@@ -55,7 +55,7 @@ The definable exceptional-family proof uses Mathlib projection and Boolean
 closure; it adds no index or support-ball representative to the original base.
 These two new core modules have passed compilation and full type/axiom audits.
 
-The pending ACVF bridge adapts the valuation conversion in the predecessor's
+The checked ACVF bridge adapts the valuation conversion in the predecessor's
 `GammaThresholdGeometry.encodedBall_good`, retaining the stronger single-ball
 property. It uses `ValOneEC.isKBall_subset_or_subset`,
 `EncodedBallGeometry.isBall_subset_vf`,
@@ -63,7 +63,9 @@ property. It uses `ValOneEC.isKBall_subset_or_subset`,
 `CMinimal.theorem_2_8_c_minimal`. The full raw definability is interpreted in
 canonical normalization, because arbitrary unsorted totalizations must not
 be mistaken for the sorted language. The predecessor's source and notices
-remain in the pinned dependency. Compilation of this bridge is pending CI.
+remain in the pinned dependency. This bridge passed the full project build
+and its full type/axiom audits in CI run 42789563292. The sorted C-minimality
+wrapper is reused directly from `RVUnaryLift.DefinableAt.isBoolComb_balls`.
 
 For the remaining imaginary interpretation, inspect `ClosedBallCodes`,
 `ClosedBallQuotient`, `OpenBallCodes`, `GeneralBallCenters` and
@@ -80,7 +82,8 @@ Equality can be proved from an injective definable point-membership relation.
 This is an interpretation interface, not an assumed atomicity or algebraicity
 result. Its closure, projection, composition, algebraicity-transfer and
 finite-exception theorems passed the same local compiler/type/axiom checks.
-The bridge to the actual predecessor ball presentation remains in progress.
+The actual predecessor ball presentation is now checked over real bases.
+The additional imaginary names in a full C• base remain open.
 
 ## Lemma 3.3: search beyond the predecessor's Section 3
 
@@ -99,7 +102,9 @@ Related checked interfaces are `Section4/GammaPredicates.lean`,
 `GammaDefinableClosure.lean` and `FiniteOrderSamples.lean`.
 For real outputs, the Section 3 `GammaParameters.Relation` API supplies
 complement, intersection, real-coordinate projection and definable-parameter
-elimination. The arbitrary finite mixed output arity and the full C• base
-containing ball names still need an explicit sequel bridge. Do not rebuild
+elimination. `GammaAtomicity.lean` now proves the real-base case for arbitrary
+finite mixed output arity and every finite Gamma tuple; its five type/axiom
+audits passed in CI run 42789563292. The full C• base containing ball names
+still needs an explicit sequel bridge. Do not rebuild
 the original-base Gamma definable-point theorem or silently drop its named
 nontrivial-value hypothesis.

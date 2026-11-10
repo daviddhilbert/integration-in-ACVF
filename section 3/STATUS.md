@@ -8,15 +8,18 @@ are also in scope. None of those later statements is marked complete.
 
 ## Current scope
 
-The Section 3 library build and all **55 declaration type/axiom audits
-passed** under Lean 4.35.0. Only `propext`, `Classical.choice` and `Quot.sound`
+The full project build and all **76 Section 3 declaration type/axiom audits
+passed** under Lean 4.35.0 in
+[CI run 42789563292](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42789563292).
+Only `propext`, `Classical.choice` and `Quot.sound`
 occur in their axiom reports. The checked sources contain no `sorry`, `admit`
 or custom axiom declarations. This is a certificate for the components below,
-not 55 numbered paper results and not completion of Lemma 3.2.
+not 76 numbered paper results. The full C• parameter-base scope remains open.
 
 `VERIFICATION.json` records the exact source hashes, compiler, dependency pins
 and per-headline axioms. Full compiler output and the freshly compiled audit
-source are retained locally in `.scratch/section3-verified/`.
+source are retained in the linked CI artifact and locally in
+`.scratch/ci-4109dc7-section3/`.
 
 | Component | Source | Scope |
 | --- | --- | --- |
@@ -25,13 +28,13 @@ source are retained locally in `.scratch/section3-verified/`.
 | Finite support for Boolean combinations | `IntegrationSection3/BallSupport.lean` | Connects Mathlib's Boolean subalgebra closure to finite membership support. |
 | Finite-exception geometry for Lemma 3.2 | Same | A finite Boolean combination of a laminar family splits only finitely many members of any pairwise disjoint subfamily. The containment and disjointness hypotheses are explicit. |
 | First-order parametric atomicity | `IntegrationSection3/DefinableFamilies.lean`, `ParametricAtomicity.lean` | Proves parameter promotion, same-base definability of the exceptional indices, their finiteness, and the algebraicity contradiction. C-minimality and laminarity are explicit geometric inputs. The associated-code variant uses a genuinely definable map. |
-| Imaginary-index argument | `IntegrationSection3/ImaginaryFamilies.lean` | Full real-preimage definability on an interpreted quotient sort; equality follows from an injective definable membership relation. Proves finite exceptional imaginary indices, same-base algebraicity transfer through a definable partial function, and atomicity under nonalgebraicity of the output imaginary. No chosen representative is named. Actual ball presentation still needs verification. |
+| Imaginary-index argument | `IntegrationSection3/ImaginaryFamilies.lean` | Full real-preimage definability on an interpreted quotient sort; equality follows from an injective definable membership relation. Proves finite exceptional imaginary indices, same-base algebraicity transfer through a definable partial function, and atomicity under nonalgebraicity of the output imaginary. No chosen representative is named. |
 | Complete-type argument for Lemma 3.4 | `ImaginaryFamilies.lean` | A member of a definable disjoint family contained in a complete-type-generating set is atomic over its imaginary index. This logical argument needs no C-minimality or nonalgebraicity hypothesis. The actual same-radius family is still needed. |
-| Actual ACVF geometry and real-index case | `IntegrationSection3ACVF/Geometry.lean` | Written, pending compilation and five additional type/axiom audits in CI. Uses the predecessor's proved C-minimality and unchanged ball predicates on the canonical normalization. No verification claim yet. |
-| Actual imaginary ball presentation and real-base Lemma 3.2 | `IntegrationSection3ACVF/BallPresentation.lean` | Written, pending compilation and eleven further audits. Uses the predecessor's actual open/closed quotients, a surjective full code presentation, proved interpreted equality, proved ball geometry/C-minimality, and nonalgebraicity of the actual output-ball imaginary. It covers real parameter bases; bases containing additional imaginary names are not claimed. |
-| Lemma 3.3 over a real base | `IntegrationSection3ACVF/GammaAtomicity.lean` | Written, pending compilation and five further audits. Covers arbitrary finite Gamma parameter tuples and finite mixed output arities, with an explicit original-base definable nontrivial Gamma value. Uses the predecessor's proved tuple definable-point theorem. Full bases containing ball names remain open. |
-| Full Lemma 3.2 | Not complete | The imaginary ball-index interpretation and exact imaginary parameter base still need to be connected. The generic theorem is not counted as this missing interpretation. |
-| Lemmas 3.3–3.18 and Proposition 3.19 | Not complete | No coverage is claimed by the preceding generic results. |
+| Actual ACVF geometry and real-index case | `IntegrationSection3ACVF/Geometry.lean` | Checked, with five audits. Uses the predecessor's proved C-minimality and unchanged ball predicates on canonical normalization. |
+| Actual imaginary ball presentation and real-base Lemma 3.2 | `IntegrationSection3ACVF/BallPresentation.lean` | Checked, with eleven audits. Uses the predecessor's actual open/closed quotients, a surjective full code presentation, proved interpreted equality, proved ball geometry/C-minimality, and nonalgebraicity of the actual output-ball imaginary. It covers real parameter bases; bases containing additional imaginary names are not claimed. |
+| Lemma 3.3 over a real base | `IntegrationSection3ACVF/GammaAtomicity.lean` | Checked, with five audits. Covers arbitrary finite Gamma parameter tuples and finite mixed output arities, with an explicit original-base definable nontrivial Gamma value. Uses the predecessor's proved tuple definable-point theorem. Full bases containing ball names remain open. |
+| Full Lemmas 3.2–3.3 | Not complete | Their bases must still allow additional genuine Gamma and ball names, rather than chosen real representatives. |
+| Lemmas 3.4–3.24 | Not complete | The logical ingredient for 3.4 is checked, as listed above; no later geometric conclusion is claimed. |
 
 The tuple carrier can later be restricted to the actual VF/RV sorts. Allowing
 a generic first-order language also permits an imaginary expansion, but does

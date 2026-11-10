@@ -19,8 +19,8 @@ The chosen finite representative tuple is used only inside the proof of
 finiteness. The stated hypothesis remains full graph definability over the
 original base. No bound on the total set of Gamma names is added.
 
-The new wrappers and their type/axiom audit are written; compilation is
-pending CI. The stronger predecessor theorem is proved rather than supplied
+The new wrappers passed the full project build and both full type/axiom
+audits in CI run 42789563292. The stronger predecessor theorem is proved rather than supplied
 as an unproved field of a model interface. Its original sources and notices
 remain in the pinned dependency.
 

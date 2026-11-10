@@ -32,8 +32,10 @@ The current root imports the predecessor and the new Section 2 and 3 libraries.
 [Section 2](section%202/STATUS.md) records the prerequisite map and Corollary 2.15;
 [Section 3](section%203/STATUS.md) records the exact formalized scope and open work.
 The checked Section 3 core contains Definition 3.1 and the first-order
-real/imaginary-index arguments for Lemmas 3.2 and 3.4. The actual ACVF
-ball-index instance over real bases and Corollary 2.15 are awaiting CI checks.
+real/imaginary-index arguments for Lemmas 3.2 and 3.4. Corollary 2.15 and the
+actual ACVF real-base cases of Lemmas 3.2–3.3 passed the full build and
+type/axiom audits in
+[CI](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42789563292).
 Full imaginary bases and the open-to-open theorem remain open. The remaining
 section folders are placeholders.
 

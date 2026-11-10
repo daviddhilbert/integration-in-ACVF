@@ -14,8 +14,11 @@ the predecessor's proved `GammaRVFamily.finite_projection`. It covers partial
 functions from actual Gamma to RV, over both arbitrary small real bases and
 genuine Gamma-named bases. The entire function graph is required to be
 definable through its full preimage on nonzero RV representatives. Saturation,
-smallness and pure characteristic zero remain explicit. Compilation and the
-two full type/axiom checks are pending CI; this is not yet a verified result.
+smallness and pure characteristic zero remain explicit. The full project
+build and both full type/axiom checks passed in
+[CI run 42789563292](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42789563292).
+Only `propext`, `Classical.choice` and `Quot.sound` occur. `VERIFICATION.json`
+records the exact checked source identities, compiler and dependency pins.
 
 Corollary 2.34 remains open. The legacy volume-form interfaces in the pinned
 predecessor have explicit mathematical inputs, so their import is insufficient
