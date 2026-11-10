@@ -49,6 +49,7 @@ theorem vfDefault_definable (Q : Set M) :
   change (D z) = if @iVF M sM (z 0) then z 0 else @iVFZero M sM
   dsimp [D]
   by_cases hx : @iVF M sM (z 0) <;> simp only [vfDefault,hx,↓reduceDIte,↓reduceIte]
+  rfl
 
 theorem total_graph_definable (B : FullBaseAtomicity.Base (M := M)) {m : ℕ}
     (f : VFType (M := M) → Set (Fin m → M))
