@@ -46,6 +46,7 @@ theorem vfDefault_definable (Q : Set M) :
   change Q.DefinableFun LRV D
   convert hd using 1
   funext z
+  change (D z) = if @iVF M sM (z 0) then z 0 else @iVFZero M sM
   dsimp [D]
   by_cases hx : @iVF M sM (z 0) <;> simp only [vfDefault,hx,↓reduceDIte,↓reduceIte]
 

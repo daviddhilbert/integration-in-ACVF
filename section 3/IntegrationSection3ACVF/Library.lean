@@ -18,3 +18,4 @@ import IntegrationSection3ACVF.FullCosetExceptions
 import IntegrationSection3ACVF.FullProfileCosets
 import IntegrationSection3ACVF.GammaCosetGeometry
 import IntegrationSection3ACVF.OpenBallConstancy
+import IntegrationSection3ACVF.PaperBalls

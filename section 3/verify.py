@@ -253,6 +253,12 @@ ACVF_HEADLINES += [
     'IntegrationInACVF.Section3ACVF.OpenBallConstancy.lemma_3_9_on',
     'IntegrationInACVF.Section3ACVF.OpenBallConstancy.corollary_3_10_on',
 ]
+ACVF_HEADLINES += [
+    'IntegrationInACVF.Section3ACVF.OpenBallConstancy.atomic_not_contains_vf',
+    'IntegrationInACVF.Section3ACVF.OpenBallConstancy.lemma_3_9_open',
+    'IntegrationInACVF.Section3ACVF.OpenBallConstancy.corollary_3_10_open',
+    'IntegrationInACVF.Section3ACVF.PaperBalls.samePrimitiveType_symm',
+]
 DEFINITIONS = [
     'GeneratesCompleteType', 'IsAtomic', 'Splits',
     'IsLaminar', 'HasFiniteBallSupport',
@@ -318,6 +324,11 @@ ACVF_DEFINITIONS += ['IntegrationInACVF.Section3ACVF.FullProfileCosets.vfDefault
 ACVF_DEFINITIONS += [
     'IntegrationInACVF.Section3ACVF.OpenBallConstancy.graphOn',
     'IntegrationInACVF.Section3ACVF.OpenBallConstancy.extendByEmpty',
+]
+ACVF_DEFINITIONS += [
+    'IntegrationInACVF.Section3ACVF.PaperBalls.' + name for name in (
+        'IsOpenBall', 'IsClosedBall', 'Radius', 'HasRadius', 'HasValuativeCentre',
+        'IsThinAnnulus', 'PrimitiveKind', 'HasPrimitiveKind', 'SamePrimitiveType')
 ]
 ALLOWED = {'propext', 'Classical.choice', 'Quot.sound'}
 
@@ -401,7 +412,7 @@ def main():
                       + ('actual Lemmas 3.2-3.3 over genuine real/Gamma/ball bases, with an original-base '
                          'definable nontrivial Gamma value explicit for 3.3; Lemma 3.4 at original-base '
                          'definable Gamma radii, singletons and VF; actual finite disjoint punctured '
-                         'decomposition; finite coset-profile exceptions, Lemma 3.9 and Corollary 3.10 for proper open balls; ' if args.acvf else '')
+                         'decomposition; finite coset-profile exceptions, Lemma 3.9 and Corollary 3.10 with the sequel open-ball convention and domain graphs; ' if args.acvf else '')
                       + 'the primitive-type classification of Lemma 3.6 and later section geometry remain open'),
             'build_scope': 'Incremental Lake Section 3 build plus freshly compiled headline audit',
         }

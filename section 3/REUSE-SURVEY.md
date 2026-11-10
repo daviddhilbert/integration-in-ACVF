@@ -298,3 +298,12 @@ compatible valuation and the already checked Gamma-radius description.
 finite exceptions or infinitely many cosets as new mathematical axioms.
 The standing original-base definable nontrivial value and ACVF(0,0) remain
 explicit. These new actual modules are awaiting their CI build and audit.
+
+
+The subsequent domain wrappers use `graphOn A f` and extension by the empty
+set, so only the graph on the paper's stated domain is required. The
+whole-field open-ball case is eliminated by the parameter-free singleton
+zero; `PaperBalls.IsOpenBall` excludes the predecessor's singleton-open
+convention. Definition 3.5 is expressed by common actual-Gamma radius,
+valuative-centre and primitive-kind predicates on the unpunctured parents.
+The primitive decomposition/classification theorem is still open.

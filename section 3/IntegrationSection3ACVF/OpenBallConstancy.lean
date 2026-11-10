@@ -1,6 +1,7 @@
 import IntegrationSection3ACVF.FullGammaAtomicity
 import IntegrationSection3ACVF.FullProfileCosets
 import IntegrationSection3ACVF.GammaCosetGeometry
+import IntegrationSection3ACVF.PaperBalls
 
 /-! Lemma 3.9 for proper open balls, with every finite RV output arity and
 an arbitrary original real/Gamma/ball base. -/
@@ -154,5 +155,52 @@ theorem corollary_3_10_on (h00 : M ⊨ Axioms.ACVF00)
   have hc := corollary_3_10 h00 B δ hδ hδ1 hA a α hsub g hg hd
   intro x hx y hy
   simpa only [g,extendByEmpty,if_pos (hsub hx),if_pos (hsub hy)] using hc x hx y hy
+
+
+/-- The whole VF sort cannot lie inside an atomic set: the parameter-free
+singleton zero separates it from the VF point one. -/
+theorem atomic_not_contains_vf (B : FullBaseAtomicity.Base (M := M))
+    {A : Set M} (hA : AdjoinBall.AtomicOver B A) : ¬ ({x : M | iVF x} ⊆ A) := by
+  intro hAll
+  have hz : DefinableAt B.real .vf ({iVFZero} : Set M) :=
+    definableClosureAt_function_symbol B.real Fn.vfZero Fin.elim0
+      (fun j => j.elim0) (fun j => j.elim0)
+  have hd : FullBaseAtomicity.OverBase B {z : Fin 1 → M | z 0 ∈ ({iVFZero} : Set M)} :=
+    FullBaseAtomicity.OverBase.of_real (B := B)
+      (((@definableAt_iff_normalized_raw M sM hM B.real .vf _).mp hz).1)
+  rcases hA.2 {iVFZero} hd with hw | he
+  · have h10 : (1 : VFType (M := M)).val = (0 : VFType (M := M)).val :=
+      hw (hAll (1 : VFType (M := M)).property)
+    exact (one_ne_zero : (1 : VFType (M := M)) ≠ 0) (Subtype.ext h10)
+  · exact Set.disjoint_left.mp he (hAll (0 : VFType (M := M)).property)
+      (show (0 : VFType (M := M)).val ∈ ({iVFZero} : Set M) from rfl)
+
+/-- Lemma 3.9 including the sequel's whole-field open-ball convention. -/
+theorem lemma_3_9_open (h00 : M ⊨ Axioms.ACVF00)
+    (B : FullBaseAtomicity.Base (M := M))
+    (δ : Values.Gamma (M := M)) (hδ : FullGammaSyntax.Scalar B {δ}) (hδ1 : 1 < δ)
+    {A : Set M} (ho : PaperBalls.IsOpenBall A) (hA : AdjoinBall.AtomicOver B A)
+    {m : ℕ} (f : VFType (M := M) → Set (Fin m → M))
+    (hf : ∀ x : VFType (M := M), x.val ∈ A → ∀ ys ∈ f x, ∀ i, iRV (ys i))
+    (hgraph : FullBaseAtomicity.OverBase B (graphOn A f)) :
+    ∀ x : VFType (M := M), x.val ∈ A → ∀ y : VFType (M := M), y.val ∈ A → f x = f y := by
+  rcases ho with rfl | ⟨a,α,rfl⟩
+  · exact (atomic_not_contains_vf B hA Set.Subset.rfl).elim
+  · exact lemma_3_9_on h00 B δ hδ hδ1 a α hA f hf hgraph
+
+/-- Corollary 3.10 for the sequel's exact open-ball predicate and the full
+graph on the atomic domain. No radius or centre occurs in the conclusion. -/
+theorem corollary_3_10_open (h00 : M ⊨ Axioms.ACVF00)
+    (B : FullBaseAtomicity.Base (M := M))
+    (δ : Values.Gamma (M := M)) (hδ : FullGammaSyntax.Scalar B {δ}) (hδ1 : 1 < δ)
+    {A O : Set M} (hA : AdjoinBall.AtomicOver B A)
+    (ho : PaperBalls.IsOpenBall O) (hsub : O ⊆ A)
+    {m : ℕ} (f : VFType (M := M) → Set (Fin m → M))
+    (hf : ∀ x : VFType (M := M), x.val ∈ A → ∀ ys ∈ f x, ∀ i, iRV (ys i))
+    (hgraph : FullBaseAtomicity.OverBase B (graphOn A f)) :
+    ∀ x : VFType (M := M), x.val ∈ O → ∀ y : VFType (M := M), y.val ∈ O → f x = f y := by
+  rcases ho with rfl | ⟨a,α,rfl⟩
+  · exact (atomic_not_contains_vf B hA hsub).elim
+  · exact corollary_3_10_on h00 B δ hδ hδ1 hA a α hsub f hf hgraph
 
 end IntegrationInACVF.Section3ACVF.OpenBallConstancy
