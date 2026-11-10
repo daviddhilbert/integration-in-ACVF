@@ -11,3 +11,5 @@ import IntegrationSection3ACVF.FullGammaSyntax
 import IntegrationSection3ACVF.FullGammaPoint
 import IntegrationSection3ACVF.AdjoinGamma
 import IntegrationSection3ACVF.FullGammaAtomicity
+import IntegrationSection3ACVF.FullBallCoset
+import IntegrationSection3ACVF.FullGammaRadius

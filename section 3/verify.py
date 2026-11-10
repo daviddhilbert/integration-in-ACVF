@@ -116,6 +116,10 @@ HEADLINES = [
     'ImaginaryBaseFamilies.Relation.comp_on',
     'ImaginaryBaseFamilies.parametric_atomic_of_output',
 ]
+HEADLINES += [
+    'ImaginaryBaseFamilies.rangeFamily_definable',
+    'ImaginaryBaseFamilies.atomicWith_of_subsingleton',
+]
 ACVF_HEADLINES = [
     'IntegrationInACVF.Section3ACVF.' + name for name in (
         'encodedBall_isKBall', 'encodedBalls_laminar', 'support_of_isBoolComb',
@@ -195,6 +199,15 @@ ACVF_HEADLINES += [
         'cutParameters_definable', 'lemma_3_3_one', 'lemma_3_3_finset',
         'lemma_3_3', 'lemma_3_3_unary')
 ]
+ACVF_HEADLINES += [
+    'IntegrationInACVF.Section3ACVF.FullBallCoset.' + name for name in (
+        'cosetRelation_definable', 'cosetFamily_definable', 'atomic_coset', 'atomicWith_to_adjoin')
+]
+ACVF_HEADLINES += [
+    'IntegrationInACVF.Section3ACVF.FullGammaRadius.' + name for name in (
+        'radiusTail_definable', 'rv_preimage', 'radius_subgroup',
+        'lemma_3_4', 'lemma_3_4_singleton', 'lemma_3_4_whole_field')
+]
 DEFINITIONS = [
     'GeneratesCompleteType', 'IsAtomic', 'Splits',
     'IsLaminar', 'HasFiniteBallSupport',
@@ -249,6 +262,7 @@ ACVF_DEFINITIONS += [
     'IntegrationInACVF.Section3ACVF.FullGammaAtomicity.' + name for name in (
         'AtomicTuple', 'cutParameters', 'withGammaFinset', 'withGammaTuple')
 ]
+ACVF_DEFINITIONS += ['IntegrationInACVF.Section3ACVF.FullBallCoset.CompleteType']
 ALLOWED = {'propext', 'Classical.choice', 'Quot.sound'}
 
 

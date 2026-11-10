@@ -111,7 +111,7 @@ theorem lemma_3_3_finset (h00 : M ⊨ Axioms.ACVF00) (B : FullBaseAtomicity.Base
           (G : Set (Values.Gamma (M := M))))⟩ : FullBaseAtomicity.Base (M := M)) = _
       congr 1
       ext x
-      simp only [Finset.coe_insert,Set.image_insert,Set.mem_insert_iff,Set.mem_union]
+      simp only [Finset.coe_insert,Set.image_insert_eq,Set.mem_insert_iff,Set.mem_union]
       tauto
     rw [he] at h
     exact h
