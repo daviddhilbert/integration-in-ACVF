@@ -67,9 +67,9 @@ explicit singleton-open convention is not used as the sequel's predicate.
 ## Verification and next reuse boundary
 
 The full root build, inherited foundation audit, both Section 2 audits and
-306 Section 3 audits passed in [CI run 42833098057](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42833098057)
-at source `661d4fed208c86486a2bba7a247f2027b8c4e1fa`. All 18 newly exported
-types since the 288-declaration checkpoint were reviewed, together with
+344 Section 3 audits passed in [CI run 42839273157](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42839273157)
+at source `f49f163b19d1281f31769954cb04ba37a758ee46`. All 38 newly exported
+types since the 306-declaration checkpoint were reviewed, together with
 the actual ball family and original-model/normalized definitions. Every
 receipt input hash matched the committed source. Only propext,
 Classical.choice and Quot.sound occur. The receipts distinguish exact
@@ -103,6 +103,19 @@ and `CanonicalHoles.lean` identify maximal proper support balls intrinsically
 and prove the joint hole/parent relation definable over that same base. All
 of these steps are now checked by the full build and audit above.
 
-Next come the invariant Gamma/ball radius, valuative-centre and kind graphs,
-followed by primitive classification. Later image/open-to-open results remain
-open; generic decomposition and legacy volume interfaces do not prove them.
+`CodeEquality.lean` proves intrinsic equality and code-image definability;
+`BallKindPredicates.lean` uses it for full original-base open/closed tests.
+`AtomicCanonicalRegions.lean` proves uniform puncture status and the generic
+uniform-property step on canonical positive regions. Radius comparisons in
+ValuationRadius.lean are supplied with actual ACVF density in
+BallRadiusGeometry.lean using the pinned formalized
+`ValOneEC.Johnson.exists_val_between'`; nontriviality is derived from `δ > 1`.
+PaperBallInvariants.lean proves radius existence and uniqueness, including
+the singleton and VF conventions. ValuativeCentreGeometry.lean reuses the
+pinned predecessor's `Balls.openDisc_value_constant` and
+`closedDisc_value_constant` for centre existence, and proves uniqueness on
+nonempty VF sets. Their full types and standard axioms are checked.
+
+Next come the invariant Gamma graphs, finite images and constancy across
+the positive family, then primitive classification. Later image/open-to-open
+results remain open. None is counted as proved by assuming its geometry.

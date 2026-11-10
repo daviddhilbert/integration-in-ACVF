@@ -5,11 +5,11 @@ Proposition 3.24. Its main open-to-open partition theorem is Proposition 3.19.
 
 ## Verified scope
 
-The full project build and **306 Section 3 declaration type/axiom audits
-passed** in [CI run 42833098057](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42833098057)
-at source `661d4fed208c86486a2bba7a247f2027b8c4e1fa` under Lean 4.35.0.
-There are 147 generic declarations and 159 actual ACVF declarations. These
-are component audits, not 306 numbered paper results. Only `propext`,
+The full project build and **344 Section 3 declaration type/axiom audits
+passed** in [CI run 42839273157](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42839273157)
+at source `f49f163b19d1281f31769954cb04ba37a758ee46` under Lean 4.35.0.
+There are 156 generic declarations and 188 actual ACVF declarations. These
+are component audits, not 344 numbered paper results. Only `propext`,
 `Classical.choice` and `Quot.sound` occur. The checked sources have no
 placeholders or custom axioms.
 
@@ -60,6 +60,15 @@ placeholders or custom axioms.
   original-base definability of the joint hole/parent relation through all
   real codes of both ball names. No primitive-type equality is asserted.
 
+- **Kind and invariant geometry:** `BallKindPredicates` proves original-base
+  definability of the actual open/closed-kind tests, using all valid charts.
+  `AtomicCanonicalRegions.uniform_unpunctured` proves common puncture status
+  of the positive regions inside a complete type. `PaperBallInvariants`
+  proves radius existence and uniqueness, including singleton and VF cases;
+  uniqueness displays `δ > 1`. `ValuativeCentreGeometry` proves centre
+  existence on balls and uniqueness on nonempty VF sets. Constancy of
+  these invariants across the positive family remains open.
+
 ## Remaining work
 
 Lemma 3.6's canonical primitive classification and Lemmas 3.7–3.8 remain open.
@@ -68,35 +77,19 @@ image, linearity, open-to-open, component-count and bijection results through
 Proposition 3.24. No such result is counted as proved by a helper that assumes
 its missing geometry. Section 2's Corollary 2.34 remains open separately.
 
-The next targets are invariant radius, valuative-centre and kind relations,
-then nonmaximal-hole enlargement and the multiple-hole contradiction. The
-canonical support, positive regions and maximal holes are definable over the
+The next targets are invariant radius and valuative-centre graphs, their
+finite images and constancy, then nonmaximal-hole enlargement and the
+multiple-hole contradiction. The canonical support, positive regions and maximal holes are definable over the
 original combined base. Individual component definability is not assumed.
-
-## Current continuation
-
-The local 156-declaration core audit passes. This includes full-code equality,
-images of code sets, projection of interpreted binary relations, uniform
-definable properties of disjoint regions inside a complete type, and
-valuation-radius comparisons with density explicit where needed. Every new
-full type and its standard axioms were reviewed.
-
-The actual continuation implements original-base open/closed-kind tests,
-uniform properties and puncture status of canonical positive regions,
-ordinary and extended radius existence/uniqueness (with singleton and VF
-cases), and valuative-centre existence/uniqueness. Valuation density is
-supplied by the pinned formalized Johnson result, deriving nontriviality
-from `δ > 1`. These actual modules await full CI; the full receipt remains
-the 306-declaration checkpoint. Invariant graph definability, finite images,
-constancy of radius/valuative centre and the hole classification remain open.
 
 ## Verification evidence
 
 `VERIFICATION.json` records compiler, dependency pins, all checked source
-hashes and per-declaration axioms for the 306-declaration checkpoint.
-`CORE-VERIFICATION.json` records the local 156-declaration core continuation. Complete diagnostics, explicit exported definitions/types and
+hashes and per-declaration axioms for the 344-declaration checkpoint.
+`CORE-VERIFICATION.json` retains the local 156-declaration core audit. Complete diagnostics, explicit exported
+definitions/types and
 compact type output are in the linked artifact and
-`.scratch/ci-661d4fe-section3/`. Every receipt input hash was compared with
+`.scratch/ci-f49f163-section3/`. Every receipt input hash was compared with
 the committed source before publication. Dependencies may be reused from
 pinned caches; the full root and new modules were checked by the CI build.
 

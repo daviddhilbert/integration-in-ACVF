@@ -6,12 +6,12 @@ Section 2's Corollary 2.15 is checked, while Corollary 2.34 remains open.
 This section ends at Proposition 3.24.
 
 The full project build, inherited foundation audit, two Section 2 audits and
-306 Section 3 audits passed at source `661d4fed208c86486a2bba7a247f2027b8c4e1fa`
-in [CI run 42833098057](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42833098057).
+344 Section 3 audits passed at source `f49f163b19d1281f31769954cb04ba37a758ee46`
+in [CI run 42839273157](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42839273157).
 The complete new types and axioms were reviewed, including the original-model
 carriers and normalized raw definability. All receipt input hashes matched
 the committed source. `VERIFICATION.json` binds this full checkpoint;
-`CORE-VERIFICATION.json` now records the 156-declaration local core continuation.
+`CORE-VERIFICATION.json` retains the local 156-declaration core audit.
 
 Checked entry points:
 
@@ -44,10 +44,18 @@ bodies covering A, actual maximal proper holes and the full interpreted
 hole/parent relation. Their generic formulas are in RegionFormulas.lean and
 HoleFormulas.lean.
 
-Next: Lemma 3.6's invariant radius, valuative-centre and kind predicates.
-Nonmaximal-hole enlargement and the integer-translate argument for multiple
-maximal holes remain open. Reuse the checked integer-unit/coset geometry
-from 3.9. No component itself is assumed definable over the original base.
+The kind predicates now have full original-base definability proofs in
+BallKindPredicates.lean. AtomicCanonicalRegions.lean proves uniform
+puncture status and uniformity for arbitrary definable parent properties.
+BallRadiusGeometry.lean and PaperBallInvariants.lean prove actual radius
+existence/uniqueness, including singleton and VF, with `δ > 1` explicit
+for uniqueness. ValuativeCentreGeometry.lean proves existence on balls and
+uniqueness on nonempty VF sets. These steps are fully checked.
+
+Next: Lemma 3.6's invariant Gamma graphs, finite images and constancy of
+radius and valuative centre across the positive family. Nonmaximal-hole
+enlargement and the integer-translate multiple-hole argument remain open.
+Use only full code preimages over B; no chosen component is assumed B-definable.
 
 For 3.11 retain the accepted explicit `A ≠ ∅`; see PAPER-CORRECTIONS.md.
 Geometric separation and later results through 3.24 are still open.
@@ -56,13 +64,3 @@ Use `lake env python3 'section 3/verify.py' --acvf` for the full current audit.
 Freeze original-model functions, sets and carriers before introducing any
 local normalized structure. No chosen real representative may enter the
 exported imaginary base. Keep scratch work and diagnostics in `.scratch/`.
-
-Current continuation: the 156-declaration generic core passed its full types,
-standard-axiom audit and source-hash check. The actual modules now implement
-full-code kind tests, canonical positive-region uniformity and puncture
-status, ordinary/extended radius uniqueness, radius existence, and valuative
-centre existence/uniqueness. They await full CI. Source-model functions and
-carriers are frozen before normalization; explicitly `change` through set
-membership and local aliases before rewriting. Next define invariant graphs,
-prove their finite images, use atomicity for constant invariants, then finish
-nonmaximal-hole enlargement and the multiple-hole contradiction.
