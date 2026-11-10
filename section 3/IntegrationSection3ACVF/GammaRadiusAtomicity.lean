@@ -85,8 +85,8 @@ private noncomputable def difference (x y : VFType (M := M)) : VFType (M := M) :
 def gammaBall (a : VFType (M := M)) (γ : Values.Gamma (M := M))
     (strict : Bool) : Set M :=
   {x | ∃ hx : iVF x,
-    γ.val ≤ (@Values.vfValueHom M sM hM) (difference ⟨x,hx⟩ a) ∧
-      (strict = true → ¬ (@Values.vfValueHom M sM hM) (difference ⟨x,hx⟩ a) ≤ γ.val)}
+    γ.val ≤ (@Values.vfValueHom M sM hM) ((@difference M sM hM) ⟨x,hx⟩ a) ∧
+      (strict = true → ¬ (@Values.vfValueHom M sM hM) ((@difference M sM hM) ⟨x,hx⟩ a) ≤ γ.val)}
 
 theorem radiusBall_eq_gammaBall (a : VFType (M := M)) (t : CanonicalRV.RVSort M)
     (γ : Values.Gamma (M := M)) (htγ : Values.vrv t = γ.val) (strict : Bool) :
@@ -94,22 +94,22 @@ theorem radiusBall_eq_gammaBall (a : VFType (M := M)) (t : CanonicalRV.RVSort M)
   ext x
   have hc (hx : iVF x) :
       iLe t.val (iRv (iVFAdd x (iVFNeg a.val))) ↔
-        γ.val ≤ (@Values.vfValueHom M sM hM) (difference ⟨x,hx⟩ a) := by
+        γ.val ≤ (@Values.vfValueHom M sM hM) ((@difference M sM hM) ⟨x,hx⟩ a) := by
     let u : VFType (M := M) := ⟨x,hx⟩
     have hd : (u-a).val = iVFAdd x (iVFNeg a.val) := by
       rw [sub_eq_add_neg]; rfl
-    have h := Values.vrv_le_iff t (CanonicalRV.encodedRv (u-a))
-    change Values.vrv t ≤ (@Values.vfValueHom M sM hM) (difference ⟨x,hx⟩ a) ↔ _ at h
+    have h := @Values.vrv_le_iff M sM hM t (@CanonicalRV.encodedRv M sM hM (u-a))
+    change Values.vrv t ≤ (@Values.vfValueHom M sM hM) ((@difference M sM hM) ⟨x,hx⟩ a) ↔ iLe t.val (iRv (u-a).val) at h
     rw [htγ,hd] at h
     exact h.symm
   have hc' (hx : iVF x) :
       iLe (iRv (iVFAdd x (iVFNeg a.val))) t.val ↔
-        (@Values.vfValueHom M sM hM) (difference ⟨x,hx⟩ a) ≤ γ.val := by
+        (@Values.vfValueHom M sM hM) ((@difference M sM hM) ⟨x,hx⟩ a) ≤ γ.val := by
     let u : VFType (M := M) := ⟨x,hx⟩
     have hd : (u-a).val = iVFAdd x (iVFNeg a.val) := by
       rw [sub_eq_add_neg]; rfl
-    have h := Values.vrv_le_iff (CanonicalRV.encodedRv (u-a)) t
-    change (@Values.vfValueHom M sM hM) (difference ⟨x,hx⟩ a) ≤ Values.vrv t ↔ _ at h
+    have h := @Values.vrv_le_iff M sM hM (@CanonicalRV.encodedRv M sM hM (u-a)) t
+    change (@Values.vfValueHom M sM hM) ((@difference M sM hM) ⟨x,hx⟩ a) ≤ Values.vrv t ↔ iLe (iRv (u-a).val) t.val at h
     rw [htγ,hd] at h
     exact h.symm
   constructor
