@@ -16,7 +16,7 @@ occur in their axiom reports. The checked sources contain no `sorry`, `admit`
 or custom axiom declarations. This is a certificate for the components below,
 not 84 numbered paper results. The full C• parameter-base scope remains open.
 
-Continuation: the generic core now has **86 declarations**, all locally
+Continuation: the generic core now has **90 declarations**, all locally
 compiled and type/axiom-audited, including finite-support imaginary parameter
 bases, Boolean and existential closure, and the parametric atomicity argument
 over such bases. `CORE-VERIFICATION.json` binds this local core audit.

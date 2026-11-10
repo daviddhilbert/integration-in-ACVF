@@ -125,6 +125,54 @@ theorem traces_definable (hq : B.real.Definable L q.codes)
   Relation.range (Relation.restrict hp (exceptional_definable hp hq hT hC hP)
     (Relation.inter hp hC hP))
 
+include hp in
+theorem Family.image_on {A T : Set J} {f : J → J}
+    (hA : Family (L := L) p B q A)
+    (hf : OverBase (L := L) p B (q.functionPullback T f)) :
+    Family (L := L) p B q (f '' (A ∩ T)) := by
+  have hi := OverBase.inter
+    (OverBase.preimage_comp hA (Sum.inl : η → η ⊕ η)) hf hp
+  have hd := (hi.preimage_comp (Sum.swap : η ⊕ η → η ⊕ η)).exists_block
+  change OverBase (L := L) p B (q.pullback (f '' (A ∩ T)))
+  convert hd using 1
+  ext z
+  constructor
+  · rintro ⟨hz,i,⟨hi,hiT⟩,hfi⟩
+    obtain ⟨c,rfl⟩ := q.onto i
+    exact ⟨c.val,⟨c.property,hi⟩,c.property,hz,hiT,hfi⟩
+  · rintro ⟨a,⟨ha,hi⟩,_,hb,hiT,hfi⟩
+    exact ⟨hb,q.decode ⟨a,ha⟩,⟨hi,hiT⟩,hfi⟩
+
+include hp in
+theorem Algebraic.map_on {T : Set J} {f : J → J} {i : J}
+    (hi : Algebraic (L := L) p B q i) (hiT : i ∈ T)
+    (hf : OverBase (L := L) p B (q.functionPullback T f)) :
+    Algebraic (L := L) p B q (f i) := by
+  obtain ⟨A,hA,hfin,hi⟩ := hi
+  exact ⟨f '' (A ∩ T),Family.image_on hp hA hf,
+    (hfin.inter_of_left T).image f,i,⟨hi,hiT⟩,rfl⟩
+
+include hp in
+theorem Relation.comp_on {T : Set J} {f : J → J} {R : J → Set M}
+    (hR : Relation (L := L) p B q R)
+    (hf : OverBase (L := L) p B (q.functionPullback T f)) :
+    Relation (L := L) p B q (fun i => {x | i ∈ T ∧ x ∈ R (f i)}) := by
+  let πf : η ⊕ η → (η ⊕ Fin 1) ⊕ η :=
+    Sum.elim (fun i => .inl (.inl i)) Sum.inr
+  let πR : η ⊕ Fin 1 → (η ⊕ Fin 1) ⊕ η :=
+    Sum.elim Sum.inr (fun i => .inl (.inr i))
+  have hd := (OverBase.inter (hf.preimage_comp πf)
+    (OverBase.preimage_comp hR πR) hp).exists_block
+  change OverBase (L := L) p B (q.relationPullback (fun i => {x | i ∈ T ∧ x ∈ R (f i)}))
+  convert hd using 1
+  ext z
+  constructor
+  · rintro ⟨hz,ht,hx⟩
+    obtain ⟨c,hc⟩ := q.onto (f (q.decode ⟨z ∘ Sum.inl,hz⟩))
+    exact ⟨c.val,⟨hz,c.property,ht,hc.symm⟩,c.property,hc.symm ▸ hx⟩
+  · rintro ⟨c,⟨hz,hc,ht,hfi⟩,_,hx⟩
+    exact ⟨hz,ht,hfi.symm ▸ hx⟩
+
 variable [Finite κ]
 
 include hp in
@@ -194,5 +242,19 @@ theorem parametric_atomic (hq : B.real.Definable L q.codes)
   · exact Or.inl hwhole
   · obtain ⟨y,hy,hyp⟩ := Set.not_subset.mp hwhole
     exact Or.inr (Set.disjoint_left.mpr fun x hx hxp => hcut ⟨x,hx,hxp,y,hy,hyp⟩)
+
+include hp in
+theorem parametric_atomic_of_output (hq : B.real.Definable L q.codes)
+    {D : Set M} {balls : Set (Set M)} (hlam : IsLaminar balls)
+    (hcm : ∀ Q' : Set M, CMinimalOn L Q' D balls) (hsub : ∀ b ∈ balls, b ⊆ D)
+    {T : Set J} {C : J → Set M}
+    (hT : Family (L := L) p B q T) (hC : Relation (L := L) p B q C)
+    (hballs : ∀ i ∈ T, C i ∈ balls)
+    (hdis : T.Pairwise fun i j => Disjoint (C i) (C j))
+    {f : J → J} (hf : OverBase (L := L) p B (q.functionPullback T f))
+    {i : J} (hi : i ∈ T) (hna : ¬ Algebraic (L := L) p B q (f i)) :
+    AtomicWith (L := L) p B q i (C i) :=
+  parametric_atomic hp hq hlam hcm hsub hT hC hballs hdis hi
+    (fun ha => hna (Algebraic.map_on hp ha hi hf))
 
 end IntegrationInACVF.Section3.ImaginaryBaseFamilies

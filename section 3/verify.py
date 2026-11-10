@@ -100,6 +100,10 @@ HEADLINES = [
     'ImaginaryBaseFamilies.finite_exceptional',
     'ImaginaryBaseFamilies.atomic_below_complete_type',
     'ImaginaryBaseFamilies.parametric_atomic',
+    'ImaginaryBaseFamilies.Family.image_on',
+    'ImaginaryBaseFamilies.Algebraic.map_on',
+    'ImaginaryBaseFamilies.Relation.comp_on',
+    'ImaginaryBaseFamilies.parametric_atomic_of_output',
 ]
 ACVF_HEADLINES = [
     'IntegrationInACVF.Section3ACVF.' + name for name in (

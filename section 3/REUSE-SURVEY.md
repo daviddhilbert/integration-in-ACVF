@@ -179,4 +179,4 @@ with a full invariant first-order relation in all their codes. The module
 proves real-code specialization, parameter monotonicity, Boolean closure,
 and the transfer of finite ball support. Connecting it to combined actual
 Gamma/ball names and to the complete-type family arguments remains work
-in progress. The generic parameter-base and family extensions have compiled locally and passed all 86 current core full-type/axiom checks. The family proofs preserve the original interpreted base in the exceptional sets; real-code specialization is confined to obtaining finite ball support.
+in progress. The generic parameter-base and family extensions have compiled locally and passed all 90 current core full-type/axiom checks. The family proofs preserve the original interpreted base in the exceptional sets; real-code specialization is confined to obtaining finite ball support.
