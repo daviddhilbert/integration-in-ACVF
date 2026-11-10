@@ -257,4 +257,42 @@ theorem parametric_atomic_of_output (hq : B.real.Definable L q.codes)
   parametric_atomic hp hq hlam hcm hsub hT hC hballs hdis hi
     (fun ha => hna (Algebraic.map_on hp ha hi hf))
 
+/-- Existential projection of an interpreted binary relation, quantifying
+all codes of the first component over the same original base. -/
+theorem pair_domain {R : Set (Fin 2 → J)}
+    (hR : OverBase (L := L) p B ((tuplePresentation q (Fin 2)).pullback R)) :
+    Family (L := L) p B q {j | ∃ k, ![k,j] ∈ R} := by
+  let π : Fin 2 × η → η ⊕ η :=
+    fun (i,a) => Fin.cases (.inr a) (fun _ => .inl a) i
+  have hex := OverBase.exists_block (hR.preimage_comp π)
+  change OverBase (L := L) p B (q.pullback {j | ∃ k, ![k,j] ∈ R})
+  convert hex using 1
+  ext c
+  change (∃ hc : c ∈ q.codes, ∃ k, ![k,q.decode ⟨c,hc⟩] ∈ R) ↔
+    ∃ d : η → M, ∃ hd : Sum.elim c d ∘ π ∈ tupleCodes q (Fin 2),
+      (tuplePresentation q (Fin 2)).decode ⟨Sum.elim c d ∘ π,hd⟩ ∈ R
+  have he (d : η → M) (hc : c ∈ q.codes) (hd : d ∈ q.codes)
+      (hcd : Sum.elim c d ∘ π ∈ tupleCodes q (Fin 2)) :
+      (tuplePresentation q (Fin 2)).decode ⟨Sum.elim c d ∘ π,hcd⟩ =
+        ![q.decode ⟨d,hd⟩,q.decode ⟨c,hc⟩] := by
+    funext i
+    fin_cases i <;> rfl
+  constructor
+  · rintro ⟨hc,k,hk⟩
+    obtain ⟨d,hd⟩ := q.onto k
+    have hcd : Sum.elim c d.val ∘ π ∈ tupleCodes q (Fin 2) := by
+      intro i
+      fin_cases i
+      · exact d.property
+      · exact hc
+    refine ⟨d.val,hcd,?_⟩
+    rw [he d.val hc d.property hcd,hd]
+    exact hk
+  · rintro ⟨d,hcd,hr⟩
+    have hc : c ∈ q.codes := hcd 1
+    have hd : d ∈ q.codes := hcd 0
+    rw [he d hc hd hcd] at hr
+    exact ⟨hc,q.decode ⟨d,hd⟩,hr⟩
+
+
 end IntegrationInACVF.Section3.ImaginaryBaseFamilies

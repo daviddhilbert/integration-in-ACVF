@@ -51,7 +51,7 @@ theorem closed_raw_gammaBall (q : ClosedBallCodes.Code M) (hflag : q.val 2 ≠ i
   rw [← radiusBall_eq_gammaBall a (CanonicalRV.encodedRv r) γ hr false]
   ext x
   simp only [ClosedBallCodes.rawBall,Set.mem_ofPred_eq,ClosedBallCodes.body_realize,
-    hflag,false_or,q.property,true_and,radiusBall,Bool.false_eq_true,false_implies,and_true]
+    hflag,false_or,and_iff_right q.property,radiusBall,Bool.false_eq_true,false_implies,and_true]
 
 theorem open_raw_isOpenBall (q : OpenBallCodes.Code M) :
     PaperBalls.IsOpenBall (OpenBallCodes.rawBall q.val) := by
@@ -70,7 +70,7 @@ theorem closed_raw_isClosedBall (q : ClosedBallCodes.Code M) :
   · left
     ext x
     simp only [ClosedBallCodes.rawBall,Set.mem_ofPred_eq,ClosedBallCodes.body_realize,
-      hflag,true_or,and_true,q.property,true_and]
+      hflag,true_or,and_true,and_iff_right q.property]
   · let a : VFType (M := M) := ⟨q.val 0,q.property 0⟩
     let r : VFType (M := M) := ⟨q.val 1,q.property 1⟩
     by_cases hr0 : r = 0

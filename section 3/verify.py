@@ -165,6 +165,7 @@ HEADLINES += [
     'CodeEquality.equalityCodes_definable', 'CodeEquality.pairRows_mem_iff',
     'CodeEquality.imageCodes_definable', 'AtomicRegions.uniform_property',
 ]
+HEADLINES += ['ImaginaryBaseFamilies.pair_domain']
 ACVF_HEADLINES = [
     'IntegrationInACVF.Section3ACVF.' + name for name in (
         'encodedBall_isKBall', 'encodedBalls_laminar', 'support_of_isBoolComb',
@@ -316,6 +317,15 @@ ACVF_HEADLINES += [
         'open_raw_gammaBall', 'closed_raw_gammaBall', 'open_raw_isOpenBall',
         'closed_raw_isClosedBall', 'gammaBall_open_code', 'gammaBall_closed_code')
 ]
+ACVF_HEADLINES += [
+    'IntegrationInACVF.Section3ACVF.BallKindPredicates.' + name for name in (
+        'gammaBall_mem_valuation_closed', 'paper_closed_code', 'chartCodes_definable',
+        'open_image_eq', 'closed_image_eq', 'open_family_definable', 'closed_family_definable')
+]
+ACVF_HEADLINES += [
+    'IntegrationInACVF.Section3ACVF.AtomicCanonicalRegions.' + name for name in (
+        'uniform_property', 'unpunctured_family_definable', 'uniform_unpunctured')
+]
 DEFINITIONS = [
     'GeneratesCompleteType', 'IsAtomic', 'Splits',
     'IsLaminar', 'HasFiniteBallSupport',
@@ -399,6 +409,10 @@ ACVF_DEFINITIONS += [
         'IsThinAnnulus', 'PrimitiveKind', 'HasPrimitiveKind', 'SamePrimitiveType')
 ]
 ACVF_DEFINITIONS += ['IntegrationInACVF.Section3ACVF.CanonicalBallSupport.ballFamily']
+ACVF_DEFINITIONS += [
+    'IntegrationInACVF.Section3ACVF.BallKindPredicates.openCodes',
+    'IntegrationInACVF.Section3ACVF.BallKindPredicates.closedCodes',
+]
 ALLOWED = {'propext', 'Classical.choice', 'Quot.sound'}
 
 

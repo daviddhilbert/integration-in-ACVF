@@ -11,7 +11,7 @@ in [CI run 42833098057](https://github.com/daviddhilbert/integration-in-ACVF/act
 The complete new types and axioms were reviewed, including the original-model
 carriers and normalized raw definability. All receipt input hashes matched
 the committed source. `VERIFICATION.json` binds this full checkpoint;
-`CORE-VERIFICATION.json` now records the 151-declaration local core continuation.
+`CORE-VERIFICATION.json` now records the 152-declaration local core continuation.
 
 Checked entry points:
 
@@ -58,6 +58,11 @@ local normalized structure. No chosen real representative may enter the
 exported imaginary base. Keep scratch work and diagnostics in `.scratch/`.
 
 Current continuation: CodeEquality.lean and AtomicRegions.lean passed their
-four new full types and standard-axiom checks (151 core total). The actual
+five new full types and standard-axiom checks (152 core total). The actual
 BallKindGeometry.lean chart/Gamma bridges await CI. Next build invariant
 open/closed predicates from full code images, then radius and valuative centre.
+
+The current actual continuation adds full-code open/closed-family predicates
+and uniform canonical positive-region properties, including uniform
+puncture status. It awaits CI. The previous geometry build left two
+constant-sort guards in simplification; those are now removed explicitly.
