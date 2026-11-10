@@ -34,7 +34,8 @@ For Lemma 3.4, instantiate `atomic_below_complete_type` with the actual
 definable disjoint family of same-radius open or closed balls. The ambient
 complete-type-generating set need not be definable. Retain actual
 parameter support throughout. Consult STATUS.md before the later Lemma 3.11
-headline because its printed statement needs a nonemptiness qualification.
+headline: the author has approved the explicit nonemptiness hypothesis,
+recorded in `../PAPER-CORRECTIONS.md`.
 
 Run `lake env python3 'section 3/verify.py' --acvf` and inspect its complete logs and
 headline axiom records. Compiler evidence belongs in

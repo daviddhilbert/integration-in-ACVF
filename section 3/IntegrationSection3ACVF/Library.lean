@@ -1,2 +1,3 @@
 import IntegrationSection3ACVF.BallPresentation
 import IntegrationSection3ACVF.GammaAtomicity
+import IntegrationSection3ACVF.BallCosetAtomicity

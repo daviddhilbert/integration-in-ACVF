@@ -108,3 +108,26 @@ audits passed in CI run 42789563292. The full C• base containing ball names
 still needs an explicit sequel bridge. Do not rebuild
 the original-base Gamma definable-point theorem or silently drop its named
 nontrivial-value hypothesis.
+
+## Lemma 3.4: additive cosets and interpreted ranges
+
+`DefinableCosets.relation_definable` already proves original-base
+definability of the actual VF difference/coset relation. Its
+`mem_relation` identifies membership with equality in the actual additive
+quotient. Reuse these results and `QuotientAddGroup` rather than introducing
+a new equivalence relation or assuming same-radius ball families definable.
+
+`InterpretedRanges.rangeFamily_definable` derives definability of the family
+of interpreted objects whose underlying sets equal fibres of a definable
+real relation. Equality is a universal real quantifier and range membership
+is an existential real quantifier, both over the original base. This is the
+missing family-construction step for `atomic_below_complete_type`.
+
+`BallCosetAtomicity` applies it to all ball imaginaries that are cosets of an
+actual definable additive subgroup of VF. Disjointness is proved in the
+quotient, and no centre is named. This new instance is awaiting compilation
+and type/axiom checks. To specialize to a ball with a named radius, inspect
+Mathlib's `Valuation.leAddSubgroup` and `Valuation.ltAddSubgroup`, together
+with the predecessor's `RVUnaryLift`, `rv_le_normalize` and RV definability
+APIs. These supply actual zero-centred valuation-ball subgroups; their
+original-base definability and the ball/coset equality still need proof.

@@ -25,12 +25,12 @@ this paper. VF itself is clopen by the sequel's explicit convention.
 | Statement | Required target and current boundary |
 | --- | --- |
 | 3.1 | Actual first-order complete-type generation and atomicity, all finite VF/RV tuple arities, arbitrary parameter base. The generic Mathlib definitions and calculus are checked. |
-| 3.2 | A definable family indexed by ball imaginaries, disjoint output balls, nonalgebraicity of the output-ball imaginary over the original base; atomicity over the index. The quotient argument is checked generically; the actual real-base instance is written and awaiting CI. Full C• bases remain open. |
+| 3.2 | A definable family indexed by ball imaginaries, disjoint output balls, nonalgebraicity of the output-ball imaginary over the original base; atomicity over the index. The quotient argument and actual real-base instance are checked. Full C• bases remain open. |
 | 3.3 | Adjoining every finite tuple of actual Gamma parameters preserves atomicity for mixed VF/RV tuples. Derive the definable-point step from the standing nontrivial base and Gamma geometry; do not assume the atomicity conclusion. |
 | 3.4 | Every open/closed ball inside a complete-type-generating unary set is atomic over its ball code. The ambient set need not be definable. The logical disjoint-family argument is checked; actual same-radius families and the full base still need to be supplied. |
 | 3.5–3.8 | Primitive type, canonical punctured-ball decomposition of an atomic unary set, same-radius ball coverage, and one-component preservation under definable images. Radius, valuative centre and kind must be invariant and definable over the exact base. |
 | 3.9–3.10 | Constancy of powerset-valued RV families on atomic open balls and on open subballs of atomic sets. Use full definable graphs and the original-base finite-coset exception theorem. |
-| 3.11–3.14 | Geometric separation of atomic balls, function restrictions, open-ball images and the closed-image obstruction. The empty relation refutes the literal wording of 3.11; a nonemptiness correction awaits author confirmation. |
+| 3.11–3.14 | Geometric separation of atomic balls, function restrictions, open-ball images and the closed-image obstruction. The author approved adding `A ≠ ∅` to 3.11; retain it explicitly. See `../PAPER-CORRECTIONS.md`. |
 | 3.15 | Every open ball inside a complete type has open image under a definable function injective on that type. |
 | 3.16–3.18 | Gamma-linearity, the local threshold consequence, and the stronger RV-linearity of bijections of atomic open balls. Keep the orders, radii and single absorbing RV element consistent. |
 | 3.19 | Finite definable partition of a unary definable bijection into restrictions preserving and reflecting open balls. Both compactness applications require actual saturation and parameter bounds. |

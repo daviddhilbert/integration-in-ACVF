@@ -16,6 +16,12 @@ occur in their axiom reports. The checked sources contain no `sorry`, `admit`
 or custom axiom declarations. This is a certificate for the components below,
 not 76 numbered paper results. The full C• parameter-base scope remains open.
 
+Continuation: the generic core now has 58 declarations, all locally compiled
+and type/axiom-audited. This includes definability of interpreted ranges and
+the full-projection consequence of the accepted nonemptiness correction.
+The new `BallCosetAtomicity.lean` instance is written and awaiting CI checks;
+the committed receipt below records the preceding fully verified revision.
+
 `VERIFICATION.json` records the exact source hashes, compiler, dependency pins
 and per-headline axioms. Full compiler output and the freshly compiled audit
 source are retained in the linked CI artifact and locally in
@@ -58,14 +64,14 @@ does not imply every dependency was freshly compiled in that invocation.
 The root `IntegrationInACVF.lean` also imports the predecessor; a check of only
 this Section 3 library is not a fresh build of that full coordination root.
 
-## Wording issue to resolve before Lemma 3.11
+## Accepted correction to Lemma 3.11
 
 The printed Lemma 3.11 says a definable relation `A` between two atomic balls
 cannot have finite-to-one first projection. Taken literally this includes the
 empty relation, whose projection is finite-to-one. Its proof uses both
-projections being surjective, which requires `A` to be nonempty. Record an
-explicit nonemptiness condition before formalizing that headline; no silent
-paper correction has been implemented. `StatementChecks.lean` now verifies
+projections being surjective, which requires `A` to be nonempty. The author
+approved adding `A ≠ ∅` on November 10, 2026; see
+[`PAPER-CORRECTIONS.md`](../PAPER-CORRECTIONS.md). `StatementChecks.lean` verifies
 the empty relation's definability, product containment and finite fibres.
-The author clarification was requested in this session and is still pending.
-This does not affect Definition 3.1 or the earlier family arguments.
+The corrected geometric theorem remains open. This does not affect
+Definition 3.1 or the earlier family arguments.

@@ -5,4 +5,5 @@ public import IntegrationSection3.BallSupport
 public import IntegrationSection3.DefinableFamilies
 public import IntegrationSection3.ParametricAtomicity
 public import IntegrationSection3.ImaginaryFamilies
+public import IntegrationSection3.InterpretedRanges
 public import IntegrationSection3.StatementChecks

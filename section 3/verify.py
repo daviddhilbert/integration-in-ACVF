@@ -68,7 +68,10 @@ HEADLINES = [
     'ImaginaryFamilies.finite_exceptional',
     'ImaginaryFamilies.parametric_atomic',
     'ImaginaryFamilies.parametric_atomic_of_output',
+    'ImaginaryFamilies.rangeFamily_definable',
+    'ImaginaryFamilies.atomicWith_of_subsingleton',
     'empty_relation_check',
+    'complete_type_relation_projections',
 ]
 ACVF_HEADLINES = [
     'IntegrationInACVF.Section3ACVF.' + name for name in (
@@ -88,6 +91,11 @@ ACVF_HEADLINES += [
         'fibre_decode', 'cutting_parameters_definable',
         'fibre_definable_of_definable_parameters', 'definableWith_of_real',
         'lemma_3_3_real_base')
+]
+ACVF_HEADLINES += [
+    'IntegrationInACVF.Section3ACVF.BallCosetAtomicity.' + name for name in (
+        'cosetRelation_definable', 'cosetRelation_fibre', 'cosetFamily_definable',
+        'cosetFamily_disjoint', 'atomic_ball_coset_below_complete_type')
 ]
 DEFINITIONS = [
     'GeneratesCompleteType', 'IsAtomic', 'Splits',
@@ -179,7 +187,8 @@ def main():
             'audit_source_sha256': digest(audit),
             'audit_log_sha256': digest(OUT / 'HeadlineAudit.log'),
             'scope': ('Definition 3.1 and generic real/imaginary-index parametric atomicity; '
-                      + ('actual ACVF real-base cases of Lemmas 3.2 and 3.3; ' if args.acvf else '')
+                      + ('actual ACVF real-base cases of Lemmas 3.2 and 3.3, '
+                         'and the definable-subgroup coset instance of Lemma 3.4; ' if args.acvf else '')
                       + 'full C-bullet bases with additional imaginary names remain open'),
             'build_scope': 'Incremental Lake Section 3 build plus freshly compiled headline audit',
         }
