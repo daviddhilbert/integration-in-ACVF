@@ -67,9 +67,9 @@ explicit singleton-open convention is not used as the sequel's predicate.
 ## Verification and next reuse boundary
 
 The full root build, inherited foundation audit, both Section 2 audits and
-288 Section 3 audits passed in [CI run 42829855150](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42829855150)
-at source `a401f0579918de5ff128f723b98e39aecd5ca416`. All 31 newly exported
-types since the 257-declaration checkpoint were reviewed, together with
+306 Section 3 audits passed in [CI run 42833098057](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42833098057)
+at source `661d4fed208c86486a2bba7a247f2027b8c4e1fa`. All 18 newly exported
+types since the 288-declaration checkpoint were reviewed, together with
 the actual ball family and original-model/normalized definitions. Every
 receipt input hash matched the committed source. Only propext,
 Classical.choice and Quot.sound occur. The receipts distinguish exact
@@ -95,9 +95,14 @@ original-base definable support family. These are now fully checked.
 
 `MinimalBallSupport.support_covers` and
 `PuncturedDecomposition.finite_decomposition_of_support` keep the canonical
-parent family fixed while deriving its disjoint positive regions. The next
-bridge is definability of that positive family and its holes by full-code
-strict-containment and membership formulas. Their Gamma invariants and
-primitive classification remain open, as do the later image/open-to-open
-results. Neither generic decomposition nor legacy volume interfaces prove
-those obligations automatically.
+parent family fixed while deriving its disjoint positive regions.
+`RegionFormulas.lean` proves full-code strict containment, region membership
+and positive-parent definability; `CanonicalRegions.lean` supplies the actual
+finite original-base family and its disjoint decomposition. `HoleFormulas.lean`
+and `CanonicalHoles.lean` identify maximal proper support balls intrinsically
+and prove the joint hole/parent relation definable over that same base. All
+of these steps are now checked by the full build and audit above.
+
+Next come the invariant Gamma/ball radius, valuative-centre and kind graphs,
+followed by primitive classification. Later image/open-to-open results remain
+open; generic decomposition and legacy volume interfaces do not prove them.

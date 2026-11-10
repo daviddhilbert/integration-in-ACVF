@@ -5,11 +5,11 @@ Proposition 3.24. Its main open-to-open partition theorem is Proposition 3.19.
 
 ## Verified scope
 
-The full project build and **288 Section 3 declaration type/axiom audits
-passed** in [CI run 42829855150](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42829855150)
-at source `a401f0579918de5ff128f723b98e39aecd5ca416` under Lean 4.35.0.
-There are 133 generic declarations and 155 actual ACVF declarations. These
-are component audits, not 288 numbered paper results. Only `propext`,
+The full project build and **306 Section 3 declaration type/axiom audits
+passed** in [CI run 42833098057](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42833098057)
+at source `661d4fed208c86486a2bba7a247f2027b8c4e1fa` under Lean 4.35.0.
+There are 147 generic declarations and 159 actual ACVF declarations. These
+are component audits, not 306 numbered paper results. Only `propext`,
 `Classical.choice` and `Quot.sound` occur. The checked sources have no
 placeholders or custom axioms.
 
@@ -52,6 +52,14 @@ placeholders or custom axioms.
   nontriviality; no chosen support tuple, centre or representative enters
   the base. This is a prerequisite for 3.6, not its primitive classification.
 
+- **Definable positive decomposition and holes:**
+  `CanonicalRegions.exists_definable_positive_decomposition` proves that the
+  positive parents form a finite original-base definable family, their
+  nonempty disjoint regions partition A, and their maximal proper holes are
+  actual pairwise disjoint balls. `CanonicalHoles.holes_definable` proves
+  original-base definability of the joint hole/parent relation through all
+  real codes of both ball names. No primitive-type equality is asserted.
+
 ## Remaining work
 
 Lemma 3.6's canonical primitive classification and Lemmas 3.7–3.8 remain open.
@@ -60,32 +68,19 @@ image, linearity, open-to-open, component-count and bijection results through
 Proposition 3.24. No such result is counted as proved by a helper that assumes
 its missing geometry. Section 2's Corollary 2.34 remains open separately.
 
-The next target is the original-base definable family of nonempty positive
-regions associated with the canonical support, followed by the radius,
-valuative-centre, kind and hole classification. Strict containment and
-region membership must retain full invariant ball-code preimages. The
-fixed-support coverage and disjoint-decomposition arguments are checked;
-individual component definability is not assumed.
-
-## Current continuation
-
-`RegionFormulas.lean` adds full-code strict containment, positive-region
-membership and positive-parent definability over the original interpreted
-base, with semantic identification and coverage of the positive regions.
-Its nine full exported types and standard axioms passed the local
-147-declaration core audit, including the five new maximal-hole formula checks. `CanonicalRegions.lean` connects these formulas
-to the actual canonical support and finite disjoint decomposition; its full
-ACVF build exposed the wrong code-domain interface; that has been corrected,
-and the revised actual region and maximal-hole bridges await CI. The full receipt above remains the
-288-declaration checkpoint; `CORE-VERIFICATION.json` records this continuation.
+The next targets are invariant radius, valuative-centre and kind relations,
+then nonmaximal-hole enlargement and the multiple-hole contradiction. The
+canonical support, positive regions and maximal holes are definable over the
+original combined base. Individual component definability is not assumed.
 
 ## Verification evidence
 
 `VERIFICATION.json` records compiler, dependency pins, all checked source
-hashes and per-declaration axioms for the 288-declaration checkpoint.
-`CORE-VERIFICATION.json` records the local core continuation described above. Complete diagnostics, explicit exported definitions/types and
+hashes and per-declaration axioms for the 306-declaration checkpoint.
+`CORE-VERIFICATION.json` retains the corresponding local 147-declaration
+core audit. Complete diagnostics, explicit exported definitions/types and
 compact type output are in the linked artifact and
-`.scratch/ci-a401f05-section3/`. Every receipt input hash was compared with
+`.scratch/ci-661d4fe-section3/`. Every receipt input hash was compared with
 the committed source before publication. Dependencies may be reused from
 pinned caches; the full root and new modules were checked by the CI build.
 
