@@ -1,4 +1,5 @@
-import SpecialTransformations
+import Section3.Library
+import Section4.Library
 
 /-!
 # Corollary 2.15: finite image of a Gamma-to-RV function

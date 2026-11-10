@@ -1,4 +1,5 @@
-import SpecialTransformations
+import Section3.Library
+import Section4.Library
 import IntegrationSection3.Library
 
 /-!

@@ -191,3 +191,10 @@ UniformSupportHull, ClosedTraceFamilies and OrdinarySeparation. The latter
 assembles the nonempty-relation contradiction, temporarily adjoining the
 unnamed target radius by checked 3.3. No additional saturation premise or
 HK citation is used. All these actual connections await compilation.
+
+
+Local import preparation now uses the pinned predecessor's Sections 3 and 4
+and ACVF-QE directly, rather than importing its later Sections 5–9 into every
+sequel proof. No pin, mathematical declaration or hypothesis changed. CI still
+builds the full predecessor separately. This import change awaits the local
+actual build and the complete type comparison; it is not yet published.
