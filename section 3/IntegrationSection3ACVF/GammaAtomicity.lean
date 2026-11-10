@@ -21,11 +21,12 @@ namespace IntegrationInACVF.Section3ACVF.GammaAtomicity
 variable {M : Type} [sM : LRV.Structure M] [hM : M ⊨ Axioms.ACVF]
 variable {Q : Set M} {k n : ℕ} {sn : Fin n → SortTag}
 
-private theorem tuple_domain {R : Set ((Fin k → M) × (Fin n → M))}
-    (hR : @Set.Definable M Q LRV (CanonicalStructure.normalize (M := M)) (Fin k ⊕ Fin n)
+private theorem tuple_domain (N : LRV.Structure M) {R : Set ((Fin k → M) × (Fin n → M))}
+    (hR : @Set.Definable M Q LRV N (Fin k ⊕ Fin n)
       {z | (z ∘ Sum.inl,z ∘ Sum.inr) ∈ R}) :
-    @Set.Definable M Q LRV (CanonicalStructure.normalize (M := M)) (Fin k)
+    @Set.Definable M Q LRV N (Fin k)
       {a | ∃ b, (a,b) ∈ R} := by
+  letI := N
   convert hR.image_comp (Sum.inl : Fin k → Fin k ⊕ Fin n) using 1
   ext a
   constructor
@@ -34,11 +35,12 @@ private theorem tuple_domain {R : Set ((Fin k → M) × (Fin n → M))}
   · rintro ⟨z,hz,rfl⟩
     exact ⟨z ∘ Sum.inr,hz⟩
 
-private theorem tuple_range {R : Set ((Fin k → M) × (Fin n → M))}
-    (hR : @Set.Definable M Q LRV (CanonicalStructure.normalize (M := M)) (Fin k ⊕ Fin n)
+private theorem tuple_range (N : LRV.Structure M) {R : Set ((Fin k → M) × (Fin n → M))}
+    (hR : @Set.Definable M Q LRV N (Fin k ⊕ Fin n)
       {z | (z ∘ Sum.inl,z ∘ Sum.inr) ∈ R}) :
-    @Set.Definable M Q LRV (CanonicalStructure.normalize (M := M)) (Fin n)
+    @Set.Definable M Q LRV N (Fin n)
       {b | ∃ a, (a,b) ∈ R} := by
+  letI := N
   convert hR.image_comp (Sum.inr : Fin n → Fin k ⊕ Fin n) using 1
   ext b
   constructor
@@ -58,25 +60,30 @@ theorem cutting_parameters_definable (R : Relation Q k n sn) {A : Set (Fin n →
     (hA : @Set.Definable M Q LRV (CanonicalStructure.normalize (M := M)) (Fin n) A) :
     GammaSyntax.Definable Q (fun γ => Splits (R.fibre γ) A) := by
   have hp := proper_normalized_definable (M := M) Q (n := k)
+  let P : Set (Fin k → M) := {a | Proper a}
+  let B : Set (Fin k → M) :=
+    {a | GammaSyntax.Proper a ∧ Splits (R.fibre (GammaSyntax.decode a)) A}
+  have hdecode := fibre_decode R
+  let N := CanonicalStructure.normalize (M := M)
+  letI := N
   have hAcyl := hA.preimage_comp (Sum.inr : Fin n → Fin k ⊕ Fin n)
   have hpcyl := hp.preimage_comp (Sum.inl : Fin k → Fin k ⊕ Fin n)
-  have hy := tuple_domain (R := {p | p.2 ∈ A ∧ p ∈ R.carrier})
+  have hy := tuple_domain N (R := {p | p.2 ∈ A ∧ p ∈ R.carrier})
     (hAcyl.inter R.definable)
-  have hn := tuple_domain (R := {p | (Proper p.1 ∧ p.2 ∈ A) ∧ p ∉ R.carrier})
+  have hn := tuple_domain N (R := {p | (p.1 ∈ P ∧ p.2 ∈ A) ∧ p ∉ R.carrier})
     ((hpcyl.inter hAcyl).inter R.definable.compl)
-  change @Set.Definable M Q LRV (CanonicalStructure.normalize (M := M)) (Fin k)
-    {a | GammaSyntax.Proper a ∧ Splits (R.fibre (GammaSyntax.decode a)) A}
+  change Q.Definable LRV B
   convert hp.inter (hy.inter hn) using 1
   ext a
   constructor
   · rintro ⟨ha,x,hxa,hxr,y,hya,hyr⟩
     refine ⟨ha,⟨x,hxa,?_⟩,y,⟨ha,hya⟩,?_⟩
-    · exact Set.ext_iff.mp (fibre_decode R a ha) x |>.mp hxr
-    · exact fun h => hyr ((Set.ext_iff.mp (fibre_decode R a ha) y).mpr h)
+    · exact Set.ext_iff.mp (hdecode a ha) x |>.mp hxr
+    · exact fun h => hyr ((Set.ext_iff.mp (hdecode a ha) y).mpr h)
   · rintro ⟨ha,⟨x,hxa,hxr⟩,y,⟨_,hya⟩,hyr⟩
     refine ⟨ha,x,hxa,?_,y,hya,?_⟩
-    · exact (Set.ext_iff.mp (fibre_decode R a ha) x).mpr hxr
-    · exact fun h => hyr ((Set.ext_iff.mp (fibre_decode R a ha) y).mp h)
+    · exact (Set.ext_iff.mp (hdecode a ha) x).mpr hxr
+    · exact fun h => hyr ((Set.ext_iff.mp (hdecode a ha) y).mp h)
 
 /-- A tuple of Gamma points individually definable over `Q` can be eliminated
 from a full invariant relation by quantifying its complete code fibre. -/
@@ -87,33 +94,45 @@ theorem fibre_definable_of_definable_parameters (R : Relation Q k n sn)
     (fun i : Fin k => GammaSyntax.unary_at (hγ i) i)
   have hnamed : @Set.Definable M Q LRV (CanonicalStructure.normalize (M := M)) (Fin k)
       {a | GammaSyntax.Proper a ∧ ∀ i, GammaSyntax.decode a i = γ i} := hnames
-  have hr := tuple_range (R := {p |
-    (GammaSyntax.Proper p.1 ∧ ∀ i, GammaSyntax.decode p.1 i = γ i) ∧ p ∈ R.carrier})
+  let Names : Set (Fin k → M) :=
+    {a | GammaSyntax.Proper a ∧ ∀ i, GammaSyntax.decode a i = γ i}
+  let F := R.fibre γ
+  let d := GammaSyntax.decode (M := M) (ι := Fin k)
+  have hdecode := fibre_decode R
+  let t := representatives γ
+  let a := rawTuple t
+  have ha : Proper a := rawTuple_proper t
+  have hv : d a = γ := by
+    funext i
+    exact (codeValue_raw (representatives γ i)).trans (congrFun (representatives_values γ) i)
+  have hm := R.mem_fibre_iff t γ (representatives_values γ)
+  let N := CanonicalStructure.normalize (M := M)
+  letI := N
+  have hr := tuple_range N (R := {p | p.1 ∈ Names ∧ p ∈ R.carrier})
     ((hnamed.preimage_comp (Sum.inl : Fin k → Fin k ⊕ Fin n)).inter R.definable)
+  change Q.Definable LRV F
   convert hr using 1
   ext b
   constructor
   · intro hb
-    let a := rawTuple (representatives γ)
-    have ha : Proper a := rawTuple_proper _
-    have hv : GammaSyntax.decode a = γ := by
-      funext i
-      exact (codeValue_raw (representatives γ i)).trans (congrFun (representatives_values γ) i)
     exact ⟨a,⟨ha,fun i => congrFun hv i⟩,
-      (R.mem_fibre_iff (representatives γ) γ (representatives_values γ) b).mp hb⟩
-  · rintro ⟨a,⟨ha,hv⟩,hb⟩
-    have he := fibre_decode R a ha
-    rw [show GammaSyntax.decode a = γ from funext hv] at he
+      (hm b).mp hb⟩
+  · rintro ⟨a',⟨ha',hv'⟩,hb⟩
+    have he := hdecode a' ha'
+    rw [show d a' = γ from funext hv'] at he
     exact (Set.ext_iff.mp he b).mpr hb
 
 theorem definableWith_of_real {A : Set (Fin n → M)}
     (hA : @Set.Definable M Q LRV (CanonicalStructure.normalize (M := M)) (Fin n) A)
     (hproper : ∀ a ∈ A, ∀ i, sortEval (sn i) (a i))
     (γ : Fin k → Values.Gamma (M := M)) : DefinableWith Q γ sn A := by
+  have hp := proper_normalized_definable (M := M) Q (n := k)
+  let N := CanonicalStructure.normalize (M := M)
   let R : Relation Q k n sn :=
     { carrier := {p | Proper p.1 ∧ p.2 ∈ A}
-      definable := ((proper_normalized_definable Q (n := k)).preimage_comp
-        (Sum.inl : Fin k → Fin k ⊕ Fin n)).inter
+      definable := by
+        letI := N
+        exact (hp.preimage_comp (Sum.inl : Fin k → Fin k ⊕ Fin n)).inter
           (hA.preimage_comp (Sum.inr : Fin n → Fin k ⊕ Fin n))
       proper := fun p hp => ⟨hp.1,hproper p.2 hp.2⟩
       invariant := by

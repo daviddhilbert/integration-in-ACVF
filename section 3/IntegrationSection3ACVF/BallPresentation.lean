@@ -125,15 +125,20 @@ private theorem closed_membership_sorted (Q : Set M) :
 theorem codeDomain_definable (Q : Set M) :
     @Set.Definable M Q LRV (CanonicalStructure.normalize (M := M)) (Fin 4) codeDomain := by
   let N := CanonicalStructure.normalize (M := M)
+  let D := codeDomain (M := M)
+  have hs : DefinableAt Q .vf {x | iVF x} := definableAt_sort Q .vf
   have hsort : @Set.Definable₁ M Q LRV N {x | @iVF M sM x} :=
-    ((definableAt_iff_normalized_raw Q .vf _).mp (definableAt_sort Q .vf)).1
-  have hz : @iVFZero M N = @iVFZero M sM := CanonicalStructure.sortZero_normalize .vf
+    ((@definableAt_iff_normalized_raw M sM hM Q .vf _).mp hs).1
+  have hz : @iVFZero M N = @iVFZero M sM := @CanonicalStructure.sortZero_normalize M sM .vf
   have hzero : @Set.DefinableFun M LRV N (Fin 4) Q
       (fun _ => @iVFZero M sM) := by
     rw [← hz]
     letI := N
-    exact DefinableConstants.constant (DefinableConstants.function_symbol
+    exact SpecialTransformations.DefinableConstants.constant
+      (SpecialTransformations.DefinableConstants.function_symbol
       (L := LRV) Fn.vfZero Fin.elim0 (fun i => i.elim0))
+  letI := N
+  change Q.Definable LRV D
   have h0 := hsort.preimage_comp (fun _ : Fin 1 => (0 : Fin 4))
   have h1 := hsort.preimage_comp (fun _ : Fin 1 => (1 : Fin 4))
   have h2 := hsort.preimage_comp (fun _ : Fin 1 => (2 : Fin 4))
@@ -142,7 +147,7 @@ theorem codeDomain_definable (Q : Set M) :
   convert ((he3.inter (h0.inter (h1.inter h2))).union
     (he3.compl.inter ((h0.inter h1).inter he1.compl))) using 1
   ext q
-  simp only [codeDomain,closedTuple,openTuple,OpenBallCodes.Proper,
+  simp only [D,codeDomain,closedTuple,openTuple,OpenBallCodes.Proper,
     Fin.forall_fin_succ,Fin.forall_fin_zero,and_true,Matrix.cons_val_zero,
     Matrix.cons_val_succ,Set.mem_ofPred_eq,Set.mem_union,Set.mem_inter_iff,
     Set.mem_preimage,Set.mem_compl_iff,Function.comp_apply]
@@ -151,48 +156,58 @@ theorem codeDomain_definable (Q : Set M) :
 theorem membership_definable (Q : Set M) :
     @Presentation.DefinableRelation LRV M (CanonicalStructure.normalize (M := M))
       (BallImaginaries.Ball M) (Fin 4) presentation Q BallImaginaries.underlying := by
-  have hc := ((definableOver_iff_normalized_raw Q (fun _ : Fin 4 => .vf) _).mp
+  have hc := ((@definableOver_iff_normalized_raw M sM hM Q 4 (fun _ : Fin 4 => .vf) _).mp
     (closed_membership_sorted (M := M) Q)).1
-  have ho := ((definableOver_iff_normalized_raw Q (fun _ : Fin 3 => .vf) _).mp
+  have ho := ((@definableOver_iff_normalized_raw M sM hM Q 3 (fun _ : Fin 3 => .vf) _).mp
     (OpenBallCodes.membership_definable (M := M) Q)).1
   have hdom := codeDomain_definable (M := M) Q
+  let p := presentation (M := M)
+  let U := BallImaginaries.underlying (M := M)
+  let D := codeDomain (M := M)
+  let oRaw := OpenBallCodes.rawBall (M := M)
+  let z0 := @iVFZero M sM
+  have hdecode := underlying_decode (M := M)
   let N := CanonicalStructure.normalize (M := M)
-  have hz : @iVFZero M N = @iVFZero M sM := CanonicalStructure.sortZero_normalize .vf
+  have hz : @iVFZero M N = @iVFZero M sM := @CanonicalStructure.sortZero_normalize M sM .vf
   have hzero : @Set.DefinableFun M LRV N (Fin 4 ⊕ Fin 1) Q
       (fun _ => @iVFZero M sM) := by
     rw [← hz]
     letI := N
-    exact DefinableConstants.constant (DefinableConstants.function_symbol
+    exact SpecialTransformations.DefinableConstants.constant
+      (SpecialTransformations.DefinableConstants.function_symbol
       (L := LRV) Fn.vfZero Fin.elim0 (fun i => i.elim0))
+  letI := N
   let πc : Fin 4 → Fin 4 ⊕ Fin 1 := ![.inl 0,.inl 1,.inl 2,.inr 0]
   let πo : Fin 3 → Fin 4 ⊕ Fin 1 := ![.inl 0,.inl 1,.inr 0]
   have ho' : @Set.Definable M Q LRV N (Fin 4 ⊕ Fin 1)
-      {z | z (.inr 0) ∈ OpenBallCodes.rawBall (openTuple (z ∘ Sum.inl))} := by
+      {z | z (.inr 0) ∈ oRaw (openTuple (z ∘ Sum.inl))} := by
     convert ho.preimage_comp πo using 1
     ext z
     have he : Fin.init (z ∘ πo) = openTuple (z ∘ Sum.inl) := by
       funext i; fin_cases i <;> rfl
+    change z (.inr 0) ∈ oRaw (openTuple (z ∘ Sum.inl)) ↔
+      (z ∘ πo) (Fin.last 2) ∈ oRaw (Fin.init (z ∘ πo))
     rw [he]
     rfl
   have hflag := (@Set.DefinableFun.proj M LRV N (Fin 4 ⊕ Fin 1) Q
     (.inl 3)).ofPred_eq hzero
   change @Set.Definable M Q LRV N (Fin 4 ⊕ Fin 1)
-    (presentation.relationPullback BallImaginaries.underlying)
+    (p.relationPullback U)
   convert (hdom.preimage_comp (Sum.inl : Fin 4 → Fin 4 ⊕ Fin 1)).inter
     ((hflag.inter (hc.preimage_comp πc)).union (hflag.compl.inter ho')) using 1
   ext z
   constructor
   · rintro ⟨hzcode,hx⟩
     refine ⟨hzcode,?_⟩
-    have he := Set.ext_iff.mp (underlying_decode (⟨z ∘ Sum.inl,hzcode⟩ : codeDomain)) (z (.inr 0))
-    by_cases hf : z (.inl 3) = @iVFZero M sM
+    have he := Set.ext_iff.mp (hdecode (⟨z ∘ Sum.inl,hzcode⟩ : D)) (z (.inr 0))
+    by_cases hf : z (.inl 3) = z0
     · left
       exact ⟨hf,by simpa only [if_pos hf,closedTuple,πc] using he.mp hx⟩
     · right
       exact ⟨hf,by simpa only [if_neg hf,openTuple,πo] using he.mp hx⟩
   · rintro ⟨hzcode,hx⟩
     refine ⟨hzcode,?_⟩
-    have he := Set.ext_iff.mp (underlying_decode (⟨z ∘ Sum.inl,hzcode⟩ : codeDomain)) (z (.inr 0))
+    have he := Set.ext_iff.mp (hdecode (⟨z ∘ Sum.inl,hzcode⟩ : D)) (z (.inr 0))
     apply he.mpr
     rcases hx with ⟨hf,hx⟩ | ⟨hf,hx⟩
     · simpa only [if_pos hf,closedTuple,πc] using hx
@@ -200,9 +215,14 @@ theorem membership_definable (Q : Set M) :
 
 theorem presentation_definable (Q : Set M) :
     @Presentation.IsDefinable M (BallImaginaries.Ball M) (Fin 4) presentation
-      LRV (CanonicalStructure.normalize (M := M)) Q :=
-  Presentation.isDefinable_of_membership presentation BallImaginaries.underlying
-    BallImaginaries.underlying_injective (codeDomain_definable Q) (membership_definable Q)
+      LRV (CanonicalStructure.normalize (M := M)) Q := by
+  have hc := codeDomain_definable (M := M) Q
+  have hm := membership_definable (M := M) Q
+  have hi := BallImaginaries.underlying_injective (M := M)
+  let p := presentation (M := M)
+  let U := BallImaginaries.underlying (M := M)
+  letI := CanonicalStructure.normalize (M := M)
+  exact Presentation.isDefinable_of_membership p U hi hc hm
 
 /-- Ordinary valuation balls restricted to the released VF sort. -/
 def valuationBalls {Γ : Type} [LinearOrderedCommGroupWithZero Γ]
@@ -281,7 +301,11 @@ theorem lemma_3_2_real_base (Q : Set M) (T : Set (BallImaginaries.Ball M))
   letI := hΓ
   let C : BallImaginaries.Ball M → Set M :=
     fun j => {x | j ∈ T ∧ x ∈ BallImaginaries.underlying (f j)}
-  have hC := (membership_definable Q).comp_on hf
+  have hm := membership_definable (M := M) Q
+  have hC : @Presentation.DefinableRelation LRV M (CanonicalStructure.normalize (M := M))
+      (BallImaginaries.Ball M) (Fin 4) presentation Q C := by
+    letI := CanonicalStructure.normalize (M := M)
+    exact hm.comp_on hf
   have hc (j : BallImaginaries.Ball M) (hj : j ∈ T) :
       C j = BallImaginaries.underlying (f j) := by
     ext x
@@ -294,9 +318,14 @@ theorem lemma_3_2_real_base (Q : Set M) (T : Set (BallImaginaries.Ball M))
     intro j hj k hk hne
     rw [hc j hj,hc k hk]
     exact hdis hj hk hne
-  have h := parametric_atomic_of_output (presentation_definable Q)
-    (valuationBalls_laminar v) (normalized_cMinimalOn_valuationBalls Q v hv)
+  have hp := presentation_definable (M := M) Q
+  have hl := valuationBalls_laminar v
+  have hcm := normalized_cMinimalOn_valuationBalls Q v hv
+  let p := presentation (M := M)
+  letI := CanonicalStructure.normalize (M := M)
+  have h := parametric_atomic_of_output hp hl hcm
     (fun _ hb => hb.1) hT hC hb hd hf hi hna
+  change p.AtomicWith (L := LRV) Q i (C i) at h
   rw [hc i hi] at h
   exact h
 
