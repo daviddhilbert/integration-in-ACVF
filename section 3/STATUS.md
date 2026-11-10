@@ -73,12 +73,22 @@ then nonmaximal-hole enlargement and the multiple-hole contradiction. The
 canonical support, positive regions and maximal holes are definable over the
 original combined base. Individual component definability is not assumed.
 
+## Current continuation
+
+`CodeEquality.lean` proves full-code equality and definability of images of
+real-code sets in a faithful interpreted family. `AtomicRegions.lean` proves
+that every original-base definable property of disjoint nonempty regions
+inside a complete type is uniform across that family. Their four new full
+types and standard axioms passed the local 151-declaration core audit.
+`BallKindGeometry.lean` now connects the original open/closed charts to the
+sequel's predicates and ordinary Gamma balls; its full ACVF checks await CI.
+The full receipt above remains the 306-declaration checkpoint.
+
 ## Verification evidence
 
 `VERIFICATION.json` records compiler, dependency pins, all checked source
 hashes and per-declaration axioms for the 306-declaration checkpoint.
-`CORE-VERIFICATION.json` retains the corresponding local 147-declaration
-core audit. Complete diagnostics, explicit exported definitions/types and
+`CORE-VERIFICATION.json` records the local 151-declaration core continuation. Complete diagnostics, explicit exported definitions/types and
 compact type output are in the linked artifact and
 `.scratch/ci-661d4fe-section3/`. Every receipt input hash was compared with
 the committed source before publication. Dependencies may be reused from

@@ -161,6 +161,10 @@ HEADLINES += [
         'holeCodes_definable', 'pairRows_mem_iff', 'mem_holeCodes_iff',
         'maximal_iff_mem_holes', 'holeCodes_eq_pullback')
 ]
+HEADLINES += [
+    'CodeEquality.equalityCodes_definable', 'CodeEquality.pairRows_mem_iff',
+    'CodeEquality.imageCodes_definable', 'AtomicRegions.uniform_property',
+]
 ACVF_HEADLINES = [
     'IntegrationInACVF.Section3ACVF.' + name for name in (
         'encodedBall_isKBall', 'encodedBalls_laminar', 'support_of_isBoolComb',
@@ -307,6 +311,11 @@ ACVF_HEADLINES += [
         'exists_definable_positive_decomposition')
 ]
 ACVF_HEADLINES += ['IntegrationInACVF.Section3ACVF.CanonicalHoles.holes_definable']
+ACVF_HEADLINES += [
+    'IntegrationInACVF.Section3ACVF.BallKindGeometry.' + name for name in (
+        'open_raw_gammaBall', 'closed_raw_gammaBall', 'open_raw_isOpenBall',
+        'closed_raw_isClosedBall', 'gammaBall_open_code', 'gammaBall_closed_code')
+]
 DEFINITIONS = [
     'GeneratesCompleteType', 'IsAtomic', 'Splits',
     'IsLaminar', 'HasFiniteBallSupport',
@@ -343,6 +352,7 @@ DEFINITIONS += [
     'RegionFormulas.positiveFamily',
 ]
 DEFINITIONS += ['HoleFormulas.pairRows', 'HoleFormulas.HoleCodes']
+DEFINITIONS += ['CodeEquality.EqualityCodes', 'CodeEquality.imageCodes']
 ACVF_DEFINITIONS = [
     'IntegrationInACVF.Section3ACVF.BallPresentation.' + name
     for name in ('codeDomain', 'decode', 'presentation', 'valuationBalls')

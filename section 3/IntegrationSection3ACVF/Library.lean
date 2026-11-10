@@ -24,3 +24,4 @@ import IntegrationSection3ACVF.BallCodeGeometry
 import IntegrationSection3ACVF.CanonicalSupportFamily
 import IntegrationSection3ACVF.CanonicalRegions
 import IntegrationSection3ACVF.CanonicalHoles
+import IntegrationSection3ACVF.BallKindGeometry

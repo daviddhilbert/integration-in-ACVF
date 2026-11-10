@@ -19,3 +19,5 @@ public import IntegrationSection3.MinimalBallSupport
 public import IntegrationSection3.SupportFormulas
 public import IntegrationSection3.RegionFormulas
 public import IntegrationSection3.HoleFormulas
+public import IntegrationSection3.CodeEquality
+public import IntegrationSection3.AtomicRegions

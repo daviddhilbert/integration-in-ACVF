@@ -11,7 +11,7 @@ in [CI run 42833098057](https://github.com/daviddhilbert/integration-in-ACVF/act
 The complete new types and axioms were reviewed, including the original-model
 carriers and normalized raw definability. All receipt input hashes matched
 the committed source. `VERIFICATION.json` binds this full checkpoint;
-`CORE-VERIFICATION.json` retains the local 147-declaration core audit.
+`CORE-VERIFICATION.json` now records the 151-declaration local core continuation.
 
 Checked entry points:
 
@@ -56,3 +56,8 @@ Use `lake env python3 'section 3/verify.py' --acvf` for the full current audit.
 Freeze original-model functions, sets and carriers before introducing any
 local normalized structure. No chosen real representative may enter the
 exported imaginary base. Keep scratch work and diagnostics in `.scratch/`.
+
+Current continuation: CodeEquality.lean and AtomicRegions.lean passed their
+four new full types and standard-axiom checks (151 core total). The actual
+BallKindGeometry.lean chart/Gamma bridges await CI. Next build invariant
+open/closed predicates from full code images, then radius and valuative centre.

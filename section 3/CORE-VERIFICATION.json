@@ -1,10 +1,12 @@
 {
-  "checked_at_utc": "2026-11-10T14:17:22.517555+00:00",
+  "checked_at_utc": "2026-11-10T14:26:48.843081+00:00",
   "compiler": "Lean (version 4.35.0, x86_64-unknown-linux-gnu, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
   "source_sha256": {
     "section 3/IntegrationSection3/AdjoinParameters.lean": "695c0531cd6d4d95db5eb3ebdbd04a50bc0da34b2d9026bd8af8b08efd34001e",
+    "section 3/IntegrationSection3/AtomicRegions.lean": "e52f0843e460df16f268a844551f181ae1df79b6da3ee81b3a443075558f24ac",
     "section 3/IntegrationSection3/Atomicity.lean": "c5330e3a43cdf502a6f714b84094505521e2c41d4dae75beaa74788f70c112fc",
     "section 3/IntegrationSection3/BallSupport.lean": "04fd317ae78ede96aa58ece0bed6ba7fc2c569509ffe4fccc3e5698dd12190fa",
+    "section 3/IntegrationSection3/CodeEquality.lean": "3c7cc07c37cdff025a35df8160003ffd1ef10b32457e351c7f217bf0f57a5728",
     "section 3/IntegrationSection3/DefinableFamilies.lean": "bc8ff84b48fe1ba86f651f9281949f7963c847b56612ebbedd9892ce7cf41ea9",
     "section 3/IntegrationSection3/HoleFormulas.lean": "0692292ecbea7b4fe7c168672c32b2d7c92251623f6db1b584718bf1db2749c0",
     "section 3/IntegrationSection3/ImaginaryBaseFamilies.lean": "7b0463c9ccaf7e4a5fb52836411d120d93deffadad54fe9f65573ec71f8fae2f",
@@ -14,7 +16,7 @@
     "section 3/IntegrationSection3/ImaginaryTupleAtomicity.lean": "ccf4726f209e98ea470e6482e85c7dd40517792ea2b2ad67284c161313252d61",
     "section 3/IntegrationSection3/InfiniteCosets.lean": "50832e988ef2fe1cbb64899ba10aba3e6cf05b679dc1ef164cf5e409854f8088",
     "section 3/IntegrationSection3/InterpretedRanges.lean": "548aa84ea9d75ade091f255c1b1f6c33ecca2472d9aae56e837883015ad15746",
-    "section 3/IntegrationSection3/Library.lean": "9e7a40bfd109c2e72b533c5688d91649c25686712def3411f1ceaf5cd6f40958",
+    "section 3/IntegrationSection3/Library.lean": "42c191b4a1933df51537d9110749b001e92b2796644c1e10db694fb100fd3b11",
     "section 3/IntegrationSection3/MinimalBallSupport.lean": "47a095449ac92874a230c1cf29ca81f089f5b7ad86cebb905101ac7ac0411fc9",
     "section 3/IntegrationSection3/ParametricAtomicity.lean": "d78925272850b931f08ba13104aafb7ad16e4fdfa517680d9762b4b4b5431d83",
     "section 3/IntegrationSection3/ProfileAtomicity.lean": "f2e7637a10d8b7696b7717dead0ae237b369f099a7e3181d73a49e105e0b1b96",
@@ -23,9 +25,9 @@
     "section 3/IntegrationSection3/StatementChecks.lean": "ac0c85c1ee149cd0b61409963a6265ed139e603ea8bf70a401789f1ded3f3a36",
     "section 3/IntegrationSection3/SupportFormulas.lean": "213bb231756b6dbe39b7d7c273746019a46e01967f82c1c351f8ef86cd399402",
     "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
-    "lakefile.toml": "05fce77d7edf71caba969360411ee7c152ecb180c34824e9499cc1e3c45f4b58",
+    "lakefile.toml": "147b74fcf29d7a65444bf6a7beb1eae0f6cae2d5d5ff07be32525e1a95919ce5",
     "lake-manifest.json": "251c835a4f3b9efa7080700dd971fea4821e32fcfe2afbd05f31f99d36e67c84",
-    "section 3/verify.py": "e9d43a8970e41091b1c64ab93b74b3ff83dcf064fa422b80312c9168e1b961b9"
+    "section 3/verify.py": "cad74721c3c716504badb7072d7365b858bbc191a482046fd69ae6ca62581962"
   },
   "dependencies": {
     "special_transformations": "9cc9760892092dd34cfad4a6dee655843c52f30c",
@@ -1207,12 +1209,44 @@
       ]
     },
     {
+      "name": "IntegrationInACVF.Section3.CodeEquality.equalityCodes_definable",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "name": "IntegrationInACVF.Section3.CodeEquality.pairRows_mem_iff",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "name": "IntegrationInACVF.Section3.CodeEquality.imageCodes_definable",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "name": "IntegrationInACVF.Section3.AtomicRegions.uniform_property",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
       "name": "IntegrationInACVF.Section3.ImaginaryFamilies.Presentation.mem_pullback",
       "axioms": []
     }
   ],
-  "audit_source_sha256": "038b6771a03226310d7f20dd5c4a7cb32adcb16a67a0b136410ed356a62a394e",
-  "audit_log_sha256": "7d1bc40293c1da727a48854fa7e27a52233c964a4f1baf1778a7c5b797e82b93",
+  "audit_source_sha256": "3ac93b25751cdb545d4bc3e3fe8fe4ef50d302f6bfd76bba96ae040abc80294d",
+  "audit_log_sha256": "92591e4e7093606a25ed47f5341aaef644e1482e79837dab0edfeef087da77a5",
   "scope": "Definition 3.1, interpreted-base calculus and finite laminar punctured decomposition; the primitive-type classification of Lemma 3.6 and later section geometry remain open",
   "build_scope": "Incremental Lake Section 3 build plus freshly compiled headline audit"
 }
