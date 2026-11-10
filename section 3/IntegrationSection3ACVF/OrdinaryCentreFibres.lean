@@ -1,5 +1,6 @@
 import IntegrationSection3ACVF.PaperBallInvariants
 import IntegrationSection3ACVF.FullGammaRadius
+import IntegrationSection3ACVF.FullGammaPoint
 
 /-! Full ordinary-Gamma fibres of the valuative-centre predicate.
 Uses the pinned SameScalar formula and normalization theorem on all RV
@@ -113,6 +114,8 @@ theorem relation_definable (B : FullBaseAtomicity.Base (M := M)) :
   have hnz : @Set.Definable M B.real LRV (CanonicalStructure.normalize (M := M)) (Fin 1)
       {z | nzp (z 0)} := by
     have h := @nonzero_rv_definable M (CanonicalStructure.normalize (M := M)) B.real
+    change @Set.Definable M B.real LRV (CanonicalStructure.normalize (M := M)) (Fin 1)
+      {z | @NonzeroRV M (CanonicalStructure.normalize (M := M)) (z 0)} at h
     convert h using 1
     ext z
     exact (@nonzero_rv_normalize M sM hM (z 0)).symm
@@ -178,7 +181,9 @@ theorem image_definable (B : FullBaseAtomicity.Base (M := M))
     exact ImaginaryBaseFamilies.Relation.range
       (ImaginaryBaseFamilies.Relation.restrict hp hT hR)
   change FullBaseAtomicity.OverBase B {z : Fin 1 → M | z 0 ∈ Values.gammaPullback V}
-  simpa only [he] using hr
+  rw [he]
+  change FullBaseAtomicity.OverBase B {z : Fin 1 → M | ∃ i ∈ T, z 0 ∈ C i}
+  exact hr
 
 theorem image_finite (T : Set (BallImaginaries.Ball M)) (hT : T.Finite) :
     {γ : Values.Gamma (M := M) | ∃ i ∈ T,
