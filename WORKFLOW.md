@@ -89,6 +89,8 @@ root import from source, audits the inherited QE headline types and axioms,
 and runs any section verifiers present. Logs, pins and audits are retained
 as downloadable artifacts even when a check fails.
 
-Initially this verifies only the project setup and imported foundation.
-It does not certify a theorem from this sequel. Green CI does not replace
-manual review of mathematical statements or discharge explicit hypotheses.
+The Section 3 verifier also checks Definition 3.1's basic calculus and the
+generic finite-exception geometry. Its status records which connections to
+ACVF and imaginary parameters remain open; those components do not yet prove
+the full Lemma 3.2. Green CI does not replace manual review of mathematical
+statements or discharge explicit hypotheses.

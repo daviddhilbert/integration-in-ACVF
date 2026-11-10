@@ -1,9 +1,11 @@
 import SpecialTransformations
+import IntegrationSection3.Library
 
 /-!
 # Integration in algebraically closed valued fields
 
 The predecessor supplies the common ACVF-QE language and its integrated libraries.
-This entry point currently checks that dependency boundary; no result from
-arXiv:0809.0473 has been formalized in this repository yet.
+The sequel's Section 3 library develops Definition 3.1 and the finite-exception
+geometry used in Lemma 3.2. Its status distinguishes these checked components
+from the remaining connections to the ACVF imaginary expansion.
 -/
