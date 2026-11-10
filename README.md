@@ -34,9 +34,8 @@ The current root imports the predecessor and the new Section 2 and 3 libraries.
 The full local project build, inherited QE audit, Section 2 audit and 658
 Section 3 type/axiom audits pass (287 generic, 371 actual ACVF declarations).
 The 28 new RV-map and integer-equivariance components advance 3.16;
-its Gamma-linearity conclusion remains open. New CI confirmation is pending.
-The preceding 630-head checkpoint passed
-[CI](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42906974736),
+its Gamma-linearity conclusion remains open. This 658-head checkpoint passed
+[CI](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42911030261),
 with every complete type and source hash matched to reviewed local evidence.
 
 Checked Section 3 results are 3.2, 3.3, 3.4 at original-base definable radii

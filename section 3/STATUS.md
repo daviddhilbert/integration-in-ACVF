@@ -11,12 +11,13 @@ All 143 source hashes match. Every prior 630 complete type is unchanged;
 all 28 new types exactly match individually compiled and manually reviewed
 snapshots. Only `propext`, `Classical.choice` and `Quot.sound` occur.
 
-`VERIFICATION.json` records the local checkpoint; `CORE-VERIFICATION.json`
+`VERIFICATION.json` records the local and CI checkpoint; `CORE-VERIFICATION.json`
 selects its 287 generic heads. Evidence is in `.scratch/local-rv-map-658/`.
-New CI confirmation is pending. The preceding proof `fe2adfa` passed
-[CI 42906974736](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42906974736),
-with all 630 full types and 129 source hashes matched before main promotion
-at receipt `c14e6e1`. Its main CI 42908115112 also passed.
+[CI 42911030261](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42911030261)
+passed at proof `11e05be103d9bf57e37376976147f74b3fd943b1`. Every complete CI
+type exactly matches the reviewed local type, all 143 source hashes match,
+and both audit hashes and the standard axioms were checked before main
+promotion. Earlier checkpoints remain historical.
 
 ## Numbered results
 

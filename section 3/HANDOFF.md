@@ -9,12 +9,12 @@ The current full root, inherited QE, Section 2 and 658 Section 3 audits pass
 locally: 287 generic and 371 actual heads. All 143 hashes match. All 630
 prior complete types are unchanged; 28 new types exactly match individually
 compiled and reviewed snapshots. Only the three standard axioms occur.
-See VERIFICATION.json and .scratch/local-rv-map-658/. New CI confirmation
-is pending; compare every full artifact type and source hash before promotion.
+See VERIFICATION.json and .scratch/local-rv-map-658/.
 
-The preceding source fe2adfa passed CI 42906974736; all 630 types and 129
-hashes matched local evidence before promotion at receipt c14e6e1. That main
-receipt passed CI 42908115112. Older checkpoints are historical.
+Source 11e05be passed CI 42911030261. Every one of the 658 complete CI types
+exactly matches reviewed local evidence; all 143 source hashes, both audit
+hashes and permitted axioms match. The receipt-only main commit records
+this comparison. Earlier checkpoints remain historical.
 
 Twelve numbered results are checked in precise scope: 3.2, 3.3, 3.4 at
 named radii plus singleton/VF, 3.6, 3.7, 3.8, 3.9, 3.10, corrected 3.11,
