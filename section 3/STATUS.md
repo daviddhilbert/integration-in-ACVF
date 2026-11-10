@@ -82,11 +82,24 @@ finite images and constancy, then nonmaximal-hole enlargement and the
 multiple-hole contradiction. The canonical support, positive regions and maximal holes are definable over the
 original combined base. Individual component definability is not assumed.
 
+## Current continuation
+
+`CodeEquality.imageCodeRelation_definable` adds a free real output to the
+full interpreted code-image formula; its complete type and standard axioms
+passed the local 157-declaration core audit. `OrdinaryCentreFibres.lean`
+implements the full ordinary-RV centre relation, finite original-base
+Gamma images, named parent tests and definability of each occurring ordinary
+value. `UniformValuativeCentre.lean` uses those tests and the checked atomic
+region calculus to prove a common actual centre on the canonical positive
+family, including its empty case. These new actual proofs await full CI.
+The full receipt remains the 344-declaration checkpoint. Radius constancy
+and the primitive hole classification remain open.
+
 ## Verification evidence
 
 `VERIFICATION.json` records compiler, dependency pins, all checked source
 hashes and per-declaration axioms for the 344-declaration checkpoint.
-`CORE-VERIFICATION.json` retains the local 156-declaration core audit. Complete diagnostics, explicit exported
+`CORE-VERIFICATION.json` records the local 157-declaration core continuation. Complete diagnostics, explicit exported
 definitions/types and
 compact type output are in the linked artifact and
 `.scratch/ci-f49f163-section3/`. Every receipt input hash was compared with

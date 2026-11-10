@@ -171,6 +171,7 @@ HEADLINES += [
         'closed_radius_le_of_subset', 'closed_radius_lt_of_subset_open',
         'open_radius_le_of_subset_closed', 'open_ne_closed')
 ]
+HEADLINES += ['CodeEquality.imageCodeRelation_definable']
 ACVF_HEADLINES = [
     'IntegrationInACVF.Section3ACVF.' + name for name in (
         'encodedBall_isKBall', 'encodedBalls_laminar', 'support_of_isBoolComb',
@@ -348,6 +349,16 @@ ACVF_HEADLINES += [
     'IntegrationInACVF.Section3ACVF.PaperBallInvariants.' + name for name in (
         'singleton_ne_vf', 'hasRadius_exists', 'hasRadius_unique')
 ]
+ACVF_HEADLINES += [
+    'IntegrationInACVF.Section3ACVF.OrdinaryCentreFibres.' + name for name in (
+        'fieldValueEq_definable', 'fieldValueEq_iff', 'mem_ordinaryCentreFibre_iff',
+        'relation_definable', 'image_definable', 'image_finite',
+        'parent_test_definable', 'value_definable')
+]
+ACVF_HEADLINES += [
+    'IntegrationInACVF.Section3ACVF.UniformValuativeCentre.' + name for name in (
+        'uniform_centre', 'exists_common_centre')
+]
 DEFINITIONS = [
     'GeneratesCompleteType', 'IsAtomic', 'Splits',
     'IsLaminar', 'HasFiniteBallSupport',
@@ -385,6 +396,7 @@ DEFINITIONS += [
 ]
 DEFINITIONS += ['HoleFormulas.pairRows', 'HoleFormulas.HoleCodes']
 DEFINITIONS += ['CodeEquality.EqualityCodes', 'CodeEquality.imageCodes']
+DEFINITIONS += ['CodeEquality.imageCodeRelation']
 ACVF_DEFINITIONS = [
     'IntegrationInACVF.Section3ACVF.BallPresentation.' + name
     for name in ('codeDomain', 'decode', 'presentation', 'valuationBalls')
@@ -434,6 +446,10 @@ ACVF_DEFINITIONS += ['IntegrationInACVF.Section3ACVF.CanonicalBallSupport.ballFa
 ACVF_DEFINITIONS += [
     'IntegrationInACVF.Section3ACVF.BallKindPredicates.openCodes',
     'IntegrationInACVF.Section3ACVF.BallKindPredicates.closedCodes',
+]
+ACVF_DEFINITIONS += [
+    'IntegrationInACVF.Section3ACVF.OrdinaryCentreFibres.fieldValueEq',
+    'IntegrationInACVF.Section3ACVF.OrdinaryCentreFibres.ordinaryCentreFibre',
 ]
 ALLOWED = {'propext', 'Classical.choice', 'Quot.sound'}
 

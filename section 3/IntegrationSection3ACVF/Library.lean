@@ -30,3 +30,5 @@ import IntegrationSection3ACVF.AtomicCanonicalRegions
 import IntegrationSection3ACVF.BallRadiusGeometry
 import IntegrationSection3ACVF.ValuativeCentreGeometry
 import IntegrationSection3ACVF.PaperBallInvariants
+import IntegrationSection3ACVF.OrdinaryCentreFibres
+import IntegrationSection3ACVF.UniformValuativeCentre

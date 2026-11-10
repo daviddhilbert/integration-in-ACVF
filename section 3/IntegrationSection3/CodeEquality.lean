@@ -101,4 +101,44 @@ theorem imageCodes_definable (hp : B.real.Definable L p.codes)
     have hd : d ∈ q.codes := he.1 0
     exact ⟨hc,d,hdA,hd,hinj ((pairRows_mem_iff ⟨d,hd⟩ ⟨c,hc⟩).mp he)⟩
 
+def imageCodeRelation (q : Presentation M J η) (A : Set (η ⊕ Fin 1 → M)) (j : J) : Set M :=
+  {x | ∃ a : q.codes, Sum.elim a.val ![x] ∈ A ∧ q.decode a = j}
+
+theorem imageCodeRelation_definable (hp : B.real.Definable L p.codes)
+    (hq : B.real.Definable L q.codes) {U : J → Set M}
+    (hU : ImaginaryBaseFamilies.Relation (L := L) p B q U)
+    (hinj : Function.Injective U) {A : Set (η ⊕ Fin 1 → M)}
+    (hA : OverBase (L := L) p B A) :
+    ImaginaryBaseFamilies.Relation (L := L) p B q (imageCodeRelation q A) := by
+  let πE : Fin 2 × η → (η ⊕ Fin 1) ⊕ η :=
+    fun (i,a) => Fin.cases (.inr a) (fun _ => .inl (.inl a)) i
+  let πA : η ⊕ Fin 1 → (η ⊕ Fin 1) ⊕ η :=
+    Sum.elim Sum.inr (fun i => .inl (.inr i))
+  have heq := (equalityCodes_definable hp hq hU).preimage_comp πE
+  have ha := hA.preimage_comp πA
+  have hex := OverBase.exists_block (OverBase.inter ha heq hp)
+  change OverBase (L := L) p B (q.relationPullback (imageCodeRelation q A))
+  convert hex using 1
+  ext z
+  have he (d : η → M) : Sum.elim z d ∘ πE = pairRows d (z ∘ Sum.inl) := by
+    funext (i,a)
+    fin_cases i <;> rfl
+  have ha (d : η → M) : Sum.elim z d ∘ πA = Sum.elim d ![z (.inr 0)] := by
+    funext i
+    cases i with
+    | inl i => rfl
+    | inr i => fin_cases i; rfl
+  change (∃ hc : z ∘ Sum.inl ∈ q.codes, ∃ a : q.codes,
+      Sum.elim a.val ![z (.inr 0)] ∈ A ∧ q.decode a = q.decode ⟨z ∘ Sum.inl,hc⟩) ↔
+    ∃ d : η → M, Sum.elim z d ∘ πA ∈ A ∧ Sum.elim z d ∘ πE ∈ EqualityCodes q U
+  simp only [he,ha]
+  constructor
+  · rintro ⟨hc,a,hA,he⟩
+    exact ⟨a.val,hA,(pairRows_mem_iff a ⟨z ∘ Sum.inl,hc⟩).mpr (congrArg U he)⟩
+  · rintro ⟨d,hA,he⟩
+    have hd : d ∈ q.codes := he.1 0
+    have hc : z ∘ Sum.inl ∈ q.codes := he.1 1
+    exact ⟨hc,⟨d,hd⟩,hA,hinj ((pairRows_mem_iff ⟨d,hd⟩ ⟨z ∘ Sum.inl,hc⟩).mp he)⟩
+
+
 end IntegrationInACVF.Section3.CodeEquality
