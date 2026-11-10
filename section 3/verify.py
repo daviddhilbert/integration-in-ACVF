@@ -336,6 +336,18 @@ ACVF_HEADLINES += [
         'valuation_dense', 'gamma_radius_unique_same_kind', 'gamma_open_ne_closed',
         'gamma_open_not_closed', 'open_closed_only_vf')
 ]
+ACVF_HEADLINES += [
+    'IntegrationInACVF.Section3ACVF.BallRadiusGeometry.' + name for name in (
+        'gammaBall_ne_vf', 'gamma_closed_ne_singleton', 'gamma_radius_unique')
+]
+ACVF_HEADLINES += [
+    'IntegrationInACVF.Section3ACVF.ValuativeCentreGeometry.' + name for name in (
+        'valuativeCentre_unique', 'valuativeCentre_exists')
+]
+ACVF_HEADLINES += [
+    'IntegrationInACVF.Section3ACVF.PaperBallInvariants.' + name for name in (
+        'singleton_ne_vf', 'hasRadius_exists', 'hasRadius_unique')
+]
 DEFINITIONS = [
     'GeneratesCompleteType', 'IsAtomic', 'Splits',
     'IsLaminar', 'HasFiniteBallSupport',

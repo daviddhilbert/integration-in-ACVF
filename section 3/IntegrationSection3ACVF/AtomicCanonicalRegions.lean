@@ -67,6 +67,7 @@ theorem unpunctured_family_definable (B : FullBaseAtomicity.Base (M := M))
       apply hn
       refine ⟨k,?_⟩
       change U k ∈ holes F (U j)
+      change U k = b at hk
       rw [hk]
       exact hb
     · intro hempty

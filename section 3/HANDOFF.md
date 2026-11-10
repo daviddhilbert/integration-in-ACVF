@@ -57,19 +57,12 @@ Freeze original-model functions, sets and carriers before introducing any
 local normalized structure. No chosen real representative may enter the
 exported imaginary base. Keep scratch work and diagnostics in `.scratch/`.
 
-Current continuation: CodeEquality.lean and AtomicRegions.lean passed their
-five new full types and standard-axiom checks (152 core total). The actual
-BallKindGeometry.lean chart/Gamma bridges await CI. Next build invariant
-open/closed predicates from full code images, then radius and valuative centre.
-
-The current actual continuation adds full-code open/closed-family predicates
-and uniform canonical positive-region properties, including uniform
-puncture status. It awaits CI. The previous geometry build left two
-constant-sort guards in simplification; those are now removed explicitly.
-
-ValuationRadius.lean passed four new full types and standard axioms (156 core
-total). BallRadiusGeometry.lean supplies its density input from the existing
-formalized Johnson result and implements actual-Gamma ordinary-radius
-uniqueness and open/closed separation. An omitted unused typeclass now has
-correct declaration syntax and the full local core audit passed again. The
-actual continuations still require full CI.
+Current continuation: the 156-declaration generic core passed its full types,
+standard-axiom audit and source-hash check. The actual modules now implement
+full-code kind tests, canonical positive-region uniformity and puncture
+status, ordinary/extended radius uniqueness, radius existence, and valuative
+centre existence/uniqueness. They await full CI. Source-model functions and
+carriers are frozen before normalization; explicitly `change` through set
+membership and local aliases before rewriting. Next define invariant graphs,
+prove their finite images, use atomicity for constant invariants, then finish
+nonmaximal-hole enlargement and the multiple-hole contradiction.

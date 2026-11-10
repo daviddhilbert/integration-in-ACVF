@@ -96,6 +96,8 @@ theorem open_image_eq : CodeEquality.imageCodes
     (@BallPresentation.presentation M sM hM) openCodes =
       {i | PaperBalls.IsOpenBall (BallImaginaries.underlying i)} := by
   ext i
+  change i ∈ CodeEquality.imageCodes (@BallPresentation.presentation M sM hM) openCodes ↔
+    PaperBalls.IsOpenBall (BallImaginaries.underlying i)
   constructor
   · rintro ⟨c,hc,hvalid,hdecode⟩
     have he := BallPresentation.underlying_decode (⟨c,hvalid⟩ : BallPresentation.codeDomain)
@@ -147,6 +149,8 @@ theorem closed_image_eq : CodeEquality.imageCodes
     (@BallPresentation.presentation M sM hM) closedCodes =
       {i | PaperBalls.IsClosedBall (BallImaginaries.underlying i)} := by
   ext i
+  change i ∈ CodeEquality.imageCodes (@BallPresentation.presentation M sM hM) closedCodes ↔
+    PaperBalls.IsClosedBall (BallImaginaries.underlying i)
   constructor
   · rintro ⟨c,hc,hvalid,hdecode⟩
     have he := BallPresentation.underlying_decode (⟨c,hvalid⟩ : BallPresentation.codeDomain)
@@ -181,7 +185,10 @@ theorem open_family_definable (B : FullBaseAtomicity.Base (M := M)) :
     exact CodeEquality.imageCodes_definable hp hq
       (ImaginaryParameters.OverBase.of_real (p := p) (B := B) hm) hinj
       (ImaginaryParameters.OverBase.of_real (p := p) (B := B) ho)
-  simpa only [he] using hd
+  change FullBaseAtomicity.Family B
+    (CodeEquality.imageCodes (@BallPresentation.presentation M sM hM) openCodes) at hd
+  rw [he] at hd
+  exact hd
 
 theorem closed_family_definable (B : FullBaseAtomicity.Base (M := M)) :
     FullBaseAtomicity.Family B {i | PaperBalls.IsClosedBall (BallImaginaries.underlying i)} := by
@@ -200,6 +207,9 @@ theorem closed_family_definable (B : FullBaseAtomicity.Base (M := M)) :
     exact CodeEquality.imageCodes_definable hp hq
       (ImaginaryParameters.OverBase.of_real (p := p) (B := B) hm) hinj
       (ImaginaryParameters.OverBase.of_real (p := p) (B := B) hc)
-  simpa only [he] using hd
+  change FullBaseAtomicity.Family B
+    (CodeEquality.imageCodes (@BallPresentation.presentation M sM hM) closedCodes) at hd
+  rw [he] at hd
+  exact hd
 
 end IntegrationInACVF.Section3ACVF.BallKindPredicates

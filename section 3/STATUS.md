@@ -75,26 +75,20 @@ original combined base. Individual component definability is not assumed.
 
 ## Current continuation
 
-`CodeEquality.lean` proves full-code equality and definability of images of
-real-code sets in a faithful interpreted family. `AtomicRegions.lean` proves
-that every original-base definable property of disjoint nonempty regions
-inside a complete type is uniform across that family. Their four new full
-types and standard axioms passed the local 156-declaration core audit.
-`ImaginaryBaseFamilies.pair_domain` also passed its full type and standard
-axiom check, projecting an interpreted binary relation over the unchanged
-base. `BallKindGeometry.lean` now connects the original open/closed charts to the
-sequel's predicates and ordinary Gamma balls. The first CI found a residual
-constant-sort guard in two simplifications; those proofs are corrected.
-`BallKindPredicates.lean` supplies the full original-base kind tests, and
-`AtomicCanonicalRegions.lean` supplies uniform definable properties and
-punctured/unpunctured status. These actual bridges await full CI. The four new generic valuation-radius
-comparisons passed their full types and standard axioms locally; their
-open-to-closed comparison shows its density input explicitly.
-`BallRadiusGeometry.lean` supplies that density from the pinned formalized
-Johnson theorem and implements actual-Gamma radius uniqueness within each
-kind and separation of ordinary open and closed balls. This actual radius
-continuation also awaits full CI.
-The full receipt above remains the 306-declaration checkpoint.
+The local 156-declaration core audit passes. This includes full-code equality,
+images of code sets, projection of interpreted binary relations, uniform
+definable properties of disjoint regions inside a complete type, and
+valuation-radius comparisons with density explicit where needed. Every new
+full type and its standard axioms were reviewed.
+
+The actual continuation implements original-base open/closed-kind tests,
+uniform properties and puncture status of canonical positive regions,
+ordinary and extended radius existence/uniqueness (with singleton and VF
+cases), and valuative-centre existence/uniqueness. Valuation density is
+supplied by the pinned formalized Johnson result, deriving nontriviality
+from `δ > 1`. These actual modules await full CI; the full receipt remains
+the 306-declaration checkpoint. Invariant graph definability, finite images,
+constancy of radius/valuative centre and the hole classification remain open.
 
 ## Verification evidence
 
