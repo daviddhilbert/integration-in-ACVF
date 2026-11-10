@@ -144,6 +144,8 @@ theorem membership_definable (Q : Set M) :
   let p := presentation (M := M)
   let U := body (M := M)
   let b := ballTuple (M := M)
+  let UB := BallImaginaries.underlying (M := M)
+  let db := @BallPresentation.decode M sM hM
   have hmem := gamma_membership (M := M)
   let gBody : Values.Gamma (M := M) → Set M := fun γ => Values.gammaPullback {γ}
   let gVal : M → Values.Gamma (M := M) := codeValue
@@ -170,9 +172,10 @@ theorem membership_definable (Q : Set M) :
     refine ⟨hc,?_⟩
     by_cases ht : z (.inl 4) = @iVFZero M sM
     · left
-      refine ⟨ht,?_,?_⟩
-      · exact (hc.resolve_right (fun h => h.1 ht)).2
-      · simpa only [p,presentation,U,body,decode,Function.comp_apply,dite_eq_left ht,Sum.elim_inl,ballTuple,Sum.map_inl,Sum.map_inr,id_eq] using hx
+      have hbc := (hc.resolve_right (fun h => h.1 ht)).2
+      refine ⟨ht,hbc,?_⟩
+      change z (.inr 0) ∈ UB (db ⟨b (z ∘ Sum.inl),hbc⟩)
+      simpa only [p,presentation,U,body,decode,Function.comp_apply,dite_eq_left ht,Sum.elim_inl] using hx
     · right
       refine ⟨ht,?_⟩
       have hproper := (hc.resolve_left (fun h => ht h.1)).2
@@ -184,8 +187,12 @@ theorem membership_definable (Q : Set M) :
   · rintro ⟨hc,hx⟩
     refine ⟨hc,?_⟩
     rcases hx with ⟨ht,hb,hx⟩ | ⟨ht,hx⟩
-    · simpa only [p,presentation,U,body,decode,Function.comp_apply,dite_eq_left ht,Sum.elim_inl,ballTuple,Sum.map_inl,Sum.map_inr,id_eq] using hx
-    · have hproper := (hc.resolve_left (fun h => ht h.1)).2
+    · change z (.inl 4) = @iVFZero M sM at ht
+      have hbc := (hc.resolve_right (fun h => h.1 ht)).2
+      change z (.inr 0) ∈ UB (db ⟨b (z ∘ Sum.inl),hbc⟩) at hx
+      simpa only [p,presentation,U,body,decode,Function.comp_apply,dite_eq_left ht,Sum.elim_inl] using hx
+    · change z (.inl 4) ≠ @iVFZero M sM at ht
+      have hproper := (hc.resolve_left (fun h => ht h.1)).2
       have hx' := (hmem _ _ hproper).mpr (hx 0)
       simpa only [p,presentation,U,body,decode,Function.comp_apply,dite_eq_right ht,Sum.elim_inr,Sum.elim_inl] using hx'
 

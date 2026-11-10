@@ -153,6 +153,11 @@ ACVF_HEADLINES += [
         'presentation_definable')
 ]
 ACVF_HEADLINES += ['IntegrationInACVF.Section3ACVF.FullBaseAtomicity.lemma_3_2']
+ACVF_HEADLINES += [
+    'IntegrationInACVF.Section3ACVF.AdjoinBall.' + name for name in (
+        'embedCode_compatible', 'embedCode_definable', 'restrict_family',
+        'restrict_relation', 'lemma_3_2')
+]
 DEFINITIONS = [
     'GeneratesCompleteType', 'IsAtomic', 'Splits',
     'IsLaminar', 'HasFiniteBallSupport',
@@ -192,6 +197,7 @@ ACVF_DEFINITIONS += [
     'IntegrationInACVF.Section3ACVF.FullBaseAtomicity.' + name for name in (
         'Base', 'OverBase', 'Family', 'Relation', 'Algebraic', 'AtomicWith')
 ]
+ACVF_DEFINITIONS += ['IntegrationInACVF.Section3ACVF.AdjoinBall.AtomicOver']
 ALLOWED = {'propext', 'Classical.choice', 'Quot.sound'}
 
 
