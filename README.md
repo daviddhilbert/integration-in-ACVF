@@ -33,8 +33,8 @@ The current root imports the predecessor and the new Section 2 and 3 libraries.
 [Section 3](section%203/STATUS.md) records the exact formalized scope and open work.
 The full local project build, inherited QE audit, Section 2 audit and 630
 Section 3 type/axiom audits pass (282 generic, 348 actual ACVF declarations).
-New CI confirmation is pending. The preceding 600-head checkpoint passed
-[CI](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42902239726),
+This 630-head checkpoint passed
+[CI](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42906974736),
 with every complete type and source hash matched to reviewed local evidence.
 
 Checked Section 3 results are 3.2, 3.3, 3.4 at original-base definable radii

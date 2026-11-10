@@ -11,14 +11,13 @@ All 129 source hashes match. Every prior 600 complete type is unchanged;
 all 30 new types exactly match individually compiled and manually reviewed
 snapshots. Only `propext`, `Classical.choice` and `Quot.sound` occur.
 
-`VERIFICATION.json` records this local checkpoint; `CORE-VERIFICATION.json`
-selects its 282 generic heads. Evidence is in `.scratch/local-closed-image-630/`.
-New CI confirmation is pending. The preceding 600-head checkpoint passed
-[CI42902239726](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42902239726)
-at proof `4eba53c36ff54676bb492a3e40c4d6070628cc66`, with all complete types
-and 118 hashes matched before main promotion at receipt `3b7c6f1`.
-[Main CI42903650028](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42903650028)
-also passed for that receipt.
+`VERIFICATION.json` records the local and CI checkpoint; `CORE-VERIFICATION.json`
+selects its 282 generic heads. Local evidence is in `.scratch/local-closed-image-630/`.
+[CI 42906974736](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42906974736)
+passed at proof `fe2adfaadfcfd5594ff069ccae49434d2155adca`. Every complete CI
+type exactly matches the reviewed local type, all 129 source hashes match,
+and the audit source/log hashes and permitted axioms were checked before
+main promotion. The 600-, 551- and 471-head checkpoints remain historical.
 
 ## Numbered results
 

@@ -9,13 +9,13 @@ The current full local root, foundation/Section 2 and 630 Section 3 audits pass:
 282 generic,348 actual heads. All 129 input hashes match. The previous 600
 complete types are unchanged;30 new types exactly match the individually
 compiled and manually reviewed snapshots. Only the three standard axioms
-occur. See VERIFICATION.json and .scratch/local-closed-image-630/. New CI
-confirmation is pending; compare all artifact types/hashes before promotion.
+occur. See VERIFICATION.json and .scratch/local-closed-image-630/.
 
-Main currently has the verified600-head receipt3b7c6f1. Source4eba53c passed
-feature CI42902239726, and receipt main CI42903650028 passed too. All600
-complete CI types and 118 hashes matched local reviewed evidence. Previous
-551 and 471 checkpoints are historical; do not confuse their evidence scopes.
+Source fe2adfa passed CI 42906974736. All 630 complete CI types exactly match
+reviewed local evidence, all 129 source hashes match, and the audit hashes and
+standard axioms were checked before main promotion. The receipt-only main
+commit records this evidence. Previous 600, 551 and 471 checkpoints are
+historical; do not confuse their evidence scopes.
 
 Checked numbered scope:3.2,3.3,3.4 at named radii plus singleton/VF,3.6,3.7,
 3.8,3.9,3.10, corrected 3.11, both3.12 consequences,3.13 and 3.14. The 3.14
