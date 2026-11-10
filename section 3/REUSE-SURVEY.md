@@ -255,3 +255,22 @@ base for all named points. This new point theorem awaits its own audit.
 definability. Its local full type/axiom checks identify unary tuple
 atomicity with the existing unary definition and recover actual Mathlib
 first-order Definition 3.1 over a base with no imaginary names.
+
+
+The Gamma definable-point extension passed CI run 42815859588 at source
+ca354cd: 190 total audits, original-base point conclusion, standard axioms
+only and all input hashes matched. `FullGammaAtomicity.lean` implements the
+one-parameter cutting-set argument and finite induction; it compiled in the
+next run, whose new radius-wrapper errors still block the combined audit.
+
+For the next decomposition step, `PuncturedDecomposition.lean` reuses finite
+poset extrema from pinned Mathlib `Order/Preorder/Finite.lean` (Apache-2.0).
+It proves finite disjoint regions for a laminar finite support and replaces
+all smaller support balls by their maximal pairwise disjoint holes. Its eight
+new full types and standard-axiom records passed the local core audit.
+`PuncturedGeometry.lean` connects this to the predecessor's actual encoded
+ball predicate and to C-minimality after finite-code specialization. The
+chosen pieces are not claimed definable over the original base. Equality of
+primitive radii, valuative centres and kinds remains a separate obligation.
+The source statements were re-read in arXiv:0809.0473v2, pp. 7–8, using the
+available web tool; direct shell access to arXiv is not needed.

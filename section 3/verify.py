@@ -120,6 +120,12 @@ HEADLINES += [
     'ImaginaryBaseFamilies.rangeFamily_definable',
     'ImaginaryBaseFamilies.atomicWith_of_subsingleton',
 ]
+HEADLINES += [
+    'PuncturedDecomposition.' + name for name in (
+        'mem_holes', 'proper_subset_in_hole', 'region_eq_sdiff_holes',
+        'holes_disjoint', 'regions_disjoint', 'region_agreement',
+        'exists_region', 'finite_punctured_decomposition')
+]
 ACVF_HEADLINES = [
     'IntegrationInACVF.Section3ACVF.' + name for name in (
         'encodedBall_isKBall', 'encodedBalls_laminar', 'support_of_isBoolComb',
@@ -208,6 +214,11 @@ ACVF_HEADLINES += [
         'radiusTail_definable', 'rv_preimage', 'radius_subgroup',
         'lemma_3_4', 'lemma_3_4_singleton', 'lemma_3_4_whole_field')
 ]
+ACVF_HEADLINES += [
+    'IntegrationInACVF.Section3ACVF.PuncturedGeometry.' + name for name in (
+        'PuncturedBall.body_subset_parent', 'PuncturedBall.body_subset_vf',
+        'definable_punctured_decomposition')
+]
 DEFINITIONS = [
     'GeneratesCompleteType', 'IsAtomic', 'Splits',
     'IsLaminar', 'HasFiniteBallSupport',
@@ -232,6 +243,7 @@ DEFINITIONS = [
     'ImaginaryBaseFamilies.AtomicWith',
     'ImaginaryBaseFamilies.CompleteType',
 ]
+DEFINITIONS += ['PuncturedDecomposition.region', 'PuncturedDecomposition.holes']
 ACVF_DEFINITIONS = [
     'IntegrationInACVF.Section3ACVF.BallPresentation.' + name
     for name in ('codeDomain', 'decode', 'presentation', 'valuationBalls')
@@ -263,6 +275,10 @@ ACVF_DEFINITIONS += [
         'AtomicTuple', 'cutParameters', 'withGammaFinset', 'withGammaTuple')
 ]
 ACVF_DEFINITIONS += ['IntegrationInACVF.Section3ACVF.FullBallCoset.CompleteType']
+ACVF_DEFINITIONS += [
+    'IntegrationInACVF.Section3ACVF.PuncturedGeometry.PuncturedBall',
+    'IntegrationInACVF.Section3ACVF.PuncturedGeometry.PuncturedBall.body',
+]
 ALLOWED = {'propext', 'Classical.choice', 'Quot.sound'}
 
 
@@ -341,10 +357,12 @@ def main():
             'headline_audits': records,
             'audit_source_sha256': digest(audit),
             'audit_log_sha256': digest(OUT / 'HeadlineAudit.log'),
-            'scope': ('Definition 3.1, interpreted parameter promotion and exact-base family arguments; '
-                      + ('actual Lemma 3.2 with additional Gamma/ball names, real-base Lemma 3.3, '
-                         'and Lemma 3.4 for real-base definable Gamma radii, singletons and VF; ' if args.acvf else '')
-                      + 'full C-bullet scope of Lemmas 3.3-3.4 and later section geometry remain open'),
+            'scope': ('Definition 3.1, interpreted-base calculus and finite laminar punctured decomposition; '
+                      + ('actual Lemmas 3.2-3.3 over genuine real/Gamma/ball bases, with an original-base '
+                         'definable nontrivial Gamma value explicit for 3.3; Lemma 3.4 at original-base '
+                         'definable Gamma radii, singletons and VF; actual finite disjoint punctured '
+                         'decomposition; ' if args.acvf else '')
+                      + 'the primitive-type classification of Lemma 3.6 and later section geometry remain open'),
             'build_scope': 'Incremental Lake Section 3 build plus freshly compiled headline audit',
         }
         (OUT / 'receipt.json').write_text(json.dumps(receipt, indent=2) + '\n', encoding='utf-8')

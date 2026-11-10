@@ -13,3 +13,4 @@ import IntegrationSection3ACVF.AdjoinGamma
 import IntegrationSection3ACVF.FullGammaAtomicity
 import IntegrationSection3ACVF.FullBallCoset
 import IntegrationSection3ACVF.FullGammaRadius
+import IntegrationSection3ACVF.PuncturedGeometry

@@ -60,15 +60,16 @@ retains this convention and adds nonemptiness when selecting a realization.
 
 ## Current continuation
 
-The combined-base closure operations and Gamma predicate calculus passed
-175 declaration audits in CI run 42814520395 at source f5953ae. Their complete
-exported types and axiom records were reviewed. The generic core now has
-101 locally audited declarations, including the tuple/unary equivalence
-and agreement with Definition 3.1 when no imaginary names are present.
-`FullGammaPoint.lean` implements the original-base finite-controller and
-Gamma definable-point argument and is awaiting its full CI checks.
-`VERIFICATION.json` remains the certificate for the preceding 145-declaration
-paper-result checkpoint; `CORE-VERIFICATION.json` records the new local core.
+The Gamma definable-point argument passed all 190 current audits at source
+`ca354cd` in CI run 42815859588. Its complete new types, standard axioms and
+all receipt input hashes were reviewed. The generic core now has 111 locally
+audited declarations, including full-base interpreted ranges and the finite
+laminar punctured decomposition. The full-base Lemma 3.3 module compiled in
+the subsequent CI run; that run failed in the newly added Lemma 3.4 radius
+wrapper, so the new combined checkpoint is not yet certified. Those compiler
+issues are being corrected, and the ACVF punctured-decomposition bridge is
+also awaiting its full build. `VERIFICATION.json` remains the certificate for
+the preceding 145-declaration paper-result checkpoint.
 
 ## Verification
 

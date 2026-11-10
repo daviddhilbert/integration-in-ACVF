@@ -46,7 +46,7 @@ theorem radiusTail_definable (B : FullBaseAtomicity.Base (M := M))
   let p := @ParameterPresentation.presentation M sM hM
   let N := CanonicalStructure.normalize (M := M)
   letI := N
-  have h0 := hf.preimage_comp (fun _ : Fin 1 => (0 : Fin 2))
+  have h0 := ImaginaryParameters.OverBase.preimage_comp hf (fun _ : Fin 1 => (0 : Fin 2))
   have h1 := (ImaginaryParameters.OverBase.of_real (p := p) (B := B) hs).preimage_comp (fun _ : Fin 1 => (1 : Fin 2))
   have hl := GammaParameters.raw_le_definable (M := M) B.real
   have hl := ImaginaryParameters.OverBase.of_real (p := p) (B := B) hl
@@ -55,7 +55,8 @@ theorem radiusTail_definable (B : FullBaseAtomicity.Base (M := M))
     change ImaginaryParameters.OverBase (L := LRV) p B {z : Fin 2 → M | (z 0,z 1) ∈ R}
     cases strict with
     | false =>
-      convert h0.inter (h1.inter hl hp) hp using 1
+      convert ImaginaryParameters.OverBase.inter h0
+        (ImaginaryParameters.OverBase.inter h1 hl hp) hp using 1
       ext z
       change (z 0 ∈ F ∧ @iRV M sM (z 1) ∧ @iLe M sM (z 0) (z 1) ∧
         (false = true → ¬ @iLe M sM (z 1) (z 0))) ↔
@@ -64,7 +65,9 @@ theorem radiusTail_definable (B : FullBaseAtomicity.Base (M := M))
       exact and_congr_right fun hu => and_congr_right fun hx =>
         (hnorm _ _ hu.choose hx).symm
     | true =>
-      convert h0.inter (h1.inter (hl.inter (hr.compl hp) hp) hp) hp using 1
+      convert ImaginaryParameters.OverBase.inter h0
+        (ImaginaryParameters.OverBase.inter h1
+          (ImaginaryParameters.OverBase.inter hl (ImaginaryParameters.OverBase.compl hr hp) hp) hp) hp using 1
       ext z
       change (z 0 ∈ F ∧ @iRV M sM (z 1) ∧ @iLe M sM (z 0) (z 1) ∧
         (true = true → ¬ @iLe M sM (z 1) (z 0))) ↔
@@ -90,15 +93,15 @@ theorem rv_preimage {B : FullBaseAtomicity.Base (M := M)} {T : Set M}
     (@definableAt_sort M sM B.real .vf)).1
   have hnorm (x : M) (hx : iVF x) :
       @iRv M (CanonicalStructure.normalize (M := M)) x = @iRv M sM x :=
-    CanonicalStructure.normalize_fun Fn.rv ![x] (fun j => by fin_cases j; exact hx)
+    CanonicalStructure.normalize_fun Fn.rvMap ![x] (fun j => by fin_cases j; exact hx)
   let U : Set (Fin 1 → M) := {z | iVF (z 0) ∧ iRv (z 0) ∈ T}
   have hp := ParameterPresentation.codeDomain_definable (M := M) B.real
   let p := @ParameterPresentation.presentation M sM hM
   let N := CanonicalStructure.normalize (M := M)
   letI := N
   have hr : B.real.DefinableFun LRV (fun z : Fin 1 → M => iRv (z 0)) := by
-    have hf : B.real.DefinableFun LRV (Structure.funMap (L := LRV) Fn.rv) :=
-      Set.DefinableFun.of_empty (@Set.DefinableFun.fun_symbol M LRV N 1 Fn.rv)
+    have hf : B.real.DefinableFun LRV (Structure.funMap (L := LRV) Fn.rvMap) :=
+      Set.DefinableFun.of_empty (@Set.DefinableFun.fun_symbol M LRV N 1 Fn.rvMap)
     exact hf.comp (fun j => by fin_cases j; exact Set.DefinableFun.proj LRV)
   have hd := ImaginaryParameters.OverBase.inter
     (ImaginaryParameters.OverBase.of_real (p := p) (B := B) hs)
@@ -126,10 +129,13 @@ theorem radius_subgroup (B : FullBaseAtomicity.Base (M := M))
       let u : VFType (M := M) := ⟨x,hx⟩
       change (u + -0).val = x
       simp only [neg_zero,add_zero]
+      rfl
     constructor
     · rintro ⟨u,hu,rfl⟩
+      change u ∈ H at hu
+      have hus : u - 0 ∈ H := by rw [sub_zero]; exact hu
       have hc : u.val ∈ cosetBody H 0 :=
-        ⟨u,QuotientAddGroup.eq_iff_sub_mem.mpr (by simpa only [sub_zero] using hu),rfl⟩
+        ⟨u,QuotientAddGroup.eq_iff_sub_mem.mpr hus,rfl⟩
       rw [he 0] at hc
       change iVF u.val ∧ iLe t.val (iRv (iVFAdd u.val (iVFNeg (0 : VFType (M := M)).val))) ∧
         (strict = true → ¬ iLe (iRv (iVFAdd u.val (iVFNeg (0 : VFType (M := M)).val))) t.val) at hc
@@ -145,7 +151,9 @@ theorem radius_subgroup (B : FullBaseAtomicity.Base (M := M))
       obtain ⟨v,hv,hvx⟩ := hc
       have hvu : v = u := Subtype.ext hvx
       rw [hvu] at hv
-      exact ⟨u,by simpa only [sub_zero] using QuotientAddGroup.eq_iff_sub_mem.mp hv,rfl⟩
+      have hus : u - 0 ∈ H := QuotientAddGroup.eq_iff_sub_mem.mp hv
+      rw [sub_zero] at hus
+      exact ⟨u,hus,rfl⟩
   refine ⟨H,?_,he⟩
   have hr := rv_preimage hT
   convert hr using 1
