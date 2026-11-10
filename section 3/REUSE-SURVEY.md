@@ -114,3 +114,10 @@ directions. `CanonicalSupportFamily.lean` combines those bridges, the
 intrinsic support formula, and minimal-support uniqueness to define the
 finite canonical family over the original real/Gamma/ball base. These new
 actual declarations await CI; no primitive classification is claimed yet.
+
+
+The fixed-support continuation adds `MinimalBallSupport.support_covers` and
+`PuncturedDecomposition.finite_decomposition_of_support`. A point outside VF
+ensures the canonical VF support covers A; its nonempty positive regions then
+partition A without changing the parent family. Both full types and standard
+axioms passed the 133-declaration local core audit.

@@ -186,4 +186,17 @@ theorem minimal_unique {balls : Set (Set X)} (hl : IsLaminar balls)
   Finset.Subset.antisymm (minimal_subset_support hl htop hav hF hG.1)
     (minimal_subset_support hl htop hav hG hF.1)
 
+
+/-- If the ambient domain has an outside point, every point of a supported
+subset lies in at least one support ball contained in that domain. -/
+theorem support_covers {F : Finset (Set X)} {S D : Set X}
+    (hs : Supports F S) (hSD : S ⊆ D) (hF : ∀ b ∈ F, b ⊆ D)
+    (y : X) (hy : y ∉ D) : ∀ x ∈ S, ∃ b ∈ F, x ∈ b := by
+  classical
+  intro x hx
+  by_contra hn
+  have he : ∀ b ∈ F, x ∈ b ↔ y ∈ b := fun b hb =>
+    iff_of_false (fun hxb => hn ⟨b,hb,hxb⟩) (fun hyb => hy (hF b hb hyb))
+  exact hy (hSD ((hs x y he).mp hx))
+
 end IntegrationInACVF.Section3.MinimalBallSupport

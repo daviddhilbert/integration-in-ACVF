@@ -133,4 +133,34 @@ theorem finite_punctured_decomposition {balls : Set (Set X)} (hl : IsLaminar bal
   · intro b _
     exact holes_disjoint hl hF b
 
+
+/-- A fixed support that covers S gives an intrinsic family of positive
+regions, without adding an extra parent to the support. -/
+theorem finite_decomposition_of_support {balls : Set (Set X)} (hl : IsLaminar balls)
+    {F : Finset (Set X)} (hF : ∀ b ∈ F, b ∈ balls) {S : Set X}
+    (hs : ∀ x y, (∀ b ∈ F, x ∈ b ↔ y ∈ b) → (x ∈ S ↔ y ∈ S))
+    (hcover : ∀ x ∈ S, ∃ b ∈ F, x ∈ b) :
+    ∃ G : Finset (Set X), G ⊆ F ∧ (∀ b ∈ G, (region F b).Nonempty) ∧
+      (G : Set (Set X)).Pairwise (fun b c => Disjoint (region F b) (region F c)) ∧
+      S = {x | ∃ b ∈ G, x ∈ region F b} ∧
+      ∀ b ∈ G, (holes F b : Set (Set X)).Pairwise Disjoint := by
+  classical
+  let G := F.filter fun b => (region F b).Nonempty ∧ region F b ⊆ S
+  refine ⟨G,Finset.filter_subset _ _,?_,?_,?_,?_⟩
+  · intro b hb
+    exact (Finset.mem_filter.mp hb).2.1
+  · exact (regions_disjoint hl hF).mono (Finset.filter_subset _ _)
+  · ext x
+    constructor
+    · intro hx
+      obtain ⟨d,hd,hxd⟩ := hcover x hx
+      obtain ⟨b,hb,hxb⟩ := exists_region hd hxd
+      refine ⟨b,Finset.mem_filter.mpr ⟨hb,⟨x,hxb⟩,?_⟩,hxb⟩
+      intro y hy
+      exact (hs x y (region_agreement hl hF hb hxb hy)).mp hx
+    · rintro ⟨b,hb,hxb⟩
+      exact (Finset.mem_filter.mp hb).2.2 hxb
+  · intro b _
+    exact holes_disjoint hl hF b
+
 end IntegrationInACVF.Section3.PuncturedDecomposition

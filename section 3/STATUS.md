@@ -59,7 +59,7 @@ classification arguments. Keep all ball-code preimages invariant.
 
 ## Current continuation
 
-`MinimalBallSupport.lean` has passed the local 131-declaration core audit.
+`MinimalBallSupport.lean` has passed the local 133-declaration core audit.
 It proves existence and uniqueness of minimal finite supports in a laminar
 family with the explicit finite-proper-subball non-covering property.
 `CanonicalBallSupport.lean` supplies the actual ACVF bridge using the already
@@ -69,7 +69,9 @@ support family and its identification with the minimal support. Its seven
 new complete types and standard axioms passed that local core audit. `BallCodeGeometry.lean` and `CanonicalSupportFamily.lean` now implement that
 actual ball-code bridge and the original-base canonical family. Their full
 CI build and audits are pending; the primitive
-classification is not yet established. `VERIFICATION.json` remains the full
+classification is not yet established. The fixed canonical support now also
+covers the VF set and yields disjoint positive regions without inserting a
+new parent; both generic steps passed the local core audit. `VERIFICATION.json` remains the full
 257-declaration checkpoint, while `CORE-VERIFICATION.json` records the new
 local core and its exact input hashes.
 

@@ -96,7 +96,7 @@ theorem encoded_avoids_finite_proper_subballs (δ : Values.Gamma (M := M)) (hδ 
       exact Set.mem_iUnion.mpr ⟨c,Set.mem_iUnion.mpr ⟨hc,hxc⟩⟩
     · intro hx
       obtain ⟨c,hc,hxc⟩ : ∃ c ∈ F, x.val ∈ c := by
-        simpa only [Set.mem_iUnion,C,Set.mem_ofPred_eq] using hx
+        simpa only [Set.mem_iUnion,C,Set.mem_ofPred_eq,exists_prop] using hx
       exact (hF c hc).2.1 hxc
   exact hnot hcover
 

@@ -145,6 +145,10 @@ HEADLINES += [
         'mem_supportCodes_iff', 'exists_finite', 'supportFamily_definable',
         'supportFamily_eq_preimage')
 ]
+HEADLINES += [
+    'MinimalBallSupport.support_covers',
+    'PuncturedDecomposition.finite_decomposition_of_support',
+]
 ACVF_HEADLINES = [
     'IntegrationInACVF.Section3ACVF.' + name for name in (
         'encodedBall_isKBall', 'encodedBalls_laminar', 'support_of_isBoolComb',

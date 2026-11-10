@@ -31,8 +31,10 @@ theorem closed_raw_isBall (q : ClosedBallCodes.Code M) : IsBall (ClosedBallCodes
     · obtain ⟨Γ,hΓ,v,hv⟩ := VFValued.exists_valuation_predV (M := M)
       letI := hΓ
       have he : ClosedBallCodes.ball q.val = {a} := by
-        simpa only [hr0,map_zero,ValOneEC.closedBall_zero_radius] using
-          ClosedBallCodes.ball_eq_closed v hv q.val q.property hflag
+        have h := ClosedBallCodes.ball_eq_closed v hv q.val q.property hflag
+        change ClosedBallCodes.ball q.val = ValOneEC.closedBall v a (v r) at h
+        rw [hr0,map_zero,ValOneEC.closedBall_zero_radius] at h
+        exact h
       have hraw : ClosedBallCodes.rawBall q.val = {a.val} := by
         ext x
         constructor
@@ -55,8 +57,8 @@ theorem closed_raw_isBall (q : ClosedBallCodes.Code M) : IsBall (ClosedBallCodes
       · exact fun hz => hr0 ((CanonicalRV.encodedRv_zero_iff r).mp hz)
       · ext x
         simp only [ClosedBallCodes.rawBall,Set.mem_ofPred_eq,ClosedBallCodes.body_realize,
-          q.property,true_and,hflag,false_or]
-        rfl
+          hflag,false_or]
+        exact and_iff_right q.property
 
 theorem open_raw_isBall (q : OpenBallCodes.Code M) : IsBall (OpenBallCodes.rawBall q.val) := by
   let a : VFType (M := M) := ⟨q.val 0,q.property.1 0⟩
