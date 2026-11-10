@@ -6,13 +6,15 @@ The user wants continuous work and has authorized pushing. No subagents
 are authorized. HK may be consulted for ideas, but must not be cited or
 used as an unproved formalization input.
 
-The previously integrated checkpoint has 360 Section 3 type/axiom audits:
-159 generic and 201 actual ACVF. Its receipt and linked CI evidence remain
-in VERIFICATION.json and STATUS.md. This continuation adds 111 locally
-checked generic heads, for 270 generic and a proposed integrated total of
-471. The actual ACVF sources are unchanged. Fresh generic build, full type
-review and standard-axiom audit precede publishing; CI integration is pending.
-Do not call that integration passed until its full audit receipt is reviewed.
+The integrated proof checkpoint 61f65399e4c10915b36bfcaf794d7383b984c962
+passed its full build, inherited foundation audit, two Section 2 audits and
+471 Section 3 type/axiom audits in CI run 42884025168. There are 270 generic
+and 201 actual ACVF heads. All 111 new generic complete types were reviewed;
+the full output matches the local audit. The 201 unchanged actual complete
+types match the earlier reviewed checkpoint exactly. Only the three standard
+axioms occur. Every receipt input hash matches the proof commit.
+VERIFICATION.json records the full checkpoint; CORE-VERIFICATION.json also
+retains the preceding fresh local generic audit.
 
 The new core components are DefinableHoleRefinement, AffineHoleClosure,
 AffineHoleFormulas, PuncturedSupport, AtomicPuncturedPartition,

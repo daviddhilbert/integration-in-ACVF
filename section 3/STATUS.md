@@ -5,11 +5,11 @@ Proposition 3.24. Its main open-to-open partition theorem is Proposition 3.19.
 
 ## Verified scope
 
-The full project build and **360 Section 3 declaration type/axiom audits
-passed** in [CI run 42845510919](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42845510919)
-at source `2a3b835c341e28f1662441bb84c1f8cda89b5fbe` under Lean 4.35.0.
-There are 159 generic declarations and 201 actual ACVF declarations. These
-are component audits, not 360 numbered paper results. Only `propext`,
+The full project build and **471 Section 3 declaration type/axiom audits
+passed** in [CI run 42884025168](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42884025168)
+at source `61f65399e4c10915b36bfcaf794d7383b984c962` under Lean 4.35.0.
+There are 270 generic declarations and 201 actual ACVF declarations. These
+are component audits, not 471 numbered paper results. Only `propext`,
 `Classical.choice` and `Quot.sound` occur. The checked sources have no
 placeholders or custom axioms.
 
@@ -100,11 +100,11 @@ original combined base. Individual component definability is not assumed.
 ## Verification evidence
 
 `VERIFICATION.json` records compiler, dependency pins, all checked source
-hashes and per-declaration axioms for the 360-declaration checkpoint.
+hashes and per-declaration axioms for the 471-declaration checkpoint.
 `CORE-VERIFICATION.json` records the fresh local 270-declaration core audit. Complete diagnostics, explicit exported
 definitions/types and
 compact type output are in the linked artifact and
-`.scratch/ci-2a3b835-section3/`. Every receipt input hash was compared with
+`.scratch/ci-61f6539/.scratch/section3-verified/`. Every receipt input hash was compared with
 the committed source before publication. Dependencies may be reused from
 pinned caches; the full root and new modules were checked by the CI build.
 
@@ -137,8 +137,8 @@ The generic library now has 270 locally checked declaration type/axiom
 heads, up from the published 159. All 111 new complete types were reviewed;
 only the three standard axioms occur. This is a component checkpoint, not
 an additional numbered paper theorem. The actual ACVF library remains at
-its previously checked 201 heads. Integration of the combined 471-head
-scope is awaiting the new CI run.
+its previously checked 201 heads. The combined 471-head scope passed the full CI build and audit, with
+complete types, standard axioms and every source hash reviewed.
 
 The new modules prove full-base finite Boolean refinement, finite punctured
 partition rigidity, intrinsic proper hole refinement and affine hole
@@ -163,6 +163,6 @@ part of this publication.
 
 The environment blocks the pinned Mathlib cache, so a bounded local source
 build is preparing the complete actual-ACVF dependency import. The affected
-generic proof batch has compiled locally before publication. CI will confirm
+generic proof batch has compiled locally before publication. CI confirmed
 its integration with the unchanged actual library. HK is background for
 proof ideas only; no HK citation or assumed result is introduced.
