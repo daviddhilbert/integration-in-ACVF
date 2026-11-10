@@ -9,8 +9,10 @@ The full local root, inherited QE, Section 2 and 707 Section 3 audits pass:
 289 generic and 418 actual heads. All 165 source hashes match; all 679
 prior full types are unchanged; 28 new full types exactly match individual
 compiled and reviewed audits. Only propext, Classical.choice and Quot.sound.
-See VERIFICATION.json and .scratch/local-gamma-linear-707/. CI confirmation
-is pending; compare every full artifact type and source hash before promotion.
+See VERIFICATION.json and .scratch/local-gamma-linear-707/. Source 49d901b
+passed CI 42919041255. All 707 full types exactly match reviewed local types;
+all 165 source hashes and audit hashes match. This receipt promotes that
+verified checkpoint to main.
 
 The preceding source 8e3f6b7 passed CI 42914840110; all 679 types and 153 hashes
 matched before main promotion at receipt b808def. That main receipt passed

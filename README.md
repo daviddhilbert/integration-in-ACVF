@@ -35,9 +35,8 @@ The full local project build, inherited QE audit, Section 2 audit and 707
 Section 3 type/axiom audits pass (289 generic, 418 actual ACVF declarations).
 Lemma 3.16 now gives Gamma-linearity with the target/source radius ratio,
 retaining genuine saturation, small-base and characteristic hypotheses.
-New CI confirmation is pending. The preceding 679-head checkpoint passed
-[CI](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42914840110),
-with every complete type and source hash matched to reviewed local evidence.
+All 707 complete types and 165 source hashes from [CI](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42919041255)
+match the reviewed local evidence; only standard Lean axioms occur.
 
 Checked Section 3 results are 3.2, 3.3, 3.4 at original-base definable radii
 plus singleton/VF cases, 3.6, 3.7, 3.8, 3.9, 3.10, corrected 3.11, 3.12,

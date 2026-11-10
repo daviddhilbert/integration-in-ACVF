@@ -13,10 +13,10 @@ snapshots. Only `propext`, `Classical.choice` and `Quot.sound` occur.
 
 `VERIFICATION.json` records the local checkpoint; `CORE-VERIFICATION.json`
 selects its 289 generic heads. Evidence is in `.scratch/local-gamma-linear-707/`.
-New CI confirmation is pending. The preceding proof `8e3f6b7` passed
-[CI 42914840110](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42914840110),
-with all 679 full types and 153 source hashes matched before main promotion
-at receipt `b808def`. Its main CI 42916312856 also passed.
+Source `49d901b` passed [CI 42919041255](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42919041255).
+Every one of its 707 complete types exactly matches the reviewed local
+audit; all 165 source hashes and both audit hashes match. This checkpoint
+is verified locally and in CI, and is promoted to main by this receipt.
 
 ## Numbered results
 
