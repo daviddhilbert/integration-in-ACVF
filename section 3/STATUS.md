@@ -14,7 +14,10 @@ their individually compiled and manually reviewed snapshots exactly. Only
 
 `VERIFICATION.json` records the local 600-head checkpoint. `CORE-VERIFICATION.json`
 selects its 276 generic heads. Complete evidence is in
-`.scratch/local-separation-600/`. New CI confirmation is pending. The previous
+`.scratch/local-separation-600/`. The batch also passed
+[CI run42902239726](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42902239726)
+at proof `4eba53c36ff54676bb492a3e40c4d6070628cc66`. All600 complete CI types
+and all118 source hashes match the reviewed local evidence. The previous
 551-head primitive checkpoint passed
 [CI run 42900083681](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42900083681)
 at proof `92f7b0a478d111cde0a23f6b31714abd92f0ed6a`; all 551 complete CI types

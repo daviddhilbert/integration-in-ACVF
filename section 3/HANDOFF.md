@@ -10,8 +10,8 @@ type/axiom audits pass:276 generic,324 actual. All118 source hashes match.
 All551 prior full types are unchanged, and all 49 new types exactly match
 individually compiled and manually reviewed snapshots. Only the standard
 three axioms occur. See VERIFICATION.json and .scratch/local-separation-600/.
-New CI confirmation is pending; do not promote before it passes and the
-artifact types/hashes match reviewed local evidence.
+CI42902239726 passed at proof4eba53c. All600 complete CI types and118 source
+hashes match the reviewed local evidence; this receipt records that check.
 
 Main is verified551-head receipt b71e2eb, based on proof 92f7b0a and green
 CI42900083681. Its551 complete CI types and105 hashes all matched the local
