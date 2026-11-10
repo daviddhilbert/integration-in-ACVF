@@ -223,9 +223,11 @@ theorem membership_definable (Q : Set M) :
       Set.ext_iff.mp (hdecode (⟨z ∘ Sum.inl,hzcode⟩ : D)) (z (.inr 0))
     apply he.mpr
     rcases hx with ⟨hf,hx⟩ | ⟨hf,hx⟩
-    · rw [if_pos hf]
+    · change z (.inl 3) = z0 at hf
+      rw [if_pos hf]
       exact hx
-    · rw [if_neg hf]
+    · change z (.inl 3) ≠ z0 at hf
+      rw [if_neg hf]
       exact hx
 
 theorem presentation_definable (Q : Set M) :
