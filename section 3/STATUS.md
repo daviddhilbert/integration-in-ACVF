@@ -52,9 +52,9 @@ the committed source revision before publication.
 | Corrected Lemma 3.11: logical step | `StatementChecks.lean` | The empty relation is a counterexample to the printed statement. The accepted nonemptiness hypothesis gives surjectivity of both projections between complete types; geometric separation remains open. |
 | Later section geometry | Not complete | Primitive types and punctured decompositions, RV-family constancy, open-to-open results, component counts and bijection obstructions remain open. |
 
-The tuple carrier can later be restricted to the actual VF/RV sorts. Allowing
-a generic first-order language also permits an imaginary expansion, but does
-not construct that expansion or prove the required ACVF interpretations.
+The generic core remains independent of ACVF. The concrete presentations
+and finite-support parameter calculus interpret the additional names using
+the unchanged released LRV structure and its canonical normalization.
 The paper's Definition 3.1 does not explicitly require nonemptiness; the code
 retains this convention and adds nonemptiness when selecting a realization.
 

@@ -38,7 +38,7 @@ to claim the full concrete measure-preservation assertion here.
 | C-minimality used in Lemma 3.2 | `Section3/CMinimal.lean` | Its proved theorem is `SpecialTransformations.Section3.theorem_2_8_c_minimal`; connect its Boolean-combination representation to the sequel's finite support. |
 
 These are source-inspected candidates, not a new combined verification
-certificate. The Section 3 core is generic; its pending ACVF bridge uses the
+certificate. The Section 3 core is generic; its checked ACVF bridge uses the
 actual C-minimality and ball-quotient sources. References [11] and
 [12] in the paper are different papers; do not conflate their numbering.
 
