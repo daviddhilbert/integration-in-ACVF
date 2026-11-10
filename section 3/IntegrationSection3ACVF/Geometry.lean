@@ -82,7 +82,7 @@ theorem encodedBall_isKBall {Γ : Type} [LinearOrderedCommGroupWithZero Γ]
       rw [and_iff_right x.property]
       exact ⟨fun h => Subtype.ext h,fun h => congrArg Subtype.val h⟩
     rw [he, ← ValOneEC.closedBall_zero_radius v a']
-    simpa only [map_zero] using
+    simpa only [RingHom.id_apply, map_zero] using
       (ValOneEC.IsKBall.closed (f := RingHom.id _) (w := v) a' 0)
 
 /-- Open/closed encoded balls, singletons and VF itself form a laminar family. -/
@@ -106,6 +106,7 @@ theorem encodedBalls_laminar : IsLaminar {B : Set M | IsBall B} := by
     intro y hy
     exact h (a := (⟨y,isBall_subset_vf C hC hy⟩ : VFType (M := M))) hy
 
+omit sM hM in
 theorem support_of_isBoolComb {balls : Set (Set M)} {S : Set M}
     (h : IsBoolComb balls S) : HasFiniteBallSupport balls S := by
   induction h with

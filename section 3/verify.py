@@ -83,6 +83,12 @@ ACVF_HEADLINES += [
         'normalized_cMinimalOn_valuationBalls', 'underlying_valuationBall',
         'lemma_3_2_real_base')
 ]
+ACVF_HEADLINES += [
+    'IntegrationInACVF.Section3ACVF.GammaAtomicity.' + name for name in (
+        'fibre_decode', 'cutting_parameters_definable',
+        'fibre_definable_of_definable_parameters', 'definableWith_of_real',
+        'lemma_3_3_real_base')
+]
 DEFINITIONS = [
     'GeneratesCompleteType', 'IsAtomic', 'Splits',
     'IsLaminar', 'HasFiniteBallSupport',
@@ -138,7 +144,7 @@ def main():
             names += ACVF_HEADLINES
         audit = OUT / 'HeadlineAudit.lean'
         audit.write_text(
-            ('import IntegrationSection3ACVF.BallPresentation\n' if args.acvf
+            ('import IntegrationSection3ACVF.Library\n' if args.acvf
              else 'import IntegrationSection3.Library\n')
             + 'set_option pp.explicit true\n'
             + '\n'.join('#print ' + PREFIX + name for name in DEFINITIONS)

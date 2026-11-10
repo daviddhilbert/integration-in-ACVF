@@ -29,6 +29,7 @@ source are retained locally in `.scratch/section3-verified/`.
 | Complete-type argument for Lemma 3.4 | `ImaginaryFamilies.lean` | A member of a definable disjoint family contained in a complete-type-generating set is atomic over its imaginary index. This logical argument needs no C-minimality or nonalgebraicity hypothesis. The actual same-radius family is still needed. |
 | Actual ACVF geometry and real-index case | `IntegrationSection3ACVF/Geometry.lean` | Written, pending compilation and five additional type/axiom audits in CI. Uses the predecessor's proved C-minimality and unchanged ball predicates on the canonical normalization. No verification claim yet. |
 | Actual imaginary ball presentation and real-base Lemma 3.2 | `IntegrationSection3ACVF/BallPresentation.lean` | Written, pending compilation and eleven further audits. Uses the predecessor's actual open/closed quotients, a surjective full code presentation, proved interpreted equality, proved ball geometry/C-minimality, and nonalgebraicity of the actual output-ball imaginary. It covers real parameter bases; bases containing additional imaginary names are not claimed. |
+| Lemma 3.3 over a real base | `IntegrationSection3ACVF/GammaAtomicity.lean` | Written, pending compilation and five further audits. Covers arbitrary finite Gamma parameter tuples and finite mixed output arities, with an explicit original-base definable nontrivial Gamma value. Uses the predecessor's proved tuple definable-point theorem. Full bases containing ball names remain open. |
 | Full Lemma 3.2 | Not complete | The imaginary ball-index interpretation and exact imaginary parameter base still need to be connected. The generic theorem is not counted as this missing interpretation. |
 | Lemmas 3.3–3.18 and Proposition 3.19 | Not complete | No coverage is claimed by the preceding generic results. |
 
@@ -43,7 +44,7 @@ retains this convention and adds nonemptiness when selecting a realization.
 ```sh
 lake build IntegrationSection3
 lake env python3 'section 3/verify.py'
-# ACVF bridge and sixteen additional declarations:
+# ACVF bridge and twenty-one additional declarations:
 lake env python3 'section 3/verify.py' --acvf
 ```
 

@@ -1,7 +1,7 @@
 import SpecialTransformations
 import IntegrationSection3.Library
 import IntegrationSection2.Library
-import IntegrationSection3ACVF.BallPresentation
+import IntegrationSection3ACVF.Library
 
 /-!
 # Integration in algebraically closed valued fields

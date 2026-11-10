@@ -14,10 +14,13 @@ together with the unchanged pinned Special transformations project.
 The core checkpoint passed the library build and 55 declaration type/axiom
 checks; `VERIFICATION.json` binds that evidence to the actual source hashes.
 The actual ACVF geometry and full real-code ball presentation are written
-but awaiting CI compilation; their sixteen headlines are included by the
+but awaiting CI compilation; their twenty-one headlines are included by the
 verifier's --acvf option and the CI driver. BallPresentation now contains
 the actual ball-index Lemma 3.2 over real bases, with a definable full graph
 and nonalgebraicity of its output-ball imaginary. Full C• bases remain open.
+GammaAtomicity additionally proves the real-base Lemma 3.3, using the
+predecessor's Gamma tuple definable-point theorem and full invariant code
+fibres. It is written but still awaiting CI compilation and its five audits.
 
 Next mathematical target: finish Lemma 3.2 by connecting `parametric_ball_atomic`
 to the actual imaginary ball codes. The finite exceptional index set is now
