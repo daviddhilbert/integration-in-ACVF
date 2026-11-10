@@ -48,17 +48,17 @@ theorem uniform_centre (B : FullBaseAtomicity.Base (M := M))
     rcases h with h | h
     · exact h
     · exact (Set.disjoint_left.mp h hk hγ).elim
-  by_cases hc∞ : c = Values.infinity
-  · by_cases hd∞ : d = Values.infinity
-    · exact hc∞.trans hd∞.symm
+  by_cases hc_inf : c = Values.infinity
+  · by_cases hd_inf : d = Values.infinity
+    · exact hc_inf.trans hd_inf.symm
     · exact ValuativeCentreGeometry.valuativeCentre_unique
         (BallImaginaries.underlying_subset_vf i)
         (encodedBall_nonempty (BallCodeGeometry.underlying_isBall i)) hc
-        (hall j hj ⟨d,hd∞⟩ hd i hi)
+        (hall j hj ⟨d,hd_inf⟩ hd i hi)
   · exact ValuativeCentreGeometry.valuativeCentre_unique
       (BallImaginaries.underlying_subset_vf j)
       (encodedBall_nonempty (BallCodeGeometry.underlying_isBall j))
-      (hall i hi ⟨c,hc∞⟩ hc j hj) hd
+      (hall i hi ⟨c,hc_inf⟩ hc j hj) hd
 
 theorem exists_common_centre (B : FullBaseAtomicity.Base (M := M))
     (δ : Values.Gamma (M := M)) (hδ : 1 < δ) {F : Finset (Set M)} {A : Set M}
