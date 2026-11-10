@@ -4,25 +4,26 @@ Source: arXiv:0809.0473v2, pp. 7–12, through Proposition 3.24.
 
 ## Verification
 
-The full local project build, inherited QE audit, Section 2 audit and **551
+The full local project build, inherited QE audit, Section 2 audit and **600
 Section 3 declaration type/axiom audits pass** under pinned Lean 4.35.0.
-There are 276 generic and 275 actual ACVF heads; these are supporting
-components, not 551 numbered paper results. Only `propext`, `Classical.choice`
-and `Quot.sound` occur. Every receipt source hash matches. All 201 earlier
-actual types match their reviewed checkpoint exactly; all 59 new primitive
-batch types match their individually compiled and reviewed snapshots exactly.
+There are 276 generic and 324 actual ACVF heads. These are supporting
+components, not 600 numbered results. Every source hash matches. All551 prior
+complete theorem types are unchanged; all 49 new separation-batch types match
+their individually compiled and manually reviewed snapshots exactly. Only
+`propext`, `Classical.choice` and `Quot.sound` occur.
 
-`VERIFICATION.json` records this local checkpoint. `CORE-VERIFICATION.json`
-selects the 276 generic declarations from the same fresh full audit. Complete
-local evidence is retained in `.scratch/local-primitive-551/`. All551 complete CI types match the reviewed local audit exactly. The batch
-passed [CI run42900083681](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42900083681)
-at source `92f7b0a478d111cde0a23f6b31714abd92f0ed6a`. The preceding 471-head checkpoint passed
-[CI run 42884025168](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42884025168)
-at proof source `61f65399e4c10915b36bfcaf794d7383b984c962`.
+`VERIFICATION.json` records the local 600-head checkpoint. `CORE-VERIFICATION.json`
+selects its 276 generic heads. Complete evidence is in
+`.scratch/local-separation-600/`. New CI confirmation is pending. The previous
+551-head primitive checkpoint passed
+[CI run 42900083681](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42900083681)
+at proof `92f7b0a478d111cde0a23f6b31714abd92f0ed6a`; all 551 complete CI types
+and all 105 source hashes matched the reviewed local evidence before promotion
+to main at receipt commit `b71e2eb18ab68c46e34fecf111f33992c7eda7b6`.
 
 ## Numbered results
 
-Eight numbered Section 3 results are checked in the following precise scope:
+Eleven numbered Section 3 results are checked in the following precise scope:
 
 - **3.2:** `AdjoinBall.lemma_3_2` permits arbitrary real, genuine Gamma and
   ball names. Atomicity is over the original base with the input ball name
@@ -53,6 +54,21 @@ Eight numbered Section 3 results are checked in the following precise scope:
   Full domain graphs and the sequel's open-ball convention are used. The
   subball's radius need not be named initially; 3.3 adjoins it. The standing
   characteristic and nontriviality hypotheses remain explicit.
+
+- **3.11, corrected:** `Separation.lemma_3_11` proves that a nonempty definable
+  relation from an atomic open ball to an atomic closed ball of radius less
+  than infinity, or an atomic thin annulus, cannot have finite first-coordinate
+  fibres. `R.Nonempty` is explicit. Neither ball radius must be originally
+  named. Full real/Gamma/ball bases, ACVF(0,0) and named nontrivial `δ` are
+  retained; no extra saturation premise is added.
+- **3.12:** `SeparationFunctions` proves both function obstructions: no map
+  from the atomic open ball to the stated finite-radius closed/thin target,
+  and no finite-to-one map in the reverse direction. The reverse statement
+  also handles singleton closed sources.
+- **3.13:** `OpenImages.lemma_3_13` proves that a definable VF image of an atomic
+  open ball is constant or an atomic open ball, using the checked primitive
+  image classification and separation. Full partial-domain graphs and the
+  unchanged parameter base are used.
 
 Section 2's Corollary 2.15 is checked separately, with genuine saturation and
 parameter smallness explicit. Corollary 2.34 remains open.
@@ -86,20 +102,32 @@ family of image regions. `PrimitiveImages` then applies the checked primitive
 classification. Original-base definability of the individual canonical pieces
 is never assumed.
 
+## Checked separation geometry
+
+The actual inverse-image support graph retains all codes, and atomicity
+bounds finite relation rows uniformly. Proper canonical inverse-support balls
+have genuine minimal native closed hulls inside the open source. Their radius
+is described by the full original-base span graph;3.3 makes that radius
+constant across the infinite family of target maximal open classes. A source
+cut has infinitely many smaller quotient classes on both sides, contradicting
+the finite/cofinite trace theorem. Trace definability is proved after naming
+the cut, without assuming atomicity over that enlarged base.
+
 ## Remaining work
 
-Thirteen proof results remain, 3.11–3.19 and 3.21–3.24; 3.20 is a definition.
-These comprise seven lemmas, two corollaries and four propositions. The next
-result is corrected geometric separation in 3.11, then the function and image
-consequences and the closed-image obstruction. Do not count a helper that
-assumes missing geometry as a proof of the corresponding numbered statement.
+Ten proof results remain,3.14–3.19 and3.21–3.24;3.20 is a definition. They
+comprise five lemmas, one corollary and four propositions. Section 2's2.34 is
+open separately. Lemma3.4 currently covers original-base definable radii plus
+singleton/VF; its unrestricted unnamed-radius extension is also still needed
+for the full3.15 claim. Do not count a named-radius wrapper as unrestricted3.15.
 
-The generic separation core already proves joint inverse-support graphs,
-uniform finite-row bounds directly from atomicity, proper inverse supports,
-finite/cofinite class traces, intrinsic closed hulls, and a source cut with
-infinitely many small quotient classes on both sides. The actual ACVF wrappers
-for this route are being checked locally; the assembled 3.11 is not established.
-No new saturation or cardinality hypothesis is introduced in this route.
+The next target is3.14. Its restriction that only the source ball imaginary
+is needed to define the target must remain explicit. Polynomial escape,
+coefficient-field root avoidance and elimination of a ball name in favour of
+its centres are being connected to parameter-preserving quantifier elimination.
+The finite two-variable polynomial support and Gamma-parameter specialization
+bridges remain to be supplied. No interface assuming those bridges counts
+as a proof of 3.14.
 
 The author approved adding **`R.Nonempty`** to printed 3.11, whose empty
 relation is a counterexample. Retain it explicitly; see

@@ -484,6 +484,57 @@ ACVF_HEADLINES += [
     'IntegrationInACVF.Section3ACVF.PrimitiveImages.atomic_image',
     'IntegrationInACVF.Section3ACVF.PrimitiveImages.lemma_3_8',
 ]
+ACVF_HEADLINES += [
+    'IntegrationInACVF.Section3ACVF.FullRelationSupports.preimages_definable',
+    'IntegrationInACVF.Section3ACVF.FullRelationSupports.support_graph_definable',
+    'IntegrationInACVF.Section3ACVF.FullRelationSupports.uniform_support_card',
+    'IntegrationInACVF.Section3ACVF.FullRelationSupports.exists_proper_inverse_supports',
+    'IntegrationInACVF.Section3ACVF.FullGammaFamilyConstancy.graph_of_fibres',
+    'IntegrationInACVF.Section3ACVF.FullGammaFamilyConstancy.constant',
+    'IntegrationInACVF.Section3ACVF.SupportHullRadius.covers_definable',
+    'IntegrationInACVF.Section3ACVF.SupportHullRadius.span_definable',
+    'IntegrationInACVF.Section3ACVF.SupportHullRadius.mem_covers_iff',
+    'IntegrationInACVF.Section3ACVF.SupportHullRadius.cover_from_hull',
+    'IntegrationInACVF.Section3ACVF.SupportHullRadius.cover_value_le_hull',
+    'IntegrationInACVF.Section3ACVF.SupportHullRadius.mem_span_iff_value',
+    'IntegrationInACVF.Section3ACVF.SupportHullRadius.span_eq_gammaFibre',
+    'IntegrationInACVF.Section3ACVF.MaximalSubballGeometry.equal_of_inter',
+    'IntegrationInACVF.Section3ACVF.MaximalSubballGeometry.proper_ball_in_maximal',
+    'IntegrationInACVF.Section3ACVF.MaximalSubballGeometry.class_subset_body',
+    'IntegrationInACVF.Section3ACVF.MaximalSubballGeometry.covers_body',
+    'IntegrationInACVF.Section3ACVF.MaximalSubballGeometry.classes_disjoint',
+    'IntegrationInACVF.Section3ACVF.MaximalSubballGeometry.class_proper_parent',
+    'IntegrationInACVF.Section3ACVF.MaximalSubballGeometry.classes_infinite',
+    'IntegrationInACVF.Section3ACVF.MaximalSubballGeometry.test_ball',
+    'IntegrationInACVF.Section3ACVF.MaximalSubballFamilies.contained_family_definable',
+    'IntegrationInACVF.Section3ACVF.MaximalSubballFamilies.classes_definable',
+    'IntegrationInACVF.Section3ACVF.MaximalSubballFamilies.finite_or_cofinite',
+    'IntegrationInACVF.Section3ACVF.InfiniteOrdinaryBalls.open_infinite',
+    'IntegrationInACVF.Section3ACVF.InfiniteOrdinaryBalls.closed_infinite',
+    'IntegrationInACVF.Section3ACVF.NativeBallHulls.closed_hull_for_ball',
+    'IntegrationInACVF.Section3ACVF.NativeBallHulls.finite_support_hull',
+    'IntegrationInACVF.Section3ACVF.UniformSupportHull.preimage_subset_supportLift',
+    'IntegrationInACVF.Section3ACVF.UniformSupportHull.preimage_infinite',
+    'IntegrationInACVF.Section3ACVF.UniformSupportHull.supportLift_infinite',
+    'IntegrationInACVF.Section3ACVF.UniformSupportHull.common_hull_radius',
+    'IntegrationInACVF.Section3ACVF.ClosedTraceFamilies.named_ball_body',
+    'IntegrationInACVF.Section3ACVF.ClosedTraceFamilies.meets_named_ball',
+    'IntegrationInACVF.Section3ACVF.ClosedTraceFamilies.finite_or_cofinite_native_cut',
+    'IntegrationInACVF.Section3ACVF.OrdinarySeparation.not_finite_rows',
+    'IntegrationInACVF.Section3ACVF.OrdinarySeparation.not_finite_rows_unnamed_radius',
+    'IntegrationInACVF.Section3ACVF.Separation.unpunctured_body',
+    'IntegrationInACVF.Section3ACVF.Separation.for_punctured_target',
+    'IntegrationInACVF.Section3ACVF.Separation.lemma_3_11',
+    'IntegrationInACVF.Section3ACVF.SeparationFunctions.open_nonempty',
+    'IntegrationInACVF.Section3ACVF.SeparationFunctions.closed_nonempty',
+    'IntegrationInACVF.Section3ACVF.SeparationFunctions.punctured_nonempty',
+    'IntegrationInACVF.Section3ACVF.SeparationFunctions.open_infinite',
+    'IntegrationInACVF.Section3ACVF.SeparationFunctions.no_function_from_open',
+    'IntegrationInACVF.Section3ACVF.SeparationFunctions.no_finite_to_one_to_open',
+    'IntegrationInACVF.Section3ACVF.OpenImages.open_one_component',
+    'IntegrationInACVF.Section3ACVF.OpenImages.body_eq_parent',
+    'IntegrationInACVF.Section3ACVF.OpenImages.lemma_3_13',
+]
 DEFINITIONS = [
     'GeneratesCompleteType', 'IsAtomic', 'Splits',
     'IsLaminar', 'HasFiniteBallSupport',
@@ -606,6 +657,16 @@ ACVF_DEFINITIONS += [
     'IntegrationInACVF.Section3ACVF.PrimitiveDecomposition.piece',
     'IntegrationInACVF.Section3ACVF.PrimitiveImages.OnePrimitiveComponent',
 ]
+ACVF_DEFINITIONS += [
+    'IntegrationInACVF.Section3ACVF.FullRelationSupports.preimages',
+    'IntegrationInACVF.Section3ACVF.FullGammaFamilyConstancy.Graph',
+    'IntegrationInACVF.Section3ACVF.SupportHullRadius.covers',
+    'IntegrationInACVF.Section3ACVF.SupportHullRadius.order',
+    'IntegrationInACVF.Section3ACVF.SupportHullRadius.span',
+    'IntegrationInACVF.Section3ACVF.SupportHullRadius.supportLift',
+    'IntegrationInACVF.Section3ACVF.MaximalSubballGeometry.classes',
+    'IntegrationInACVF.Section3ACVF.Separation.unpunctured',
+]
 ALLOWED = {'propext', 'Classical.choice', 'Quot.sound'}
 
 
@@ -687,9 +748,9 @@ def main():
             'scope': ('Definition 3.1, interpreted-base calculus and finite laminar punctured decomposition; '
                       + ('actual Lemmas 3.2-3.3 over genuine real/Gamma/ball bases, with an original-base '
                          'definable nontrivial Gamma value explicit for 3.3; Lemma 3.4 at original-base '
-                         'definable Gamma radii, singletons and VF; Lemmas 3.6 and 3.8 over the full base with ACVF(0,0) and a definable nontrivial Gamma value explicit; actual finite disjoint punctured '
+                         'definable Gamma radii, singletons and VF; Lemmas 3.6, 3.8, corrected 3.11, both consequences of 3.12 and Lemma 3.13 over the full base with ACVF(0,0) and a definable nontrivial Gamma value explicit; actual finite disjoint punctured '
                          'decomposition; finite coset-profile exceptions, Lemma 3.9 and Corollary 3.10 with the sequel open-ball convention and domain graphs; ' if args.acvf else '')
-                      + 'later section geometry from corrected Lemma 3.11 onward remains open'),
+                      + 'later section geometry from Lemma 3.14 onward remains open'),
             'build_scope': 'Incremental Lake Section 3 build plus freshly compiled headline audit',
         }
         (OUT / 'receipt.json').write_text(json.dumps(receipt, indent=2) + '\n', encoding='utf-8')

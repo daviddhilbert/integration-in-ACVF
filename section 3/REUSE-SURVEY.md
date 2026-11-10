@@ -172,5 +172,19 @@ PuncturedImageComponents applies the checked finite punctured partition theorem
 and exact minimal-support recognition, proving source-parent definability rather
 than assuming it. PrimitiveImages then proves3.8. All59 new actual complete
 exported types match their individually compiled and manually reviewed audits
-exactly; the full551-head audit and root/foundation/Section2 checks pass locally.
+exactly; the full551-head audit and root/foundation/Section 2 checks pass locally.
 No new external citation, unproved HK result or dependency pin is introduced.
+
+
+## Corrected separation and open images, local 600-head checkpoint
+
+No pins, licenses or external theorem inputs changed. The49 new actual heads
+supply the original-base inverse-support graph, intrinsic span radius, actual
+minimal native closed hulls, constancy across target classes, finite/cofinite
+closed-cut traces over an enlarged base and the assembled separation contradiction.
+Nonemptiness of R is explicit; both projections are proved onto. No saturation
+is assumed for finite-row uniformity or the geometric contradiction. The
+unnamed target radius is temporarily adjoined using checked3.3. Actual3.12
+and3.13 then follow from separation and the checked3.8 image classification.
+All49 complete types match their separately compiled and manually reviewed
+snapshots exactly; the full local root and600-declaration audit pass.
