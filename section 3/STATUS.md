@@ -5,11 +5,11 @@ Proposition 3.24. Its main open-to-open partition theorem is Proposition 3.19.
 
 ## Verified scope
 
-The full project build and **257 Section 3 declaration type/axiom audits
-passed** in [CI run 42825054208](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42825054208)
-at source `2792396a6ad887fd82430fb4f7d1d4cd5371fb74` under Lean 4.35.0.
-There are 116 generic declarations and 141 actual ACVF declarations. These
-are component audits, not 257 numbered paper results. Only `propext`,
+The full project build and **288 Section 3 declaration type/axiom audits
+passed** in [CI run 42829855150](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42829855150)
+at source `a401f0579918de5ff128f723b98e39aecd5ca416` under Lean 4.35.0.
+There are 133 generic declarations and 155 actual ACVF declarations. These
+are component audits, not 288 numbered paper results. Only `propext`,
 `Classical.choice` and `Quot.sound` occur. The checked sources have no
 placeholders or custom axioms.
 
@@ -43,6 +43,15 @@ placeholders or custom axioms.
   many disjoint proper holes. It does not assert original-base definability
   of each component or equality of primitive types.
 
+- **Canonical finite support:** `CanonicalSupportFamily.exists_definable_canonical_support`
+  proves that every set of VF points definable over the combined base has a
+  unique minimal finite support by actual balls, and that the full family
+  of those ball imaginaries is definable over the original base. The finite
+  proper-subball non-covering input is derived from the already formalized
+  Johnson theorem. A Gamma value greater than one supplies ambient
+  nontriviality; no chosen support tuple, centre or representative enters
+  the base. This is a prerequisite for 3.6, not its primitive classification.
+
 ## Remaining work
 
 Lemma 3.6's canonical primitive classification and Lemmas 3.7–3.8 remain open.
@@ -51,38 +60,21 @@ image, linearity, open-to-open, component-count and bijection results through
 Proposition 3.24. No such result is counted as proved by a helper that assumes
 its missing geometry. Section 2's Corollary 2.34 remains open separately.
 
-The next target is a canonical finite support for a definable VF set. Prove
-uniqueness using the pinned Johnson finite-proper-subball non-covering theorem,
-then recover original-base definability from the intrinsic minimal-support
-formula. This must precede the primitive-radius, valuative-centre and hole
-classification arguments. Keep all ball-code preimages invariant.
-
-## Current continuation
-
-`MinimalBallSupport.lean` has passed the local 133-declaration core audit.
-It proves existence and uniqueness of minimal finite supports in a laminar
-family with the explicit finite-proper-subball non-covering property.
-`CanonicalBallSupport.lean` supplies the actual ACVF bridge using the already
-formalized pinned Johnson theorem, with nontriviality derived from a Gamma
-value greater than one. That new actual module is awaiting CI. `SupportFormulas.lean` now proves original-base definability of the fixed-length
-support family and its identification with the minimal support. Its seven
-new complete types and standard axioms passed that local core audit. `BallCodeGeometry.lean` and `CanonicalSupportFamily.lean` now implement that
-actual ball-code bridge and the original-base canonical family. Their full
-CI build and audits are pending; the primitive
-classification is not yet established. The fixed canonical support now also
-covers the VF set and yields disjoint positive regions without inserting a
-new parent; both generic steps passed the local core audit. `VERIFICATION.json` remains the full
-257-declaration checkpoint, while `CORE-VERIFICATION.json` records the new
-local core and its exact input hashes.
+The next target is the original-base definable family of nonempty positive
+regions associated with the canonical support, followed by the radius,
+valuative-centre, kind and hole classification. Strict containment and
+region membership must retain full invariant ball-code preimages. The
+fixed-support coverage and disjoint-decomposition arguments are checked;
+individual component definability is not assumed.
 
 ## Verification evidence
 
 `VERIFICATION.json` records compiler, dependency pins, all checked source
-hashes and per-declaration axioms for the 257-declaration checkpoint.
-The full checkpoint contains 116 generic audits; the current local core
-receipt may include the explicitly described continuation above. Complete diagnostics, explicit exported definitions/types and
+hashes and per-declaration axioms for the 288-declaration checkpoint.
+`CORE-VERIFICATION.json` retains the corresponding local 133-declaration
+core audit. Complete diagnostics, explicit exported definitions/types and
 compact type output are in the linked artifact and
-`.scratch/ci-2792396-section3/`. Every receipt input hash was compared with
+`.scratch/ci-a401f05-section3/`. Every receipt input hash was compared with
 the committed source before publication. Dependencies may be reused from
 pinned caches; the full root and new modules were checked by the CI build.
 

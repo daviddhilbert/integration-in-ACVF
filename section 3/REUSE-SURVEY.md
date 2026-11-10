@@ -67,57 +67,37 @@ explicit singleton-open convention is not used as the sequel's predicate.
 ## Verification and next reuse boundary
 
 The full root build, inherited foundation audit, both Section 2 audits and
-257 Section 3 audits passed in CI run 42825054208 at source
-`2792396a6ad887fd82430fb4f7d1d4cd5371fb74`. All 67 newly exported types since
-the 190-declaration checkpoint were reviewed, together with the explicit
-original-model/normalized definitions. Every receipt input hash matched
-the committed source. Only propext, Classical.choice and Quot.sound occur.
-The receipts distinguish compiler/source identities and incremental builds.
+288 Section 3 audits passed in [CI run 42829855150](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42829855150)
+at source `a401f0579918de5ff128f723b98e39aecd5ca416`. All 31 newly exported
+types since the 257-declaration checkpoint were reviewed, together with
+the actual ball family and original-model/normalized definitions. Every
+receipt input hash matched the committed source. Only propext,
+Classical.choice and Quot.sound occur. The receipts distinguish exact
+compiler/source identities and incremental builds.
 
-For canonical supports in Lemma 3.6, the next source is pinned ACVF-QE
-`Proofs/JohnsonGeometry.lean`, specifically
-`Johnson.ne_finite_union_of_proper_subballs` (Johnson Lemma 2.3.7).
-It supplies the actual algebraically closed nontrivially valued-field
-non-covering property. Unique finite supports must then be shown definable
-over the original base by an intrinsic fixed-length support formula. Their
-radii, valuative centres, kinds, holes and affine residue-class operations
-need invariant full-code definitions before the primitive classification
-can be counted as proved. The later image and open-to-open geometry remains
-open; neither generic finite decomposition nor legacy volume interfaces
-prove it automatically.
+`MinimalBallSupport.lean` proves minimal finite support uniqueness in a
+laminar family with the explicit non-covering property.
+`CanonicalBallSupport.lean` supplies that property from the existing Lean
+proof `ValOneEC.Johnson.ne_finite_union_of_proper_subballs` (Johnson Lemma
+2.3.7) in pinned ACVF-QE `Proofs/JohnsonGeometry.lean`. It supplies IsAlgClosed
+VF and derives a nontrivial valuation witness from an actual Gamma value
+greater than one. The extra raw-universe top is absent from minimal supports.
+No unformalized external theorem is cited for this bridge.
 
+`SupportFormulas.lean` defines fixed-length support codes and their full
+interpreted family over the original base. Minimal-support uniqueness
+identifies its range with the canonical support without naming a chosen
+tuple. `BallCodeGeometry.lean` proves both directions of encoded-ball and
+actual-quotient coverage from the pinned chart bodies; the raw chart
+argument follows `GeometryBridge.isKBall_vfImage`, retaining a single ball.
+`CanonicalSupportFamily.lean` combines these steps to obtain the finite
+original-base definable support family. These are now fully checked.
 
-The canonical-support continuation uses `MinimalBallSupport.lean` for the
-finite laminar uniqueness proof. Its eight new complete types and standard
-axioms passed the local 124-declaration core audit. The drafted actual module
-`CanonicalBallSupport.lean` imports the existing Johnson proof, supplies
-IsAlgClosed VF and a nontrivial valuation witness, and transfers between
-encoded real subsets and actual VF valuation balls. A logical raw-universe
-top is added only to apply the generic uniqueness argument; essentiality
-proves it absent from minimal supports. This actual bridge awaits its CI
-build and audit. No unformalized external theorem is used.
-
-
-`SupportFormulas.lean` proves definability of fixed-length interpreted support
-codes and of their support family, using all codes and the original base.
-Its semantic identification with the unique minimal support uses the proved
-generic non-covering uniqueness argument. The seven new full types and
-standard axioms passed the 131-declaration local core audit. Actual ball-code
-coverage and the concrete family instance are the next bridges; no selected
-support tuple or representative is named over B.
-
-
-`BallCodeGeometry.lean` reuses the pinned real chart bodies and the argument
-in `GeometryBridge.isKBall_vfImage`, retaining a single encoded ball in the
-nonempty charts. It proves actual-quotient/encoded-ball coverage in both
-directions. `CanonicalSupportFamily.lean` combines those bridges, the
-intrinsic support formula, and minimal-support uniqueness to define the
-finite canonical family over the original real/Gamma/ball base. These new
-actual declarations await CI; no primitive classification is claimed yet.
-
-
-The fixed-support continuation adds `MinimalBallSupport.support_covers` and
-`PuncturedDecomposition.finite_decomposition_of_support`. A point outside VF
-ensures the canonical VF support covers A; its nonempty positive regions then
-partition A without changing the parent family. Both full types and standard
-axioms passed the 133-declaration local core audit.
+`MinimalBallSupport.support_covers` and
+`PuncturedDecomposition.finite_decomposition_of_support` keep the canonical
+parent family fixed while deriving its disjoint positive regions. The next
+bridge is definability of that positive family and its holes by full-code
+strict-containment and membership formulas. Their Gamma invariants and
+primitive classification remain open, as do the later image/open-to-open
+results. Neither generic decomposition nor legacy volume interfaces prove
+those obligations automatically.
