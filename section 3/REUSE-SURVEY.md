@@ -131,3 +131,19 @@ Mathlib's `Valuation.leAddSubgroup` and `Valuation.ltAddSubgroup`, together
 with the predecessor's `RVUnaryLift`, `rv_le_normalize` and RV definability
 APIs. These supply actual zero-centred valuation-ball subgroups; their
 original-base definability and the ball/coset equality still need proof.
+# Named-radius specialization
+
+`NamedRadiusAtomicity.lean` uses the same pinned predecessor revision and
+Mathlib revision listed above. `GammaParameters.raw_le_definable`,
+`rv_le_normalize`, and `DefinableAt.rv_preimage` give the zero-centred
+subgroup's definability over the original base. Mathlib's
+`Valuation.leAddSubgroup` and `Valuation.ltAddSubgroup` supply the actual
+additive subgroups. `CanonicalRV.encodedRv_surjective` supplies a VF lift only
+inside the proof; no chosen VF representative appears in the parameter base.
+The resulting real-base statement covers a nonzero RV radius already in
+the base and both the open and closed inequalities. Full imaginary bases
+and the singleton/whole-field cases are separate follow-up obligations.
+
+The preceding coset module passed the complete root build and 84 Section 3
+headline audits in run 42805178064 at source 19265875181911103ae0c8fabfd03891b3d42d4c.
+The named-radius specialization awaits its own complete build and audit.
