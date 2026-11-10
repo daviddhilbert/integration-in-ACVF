@@ -8,24 +8,28 @@ are also in scope. None of those later statements is marked complete.
 
 ## Current scope
 
-The full project build and all **76 Section 3 declaration type/axiom audits
+The full project build and all **84 Section 3 declaration type/axiom audits
 passed** under Lean 4.35.0 in
-[CI run 42789563292](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42789563292).
+[CI run 42805178064](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42805178064).
 Only `propext`, `Classical.choice` and `Quot.sound`
 occur in their axiom reports. The checked sources contain no `sorry`, `admit`
 or custom axiom declarations. This is a certificate for the components below,
-not 76 numbered paper results. The full C• parameter-base scope remains open.
+not 84 numbered paper results. The full C• parameter-base scope remains open.
 
-Continuation: the generic core now has 58 declarations, all locally compiled
-and type/axiom-audited. This includes definability of interpreted ranges and
-the full-projection consequence of the accepted nonemptiness correction.
-The new `BallCosetAtomicity.lean` instance is written and awaiting CI checks;
-the committed receipt below records the preceding fully verified revision.
+Continuation: the generic core now has **86 declarations**, all locally
+compiled and type/axiom-audited, including finite-support imaginary parameter
+bases, Boolean and existential closure, and the parametric atomicity argument
+over such bases. `CORE-VERIFICATION.json` binds this local core audit.
+`BallCosetAtomicity.lean` passed the full CI checks above. The named-RV radius
+specialization has compiled in CI; the Gamma-radius and degenerate-ball
+extensions are undergoing compiler checks. They are not yet included in a
+passed full-revision certificate. The committed full receipt below records
+the preceding 84-declaration revision.
 
 `VERIFICATION.json` records the exact source hashes, compiler, dependency pins
 and per-headline axioms. Full compiler output and the freshly compiled audit
 source are retained in the linked CI artifact and locally in
-`.scratch/ci-4109dc7-section3/`.
+`.scratch/ci-1926587-section3/`.
 
 | Component | Source | Scope |
 | --- | --- | --- |
@@ -35,10 +39,13 @@ source are retained in the linked CI artifact and locally in
 | Finite-exception geometry for Lemma 3.2 | Same | A finite Boolean combination of a laminar family splits only finitely many members of any pairwise disjoint subfamily. The containment and disjointness hypotheses are explicit. |
 | First-order parametric atomicity | `IntegrationSection3/DefinableFamilies.lean`, `ParametricAtomicity.lean` | Proves parameter promotion, same-base definability of the exceptional indices, their finiteness, and the algebraicity contradiction. C-minimality and laminarity are explicit geometric inputs. The associated-code variant uses a genuinely definable map. |
 | Imaginary-index argument | `IntegrationSection3/ImaginaryFamilies.lean` | Full real-preimage definability on an interpreted quotient sort; equality follows from an injective definable membership relation. Proves finite exceptional imaginary indices, same-base algebraicity transfer through a definable partial function, and atomicity under nonalgebraicity of the output imaginary. No chosen representative is named. |
-| Complete-type argument for Lemma 3.4 | `ImaginaryFamilies.lean` | A member of a definable disjoint family contained in a complete-type-generating set is atomic over its imaginary index. This logical argument needs no C-minimality or nonalgebraicity hypothesis. The actual same-radius family is still needed. |
+| Complete-type argument for Lemma 3.4 | `ImaginaryFamilies.lean` | A member of a definable disjoint family contained in a complete-type-generating set is atomic over its imaginary index. This logical argument needs no C-minimality or nonalgebraicity hypothesis. The definable additive-coset family is now checked; its radius specializations are being checked. |
 | Actual ACVF geometry and real-index case | `IntegrationSection3ACVF/Geometry.lean` | Checked, with five audits. Uses the predecessor's proved C-minimality and unchanged ball predicates on canonical normalization. |
 | Actual imaginary ball presentation and real-base Lemma 3.2 | `IntegrationSection3ACVF/BallPresentation.lean` | Checked, with eleven audits. Uses the predecessor's actual open/closed quotients, a surjective full code presentation, proved interpreted equality, proved ball geometry/C-minimality, and nonalgebraicity of the actual output-ball imaginary. It covers real parameter bases; bases containing additional imaginary names are not claimed. |
 | Lemma 3.3 over a real base | `IntegrationSection3ACVF/GammaAtomicity.lean` | Checked, with five audits. Covers arbitrary finite Gamma parameter tuples and finite mixed output arities, with an explicit original-base definable nontrivial Gamma value. Uses the predecessor's proved tuple definable-point theorem. Full bases containing ball names remain open. |
+| Arbitrary interpreted parameter bases | `ImaginaryParameters.lean`, `ImaginaryBaseFamilies.lean` | Locally checked generic finite-support definitions, specialization, Boolean/quantifier closure, exceptional-set definability and finiteness, and parametric atomicity over the exact interpreted base. A combined actual Gamma/ball presentation and the extra-index parameter equivalence remain to be connected. |
+| Ball cosets below complete types | `IntegrationSection3ACVF/BallCosetAtomicity.lean` | Checked, with five audits. Builds the actual definable disjoint family of ball cosets of a definable additive VF subgroup and applies the complete-type argument without naming a centre. |
+| Radius specializations of Lemma 3.4 | `NamedRadiusAtomicity.lean`, `GammaRadiusAtomicity.lean` | Named-RV radii compiled; ordinary definable Gamma radii, singleton balls and VF are undergoing full compiler/audit checks. Full C• bases remain open. |
 | Full Lemmas 3.2–3.3 | Not complete | Their bases must still allow additional genuine Gamma and ball names, rather than chosen real representatives. |
 | Lemmas 3.4–3.24 | Not complete | The logical ingredient for 3.4 is checked, as listed above; no later geometric conclusion is claimed. |
 
@@ -53,7 +60,7 @@ retains this convention and adds nonemptiness when selecting a realization.
 ```sh
 lake build IntegrationSection3
 lake env python3 'section 3/verify.py'
-# ACVF bridge and twenty-one additional declarations:
+# Include the actual ACVF declarations:
 lake env python3 'section 3/verify.py' --acvf
 ```
 

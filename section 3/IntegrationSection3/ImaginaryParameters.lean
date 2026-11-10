@@ -21,7 +21,7 @@ namespace IntegrationInACVF.Section3.ImaginaryParameters
 
 set_option backward.isDefEq.respectTransparency false
 
-universe u v w w' w'' w₁ w₂
+universe u v w w' w'' w₁ w₂ w₃
 
 variable {L : Language.{u,v}} {M : Type w} [L.Structure M]
 variable {I : Type w'} {κ : Type w''}
@@ -195,6 +195,60 @@ theorem OverBase.compl {B : Base M I} {υ : Type w₂} [Finite υ] {A : Set (υ 
     OverBase (L := L) p B Aᶜ := by
   obtain ⟨F,hF,hA⟩ := hA
   exact ⟨F,hF,hA.compl hp⟩
+
+omit [Finite κ] in
+theorem WithTuple.preimage_comp {θ : Type w₁} {υ : Type w₂} {β : Type w₃}
+    {a : θ → I} {A : Set (υ → M)}
+    (hA : WithTuple (L := L) p Q a A) (f : υ → β) :
+    WithTuple (L := L) p Q a ((fun z : β → M => z ∘ f) ⁻¹' A) := by
+  obtain ⟨R,hR,rfl⟩ := hA
+  refine ⟨fun i => (fun z : β → M => z ∘ f) ⁻¹' R i,?_,rfl⟩
+  convert hR.preimage_comp (Sum.map id f) using 1
+  ext z
+  simp only [vectorPullback, Set.mem_ofPred_eq, Set.mem_preimage,
+    Function.comp_def, Sum.map_inl, Sum.map_inr, id_eq]
+
+omit [Finite κ] in
+theorem OverBase.preimage_comp {B : Base M I} {υ : Type w₂} {β : Type w₃}
+    {A : Set (υ → M)} (hA : OverBase (L := L) p B A) (f : υ → β) :
+    OverBase (L := L) p B ((fun z : β → M => z ∘ f) ⁻¹' A) := by
+  obtain ⟨F,hF,hA⟩ := hA
+  exact ⟨F,hF,hA.preimage_comp f⟩
+
+omit [Finite κ] in
+theorem WithTuple.exists_block {θ : Type w₁} {υ : Type w₂} {β : Type w₃} [Finite β]
+    {a : θ → I} {A : Set (υ ⊕ β → M)} (hA : WithTuple (L := L) p Q a A) :
+    WithTuple (L := L) p Q a {z | ∃ b : β → M, Sum.elim z b ∈ A} := by
+  obtain ⟨R,hR,rfl⟩ := hA
+  refine ⟨fun i => {z | ∃ b : β → M, Sum.elim z b ∈ R i},?_,rfl⟩
+  let f : (θ × κ) ⊕ (υ ⊕ β) → ((θ × κ) ⊕ υ) ⊕ β :=
+    Sum.elim (fun c => .inl (.inl c))
+      (Sum.elim (fun v => .inl (.inr v)) Sum.inr)
+  have h := (hR.preimage_comp f).exists_of_finite
+  convert h using 1
+  ext z
+  have hreal (b : β → M) :
+      (Sum.elim z b ∘ f) ∘ Sum.inr = Sum.elim (z ∘ Sum.inr) b := by
+    funext j
+    cases j <;> rfl
+  constructor
+  · rintro ⟨hz,b,hb⟩
+    refine ⟨b,hz,?_⟩
+    change ((Sum.elim z b ∘ f) ∘ Sum.inr) ∈ _
+    rw [hreal]
+    exact hb
+  · rintro ⟨b,hz,hb⟩
+    refine ⟨hz,b,?_⟩
+    change ((Sum.elim z b ∘ f) ∘ Sum.inr) ∈ _ at hb
+    rw [hreal] at hb
+    exact hb
+
+omit [Finite κ] in
+theorem OverBase.exists_block {B : Base M I} {υ : Type w₂} {β : Type w₃} [Finite β]
+    {A : Set (υ ⊕ β → M)} (hA : OverBase (L := L) p B A) :
+    OverBase (L := L) p B {z | ∃ b : β → M, Sum.elim z b ∈ A} := by
+  obtain ⟨F,hF,hA⟩ := hA
+  exact ⟨F,hF,hA.exists_block⟩
 
 /-- C-minimality can be used after specialization without changing the
 definability assertion over the original interpreted base. -/

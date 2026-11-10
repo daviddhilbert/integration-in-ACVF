@@ -85,6 +85,21 @@ HEADLINES = [
     'ImaginaryParameters.OverBase.inter',
     'ImaginaryParameters.OverBase.compl',
     'ImaginaryParameters.finite_ball_support',
+    'ImaginaryParameters.WithTuple.preimage_comp',
+    'ImaginaryParameters.OverBase.preimage_comp',
+    'ImaginaryParameters.WithTuple.exists_block',
+    'ImaginaryParameters.OverBase.exists_block',
+    'ImaginaryBaseFamilies.Relation.inter',
+    'ImaginaryBaseFamilies.Relation.compl',
+    'ImaginaryBaseFamilies.Relation.domain',
+    'ImaginaryBaseFamilies.Family.inter',
+    'ImaginaryBaseFamilies.Relation.restrict',
+    'ImaginaryBaseFamilies.Relation.range',
+    'ImaginaryBaseFamilies.exceptional_definable',
+    'ImaginaryBaseFamilies.traces_definable',
+    'ImaginaryBaseFamilies.finite_exceptional',
+    'ImaginaryBaseFamilies.atomic_below_complete_type',
+    'ImaginaryBaseFamilies.parametric_atomic',
 ]
 ACVF_HEADLINES = [
     'IntegrationInACVF.Section3ACVF.' + name for name in (
@@ -133,6 +148,12 @@ DEFINITIONS = [
     'ImaginaryParameters.WithTuple',
     'ImaginaryParameters.Base',
     'ImaginaryParameters.OverBase',
+    'ImaginaryBaseFamilies.Family',
+    'ImaginaryBaseFamilies.Relation',
+    'ImaginaryBaseFamilies.With',
+    'ImaginaryBaseFamilies.Algebraic',
+    'ImaginaryBaseFamilies.AtomicWith',
+    'ImaginaryBaseFamilies.CompleteType',
 ]
 ACVF_DEFINITIONS = [
     'IntegrationInACVF.Section3ACVF.BallPresentation.' + name

@@ -54,6 +54,7 @@ theorem radiusTail_definable_of_value (Q : Set M) (t : CanonicalRV.RVSort M)
   have hl := GammaParameters.raw_le_definable (M := M) Q
   have hr := hl.preimage_comp (![1,0] : Fin 2 → Fin 2)
   have hR : Q.Definable₂ LRV R := by
+    change Q.Definable LRV {z : Fin 2 → M | (z 0,z 1) ∈ R}
     cases strict with
     | false =>
       convert h0.inter (h1.inter hl) using 1
@@ -82,8 +83,8 @@ theorem radiusTail_definable_of_value (Q : Set M) (t : CanonicalRV.RVSort M)
 def gammaBall (a : VFType (M := M)) (γ : Values.Gamma (M := M))
     (strict : Bool) : Set M :=
   {x | ∃ hx : iVF x,
-    γ.val ≤ Values.vfValueHom ((⟨x,hx⟩ : VFType (M := M))-a) ∧
-      (strict = true → ¬ Values.vfValueHom ((⟨x,hx⟩ : VFType (M := M))-a) ≤ γ.val)}
+    γ.val ≤ (@Values.vfValueHom M sM hM) ((⟨x,hx⟩ : VFType (M := M))-a) ∧
+      (strict = true → ¬ (@Values.vfValueHom M sM hM) ((⟨x,hx⟩ : VFType (M := M))-a) ≤ γ.val)}
 
 theorem radiusBall_eq_gammaBall (a : VFType (M := M)) (t : CanonicalRV.RVSort M)
     (γ : Values.Gamma (M := M)) (htγ : Values.vrv t = γ.val) (strict : Bool) :
@@ -91,20 +92,22 @@ theorem radiusBall_eq_gammaBall (a : VFType (M := M)) (t : CanonicalRV.RVSort M)
   ext x
   have hc (hx : iVF x) :
       iLe t.val (iRv (iVFAdd x (iVFNeg a.val))) ↔
-        γ.val ≤ Values.vfValueHom ((⟨x,hx⟩ : VFType (M := M))-a) := by
-    have hd : ((⟨x,hx⟩ : VFType (M := M))-a).val = iVFAdd x (iVFNeg a.val) := by
+        γ.val ≤ (@Values.vfValueHom M sM hM) ((⟨x,hx⟩ : VFType (M := M))-a) := by
+    let u : VFType (M := M) := ⟨x,hx⟩
+    have hd : (u-a).val = iVFAdd x (iVFNeg a.val) := by
       rw [sub_eq_add_neg]; rfl
-    have h := Values.vrv_le_iff t (CanonicalRV.encodedRv ((⟨x,hx⟩ : VFType (M := M))-a))
-    change Values.vrv t ≤ Values.vfValueHom ((⟨x,hx⟩ : VFType (M := M))-a) ↔ _ at h
+    have h := Values.vrv_le_iff t (CanonicalRV.encodedRv (u-a))
+    change Values.vrv t ≤ (@Values.vfValueHom M sM hM) ((⟨x,hx⟩ : VFType (M := M))-a) ↔ _ at h
     rw [htγ,hd] at h
     exact h.symm
   have hc' (hx : iVF x) :
       iLe (iRv (iVFAdd x (iVFNeg a.val))) t.val ↔
-        Values.vfValueHom ((⟨x,hx⟩ : VFType (M := M))-a) ≤ γ.val := by
-    have hd : ((⟨x,hx⟩ : VFType (M := M))-a).val = iVFAdd x (iVFNeg a.val) := by
+        (@Values.vfValueHom M sM hM) ((⟨x,hx⟩ : VFType (M := M))-a) ≤ γ.val := by
+    let u : VFType (M := M) := ⟨x,hx⟩
+    have hd : (u-a).val = iVFAdd x (iVFNeg a.val) := by
       rw [sub_eq_add_neg]; rfl
-    have h := Values.vrv_le_iff (CanonicalRV.encodedRv ((⟨x,hx⟩ : VFType (M := M))-a)) t
-    change Values.vfValueHom ((⟨x,hx⟩ : VFType (M := M))-a) ≤ Values.vrv t ↔ _ at h
+    have h := Values.vrv_le_iff (CanonicalRV.encodedRv (u-a)) t
+    change (@Values.vfValueHom M sM hM) ((⟨x,hx⟩ : VFType (M := M))-a) ≤ Values.vrv t ↔ _ at h
     rw [htγ,hd] at h
     exact h.symm
   constructor
@@ -167,8 +170,9 @@ theorem lemma_3_4_whole_field (Q : Set M) {A : Set M}
     · rintro ⟨u,_,rfl⟩
       exact u.property
     · intro hx
-      refine ⟨⟨x,hx⟩,?_,rfl⟩
-      exact QuotientAddGroup.eq_iff_sub_mem.mpr (show (⟨x,hx⟩ : VFType (M := M))-0 ∈ H from trivial)
+      let u : VFType (M := M) := ⟨x,hx⟩
+      refine ⟨u,?_,rfl⟩
+      exact QuotientAddGroup.eq_iff_sub_mem.mpr (show u-0 ∈ H from trivial)
   exact atomic_ball_coset_below_complete_type Q H hH hA i ⟨0,hi.trans hc.symm⟩ hsub
 
 end IntegrationInACVF.Section3ACVF.GammaRadiusAtomicity

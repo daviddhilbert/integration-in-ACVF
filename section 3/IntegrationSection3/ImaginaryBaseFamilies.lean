@@ -1,0 +1,198 @@
+module
+
+public import IntegrationSection3.ImaginaryParameters
+
+@[expose] public section
+
+/-! Family arguments with an arbitrary finitely supported interpreted base.
+The presentation of the parameter sort and that of the family index can
+differ. In ACVF the former can combine Gamma and ball names. -/
+
+open Set FirstOrder
+open IntegrationInACVF.Section3.ImaginaryFamilies
+open IntegrationInACVF.Section3.ImaginaryParameters
+
+namespace IntegrationInACVF.Section3.ImaginaryBaseFamilies
+
+set_option backward.isDefEq.respectTransparency false
+
+universe u v w w' w'' w₁ w₂
+
+variable {L : Language.{u,v}} {M : Type w} [L.Structure M]
+variable {I : Type w'} {κ : Type w''} {J : Type w₁} {η : Type w₂}
+variable (p : Presentation M I κ) (B : Base M I) (q : Presentation M J η)
+
+def Family (T : Set J) : Prop := OverBase (L := L) p B (q.pullback T)
+def Relation (C : J → Set M) : Prop := OverBase (L := L) p B (q.relationPullback C)
+def With (j : J) (A : Set M) : Prop := ∃ C, Relation (L := L) p B q C ∧ C j = A
+def Algebraic (j : J) : Prop := ∃ T, Family (L := L) p B q T ∧ T.Finite ∧ j ∈ T
+def AtomicWith (j : J) (A : Set M) : Prop :=
+  With (L := L) p B q j A ∧
+    ∀ S : Set M, With (L := L) p B q j S → A ⊆ S ∨ Disjoint A S
+def CompleteType (A : Set M) : Prop :=
+  ∀ S : Set M, OverBase (L := L) p B {z : Fin 1 → M | z 0 ∈ S} →
+    A ⊆ S ∨ Disjoint A S
+
+variable {p B q} [Finite η]
+variable (hp : B.real.Definable L p.codes)
+
+include hp in
+theorem Relation.inter {C P : J → Set M}
+    (hC : Relation (L := L) p B q C) (hP : Relation (L := L) p B q P) :
+    Relation (L := L) p B q (fun j => C j ∩ P j) := by
+  change OverBase (L := L) p B (q.relationPullback (fun j => C j ∩ P j))
+  convert OverBase.inter hC hP hp using 1
+  ext z
+  exact ⟨fun ⟨hz,hc,hp⟩ => ⟨⟨hz,hc⟩,hz,hp⟩,
+    fun ⟨⟨hz,hc⟩,_,hp⟩ => ⟨hz,hc,hp⟩⟩
+
+include hp in
+theorem Relation.compl (hq : B.real.Definable L q.codes) {C : J → Set M}
+    (hC : Relation (L := L) p B q C) :
+    Relation (L := L) p B q (fun j => (C j)ᶜ) := by
+  have hd : OverBase (L := L) p B q.codes := OverBase.of_real hq
+  change OverBase (L := L) p B (q.relationPullback (fun j => (C j)ᶜ))
+  convert OverBase.inter (hd.preimage_comp (Sum.inl : η → η ⊕ Fin 1))
+    (OverBase.compl hC hp) hp using 1
+  ext z
+  exact ⟨fun ⟨hz,hn⟩ => ⟨hz,fun ⟨_,h⟩ => hn h⟩,
+    fun ⟨hz,hn⟩ => ⟨hz,fun h => hn ⟨hz,h⟩⟩⟩
+
+omit [Finite η] in
+theorem Relation.domain {C : J → Set M} (hC : Relation (L := L) p B q C) :
+    Family (L := L) p B q {j | (C j).Nonempty} := by
+  change OverBase (L := L) p B (q.pullback {j | (C j).Nonempty})
+  convert OverBase.exists_block hC using 1
+  ext z
+  exact ⟨fun ⟨hz,x,hx⟩ => ⟨![x],hz,hx⟩,
+    fun ⟨x,hz,hx⟩ => ⟨hz,x 0,hx⟩⟩
+
+include hp in
+theorem Family.inter {T U : Set J}
+    (hT : Family (L := L) p B q T) (hU : Family (L := L) p B q U) :
+    Family (L := L) p B q (T ∩ U) := by
+  change OverBase (L := L) p B (q.pullback (T ∩ U))
+  convert OverBase.inter hT hU hp using 1
+  ext z
+  exact ⟨fun ⟨hz,ht,hu⟩ => ⟨⟨hz,ht⟩,hz,hu⟩,
+    fun ⟨⟨hz,ht⟩,_,hu⟩ => ⟨hz,ht,hu⟩⟩
+
+include hp in
+theorem Relation.restrict {T : Set J} {C : J → Set M}
+    (hT : Family (L := L) p B q T) (hC : Relation (L := L) p B q C) :
+    Relation (L := L) p B q (fun j => {x | j ∈ T ∧ x ∈ C j}) := by
+  change OverBase (L := L) p B (q.relationPullback (fun j => {x | j ∈ T ∧ x ∈ C j}))
+  convert OverBase.inter
+    (OverBase.preimage_comp hT (Sum.inl : η → η ⊕ Fin 1)) hC hp using 1
+  ext z
+  exact ⟨fun ⟨hz,ht,hc⟩ => ⟨⟨hz,ht⟩,hz,hc⟩,
+    fun ⟨⟨hz,ht⟩,_,hc⟩ => ⟨hz,ht,hc⟩⟩
+
+theorem Relation.range {C : J → Set M} (hC : Relation (L := L) p B q C) :
+    OverBase (L := L) p B {z : Fin 1 → M | ∃ j, z 0 ∈ C j} := by
+  have h := (OverBase.preimage_comp hC (Sum.swap : η ⊕ Fin 1 → Fin 1 ⊕ η)).exists_block
+  convert h using 1
+  ext z
+  constructor
+  · rintro ⟨j,hj⟩
+    obtain ⟨c,rfl⟩ := q.onto j
+    exact ⟨c.val,c.property,hj⟩
+  · rintro ⟨c,hc,hj⟩
+    exact ⟨q.decode ⟨c,hc⟩,hj⟩
+
+include hp in
+theorem exceptional_definable (hq : B.real.Definable L q.codes)
+    {T : Set J} {C P : J → Set M}
+    (hT : Family (L := L) p B q T)
+    (hC : Relation (L := L) p B q C) (hP : Relation (L := L) p B q P) :
+    Family (L := L) p B q (ImaginaryFamilies.exceptional T C P) := by
+  have hc := Relation.inter hp hC hP
+  have hn := Relation.inter hp hC (Relation.compl hp hq hP)
+  have hd := Family.inter hp hT (Family.inter hp hc.domain hn.domain)
+  change OverBase (L := L) p B (q.pullback (ImaginaryFamilies.exceptional T C P))
+  change OverBase (L := L) p B (q.pullback _) at hd
+  convert hd using 1
+  ext z
+  exact ⟨fun ⟨hz,ht,x,hxc,hxp,y,hyc,hyp⟩ => ⟨hz,ht,⟨x,hxc,hxp⟩,y,hyc,hyp⟩,
+    fun ⟨hz,ht,⟨x,hxc,hxp⟩,y,hyc,hyp⟩ => ⟨hz,ht,x,hxc,hxp,y,hyc,hyp⟩⟩
+
+include hp in
+theorem traces_definable (hq : B.real.Definable L q.codes)
+    {T : Set J} {C P : J → Set M}
+    (hT : Family (L := L) p B q T)
+    (hC : Relation (L := L) p B q C) (hP : Relation (L := L) p B q P) :
+    OverBase (L := L) p B {z : Fin 1 → M | z 0 ∈ ImaginaryFamilies.traces T C P} :=
+  Relation.range (Relation.restrict hp (exceptional_definable hp hq hT hC hP)
+    (Relation.inter hp hC hP))
+
+variable [Finite κ]
+
+include hp in
+theorem finite_exceptional (hq : B.real.Definable L q.codes)
+    {D : Set M} {balls : Set (Set M)} (hlam : IsLaminar balls)
+    (hcm : ∀ Q' : Set M, CMinimalOn L Q' D balls) (hsub : ∀ b ∈ balls, b ⊆ D)
+    {T : Set J} {C P : J → Set M}
+    (hT : Family (L := L) p B q T)
+    (hC : Relation (L := L) p B q C) (hP : Relation (L := L) p B q P)
+    (hballs : ∀ j ∈ T, C j ∈ balls)
+    (hdis : T.Pairwise fun i j => Disjoint (C i) (C j)) :
+    (ImaginaryFamilies.exceptional T C P).Finite := by
+  have hsupport := ImaginaryParameters.finite_ball_support hcm
+    (traces_definable hp hq hT hC hP) (by
+      rintro x ⟨i,hi,hxc,_⟩
+      exact hsub _ (hballs i hi.1) hxc)
+  have hpair : Pairwise fun i j : T => Disjoint (C i.val) (C j.val) := by
+    intro i j hne
+    exact hdis i.property j.property (fun he => hne (Subtype.ext he))
+  have hf := finite_splitters hlam (fun i : T => C i.val)
+    (fun i => hballs i.val i.property) hpair hsupport
+  apply (hf.image Subtype.val).subset
+  intro i hi
+  exact ⟨⟨i,hi.1⟩,ImaginaryFamilies.splits_traces hdis hi,rfl⟩
+
+omit [Finite κ] in
+include hp in
+theorem atomic_below_complete_type (hq : B.real.Definable L q.codes)
+    {T : Set J} {C : J → Set M}
+    (hT : Family (L := L) p B q T) (hC : Relation (L := L) p B q C)
+    (hdis : T.Pairwise fun i j => Disjoint (C i) (C j))
+    {A : Set M} (hA : CompleteType (L := L) p B A)
+    {i : J} (hi : i ∈ T) (hisub : C i ⊆ A) :
+    AtomicWith (L := L) p B q i (C i) := by
+  classical
+  refine ⟨⟨C,hC,rfl⟩,?_⟩
+  rintro S ⟨P,hP,rfl⟩
+  have hcut : ¬ Splits (P i) (C i) := by
+    intro hc
+    obtain ⟨x,hxc,hxU,y,hyc,hyU⟩ := ImaginaryFamilies.splits_traces hdis ⟨hi,hc⟩
+    rcases hA _ (traces_definable hp hq hT hC hP) with hw | hd
+    · exact hyU (hw (hisub hyc))
+    · exact Set.disjoint_left.mp hd (hisub hxc) hxU
+  by_cases hwhole : C i ⊆ P i
+  · exact Or.inl hwhole
+  · obtain ⟨y,hy,hyp⟩ := Set.not_subset.mp hwhole
+    exact Or.inr (Set.disjoint_left.mpr fun x hx hxp => hcut ⟨x,hx,hxp,y,hy,hyp⟩)
+
+include hp in
+theorem parametric_atomic (hq : B.real.Definable L q.codes)
+    {D : Set M} {balls : Set (Set M)} (hlam : IsLaminar balls)
+    (hcm : ∀ Q' : Set M, CMinimalOn L Q' D balls) (hsub : ∀ b ∈ balls, b ⊆ D)
+    {T : Set J} {C : J → Set M}
+    (hT : Family (L := L) p B q T) (hC : Relation (L := L) p B q C)
+    (hballs : ∀ i ∈ T, C i ∈ balls)
+    (hdis : T.Pairwise fun i j => Disjoint (C i) (C j))
+    {i : J} (hi : i ∈ T) (hna : ¬ Algebraic (L := L) p B q i) :
+    AtomicWith (L := L) p B q i (C i) := by
+  classical
+  refine ⟨⟨C,hC,rfl⟩,?_⟩
+  rintro S ⟨P,hP,rfl⟩
+  have hcut : ¬ Splits (P i) (C i) := by
+    intro hc
+    exact hna ⟨ImaginaryFamilies.exceptional T C P,exceptional_definable hp hq hT hC hP,
+      finite_exceptional hp hq hlam hcm hsub hT hC hP hballs hdis,hi,hc⟩
+  by_cases hwhole : C i ⊆ P i
+  · exact Or.inl hwhole
+  · obtain ⟨y,hy,hyp⟩ := Set.not_subset.mp hwhole
+    exact Or.inr (Set.disjoint_left.mpr fun x hx hxp => hcut ⟨x,hx,hxp,y,hy,hyp⟩)
+
+end IntegrationInACVF.Section3.ImaginaryBaseFamilies
