@@ -72,3 +72,12 @@ balls and define family definability by full real preimages in both charts.
 `GammaParameters` uses the corresponding invariant-preimage convention for
 genuine value-group parameters. These are preferable to naming chosen real
 representatives or introducing an unrelated ACVF language.
+
+`ImaginaryFamilies` now supplies the language-generic full-preimage argument.
+Its presentation consists of real code data, a surjective decoding map, and
+separate first-order definability of the domain and interpreted equality.
+Equality can be proved from an injective definable point-membership relation.
+This is an interpretation interface, not an assumed atomicity or algebraicity
+result. Its closure, projection, composition, algebraicity-transfer and
+finite-exception theorems passed the same local compiler/type/axiom checks.
+The bridge to the actual predecessor ball presentation remains in progress.

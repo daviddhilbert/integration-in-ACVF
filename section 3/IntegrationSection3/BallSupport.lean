@@ -36,6 +36,13 @@ def HasFiniteBallSupport (balls : Set (Set X)) (S : Set X) : Prop :=
   ∃ F : Finset (Set X), (∀ b ∈ F, b ∈ balls) ∧
     ∀ x y, (∀ b ∈ F, (x ∈ b ↔ y ∈ b)) → (x ∈ S ↔ y ∈ S)
 
+/-- Enlarging the collection of allowed balls preserves a finite support. -/
+theorem HasFiniteBallSupport.mono {balls balls' : Set (Set X)} {S : Set X}
+    (h : HasFiniteBallSupport balls S) (hb : balls ⊆ balls') :
+    HasFiniteBallSupport balls' S := by
+  obtain ⟨F,hF,hS⟩ := h
+  exact ⟨F,fun b hbf => hb (hF b hbf),hS⟩
+
 theorem HasFiniteBallSupport.basic {balls : Set (Set X)} {b : Set X}
     (hb : b ∈ balls) : HasFiniteBallSupport balls b := by
   classical

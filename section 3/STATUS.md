@@ -5,11 +5,11 @@ definable partition with the open-to-open property in Proposition 3.19.
 
 ## Current scope
 
-The Section 3 library build and all **34 helper-theorem type/axiom audits
+The Section 3 library build and all **52 helper-theorem type/axiom audits
 passed** under Lean 4.35.0. Only `propext`, `Classical.choice` and `Quot.sound`
 occur in their axiom reports. The checked sources contain no `sorry`, `admit`
 or custom axiom declarations. This is a certificate for the components below,
-not 34 numbered paper results and not completion of Lemma 3.2.
+not 52 numbered paper results and not completion of Lemma 3.2.
 
 `VERIFICATION.json` records the exact source hashes, compiler, dependency pins
 and per-headline axioms. Full compiler output and the freshly compiled audit
@@ -22,6 +22,7 @@ source are retained locally in `.scratch/section3-verified/`.
 | Finite support for Boolean combinations | `IntegrationSection3/BallSupport.lean` | Connects Mathlib's Boolean subalgebra closure to finite membership support. |
 | Finite-exception geometry for Lemma 3.2 | Same | A finite Boolean combination of a laminar family splits only finitely many members of any pairwise disjoint subfamily. The containment and disjointness hypotheses are explicit. |
 | First-order parametric atomicity | `IntegrationSection3/DefinableFamilies.lean`, `ParametricAtomicity.lean` | Proves parameter promotion, same-base definability of the exceptional indices, their finiteness, and the algebraicity contradiction. C-minimality and laminarity are explicit geometric inputs. The associated-code variant uses a genuinely definable map. |
+| Imaginary-index argument | `IntegrationSection3/ImaginaryFamilies.lean` | Full real-preimage definability on an interpreted quotient sort; equality follows from an injective definable membership relation. Proves finite exceptional imaginary indices, same-base algebraicity transfer through a definable partial function, and atomicity under nonalgebraicity of the output imaginary. No chosen representative is named. Actual ball presentation still needs verification. |
 | Actual ACVF geometry and real-index case | `IntegrationSection3ACVF/Geometry.lean` | Written, pending compilation and the five additional type/axiom audits in CI. Uses the predecessor's proved C-minimality and unchanged ball predicates on the canonical normalization. No verification claim yet. |
 | Full Lemma 3.2 | Not complete | The imaginary ball-index interpretation and exact imaginary parameter base still need to be connected. The generic theorem is not counted as this missing interpretation. |
 | Lemmas 3.3–3.18 and Proposition 3.19 | Not complete | No coverage is claimed by the preceding generic results. |

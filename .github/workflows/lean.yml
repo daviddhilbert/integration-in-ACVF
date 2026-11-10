@@ -64,7 +64,26 @@ jobs:
         run: python3 scripts/prepare_ci.py
 
       - name: Restore compiled pinned predecessors
-        uses: actions/cache@v4
+        id: predecessor-cache
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            .lake/packages/special_transformations/.lake/build
+            .lake/packages/acvf_qe/.lake/build
+          key: predecessor-${{ runner.os }}-${{ hashFiles('lean-toolchain', 'lake-manifest.json') }}
+
+      - name: Build the pinned predecessor
+        id: predecessor-build
+        env:
+          LEAN_NUM_THREADS: "4"
+        shell: bash
+        run: |
+          mkdir -p .scratch/ci-verified
+          lake build SpecialTransformations 2>&1 | tee .scratch/ci-verified/PredecessorBuild.log
+
+      - name: Save compiled pinned predecessors
+        if: ${{ steps.predecessor-cache.outputs.cache-hit != 'true' }}
+        uses: actions/cache/save@v4
         with:
           path: |
             .lake/packages/special_transformations/.lake/build

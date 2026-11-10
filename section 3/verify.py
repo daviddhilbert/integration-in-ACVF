@@ -26,6 +26,7 @@ HEADLINES = [
     'definable_image',
     'IsAtomic.image',
     'HasFiniteBallSupport.basic',
+    'HasFiniteBallSupport.mono',
     'HasFiniteBallSupport.univ',
     'HasFiniteBallSupport.compl',
     'HasFiniteBallSupport.union',
@@ -48,6 +49,23 @@ HEADLINES = [
     'finite_cutIndices',
     'parametric_ball_atomic',
     'parametric_ball_atomic_of_code',
+    'ImaginaryFamilies.Presentation.mem_pullback',
+    'ImaginaryFamilies.Presentation.mem_relationPullback',
+    'ImaginaryFamilies.Presentation.isDefinable_of_membership',
+    'ImaginaryFamilies.Presentation.DefinableRelation.inter',
+    'ImaginaryFamilies.Presentation.DefinableRelation.compl',
+    'ImaginaryFamilies.Presentation.DefinableRelation.domain',
+    'ImaginaryFamilies.Presentation.DefinableFamily.inter',
+    'ImaginaryFamilies.Presentation.DefinableRelation.restrict',
+    'ImaginaryFamilies.Presentation.DefinableRelation.range',
+    'ImaginaryFamilies.Presentation.DefinableFamily.image_on',
+    'ImaginaryFamilies.Presentation.Algebraic.map_on',
+    'ImaginaryFamilies.Presentation.DefinableRelation.comp_on',
+    'ImaginaryFamilies.exceptional_definable',
+    'ImaginaryFamilies.traces_definable',
+    'ImaginaryFamilies.finite_exceptional',
+    'ImaginaryFamilies.parametric_atomic',
+    'ImaginaryFamilies.parametric_atomic_of_output',
 ]
 ACVF_HEADLINES = [
     'IntegrationInACVF.Section3ACVF.' + name for name in (
@@ -58,6 +76,11 @@ DEFINITIONS = [
     'GeneratesCompleteType', 'IsAtomic', 'Splits',
     'IsLaminar', 'HasFiniteBallSupport',
     'DefinableFamilies.IsAlgebraicPoint', 'CMinimalOn', 'cutIndices', 'cutUnion',
+    'ImaginaryFamilies.Presentation',
+    'ImaginaryFamilies.Presentation.IsDefinable',
+    'ImaginaryFamilies.Presentation.DefinableWith',
+    'ImaginaryFamilies.Presentation.Algebraic',
+    'ImaginaryFamilies.Presentation.AtomicWith',
 ]
 ALLOWED = {'propext', 'Classical.choice', 'Quot.sound'}
 

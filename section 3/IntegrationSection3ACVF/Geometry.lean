@@ -117,7 +117,7 @@ theorem support_of_isBoolComb {balls : Set (Set M)} {S : Set M}
 /-- C-minimality is supplied by the predecessor's theorem, with raw
 definability interpreted in its canonical normalization. -/
 theorem normalized_cMinimalOn (Q : Set M) :
-    @CMinimalOn LRV M (CanonicalStructure.normalize (M := M)) Q
+    @CMinimalOn M LRV (CanonicalStructure.normalize (M := M)) Q
       {x | iVF x} {B : Set M | IsBall B} := by
   intro S hS hsub
   have hsorted : DefinableAt Q .vf S :=
@@ -142,7 +142,7 @@ theorem real_parametric_ball_atomic (Q T : Set M) (C : Set (M × M))
     (hdis : T.Pairwise fun t u => Disjoint (DefinableFamilies.fibre C t)
       (DefinableFamilies.fibre C u))
     {t : M} (ht : t ∈ T)
-    (hna : ¬ @DefinableFamilies.IsAlgebraicPoint LRV M
+    (hna : ¬ @DefinableFamilies.IsAlgebraicPoint M LRV
       (CanonicalStructure.normalize (M := M)) Q t) :
     @IsAtomic LRV M (CanonicalStructure.normalize (M := M)) (Fin 1) (insert t Q)
       {z | z 0 ∈ DefinableFamilies.fibre C t} := by
