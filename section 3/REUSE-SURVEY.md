@@ -302,3 +302,25 @@ then the paper's least-threshold exclusion, including VF source. Existence
 of a least-radius function is not asserted by its definition. All 21 new
 full types match individually reviewed audits and all 707 previous types
 are unchanged. No new external citation or unproved HK input is used.
+
+## Actual RV-fibre and coefficient-tail components
+
+Pins and licenses are unchanged. New proofs reuse the already checked
+actual Gamma-coset family, native RV closeness, residue-characteristic-zero
+integer orbit and finite-cover argument to construct atomic RV fibres.
+They reuse genuine real FIP saturation and normalization transfer; no
+quotient saturation is postulated. Full-code coefficient rows specialize
+one RV parameter only inside their controller proof. Finite controller
+endpoints and the checked finite projection give actual eventual RV
+coefficient constancy without completeness or Archimedean assumptions.
+
+The pinned RingSyntax, term normalization and Mathlib definable-term APIs
+were inspected before representing the actual affine error. The partial
+function graph retains the original imaginary base, with its real affine
+constants explicitly named. Checked 3.9 supplies actual RV error constancy;
+native valuation estimates recover the affine RV difference under the
+stated strict error bound. All 23 new full types match reviewed individual
+audits and all 728 earlier types are unchanged in the fresh 751-head audit.
+Full 3.18 is not counted. PROOF-OBLIGATIONS.md records the additional
+left-endpoint argument still needed. No new external citation or unproved
+HK input is used.

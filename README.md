@@ -31,13 +31,15 @@ and manual dispatch, with downloadable build and audit evidence.
 The current root imports the predecessor and the new Section 2 and 3 libraries.
 [Section 2](section%202/STATUS.md) records the prerequisite map and Corollary 2.15;
 [Section 3](section%203/STATUS.md) records the exact formalized scope and open work.
-The full local project build, inherited QE audit, Section 2 audit and 728
-Section 3 type/axiom audits pass (289 generic, 439 actual-namespace heads).
-Corollary 3.17 now excludes the stated uniform bound for any given
-least-linear-radius function, including a whole-field source. Actual linear
-subballs at every smaller radius are constructed using genuine saturation.
-All 728 complete types and 173 source hashes from [CI](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42922204695)
-match the reviewed local evidence; only standard Lean axioms occur.
+The full local project build, inherited QE audit, Section 2 audit and 751
+Section 3 type/axiom audits pass (289 generic, 462 actual-namespace heads).
+New components prove eventual RV-coefficient constancy, actual atomic
+RV-fibre choice and definable affine-error RV constancy. Full Lemma 3.18
+remains open; its endpoint estimate is recorded in
+[proof obligations](section%203/PROOF-OBLIGATIONS.md).
+New CI confirmation is pending. The preceding 728-head checkpoint, including
+Corollary 3.17, passed [CI](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42922204695)
+with every complete type and source hash matched before main promotion.
 
 Checked Section 3 results are 3.2, 3.3, 3.4 at original-base definable radii
 plus singleton/VF cases, 3.6, 3.7, 3.8, 3.9, 3.10, corrected 3.11, 3.12,

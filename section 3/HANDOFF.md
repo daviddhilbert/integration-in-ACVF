@@ -5,20 +5,16 @@ predecessor LANGUAGE-ERRATA.md. Use arXiv:0809.0473v2 through 3.24. Continuous
 work and pushes are authorized; no subagents. HK is background for proof
 ideas only: no citation or unproved input. Keep R.Nonempty in 3.11.
 
-Full local root build, inherited QE, Section 2 and 728 Section 3 audits pass:
-289 generic, 439 actual-namespace heads; 173 source hashes. Every prior 707
-complete type is unchanged; all 21 new types exactly match individual
-compiled and manually reviewed audits. Only propext, Classical.choice and
-Quot.sound. Evidence: .scratch/local-threshold-728/, VERIFICATION.json.
-Source e662a30 passed CI 42922204695. All 728 complete artifact types match
-reviewed local types; all 173 source hashes and audit hashes match. This
-receipt promotes that verified checkpoint to main. Root was freshly built
-after the section build,
-and its inherited QE audit was rerun against that fresh root.
+Fresh full local root build, inherited QE, Section 2 and 751 Section 3 audits
+pass: 289 generic, 462 actual-namespace heads; 182 source hashes. Every prior
+728 complete type is unchanged, and all 23 new full types exactly match
+individual compiled/manual-reviewed snapshots. Only standard three axioms.
+Evidence .scratch/local-rv-tail-751/, VERIFICATION.json. CI confirmation is
+pending; match all complete artifact types and source hashes before main.
 
-Preceding source 49d901b passed CI 42919041255, with all 707 full types and
-165 hashes matched before promotion at receipt 0ffbf92. Its main run
-42920443119 also passed. Older 679/658/630/600 checkpoints remain verified history.
+Preceding source e662a30 passed CI 42922204695; all 728 full types and 173
+hashes matched before main promotion at receipt 3235d3f. That main receipt
+passed CI 42923542770. Earlier checkpoints remain verified history.
 
 Fourteen numbered results are checked in exact scope: 3.2, 3.3, 3.4 at named
 radii plus singleton/VF, 3.6, 3.7, 3.8, 3.9, 3.10, corrected 3.11, both
@@ -51,18 +47,34 @@ is ordinary IsLeast applied to actual containment plus GammaLinear;
 corollary_3_17 proves the paper's exclusion for every given such least-radius
 function. The definition itself does not assert existence of minima.
 
-Next: 3.18 needs nonalgebraic RV-fibre choice after temporarily naming the
-subtraction centre and a VF coefficient lift. MaximalSubballGeometry.classes
-of a closed ball minus its central maximal open hole give an infinite
-definable disjoint fixed-radius family; identify each class as a nonzero
-RV fibre. SaturatedBallFamilies and AtomicBallFamilyChoice can supply the
-actual atomic member. 3.9 makes RV of the error constant there; comparison
-of pair differences gives right-local constancy of the RV coefficient.
-The remaining left-endpoint argument and necessary value-function bounds
-must be proved: piecewise affine and above the identity alone do not imply
-that values exceed the limiting endpoint. Do not assume that implication.
-Finite Gamma controllers are available, but right-local constancy alone
-allows jumps and does not imply global constancy. No HK citation.
+The nine new modules are RVValueShellGeometry, RVValueBallFamilies,
+RVUnaryConstancy, RVErrorComparison, RVSlopeControllers,
+FiniteControllerTails, RVSlopeTail, RVErrorSyntax and RVErrorConstancy.
+They give actual atomic RV-fibre choice, finite coefficient-row controllers,
+eventual actual RV coefficient constancy, normalized actual affine-error
+graphs, RV error constancy and strict affine RV comparison. All 23 exported
+full types match individually reviewed audits. Full 3.18 is not counted.
+The atomic fibre choice currently has small empty-imaginary intermediate
+base and named Gamma radius; finite-code specialization can supply this
+inside a full-base argument, as in checked 3.17.
+
+Next for 3.18: assemble right-local constancy using an atomic RV fibre after
+naming source centre, coefficient lift and image of centre. Translate the
+input to put that fibre in the original source. The normalized actual error
+graph is already available; RVErrorConstancy and RVErrorComparison can give
+the comparison interval. Preserve the original-source slope relation while
+using the enlarged base only for atomic-fibre choice. The enlarged whole
+source need not remain atomic. RVSlopeTail gives eventual constancy, with
+no image-ball premise, under genuine saturation/smallness hypotheses.
+
+Critical open proof step: PROOF-OBLIGATIONS.md records the second-half 3.18
+endpoint issue. Piecewise affine zeta with zeta(t)>t can still satisfy
+zeta(t)<d for all t<d, e.g. zeta(t)=(t+d)/2. Thus the printed inference needs
+an additional property of the actual error-value function or another proof.
+The author has been asked for that missing fact while supporting work
+continues. No statement correction or axiom is introduced. Right-local
+constancy plus finite controllers alone also allows left jumps. Do not
+silently infer global coefficient constancy from either insufficient input.
 
 Paper web tool mcp__codex_apps__search_service_web_run works with PDF
 https://arxiv.org/pdf/0809.0473v2. Current ref turn964604view0; 3.17 lines

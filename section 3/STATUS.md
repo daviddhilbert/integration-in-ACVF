@@ -4,20 +4,19 @@ Source: arXiv:0809.0473v2, pp. 7–12, through Proposition 3.24.
 
 ## Verification
 
-The full local root build, inherited QE audit, Section 2 audit and **728
+The full local root build, inherited QE audit, Section 2 audit and **751
 Section 3 type/axiom audits pass** under pinned Lean 4.35.0: 289 generic and
-439 actual-namespace declarations. These are components, not numbered results.
-All 173 source hashes match. Every prior 707 complete type is unchanged;
-all 21 new types exactly match individually compiled and manually reviewed
+462 actual-namespace declarations. These are components, not numbered results.
+All 182 source hashes match. Every prior 728 complete type is unchanged;
+all 23 new types exactly match individually compiled and manually reviewed
 snapshots. Only `propext`, `Classical.choice` and `Quot.sound` occur.
 
 `VERIFICATION.json` records the local checkpoint; `CORE-VERIFICATION.json`
-selects its 289 generic heads. Evidence is in `.scratch/local-threshold-728/`.
-Source `e662a30` passed [CI 42922204695](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42922204695).
-Every one of its 728 complete types exactly matches the reviewed local audit;
-all 173 source hashes and both audit hashes match. This receipt promotes
-that verified checkpoint to main. The preceding main receipt `0ffbf92` also
-passed CI 42920443119.
+selects its 289 generic heads. Evidence is in `.scratch/local-rv-tail-751/`.
+New CI confirmation is pending. The preceding proof `e662a30` passed
+[CI 42922204695](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42922204695),
+with all 728 full types and 173 source hashes matched before promotion at
+receipt `3235d3f`. That main receipt passed CI 42923542770.
 
 ## Numbered results
 
@@ -285,3 +284,34 @@ of the cardinality of the original imaginary base. `LinearRadiusThreshold`
 handles actual radius invariants, including VF and infinity, and derives
 3.17 for every given least-radius function. All 21 full exported types match
 the reviewed individual audits; all 707 preceding full types are unchanged.
+
+## Checked RV-linearity components and open endpoint estimate
+
+`RVValueShellGeometry` identifies actual nonzero RV fibres with ordinary open
+balls and proves that each value shell has infinite RV image, using the
+checked ACVF00 integer orbit. `RVValueBallFamilies` supplies a full-code
+infinite disjoint family and an actual atomic fibre through genuine real
+saturation and checked 3.2. Its intermediate base is small and has no
+imaginary parameters; saturation of an imaginary sort is never assumed.
+
+`RVSlopeControllers` proves finite order controllers for each coefficient
+row, naming that RV coefficient only inside the row proof.
+`FiniteControllerTails` bounds the finite union of endpoints; `RVSlopeTail`
+then proves that the actual nonzero RV coefficient is constant above some
+Gamma value larger than the source radius. This is eventual constancy,
+with all genuine saturation/small-base hypotheses explicit.
+
+`RVUnaryConstancy` derives ordinary unary RV-map constancy from 3.9.
+`RVErrorSyntax` represents the actual affine error by normalized first-order
+syntax and proves its full partial-domain graph is definable when its three
+real constants are named. `RVErrorConstancy` proves equality of actual RV
+errors on an atomic open source. `RVErrorComparison` supplies the strict
+error-value estimate and affine RV-difference recovery, including zero error.
+
+The full 3.18 result and assembly of right-local constancy remain open.
+The second half of the printed proof needs an extra justification for its
+left-endpoint estimate: piecewise affinity and being above the identity
+alone do not give the asserted bound. The affine counterexample and exact
+remaining obligation are recorded in [PROOF-OBLIGATIONS.md](PROOF-OBLIGATIONS.md).
+No change to the numbered statement or unproved replacement input is made.
+The numbered count remains fourteen, with seven proof results left.
