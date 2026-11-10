@@ -12,7 +12,8 @@ Full new types were reviewed. All 201 prior actual types match the reviewed
 individual audits exactly; the 15 radius and six generic separation types
 were reviewed at the preceding local 492-head check. Every source hash matches,
 and only the three standard axioms occur. See VERIFICATION.json and
-.scratch/local-primitive-551/. New CI confirmation is still pending. Previous
+.scratch/local-primitive-551/. CI run42900083681 passed at proof92f7b0a; all551 complete CI types and
+all105 source hashes match the reviewed local evidence. Previous
 public proof61f6539 had green run42884025168 and main009543e had green
 run42885111227. Do not confuse that older471-head receipt with the new batch.
 

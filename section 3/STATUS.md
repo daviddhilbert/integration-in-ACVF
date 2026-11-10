@@ -14,8 +14,9 @@ batch types match their individually compiled and reviewed snapshots exactly.
 
 `VERIFICATION.json` records this local checkpoint. `CORE-VERIFICATION.json`
 selects the 276 generic declarations from the same fresh full audit. Complete
-local evidence is retained in `.scratch/local-primitive-551/`. CI confirmation
-of this new batch is pending. The preceding 471-head checkpoint passed
+local evidence is retained in `.scratch/local-primitive-551/`. All551 complete CI types match the reviewed local audit exactly. The batch
+passed [CI run42900083681](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42900083681)
+at source `92f7b0a478d111cde0a23f6b31714abd92f0ed6a`. The preceding 471-head checkpoint passed
 [CI run 42884025168](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42884025168)
 at proof source `61f65399e4c10915b36bfcaf794d7383b984c962`.
 
