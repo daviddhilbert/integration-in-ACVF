@@ -51,3 +51,7 @@ public import IntegrationSection3.AtomicFiniteFibres
 public import IntegrationSection3.NamedFamilyFibres
 public import IntegrationSection3.ProperInverseSupports
 public import IntegrationSection3.CoverRadiusFormulas
+
+public import IntegrationSection3.RelationProjections
+public import IntegrationSection3.RelativeQuotientCut
+public import IntegrationSection3.UniformHullSeparation

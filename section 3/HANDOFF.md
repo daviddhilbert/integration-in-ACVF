@@ -44,3 +44,41 @@ environment; a bounded source build is preparing its full import. Do not
 route the blocked cache through CI artifacts or other hosts. Freeze all
 original-model data before binding a normalized structure. Never add a
 chosen centre or code representative to the exported parameter base.
+
+
+## Current local continuation
+
+Branch section-1-3/ordinary-separation starts at main's verified receipt
+commit 009543e. The original local branch section-1-3/parametric-atomicity
+is preserved at c3c04e9. No work was discarded. Local source changes have
+276 checked generic heads and 216 proposed actual heads (15 new radius
+drafts), for an unverified full total of 492. The six new generic complete
+types are in .scratch/separation-six-types.txt, and CORE-VERIFICATION.json
+binds all 58 current inputs. Do not push these actual drafts before passing
+local compilation and type/axiom review.
+
+The bounded Mathlib builder remains active: .scratch/build_mathlib_local.py,
+PID 107163; .scratch/mathlib-local-build.log. The old waiting full verifier
+was deliberately stopped before changing the base. Restart
+.scratch/finish_local_verification.py at the clean continuation commit;
+it first waits for Mathlib, then runs the full build, foundation audit,
+Section 2 audit and Section 3 --acvf audit. Inspect its stage before edits.
+
+Additional actual draft dependency order:
+BallEnlargementGeometry; NamedClosedHoleCut; AffineArithmetic;
+AffineHoleGeometry; AffineHoleCut; PrimitiveDecomposition;
+PuncturedImageComponents; PrimitiveImages. For 3.11 then:
+FullRelationSupports; FullGammaFamilyConstancy; SupportHullRadius;
+MaximalSubballGeometry; MaximalSubballFamilies; InfiniteOrdinaryBalls;
+NativeBallHulls; UniformSupportHull; ClosedTraceFamilies;
+OrdinarySeparation. All these files are ignored .scratch drafts, not
+compiled or counted. Register them only while no compiler is checking the
+same sources, compile each affected module and inspect every exported type.
+
+OrdinarySeparation now assembles the proposed geometric contradiction for
+an ordinary open source and an ordinary closed target with finitely many
+maximal open holes. Its second wrapper adjoins the target radius using
+checked 3.3, so original-base radius definability is not assumed. Remaining
+packaging must cover the paper's closed-ball and thin-annulus definitions,
+and the vacuous whole-VF source case. Keep A nonempty explicit. The actual
+proof is not established until compilation and the full audit pass.

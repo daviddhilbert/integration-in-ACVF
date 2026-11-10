@@ -166,3 +166,28 @@ build is preparing the complete actual-ACVF dependency import. The affected
 generic proof batch has compiled locally before publication. CI confirmed
 its integration with the unchanged actual library. HK is background for
 proof ideas only; no HK citation or assumed result is introduced.
+
+
+## Local continuation after the 471-head checkpoint
+
+The local core audit now passes 276 generic declarations. The six new heads
+prove full-base projection surjectivity for nonempty relations, the closed
+source cut with infinitely many quotient classes on both sides, and the
+abstract contradiction for a uniformly bounded-hull cover whose closed-cut
+traces are always finite or cofinite. Their complete exported types and
+standard-only axiom output were manually reviewed; all 58 receipt inputs
+match. This is still not a completed actual 3.11 proof.
+
+OrdinaryRadiusFibres and UniformRadius are restored as local registered
+drafts with 15 proposed ACVF heads. They are not part of main's verified
+201 actual heads and have not compiled yet. The full local pipeline is being
+restarted from this continuation after the pinned Mathlib source build.
+It will check a proposed 492-head combined scope, not a passed checkpoint.
+
+Further actual drafts remain in .scratch/: maximal open class geometry and
+finite/cofinite traces, infinitude of ordinary balls, native support hull
+existence, intrinsic full-code span graphs and their Gamma constancy,
+UniformSupportHull, ClosedTraceFamilies and OrdinarySeparation. The latter
+assembles the nonempty-relation contradiction, temporarily adjoining the
+unnamed target radius by checked 3.3. No additional saturation premise or
+HK citation is used. All these actual connections await compilation.

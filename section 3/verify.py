@@ -219,6 +219,8 @@ HEADLINES += ['FiniteClosedHull.radius_lt_of_open_cover', 'CoverRadiusFormulas.c
 
 HEADLINES += ['FiniteClosedHull.exists_of_finite_hulls', 'FiniteClosedHull.radius_ne_zero_of_infinite']
 
+HEADLINES += ['RelationProjections.domain_definable', 'RelationProjections.range_definable', 'RelationProjections.surjective', 'RelativeQuotientCut.closed_saturated', 'RelativeQuotientCut.exists_cut', 'UniformHullSeparation.impossible']
+
 ACVF_HEADLINES = [
     'IntegrationInACVF.Section3ACVF.' + name for name in (
         'encodedBall_isKBall', 'encodedBalls_laminar', 'support_of_isBoolComb',
@@ -410,6 +412,17 @@ ACVF_HEADLINES += [
     'IntegrationInACVF.Section3ACVF.SameRadiusCoverage.' + name for name in (
         'corollary_3_7_gamma', 'corollary_3_7_open', 'corollary_3_7_closed')
 ]
+ACVF_HEADLINES += [
+    'IntegrationInACVF.Section3ACVF.OrdinaryRadiusFibres.' + name for name in (
+        'radiusCodes_definable', 'code_has_radius', 'hasRadius_code',
+        'image_eq', 'relation_definable', 'mem_ordinaryRadiusFibre_iff',
+        'image_definable', 'image_finite', 'parent_test_definable', 'value_definable')
+]
+ACVF_HEADLINES += [
+    'IntegrationInACVF.Section3ACVF.UniformRadius.' + name for name in (
+        'radius_bottom_iff', 'radius_infinity_iff', 'nonordinary_cases',
+        'uniform_radius', 'exists_common_radius')
+]
 DEFINITIONS = [
     'GeneratesCompleteType', 'IsAtomic', 'Splits',
     'IsLaminar', 'HasFiniteBallSupport',
@@ -516,6 +529,10 @@ ACVF_DEFINITIONS += [
 ACVF_DEFINITIONS += [
     'IntegrationInACVF.Section3ACVF.OrdinaryCentreFibres.fieldValueEq',
     'IntegrationInACVF.Section3ACVF.OrdinaryCentreFibres.ordinaryCentreFibre',
+]
+ACVF_DEFINITIONS += [
+    'IntegrationInACVF.Section3ACVF.OrdinaryRadiusFibres.ordinaryRadiusFibre',
+    'IntegrationInACVF.Section3ACVF.OrdinaryRadiusFibres.RadiusCodes',
 ]
 ALLOWED = {'propext', 'Classical.choice', 'Quot.sound'}
 
