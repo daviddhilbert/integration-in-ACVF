@@ -67,12 +67,22 @@ region membership must retain full invariant ball-code preimages. The
 fixed-support coverage and disjoint-decomposition arguments are checked;
 individual component definability is not assumed.
 
+## Current continuation
+
+`RegionFormulas.lean` adds full-code strict containment, positive-region
+membership and positive-parent definability over the original interpreted
+base, with semantic identification and coverage of the positive regions.
+Its nine full exported types and standard axioms passed the local
+142-declaration core audit. `CanonicalRegions.lean` connects these formulas
+to the actual canonical support and finite disjoint decomposition; its full
+ACVF build and audits are pending. The full receipt above remains the
+288-declaration checkpoint; `CORE-VERIFICATION.json` records this continuation.
+
 ## Verification evidence
 
 `VERIFICATION.json` records compiler, dependency pins, all checked source
 hashes and per-declaration axioms for the 288-declaration checkpoint.
-`CORE-VERIFICATION.json` retains the corresponding local 133-declaration
-core audit. Complete diagnostics, explicit exported definitions/types and
+`CORE-VERIFICATION.json` records the local core continuation described above. Complete diagnostics, explicit exported definitions/types and
 compact type output are in the linked artifact and
 `.scratch/ci-a401f05-section3/`. Every receipt input hash was compared with
 the committed source before publication. Dependencies may be reused from

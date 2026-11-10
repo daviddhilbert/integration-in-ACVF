@@ -17,3 +17,4 @@ public import IntegrationSection3.ProfileAtomicity
 public import IntegrationSection3.InfiniteCosets
 public import IntegrationSection3.MinimalBallSupport
 public import IntegrationSection3.SupportFormulas
+public import IntegrationSection3.RegionFormulas

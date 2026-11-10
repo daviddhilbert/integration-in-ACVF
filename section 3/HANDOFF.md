@@ -11,7 +11,7 @@ in [CI run 42829855150](https://github.com/daviddhilbert/integration-in-ACVF/act
 The complete new types and axioms were reviewed, including the original-model
 carriers and normalized raw definability. All receipt input hashes matched
 the committed source. `VERIFICATION.json` binds this full checkpoint;
-`CORE-VERIFICATION.json` retains its local 133-declaration core audit.
+`CORE-VERIFICATION.json` now records the 142-declaration local core continuation.
 
 Checked entry points:
 
@@ -53,3 +53,9 @@ Use `lake env python3 'section 3/verify.py' --acvf` for the full current audit.
 Freeze original-model functions, sets and carriers before introducing any
 local normalized structure. No chosen real representative may enter the
 exported imaginary base. Keep scratch work and diagnostics in `.scratch/`.
+
+Current continuation: `RegionFormulas.lean` passed all nine new full types and
+standard-axiom checks locally (142 core total). `CanonicalRegions.lean` now
+implements the actual positive-family and disjoint-decomposition bridge,
+awaiting full CI. Next define the original-base maximal-hole relation and
+then the invariant radius/valuative-centre/kind graphs.

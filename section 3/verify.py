@@ -149,6 +149,13 @@ HEADLINES += [
     'MinimalBallSupport.support_covers',
     'PuncturedDecomposition.finite_decomposition_of_support',
 ]
+HEADLINES += [
+    'RegionFormulas.' + name for name in (
+        'strictSubsetCodes_definable', 'mem_strictSubsetCodes_iff',
+        'regionFamily_definable', 'family_compl', 'constantRelation',
+        'positiveFamily_definable', 'regionFamily_eq_region',
+        'positiveFamily_eq_preimage', 'positive_regions_cover')
+]
 ACVF_HEADLINES = [
     'IntegrationInACVF.Section3ACVF.' + name for name in (
         'encodedBall_isKBall', 'encodedBalls_laminar', 'support_of_isBoolComb',
@@ -289,6 +296,11 @@ ACVF_HEADLINES += [
     'IntegrationInACVF.Section3ACVF.CanonicalSupportFamily.support_family_definable',
     'IntegrationInACVF.Section3ACVF.CanonicalSupportFamily.exists_definable_canonical_support',
 ]
+ACVF_HEADLINES += [
+    'IntegrationInACVF.Section3ACVF.CanonicalRegions.' + name for name in (
+        'regions_definable', 'positive_family_definable',
+        'exists_definable_positive_decomposition')
+]
 DEFINITIONS = [
     'GeneratesCompleteType', 'IsAtomic', 'Splits',
     'IsLaminar', 'HasFiniteBallSupport',
@@ -320,6 +332,10 @@ DEFINITIONS += [
         'Supports', 'IsSupport', 'IsMinimalSupport', 'AvoidsFiniteProperSubballs')
 ]
 DEFINITIONS += ['SupportFormulas.row', 'SupportFormulas.SupportCodes', 'SupportFormulas.SupportFamily']
+DEFINITIONS += [
+    'RegionFormulas.StrictSubsetCodes', 'RegionFormulas.regionFamily',
+    'RegionFormulas.positiveFamily',
+]
 ACVF_DEFINITIONS = [
     'IntegrationInACVF.Section3ACVF.BallPresentation.' + name
     for name in ('codeDomain', 'decode', 'presentation', 'valuationBalls')
