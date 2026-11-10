@@ -61,3 +61,4 @@ public import IntegrationSection3.BivariateCoordinates
 public import IntegrationSection3.PairMapFibres
 public import IntegrationSection3.PartialInverse
 public import IntegrationSection3.ValuationProgressions
+public import IntegrationSection3.FiniteImageContinuity

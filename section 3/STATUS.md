@@ -4,24 +4,23 @@ Source: arXiv:0809.0473v2, pp. 7–12, through Proposition 3.24.
 
 ## Verification
 
-The full local root build, inherited QE audit, Section 2 audit and **679
-Section 3 type/axiom audits pass** under pinned Lean 4.35.0: 287 generic and 392
-actual ACVF declarations. These are components, not 679 numbered results.
-All 153 source hashes match. Every prior 658 complete type is unchanged;
-all 21 new types exactly match individually compiled and manually reviewed
+The full local root build, inherited QE audit, Section 2 audit and **707
+Section 3 type/axiom audits pass** under pinned Lean 4.35.0: 289 generic and 418
+actual ACVF declarations. These are components, not 707 numbered results.
+All 165 source hashes match. Every prior 679 complete type is unchanged;
+all 28 new types exactly match individually compiled and manually reviewed
 snapshots. Only `propext`, `Classical.choice` and `Quot.sound` occur.
 
-`VERIFICATION.json` records the local and CI checkpoint; `CORE-VERIFICATION.json`
-selects its 287 generic heads. Evidence is in `.scratch/local-slope-679/`.
-[CI 42914840110](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42914840110)
-passed at proof `8e3f6b7f0f17eb8cbf42e9671c2ba3bab97d9b8f`. Every complete CI
-type exactly matches reviewed local evidence; all 153 source hashes, both
-audit hashes and the standard axioms were checked before main promotion.
-Earlier checkpoints remain historical.
+`VERIFICATION.json` records the local checkpoint; `CORE-VERIFICATION.json`
+selects its 289 generic heads. Evidence is in `.scratch/local-gamma-linear-707/`.
+New CI confirmation is pending. The preceding proof `8e3f6b7` passed
+[CI 42914840110](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42914840110),
+with all 679 full types and 153 source hashes matched before main promotion
+at receipt `b808def`. Its main CI 42916312856 also passed.
 
 ## Numbered results
 
-Twelve numbered Section 3 results are checked in the following precise scope:
+Thirteen numbered Section 3 results are checked in the following precise scope:
 
 - **3.2:** `AdjoinBall.lemma_3_2` permits arbitrary real, genuine Gamma and
   ball names. Atomicity is over the original base with the input ball name
@@ -75,6 +74,17 @@ Twelve numbered Section 3 results are checked in the following precise scope:
   names. The source radius need not be originally named. ACVF(0,0) and the
   standing named nontrivial value remain explicit; no saturation is assumed.
 
+- **3.16:** `GammaLinearity.lemma_3_16` proves actual Gamma-linearity of an
+  injective partial-domain definable VF map on an atomic open ball, with
+  coefficient equal to target/source radius ratio (paper: target radius
+  minus source radius). Source and image radii are actual `HasRadius`
+  properties; no centre or radius lift is named in the original base.
+  Genuine `Saturated M kappa`, `aleph0 <= kappa`, `mk B.real < kappa`,
+  ACVF00 and the original-base named nontrivial delta are explicit.
+  The RV map, Gamma graph, finite image, finite controllers, order
+  isomorphism and constant-shift argument are all proved. A saturation-free
+  all-model transfer is not claimed.
+
 Section 2's Corollary 2.15 is checked separately, with genuine saturation and
 parameter smallness explicit. Corollary 2.34 remains open.
 
@@ -120,8 +130,8 @@ the cut, without assuming atomicity over that enlarged base.
 
 ## Remaining work
 
-Nine later proof results remain,3.15–3.19 and 3.21–3.24;3.20 is a definition.
-They comprise four lemmas, one corollary and four propositions. Section 2's 2.34
+Eight proof results remain: 3.15, 3.17–3.19 and 3.21–3.24; 3.20 is a definition.
+They comprise three lemmas, one corollary and four propositions. Section 2's 2.34
 is open separately. The unrestricted unnamed-radius extension of 3.4 is also
 still needed for the full3.15 claim. A wrapper for arbitrary-radius subballs
 of a **definable atomic** ambient set is checked separately, but it does not
@@ -192,8 +202,8 @@ and `RVPairConstancy` supply the actual subball geometry and full graph.
 `RVMapRelation`, `RVInverse` and `RVMapBijection` establish the common
 single-valued bijection. `ValuationProgressions`, `RVIntegerSequences`
 and `RVIntegerEquivariance` give the integer argument. The full 3.16
-Gamma-linearity conclusion remains open, so the numbered-result count
-is unchanged. Unrestricted 3.15 remains open independently.
+Gamma-linearity conclusion is now assembled from these components and the
+subsequent order argument. Unrestricted 3.15 remains open independently.
 
 ## Gamma slope fibres and valuation order toward 3.16
 
@@ -213,6 +223,28 @@ inside the proof. `OpenBallSeparationGeometry` and `InjectiveBallOrder`
 prove preservation of strict valuation comparisons using actual open
 subball images; this step needs no saturation.
 
-The remaining 3.16 argument must show the Gamma slope is globally constant
-and identify the difference of the source/target radii. No full 3.16 result
-is counted yet. The unrestricted 3.15 issue is unchanged.
+The previously remaining constant-slope and radius-identification steps are
+now proved, as described below. The unrestricted 3.15 issue is unchanged.
+
+## Assembled Gamma-linearity 3.16
+
+`GammaDifferenceRealization` and `GammaSlopeDomain` identify the source
+Gamma tail exactly. `GammaSlopeOutput` proves the actual output-value
+formula for every source pair. `GammaTailMap` constructs a strictly
+increasing map, and `GammaTailIso` proves surjectivity by lifting actual
+image points, obtaining an order isomorphism of the source/image tails.
+
+`FullGammaControllers` and `GammaSlopeValueGraph` prove finite order
+controllers for every shift fibre over the full interpreted base.
+`FiniteImageContinuity` proves local constancy for continuous finite-range
+maps; `FiniteControllerLocal` and `GammaShiftConstancy` then prove global
+constant shift and identify it with the ratio of endpoint radii. This
+argument does not assume a complete or Archimedean value group.
+
+`GammaTailShift` supplies every prerequisite of that abstract order step.
+`GammaLinearity.ordinary` gives the actual field-value equation, including
+zero differences. `GammaLinearity.lemma_3_16` removes selected centres and
+uses actual radius invariants. All 28 new full exported types match the
+reviewed individual audits. Saturation and smallness enter through the
+already checked finite Gamma-to-RV projection; no such premise is hidden
+inside the definition of Gamma-linearity or assumed as the desired result.

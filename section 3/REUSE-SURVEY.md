@@ -259,3 +259,25 @@ or strict valuation-order theorems. The latter follow from proved open
 subball images and a new native ultrametric separation bound. All 21 new
 full types match reviewed individual snapshots; all 658 prior types are
 unchanged in the successful full root and 679-declaration local audit.
+
+## Assembled Gamma-linearity 3.16, local 707-head checkpoint
+
+Pins and licenses are unchanged. The exact formalized Mathlib APIs for
+continuity of order isomorphisms, continuous group division, finite closed
+sets in T1 spaces and locally constant fibres were inspected before use.
+The pinned finite-order-controller theorems and their exact hypotheses
+were inspected as well. New proofs supply the finite-image continuity
+bridge, removal of locally redundant controller endpoints, constant shift
+on the actual Gamma tail and its endpoint ratio. No completeness or
+Archimedean assumption is used.
+
+Actual ACVF bridges supply domain realization, the coefficient/output-value
+formula, the strictly increasing Gamma map, surjectivity and its full
+order isomorphism. Fixed-output Gamma rows retain the full original-base
+graph and obtain finite controllers only after finite-code specialization.
+The final 3.16 theorem uses actual field difference values and actual radius
+invariants; every prerequisite is supplied by checked proofs. Genuine
+saturation and smallness from the finite projection theorem stay explicit.
+The full root and 707 local audits pass; all 679 previous full types are
+unchanged and all 28 new ones exactly match reviewed individual snapshots.
+No new external citation or unproved HK input is used.
