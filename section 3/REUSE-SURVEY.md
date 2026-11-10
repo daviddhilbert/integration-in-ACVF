@@ -81,3 +81,25 @@ This is an interpretation interface, not an assumed atomicity or algebraicity
 result. Its closure, projection, composition, algebraicity-transfer and
 finite-exception theorems passed the same local compiler/type/axiom checks.
 The bridge to the actual predecessor ball presentation remains in progress.
+
+## Lemma 3.3: search beyond the predecessor's Section 3
+
+The pinned predecessor's `Section4/GammaDefinablePoint.lean` already proves
+`SpecialTransformations.Section4.gamma_definable_point` and its finite-tuple
+version. The scalar theorem assumes ACVF(0,0), an actual Gamma value `δ`
+whose singleton is definable over the original real base, and `1 < δ`.
+Every nonempty Gamma-definable set then contains a point with its singleton
+definable over that same base. These are proved from intrinsic finite
+controllers and ordered-group samples; no o-minimality or choice conclusion
+is assumed as a model field.
+
+Reuse this result for the nonempty exceptional Gamma set in Lemma 3.3.
+Related checked interfaces are `Section4/GammaPredicates.lean`,
+`GammaControllerDefinability.lean`, `GammaFiniteDefinablePoints.lean`,
+`GammaDefinableClosure.lean` and `FiniteOrderSamples.lean`.
+For real outputs, the Section 3 `GammaParameters.Relation` API supplies
+complement, intersection, real-coordinate projection and definable-parameter
+elimination. The arbitrary finite mixed output arity and the full C• base
+containing ball names still need an explicit sequel bridge. Do not rebuild
+the original-base Gamma definable-point theorem or silently drop its named
+nontrivial-value hypothesis.
