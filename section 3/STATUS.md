@@ -73,9 +73,10 @@ individual component definability is not assumed.
 membership and positive-parent definability over the original interpreted
 base, with semantic identification and coverage of the positive regions.
 Its nine full exported types and standard axioms passed the local
-142-declaration core audit. `CanonicalRegions.lean` connects these formulas
+147-declaration core audit, including the five new maximal-hole formula checks. `CanonicalRegions.lean` connects these formulas
 to the actual canonical support and finite disjoint decomposition; its full
-ACVF build and audits are pending. The full receipt above remains the
+ACVF build exposed the wrong code-domain interface; that has been corrected,
+and the revised actual region and maximal-hole bridges await CI. The full receipt above remains the
 288-declaration checkpoint; `CORE-VERIFICATION.json` records this continuation.
 
 ## Verification evidence

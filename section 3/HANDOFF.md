@@ -11,7 +11,7 @@ in [CI run 42829855150](https://github.com/daviddhilbert/integration-in-ACVF/act
 The complete new types and axioms were reviewed, including the original-model
 carriers and normalized raw definability. All receipt input hashes matched
 the committed source. `VERIFICATION.json` binds this full checkpoint;
-`CORE-VERIFICATION.json` now records the 142-declaration local core continuation.
+`CORE-VERIFICATION.json` now records the 147-declaration local core continuation.
 
 Checked entry points:
 
@@ -59,3 +59,9 @@ standard-axiom checks locally (142 core total). `CanonicalRegions.lean` now
 implements the actual positive-family and disjoint-decomposition bridge,
 awaiting full CI. Next define the original-base maximal-hole relation and
 then the invariant radius/valuative-centre/kind graphs.
+
+`HoleFormulas.lean` passed its five new full type/axiom checks (147 core
+total). `CanonicalHoles.lean` supplies the full interpreted pair-of-balls
+relation. The previous actual CI found use of the whole presentation proof
+where code-domain definability was required; the revised region/hole calls
+now use `codeDomain_definable`. Full CI remains required.

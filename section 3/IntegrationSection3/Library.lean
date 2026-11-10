@@ -18,3 +18,4 @@ public import IntegrationSection3.InfiniteCosets
 public import IntegrationSection3.MinimalBallSupport
 public import IntegrationSection3.SupportFormulas
 public import IntegrationSection3.RegionFormulas
+public import IntegrationSection3.HoleFormulas

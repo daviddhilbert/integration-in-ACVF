@@ -31,7 +31,7 @@ theorem regions_definable (B : FullBaseAtomicity.Base (M := M))
       fun i => region F (U i) := funext (RegionFormulas.regionFamily_eq_region hc)
   have hT := CanonicalSupportFamily.support_family_definable B δ hδ hA hF
   have hp := ParameterPresentation.codeDomain_definable (M := M) B.real
-  have hq := BallPresentation.presentation_definable (M := M) B.real
+  have hq := BallPresentation.codeDomain_definable (M := M) B.real
   have hm := BallPresentation.membership_definable (M := M) B.real
   let p := @ParameterPresentation.presentation M sM hM
   let q := @BallPresentation.presentation M sM hM
@@ -52,10 +52,13 @@ theorem positive_family_definable (B : FullBaseAtomicity.Base (M := M))
   let U := BallImaginaries.underlying (M := M)
   have hc : ∀ b ∈ F, ∃ k, U k = b := fun b hb =>
     BallCodeGeometry.encodedBall_coded b (minimal_support_encoded hF b hb)
-  have he := RegionFormulas.positiveFamily_eq_preimage hc A
+  have he : RegionFormulas.positiveFamily (U ⁻¹' (F : Set (Set M))) U A =
+      {i | U i ∈ F ∧ (region F (U i)).Nonempty ∧ region F (U i) ⊆ A} := by
+    rw [RegionFormulas.positiveFamily_eq_preimage hc A]
+    rfl
   have hT := CanonicalSupportFamily.support_family_definable B δ hδ hA hF
   have hp := ParameterPresentation.codeDomain_definable (M := M) B.real
-  have hq := BallPresentation.presentation_definable (M := M) B.real
+  have hq := BallPresentation.codeDomain_definable (M := M) B.real
   have hm := BallPresentation.membership_definable (M := M) B.real
   let p := @ParameterPresentation.presentation M sM hM
   let q := @BallPresentation.presentation M sM hM
