@@ -36,9 +36,8 @@ Section 3 type/axiom audits pass (289 generic, 439 actual-namespace heads).
 Corollary 3.17 now excludes the stated uniform bound for any given
 least-linear-radius function, including a whole-field source. Actual linear
 subballs at every smaller radius are constructed using genuine saturation.
-New CI confirmation is pending. The preceding 707-head checkpoint passed
-[CI](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42919041255),
-with every complete type and source hash matched to reviewed local evidence.
+All 728 complete types and 173 source hashes from [CI](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42922204695)
+match the reviewed local evidence; only standard Lean axioms occur.
 
 Checked Section 3 results are 3.2, 3.3, 3.4 at original-base definable radii
 plus singleton/VF cases, 3.6, 3.7, 3.8, 3.9, 3.10, corrected 3.11, 3.12,

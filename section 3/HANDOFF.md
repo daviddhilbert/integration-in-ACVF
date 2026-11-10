@@ -10,13 +10,15 @@ Full local root build, inherited QE, Section 2 and 728 Section 3 audits pass:
 complete type is unchanged; all 21 new types exactly match individual
 compiled and manually reviewed audits. Only propext, Classical.choice and
 Quot.sound. Evidence: .scratch/local-threshold-728/, VERIFICATION.json.
-CI confirmation is pending; match all complete artifact types and source
-hashes before promotion. Root was freshly built after the section build,
+Source e662a30 passed CI 42922204695. All 728 complete artifact types match
+reviewed local types; all 173 source hashes and audit hashes match. This
+receipt promotes that verified checkpoint to main. Root was freshly built
+after the section build,
 and its inherited QE audit was rerun against that fresh root.
 
 Preceding source 49d901b passed CI 42919041255, with all 707 full types and
-165 hashes matched before promotion at receipt 0ffbf92. Its main run is
-42920443119. Older 679/658/630/600 checkpoints remain verified history.
+165 hashes matched before promotion at receipt 0ffbf92. Its main run
+42920443119 also passed. Older 679/658/630/600 checkpoints remain verified history.
 
 Fourteen numbered results are checked in exact scope: 3.2, 3.3, 3.4 at named
 radii plus singleton/VF, 3.6, 3.7, 3.8, 3.9, 3.10, corrected 3.11, both
