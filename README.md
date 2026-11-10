@@ -31,24 +31,22 @@ and manual dispatch, with downloadable build and audit evidence.
 The current root imports the predecessor and the new Section 2 and 3 libraries.
 [Section 2](section%202/STATUS.md) records the prerequisite map and Corollary 2.15;
 [Section 3](section%203/STATUS.md) records the exact formalized scope and open work.
-Corollary 2.15 and 360 Section 3 type/axiom audits passed the full project
-build in [CI](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42845510919). Lemmas 3.2–3.3
-allow additional genuine Gamma and ball names in their base. Lemma 3.4 is
-checked at every original-base definable Gamma radius, including the singleton
-and whole-field cases. Lemma 3.9 and Corollary 3.10 are checked for every finite
-RV output arity, using the full graph on the stated domain and the sequel's
-open-ball convention. The standing definable nontrivial Gamma value and
-ACVF(0,0) hypotheses remain explicit where used.
+The full local project build, inherited QE audit, Section 2 audit and 551
+Section 3 type/axiom audits pass (276 generic, 275 actual ACVF declarations).
+The exact hypotheses and evidence are recorded in the section status. CI
+confirmation of this batch is pending; the preceding 471-head checkpoint
+passed [CI](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42884025168).
 
-The finite disjoint punctured decomposition and the original-base definable
-canonical finite ball support, positive-region family and maximal-hole relation
-are checked. The kind tests, common puncture status and actual invariant
-existence/uniqueness are also checked. The canonical positive regions have a
-common valuative centre. Corollary 3.7 is checked for both ball kinds and all
-radius conventions. The primitive-type
-classification of Lemma 3.6, Lemma 3.8, geometric Lemma 3.11 and the later
-open-to-open results remain open. Corollary 2.34 also remains open. The
-accepted nonemptiness correction to Lemma 3.11 is recorded in
+Checked Section 3 results are 3.2, 3.3, 3.4 at original-base definable radii
+plus singleton/VF cases, 3.6, 3.7, 3.8, 3.9 and 3.10. The new primitive
+classification gives disjoint pieces of the same primitive type, and the image
+of a one-component atomic set again has one primitive component. Full real,
+Gamma and ball parameter bases are retained. ACVF(0,0) and an original-base
+definable nontrivial Gamma value remain explicit where used.
+
+Geometric separation 3.11 and the later results through 3.24 remain open;
+3.20 is a definition. Section 2's 2.15 is checked and 2.34 remains open. Keep
+the author-approved nonemptiness correction to 3.11 in
 [PAPER-CORRECTIONS.md](PAPER-CORRECTIONS.md).
 The remaining section folders are placeholders.
 

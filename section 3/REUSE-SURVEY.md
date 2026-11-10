@@ -153,3 +153,24 @@ closed-hull geometry; density and natural-number valuation-unit inputs stay
 explicit for the later actual ACVF wrappers. No new external theorem input
 or dependency is assumed. These components do not establish the open
 numbered primitive-classification or separation statements on their own.
+
+
+## Primitive classification and images, local 551-head checkpoint
+
+Pins and licenses are unchanged. OrdinaryRadiusFibres and UniformRadius now
+check the complete actual radius graph and its constancy. BallEnlargementGeometry
+uses actual compatible valuations and the already checked Gamma density and
+radius comparisons. Its same-radius re-centring is proved by the ultrametric
+inequality; it does not import the predecessor's legacy RV conventions.
+NamedClosedHoleCut uses the checked original-base radius samples and intrinsic
+finite hole refinement. AffineArithmetic uses the pinned RingSyntax sorted-term
+interpretation with natural numbers in syntax, not as new parameters. The actual
+affine quotient argument supplies all hypotheses of the checked generic closure
+and full-code refinement. PrimitiveDecomposition proves3.6 from those facts.
+
+PuncturedImageComponents applies the checked finite punctured partition theorem
+and exact minimal-support recognition, proving source-parent definability rather
+than assuming it. PrimitiveImages then proves3.8. All59 new actual complete
+exported types match their individually compiled and manually reviewed audits
+exactly; the full551-head audit and root/foundation/Section2 checks pass locally.
+No new external citation, unproved HK result or dependency pin is introduced.

@@ -423,6 +423,67 @@ ACVF_HEADLINES += [
         'radius_bottom_iff', 'radius_infinity_iff', 'nonordinary_cases',
         'uniform_radius', 'exists_common_radius')
 ]
+ACVF_HEADLINES += [
+    'IntegrationInACVF.Section3ACVF.BallEnlargementGeometry.valuation_le_of_gamma_le',
+    'IntegrationInACVF.Section3ACVF.BallEnlargementGeometry.valuation_lt_of_gamma_lt',
+    'IntegrationInACVF.Section3ACVF.BallEnlargementGeometry.ordinary_presentation',
+    'IntegrationInACVF.Section3ACVF.BallEnlargementGeometry.gammaBall_centre_mem',
+    'IntegrationInACVF.Section3ACVF.BallEnlargementGeometry.gammaBall_isBall',
+    'IntegrationInACVF.Section3ACVF.BallEnlargementGeometry.closed_ball_coded',
+    'IntegrationInACVF.Section3ACVF.BallEnlargementGeometry.vf_ssubset_lift',
+    'IntegrationInACVF.Section3ACVF.BallEnlargementGeometry.vf_eq_lift',
+    'IntegrationInACVF.Section3ACVF.BallEnlargementGeometry.gamma_same_kind_eq_of_subset',
+    'IntegrationInACVF.Section3ACVF.BallEnlargementGeometry.closed_not_subset_open_same_radius',
+    'IntegrationInACVF.Section3ACVF.BallEnlargementGeometry.proper_same_radius_kinds',
+    'IntegrationInACVF.Section3ACVF.BallEnlargementGeometry.gamma_radius_le_of_subset',
+    'IntegrationInACVF.Section3ACVF.BallEnlargementGeometry.open_inside_closed_same_radius',
+    'IntegrationInACVF.Section3ACVF.BallEnlargementGeometry.gammaBall_strict_enlargement',
+    'IntegrationInACVF.Section3ACVF.BallEnlargementGeometry.closed_inside_parent',
+    'IntegrationInACVF.Section3ACVF.BallEnlargementGeometry.gammaBall_proper_in_vf',
+    'IntegrationInACVF.Section3ACVF.BallEnlargementGeometry.singleton_strict_enlargement',
+    'IntegrationInACVF.Section3ACVF.BallEnlargementGeometry.closed_fixed_radius_unique',
+    'IntegrationInACVF.Section3ACVF.BallEnlargementGeometry.closed_ordinary_presentation',
+    'IntegrationInACVF.Section3ACVF.BallEnlargementGeometry.closed_supersets_unique',
+    'IntegrationInACVF.Section3ACVF.BallEnlargementGeometry.fixed_radius_enlargements_finite',
+    'IntegrationInACVF.Section3ACVF.NamedClosedHoleCut.radiusClass_definable',
+    'IntegrationInACVF.Section3ACVF.NamedClosedHoleCut.expansion_definable',
+    'IntegrationInACVF.Section3ACVF.NamedClosedHoleCut.additional_names_finite',
+    'IntegrationInACVF.Section3ACVF.NamedClosedHoleCut.no_named_closed_intermediate',
+    'IntegrationInACVF.Section3ACVF.NamedClosedHoleCut.support_radius_named',
+    'IntegrationInACVF.Section3ACVF.NamedClosedHoleCut.no_ordinary_hole_gap',
+    'IntegrationInACVF.Section3ACVF.NamedClosedHoleCut.no_singleton_hole_in_ordinary_parent',
+    'IntegrationInACVF.Section3ACVF.NamedClosedHoleCut.no_hole_in_vf_parent',
+    'IntegrationInACVF.Section3ACVF.NamedClosedHoleCut.no_vf_positive_parent',
+    'IntegrationInACVF.Section3ACVF.NamedClosedHoleCut.no_hole_in_singleton_parent',
+    'IntegrationInACVF.Section3ACVF.NamedClosedHoleCut.hole_maximal_open',
+    'IntegrationInACVF.Section3ACVF.NamedClosedHoleCut.punctured_parent_shape',
+    'IntegrationInACVF.Section3ACVF.AffineArithmetic.graph_definable',
+    'IntegrationInACVF.Section3ACVF.AffineArithmetic.mem_graph_iff',
+    'IntegrationInACVF.Section3ACVF.AffineArithmetic.graph_overBase',
+    'IntegrationInACVF.Section3ACVF.AffineHoleGeometry.open_ordinary_presentation',
+    'IntegrationInACVF.Section3ACVF.AffineHoleGeometry.coset_presentation',
+    'IntegrationInACVF.Section3ACVF.AffineHoleGeometry.class_eq_of_mem',
+    'IntegrationInACVF.Section3ACVF.AffineHoleGeometry.same_name_of_class',
+    'IntegrationInACVF.Section3ACVF.AffineHoleGeometry.affine_output_unique',
+    'IntegrationInACVF.Section3ACVF.AffineHoleGeometry.radiusClass_definable',
+    'IntegrationInACVF.Section3ACVF.AffineHoleGeometry.expansion_definable',
+    'IntegrationInACVF.Section3ACVF.AffineHoleGeometry.additional_names_finite',
+    'IntegrationInACVF.Section3ACVF.AffineHoleGeometry.exists_additional_hole',
+    'IntegrationInACVF.Section3ACVF.AffineHoleCut.holes_subsingleton',
+    'IntegrationInACVF.Section3ACVF.PrimitiveDecomposition.piece_body',
+    'IntegrationInACVF.Section3ACVF.PrimitiveDecomposition.punctured_piece_thin',
+    'IntegrationInACVF.Section3ACVF.PrimitiveDecomposition.unpunctured_piece_kind',
+    'IntegrationInACVF.Section3ACVF.PrimitiveDecomposition.common_kind',
+    'IntegrationInACVF.Section3ACVF.PrimitiveDecomposition.same_primitive_type',
+    'IntegrationInACVF.Section3ACVF.PrimitiveDecomposition.lemma_3_6',
+    'IntegrationInACVF.Section3ACVF.PuncturedImageComponents.partition_subsingleton',
+    'IntegrationInACVF.Section3ACVF.PuncturedImageComponents.image_one_positive_region',
+    'IntegrationInACVF.Section3ACVF.PuncturedImageComponents.image_of_single_canonical_component',
+    'IntegrationInACVF.Section3ACVF.PuncturedImageComponents.image_of_atomic_punctured',
+    'IntegrationInACVF.Section3ACVF.PuncturedImageComponents.image_is_punctured',
+    'IntegrationInACVF.Section3ACVF.PrimitiveImages.atomic_image',
+    'IntegrationInACVF.Section3ACVF.PrimitiveImages.lemma_3_8',
+]
 DEFINITIONS = [
     'GeneratesCompleteType', 'IsAtomic', 'Splits',
     'IsLaminar', 'HasFiniteBallSupport',
@@ -534,6 +595,17 @@ ACVF_DEFINITIONS += [
     'IntegrationInACVF.Section3ACVF.OrdinaryRadiusFibres.ordinaryRadiusFibre',
     'IntegrationInACVF.Section3ACVF.OrdinaryRadiusFibres.RadiusCodes',
 ]
+ACVF_DEFINITIONS += [
+    'IntegrationInACVF.Section3ACVF.NamedClosedHoleCut.radiusClass',
+    'IntegrationInACVF.Section3ACVF.NamedClosedHoleCut.expansion',
+    'IntegrationInACVF.Section3ACVF.AffineArithmetic.expression',
+    'IntegrationInACVF.Section3ACVF.AffineArithmetic.term',
+    'IntegrationInACVF.Section3ACVF.AffineArithmetic.graph',
+    'IntegrationInACVF.Section3ACVF.AffineHoleGeometry.radiusClass',
+    'IntegrationInACVF.Section3ACVF.AffineHoleGeometry.expansion',
+    'IntegrationInACVF.Section3ACVF.PrimitiveDecomposition.piece',
+    'IntegrationInACVF.Section3ACVF.PrimitiveImages.OnePrimitiveComponent',
+]
 ALLOWED = {'propext', 'Classical.choice', 'Quot.sound'}
 
 
@@ -615,9 +687,9 @@ def main():
             'scope': ('Definition 3.1, interpreted-base calculus and finite laminar punctured decomposition; '
                       + ('actual Lemmas 3.2-3.3 over genuine real/Gamma/ball bases, with an original-base '
                          'definable nontrivial Gamma value explicit for 3.3; Lemma 3.4 at original-base '
-                         'definable Gamma radii, singletons and VF; actual finite disjoint punctured '
+                         'definable Gamma radii, singletons and VF; Lemmas 3.6 and 3.8 over the full base with ACVF(0,0) and a definable nontrivial Gamma value explicit; actual finite disjoint punctured '
                          'decomposition; finite coset-profile exceptions, Lemma 3.9 and Corollary 3.10 with the sequel open-ball convention and domain graphs; ' if args.acvf else '')
-                      + 'the primitive-type classification of Lemma 3.6 and later section geometry remain open'),
+                      + 'later section geometry from corrected Lemma 3.11 onward remains open'),
             'build_scope': 'Incremental Lake Section 3 build plus freshly compiled headline audit',
         }
         (OUT / 'receipt.json').write_text(json.dumps(receipt, indent=2) + '\n', encoding='utf-8')
