@@ -7,3 +7,4 @@ public import IntegrationSection3.ParametricAtomicity
 public import IntegrationSection3.ImaginaryFamilies
 public import IntegrationSection3.InterpretedRanges
 public import IntegrationSection3.StatementChecks
+public import IntegrationSection3.ImaginaryParameters

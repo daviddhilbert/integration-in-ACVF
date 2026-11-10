@@ -50,6 +50,7 @@ theorem radiusTail_definable (Q : Set M) (t : M) (ht : iRV t) (hQt : t ∈ Q)
   have hr := (GammaParameters.raw_le_definable (M := M) Q).preimage_map
     (show Q.DefinableMap LRV (fun z : Fin 1 → M => ![z 0,t]) from by
       intro i; fin_cases i; exact hx; exact hc)
+  change Q.Definable LRV {z : Fin 1 → M | z 0 ∈ T}
   cases strict with
   | false =>
     convert hs.inter hl using 1
@@ -111,9 +112,10 @@ theorem radius_subgroup (Q : Set M) (t : M) (ht : iRV t) (ht0 : t ≠ iRVZero)
   ext x
   constructor
   · rintro ⟨u,hu,rfl⟩
-    have hd : (u-a).val = iVFAdd u.val (iVFNeg a.val) := by rw [sub_eq_add_neg]; rfl
-    have hq : u-a ∈ H := QuotientAddGroup.eq_iff_sub_mem.mp hu
-    have hh := (hmem (u-a)).mp hq
+    let u' : VFType (M := M) := u
+    have hd : (u'-a).val = iVFAdd u.val (iVFNeg a.val) := by rw [sub_eq_add_neg]; rfl
+    have hq : u'-a ∈ H := QuotientAddGroup.eq_iff_sub_mem.mp hu
+    have hh := (hmem (u'-a)).mp hq
     rw [hd] at hh
     exact ⟨u.property,hh⟩
   · intro hx

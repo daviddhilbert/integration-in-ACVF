@@ -155,3 +155,28 @@ to every original-base definable Gamma radius. `Values.vrv_le_iff` proves the
 comparison invariant under a change of RV representative. Singleton balls
 use the checked subsingleton argument, and VF uses the full additive
 subgroup. These extensions await compilation and full audits.
+
+## Additional imaginary parameters
+
+The new generic `ImaginaryParameters.lean` follows the finite-support/full-code
+design of the pinned predecessor's `GammaParameters.lean` and
+`GammaSpecialization.lean`. The latter's `GammaBaseCMinimal.lean` provides the
+same proof pattern: choose real codes inside a specialization proof, then
+use C-minimality over that explicitly enlarged real base. No representative
+is inserted into the original definability definition.
+
+The pinned Mathlib `ModelTheory/Quotients.lean` defines quotients of
+structures with a prestructure; it does not supply definability over an
+arbitrary collection of names from an interpreted sort. Searches of the
+predecessor's ball-imaginary sources found no such ball-parameter base.
+GitHub repository searches for “Lean model theory imaginaries” and “Lean
+model theory interpretation” on November 10 returned no candidate project.
+The chosen extension reuses the existing presentations and Mathlib's
+definability operations, rather than adding a second ACVF signature.
+
+`OverBase` explicitly uses a finite subset of the named imaginary elements,
+with a full invariant first-order relation in all their codes. The module
+proves real-code specialization, parameter monotonicity, Boolean closure,
+and the transfer of finite ball support. Connecting it to combined actual
+Gamma/ball names and to the complete-type family arguments remains work
+in progress. The code has compiled locally; its new audit is pending.

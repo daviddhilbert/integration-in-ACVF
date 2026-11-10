@@ -72,6 +72,19 @@ HEADLINES = [
     'ImaginaryFamilies.atomicWith_of_subsingleton',
     'empty_relation_check',
     'complete_type_relation_projections',
+    'ImaginaryParameters.tupleCodes_definable',
+    'ImaginaryParameters.vector_specialize',
+    'ImaginaryParameters.WithTuple.specialize',
+    'ImaginaryParameters.OverBase.specialize',
+    'ImaginaryParameters.WithTuple.mono',
+    'ImaginaryParameters.OverBase.mono',
+    'ImaginaryParameters.WithTuple.reindex',
+    'ImaginaryParameters.WithTuple.inter',
+    'ImaginaryParameters.WithTuple.compl',
+    'ImaginaryParameters.OverBase.of_real',
+    'ImaginaryParameters.OverBase.inter',
+    'ImaginaryParameters.OverBase.compl',
+    'ImaginaryParameters.finite_ball_support',
 ]
 ACVF_HEADLINES = [
     'IntegrationInACVF.Section3ACVF.' + name for name in (
@@ -115,6 +128,11 @@ DEFINITIONS = [
     'ImaginaryFamilies.Presentation.DefinableWith',
     'ImaginaryFamilies.Presentation.Algebraic',
     'ImaginaryFamilies.Presentation.AtomicWith',
+    'ImaginaryParameters.tuplePresentation',
+    'ImaginaryParameters.vectorPullback',
+    'ImaginaryParameters.WithTuple',
+    'ImaginaryParameters.Base',
+    'ImaginaryParameters.OverBase',
 ]
 ACVF_DEFINITIONS = [
     'IntegrationInACVF.Section3ACVF.BallPresentation.' + name
