@@ -101,7 +101,7 @@ original combined base. Individual component definability is not assumed.
 
 `VERIFICATION.json` records compiler, dependency pins, all checked source
 hashes and per-declaration axioms for the 360-declaration checkpoint.
-`CORE-VERIFICATION.json` retains the local 159-declaration core audit. Complete diagnostics, explicit exported
+`CORE-VERIFICATION.json` records the fresh local 270-declaration core audit. Complete diagnostics, explicit exported
 definitions/types and
 compact type output are in the linked artifact and
 `.scratch/ci-2a3b835-section3/`. Every receipt input hash was compared with
@@ -129,3 +129,40 @@ see [`PAPER-CORRECTIONS.md`](../PAPER-CORRECTIONS.md).
 `StatementChecks.lean` checks the counterexample and proves that a nonempty
 definable relation between complete types has both projections surjective.
 The corrected geometric statement remains open.
+
+
+## Checked generic continuation
+
+The generic library now has 270 locally checked declaration type/axiom
+heads, up from the published 159. All 111 new complete types were reviewed;
+only the three standard axioms occur. This is a component checkpoint, not
+an additional numbered paper theorem. The actual ACVF library remains at
+its previously checked 201 heads. Integration of the combined 471-head
+scope is awaiting the new CI run.
+
+The new modules prove full-base finite Boolean refinement, finite punctured
+partition rigidity, intrinsic proper hole refinement and affine hole
+closure, and preservation of a single positive region under atomic images.
+All finite imaginary-code graphs retain every representative over the
+original parameter base.
+
+For corrected 3.11, FibreSupportFormulas proves joint canonical inverse-support
+membership and uniform minimal support size. AtomicFiniteFibres obtains a
+uniform bound on finite relation rows directly from source atomicity, with
+no extra saturation or base-cardinality assumption. ProperInverseSupports
+combines it with target atomicity, infinite disjoint target classes and
+finite proper-ball non-covering to prove that inverse supports lie properly
+inside the source ball. The actual ACVF connection remains to be compiled.
+
+FiniteCofiniteClasses, QuotientCover, FiniteClosedHull and CoverRadiusFormulas
+supply the remaining abstract trace, counting, intrinsic hull and full-code
+radius constructions. Actual maximal-subball geometry, hull existence and
+constancy are still needed for a complete 3.11 proof. The actual primitive
+classification drafts for 3.6/3.8 are kept local until compiled; they are not
+part of this publication.
+
+The environment blocks the pinned Mathlib cache, so a bounded local source
+build is preparing the complete actual-ACVF dependency import. The affected
+generic proof batch has compiled locally before publication. CI will confirm
+its integration with the unchanged actual library. HK is background for
+proof ideas only; no HK citation or assumed result is introduced.

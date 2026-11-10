@@ -135,3 +135,21 @@ adjoined using 3.3; all new types and standard axioms passed. The open/closed
 wrappers include VF and singleton cases. The proof does not use open 3.6. Later
 image/open-to-open results remain open. No result is counted by assuming
 its missing geometry.
+
+
+## Checked generic support and hull continuation
+
+The dependency pins and licenses above are unchanged. The generic library
+now contains 270 locally compiled and type/axiom-audited heads. All new
+complete types were manually inspected. No HK citation or assumed result
+is introduced; the user permits only background proof ideas from HK.
+
+The continuation uses existing interpreted-code quantifiers and ordinary
+first-order counting. Source complete-type atomicity makes the finite row
+bound uniform without saturation. Minimal ball support, laminarity and
+finite proper-subball non-covering give proper inverse supports. Mathlib's
+valuation and additive quotient APIs support the affine transport and
+closed-hull geometry; density and natural-number valuation-unit inputs stay
+explicit for the later actual ACVF wrappers. No new external theorem input
+or dependency is assumed. These components do not establish the open
+numbered primitive-classification or separation statements on their own.

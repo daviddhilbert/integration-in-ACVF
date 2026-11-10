@@ -255,4 +255,38 @@ theorem positive_regions_cover {balls : Set (Set M)} (hl : IsLaminar balls)
   · rintro ⟨b,_,_,hsub,hxb⟩
     exact hsub hxb
 
+omit [L.Structure M] [Finite η] in
+/-- A sole positive parent identifies the supported set with its region.
+Coding is only used to identify the parent; no representative is named. -/
+theorem single_positive_region {balls : Set (Set M)} (hl : IsLaminar balls)
+    {F : Finset (Set M)} (hF : ∀ b ∈ F, b ∈ balls) {A : Set M}
+    (hs : MinimalBallSupport.Supports F A)
+    (hcover : ∀ x ∈ A, ∃ b ∈ F, x ∈ b)
+    {U : J → Set M} (hcodes : ∀ b ∈ F, ∃ j, U j = b) (i : J)
+    (hunique : {j | U j ∈ F ∧ (PuncturedDecomposition.region F (U j)).Nonempty ∧
+      PuncturedDecomposition.region F (U j) ⊆ A} = {i}) :
+    A = PuncturedDecomposition.region F (U i) := by
+  have hi : U i ∈ F ∧ (PuncturedDecomposition.region F (U i)).Nonempty ∧
+      PuncturedDecomposition.region F (U i) ⊆ A := by
+    have h : i ∈ {j | U j ∈ F ∧ (PuncturedDecomposition.region F (U j)).Nonempty ∧
+        PuncturedDecomposition.region F (U j) ⊆ A} := by
+      rw [hunique]
+      exact Set.mem_singleton i
+    exact h
+  apply Set.Subset.antisymm _ hi.2.2
+  intro x hx
+  rw [positive_regions_cover hl hF hs hcover] at hx
+  obtain ⟨b,hb,hne,hsub,hxb⟩ := hx
+  obtain ⟨j,hj⟩ := hcodes b hb
+  have hjmem : j ∈ {j | U j ∈ F ∧ (PuncturedDecomposition.region F (U j)).Nonempty ∧
+      PuncturedDecomposition.region F (U j) ⊆ A} := by
+    change U j ∈ F ∧ (PuncturedDecomposition.region F (U j)).Nonempty ∧
+      PuncturedDecomposition.region F (U j) ⊆ A
+    rw [hj]
+    exact ⟨hb,hne,hsub⟩
+  rw [hunique] at hjmem
+  have hji : j = i := hjmem
+  have he : b = U i := hj.symm.trans (congrArg U hji)
+  rwa [he] at hxb
+
 end IntegrationInACVF.Section3.RegionFormulas

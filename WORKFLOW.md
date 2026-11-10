@@ -60,6 +60,12 @@ Allow only `propext`, `Classical.choice` and `Quot.sound`.
 Check explicit hypotheses and fidelity to the paper separately.
 Check the affected library import or downstream consumer.
 
+Compile the affected proof batch and run its type/axiom audit locally before
+pushing. Use CI to confirm integration after those checks. If local dependency
+artifacts are unavailable, prepare them first and keep uncompiled drafts local,
+with their limitation recorded in the section status. Do not use successive
+pushes as a compiler loop.
+
 Record commands, compiler and dependency revisions, source identity, exit
 status, full headline type and axiom output. Distinguish fresh builds from
 reused artifacts and selected checks from wider integration checks.
@@ -79,6 +85,8 @@ remaining obstacles and next step. A running audit is not a passed certificate.
 Review the intended diff, preserve unrelated work, publish within the current
 user authorization and verify the remote revision. Report the verification
 scope and any unresolved checks. Stop at a requested handoff.
+Promote only verified proof checkpoints to main. Avoid duplicate feature-branch
+pushes for receipt-only updates when the same proof sources are already checked.
 
 ## Automated checks
 

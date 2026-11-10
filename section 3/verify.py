@@ -165,7 +165,7 @@ HEADLINES += [
     'CodeEquality.equalityCodes_definable', 'CodeEquality.pairRows_mem_iff',
     'CodeEquality.imageCodes_definable', 'AtomicRegions.uniform_property',
 ]
-HEADLINES += ['ImaginaryBaseFamilies.pair_domain']
+HEADLINES += ['ImaginaryBaseFamilies.pair_domain', 'RegionFormulas.single_positive_region']
 HEADLINES += [
     'ValuationRadius.' + name for name in (
         'closed_radius_le_of_subset', 'closed_radius_lt_of_subset_open',
@@ -173,6 +173,52 @@ HEADLINES += [
 ]
 HEADLINES += ['CodeEquality.imageCodeRelation_definable']
 HEADLINES += ['ClassCoverage.wholeClass_definable', 'ClassCoverage.complete_type_cover']
+HEADLINES += [
+    'ValuationEnlargement.strict_enlargement',
+    'ValuationEnlargement.closed_ssubset_closed', 'ValuationEnlargement.closed_ssubset_open',
+    'AffineHoleCosets.congr', 'AffineHoleCosets.cosets_injective',
+    'AffineHoleCosets.affine_mem_closed', 'AffineHoleCosets.exists_new_coset',
+    'BallInclusionFormulas.subsetCodes_definable',
+    'BallInclusionFormulas.mem_subsetCodes_iff', 'BallInclusionFormulas.enlargement_definable',
+    'DefinablePartitions.cell_subordinate', 'DefinablePartitions.cells_disjoint',
+    'DefinablePartitions.cell_definable', 'DefinablePartitions.exists_partition',
+    'CoarsePartition.region_not_small', 'CoarsePartition.common_support',
+    'CoarsePartition.outer_piece_cover', 'CoarsePartition.unique_outer_piece_at_bound',
+    'BoundedCoverFormulas.coverWitness_definable', 'BoundedCoverFormulas.tupleCover_definable',
+    'BoundedCoverFormulas.atMostCover_definable', 'BoundedCoverFormulas.atMostCover_iff',
+    'BoundedCoverFormulas.uncoveredFamily_definable',
+    'AtomicPuncturedPartition.subsingleton',
+    'ImaginaryBaseFamilies.Relation.finite_ball_support',
+    'ImaginaryBaseImages.image_definable', 'ImaginaryBaseImages.preimage_definable',
+    'ImaginaryBaseImages.completeType_image', 'ImaginaryBaseImages.family_preimage_definable',
+    'DefinableHoleRefinement.names_finite', 'DefinableHoleRefinement.enlarged_proper',
+    'DefinableHoleRefinement.body_nonempty', 'DefinableHoleRefinement.body_subset_region',
+    'DefinableHoleRefinement.body_strict', 'DefinableHoleRefinement.body_strict_of_hole_enlargement',
+    'DefinableHoleRefinement.body_definable', 'DefinableHoleRefinement.body_eq_region',
+    'ImaginaryTupleFormulas.inter', 'ImaginaryTupleFormulas.neg',
+    'ImaginaryTupleFormulas.reindex', 'ImaginaryTupleFormulas.exists_finite',
+    'ImaginaryTupleFormulas.exists_block', 'ImaginaryTupleFormulas.coordinate_eq',
+    'ImaginaryTupleFormulas.coordinate_mem', 'ImaginaryTupleFormulas.strict_subset',
+    'ImaginaryTupleFormulas.exists_points', 'AffineHoleFormulas.expansion_definable',
+    'AffineHoleClosure.mk_step', 'AffineHoleClosure.subset_closure',
+    'AffineHoleClosure.step_mem_closure', 'AffineHoleClosure.closure_strict',
+    'AffineHoleClosure.affine_mem_closed_parent', 'AffineHoleClosure.closure_stays_in_parent',
+    'PuncturedSupport.supports', 'PuncturedSupport.region_parent',
+    'PuncturedSupport.minimal_eq', 'PuncturedSupport.positive_names_singleton',
+    'AtomicRegions.refinement_eq',
+    'PunctureCuts.exists_avoiding', 'PunctureCuts.not_subset_old_holes',
+    'PunctureCuts.strict_replacement',
+    'PunctureFormulas.puncturedFamily_definable', 'PunctureFormulas.transported_definable',
+    'PunctureFormulas.add_transport_definable',
+]
+HEADLINES += ['FiniteBallHulls.finite_strict_bound', 'FiniteBallHulls.open_ssubset_open', 'FiniteBallHulls.finite_points_in_proper_open', 'FiniteBallHulls.finite_closed_balls_in_proper_open', 'FibreSupportFormulas.supportsTuple_definable', 'FibreSupportFormulas.supportsTuple_iff', 'FibreSupportFormulas.hasSupport_definable', 'FibreSupportFormulas.hasSupport_family', 'FibreSupportFormulas.hasSupport_of_support', 'FibreSupportFormulas.card_le_of_hasSupport', 'FibreSupportFormulas.uniform_minimal_card', 'FibreSupportFormulas.supportMember_definable', 'FibreSupportFormulas.supportMember_eq_family', 'FibreSupportFormulas.supportMember_iff_canonical', 'RelationalPreimages.family_definable', 'CoarseRelationFibres.infinite_preimage', 'CoarseRelationFibres.finite_intersection', 'CoarseRelationFibres.finite_family_bound', 'CoarseRelationFibres.coarse_indices_finite']
+
+HEADLINES += ['SupportInsideBall.trimmed_support', 'SupportInsideBall.support_subset_parent', 'SupportInsideBall.parent_region_subset', 'SupportInsideBall.parent_mem_small_complement', 'SupportInsideBall.proper_support_of_not_small', 'FiniteCofiniteClasses.outside_finite_same_profile', 'FiniteCofiniteClasses.finite_or_cofinite', 'QuotientCover.image_finite_of_finite_cover', 'QuotientCover.meets_infinite', 'QuotientCover.complement_infinite', 'FiniteClosedHull.radius_unique', 'FiniteClosedHull.open_hull_subset', 'FiniteClosedHull.exists_hull', 'AtomicFiniteFibres.hasMore_definable', 'AtomicFiniteFibres.exists_injective_of_card_le', 'AtomicFiniteFibres.not_hasMore_iff', 'AtomicFiniteFibres.uniform_bound', 'NamedFamilyFibres.equal_family', 'NamedFamilyFibres.singleton_of_definable', 'NamedFamilyFibres.unary_family', 'NamedFamilyFibres.binary_fibre', 'ProperInverseSupports.proper_inverse_supports']
+
+HEADLINES += ['FiniteClosedHull.radius_lt_of_open_cover', 'CoverRadiusFormulas.covers_definable', 'CoverRadiusFormulas.greatest_definable']
+
+HEADLINES += ['FiniteClosedHull.exists_of_finite_hulls', 'FiniteClosedHull.radius_ne_zero_of_infinite']
+
 ACVF_HEADLINES = [
     'IntegrationInACVF.Section3ACVF.' + name for name in (
         'encodedBall_isKBall', 'encodedBalls_laminar', 'support_of_isBoolComb',
@@ -402,7 +448,21 @@ DEFINITIONS += [
 DEFINITIONS += ['HoleFormulas.pairRows', 'HoleFormulas.HoleCodes']
 DEFINITIONS += ['CodeEquality.EqualityCodes', 'CodeEquality.imageCodes']
 DEFINITIONS += ['CodeEquality.imageCodeRelation']
-DEFINITIONS += ['ClassCoverage.wholeClass']
+DEFINITIONS += ['ClassCoverage.wholeClass', 'PunctureFormulas.puncturedFamily',
+                'PunctureFormulas.transported', 'AffineHoleCosets.affine',
+                'BallInclusionFormulas.SubsetCodes', 'DefinablePartitions.cell',
+                'CoarsePartition.SmallIn', 'CoarsePartition.CoveredBy',
+                'BoundedCoverFormulas.CoverWitness', 'BoundedCoverFormulas.TupleCover',
+                'BoundedCoverFormulas.AtMostCover', 'ImaginaryBaseImages.graphOn', 'DefinableHoleRefinement.original',
+                'DefinableHoleRefinement.enlarged', 'DefinableHoleRefinement.body',
+                'AffineHoleClosure.step', 'AffineHoleClosure.closure',
+                'ImaginaryTupleFormulas.Predicate', 'AffineHoleFormulas.expansion']
+DEFINITIONS += ['FibreSupportFormulas.SupportsTuple', 'FibreSupportFormulas.HasSupport', 'FibreSupportFormulas.SupportMember', 'RelationalPreimages.family']
+
+DEFINITIONS += ['SupportInsideBall.trimmed', 'QuotientCover.meets', 'FiniteClosedHull.IsHull', 'AtomicFiniteFibres.HasMore']
+
+DEFINITIONS += ['CoverRadiusFormulas.covers', 'CoverRadiusFormulas.greatest']
+
 ACVF_DEFINITIONS = [
     'IntegrationInACVF.Section3ACVF.BallPresentation.' + name
     for name in ('codeDomain', 'decode', 'presentation', 'valuationBalls')

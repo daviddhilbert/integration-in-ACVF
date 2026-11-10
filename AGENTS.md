@@ -23,3 +23,7 @@ Record conditional results and coverage precisely. Keep scratch output in
 Citation policy (user clarification, November 10, 2026): citations outside the
 approved list require user approval, except results already formalized.
 Check the existing Lean theorem and its hypotheses before using that exception.
+
+User clarification: HK may be consulted for background proof ideas, but do
+not cite HK or use its unproved results as formalization inputs. Reprove
+needed steps using these papers and checked Lean declarations.

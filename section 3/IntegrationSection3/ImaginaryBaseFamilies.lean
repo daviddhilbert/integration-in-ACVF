@@ -296,4 +296,17 @@ theorem pair_domain {R : Set (Fin 2 → J)}
     exact ⟨hc,q.decode ⟨d,hd⟩,hr⟩
 
 
+/-- A full interpreted membership family has finite ball support in each
+fibre under C-minimality. Real codes are specialized only inside the
+geometric proof; the original family remains over B. -/
+theorem Relation.finite_ball_support {D : Set M} {balls : Set (Set M)}
+    (hcm : ∀ Q : Set M, CMinimalOn L Q D balls)
+    {C : J → Set M} (hC : Relation (L := L) p B q C) (j : J)
+    (hsub : C j ⊆ D) : HasFiniteBallSupport balls (C j) := by
+  obtain ⟨F,_,hF⟩ := OverBase.specialize hC
+  let V : J → Set (Fin 1 → M) := fun k => {z | z 0 ∈ C k}
+  have hv : (B.real ∪ F).Definable L (vectorPullback q V) := hF
+  obtain ⟨c,_,hc⟩ := vector_specialize hv j
+  exact hcm ((B.real ∪ F) ∪ Set.range c.val) (C j) hc hsub
+
 end IntegrationInACVF.Section3.ImaginaryBaseFamilies
