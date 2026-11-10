@@ -2,3 +2,5 @@ module
 
 public import IntegrationSection3.Atomicity
 public import IntegrationSection3.BallSupport
+public import IntegrationSection3.DefinableFamilies
+public import IntegrationSection3.ParametricAtomicity

@@ -90,8 +90,11 @@ def main():
             outcomes[label] = 'skipped'
             continue
         with (out / f'{label}.log').open('w', encoding='utf-8') as log:
+            command = [sys.executable, str(verifier)]
+            if number == 3:
+                command.append('--acvf')
             result = subprocess.run(
-                [sys.executable, str(verifier)], cwd=ROOT,
+                command, cwd=ROOT,
                 stdout=log, stderr=subprocess.STDOUT)
         outcomes[label] = 'success' if result.returncode == 0 else 'failure'
 

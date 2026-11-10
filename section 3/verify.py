@@ -2,6 +2,7 @@
 """Build the Section 3 library and audit its current full types and axioms."""
 
 from datetime import datetime, timezone
+import argparse
 import hashlib
 import json
 from pathlib import Path
@@ -35,10 +36,28 @@ HEADLINES = [
     'splits_support',
     'finite_splitters',
     'finite_splitters_of_boolean_closure',
+    'DefinableFamilies.isAlgebraicPoint_of_mem',
+    'DefinableFamilies.definable_domain',
+    'DefinableFamilies.definable_fibre',
+    'DefinableFamilies.promote_fibre',
+    'DefinableFamilies.IsAlgebraicPoint.map',
+    'definable_range',
+    'cutIndices_definable',
+    'cutUnion_definable',
+    'splits_cutUnion',
+    'finite_cutIndices',
+    'parametric_ball_atomic',
+    'parametric_ball_atomic_of_code',
+]
+ACVF_HEADLINES = [
+    'IntegrationInACVF.Section3ACVF.' + name for name in (
+        'encodedBall_isKBall', 'encodedBalls_laminar', 'support_of_isBoolComb',
+        'normalized_cMinimalOn', 'real_parametric_ball_atomic')
 ]
 DEFINITIONS = [
     'GeneratesCompleteType', 'IsAtomic', 'Splits',
     'IsLaminar', 'HasFiniteBallSupport',
+    'DefinableFamilies.IsAlgebraicPoint', 'CMinimalOn', 'cutIndices', 'cutUnion',
 ]
 ALLOWED = {'propext', 'Classical.choice', 'Quot.sound'}
 
@@ -59,21 +78,31 @@ def run(command, log):
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--acvf', action='store_true',
+                        help='Also build and audit the actual ACVF bridge')
+    args = parser.parse_args()
     OUT.mkdir(parents=True, exist_ok=True)
     status = OUT / 'status.txt'
     status.write_text('RUNNING\n', encoding='utf-8')
     try:
         sources = sorted((ROOT / 'section 3' / 'IntegrationSection3').glob('*.lean'))
+        if args.acvf:
+            sources += sorted((ROOT / 'section 3' / 'IntegrationSection3ACVF').glob('*.lean'))
         inputs = sources + [ROOT / name for name in (
             'lean-toolchain', 'lakefile.toml', 'lake-manifest.json', 'section 3/verify.py')]
         before = {str(p.relative_to(ROOT)): digest(p) for p in inputs}
-        run(['lake', 'build', 'IntegrationSection3'], 'SectionBuild.log')
+        target = 'IntegrationSection3ACVF' if args.acvf else 'IntegrationSection3'
+        run(['lake', 'build', target], 'SectionBuild.log')
         compiler = run(['lake', 'env', 'lean', '--version'], 'Compiler.log').strip()
         names = [PREFIX + name for name in HEADLINES]
+        if args.acvf:
+            names += ACVF_HEADLINES
         audit = OUT / 'HeadlineAudit.lean'
         audit.write_text(
-            'import IntegrationSection3.Library\n'
-            'set_option pp.explicit true\n'
+            ('import IntegrationSection3ACVF.Geometry\n' if args.acvf
+             else 'import IntegrationSection3.Library\n')
+            + 'set_option pp.explicit true\n'
             + '\n'.join('#print ' + PREFIX + name for name in DEFINITIONS)
             + '\n'
             + '\n'.join('#check @' + name + '\n#print axioms ' + name for name in names)
@@ -104,7 +133,9 @@ def main():
             'headline_audits': records,
             'audit_source_sha256': digest(audit),
             'audit_log_sha256': digest(OUT / 'HeadlineAudit.log'),
-            'scope': 'Definition 3.1 and generic finite-exception geometry; full Lemma 3.2 remains open',
+            'scope': ('Definition 3.1, first-order parametric atomicity, '
+                      + ('and its actual ACVF real-index case; ' if args.acvf else '')
+                      + 'full imaginary-parameter Lemma 3.2 remains open'),
             'build_scope': 'Incremental Lake Section 3 build plus freshly compiled headline audit',
         }
         (OUT / 'receipt.json').write_text(json.dumps(receipt, indent=2) + '\n', encoding='utf-8')

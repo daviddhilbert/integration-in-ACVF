@@ -45,3 +45,30 @@ dependency or toolchain upgrade was selected. Broader external searches are
 still required if the ACVF imaginary-code bridge needs a new major interface.
 Source inspection and upstream verification reports are distinct from the
 fresh local compiler/axiom evidence recorded by `verify.py`.
+
+## First-order family argument and ACVF bridge
+
+The unary parameter-promotion proof adapts
+`SpecialTransformations.ModelTheory.promote_definable_tuple_fibre` from
+`Section3/GammaBaseTools.lean`, retaining its formula-relabeling construction.
+The definable exceptional-family proof uses Mathlib projection and Boolean
+closure; it adds no index or support-ball representative to the original base.
+These two new core modules have passed compilation and full type/axiom audits.
+
+The pending ACVF bridge adapts the valuation conversion in the predecessor's
+`GammaThresholdGeometry.encodedBall_good`, retaining the stronger single-ball
+property. It uses `ValOneEC.isKBall_subset_or_subset`,
+`EncodedBallGeometry.isBall_subset_vf`,
+`SortedBoolean.definableAt_iff_normalized_raw`, and the proved
+`CMinimal.theorem_2_8_c_minimal`. The full raw definability is interpreted in
+canonical normalization, because arbitrary unsorted totalizations must not
+be mistaken for the sorted language. The predecessor's source and notices
+remain in the pinned dependency. Compilation of this bridge is pending CI.
+
+For the remaining imaginary interpretation, inspect `ClosedBallCodes`,
+`ClosedBallQuotient`, `OpenBallCodes`, `GeneralBallCenters` and
+`GeneralCosetChoice`. They supply actual quotients by equality of underlying
+balls and define family definability by full real preimages in both charts.
+`GammaParameters` uses the corresponding invariant-preimage convention for
+genuine value-group parameters. These are preferable to naming chosen real
+representatives or introducing an unrelated ACVF language.
