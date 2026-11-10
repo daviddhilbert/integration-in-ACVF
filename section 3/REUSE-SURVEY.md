@@ -281,3 +281,24 @@ saturation and smallness from the finite projection theorem stay explicit.
 The full root and 707 local audits pass; all 679 previous full types are
 unchanged and all 28 new ones exactly match reviewed individual snapshots.
 No new external citation or unproved HK input is used.
+
+## Nonalgebraic ball choice and Corollary 3.17
+
+Pins and licenses are unchanged. The exact already formalized declarations
+`Section4.NonalgebraicTypes.realize_unary_definable_fip`,
+`Section3.NormalizationSaturation.Saturated.normalize`,
+`Section4.gammaDcl_of_named_code` and `Section3.small_union_finite` were
+inspected before reuse. These provide real saturation, its reduct transfer,
+named-code Gamma definability and preservation of smallness under finitely
+many temporary real parameters. No saturation of ball imaginaries is assumed.
+
+New proofs construct a nonalgebraic member of an infinite disjoint definable
+ball family, provide the actual interpreted identity graph and apply 3.2.
+The fixed-radius subball family is proved infinite using the checked actual
+Gamma-coset geometry and finite-cover theorem. Full-code map specialization
+happens only inside the proof, so arbitrary original Gamma/ball names remain
+permitted. Applying 3.16 gives the actual local Gamma-linearity statement and
+then the paper's least-threshold exclusion, including VF source. Existence
+of a least-radius function is not asserted by its definition. All 21 new
+full types match individually reviewed audits and all 707 previous types
+are unchanged. No new external citation or unproved HK input is used.

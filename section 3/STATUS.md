@@ -4,23 +4,23 @@ Source: arXiv:0809.0473v2, pp. 7–12, through Proposition 3.24.
 
 ## Verification
 
-The full local root build, inherited QE audit, Section 2 audit and **707
-Section 3 type/axiom audits pass** under pinned Lean 4.35.0: 289 generic and 418
-actual ACVF declarations. These are components, not 707 numbered results.
-All 165 source hashes match. Every prior 679 complete type is unchanged;
-all 28 new types exactly match individually compiled and manually reviewed
+The full local root build, inherited QE audit, Section 2 audit and **728
+Section 3 type/axiom audits pass** under pinned Lean 4.35.0: 289 generic and
+439 actual-namespace declarations. These are components, not numbered results.
+All 173 source hashes match. Every prior 707 complete type is unchanged;
+all 21 new types exactly match individually compiled and manually reviewed
 snapshots. Only `propext`, `Classical.choice` and `Quot.sound` occur.
 
 `VERIFICATION.json` records the local checkpoint; `CORE-VERIFICATION.json`
-selects its 289 generic heads. Evidence is in `.scratch/local-gamma-linear-707/`.
-Source `49d901b` passed [CI 42919041255](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42919041255).
-Every one of its 707 complete types exactly matches the reviewed local
-audit; all 165 source hashes and both audit hashes match. This checkpoint
-is verified locally and in CI, and is promoted to main by this receipt.
+selects its 289 generic heads. Evidence is in `.scratch/local-threshold-728/`.
+New CI confirmation is pending. The preceding proof `49d901b` passed
+[CI 42919041255](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42919041255),
+with all 707 full types and 165 source hashes matched before main promotion
+at receipt `0ffbf92`.
 
 ## Numbered results
 
-Thirteen numbered Section 3 results are checked in the following precise scope:
+Fourteen numbered Section 3 results are checked in the following precise scope:
 
 - **3.2:** `AdjoinBall.lemma_3_2` permits arbitrary real, genuine Gamma and
   ball names. Atomicity is over the original base with the input ball name
@@ -85,6 +85,19 @@ Thirteen numbered Section 3 results are checked in the following precise scope:
   isomorphism and constant-shift argument are all proved. A saturation-free
   all-model transfer is not claimed.
 
+- **3.17:** `LinearRadiusThreshold.corollary_3_17` excludes a uniform strict
+  lower bound above the actual source radius for every given least-linear-radius
+  function, as in the paper. `exists_at_radius` constructs an actual Gamma-linear
+  subball at every prescribed ordinary radius above that source radius. The
+  source includes VF with bottom radius; infinity in the threshold predicate
+  means a singleton. The map may be any injective partial-domain definable VF
+  map, so no image-ball premise is needed. The original full real/Gamma/ball
+  base, genuine saturation, infinite saturation cardinal, small real base and
+  ACVF00 are explicit. Only finitely many centre/radius codes are temporarily
+  named inside the proof; no original named delta or bound on the imaginary
+  base cardinality is required. The definition of least radius does not
+  assert existence of a least-radius function.
+
 Section 2's Corollary 2.15 is checked separately, with genuine saturation and
 parameter smallness explicit. Corollary 2.34 remains open.
 
@@ -130,8 +143,8 @@ the cut, without assuming atomicity over that enlarged base.
 
 ## Remaining work
 
-Eight proof results remain: 3.15, 3.17–3.19 and 3.21–3.24; 3.20 is a definition.
-They comprise three lemmas, one corollary and four propositions. Section 2's 2.34
+Seven proof results remain: 3.15, 3.18–3.19 and 3.21–3.24; 3.20 is a definition.
+They comprise three lemmas and four propositions. Section 2's 2.34
 is open separately. The unrestricted unnamed-radius extension of 3.4 is also
 still needed for the full3.15 claim. A wrapper for arbitrary-radius subballs
 of a **definable atomic** ambient set is checked separately, but it does not
@@ -248,3 +261,26 @@ uses actual radius invariants. All 28 new full exported types match the
 reviewed individual audits. Saturation and smallness enter through the
 already checked finite Gamma-to-RV projection; no such premise is hidden
 inside the definition of Gamma-linearity or assumed as the desired result.
+
+## Nonalgebraic subballs and Corollary 3.17
+
+`SaturatedInterpretedFamilies` realizes a real point outside every finite
+base-definable subfamily of an infinite disjoint family. Its index is then
+nonalgebraic. `SaturatedBallFamilies` transfers genuine saturation through
+the proved normalization reduct and applies this to actual ball membership.
+It does not introduce saturation of an imaginary quotient sort.
+
+`BetaSubballFamilies` gives full-code definability, coverage, disjointness,
+actual fixed-radius presentations and infinitude of the smaller-ball family.
+`NamedBallSetup` defines radii and ball fibres from temporarily named real
+codes. `AtomicBallFamilyChoice` supplies the full interpreted identity graph
+and applies checked 3.2. `LocalGammaLinearity` restricts the map graph to the
+chosen atomic member, proves its image is open and applies checked 3.16.
+
+`LinearSubballSpecialization` removes the intermediate named-centre/radius
+hypotheses by specializing only the finite support of the original map.
+The small real base remains small after the finite enlargement, regardless
+of the cardinality of the original imaginary base. `LinearRadiusThreshold`
+handles actual radius invariants, including VF and infinity, and derives
+3.17 for every given least-radius function. All 21 full exported types match
+the reviewed individual audits; all 707 preceding full types are unchanged.

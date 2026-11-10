@@ -31,16 +31,18 @@ and manual dispatch, with downloadable build and audit evidence.
 The current root imports the predecessor and the new Section 2 and 3 libraries.
 [Section 2](section%202/STATUS.md) records the prerequisite map and Corollary 2.15;
 [Section 3](section%203/STATUS.md) records the exact formalized scope and open work.
-The full local project build, inherited QE audit, Section 2 audit and 707
-Section 3 type/axiom audits pass (289 generic, 418 actual ACVF declarations).
-Lemma 3.16 now gives Gamma-linearity with the target/source radius ratio,
-retaining genuine saturation, small-base and characteristic hypotheses.
-All 707 complete types and 165 source hashes from [CI](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42919041255)
-match the reviewed local evidence; only standard Lean axioms occur.
+The full local project build, inherited QE audit, Section 2 audit and 728
+Section 3 type/axiom audits pass (289 generic, 439 actual-namespace heads).
+Corollary 3.17 now excludes the stated uniform bound for any given
+least-linear-radius function, including a whole-field source. Actual linear
+subballs at every smaller radius are constructed using genuine saturation.
+New CI confirmation is pending. The preceding 707-head checkpoint passed
+[CI](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42919041255),
+with every complete type and source hash matched to reviewed local evidence.
 
 Checked Section 3 results are 3.2, 3.3, 3.4 at original-base definable radii
 plus singleton/VF cases, 3.6, 3.7, 3.8, 3.9, 3.10, corrected 3.11, 3.12,
-3.13, 3.14 and 3.16 in the stated saturation/small-base scope. Full real,
+3.13, 3.14, 3.16 and 3.17 in the stated saturation/small-base scope. Full real,
 Gamma and ball bases are retained where permitted.
 Lemma 3.14 keeps its restriction to the one source ball imaginary plus old
 Gamma names. ACVF(0,0) and an original-base definable nontrivial Gamma value
