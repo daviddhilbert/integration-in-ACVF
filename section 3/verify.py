@@ -179,7 +179,7 @@ def main():
             'audit_source_sha256': digest(audit),
             'audit_log_sha256': digest(OUT / 'HeadlineAudit.log'),
             'scope': ('Definition 3.1 and generic real/imaginary-index parametric atomicity; '
-                      + ('actual ACVF ball-index Lemma 3.2 over real bases; ' if args.acvf else '')
+                      + ('actual ACVF real-base cases of Lemmas 3.2 and 3.3; ' if args.acvf else '')
                       + 'full C-bullet bases with additional imaginary names remain open'),
             'build_scope': 'Incremental Lake Section 3 build plus freshly compiled headline audit',
         }

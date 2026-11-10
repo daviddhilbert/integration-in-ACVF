@@ -21,6 +21,7 @@ namespace IntegrationInACVF.Section3ACVF.GammaAtomicity
 variable {M : Type} [sM : LRV.Structure M] [hM : M ⊨ Axioms.ACVF]
 variable {Q : Set M} {k n : ℕ} {sn : Fin n → SortTag}
 
+omit sM hM in
 private theorem tuple_domain (N : LRV.Structure M) {R : Set ((Fin k → M) × (Fin n → M))}
     (hR : @Set.Definable M Q LRV N (Fin k ⊕ Fin n)
       {z | (z ∘ Sum.inl,z ∘ Sum.inr) ∈ R}) :
@@ -35,6 +36,7 @@ private theorem tuple_domain (N : LRV.Structure M) {R : Set ((Fin k → M) × (F
   · rintro ⟨z,hz,rfl⟩
     exact ⟨z ∘ Sum.inr,hz⟩
 
+omit sM hM in
 private theorem tuple_range (N : LRV.Structure M) {R : Set ((Fin k → M) × (Fin n → M))}
     (hR : @Set.Definable M Q LRV N (Fin k ⊕ Fin n)
       {z | (z ∘ Sum.inl,z ∘ Sum.inr) ∈ R}) :
@@ -60,6 +62,8 @@ theorem cutting_parameters_definable (R : Relation Q k n sn) {A : Set (Fin n →
     (hA : @Set.Definable M Q LRV (CanonicalStructure.normalize (M := M)) (Fin n) A) :
     GammaSyntax.Definable Q (fun γ => Splits (R.fibre γ) A) := by
   have hp := proper_normalized_definable (M := M) Q (n := k)
+  let U := R.carrier
+  have hR := R.definable
   let P : Set (Fin k → M) := {a | Proper a}
   let B : Set (Fin k → M) :=
     {a | GammaSyntax.Proper a ∧ Splits (R.fibre (GammaSyntax.decode a)) A}
@@ -68,10 +72,10 @@ theorem cutting_parameters_definable (R : Relation Q k n sn) {A : Set (Fin n →
   letI := N
   have hAcyl := hA.preimage_comp (Sum.inr : Fin n → Fin k ⊕ Fin n)
   have hpcyl := hp.preimage_comp (Sum.inl : Fin k → Fin k ⊕ Fin n)
-  have hy := tuple_domain N (R := {p | p.2 ∈ A ∧ p ∈ R.carrier})
-    (hAcyl.inter R.definable)
-  have hn := tuple_domain N (R := {p | (p.1 ∈ P ∧ p.2 ∈ A) ∧ p ∉ R.carrier})
-    ((hpcyl.inter hAcyl).inter R.definable.compl)
+  have hy := tuple_domain N (R := {p | p.2 ∈ A ∧ p ∈ U})
+    (hAcyl.inter hR)
+  have hn := tuple_domain N (R := {p | (p.1 ∈ P ∧ p.2 ∈ A) ∧ p ∉ U})
+    ((hpcyl.inter hAcyl).inter hR.compl)
   change Q.Definable LRV B
   convert hp.inter (hy.inter hn) using 1
   ext a
@@ -97,6 +101,9 @@ theorem fibre_definable_of_definable_parameters (R : Relation Q k n sn)
   let Names : Set (Fin k → M) :=
     {a | GammaSyntax.Proper a ∧ ∀ i, GammaSyntax.decode a i = γ i}
   let F := R.fibre γ
+  let fr := R.fibre
+  let U := R.carrier
+  have hR := R.definable
   let d := GammaSyntax.decode (M := M) (ι := Fin k)
   have hdecode := fibre_decode R
   let t := representatives γ
@@ -108,8 +115,8 @@ theorem fibre_definable_of_definable_parameters (R : Relation Q k n sn)
   have hm := R.mem_fibre_iff t γ (representatives_values γ)
   let N := CanonicalStructure.normalize (M := M)
   letI := N
-  have hr := tuple_range N (R := {p | p.1 ∈ Names ∧ p ∈ R.carrier})
-    ((hnamed.preimage_comp (Sum.inl : Fin k → Fin k ⊕ Fin n)).inter R.definable)
+  have hr := tuple_range N (R := {p | p.1 ∈ Names ∧ p ∈ U})
+    ((hnamed.preimage_comp (Sum.inl : Fin k → Fin k ⊕ Fin n)).inter hR)
   change Q.Definable LRV F
   convert hr using 1
   ext b
@@ -119,6 +126,7 @@ theorem fibre_definable_of_definable_parameters (R : Relation Q k n sn)
       (hm b).mp hb⟩
   · rintro ⟨a',⟨ha',hv'⟩,hb⟩
     have he := hdecode a' ha'
+    change fr (d a') = {b | (a',b) ∈ U} at he
     rw [show d a' = γ from funext hv'] at he
     exact (Set.ext_iff.mp he b).mpr hb
 
@@ -127,11 +135,10 @@ theorem definableWith_of_real {A : Set (Fin n → M)}
     (hproper : ∀ a ∈ A, ∀ i, sortEval (sn i) (a i))
     (γ : Fin k → Values.Gamma (M := M)) : DefinableWith Q γ sn A := by
   have hp := proper_normalized_definable (M := M) Q (n := k)
-  let N := CanonicalStructure.normalize (M := M)
   let R : Relation Q k n sn :=
     { carrier := {p | Proper p.1 ∧ p.2 ∈ A}
       definable := by
-        letI := N
+        letI := CanonicalStructure.normalize (M := M)
         exact (hp.preimage_comp (Sum.inl : Fin k → Fin k ⊕ Fin n)).inter
           (hA.preimage_comp (Sum.inr : Fin n → Fin k ⊕ Fin n))
       proper := fun p hp => ⟨hp.1,hproper p.2 hp.2⟩

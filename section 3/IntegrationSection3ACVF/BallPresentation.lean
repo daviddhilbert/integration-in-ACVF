@@ -124,11 +124,11 @@ private theorem closed_membership_sorted (Q : Set M) :
 
 theorem codeDomain_definable (Q : Set M) :
     @Set.Definable M Q LRV (CanonicalStructure.normalize (M := M)) (Fin 4) codeDomain := by
-  let N := CanonicalStructure.normalize (M := M)
   let D := codeDomain (M := M)
-  have hs : DefinableAt Q .vf {x | iVF x} := definableAt_sort Q .vf
-  have hsort : @Set.Definable₁ M Q LRV N {x | @iVF M sM x} :=
+  have hs : @DefinableAt M sM Q .vf {x | @iVF M sM x} := @definableAt_sort M sM Q .vf
+  have hsort : @Set.Definable₁ M Q LRV (@CanonicalStructure.normalize M sM) {x | @iVF M sM x} :=
     ((@definableAt_iff_normalized_raw M sM hM Q .vf _).mp hs).1
+  let N := @CanonicalStructure.normalize M sM
   have hz : @iVFZero M N = @iVFZero M sM := @CanonicalStructure.sortZero_normalize M sM .vf
   have hzero : @Set.DefinableFun M LRV N (Fin 4) Q
       (fun _ => @iVFZero M sM) := by
@@ -164,6 +164,7 @@ theorem membership_definable (Q : Set M) :
   let p := presentation (M := M)
   let U := BallImaginaries.underlying (M := M)
   let D := codeDomain (M := M)
+  let cRaw := ClosedBallCodes.rawBall (M := M)
   let oRaw := OpenBallCodes.rawBall (M := M)
   let z0 := @iVFZero M sM
   have hdecode := underlying_decode (M := M)
@@ -199,19 +200,33 @@ theorem membership_definable (Q : Set M) :
   constructor
   · rintro ⟨hzcode,hx⟩
     refine ⟨hzcode,?_⟩
-    have he := Set.ext_iff.mp (hdecode (⟨z ∘ Sum.inl,hzcode⟩ : D)) (z (.inr 0))
+    have he : z (.inr 0) ∈ U (p.decode ⟨z ∘ Sum.inl,hzcode⟩) ↔
+        z (.inr 0) ∈ (if z (.inl 3) = z0 then cRaw (closedTuple (z ∘ Sum.inl))
+          else oRaw (openTuple (z ∘ Sum.inl))) :=
+      Set.ext_iff.mp (hdecode (⟨z ∘ Sum.inl,hzcode⟩ : D)) (z (.inr 0))
     by_cases hf : z (.inl 3) = z0
     · left
-      exact ⟨hf,by simpa only [if_pos hf,closedTuple,πc] using he.mp hx⟩
+      refine ⟨hf,?_⟩
+      have hx' := he.mp hx
+      rw [if_pos hf] at hx'
+      exact hx'
     · right
-      exact ⟨hf,by simpa only [if_neg hf,openTuple,πo] using he.mp hx⟩
+      refine ⟨hf,?_⟩
+      have hx' := he.mp hx
+      rw [if_neg hf] at hx'
+      exact hx'
   · rintro ⟨hzcode,hx⟩
     refine ⟨hzcode,?_⟩
-    have he := Set.ext_iff.mp (hdecode (⟨z ∘ Sum.inl,hzcode⟩ : D)) (z (.inr 0))
+    have he : z (.inr 0) ∈ U (p.decode ⟨z ∘ Sum.inl,hzcode⟩) ↔
+        z (.inr 0) ∈ (if z (.inl 3) = z0 then cRaw (closedTuple (z ∘ Sum.inl))
+          else oRaw (openTuple (z ∘ Sum.inl))) :=
+      Set.ext_iff.mp (hdecode (⟨z ∘ Sum.inl,hzcode⟩ : D)) (z (.inr 0))
     apply he.mpr
     rcases hx with ⟨hf,hx⟩ | ⟨hf,hx⟩
-    · simpa only [if_pos hf,closedTuple,πc] using hx
-    · simpa only [if_neg hf,openTuple,πo] using hx
+    · rw [if_pos hf]
+      exact hx
+    · rw [if_neg hf]
+      exact hx
 
 theorem presentation_definable (Q : Set M) :
     @Presentation.IsDefinable M (BallImaginaries.Ball M) (Fin 4) presentation
