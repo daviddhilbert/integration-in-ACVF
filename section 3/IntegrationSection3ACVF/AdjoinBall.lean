@@ -99,7 +99,7 @@ theorem restrict_relation (B : FullBaseAtomicity.Base (M := M))
     | inl j => exact (he j).comp (fun _ => Set.DefinableFun.proj LRV)
     | inr j => exact Set.DefinableFun.proj LRV
   letI := CanonicalStructure.normalize (M := M)
-  have hd := (ImaginaryParameters.OverBase.of_real hc).preimage_comp
+  have hd := (ImaginaryParameters.OverBase.of_real (p := p) (B := B) hc).preimage_comp
     (Sum.inl : Fin 4 → Fin 4 ⊕ Fin 1)
   have h := hd.inter (hR.preimage_map hmap) hp
   change ImaginaryParameters.OverBase (L := LRV) p B
@@ -164,7 +164,7 @@ theorem lemma_3_2 (B : FullBaseAtomicity.Base (M := M))
       {z : Fin 1 → M | ∃ D ∈ ({i} : Set (BallImaginaries.Ball M)), z 0 ∈ C D} := by
     letI := CanonicalStructure.normalize (M := M)
     exact ImaginaryBaseFamilies.Relation.range
-      (ImaginaryBaseFamilies.Relation.restrict hp.1 hIndex hCm)
+      (ImaginaryBaseFamilies.Relation.restrict (p := p) (B := B') (q := q) hp.1 hIndex hCm)
   letI := CanonicalStructure.normalize (M := M)
   change ImaginaryParameters.IsAtomicOver (L := LRV) p B' (U (f i))
   refine ⟨?_,?_⟩
@@ -172,7 +172,12 @@ theorem lemma_3_2 (B : FullBaseAtomicity.Base (M := M))
     ext z
     change z 0 ∈ U (f i) ↔ ∃ D, D = i ∧ z 0 ∈ C D
     rw [← hCi]
-    exact ⟨fun hz => ⟨i,rfl,hz⟩,fun ⟨D,rfl,hz⟩ => hz⟩
+    constructor
+    · intro hz
+      exact ⟨i,rfl,hz⟩
+    · rintro ⟨D,hDi,hz⟩
+      rw [hDi] at hz
+      exact hz
   · intro S hS
     obtain ⟨R,hR,hRi⟩ := (ImaginaryParameters.with_iff_over_adjoin hp (Sum.inl i) S).mpr hS
     have hr := @restrict_relation M sM hM B R hR

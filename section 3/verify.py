@@ -246,6 +246,9 @@ def main():
             + ('\n' + '\n'.join('#print ' + name for name in ACVF_DEFINITIONS) if args.acvf else '')
             + '\n'
             + '\n'.join('#check @' + name + '\n#print axioms ' + name for name in names)
+            + '\n#eval IO.println "BEGIN_COMPACT_TYPES"\n'
+            + 'set_option pp.explicit false\n'
+            + '\n'.join('#check @' + name for name in names)
             + '\n', encoding='utf-8')
         output = run(['lake', 'env', 'lean', str(audit)], 'HeadlineAudit.log')
         if re.search(r'\berror\b|\bsorry(?:Ax)?\b', output, re.I):
@@ -273,10 +276,10 @@ def main():
             'headline_audits': records,
             'audit_source_sha256': digest(audit),
             'audit_log_sha256': digest(OUT / 'HeadlineAudit.log'),
-            'scope': ('Definition 3.1 and generic real/imaginary-index parametric atomicity; '
-                      + ('actual ACVF real-base cases of Lemmas 3.2 and 3.3, '
-                         'and Lemma 3.4 for definable Gamma radii, singletons and VF; ' if args.acvf else '')
-                      + 'full C-bullet bases with additional imaginary names remain open'),
+            'scope': ('Definition 3.1, interpreted parameter promotion and exact-base family arguments; '
+                      + ('actual Lemma 3.2 with additional Gamma/ball names, real-base Lemma 3.3, '
+                         'and Lemma 3.4 for real-base definable Gamma radii, singletons and VF; ' if args.acvf else '')
+                      + 'full C-bullet scope of Lemmas 3.3-3.4 and later section geometry remain open'),
             'build_scope': 'Incremental Lake Section 3 build plus freshly compiled headline audit',
         }
         (OUT / 'receipt.json').write_text(json.dumps(receipt, indent=2) + '\n', encoding='utf-8')
