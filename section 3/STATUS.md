@@ -89,11 +89,23 @@ common radius, then nonmaximal-hole enlargement and the multiple-hole
 contradiction. The canonical support, positive regions and maximal holes are definable over the
 original combined base. Individual component definability is not assumed.
 
+## Current continuation
+
+`ClassCoverage.lean` proves original-base definability of the points whose
+whole binary-relation fibre lies in A, and propagation of that property
+across a definable complete type. Both full types and standard axioms passed
+the local 159-declaration core audit. `SameRadiusCoverage.lean` uses the
+checked Gamma-atomicity theorem to implement Corollary 3.7 directly, including
+open/closed ordinary radii, singleton and VF cases. ACVF(0,0), a definable
+nontrivial Gamma value over the original base and `1 < δ` remain explicit.
+This actual continuation awaits full CI; it does not assume open 3.6.
+The full receipt remains the 355-declaration checkpoint.
+
 ## Verification evidence
 
 `VERIFICATION.json` records compiler, dependency pins, all checked source
 hashes and per-declaration axioms for the 355-declaration checkpoint.
-`CORE-VERIFICATION.json` retains the local 157-declaration core audit. Complete diagnostics, explicit exported
+`CORE-VERIFICATION.json` records the local 159-declaration core continuation. Complete diagnostics, explicit exported
 definitions/types and
 compact type output are in the linked artifact and
 `.scratch/ci-e483d8a-section3/`. Every receipt input hash was compared with

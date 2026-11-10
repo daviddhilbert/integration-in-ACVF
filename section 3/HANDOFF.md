@@ -11,7 +11,7 @@ in [CI run 42842714296](https://github.com/daviddhilbert/integration-in-ACVF/act
 The complete new types and axioms were reviewed, including the original-model
 carriers and normalized raw definability. All receipt input hashes matched
 the committed source. `VERIFICATION.json` binds this full checkpoint;
-`CORE-VERIFICATION.json` retains the local 157-declaration core audit.
+`CORE-VERIFICATION.json` records the local 159-declaration core continuation.
 
 Checked entry points:
 
@@ -72,3 +72,11 @@ Use `lake env python3 'section 3/verify.py' --acvf` for the full current audit.
 Freeze original-model functions, sets and carriers before introducing any
 local normalized structure. No chosen real representative may enter the
 exported imaginary base. Keep scratch work and diagnostics in `.scratch/`.
+
+Current continuation: ClassCoverage.lean passed its two new full types and
+standard axioms (159 core total). SameRadiusCoverage.lean implements the
+direct Corollary 3.7 proof from Gamma-atomicity and definable whole-coset
+coverage, including VF and singleton cases. It awaits full CI. Radius graph
+and common-radius drafts remain in .scratch/OrdinaryRadiusFibres.lean and
+.scratch/UniformRadius.lean, unregistered/unverified. Plans are in
+.scratch/RadiusFibrePlan.txt and .scratch/Corollary37Plan.txt. After this checkpoint, registering the radius continuation adds 15 actual audits.

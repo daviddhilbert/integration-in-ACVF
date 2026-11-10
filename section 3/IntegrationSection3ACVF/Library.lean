@@ -32,3 +32,4 @@ import IntegrationSection3ACVF.ValuativeCentreGeometry
 import IntegrationSection3ACVF.PaperBallInvariants
 import IntegrationSection3ACVF.OrdinaryCentreFibres
 import IntegrationSection3ACVF.UniformValuativeCentre
+import IntegrationSection3ACVF.SameRadiusCoverage

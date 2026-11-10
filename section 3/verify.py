@@ -172,6 +172,7 @@ HEADLINES += [
         'open_radius_le_of_subset_closed', 'open_ne_closed')
 ]
 HEADLINES += ['CodeEquality.imageCodeRelation_definable']
+HEADLINES += ['ClassCoverage.wholeClass_definable', 'ClassCoverage.complete_type_cover']
 ACVF_HEADLINES = [
     'IntegrationInACVF.Section3ACVF.' + name for name in (
         'encodedBall_isKBall', 'encodedBalls_laminar', 'support_of_isBoolComb',
@@ -359,6 +360,10 @@ ACVF_HEADLINES += [
     'IntegrationInACVF.Section3ACVF.UniformValuativeCentre.' + name for name in (
         'uniform_centre', 'exists_common_centre')
 ]
+ACVF_HEADLINES += [
+    'IntegrationInACVF.Section3ACVF.SameRadiusCoverage.' + name for name in (
+        'corollary_3_7_gamma', 'corollary_3_7_open', 'corollary_3_7_closed')
+]
 DEFINITIONS = [
     'GeneratesCompleteType', 'IsAtomic', 'Splits',
     'IsLaminar', 'HasFiniteBallSupport',
@@ -397,6 +402,7 @@ DEFINITIONS += [
 DEFINITIONS += ['HoleFormulas.pairRows', 'HoleFormulas.HoleCodes']
 DEFINITIONS += ['CodeEquality.EqualityCodes', 'CodeEquality.imageCodes']
 DEFINITIONS += ['CodeEquality.imageCodeRelation']
+DEFINITIONS += ['ClassCoverage.wholeClass']
 ACVF_DEFINITIONS = [
     'IntegrationInACVF.Section3ACVF.BallPresentation.' + name
     for name in ('codeDomain', 'decode', 'presentation', 'valuationBalls')
