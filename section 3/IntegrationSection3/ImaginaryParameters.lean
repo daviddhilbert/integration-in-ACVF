@@ -307,6 +307,27 @@ theorem OverBase.forall_block {B : Base M I} {υ : Type w₂} [Finite υ]
   simp only [Set.mem_ofPred_eq,Set.mem_compl_iff,not_exists,not_not]
 
 omit [Finite κ] in
+theorem OverBase.forall_finite {B : Base M I} {υ : Type w₂} [Finite υ]
+    {τ : Type w₃} [Finite τ] {P : τ → Set (υ → M)}
+    (hP : ∀ t, OverBase (L := L) p B (P t)) (hp : B.real.Definable L p.codes) :
+    OverBase (L := L) p B {z | ∀ t, z ∈ P t} := by
+  classical
+  let := Fintype.ofFinite τ
+  have hfin (s : Finset τ) : OverBase (L := L) p B {z | ∀ t ∈ s, z ∈ P t} := by
+    induction s using Finset.induction_on with
+    | empty =>
+      convert OverBase.of_real (p := p) (B := B) (Set.definable_univ (L := L) (α := υ)) using 1
+      ext z
+      simp
+    | @insert t s ht ih =>
+      convert (hP t).inter ih hp using 1
+      ext z
+      simp only [Finset.forall_mem_insert,Set.mem_inter_iff,Set.mem_ofPred_eq]
+  convert hfin Finset.univ using 1
+  ext z
+  simp
+
+omit [Finite κ] in
 /-- A named imaginary has a definable singleton over the base naming it;
 its full real preimage is used, rather than a selected representative. -/
 theorem OverBase.named_singleton {B : Base M I} (hp : p.IsDefinable L B.real)

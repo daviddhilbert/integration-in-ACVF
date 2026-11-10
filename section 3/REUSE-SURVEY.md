@@ -232,3 +232,10 @@ full-base Boolean and quantifier operations can retain this definition over
 the original combined base. Its finite definable points and definable-group
 samples then feed the same `FiniteOrder.nonempty_inter_of_controls` theorem.
 This is planned work, not a claim of the full-base Lemma 3.3.
+
+
+The Gamma continuation uses `FullBaseDefinability.lean` as a small wrapper
+over the proved generic first-order operations. It preserves the original
+model's presentations while fixing raw definability to its normalization.
+The generic finite universal-quantifier closure passed the 99-declaration
+local core audit; the concrete wrappers await their CI build and audit.

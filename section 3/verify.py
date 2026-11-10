@@ -93,6 +93,7 @@ HEADLINES = [
     'ImaginaryParameters.OverBase.preimage_map',
     'ImaginaryParameters.OverBase.empty_iff_real',
     'ImaginaryParameters.OverBase.forall_block',
+    'ImaginaryParameters.OverBase.forall_finite',
     'ImaginaryParameters.OverBase.named_singleton',
     'ImaginaryParameters.OverBase.adjoin_iff',
     'ImaginaryParameters.with_iff_over_adjoin',
@@ -157,6 +158,11 @@ ACVF_HEADLINES += [
     'IntegrationInACVF.Section3ACVF.AdjoinBall.' + name for name in (
         'embedCode_compatible', 'embedCode_definable', 'restrict_family',
         'restrict_relation', 'lemma_3_2')
+]
+ACVF_HEADLINES += [
+    'IntegrationInACVF.Section3ACVF.FullBaseAtomicity.OverBase.' + name for name in (
+        'of_real', 'congr', 'inter', 'compl', 'union', 'preimage_comp',
+        'exists_block', 'forall_block', 'forall_finite')
 ]
 DEFINITIONS = [
     'GeneratesCompleteType', 'IsAtomic', 'Splits',

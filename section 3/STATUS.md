@@ -58,6 +58,15 @@ the unchanged released LRV structure and its canonical normalization.
 The paper's Definition 3.1 does not explicitly require nonemptiness; the code
 retains this convention and adds nonemptiness when selecting a realization.
 
+## Current continuation
+
+The next extension adds finite universal closure to the generic core (99
+locally audited declarations) and `FullBaseDefinability.lean`, which exposes
+the proved first-order operations over the combined base for the Gamma
+argument. Its concrete wrappers are awaiting CI. `VERIFICATION.json` above
+remains the certificate for the preceding 145-declaration checkpoint;
+`CORE-VERIFICATION.json` records the new local core audit.
+
 ## Verification
 
 ```sh
