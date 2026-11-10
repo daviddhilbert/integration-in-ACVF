@@ -38,10 +38,13 @@ theorem graph_extendByEmpty {m : ℕ} (A : Set M)
     have hxA : x.val ∈ A := by
       by_contra hn
       simp only [extendByEmpty,if_neg hn,Set.mem_empty_iff_false] at hy
-    exact ⟨⟨x,hx,by simpa only [extendByEmpty,if_pos hxA] using hy⟩,hx ▸ hxA⟩
+    exact ⟨⟨x,hx,by simpa only [extendByEmpty,if_pos hxA] using hy⟩,
+      (show z 0 ∈ A from hx ▸ hxA)⟩
   · rintro ⟨⟨x,hx,hy⟩,hzA⟩
+    change z 0 ∈ A at hzA
+    have hxA : x.val ∈ A := hx.symm ▸ hzA
     refine ⟨x,hx,?_⟩
-    simpa only [extendByEmpty,if_pos (hx.symm ▸ hzA)] using hy
+    simpa only [extendByEmpty,if_pos hxA] using hy
 
 /-- Lemma 3.9. The full graph is allowed to give arbitrary values outside
 this open ball; only its original-base definability is used. -/
