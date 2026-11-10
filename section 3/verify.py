@@ -101,6 +101,11 @@ ACVF_HEADLINES += [
     'IntegrationInACVF.Section3ACVF.NamedRadiusAtomicity.' + name for name in (
         'radiusTail_definable', 'radius_subgroup', 'lemma_3_4_named_radius')
 ]
+ACVF_HEADLINES += [
+    'IntegrationInACVF.Section3ACVF.GammaRadiusAtomicity.' + name for name in (
+        'radiusTail_definable_of_value', 'radiusBall_eq_gammaBall',
+        'lemma_3_4_real_base', 'lemma_3_4_singleton', 'lemma_3_4_whole_field')
+]
 DEFINITIONS = [
     'GeneratesCompleteType', 'IsAtomic', 'Splits',
     'IsLaminar', 'HasFiniteBallSupport',
@@ -192,7 +197,7 @@ def main():
             'audit_log_sha256': digest(OUT / 'HeadlineAudit.log'),
             'scope': ('Definition 3.1 and generic real/imaginary-index parametric atomicity; '
                       + ('actual ACVF real-base cases of Lemmas 3.2 and 3.3, '
-                         'and Lemma 3.4 for ordinary RV radii named in the real base; ' if args.acvf else '')
+                         'and Lemma 3.4 for definable Gamma radii, singletons and VF; ' if args.acvf else '')
                       + 'full C-bullet bases with additional imaginary names remain open'),
             'build_scope': 'Incremental Lake Section 3 build plus freshly compiled headline audit',
         }

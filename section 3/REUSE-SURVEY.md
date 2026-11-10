@@ -147,3 +147,11 @@ and the singleton/whole-field cases are separate follow-up obligations.
 The preceding coset module passed the complete root build and 84 Section 3
 headline audits in run 42805178064 at source 19265875181911103ae0c8fabfd03891b3d42d4c.
 The named-radius specialization awaits its own complete build and audit.
+
+`GammaRadiusAtomicity.lean` further reuses the predecessor's
+`Section4/RVValueFibres.lean`: `RVValueDefinable`, `rvValuePullback` and
+`gamma_value_definable`. Quantifying the full value fibre extends the argument
+to every original-base definable Gamma radius. `Values.vrv_le_iff` proves the
+comparison invariant under a change of RV representative. Singleton balls
+use the checked subsingleton argument, and VF uses the full additive
+subgroup. These extensions await compilation and full audits.
