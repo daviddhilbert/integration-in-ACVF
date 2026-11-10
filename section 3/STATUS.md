@@ -79,7 +79,7 @@ original combined base. Individual component definability is not assumed.
 real-code sets in a faithful interpreted family. `AtomicRegions.lean` proves
 that every original-base definable property of disjoint nonempty regions
 inside a complete type is uniform across that family. Their four new full
-types and standard axioms passed the local 152-declaration core audit.
+types and standard axioms passed the local 156-declaration core audit.
 `ImaginaryBaseFamilies.pair_domain` also passed its full type and standard
 axiom check, projecting an interpreted binary relation over the unchanged
 base. `BallKindGeometry.lean` now connects the original open/closed charts to the
@@ -87,14 +87,20 @@ sequel's predicates and ordinary Gamma balls. The first CI found a residual
 constant-sort guard in two simplifications; those proofs are corrected.
 `BallKindPredicates.lean` supplies the full original-base kind tests, and
 `AtomicCanonicalRegions.lean` supplies uniform definable properties and
-punctured/unpunctured status. These actual bridges await full CI.
+punctured/unpunctured status. These actual bridges await full CI. The four new generic valuation-radius
+comparisons passed their full types and standard axioms locally; their
+open-to-closed comparison shows its density input explicitly.
+`BallRadiusGeometry.lean` supplies that density from the pinned formalized
+Johnson theorem and implements actual-Gamma radius uniqueness within each
+kind and separation of ordinary open and closed balls. This actual radius
+continuation also awaits full CI.
 The full receipt above remains the 306-declaration checkpoint.
 
 ## Verification evidence
 
 `VERIFICATION.json` records compiler, dependency pins, all checked source
 hashes and per-declaration axioms for the 306-declaration checkpoint.
-`CORE-VERIFICATION.json` records the local 152-declaration core continuation. Complete diagnostics, explicit exported definitions/types and
+`CORE-VERIFICATION.json` records the local 156-declaration core continuation. Complete diagnostics, explicit exported definitions/types and
 compact type output are in the linked artifact and
 `.scratch/ci-661d4fe-section3/`. Every receipt input hash was compared with
 the committed source before publication. Dependencies may be reused from

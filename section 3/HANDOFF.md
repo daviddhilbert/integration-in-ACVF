@@ -11,7 +11,7 @@ in [CI run 42833098057](https://github.com/daviddhilbert/integration-in-ACVF/act
 The complete new types and axioms were reviewed, including the original-model
 carriers and normalized raw definability. All receipt input hashes matched
 the committed source. `VERIFICATION.json` binds this full checkpoint;
-`CORE-VERIFICATION.json` now records the 152-declaration local core continuation.
+`CORE-VERIFICATION.json` now records the 156-declaration local core continuation.
 
 Checked entry points:
 
@@ -66,3 +66,10 @@ The current actual continuation adds full-code open/closed-family predicates
 and uniform canonical positive-region properties, including uniform
 puncture status. It awaits CI. The previous geometry build left two
 constant-sort guards in simplification; those are now removed explicitly.
+
+ValuationRadius.lean passed four new full types and standard axioms (156 core
+total). BallRadiusGeometry.lean supplies its density input from the existing
+formalized Johnson result and implements actual-Gamma ordinary-radius
+uniqueness and open/closed separation. An omitted unused typeclass now has
+correct declaration syntax and the full local core audit passed again. The
+actual continuations still require full CI.
