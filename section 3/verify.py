@@ -139,6 +139,12 @@ HEADLINES += [
         'strata_points', 'essential_ne_univ', 'region_of_agreement',
         'minimal_subset_support', 'minimal_unique')
 ]
+HEADLINES += [
+    'SupportFormulas.' + name for name in (
+        'imp_definable', 'iff_definable', 'supportCodes_definable',
+        'mem_supportCodes_iff', 'exists_finite', 'supportFamily_definable',
+        'supportFamily_eq_preimage')
+]
 ACVF_HEADLINES = [
     'IntegrationInACVF.Section3ACVF.' + name for name in (
         'encodedBall_isKBall', 'encodedBalls_laminar', 'support_of_isBoolComb',
@@ -301,6 +307,7 @@ DEFINITIONS += [
     'MinimalBallSupport.' + name for name in (
         'Supports', 'IsSupport', 'IsMinimalSupport', 'AvoidsFiniteProperSubballs')
 ]
+DEFINITIONS += ['SupportFormulas.row', 'SupportFormulas.SupportCodes', 'SupportFormulas.SupportFamily']
 ACVF_DEFINITIONS = [
     'IntegrationInACVF.Section3ACVF.BallPresentation.' + name
     for name in ('codeDomain', 'decode', 'presentation', 'valuationBalls')

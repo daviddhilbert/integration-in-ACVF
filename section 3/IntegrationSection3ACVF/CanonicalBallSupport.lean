@@ -9,6 +9,7 @@ universe is a logical top element; it never occurs in a minimal support. -/
 set_option backward.isDefEq.respectTransparency false
 
 open Classical FirstOrder FirstOrder.Language
+open ValOneEC
 open SpecialTransformations.Milestone0 SpecialTransformations.Milestone0.LRV
 open SpecialTransformations.Milestone0.Transfer
 open SpecialTransformations.Section3

@@ -96,3 +96,12 @@ encoded real subsets and actual VF valuation balls. A logical raw-universe
 top is added only to apply the generic uniqueness argument; essentiality
 proves it absent from minimal supports. This actual bridge awaits its CI
 build and audit. No unformalized external theorem is used.
+
+
+`SupportFormulas.lean` proves definability of fixed-length interpreted support
+codes and of their support family, using all codes and the original base.
+Its semantic identification with the unique minimal support uses the proved
+generic non-covering uniqueness argument. The seven new full types and
+standard axioms passed the 131-declaration local core audit. Actual ball-code
+coverage and the concrete family instance are the next bridges; no selected
+support tuple or representative is named over B.
