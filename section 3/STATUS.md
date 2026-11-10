@@ -62,13 +62,13 @@ retains this convention and adds nonemptiness when selecting a realization.
 
 The Gamma definable-point argument passed all 190 current audits at source
 `ca354cd` in CI run 42815859588. Its complete new types, standard axioms and
-all receipt input hashes were reviewed. The generic core now has 111 locally
+all receipt input hashes were reviewed. The generic core now has 114 locally
 audited declarations, including full-base interpreted ranges and the finite
 laminar punctured decomposition. The full-base Lemma 3.3 module compiled in
 the subsequent CI run; that run failed in the newly added Lemma 3.4 radius
 wrapper, so the new combined checkpoint is not yet certified. Those compiler
 issues are being corrected, and the ACVF punctured-decomposition bridge is
-also awaiting its full build. `VERIFICATION.json` remains the certificate for
+compiled in CI. A remaining VF subtraction annotation in the radius proof was corrected for the next run. The finite coset-exception transfer and atomic profile argument are also being checked. `VERIFICATION.json` remains the certificate for
 the preceding 145-declaration paper-result checkpoint.
 
 ## Verification

@@ -126,6 +126,10 @@ HEADLINES += [
         'holes_disjoint', 'regions_disjoint', 'region_agreement',
         'exists_region', 'finite_punctured_decomposition')
 ]
+HEADLINES += [
+    'ProfileAtomicity.sameProfile_definable', 'ProfileAtomicity.badPoints_definable',
+    'ProfileAtomicity.constant_on_classes',
+]
 ACVF_HEADLINES = [
     'IntegrationInACVF.Section3ACVF.' + name for name in (
         'encodedBall_isKBall', 'encodedBalls_laminar', 'support_of_isBoolComb',
@@ -219,6 +223,12 @@ ACVF_HEADLINES += [
         'PuncturedBall.body_subset_parent', 'PuncturedBall.body_subset_vf',
         'definable_punctured_decomposition')
 ]
+ACVF_HEADLINES += ['IntegrationInACVF.Section3ACVF.FullCosetExceptions.finite_bad_cosets']
+ACVF_HEADLINES += [
+    'IntegrationInACVF.Section3ACVF.FullProfileCosets.' + name for name in (
+        'vfDefault_val', 'vfDefault_definable', 'total_graph_definable',
+        'total_class_relation_definable', 'constant_on_cosets')
+]
 DEFINITIONS = [
     'GeneratesCompleteType', 'IsAtomic', 'Splits',
     'IsLaminar', 'HasFiniteBallSupport',
@@ -244,6 +254,7 @@ DEFINITIONS = [
     'ImaginaryBaseFamilies.CompleteType',
 ]
 DEFINITIONS += ['PuncturedDecomposition.region', 'PuncturedDecomposition.holes']
+DEFINITIONS += ['ProfileAtomicity.graph', 'ProfileAtomicity.sameProfile', 'ProfileAtomicity.badPoints']
 ACVF_DEFINITIONS = [
     'IntegrationInACVF.Section3ACVF.BallPresentation.' + name
     for name in ('codeDomain', 'decode', 'presentation', 'valuationBalls')
@@ -279,6 +290,7 @@ ACVF_DEFINITIONS += [
     'IntegrationInACVF.Section3ACVF.PuncturedGeometry.PuncturedBall',
     'IntegrationInACVF.Section3ACVF.PuncturedGeometry.PuncturedBall.body',
 ]
+ACVF_DEFINITIONS += ['IntegrationInACVF.Section3ACVF.FullProfileCosets.vfDefault']
 ALLOWED = {'propext', 'Classical.choice', 'Quot.sound'}
 
 

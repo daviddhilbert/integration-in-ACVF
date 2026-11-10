@@ -132,10 +132,11 @@ theorem radius_subgroup (B : FullBaseAtomicity.Base (M := M))
       rfl
     constructor
     · rintro ⟨u,hu,rfl⟩
-      change u ∈ H at hu
-      have hus : u - 0 ∈ H := by rw [sub_zero]; exact hu
+      let w : VFType (M := M) := u
+      have hw : w ∈ H := hu
+      have hus : w - (0 : VFType (M := M)) ∈ H := by rw [sub_zero]; exact hw
       have hc : u.val ∈ cosetBody H 0 :=
-        ⟨u,QuotientAddGroup.eq_iff_sub_mem.mpr hus,rfl⟩
+        ⟨w,QuotientAddGroup.eq_iff_sub_mem.mpr hus,rfl⟩
       rw [he 0] at hc
       change iVF u.val ∧ iLe t.val (iRv (iVFAdd u.val (iVFNeg (0 : VFType (M := M)).val))) ∧
         (strict = true → ¬ iLe (iRv (iVFAdd u.val (iVFNeg (0 : VFType (M := M)).val))) t.val) at hc

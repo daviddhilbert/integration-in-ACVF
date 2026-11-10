@@ -274,3 +274,14 @@ chosen pieces are not claimed definable over the original base. Equality of
 primitive radii, valuative centres and kinds remains a separate obligation.
 The source statements were re-read in arXiv:0809.0473v2, pp. 7–8, using the
 available web tool; direct shell access to arXiv is not needed.
+
+
+`FullCosetExceptions.lean` reuses pinned `AdditiveCosets.lemma_3_18_1`,
+retaining the actual additive quotient and complete powerset-valued RV graph.
+The subgroup and graph specialize only for the finite-exception proof;
+no representative is added to the exported base. The generic
+`ProfileAtomicity.lean` makes profile equality and bad-point sets definable
+over that exact base. Its three full types and standard axioms passed the
+local core audit. `FullProfileCosets.lean` connects these steps using a
+parameter-free default VF zero to totalize variables. The infinite-class
+ball geometry remains explicit; this is not yet a proof of Lemma 3.9.
