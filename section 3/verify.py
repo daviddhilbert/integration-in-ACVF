@@ -164,6 +164,15 @@ ACVF_HEADLINES += [
         'of_real', 'congr', 'inter', 'compl', 'union', 'preimage_comp',
         'exists_block', 'forall_block', 'forall_finite')
 ]
+ACVF_HEADLINES += [
+    'IntegrationInACVF.Section3ACVF.FullGammaSyntax.' + name for name in (
+        'proper_definable', 'Definable.of_real', 'Scalar.of_real', 'Definable.true_',
+        'Definable.congr', 'Definable.and', 'Definable.not', 'Definable.or',
+        'Definable.imp', 'Definable.iff', 'Definable.forall_finite',
+        'Definable.reindex', 'Definable.exists_block', 'Definable.forall_block',
+        'lt_definable', 'eq_definable', 'mul_definable', 'scalar_definable_iff',
+        'unary_at', 'one_definable')
+]
 DEFINITIONS = [
     'GeneratesCompleteType', 'IsAtomic', 'Splits',
     'IsLaminar', 'HasFiniteBallSupport',
@@ -204,6 +213,10 @@ ACVF_DEFINITIONS += [
         'Base', 'OverBase', 'Family', 'Relation', 'Algebraic', 'AtomicWith')
 ]
 ACVF_DEFINITIONS += ['IntegrationInACVF.Section3ACVF.AdjoinBall.AtomicOver']
+ACVF_DEFINITIONS += [
+    'IntegrationInACVF.Section3ACVF.FullGammaSyntax.Definable',
+    'IntegrationInACVF.Section3ACVF.FullGammaSyntax.Scalar',
+]
 ALLOWED = {'propext', 'Classical.choice', 'Quot.sound'}
 
 

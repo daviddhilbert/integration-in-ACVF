@@ -7,3 +7,4 @@ import IntegrationSection3ACVF.ParameterPresentation
 import IntegrationSection3ACVF.FullBaseAtomicity
 import IntegrationSection3ACVF.AdjoinBall
 import IntegrationSection3ACVF.FullBaseDefinability
+import IntegrationSection3ACVF.FullGammaSyntax
