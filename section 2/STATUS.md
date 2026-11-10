@@ -16,7 +16,7 @@ genuine Gamma-named bases. The entire function graph is required to be
 definable through its full preimage on nonzero RV representatives. Saturation,
 smallness and pure characteristic zero remain explicit. The full project
 build and both full type/axiom checks passed in
-[CI run 42789563292](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42789563292).
+[CI run 42812579731](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42812579731).
 Only `propext`, `Classical.choice` and `Quot.sound` occur. `VERIFICATION.json`
 records the exact checked source identities, compiler and dependency pins.
 

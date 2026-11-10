@@ -8,46 +8,49 @@ are also in scope. None of those later statements is marked complete.
 
 ## Current scope
 
-The full project build and all **84 Section 3 declaration type/axiom audits
+The full project build and **145 Section 3 declaration type/axiom audits
 passed** under Lean 4.35.0 in
-[CI run 42805178064](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42805178064).
-Only `propext`, `Classical.choice` and `Quot.sound`
-occur in their axiom reports. The checked sources contain no `sorry`, `admit`
-or custom axiom declarations. This is a certificate for the components below,
-not 84 numbered paper results. The full C• parameter-base scope remains open.
+[CI run 42812579731](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42812579731),
+at source `a8901fd4a9fac6976dc475506706e85ad3ddb35c`.
+The audit covers 98 generic declarations and 47 actual ACVF declarations.
+Only `propext`, `Classical.choice` and `Quot.sound` occur, and the checked
+sources have no placeholders or custom axiom declarations. These are
+component audits, not 145 numbered paper results.
 
-Continuation: the generic core now has **98 declarations**, all locally
-compiled and type/axiom-audited, including finite-support imaginary parameter
-bases, Boolean and existential closure, and the parametric atomicity argument
-over such bases. `CORE-VERIFICATION.json` binds this local core audit.
-`BallCosetAtomicity.lean` passed the full CI checks above. The named-RV radius, definable-Gamma-radius and degenerate-ball
-extensions have compiled in CI. Their full type/axiom checks and the new
-combined Gamma/ball parameter presentation are still pending. They are not yet included in a
-passed full-revision certificate. The committed full receipt below records
-the preceding 84-declaration revision.
+**Lemma 3.2 is checked with the full additional Gamma/ball parameter base.**
+`AdjoinBall.lemma_3_2` concludes atomicity over the original interpreted base
+with the input-ball name adjoined. Its nonalgebraicity hypothesis concerns
+the output-ball imaginary. All parameter definitions, graphs and tests use
+full invariant real-code preimages. No chosen centre or radius
+representative is named in the base.
 
-`VERIFICATION.json` records the exact source hashes, compiler, dependency pins
-and per-headline axioms. Full compiler output and the freshly compiled audit
-source are retained in the linked CI artifact and locally in
-`.scratch/ci-1926587-section3/`.
+Lemma 3.3 is checked over real bases, with a definable nontrivial Gamma value
+explicit. Lemma 3.4 is checked over real bases for every definable ordinary
+Gamma radius, for singleton balls and for VF. Extending 3.3 and 3.4 to bases
+already containing ball names remains open, as do the later geometric
+statements through Proposition 3.24.
+
+`VERIFICATION.json` records the exact compiler, source hashes, dependency pins
+and per-headline axioms for the full audit. `CORE-VERIFICATION.json` retains
+the corresponding local 98-declaration core audit. Complete logs and both
+explicit and compact exported types are in the linked CI artifact and
+`.scratch/ci-a8901fd-section3/`. Every recorded input hash was compared with
+the committed source revision before publication.
 
 | Component | Source | Scope |
 | --- | --- | --- |
-| Definition 3.1 | `IntegrationSection3/Atomicity.lean` | Complete-type-generating and atomic sets use actual Mathlib first-order definability over an arbitrary base. The definitions are generic in the language and tuple index. |
-| Basic atomicity calculus | Same | Predicate agreement, subset and parameter restriction, no proper nonempty definable subset, equality/disjointness, and definable images. No ACVF or saturation premise is needed. |
-| Finite support for Boolean combinations | `IntegrationSection3/BallSupport.lean` | Connects Mathlib's Boolean subalgebra closure to finite membership support. |
-| Finite-exception geometry for Lemma 3.2 | Same | A finite Boolean combination of a laminar family splits only finitely many members of any pairwise disjoint subfamily. The containment and disjointness hypotheses are explicit. |
-| First-order parametric atomicity | `IntegrationSection3/DefinableFamilies.lean`, `ParametricAtomicity.lean` | Proves parameter promotion, same-base definability of the exceptional indices, their finiteness, and the algebraicity contradiction. C-minimality and laminarity are explicit geometric inputs. The associated-code variant uses a genuinely definable map. |
-| Imaginary-index argument | `IntegrationSection3/ImaginaryFamilies.lean` | Full real-preimage definability on an interpreted quotient sort; equality follows from an injective definable membership relation. Proves finite exceptional imaginary indices, same-base algebraicity transfer through a definable partial function, and atomicity under nonalgebraicity of the output imaginary. No chosen representative is named. |
-| Complete-type argument for Lemma 3.4 | `ImaginaryFamilies.lean` | A member of a definable disjoint family contained in a complete-type-generating set is atomic over its imaginary index. This logical argument needs no C-minimality or nonalgebraicity hypothesis. The definable additive-coset family is now checked; its radius specializations are being checked. |
-| Actual ACVF geometry and real-index case | `IntegrationSection3ACVF/Geometry.lean` | Checked, with five audits. Uses the predecessor's proved C-minimality and unchanged ball predicates on canonical normalization. |
-| Actual imaginary ball presentation and real-base Lemma 3.2 | `IntegrationSection3ACVF/BallPresentation.lean` | Checked, with eleven audits. Uses the predecessor's actual open/closed quotients, a surjective full code presentation, proved interpreted equality, proved ball geometry/C-minimality, and nonalgebraicity of the actual output-ball imaginary. It covers real parameter bases; bases containing additional imaginary names are not claimed. |
-| Lemma 3.3 over a real base | `IntegrationSection3ACVF/GammaAtomicity.lean` | Checked, with five audits. Covers arbitrary finite Gamma parameter tuples and finite mixed output arities, with an explicit original-base definable nontrivial Gamma value. Uses the predecessor's proved tuple definable-point theorem. Full bases containing ball names remain open. |
-| Arbitrary interpreted parameter bases | `ImaginaryParameters.lean`, `ImaginaryBaseFamilies.lean` | Locally checked generic finite-support definitions, specialization, Boolean/quantifier closure, exceptional-set definability and finiteness, and parametric atomicity over the exact interpreted base. A combined actual Gamma/ball presentation and the extra-index parameter equivalence remain to be connected. |
-| Ball cosets below complete types | `IntegrationSection3ACVF/BallCosetAtomicity.lean` | Checked, with five audits. Builds the actual definable disjoint family of ball cosets of a definable additive VF subgroup and applies the complete-type argument without naming a centre. |
-| Radius specializations of Lemma 3.4 | `NamedRadiusAtomicity.lean`, `GammaRadiusAtomicity.lean` | Named-RV radii compiled; ordinary definable Gamma radii, singleton balls and VF are undergoing full compiler/audit checks. Full C• bases remain open. |
-| Full Lemmas 3.2–3.3 | Not complete | Their bases must still allow additional genuine Gamma and ball names, rather than chosen real representatives. |
-| Lemmas 3.4–3.24 | Not complete | The logical ingredient for 3.4 is checked, as listed above; no later geometric conclusion is claimed. |
+| Definition 3.1 and its calculus | `IntegrationSection3/Atomicity.lean` | Actual first-order complete-type generation and atomicity; predicate agreement, parameter restriction, definable subsets and images. |
+| Finite Boolean support | `BallSupport.lean` | A finite Boolean combination of a laminar ball family cuts only finitely many members of a disjoint subfamily. |
+| Real and imaginary family arguments | `DefinableFamilies.lean`, `ParametricAtomicity.lean`, `ImaginaryFamilies.lean`, `InterpretedRanges.lean` | Same-base definability, finite exceptional sets, algebraicity transfer and atomicity. Geometry is supplied explicitly, not assumed as an atomicity interface. |
+| Arbitrary interpreted parameter bases | `ImaginaryParameters.lean`, `ImaginaryBaseFamilies.lean`, `AdjoinParameters.lean` | Finite-support full-preimage definitions, specialization, Boolean/quantifier closure and the family arguments over that exact base. Parameter promotion is proved equivalent to adjoining an imaginary name. |
+| Actual ACVF geometry | `IntegrationSection3ACVF/Geometry.lean` | Reuses the pinned predecessor's proved C-minimality and actual valuation-ball geometry. |
+| Ball and combined parameter presentations | `BallPresentation.lean`, `ParameterPresentation.lean` | Existing actual ball/Gamma quotients, surjective full real codes, definable membership and interpreted equality. |
+| Lemma 3.2 | `FullBaseAtomicity.lean`, `AdjoinBall.lean` | Checked with arbitrary additional real, Gamma and ball names, nonalgebraicity of the output ball, and atomicity over the base plus the input ball. The real-base wrapper remains available in `BallPresentation.lean`. |
+| Lemma 3.3 over real bases | `GammaAtomicity.lean` | Every finite actual Gamma tuple preserves atomicity for finite mixed VF/RV tuples; an original-base definable nontrivial value is explicit. |
+| Additive-coset instance of Lemma 3.4 | `BallCosetAtomicity.lean` | Actual definable disjoint coset families below a complete-type-generating set, without requiring that ambient set to be definable. |
+| Real-base radius cases of Lemma 3.4 | `NamedRadiusAtomicity.lean`, `GammaRadiusAtomicity.lean` | Named nonzero RV radii, ordinary Gamma radii definable over the original base, singleton balls and VF. |
+| Corrected Lemma 3.11: logical step | `StatementChecks.lean` | The empty relation is a counterexample to the printed statement. The accepted nonemptiness hypothesis gives surjectivity of both projections between complete types; geometric separation remains open. |
+| Later section geometry | Not complete | Primitive types and punctured decompositions, RV-family constancy, open-to-open results, component counts and bijection obstructions remain open. |
 
 The tuple carrier can later be restricted to the actual VF/RV sorts. Allowing
 a generic first-order language also permits an imaginary expansion, but does

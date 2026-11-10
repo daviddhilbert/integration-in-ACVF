@@ -210,3 +210,25 @@ over the enlarged interpreted base when the parameter and index
 presentations agree. All three declarations passed local full type/axiom
 audits. The remaining actual bridge identifies the separate ball-only
 index presentation with its chart in the combined parameter presentation.
+
+
+## Verified full-base checkpoint
+
+At source a8901fd4a9fac6976dc475506706e85ad3ddb35c, CI run 42812579731
+passed the full root import, the foundation audit, both Section 2 audits,
+and all 145 Section 3 full type/axiom checks. The earlier pending notes
+above are superseded: the named/definable-radius cases, combined parameter
+presentation, parameter-promotion equivalence and actual full-base
+`AdjoinBall.lemma_3_2` are all checked. Complete new exported types and their
+axioms were reviewed, including the normalized structure and the original
+model's actual Gamma/ball carriers. No extra field, representative,
+saturation definition or atomicity assumption was introduced.
+
+For the next Gamma-base extension, the predecessor's intrinsic minimal
+order-controller proof is the reuse boundary. Its finite existence follows
+after real-code specialization; the minimal controller's defining formula
+uses the original set, order and real/Gamma quantifiers. The already proved
+full-base Boolean and quantifier operations can retain this definition over
+the original combined base. Its finite definable points and definable-group
+samples then feed the same `FiniteOrder.nonempty_inter_of_controls` theorem.
+This is planned work, not a claim of the full-base Lemma 3.3.

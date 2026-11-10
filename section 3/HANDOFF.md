@@ -12,23 +12,34 @@ It imports Atomicity, BallSupport, DefinableFamilies, ParametricAtomicity
 and ImaginaryFamilies, plus the printed-statement checks.
 The coordination root additionally imports IntegrationSection3ACVF.Library
 together with the unchanged pinned Special transformations project.
-The last complete project build and 84 Section 3 audits passed at source
-1926587 in CI run 42805178064. `VERIFICATION.json` binds that full audit.
-The generic core now has 98 locally passed full type/axiom checks, bound by
-`CORE-VERIFICATION.json`. Its additional interpreted-base definitions are in
-`ImaginaryParameters.lean` and `ImaginaryBaseFamilies.lean`; they prove
-finite-support specialization, Boolean and quantifier closure, the
-exceptional-set argument, and algebraicity transfer through definable maps.
+The full project build, inherited foundation audit, two Section 2 audits and
+145 Section 3 audits passed at source a8901fd in CI run 42812579731.
+`VERIFICATION.json` binds the full Section 3 audit; `CORE-VERIFICATION.json`
+retains the local 98-declaration core audit. All input hashes were matched
+against the committed source, and the complete new exported types and their
+axioms were reviewed. CI retains explicit and compact type output.
 
-Actual ACVF modules: `BallPresentation` proves the real-base Lemma 3.2;
-`GammaAtomicity` proves the real-base Lemma 3.3; `BallCosetAtomicity` proves
-the actual definable additive-coset instance of Lemma 3.4. Named-RV radii,
-definable Gamma radii, singleton balls and VF have compiled in CI. The
-combined Gamma/ball `ParameterPresentation` and `FullBaseAtomicity.lemma_3_2`
-are undergoing full CI checks. Do not infer completion from their source
-being present; inspect the newest build and audit logs. The next bridge is
-the precise equivalence between a full family with one additional imaginary
-index and definability over the base with that index adjoined.
+`AdjoinBall.lemma_3_2` proves the full additional Gamma/ball-base instance of
+Lemma 3.2. It concludes `AtomicOver (B.adjoin (.inl i)) (underlying (f i))`,
+with the original-base definable family/function graph, disjoint output balls
+and nonalgebraicity of the output-ball name. The combined base uses the
+existing actual Gamma and ball quotients; no real representative is named.
+`AdjoinParameters.OverBase.adjoin_iff` and its atomicity consequence establish
+the precise parameter-promotion equivalence, and AdjoinBall restricts full
+combined-sort tests to the ball chart.
+
+The real-base Lemma 3.3 and the real-base definable-radius cases of Lemma 3.4
+are also fully checked. Full bases containing additional ball names remain
+the next scope extension for these two lemmas.
+
+Next: extend the Gamma definable-point argument to the combined base. Reuse
+pinned Section4/GammaControllerDefinability.lean, GammaOrderControllers.lean,
+GammaFiniteDefinablePoints.lean, GammaDefinableClosure.lean and
+FiniteOrderSamples.lean. Specializing real codes can prove existence of a
+finite order controller; the intrinsic minimal controller must then be
+shown definable over the original interpreted base. Retain the standing
+nontrivial definable value explicitly. Do not replace this by a definable
+point over a base enlarged with chosen representatives.
 
 For Lemma 3.11, the author approved the explicit nonemptiness hypothesis in
 `../PAPER-CORRECTIONS.md`. `StatementChecks.complete_type_relation_projections`

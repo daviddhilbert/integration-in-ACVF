@@ -31,13 +31,14 @@ and manual dispatch, with downloadable build and audit evidence.
 The current root imports the predecessor and the new Section 2 and 3 libraries.
 [Section 2](section%202/STATUS.md) records the prerequisite map and Corollary 2.15;
 [Section 3](section%203/STATUS.md) records the exact formalized scope and open work.
-The checked Section 3 core contains Definition 3.1 and the first-order
-real/imaginary-index arguments for Lemmas 3.2 and 3.4. Corollary 2.15 and the
-actual ACVF real-base cases of Lemmas 3.2–3.3 passed the full build and
-type/axiom audits in
-[CI](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42789563292).
-Full imaginary bases and the open-to-open theorem remain open. The remaining
-section folders are placeholders.
+Corollary 2.15 and 145 Section 3 type/axiom audits passed the full project
+build in [CI](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42812579731).
+Lemma 3.2 now allows additional genuine Gamma and ball names in its base.
+Lemma 3.3 and the definable-radius cases of Lemma 3.4 are checked over real
+bases. Their full imaginary-base extensions and the later open-to-open
+geometry remain open. The author-approved nonemptiness correction to
+Lemma 3.11 is recorded in [PAPER-CORRECTIONS.md](PAPER-CORRECTIONS.md).
+The remaining section folders are placeholders.
 
 For the targeted library and full headline audit:
 
