@@ -277,6 +277,14 @@ ACVF_HEADLINES += [
         'encoded_avoids_finite_proper_subballs', 'ballFamily_laminar',
         'ballFamily_avoids', 'minimal_support_encoded', 'exists_unique_minimal_support')
 ]
+ACVF_HEADLINES += [
+    'IntegrationInACVF.Section3ACVF.BallCodeGeometry.' + name for name in (
+        'closed_raw_isBall', 'open_raw_isBall', 'underlying_isBall', 'encodedBall_coded')
+]
+ACVF_HEADLINES += [
+    'IntegrationInACVF.Section3ACVF.CanonicalSupportFamily.support_family_definable',
+    'IntegrationInACVF.Section3ACVF.CanonicalSupportFamily.exists_definable_canonical_support',
+]
 DEFINITIONS = [
     'GeneratesCompleteType', 'IsAtomic', 'Splits',
     'IsLaminar', 'HasFiniteBallSupport',

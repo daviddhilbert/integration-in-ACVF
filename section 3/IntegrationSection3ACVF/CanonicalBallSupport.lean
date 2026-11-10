@@ -33,11 +33,13 @@ theorem encodedBall_isValBall {Γ : Type} [LinearOrderedCommGroupWithZero Γ]
     (hv : ∀ x y : VFType (M := M), VFValued.predV x y ↔ v x ≤ v y)
     {B : Set M} (hB : IsBall B) :
     Johnson.IsValBall v {x : VFType (M := M) | x.val ∈ B} := by
-  have h := encodedBall_isKBall v hv B hB
-  cases h with
-  | closed a r => exact Johnson.IsValBall.closed a r
-  | openball a r => exact Johnson.IsValBall.openball a r
-  | univ => exact Johnson.IsValBall.univ
+  have hbridge (C : Set (VFType (M := M)))
+      (h : IsKBall (RingHom.id (VFType (M := M))) v C) : Johnson.IsValBall v C := by
+    cases h with
+    | closed a r => exact Johnson.IsValBall.closed a r
+    | openball a r => exact Johnson.IsValBall.openball a r
+    | univ => exact Johnson.IsValBall.univ
+  exact hbridge _ (encodedBall_isKBall v hv B hB)
 
 theorem valuation_nontrivial {Γ : Type} [LinearOrderedCommGroupWithZero Γ]
     (v : Valuation (VFType (M := M)) Γ)
@@ -94,7 +96,7 @@ theorem encoded_avoids_finite_proper_subballs (δ : Values.Gamma (M := M)) (hδ 
       exact Set.mem_iUnion.mpr ⟨c,Set.mem_iUnion.mpr ⟨hc,hxc⟩⟩
     · intro hx
       obtain ⟨c,hc,hxc⟩ : ∃ c ∈ F, x.val ∈ c := by
-        simpa only [Set.mem_iUnion] using hx
+        simpa only [Set.mem_iUnion,C,Set.mem_ofPred_eq] using hx
       exact (hF c hc).2.1 hxc
   exact hnot hcover
 

@@ -105,3 +105,12 @@ generic non-covering uniqueness argument. The seven new full types and
 standard axioms passed the 131-declaration local core audit. Actual ball-code
 coverage and the concrete family instance are the next bridges; no selected
 support tuple or representative is named over B.
+
+
+`BallCodeGeometry.lean` reuses the pinned real chart bodies and the argument
+in `GeometryBridge.isKBall_vfImage`, retaining a single encoded ball in the
+nonempty charts. It proves actual-quotient/encoded-ball coverage in both
+directions. `CanonicalSupportFamily.lean` combines those bridges, the
+intrinsic support formula, and minimal-support uniqueness to define the
+finite canonical family over the original real/Gamma/ball base. These new
+actual declarations await CI; no primitive classification is claimed yet.

@@ -66,8 +66,9 @@ family with the explicit finite-proper-subball non-covering property.
 formalized pinned Johnson theorem, with nontriviality derived from a Gamma
 value greater than one. That new actual module is awaiting CI. `SupportFormulas.lean` now proves original-base definability of the fixed-length
 support family and its identification with the minimal support. Its seven
-new complete types and standard axioms passed that local core audit. The next
-step is the actual ball-code bridge for this family; the primitive
+new complete types and standard axioms passed that local core audit. `BallCodeGeometry.lean` and `CanonicalSupportFamily.lean` now implement that
+actual ball-code bridge and the original-base canonical family. Their full
+CI build and audits are pending; the primitive
 classification is not yet established. `VERIFICATION.json` remains the full
 257-declaration checkpoint, while `CORE-VERIFICATION.json` records the new
 local core and its exact input hashes.
