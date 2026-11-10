@@ -155,6 +155,7 @@ theorem lemma_3_2 (B : FullBaseAtomicity.Base (M := M))
     ext D
     simp only [Set.mem_singleton_iff,Set.mem_setOf_eq,Sum.inl.injEq]
   obtain ⟨C,hC,hCi⟩ := hat.1
+  change C i = U (f i) at hCi
   have hCm : FullBaseAtomicity.Relation B' C := by
     letI := CanonicalStructure.normalize (M := M)
     exact ImaginaryParameters.OverBase.mono hC Set.Subset.rfl

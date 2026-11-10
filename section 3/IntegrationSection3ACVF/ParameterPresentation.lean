@@ -145,7 +145,7 @@ theorem membership_definable (Q : Set M) :
   let U := body (M := M)
   let b := ballTuple (M := M)
   let UB := BallImaginaries.underlying (M := M)
-  let db := @BallPresentation.decode M sM hM
+  let db := @BallPresentation.decode M sM
   have hmem := gamma_membership (M := M)
   let gBody : Values.Gamma (M := M) → Set M := fun γ => Values.gammaPullback {γ}
   let gVal : M → Values.Gamma (M := M) := codeValue
