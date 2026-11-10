@@ -28,16 +28,21 @@ lake env python3 scripts/verify_ci.py
 
 [Lean verification](.github/workflows/lean.yml) runs on pushes, pull requests
 and manual dispatch, with downloadable build and audit evidence.
-The current root imports the predecessor and the new Section 3 library.
-[Section 2](section%202/STATUS.md) records the prerequisite map;
+The current root imports the predecessor and the new Section 2 and 3 libraries.
+[Section 2](section%202/STATUS.md) records the prerequisite map and Corollary 2.15;
 [Section 3](section%203/STATUS.md) records the exact formalized scope and open work.
-Definition 3.1 and the finite-exception geometry used in Lemma 3.2 are the first
-implementation targets. They do not yet establish the complete numbered lemma
-or the section's open-to-open theorem. The remaining section folders are placeholders.
+The checked Section 3 core contains Definition 3.1 and the first-order
+real/imaginary-index arguments for Lemmas 3.2 and 3.4. The actual ACVF
+ball-index instance over real bases and Corollary 2.15 are awaiting CI checks.
+Full imaginary bases and the open-to-open theorem remain open. The remaining
+section folders are placeholders.
 
 For the targeted library and full headline audit:
 
 ```sh
 lake build IntegrationSection3
 lake env python3 'section 3/verify.py'
+# Also compile and audit the actual ACVF ball presentation:
+lake env python3 'section 3/verify.py' --acvf
+lake env python3 'section 2/verify.py'
 ```

@@ -1,0 +1,1 @@
+import IntegrationSection2.GammaFiniteImage

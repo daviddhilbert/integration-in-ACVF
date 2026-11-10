@@ -9,6 +9,18 @@ copy their language or infer that every cited result has identical scope.
 Corollaries 2.15 and 2.34 are derived statements in this paper; they are not
 automatically discharged merely by importing the predecessor.
 
+`IntegrationSection2/GammaFiniteImage.lean` now derives Corollary 2.15 from
+the predecessor's proved `GammaRVFamily.finite_projection`. It covers partial
+functions from actual Gamma to RV, over both arbitrary small real bases and
+genuine Gamma-named bases. The entire function graph is required to be
+definable through its full preimage on nonzero RV representatives. Saturation,
+smallness and pure characteristic zero remain explicit. Compilation and the
+two full type/axiom checks are pending CI; this is not yet a verified result.
+
+Corollary 2.34 remains open. The legacy volume-form interfaces in the pinned
+predecessor have explicit mathematical inputs, so their import is insufficient
+to claim the full concrete measure-preservation assertion here.
+
 ## Source reuse candidates for Section 3
 
 | This paper | Pinned predecessor source | Review boundary |
@@ -23,8 +35,8 @@ automatically discharged merely by importing the predecessor.
 | C-minimality used in Lemma 3.2 | `Section3/CMinimal.lean` | Its proved theorem is `SpecialTransformations.Section3.theorem_2_8_c_minimal`; connect its Boolean-combination representation to the sequel's finite support. |
 
 These are source-inspected candidates, not a new combined verification
-certificate. The first Section 3 modules are generic first-order/set-theoretic
-results and do not yet invoke these ACVF-specific inputs. References [11] and
+certificate. The Section 3 core is generic; its pending ACVF bridge uses the
+actual C-minimality and ball-quotient sources. References [11] and
 [12] in the paper are different papers; do not conflate their numbering.
 
 Standing language corrections are recorded in the pinned predecessor's

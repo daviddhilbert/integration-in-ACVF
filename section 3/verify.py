@@ -63,14 +63,25 @@ HEADLINES = [
     'ImaginaryFamilies.Presentation.DefinableRelation.comp_on',
     'ImaginaryFamilies.exceptional_definable',
     'ImaginaryFamilies.traces_definable',
+    'ImaginaryFamilies.splits_traces',
+    'ImaginaryFamilies.atomic_below_complete_type',
     'ImaginaryFamilies.finite_exceptional',
     'ImaginaryFamilies.parametric_atomic',
     'ImaginaryFamilies.parametric_atomic_of_output',
+    'empty_relation_check',
 ]
 ACVF_HEADLINES = [
     'IntegrationInACVF.Section3ACVF.' + name for name in (
         'encodedBall_isKBall', 'encodedBalls_laminar', 'support_of_isBoolComb',
         'normalized_cMinimalOn', 'real_parametric_ball_atomic')
+]
+ACVF_HEADLINES += [
+    'IntegrationInACVF.Section3ACVF.BallPresentation.' + name for name in (
+        'decode_encodeClosed', 'decode_encodeOpen', 'decode_surjective',
+        'underlying_decode', 'codeDomain_definable', 'membership_definable',
+        'presentation_definable', 'valuationBalls_laminar',
+        'normalized_cMinimalOn_valuationBalls', 'underlying_valuationBall',
+        'lemma_3_2_real_base')
 ]
 DEFINITIONS = [
     'GeneratesCompleteType', 'IsAtomic', 'Splits',
@@ -81,6 +92,10 @@ DEFINITIONS = [
     'ImaginaryFamilies.Presentation.DefinableWith',
     'ImaginaryFamilies.Presentation.Algebraic',
     'ImaginaryFamilies.Presentation.AtomicWith',
+]
+ACVF_DEFINITIONS = [
+    'IntegrationInACVF.Section3ACVF.BallPresentation.' + name
+    for name in ('codeDomain', 'decode', 'presentation', 'valuationBalls')
 ]
 ALLOWED = {'propext', 'Classical.choice', 'Quot.sound'}
 
@@ -123,10 +138,11 @@ def main():
             names += ACVF_HEADLINES
         audit = OUT / 'HeadlineAudit.lean'
         audit.write_text(
-            ('import IntegrationSection3ACVF.Geometry\n' if args.acvf
+            ('import IntegrationSection3ACVF.BallPresentation\n' if args.acvf
              else 'import IntegrationSection3.Library\n')
             + 'set_option pp.explicit true\n'
             + '\n'.join('#print ' + PREFIX + name for name in DEFINITIONS)
+            + ('\n' + '\n'.join('#print ' + name for name in ACVF_DEFINITIONS) if args.acvf else '')
             + '\n'
             + '\n'.join('#check @' + name + '\n#print axioms ' + name for name in names)
             + '\n', encoding='utf-8')
@@ -156,9 +172,9 @@ def main():
             'headline_audits': records,
             'audit_source_sha256': digest(audit),
             'audit_log_sha256': digest(OUT / 'HeadlineAudit.log'),
-            'scope': ('Definition 3.1, first-order parametric atomicity, '
-                      + ('and its actual ACVF real-index case; ' if args.acvf else '')
-                      + 'full imaginary-parameter Lemma 3.2 remains open'),
+            'scope': ('Definition 3.1 and generic real/imaginary-index parametric atomicity; '
+                      + ('actual ACVF ball-index Lemma 3.2 over real bases; ' if args.acvf else '')
+                      + 'full C-bullet bases with additional imaginary names remain open'),
             'build_scope': 'Incremental Lake Section 3 build plus freshly compiled headline audit',
         }
         (OUT / 'receipt.json').write_text(json.dumps(receipt, indent=2) + '\n', encoding='utf-8')

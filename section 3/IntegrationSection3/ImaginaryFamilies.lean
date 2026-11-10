@@ -305,6 +305,16 @@ theorem traces_definable (hp : p.IsDefinable L Q)
     (hP : p.DefinableRelation (L := L) Q P) : Q.Definable₁ L (traces T C P) :=
   ((hC.inter hP).restrict (exceptional_definable hp hT hC hP)).range
 
+theorem splits_traces (hdis : T.Pairwise fun i j => Disjoint (C i) (C j))
+    {i : I} (hi : i ∈ exceptional T C P) : Splits (traces T C P) (C i) := by
+  classical
+  obtain ⟨hit,x,hxc,hxp,y,hyc,hyp⟩ := hi
+  refine ⟨x,hxc,⟨i,⟨hit,x,hxc,hxp,y,hyc,hyp⟩,hxc,hxp⟩,y,hyc,?_⟩
+  rintro ⟨j,hj,hyj,hypj⟩
+  by_cases he : j = i
+  · subst j; exact hyp hypj
+  · exact Set.disjoint_left.mp (hdis hj.1 hit he) hyj hyc
+
 theorem finite_exceptional {D : Set M} {balls : Set (Set M)}
     (hp : p.IsDefinable L Q) (hlam : IsLaminar balls)
     (hcm : CMinimalOn L Q D balls) (hsub : ∀ b ∈ balls, b ⊆ D)
@@ -323,12 +333,35 @@ theorem finite_exceptional {D : Set M} {balls : Set (Set M)}
   have hf := finite_splitters hlam (fun i : T => C i.val)
     (fun i => hballs i.val i.property) hpair hsupport
   apply (hf.image Subtype.val).subset
-  rintro i ⟨hi,x,hxc,hxp,y,hyc,hyp⟩
-  refine ⟨⟨i,hi⟩,⟨x,hxc,⟨i,⟨hi,x,hxc,hxp,y,hyc,hyp⟩,hxc,hxp⟩,y,hyc,?_⟩,rfl⟩
-  rintro ⟨j,hj,hyj,hypj⟩
-  by_cases he : j = i
-  · subst j; exact hyp hypj
-  · exact Set.disjoint_left.mp (hdis hj.1 hi he) hyj hyc
+  intro i hi
+  exact ⟨⟨i,hi.1⟩,splits_traces hdis hi,rfl⟩
+
+/-- The logical argument behind Lemma 3.4. A definable disjoint family
+cannot cut any member contained in a complete-type-generating set: the union
+of the proper traces would cut that complete type over the original base.
+Here C-minimality and nonalgebraicity are unnecessary. For balls one still
+has to supply the actual same-radius family and its definability. -/
+theorem atomic_below_complete_type (hp : p.IsDefinable L Q)
+    (hT : p.DefinableFamily (L := L) Q T)
+    (hC : p.DefinableRelation (L := L) Q C)
+    (hdis : T.Pairwise fun i j => Disjoint (C i) (C j))
+    {A : Set M} (hA : GeneratesCompleteType L Q {z : Fin 1 → M | z 0 ∈ A})
+    {i : I} (hi : i ∈ T) (hisub : C i ⊆ A) :
+    p.AtomicWith (L := L) Q i (C i) := by
+  classical
+  refine ⟨⟨C,hC,rfl⟩,?_⟩
+  rintro S ⟨P,hP,rfl⟩
+  have hcut : ¬ Splits (P i) (C i) := by
+    intro hc
+    obtain ⟨x,hxc,hxU,y,hyc,hyU⟩ := splits_traces hdis ⟨hi,hc⟩
+    rcases hA {z | z 0 ∈ traces T C P} (traces_definable hp hT hC hP) with hw | hd
+    · exact hyU (hw (show ![y] ∈ {z : Fin 1 → M | z 0 ∈ A} from hisub hyc))
+    · exact Set.disjoint_left.mp hd
+        (show ![x] ∈ {z : Fin 1 → M | z 0 ∈ A} from hisub hxc) hxU
+  by_cases hwhole : C i ⊆ P i
+  · exact Or.inl hwhole
+  · obtain ⟨y,hy,hyp⟩ := Set.not_subset.mp hwhole
+    exact Or.inr (Set.disjoint_left.mpr fun x hx hxp => hcut ⟨x,hx,hxp,y,hy,hyp⟩)
 
 /-- Parametric atomicity on an actually interpreted quotient sort. The
 nonalgebraicity condition concerns the imaginary, not any real code for it. -/

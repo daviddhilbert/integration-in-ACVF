@@ -122,15 +122,7 @@ theorem normalized_cMinimalOn (Q : Set M) :
   intro S hS hsub
   have hsorted : DefinableAt Q .vf S :=
     (definableAt_iff_normalized_raw Q .vf S).mpr ⟨hS,hsub⟩
-  obtain ⟨p,φ,hφ,hset⟩ := hsorted.1
-  have hb := theorem_2_8_c_minimal (M := M)
-    (Fin p.length) p.sorts φ hφ p.values p.sorted
-  have he : {x : M | iVF x ∧ φ.Realize p.values ![x]} = S := by
-    ext x
-    have hx := (Set.ext_iff.mp hset ![x]).symm
-    simpa only [Set.mem_ofPred_eq, Fin.forall_fin_one, sortEval] using hx
-  rw [he] at hb
-  exact support_of_isBoolComb hb
+  exact support_of_isBoolComb hsorted.isBoolComb_balls
 
 /-- Real-index case of the parametric ball theorem in the released ACVF
 language. Imaginary ball-index parameters are not represented by this
