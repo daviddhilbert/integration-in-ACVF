@@ -11,12 +11,13 @@ All 153 source hashes match. Every prior 658 complete type is unchanged;
 all 21 new types exactly match individually compiled and manually reviewed
 snapshots. Only `propext`, `Classical.choice` and `Quot.sound` occur.
 
-`VERIFICATION.json` records the local checkpoint; `CORE-VERIFICATION.json`
+`VERIFICATION.json` records the local and CI checkpoint; `CORE-VERIFICATION.json`
 selects its 287 generic heads. Evidence is in `.scratch/local-slope-679/`.
-New CI confirmation is pending. The preceding proof `11e05be` passed
-[CI 42911030261](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42911030261),
-with all 658 full types and 143 source hashes matched before main promotion
-at receipt `7e752ff`. Earlier checkpoints remain historical.
+[CI 42914840110](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42914840110)
+passed at proof `8e3f6b7f0f17eb8cbf42e9671c2ba3bab97d9b8f`. Every complete CI
+type exactly matches reviewed local evidence; all 153 source hashes, both
+audit hashes and the standard axioms were checked before main promotion.
+Earlier checkpoints remain historical.
 
 ## Numbered results
 

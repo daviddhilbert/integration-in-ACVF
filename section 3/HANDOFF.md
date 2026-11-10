@@ -9,12 +9,12 @@ The current full root, inherited QE, Section 2 and 679 Section 3 audits pass
 locally: 287 generic and 392 actual heads. All 153 hashes match. All 658
 prior complete types are unchanged; 21 new types exactly match individually
 compiled and reviewed snapshots. Only the three standard axioms occur.
-See VERIFICATION.json and .scratch/local-slope-679/. New CI confirmation
-is pending; compare all artifact full types and hashes before promotion.
+See VERIFICATION.json and .scratch/local-slope-679/.
 
-The preceding source 11e05be passed CI 42911030261. All 658 complete types
-and 143 source hashes matched local evidence before promotion at receipt
-7e752ff. Earlier checkpoints remain historical.
+Source 8e3f6b7 passed CI 42914840110. Every one of the 679 complete CI types
+exactly matches reviewed local evidence; all 153 source hashes, both audit
+hashes and permitted axioms match. The receipt-only main commit records
+this comparison. Earlier checkpoints remain historical.
 
 Twelve numbered results are checked in precise scope: 3.2, 3.3, 3.4 at
 named radii plus singleton/VF, 3.6, 3.7, 3.8, 3.9, 3.10, corrected 3.11,

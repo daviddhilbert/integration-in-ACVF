@@ -36,9 +36,8 @@ Section 3 type/axiom audits pass (287 generic, 392 actual ACVF declarations).
 The RV coefficient is constant on each value fibre; its Gamma descent has
 finite image with genuine saturation/small-base hypotheses explicit.
 Strict valuation comparisons are preserved. The final 3.16 Gamma-linearity
-conclusion remains open. New CI confirmation is pending. The preceding
-658-head checkpoint passed
-[CI](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42911030261),
+conclusion remains open. This 679-head checkpoint passed
+[CI](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42914840110),
 with every complete type and source hash matched to reviewed local evidence.
 
 Checked Section 3 results are 3.2, 3.3, 3.4 at original-base definable radii
