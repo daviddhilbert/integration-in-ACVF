@@ -21,3 +21,4 @@ public import IntegrationSection3.RegionFormulas
 public import IntegrationSection3.HoleFormulas
 public import IntegrationSection3.CodeEquality
 public import IntegrationSection3.AtomicRegions
+public import IntegrationSection3.ValuationRadius

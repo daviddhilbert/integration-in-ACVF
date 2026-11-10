@@ -259,6 +259,7 @@ theorem parametric_atomic_of_output (hq : B.real.Definable L q.codes)
 
 /-- Existential projection of an interpreted binary relation, quantifying
 all codes of the first component over the same original base. -/
+omit [Finite κ] in
 theorem pair_domain {R : Set (Fin 2 → J)}
     (hR : OverBase (L := L) p B ((tuplePresentation q (Fin 2)).pullback R)) :
     Family (L := L) p B q {j | ∃ k, ![k,j] ∈ R} := by

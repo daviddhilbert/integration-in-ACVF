@@ -60,7 +60,7 @@ theorem unpunctured_family_definable (B : FullBaseAtomicity.Base (M := M))
     ext j
     constructor
     · intro hn
-      apply Finset.eq_empty_iff_forall_not_mem.mpr
+      apply Finset.eq_empty_iff_forall_notMem.mpr
       intro b hb
       obtain ⟨k,hk⟩ := BallCodeGeometry.encodedBall_coded b
         (minimal_support_encoded hF b (mem_holes.mp hb).1)
@@ -72,7 +72,7 @@ theorem unpunctured_family_definable (B : FullBaseAtomicity.Base (M := M))
     · intro hempty
       rintro ⟨k,hk⟩
       rw [hempty] at hk
-      exact Finset.not_mem_empty _ hk
+      exact Finset.notMem_empty _ hk
   have hR := CanonicalHoles.holes_definable B δ hδ hA hF
   have hp := ParameterPresentation.codeDomain_definable (M := M) B.real
   have hq := BallPresentation.codeDomain_definable (M := M) B.real

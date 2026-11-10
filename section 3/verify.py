@@ -166,6 +166,11 @@ HEADLINES += [
     'CodeEquality.imageCodes_definable', 'AtomicRegions.uniform_property',
 ]
 HEADLINES += ['ImaginaryBaseFamilies.pair_domain']
+HEADLINES += [
+    'ValuationRadius.' + name for name in (
+        'closed_radius_le_of_subset', 'closed_radius_lt_of_subset_open',
+        'open_radius_le_of_subset_closed', 'open_ne_closed')
+]
 ACVF_HEADLINES = [
     'IntegrationInACVF.Section3ACVF.' + name for name in (
         'encodedBall_isKBall', 'encodedBalls_laminar', 'support_of_isBoolComb',
@@ -325,6 +330,11 @@ ACVF_HEADLINES += [
 ACVF_HEADLINES += [
     'IntegrationInACVF.Section3ACVF.AtomicCanonicalRegions.' + name for name in (
         'uniform_property', 'unpunctured_family_definable', 'uniform_unpunctured')
+]
+ACVF_HEADLINES += [
+    'IntegrationInACVF.Section3ACVF.BallRadiusGeometry.' + name for name in (
+        'valuation_dense', 'gamma_radius_unique_same_kind', 'gamma_open_ne_closed',
+        'gamma_open_not_closed', 'open_closed_only_vf')
 ]
 DEFINITIONS = [
     'GeneratesCompleteType', 'IsAtomic', 'Splits',

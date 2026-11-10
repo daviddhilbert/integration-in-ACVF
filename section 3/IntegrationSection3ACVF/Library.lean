@@ -27,3 +27,4 @@ import IntegrationSection3ACVF.CanonicalHoles
 import IntegrationSection3ACVF.BallKindGeometry
 import IntegrationSection3ACVF.BallKindPredicates
 import IntegrationSection3ACVF.AtomicCanonicalRegions
+import IntegrationSection3ACVF.BallRadiusGeometry

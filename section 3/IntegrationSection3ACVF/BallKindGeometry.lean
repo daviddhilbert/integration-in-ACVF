@@ -52,6 +52,7 @@ theorem closed_raw_gammaBall (q : ClosedBallCodes.Code M) (hflag : q.val 2 ≠ i
   ext x
   simp only [ClosedBallCodes.rawBall,Set.mem_ofPred_eq,ClosedBallCodes.body_realize,
     hflag,false_or,and_iff_right q.property,radiusBall,Bool.false_eq_true,false_implies,and_true]
+  rfl
 
 theorem open_raw_isOpenBall (q : OpenBallCodes.Code M) :
     PaperBalls.IsOpenBall (OpenBallCodes.rawBall q.val) := by
