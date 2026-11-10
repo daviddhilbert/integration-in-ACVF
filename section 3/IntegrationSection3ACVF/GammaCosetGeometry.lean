@@ -42,17 +42,19 @@ theorem valuation_nat_unit {Γ : Type} [LinearOrderedCommGroupWithZero Γ]
     (h00 : M ⊨ Axioms.ACVF00) (v : Valuation (VFType (M := M)) Γ)
     (hv : ∀ x y : VFType (M := M), VFValued.predV x y ↔ v x ≤ v y)
     (n : ℕ) (hn : n ≠ 0) : v (n : VFType (M := M)) = 1 := by
-  apply le_antisymm
-  · have h : v (n : VFType (M := M)) ≤ v 1 := (hv _ _).mp (by
-      change iLe (iRv (1 : VFType (M := M)).val) (Average.val (n : VFType (M := M)))
-      rw [Average.val_one]
-      exact Average.le_one_natCast n)
-    simpa only [map_one] using h
-  · have h : v (1 : VFType (M := M)) ≤ v (n : VFType (M := M)) := (hv _ _).mp (by
-      change iLe (Average.val (n : VFType (M := M))) (iRv (1 : VFType (M := M)).val)
-      rw [Average.val_one]
-      exact Average.nat_unit h00 n hn)
-    simpa only [map_one] using h
+  have h1 : Average.val (1 : VFType (M := M)) = iRVOne := Average.val_one
+  have hl : VFValued.predV (n : VFType (M := M)) (1 : VFType (M := M)) := by
+    have h : iLe (Average.val (1 : VFType (M := M))) (Average.val (n : VFType (M := M))) := by
+      rw [h1]
+      exact Average.le_one_natCast n
+    exact h
+  have hu : VFValued.predV (1 : VFType (M := M)) (n : VFType (M := M)) := by
+    have h : iLe (Average.val (n : VFType (M := M))) (Average.val (1 : VFType (M := M))) := by
+      rw [h1]
+      exact Average.nat_unit h00 n hn
+    exact h
+  exact le_antisymm (by simpa only [map_one] using (hv _ _).mp hl)
+    (by simpa only [map_one] using (hv _ _).mp hu)
 
 theorem cosetBody_mem (H : AddSubgroup (VFType (M := M))) (x a : VFType (M := M)) :
     x.val ∈ cosetBody H a ↔ QuotientAddGroup.mk' H x = QuotientAddGroup.mk' H a := by
@@ -76,7 +78,14 @@ theorem infinite_gamma_cosets (h00 : M ⊨ Axioms.ACVF00)
   obtain ⟨s,hs⟩ := vf_representative α
   have hm (x : VFType (M := M)) : x ∈ H ↔ v x < v r := by
     have h0 : x ∈ H ↔ x.val ∈ cosetBody H 0 := by
-      rw [cosetBody_mem,QuotientAddGroup.eq_iff_sub_mem,sub_zero]
+      rw [cosetBody_mem]
+      constructor
+      · intro hx
+        apply QuotientAddGroup.eq_iff_sub_mem.mpr
+        simpa only [sub_zero] using hx
+      · intro he
+        have hx : x - (0 : VFType (M := M)) ∈ H := QuotientAddGroup.eq_iff_sub_mem.mp he
+        simpa only [sub_zero] using hx
     rw [hH 0] at h0
     simpa only [sub_zero] using h0.trans (gammaBall_mem_valuation v hv 0 r β hr x)
   have hrs : v r < v s := by

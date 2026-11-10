@@ -22,6 +22,8 @@ noncomputable def vfDefault (x : M) : VFType (M := M) :=
 
 theorem vfDefault_val (x : VFType (M := M)) : vfDefault x.val = x := by
   simp only [vfDefault,dif_pos x.property]
+  apply Subtype.ext
+  rfl
 
 theorem vfDefault_definable (Q : Set M) :
     @Set.DefinableFun M LRV (CanonicalStructure.normalize (M := M))
@@ -39,7 +41,8 @@ theorem vfDefault_definable (Q : Set M) :
       (SpecialTransformations.DefinableConstants.function_symbol
         (L := LRV) Fn.vfZero Fin.elim0 (fun j => j.elim0))
   letI := N
-  have hd := Set.DefinableFun.ite hs (Set.DefinableFun.proj LRV) hc
+  have hx : Q.DefinableFun LRV (fun z : Fin 1 → M => z 0) := Set.DefinableFun.proj LRV
+  have hd := Set.DefinableFun.ite hs hx hc
   change Q.DefinableFun LRV D
   convert hd using 1
   funext z

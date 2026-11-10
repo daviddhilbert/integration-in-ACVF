@@ -248,6 +248,11 @@ ACVF_HEADLINES += [
     'IntegrationInACVF.Section3ACVF.OpenBallConstancy.lemma_3_9',
     'IntegrationInACVF.Section3ACVF.OpenBallConstancy.corollary_3_10',
 ]
+ACVF_HEADLINES += [
+    'IntegrationInACVF.Section3ACVF.OpenBallConstancy.graph_extendByEmpty',
+    'IntegrationInACVF.Section3ACVF.OpenBallConstancy.lemma_3_9_on',
+    'IntegrationInACVF.Section3ACVF.OpenBallConstancy.corollary_3_10_on',
+]
 DEFINITIONS = [
     'GeneratesCompleteType', 'IsAtomic', 'Splits',
     'IsLaminar', 'HasFiniteBallSupport',
@@ -310,6 +315,10 @@ ACVF_DEFINITIONS += [
     'IntegrationInACVF.Section3ACVF.PuncturedGeometry.PuncturedBall.body',
 ]
 ACVF_DEFINITIONS += ['IntegrationInACVF.Section3ACVF.FullProfileCosets.vfDefault']
+ACVF_DEFINITIONS += [
+    'IntegrationInACVF.Section3ACVF.OpenBallConstancy.graphOn',
+    'IntegrationInACVF.Section3ACVF.OpenBallConstancy.extendByEmpty',
+]
 ALLOWED = {'propext', 'Classical.choice', 'Quot.sound'}
 
 

@@ -121,6 +121,9 @@ theorem restrict_family (B : FullBaseAtomicity.Base (M := M))
   change FullBaseAtomicity.OverBase B _
   convert FullBaseAtomicity.OverBase.inter hc hd using 1
   ext z
+  change (z 0 ∈ Values.gammaPullback {γ | Sum.inr γ ∈ T}) ↔
+    (NonzeroRV (z 0) ∧ ∃ hn : E z ∈ ParameterPresentation.codeDomain,
+      d ⟨E z,hn⟩ ∈ T)
   rw [GammaSyntax.mem_gammaPullback_iff]
   constructor
   · rintro ⟨hz,ht⟩
