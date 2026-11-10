@@ -37,7 +37,7 @@ theorem hasRadius_exists {D : Set M} (hD : IsBall D) :
         ⟨BallPresentation.closedTuple c.val,(c.property.resolve_right (fun hn => hn.1 h3)).2⟩
     rcases hclosed with hVF | ⟨a,ha⟩ | ⟨a,γ,ha⟩
     · exact ⟨⊥,Or.inl ⟨hVF,rfl⟩⟩
-    · exact ⟨↑Values.infinity,Or.inr (Or.inl ⟨a,ha,rfl⟩)⟩
+    · exact ⟨(↑(Values.infinity (M := M)) : PaperBalls.Radius (M := M)),Or.inr (Or.inl ⟨a,ha,rfl⟩)⟩
     · exact ⟨↑γ.val,Or.inr (Or.inr ⟨a,γ,false,ha,rfl⟩)⟩
   · have hopen : PaperBalls.IsOpenBall D := by
       rw [he,if_neg h3]
