@@ -60,12 +60,15 @@ retains this convention and adds nonemptiness when selecting a realization.
 
 ## Current continuation
 
-The next extension adds finite universal closure to the generic core (99
-locally audited declarations) and `FullBaseDefinability.lean`, which exposes
-the proved first-order operations over the combined base for the Gamma
-argument. Its concrete wrappers are awaiting CI. `VERIFICATION.json` above
-remains the certificate for the preceding 145-declaration checkpoint;
-`CORE-VERIFICATION.json` records the new local core audit.
+The combined-base closure operations and Gamma predicate calculus passed
+175 declaration audits in CI run 42814520395 at source f5953ae. Their complete
+exported types and axiom records were reviewed. The generic core now has
+101 locally audited declarations, including the tuple/unary equivalence
+and agreement with Definition 3.1 when no imaginary names are present.
+`FullGammaPoint.lean` implements the original-base finite-controller and
+Gamma definable-point argument and is awaiting its full CI checks.
+`VERIFICATION.json` remains the certificate for the preceding 145-declaration
+paper-result checkpoint; `CORE-VERIFICATION.json` records the new local core.
 
 ## Verification
 

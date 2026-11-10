@@ -239,3 +239,19 @@ over the proved generic first-order operations. It preserves the original
 model's presentations while fixing raw definability to its normalization.
 The generic finite universal-quantifier closure passed the 99-declaration
 local core audit; the concrete wrappers await their CI build and audit.
+
+
+`FullGammaSyntax.lean` passed the full project build and all 175 current
+audits in CI run 42814520395 (source f5953ae). It retains the predecessor's
+actual `GammaSyntax.Proper` and `decode` functions. The newly adapted
+`FullGammaPoint.lean` uses the intrinsic minimal-controller formula,
+finite ordered-set minima, and the predecessor's finite-order sample
+theorem. Multiplication, inverses and unique square roots are definable
+over the original combined base. Its existence proof specializes real
+codes only to obtain finite thresholds, and then returns to the original
+base for all named points. This new point theorem awaits its own audit.
+
+`ImaginaryTupleAtomicity.lean` uses the already proved interpreted-base
+definability. Its local full type/axiom checks identify unary tuple
+atomicity with the existing unary definition and recover actual Mathlib
+first-order Definition 3.1 over a base with no imaginary names.

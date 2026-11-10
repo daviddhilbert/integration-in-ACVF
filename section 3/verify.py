@@ -98,6 +98,8 @@ HEADLINES = [
     'ImaginaryParameters.OverBase.adjoin_iff',
     'ImaginaryParameters.with_iff_over_adjoin',
     'ImaginaryParameters.atomicWith_iff_atomic_adjoin',
+    'ImaginaryParameters.isAtomicTupleOver_empty_iff',
+    'ImaginaryParameters.unary_tuple_atomic_iff',
     'ImaginaryBaseFamilies.Relation.inter',
     'ImaginaryBaseFamilies.Relation.compl',
     'ImaginaryBaseFamilies.Relation.domain',
@@ -173,6 +175,13 @@ ACVF_HEADLINES += [
         'lt_definable', 'eq_definable', 'mul_definable', 'scalar_definable_iff',
         'unary_at', 'one_definable')
 ]
+ACVF_HEADLINES += [
+    'IntegrationInACVF.Section3ACVF.FullGammaPoint.' + name for name in (
+        'real_specialization', 'tupleControls_definable', 'minimal_controller_definable',
+        'exists_definable_minimal_controller', 'scalar_sdiff', 'finset_min_definable',
+        'finset_element_definable', 'named_one', 'named_mul', 'named_inv',
+        'named_square_root', 'named_samples', 'gamma_definable_point')
+]
 DEFINITIONS = [
     'GeneratesCompleteType', 'IsAtomic', 'Splits',
     'IsLaminar', 'HasFiniteBallSupport',
@@ -189,6 +198,7 @@ DEFINITIONS = [
     'ImaginaryParameters.OverBase',
     'ImaginaryParameters.Base.adjoin',
     'ImaginaryParameters.IsAtomicOver',
+    'ImaginaryParameters.IsAtomicTupleOver',
     'ImaginaryBaseFamilies.Family',
     'ImaginaryBaseFamilies.Relation',
     'ImaginaryBaseFamilies.With',
@@ -216,6 +226,7 @@ ACVF_DEFINITIONS += ['IntegrationInACVF.Section3ACVF.AdjoinBall.AtomicOver']
 ACVF_DEFINITIONS += [
     'IntegrationInACVF.Section3ACVF.FullGammaSyntax.Definable',
     'IntegrationInACVF.Section3ACVF.FullGammaSyntax.Scalar',
+    'IntegrationInACVF.Section3ACVF.FullGammaPoint.Named',
 ]
 ALLOWED = {'propext', 'Classical.choice', 'Quot.sound'}
 

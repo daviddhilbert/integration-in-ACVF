@@ -10,3 +10,4 @@ public import IntegrationSection3.StatementChecks
 public import IntegrationSection3.ImaginaryParameters
 public import IntegrationSection3.ImaginaryBaseFamilies
 public import IntegrationSection3.AdjoinParameters
+public import IntegrationSection3.ImaginaryTupleAtomicity
