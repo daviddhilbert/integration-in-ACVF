@@ -14,3 +14,4 @@ public import IntegrationSection3.ImaginaryTupleAtomicity
 public import IntegrationSection3.ImaginaryBaseRanges
 public import IntegrationSection3.PuncturedDecomposition
 public import IntegrationSection3.ProfileAtomicity
+public import IntegrationSection3.InfiniteCosets

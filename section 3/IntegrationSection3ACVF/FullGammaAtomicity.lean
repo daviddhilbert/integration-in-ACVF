@@ -131,6 +131,17 @@ theorem lemma_3_3 (h00 : M ⊨ Axioms.ACVF00) (B : FullBaseAtomicity.Base (M := 
   classical
   exact lemma_3_3_finset h00 B δ hδ hδ1 hA (Finset.univ.image γ)
 
+theorem lemma_3_3_one_unary (h00 : M ⊨ Axioms.ACVF00) (B : FullBaseAtomicity.Base (M := M))
+    (δ : Values.Gamma (M := M)) (hδ : FullGammaSyntax.Scalar B {δ}) (hδ1 : 1 < δ)
+    {A : Set M} (hA : AdjoinBall.AtomicOver B A) (γ : Values.Gamma (M := M)) :
+    AdjoinBall.AtomicOver (B.adjoin (Sum.inr γ)) A := by
+  have ht : AtomicTuple B {z : Fin 1 → M | z 0 ∈ A} := by
+    letI := CanonicalStructure.normalize (M := M)
+    exact ImaginaryParameters.unary_tuple_atomic_iff.mpr hA
+  have h := lemma_3_3_one h00 B δ hδ hδ1 ht γ
+  letI := CanonicalStructure.normalize (M := M)
+  exact ImaginaryParameters.unary_tuple_atomic_iff.mp h
+
 theorem lemma_3_3_unary (h00 : M ⊨ Axioms.ACVF00) (B : FullBaseAtomicity.Base (M := M))
     (δ : Values.Gamma (M := M)) (hδ : FullGammaSyntax.Scalar B {δ}) (hδ1 : 1 < δ)
     {A : Set M} (hA : AdjoinBall.AtomicOver B A)

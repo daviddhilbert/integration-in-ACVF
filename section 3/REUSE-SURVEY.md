@@ -285,3 +285,16 @@ over that exact base. Its three full types and standard axioms passed the
 local core audit. `FullProfileCosets.lean` connects these steps using a
 parameter-free default VF zero to totalize variables. The infinite-class
 ball geometry remains explicit; this is not yet a proof of Lemma 3.9.
+
+
+`InfiniteCosets.lean` uses pinned Mathlib valuation and additive-quotient
+APIs (Apache-2.0), with a checked integer-translate injection into distinct
+small-ball cosets. Its nonzero-natural-number unit premise is derived in
+`GammaCosetGeometry.valuation_nat_unit` from the predecessor's
+`Average.le_one_natCast` and `Average.nat_unit`. The proper-open-ball
+membership bridge uses the actual Gamma quotient, the predecessor's
+compatible valuation and the already checked Gamma-radius description.
+`OpenBallConstancy.lean` then implements 3.9 and 3.10 without assuming either
+finite exceptions or infinitely many cosets as new mathematical axioms.
+The standing original-base definable nontrivial value and ACVF(0,0) remain
+explicit. These new actual modules are awaiting their CI build and audit.

@@ -161,6 +161,34 @@ theorem radius_subgroup (B : FullBaseAtomicity.Base (M := M))
   ext z
   exact Set.ext_iff.mp hz (z 0)
 
+/-- The full family of cosets of a ball-radius subgroup is definable over
+an arbitrary genuine real/Gamma/ball base that defines that radius. -/
+theorem gamma_subgroup (B : FullBaseAtomicity.Base (M := M))
+    (γ : Values.Gamma (M := M)) (hγ : FullGammaSyntax.Scalar B {γ}) (strict : Bool) :
+    ∃ H : AddSubgroup (VFType (M := M)),
+      FullBaseAtomicity.OverBase B
+        {z : Fin 1 → M | z 0 ∈ Subtype.val '' (H : Set (VFType (M := M)))} ∧
+      ∀ a : VFType (M := M), cosetBody H a = gammaBall a γ strict := by
+  obtain ⟨t,ht0,htγ⟩ := Values.gamma_has_nonzero_representative γ
+  have hv : rvValuePullback (Values.vrv t) = Values.gammaPullback {γ} := by
+    rw [htγ]
+    ext x
+    constructor
+    · rintro ⟨hx,he⟩
+      have hx0 : x ≠ iRVZero := by
+        intro hz
+        exact γ.property (he.symm.trans ((Values.vrv_eq_infinity_iff _).mpr hz))
+      exact ⟨hx,hx0,Subtype.ext he⟩
+    · rintro ⟨hx,hx0,he⟩
+      exact ⟨hx,congrArg Subtype.val he⟩
+  have hF : FullBaseAtomicity.OverBase B
+      {z : Fin 1 → M | z 0 ∈ rvValuePullback (Values.vrv t)} := by
+    rw [hv]
+    exact hγ
+  obtain ⟨H,hH,he⟩ := radius_subgroup B t ht0 strict (radiusTail_definable B t strict hF)
+  refine ⟨H,hH,fun a => (he a).trans ?_⟩
+  exact radiusBall_eq_gammaBall a t γ htγ strict
+
 theorem lemma_3_4 (B : FullBaseAtomicity.Base (M := M))
     (γ : Values.Gamma (M := M)) (hγ : FullGammaSyntax.Scalar B {γ})
     (strict : Bool) {A : Set M} (hA : FullBallCoset.CompleteType B A)

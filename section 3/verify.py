@@ -130,6 +130,9 @@ HEADLINES += [
     'ProfileAtomicity.sameProfile_definable', 'ProfileAtomicity.badPoints_definable',
     'ProfileAtomicity.constant_on_classes',
 ]
+HEADLINES += [
+    'InfiniteCosets.map_nat_difference', 'InfiniteCosets.infinite_cosets_in_open_ball',
+]
 ACVF_HEADLINES = [
     'IntegrationInACVF.Section3ACVF.' + name for name in (
         'encodedBall_isKBall', 'encodedBalls_laminar', 'support_of_isBoolComb',
@@ -228,6 +231,22 @@ ACVF_HEADLINES += [
     'IntegrationInACVF.Section3ACVF.FullProfileCosets.' + name for name in (
         'vfDefault_val', 'vfDefault_definable', 'total_graph_definable',
         'total_class_relation_definable', 'constant_on_cosets')
+]
+ACVF_HEADLINES += [
+    'IntegrationInACVF.Section3ACVF.AdjoinGamma.restrict_family',
+    'IntegrationInACVF.Section3ACVF.AdjoinGamma.named_scalar',
+    'IntegrationInACVF.Section3ACVF.FullGammaAtomicity.lemma_3_3_one_unary',
+    'IntegrationInACVF.Section3ACVF.FullGammaRadius.gamma_subgroup',
+]
+ACVF_HEADLINES += [
+    'IntegrationInACVF.Section3ACVF.GammaCosetGeometry.' + name for name in (
+        'vf_representative', 'gammaBall_mem_valuation', 'valuation_nat_unit',
+        'cosetBody_mem', 'infinite_gamma_cosets', 'gammaBall_coded',
+        'intermediate_radius', 'same_coset_of_difference')
+]
+ACVF_HEADLINES += [
+    'IntegrationInACVF.Section3ACVF.OpenBallConstancy.lemma_3_9',
+    'IntegrationInACVF.Section3ACVF.OpenBallConstancy.corollary_3_10',
 ]
 DEFINITIONS = [
     'GeneratesCompleteType', 'IsAtomic', 'Splits',
@@ -373,7 +392,7 @@ def main():
                       + ('actual Lemmas 3.2-3.3 over genuine real/Gamma/ball bases, with an original-base '
                          'definable nontrivial Gamma value explicit for 3.3; Lemma 3.4 at original-base '
                          'definable Gamma radii, singletons and VF; actual finite disjoint punctured '
-                         'decomposition; ' if args.acvf else '')
+                         'decomposition; finite coset-profile exceptions, Lemma 3.9 and Corollary 3.10 for proper open balls; ' if args.acvf else '')
                       + 'the primitive-type classification of Lemma 3.6 and later section geometry remain open'),
             'build_scope': 'Incremental Lake Section 3 build plus freshly compiled headline audit',
         }

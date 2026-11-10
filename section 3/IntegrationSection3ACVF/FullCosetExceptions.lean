@@ -53,12 +53,18 @@ theorem finite_bad_cosets (h00 : M ⊨ Axioms.ACVF00)
   obtain ⟨E,_,hsH⟩ := hsH
   obtain ⟨F,_,hsG⟩ := hsG
   let Q := (B.real ∪ E) ∪ (B.real ∪ F)
+  have hHQ : @Set.Definable M Q LRV (CanonicalStructure.normalize (M := M))
+      (Fin 1) {z | z 0 ∈ U} := by
+    letI := CanonicalStructure.normalize (M := M)
+    exact hsH.mono Set.subset_union_left
+  have hGQ : @Set.Definable M Q LRV (CanonicalStructure.normalize (M := M))
+      (Fin (m+1)) G := by
+    letI := CanonicalStructure.normalize (M := M)
+    exact hsG.mono Set.subset_union_right
   have hdH : DefinableAt Q .vf U :=
-    (@definableAt_iff_normalized_raw M sM hM Q .vf U).mpr
-      ⟨hsH.mono Set.subset_union_left,hU⟩
+    (@definableAt_iff_normalized_raw M sM hM Q .vf U).mpr ⟨hHQ,hU⟩
   have hdG : DefinableOver Q MixedPolynomialSyntax.contextSort G :=
-    (@definableOver_iff_normalized_raw M sM hM Q (m+1) MixedPolynomialSyntax.contextSort G).mpr
-      ⟨hsG.mono Set.subset_union_right,hG⟩
+    (@definableOver_iff_normalized_raw M sM hM Q (m+1) MixedPolynomialSyntax.contextSort G).mpr ⟨hGQ,hG⟩
   exact AdditiveCosets.lemma_3_18_1 h00 Q H hdH f hf hdG
 
 end IntegrationInACVF.Section3ACVF.FullCosetExceptions

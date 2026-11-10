@@ -16,3 +16,5 @@ import IntegrationSection3ACVF.FullGammaRadius
 import IntegrationSection3ACVF.PuncturedGeometry
 import IntegrationSection3ACVF.FullCosetExceptions
 import IntegrationSection3ACVF.FullProfileCosets
+import IntegrationSection3ACVF.GammaCosetGeometry
+import IntegrationSection3ACVF.OpenBallConstancy

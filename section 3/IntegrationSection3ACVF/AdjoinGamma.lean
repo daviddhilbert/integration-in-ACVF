@@ -106,6 +106,49 @@ theorem restrict_vector {α : Type} [Finite α] (B : FullBaseAtomicity.Base (M :
     rw [heq] at hr
     exact hr
 
+theorem restrict_family (B : FullBaseAtomicity.Base (M := M))
+    (T : Set (ParameterPresentation.Name (M := M)))
+    (hT : FullBaseAtomicity.OverBase B
+      ((@ParameterPresentation.presentation M sM hM).pullback T)) :
+    FullGammaSyntax.Scalar B {γ | Sum.inr γ ∈ T} := by
+  have hd := FullBaseAtomicity.OverBase.preimage_map hT (embedCode_definable (M := M) B.real)
+  have hc : FullBaseAtomicity.OverBase B {z : Fin 1 → M | NonzeroRV (z 0)} :=
+    FullBaseAtomicity.OverBase.of_real (B := B)
+      (nonzero_codes_normalized_definable (M := M) B.real)
+  have hp := embedCode_compatible (M := M)
+  let E := embedCode (M := M)
+  let d := @ParameterPresentation.decode M sM hM
+  change FullBaseAtomicity.OverBase B _
+  convert FullBaseAtomicity.OverBase.inter hc hd using 1
+  ext z
+  rw [GammaSyntax.mem_gammaPullback_iff]
+  constructor
+  · rintro ⟨hz,ht⟩
+    obtain ⟨hn,he⟩ := hp z hz
+    refine ⟨hz,hn,?_⟩
+    change d ⟨E z,hn⟩ ∈ T
+    rw [show d ⟨E z,hn⟩ = Sum.inr (codeValue (z 0)) from he]
+    exact ht
+  · rintro ⟨hz,hn,ht⟩
+    obtain ⟨hn',he⟩ := hp z hz
+    refine ⟨hz,?_⟩
+    change d ⟨E z,hn'⟩ ∈ T at ht
+    rw [show d ⟨E z,hn'⟩ = Sum.inr (codeValue (z 0)) from he] at ht
+    exact ht
+
+theorem named_scalar {B : FullBaseAtomicity.Base (M := M)}
+    (γ : Values.Gamma (M := M)) (hγ : Sum.inr γ ∈ B.imaginary) :
+    FullGammaSyntax.Scalar B {γ} := by
+  have hp := ParameterPresentation.presentation_definable (M := M) B.real
+  let p := @ParameterPresentation.presentation M sM hM
+  have hn : FullBaseAtomicity.OverBase B (p.pullback {Sum.inr γ}) := by
+    letI := CanonicalStructure.normalize (M := M)
+    exact ImaginaryParameters.OverBase.named_singleton (p := p) (B := B) hp hγ
+  have h := restrict_family B {Sum.inr γ} hn
+  convert h using 1
+  ext η
+  simp only [Set.mem_singleton_iff,Set.mem_setOf_eq,Sum.inr.injEq]
+
 theorem fibre_definable {α : Type} [Finite α] {B : FullBaseAtomicity.Base (M := M)}
     {R : Values.Gamma (M := M) → Set (α → M)}
     (hR : FullBaseAtomicity.OverBase B (vectorPullback R))
