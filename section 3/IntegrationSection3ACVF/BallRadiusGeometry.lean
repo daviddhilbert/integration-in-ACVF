@@ -108,6 +108,7 @@ theorem gamma_open_not_closed (δ : Values.Gamma (M := M)) (hδ : 1 < δ)
     have he : x.val ∈ gammaBall a α true ↔ x = b := by
       rw [hpoint]
       exact ⟨Subtype.ext,congrArg Subtype.val⟩
+    change v (x-a) < v r ↔ v (x-b) ≤ v (0 : VFType (M := M))
     rw [← GammaCosetGeometry.gammaBall_mem_valuation v hv a r α hr x,he]
     simp only [map_zero,le_zero_iff,map_eq_zero,sub_eq_zero]
   · exact gamma_open_ne_closed δ hδ a b α β hclosed
@@ -148,6 +149,7 @@ theorem gamma_closed_ne_singleton (a b : VFType (M := M))
   intro he
   have hsub : {x : VFType (M := M) | v (x-a) ≤ v r} ⊆ {x | v (x-b) ≤ v (0 : VFType (M := M))} := by
     intro x hx
+    change v (x-b) ≤ v (0 : VFType (M := M))
     have hx' := (BallKindPredicates.gammaBall_mem_valuation_closed v hv a r α hr x).mpr hx
     rw [he] at hx'
     have hxb : x = b := Subtype.ext (show x.val = b.val from hx')
