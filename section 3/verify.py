@@ -89,6 +89,11 @@ HEADLINES = [
     'ImaginaryParameters.OverBase.preimage_comp',
     'ImaginaryParameters.WithTuple.exists_block',
     'ImaginaryParameters.OverBase.exists_block',
+    'ImaginaryParameters.WithTuple.preimage_map',
+    'ImaginaryParameters.OverBase.preimage_map',
+    'ImaginaryParameters.OverBase.empty_iff_real',
+    'ImaginaryParameters.OverBase.forall_block',
+    'ImaginaryParameters.OverBase.named_singleton',
     'ImaginaryBaseFamilies.Relation.inter',
     'ImaginaryBaseFamilies.Relation.compl',
     'ImaginaryBaseFamilies.Relation.domain',
@@ -138,6 +143,13 @@ ACVF_HEADLINES += [
         'radiusTail_definable_of_value', 'radiusBall_eq_gammaBall',
         'lemma_3_4_real_base', 'lemma_3_4_singleton', 'lemma_3_4_whole_field')
 ]
+ACVF_HEADLINES += [
+    'IntegrationInACVF.Section3ACVF.ParameterPresentation.' + name for name in (
+        'decode_encodeBall', 'decode_surjective', 'gamma_membership',
+        'body_injective', 'codeDomain_definable', 'membership_definable',
+        'presentation_definable')
+]
+ACVF_HEADLINES += ['IntegrationInACVF.Section3ACVF.FullBaseAtomicity.lemma_3_2']
 DEFINITIONS = [
     'GeneratesCompleteType', 'IsAtomic', 'Splits',
     'IsLaminar', 'HasFiniteBallSupport',
@@ -162,6 +174,18 @@ DEFINITIONS = [
 ACVF_DEFINITIONS = [
     'IntegrationInACVF.Section3ACVF.BallPresentation.' + name
     for name in ('codeDomain', 'decode', 'presentation', 'valuationBalls')
+]
+ACVF_DEFINITIONS += [
+    'IntegrationInACVF.Section3ACVF.NamedRadiusAtomicity.radiusBall',
+    'IntegrationInACVF.Section3ACVF.GammaRadiusAtomicity.gammaBall',
+]
+ACVF_DEFINITIONS += [
+    'IntegrationInACVF.Section3ACVF.ParameterPresentation.' + name for name in (
+        'Name', 'codeDomain', 'decode', 'presentation', 'body')
+]
+ACVF_DEFINITIONS += [
+    'IntegrationInACVF.Section3ACVF.FullBaseAtomicity.' + name for name in (
+        'Base', 'OverBase', 'Family', 'Relation', 'Algebraic', 'AtomicWith')
 ]
 ALLOWED = {'propext', 'Classical.choice', 'Quot.sound'}
 

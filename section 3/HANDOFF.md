@@ -12,30 +12,27 @@ It imports Atomicity, BallSupport, DefinableFamilies, ParametricAtomicity
 and ImaginaryFamilies, plus the printed-statement checks.
 The coordination root additionally imports IntegrationSection3ACVF.Library
 together with the unchanged pinned Special transformations project.
-The full project build, inherited foundation audit, two Section 2 audits and
-76 Section 3 audits passed in CI run 42789563292. `VERIFICATION.json` binds
-the Section 3 evidence to the exact source hashes. The 55 generic and 21
-actual ACVF declarations have only the three permitted standard axioms.
-BallPresentation contains
-the actual ball-index Lemma 3.2 over real bases, with a definable full graph
-and nonalgebraicity of its output-ball imaginary. Full C• bases remain open.
-GammaAtomicity additionally proves the real-base Lemma 3.3, using the
-predecessor's Gamma tuple definable-point theorem and full invariant code
-fibres. Both real-base paper instances have passed their full type/axiom audits.
+The last complete project build and 84 Section 3 audits passed at source
+1926587 in CI run 42805178064. `VERIFICATION.json` binds that full audit.
+The generic core now has 95 locally passed full type/axiom checks, bound by
+`CORE-VERIFICATION.json`. Its additional interpreted-base definitions are in
+`ImaginaryParameters.lean` and `ImaginaryBaseFamilies.lean`; they prove
+finite-support specialization, Boolean and quantifier closure, the
+exceptional-set argument, and algebraicity transfer through definable maps.
 
-Next mathematical target: extend the real-base cases of Lemmas 3.2–3.3 to
-the full C• base with additional Gamma and ball names. The actual ball
-presentation is already checked. Keep full invariant real preimages and
-the original base throughout; a chosen centre or RV representative must not
-silently become a named parameter. Do not assume atomicity or the missing
-interpretation as a model-interface field.
+Actual ACVF modules: `BallPresentation` proves the real-base Lemma 3.2;
+`GammaAtomicity` proves the real-base Lemma 3.3; `BallCosetAtomicity` proves
+the actual definable additive-coset instance of Lemma 3.4. Named-RV radii,
+definable Gamma radii, singleton balls and VF have compiled in CI. The
+combined Gamma/ball `ParameterPresentation` and `FullBaseAtomicity.lemma_3_2`
+are undergoing full CI checks. Do not infer completion from their source
+being present; inspect the newest build and audit logs. The next bridge is
+the precise equivalence between a full family with one additional imaginary
+index and definability over the base with that index adjoined.
 
-For Lemma 3.4, instantiate `atomic_below_complete_type` with the actual
-definable disjoint family of same-radius open or closed balls. The ambient
-complete-type-generating set need not be definable. Retain actual
-parameter support throughout. Consult STATUS.md before the later Lemma 3.11
-headline: the author has approved the explicit nonemptiness hypothesis,
-recorded in `../PAPER-CORRECTIONS.md`.
+For Lemma 3.11, the author approved the explicit nonemptiness hypothesis in
+`../PAPER-CORRECTIONS.md`. `StatementChecks.complete_type_relation_projections`
+proves the resulting projection step; geometric separation is still open.
 
 Run `lake env python3 'section 3/verify.py' --acvf` and inspect its complete logs and
 headline axiom records. Compiler evidence belongs in

@@ -4,3 +4,4 @@ import IntegrationSection3ACVF.BallCosetAtomicity
 import IntegrationSection3ACVF.NamedRadiusAtomicity
 import IntegrationSection3ACVF.GammaRadiusAtomicity
 import IntegrationSection3ACVF.ParameterPresentation
+import IntegrationSection3ACVF.FullBaseAtomicity

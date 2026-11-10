@@ -250,6 +250,81 @@ theorem OverBase.exists_block {B : Base M I} {υ : Type w₂} {β : Type w₃} [
   obtain ⟨F,hF,hA⟩ := hA
   exact ⟨F,hF,hA.exists_block⟩
 
+omit [Finite κ] in
+theorem WithTuple.preimage_map {θ : Type w₁} [Finite θ] [Finite κ]
+    {υ : Type w₂} [Finite υ] {β : Type w₃} [Finite β]
+    {a : θ → I} {A : Set (υ → M)} {F : (β → M) → (υ → M)}
+    (hA : WithTuple (L := L) p Q a A) (hF : Q.DefinableMap L F) :
+    WithTuple (L := L) p Q a (F ⁻¹' A) := by
+  obtain ⟨R,hR,rfl⟩ := hA
+  let G : ((θ × κ) ⊕ β → M) → ((θ × κ) ⊕ υ → M) :=
+    fun z => Sum.elim (z ∘ Sum.inl) (F (z ∘ Sum.inr))
+  have hG : Q.DefinableMap L G := by
+    intro j
+    cases j with
+    | inl c => exact Set.DefinableFun.proj L
+    | inr j => exact (hF j).comp (fun _ => Set.DefinableFun.proj L)
+  refine ⟨fun i => F ⁻¹' R i,?_,rfl⟩
+  convert hR.preimage_map hG using 1
+  ext z
+  rfl
+
+theorem OverBase.preimage_map {B : Base M I} {υ : Type w₂} [Finite υ] {β : Type w₃} [Finite β]
+    {A : Set (υ → M)} {F : (β → M) → (υ → M)}
+    (hA : OverBase (L := L) p B A) (hF : B.real.DefinableMap L F) :
+    OverBase (L := L) p B (F ⁻¹' A) := by
+  obtain ⟨S,hS,hA⟩ := hA
+  exact ⟨S,hS,hA.preimage_map hF⟩
+
+theorem OverBase.empty_iff_real {B : Base M I} {υ : Type w₂} [Finite υ]
+    {A : Set (υ → M)} (hB : B.imaginary = ∅) :
+    OverBase (L := L) p B A ↔ B.real.Definable L A := by
+  classical
+  constructor
+  · rintro ⟨F,hF,R,hR,he⟩
+    have hFe : F = ∅ := by
+      apply Finset.eq_empty_iff_forall_notMem.mpr
+      intro i hi
+      exact Set.notMem_empty i (hB ▸ hF i hi)
+    subst F
+    obtain ⟨q,_,hq⟩ := vector_specialize hR (Subtype.val : (∅ : Finset I) → I)
+    have hrange : Set.range q.val = ∅ := by
+      apply Set.eq_empty_iff_forall_notMem.mpr
+      rintro x ⟨c,_⟩
+      exact Finset.notMem_empty c.1.val c.1.property
+    simpa only [hrange,Set.union_empty,he] using hq
+  · exact OverBase.of_real
+
+theorem OverBase.forall_block {B : Base M I} {υ : Type w₂} [Finite υ]
+    {β : Type w₃} [Finite β] {A : Set (υ ⊕ β → M)}
+    (hA : OverBase (L := L) p B A) (hp : B.real.Definable L p.codes) :
+    OverBase (L := L) p B {z | ∀ b : β → M, Sum.elim z b ∈ A} := by
+  classical
+  have h := ((hA.compl hp).exists_block).compl hp
+  convert h using 1
+  ext z
+  simp only [Set.mem_ofPred_eq,Set.mem_compl_iff,not_exists,not_not]
+
+/-- A named imaginary has a definable singleton over the base naming it;
+its full real preimage is used, rather than a selected representative. -/
+theorem OverBase.named_singleton {B : Base M I} (hp : p.IsDefinable L B.real)
+    {i : I} (hi : i ∈ B.imaginary) : OverBase (L := L) p B (p.pullback {i}) := by
+  classical
+  let F : Finset I := {i}
+  let j : F := ⟨i,Finset.mem_singleton_self i⟩
+  let R : (F → I) → Set (κ → M) := fun a => p.pullback {a j}
+  refine ⟨F,?_,R,?_,rfl⟩
+  · intro c hc
+    exact (Finset.mem_singleton.mp hc) ▸ hi
+  · have hd := (tupleCodes_definable hp.1 F).preimage_comp
+      (Sum.inl : F × κ → (F × κ) ⊕ κ)
+    have he := hp.2.preimage_comp
+      (Sum.elim Sum.inr (fun c => (Sum.inl (j,c) : (F × κ) ⊕ κ)))
+    convert hd.inter he using 1
+    ext z
+    exact ⟨fun ⟨hz,hout,he⟩ => ⟨hz,hout,hz j,he⟩,
+      fun ⟨hz,hout,_,he⟩ => ⟨hz,hout,he⟩⟩
+
 /-- C-minimality can be used after specialization without changing the
 definability assertion over the original interpreted base. -/
 theorem finite_ball_support {B : Base M I} {D : Set M} {balls : Set (Set M)}

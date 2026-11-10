@@ -92,6 +92,7 @@ theorem body_injective : Function.Injective (body (M := M)) := by
     cases j with
     | inl E => exact congrArg Sum.inl (BallImaginaries.underlying_injective he)
     | inr γ =>
+      change BallImaginaries.underlying D = Values.gammaPullback {γ} at he
       obtain ⟨c,hc⟩ := value_surjective γ
       have hr : raw c ∈ Values.gammaPullback {γ} := ⟨raw_rv c,raw_ne_zero c,hc⟩
       have hf := BallImaginaries.underlying_subset_vf D (he.symm ▸ hr)
@@ -99,11 +100,13 @@ theorem body_injective : Function.Injective (body (M := M)) := by
   | inr γ =>
     cases j with
     | inl D =>
+      change Values.gammaPullback {γ} = BallImaginaries.underlying D at he
       obtain ⟨c,hc⟩ := value_surjective γ
       have hr : raw c ∈ Values.gammaPullback {γ} := ⟨raw_rv c,raw_ne_zero c,hc⟩
       have hf := BallImaginaries.underlying_subset_vf D (he ▸ hr)
       exact False.elim (TypedModelMap.not_rv_of_vf hf (raw_rv c))
     | inr δ =>
+      change Values.gammaPullback {γ} = Values.gammaPullback {δ} at he
       obtain ⟨c,hc⟩ := value_surjective γ
       have hr : raw c ∈ Values.gammaPullback {γ} := ⟨raw_rv c,raw_ne_zero c,hc⟩
       have hd : raw c ∈ Values.gammaPullback {δ} := he ▸ hr
@@ -169,22 +172,22 @@ theorem membership_definable (Q : Set M) :
     · left
       refine ⟨ht,?_,?_⟩
       · exact (hc.resolve_right (fun h => h.1 ht)).2
-      · simpa only [U,body,decode,dif_pos ht,Sum.elim_inl] using hx
+      · simpa only [p,presentation,U,body,decode,dif_pos ht,Sum.elim_inl] using hx
     · right
       refine ⟨ht,?_⟩
       have hproper := (hc.resolve_left (fun h => ht h.1)).2
       have hx' : z (.inr 0) ∈ gBody (gVal (z (.inl 0))) := by
-        simpa only [U,body,decode,dif_neg ht,Sum.elim_inr] using hx
+        simpa only [p,presentation,U,body,decode,dif_neg ht,Sum.elim_inr] using hx
       intro j
       fin_cases j
       exact (hmem _ _ hproper).mp hx'
   · rintro ⟨hc,hx⟩
     refine ⟨hc,?_⟩
     rcases hx with ⟨ht,hb,hx⟩ | ⟨ht,hx⟩
-    · simpa only [U,body,decode,dif_pos ht,Sum.elim_inl] using hx
+    · simpa only [p,presentation,U,body,decode,dif_pos ht,Sum.elim_inl] using hx
     · have hproper := (hc.resolve_left (fun h => ht h.1)).2
       have hx' := (hmem _ _ hproper).mpr (hx 0)
-      simpa only [U,body,decode,dif_neg ht,Sum.elim_inr] using hx'
+      simpa only [p,presentation,U,body,decode,dif_neg ht,Sum.elim_inr] using hx'
 
 theorem presentation_definable (Q : Set M) :
     @Presentation.IsDefinable M (Name (M := M)) (Fin 5) presentation

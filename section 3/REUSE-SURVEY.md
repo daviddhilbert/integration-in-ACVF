@@ -179,4 +179,23 @@ with a full invariant first-order relation in all their codes. The module
 proves real-code specialization, parameter monotonicity, Boolean closure,
 and the transfer of finite ball support. Connecting it to combined actual
 Gamma/ball names and to the complete-type family arguments remains work
-in progress. The generic parameter-base and family extensions have compiled locally and passed all 90 current core full-type/axiom checks. The family proofs preserve the original interpreted base in the exceptional sets; real-code specialization is confined to obtaining finite ball support.
+in progress. The generic parameter-base and family extensions have compiled locally and passed all 95 current core full-type/axiom checks. The family proofs preserve the original interpreted base in the exceptional sets; real-code specialization is confined to obtaining finite ball support.
+
+
+## Combined actual parameter presentation
+
+`ParameterPresentation.lean` takes the disjoint sum of the predecessor's
+actual `BallImaginaries.Ball` and `Values.Gamma`. A fifth real coordinate
+selects the ball or value chart. Every valid code is retained. Its equality
+proof uses the already checked ball-membership injection and the full
+Gamma value fibres; the VF/RV sort disjointness distinguishes the two kinds
+of names. The code domain and membership relation use only the original
+normalized LRV definability. This module is undergoing CI checks.
+
+`FullBaseAtomicity.lean` applies the locally checked exact-base family
+argument and actual ACVF C-minimality to these additional imaginary names.
+Its Lemma 3.2 wrapper is written but awaits compilation and its full audit.
+The finite-support semantics and the equivalence for adjoining an additional
+ball name must be reviewed before marking the full paper scope complete.
+The ordinary Gamma-radius and singleton/VF cases have now compiled in CI
+run 42809154329; they still await their fresh full type/axiom audit.

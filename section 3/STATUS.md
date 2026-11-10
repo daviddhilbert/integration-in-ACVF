@@ -16,13 +16,13 @@ occur in their axiom reports. The checked sources contain no `sorry`, `admit`
 or custom axiom declarations. This is a certificate for the components below,
 not 84 numbered paper results. The full C• parameter-base scope remains open.
 
-Continuation: the generic core now has **90 declarations**, all locally
+Continuation: the generic core now has **95 declarations**, all locally
 compiled and type/axiom-audited, including finite-support imaginary parameter
 bases, Boolean and existential closure, and the parametric atomicity argument
 over such bases. `CORE-VERIFICATION.json` binds this local core audit.
-`BallCosetAtomicity.lean` passed the full CI checks above. The named-RV radius
-specialization has compiled in CI; the Gamma-radius and degenerate-ball
-extensions are undergoing compiler checks. They are not yet included in a
+`BallCosetAtomicity.lean` passed the full CI checks above. The named-RV radius, definable-Gamma-radius and degenerate-ball
+extensions have compiled in CI. Their full type/axiom checks and the new
+combined Gamma/ball parameter presentation are still pending. They are not yet included in a
 passed full-revision certificate. The committed full receipt below records
 the preceding 84-declaration revision.
 
