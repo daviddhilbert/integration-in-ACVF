@@ -1,12 +1,12 @@
 {
-  "checked_at_utc": "2026-11-10T15:01:17.118857+00:00",
+  "checked_at_utc": "2026-11-10T15:21:42.810838+00:00",
   "compiler": "Lean (version 4.35.0, x86_64-unknown-linux-gnu, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
   "source_sha256": {
     "section 3/IntegrationSection3/AdjoinParameters.lean": "695c0531cd6d4d95db5eb3ebdbd04a50bc0da34b2d9026bd8af8b08efd34001e",
     "section 3/IntegrationSection3/AtomicRegions.lean": "e52f0843e460df16f268a844551f181ae1df79b6da3ee81b3a443075558f24ac",
     "section 3/IntegrationSection3/Atomicity.lean": "c5330e3a43cdf502a6f714b84094505521e2c41d4dae75beaa74788f70c112fc",
     "section 3/IntegrationSection3/BallSupport.lean": "04fd317ae78ede96aa58ece0bed6ba7fc2c569509ffe4fccc3e5698dd12190fa",
-    "section 3/IntegrationSection3/CodeEquality.lean": "3c7cc07c37cdff025a35df8160003ffd1ef10b32457e351c7f217bf0f57a5728",
+    "section 3/IntegrationSection3/CodeEquality.lean": "3a0a7a6652187abada304a7dc2f4f3496cf19ee6cad541b7c5faf881b25b0b10",
     "section 3/IntegrationSection3/DefinableFamilies.lean": "bc8ff84b48fe1ba86f651f9281949f7963c847b56612ebbedd9892ce7cf41ea9",
     "section 3/IntegrationSection3/HoleFormulas.lean": "0692292ecbea7b4fe7c168672c32b2d7c92251623f6db1b584718bf1db2749c0",
     "section 3/IntegrationSection3/ImaginaryBaseFamilies.lean": "d8dc5412fea68cef7df3ed39fec7c205178c84ca55638f55e952736715431179",
@@ -51,18 +51,20 @@
     "section 3/IntegrationSection3ACVF/GammaCosetGeometry.lean": "28522821fd6b7521d75a0ffb847614fc901970bb338a8334e0fceee6846f125e",
     "section 3/IntegrationSection3ACVF/GammaRadiusAtomicity.lean": "5103bfe4115162c2a664f4d6a4602a5622a25bf20901fb8db36cea41a47cc990",
     "section 3/IntegrationSection3ACVF/Geometry.lean": "cdd6c038a117ce37ac08df33f5f308d1d94d17a3984de7468f2ecd3d4bdcfd1c",
-    "section 3/IntegrationSection3ACVF/Library.lean": "58fbd15e1625f1cf2947829f56533c1774b455e95c9ed2d10414e8dad8bdcbc4",
+    "section 3/IntegrationSection3ACVF/Library.lean": "db5594344a79107edbd804bd5c14fbab29e0787d1a08ade0a37f52c2da7f7271",
     "section 3/IntegrationSection3ACVF/NamedRadiusAtomicity.lean": "c1593a6edbb5e0042d6a1b0e6d38ccda662b6777a5a1a5586283e107b8f69236",
     "section 3/IntegrationSection3ACVF/OpenBallConstancy.lean": "9ee262576c30e1128283c7fd132d45ec5a46f64d1e50ff1af56a71c88847815e",
+    "section 3/IntegrationSection3ACVF/OrdinaryCentreFibres.lean": "bf51b564efe617d6656708199ed7a1f83f5839c8097c8ff2f7ca52baef7c2659",
     "section 3/IntegrationSection3ACVF/PaperBallInvariants.lean": "6949eb56601ba4e411c72829a457ed359da2c1dc52929f858d847464375a0cde",
     "section 3/IntegrationSection3ACVF/PaperBalls.lean": "00ba508d58ea63b0e417a305caa51cb7a4a82ab99b2ea71e654b7c6dcf38feb4",
     "section 3/IntegrationSection3ACVF/ParameterPresentation.lean": "75de8a2bfff00410b00878cf68618d372ba897803d809859ffacd71856709816",
     "section 3/IntegrationSection3ACVF/PuncturedGeometry.lean": "18cc7e98a31e3f262009d7e1d96e40b4553602e6dae8ae4e144ed8ae51989c1d",
+    "section 3/IntegrationSection3ACVF/UniformValuativeCentre.lean": "a1c5d0260c0a79b3cc4d3d3442f7e8c5679855513c4c6a110d0e90a9bb928118",
     "section 3/IntegrationSection3ACVF/ValuativeCentreGeometry.lean": "4a9fef5b3eaaedd9ac6a78a079fb904037efd5209df1d72ef3bbf99086f19c92",
     "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
-    "lakefile.toml": "7fe1d052e9f6c7b742d98804e83aaeab8ec8e1cdd0fb8acd1b695cfe12d8e1af",
+    "lakefile.toml": "adcae1a0418b58d46f66afa04d61572fd37082893223eb08bff2b82375d9f929",
     "lake-manifest.json": "251c835a4f3b9efa7080700dd971fea4821e32fcfe2afbd05f31f99d36e67c84",
-    "section 3/verify.py": "3f062a4c7aad0ec5d15c6ff38b61c9834749232183253d960432cd862a0512e4"
+    "section 3/verify.py": "69bc4966bc948e0ee5c97225707f8ae7b78b1f14bfe79ae0820603f8f413225d"
   },
   "dependencies": {
     "special_transformations": "9cc9760892092dd34cfad4a6dee655843c52f30c",
@@ -1309,6 +1311,14 @@
     },
     {
       "name": "IntegrationInACVF.Section3.ValuationRadius.open_ne_closed",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "name": "IntegrationInACVF.Section3.CodeEquality.imageCodeRelation_definable",
       "axioms": [
         "Classical.choice",
         "Quot.sound",
@@ -2820,12 +2830,92 @@
       ]
     },
     {
+      "name": "IntegrationInACVF.Section3ACVF.OrdinaryCentreFibres.fieldValueEq_definable",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "name": "IntegrationInACVF.Section3ACVF.OrdinaryCentreFibres.fieldValueEq_iff",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "name": "IntegrationInACVF.Section3ACVF.OrdinaryCentreFibres.mem_ordinaryCentreFibre_iff",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "name": "IntegrationInACVF.Section3ACVF.OrdinaryCentreFibres.relation_definable",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "name": "IntegrationInACVF.Section3ACVF.OrdinaryCentreFibres.image_definable",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "name": "IntegrationInACVF.Section3ACVF.OrdinaryCentreFibres.image_finite",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "name": "IntegrationInACVF.Section3ACVF.OrdinaryCentreFibres.parent_test_definable",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "name": "IntegrationInACVF.Section3ACVF.OrdinaryCentreFibres.value_definable",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "name": "IntegrationInACVF.Section3ACVF.UniformValuativeCentre.uniform_centre",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "name": "IntegrationInACVF.Section3ACVF.UniformValuativeCentre.exists_common_centre",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
       "name": "IntegrationInACVF.Section3.ImaginaryFamilies.Presentation.mem_pullback",
       "axioms": []
     }
   ],
-  "audit_source_sha256": "947d2f609b2dc88fdddd7a30770242f4907a87047c753bb3eab6300130f7519c",
-  "audit_log_sha256": "231d5f876f111e84dea657ada3fa3ea01b59b01937df26e7d7c7e3971aefb6b1",
+  "audit_source_sha256": "587c0107567ba3cb571b1bc753283a7356b24818b5f17d81192c5e174cf271e5",
+  "audit_log_sha256": "8a5848d5044a96ee4c426dfc4323728d68745c6a909d7ef6f402cd3a45df7922",
   "scope": "Definition 3.1, interpreted-base calculus and finite laminar punctured decomposition; actual Lemmas 3.2-3.3 over genuine real/Gamma/ball bases, with an original-base definable nontrivial Gamma value explicit for 3.3; Lemma 3.4 at original-base definable Gamma radii, singletons and VF; actual finite disjoint punctured decomposition; finite coset-profile exceptions, Lemma 3.9 and Corollary 3.10 with the sequel open-ball convention and domain graphs; the primitive-type classification of Lemma 3.6 and later section geometry remain open",
   "build_scope": "Incremental Lake Section 3 build plus freshly compiled headline audit"
 }

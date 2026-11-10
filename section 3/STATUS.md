@@ -5,11 +5,11 @@ Proposition 3.24. Its main open-to-open partition theorem is Proposition 3.19.
 
 ## Verified scope
 
-The full project build and **344 Section 3 declaration type/axiom audits
-passed** in [CI run 42839273157](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42839273157)
-at source `f49f163b19d1281f31769954cb04ba37a758ee46` under Lean 4.35.0.
-There are 156 generic declarations and 188 actual ACVF declarations. These
-are component audits, not 344 numbered paper results. Only `propext`,
+The full project build and **355 Section 3 declaration type/axiom audits
+passed** in [CI run 42842714296](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42842714296)
+at source `e483d8ac85b5168c61aa82be9871ab8ce76e7cc6` under Lean 4.35.0.
+There are 157 generic declarations and 198 actual ACVF declarations. These
+are component audits, not 355 numbered paper results. Only `propext`,
 `Classical.choice` and `Quot.sound` occur. The checked sources have no
 placeholders or custom axioms.
 
@@ -67,7 +67,14 @@ placeholders or custom axioms.
   proves radius existence and uniqueness, including singleton and VF cases;
   uniqueness displays `δ > 1`. `ValuativeCentreGeometry` proves centre
   existence on balls and uniqueness on nonempty VF sets. Constancy of
-  these invariants across the positive family remains open.
+  radius across the positive family remains open.
+
+- **Common valuative centre:** `UniformValuativeCentre.exists_common_centre`
+  proves that every canonical positive parent of a definable complete type
+  has the same actual valuative centre, including the infinity case. The
+  full ordinary-RV graph, its finite Gamma image and each occurring ordinary
+  value are definable over the original base. No RV representative or
+  component centre is named there. The empty positive family is covered.
 
 ## Remaining work
 
@@ -77,32 +84,19 @@ image, linearity, open-to-open, component-count and bijection results through
 Proposition 3.24. No such result is counted as proved by a helper that assumes
 its missing geometry. Section 2's Corollary 2.34 remains open separately.
 
-The next targets are invariant radius and valuative-centre graphs, their
-finite images and constancy, then nonmaximal-hole enlargement and the
-multiple-hole contradiction. The canonical support, positive regions and maximal holes are definable over the
+The next targets are the invariant radius graph, its finite image and
+common radius, then nonmaximal-hole enlargement and the multiple-hole
+contradiction. The canonical support, positive regions and maximal holes are definable over the
 original combined base. Individual component definability is not assumed.
-
-## Current continuation
-
-`CodeEquality.imageCodeRelation_definable` adds a free real output to the
-full interpreted code-image formula; its complete type and standard axioms
-passed the local 157-declaration core audit. `OrdinaryCentreFibres.lean`
-implements the full ordinary-RV centre relation, finite original-base
-Gamma images, named parent tests and definability of each occurring ordinary
-value. `UniformValuativeCentre.lean` uses those tests and the checked atomic
-region calculus to prove a common actual centre on the canonical positive
-family, including its empty case. These new actual proofs await full CI.
-The full receipt remains the 344-declaration checkpoint. Radius constancy
-and the primitive hole classification remain open.
 
 ## Verification evidence
 
 `VERIFICATION.json` records compiler, dependency pins, all checked source
-hashes and per-declaration axioms for the 344-declaration checkpoint.
-`CORE-VERIFICATION.json` records the local 157-declaration core continuation. Complete diagnostics, explicit exported
+hashes and per-declaration axioms for the 355-declaration checkpoint.
+`CORE-VERIFICATION.json` retains the local 157-declaration core audit. Complete diagnostics, explicit exported
 definitions/types and
 compact type output are in the linked artifact and
-`.scratch/ci-f49f163-section3/`. Every receipt input hash was compared with
+`.scratch/ci-e483d8a-section3/`. Every receipt input hash was compared with
 the committed source before publication. Dependencies may be reused from
 pinned caches; the full root and new modules were checked by the CI build.
 

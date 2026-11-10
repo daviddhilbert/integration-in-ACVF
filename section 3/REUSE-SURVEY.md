@@ -67,9 +67,9 @@ explicit singleton-open convention is not used as the sequel's predicate.
 ## Verification and next reuse boundary
 
 The full root build, inherited foundation audit, both Section 2 audits and
-344 Section 3 audits passed in [CI run 42839273157](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42839273157)
-at source `f49f163b19d1281f31769954cb04ba37a758ee46`. All 38 newly exported
-types since the 306-declaration checkpoint were reviewed, together with
+355 Section 3 audits passed in [CI run 42842714296](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42842714296)
+at source `e483d8ac85b5168c61aa82be9871ab8ce76e7cc6`. All 11 newly exported
+types since the 344-declaration checkpoint were reviewed, together with
 the actual ball family and original-model/normalized definitions. Every
 receipt input hash matched the committed source. Only propext,
 Classical.choice and Quot.sound occur. The receipts distinguish exact
@@ -116,6 +116,18 @@ pinned predecessor's `Balls.openDisc_value_constant` and
 `closedDisc_value_constant` for centre existence, and proves uniqueness on
 nonempty VF sets. Their full types and standard axioms are checked.
 
-Next come the invariant Gamma graphs, finite images and constancy across
-the positive family, then primitive classification. Later image/open-to-open
-results remain open. None is counted as proved by assuming its geometry.
+`OrdinaryCentreFibres.lean` reuses the pinned
+`GammaParameters.same_scalar_normalize` and `same_scalar_definable` and
+the checked normalized RV-map argument. Its entire ordinary centre graph,
+finite original-base Gamma image, individual occurring values and parent
+tests are checked. `UniformValuativeCentre.lean` combines these tests with
+canonical region atomicity and actual centre uniqueness to obtain a common
+valuative centre, including infinity and an empty positive family. All code
+fibres are retained and the base is unchanged. The new generic free-real-
+output image-code formula is also checked.
+
+Next come the invariant radius graph, finite image and common radius, then
+primitive hole classification. A direct whole-coset proof of Corollary 3.7
+can use the already checked Gamma-atomicity instead of open 3.6. Later
+image/open-to-open results remain open. No result is counted by assuming
+its missing geometry.

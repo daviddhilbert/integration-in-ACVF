@@ -31,8 +31,8 @@ and manual dispatch, with downloadable build and audit evidence.
 The current root imports the predecessor and the new Section 2 and 3 libraries.
 [Section 2](section%202/STATUS.md) records the prerequisite map and Corollary 2.15;
 [Section 3](section%203/STATUS.md) records the exact formalized scope and open work.
-Corollary 2.15 and 344 Section 3 type/axiom audits passed the full project
-build in [CI](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42839273157). Lemmas 3.2–3.3
+Corollary 2.15 and 355 Section 3 type/axiom audits passed the full project
+build in [CI](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42842714296). Lemmas 3.2–3.3
 allow additional genuine Gamma and ball names in their base. Lemma 3.4 is
 checked at every original-base definable Gamma radius, including the singleton
 and whole-field cases. Lemma 3.9 and Corollary 3.10 are checked for every finite
@@ -43,7 +43,8 @@ ACVF(0,0) hypotheses remain explicit where used.
 The finite disjoint punctured decomposition and the original-base definable
 canonical finite ball support, positive-region family and maximal-hole relation
 are checked. The kind tests, common puncture status and actual invariant
-existence/uniqueness are also checked; the primitive-type
+existence/uniqueness are also checked. The canonical positive regions have a
+common valuative centre. The primitive-type
 classification of Lemma 3.6, Lemmas 3.7–3.8, geometric Lemma 3.11 and the later
 open-to-open results remain open. Corollary 2.34 also remains open. The
 accepted nonemptiness correction to Lemma 3.11 is recorded in

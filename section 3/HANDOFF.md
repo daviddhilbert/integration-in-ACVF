@@ -6,12 +6,12 @@ Section 2's Corollary 2.15 is checked, while Corollary 2.34 remains open.
 This section ends at Proposition 3.24.
 
 The full project build, inherited foundation audit, two Section 2 audits and
-344 Section 3 audits passed at source `f49f163b19d1281f31769954cb04ba37a758ee46`
-in [CI run 42839273157](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42839273157).
+355 Section 3 audits passed at source `e483d8ac85b5168c61aa82be9871ab8ce76e7cc6`
+in [CI run 42842714296](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42842714296).
 The complete new types and axioms were reviewed, including the original-model
 carriers and normalized raw definability. All receipt input hashes matched
 the committed source. `VERIFICATION.json` binds this full checkpoint;
-`CORE-VERIFICATION.json` records the local 157-declaration core continuation.
+`CORE-VERIFICATION.json` retains the local 157-declaration core audit.
 
 Checked entry points:
 
@@ -52,10 +52,18 @@ existence/uniqueness, including singleton and VF, with `δ > 1` explicit
 for uniqueness. ValuativeCentreGeometry.lean proves existence on balls and
 uniqueness on nonempty VF sets. These steps are fully checked.
 
-Next: Lemma 3.6's invariant Gamma graphs, finite images and constancy of
-radius and valuative centre across the positive family. Nonmaximal-hole
-enlargement and the integer-translate multiple-hole argument remain open.
-Use only full code preimages over B; no chosen component is assumed B-definable.
+`OrdinaryCentreFibres.lean` and `UniformValuativeCentre.lean` are checked:
+full ordinary-RV centre graph, finite original-base Gamma image, individual
+ordinary values and parent tests, and a common actual centre on all the
+canonical positive parents of a definable complete type (including infinity
+and the empty-family case). This finishes the centre-constancy component
+of 3.6, not the primitive classification.
+
+Next: the corresponding ordinary radius graph, finite image and common
+radius; then nonmaximal-hole enlargement and the multiple-hole argument.
+Corollary 3.7 can also be derived directly from the checked Gamma-atomicity
+and definable whole-coset coverage, avoiding a dependency on open 3.6.
+Use all code preimages over B; no chosen component is assumed B-definable.
 
 For 3.11 retain the accepted explicit `A ≠ ∅`; see PAPER-CORRECTIONS.md.
 Geometric separation and later results through 3.24 are still open.
@@ -64,13 +72,3 @@ Use `lake env python3 'section 3/verify.py' --acvf` for the full current audit.
 Freeze original-model functions, sets and carriers before introducing any
 local normalized structure. No chosen real representative may enter the
 exported imaginary base. Keep scratch work and diagnostics in `.scratch/`.
-
-Current continuation: the generic free-real-output image-code theorem passed
-its full type and standard axioms (157 core total). OrdinaryCentreFibres.lean
-and UniformValuativeCentre.lean implement the full ordinary centre graph,
-finite original-base images, individually definable ordinary values, parent
-tests and common valuative centre on canonical positive regions. They await
-full CI. Detailed radius and centre plans are in .scratch/RadiusFibrePlan.txt
-and .scratch/ValuativeCentrePlan.txt. Next build the ordinary radius graph
-using CodeEquality.imageCodeRelation_definable, then its finite image and
-common radius. The nonmaximal-hole and multiple-hole cuts remain open.
