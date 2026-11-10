@@ -5,56 +5,60 @@ pinned predecessor LANGUAGE-ERRATA.md. Use arXiv:0809.0473v2 through 3.24.
 Continuous work and pushes are authorized; no subagents are authorized.
 HK is background for ideas only, with no citation or unproved input.
 
-The current full local root, foundation/Section 2 and 630 Section 3 audits pass:
-282 generic,348 actual heads. All 129 input hashes match. The previous 600
-complete types are unchanged;30 new types exactly match the individually
-compiled and manually reviewed snapshots. Only the three standard axioms
-occur. See VERIFICATION.json and .scratch/local-closed-image-630/.
+The current full root, inherited QE, Section 2 and 658 Section 3 audits pass
+locally: 287 generic and 371 actual heads. All 143 hashes match. All 630
+prior complete types are unchanged; 28 new types exactly match individually
+compiled and reviewed snapshots. Only the three standard axioms occur.
+See VERIFICATION.json and .scratch/local-rv-map-658/. New CI confirmation
+is pending; compare every full artifact type and source hash before promotion.
 
-Source fe2adfa passed CI 42906974736. All 630 complete CI types exactly match
-reviewed local evidence, all 129 source hashes match, and the audit hashes and
-standard axioms were checked before main promotion. The receipt-only main
-commit records this evidence. Previous 600, 551 and 471 checkpoints are
-historical; do not confuse their evidence scopes.
+The preceding source fe2adfa passed CI 42906974736; all 630 types and 129
+hashes matched local evidence before promotion at receipt c14e6e1. That main
+receipt passed CI 42908115112. Older checkpoints are historical.
 
-Checked numbered scope:3.2,3.3,3.4 at named radii plus singleton/VF,3.6,3.7,
-3.8,3.9,3.10, corrected 3.11, both3.12 consequences,3.13 and 3.14. The 3.14
-statement restricts old imaginary names to Gamma and adds just the one source
-ball name, as required by its parameter condition; arbitrary source radius
-is temporarily adjoined using3.3. Genuine ACVF00 and original-base named
-nontrivial delta remain explicit. No new saturation premise is used.
+Twelve numbered results are checked in precise scope: 3.2, 3.3, 3.4 at
+named radii plus singleton/VF, 3.6, 3.7, 3.8, 3.9, 3.10, corrected 3.11,
+both 3.12 consequences, 3.13 and 3.14. The 3.14 statement keeps only old
+Gamma names and one source ball imaginary. ACVF00 and original-base named
+nontrivial delta remain explicit. Keep the approved R.Nonempty correction.
 
-Nine later proof results remain:3.15–3.19,3.21–3.24. Definition3.20 is not
-counted. The unnamed-radius3.4 extension is still needed for unrestricted3.15.
-Section 2 has2.15 checked and 2.34 open. Keep R.Nonempty in 3.11.
+Nine later proof results remain: 3.15–3.19 and 3.21–3.24. Definition 3.20 is
+not counted. The unnamed-radius 3.4 extension is needed for unrestricted
+3.15 with an ambient complete-type set that need not be definable.
+Section 2 has 2.15 checked with genuine saturation/smallness; 2.34 is open.
 
-New3.14 modules are registered and fully locally checked: generic
-PolynomialSpecialization,FibreEqualityFormulas,BivariateCoordinates; actual
-PolynomialEscape,AtomicPolynomialRoots,BallCentreElimination,
-MultivariatePolynomialSupport,GammaSpecialization,GammaPairFormula,
-PolynomialSeparation,ClosedImageObstruction. Every syntax, coefficient,
-nonzero-specialization and geometric-escape premise has been proved.
-The multivariate support extension derives from the pinned MIT unary module;
-its attribution is retained. The three generic modules use module/public
-imports/expose public section, as required by the generic Library.
+The 14 newly registered modules prove the RV-map step toward 3.16:
+- OpenSubballImages handles arbitrary-radius subballs of a definable atomic
+  ambient set; it does not prove unrestricted 3.15.
+- RVFibreSubballs and RVPairPreservation prove fixed-point RV preservation.
+- PairMapFibres, RVDifferencePairs and RVPairConstancy retain the full
+  original-base graph and prove independence of the source point via 3.9.
+- RVMapRelation proves right uniqueness across arbitrary pairs.
+- PartialInverse and RVInverse derive the inverse graph and atomic open
+  image; RVMapBijection proves reflection of RV equality too.
+- ValuationProgressions, RVIntegerSequences and RVIntegerEquivariance prove
+  equivariance under nonzero natural multiples by strictly small errors.
+- OpenBallRVGeometry supplies constant RV differences on a missing-point ball.
+All 28 full types and their standard axioms were reviewed. No new saturation
+premise, chosen original-base centre, HK citation or unproved input is used.
 
-Extra ignored checked module OpenSubballImages proves open images for
-arbitrary-radius subballs of a definable atomic set. It preserves a full
-partial-domain graph and is useful for 3.16. It does not handle an arbitrary
-undefinable complete-type ambient set, so it is not unrestricted3.15 and
-is outside630. Its complete type and standard axioms were reviewed.
+Next: the slope h(t)/t is constant on each Gamma-value fibre, using integer
+orbits and the pinned rv_value_fibre_finite_or_cofinite theorem. Then descend
+the slope to Gamma and finish 3.16. Corollary 2.15 currently has genuine
+saturation and small-real-base hypotheses: retain them if invoked; do not
+drop them. An elementary-extension transfer or an all-model replacement
+would need proof. The independent unrestricted 3.15 issue remains explicit.
+Ignored RVInputFibre is prepared to realize every RV class of the relevant
+value fibre as a difference in the source ball; inspect its checker status.
 
-Use .scratch/check_actual_draft.py for ignored modules. The overlay now
-prefers fresh canonical artifacts for every registered module except the
-current module under test, and unlinks its own output symlinks before
-compilation. Snapshot inputs must remain unchanged during each check. The
-canonical module-mode artifacts were synchronized after the 630 root build.
-Do not edit compiler inputs during a check. Compile/audit locally before
-pushing; use CI for integration confirmation. No cache/network workaround.
+Use .scratch/check_actual_draft.py for ignored modules. The overlay prefers
+fresh canonical artifacts for registered modules, and unlinks its own output
+symlinks before compilation. Keep inputs unchanged during checks. Compile
+and audit locally before pushing; CI confirms integration.
 
-Pinned Mathlib and the required predecessor closure are fully available;
-do not restart cold source builds. Pins are unchanged. Root/geometry use
-ACVFQE and pinned Sections 3/4; CI also builds the full predecessor.
-Primary workspace: /workspace/integration-in-ACVF, branch
-section-1-3/ordinary-separation. Publication: /workspace/integration-in-ACVF-publish.
-The earlier local branch is preserved at c3c04e9.
+Pinned Mathlib and required predecessor artifacts are fully available;
+do not restart cold builds. Pins are unchanged. Root uses ACVFQE and sequel
+libraries; actual geometry uses pinned Sections 3/4. Primary worktree:
+/workspace/integration-in-ACVF, branch section-1-3/ordinary-separation.
+Publication: /workspace/integration-in-ACVF-publish. Older local branch is
+preserved at c3c04e9. No pull request has been created.

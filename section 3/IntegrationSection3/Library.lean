@@ -58,3 +58,6 @@ public import IntegrationSection3.UniformHullSeparation
 public import IntegrationSection3.PolynomialSpecialization
 public import IntegrationSection3.FibreEqualityFormulas
 public import IntegrationSection3.BivariateCoordinates
+public import IntegrationSection3.PairMapFibres
+public import IntegrationSection3.PartialInverse
+public import IntegrationSection3.ValuationProgressions

@@ -4,20 +4,19 @@ Source: arXiv:0809.0473v2, pp. 7–12, through Proposition 3.24.
 
 ## Verification
 
-The full local root build, inherited QE audit, Section 2 audit and **630
-Section 3 type/axiom audits pass** under pinned Lean 4.35.0: 282 generic and 348
-actual ACVF declarations. These are components, not 630 numbered results.
-All 129 source hashes match. Every prior 600 complete type is unchanged;
-all 30 new types exactly match individually compiled and manually reviewed
+The full local root build, inherited QE audit, Section 2 audit and **658
+Section 3 type/axiom audits pass** under pinned Lean 4.35.0: 287 generic and 371
+actual ACVF declarations. These are components, not 658 numbered results.
+All 143 source hashes match. Every prior 630 complete type is unchanged;
+all 28 new types exactly match individually compiled and manually reviewed
 snapshots. Only `propext`, `Classical.choice` and `Quot.sound` occur.
 
-`VERIFICATION.json` records the local and CI checkpoint; `CORE-VERIFICATION.json`
-selects its 282 generic heads. Local evidence is in `.scratch/local-closed-image-630/`.
-[CI 42906974736](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42906974736)
-passed at proof `fe2adfaadfcfd5594ff069ccae49434d2155adca`. Every complete CI
-type exactly matches the reviewed local type, all 129 source hashes match,
-and the audit source/log hashes and permitted axioms were checked before
-main promotion. The 600-, 551- and 471-head checkpoints remain historical.
+`VERIFICATION.json` records the local checkpoint; `CORE-VERIFICATION.json`
+selects its 287 generic heads. Evidence is in `.scratch/local-rv-map-658/`.
+New CI confirmation is pending. The preceding proof `fe2adfa` passed
+[CI 42906974736](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42906974736),
+with all 630 full types and 129 source hashes matched before main promotion
+at receipt `c14e6e1`. Its main CI 42908115112 also passed.
 
 ## Numbered results
 
@@ -175,3 +174,22 @@ the actual geometry uses the predecessor's pinned Sections 3 and 4 directly.
 CI still builds the full predecessor separately. No dependency pin changed.
 Compile and audit locally before pushing; use CI for integration confirmation.
 HK may supply background proof ideas only: no HK citation or unproved input.
+
+## RV difference maps toward 3.16
+
+The next 28 declarations passed individual and full integration type/axiom
+checks. They prove that an
+injective full-base definable VF map on a definable atomic open ball
+preserves and reflects equality of RV difference classes, even for pairs
+with different base points. Its common RV relation also respects nonzero
+natural-number multiplication. No radius or centre is named in the
+original parameter base, and no saturation premise is used here.
+
+`OpenSubballImages` handles arbitrary-radius subballs of a definable atomic
+ambient set. `RVFibreSubballs`, `RVPairPreservation`, `RVDifferencePairs`
+and `RVPairConstancy` supply the actual subball geometry and full graph.
+`RVMapRelation`, `RVInverse` and `RVMapBijection` establish the common
+single-valued bijection. `ValuationProgressions`, `RVIntegerSequences`
+and `RVIntegerEquivariance` give the integer argument. The full 3.16
+Gamma-linearity conclusion remains open, so the numbered-result count
+is unchanged. Unrestricted 3.15 remains open independently.

@@ -712,6 +712,12 @@ ACVF_DEFINITIONS += [
     'IntegrationInACVF.Section3ACVF.MultivariatePolynomialSupport.term',
     'IntegrationInACVF.Section3ACVF.MultivariatePolynomialSupport.formula',
 ]
+
+HEADLINES += ['PairMapFibres.graph_definable', 'PartialInverse.graph_eq', 'PartialInverse.graph_definable', 'ValuationProgressions.error_lt', 'ValuationProgressions.affine_mem_open']
+ACVF_HEADLINES += ['IntegrationInACVF.Section3ACVF.OpenSubballImages.image_open_of_atomic', 'IntegrationInACVF.Section3ACVF.OpenBallRVGeometry.rv_sub_constant', 'IntegrationInACVF.Section3ACVF.RVFibreSubballs.exists_subball', 'IntegrationInACVF.Section3ACVF.RVDifferencePairs.difference_vf', 'IntegrationInACVF.Section3ACVF.RVDifferencePairs.difference_graph_definable', 'IntegrationInACVF.Section3ACVF.RVDifferencePairs.pair_graph_definable', 'IntegrationInACVF.Section3ACVF.RVPairPreservation.rv_difference', 'IntegrationInACVF.Section3ACVF.RVPairConstancy.graph_eq', 'IntegrationInACVF.Section3ACVF.RVPairConstancy.family_rv', 'IntegrationInACVF.Section3ACVF.RVPairConstancy.constant', 'IntegrationInACVF.Section3ACVF.RVMapRelation.difference_sorted', 'IntegrationInACVF.Section3ACVF.RVMapRelation.same_basepoint', 'IntegrationInACVF.Section3ACVF.RVMapRelation.right_unique', 'IntegrationInACVF.Section3ACVF.RVInverse.inverse_on', 'IntegrationInACVF.Section3ACVF.RVInverse.inverse_right', 'IntegrationInACVF.Section3ACVF.RVInverse.inverse_injOn', 'IntegrationInACVF.Section3ACVF.RVInverse.inverse_graph_definable', 'IntegrationInACVF.Section3ACVF.RVInverse.atomic_open_image', 'IntegrationInACVF.Section3ACVF.RVMapBijection.left_unique', 'IntegrationInACVF.Section3ACVF.RVMapBijection.difference_iff', 'IntegrationInACVF.Section3ACVF.RVIntegerSequences.sequence_rv', 'IntegrationInACVF.Section3ACVF.RVIntegerEquivariance.affine_mem', 'IntegrationInACVF.Section3ACVF.RVIntegerEquivariance.integer_equivariance']
+DEFINITIONS += ['PairMapFibres.family', 'PairMapFibres.graph']
+ACVF_DEFINITIONS += ['IntegrationInACVF.Section3ACVF.RVDifferencePairs.difference', 'IntegrationInACVF.Section3ACVF.RVPairConstancy.family', 'IntegrationInACVF.Section3ACVF.RVInverse.inverse']
+
 ALLOWED = {'propext', 'Classical.choice', 'Quot.sound'}
 
 
@@ -795,7 +801,7 @@ def main():
                          'definable nontrivial Gamma value explicit for 3.3; Lemma 3.4 at original-base '
                          'definable Gamma radii, singletons and VF; Lemmas 3.6, 3.8, corrected 3.11, both consequences of 3.12 and Lemma 3.13 over the full base; Lemma3.14 with only the source ball imaginary and original Gamma names; all with ACVF(0,0) and a definable nontrivial Gamma value explicit; actual finite disjoint punctured '
                          'decomposition; finite coset-profile exceptions, Lemma 3.9 and Corollary 3.10 with the sequel open-ball convention and domain graphs; ' if args.acvf else '')
-                      + 'later section geometry from unrestricted Lemma 3.15 onward remains open'),
+                      + 'RV difference bijection and integer equivariance for atomic open-ball maps are checked; unrestricted Lemma 3.15 and the remaining Gamma-linearity argument from Lemma 3.16 onward remain open'),
             'build_scope': 'Incremental Lake Section 3 build plus freshly compiled headline audit',
         }
         (OUT / 'receipt.json').write_text(json.dumps(receipt, indent=2) + '\n', encoding='utf-8')

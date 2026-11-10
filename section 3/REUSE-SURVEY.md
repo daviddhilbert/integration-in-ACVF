@@ -208,3 +208,34 @@ Every model/characteristic/nontriviality hypothesis is supplied explicitly;
 no HK citation, unproved polynomial-presentation premise, saturation premise
 or new chosen field parameter is used. Full local root and 630 audits pass;
 all 30 new complete types exactly match reviewed individual snapshots.
+
+## RV difference maps and integer equivariance toward 3.16
+
+Dependency pins and licenses are unchanged. The exact checked declarations
+`Balls.rv_sub_constant_openDisc`, `Balls.rvFibre_eq_openDisc`,
+`CanonicalRV.encoded_eq_iff_close`, native ball laminarity and the existing
+compatible-valuation and Gamma-representative APIs supply the geometry.
+The new subball-image theorem derives its conclusion from this sequel's
+checked 3.3, named-radius 3.4 and 3.13; its definable atomic ambient-set
+hypothesis is explicit. It is not the unrestricted 3.15 statement.
+
+Full interpreted-base formulas retain both input/output difference values,
+all original imaginary codes and the exact graph on the source domain.
+The normalized difference term is proved equal to the original RV of a
+VF difference. Checked 3.9 makes its RV-pair family independent of the
+source point. Subball images prove single-valuedness; the transposed
+partial inverse graph and the checked atomic open image prove injectivity
+of that relation. Mathlib's proved `Function.invFunOn` API supplies the
+partial inverse; no inverse definability is assumed.
+
+The integer step uses a new native valuation estimate for sums of strictly
+small errors, the previously checked characteristic-zero valuation of
+nonzero natural numbers, and preservation of open balls under integer
+affine combinations. It proves actual integer equivariance of the common
+RV relation. All full-base, ACVF00 and original-base nontrivial Gamma
+hypotheses remain explicit. No saturation, HK citation or unproved
+linearity premise is introduced. Descent of the slope to Gamma and the
+remaining constant-slope argument are still open.
+
+The full root and 658 local audits pass; all 28 new complete types match
+reviewed individual snapshots, and the 630 earlier types are unchanged.

@@ -31,9 +31,11 @@ and manual dispatch, with downloadable build and audit evidence.
 The current root imports the predecessor and the new Section 2 and 3 libraries.
 [Section 2](section%202/STATUS.md) records the prerequisite map and Corollary 2.15;
 [Section 3](section%203/STATUS.md) records the exact formalized scope and open work.
-The full local project build, inherited QE audit, Section 2 audit and 630
-Section 3 type/axiom audits pass (282 generic, 348 actual ACVF declarations).
-This 630-head checkpoint passed
+The full local project build, inherited QE audit, Section 2 audit and 658
+Section 3 type/axiom audits pass (287 generic, 371 actual ACVF declarations).
+The 28 new RV-map and integer-equivariance components advance 3.16;
+its Gamma-linearity conclusion remains open. New CI confirmation is pending.
+The preceding 630-head checkpoint passed
 [CI](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42906974736),
 with every complete type and source hash matched to reviewed local evidence.
 
