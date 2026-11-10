@@ -239,3 +239,23 @@ remaining constant-slope argument are still open.
 
 The full root and 658 local audits pass; all 28 new complete types match
 reviewed individual snapshots, and the 630 earlier types are unchanged.
+
+## Gamma slope fibres and order, local 679-head checkpoint
+
+Pins and licenses are unchanged. The exact checked
+`AdditiveBalls.affine_rv_injective` supplies injective nonzero-natural orbits
+inside one actual RV value fibre. The exact checked
+`rv_value_fibre_finite_or_cofinite` applies after finite real-code
+specialization and naming a coefficient only within the proof. Infinite
+orbits and coefficient uniqueness prove value-fibre constancy.
+
+The original-base full-code Gamma graph is proved definable, including every
+nonzero RV representative of each Gamma input. The checked
+`GammaRVFamily.finite_projection` supplies finite image with genuine
+`Saturated M kappa`, `aleph0 <= kappa` and `mk B.real < kappa` hypotheses
+explicit. Finite imaginary-code support preserves that smallness bound.
+No saturation premise is introduced into the separate value-fibre constancy
+or strict valuation-order theorems. The latter follow from proved open
+subball images and a new native ultrametric separation bound. All 21 new
+full types match reviewed individual snapshots; all 658 prior types are
+unchanged in the successful full root and 679-declaration local audit.

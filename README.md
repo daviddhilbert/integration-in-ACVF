@@ -31,10 +31,13 @@ and manual dispatch, with downloadable build and audit evidence.
 The current root imports the predecessor and the new Section 2 and 3 libraries.
 [Section 2](section%202/STATUS.md) records the prerequisite map and Corollary 2.15;
 [Section 3](section%203/STATUS.md) records the exact formalized scope and open work.
-The full local project build, inherited QE audit, Section 2 audit and 658
-Section 3 type/axiom audits pass (287 generic, 371 actual ACVF declarations).
-The 28 new RV-map and integer-equivariance components advance 3.16;
-its Gamma-linearity conclusion remains open. This 658-head checkpoint passed
+The full local project build, inherited QE audit, Section 2 audit and 679
+Section 3 type/axiom audits pass (287 generic, 392 actual ACVF declarations).
+The RV coefficient is constant on each value fibre; its Gamma descent has
+finite image with genuine saturation/small-base hypotheses explicit.
+Strict valuation comparisons are preserved. The final 3.16 Gamma-linearity
+conclusion remains open. New CI confirmation is pending. The preceding
+658-head checkpoint passed
 [CI](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42911030261),
 with every complete type and source hash matched to reviewed local evidence.
 

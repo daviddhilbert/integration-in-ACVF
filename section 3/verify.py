@@ -718,6 +718,9 @@ ACVF_HEADLINES += ['IntegrationInACVF.Section3ACVF.OpenSubballImages.image_open_
 DEFINITIONS += ['PairMapFibres.family', 'PairMapFibres.graph']
 ACVF_DEFINITIONS += ['IntegrationInACVF.Section3ACVF.RVDifferencePairs.difference', 'IntegrationInACVF.Section3ACVF.RVPairConstancy.family', 'IntegrationInACVF.Section3ACVF.RVInverse.inverse']
 
+ACVF_HEADLINES += ['IntegrationInACVF.Section3ACVF.RVInputFibre.translate_mem_of_value', 'IntegrationInACVF.Section3ACVF.RVInputFibre.value_fibre_realized', 'IntegrationInACVF.Section3ACVF.RVSlopeGraph.relation_definable', 'IntegrationInACVF.Section3ACVF.RVSlopeGraph.multiply_rv', 'IntegrationInACVF.Section3ACVF.RVSlopeGraph.multiply_map_definable', 'IntegrationInACVF.Section3ACVF.RVSlopeGraph.slopes_definable', 'IntegrationInACVF.Section3ACVF.RVSlopeFibres.slope_of_pair', 'IntegrationInACVF.Section3ACVF.RVSlopeFibres.unique', 'IntegrationInACVF.Section3ACVF.RVIntegerOrbits.nat_value', 'IntegrationInACVF.Section3ACVF.RVIntegerOrbits.orbit_injective', 'IntegrationInACVF.Section3ACVF.RVIntegerOrbits.orbit_value', 'IntegrationInACVF.Section3ACVF.RVSlopeFiniteCofinite.row_definable', 'IntegrationInACVF.Section3ACVF.RVSlopeFiniteCofinite.finite_or_cofinite', 'IntegrationInACVF.Section3ACVF.RVSlopeOrbits.pair_orbit', 'IntegrationInACVF.Section3ACVF.RVSlopeOrbits.infinite', 'IntegrationInACVF.Section3ACVF.RVSlopeConstancy.on_value_fibre', 'IntegrationInACVF.Section3ACVF.RVSlopeGamma.sorted', 'IntegrationInACVF.Section3ACVF.RVSlopeGamma.graph_definable', 'IntegrationInACVF.Section3ACVF.RVSlopeGamma.finite_image', 'IntegrationInACVF.Section3ACVF.OpenBallSeparationGeometry.inside_value_lt_outside', 'IntegrationInACVF.Section3ACVF.InjectiveBallOrder.value_strictMono']
+ACVF_DEFINITIONS += ['IntegrationInACVF.Section3ACVF.RVSlopeGraph.relation', 'IntegrationInACVF.Section3ACVF.RVSlopeGraph.multiply', 'IntegrationInACVF.Section3ACVF.RVSlopeGraph.slopes', 'IntegrationInACVF.Section3ACVF.RVSlopeFiniteCofinite.row', 'IntegrationInACVF.Section3ACVF.RVSlopeGamma.relation']
+
 ALLOWED = {'propext', 'Classical.choice', 'Quot.sound'}
 
 
@@ -801,7 +804,7 @@ def main():
                          'definable nontrivial Gamma value explicit for 3.3; Lemma 3.4 at original-base '
                          'definable Gamma radii, singletons and VF; Lemmas 3.6, 3.8, corrected 3.11, both consequences of 3.12 and Lemma 3.13 over the full base; Lemma3.14 with only the source ball imaginary and original Gamma names; all with ACVF(0,0) and a definable nontrivial Gamma value explicit; actual finite disjoint punctured '
                          'decomposition; finite coset-profile exceptions, Lemma 3.9 and Corollary 3.10 with the sequel open-ball convention and domain graphs; ' if args.acvf else '')
-                      + 'RV difference bijection and integer equivariance for atomic open-ball maps are checked; unrestricted Lemma 3.15 and the remaining Gamma-linearity argument from Lemma 3.16 onward remain open'),
+                      + 'RV difference bijection, integer equivariance, constancy of RV coefficients on value fibres and strict valuation-order preservation for atomic open-ball maps are checked; full-code Gamma slope descent and finite image are checked with genuine saturation and small-real-base hypotheses for finite image; unrestricted Lemma 3.15 and the final Gamma-linearity conclusion of Lemma 3.16 onward remain open'),
             'build_scope': 'Incremental Lake Section 3 build plus freshly compiled headline audit',
         }
         (OUT / 'receipt.json').write_text(json.dumps(receipt, indent=2) + '\n', encoding='utf-8')

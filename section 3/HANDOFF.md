@@ -5,16 +5,16 @@ pinned predecessor LANGUAGE-ERRATA.md. Use arXiv:0809.0473v2 through 3.24.
 Continuous work and pushes are authorized; no subagents are authorized.
 HK is background for ideas only, with no citation or unproved input.
 
-The current full root, inherited QE, Section 2 and 658 Section 3 audits pass
-locally: 287 generic and 371 actual heads. All 143 hashes match. All 630
-prior complete types are unchanged; 28 new types exactly match individually
+The current full root, inherited QE, Section 2 and 679 Section 3 audits pass
+locally: 287 generic and 392 actual heads. All 153 hashes match. All 658
+prior complete types are unchanged; 21 new types exactly match individually
 compiled and reviewed snapshots. Only the three standard axioms occur.
-See VERIFICATION.json and .scratch/local-rv-map-658/.
+See VERIFICATION.json and .scratch/local-slope-679/. New CI confirmation
+is pending; compare all artifact full types and hashes before promotion.
 
-Source 11e05be passed CI 42911030261. Every one of the 658 complete CI types
-exactly matches reviewed local evidence; all 143 source hashes, both audit
-hashes and permitted axioms match. The receipt-only main commit records
-this comparison. Earlier checkpoints remain historical.
+The preceding source 11e05be passed CI 42911030261. All 658 complete types
+and 143 source hashes matched local evidence before promotion at receipt
+7e752ff. Earlier checkpoints remain historical.
 
 Twelve numbered results are checked in precise scope: 3.2, 3.3, 3.4 at
 named radii plus singleton/VF, 3.6, 3.7, 3.8, 3.9, 3.10, corrected 3.11,
@@ -42,14 +42,37 @@ The 14 newly registered modules prove the RV-map step toward 3.16:
 All 28 full types and their standard axioms were reviewed. No new saturation
 premise, chosen original-base centre, HK citation or unproved input is used.
 
-Next: the slope h(t)/t is constant on each Gamma-value fibre, using integer
-orbits and the pinned rv_value_fibre_finite_or_cofinite theorem. Then descend
-the slope to Gamma and finish 3.16. Corollary 2.15 currently has genuine
-saturation and small-real-base hypotheses: retain them if invoked; do not
-drop them. An elementary-extension transfer or an all-model replacement
-would need proof. The independent unrestricted 3.15 issue remains explicit.
-Ignored RVInputFibre is prepared to realize every RV class of the relevant
-value fibre as a difference in the source ball; inspect its checker status.
+The next 10 modules and 21 heads are now fully locally integrated:
+RVInputFibre, RVSlopeGraph, RVSlopeFibres, RVIntegerOrbits,
+RVSlopeFiniteCofinite, RVSlopeOrbits, RVSlopeConstancy, RVSlopeGamma,
+OpenBallSeparationGeometry and InjectiveBallOrder. The slope is proved
+constant on each Gamma value fibre. The descended full-code Gamma relation
+has finite image with genuine saturation, infinite cardinal and small-real-
+base hypotheses explicit. Strict valuation comparisons are preserved using
+actual open subball images, without saturation.
+
+Next: assemble an order isomorphism between Gamma tails above the source
+and image radii, with the finite slope values. Prove that this order
+isomorphism has globally constant multiplicative shift, using definability
+of the slope rows (finite order controllers). Do not assume an Archimedean
+or Dedekind-complete value group: a nonprincipal cut in a non-Archimedean
+group permits locally constant, nonconstant finite shifts abstractly.
+The pinned Section4.GammaOrderControllers and GammaThresholdGeometry give
+finite controllers for genuinely definable Gamma rows; their exact
+hypotheses were inspected. Their use would need the real full-code row
+bridge, obtainable from RVSlopeGamma.graph_definable by finite-code
+specialization and naming the one coefficient inside the proof.
+
+Ignored FiniteControllerLocal.constant_on_tail is being checked. It removes
+all minimal-controller endpoints above a threshold when the row is locally
+constant there, forcing constancy on that tail. Inspect its checker status.
+For local constancy, an order isomorphism of open Gamma tails is continuous
+in the order topology; its quotient by the input is continuous. A continuous
+map into a T1 space with finite range is locally constant: each fibre is the
+complement of the preimage of the finite set of other values. This generic
+Mathlib topology step is not yet implemented. Preserve the genuine
+saturation/smallness hypotheses if using the finite-image result; do not
+silently drop them. The independent unrestricted 3.15 issue remains open.
 
 Use .scratch/check_actual_draft.py for ignored modules. The overlay prefers
 fresh canonical artifacts for registered modules, and unlinks its own output

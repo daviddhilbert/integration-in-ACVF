@@ -4,20 +4,19 @@ Source: arXiv:0809.0473v2, pp. 7–12, through Proposition 3.24.
 
 ## Verification
 
-The full local root build, inherited QE audit, Section 2 audit and **658
-Section 3 type/axiom audits pass** under pinned Lean 4.35.0: 287 generic and 371
-actual ACVF declarations. These are components, not 658 numbered results.
-All 143 source hashes match. Every prior 630 complete type is unchanged;
-all 28 new types exactly match individually compiled and manually reviewed
+The full local root build, inherited QE audit, Section 2 audit and **679
+Section 3 type/axiom audits pass** under pinned Lean 4.35.0: 287 generic and 392
+actual ACVF declarations. These are components, not 679 numbered results.
+All 153 source hashes match. Every prior 658 complete type is unchanged;
+all 21 new types exactly match individually compiled and manually reviewed
 snapshots. Only `propext`, `Classical.choice` and `Quot.sound` occur.
 
-`VERIFICATION.json` records the local and CI checkpoint; `CORE-VERIFICATION.json`
-selects its 287 generic heads. Evidence is in `.scratch/local-rv-map-658/`.
-[CI 42911030261](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42911030261)
-passed at proof `11e05be103d9bf57e37376976147f74b3fd943b1`. Every complete CI
-type exactly matches the reviewed local type, all 143 source hashes match,
-and both audit hashes and the standard axioms were checked before main
-promotion. Earlier checkpoints remain historical.
+`VERIFICATION.json` records the local checkpoint; `CORE-VERIFICATION.json`
+selects its 287 generic heads. Evidence is in `.scratch/local-slope-679/`.
+New CI confirmation is pending. The preceding proof `11e05be` passed
+[CI 42911030261](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42911030261),
+with all 658 full types and 143 source hashes matched before main promotion
+at receipt `7e752ff`. Earlier checkpoints remain historical.
 
 ## Numbered results
 
@@ -194,3 +193,25 @@ single-valued bijection. `ValuationProgressions`, `RVIntegerSequences`
 and `RVIntegerEquivariance` give the integer argument. The full 3.16
 Gamma-linearity conclusion remains open, so the numbered-result count
 is unchanged. Unrestricted 3.15 remains open independently.
+
+## Gamma slope fibres and valuation order toward 3.16
+
+The next 21 components are fully locally integrated. `RVInputFibre` realizes
+all relevant RV classes in the source ball. `RVSlopeGraph` retains the full
+original-base coefficient graph; `RVSlopeFibres` proves coefficients exist
+and are unique. `RVIntegerOrbits` and `RVSlopeOrbits` make every nonempty
+coefficient fibre infinite. `RVSlopeFiniteCofinite` applies the pinned checked
+RV value-fibre dichotomy; `RVSlopeConstancy` proves a coefficient is constant
+on each actual Gamma value fibre, without saturation.
+
+`RVSlopeGamma` descends to a full-code Gamma relation. Its finite-image
+theorem explicitly assumes genuine saturation, an infinite saturation
+cardinal and a small real part of the base, exactly as the checked finite
+projection theorem requires. Finite imaginary support is specialized only
+inside the proof. `OpenBallSeparationGeometry` and `InjectiveBallOrder`
+prove preservation of strict valuation comparisons using actual open
+subball images; this step needs no saturation.
+
+The remaining 3.16 argument must show the Gamma slope is globally constant
+and identify the difference of the source/target radii. No full 3.16 result
+is counted yet. The unrestricted 3.15 issue is unchanged.
