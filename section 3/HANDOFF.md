@@ -6,12 +6,12 @@ Section 2's Corollary 2.15 is checked, while Corollary 2.34 remains open.
 This section ends at Proposition 3.24.
 
 The full project build, inherited foundation audit, two Section 2 audits and
-355 Section 3 audits passed at source `e483d8ac85b5168c61aa82be9871ab8ce76e7cc6`
-in [CI run 42842714296](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42842714296).
+360 Section 3 audits passed at source `2a3b835c341e28f1662441bb84c1f8cda89b5fbe`
+in [CI run 42845510919](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42845510919).
 The complete new types and axioms were reviewed, including the original-model
 carriers and normalized raw definability. All receipt input hashes matched
 the committed source. `VERIFICATION.json` binds this full checkpoint;
-`CORE-VERIFICATION.json` records the local 159-declaration core continuation.
+`CORE-VERIFICATION.json` retains the local 159-declaration core audit.
 
 Checked entry points:
 
@@ -61,8 +61,10 @@ of 3.6, not the primitive classification.
 
 Next: the corresponding ordinary radius graph, finite image and common
 radius; then nonmaximal-hole enlargement and the multiple-hole argument.
-Corollary 3.7 can also be derived directly from the checked Gamma-atomicity
-and definable whole-coset coverage, avoiding a dependency on open 3.6.
+Corollary 3.7 is now checked in SameRadiusCoverage.lean, directly from
+Gamma-atomicity and definable whole-coset coverage, with all ordinary,
+singleton and VF cases. It uses no primitive classification. ACVF(0,0)
+and an original-base definable nontrivial Gamma value remain explicit.
 Use all code preimages over B; no chosen component is assumed B-definable.
 
 For 3.11 retain the accepted explicit `A ≠ ∅`; see PAPER-CORRECTIONS.md.
@@ -72,11 +74,3 @@ Use `lake env python3 'section 3/verify.py' --acvf` for the full current audit.
 Freeze original-model functions, sets and carriers before introducing any
 local normalized structure. No chosen real representative may enter the
 exported imaginary base. Keep scratch work and diagnostics in `.scratch/`.
-
-Current continuation: ClassCoverage.lean passed its two new full types and
-standard axioms (159 core total). SameRadiusCoverage.lean implements the
-direct Corollary 3.7 proof from Gamma-atomicity and definable whole-coset
-coverage, including VF and singleton cases. It awaits full CI. Radius graph
-and common-radius drafts remain in .scratch/OrdinaryRadiusFibres.lean and
-.scratch/UniformRadius.lean, unregistered/unverified. Plans are in
-.scratch/RadiusFibrePlan.txt and .scratch/Corollary37Plan.txt. After this checkpoint, registering the radius continuation adds 15 actual audits.

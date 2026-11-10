@@ -5,11 +5,11 @@ Proposition 3.24. Its main open-to-open partition theorem is Proposition 3.19.
 
 ## Verified scope
 
-The full project build and **355 Section 3 declaration type/axiom audits
-passed** in [CI run 42842714296](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42842714296)
-at source `e483d8ac85b5168c61aa82be9871ab8ce76e7cc6` under Lean 4.35.0.
-There are 157 generic declarations and 198 actual ACVF declarations. These
-are component audits, not 355 numbered paper results. Only `propext`,
+The full project build and **360 Section 3 declaration type/axiom audits
+passed** in [CI run 42845510919](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42845510919)
+at source `2a3b835c341e28f1662441bb84c1f8cda89b5fbe` under Lean 4.35.0.
+There are 159 generic declarations and 201 actual ACVF declarations. These
+are component audits, not 360 numbered paper results. Only `propext`,
 `Classical.choice` and `Quot.sound` occur. The checked sources have no
 placeholders or custom axioms.
 
@@ -76,9 +76,17 @@ placeholders or custom axioms.
   value are definable over the original base. No RV representative or
   component centre is named there. The empty positive family is covered.
 
+- **Corollary 3.7:** `SameRadiusCoverage.corollary_3_7_open` and
+  `corollary_3_7_closed` prove same-radius ball coverage at every VF point
+  of an atomic set, including singleton and VF cases. The ordinary Gamma
+  radius need not be definable over the original base: adjoining it preserves
+  atomicity by checked 3.3, then whole-coset coverage is definable. This
+  direct proof uses no open 3.6 classification. ACVF(0,0), an original-base
+  definable nontrivial Gamma value and `1 < δ` are explicit.
+
 ## Remaining work
 
-Lemma 3.6's canonical primitive classification and Lemmas 3.7–3.8 remain open.
+Lemma 3.6's canonical primitive classification and Lemma 3.8 remain open.
 So do the geometric separation in corrected Lemma 3.11 and the subsequent
 image, linearity, open-to-open, component-count and bijection results through
 Proposition 3.24. No such result is counted as proved by a helper that assumes
@@ -89,26 +97,14 @@ common radius, then nonmaximal-hole enlargement and the multiple-hole
 contradiction. The canonical support, positive regions and maximal holes are definable over the
 original combined base. Individual component definability is not assumed.
 
-## Current continuation
-
-`ClassCoverage.lean` proves original-base definability of the points whose
-whole binary-relation fibre lies in A, and propagation of that property
-across a definable complete type. Both full types and standard axioms passed
-the local 159-declaration core audit. `SameRadiusCoverage.lean` uses the
-checked Gamma-atomicity theorem to implement Corollary 3.7 directly, including
-open/closed ordinary radii, singleton and VF cases. ACVF(0,0), a definable
-nontrivial Gamma value over the original base and `1 < δ` remain explicit.
-This actual continuation awaits full CI; it does not assume open 3.6.
-The full receipt remains the 355-declaration checkpoint.
-
 ## Verification evidence
 
 `VERIFICATION.json` records compiler, dependency pins, all checked source
-hashes and per-declaration axioms for the 355-declaration checkpoint.
-`CORE-VERIFICATION.json` records the local 159-declaration core continuation. Complete diagnostics, explicit exported
+hashes and per-declaration axioms for the 360-declaration checkpoint.
+`CORE-VERIFICATION.json` retains the local 159-declaration core audit. Complete diagnostics, explicit exported
 definitions/types and
 compact type output are in the linked artifact and
-`.scratch/ci-e483d8a-section3/`. Every receipt input hash was compared with
+`.scratch/ci-2a3b835-section3/`. Every receipt input hash was compared with
 the committed source before publication. Dependencies may be reused from
 pinned caches; the full root and new modules were checked by the CI build.
 
