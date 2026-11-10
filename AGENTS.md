@@ -19,3 +19,7 @@ and an axiom audit allowing only propext, Classical.choice and Quot.sound.
 Do not count a theorem assuming an open obligation as a proof of that obligation.
 Record conditional results and coverage precisely. Keep scratch output in
 .scratch/. Publish within the user's authorization.
+
+Citation policy (user clarification, November 10, 2026): citations outside the
+approved list require user approval, except results already formalized.
+Check the existing Lean theorem and its hypotheses before using that exception.

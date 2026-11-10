@@ -1,309 +1,87 @@
-# Reuse survey for the first Section 3 implementation
+# Section 3 reuse survey
 
-Checked 2026-11-09 (America/Los_Angeles).
+Reviewed November 10, 2026 (UTC). Source: arXiv:0809.0473v2, Section 3
+through Proposition 3.24. No OpenMathOS source or proof claim was imported.
 
 ## Fixed inputs
 
-- Paper: arXiv:0809.0473v2, 29 December 2010, Definition 3.1 and the proof of
-  Lemma 3.2; Section 2 supplies the review boundary.
-- Special transformations: `9cc9760892092dd34cfad4a6dee655843c52f30c`.
-- ACVF-QE: `939346b0a99899e22a873479364e3cc5d142731c`, inherited.
-- Mathlib: `56a005855ea17e0b0958f73ec801ae140b0a1679`.
-- Lean: `leanprover/lean4:v4.35.0`.
+| Input | Revision / terms |
+| --- | --- |
+| Special transformations | `9cc9760892092dd34cfad4a6dee655843c52f30c`; MIT |
+| Inherited ACVF-QE | `939346b0a99899e22a873479364e3cc5d142731c`; MIT |
+| Mathlib | `56a005855ea17e0b0958f73ec801ae140b0a1679`; Apache-2.0 |
+| Lean | `leanprover/lean4:v4.35.0` |
 
-No OpenMathOS sources, plans, proof artifacts or claims were imported.
+Read the predecessor's LANGUAGE-ERRATA.md and relevant section status before
+reuse. The corrected common LRV has named RV inversion, one absorbing RV
+element, and the paper's Gamma order reverses Mathlib's valuation order.
+Dependency pins do not discharge open mathematical inputs in legacy modules.
+No new external dependency or toolchain upgrade was introduced. The user's
+citation policy allows already formalized results; unformalized results
+outside the approved list require approval. The Johnson result below is an
+existing proved Lean theorem in the pinned dependency.
 
-## Sources inspected and decisions
+## Reused sources and proved bridges
 
-1. `Mathlib/ModelTheory/Definability.lean`: use `Set.Definable`, `DefinableMap`,
-   parameter monotonicity and projection/preimage closure directly. The new
-   atomicity definitions describe the paper's semantic condition over these
-   genuine first-order predicates. The graph/projection argument for images
-   follows this file's `Set.Definable.preimage_map` construction. Mathlib code
-   is Apache-2.0; its original source and notices remain in the dependency.
-2. `Mathlib/Order/BooleanSubalgebra.lean`: reuse `closure` and
-   `closure_bot_sup_induction` instead of introducing another inductive syntax
-   for finite Boolean combinations. `HasFiniteBallSupport` is a finite support
-   witness, not a replacement ACVF language.
-3. The predecessor's `Section3/Parameters.lean`, `ModelContext.lean`,
-   `BallGeometry.lean`, `BooleanCombinations.lean`, `CMinimal.lean`,
-   `QuotientFamilies.lean`, `FibreDescent.lean` and relevant status/errata.
-   Their parameter, ball, saturation and powerset-family interfaces are the
-   intended ACVF reuse boundary. They do not already define the sequel's
-   atomic subsets. The finite-exception lemma is first proved independently
-   in a generic laminar family; adapting it to `Enc.IsBoolComb` and actual
-   imaginary ball codes is still required.
-4. Repository-wide source searches for `atomic`, `Atomic`, `CompleteType`,
-   `IsBoolComb`, `BallGeometry`, `DefinableMap` and Boolean closures found
-   syntax-level uses of atomic formulas and the above reusable APIs. Those
-   are different from the sequel's atomic definable subsets. Legacy
-   scaffolds with duplicate RV encodings were excluded.
+| Source | Decision and sequel bridge |
+| --- | --- |
+| Mathlib `ModelTheory/Definability.lean` | Use actual `Set.Definable`, definable maps, Boolean operations and quantifier/projection closure. Definition 3.1 is defined over these first-order predicates. |
+| Mathlib `Order/BooleanSubalgebra.lean` | Reuse Boolean closure induction for finite ball support. Support witnesses do not replace the ACVF language. |
+| Predecessor `Section3/GammaBaseTools.lean` | Adapt `promote_definable_tuple_fibre`'s formula-relabeling construction. `ImaginaryParameters` proves finite-support full-preimage bases and exact parameter promotion. |
+| `Parameters`, `SortedBoolean`, `CMinimal`, `RVUnaryLift`, `GammaThresholdGeometry` | Reuse normalized raw/sorted bridges and proved C-minimality. `Geometry.lean` keeps the stronger single-ball valuation conversion and actual laminar geometry. |
+| `ClosedBallCodes`, `ClosedBallQuotient`, `OpenBallCodes`, `GeneralBallCenters`, `GeneralCosetChoice` | Keep the existing quotients by equality of underlying balls. `BallPresentation` supplies full surjective real codes, membership and interpreted equality; `ParameterPresentation` combines actual Gamma and ball names. No centre or radius representative is named. |
+| `Section4/GammaPredicates`, `GammaControllerDefinability`, `GammaOrderControllers`, `GammaFiniteDefinablePoints`, `GammaDefinableClosure`, `FiniteOrderSamples` | `FullGammaSyntax` and `FullGammaPoint` adapt these proofs to the combined base. Real-code specialization obtains a finite controller; its intrinsic minimality recovers definability over the original base. Finite ordered points, multiplication, inverses and unique square roots yield the required definable samples. |
+| `Section3/DefinableCosets.lean` and Mathlib `QuotientAddGroup` | Use the actual additive quotient and its full difference relation. The interpreted range-family construction derives definability by real universal/existential quantifiers, including arbitrary original imaginary names. |
+| Mathlib `Valuation.leAddSubgroup`, `ltAddSubgroup`; predecessor RV normalization/value APIs | `NamedRadiusAtomicity`, `GammaRadiusAtomicity` and `FullGammaRadius` prove the zero-centred subgroup and all translated ball equalities. A Gamma radius is represented by its whole value fibre, not a selected RV lift. |
+| `Section3/AdditiveCosets.lemma_3_18_1`, `BallFibreConstancy` | `FullCosetExceptions` specializes the complete graph and subgroup only to prove finiteness, then retains the original-base statement. Powerset-valued functions are full relations in every finite RV arity. |
+| Mathlib valuation/quotient APIs; predecessor `Average.le_one_natCast`, `Average.nat_unit` | `InfiniteCosets` proves the integer-translate injection into distinct smaller-ball cosets. `GammaCosetGeometry` derives its unit premise from ACVF(0,0) and proves the actual Gamma/valuation membership and intermediate-radius bridges. |
+| Mathlib `Order/Preorder/Finite.lean` | `PuncturedDecomposition` uses finite extrema to replace all proper support balls by maximal disjoint holes. The result is a finite disjoint decomposition, without original-base component definability or primitive classification. |
 
-This initial task adds generic logical and finite-set arguments, rather than
-rebuilding a substantial external mathematical prerequisite. No new external
-dependency or toolchain upgrade was selected. Broader external searches are
-still required if the ACVF imaginary-code bridge needs a new major interface.
-Source inspection and upstream verification reports are distinct from the
-fresh local compiler/axiom evidence recorded by `verify.py`.
+The inherited source and notices remain in the dependencies. The generic
+core is independent of ACVF. Actual wrappers freeze original-model data
+before introducing canonical normalization for first-order definability.
 
-## First-order family argument and ACVF bridge
+## Current mathematical consequences
 
-The unary parameter-promotion proof adapts
-`SpecialTransformations.ModelTheory.promote_definable_tuple_fibre` from
-`Section3/GammaBaseTools.lean`, retaining its formula-relabeling construction.
-The definable exceptional-family proof uses Mathlib projection and Boolean
-closure; it adds no index or support-ball representative to the original base.
-These two new core modules have passed compilation and full type/axiom audits.
+- `AdjoinBall.lemma_3_2`: arbitrary genuine real/Gamma/ball base, with the
+  input-ball name adjoined in the conclusion and nonalgebraicity of the output.
+- `FullGammaAtomicity.lemma_3_3`: every finite Gamma tuple, every finite real
+  output arity, full combined base. The original-base definable nontrivial
+  value and ACVF(0,0) remain explicit.
+- `FullGammaRadius.lemma_3_4`: full combined base, original-base definable
+  ordinary Gamma radii, singleton and VF cases. Ambient complete types need
+  not be definable.
+- `OpenBallConstancy.lemma_3_9_open` and `corollary_3_10_open`: complete graphs
+  on the stated domains, all finite RV output arities, exact sequel open-ball
+  predicate and combined base. The corollary can first adjoin an unnamed
+  subball radius using 3.3. No finite-exception, infinite-class or constancy
+  conclusion is left as an assumed model field.
+- `PaperBalls` encodes Definition 3.5; `PuncturedGeometry` proves the initial
+  finite decomposition step of 3.6. The primitive classification is open.
 
-The checked ACVF bridge adapts the valuation conversion in the predecessor's
-`GammaThresholdGeometry.encodedBall_good`, retaining the stronger single-ball
-property. It uses `ValOneEC.isKBall_subset_or_subset`,
-`EncodedBallGeometry.isBall_subset_vf`,
-`SortedBoolean.definableAt_iff_normalized_raw`, and the proved
-`CMinimal.theorem_2_8_c_minimal`. The full raw definability is interpreted in
-canonical normalization, because arbitrary unsorted totalizations must not
-be mistaken for the sorted language. The predecessor's source and notices
-remain in the pinned dependency. This bridge passed the full project build
-and its full type/axiom audits in CI run 42789563292. The sorted C-minimality
-wrapper is reused directly from `RVUnaryLift.DefinableAt.isBoolComb_balls`.
+The domain wrappers extend a function by the empty set only inside the proof.
+The whole-field open-ball case is vacuous under atomicity, because the
+parameter-free singleton zero separates VF from one. The predecessor's
+explicit singleton-open convention is not used as the sequel's predicate.
 
-For the remaining imaginary interpretation, inspect `ClosedBallCodes`,
-`ClosedBallQuotient`, `OpenBallCodes`, `GeneralBallCenters` and
-`GeneralCosetChoice`. They supply actual quotients by equality of underlying
-balls and define family definability by full real preimages in both charts.
-`GammaParameters` uses the corresponding invariant-preimage convention for
-genuine value-group parameters. These are preferable to naming chosen real
-representatives or introducing an unrelated ACVF language.
+## Verification and next reuse boundary
 
-`ImaginaryFamilies` now supplies the language-generic full-preimage argument.
-Its presentation consists of real code data, a surjective decoding map, and
-separate first-order definability of the domain and interpreted equality.
-Equality can be proved from an injective definable point-membership relation.
-This is an interpretation interface, not an assumed atomicity or algebraicity
-result. Its closure, projection, composition, algebraicity-transfer and
-finite-exception theorems passed the same local compiler/type/axiom checks.
-The actual predecessor ball presentation is now checked over real bases.
-The additional imaginary names in a full C• base remain open.
+The full root build, inherited foundation audit, both Section 2 audits and
+257 Section 3 audits passed in CI run 42825054208 at source
+`2792396a6ad887fd82430fb4f7d1d4cd5371fb74`. All 67 newly exported types since
+the 190-declaration checkpoint were reviewed, together with the explicit
+original-model/normalized definitions. Every receipt input hash matched
+the committed source. Only propext, Classical.choice and Quot.sound occur.
+The receipts distinguish compiler/source identities and incremental builds.
 
-## Lemma 3.3: search beyond the predecessor's Section 3
-
-The pinned predecessor's `Section4/GammaDefinablePoint.lean` already proves
-`SpecialTransformations.Section4.gamma_definable_point` and its finite-tuple
-version. The scalar theorem assumes ACVF(0,0), an actual Gamma value `δ`
-whose singleton is definable over the original real base, and `1 < δ`.
-Every nonempty Gamma-definable set then contains a point with its singleton
-definable over that same base. These are proved from intrinsic finite
-controllers and ordered-group samples; no o-minimality or choice conclusion
-is assumed as a model field.
-
-Reuse this result for the nonempty exceptional Gamma set in Lemma 3.3.
-Related checked interfaces are `Section4/GammaPredicates.lean`,
-`GammaControllerDefinability.lean`, `GammaFiniteDefinablePoints.lean`,
-`GammaDefinableClosure.lean` and `FiniteOrderSamples.lean`.
-For real outputs, the Section 3 `GammaParameters.Relation` API supplies
-complement, intersection, real-coordinate projection and definable-parameter
-elimination. `GammaAtomicity.lean` now proves the real-base case for arbitrary
-finite mixed output arity and every finite Gamma tuple; its five type/axiom
-audits passed in CI run 42789563292. The full C• base containing ball names
-still needs an explicit sequel bridge. Do not rebuild
-the original-base Gamma definable-point theorem or silently drop its named
-nontrivial-value hypothesis.
-
-## Lemma 3.4: additive cosets and interpreted ranges
-
-`DefinableCosets.relation_definable` already proves original-base
-definability of the actual VF difference/coset relation. Its
-`mem_relation` identifies membership with equality in the actual additive
-quotient. Reuse these results and `QuotientAddGroup` rather than introducing
-a new equivalence relation or assuming same-radius ball families definable.
-
-`InterpretedRanges.rangeFamily_definable` derives definability of the family
-of interpreted objects whose underlying sets equal fibres of a definable
-real relation. Equality is a universal real quantifier and range membership
-is an existential real quantifier, both over the original base. This is the
-missing family-construction step for `atomic_below_complete_type`.
-
-`BallCosetAtomicity` applies it to all ball imaginaries that are cosets of an
-actual definable additive subgroup of VF. Disjointness is proved in the
-quotient, and no centre is named. This new instance is awaiting compilation
-and type/axiom checks. To specialize to a ball with a named radius, inspect
-Mathlib's `Valuation.leAddSubgroup` and `Valuation.ltAddSubgroup`, together
-with the predecessor's `RVUnaryLift`, `rv_le_normalize` and RV definability
-APIs. These supply actual zero-centred valuation-ball subgroups; their
-original-base definability and the ball/coset equality still need proof.
-# Named-radius specialization
-
-`NamedRadiusAtomicity.lean` uses the same pinned predecessor revision and
-Mathlib revision listed above. `GammaParameters.raw_le_definable`,
-`rv_le_normalize`, and `DefinableAt.rv_preimage` give the zero-centred
-subgroup's definability over the original base. Mathlib's
-`Valuation.leAddSubgroup` and `Valuation.ltAddSubgroup` supply the actual
-additive subgroups. `CanonicalRV.encodedRv_surjective` supplies a VF lift only
-inside the proof; no chosen VF representative appears in the parameter base.
-The resulting real-base statement covers a nonzero RV radius already in
-the base and both the open and closed inequalities. Full imaginary bases
-and the singleton/whole-field cases are separate follow-up obligations.
-
-The preceding coset module passed the complete root build and 84 Section 3
-headline audits in run 42805178064 at source 19265875181911103ae0c8fabfd03891b3d42d4c.
-The named-radius specialization awaits its own complete build and audit.
-
-`GammaRadiusAtomicity.lean` further reuses the predecessor's
-`Section4/RVValueFibres.lean`: `RVValueDefinable`, `rvValuePullback` and
-`gamma_value_definable`. Quantifying the full value fibre extends the argument
-to every original-base definable Gamma radius. `Values.vrv_le_iff` proves the
-comparison invariant under a change of RV representative. Singleton balls
-use the checked subsingleton argument, and VF uses the full additive
-subgroup. These extensions await compilation and full audits.
-
-## Additional imaginary parameters
-
-The new generic `ImaginaryParameters.lean` follows the finite-support/full-code
-design of the pinned predecessor's `GammaParameters.lean` and
-`GammaSpecialization.lean`. The latter's `GammaBaseCMinimal.lean` provides the
-same proof pattern: choose real codes inside a specialization proof, then
-use C-minimality over that explicitly enlarged real base. No representative
-is inserted into the original definability definition.
-
-The pinned Mathlib `ModelTheory/Quotients.lean` defines quotients of
-structures with a prestructure; it does not supply definability over an
-arbitrary collection of names from an interpreted sort. Searches of the
-predecessor's ball-imaginary sources found no such ball-parameter base.
-GitHub repository searches for “Lean model theory imaginaries” and “Lean
-model theory interpretation” on November 10 returned no candidate project.
-The chosen extension reuses the existing presentations and Mathlib's
-definability operations, rather than adding a second ACVF signature.
-
-`OverBase` explicitly uses a finite subset of the named imaginary elements,
-with a full invariant first-order relation in all their codes. The module
-proves real-code specialization, parameter monotonicity, Boolean closure,
-and the transfer of finite ball support. Connecting it to combined actual
-Gamma/ball names and to the complete-type family arguments remains work
-in progress. The generic parameter-base and family extensions have compiled locally and passed all 98 current core full-type/axiom checks. The family proofs preserve the original interpreted base in the exceptional sets; real-code specialization is confined to obtaining finite ball support.
-
-
-## Combined actual parameter presentation
-
-`ParameterPresentation.lean` takes the disjoint sum of the predecessor's
-actual `BallImaginaries.Ball` and `Values.Gamma`. A fifth real coordinate
-selects the ball or value chart. Every valid code is retained. Its equality
-proof uses the already checked ball-membership injection and the full
-Gamma value fibres; the VF/RV sort disjointness distinguishes the two kinds
-of names. The code domain and membership relation use only the original
-normalized LRV definability. This module is undergoing CI checks.
-
-`FullBaseAtomicity.lean` applies the locally checked exact-base family
-argument and actual ACVF C-minimality to these additional imaginary names.
-Its Lemma 3.2 wrapper is written but awaits compilation and its full audit.
-The finite-support semantics and the equivalence for adjoining an additional
-ball name must be reviewed before marking the full paper scope complete.
-The ordinary Gamma-radius and singleton/VF cases have now compiled in CI
-run 42809154329; they still await their fresh full type/axiom audit.
-
-
-`AdjoinParameters.lean` now proves finite imaginary parameter promotion:
-definability over a base with one name adjoined is equivalent to a full
-invariant family over the original base. The proof separates that name
-from the finite parameter support and moves all its real codes to free
-variables. It also identifies the family atomicity predicate with atomicity
-over the enlarged interpreted base when the parameter and index
-presentations agree. All three declarations passed local full type/axiom
-audits. The remaining actual bridge identifies the separate ball-only
-index presentation with its chart in the combined parameter presentation.
-
-
-## Verified full-base checkpoint
-
-At source a8901fd4a9fac6976dc475506706e85ad3ddb35c, CI run 42812579731
-passed the full root import, the foundation audit, both Section 2 audits,
-and all 145 Section 3 full type/axiom checks. The earlier pending notes
-above are superseded: the named/definable-radius cases, combined parameter
-presentation, parameter-promotion equivalence and actual full-base
-`AdjoinBall.lemma_3_2` are all checked. Complete new exported types and their
-axioms were reviewed, including the normalized structure and the original
-model's actual Gamma/ball carriers. No extra field, representative,
-saturation definition or atomicity assumption was introduced.
-
-For the next Gamma-base extension, the predecessor's intrinsic minimal
-order-controller proof is the reuse boundary. Its finite existence follows
-after real-code specialization; the minimal controller's defining formula
-uses the original set, order and real/Gamma quantifiers. The already proved
-full-base Boolean and quantifier operations can retain this definition over
-the original combined base. Its finite definable points and definable-group
-samples then feed the same `FiniteOrder.nonempty_inter_of_controls` theorem.
-This is planned work, not a claim of the full-base Lemma 3.3.
-
-
-The Gamma continuation uses `FullBaseDefinability.lean` as a small wrapper
-over the proved generic first-order operations. It preserves the original
-model's presentations while fixing raw definability to its normalization.
-The generic finite universal-quantifier closure passed the 99-declaration
-local core audit; the concrete wrappers await their CI build and audit.
-
-
-`FullGammaSyntax.lean` passed the full project build and all 175 current
-audits in CI run 42814520395 (source f5953ae). It retains the predecessor's
-actual `GammaSyntax.Proper` and `decode` functions. The newly adapted
-`FullGammaPoint.lean` uses the intrinsic minimal-controller formula,
-finite ordered-set minima, and the predecessor's finite-order sample
-theorem. Multiplication, inverses and unique square roots are definable
-over the original combined base. Its existence proof specializes real
-codes only to obtain finite thresholds, and then returns to the original
-base for all named points. This new point theorem awaits its own audit.
-
-`ImaginaryTupleAtomicity.lean` uses the already proved interpreted-base
-definability. Its local full type/axiom checks identify unary tuple
-atomicity with the existing unary definition and recover actual Mathlib
-first-order Definition 3.1 over a base with no imaginary names.
-
-
-The Gamma definable-point extension passed CI run 42815859588 at source
-ca354cd: 190 total audits, original-base point conclusion, standard axioms
-only and all input hashes matched. `FullGammaAtomicity.lean` implements the
-one-parameter cutting-set argument and finite induction; it compiled in the
-next run, whose new radius-wrapper errors still block the combined audit.
-
-For the next decomposition step, `PuncturedDecomposition.lean` reuses finite
-poset extrema from pinned Mathlib `Order/Preorder/Finite.lean` (Apache-2.0).
-It proves finite disjoint regions for a laminar finite support and replaces
-all smaller support balls by their maximal pairwise disjoint holes. Its eight
-new full types and standard-axiom records passed the local core audit.
-`PuncturedGeometry.lean` connects this to the predecessor's actual encoded
-ball predicate and to C-minimality after finite-code specialization. The
-chosen pieces are not claimed definable over the original base. Equality of
-primitive radii, valuative centres and kinds remains a separate obligation.
-The source statements were re-read in arXiv:0809.0473v2, pp. 7–8, using the
-available web tool; direct shell access to arXiv is not needed.
-
-
-`FullCosetExceptions.lean` reuses pinned `AdditiveCosets.lemma_3_18_1`,
-retaining the actual additive quotient and complete powerset-valued RV graph.
-The subgroup and graph specialize only for the finite-exception proof;
-no representative is added to the exported base. The generic
-`ProfileAtomicity.lean` makes profile equality and bad-point sets definable
-over that exact base. Its three full types and standard axioms passed the
-local core audit. `FullProfileCosets.lean` connects these steps using a
-parameter-free default VF zero to totalize variables. The infinite-class
-ball geometry remains explicit; this is not yet a proof of Lemma 3.9.
-
-
-`InfiniteCosets.lean` uses pinned Mathlib valuation and additive-quotient
-APIs (Apache-2.0), with a checked integer-translate injection into distinct
-small-ball cosets. Its nonzero-natural-number unit premise is derived in
-`GammaCosetGeometry.valuation_nat_unit` from the predecessor's
-`Average.le_one_natCast` and `Average.nat_unit`. The proper-open-ball
-membership bridge uses the actual Gamma quotient, the predecessor's
-compatible valuation and the already checked Gamma-radius description.
-`OpenBallConstancy.lean` then implements 3.9 and 3.10 without assuming either
-finite exceptions or infinitely many cosets as new mathematical axioms.
-The standing original-base definable nontrivial value and ACVF(0,0) remain
-explicit. These new actual modules are awaiting their CI build and audit.
-
-
-The subsequent domain wrappers use `graphOn A f` and extension by the empty
-set, so only the graph on the paper's stated domain is required. The
-whole-field open-ball case is eliminated by the parameter-free singleton
-zero; `PaperBalls.IsOpenBall` excludes the predecessor's singleton-open
-convention. Definition 3.5 is expressed by common actual-Gamma radius,
-valuative-centre and primitive-kind predicates on the unpunctured parents.
-The primitive decomposition/classification theorem is still open.
+For canonical supports in Lemma 3.6, the next source is pinned ACVF-QE
+`Proofs/JohnsonGeometry.lean`, specifically
+`Johnson.ne_finite_union_of_proper_subballs` (Johnson Lemma 2.3.7).
+It supplies the actual algebraically closed nontrivially valued-field
+non-covering property. Unique finite supports must then be shown definable
+over the original base by an intrinsic fixed-length support formula. Their
+radii, valuative centres, kinds, holes and affine residue-class operations
+need invariant full-code definitions before the primitive classification
+can be counted as proved. The later image and open-to-open geometry remains
+open; neither generic finite decomposition nor legacy volume interfaces
+prove it automatically.
