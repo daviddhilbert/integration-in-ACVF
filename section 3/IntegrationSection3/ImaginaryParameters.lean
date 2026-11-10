@@ -295,6 +295,7 @@ theorem OverBase.empty_iff_real {B : Base M I} {υ : Type w₂} [Finite υ]
     simpa only [hrange,Set.union_empty,he] using hq
   · exact OverBase.of_real
 
+omit [Finite κ] in
 theorem OverBase.forall_block {B : Base M I} {υ : Type w₂} [Finite υ]
     {β : Type w₃} [Finite β] {A : Set (υ ⊕ β → M)}
     (hA : OverBase (L := L) p B A) (hp : B.real.Definable L p.codes) :
@@ -305,6 +306,7 @@ theorem OverBase.forall_block {B : Base M I} {υ : Type w₂} [Finite υ]
   ext z
   simp only [Set.mem_ofPred_eq,Set.mem_compl_iff,not_exists,not_not]
 
+omit [Finite κ] in
 /-- A named imaginary has a definable singleton over the base naming it;
 its full real preimage is used, rather than a selected representative. -/
 theorem OverBase.named_singleton {B : Base M I} (hp : p.IsDefinable L B.real)

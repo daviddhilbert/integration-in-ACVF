@@ -172,22 +172,22 @@ theorem membership_definable (Q : Set M) :
     · left
       refine ⟨ht,?_,?_⟩
       · exact (hc.resolve_right (fun h => h.1 ht)).2
-      · simpa only [p,presentation,U,body,decode,dif_pos ht,Sum.elim_inl] using hx
+      · simpa only [p,presentation,U,body,decode,Function.comp_apply,dite_eq_left ht,Sum.elim_inl,ballTuple,Sum.map_inl,Sum.map_inr,id_eq] using hx
     · right
       refine ⟨ht,?_⟩
       have hproper := (hc.resolve_left (fun h => ht h.1)).2
       have hx' : z (.inr 0) ∈ gBody (gVal (z (.inl 0))) := by
-        simpa only [p,presentation,U,body,decode,dif_neg ht,Sum.elim_inr] using hx
+        simpa only [p,presentation,U,body,decode,Function.comp_apply,dite_eq_right ht,Sum.elim_inr,Sum.elim_inl] using hx
       intro j
       fin_cases j
       exact (hmem _ _ hproper).mp hx'
   · rintro ⟨hc,hx⟩
     refine ⟨hc,?_⟩
     rcases hx with ⟨ht,hb,hx⟩ | ⟨ht,hx⟩
-    · simpa only [p,presentation,U,body,decode,dif_pos ht,Sum.elim_inl] using hx
+    · simpa only [p,presentation,U,body,decode,Function.comp_apply,dite_eq_left ht,Sum.elim_inl,ballTuple,Sum.map_inl,Sum.map_inr,id_eq] using hx
     · have hproper := (hc.resolve_left (fun h => ht h.1)).2
       have hx' := (hmem _ _ hproper).mpr (hx 0)
-      simpa only [p,presentation,U,body,decode,dif_neg ht,Sum.elim_inr] using hx'
+      simpa only [p,presentation,U,body,decode,Function.comp_apply,dite_eq_right ht,Sum.elim_inr,Sum.elim_inl] using hx'
 
 theorem presentation_definable (Q : Set M) :
     @Presentation.IsDefinable M (Name (M := M)) (Fin 5) presentation

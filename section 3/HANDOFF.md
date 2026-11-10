@@ -14,7 +14,7 @@ The coordination root additionally imports IntegrationSection3ACVF.Library
 together with the unchanged pinned Special transformations project.
 The last complete project build and 84 Section 3 audits passed at source
 1926587 in CI run 42805178064. `VERIFICATION.json` binds that full audit.
-The generic core now has 95 locally passed full type/axiom checks, bound by
+The generic core now has 98 locally passed full type/axiom checks, bound by
 `CORE-VERIFICATION.json`. Its additional interpreted-base definitions are in
 `ImaginaryParameters.lean` and `ImaginaryBaseFamilies.lean`; they prove
 finite-support specialization, Boolean and quantifier closure, the
