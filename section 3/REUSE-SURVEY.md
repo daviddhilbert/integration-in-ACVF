@@ -185,6 +185,26 @@ closed-cut traces over an enlarged base and the assembled separation contradicti
 Nonemptiness of R is explicit; both projections are proved onto. No saturation
 is assumed for finite-row uniformity or the geometric contradiction. The
 unnamed target radius is temporarily adjoined using checked3.3. Actual3.12
-and3.13 then follow from separation and the checked3.8 image classification.
+and 3.13 then follow from separation and the checked3.8 image classification.
 All49 complete types match their separately compiled and manually reviewed
-snapshots exactly; the full local root and600-declaration audit pass.
+snapshots exactly; the full local root and 600-declaration audit pass.
+
+
+## Closed-image obstruction3.14, local 630-head checkpoint
+
+Pins and licenses are unchanged. The finite-arity polynomial support proof
+is extended from pinned MIT Section3.PolynomialSupport, with source attribution
+in its header; the existing Section4.MultivariateSyntax interpretation is
+imported. Other syntax reuse includes the proved original-base QF theorem,
+PolynomialZero.zeroSet_parameterField_definable, sorted coefficient-name
+elimination, and the exact ring-term and parameter-field APIs already surveyed.
+
+The new bridges prove all-code elimination of the one source ball name,
+Gamma-only finite specialization without VF-field enlargement, a two-VF QF
+presentation over that field, nonzero specialization on the atomic source,
+and a zero-free product via corrected 3.11. ClosedBallRoots.enlarge and
+polynomial_rv_constant_openDisc supply the checked native closed-ball escape.
+Every model/characteristic/nontriviality hypothesis is supplied explicitly;
+no HK citation, unproved polynomial-presentation premise, saturation premise
+or new chosen field parameter is used. Full local root and 630 audits pass;
+all 30 new complete types exactly match reviewed individual snapshots.

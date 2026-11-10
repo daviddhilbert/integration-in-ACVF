@@ -535,6 +535,40 @@ ACVF_HEADLINES += [
     'IntegrationInACVF.Section3ACVF.OpenImages.body_eq_parent',
     'IntegrationInACVF.Section3ACVF.OpenImages.lemma_3_13',
 ]
+HEADLINES += [
+    'PolynomialSpecialization.finite_zero_specializations',
+    'FibreEqualityFormulas.equalFibres_definable',
+    'FibreEqualityFormulas.compose_definable',
+    'BivariateCoordinates.ne_zero_iff',
+    'BivariateCoordinates.eval_coordinates',
+    'BivariateCoordinates.eval₂_coordinates',
+]
+ACVF_HEADLINES += [
+    'IntegrationInACVF.Section3ACVF.PolynomialEscape.outside_closed',
+    'IntegrationInACVF.Section3ACVF.PolynomialEscape.finite_polynomial_escape',
+    'IntegrationInACVF.Section3ACVF.PolynomialEscape.same_rv_escape',
+    'IntegrationInACVF.Section3ACVF.PolynomialEscape.closed_escape_in_rv_fibre',
+    'IntegrationInACVF.Section3ACVF.AtomicPolynomialRoots.rootSet_definable',
+    'IntegrationInACVF.Section3ACVF.AtomicPolynomialRoots.nonzero_on_complete_type',
+    'IntegrationInACVF.Section3ACVF.AtomicPolynomialRoots.specialization_nonzero_on_complete_type',
+    'IntegrationInACVF.Section3ACVF.AtomicPolynomialRoots.specialization_parameterField',
+    'IntegrationInACVF.Section3ACVF.BallCentreElimination.centres_definable',
+    'IntegrationInACVF.Section3ACVF.BallCentreElimination.graph_definable',
+    'IntegrationInACVF.Section3ACVF.BallCentreElimination.on_coset',
+    'IntegrationInACVF.Section3ACVF.BallCentreElimination.adjoin_elimination',
+    'IntegrationInACVF.Section3ACVF.MultivariatePolynomialSupport.rv_term_eq_of_support',
+    'IntegrationInACVF.Section3ACVF.MultivariatePolynomialSupport.formula_iff_of_support',
+    'IntegrationInACVF.Section3ACVF.GammaSpecialization.specialize',
+    'IntegrationInACVF.Section3ACVF.GammaSpecialization.parameterField_unchanged',
+    'IntegrationInACVF.Section3ACVF.GammaSpecialization.specialize_preserving_field',
+    'IntegrationInACVF.Section3ACVF.GammaPairFormula.presentation',
+    'IntegrationInACVF.Section3ACVF.PolynomialSeparation.open_subset_vf',
+    'IntegrationInACVF.Section3ACVF.PolynomialSeparation.zeroSet_mem_iff',
+    'IntegrationInACVF.Section3ACVF.PolynomialSeparation.nonzero_on_product',
+    'IntegrationInACVF.Section3ACVF.ClosedImageObstruction.with_definable_subgroup',
+    'IntegrationInACVF.Section3ACVF.ClosedImageObstruction.not_closed',
+    'IntegrationInACVF.Section3ACVF.ClosedImageObstruction.lemma_3_14',
+]
 DEFINITIONS = [
     'GeneratesCompleteType', 'IsAtomic', 'Splits',
     'IsLaminar', 'HasFiniteBallSupport',
@@ -667,6 +701,17 @@ ACVF_DEFINITIONS += [
     'IntegrationInACVF.Section3ACVF.MaximalSubballGeometry.classes',
     'IntegrationInACVF.Section3ACVF.Separation.unpunctured',
 ]
+DEFINITIONS += [
+    'PolynomialSpecialization.specialize',
+    'FibreEqualityFormulas.equalFibres',
+    'BivariateCoordinates.equiv',
+]
+ACVF_DEFINITIONS += [
+    'IntegrationInACVF.Section3ACVF.BallCentreElimination.centres',
+    'IntegrationInACVF.Section3ACVF.BallCentreElimination.graph',
+    'IntegrationInACVF.Section3ACVF.MultivariatePolynomialSupport.term',
+    'IntegrationInACVF.Section3ACVF.MultivariatePolynomialSupport.formula',
+]
 ALLOWED = {'propext', 'Classical.choice', 'Quot.sound'}
 
 
@@ -748,9 +793,9 @@ def main():
             'scope': ('Definition 3.1, interpreted-base calculus and finite laminar punctured decomposition; '
                       + ('actual Lemmas 3.2-3.3 over genuine real/Gamma/ball bases, with an original-base '
                          'definable nontrivial Gamma value explicit for 3.3; Lemma 3.4 at original-base '
-                         'definable Gamma radii, singletons and VF; Lemmas 3.6, 3.8, corrected 3.11, both consequences of 3.12 and Lemma 3.13 over the full base with ACVF(0,0) and a definable nontrivial Gamma value explicit; actual finite disjoint punctured '
+                         'definable Gamma radii, singletons and VF; Lemmas 3.6, 3.8, corrected 3.11, both consequences of 3.12 and Lemma 3.13 over the full base; Lemma3.14 with only the source ball imaginary and original Gamma names; all with ACVF(0,0) and a definable nontrivial Gamma value explicit; actual finite disjoint punctured '
                          'decomposition; finite coset-profile exceptions, Lemma 3.9 and Corollary 3.10 with the sequel open-ball convention and domain graphs; ' if args.acvf else '')
-                      + 'later section geometry from Lemma 3.14 onward remains open'),
+                      + 'later section geometry from unrestricted Lemma 3.15 onward remains open'),
             'build_scope': 'Incremental Lake Section 3 build plus freshly compiled headline audit',
         }
         (OUT / 'receipt.json').write_text(json.dumps(receipt, indent=2) + '\n', encoding='utf-8')

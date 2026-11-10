@@ -4,29 +4,25 @@ Source: arXiv:0809.0473v2, pp. 7–12, through Proposition 3.24.
 
 ## Verification
 
-The full local project build, inherited QE audit, Section 2 audit and **600
-Section 3 declaration type/axiom audits pass** under pinned Lean 4.35.0.
-There are 276 generic and 324 actual ACVF heads. These are supporting
-components, not 600 numbered results. Every source hash matches. All551 prior
-complete theorem types are unchanged; all 49 new separation-batch types match
-their individually compiled and manually reviewed snapshots exactly. Only
-`propext`, `Classical.choice` and `Quot.sound` occur.
+The full local root build, inherited QE audit, Section 2 audit and **630
+Section 3 type/axiom audits pass** under pinned Lean 4.35.0: 282 generic and 348
+actual ACVF declarations. These are components, not 630 numbered results.
+All 129 source hashes match. Every prior 600 complete type is unchanged;
+all 30 new types exactly match individually compiled and manually reviewed
+snapshots. Only `propext`, `Classical.choice` and `Quot.sound` occur.
 
-`VERIFICATION.json` records the local 600-head checkpoint. `CORE-VERIFICATION.json`
-selects its 276 generic heads. Complete evidence is in
-`.scratch/local-separation-600/`. The batch also passed
-[CI run42902239726](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42902239726)
-at proof `4eba53c36ff54676bb492a3e40c4d6070628cc66`. All600 complete CI types
-and all118 source hashes match the reviewed local evidence. The previous
-551-head primitive checkpoint passed
-[CI run 42900083681](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42900083681)
-at proof `92f7b0a478d111cde0a23f6b31714abd92f0ed6a`; all 551 complete CI types
-and all 105 source hashes matched the reviewed local evidence before promotion
-to main at receipt commit `b71e2eb18ab68c46e34fecf111f33992c7eda7b6`.
+`VERIFICATION.json` records this local checkpoint; `CORE-VERIFICATION.json`
+selects its 282 generic heads. Evidence is in `.scratch/local-closed-image-630/`.
+New CI confirmation is pending. The preceding 600-head checkpoint passed
+[CI42902239726](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42902239726)
+at proof `4eba53c36ff54676bb492a3e40c4d6070628cc66`, with all complete types
+and 118 hashes matched before main promotion at receipt `3b7c6f1`.
+[Main CI42903650028](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42903650028)
+also passed for that receipt.
 
 ## Numbered results
 
-Eleven numbered Section 3 results are checked in the following precise scope:
+Twelve numbered Section 3 results are checked in the following precise scope:
 
 - **3.2:** `AdjoinBall.lemma_3_2` permits arbitrary real, genuine Gamma and
   ball names. Atomicity is over the original base with the input ball name
@@ -73,6 +69,13 @@ Eleven numbered Section 3 results are checked in the following precise scope:
   image classification and separation. Full partial-domain graphs and the
   unchanged parameter base are used.
 
+- **3.14:** `ClosedImageObstruction.lemma_3_14` proves that an infinite atomic
+  target with one primitive component is not a closed ball when its only ball
+  imaginary is the source open-ball name, and that source is atomic over its
+  name. The original base may contain genuine Gamma names, but no other ball
+  names. The source radius need not be originally named. ACVF(0,0) and the
+  standing named nontrivial value remain explicit; no saturation is assumed.
+
 Section 2's Corollary 2.15 is checked separately, with genuine saturation and
 parameter smallness explicit. Corollary 2.34 remains open.
 
@@ -118,19 +121,36 @@ the cut, without assuming atomicity over that enlarged base.
 
 ## Remaining work
 
-Ten proof results remain,3.14–3.19 and3.21–3.24;3.20 is a definition. They
-comprise five lemmas, one corollary and four propositions. Section 2's2.34 is
-open separately. Lemma3.4 currently covers original-base definable radii plus
-singleton/VF; its unrestricted unnamed-radius extension is also still needed
-for the full3.15 claim. Do not count a named-radius wrapper as unrestricted3.15.
+Nine later proof results remain,3.15–3.19 and 3.21–3.24;3.20 is a definition.
+They comprise four lemmas, one corollary and four propositions. Section 2's 2.34
+is open separately. The unrestricted unnamed-radius extension of 3.4 is also
+still needed for the full3.15 claim. A wrapper for arbitrary-radius subballs
+of a **definable atomic** ambient set is checked separately, but it does not
+replace3.15 for a possibly undefinable complete-type set.
 
-The next target is3.14. Its restriction that only the source ball imaginary
-is needed to define the target must remain explicit. Polynomial escape,
-coefficient-field root avoidance and elimination of a ball name in favour of
-its centres are being connected to parameter-preserving quantifier elimination.
-The finite two-variable polynomial support and Gamma-parameter specialization
-bridges remain to be supplied. No interface assuming those bridges counts
-as a proof of 3.14.
+## The 3.14 coefficient and escape argument
+
+`BallCentreElimination` replaces the source ball name by every one of its real
+centres, while keeping the subgroup definable over the old base. Only actual
+Gamma names remain there. `GammaSpecialization` specializes their finite code
+support using RV representatives and original VF0/1 constants and proves the
+VF parameter field unchanged. `GammaPairFormula` then applies the pinned
+quantifier-elimination theorem to a two-VF-variable formula with coefficients
+in exactly that original parameter field.
+
+`MultivariatePolynomialSupport` extends the pinned MIT unary support argument
+to a finite VF tuple, reusing `Section4.MultivariateSyntax`. Finite polynomial
+support controls truth of every well-sorted quantifier-free formula. Original
+source attribution is retained. `AtomicPolynomialRoots` proves that nonzero
+polynomials cannot specialize identically on the infinite atomic source.
+`PolynomialSeparation` turns any purported zero into a nonempty definable
+relation with finite source rows, contradicting corrected 3.11.
+
+`PolynomialEscape` supplies an outside point with the same RV values for all
+specialized polynomials on the root-free closed target. Truth preservation
+contradicts its defining formula. The source radius is temporarily adjoined
+using3.3; the final statement names no centre or field-radius lift. All these
+steps are proved, not assumed as a polynomial-presentation interface.
 
 The author approved adding **`R.Nonempty`** to printed 3.11, whose empty
 relation is a counterexample. Retain it explicitly; see

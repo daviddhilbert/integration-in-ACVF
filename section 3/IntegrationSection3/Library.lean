@@ -55,3 +55,6 @@ public import IntegrationSection3.CoverRadiusFormulas
 public import IntegrationSection3.RelationProjections
 public import IntegrationSection3.RelativeQuotientCut
 public import IntegrationSection3.UniformHullSeparation
+public import IntegrationSection3.PolynomialSpecialization
+public import IntegrationSection3.FibreEqualityFormulas
+public import IntegrationSection3.BivariateCoordinates
