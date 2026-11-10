@@ -72,4 +72,27 @@ theorem OverBase.forall_finite {τ : Type} [Finite τ] {P : τ → Set (α → M
   letI := CanonicalStructure.normalize (M := M)
   exact ImaginaryParameters.OverBase.forall_finite hP hp
 
+omit [Finite α] in
+theorem OverBase.mono {B' : Base (M := M)} {A : Set (α → M)} (hA : OverBase B A)
+    (hreal : B.real ⊆ B'.real) (himag : B.imaginary ⊆ B'.imaginary) : OverBase B' A := by
+  letI := CanonicalStructure.normalize (M := M)
+  exact ImaginaryParameters.OverBase.mono hA hreal himag
+
+theorem OverBase.preimage_map {A : Set (α → M)} {F : (β → M) → (α → M)}
+    (hA : OverBase B A)
+    (hF : @Set.DefinableMap M LRV (CanonicalStructure.normalize (M := M)) β α B.real F) :
+    OverBase B (F ⁻¹' A) := by
+  letI := CanonicalStructure.normalize (M := M)
+  exact ImaginaryParameters.OverBase.preimage_map hA hF
+
+theorem OverBase.adjoin_iff (i : ParameterPresentation.Name (M := M)) (A : Set (α → M)) :
+    OverBase (B.adjoin i) A ↔
+      ∃ R : ParameterPresentation.Name (M := M) → Set (α → M),
+        OverBase B (ImaginaryParameters.vectorPullback (@ParameterPresentation.presentation M sM hM) R) ∧
+          R i = A := by
+  have hp := ParameterPresentation.presentation_definable (M := M) B.real
+  let p := @ParameterPresentation.presentation M sM hM
+  letI := CanonicalStructure.normalize (M := M)
+  exact ImaginaryParameters.OverBase.adjoin_iff (p := p) (B := B) hp i A
+
 end IntegrationInACVF.Section3ACVF.FullBaseAtomicity

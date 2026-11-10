@@ -182,6 +182,19 @@ ACVF_HEADLINES += [
         'finset_element_definable', 'named_one', 'named_mul', 'named_inv',
         'named_square_root', 'named_samples', 'gamma_definable_point')
 ]
+ACVF_HEADLINES += [
+    'IntegrationInACVF.Section3ACVF.FullBaseAtomicity.OverBase.' + name for name in (
+        'mono', 'preimage_map', 'adjoin_iff')
+]
+ACVF_HEADLINES += [
+    'IntegrationInACVF.Section3ACVF.AdjoinGamma.' + name for name in (
+        'embedCode_compatible', 'embedCode_definable', 'restrict_vector', 'fibre_definable')
+]
+ACVF_HEADLINES += [
+    'IntegrationInACVF.Section3ACVF.FullGammaAtomicity.' + name for name in (
+        'cutParameters_definable', 'lemma_3_3_one', 'lemma_3_3_finset',
+        'lemma_3_3', 'lemma_3_3_unary')
+]
 DEFINITIONS = [
     'GeneratesCompleteType', 'IsAtomic', 'Splits',
     'IsLaminar', 'HasFiniteBallSupport',
@@ -227,6 +240,14 @@ ACVF_DEFINITIONS += [
     'IntegrationInACVF.Section3ACVF.FullGammaSyntax.Definable',
     'IntegrationInACVF.Section3ACVF.FullGammaSyntax.Scalar',
     'IntegrationInACVF.Section3ACVF.FullGammaPoint.Named',
+]
+ACVF_DEFINITIONS += [
+    'IntegrationInACVF.Section3ACVF.AdjoinGamma.' + name for name in (
+        'embedCode', 'vectorPullback')
+]
+ACVF_DEFINITIONS += [
+    'IntegrationInACVF.Section3ACVF.FullGammaAtomicity.' + name for name in (
+        'AtomicTuple', 'cutParameters', 'withGammaFinset', 'withGammaTuple')
 ]
 ALLOWED = {'propext', 'Classical.choice', 'Quot.sound'}
 

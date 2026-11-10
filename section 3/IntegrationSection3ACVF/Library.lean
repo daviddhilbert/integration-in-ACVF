@@ -9,3 +9,5 @@ import IntegrationSection3ACVF.AdjoinBall
 import IntegrationSection3ACVF.FullBaseDefinability
 import IntegrationSection3ACVF.FullGammaSyntax
 import IntegrationSection3ACVF.FullGammaPoint
+import IntegrationSection3ACVF.AdjoinGamma
+import IntegrationSection3ACVF.FullGammaAtomicity
