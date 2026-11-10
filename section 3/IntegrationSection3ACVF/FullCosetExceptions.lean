@@ -8,6 +8,7 @@ set_option backward.isDefEq.respectTransparency false
 
 open Classical FirstOrder FirstOrder.Language
 open SpecialTransformations.Milestone0 SpecialTransformations.Milestone0.LRV
+open SpecialTransformations.Milestone0.Transfer
 open SpecialTransformations.Section3
 open IntegrationInACVF.Section3
 
