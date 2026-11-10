@@ -19,3 +19,4 @@ import IntegrationSection3ACVF.FullProfileCosets
 import IntegrationSection3ACVF.GammaCosetGeometry
 import IntegrationSection3ACVF.OpenBallConstancy
 import IntegrationSection3ACVF.PaperBalls
+import IntegrationSection3ACVF.CanonicalBallSupport

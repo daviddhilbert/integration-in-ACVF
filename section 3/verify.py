@@ -133,6 +133,12 @@ HEADLINES += [
 HEADLINES += [
     'InfiniteCosets.map_nat_difference', 'InfiniteCosets.infinite_cosets_in_open_ball',
 ]
+HEADLINES += [
+    'MinimalBallSupport.' + name for name in (
+        'exists_minimal_support', 'essential', 'region_mem_iff_subset',
+        'strata_points', 'essential_ne_univ', 'region_of_agreement',
+        'minimal_subset_support', 'minimal_unique')
+]
 ACVF_HEADLINES = [
     'IntegrationInACVF.Section3ACVF.' + name for name in (
         'encodedBall_isKBall', 'encodedBalls_laminar', 'support_of_isBoolComb',
@@ -259,6 +265,12 @@ ACVF_HEADLINES += [
     'IntegrationInACVF.Section3ACVF.OpenBallConstancy.corollary_3_10_open',
     'IntegrationInACVF.Section3ACVF.PaperBalls.samePrimitiveType_symm',
 ]
+ACVF_HEADLINES += [
+    'IntegrationInACVF.Section3ACVF.CanonicalBallSupport.' + name for name in (
+        'encodedBall_nonempty', 'encodedBall_isValBall', 'valuation_nontrivial',
+        'encoded_avoids_finite_proper_subballs', 'ballFamily_laminar',
+        'ballFamily_avoids', 'minimal_support_encoded', 'exists_unique_minimal_support')
+]
 DEFINITIONS = [
     'GeneratesCompleteType', 'IsAtomic', 'Splits',
     'IsLaminar', 'HasFiniteBallSupport',
@@ -285,6 +297,10 @@ DEFINITIONS = [
 ]
 DEFINITIONS += ['PuncturedDecomposition.region', 'PuncturedDecomposition.holes']
 DEFINITIONS += ['ProfileAtomicity.graph', 'ProfileAtomicity.sameProfile', 'ProfileAtomicity.badPoints']
+DEFINITIONS += [
+    'MinimalBallSupport.' + name for name in (
+        'Supports', 'IsSupport', 'IsMinimalSupport', 'AvoidsFiniteProperSubballs')
+]
 ACVF_DEFINITIONS = [
     'IntegrationInACVF.Section3ACVF.BallPresentation.' + name
     for name in ('codeDomain', 'decode', 'presentation', 'valuationBalls')
@@ -330,6 +346,7 @@ ACVF_DEFINITIONS += [
         'IsOpenBall', 'IsClosedBall', 'Radius', 'HasRadius', 'HasValuativeCentre',
         'IsThinAnnulus', 'PrimitiveKind', 'HasPrimitiveKind', 'SamePrimitiveType')
 ]
+ACVF_DEFINITIONS += ['IntegrationInACVF.Section3ACVF.CanonicalBallSupport.ballFamily']
 ALLOWED = {'propext', 'Classical.choice', 'Quot.sound'}
 
 

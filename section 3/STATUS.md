@@ -57,12 +57,25 @@ then recover original-base definability from the intrinsic minimal-support
 formula. This must precede the primitive-radius, valuative-centre and hole
 classification arguments. Keep all ball-code preimages invariant.
 
+## Current continuation
+
+`MinimalBallSupport.lean` has passed the local 124-declaration core audit.
+It proves existence and uniqueness of minimal finite supports in a laminar
+family with the explicit finite-proper-subball non-covering property.
+`CanonicalBallSupport.lean` supplies the actual ACVF bridge using the already
+formalized pinned Johnson theorem, with nontriviality derived from a Gamma
+value greater than one. That new actual module is awaiting CI. The next step
+is original-base definability of the unique support; the primitive
+classification is not yet established. `VERIFICATION.json` remains the full
+257-declaration checkpoint, while `CORE-VERIFICATION.json` records the new
+local core and its exact input hashes.
+
 ## Verification evidence
 
 `VERIFICATION.json` records compiler, dependency pins, all checked source
 hashes and per-declaration axioms for the 257-declaration checkpoint.
-`CORE-VERIFICATION.json` retains the corresponding local 116-declaration
-core audit. Complete diagnostics, explicit exported definitions/types and
+The full checkpoint contains 116 generic audits; the current local core
+receipt may include the explicitly described continuation above. Complete diagnostics, explicit exported definitions/types and
 compact type output are in the linked artifact and
 `.scratch/ci-2792396-section3/`. Every receipt input hash was compared with
 the committed source before publication. Dependencies may be reused from

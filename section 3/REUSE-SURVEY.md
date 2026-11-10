@@ -85,3 +85,14 @@ need invariant full-code definitions before the primitive classification
 can be counted as proved. The later image and open-to-open geometry remains
 open; neither generic finite decomposition nor legacy volume interfaces
 prove it automatically.
+
+
+The canonical-support continuation uses `MinimalBallSupport.lean` for the
+finite laminar uniqueness proof. Its eight new complete types and standard
+axioms passed the local 124-declaration core audit. The drafted actual module
+`CanonicalBallSupport.lean` imports the existing Johnson proof, supplies
+IsAlgClosed VF and a nontrivial valuation witness, and transfers between
+encoded real subsets and actual VF valuation balls. A logical raw-universe
+top is added only to apply the generic uniqueness argument; essentiality
+proves it absent from minimal supports. This actual bridge awaits its CI
+build and audit. No unformalized external theorem is used.
