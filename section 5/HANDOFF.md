@@ -1,38 +1,55 @@
 # Section5 continuation
 
-The user explicitly requested uninterrupted work until the whole section
-is done. Do not end at this checkpoint. No subagents are authorized.
+User explicitly requested uninterrupted work until the whole section is done.
+Do not end at this checkpoint. No subagents or external messages authorized.
 
-Lemmas5.1–5.2, Remark5.3 and Definition5.4's actual relative-special
-predicate/factorization are checked. All302 full types/axioms and root/project
-integration pass locally. All227 earlier types are unchanged. See STATUS.md,
-TARGETS.md and VERIFICATION.json for exact scopes. Preserved current receipt:
-`.scratch/section5-302-verified/`. Only publish this verified source identity.
+Lemmas5.1–5.2, Remark5.3 and Definition5.4's actual fibre specialness and
+exact relative-special factorization are checked. The uniform ambient
+original-Gamma relative preparation is now constructed as support toward5.5.
+All392 full types/axioms and root/project integration pass. All302 earlier
+complete types unchanged. See STATUS/TARGETS/VERIFICATION for exact scopes.
+Preserved receipt: `.scratch/section5-392-verified/`.
 
-Latest remote main is a2dd306(227 heads), with successful CI43083073855
-and downloaded artifact13885164055 exactly matching all local types and
-source/dependency/audit hashes. Feature: section-5/contracting-to-rv.
+Remote main/feature before publishing this batch:53b98da(302 heads).
+CI43087844851 succeeded; retained artifact13887054661 exactly matches all302
+local complete types and source/pin/audit hashes, and is promoted to main.
 
-New entry: `special_relativeSpecial_factorization`, for every actual
-SpecialBijection in all finite VF arities. RelativeSpecialChain retains each
-actual map, bijectivity and exact fibrewise specialness. CoordinateCanonical
-adds just the chosen VF RV value; descending-coordinate factors reproduce
-exactly the pinned full canonical map. Focus restriction intersects its locus
-with the fibre hull. CoordinateFibreMap preserves the full original-Gamma
-graph over coordinateGammaBase, which adds only complementary VF coordinates
-and keeps precisely the original Gamma names. See GammaCoordinateFibres.
+`relative_prepare_gamma_relation` constructs a HeadPreparation on the whole
+mixed ambient space over P.real, from genuine saturation, ACVF00, small
+P.real, VFFieldBase P.real and the original-Gamma full relation graph. Its
+actual fibre special chains have legal none-to-canonical boundaries. The
+relation is constant on inverse pieces with the same RV key and fixed
+complementary VF tuple. No Gamma representative or working-code smallness
+is introduced. The construction uses uniformVerticalObstacles and direct
+bounded vertical means/root-count reduction. `RelativeInverseGeometry` and
+`RelativeInverseSlices` derive the affine/ordinary-ball inverse geometry
+from actual unary fibre specials. Do not replace those witnesses by merely
+geometric fields. `SpecialRelativeBoundary` retains alternation on composition.
 
-Next: the uniform relative preparation leading to standard contractions5.5,
-actual ordered contraction/lift data for every VF permutation, general5.6,
-then5.7 and5.8 using actual Section4 cells. Do not replace standard contraction
-by an arbitrary RV map or fibre specialness by UnaryRelative. Do not assume
-arbitrary SpecialBijection composition is alternating. The source sigma/list
-proof in RelativeSpecialChain avoids arity casts while retaining exact labels.
+HeadPreparation and OrderedContractionProgram are actual ordered data, with
+induced contraction/lift squares, suffix retention of original RV labels,
+and injective volume indices. No full standard-contraction existence or
+whole5.5 completion is claimed yet.
 
-Section4 is active in a separate chat; no Section4 branch is published yet.
-Its checked local vertical preparation may help, but its RelativeBijection
-has geometric fields rather than actual fibre-special witnesses, and its
-full canonical steps add RV labels of all VF coordinates. Those must be
-addressed explicitly when reusing it for5.5. No external messages authorized.
+Next: restrict the ambient preparer to arbitrary original-Gamma sets in a
+possibly larger real presentation. A parameter-extension bridge already
+compiles in `.scratch/RelativeSpecialExtension.lean`: extendPointMap,
+coordinateFibre_extendBase_eq and specialRelativeBoundary_extendBase. It is
+NOT in the392-head source inventory; integrate only after this proof batch
+is published, then audit it with the next batch. Equality of fibre DefSets
+across base extension is definitionally rfl (proof irrelevance).
 
-The detailed running record is `.scratch/SECTION5-ACTIVE-PLAN.md`.
+Then prove actual relative-special restriction with pinned
+SpecialBijection.restrict_at on each fibre; membership constancy gives the
+restricted image HeadSaturated. Retain original-Gamma full graphs and use
+headKey images to recurse in VF arity. Finish permutation orders, the full
+natural lift/special witness, general5.6 and actual2-cell5.7–5.8.
+
+Important: the pinned full canonical adds all VF RV labels, whereas a
+one-coordinate canonical adds one. RV label order and the paper's first-n
+volume convention must be bridged explicitly. Do not quietly drop the full
+special-lift assertion or call an arbitrary RV-valued map a standard
+contraction. Section4 is active separately, with no published branch yet.
+No unchecked cell theorem has been imported.
+
+Detailed running record: `.scratch/SECTION5-ACTIVE-PLAN.md`.

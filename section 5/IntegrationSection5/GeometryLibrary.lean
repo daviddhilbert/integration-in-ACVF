@@ -23,3 +23,5 @@ import IntegrationSection5.PreparedCoordinatePartition
 import IntegrationSection5.UnaryRVCategory
 import IntegrationSection5.RelativeSpecialFactorization
 import IntegrationSection5.GammaCoordinateFibres
+import IntegrationSection5.RelativeGammaPreparation
+import IntegrationSection5.OrderedContractionProgram

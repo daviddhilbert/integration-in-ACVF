@@ -2,8 +2,8 @@
 
 **Lemmas 5.1–5.2, Remark 5.3 and the definition/factorization part of 5.4 are locally checked** in the recorded original
 real/Gamma base scope. The full Section5 is still in progress. The current
-302-declaration full type/axiom audit passes with only propext,
-Classical.choice and Quot.sound. All227 prior complete types are unchanged.
+392-declaration full type/axiom audit passes with only propext,
+Classical.choice and Quot.sound. All302 prior complete types are unchanged.
 The root build and full project audits pass for foundation and Sections2,3,5;
 Sections4,6,7 have no local verifiers and are skipped.
 
@@ -59,25 +59,45 @@ The original-Gamma fibre-set, full-map and focus graphs are proved in
 `GammaCoordinateFibres`. This batch needs only ACVF and the actual given
 maps/foci, with no saturation or smallness premise.
 
-Next: uniform coordinate preparation and standard contractions(5.5), general5.6 and
+Uniform relative preparation of an ambient original-Gamma relation is now
+constructed by `relative_prepare_gamma_relation`. It requires genuine
+saturation, ACVF00, small P.real and VFFieldBase P.real, and returns an actual
+head preparation over P.real with fibre-special chains and explicit legal
+alternation. No Gamma representatives or smallness of a working code set
+are introduced. The real-RV producer `relative_prepare_realRV` derives its
+finite obstacles from saturation; bounded finite-root means and strict root
+reduction construct the maps. Inverse affine and ordinary-ball slice
+geometry come from actual unary fibre special witnesses.
+
+`HeadPreparation` and `OrderedContractionProgram` retain actual successive
+coordinate maps and their induced contractions. The one-coordinate lift
+square, suffix preservation of old RV labels and the injective volume
+coordinate index are proved. These data do not assert existence of a full
+standard contraction of an arbitrary source.
+
+Next: restriction of ambient preparations to arbitrary original-Gamma sets,
+ordered standard contractions and their full special lift(5.5), general5.6 and
 2-cell results5.7–5.8 remain open. An arbitrary RV-valued map is not a
 standard contraction; an RV-key bijection alone does not prove5.3.
 
-Local evidence: `.scratch/section5-302-verified/`, complete types and exact
-source/pin/audit hashes in VERIFICATION.json, and the relative-special root
-and project verification logs. All302 type/axiom audits pass. The root build
-completed10286 jobs; project audits pass for foundation and Sections2,3,5.
-Sections4,6,7 have no local verifiers in this checkout and are skipped.
+Local evidence: all392 full type/axiom audits pass, with all302 prior types
+unchanged. The90 new types have also been manually reviewed in a747-line
+readable export with proofs and deep terms enabled, without omitted terms.
+The root build completed10302 jobs. Full project verification passes for
+foundation and Sections2,3,5, with4,6,7 skipped(no local verifiers). The
+preserved receipt is `.scratch/section5-392-verified/`; exact source, type,
+dependency and integration hashes are recorded in VERIFICATION.json.
 
 Published verified checkpoints: f3bd053(121 heads),2428bd0(161),
-9426f7e(197, full5.2),a2dd306(227, Remark5.3). The latter passed
-CI43083073855; downloaded artifact13885164055 matches all227 complete
-local types and all source/dependency/audit hashes exactly. It is on main.
-The302-head definition/factorization batch has passed local integration;
-remote CI confirmation remains a separate publication step.
+9426f7e(197, full5.2),a2dd306(227, Remark5.3),53b98da(302, actual5.4
+fibre specialness and exact factorization). The latter passed CI43087844851;
+downloaded artifact13887054661 matches all302 complete types and every
+source/dependency/audit hash exactly. It is on main.
 
 No Section5 result is assumed as a prerequisite of itself. No HK result,
 referee assertion or new external citation is a proof input. The5.2 proof
 follows the paper's partition-and-matching argument. Remark5.3 uses the
-verified replacement argument in PROOF-WRITEUP.md. The5.4 fibre and
-canonical-coordinate bookkeeping follows the paper's stated construction.
+verified replacement argument in PROOF-WRITEUP.md. The uniform relative
+preparation expands the checked finite-root argument underlying the paper's
+cited preparation theorem; it is not yet classified as a different proof of
+a completed numbered target.

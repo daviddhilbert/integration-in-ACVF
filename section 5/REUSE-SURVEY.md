@@ -147,3 +147,26 @@ exact RV-label order of the finite one-coordinate canonical factorization.
 No additional mathematical theorem, citation or choice principle is used.
 The local302-head section build/type/axiom audit, root build and full project
 audits pass. Exact evidence and limitations are in VERIFICATION.json.
+
+## Genuine uniform relative preparation
+
+At the same pinned predecessor revision, RootFamily.focus supplies an actual
+unary focus after restriction of each VerticalRootFamily to a coordinate
+fibre. VerticalRootFamily.meanMap supplies uniform real definability;
+finite_mean_child_bound proves the strict child-root bound. The local map
+uses one-coordinate canonical steps and keeps every complementary VF
+coordinate fixed. SpecialRelativeBoundary tracks actual fibre-chain
+alternation through the finite induction.
+
+The ordinary-ball inverse-slice proof and zero-obstacle relation argument
+are adapted, with attribution in the sources, from checked
+Section5.VerticalConstruction and Section5.Assembly. Their previous
+compatible-global-chain inputs are replaced here by geometry proved from
+actual unary fibre specials. uniformVerticalObstacles supplies the genuine
+saturation/finite-root input; gammaPolynomialSupportInput_of_fieldBase keeps
+coefficients in P.real. No field storing preparation existence, compactness
+conclusion, saturation substitute or original-Gamma representative is used.
+The separate Section4 chat's vertical work was inspected for comparison;
+its geometric RelativeBijection structure was not imported as fibrewise
+specialness. All392 local full type/axiom audits pass; integration evidence
+and remaining5.5 obligations are recorded separately.
