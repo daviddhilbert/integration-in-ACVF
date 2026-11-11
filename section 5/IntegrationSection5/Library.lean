@@ -3,3 +3,4 @@ import IntegrationSection5.GammaPreparation
 import IntegrationSection5.GammaMapPresentation
 import IntegrationSection5.QuotientBijection
 import IntegrationSection5.RelativelyUnary
+import IntegrationSection5.GeometryLibrary
