@@ -31,26 +31,34 @@ and manual dispatch, with downloadable build and audit evidence.
 The current root imports the predecessor and the new Section 2 and 3 libraries.
 [Section 2](section%202/STATUS.md) records the prerequisite map and Corollary 2.15;
 [Section 3](section%203/STATUS.md) records the exact formalized scope and open work.
-The full local project build, inherited QE audit, Section 2 audit and 871
-Section 3 type/axiom audits pass (323 generic, 548 actual-namespace heads).
-Lemma 3.18 is checked, and unnamed-radius open-ball 3.4 and 3.15 are checked
-over real/Gamma bases, including possibly undefinable complete types.
-Supporting 3.22 proofs now cover residue conservation, actual ball and hole
-coordinates, their full LRV graphs and preservation of maximal open classes.
-Finite-family coordinate assembly and final graph application remain open.
-All 871 complete types and 230 source hashes from
-[CI](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42956568397)
-match reviewed local evidence; only the standard Lean axioms occur.
+The full local root build, inherited QE audit, Section 2 audit and 914
+Section 3 type/axiom audits pass: 328 generic and 586 actual heads.
+All 244 source hashes match; all 871 prior complete types are unchanged,
+and all 43 new complete types exactly match individually reviewed audits.
+Only propext, Classical.choice and Quot.sound occur. Evidence is in
+.scratch/local-thin-conservation-914/ and VERIFICATION.json.
+New CI confirmation is pending. Source 83b74b5 passed
+[CI 42956568397](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42956568397);
+all 871 complete types and 230 hashes matched before main receipt 1a071cc.
+
+Lemma 3.22 is complete in ThinFamilyConservation.lemma_3_22 over the full
+original real/Gamma/ball base. Finite actual thin families with pairwise
+disjoint bodies, the original-base full partial VF graph, actual BijOn,
+actual OpenToOpen and a genuine nontrivial Gamma value are the inputs.
+Both original component counts and sums of actual hole cardinalities
+are equal. No canonical-model restriction, saturation, ACVF00 or originally
+named charts, centres, radii or tags occur in the final theorem.
 
 Checked Section 3 results are 3.2, 3.3, 3.4 at original-base definable radii
 plus singleton/VF cases, 3.6, 3.7, 3.8, 3.9, 3.10, corrected 3.11, 3.12,
-3.13, 3.14, 3.16, 3.17 and 3.18 in the stated saturation/small-base scope. Full real,
+3.13, 3.14, 3.16, 3.17, 3.18 and 3.22. Linearity results retain their stated
+saturation/small-base scope. Full real,
 Gamma and ball bases are retained where permitted.
 Lemma 3.14 keeps its restriction to the one source ball imaginary plus old
 Gamma names. ACVF(0,0) and an original-base definable nontrivial Gamma value
 remain explicit where used. See the section status for exact statements.
 
-Six Section 3 results remain open: 3.15, 3.19 and 3.21–3.24; 3.20 is a definition.
+Five Section 3 results remain open: 3.15, 3.19, 3.21, 3.23 and 3.24; 3.20 is a definition.
 The extension of 3.4 and 3.15 with old ball parameters remains open; the
 real/Gamma-base case now handles arbitrary open-ball radii.
 Section 2's 2.15 is checked and 2.34 remains open. Retain the author-approved

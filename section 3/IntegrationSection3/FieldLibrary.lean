@@ -17,5 +17,7 @@ public import IntegrationSection3.AffineResidueChart
 
 public import IntegrationSection3.SurjectiveQuotientMap
 
+public import IntegrationSection3.FiniteTaggedHoles
+
 /-! Pure-field graph and conservation results, kept separate so their additions
 do not rebuild the valuation-ball geometry entry point. -/

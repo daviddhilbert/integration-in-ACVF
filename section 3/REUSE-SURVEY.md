@@ -429,3 +429,15 @@ proper-subball non-covering is the already formalized pinned theorem,
 not an unproved outside citation. Open-to-open kernel preservation and
 the exact existential graph of the induced quotient are proved, with
 finite-family coordinate assembly still a separate obligation.
+
+## Complete 3.22 and general-model transport
+
+Pins and licenses unchanged. Exact predecessor ball-set normalization,
+Gamma code and definability specialization types were inspected. All43
+new full types and coordinate definitions, including Chart fields, were
+reviewed. Explicit original versus normalized arguments in openness,
+nontrivial Gamma and finite-hole sums are distinct; compact display does
+not identify their interpretations. All871 prior types unchanged,43new
+types exactly match individual reviewed snapshots,244hashes match in the
+fresh914-head local audit; only standard axioms. Every quotient, graph,
+conservation and normalization bridge for full3.22 is proved.
