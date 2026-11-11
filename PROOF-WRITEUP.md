@@ -43,5 +43,5 @@ predicate,real-label promotion with invariant code hulls,and full-graph
 gluing explicit. Simultaneous Boolean refinement replaces iterative pair
 refinement,but does not constitute a substantially different mathematical
 proof. No standalone replacement writeup is currently required for3.21.
-Local1042-head audit passed;CI pending. The3.4 and3.18 replacement entries
+Local1042-head audit and CI42974291389 passed; exact full type/source/audit hashes matched. The3.4 and3.18 replacement entries
 remain relevant for the eventual whole-paper writeup.
