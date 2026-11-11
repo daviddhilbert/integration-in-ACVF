@@ -4,20 +4,19 @@ Source: arXiv:0809.0473v2, pp. 7–12, through Proposition 3.24.
 
 ## Verification
 
-The full local root build, inherited QE audit, Section 2 audit and **794
+The full local root build, inherited QE audit, Section 2 audit and **805
 Section 3 type/axiom audits pass** under pinned Lean 4.35.0: 289 generic and
-505 actual-namespace declarations. These are components, not numbered results.
-All 201 source hashes match. Every prior 751 complete type is unchanged;
-all 43 new types exactly match individually compiled and manually reviewed
+516 actual-namespace declarations. These are components, not numbered results.
+All 205 source hashes match. Every prior 794 complete type is unchanged;
+all 11 new types exactly match individually compiled and manually reviewed
 snapshots. Only `propext`, `Classical.choice` and `Quot.sound` occur.
 
 `VERIFICATION.json` records the local checkpoint; `CORE-VERIFICATION.json`
-selects its 289 generic heads. Evidence is in `.scratch/local-rv-linear-794/`.
-Source `276a104` passed [CI 42947193955](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42947193955).
-All 794 complete types exactly match the reviewed local audit; all 201
-source hashes and both audit hashes match. This receipt promotes that
-verified checkpoint to main. The preceding main receipt `d234359` passed
-CI 42941390575.
+selects its 289 generic heads. Evidence is in `.scratch/local-complete-type-805/`.
+New CI confirmation is pending. The preceding source `276a104` passed
+[CI 42947193955](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42947193955),
+with all 794 complete types and 201 source hashes matched before main
+promotion at receipt `41eb7de`.
 
 ## Numbered results
 
@@ -32,7 +31,8 @@ Fifteen numbered Section 3 results are checked in the following precise scope:
 - **3.4:** `FullGammaRadius.lemma_3_4` proves ball atomicity at original-base
   definable Gamma radii, and for singletons and VF. The ambient complete type
   need not be definable. Only the ball name is adjoined. An extension to
-  unrestricted unnamed radii is not claimed.
+  unnamed open-ball radii over real/Gamma bases is now checked as described
+  below; the extension with old ball parameters remains open.
 - **3.6:** `PrimitiveDecomposition.lemma_3_6` decomposes an atomic VF set into
   finitely many nonempty pairwise disjoint primitive bodies, all of the same
   primitive type. Each is an open ball, closed ball or thin annulus, with
@@ -157,8 +157,9 @@ the cut, without assuming atomicity over that enlarged base.
 
 Six proof results remain: 3.15, 3.19 and 3.21–3.24; 3.20 is a definition.
 They comprise two lemmas and four propositions. Section 2's 2.34
-is open separately. The unrestricted unnamed-radius extension of 3.4 is also
-still needed for the full3.15 claim. A wrapper for arbitrary-radius subballs
+is open separately. The extension of 3.4 and 3.15 with old ball parameters remains open.
+Arbitrary open-ball radii over real/Gamma bases are now checked, including
+a possibly undefinable complete-type ambient. A wrapper for arbitrary-radius subballs
 of a **definable atomic** ambient set is checked separately, but it does not
 replace3.15 for a possibly undefinable complete-type set.
 
@@ -350,3 +351,31 @@ printed endpoint issue is documented in
 [PROOF-OBLIGATIONS.md](PROOF-OBLIGATIONS.md); that inference is not used.
 The mathematical replacement is tracked for the author's requested final
 writeup in `../PROOF-WRITEUP.md`.
+
+## Unnamed radii and possibly undefinable complete types
+
+`CompleteTypeRVProfiles` gives a QF presentation for every real/Gamma-base
+RV relation with VF coefficients in exactly the original real parameter
+field. A finite original-base definable polynomial obstacle set controls
+all RV tuples simultaneously. An infinite complete-type ambient excludes
+this finite set, so the relation is constant on every open ball it contains.
+The ambient complete type is never assumed definable.
+
+`SelfCentredBallProfiles` replaces the centre in a named ball's code by the
+point being tested, retaining its radius as an RV variable. All radius lifts
+are quantified, and native normalization and quotient equality are proved.
+The profile has just one VF variable; the preceding obstacle argument
+therefore applies without naming the ball radius in the original base.
+
+`OpenCompleteTypeAtomicity.lemma_3_4_open_gamma_base` concludes actual
+atomicity over the original base plus the one ball name. It has no saturation
+or original named-radius premise. `CompleteTypeOpenImages.lemma_3_15_gamma_base`
+then applies checked 3.13 and rules out a constant image by injectivity.
+It permits a graph on any definable larger domain containing the complete
+type. ACVF00 and the standing original-base named nontrivial Gamma value
+are explicit. Its whole-VF case is excluded by the parameter-free zero.
+
+The original base in these new conclusions may contain arbitrary real and
+Gamma parameters, but no old ball parameters. That restriction is explicit
+in every relevant exported type. Thus unrestricted 3.15 remains on the six
+remaining-result list. No unproved full-base extension is assumed or counted.

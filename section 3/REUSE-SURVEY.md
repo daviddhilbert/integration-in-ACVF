@@ -57,7 +57,7 @@ before introducing canonical normalization for first-order definability.
   subball radius using 3.3. No finite-exception, infinite-class or constancy
   conclusion is left as an assumed model field.
 - `PaperBalls` encodes Definition 3.5; `PuncturedGeometry` proves the initial
-  finite decomposition step of 3.6. The primitive classification is open.
+  finite decomposition step of 3.6. The primitive classification is now checked; see STATUS.md for the subsequent proof chain.
 
 The domain wrappers extend a function by the empty set only inside the proof.
 The whole-field open-ball case is vacuous under atomicity, because the
@@ -350,3 +350,23 @@ atomic after naming its centre, slope lift and image of centre. Every final
 hypothesis and actual RV equation was inspected; no endpoint assertion or
 unproved external result remains as an input. All 43 new complete types
 match reviewed individual audits, and all 751 earlier types are unchanged.
+
+## Unnamed-radius open-ball atomicity over real/Gamma bases
+
+Pins and licenses are unchanged. Full types and source of the already
+formalized `MixedRootFree.mixed_qf_rootFree_constant`,
+`PolynomialObstacles.obstacles_definable`, `OpenBallCodes.ball_eq_open`,
+normalization and polynomial RV factorization APIs were inspected.
+`CompleteTypeRVProfiles` adapts the pinned MIT root-free proof with explicit
+attribution and uses checked Gamma specialization without changing the
+original VF coefficient field. No new citation is introduced.
+
+The self-centred profile quantifies all native radius codes and proves
+agreement with the actual ball imaginary. It leaves one VF variable and
+one RV radius variable, so a finite original-base polynomial obstacle set
+works uniformly. Completeness and infinitude exclude those obstacles even
+when the ambient set is not definable. This yields unnamed-radius open-ball
+3.4 and then 3.15 over real/Gamma bases, with no saturation or originally
+named radius. Old ball parameters remain excluded, explicitly and honestly.
+All 11 new complete types match individual reviewed audits and all 794
+earlier types are unchanged in the fresh full 805-head local check.

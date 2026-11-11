@@ -5,23 +5,19 @@ predecessor LANGUAGE-ERRATA.md. Use arXiv:0809.0473v2 through 3.24. Continuous
 work and pushes are authorized; no subagents. HK is background for proof
 ideas only: no citation or unproved input. Keep R.Nonempty in 3.11.
 
-Fresh full local root, inherited QE, Section 2 and 794 Section 3 checks pass:
-289 generic, 505 actual heads; 201 source hashes. Every prior 751 full type
-is unchanged, and all 43 new types exactly match individually compiled and
-manually reviewed audits. Only propext, Classical.choice and Quot.sound.
-See .scratch/local-rv-linear-794/ and VERIFICATION.json. Source 276a104
-passed CI 42947193955; all 794 full types, 201 source hashes and both audit
-hashes exactly match reviewed local evidence. This receipt promotes it
-to main.
-Preceding source 399f3a7 passed CI 42925183881, all types/hashes matched;
-receipt d234359 promoted it to main and passed CI 42941390575.
+Fresh full local root, inherited QE, Section 2 and805 Section3 checks pass:
+289 generic,516 actual heads;205 source hashes. All794 prior full types
+unchanged;11 new complete types exactly match individually reviewed audits.
+Only propext,Classical.choice,Quot.sound. Evidence .scratch/local-complete-type-805/;
+VERIFICATION.json. New CI pending: compare every type/hash before promotion.
+Preceding source276a104 passed CI42947193955; all794types/201hashes matched;
+receipt41eb7de promoted to main. Check that receipt's CI42948389490.
 
 Fifteen numbered Section 3 results are checked in exact scope: 3.2,3.3,
 3.4 at named radii plus singleton/VF,3.6,3.7,3.8,3.9,3.10,corrected3.11,
 3.12 both,3.13,3.14,3.16,3.17 and3.18. Six remain:3.15,3.19,3.21–3.24
-(two lemmas,four propositions);3.20 is a definition. Unrestricted unnamed
-radius3.4 remains needed for3.15 on a possibly undefinable complete-type
-ambient. Section2 has2.15 checked and2.34 open. Keep precise restrictions
+(two lemmas,four propositions);3.20 is a definition. The remaining3.4/3.15 issue concerns old ball parameters; the unnamed
+open-radius case over real/Gamma bases now works with undefinable complete types. Section2 has2.15 checked and2.34 open. Keep precise restrictions
 from STATUS:3.14 has only old Gamma names and the source ball imaginary;
 3.16/3.18 genuineSat/infiniteCardinal/smallReal/ACVF00/namedNontrivialDelta;
 3.17 no original named centre/radius/delta or imaginary-cardinality bound.
@@ -55,11 +51,23 @@ is not used in the replacement. The author's requested writeup after the
 whole paper is complete is tracked durably in ../PROOF-WRITEUP.md and AGENTS.
 Keep that ledger current; no unproved idea counts as a replacement.
 
-Next: unrestricted3.4/3.15, then3.19,3.21–3.24 and Section2's2.34. Do not
-extend3.3 to arbitrary undefinable complete-type sets without proof: its
-cut-parameter definability uses ambient definability. Existing full3.4 at
-named radii works without ambient definability; find an honest unnamed-radius
-argument. Paper PDF https://arxiv.org/pdf/0809.0473v2 via web tool,
+New proof batch: CompleteTypeRVProfiles,SelfCentredBallProfiles,
+OpenCompleteTypeAtomicity,CompleteTypeOpenImages. Every relevant type has
+hOnly excluding old ball parameters. Gamma specialization preserves the
+original VF coefficient field. Finite definable polynomial obstacles are
+excluded by an infinite complete-type ambient, without ambient definability.
+The tested point itself is a valid centre code of its containing ball;
+the radius remains an RV variable. This yields actual atomicity over the
+original base plus the ball name without naming its radius. Applying3.13
+gives3.15 over real/Gamma bases, no saturation; named nontrivial delta stays
+explicit in3.15. Whole-VF case excluded by parameter-free zero. Do not
+count unrestricted3.15 or silently permit old ball parameters here.
+
+Next: extension with old ball parameters, then3.19,3.21–3.24 and Section2's2.34.
+Do not extend3.3 to arbitrary undefinable complete-type sets without proof:
+its cut-parameter definability uses ambient definability. Self-centred RV
+profiles avoid that error in the now checked real/Gamma-base scope.
+Paper PDF https://arxiv.org/pdf/0809.0473v2 via web tool,
 ref turn101834view0:3.15 lines567–569,3.18 lines609–660,3.19 lines662–674,
 3.21 lines687–701,3.22 lines704–722,3.23–3.24 lines725–751. Direct shell
 download was blocked; do not try alternate hosts to evade it.
