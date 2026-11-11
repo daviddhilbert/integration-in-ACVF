@@ -1,16 +1,24 @@
 # Section 5 status
 
 **Lemmas5.1–5.2, Remark5.3, Definition5.4 and Lemma5.6 are locally checked.**
-The whole section remains in progress: the global actual SpecialBijection
-bridge in5.5 and actual two-cell results5.7–5.8 are still open.
+The balanced and bijective graph cases of5.7 now construct actual standard
+contractions in both orders with an actual pinned RV[2] isomorphism. The
+whole section remains in progress: product cases of5.7, full uniform5.8
+and the global actual SpecialBijection bridge of5.5 remain open.
 
-All683 complete headline types and axiom audits pass, using only propext,
-Classical.choice and Quot.sound. All601 prior types are unchanged. All82 new
-full types, complete data constructors and the recursive original-Gamma
-certificate were reviewed in920 readable lines without omissions. The root
-build completed10458 jobs. Full project audits pass for foundation and
-Sections2,3,4,5; Sections6,7 have no verifiers and are skipped. Preserved
-receipt: `.scratch/section5-683-verified/`; hashes and scope: VERIFICATION.json.
+All807 complete headline types and axiom audits pass, using only propext,
+Classical.choice and Quot.sound. All683 prior full types are unchanged.
+All124 new full types and complete data constructors were reviewed in1567
+readable lines without omissions. The root build completed10491 jobs.
+Project audits pass for foundation and Sections2,3,4,5; Sections6,7 have no
+verifiers and are skipped. Preserved evidence: `.scratch/section5-807-verified/`.
+Hashes and scope: VERIFICATION.json.
+
+The683 checkpoint30071af passed CI43111040742 and an exact retained artifact
+comparison of all683 types/axioms, source hashes, pins and audit logs. Main
+promotion was rejected by automatic approval review because the visible
+request did not explicitly authorize moving main. User approval is pending;
+work continues on the feature branch.
 
 ## Checked numbered results
 
@@ -107,3 +115,22 @@ The683 checkpoint still requires its own remote CI and retained comparison.
 No HK theorem, referee assertion or new external citation is a proof input.
 The paper's precise5.5–5.8 statements and standing conventions were rechecked
 against arXiv:0809.0473v2 during this batch.
+
+## Constructed cases of5.7
+
+CellBalancedStandard.lemma_5_7_balanced and lemma_5_7_bijective_graph construct
+both actual StandardContractions and an actual RV[2] isomorphism, from the
+actual Section4 DefinableCellData. Scope: ACVF00, genuine saturation,
+aleph0≤κ, small G.real, VFFieldBase G.real and namedδ>1. The graph case
+requires its stated zero paradigm and injective positioning; these are
+proved case hypotheses, not additional hypotheses on the complete5.7 target.
+
+The construction proves exact strip geometry, constructs the coordinate
+canonical/focus maps, proves head saturation while retaining the original
+head RV tag, computes the two unary contracted sources, and joins them by
+the actual positioning bijection. Full5.2–5.3 construct matched unary tails.
+Both full two-stage programs retain original-Gamma certificates. Explicit
+RV-domain and volume-reindex isomorphisms give the actual RV[2] comparison.
+The final wrappers currently export the category isomorphism over their
+internal real presentation; original-Gamma graphs of the final RV[2]
+comparison and the full uniform family construction are still to be exported.

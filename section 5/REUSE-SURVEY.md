@@ -228,3 +228,17 @@ The complete finite active-coordinate induction is proved, without importing
 a standard-contraction or dimension conclusion. All82 new full types and
 actual data constructors were manually reviewed;683-head audit and full
 root/project verification pass, with all601 prior complete types unchanged.
+
+
+## Cell comparison checkpoint,807 audited declarations
+
+The actual Section4 cell geometry at pinned merged source802eb9c supplies
+balanced horizontal/vertical fibres, nonemptiness and simultaneous paradigm
+degeneracy. No external result is assumed. Matched unary preparations use
+this repository's completed5.2 and5.3 with their exact original-base scope.
+Pinned Section4 rvIsoOfCarrierEq, rvIsoOfVolumePreservingBijection and
+rvReindexVolumeIso reconcile actual key domains and restore volume ordering.
+RVUnaryProfiles proves the extra constant-coordinate morphism obligations.
+All124 new full types/constructors reviewed;807 allowed-axiom checks,10491-job
+root build and full project verifier pass. Product/family compatibility and
+the global special-map bridge remain separate obligations.
