@@ -5,8 +5,8 @@ Section3 type/axiom audits pass:356 generic and854 actual heads.
 All357 source hashes match; all1166 previous complete types are unchanged,
 and all44 new complete types exactly match individually reviewed audits.
 Only propext, Classical.choice and Quot.sound occur. Evidence is in
-.scratch/local-punctured-obstruction-1210/ and VERIFICATION.json. CI confirmation
-for this batch is pending. The preceding source186f888 passed
+.scratch/local-punctured-obstruction-1210/ and VERIFICATION.json. [CI42994511817](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42994511817) passed;
+all1210 full CI types and357 source hashes match the reviewed local archive. The preceding source186f888 passed
 [CI42991404874](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42991404874)
 and was promoted to main at receipt3814b66 after exact type/source/audit matching.
 
@@ -31,9 +31,8 @@ Author explicitly approved excludingVF as the closed parent of3.24; see
 PAPER-CORRECTIONS.md. No restriction was added to the open target,soVFas
 target parent remains part of the corrected goal.
 
-The1210 archive includes its own Section2 logs/receipt. Compare all1210
-full CI types,357 source hashes and both audit hashes against that archive
-and publication checkout before main promotion. Compare its archivedSection2,
+The1210 archive includes its own Section2 logs/receipt. All1210 full CI types,357 source hashes and both audit hashes match
+that archive and this publication checkout. Compare its archivedSection2,
 not later live artifacts. Use set-e in publication shell sequences.
 
 PuncturedBallObstruction.proposition_3_24 proves the corrected final
