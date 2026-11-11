@@ -31,24 +31,24 @@ and manual dispatch, with downloadable build and audit evidence.
 The current root imports the predecessor and the new Section 2 and 3 libraries.
 [Section 2](section%202/STATUS.md) records the prerequisite map and Corollary 2.15;
 [Section 3](section%203/STATUS.md) records the exact formalized scope and open work.
-The full local project build, inherited QE audit, Section 2 audit and 751
-Section 3 type/axiom audits pass (289 generic, 462 actual-namespace heads).
-New components prove eventual RV-coefficient constancy, actual atomic
-RV-fibre choice and definable affine-error RV constancy. Full Lemma 3.18
-remains open; its endpoint estimate is recorded in
-[proof obligations](section%203/PROOF-OBLIGATIONS.md).
-All 751 complete types and 182 source hashes from [CI](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42925183881)
-match the reviewed local evidence; only standard Lean axioms occur.
+The full local project build, inherited QE audit, Section 2 audit and 794
+Section 3 type/axiom audits pass (289 generic, 505 actual-namespace heads).
+Lemma 3.18 now proves actual RV-linearity using finite-fibre means and a
+Gamma-linear radius contradiction. Genuine saturation, small-base and
+characteristic hypotheses remain explicit. New CI confirmation is pending.
+The preceding 751-head checkpoint passed
+[CI](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42925183881),
+with every complete type and source hash matched to reviewed local evidence.
 
 Checked Section 3 results are 3.2, 3.3, 3.4 at original-base definable radii
 plus singleton/VF cases, 3.6, 3.7, 3.8, 3.9, 3.10, corrected 3.11, 3.12,
-3.13, 3.14, 3.16 and 3.17 in the stated saturation/small-base scope. Full real,
+3.13, 3.14, 3.16, 3.17 and 3.18 in the stated saturation/small-base scope. Full real,
 Gamma and ball bases are retained where permitted.
 Lemma 3.14 keeps its restriction to the one source ball imaginary plus old
 Gamma names. ACVF(0,0) and an original-base definable nontrivial Gamma value
 remain explicit where used. See the section status for exact statements.
 
-The later results 3.15–3.19 and 3.21–3.24 remain open; 3.20 is a definition.
+Six Section 3 results remain open: 3.15, 3.19 and 3.21–3.24; 3.20 is a definition.
 The unnamed-radius extension of 3.4 is also needed for unrestricted 3.15.
 Section 2's 2.15 is checked and 2.34 remains open. Retain the author-approved
 nonemptiness correction to 3.11 in [PAPER-CORRECTIONS.md](PAPER-CORRECTIONS.md).

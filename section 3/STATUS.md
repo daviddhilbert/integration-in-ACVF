@@ -4,24 +4,23 @@ Source: arXiv:0809.0473v2, pp. 7–12, through Proposition 3.24.
 
 ## Verification
 
-The full local root build, inherited QE audit, Section 2 audit and **751
+The full local root build, inherited QE audit, Section 2 audit and **794
 Section 3 type/axiom audits pass** under pinned Lean 4.35.0: 289 generic and
-462 actual-namespace declarations. These are components, not numbered results.
-All 182 source hashes match. Every prior 728 complete type is unchanged;
-all 23 new types exactly match individually compiled and manually reviewed
+505 actual-namespace declarations. These are components, not numbered results.
+All 201 source hashes match. Every prior 751 complete type is unchanged;
+all 43 new types exactly match individually compiled and manually reviewed
 snapshots. Only `propext`, `Classical.choice` and `Quot.sound` occur.
 
 `VERIFICATION.json` records the local checkpoint; `CORE-VERIFICATION.json`
-selects its 289 generic heads. Evidence is in `.scratch/local-rv-tail-751/`.
-Source `399f3a7` passed [CI 42925183881](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42925183881).
-All 751 complete types exactly match the reviewed local audit; all 182
-source hashes and both audit hashes match. This receipt promotes that
-verified checkpoint to main. The preceding main receipt `3235d3f` passed
-CI 42923542770.
+selects its 289 generic heads. Evidence is in `.scratch/local-rv-linear-794/`.
+New CI confirmation is pending. The preceding source `399f3a7` passed
+[CI 42925183881](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42925183881),
+with all 751 full types and 182 source hashes matched before main promotion
+at receipt `d234359`. That main receipt passed CI 42941390575.
 
 ## Numbered results
 
-Fourteen numbered Section 3 results are checked in the following precise scope:
+Fifteen numbered Section 3 results are checked in the following precise scope:
 
 - **3.2:** `AdjoinBall.lemma_3_2` permits arbitrary real, genuine Gamma and
   ball names. Atomicity is over the original base with the input ball name
@@ -99,6 +98,17 @@ Fourteen numbered Section 3 results are checked in the following precise scope:
   base cardinality is required. The definition of least radius does not
   assert existence of a least-radius function.
 
+- **3.18:** `RVLinearity.lemma_3_18` proves actual RV-linearity on an atomic
+  open source, for its full original-base partial-domain graph and any
+  injective VF map. The coefficient is an actual nonzero RV element and
+  its equation holds for every pair, including equal points. Image openness
+  is derived. Genuine saturation, infinite cardinal, small real base,
+  ACVF00 and an original-base named nontrivial Gamma value remain explicit.
+  Temporary real codes and the error map occur only inside the proof.
+  Injectivity of that error map is proved from finite-fibre means. Checked
+  3.16 then gives a radius contradiction, avoiding the printed endpoint
+  estimate without a statement correction or an unproved external input.
+
 Section 2's Corollary 2.15 is checked separately, with genuine saturation and
 parameter smallness explicit. Corollary 2.34 remains open.
 
@@ -144,8 +154,8 @@ the cut, without assuming atomicity over that enlarged base.
 
 ## Remaining work
 
-Seven proof results remain: 3.15, 3.18–3.19 and 3.21–3.24; 3.20 is a definition.
-They comprise three lemmas and four propositions. Section 2's 2.34
+Six proof results remain: 3.15, 3.19 and 3.21–3.24; 3.20 is a definition.
+They comprise two lemmas and four propositions. Section 2's 2.34
 is open separately. The unrestricted unnamed-radius extension of 3.4 is also
 still needed for the full3.15 claim. A wrapper for arbitrary-radius subballs
 of a **definable atomic** ambient set is checked separately, but it does not
@@ -286,7 +296,7 @@ handles actual radius invariants, including VF and infinity, and derives
 3.17 for every given least-radius function. All 21 full exported types match
 the reviewed individual audits; all 707 preceding full types are unchanged.
 
-## Checked RV-linearity components and open endpoint estimate
+## RV-linearity components and the replacement proof of 3.18
 
 `RVValueShellGeometry` identifies actual nonzero RV fibres with ordinary open
 balls and proves that each value shell has infinite RV image, using the
@@ -309,10 +319,33 @@ real constants are named. `RVErrorConstancy` proves equality of actual RV
 errors on an atomic open source. `RVErrorComparison` supplies the strict
 error-value estimate and affine RV-difference recovery, including zero error.
 
-The full 3.18 result and assembly of right-local constancy remain open.
-The second half of the printed proof needs an extra justification for its
-left-endpoint estimate: piecewise affinity and being above the identity
-alone do not give the asserted bound. The affine counterexample and exact
-remaining obligation are recorded in [PROOF-OBLIGATIONS.md](PROOF-OBLIGATIONS.md).
-No change to the numbered statement or unproved replacement input is made.
-The numbered count remains fourteen, with seven proof results left.
+The full 3.18 result is now proved by a different ending.
+`VFExchangeAnyBase` extends the pinned VF exchange proof to every real base.
+`FiniteFibresFromExchange` and `AtomicFunctionFibres` prove that a real-base
+map, restricted to an atomic open ball, is constant or has finite fibres.
+The finite-code specialization and genuine saturation needed for finiteness
+are proved with their cardinal bounds explicit.
+
+`FullFibreEnumerations`, `FullFibreMeans` and `AtomicFibreMeanGraph` define
+the actual fibre means over the unchanged full interpreted base. The bound
+on fibre size is supplied by completeness of the image. Checked RV
+nonconstancy of a finite mean-centred set and 3.9 give injectivity in
+`FiniteFibreInjectivity` and `AtomicFunctionInjectivity`.
+
+`RealGraphOperations`, `VFErrorSyntax`, `TranslationSyntax` and
+`TranslatedErrorGeometry` construct the real-definable translated error.
+`RVLinearitySlopeValues`, `RVSlopePairFormula` and `RVLeadingDifference`
+give its strict output bound and an exact pair-value equation if two
+original RV coefficients differ. `RealAtomicValueBoundRigidity` supplies
+error-map injectivity and applies `AtomicValueBoundRigidity`: checked 3.16
+forces its open image to contain zero, contradicting atomicity.
+
+`RVSlopeRigidity.ordered_coefficients_eq` applies that contradiction on a
+newly chosen atomic RV fibre after finite temporary naming. The original
+whole source need not remain atomic over the enlarged real base.
+`RVLinearity.lemma_3_18` supplies the intermediate Gamma-linear premise
+from checked 3.16 and proves the final equation on all source pairs. The
+printed endpoint issue is documented in
+[PROOF-OBLIGATIONS.md](PROOF-OBLIGATIONS.md); that inference is not used.
+The mathematical replacement is tracked for the author's requested final
+writeup in `../PROOF-WRITEUP.md`.

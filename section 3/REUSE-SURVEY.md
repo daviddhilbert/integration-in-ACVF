@@ -324,3 +324,29 @@ audits and all 728 earlier types are unchanged in the fresh 751-head audit.
 Full 3.18 is not counted. PROOF-OBLIGATIONS.md records the additional
 left-endpoint argument still needed. No new external citation or unproved
 HK input is used.
+
+## Finite-fibre means and the replacement proof of 3.18
+
+Pins and licenses are unchanged. Full types and hypotheses of the pinned
+`VFExchange`, `VFAlgebraicity`, `Barycentre`, `FibreEnumerations`,
+`FiniteFibreMeans`, `RawClosure.finite_of_definable_subset_algebraic`,
+`NormalizationSaturation` and finite-parameter cardinal lemmas were inspected.
+Mathlib's field algebraicity matroid supplies exchange after proving the
+parameter-field identity for arbitrary real bases. The two substantial MIT
+proof adaptations preserve source attribution in their headers.
+
+New full-base enumeration and mean graphs quantify all enumerations and
+retain unchanged imaginary parameters. Atomic image completeness supplies
+the finite bound. RV mean-centred nonconstancy plus checked 3.9 proves the
+constant-or-injective error-map theorem, with its real-definable larger
+domain and genuine saturation/smallness explicit.
+
+The final proof specializes only finite original graph support and finite
+real constants inside the argument. Checked real saturation and 3.2 choose
+a new atomic RV fibre after this enlargement. Original 3.16 supplies the
+Gamma scale; applying it again to the proved injective error map gives the
+contradictory image radius. The original whole source is never assumed
+atomic after naming its centre, slope lift and image of centre. Every final
+hypothesis and actual RV equation was inspected; no endpoint assertion or
+unproved external result remains as an input. All 43 new complete types
+match reviewed individual audits, and all 751 earlier types are unchanged.

@@ -1,6 +1,13 @@
-# Open proof obligations
+# Proof issues and replacements
 
-## Lemma 3.18: the left-endpoint estimate
+## Lemma 3.18: replacement for the left-endpoint estimate
+
+The complete replacement proof now compiles in `RVLinearity.lemma_3_18` and
+passes the fresh full 794-head local integration audit. CI confirmation
+is pending. It retains the original full parameter base,
+with genuine saturation, infinite cardinal, small real base, ACVF00 and an
+original-base named nontrivial Gamma value explicit. The endpoint inference
+described below is not used by this proof.
 
 In arXiv:0809.0473v2, page 9, the second half of the proof constructs a
 value-group function `zeta` from values of an affine error. It uses piecewise
@@ -19,11 +26,9 @@ satisfies `t < zeta(t) < d` for every input. Both positive differences are
 language. Strict monotonicity does not exclude it.
 
 The actual `zeta` comes from a definable VF map and may have an additional
-constraint that repairs the argument. That constraint, or another argument
-for the endpoint estimate, remains to be proved. This is a gap in the
-justification currently available for formalization; it is not an ACVF
-counterexample to Lemma 3.18. No new axiom, unproved HK input, or weakening
-of the numbered conclusion has been introduced to bypass it.
+constraint that repairs the printed argument. The observation above is not
+an ACVF counterexample to Lemma 3.18. The checked replacement avoids the
+endpoint estimate, without a statement correction or an unproved input.
 
 The following components are checked separately, with their exact
 characteristic, parameter and saturation hypotheses:
@@ -40,5 +45,22 @@ characteristic, parameter and saturation hypotheses:
 - Equal error values and the appropriate strict increment bound recover the
   affine RV difference, including the zero-error case.
 
-These components do not yet assemble the right-local-constancy statement or
-the global RV-linearity conclusion. The numbered result remains open.
+The replacement proceeds directly from any two distinct coefficient values.
+After finitely naming real codes, choose a new atomic RV fibre at the lower
+value and form the actual translated affine error. Its values are strictly
+above the radius scaled by the original Gamma-linear coefficient. A pair
+at the higher value realizes exactly that scale for the error difference.
+
+VF algebraic exchange, genuine saturation and finite-fibre means prove that
+the real-definable error map on that atomic fibre is constant or injective.
+The pair excludes constancy. Applying checked 3.16 to the error map forces
+its image radius to equal the scaled source radius. Its strict output-value
+bound then puts zero in this atomic open image, a contradiction.
+
+`RVSlopeRigidity.ordered_coefficients_eq` proves coefficient equality by
+this argument. `RVLinearity.lemma_3_18` supplies the Gamma-linear premise
+using checked 3.16 and proves the actual RV equation for every source pair,
+including equal points. Temporary real codes occur only inside the proof;
+the original source is never assumed atomic over that enlarged base.
+
+The full post-paper comparison writeup is tracked in `../PROOF-WRITEUP.md`.
