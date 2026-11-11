@@ -4,20 +4,19 @@ Source: arXiv:0809.0473v2, pp. 7–12, through Proposition 3.24.
 
 ## Verification
 
-The full local root build, inherited QE audit, Section 2 audit and **805
-Section 3 type/axiom audits pass** under pinned Lean 4.35.0: 289 generic and
+The full local root build, inherited QE audit, Section 2 audit and **824
+Section 3 type/axiom audits pass** under pinned Lean 4.35.0: 308 generic and
 516 actual-namespace declarations. These are components, not numbered results.
-All 205 source hashes match. Every prior 794 complete type is unchanged;
-all 11 new types exactly match individually compiled and manually reviewed
+All 213 source hashes match. Every prior 805 complete type is unchanged;
+all 19 new types exactly match individually compiled and manually reviewed
 snapshots. Only `propext`, `Classical.choice` and `Quot.sound` occur.
 
 `VERIFICATION.json` records the local checkpoint; `CORE-VERIFICATION.json`
-selects its 289 generic heads. Evidence is in `.scratch/local-complete-type-805/`.
-Source `fc136c5` passed [CI 42949057513](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42949057513).
-All 805 complete types exactly match the reviewed local audit; all 205
-source hashes and both audit hashes match. This receipt promotes that
-verified checkpoint to main. The preceding main receipt `41eb7de` passed
-CI 42948389490.
+selects its 308 generic heads. Evidence is in `.scratch/local-acf-conservation-824/`.
+New CI confirmation is pending. The preceding source `fc136c5` passed
+[CI 42949057513](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42949057513),
+with all 805 complete types and 205 source hashes matched before main
+promotion at receipt `6fee1a5`.
 
 ## Numbered results
 
@@ -380,3 +379,34 @@ The original base in these new conclusions may contain arbitrary real and
 Gamma parameters, but no old ball parameters. That restriction is explicit
 in every relevant exported type. Thus unrestricted 3.15 remains on the six
 remaining-result list. No unproved full-base extension is assumed or counted.
+
+## Pure-field conservation components for 3.22
+
+`FiniteFieldDefinableMaps` identifies the fixed points of finite-field
+Frobenius with the original finite field and proves invariance under ring
+automorphisms fixing the actual parameters. Thus definable graphs preserve
+a finite subfield containing their parameters and input coordinates.
+`LocallyFiniteDefinableInjection` uses a finite field containing the finite
+formula support and a target tuple to prove self-map surjectivity over an
+algebraic extension of a finite field.
+
+`LocallyFiniteRelations` expresses this without a function symbol.
+`DefinableInjectionSentence` proves the full semantics of its first-order
+sentence, including all variable blocks and uniqueness predicates.
+`ACFDefinableInjection` proves that sentence in every positive characteristic
+and transfers it to characteristic zero using checked Mathlib ACF
+completeness and transfer. Its final theorem applies to any actual
+partial-domain graph, finite tuple arity and algebraically closed field.
+No polynomiality, constructible-map surjectivity or conservation statement
+is assumed as an input.
+
+`FiniteDefinablePatching` supplies definable finite patches.
+`CofiniteDefinableInjection` proves that an injective definable map from
+`X minus F` into `X minus G` forces `card G <= card F`; its image complement
+is finite with that same bound. `CofiniteDefinableBijection` builds the
+actual inverse graph and derives equality of the finite complement sizes.
+
+These are pure-field components. The residue-field graph interpretation,
+positive-component comparison, actual ball quotient and hole-count bridge
+still have to be assembled for 3.22. The six remaining full-scope numbered
+results are unchanged. No new external citation or unproved input is used.

@@ -5,15 +5,13 @@ predecessor LANGUAGE-ERRATA.md. Use arXiv:0809.0473v2 through 3.24. Continuous
 work and pushes are authorized; no subagents. HK is background for proof
 ideas only: no citation or unproved input. Keep R.Nonempty in 3.11.
 
-Fresh full local root, inherited QE, Section 2 and805 Section3 checks pass:
-289 generic,516 actual heads;205 source hashes. All794 prior full types
-unchanged;11 new complete types exactly match individually reviewed audits.
-Only propext,Classical.choice,Quot.sound. Evidence .scratch/local-complete-type-805/;
-VERIFICATION.json. Sourcefc136c5 passed CI42949057513; every805 complete
-type and205 source hashes match reviewed local evidence. This receipt
-promotes it to main.
-Preceding source276a104 passed CI42947193955; all794types/201hashes matched;
-receipt41eb7de promoted to main. That receipt passed CI42948389490.
+Fresh full local root, inherited QE, Section2 and824 Section3 checks pass:
+308generic,516actual heads;213source hashes. All805 prior complete types
+unchanged;19 new complete types exactly match individually reviewed audits.
+Only standard three axioms. .scratch/local-acf-conservation-824/ and
+VERIFICATION.json hold evidence. New CI pending; compare all types/hashes
+before main promotion. Preceding sourcefc136c5 passed CI42949057513; all
+805types/205hashes matched; receipt6fee1a5 promoted to main. Check its CI.
 
 Fifteen numbered Section 3 results are checked in exact scope: 3.2,3.3,
 3.4 at named radii plus singleton/VF,3.6,3.7,3.8,3.9,3.10,corrected3.11,
@@ -81,3 +79,32 @@ never restart cold builds. Fresh root first, then scripts/verify_ci.py.
 Compile/full-type/axiom audit locally before push; CI confirms integration.
 Primary /workspace/integration-in-ACVF branch section-1-3/ordinary-separation;
 publication /workspace/integration-in-ACVF-publish. No PR created.
+
+New pure-field batch for3.22: FiniteFieldDefinableMaps,
+LocallyFiniteDefinableInjection,LocallyFiniteRelations,
+DefinableInjectionSentence,ACFDefinableInjection,FiniteDefinablePatching,
+CofiniteDefinableInjection,CofiniteDefinableBijection. General definable
+injective self-maps on finite tuples over any algebraically closed field
+are proved surjective, not assumed from the polynomial Ax theorem. The
+proof uses native finite-field Frobenius, a finite restriction containing
+the finite formula parameters and target tuple, then a fully checked
+first-order relation sentence and ACF completeness/characteristic transfer.
+Finite patching gives finite deficit inequalities, finite image complement
+and exact finite-complement counts for cofinite definable bijections.
+All19 new full types and all5 sentence definitions reviewed; no new axiom.
+
+Next3.22 bridge: pinned Section4.ResidueNormalization.normalizedResidueSet_definable
+is already proved, as is Section7.ResidueConstructibility.remark_7_5.
+Read their exact types/source and Section4/7 status (read this turn) before
+reuse. normalizedResidueSet_definable has explicit hcan:IsCanonical and
+an LRV substructure/residue parameter field. For intrinsic counts, B=top
+and E=top give pure-field definability with all residue parameters, harmless
+inside the proof. Section4.ResidueNormalization.olean is already available.
+Ignored .scratch/ResidueFieldConservation.lean drafts three actual-model
+bridges: residue pullback, actual RV graph to pure graph, finite complement
+conservation. It has NOT been compiled yet; wait for full root/audit before
+running another draft checker. Its hcan premise is explicit helper scope;
+normalize/transport it before claiming a final all-model ball theorem.
+Native ball-quotient interpretation and positive-component comparison are
+also still needed for full3.22. Full3.15 with old ball parameters remains
+open independently; real/Gamma case is proved. Counts remain six.

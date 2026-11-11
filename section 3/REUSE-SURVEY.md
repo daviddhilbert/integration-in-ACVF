@@ -370,3 +370,26 @@ when the ambient set is not definable. This yields unnamed-radius open-ball
 named radius. Old ball parameters remain excluded, explicitly and honestly.
 All 11 new complete types match individual reviewed audits and all 794
 earlier types are unchanged in the fresh full 805-head local check.
+
+## Pure-field definable Dedekind finiteness and cofinite conservation
+
+Pins and licenses are unchanged. Exact source, full types and hypotheses
+of Mathlib `FiniteField.frobeniusAlgEquivOfAlgebraic`, finite-field root
+polynomials, splitting/range lemmas, definability invariance, finite-adjoin
+finiteness, ACF completeness and characteristic-zero transfer were inspected.
+The construction adapts Mathlib's Apache-2.0 `FieldTheory/AxGrothendieck.lean`
+with attribution. Its existing polynomial-map theorem is not treated as
+a theorem about arbitrary definable maps: the latter is proved here.
+
+Frobenius invariance supplies the new finite-subfield preservation step.
+A first-order partial-injection relation sentence is defined and its full
+semantics proved. Algebraic closures of finite fields satisfy it by a finite
+restriction argument. Checked completeness and characteristic transfer
+then prove the result in all algebraically closed fields. Finite patching
+and an actual definable inverse prove finite-complement conservation.
+
+All 19 new full exported types match their individually compiled and
+manually reviewed snapshots; all 805 prior full types are unchanged in
+the fresh full 824-head local audit. All use only the permitted standard
+axioms. These are supporting pure-field results, not a completed 3.22.
+No unproved conservation or external citation is introduced.
