@@ -37,9 +37,10 @@ All 244 source hashes match; all 871 prior complete types are unchanged,
 and all 43 new complete types exactly match individually reviewed audits.
 Only propext, Classical.choice and Quot.sound occur. Evidence is in
 .scratch/local-thin-conservation-914/ and VERIFICATION.json.
-New CI confirmation is pending. Source 83b74b5 passed
-[CI 42956568397](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42956568397);
-all 871 complete types and 230 hashes matched before main receipt 1a071cc.
+Source 13cabca passed [CI 42960151159](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42960151159).
+All 914 complete types,244 source hashes and both audit hashes match reviewed
+local evidence. This receipt promotes complete3.22 to main. Prior main
+receipt1a071cc passed CI42957711796.
 
 Lemma 3.22 is complete in ThinFamilyConservation.lemma_3_22 over the full
 original real/Gamma/ball base. Finite actual thin families with pairwise
