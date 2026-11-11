@@ -5,7 +5,7 @@ The section's precise targets and scope are in TARGETS.md.
 
 **Lemma 5.1 is locally checked**, over a small real base and over the original
 real/Gamma base with the explicit VF coefficient-field scope. The complete
-121-declaration type/axiom audit passed; only propext, Classical.choice and
+161-declaration type/axiom audit passed; only propext, Classical.choice and
 Quot.sound occur. Its exact source receipt and full type output are retained
 in `.scratch/section5-verified/`. The full root build and project audit also passed.
 The constructed 5.2/5.4 supporting geometry is included in that audit; neither
@@ -22,7 +22,7 @@ The constructed 5.2/5.4 supporting geometry is included in that audit; neither
 | `FocusSection`, `PulledFocusGeometry`, `PulledFocusDefinability` | An actual target focus section, selected source RV-cell locus, source centre, full original-real-base graphs, and a constructed source Focus. The supplied map is assumed contractible; no compatible-transformation conclusion is assumed or claimed. |
 
 The section library and separate geometry entry point are registered in
-Lake. The fresh 121-declaration build/type/axiom batch passed. Full types,
+Lake. The fresh 161-declaration build/type/axiom batch passed. Full types,
 source/pin hashes and audit identities are recorded in VERIFICATION.json.
 The full root integration build and project audit passed: foundation and
 Sections 2, 3 and 5. The proof checkpoint is ready for CI confirmation.
@@ -37,9 +37,7 @@ locus and its original-base graph, and the unary-chain factorization of
 actual special bijections. The open-ball geometric criterion is checked
 individually: a centred map with actual open nonzero RV-cell images is
 contractible. Both matched-focus directions, open-image preservation and the zero-marker
-chain argument now compile and pass the 121-head audit. The full compatible
-chain induction, original-Gamma graph certificates and 3.21 partition
-assembly remain to be proved.
+chain argument now compile and pass the 121-head audit. The full compatible chain induction and original-Gamma focus graph certificates now compile and pass the 161-head audit. The 3.21 partition/preparation assembly remains to be proved.
 
 No Section 5 result is assumed as a prerequisite of itself. No HK or referee
 result is cited. No paper correction has been silently adopted. Definitions,
@@ -52,3 +50,22 @@ artifacts while freshly building the remaining pinned/project modules
 (10236 jobs, largely artifact reuse). Both are local checks; remote CI
 confirmation is a separate publication step. All 72 previous complete types
 are unchanged in the 121-head audit.
+
+Verified chain checkpoint (November 11, 2026): `ChainAlgebra`,
+`MatchedFocusStep`, `MatchedChainInduction` and `PreparedMutualContraction`
+construct actual finite matching chains and the unique commuting RV-key
+bijection, under explicit prepared geometry. `GammaGraphOperations`,
+`GammaFocusSection`, `GammaPulledFocus`, `GammaChainAlgebra`,
+`GammaMatchedChain` and `GammaPreparedBijection` retain full invariant
+original-Gamma graphs throughout. The last theorem produces inverse
+preparation from genuine saturation and the coefficient-field scope;
+only the open-to-open geometry, forward preparation and tagging remain
+inputs. `UnaryPaperBallBridge` relates paper-open scalar balls to actual
+ordinary unary polydiscs and excludes VF for sets inside one RV cell.
+These are 40 new audited declarations; 5.2 still awaits its 3.21 producer.
+
+The prior 121-head checkpoint `f3bd053` passed remote CI run43071670230.
+Its downloaded artifact13879755108 agrees exactly with the local full
+receipt, including every complete type and source/audit hash. That verified
+checkpoint has been promoted to main. The new 161-head checkpoint passed
+local root integration and full project audits; remote CI is a separate step.

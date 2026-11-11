@@ -87,3 +87,15 @@ containing that point, and taking the VF coordinate as centre. Existing
 first-order relation, graph and parameter-base operations prove the entire
 locus and centre graphs over the original real base. The compatible-focus
 induction and invariant Gamma certificate remain distinct obligations.
+
+
+November11 chain batch: reused the pinned `RootConstruction.Chain` append,
+alternation and last-kind calculus, `GammaInvariantLogic.gammaLogicInput`,
+`GammaRestriction.GammaChainDefinable.graph` and `GammaExistence` preparation.
+Actual types were inspected before reuse. The real/Gamma matching proofs
+add no citation inputs or dependency revisions. `GammaParameters` intersection
+is used on full invariant graphs, with injectivity of actual mixed codes
+proved locally. The paper-open bridge uses this project's `PaperBalls` and
+`GammaRadiusAtomicity.gammaBall`; it preserves the reversed value order and
+does not replace equal RV classes by equal values. Root build and all161
+full type/allowed-axiom checks passed; exact evidence in VERIFICATION.json.

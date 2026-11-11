@@ -11,8 +11,7 @@ import sys
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / '.scratch' / 'section5-verified'
-HEADLINES = [
-    'IntegrationInACVF.Section5.contractible_comp',
+HEADLINES = ['IntegrationInACVF.Section5.contractible_comp',
     'IntegrationInACVF.Section5.focus_post_contractible',
     'IntegrationInACVF.Section5.focused_post_contractible',
     'IntegrationInACVF.Section5.replaceCoordinateMap',
@@ -133,7 +132,46 @@ HEADLINES = [
     'IntegrationInACVF.Section5.unaryShift_add_cancel',
     'IntegrationInACVF.Section5.unaryShift_open_polydisc',
     'IntegrationInACVF.Section5.unaryShift_eq_zero_iff',
-]
+    'IntegrationInACVF.Section5.unaryConjugate_inverse',
+    'IntegrationInACVF.Section5.special_split_inverse',
+    'IntegrationInACVF.Section5.conjugate_tail_inverse',
+    'IntegrationInACVF.Section5.conjugate_tail_contractible',
+    'IntegrationInACVF.Section5.special_comp_apply',
+    'IntegrationInACVF.Section5.special_comp_inverse',
+    'IntegrationInACVF.Section5.special_refl_inverse',
+    'IntegrationInACVF.Section5.gamma_chain_append',
+    'IntegrationInACVF.Section5.gamma_focussedCanonical',
+    'IntegrationInACVF.Section5.gamma_unaryConjugate_graph',
+    'IntegrationInACVF.Section5.replacementGraphMap',
+    'IntegrationInACVF.Section5.replacementGraphMap_apply',
+    'IntegrationInACVF.Section5.gamma_focusSection_graph',
+    'IntegrationInACVF.Section5.gammaPointCode_injective',
+    'IntegrationInACVF.Section5.gammaGraph_inter',
+    'IntegrationInACVF.Section5.gamma_inverse_map_graph',
+    'IntegrationInACVF.Section5.gamma_map_preimage',
+    'IntegrationInACVF.Section5.gamma_sameRV_graph',
+    'IntegrationInACVF.Section5.gamma_matched_chain_induction',
+    'IntegrationInACVF.Section5.gamma_prepared_bijective_contraction',
+    'IntegrationInACVF.Section5.gamma_pulledFocusSection_graph',
+    'IntegrationInACVF.Section5.gamma_pulledFocusLocus',
+    'IntegrationInACVF.Section5.unaryVFPointProjection',
+    'IntegrationInACVF.Section5.gamma_pulledFocus',
+    'IntegrationInACVF.Section5.matched_chain_induction',
+    'IntegrationInACVF.Section5.focussedCanonical_alternating',
+    'IntegrationInACVF.Section5.focussedCanonical_lastKind',
+    'IntegrationInACVF.Section5.focussedCanonical_tagged',
+    'IntegrationInACVF.Section5.matched_focus_step',
+    'IntegrationInACVF.Section5.prepared_mutual_contraction',
+    'IntegrationInACVF.Section5.prepared_bijective_contraction',
+    'IntegrationInACVF.Section5.unaryInsert',
+    'IntegrationInACVF.Section5.vfShadow',
+    'IntegrationInACVF.Section5.ordinaryRawOpen',
+    'IntegrationInACVF.Section5.unaryInsert_shadow',
+    'IntegrationInACVF.Section5.gammaBall_eq_ordinaryRawOpen',
+    'IntegrationInACVF.Section5.ordinaryRawOpen_paper_open',
+    'IntegrationInACVF.Section5.paper_open_ordinary',
+    'IntegrationInACVF.Section5.vfShadow_polydisc_iff',
+    'IntegrationInACVF.Section5.vfShadow_ne_whole_of_cell']
 
 ALLOWED = {'propext', 'Classical.choice', 'Quot.sound'}
 

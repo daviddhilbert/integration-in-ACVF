@@ -15,3 +15,6 @@ import IntegrationSection5.PreparedInverseGeometry
 import IntegrationSection5.FocusRefinement
 import IntegrationSection5.UnarySpecialZeros
 import IntegrationSection5.MatchedFocusReverse
+import IntegrationSection5.PreparedMutualContraction
+import IntegrationSection5.GammaPreparedBijection
+import IntegrationSection5.UnaryPaperBallBridge

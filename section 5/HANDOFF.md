@@ -38,3 +38,17 @@ Only propext, Classical.choice and Quot.sound are permitted in axiom audits.
 Do not edit a source while its compiler is running. Keep substantially
 different completed mathematical proofs in the whole-paper PROOF-WRITEUP.md
 ledger; ordinary API construction is not a replacement proof by itself.
+
+
+Current continuation after the161-head local checkpoint: the compatible
+chain induction and original-Gamma graphs are complete. The prepared
+bijection wrapper produces inverse preparation internally. Do not repeat
+that work or count 5.2 as complete. Next: Proposition3.21 partition producer,
+finite membership preparation and source-cell purity, then assemble the
+initial source/target chains with the matching theorem. A compiled scratch
+coordinate-fibre bridge is `.scratch/UnaryCoordinateGeometry.lean`; its
+`refined_coordinate_open_to_cellwise` theorem turns an actual finite partition
+and source-cell purity into the required geometry. It is not in the161-head
+publication batch yet. Full3.21 uses `FullBaseAtomicity` with Gamma/ball names;
+prove the no-ball bridge to/from predecessor `GammaParameters`, retaining
+original-base invariant graphs. Other5.3–5.8 obligations remain as in TARGETS.
