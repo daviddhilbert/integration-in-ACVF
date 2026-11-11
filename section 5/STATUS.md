@@ -2,8 +2,8 @@
 
 **Lemmas 5.1–5.2, Remark 5.3 and the definition/factorization part of 5.4 are locally checked** in the recorded original
 real/Gamma base scope. The full Section5 is still in progress. The current
-467-declaration full type/axiom audit passes with only propext,
-Classical.choice and Quot.sound. All392 prior complete types are unchanged.
+539-declaration full type/axiom audit passes with only propext,
+Classical.choice and Quot.sound. All467 prior complete types are unchanged.
 The root build and full project audits pass for foundation and Sections2,3,5;
 Sections4,6,7 have no local verifiers and are skipped.
 
@@ -79,19 +79,34 @@ and commuting square. The coordinate-difference/injectivity observation
 following5.5 is proved by `original_coordinate_injective_on_final_line`.
 No working-code smallness or preparation conclusion is a premise.
 
-Full5.5 still needs the first-n volume-coordinate normalization and the
-bridge to a global actual SpecialBijection, with explicit presentation
-isomorphisms for the different canonical RV-label conventions. General5.6
-and2-cell results5.7–5.8 remain open. An arbitrary RV-valued map is not a
-standard contraction.
+The first-n volume convention is now explicit: `normalizationIso` is an
+actual volume-preserving isomorphism in the pinned RV category, retaining
+all old labels. `normalizedNaturalLiftMap` is bijective onto its actual
+pinned lift and satisfies the square. `gammaNormalizedObject` and
+`gammaNormalizedLiftIso` retain complete original-Gamma certificates.
+The global actual SpecialBijection bridge for this natural map remains
+open; full5.5 is not yet counted as complete.
 
-Local evidence: all467 full type/axiom audits pass, with all392 prior types
-unchanged. The75 new types and actual contraction/certificate definitions
-were manually reviewed in a630-line readable export with proofs and deep
-terms enabled, without omitted terms. The root build completed10313 jobs.
+Uniform partial contractions now stop before a frozen VF tuple.
+`gamma_partial_contraction_program` constructs their actual stages with
+original-Gamma graphs, and `naturalImage_frozen_pullback` proves exact
+active-coordinate RV-pullback geometry. The coordinate-difference and
+injectivity observations extend to these partial contractions.
+`finite_head_family_rv_encoding` constructs separating RV labels for finite
+head fibres. `unary_injection_polydisc_weight_le` proves that an RV polydisc
+injecting definably into one VF coordinate has weight at most one; finite
+formula support supplies an internal small base, so no smallness of the
+working code set is assumed. These are support for5.6, whose general
+partition-and-factorization theorem remains open. The actual2-cell
+results5.7–5.8 also remain open.
+
+Local evidence: all539 full type/axiom audits pass, with all467 prior types
+unchanged. The72 new types and actual partial-program/certificate definitions
+were manually reviewed in a631-line readable export with proofs and deep
+terms enabled, without omissions. The root build completed10327 jobs.
 Full project verification passes for foundation and Sections2,3,5, with4,6,7
-skipped(no local verifiers). The preserved receipt is
-`.scratch/section5-467-verified/`; exact source, type, dependency and
+skipped(no local verifiers). Preserved receipt:
+`.scratch/section5-539-verified/`. Exact source, type, dependency and
 integration hashes are recorded in VERIFICATION.json.
 
 Published verified checkpoints: f3bd053(121 heads),2428bd0(161),

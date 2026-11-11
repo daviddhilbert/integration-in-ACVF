@@ -181,3 +181,24 @@ unproved Section4 cell assertion is used. All467 complete types/axioms pass;
 the75 new types and actual data definitions were manually reviewed without
 omissions. The natural lift is a proved definable bijection; its global
 SpecialBijection bridge remains a separate open obligation.
+
+## First-coordinate normalization and uniform partial contractions
+
+At the unchanged pinned predecessor revision, Section4.RVIsoTools supplies
+rvIsoOfVolumePreservingBijection. It is applied to the actual injective RV
+coordinate duplication retaining all old labels, with exact volume equality
+proved. Section4.RVWeightDimension.vfDim_rv_polydisc, VFCategories' finite-map
+inequality and VFDimension's arity bound give the one-VF injection bound.
+Their actual canonical-model, saturation, small-base and RV-coded-space
+hypotheses are discharged. Mathlib ModelTheory.Definability's
+Set.definable_iff_finitely_definable supplies a finite internal real support
+for both the set and full map graph, rather than a working-code smallness
+hypothesis. RawRVSpace0 is the actual RV-coded auxiliary space. The local
+539 full-type/axiom audit, root10327-job build and project audits pass.
+
+Partial contractions use the same actual HeadPreparation stages and stop
+before complementary VF parameters, with original-Gamma stage graphs and
+frozen-coordinate identities proved. No Section4 cell-existence assertion,
+external citation or HK theorem enters this batch. Nonzero RV-class
+infinitude is proved directly from the checked nontrivial-valuation axiom
+using an injective small-power sequence.
