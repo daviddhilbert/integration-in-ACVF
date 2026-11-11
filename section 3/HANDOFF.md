@@ -62,3 +62,10 @@ predecessor; no reference has been used or newly approved in this sequel.
 Inspect full types and keep every reference/model/volume premise explicit.
 No unproved imported interface may be counted as full2.34. Relevant notes
 are .scratch/least-radius-syntax-plan.md. Continue working per user request.
+
+The subsequent Section2 volume-descent batch passes the full root and all
+27 Section2 plus1244 unchanged Section3 type/axiom audits. Its concrete2.34
+bridge proves both volume conditions but retains the predecessor's explicit
+henselian graph or finite-extension reference input; unconditional2.34 remains
+open. Evidence is in .scratch/local-volume-descent-27/,including both section
+archives. CI confirmation for that integration batch is pending.

@@ -80,3 +80,12 @@ lake env python3 'section 3/verify.py'
 lake env python3 'section 3/verify.py' --acvf
 lake env python3 'section 2/verify.py'
 ```
+
+Section2 concrete volume descent now proves both the generic RV and pointwise
+Gamma conditions on essential finite-volume RV objects, relative to the
+predecessor's explicit henselian graph or finite-extension reference input.
+That reference remains unproved here, so unconditional2.34 remains open.
+The full root,inherited QE,27 Section2 and1244 unchanged Section3 audits pass
+locally; all new full types and source/audit hashes match reviewed evidence
+in .scratch/local-volume-descent-27/. CI confirmation is pending. See
+[Section2 handoff](section%202/HANDOFF.md).

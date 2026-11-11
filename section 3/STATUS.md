@@ -291,3 +291,10 @@ original-base graph and is linear at every ordinary radius,so it has no
 least radius inGammaTop. This is an existence boundary,not a counterexample
 to the original conditional3.17 exclusion. No author-approved correction
 or new source restriction is inferred. Section2.34 remains open separately.
+
+The subsequent Section2 volume-descent batch passes the full root and all
+27 Section2 plus1244 unchanged Section3 type/axiom audits. Its concrete2.34
+bridge proves both volume conditions but retains the predecessor's explicit
+henselian graph or finite-extension reference input; unconditional2.34 remains
+open. Evidence is in .scratch/local-volume-descent-27/,including both section
+archives. CI confirmation for that integration batch is pending.

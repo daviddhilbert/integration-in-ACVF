@@ -20,9 +20,31 @@ build and both full type/axiom checks passed in
 Only `propext`, `Classical.choice` and `Quot.sound` occur. `VERIFICATION.json`
 records the exact checked source identities, compiler and dependency pins.
 
-Corollary 2.34 remains open. The legacy volume-form interfaces in the pinned
-predecessor have explicit mathematical inputs, so their import is insufficient
-to claim the full concrete measure-preservation assertion here.
+Corollary 2.34 has a concrete descent proof relative to the predecessor's
+explicit henselian graph input. `VolumeLiftDescent.corollary_2_34_positive`
+proves both actual volume conditions; `corollary_2_34_essential` handles the
+essential restrictions of arbitrary original finite-volume RV objects.
+`corollary_2_34_of_finite_extension_reference` supplies the graph input from
+the exact named finite-extension reference in the predecessor. That reference
+remains unproved here, so unconditional 2.34 remains open. A legacy volume-law
+interface is not a substitute for this concrete bridge or for that reference.
+
+The 11 new modules and 25 helper/headline declarations use actual definable
+nonzero RV forms, full-base finite-volume categories and actual partial
+VF/RV Jacobians. The generic RV equation holds off an actual RV-small label
+subset; the Gamma equation holds at every essential label. Fixed-label
+restriction preserves bijectivity and the actual VF Jacobian. Only finitely
+many label coordinates are named internally. The original base, ACVF00,
+genuine saturation and homogeneity remain visible through `BaseContext`.
+Degree zero follows the category convention.
+
+The full root build, inherited QE, all 27 Section 2 complete type/axiom audits
+and all 1,244 unchanged Section 3 audits passed locally. All 25 new complete
+types match individually reviewed audits; both earlier Section 2 types are
+unchanged. All source and audit hashes match the reviewed checkout; only
+`propext`, `Classical.choice` and `Quot.sound` occur. Evidence is archived in
+`.scratch/local-volume-descent-27/` with its own Section2 and Section3 logs.
+CI confirmation is pending. See `VERIFICATION.json` and `HANDOFF.md`.
 
 ## Source reuse candidates for Section 3
 

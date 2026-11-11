@@ -28,3 +28,34 @@ For Corollary 2.34, inspect the concrete Jacobian bridge and the Section 10
 status before choosing a target. `Sec10RVVol.lean` includes explicit volume,
 dimension and Jacobian inputs. A generic theorem under those inputs must not
 be counted as the full concrete ACVF assertion without providing them.
+
+## Concrete volume descent
+
+The new bridge uses the pinned active `Section9/PaperLiftComparison.lean`,
+`GammaPolydiscDescent.lean`, `MixedJacobian.lean`, `RVJacobian.lean`,
+`GammaJacobian.lean`, `RVFiniteEssential.lean` and `GaussGraphConstruction.lean`.
+Their actual sources, theorem types and Section 9 status, handoff, category
+audit and language errata were inspected. The RV comparison and constant-value
+Gamma descent retain `HenselizedGaussGraphInput`. Its construction retains
+`FiniteHenselianExtensionReference`. The predecessor records the underlying
+Engler–Prestel facts as authorized inputs; no new reference is introduced.
+Neither input is treated as an unconditional checked theorem.
+
+`LiftFibreAvoidance` uses the actual full-polydisc VF-dimension theorem.
+`FixedLabelLift` constructs the restriction and proves bijectivity and
+preservation of actual derivative charts. `LiftFibreGeometry` checks the
+exact released RV quotient/polydisc relation. `GenericVolumeDescent` uses
+actual Jacobian uniqueness. `GammaVolumeDescent` separately proves the value
+equation at every essential label via checked polydisc descent.
+`VolumeBadLabels` pulls the RV exception back along the finite volume map.
+`ConcreteVolumeMorphisms` spells out both volume conditions with actual
+Jacobians. No volume law, comparison or Gamma compatibility is assumed as
+a model-interface field.
+
+All 11 modules compiled individually and passed complete type/axiom checks
+before integration. The full root and both section audits then passed.
+The Section 2 verifier prints forms, morphism conditions and precise
+reference inputs with a larger pretty-printer limit for long category types.
+Reprinting all previous 1,244 Section 3 types at that larger limit gave
+exactly the same types; their omissions were proof arguments rather than
+omitted type structure. Pins and dependency sources are unchanged.

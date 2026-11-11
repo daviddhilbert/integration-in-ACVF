@@ -1,5 +1,16 @@
 # Writeup of substantially different proofs
 
+Volume descent 2.34 now has a checked concrete bridge relative to the
+predecessor's explicit henselian finite-extension input. Record it as a
+provisional writeup candidate, pending resolution of that input and the final
+whole-paper scope. The RV equation uses generic actual-Jacobian comparison;
+the pointwise Gamma equation instead restricts to every label fibre and uses
+constant-value polydisc descent. This avoids the false unrestricted Gamma
+clause of predecessor 9.15 and retains labels omitted from the generic RV
+comparison. See `section 2/IntegrationSection2/VolumeLiftDescent.lean` and
+the exact input boundary in `section 2/HANDOFF.md`. No new citation or HK
+result is a proof input.
+
 Requested by the author on November 10, 2026 (America/Los_Angeles).
 **After formalization of the whole paper is complete**, prepare a mathematical
 writeup of proofs that differ substantially from those in arXiv:0809.0473v2.
