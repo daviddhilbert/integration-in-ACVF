@@ -25,3 +25,5 @@ import IntegrationSection5.RelativeSpecialFactorization
 import IntegrationSection5.GammaCoordinateFibres
 import IntegrationSection5.RelativeGammaPreparation
 import IntegrationSection5.OrderedContractionProgram
+import IntegrationSection5.StandardContraction
+import IntegrationSection5.NaturalContractionCoordinates

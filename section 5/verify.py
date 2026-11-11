@@ -404,6 +404,81 @@ HEADLINES = [
     'IntegrationInACVF.Section5.verticalRootFibre_bound',
     'IntegrationInACVF.Section5.coordinateFibre_tagged',
     'IntegrationInACVF.Section5.verticalRootFibre_hull',
+    'IntegrationInACVF.Section5.gamma_head_preparation',
+    'IntegrationInACVF.Section5.gamma_headKey_graph',
+    'IntegrationInACVF.Section5.gamma_headImage',
+    'IntegrationInACVF.Section5.gamma_headContraction_graph',
+    'IntegrationInACVF.Section5.GammaProgramDefinable',
+    'IntegrationInACVF.Section5.gamma_program_final_set',
+    'IntegrationInACVF.Section5.gamma_program_contraction_graph',
+    'IntegrationInACVF.Section5.gamma_ordered_contraction_program_certified',
+    'IntegrationInACVF.Section5.gamma_ordered_contraction_program',
+    'IntegrationInACVF.Section5.OrderedContractionProgram.naturalMap_coordinate_difference',
+    'IntegrationInACVF.Section5.OrderedContractionProgram.original_coordinate_injective_on_final_line',
+    'IntegrationInACVF.Section5.OrderedContractionProgram.LiftCondition',
+    'IntegrationInACVF.Section5.OrderedContractionProgram.naturalMap_liftCondition',
+    'IntegrationInACVF.Section5.OrderedContractionProgram.naturalMap_surjective_lift',
+    'IntegrationInACVF.Section5.OrderedContractionProgram.naturalImage_exact',
+    'IntegrationInACVF.Section5.OrderedContractionProgram.naturalImage',
+    'IntegrationInACVF.Section5.OrderedContractionProgram.naturalBijection',
+    'IntegrationInACVF.Section5.OrderedContractionProgram.naturalBijection_bijective',
+    'IntegrationInACVF.Section5.OrderedContractionProgram.naturalImage_pullback',
+    'IntegrationInACVF.Section5.firstVFMap',
+    'IntegrationInACVF.Section5.insertHeadMap',
+    'IntegrationInACVF.Section5.OrderedContractionProgram.naturalMap',
+    'IntegrationInACVF.Section5.OrderedContractionProgram.naturalMap_zero',
+    'IntegrationInACVF.Section5.OrderedContractionProgram.naturalMap_step',
+    'IntegrationInACVF.Section5.OrderedContractionProgram.naturalMap_labels',
+    'IntegrationInACVF.Section5.OrderedContractionProgram.naturalMap_rv',
+    'IntegrationInACVF.Section5.OrderedContractionProgram.naturalMap_injective',
+    'IntegrationInACVF.Section5.extendPointMap',
+    'IntegrationInACVF.Section5.coordinateFibre_extendBase_eq',
+    'IntegrationInACVF.Section5.specialRelativeBoundary_extendBase',
+    'IntegrationInACVF.Section5.chain_restrict_boundary',
+    'IntegrationInACVF.Section5.special_restrict_boundary',
+    'IntegrationInACVF.Section5.defSet_eq_of_carrier_eq',
+    'IntegrationInACVF.Section5.restrictPointImage',
+    'IntegrationInACVF.Section5.restrictPointMap',
+    'IntegrationInACVF.Section5.specialRelativeBoundary_restrict',
+    'IntegrationInACVF.Section5.restrictPointImage_headSaturated',
+    'IntegrationInACVF.Section5.StandardContraction',
+    'IntegrationInACVF.Section5.StandardContraction.toMap',
+    'IntegrationInACVF.Section5.StandardContraction.volumeIndex',
+    'IntegrationInACVF.Section5.StandardContraction.volumeIndex_injective',
+    'IntegrationInACVF.Section5.StandardContraction.naturalMap',
+    'IntegrationInACVF.Section5.StandardContraction.naturalMap_labels',
+    'IntegrationInACVF.Section5.StandardContraction.naturalMap_rv',
+    'IntegrationInACVF.Section5.StandardContraction.naturalMap_injective',
+    'IntegrationInACVF.Section5.StandardContraction.LiftCondition',
+    'IntegrationInACVF.Section5.StandardContraction.naturalMap_surjective_lift',
+    'IntegrationInACVF.Section5.StandardContraction.contractionObject',
+    'IntegrationInACVF.Section5.StandardContraction.rawContractionMap',
+    'IntegrationInACVF.Section5.StandardContraction.naturalRawMap',
+    'IntegrationInACVF.Section5.StandardContraction.naturalRawMap_mem_lift',
+    'IntegrationInACVF.Section5.StandardContraction.naturalLiftMap',
+    'IntegrationInACVF.Section5.StandardContraction.naturalLiftMap_bijective',
+    'IntegrationInACVF.Section5.StandardContraction.naturalLiftMap_square',
+    'IntegrationInACVF.Section5.standard_contraction_exists',
+    'IntegrationInACVF.Section5.rawLabelMap',
+    'IntegrationInACVF.Section5.rawLabelMap_apply',
+    'IntegrationInACVF.Section5.OrderedContractionProgram.contractionObject',
+    'IntegrationInACVF.Section5.OrderedContractionProgram.rawContractionMap',
+    'IntegrationInACVF.Section5.OrderedContractionProgram.naturalRawMap',
+    'IntegrationInACVF.Section5.OrderedContractionProgram.naturalRawMap_mem_lift',
+    'IntegrationInACVF.Section5.OrderedContractionProgram.naturalLiftMap',
+    'IntegrationInACVF.Section5.OrderedContractionProgram.naturalLiftMap_apply',
+    'IntegrationInACVF.Section5.OrderedContractionProgram.naturalLiftMap_bijective',
+    'IntegrationInACVF.Section5.OrderedContractionProgram.naturalLiftMap_square',
+    'IntegrationInACVF.Section5.OrderedContractionProgram.rawContractionMap_surjective',
+    'IntegrationInACVF.Section5.vfPermutation',
+    'IntegrationInACVF.Section5.vfPermutation_inverse',
+    'IntegrationInACVF.Section5.vfPermutation_injective',
+    'IntegrationInACVF.Section5.vfPermutationMap',
+    'IntegrationInACVF.Section5.vfPermutationImage',
+    'IntegrationInACVF.Section5.vfPermutationBijection',
+    'IntegrationInACVF.Section5.vfPermutationBijection_bijective',
+    'IntegrationInACVF.Section5.gamma_vfPermutation_graph',
+    'IntegrationInACVF.Section5.gamma_vfPermutationImage',
 ]
 
 ALLOWED = {'propext', 'Classical.choice', 'Quot.sound'}
@@ -449,6 +524,12 @@ def main():
                          'set_option pp.maxSteps 1000000\n'
                          '#print IntegrationInACVF.Section5.UnaryRelative\n'
                          '#print IntegrationInACVF.Section5.RelativelyUnary\n'
+                         '#print IntegrationInACVF.Section5.SpecialRelative\n'
+                         '#print IntegrationInACVF.Section5.SpecialRelativeBoundary\n'
+                         '#print IntegrationInACVF.Section5.HeadPreparation\n'
+                         '#print IntegrationInACVF.Section5.OrderedContractionProgram\n'
+                         '#print IntegrationInACVF.Section5.StandardContraction\n'
+                         '#print IntegrationInACVF.Section5.GammaProgramDefinable\n'
                          + '\n'.join('#check @' + name + '\n#print axioms ' + name
                                      for name in HEADLINES) + '\n', encoding='utf-8')
         output = run(['lake', 'env', 'lean', str(audit)], 'HeadlineAudit.log')
@@ -489,7 +570,7 @@ def main():
             'complete_types': types,
             'audit_source_sha256': digest(audit),
             'audit_log_sha256': digest(OUT / 'HeadlineAudit.log'),
-            'scope': 'Lemmas 5.1–5.2, Remark 5.3, Definition 5.4, exact relative-special factorization and genuine uniform relative preparation over the recorded real/Gamma base scope. Ordered contraction data are support; full 5.5–5.8 remain in progress. See STATUS.md for exact hypotheses and remaining Section5 targets.',
+            'scope': 'Lemmas 5.1–5.2, Remark 5.3, Definition 5.4, exact relative-special factorization and genuine uniform relative preparation over the recorded real/Gamma base scope. Actual standard contraction sequences in every permutation and natural pinned RV lift bijections are constructed. The full special-lift/prefix-normalization claims and5.6–5.8 remain in progress. See STATUS.md for exact hypotheses and remaining Section5 targets.',
             'build_scope': 'Incremental Lake Section 5 build and fresh full-type/axiom audit',
         }
         (OUT / 'receipt.json').write_text(json.dumps(receipt, indent=2) + '\n', encoding='utf-8')

@@ -2,8 +2,8 @@
 
 **Lemmas 5.1–5.2, Remark 5.3 and the definition/factorization part of 5.4 are locally checked** in the recorded original
 real/Gamma base scope. The full Section5 is still in progress. The current
-392-declaration full type/axiom audit passes with only propext,
-Classical.choice and Quot.sound. All302 prior complete types are unchanged.
+467-declaration full type/axiom audit passes with only propext,
+Classical.choice and Quot.sound. All392 prior complete types are unchanged.
 The root build and full project audits pass for foundation and Sections2,3,5;
 Sections4,6,7 have no local verifiers and are skipped.
 
@@ -69,24 +69,30 @@ finite obstacles from saturation; bounded finite-root means and strict root
 reduction construct the maps. Inverse affine and ordinary-ball slice
 geometry come from actual unary fibre special witnesses.
 
-`HeadPreparation` and `OrderedContractionProgram` retain actual successive
-coordinate maps and their induced contractions. The one-coordinate lift
-square, suffix preservation of old RV labels and the injective volume
-coordinate index are proved. These data do not assert existence of a full
-standard contraction of an arbitrary source.
+`gamma_head_preparation` now restricts uniform ambient preparations to arbitrary
+original-Gamma sources, with actual fibre specials and full original-Gamma
+map graphs. `gamma_ordered_contraction_program_certified` constructs each
+stage recursively. `standard_contraction_exists` constructs the sequence
+for every VF-coordinate permutation. Its natural map is bijective onto the
+actual pinned RV lift, with the explicit injective volume-coordinate selector
+and commuting square. The coordinate-difference/injectivity observation
+following5.5 is proved by `original_coordinate_injective_on_final_line`.
+No working-code smallness or preparation conclusion is a premise.
 
-Next: restriction of ambient preparations to arbitrary original-Gamma sets,
-ordered standard contractions and their full special lift(5.5), general5.6 and
-2-cell results5.7–5.8 remain open. An arbitrary RV-valued map is not a
-standard contraction; an RV-key bijection alone does not prove5.3.
+Full5.5 still needs the first-n volume-coordinate normalization and the
+bridge to a global actual SpecialBijection, with explicit presentation
+isomorphisms for the different canonical RV-label conventions. General5.6
+and2-cell results5.7–5.8 remain open. An arbitrary RV-valued map is not a
+standard contraction.
 
-Local evidence: all392 full type/axiom audits pass, with all302 prior types
-unchanged. The90 new types have also been manually reviewed in a747-line
-readable export with proofs and deep terms enabled, without omitted terms.
-The root build completed10302 jobs. Full project verification passes for
-foundation and Sections2,3,5, with4,6,7 skipped(no local verifiers). The
-preserved receipt is `.scratch/section5-392-verified/`; exact source, type,
-dependency and integration hashes are recorded in VERIFICATION.json.
+Local evidence: all467 full type/axiom audits pass, with all392 prior types
+unchanged. The75 new types and actual contraction/certificate definitions
+were manually reviewed in a630-line readable export with proofs and deep
+terms enabled, without omitted terms. The root build completed10313 jobs.
+Full project verification passes for foundation and Sections2,3,5, with4,6,7
+skipped(no local verifiers). The preserved receipt is
+`.scratch/section5-467-verified/`; exact source, type, dependency and
+integration hashes are recorded in VERIFICATION.json.
 
 Published verified checkpoints: f3bd053(121 heads),2428bd0(161),
 9426f7e(197, full5.2),a2dd306(227, Remark5.3),53b98da(302, actual5.4

@@ -170,3 +170,14 @@ The separate Section4 chat's vertical work was inspected for comparison;
 its geometric RelativeBijection structure was not imported as fibrewise
 specialness. All392 local full type/axiom audits pass; integration evidence
 and remaining5.5 obligations are recorded separately.
+
+## Actual contraction sequences and natural lifts
+
+The pinned primitive.restrict and extendBase APIs are used to retain actual
+fibre-special chains and their last-kind boundaries. Real coordinate maps,
+the original-Gamma invariant preimage/composition API and the pinned
+RVObject/rawLift definitions supply the bridges. No new external result or
+unproved Section4 cell assertion is used. All467 complete types/axioms pass;
+the75 new types and actual data definitions were manually reviewed without
+omissions. The natural lift is a proved definable bijection; its global
+SpecialBijection bridge remains a separate open obligation.
