@@ -1,15 +1,14 @@
 # Section3 continuation
 
-The full local root build, inherited QE audit, Section2 audit and1100
-Section3 type/axiom audits pass:356 generic and744 actual heads.
-All318 source hashes match; all1051 previous complete types are unchanged,
-and all49 new complete types exactly match individually reviewed audits.
+The full local root build, inherited QE audit, Section2 audit and1130
+Section3 type/axiom audits pass:356 generic and774 actual heads.
+All327 source hashes match; all1100 previous complete types are unchanged,
+and all30 new complete types exactly match individually reviewed audits.
 Only propext, Classical.choice and Quot.sound occur. Evidence is in
-.scratch/local-radial-matching-1100/ and VERIFICATION.json. [CI42985506013](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42985506013) passed;
-all1100 full CI types and318 source hashes match the reviewed local archive. The preceding source948714a
-passed [CI42975906264](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42975906264)
-and was promoted to main with the approved3.24 correction at receiptc8f4270
-following exact type/source/audit matching.
+.scratch/local-definable-matching-1130/ and VERIFICATION.json. CI confirmation
+for this batch is pending. The preceding source4921611 passed
+[CI42985506013](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42985506013)
+and was promoted to main at receiptcd84a78 after exact type/source/audit matching.
 
 FullCompleteTypeOpenImages.lemma_3_15 proves3.15 over the full original
 real/Gamma/ball base, for arbitrary open-ball radii inside a possibly
@@ -32,33 +31,28 @@ Author explicitly approved excludingVF as the closed parent of3.24; see
 PAPER-CORRECTIONS.md. No restriction was added to the open target,soVFas
 target parent remains part of the corrected goal.
 
-The1100 archive includes its own Section2 logs/receipt. All1100 full CI types,318 source hashes and both audit hashes match that
-archive and this publication checkout. Use its archivedSection2,not
-later live artifacts. Use set-e in publication shell sequences.
+The1130 archive includes its own Section2 logs/receipt. Compare all1130
+full CI types,327 source hashes and both audit hashes against that archive
+and publication checkout before main promotion. Compare its archivedSection2,
+not later live artifacts. Use set-e in publication shell sequences.
 
-New checked entries:AnnulusValueIntervals,PuncturedBallValueIntervals,
-RadialOpenClasses,RadialClassMaps,RadialQuotientGraph,RadialRVImages,
-RVFunctionValueCuts,FullRVValueFibres,CofiniteRVRows,FullRVClassRestriction,
-RVValueMatching,andgenericCofiniteFunctionFibres/CofiniteClassMatching.
-All49 full types match individual reviewed audits. Actual value intervals
-and the full definable RVquotient are proved. Actual finite/cofinite
-matching uses the definable inverse for every target value and gives a
-semantic Gamma bijection. Its first-order graph is NOT yet included.
+The actual Gamma matching graph is now proved definable. The30 new heads
+in RVMatchCodeRelations,FullBaseCounting,RVMatchCodeDichotomy,
+RVMatchUniformBound,RVMatchRowSemantics,DefinableGammaMatching,
+RadialAnnulusDomains,RadialValuePullbacks andAnnulusGammaReduction
+exactly match individual reviewed audits. DefinableGammaMatching constructs
+the Gamma bijection and its full graph over the original base. All proper
+codes remain; finite imaginary support and auxiliary real codes are internal.
 
-Next:RVMatchCodeRelations is an ignored new draft,not counted in1100.
-Construct uniform relations on proper Gamma-code pairs. Source row is the
-whole source value fibre or empty; matched row uses the full partialRVgraph.
-Finite original formula support plus common finite real codes allows genuine
-uniform_finite_side,producingN. On infinite source fibres,the matching graph
-is exactly existence ofN+1 distinct points in the matched row. Construct
-HasMore syntax over the original full base so no auxiliary real code enters
-the final Gamma graph. See .scratch/remaining-section3-plan.md.
-
-Then prove the independent definable interval-bijection obstruction. Need
-closed sourceIcc (possibly singleton),ordinary open targetIoc,andVFtargetIic.
-FiniteOrderBounds/FullGammaBounds already give real LUB/GLB and finite/interval
-dichotomy without Archimedean assumptions. The piecewise-monotonicity/Euler
-plan remains provisional. No unproved Euler or HK result may be cited.
+AnnulusGammaReduction.closed_to_open reduces the corrected actual punctured
+balls to a definable bijection Icc to Ioc or Iic. Exactly two real hole-centre
+labels are adjoined. The targetVFclosed-ray case remains included.
+Next prove the independent interval-bijection obstruction. SourceIcc can
+be singleton. Actual finite-order controllers,LUB/GLB and finite/interval
+dichotomy are available without any Archimedean hypothesis. The provisional
+piecewise-monotonicity/Euler route needs a full proof; no unproved Euler
+or HK citation may be used. New FullGammaCounting is an ignored draft,
+not included in1130. Keep all scope statements precise.
 
 Section2.34 is open separately. Keep3.17's given least-radius-function scope
 explicit until its existence is proved. The checked3.24 whole-field counterexample is addressed by the approved ordinary closed-parent correction.

@@ -2,16 +2,15 @@
 
 Target: arXiv:0809.0473v2,through Proposition3.24.
 
-The full local root build, inherited QE audit, Section2 audit and1100
-Section3 type/axiom audits pass:356 generic and744 actual heads.
-All318 source hashes match; all1051 previous complete types are unchanged,
-and all49 new complete types exactly match individually reviewed audits.
+The full local root build, inherited QE audit, Section2 audit and1130
+Section3 type/axiom audits pass:356 generic and774 actual heads.
+All327 source hashes match; all1100 previous complete types are unchanged,
+and all30 new complete types exactly match individually reviewed audits.
 Only propext, Classical.choice and Quot.sound occur. Evidence is in
-.scratch/local-radial-matching-1100/ and VERIFICATION.json. [CI42985506013](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42985506013) passed;
-all1100 full CI types and318 source hashes match the reviewed local archive. The preceding source948714a
-passed [CI42975906264](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42975906264)
-and was promoted to main with the approved3.24 correction at receiptc8f4270
-following exact type/source/audit matching.
+.scratch/local-definable-matching-1130/ and VERIFICATION.json. CI confirmation
+for this batch is pending. The preceding source4921611 passed
+[CI42985506013](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42985506013)
+and was promoted to main at receiptcd84a78 after exact type/source/audit matching.
 
 ## Numbered results and exact scope
 
@@ -41,7 +40,7 @@ Green checks certify these exported types,not broader unstated claims.
 | 3.21 | CoordinatePartitions.proposition_3_21 constructs the full uniform finite nonempty disjoint original-base partition for all selected VF coordinate pairs of actual mixed finite tuple injections. Arbitrary finite coordinate index types include all mixed arities. Same standing saturation,smallness,ACVF00 and originally named nontrivial-value scope as3.19; no old-imaginary cardinal bound. |
 | 3.22 | Complete component and actual-hole conservation for finite disjoint thin families under an original-base definable open-to-open VF bijection. Full original base; onlyACVF and a genuine nontrivial value. No canonical-model,saturation orACVF00 premise. |
 | 3.23 | No definable bijection between any distinct actual atomic primitive shapes:open,closed,thin annulus. Full original base,ACVF00 and originally definable nontrivial value. No saturation or3.15 premise. |
-| 3.24 | Ordinary closed-parent correction is author-approved. Exact value intervals and full induced RV graph are proved. Actual dominant matching is a semantic Gamma bijection; its first-order graph and the interval-bijection obstruction remain open. TargetVF retains its closed-ray case. |
+| 3.24 | Ordinary closed-parent correction is author-approved. Actual annuli now reduce to a full original-base definable Gamma bijection Icc to Ioc or Iic,with exactly two real hole-centre labels. The independent interval-bijection obstruction remains open. TargetVF retains its closed-ray case. |
 
 Except where a row states otherwise,the atomic unary geometry in3.6--3.13
 retains its full-base ACVF00/originally definable nontrivial-value scope.
@@ -187,7 +186,27 @@ and full-base finite/cofinite traces. CofiniteRVRows proves a unique
 dominant value and a cofinite image in that entire target fibre.
 RVValueMatching uses the actual definable inverse to supply a match for
 every target value. Generic CofiniteClassMatching then gives a true Gamma
-index bijection. This is semantic only:its first-order graph is the next
-obligation,followed by the interval-bijection obstruction.
+index bijection. The subsequent batch proves its full first-order graph; the independent
+interval-bijection obstruction remains open.
 No uniform bound is substituted for surjectivity. No outside citation,
 referee assertion or HK result is a proof input.
+
+## Definable Gamma matching and actual annulus reduction
+
+RVMatchCodeRelations keeps both proper Gamma-code labels free in the
+source and matched rows. FullBaseCounting expresses distinct actual RV
+witnesses over the original interpreted base. RVMatchUniformBound uses
+finite formula support only internally to obtain a genuine uniform bound
+for the finite side of every proper code row. RVMatchRowSemantics identifies
+cofiniteness with the exact actual two-sided matching relation.
+DefinableGammaMatching.exists_definable_gamma_bijection now constructs the
+actual index bijection with its full original-base first-order graph.
+All proper representatives remain in that graph. Saturation,an infinite
+cardinal,small real base and ACVF00 are explicit; no old-imaginary bound.
+
+RadialAnnulusDomains and RadialValuePullbacks identify the actual bodies
+and their complete RV images. AnnulusGammaReduction.closed_to_open gives
+a definable bijection from the closed source Icc to the ordinary-open
+target Ioc or the VFtarget Iic,adjoining exactly two real hole-centre labels.
+This is a checked reduction. It does not prove the interval obstruction
+or corrected3.24. No outside theorem or referee claim is a proof input.

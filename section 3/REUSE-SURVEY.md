@@ -567,3 +567,15 @@ No Ax/HK/Euler citation is introduced. The final Gamma graph is not yet
 proved first-order definable. All49 new complete types match individual
 reviewed audits,all1051 old types are unchanged,and318 source hashes match
 the full1100-head local root/type/axiom audit.
+
+## Definable matching graph and interval reduction
+
+Pins unchanged. Inspected the exact checked raw uniform_finite_side and
+finite injection/cardinality declarations. The full original graph has
+finite imaginary support internally; common finite real presentation gives
+genuine small-base saturation. Distinct RV witnesses express the exact
+cofinite matching graph on all proper value codes. No old-imaginary bound,
+choice assumption or external citation is introduced. All30 new full
+types match individual reviewed audits; all1100 prior types are unchanged.
+The full local root/type/axiom audit has1130 heads and327 source hashes.
+The interval-bijection obstruction is still open.

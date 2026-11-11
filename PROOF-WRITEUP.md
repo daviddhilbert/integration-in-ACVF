@@ -55,3 +55,11 @@ supplies every target match; uniform bounds are not used as a substitute
 for surjectivity. The Gamma graph and interval-bijection obstruction are
 still open,so no completed replacement proof is recorded yet. Compare the
 final argument with the printed proof only after these obligations close.
+
+## 3.24 continuation: Gamma graph and reduction
+
+The full induced Gamma graph is now checked. Genuine uniform finite-side
+bounds express the matching by finitely many distinct RV witnesses over
+the original base. Exact actual annulus domains and full RV pullbacks give
+the Icc-to-Ioc/Iic reduction. The independent interval obstruction remains
+open,so the substantially-different-proof comparison stays provisional.
