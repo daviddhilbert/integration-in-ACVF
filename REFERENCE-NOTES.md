@@ -20,7 +20,8 @@ Section3 comparisons:
   elimination with named balls; that full parameter bridge is not thereby
   verified. The new finite-hitting/profile approach was developed before
   reading the attachment and continues independently. The route now proves full-base open-ball3.4 and3.15 in the969-head local
-  checkpoint. Its earlier plan `.scratch/full-base-315-plan.md` is historical;
+  checkpoint; the983-head local extension also includes unnamed closed radii.
+  Its earlier plan `.scratch/full-base-315-plan.md` is historical;
   no proof input is taken from the report.
 - R013 discusses a last step in3.16. The existing checked formalization
   already supplies its own Gamma-slope rigidity proof. No new premise or

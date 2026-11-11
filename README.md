@@ -31,16 +31,18 @@ and manual dispatch, with downloadable build and audit evidence.
 The current root imports the predecessor and the new Section 2 and 3 libraries.
 [Section 2](section%202/STATUS.md) records the prerequisite map and Corollary 2.15;
 [Section 3](section%203/STATUS.md) records the exact formalized scope and open work.
-The full local root build, inherited QE audit, Section2 audit and969
-Section3 type/axiom audits pass:336 generic and633 actual heads.
-All270 source hashes match. All943 previously published complete types
-are unchanged; all26 new complete types exactly match individually reviewed
-audits. Only propext,Classical.choice andQuot.sound occur. Evidence is in
-.scratch/local-full-partition-969/ andVERIFICATION.json. [CI42967337352](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42967337352) passed;
-all969 complete CI types and270 source hashes match the archived local audit. The previous943-head source b11acf2 passed
-[CI42964125581](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42964125581)
-and was promoted to main at receipt66859e7 after exact type/hash comparison.
+The full local root build,inherited QE audit,Section2 audit and983
+Section3 type/axiom audits pass:336 generic and647 actual heads.
+All277 source hashes match; all969 previous complete types are unchanged,
+and all14 new complete types exactly match individually reviewed audits.
+Only propext,Classical.choice andQuot.sound occur. Evidence is in
+.scratch/local-closed-type-983/ andVERIFICATION.json. New CI confirmation
+is pending. The preceding full3.15/3.19 source fed786f passed
+[CI42967337352](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42967337352)
+and was promoted to main at receipt39db258 after exact type/hash matching.
 
+CompleteTypeBallAtomicity.lemma_3_4 proves full open/closed ball atomicity,
+including arbitrary unnamed radii and possibly undefinable complete types.
 FullCompleteTypeOpenImages.lemma_3_15 proves3.15 over the full original
 real/Gamma/ball base, for arbitrary open-ball radii inside a possibly
 undefinable complete-type set. FullOpenToOpenPartition.proposition_3_19
@@ -51,9 +53,9 @@ definable nontrivial Gamma value remain explicit. Neither theorem assumes
 finiteness or a cardinal bound on the originally named imaginary parameters.
 
 The two remaining numbered Section3 main targets are3.21 and3.24;
-3.20 is a definition. Remaining scope followups are unnamed closed-ball
-radii in3.4 and existence of the least-radius function supplied as input
-in3.17. Section2.34 remains open separately; Section2.15 is checked.
+3.20 is a definition. Lemma3.4 now includes all unnamed open/closed radii.
+Existence of the least-radius function supplied as input in3.17 remains
+a scope followup. Section2.34 remains open separately; Section2.15 is checked.
 
 Nineteen numbered Section3 results have checked implementations in the
 precise scopes listed in the section status. Keep the author-approved

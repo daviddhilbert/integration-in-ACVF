@@ -491,3 +491,19 @@ finite original formula support removes any bound on all imaginary names.
 All26 new full types are manually reviewed and exactly match the combined
 969-head audit; all943 published types unchanged,all270 source hashes match.
 Only permitted standard axioms. No new outside citation or HK input.
+
+## Full3.4 including unnamed closed radii
+
+Pins unchanged. Exact source/type inspected for pinned
+Section3.MixedRootFree.mixed_qf_rootFree_constant_closed:actual coefficient
+field,well-sorted QF formula,closed-disc root avoidance,and finite RV tuple
+scope. Every premise is proved by the new closed profile consumer.
+The actual closed ball chart and non-strict valuation bounds give the
+self-centred quotient bridge. Real/Gamma atomicity covers all ball kinds;
+the conditional real cover helper's atomicity premise is supplied,not
+retained in the final original-base theorem. The intrinsic finite-hitting
+argument is reused unchanged. All969 previous complete types unchanged,
+all14 new full types exactly match individually reviewed audits,and all277
+source hashes match the successful983-head local root/type/axiom audit.
+Only permitted standard axioms. No referee claim,new outside citation or
+HK result is a proof input.

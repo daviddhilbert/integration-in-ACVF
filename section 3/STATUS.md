@@ -2,15 +2,15 @@
 
 Target: arXiv:0809.0473v2,through Proposition3.24.
 
-The full local root build, inherited QE audit, Section2 audit and969
-Section3 type/axiom audits pass:336 generic and633 actual heads.
-All270 source hashes match. All943 previously published complete types
-are unchanged; all26 new complete types exactly match individually reviewed
-audits. Only propext,Classical.choice andQuot.sound occur. Evidence is in
-.scratch/local-full-partition-969/ andVERIFICATION.json. [CI42967337352](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42967337352) passed;
-all969 complete CI types and270 source hashes match the archived local audit. The previous943-head source b11acf2 passed
-[CI42964125581](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42964125581)
-and was promoted to main at receipt66859e7 after exact type/hash comparison.
+The full local root build,inherited QE audit,Section2 audit and983
+Section3 type/axiom audits pass:336 generic and647 actual heads.
+All277 source hashes match; all969 previous complete types are unchanged,
+and all14 new complete types exactly match individually reviewed audits.
+Only propext,Classical.choice andQuot.sound occur. Evidence is in
+.scratch/local-closed-type-983/ andVERIFICATION.json. New CI confirmation
+is pending. The preceding full3.15/3.19 source fed786f passed
+[CI42967337352](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42967337352)
+and was promoted to main at receipt39db258 after exact type/hash matching.
 
 ## Numbered results and exact scope
 
@@ -22,7 +22,7 @@ Green checks certify these exported types,not broader unstated claims.
 | 3.1 | Complete-type generation and atomicity calculus for actual definable finite tuples and interpreted bases. |
 | 3.2 | Parametric ball atomicity over the full real/Gamma/ball base. Actual nonalgebraicity is of the output ball name; only the input name is adjoined. |
 | 3.3 | Atomicity survives every finite Gamma tuple,including mixed VF/RV tuples. ACVF00 and an original-base definable nontrivial Gamma value are explicit. The ambient is definable atomic. |
-| 3.4 | Named Gamma radii,singletons andVF are checked. Arbitrary open-ball radii are now checked over the full original base in FullOpenCompleteTypeAtomicity.lemma_3_4_open,with genuine saturation,infinite cardinal,small original real base,ACVF00 and a genuine nontrivial value. The ambient complete type need not be definable. Unnamed closed-ball radii remain a scope followup. |
+| 3.4 | CompleteTypeBallAtomicity.lemma_3_4 covers every actual open/closed ball,including arbitrary unnamed radii,singletons andVF,over the full original real/Gamma/ball base. Ambient complete type need not be definable. Genuine saturation,infinite cardinal,small original real base,ACVF00 and a genuine nontrivial value explicit. Only the actual ball name is adjoined. |
 | 3.6 | Actual finite nonempty disjoint primitive decomposition of an atomic VF set,with common radius,valuative centre and primitive kind. No individual component is assumed definable. |
 | 3.7 | Whole-ball coverage at the radius of an inner ball,including singleton/VF cases. Initially unnamed radius is adjoined using checked3.3. |
 | 3.8 | Full partial-domain VF images preserve atomicity and the one-component condition. |
@@ -46,16 +46,16 @@ retains its full-base ACVF00/originally definable nontrivial-value scope.
 See exported full types and VERIFICATION.json for the exact hypotheses.
 
 The two remaining numbered Section3 main targets are3.21 and3.24;
-3.20 is a definition. Remaining scope followups are unnamed closed-ball
-radii in3.4 and existence of the least-radius function supplied as input
-in3.17. Section2.34 remains open separately; Section2.15 is checked.
+3.20 is a definition. Lemma3.4 now includes all unnamed open/closed radii.
+Existence of the least-radius function supplied as input in3.17 remains
+a scope followup. Section2.34 remains open separately; Section2.15 is checked.
 
-## Full-base open-ball atomicity and3.15
+## Full-base ball atomicity and3.15
 
 For any putative same-base cut after naming a ball,form the full-base
-definable family of open balls split by that relation. Specialize finite
+definable family of balls split by that relation. Specialize finite
 imaginary code support only inside a compactness argument. Checked
-real/Gamma open-ball atomicity excludes splitting balls in a complete-type
+real/Gamma open/closed ball atomicity excludes splitting balls in a complete-type
 core over that real code base. Two genuine saturation steps produce a
 finite real-definable cover containing no splitting-family member.
 C-minimal finite ball support supplies arbitrary finite hitting points.
@@ -74,8 +74,8 @@ This contradicts the putative cut. SplittingBallHitting constructs the
 hitting set; no such premise remains in the final3.4/3.15 types.
 
 Checked3.13 and injectivity now give3.15. This proof replaces the printed
-fixed-radius step for unnamed radii and old ball parameters. It was developed
-independently before the referee attachment was read. The attachment's
+fixed-radius step for unnamed radii and old ball parameters. The finite-hitting
+strategy was developed independently before the referee attachment was read. The attachment's
 proposed QE bridge is not used. PROOF-WRITEUP.md records the future writeup.
 
 ## Full-base finite partitions in3.19
@@ -109,3 +109,16 @@ is proved by finite-field Frobenius,first-order transfer and finite patches.
 Tagged lines conserve actual component and hole counts. Native normalization
 transports these counts back to the original model. This replaces the
 printed regular-curve conservation argument; no outside citation is added.
+
+## Unnamed closed radii in full3.4
+
+ClosedCompleteTypeRVProfiles applies the pinned checked closed-disc
+root-free theorem to finite original-base polynomial obstacles.
+ClosedSelfCentredBallProfiles uses the actual closed chart with the tested
+point as centre and all VF lifts of an RV radius variable. Non-strict
+valuation bounds prove recentering and full quotient equality.
+ClosedCompleteTypeAtomicity supplies real/Gamma atomicity for ordinary
+closed balls,with singleton/VF cases supplied by earlier checked exports.
+RealBallAtomicity covers every actual ball imaginary. The same intrinsic
+finite-hitting argument now applies to any splitting-ball family,so
+CompleteTypeBallAtomicity.lemma_3_4 has no open/closed or radius restriction.

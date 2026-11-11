@@ -1,14 +1,14 @@
 # Section3 continuation
 
-The full local root build, inherited QE audit, Section2 audit and969
-Section3 type/axiom audits pass:336 generic and633 actual heads.
-All270 source hashes match. All943 previously published complete types
-are unchanged; all26 new complete types exactly match individually reviewed
-audits. Only propext,Classical.choice andQuot.sound occur. Evidence is in
-.scratch/local-full-partition-969/ andVERIFICATION.json. [CI42967337352](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42967337352) passed;
-all969 complete CI types and270 source hashes match the archived local audit. The previous943-head source b11acf2 passed
-[CI42964125581](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42964125581)
-and was promoted to main at receipt66859e7 after exact type/hash comparison.
+The full local root build,inherited QE audit,Section2 audit and983
+Section3 type/axiom audits pass:336 generic and647 actual heads.
+All277 source hashes match; all969 previous complete types are unchanged,
+and all14 new complete types exactly match individually reviewed audits.
+Only propext,Classical.choice andQuot.sound occur. Evidence is in
+.scratch/local-closed-type-983/ andVERIFICATION.json. New CI confirmation
+is pending. The preceding full3.15/3.19 source fed786f passed
+[CI42967337352](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42967337352)
+and was promoted to main at receipt39db258 after exact type/hash matching.
 
 FullCompleteTypeOpenImages.lemma_3_15 proves3.15 over the full original
 real/Gamma/ball base, for arbitrary open-ball radii inside a possibly
@@ -20,9 +20,9 @@ definable nontrivial Gamma value remain explicit. Neither theorem assumes
 finiteness or a cardinal bound on the originally named imaginary parameters.
 
 The two remaining numbered Section3 main targets are3.21 and3.24;
-3.20 is a definition. Remaining scope followups are unnamed closed-ball
-radii in3.4 and existence of the least-radius function supplied as input
-in3.17. Section2.34 remains open separately; Section2.15 is checked.
+3.20 is a definition. Lemma3.4 now includes all unnamed open/closed radii.
+Existence of the least-radius function supplied as input in3.17 remains
+a scope followup. Section2.34 remains open separately; Section2.15 is checked.
 
 Current proof entries:FullOpenCompleteTypeAtomicity.lemma_3_4_open,
 FullCompleteTypeOpenImages.lemma_3_15,
@@ -38,13 +38,19 @@ receipt. Use set-e for publication shell sequences.
 The referee attachment is reference only:AGENTS.md andREFERENCE-NOTES.md.
 Its proposed QE repair is not an input. The finite-hitting/profile route
 was developed independently and now supplies full open-ball3.4/3.15.
-The old .scratch/full-base-315-plan.md is historical; its open-ball plan and
-the later finite-base3.19 extension are implemented. Closed unnamed radii
-still need the corresponding real/Gamma closed-ball atomicity producer.
-Pinned Section3.MixedRootFree already proves
-mixed_qf_rootFree_constant_closed. Inspect its exact type and the closed
-self-centred ball-code bridge before reuse. Singleton/VF cases are already
-checked. The finite-hitting/profile argument itself works for all balls.
+The old .scratch/full-base-315-plan.md is historical. Full open/closed3.4
+is now CompleteTypeBallAtomicity.lemma_3_4; the closed root-free producer,
+closed self-centred code bridge and arbitrary splitting-ball hitting set
+are proved. All14 new full types exactly match individual reviewed audits.
+Compare983CI against the983 archive,including its archivedSection2.
+Ignored CoordinateSlices andCoordinateFibres drafts compile individually
+(five and four heads); they are not registered or counted in983. They
+define actual deleted-coordinate contexts,insertion,and scalar fibre maps,
+prove exact full scalar graph equality,and prove fibre-map injectivity from
+actual whole-map injectivity. Review them before integration for3.20/3.21.
+The existing pinned SpecialTransformations.ModelTheory.
+promote_definable_tuple_fibre (Section3/GammaBaseTools) already promotes
+finite real names to free tuple parameters; inspect and reuse its exact type.
 
 Next3.21:define actual deleted-coordinate contexts and their fibre maps;
 apply full3.19 after finitely adjoining real context labels. Uniformize the
