@@ -133,3 +133,17 @@ saturation, finite real support and the fixed VF input. It gives finite
 volume images without an internal code-set bound or an unproved
 RV-algebraicity premise. The category morphisms and inverse laws compile;
 all227 full type/allowed-axiom audits and root/project checks pass.
+
+## Definition5.4 relative-special factorization
+
+The pinned Special transformations FocusGeometry/Focus, Map and
+SpecialBijection remain the actual notions. The fibre construction names
+only the fixed complementary VF coordinates and restricts the focus locus
+to the fibre RV hull. The checked original-Gamma preimage API in
+Section5.GammaLiftRelation and monotonicity in Section3.GammaSupport retain
+the original Gamma names. Mathlib Data.List.OfFn and Data.List.FinRange
+(pinned revision in VERIFICATION.json, Apache2.0) are used only to prove the
+exact RV-label order of the finite one-coordinate canonical factorization.
+No additional mathematical theorem, citation or choice principle is used.
+The local302-head section build/type/axiom audit, root build and full project
+audits pass. Exact evidence and limitations are in VERIFICATION.json.

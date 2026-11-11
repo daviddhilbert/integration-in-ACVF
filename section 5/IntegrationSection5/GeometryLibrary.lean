@@ -21,3 +21,5 @@ import IntegrationSection5.UnaryPaperBallBridge
 import IntegrationSection5.UnaryBijection
 import IntegrationSection5.PreparedCoordinatePartition
 import IntegrationSection5.UnaryRVCategory
+import IntegrationSection5.RelativeSpecialFactorization
+import IntegrationSection5.GammaCoordinateFibres

@@ -1,9 +1,9 @@
 # Section 5 status
 
-**Lemmas 5.1–5.2 and Remark 5.3 are locally checked** in the recorded original
+**Lemmas 5.1–5.2, Remark 5.3 and the definition/factorization part of 5.4 are locally checked** in the recorded original
 real/Gamma base scope. The full Section5 is still in progress. The current
-227-declaration full type/axiom audit passes with only propext,
-Classical.choice and Quot.sound. All197 prior complete types are unchanged.
+302-declaration full type/axiom audit passes with only propext,
+Classical.choice and Quot.sound. All227 prior complete types are unchanged.
 The root build and full project audits pass for foundation and Sections2,3,5;
 Sections4,6,7 have no local verifiers and are skipped.
 
@@ -47,29 +47,37 @@ RV-pullback data supplied by5.2. No internal code-set smallness is used.
 category isomorphism. `UnaryVFFibreFinite` proves fixed-input VF finiteness;
 `UnaryVolumeImages` proves the required category finiteness.
 
-Next: full fibrewise
-relative specialness(5.4), standard contractions(5.5), general5.6 and
+Definition5.4 now has actual coordinate-fibre maps and exact fibrewise
+special witnesses, rather than just the relatively-unary predicate. The
+fibre base names only the complementary VF coordinates; its Gamma names
+are unchanged. Restricted focus loci are intersected with the fibre RV
+hull. One-coordinate canonical factors, applied in descending coordinate
+order, reproduce the full canonical map exactly, including its RV labels.
+`special_relativeSpecial_factorization` factors every actual special
+bijection into actual relatively special factors, in all finite arities.
+The original-Gamma fibre-set, full-map and focus graphs are proved in
+`GammaCoordinateFibres`. This batch needs only ACVF and the actual given
+maps/foci, with no saturation or smallness premise.
+
+Next: uniform coordinate preparation and standard contractions(5.5), general5.6 and
 2-cell results5.7–5.8 remain open. An arbitrary RV-valued map is not a
 standard contraction; an RV-key bijection alone does not prove5.3.
 
-Local evidence: `.scratch/section5-227-verified/`, full types and exact
-source/pin/audit hashes in VERIFICATION.json, plus the lemma52 root and
-project verification logs. The prior161-head checkpoint2428bd0 passed
-CI43075798136. Artifact13882848565 exactly matches its preserved local
-receipt and that verified checkpoint was promoted to main. Remote CI
-confirmation of this197-head batch is a separate publication step.
+Local evidence: `.scratch/section5-302-verified/`, complete types and exact
+source/pin/audit hashes in VERIFICATION.json, and the relative-special root
+and project verification logs. All302 type/axiom audits pass. The root build
+completed10286 jobs; project audits pass for foundation and Sections2,3,5.
+Sections4,6,7 have no local verifiers in this checkout and are skipped.
+
+Published verified checkpoints: f3bd053(121 heads),2428bd0(161),
+9426f7e(197, full5.2),a2dd306(227, Remark5.3). The latter passed
+CI43083073855; downloaded artifact13885164055 matches all227 complete
+local types and all source/dependency/audit hashes exactly. It is on main.
+The302-head definition/factorization batch has passed local integration;
+remote CI confirmation remains a separate publication step.
 
 No Section5 result is assumed as a prerequisite of itself. No HK result,
-referee assertion or new external citation is a proof input. The5.2 proof follows the paper's partition-and-matching argument; ordinary
-parameter and Lean API bridges are not counted as different proofs.
-
-
-The197-head Lemma5.2 checkpoint9426f7e passed CI43079850718.
-Artifact13885675375 matched all197 complete types and source/pin/audit
-hashes exactly, and that checkpoint is now on main. The227-head5.3 batch
-passed local root and full project checks; remote CI is a separate step.
-
-Remark5.3 uses a verified replacement argument recorded in
-PROOF-WRITEUP.md: finite VF output at a fixed input and singleton/nonzero
-RV-cell geometry directly prove the two category conditions. It does not
-invoke an unproved RV-algebraicity criterion.
+referee assertion or new external citation is a proof input. The5.2 proof
+follows the paper's partition-and-matching argument. Remark5.3 uses the
+verified replacement argument in PROOF-WRITEUP.md. The5.4 fibre and
+canonical-coordinate bookkeeping follows the paper's stated construction.
