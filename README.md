@@ -38,10 +38,9 @@ over real/Gamma bases, including possibly undefinable complete types.
 Supporting 3.22 proofs now conserve components and holes for tagged
 residue-field lines and identify actual maximal open subballs with residue
 coordinates, including finite holes. Its induced definable quotient map
-and finite-family assembly remain open. New CI confirmation is pending.
-The preceding 824-head checkpoint passed
-[CI](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42952242946),
-with every complete type and source hash matched to reviewed local evidence.
+and finite-family assembly remain open. All 855 complete types and 223 source hashes from
+[CI](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42954891823)
+match reviewed local evidence; only the standard Lean axioms occur.
 
 Checked Section 3 results are 3.2, 3.3, 3.4 at original-base definable radii
 plus singleton/VF cases, 3.6, 3.7, 3.8, 3.9, 3.10, corrected 3.11, 3.12,
