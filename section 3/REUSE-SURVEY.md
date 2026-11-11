@@ -607,3 +607,17 @@ assembles the approved corrected3.24 with all helper premises supplied.
 All44 new full types match individual reviewed audits; all1166 prior types
 are unchanged. Full1210-head local root/type/axiom audit has357 source hashes.
 No Euler/Grothendieck/HK citation or referee assertion is a proof input.
+
+## Actual ordinary least-linear-radius construction
+
+Pins unchanged. Reuse checked actual Gamma multiplication/value preorder,
+normalization and full original-base Boolean/quantifier syntax. The exact
+raw partial graph defines uniform actual ball-linearity; every radius and
+slope representative is retained. Pairwise ordinary-ball union density and
+coefficient uniqueness prove closure from above. Actual ball inclusion
+proves the lower bound; the already checked finite-controller completeness
+theorem supplies the minimum or singleton infinity. No outside theorem is
+introduced. All34 new complete types match individual reviewed audits and
+all1210 prior types are unchanged. Full1244-head local root/type/axiom audit
+has368 source hashes. The whole-field id counterexample is an independent
+existence boundary; the conditional numbered3.17 theorem is unchanged.

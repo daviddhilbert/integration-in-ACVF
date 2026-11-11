@@ -2,15 +2,15 @@
 
 Target: arXiv:0809.0473v2,through Proposition3.24.
 
-The full local root build, inherited QE audit, Section2 audit and1210
-Section3 type/axiom audits pass:356 generic and854 actual heads.
-All357 source hashes match; all1166 previous complete types are unchanged,
-and all44 new complete types exactly match individually reviewed audits.
+The full local root build, inherited QE audit, Section2 audit and1244
+Section3 type/axiom audits pass:356 generic and888 actual heads.
+All368 source hashes match; all1210 previous complete types are unchanged,
+and all34 new complete types exactly match individually reviewed audits.
 Only propext, Classical.choice and Quot.sound occur. Evidence is in
-.scratch/local-punctured-obstruction-1210/ and VERIFICATION.json. [CI42994511817](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42994511817) passed;
-all1210 full CI types and357 source hashes match the reviewed local archive. The preceding source186f888 passed
-[CI42991404874](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42991404874)
-and was promoted to main at receipt3814b66 after exact type/source/audit matching.
+.scratch/local-least-radius-1244/ and VERIFICATION.json. CI confirmation
+for this batch is pending. The preceding sourceb2210a7 passed
+[CI42994511817](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42994511817)
+and was promoted to main at receiptce43208 after exact type/source/audit matching.
 
 ## Numbered results and exact scope
 
@@ -33,7 +33,7 @@ Green checks certify these exported types,not broader unstated claims.
 | 3.14 | Infinite one-component atomic target cannot be closed when its only ball imaginary is the source open-ball name. Original Gamma names are permitted; source radius need not be named. |
 | 3.15 | FullCompleteTypeOpenImages.lemma_3_15 for the full original real/Gamma/ball base,arbitrary open-ball radii,and possibly undefinable complete-type ambients. The map may be defined on a larger definable domain. Genuine saturation,infinite cardinal,small original real base,ACVF00 and original-base definable nontrivial value are explicit. |
 | 3.16 | Actual Gamma-linearity with coefficient target/source radius ratio,using actual HasRadius properties. Genuine saturation,infinite cardinal,small real base,ACVF00 and original-base definable nontrivial value are explicit. No linearity premise. |
-| 3.17 | Actual linear subballs and the stated exclusion for every given least-radius function. Centre/radius codes are internal; no old-imaginary cardinal bound. Existence of the least-radius function is not included in the checked export. |
+| 3.17 | LeastLinearRadiusExistence.corollary_3_17_ordinary constructs the actual least-radius function and proves the exclusion for every ordinary open source ball; no givenleast or syntax premise. Existence needs onlyACVF00 and the full original-base partial graph. The exclusion retains genuine saturation,infinite cardinal,small real base and injectivity. Original conditional3.17 still includesVF. Actual id onVF has no leastGammaTopradius; no author correction is adopted. |
 | 3.18 | Complete actual RV-linearity,with the same standing saturation/smallness/characteristic/nontrivial-value scope as3.16. The affine-error replacement avoids the printed endpoint inference. |
 | 3.19 | FullOpenToOpenPartition.proposition_3_19 constructs an actual finite disjoint partition into nonempty original-base definable pieces with actual OpenToOpen. Full original base; same standing scope as3.15. No finiteness or cardinal bound on old imaginary names. |
 | 3.20 | Actual coordinate slicing, scalar fibre maps, full uniform graph and restriction stability are checked. |
@@ -48,8 +48,9 @@ See exported full types and VERIFICATION.json for the exact hypotheses.
 
 All21 numbered Section3 main targets now have checked implementations
 in their recorded scopes;3.20 is a definition. Corrected3.24 is proved.
-Existence of the least-radius function supplied as input in3.17 remains
-a scope followup. Section2.34 remains open separately; Section2.15 is checked.
+Ordinary-source least-radius existence in3.17 is now proved. The original
+conditional theorem still coversVF; id onVF has no leastGammaTopradius.
+Section2.34 remains open separately; Section2.15 is checked.
 
 ## Full-base ball atomicity and3.15
 
@@ -262,3 +263,31 @@ more point than open cell; Ioc and Iic have equal numbers. The actual
 bijection gives equal point counts on paired decompositions,contradiction.
 No unproved Euler/Grothendieck/HK theorem,referee claim or cell-decomposition
 premise is used. Every helper Data field is constructed in the final proof.
+
+## Ordinary least-radius existence and the VF boundary
+
+LeastLinearRadiusExistence.ordinary constructs the actual least
+GammaTopradius at every point of an ordinary source ball. The map needs
+only a full original-base partial graph,VFoutputs andACVF00; no injectivity
+or saturation is required for existence. ordinary_function constructs a
+threshold function,and corollary_3_17_ordinary proves the exclusion without
+a given least-radius function. The exclusion uses the recorded genuine
+saturation,infinite cardinal,small real base and injectivity hypotheses.
+No definability of the chosen threshold function is claimed here.
+
+UniformGammaBallSyntax and UniformGammaSlopeSyntax retain every proper
+radius/coefficient code. GammaLinearValueRow and GammaLinearBallRow use
+actual fgraph witnesses to express both domain containment and the exact
+GammaLinearity equality,including zero differences. GammaLinearRadiusSyntax
+adjoins only the real centre and quantifies the coefficient codes.
+OpenRadiusLimits proves actual pairwise ball union density.
+GammaLinearRestrictions gives coefficient uniqueness on every ordinary ball;
+GammaLinearRadiusClosure proves closure from above. Actual source inclusion
+bounds the locus below. Checked finite-controller completeness supplies its
+least point; an empty ordinary locus gives the singleton radius infinity.
+
+LeastRadiusWholeFieldBoundary independently proves id onVF has a full
+original-base graph and is linear at every ordinary radius,so it has no
+least radius inGammaTop. This is an existence boundary,not a counterexample
+to the original conditional3.17 exclusion. No author-approved correction
+or new source restriction is inferred. Section2.34 remains open separately.

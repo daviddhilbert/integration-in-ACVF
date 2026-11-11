@@ -31,15 +31,15 @@ and manual dispatch, with downloadable build and audit evidence.
 The current root imports the predecessor and the new Section 2 and 3 libraries.
 [Section 2](section%202/STATUS.md) records the prerequisite map and Corollary 2.15;
 [Section 3](section%203/STATUS.md) records the exact formalized scope and open work.
-The full local root build, inherited QE audit, Section2 audit and1210
-Section3 type/axiom audits pass:356 generic and854 actual heads.
-All357 source hashes match; all1166 previous complete types are unchanged,
-and all44 new complete types exactly match individually reviewed audits.
+The full local root build, inherited QE audit, Section2 audit and1244
+Section3 type/axiom audits pass:356 generic and888 actual heads.
+All368 source hashes match; all1210 previous complete types are unchanged,
+and all34 new complete types exactly match individually reviewed audits.
 Only propext, Classical.choice and Quot.sound occur. Evidence is in
-.scratch/local-punctured-obstruction-1210/ and VERIFICATION.json. [CI42994511817](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42994511817) passed;
-all1210 full CI types and357 source hashes match the reviewed local archive. The preceding source186f888 passed
-[CI42991404874](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42991404874)
-and was promoted to main at receipt3814b66 after exact type/source/audit matching.
+.scratch/local-least-radius-1244/ and VERIFICATION.json. CI confirmation
+for this batch is pending. The preceding sourceb2210a7 passed
+[CI42994511817](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42994511817)
+and was promoted to main at receiptce43208 after exact type/source/audit matching.
 
 CompleteTypeBallAtomicity.lemma_3_4 proves full open/closed ball atomicity,
 including arbitrary unnamed radii and possibly undefinable complete types.
@@ -62,8 +62,9 @@ counterexample. The author approved the ordinary closed-parent restriction, reco
 
 All21 numbered Section3 main targets now have checked implementations
 in their recorded scopes;3.20 is a definition. Corrected3.24 is proved.
-Existence of the least-radius function supplied as input in3.17 remains
-a scope followup. Section2.34 remains open separately; Section2.15 is checked.
+Ordinary-source least-radius existence in3.17 is now proved. The original
+conditional theorem still coversVF; id onVF has no leastGammaTopradius.
+Section2.34 remains open separately; Section2.15 is checked.
 
 Twenty numbered Section3 results have checked implementations in the
 precise scopes listed in the section status. Keep the author-approved

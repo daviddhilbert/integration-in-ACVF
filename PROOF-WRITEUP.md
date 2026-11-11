@@ -97,3 +97,16 @@ completed proof route to compare with the printed proof in the requested
 whole-paper writeup. Ordinary syntax details alone are not claimed to be
 substantially different mathematics. Keep the approved boundary repair
 separate from proof comparison.3.17 and Section2.34 followups remain separate.
+
+## 3.17 ordinary existence followup
+
+Actual least-radius existence on ordinary source balls is now proved.
+The full raw partial graph defines the linear-radius locus. Coefficients
+on concentric ordinary balls agree by cancellation; pairwise ball union
+density proves closure from above. Actual inclusion bounds the locus below,
+and finite-controller completeness supplies the least radius. An empty
+ordinary locus yields the singleton infinity. This fills the ordinary
+existence step behind the exclusion; it does not alone change its printed
+proof. VFis a separate existence boundary:its identity has no leastGammaTop
+radius. No author correction is adopted and no threshold-definability
+conclusion is claimed. Keep this separate in the eventual whole-paper writeup.
