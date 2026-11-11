@@ -10,7 +10,8 @@ All 248 source hashes match; all 914 prior complete types are unchanged,
 and all 12 new complete types exactly match individually reviewed audits.
 Only propext, Classical.choice and Quot.sound occur. Evidence is in
 .scratch/local-primitive-distinction-926/ and VERIFICATION.json.
-New CI confirmation is pending. The preceding complete3.22 source13cabca
+All926 complete CI types and248 source hashes match the archived local audit.
+[CI42961486168](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42961486168) passed; this is the verified main checkpoint. The preceding complete3.22 source13cabca
 passed [CI42960151159](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42960151159);
 all914 complete types and244 hashes matched before main receipt4786753.
 
