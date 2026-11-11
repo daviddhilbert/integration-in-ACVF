@@ -6,7 +6,7 @@ Section2 types are unchanged; all14 new complete types match individually
 reviewed audits. All22/368 section source hashes and both audit hashes match.
 Only the three permitted standard axioms occur. Evidence is archived in
 `.scratch/local-henselian-support-41/`, including its own Section2 andSection3
-logs and receipts. CI confirmation for this batch is pending.
+logs and receipts. [CI43004909322](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/43004909322) passed after exact full type/source/audit matching.
 
 The five new support modules prove finite Galois immediate-extension
 triviality in residue characteristic zero, Hensel descent through actual

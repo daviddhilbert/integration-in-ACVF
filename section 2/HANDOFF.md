@@ -4,7 +4,7 @@ Newest batch: `.scratch/local-henselian-support-41/`. Its full root,inherited
 QE,41 Section2 and1244 Section3 type/axiom audits pass locally. All27 previous
 Section2 complete types and all1244 Section3 complete types are unchanged;
 all14 new full types match individual reviewed audits. Source counts are22
-and368. CI confirmation is pending. This archive has its own Section2 and
+and368. [CI43004909322](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/43004909322) passed; complete types and source/audit hashes match the local batch archive and publication checkout. This archive has its own Section2 and
 Section3 evidence; use it for this batch's eventual promotion.
 
 `HenselianImmediateGalois` proves trace-kernel triviality and degree one for
