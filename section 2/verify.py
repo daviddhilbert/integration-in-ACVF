@@ -21,6 +21,8 @@ HEADLINES += ['IntegrationInACVF.Section2.HenselianImmediateGalois.same_values',
 DEFINITIONS += ['IntegrationInACVF.Section2.HenselianImmediateGalois.ImmediateApproximation']
 HEADLINES += ['IntegrationInACVF.Section2.ValuedSubfieldRestriction.henselian_iff', 'IntegrationInACVF.Section2.AlgebraicEnvelopeBases.algebraic_comap', 'IntegrationInACVF.Section2.AlgebraicEnvelopeBases.galois_comap', 'IntegrationInACVF.Section2.AlgebraicSubfieldHenselian.algebraic_henselian', 'IntegrationInACVF.Section2.HenselianImmediateEmbeddings.embedding_value', 'IntegrationInACVF.Section2.HenselianImmediateEmbeddings.trace_kernel_zero', 'IntegrationInACVF.Section2.HenselianImmediateEmbeddings.finrank_eq_one', 'IntegrationInACVF.Section2.PrimitiveResidueDegree.field_root', 'IntegrationInACVF.Section2.PrimitiveResidueDegree.independent_powers', 'IntegrationInACVF.Section2.PrimitiveResidueDegree.generated_degree', 'IntegrationInACVF.Section2.ResidueGeneratedSurjectivity.surjective', 'IntegrationInACVF.Section2.ImmediateApproximationFromResidues.approximate', 'IntegrationInACVF.Section2.FiniteImmediateSubfield.finrank_eq_one']
 DEFINITIONS += ['IntegrationInACVF.Section2.ValuedSubfieldRestriction.fieldEquiv', 'IntegrationInACVF.Section2.ValuedSubfieldRestriction.ringEquiv', 'IntegrationInACVF.Section2.AlgebraicEnvelopeBases.baseMap']
+HEADLINES += ['IntegrationInACVF.Section2.EmbeddedValuationTransport.henselian_iff', 'IntegrationInACVF.Section2.FieldDegreeTransport.finrank', 'IntegrationInACVF.Section2.FieldDegreeTransport.finite_left', 'IntegrationInACVF.Section2.FiniteImmediateEmbedded.finrank_eq_one', 'IntegrationInACVF.Section2.EmbeddedAlgebraicHenselian.henselian', 'IntegrationInACVF.Section2.EmbeddedResidueCharacteristic.charZero', 'IntegrationInACVF.Section2.EmbeddedIntermediateHenselian.henselian', 'IntegrationInACVF.Section2.EmbeddedFiniteResidueDegree.residue_degree', 'IntegrationInACVF.Section2.ResidueZeroCharacteristic.field_charZero', 'IntegrationInACVF.Section2.ConstructedGaussGraph.graph_input', 'IntegrationInACVF.Section2.ConstructedGaussGraph.acvf_graph_input', 'IntegrationInACVF.Section2.corollary_2_34_nonzero', 'IntegrationInACVF.Section2.corollary_2_34', 'IntegrationInACVF.Section2.VolumeDescentAllDegrees.corollary_2_34_all_degrees']
+DEFINITIONS += ['IntegrationInACVF.Section2.EmbeddedValuationTransport.ringEquiv', 'IntegrationInACVF.Section2.VolumeDescentAllDegrees.Form', 'IntegrationInACVF.Section2.VolumeDescentAllDegrees.PreservesLift', 'IntegrationInACVF.Section2.VolumeDescentAllDegrees.IsVolumeIsomorphism']
 ALLOWED = {'propext', 'Classical.choice', 'Quot.sound'}
 
 
@@ -83,12 +85,12 @@ def main():
             'headline_audits': records,
             'audit_source_sha256': digest(audit),
             'audit_log_sha256': digest(OUT / 'HeadlineAudit.log'),
-            'scope': 'Corollary2.15; concrete positive and essential2.34 descent with explicit predecessor henselian graph or finite-extension reference input; degree-zero convention;27 independent henselian/residue support heads',
+            'scope': 'Corollary2.15 and actual Corollary2.34 in every degree; all graph and finite-extension obligations supplied by checked embedded proofs; standing model/base/lift/measure hypotheses explicit',
             'build_scope': 'Incremental Lake Section 2 build and fresh type/axiom audit',
         }
         (OUT / 'receipt.json').write_text(json.dumps(receipt, indent=2) + '\n', encoding='utf-8')
         status.write_text('PASS\n', encoding='utf-8')
-        print(f'PASS: {len(HEADLINES)} Section2 complete types and standard-axiom audits;2.34 reference input remains explicit.')
+        print(f'PASS: {len(HEADLINES)} Section2 complete types and standard-axiom audits;2.34 has no graph/reference input.')
         return 0
     except Exception as exc:
         status.write_text('FAIL\n', encoding='utf-8')

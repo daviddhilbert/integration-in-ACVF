@@ -1,5 +1,36 @@
 # Section 2 reuse and new proofs
 
+## Final concrete 2.34 proof
+
+`EmbeddedFiniteResidueDegree.residue_degree` now proves the required degree
+equality for actual finite extensions embedded in the algebraically closed
+valued ambient field. Its premises are finite dimension,a henselian base,
+residue characteristic zero and agreement of actual values. Neither the
+desired equality nor a finite-extension reference is assumed. Henselianity
+of embedded algebraic fields,primitive residue lifting,subextension degree,
+full residue image,immediate approximation and trace triviality are supplied
+by the preceding checked proofs. The embedding,valuation-ring and scalar
+transports are constructed.
+
+`ConstructedGaussGraph` adapts the pinned Gauss graph assembly while supplying
+both missing obligations from these new proofs. `graph_input` requires only
+an algebraically closed field; `acvf_graph_input` requires only the actual
+ACVF model. Residue characteristic zero supplies field characteristic zero
+internally. No universal finite-extension reference is used or asserted.
+
+`VolumeDescentTheorem` supplies the actual positive/essential2.34 wrappers;
+`VolumeDescentAllDegrees` covers all natural degrees. Its zero-degree data
+and equations are trivial exactly as the category convention requires.
+Positive degree uses actual original forms and essential restrictions,
+generic RV compatibility and Gamma compatibility on every label. No graph,
+comparison,reference or Gamma-law premise remains in the final theorem.
+The full68 Section2 and1244 Section3 local audit passes; complete types and
+hashes match individual reviewed evidence. Pins are unchanged. No new outside
+citation,HK result or referee assertion is a proof input.
+
+The following entries record earlier intermediate checkpoints. Their open
+reference boundaries are superseded by the final construction above.
+
 The finite-immediate batch adds actual algebraic-envelope and valuation-ring
 transport. `AlgebraicEnvelopeBases` derives algebraicity and Galoisness of
 the comap bases from the actual algebraic closure. `ValuedSubfieldRestriction`

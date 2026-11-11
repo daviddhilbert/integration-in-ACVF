@@ -1,7 +1,7 @@
 # Scope of Sections 1–3
 
 Paper version: arXiv:0809.0473v2. Section 1 is introductory. Section 2 is
-reviewed separately, with Corollaries 2.15 and 2.34 as new proof obligations.
+reviewed separately; its new Corollaries 2.15 and 2.34 are now checked.
 Section 3 ends at Proposition 3.24, not Proposition 3.19.
 
 ## Parameters and conventions

@@ -1,32 +1,5 @@
 # Writeup of substantially different proofs
 
-The provisional2.34 field argument now extends trace-zero averaging to
-non-Galois finite extensions using all embeddings and a constructed Galois
-envelope. Actual algebraic-extension henselianity is also proved by this
-envelope descent. The primitive residue lift's subextension has the residue
-degree and surjects onto the residue field; equal values plus residue
-surjectivity give immediate approximation. Assembly into the complete
-finite-extension degree theorem is still pending.
-
-Further provisional2.34 input work: the checked support proves immediate
-finite Galois triviality by a trace-zero averaging argument, descends Hensel
-roots through Galois fixed fields, and obtains residue finiteness by lifting
-independent integral families. A primitive residue generator is then lifted
-without the desired field/residue degree equality as an input. The complete
-reference reduction and degree equality remain open; do not present these
-partial results as a completed replacement proof.
-
-Volume descent 2.34 now has a checked concrete bridge relative to the
-predecessor's explicit henselian finite-extension input. Record it as a
-provisional writeup candidate, pending resolution of that input and the final
-whole-paper scope. The RV equation uses generic actual-Jacobian comparison;
-the pointwise Gamma equation instead restricts to every label fibre and uses
-constant-value polydisc descent. This avoids the false unrestricted Gamma
-clause of predecessor 9.15 and retains labels omitted from the generic RV
-comparison. See `section 2/IntegrationSection2/VolumeLiftDescent.lean` and
-the exact input boundary in `section 2/HANDOFF.md`. No new citation or HK
-result is a proof input.
-
 Requested by the author on November 10, 2026 (America/Los_Angeles).
 **After formalization of the whole paper is complete**, prepare a mathematical
 writeup of proofs that differ substantially from those in arXiv:0809.0473v2.
@@ -73,34 +46,6 @@ proof. No standalone replacement writeup is currently required for3.21.
 Local1042-head audit and CI42974291389 passed; exact full type/source/audit hashes matched. The3.4 and3.18 replacement entries
 remain relevant for the eventual whole-paper writeup.
 
-## 3.24 proof-development note
-
-The author approved the ordinary closed-parent correction. Actual value
-intervals are now proved,including the targetVFclosed ray. The full induced
-RVmap and semantic Gamma matching are checked. The inverse map explicitly
-supplies every target match; uniform bounds are not used as a substitute
-for surjectivity. The Gamma graph and interval-bijection obstruction are
-still open,so no completed replacement proof is recorded yet. Compare the
-final argument with the printed proof only after these obligations close.
-
-## 3.24 continuation: Gamma graph and reduction
-
-The full induced Gamma graph is now checked. Genuine uniform finite-side
-bounds express the matching by finitely many distinct RV witnesses over
-the original base. Exact actual annulus domains and full RV pullbacks give
-the Icc-to-Ioc/Iic reduction. The independent interval obstruction remains
-open,so the substantially-different-proof comparison stays provisional.
-
-## 3.24 continuation: independently checked Gamma monotonicity
-
-Piecewise strict monotonicity on actual Gamma is now proved, including
-non-Archimedean models. Strict local extrema are finite by genuine uniform
-finite quotient counts and common positive multiplicative windows.
-Comparison germs classify each interior point; actual prefix LUBs propagate
-coherent signs. No countability argument or unproved o-minimal Euler input.
-The finite interval-counting obstruction remains open; keep the full proof
-comparison provisional until corrected3.24 is assembled.
-
 ## Completed corrected3.24 route for the future proof comparison
 
 PuncturedBallObstruction.proposition_3_24 now closes the author-approved
@@ -123,7 +68,7 @@ No unproved Euler/Grothendieck theorem or HK citation is used. This is a
 completed proof route to compare with the printed proof in the requested
 whole-paper writeup. Ordinary syntax details alone are not claimed to be
 substantially different mathematics. Keep the approved boundary repair
-separate from proof comparison.3.17 and Section2.34 followups remain separate.
+separate from proof comparison. The3.17 existence boundary remains separate.
 
 ## 3.17 ordinary existence followup
 
@@ -137,3 +82,29 @@ existence step behind the exclusion; it does not alone change its printed
 proof. VFis a separate existence boundary:its identity has no leastGammaTop
 radius. No author correction is adopted and no threshold-definability
 conclusion is claimed. Keep this separate in the eventual whole-paper writeup.
+
+
+## Completed 2.34 route for the future proof comparison
+
+The all-degree concrete volume descent now has all graph and finite-extension
+obligations supplied by checked proofs. The generic RV comparison is combined
+with actual fibre avoidance and VF-Jacobian uniqueness. The Gamma equation is
+proved on every label fibre by the separate constant-value polydisc descent
+argument, retaining labels omitted by the generic RV comparison. The false
+unrestricted Gamma clause of predecessor9.15 is not used.
+
+The field input is independently proved: lift Hensel roots in an algebraically
+closed Galois envelope and descend them through its fixed field. Lift residue-
+independent families to obtain finite residue degree,then lift a primitive
+residue generator. Its subextension has exactly that degree and the full
+residue field. Equal values plus residue surjectivity give immediate
+approximation; trace as the sum of all embeddings makes the remaining finite
+extension trivial. This applies to non-Galois finite extensions. Every field-
+image,scalar and valuation-ring transport is constructed.
+
+Inspect EmbeddedFiniteResidueDegree,ConstructedGaussGraph,
+VolumeDescentTheorem andVolumeDescentAllDegrees in section2/IntegrationSection2.
+The complete local68 Section2 and1244 Section3 audit passes; CI confirmation
+for this final batch is pending. Keep the final whole-paper comparison
+focused on the mathematical changes,not routine Lean transport. No new
+outside citation,HK theorem or referee claim is a proof input.

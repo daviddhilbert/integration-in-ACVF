@@ -1,13 +1,10 @@
 # Integration in algebraically closed valued fields
 
-Formalization project for Yimu Yin's
+Formalization of Yimu Yin's
 [Integration in algebraically closed valued fields](https://arxiv.org/abs/0809.0473v2).
-
-This is the sequel to
-[Special transformations](https://github.com/daviddhilbert/special-transformations),
-pinned at `9cc9760892092dd34cfad4a6dee655843c52f30c`.
-The project uses the same Lean 4.35.0 toolchain and Mathlib revision.
-ACVF-QE is inherited through that dependency.
+This is the sequel to [Special transformations](https://github.com/daviddhilbert/special-transformations),
+pinned at `9cc9760892092dd34cfad4a6dee655843c52f30c`. The common ACVF-QE
+language, Lean 4.35.0 toolchain and pinned Mathlib revision are unchanged.
 
 | Directory | Paper section |
 | --- | --- |
@@ -18,7 +15,43 @@ ACVF-QE is inherited through that dependency.
 | section 6 | The kernel of L without volume forms |
 | section 7 | The kernel of L with volume forms and integration |
 
-Read [WORKFLOW.md](WORKFLOW.md) and [AGENTS.md](AGENTS.md) before proof work.
+Section 1 is introductory and has no separate proof target. Sections 4–7
+remain placeholders. Read [WORKFLOW.md](WORKFLOW.md) and [AGENTS.md](AGENTS.md)
+before proof work.
+
+## Checked scope
+
+Section 2 proves Corollary 2.15 over real and genuine Gamma-named bases.
+Corollary 2.34 is now proved on the actual finite-volume RV categories in
+all degrees. The generic RV equation and the Gamma equation at every
+essential label are proved separately. Henselian ascent, finite immediate
+triviality, primitive residue lifting and the required degree equality
+supply the Gauss graph input. No graph or finite-extension reference
+hypothesis remains in the final theorem. Degree zero has no volume data
+or equation, exactly as `mRV[0] = RV[0]`. See [Section 2 status](section%202/STATUS.md).
+
+All 21 numbered Section 3 results through Proposition 3.24 have checked
+implementations in their [recorded scopes](section%203/STATUS.md), including
+full original real/Gamma/ball parameter bases where stated. The approved
+nonemptiness correction in 3.11 and ordinary closed-parent correction in
+3.24 are recorded in [PAPER-CORRECTIONS.md](PAPER-CORRECTIONS.md). The open
+target in 3.24 still includes VF.
+
+Corollary 3.17's printed conditional exclusion includes VF. Least-radius
+existence is additionally constructed on ordinary open source balls.
+The identity on VF has no least radius in GammaTop; no author correction
+or threshold-function-definability claim is made. This boundary does not
+refute the conditional exclusion.
+
+## Verification
+
+The full root build, inherited QE audit, all 68 Section 2 and all 1,244
+Section 3 type/axiom audits pass locally. All 54 previous Section 2 types
+and all Section 3 types are unchanged; all 14 new complete types match
+individual reviewed audits. All 41/368 section source hashes and both audit
+hashes match. Only `propext`, `Classical.choice` and `Quot.sound` occur.
+The archive is `.scratch/local-closed-volume-68/`, with its own Section2 and
+Section3 evidence. CI confirmation for this final batch is pending.
 
 ```sh
 lake exe cache get
@@ -27,79 +60,11 @@ lake env python3 scripts/verify_ci.py
 ```
 
 [Lean verification](.github/workflows/lean.yml) runs on pushes, pull requests
-and manual dispatch, with downloadable build and audit evidence.
-The current root imports the predecessor and the new Section 2 and 3 libraries.
-[Section 2](section%202/STATUS.md) records the prerequisite map and Corollary 2.15;
-[Section 3](section%203/STATUS.md) records the exact formalized scope and open work.
-The full local root build, inherited QE audit, Section2 audit and1244
-Section3 type/axiom audits pass:356 generic and888 actual heads.
-All368 source hashes match; all1210 previous complete types are unchanged,
-and all34 new complete types exactly match individually reviewed audits.
-Only propext, Classical.choice and Quot.sound occur. Evidence is in
-.scratch/local-least-radius-1244/ and VERIFICATION.json. [CI42997698267](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42997698267) passed;
-all1244 full CI types and368 source hashes match the reviewed local archive. The preceding sourceb2210a7 passed
-[CI42994511817](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42994511817)
-and was promoted to main at receiptce43208 after exact type/source/audit matching.
+and manual dispatch, retaining complete audit evidence. Green CI confirms
+the exported types; exact hypotheses and paper fidelity also require manual
+review. The section receipts record the checked sources and pins.
 
-CompleteTypeBallAtomicity.lemma_3_4 proves full open/closed ball atomicity,
-including arbitrary unnamed radii and possibly undefinable complete types.
-FullCompleteTypeOpenImages.lemma_3_15 proves3.15 over the full original
-real/Gamma/ball base, for arbitrary open-ball radii inside a possibly
-undefinable complete-type set. FullOpenToOpenPartition.proposition_3_19
-constructs an actual finite disjoint original-base definable open-to-open
-partition of any actual definable VF bijection. Genuine saturation,
-infinite cardinal,small original real base,ACVF00 and an original-base
-definable nontrivial Gamma value remain explicit. Neither theorem assumes
-finiteness or a cardinal bound on the originally named imaginary parameters.
-
-CoordinatePartitions.proposition_3_21 now supplies full uniform finite
-original-base partitions with the open-to-open property on all selected
-VF coordinate pairs in actual mixed finite tuple maps.
-
-The literal whole-field boundary of3.24 has a checked nonempty identity
-counterexample. The author approved the ordinary closed-parent restriction, recorded in
-[PAPER-CORRECTIONS.md](PAPER-CORRECTIONS.md). The corrected obstruction is open.
-
-All21 numbered Section3 main targets now have checked implementations
-in their recorded scopes;3.20 is a definition. Corrected3.24 is proved.
-Ordinary-source least-radius existence in3.17 is now proved. The original
-conditional theorem still coversVF; id onVF has no leastGammaTopradius.
-Section2.34 remains open separately; Section2.15 is checked.
-
-Twenty numbered Section3 results have checked implementations in the
-precise scopes listed in the section status. Keep the author-approved
-nonemptiness correction in3.11, recorded in PAPER-CORRECTIONS.md.
-The referee attachment is reference material only; see REFERENCE-NOTES.md.
-The remaining section folders are placeholders.
-
-For the targeted libraries and full headline audits:
-
-```sh
-lake build IntegrationSection3
-lake env python3 'section 3/verify.py'
-lake env python3 'section 3/verify.py' --acvf
-lake env python3 'section 2/verify.py'
-```
-
-Section2 concrete volume descent now proves both the generic RV and pointwise
-Gamma conditions on essential finite-volume RV objects, relative to the
-predecessor's explicit henselian graph or finite-extension reference input.
-That reference remains unproved here, so unconditional2.34 remains open.
-The full root,inherited QE,27 Section2 and1244 unchanged Section3 audits pass
-locally; all new full types and source/audit hashes match reviewed evidence
-in .scratch/local-volume-descent-27/. [CI43002045059](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/43002045059) passed; complete types and source/audit hashes match the local batch archive and publication checkout. See
-[Section2 handoff](section%202/HANDOFF.md).
-
-The henselian-support batch passes the full root,inherited QE,41 Section2
-and1244 unchanged Section3 audits. It proves14 further field/residue support
-results without assuming the graph reference or desired degree equality.
-The full reference and unconditional2.34 remain open. Local evidence:
-.scratch/local-henselian-support-41/,with both section archives. [CI43004909322](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/43004909322) confirms the henselian-support batch after exact full type/source/audit matching.
-
-The finite-immediate batch passes the full root,inherited QE,54 Section2
-and1244 unchanged Section3 audits. Its13 new actual valued-field ingredients
-prove constructed-envelope henselian ascent,non-Galois finite immediate
-triviality,primitive subextension degree,residue surjectivity and approximation.
-Full degree assembly and unconditional2.34 remain open. Evidence:
-.scratch/local-finite-immediate-54/,with both section archives. CI confirmation
-for the finite-immediate batch is pending.
+The referee attachment remains reference material only; see
+[REFERENCE-NOTES.md](REFERENCE-NOTES.md). The requested writeup of proofs
+that differ substantially from the paper is deferred until the whole paper
+is formalized; its current ledger is [PROOF-WRITEUP.md](PROOF-WRITEUP.md).
