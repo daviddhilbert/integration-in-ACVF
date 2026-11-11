@@ -552,3 +552,18 @@ premise from the already checked full-base ACVF00 theorem.
 All1042 old types are unchanged;9 new types match individual reviewed
 audits,and305 source hashes match the1051-head full local audit.
 The author has now explicitly approved the ordinary closed-parent correction.
+
+## Actual radial RV quotient and Gamma matching toward3.24
+
+Pins unchanged. Exact source/full types reviewed for actual open-ball RV
+constancy,gammaBall/RV-fibre equality,open/closed recentering,intrinsic
+maximality under OpenToOpen,and the generic surjective-coordinate factor.
+Pinned GammaRVSeparation.finite_image_of_definable_cuts is applied only after
+constructing its entire guarded cut graph and proving genuine small-base
+saturation hypotheses. Actual infinite_gamma_fibre and finite/cofinite
+traces supply all dominant-row inputs. The actual definable inverse supplies
+every target match; generic matching then proves true surjectivity.
+No Ax/HK/Euler citation is introduced. The final Gamma graph is not yet
+proved first-order definable. All49 new complete types match individual
+reviewed audits,all1051 old types are unchanged,and318 source hashes match
+the full1100-head local root/type/axiom audit.

@@ -45,3 +45,13 @@ refinement,but does not constitute a substantially different mathematical
 proof. No standalone replacement writeup is currently required for3.21.
 Local1042-head audit and CI42974291389 passed; exact full type/source/audit hashes matched. The3.4 and3.18 replacement entries
 remain relevant for the eventual whole-paper writeup.
+
+## 3.24 proof-development note
+
+The author approved the ordinary closed-parent correction. Actual value
+intervals are now proved,including the targetVFclosed ray. The full induced
+RVmap and semantic Gamma matching are checked. The inverse map explicitly
+supplies every target match; uniform bounds are not used as a substitute
+for surjectivity. The Gamma graph and interval-bijection obstruction are
+still open,so no completed replacement proof is recorded yet. Compare the
+final argument with the printed proof only after these obligations close.

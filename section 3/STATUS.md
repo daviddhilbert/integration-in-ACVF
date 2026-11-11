@@ -2,15 +2,16 @@
 
 Target: arXiv:0809.0473v2,through Proposition3.24.
 
-The full local root build, inherited QE audit, Section2 audit and1051
-Section3 type/axiom audits pass:350 generic and701 actual heads.
-All305 source hashes match; all1042 previous complete types are unchanged,
-and all9 new complete types exactly match individually reviewed audits.
+The full local root build, inherited QE audit, Section2 audit and1100
+Section3 type/axiom audits pass:356 generic and744 actual heads.
+All318 source hashes match; all1051 previous complete types are unchanged,
+and all49 new complete types exactly match individually reviewed audits.
 Only propext, Classical.choice and Quot.sound occur. Evidence is in
-.scratch/local-boundary-check-1051/ and VERIFICATION.json. [CI42975906264](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42975906264) passed;
-all1051 full CI types and305 source hashes match the reviewed local archive. Full3.21 source07584cc passed
-[CI42974291389](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42974291389)
-and was promoted to main at receipt1d91eb1 after exact type/hash matching.
+.scratch/local-radial-matching-1100/ and VERIFICATION.json. CI confirmation
+for the radial/RV/Gamma matching batch is pending. The preceding source948714a
+passed [CI42975906264](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42975906264)
+and was promoted to main with the approved3.24 correction at receiptc8f4270
+following exact type/source/audit matching.
 
 ## Numbered results and exact scope
 
@@ -40,7 +41,7 @@ Green checks certify these exported types,not broader unstated claims.
 | 3.21 | CoordinatePartitions.proposition_3_21 constructs the full uniform finite nonempty disjoint original-base partition for all selected VF coordinate pairs of actual mixed finite tuple injections. Arbitrary finite coordinate index types include all mixed arities. Same standing saturation,smallness,ACVF00 and originally named nontrivial-value scope as3.19; no old-imaginary cardinal bound. |
 | 3.22 | Complete component and actual-hole conservation for finite disjoint thin families under an original-base definable open-to-open VF bijection. Full original base; onlyACVF and a genuine nontrivial value. No canonical-model,saturation orACVF00 premise. |
 | 3.23 | No definable bijection between any distinct actual atomic primitive shapes:open,closed,thin annulus. Full original base,ACVF00 and originally definable nontrivial value. No saturation or3.15 premise. |
-| 3.24 | The literal whole-field boundary has a checked nonempty identity counterexample:VF is clopen. The ordinary closed-parent restriction is author-approved; the intended ordinary-parent obstruction remains open. See ../STATEMENT-QUESTIONS.md. |
+| 3.24 | Ordinary closed-parent correction is author-approved. Exact value intervals and full induced RV graph are proved. Actual dominant matching is a semantic Gamma bijection; its first-order graph and the interval-bijection obstruction remain open. TargetVF retains its closed-ray case. |
 
 Except where a row states otherwise,the atomic unary geometry in3.6--3.13
 retains its full-base ACVF00/originally definable nontrivial-value scope.
@@ -165,3 +166,28 @@ them to arbitrary original-base definable subsets of the actual Gamma
 quotient under ACVF00. Its least-point corollary explicitly retains boundedness,
 upward closure and closure from above; it does not prove the least-linearity
 function exists in3.17 or the interval-bijection obstruction in3.24.
+
+## Actual annulus quotients toward corrected3.24
+
+AnnulusValueIntervals and PuncturedBallValueIntervals prove the exact value
+images:closed Icc for the ordinary closed source,Ioc for an ordinary open
+target,and Iic forVFas open target. Parent/hole centres may differ.
+RadialOpenClasses proves that maximal open subballs of radial domains
+avoiding their centre are exactly translated nonzeroRVfibres.
+RadialClassMaps preserves and reflects those actual fibres.
+RadialQuotientGraph constructs the induced actual RVbijection with its full
+definable graph,adjoining exactly the two real hole-centre labels.
+RadialRVImages proves that these images contain every RVclass at each
+allowed value,with actual nonzero sorting.
+
+RVFunctionValueCuts builds the full guarded Gamma cut family from the
+actual partial RVgraph. Checked genuine saturation then gives finite value
+image on a fixedRVvalue fibre. FullRVValueFibres supplies actual infinitude
+and full-base finite/cofinite traces. CofiniteRVRows proves a unique
+dominant value and a cofinite image in that entire target fibre.
+RVValueMatching uses the actual definable inverse to supply a match for
+every target value. Generic CofiniteClassMatching then gives a true Gamma
+index bijection. This is semantic only:its first-order graph is the next
+obligation,followed by the interval-bijection obstruction.
+No uniform bound is substituted for surjectivity. No outside citation,
+referee assertion or HK result is a proof input.
