@@ -51,7 +51,9 @@ and all Section 3 types are unchanged; all 14 new complete types match
 individual reviewed audits. All 41/368 section source hashes and both audit
 hashes match. Only `propext`, `Classical.choice` and `Quot.sound` occur.
 The archive is `.scratch/local-closed-volume-68/`, with its own Section2 and
-Section3 evidence. CI confirmation for this final batch is pending.
+Section3 evidence. [CI 43010073720](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/43010073720) passed.
+All complete types and source/audit hashes match the reviewed local batch
+and publication checkout.
 
 ```sh
 lake exe cache get

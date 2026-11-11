@@ -6,7 +6,9 @@ contains356 generic and888 actual heads. Every previous Section3 complete
 type is unchanged in the final Section2 integration batch. All41/368 section
 source hashes and both audit hashes match; only the three standard permitted
 axioms occur. Evidence: `.scratch/local-closed-volume-68/`, including its own
-Section2 andSection3 archives. CI confirmation for this final batch is pending.
+Section2 andSection3 archives. [CI 43010073720](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/43010073720) passed.
+All complete types and source/audit hashes match the reviewed local batch
+and publication checkout.
 
 ## Numbered results and exact scope
 

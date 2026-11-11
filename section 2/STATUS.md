@@ -62,7 +62,8 @@ source hashes and both audit hashes match the checked checkout. Only
 `propext`, `Classical.choice` and `Quot.sound` occur.
 
 Evidence is archived in `.scratch/local-closed-volume-68/`, including its
-own Section2 and Section3 logs and receipts. CI confirmation for this final
-batch is pending. See `VERIFICATION.json`, `HANDOFF.md` and `REUSE-SURVEY.md`.
+own Section2 and Section3 logs and receipts. [CI 43010073720](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/43010073720) passed.
+All complete types and source/audit hashes match the reviewed local batch
+and publication checkout. See `VERIFICATION.json`, `HANDOFF.md` and `REUSE-SURVEY.md`.
 The earlier conditional volume interfaces remain available with unchanged
 types; they are superseded as the final entry points by the proved wrappers.

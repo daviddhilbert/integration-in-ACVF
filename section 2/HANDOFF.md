@@ -21,10 +21,13 @@ pass. All54 previous Section2 and1244 Section3 complete types are unchanged;
 all14 new complete types match individually reviewed audits. Source counts
 are41 and368; only the three permitted standard axioms occur. Evidence:
 `.scratch/local-closed-volume-68/`, with its own Section2 andSection3 archives.
-CI confirmation for this final batch is pending.
+[CI 43010073720](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/43010073720) passed.
+All complete types and source/audit hashes match the reviewed local batch
+and publication checkout.
 
-Before main promotion, match every complete CI type, every source hash and
-both audit hashes to these archives and the publication checkout. The type
+All 68 Section 2 and 1,244 Section 3 complete CI types, all 41 and 368 source
+hashes, and both audit hashes match these archives and the publication
+checkout. The type
 parser must allow optional leading `@`: Lean prints the fully explicit
 `ConstructedGaussGraph.graph_input` without that character. Use `set -e` in
 publication shell sequences. Do not compare with later live artifacts.

@@ -104,7 +104,8 @@ image,scalar and valuation-ring transport is constructed.
 
 Inspect EmbeddedFiniteResidueDegree,ConstructedGaussGraph,
 VolumeDescentTheorem andVolumeDescentAllDegrees in section2/IntegrationSection2.
-The complete local68 Section2 and1244 Section3 audit passes; CI confirmation
-for this final batch is pending. Keep the final whole-paper comparison
+The complete local audits of 68 Section 2 and 1,244 Section 3 heads pass. [CI 43010073720](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/43010073720) passed.
+All complete types and source/audit hashes match the reviewed local batch
+and publication checkout. Keep the final whole-paper comparison
 focused on the mathematical changes,not routine Lean transport. No new
 outside citation,HK theorem or referee claim is a proof input.

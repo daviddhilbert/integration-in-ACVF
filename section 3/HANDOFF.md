@@ -10,9 +10,10 @@ audits pass. All54 previous Section2 complete types and all1244 Section3
 complete types are unchanged; all14 new types match individual reviewed
 audits. All41/368 source hashes and both audit hashes match. Only propext,
 Classical.choice andQuot.sound occur. Archive: `.scratch/local-closed-volume-68/`,
-including its own Section2 andSection3 logs and receipts. CI confirmation
-for this final batch is pending. Compare exact complete types and hashes
-before main promotion; use this batch's archives and `set -e`.
+including its own Section2 andSection3 logs and receipts. [CI 43010073720](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/43010073720) passed.
+All complete types and source/audit hashes match the reviewed local batch
+and publication checkout. The comparison used this batch's own archives.
+Use `set -e` in future publication shell sequences.
 
 Key Section3 entries are CompleteTypeBallAtomicity.lemma_3_4,
 FullCompleteTypeOpenImages.lemma_3_15,
