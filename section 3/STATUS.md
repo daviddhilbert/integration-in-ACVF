@@ -9,8 +9,8 @@ Section3 type/axiom audits pass:328 generic and615 actual heads.
 All255 source hashes match; all926 previous complete types are unchanged,
 and all17 new complete types exactly match individually reviewed audits.
 Only propext,Classical.choice andQuot.sound occur. Evidence is in
-.scratch/local-open-partition-943/ andVERIFICATION.json. CI confirmation
-for this batch is pending. The preceding full3.23 checkpoint1cfc67d passed
+.scratch/local-open-partition-943/ andVERIFICATION.json. [CI42964125581](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42964125581) passed;
+all943 complete CI types and255 source hashes match the archived local audit. The preceding full3.23 checkpoint1cfc67d passed
 [CI42961486168](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42961486168)
 and was promoted to main at receipt e50f47e after exact type/hash matching.
 

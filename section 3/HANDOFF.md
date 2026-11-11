@@ -10,8 +10,8 @@ Section3 type/axiom audits pass:328 generic and615 actual heads.
 All255 source hashes match; all926 previous complete types are unchanged,
 and all17 new complete types exactly match individually reviewed audits.
 Only propext,Classical.choice andQuot.sound occur. Evidence is in
-.scratch/local-open-partition-943/ andVERIFICATION.json. CI confirmation
-for this batch is pending. The preceding full3.23 checkpoint1cfc67d passed
+.scratch/local-open-partition-943/ andVERIFICATION.json. [CI42964125581](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42964125581) passed;
+all943 complete CI types and255 source hashes match the archived local audit. The preceding full3.23 checkpoint1cfc67d passed
 [CI42961486168](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42961486168)
 and was promoted to main at receipt e50f47e after exact type/hash matching.
 
@@ -176,3 +176,22 @@ same-base neighborhood. RealOpenImageCovers supplies the second compactness
 step. The actual definable inverse supplies a second finite cover;
 OpenToOpenPartitions applies the checked finite Boolean refinement.
 The proof follows the paper's compactness argument in this scope.
+
+## Independent continuation toward full3.4/3.15
+
+The referee attachment is reference only; see ../REFERENCE-NOTES.md and
+AGENTS.md. Do not accept its proposed QE repair as a checked bridge.
+The independently developed provisional plan is
+.scratch/full-base-315-plan.md. Ignored drafts FiniteBallProfiles(generic6),
+TerminalBallCover(generic1),BallProfileDefinability(actual5),
+FiniteHittingAtomicity(actual2) compile and audit individually, but are
+not registered, integrated or manually reviewed. They prove the finite
+hitting/profile bridge over the original full parameter base, under a
+real finite hitting-set premise. That premise is not yet constructed for
+the splitting-ball family; no full3.4/3.15 completion is counted.
+FiniteSupportHitting(generic1) is also individually checked. The next
+BallFamilyFibreDefinable draft supplies actual fibre parameter promotion.
+Continue by constructing real-code finite good covers using genuine
+saturation and checked real/Gamma open-ball3.4, then finite ball support
+extracts arbitrary finite hitting points. Their choices are internal;
+no false claim about auxiliary-centre coefficient fields is used.
