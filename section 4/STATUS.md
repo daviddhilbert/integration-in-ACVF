@@ -96,9 +96,11 @@ original-base definable cell {1} × rv⁻¹(rv(1)), positioning map 0, and prove
 its paradigm nonzero, its positioning not balanced, and that it is not an
 open polydisc. CellRectangles.rectangle proves the precise general product
 of a 1-cell and an open ball. CellRectangles.open_polydisc proves the version
-with open first projection. The author's choice of editorial wording is
-pending; neither valid theorem is presented as an approved paper edit.
-This boundary does not alter Definition 4.7 or the proved Lemma 4.8.
+with open first projection. The author approved replacing “an open
+polydisc” by “a product of a 1-cell and an open ball.” The corrected
+observation is therefore already proved by CellRectangles.rectangle.
+Both Section 4 wording corrections are resolved. Definition 4.7 and the
+proved Lemma 4.8 are unchanged.
 
 ## Verification and publication
 

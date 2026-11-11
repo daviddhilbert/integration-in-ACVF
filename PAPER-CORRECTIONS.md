@@ -57,7 +57,15 @@ boundary is proved in RadiusBoundary. Exact verification is recorded under
 section 4.
 
 
-## Checked boundary after Definition 4.7: singleton first projection
+## Observation after Definition 4.7: product of a 1-cell and an open ball
+
+Author clarification in the section 4 chat: replace “an open polydisc” by
+**“a product of a 1-cell and an open ball.”**
+
+The corrected sentence is: if the paradigm is nonzero and the positioning
+function is not balanced, then the 2-cell is a product of a 1-cell and an
+open ball. More precisely, it equals its first projection times an open
+ball, as proved by CellRectangles.rectangle.
 
 The unnumbered sentence claims that a nonbalanced 2-cell with nonzero
 paradigm is an open polydisc. Definition 4.7 also allows its first 1-cell
@@ -75,6 +83,6 @@ Gamma value. No referee assertion is a proof input.
 Two precise replacements are already proved: CellRectangles.rectangle
 says the cell is a product of its first 1-cell and an open ball;
 CellRectangles.open_polydisc adds the hypothesis that the first projection
-is open. The author's wording choice was requested in the section 4 chat
-and is pending. This entry records a verified boundary, not an approved
-change to the printed sentence. Definition 4.7 and Lemma 4.8 are unchanged.
+is open. The author explicitly approved the general product statement.
+The open-polydisc version remains a proved consequence with an open first
+projection. Definition 4.7 and Lemma 4.8 are unchanged.

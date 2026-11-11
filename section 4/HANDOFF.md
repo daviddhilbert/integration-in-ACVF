@@ -4,8 +4,9 @@ Read AGENTS.md, WORKFLOW.md, STATUS.md, TARGETS.md and REUSE-SURVEY.md.
 All five numbered lemmas (4.1–4.4 and 4.8) are proved in the recorded scope.
 Definitions 4.5/4.7, their parameterized forms, Remark 4.6, balanced hulls,
 ball correspondence, internal symmetry, and unary decomposition are checked.
-The only editorial question is the independently refuted unqualified
-open-polydisc observation after 4.7; both valid versions are proved.
+Both statement corrections are approved: the at-most-one formulation in
+4.3 and “a product of a 1-cell and an open ball” after 4.7. Both corrected
+statements are proved; no Section 4 editorial question remains pending.
 
 Main entries:
 - FiniteOffsets.lemma_4_1: actual original-base offsets, finite range and zero.
@@ -38,8 +39,9 @@ those checked proof sources; see VERIFICATION.json.
 
 The author-approved 4.3 correction is recorded in PAPER-CORRECTIONS.md.
 OpenPolydiscBoundary checks the 4.7 singleton counterexample over any original
-Gamma base. CellRectangles proves both valid repairs; author wording is
-pending. Definition 4.7 and Lemma 4.8 do not depend on that editorial choice.
+Gamma base. CellRectangles.rectangle proves the author's approved general
+product statement. Its open-polydisc consequence with open first projection
+is also proved. Definition 4.7 and Lemma 4.8 are unchanged.
 
 The earlier ordinary least-radius existence claim was stale and withdrawn.
 Upstream LeastLinearRadiusExistence proves ordinary existence and constructs

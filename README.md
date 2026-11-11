@@ -50,8 +50,9 @@ cell-decomposition observation. The original Gamma base is retained; 4.8
 constructs the finite-arity RV map and proves every cell ingredient definable
 over its output labels. The approved “has at most one element” correction
 to 4.3 is used. The singleton boundary to the unqualified open-polydisc
-observation after 4.7 is independently checked, together with both valid
-replacement statements; the author's editorial choice is pending.
+observation after 4.7 is independently checked. The author-approved
+replacement, “a product of a 1-cell and an open ball,” is proved by
+CellRectangles.rectangle.
 See [Section 4 status](section%204/STATUS.md).
 
 ## Verification

@@ -225,8 +225,10 @@ separate from definability and cell-decomposition existence.
 The unqualified open-polydisc observation after 4.7 has a singleton first-cell
 boundary. OpenPolydiscBoundary proves the actual definable counterexample;
 CellRectangles proves the product-of-a-1-cell-and-an-open-ball conclusion and
-the open-polydisc version with open first projection. This statement issue
-is recorded separately from comparison of mathematical proof routes.
+the open-polydisc version with open first projection. The author approved
+“a product of a 1-cell and an open ball” as the replacement for the printed
+open-polydisc claim. This approved statement correction is recorded
+separately from comparison of mathematical proof routes.
 
 ## Section5: Lemma5.6 by scalar refinement and finite active-coordinate induction
 
