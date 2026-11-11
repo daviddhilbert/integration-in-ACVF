@@ -37,9 +37,8 @@ New components prove eventual RV-coefficient constancy, actual atomic
 RV-fibre choice and definable affine-error RV constancy. Full Lemma 3.18
 remains open; its endpoint estimate is recorded in
 [proof obligations](section%203/PROOF-OBLIGATIONS.md).
-New CI confirmation is pending. The preceding 728-head checkpoint, including
-Corollary 3.17, passed [CI](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42922204695)
-with every complete type and source hash matched before main promotion.
+All 751 complete types and 182 source hashes from [CI](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42925183881)
+match the reviewed local evidence; only standard Lean axioms occur.
 
 Checked Section 3 results are 3.2, 3.3, 3.4 at original-base definable radii
 plus singleton/VF cases, 3.6, 3.7, 3.8, 3.9, 3.10, corrected 3.11, 3.12,

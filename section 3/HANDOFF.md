@@ -9,8 +9,10 @@ Fresh full local root build, inherited QE, Section 2 and 751 Section 3 audits
 pass: 289 generic, 462 actual-namespace heads; 182 source hashes. Every prior
 728 complete type is unchanged, and all 23 new full types exactly match
 individual compiled/manual-reviewed snapshots. Only standard three axioms.
-Evidence .scratch/local-rv-tail-751/, VERIFICATION.json. CI confirmation is
-pending; match all complete artifact types and source hashes before main.
+Evidence .scratch/local-rv-tail-751/, VERIFICATION.json. Source 399f3a7 passed
+CI 42925183881; every one of its 751 complete types matches the reviewed local
+audit, and all 182 source hashes and both audit hashes match. This receipt
+promotes the verified checkpoint to main.
 
 Preceding source e662a30 passed CI 42922204695; all 728 full types and 173
 hashes matched before main promotion at receipt 3235d3f. That main receipt
