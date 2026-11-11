@@ -1,0 +1,19 @@
+module
+
+
+
+public import IntegrationSection3.FiniteFieldDefinableMaps
+public import IntegrationSection3.LocallyFiniteDefinableInjection
+public import IntegrationSection3.LocallyFiniteRelations
+public import IntegrationSection3.DefinableInjectionSentence
+public import IntegrationSection3.ACFDefinableInjection
+public import IntegrationSection3.FiniteDefinablePatching
+public import IntegrationSection3.CofiniteDefinableInjection
+public import IntegrationSection3.CofiniteDefinableBijection
+public import IntegrationSection3.FiniteTupleGraphs
+public import IntegrationSection3.TaggedLineMaps
+public import IntegrationSection3.TaggedCofiniteConservation
+public import IntegrationSection3.AffineResidueChart
+
+/-! Pure-field graph and conservation results, kept separate so their additions
+do not rebuild the valuation-ball geometry entry point. -/

@@ -744,6 +744,15 @@ DEFINITIONS += ['DefinableInjectionSentence.row', 'DefinableInjectionSentence.eq
 ALLOWED = {'propext', 'Classical.choice', 'Quot.sound'}
 
 
+HEADLINES += ['FiniteTupleGraphs.comp', 'FiniteTupleGraphs.inverse', 'TaggedLineMaps.mapsTo', 'TaggedLineMaps.injOn', 'TaggedLineMaps.graph_definable', 'TaggedLineMaps.missing_line_infinite', 'TaggedLineMaps.surjOn', 'TaggedCofiniteConservation.components_le', 'TaggedCofiniteConservation.components_and_holes']
+ACVF_HEADLINES += ['IntegrationInACVF.Section3ACVF.ResidueFieldConservation.residue_pullback_definable', 'IntegrationInACVF.Section3ACVF.ResidueFieldConservation.graph_definable', 'IntegrationInACVF.Section3ACVF.ResidueFieldConservation.cofinite_bijection_card', 'IntegrationInACVF.Section3ACVF.ResidueTaggedConservation.components_and_holes']
+DEFINITIONS += ['FiniteTupleGraphs.graph', 'TaggedLineMaps.space', 'TaggedLineMaps.transport']
+
+HEADLINES += ['AffineResidueChart.div_integral', 'AffineResidueChart.surjective', 'AffineResidueChart.same_fibres', 'AffineResidueChart.open_subset_closed', 'AffineResidueChart.fibre_set']
+ACVF_HEADLINES += ['IntegrationInACVF.Section3ACVF.BallResidueChart.representative_ne_zero', 'IntegrationInACVF.Section3ACVF.BallResidueChart.surjective', 'IntegrationInACVF.Section3ACVF.BallResidueChart.same_fibres', 'IntegrationInACVF.Section3ACVF.BallResidueChart.fibre_set', 'IntegrationInACVF.Section3ACVF.ResidueBallClasses.centre_coordinate', 'IntegrationInACVF.Section3ACVF.ResidueBallClasses.underlying_ball', 'IntegrationInACVF.Section3ACVF.ResidueBallClasses.mem_ball', 'IntegrationInACVF.Section3ACVF.ResidueBallClasses.underlying_injective', 'IntegrationInACVF.Section3ACVF.ResidueBallClasses.ball_injective', 'IntegrationInACVF.Section3ACVF.ResidueBallClasses.ball_coordinate', 'IntegrationInACVF.Section3ACVF.ResidueBallClasses.range_ball', 'IntegrationInACVF.Section3ACVF.ResiduePunctures.hole_coordinate', 'IntegrationInACVF.Section3ACVF.ResiduePunctures.finite_holes']
+DEFINITIONS += ['AffineResidueChart.closed', 'AffineResidueChart.integral', 'AffineResidueChart.chart']
+ACVF_DEFINITIONS += ['IntegrationInACVF.Section3ACVF.BallResidueChart.Point', 'IntegrationInACVF.Section3ACVF.BallResidueChart.fieldPoint', 'IntegrationInACVF.Section3ACVF.BallResidueChart.coordinate', 'IntegrationInACVF.Section3ACVF.ResidueBallClasses.centre', 'IntegrationInACVF.Section3ACVF.ResidueBallClasses.ball', 'IntegrationInACVF.Section3ACVF.ResidueBallClasses.family']
+
 def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
@@ -784,6 +793,7 @@ def main():
         audit.write_text(
             ('import IntegrationSection3ACVF.Library\n' if args.acvf
              else 'import IntegrationSection3.Library\n')
+            + 'import IntegrationSection3.FieldLibrary\n'
             + 'set_option pp.explicit true\n'
             + '\n'.join('#print ' + PREFIX + name for name in DEFINITIONS)
             + ('\n' + '\n'.join('#print ' + name for name in ACVF_DEFINITIONS) if args.acvf else '')

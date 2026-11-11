@@ -393,3 +393,21 @@ manually reviewed snapshots; all 805 prior full types are unchanged in
 the fresh full 824-head local audit. All use only the permitted standard
 axioms. These are supporting pure-field results, not a completed 3.22.
 No unproved conservation or external citation is introduced.
+
+## Native residue coordinates and finite tagged-line conservation
+
+Pins and licenses are unchanged. Inspected exact Mathlib valuation-subring,
+residue-surjection, residue-zero and maximal-ideal types, and the pinned
+predecessor's `CanonicalResidue.residue_eq_iff`, residue normalization and
+native `ModelResidue` interpretation. The canonical hypothesis in residue
+purity is retained explicitly in the new graph bridge. No outside citation
+or unproved residue conservation result is used.
+
+Thirty-one new complete types and all twelve new graph/coordinate definitions
+match their individually compiled and manually reviewed snapshots in the
+fresh full 855-head local audit. All 824 prior full types are unchanged;
+all 223 source hashes match; only the three permitted standard axioms occur.
+The new pure-field conservation proof applies to actual tagged-line graphs.
+The independent valuation geometry identifies actual maximal open classes
+and finite holes with actual residue coordinates. The induced definable
+quotient-map assembly remains a separate obligation for full 3.22.

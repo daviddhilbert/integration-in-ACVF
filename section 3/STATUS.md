@@ -4,19 +4,19 @@ Source: arXiv:0809.0473v2, pp. 7–12, through Proposition 3.24.
 
 ## Verification
 
-The full local root build, inherited QE audit, Section 2 audit and **824
-Section 3 type/axiom audits pass** under pinned Lean 4.35.0: 308 generic and
-516 actual-namespace declarations. These are components, not numbered results.
-All 213 source hashes match. Every prior 805 complete type is unchanged;
-all 19 new types exactly match individually compiled and manually reviewed
+The full local root build, inherited QE audit, Section 2 audit and **855
+Section 3 type/axiom audits pass** under pinned Lean 4.35.0: 322 generic and
+533 actual-namespace declarations. These are components, not numbered results.
+All 223 source hashes match. Every prior 824 complete type is unchanged;
+all 31 new types exactly match individually compiled and manually reviewed
 snapshots. Only `propext`, `Classical.choice` and `Quot.sound` occur.
 
 `VERIFICATION.json` records the local checkpoint; `CORE-VERIFICATION.json`
-selects its 308 generic heads. Evidence is in `.scratch/local-acf-conservation-824/`.
-Source `e13d791` passed [CI 42952242946](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42952242946).
-All 824 complete types, 213 source hashes and both audit hashes match the
-reviewed local evidence. This receipt promotes that verified checkpoint to
-main. The preceding main receipt `6fee1a5` passed CI 42950124650.
+selects its 322 generic heads. Evidence is in `.scratch/local-residue-conservation-855/`.
+New CI confirmation is pending. The preceding source `e13d791` passed
+[CI 42952242946](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42952242946),
+with all 824 complete types and 213 source hashes matched before main
+promotion at receipt `fe9f8c4`.
 
 ## Numbered results
 
@@ -410,3 +410,43 @@ These are pure-field components. The residue-field graph interpretation,
 positive-component comparison, actual ball quotient and hole-count bridge
 still have to be assembled for 3.22. The six remaining full-scope numbered
 results are unchanged. No new external citation or unproved input is used.
+
+## Actual residue coordinates and tagged conservation for 3.22
+
+`FiniteTupleGraphs` proves same-base composition and an actual definable
+inverse for finite tuple partial graphs. `TaggedLineMaps` encodes finite
+disjoint unions of actual affine lines by scalar tags and proves finite
+relabelings definable. `TaggedCofiniteConservation` proves that a definable
+bijection between such unions minus finite subsets preserves both the
+number of components and the total number of deleted points. Component
+inequality follows from the previously checked finite image-complement
+theorem and an infinite missing line; hole equality follows by relabeling
+and finite-complement conservation.
+
+`ResidueFieldConservation` pulls actual RV-definable graphs back to native
+residue-field graphs using the predecessor's proved residue purity.
+`ResidueTaggedConservation` supplies both counts for those native graphs.
+Their helper scope explicitly retains `IsCanonical`; all residue parameters
+are allowed internally for the intrinsic count conclusions.
+
+`AffineResidueChart` proves that the actual residue of `(x-a)/r` parametrizes
+a closed valuation ball, with entire open-ball fibres. `BallResidueChart`
+transports this to the unchanged actual `gammaBall` and `ModelResidue`
+definitions. `ResidueBallClasses` realizes each coordinate as the actual
+ball imaginary, proves injectivity of its underlying point set and proves
+that every displayed maximal open class occurs. Arbitrary point choices
+are only used to construct the quotient bijection; no definable centre
+selector is claimed. `ResiduePunctures` constructs the finite excluded
+coordinate set for actual maximal open holes, proves its cardinality equals
+the actual hole count, and proves the exact punctured-body membership test.
+These geometric results do not need the canonical-totalization hypothesis.
+
+The induced definable map on these coordinates from an open-to-open
+bijection, its finite-family assembly, and canonical normalization before
+the final all-model conclusion remain to be proved. Full 3.22 and the six
+remaining full-scope numbered results are not counted as complete.
+
+Pure-field modules now have a separate `FieldLibrary` entry point, imported
+by the root and audit. Adding field results no longer changes the generic
+entry point imported by every valuation-ball module. All 824 prior full
+types remain exactly unchanged after this build-layout adjustment.
