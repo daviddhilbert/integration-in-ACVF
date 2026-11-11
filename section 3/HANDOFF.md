@@ -1,14 +1,14 @@
 # Section3 continuation
 
-The full local root build, inherited QE audit, Section2 audit and1130
-Section3 type/axiom audits pass:356 generic and774 actual heads.
-All327 source hashes match; all1100 previous complete types are unchanged,
-and all30 new complete types exactly match individually reviewed audits.
+The full local root build, inherited QE audit, Section2 audit and1166
+Section3 type/axiom audits pass:356 generic and810 actual heads.
+All340 source hashes match; all1130 previous complete types are unchanged,
+and all36 new complete types exactly match individually reviewed audits.
 Only propext, Classical.choice and Quot.sound occur. Evidence is in
-.scratch/local-definable-matching-1130/ and VERIFICATION.json. [CI42988577015](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42988577015) passed;
-all1130 full CI types and327 source hashes match the reviewed local archive. The preceding source4921611 passed
-[CI42985506013](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42985506013)
-and was promoted to main at receiptcd84a78 after exact type/source/audit matching.
+.scratch/local-gamma-monotonicity-1166/ and VERIFICATION.json. CI confirmation
+for this batch is pending. The preceding source4a43df1 passed
+[CI42988577015](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42988577015)
+and was promoted to main at receiptebc2b32 after exact type/source/audit matching.
 
 FullCompleteTypeOpenImages.lemma_3_15 proves3.15 over the full original
 real/Gamma/ball base, for arbitrary open-ball radii inside a possibly
@@ -31,27 +31,27 @@ Author explicitly approved excludingVF as the closed parent of3.24; see
 PAPER-CORRECTIONS.md. No restriction was added to the open target,soVFas
 target parent remains part of the corrected goal.
 
-The1130 archive includes its own Section2 logs/receipt. All1130 full CI types,327 source hashes and both audit hashes match
-that archive and this publication checkout. Compare its archivedSection2,
+The1166 archive includes its own Section2 logs/receipt. Compare all1166
+full CI types,340 source hashes and both audit hashes against that archive
+and publication checkout before main promotion. Compare its archivedSection2,
 not later live artifacts. Use set-e in publication shell sequences.
 
-The actual Gamma matching graph is now proved definable. The30 new heads
-in RVMatchCodeRelations,FullBaseCounting,RVMatchCodeDichotomy,
-RVMatchUniformBound,RVMatchRowSemantics,DefinableGammaMatching,
-RadialAnnulusDomains,RadialValuePullbacks andAnnulusGammaReduction
-exactly match individual reviewed audits. DefinableGammaMatching constructs
-the Gamma bijection and its full graph over the original base. All proper
-codes remain; finite imaginary support and auxiliary real codes are internal.
+GammaPiecewiseMonotonicity.exists_cuts is checked. Genuine uniform finite
+Gamma quotient counts give finite local extrema without Archimedean or
+countability arguments. Full original-base Gamma graph syntax constructs
+every comparison cut,local-sign set and prefix controller. An actual prefix
+LUB propagates strict signs. The36 new complete types match individually
+reviewed audits; explicit dual orders for maxima/decreasing signs were read.
 
-AnnulusGammaReduction.closed_to_open reduces the corrected actual punctured
-balls to a definable bijection Icc to Ioc or Iic. Exactly two real hole-centre
-labels are adjoined. The targetVFclosed-ray case remains included.
-Next prove the independent interval-bijection obstruction. SourceIcc can
-be singleton. Actual finite-order controllers,LUB/GLB and finite/interval
-dichotomy are available without any Archimedean hypothesis. The provisional
-piecewise-monotonicity/Euler route needs a full proof; no unproved Euler
-or HK citation may be used. New FullGammaCounting is an ignored draft,
-not included in1130. Keep all scope statements precise.
+The actual Gamma graph and AnnulusGammaReduction.closed_to_open remain
+unchanged:sourceIcc,targetIoc orIic,exactly two real hole-centre labels.
+The targetVFcase is preserved. Next prove finite interval counting and
+assemble corrected3.24. OrderedFiniteCellCount is an ignored draft,not
+included in1166. It sends each nonempty open order cell to its actual
+right endpoint. Source closedIcc has one fewer open cell than point cells;
+half-openIoc and closed-rayIic have equally many. Actual finite-controller
+decompositions and the checked piecewise monotonicity must supply the paired
+cell partitions; no Euler or Grothendieck invariant may be assumed.
 
 Section2.34 is open separately. Keep3.17's given least-radius-function scope
 explicit until its existence is proved. The checked3.24 whole-field counterexample is addressed by the approved ordinary closed-parent correction.

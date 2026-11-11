@@ -63,3 +63,13 @@ bounds express the matching by finitely many distinct RV witnesses over
 the original base. Exact actual annulus domains and full RV pullbacks give
 the Icc-to-Ioc/Iic reduction. The independent interval obstruction remains
 open,so the substantially-different-proof comparison stays provisional.
+
+## 3.24 continuation: independently checked Gamma monotonicity
+
+Piecewise strict monotonicity on actual Gamma is now proved, including
+non-Archimedean models. Strict local extrema are finite by genuine uniform
+finite quotient counts and common positive multiplicative windows.
+Comparison germs classify each interior point; actual prefix LUBs propagate
+coherent signs. No countability argument or unproved o-minimal Euler input.
+The finite interval-counting obstruction remains open; keep the full proof
+comparison provisional until corrected3.24 is assembled.

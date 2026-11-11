@@ -2,15 +2,15 @@
 
 Target: arXiv:0809.0473v2,through Proposition3.24.
 
-The full local root build, inherited QE audit, Section2 audit and1130
-Section3 type/axiom audits pass:356 generic and774 actual heads.
-All327 source hashes match; all1100 previous complete types are unchanged,
-and all30 new complete types exactly match individually reviewed audits.
+The full local root build, inherited QE audit, Section2 audit and1166
+Section3 type/axiom audits pass:356 generic and810 actual heads.
+All340 source hashes match; all1130 previous complete types are unchanged,
+and all36 new complete types exactly match individually reviewed audits.
 Only propext, Classical.choice and Quot.sound occur. Evidence is in
-.scratch/local-definable-matching-1130/ and VERIFICATION.json. [CI42988577015](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42988577015) passed;
-all1130 full CI types and327 source hashes match the reviewed local archive. The preceding source4921611 passed
-[CI42985506013](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42985506013)
-and was promoted to main at receiptcd84a78 after exact type/source/audit matching.
+.scratch/local-gamma-monotonicity-1166/ and VERIFICATION.json. CI confirmation
+for this batch is pending. The preceding source4a43df1 passed
+[CI42988577015](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42988577015)
+and was promoted to main at receiptebc2b32 after exact type/source/audit matching.
 
 ## Numbered results and exact scope
 
@@ -40,7 +40,7 @@ Green checks certify these exported types,not broader unstated claims.
 | 3.21 | CoordinatePartitions.proposition_3_21 constructs the full uniform finite nonempty disjoint original-base partition for all selected VF coordinate pairs of actual mixed finite tuple injections. Arbitrary finite coordinate index types include all mixed arities. Same standing saturation,smallness,ACVF00 and originally named nontrivial-value scope as3.19; no old-imaginary cardinal bound. |
 | 3.22 | Complete component and actual-hole conservation for finite disjoint thin families under an original-base definable open-to-open VF bijection. Full original base; onlyACVF and a genuine nontrivial value. No canonical-model,saturation orACVF00 premise. |
 | 3.23 | No definable bijection between any distinct actual atomic primitive shapes:open,closed,thin annulus. Full original base,ACVF00 and originally definable nontrivial value. No saturation or3.15 premise. |
-| 3.24 | Ordinary closed-parent correction is author-approved. Actual annuli now reduce to a full original-base definable Gamma bijection Icc to Ioc or Iic,with exactly two real hole-centre labels. The independent interval-bijection obstruction remains open. TargetVF retains its closed-ray case. |
+| 3.24 | Ordinary closed-parent correction is author-approved. Actual annuli reduce to a full original-base definable Gamma bijection Icc to Ioc or Iic,with exactly two real hole-centre labels. Piecewise strict monotonicity of actual injective Gamma functions is proved,including non-Archimedean Gamma. The finite interval-counting obstruction remains open. TargetVF retains its closed-ray case. |
 
 Except where a row states otherwise,the atomic unary geometry in3.6--3.13
 retains its full-base ACVF00/originally definable nontrivial-value scope.
@@ -210,3 +210,28 @@ a definable bijection from the closed source Icc to the ordinary-open
 target Ioc or the VFtarget Iic,adjoining exactly two real hole-centre labels.
 This is a checked reduction. It does not prove the interval obstruction
 or corrected3.24. No outside theorem or referee claim is a proof input.
+
+## Actual Gamma piecewise strict monotonicity
+
+FullGammaCounting counts distinct actual quotient values using the full
+original-base syntax. FullGammaUniformFiniteness derives a genuine uniform
+bound from small-base finite-subcover saturation, specializing only the
+finite formula support internally. OrderedLocalExtrema uses positive
+multiplicative windows and N+1 points to exclude an interval of strict
+minima. Finite controllers then give finiteness. GammaExtremumSyntax and
+GammaLocalExtrema supply all actual definability and bound inputs, for
+both minima and maxima. No countability or Archimedean premise is used.
+
+FiniteOrderGerms gives one-sided constant comparison cuts.
+OrderedFunctionGerms classifies the two strict signs for actual injections.
+GammaGermSyntax constructs the full-base increasing-set and prefix syntax;
+GammaTupleParameters specializes only the actual finite Gamma labels.
+OrderedGermMonotonicity propagates signs using the actual prefix LUB.
+GammaPiecewiseMonotonicity.exists_cuts constructs finite cuts so every
+cut-free open interval in the actual domain has StrictMonoOn or StrictAntiOn.
+Genuine saturation,an infinite cardinal,small original real base andACVF00
+are explicit. No old-imaginary bound or monotonicity premise is supplied.
+
+This independently proved step supports corrected3.24. The finite
+interval-counting obstruction and the final punctured-ball assembly remain
+open. No unproved Euler/HK result or referee claim is a proof input.

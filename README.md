@@ -31,15 +31,15 @@ and manual dispatch, with downloadable build and audit evidence.
 The current root imports the predecessor and the new Section 2 and 3 libraries.
 [Section 2](section%202/STATUS.md) records the prerequisite map and Corollary 2.15;
 [Section 3](section%203/STATUS.md) records the exact formalized scope and open work.
-The full local root build, inherited QE audit, Section2 audit and1130
-Section3 type/axiom audits pass:356 generic and774 actual heads.
-All327 source hashes match; all1100 previous complete types are unchanged,
-and all30 new complete types exactly match individually reviewed audits.
+The full local root build, inherited QE audit, Section2 audit and1166
+Section3 type/axiom audits pass:356 generic and810 actual heads.
+All340 source hashes match; all1130 previous complete types are unchanged,
+and all36 new complete types exactly match individually reviewed audits.
 Only propext, Classical.choice and Quot.sound occur. Evidence is in
-.scratch/local-definable-matching-1130/ and VERIFICATION.json. [CI42988577015](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42988577015) passed;
-all1130 full CI types and327 source hashes match the reviewed local archive. The preceding source4921611 passed
-[CI42985506013](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42985506013)
-and was promoted to main at receiptcd84a78 after exact type/source/audit matching.
+.scratch/local-gamma-monotonicity-1166/ and VERIFICATION.json. CI confirmation
+for this batch is pending. The preceding source4a43df1 passed
+[CI42988577015](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42988577015)
+and was promoted to main at receiptebc2b32 after exact type/source/audit matching.
 
 CompleteTypeBallAtomicity.lemma_3_4 proves full open/closed ball atomicity,
 including arbitrary unnamed radii and possibly undefinable complete types.

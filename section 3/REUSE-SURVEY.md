@@ -579,3 +579,17 @@ choice assumption or external citation is introduced. All30 new full
 types match individual reviewed audits; all1100 prior types are unchanged.
 The full local root/type/axiom audit has1130 heads and327 source hashes.
 The interval-bijection obstruction is still open.
+
+## Independent Gamma monotonicity
+
+Pins unchanged. Reused the exact checked genuine tuple finite-subcover
+interface and generic finite injection/cardinality equivalence. Actual
+FullGammaSyntax counts distinct quotient values. No general arbitrary-value-
+group monotonicity theorem was found in the pinned Mathlib/predecessor.
+The earlier surveyed real-only o-minimality implementation does not apply
+to non-Archimedean Gamma; no theorem or code from it is imported or ported.
+Instead prove finite strict extrema using uniform positive group windows,
+then two-sided signs and definable-prefix LUB propagation. All36 new full
+types exactly match individual reviewed audits,including explicit dual
+orders. All1130 prior types are unchanged. Full1166-head local root/type/
+axiom audit and340 source hashes match; no outside citation introduced.
