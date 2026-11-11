@@ -1,54 +1,35 @@
 # Section 5 continuation
 
-Read ../AGENTS.md, ../WORKFLOW.md, TARGETS.md, REUSE-SURVEY.md and STATUS.md.
-This chat follows the workflow recovered from “section 1-3”, including local
-compilation before publication and exact type/axiom/source evidence.
+User explicitly requested uninterrupted work until the whole section is done.
+Do not stop at this verified checkpoint. No subagents are authorized.
 
-Initial branch: `section-5/contracting-to-rv`; starting main: `c8f4270`.
-The current checked batch has 121 complete type/axiom audits and a successful
-section build. See VERIFICATION.json for exact source/pin and audit hashes.
-Lemma 5.1 covers real and genuine Gamma bases in the recorded coefficient-field
-scope. All source-focus construction and unary-factorization helpers are
-also locally checked. Full 5.2 and 5.6 remain open.
+Lemmas5.1 and5.2 are now locally checked in the scope in STATUS/TARGETS.
+`UnaryBijection.lemma_5_2` is the set-level5.2 entry point; the presented
+wrapper is in UnaryBijectionPreparation. The197-head full type/axiom audit
+passed;161 previous types are unchanged. Root build and full project audits
+passed(foundation,2,3,5;4/6/7 skipped). VERIFICATION.json has complete types,
+source/pin/audit hashes and scope review. Preserved receipt:
+`.scratch/section5-197-verified/`. Publish only this verified source identity.
 
-Active work:
+Checkpoint2428bd0(161 heads) passed CI43075798136. Downloaded artifact
+13882848565 matches every retained type/source/pin/audit hash; it has been
+promoted to main. Current feature branch is section-5/contracting-to-rv.
 
-1. The broad root build and matched-focus root consumer both passed. The
-   full project audits also passed (foundation, Sections 2, 3 and 5). Logs
-   are `.scratch/section5-matched-root-build.log` and
-   `.scratch/section5-matched-project-verification.log`.
-2. `Library` now imports `GeometryLibrary`; all 121 audited declarations
-   are root-integrated. Match the CI complete types and source hashes before
-   main promotion. Preserve exact receipt/source identity.
-3. Continue 5.2: prove the compatible source/target focus step preserves
-   contractibility and open cell images. The source Focus is already an
-   actual original-real-base construction in PulledFocusDefinability.pulledFocus.
-   Both matched-focus directions and the inverse-special affine/open-image
-   geometry now pass. Assemble the finite-chain induction next. An algebra
-   draft is in `.scratch/ChainAlgebraDraft.lean`; compile it before moving
-   it into the section. Original Gamma graph certificates and the finite 3.21 partition
-   assembly still need to be connected.
-4. Continue Definition 5.4's fibrewise specialness, standard contractions
-   (5.5), full 5.6, the category condition 5.3, and the 2-cell results 5.7/5.8.
-   Section 4 is being formalized in its own chat; consult actual source and
-   checked status rather than assuming its open results.
+Next:5.3 actual RV[1,·] isomorphism. Weight equality follows because an
+actual mutually contractible bijection between unary RV-pullbacks maps a
+singleton zero cell to a singleton zero cell; a nonzero RV cell is infinite.
+Use checked Sec3Fibre.fibre_infinite. Finite volume images follow by fixing
+a common VF representative of the input RV value (pullback property) and
+using the checked finite RV-to-VF image theorem for the old RV labels.
+A scratch proof `.scratch/UnaryVFFibreFinite.lean` is in progress; it needs
+an explicit normalized instance in ImaginaryParameters.OverBase.specialize.
+Use original-Gamma graph→full raw graph→finite real support, adjoin fixedx,
+then finite_rv_to_vf_relation_image in the canonical normalization. No
+smallness assumption on the potentially large internal code set is needed.
 
-Activate Lean with `source /workspace/.tools/activate-lean.sh`.
-Only propext, Classical.choice and Quot.sound are permitted in axiom audits.
-Do not edit a source while its compiler is running. Keep substantially
-different completed mathematical proofs in the whole-paper PROOF-WRITEUP.md
-ledger; ordinary API construction is not a replacement proof by itself.
-
-
-Current continuation after the161-head local checkpoint: the compatible
-chain induction and original-Gamma graphs are complete. The prepared
-bijection wrapper produces inverse preparation internally. Do not repeat
-that work or count 5.2 as complete. Next: Proposition3.21 partition producer,
-finite membership preparation and source-cell purity, then assemble the
-initial source/target chains with the matching theorem. A compiled scratch
-coordinate-fibre bridge is `.scratch/UnaryCoordinateGeometry.lean`; its
-`refined_coordinate_open_to_cellwise` theorem turns an actual finite partition
-and source-cell purity into the required geometry. It is not in the161-head
-publication batch yet. Full3.21 uses `FullBaseAtomicity` with Gamma/ball names;
-prove the no-ball bridge to/from predecessor `GammaParameters`, retaining
-original-base invariant graphs. Other5.3–5.8 obligations remain as in TARGETS.
+Then finish5.4 fibrewise relatively-special definition/witnesses,5.5 actual
+standard contractions with permutation and lifting square, general5.6,
+and5.7–5.8(actual2-cell geometry/uniform4.8). Section4 is active separately;
+do not assume its open results or send messages without authorization.
+The existing UnaryChain gives actual relatively-unary factors of specials
+and the arity-one5.6 case only. No full5.6 claim yet.

@@ -99,3 +99,24 @@ proved locally. The paper-open bridge uses this project's `PaperBalls` and
 `GammaRadiusAtomicity.gammaBall`; it preserves the reversed value order and
 does not replace equal RV classes by equal values. Root build and all161
 full type/allowed-axiom checks passed; exact evidence in VERIFICATION.json.
+
+
+November11 Lemma5.2 batch: inspected and applied this project's
+`CoordinatePartitions.proposition_3_21` with its actual full-base scope,
+saturation, small real base, ACVF00 and named nontrivial Gamma value.
+`GammaFullBaseBridge` proves equivalence with predecessor GammaParameters
+when the combined base has only names `Sum.inr γ`; the reverse direction
+keeps the full invariant relation. The mixed tuple translations use pinned
+`VerticalConstruction.pointValues`. Boundary preparation reuses
+`gamma_map_preparation_at_boundary`, actual RV0/1 `membershipMap`,
+`Chain.lastKind_allTagged` and `Centering.Chain.lastKind_append`.
+The197-head complete audit and root/full project checks pass. All161 prior
+types are unchanged; no dependency revision or outside citation changed.
+
+For5.3, inspected pinned `RVCategories.RVHom` (both volumetric and
+finite_volume_images are required), `PullbackLift.pullbackObject`, and
+`FiniteImage.finite_rv_to_vf_relation_image`/`GammaBaseFiniteImage`.
+The finite RV-to-VF image theorem is already formalized and requires
+genuine saturation and a small real base, not VFFieldBase or a new
+algebraicity reference. It will be specialized over finite original-base
+support plus a fixed VF input; this proof remains in scratch.

@@ -1,71 +1,56 @@
 # Section 5 status
 
-Work started on branch `section-5/contracting-to-rv` from `c8f4270`.
-The section's precise targets and scope are in TARGETS.md.
+**Lemmas 5.1 and 5.2 are locally checked** in the recorded original
+real/Gamma base scope. The full Section5 is still in progress. The current
+197-declaration full type/axiom audit passes with only propext,
+Classical.choice and Quot.sound. All161 prior complete types are unchanged.
+The root build and full project audits pass for foundation and Sections2,3,5;
+Sections4,6,7 have no local verifiers and are skipped.
 
-**Lemma 5.1 is locally checked**, over a small real base and over the original
-real/Gamma base with the explicit VF coefficient-field scope. The complete
-161-declaration type/axiom audit passed; only propext, Classical.choice and
-Quot.sound occur. Its exact source receipt and full type output are retained
-in `.scratch/section5-verified/`. The full root build and project audit also passed.
-The constructed 5.2/5.4 supporting geometry is included in that audit; neither
-5.2 nor the full section is claimed complete.
+Lemma5.1 prepares arbitrary mixed finite maps. Lemma5.2 now constructs both
+special bijections for an arbitrary unary definable bijection and produces
+the unique commuting definable RV-key bijection. Its final theorem does
+not assume contractibility, inverse contractibility, an open-to-open
+partition or the desired geometric equivalence.
 
-| Module | Locally checked scope |
-| --- | --- |
-| `Preparation` | Lemma 5.1, small real base, all finite mixed arities. Uses the actual predecessor preparation and its proved obstacle producer. |
-| `GammaPreparation` | Lemma 5.1 over the original real/Gamma base with a common working real presentation, retaining complete invariant transformation and conjugate graphs. The shared-presentation wrapper is drafted separately in GammaMapPresentation. |
-| `GammaMapPresentation` | Constructs a common real presentation internally and states the set-level Lemma 5.1 over the original Gamma base. No code-set smallness premise. |
-| `QuotientBijection` | The induced RV-key map of a contractible bijection is bijective iff its actual inverse is contractible. A unique definable commuting bijection follows with that explicit premise. This is the final quotient step, not 5.2. |
-| `RelativelyUnary`, `UnaryFactorizations` | Coordinate-preservation predicate; actual finite chains of definable relatively unary bijections; factorization of every supplied special bijection in positive VF arity; the arity-one base case of 5.6. Relative specialness and full 5.6 remain open. |
-| `UnaryBallImages`, `UnaryTranslations` | A zero-free actual open polydisc lies in one RV class; the centred open-image contractibility criterion and translation calculus. |
-| `FocusSection`, `PulledFocusGeometry`, `PulledFocusDefinability` | An actual target focus section, selected source RV-cell locus, source centre, full original-real-base graphs, and a constructed source Focus. The supplied map is assumed contractible; no compatible-transformation conclusion is assumed or claimed. |
+The original-base5.2 scope is ACVF(0,0), genuine saturation with aleph0≤κ,
+small P.real, VFFieldBase P.real and a named Gamma value δ with1<δ.
+The complete original map graph and domain definability are explicit.
+Internal real presentations may be enlarged, but every constructed focus
+and special chain has a full invariant certificate over the original P.
+No smallness bound on the internal code set or ball names is introduced.
 
-The section library and separate geometry entry point are registered in
-Lake. The fresh 161-declaration build/type/axiom batch passed. Full types,
-source/pin hashes and audit identities are recorded in VERIFICATION.json.
-The full root integration build and project audit passed: foundation and
-Sections 2, 3 and 5. The proof checkpoint is ready for CI confirmation.
+The proof imports checked Proposition3.21, proves the Gamma/no-ball-full-base
+bridge and its mixed tuple translation, then prepares all finite partition
+membership flags. Actual inverse-special geometry yields the required
+open-to-open property. Compatible chain induction matches every target
+focus, keeping both directions contractible. Boundary alternation and the
+existing last canonical step are tracked explicitly. Inverse preparation
+comes from genuine saturation and the checked predecessor producer.
 
-The full pinned dependency build completed successfully (9294 jobs). The
-cache denial has therefore been overcome by an actual from-source build;
-no network-setting change is required to proceed. Local checks use Lean
-4.35.0 and all 11 package revisions match the committed manifest.
+Entry points: `UnaryBijection.lemma_5_2` is the set-level result;
+`UnaryBijectionPreparation.lemma_5_2_gamma_presented` starts from an actual
+working real presentation. `UnaryBijectionFromPartition` and
+`GammaOpenPreparation` record the assembly. `GammaFullBaseBridge`,
+`GammaPointRawBridge`, `GammaGraphRawBridge` and `UnaryCoordinatePartition`
+retain original-base semantics. `GammaMembershipPreparation` prepares
+finite map families at an explicit chain boundary. The earlier geometry,
+quotient and relatively-unary modules remain checked support.
 
-Active proof work: target focus-section construction, the pulled source
-locus and its original-base graph, and the unary-chain factorization of
-actual special bijections. The open-ball geometric criterion is checked
-individually: a centred map with actual open nonzero RV-cell images is
-contractible. Both matched-focus directions, open-image preservation and the zero-marker
-chain argument now compile and pass the 121-head audit. The full compatible chain induction and original-Gamma focus graph certificates now compile and pass the 161-head audit. The 3.21 partition/preparation assembly remains to be proved.
+Next: Lemma5.3 must construct actual RV[1,·] morphisms in both directions,
+including weight and finite-volume-image conditions. Full fibrewise
+relative specialness(5.4), standard contractions(5.5), general5.6 and
+2-cell results5.7–5.8 remain open. An arbitrary RV-valued map is not a
+standard contraction; an RV-key bijection alone does not prove5.3.
 
-No Section 5 result is assumed as a prerequisite of itself. No HK or referee
-result is cited. No paper correction has been silently adopted. Definitions,
-partial scopes, conditional consequences and proved numbered results must
-continue to be counted separately.
+Local evidence: `.scratch/section5-197-verified/`, full types and exact
+source/pin/audit hashes in VERIFICATION.json, plus the lemma52 root and
+project verification logs. The prior161-head checkpoint2428bd0 passed
+CI43075798136. Artifact13882848565 exactly matches its preserved local
+receipt and that verified checkpoint was promoted to main. Remote CI
+confirmation of this197-head batch is a separate publication step.
 
-The first wider root build completed from the existing Mathlib/predecessor
-artifacts while freshly building the remaining pinned/project modules
-(10218 jobs reported). The matched-focus root consumer build then passed
-(10236 jobs, largely artifact reuse). Both are local checks; remote CI
-confirmation is a separate publication step. All 72 previous complete types
-are unchanged in the 121-head audit.
-
-Verified chain checkpoint (November 11, 2026): `ChainAlgebra`,
-`MatchedFocusStep`, `MatchedChainInduction` and `PreparedMutualContraction`
-construct actual finite matching chains and the unique commuting RV-key
-bijection, under explicit prepared geometry. `GammaGraphOperations`,
-`GammaFocusSection`, `GammaPulledFocus`, `GammaChainAlgebra`,
-`GammaMatchedChain` and `GammaPreparedBijection` retain full invariant
-original-Gamma graphs throughout. The last theorem produces inverse
-preparation from genuine saturation and the coefficient-field scope;
-only the open-to-open geometry, forward preparation and tagging remain
-inputs. `UnaryPaperBallBridge` relates paper-open scalar balls to actual
-ordinary unary polydiscs and excludes VF for sets inside one RV cell.
-These are 40 new audited declarations; 5.2 still awaits its 3.21 producer.
-
-The prior 121-head checkpoint `f3bd053` passed remote CI run43071670230.
-Its downloaded artifact13879755108 agrees exactly with the local full
-receipt, including every complete type and source/audit hash. That verified
-checkpoint has been promoted to main. The new 161-head checkpoint passed
-local root integration and full project audits; remote CI is a separate step.
+No Section5 result is assumed as a prerequisite of itself. No HK result,
+referee assertion or new external citation is a proof input. This work
+follows the paper's partition-and-matching argument; ordinary parameter
+and Lean API bridges are not counted as substantially different proofs.

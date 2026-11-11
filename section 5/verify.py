@@ -11,7 +11,8 @@ import sys
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / '.scratch' / 'section5-verified'
-HEADLINES = ['IntegrationInACVF.Section5.contractible_comp',
+HEADLINES = [
+    'IntegrationInACVF.Section5.contractible_comp',
     'IntegrationInACVF.Section5.focus_post_contractible',
     'IntegrationInACVF.Section5.focused_post_contractible',
     'IntegrationInACVF.Section5.replaceCoordinateMap',
@@ -171,7 +172,44 @@ HEADLINES = ['IntegrationInACVF.Section5.contractible_comp',
     'IntegrationInACVF.Section5.ordinaryRawOpen_paper_open',
     'IntegrationInACVF.Section5.paper_open_ordinary',
     'IntegrationInACVF.Section5.vfShadow_polydisc_iff',
-    'IntegrationInACVF.Section5.vfShadow_ne_whole_of_cell']
+    'IntegrationInACVF.Section5.vfShadow_ne_whole_of_cell',
+    'IntegrationInACVF.Section5.unaryConjugate_comp',
+    'IntegrationInACVF.Section5.family_gamma_real_presentation',
+    'IntegrationInACVF.Section5.gammaFullBase',
+    'IntegrationInACVF.Section5.gamma_to_full',
+    'IntegrationInACVF.Section5.full_to_gamma',
+    'IntegrationInACVF.Section5.pointRelationIndex',
+    'IntegrationInACVF.Section5.pointRelationValues_eq_code',
+    'IntegrationInACVF.Section5.gammaGraph_full_raw',
+    'IntegrationInACVF.Section5.unaryTupleMap_graph',
+    'IntegrationInACVF.Section5.unaryTupleMap_injective',
+    'IntegrationInACVF.Section5.gamma_membershipMap_graph',
+    'IntegrationInACVF.Section5.gamma_prepare_finite_maps_at_boundary',
+    'IntegrationInACVF.Section5.gamma_prepare_finite_membership_at_boundary',
+    'IntegrationInACVF.Section5.gamma_prepare_finite_membership',
+    'IntegrationInACVF.Section5.gamma_open_preparation_from_partition',
+    'IntegrationInACVF.Section5.pointValues_eq_gammaPointCode',
+    'IntegrationInACVF.Section5.pointValues_image_iff',
+    'IntegrationInACVF.Section5.gammaPointCode_sorted',
+    'IntegrationInACVF.Section5.gammaSet_full_raw_iff',
+    'IntegrationInACVF.Section5.gamma_prepared_bijective_contraction_at_boundary',
+    'IntegrationInACVF.Section5.prepared_coordinate_partition',
+    'IntegrationInACVF.Section5.gamma_tagged_tail',
+    'IntegrationInACVF.Section5.lemma_5_2',
+    'IntegrationInACVF.Section5.unary_bijection_from_partition',
+    'IntegrationInACVF.Section5.lemma_5_2_gamma_presented',
+    'IntegrationInACVF.Section5.pointValues_injective',
+    'IntegrationInACVF.Section5.unaryTupleMap',
+    'IntegrationInACVF.Section5.unaryTupleMap_apply',
+    'IntegrationInACVF.Section5.pointValues_tail_eq',
+    'IntegrationInACVF.Section5.unaryTuple_insert',
+    'IntegrationInACVF.Section5.coordinate_shadow_image',
+    'IntegrationInACVF.Section5.coordinate_piece_open_iff',
+    'IntegrationInACVF.Section5.coordinate_open_to_cellwise',
+    'IntegrationInACVF.Section5.refined_coordinate_open_to_cellwise',
+    'IntegrationInACVF.Section5.refined_conjugate_coordinate_geometry',
+    'IntegrationInACVF.Section5.unary_coordinate_partition'
+]
 
 ALLOWED = {'propext', 'Classical.choice', 'Quot.sound'}
 
@@ -234,7 +272,7 @@ def main():
             if axioms - ALLOWED:
                 raise RuntimeError('Unexpected axioms for ' + name)
             records.append({'name': name, 'axioms': sorted(axioms)})
-            match = re.search(r'(?m)^@' + re.escape(name) + r'(?:\.\{[^}]*\})?\s*:', output)
+            match = re.search(r'(?m)^@?' + re.escape(name) + r'(?:\.\{[^}]*\})?\s*:', output)
             if match is None:
                 raise RuntimeError('Missing complete type for ' + name)
             end = output.index("\n'" + name + "'", match.start())
@@ -256,7 +294,7 @@ def main():
             'complete_types': types,
             'audit_source_sha256': digest(audit),
             'audit_log_sha256': digest(OUT / 'HeadlineAudit.log'),
-            'scope': 'Lemma 5.1 over real and original Gamma bases; quotient and relatively unary calculus. See STATUS.md for the exact scope; not a proof of Lemma 5.2.',
+            'scope': 'Lemmas 5.1 and 5.2 over the recorded original real/Gamma base scope; supporting quotient, coordinate geometry and relatively unary calculus. See STATUS.md for exact hypotheses and remaining Section5 targets.',
             'build_scope': 'Incremental Lake Section 5 build and fresh full-type/axiom audit',
         }
         (OUT / 'receipt.json').write_text(json.dumps(receipt, indent=2) + '\n', encoding='utf-8')

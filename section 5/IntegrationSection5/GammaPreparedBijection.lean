@@ -18,6 +18,46 @@ variable {M : Type} [LRV.Structure M] [M ⊨ Axioms.ACVF]
 variable {P : GammaParameters.Base (M := M)} {S : Set M} {m l : ℕ}
 variable {A : DefSet (M := M) S 1 m} {B : DefSet (M := M) S 1 l}
 
+theorem gamma_prepared_bijective_contraction_at_boundary {κ : Cardinal} (hs : Saturated M κ)
+    (h00 : M ⊨ Axioms.ACVF00) (hsmall : Cardinal.mk P.real < κ)
+    (FBase : VFFieldBase P.real) (hPS : P.real ⊆ S)
+    (f : Map A B) (hf : Function.Bijective f) (hc : Contractible f)
+    (hg : CellwiseOpenEquivalence f)
+    (hA : IsRVPullback (carrier A)) (hB : IsRVPullback (carrier B))
+    (hTag : ∃ j : Fin m, Tagged (carrier A) 0 j)
+    (hADef : GammaSetDefinable P (carrier A)) (hBDef : GammaSetDefinable P (carrier B))
+    (hfDef : GammaGraphDefinable P (pointMapGraph f))
+    (previous : Option Bool) (hTags : previous = some false → AllTagged B) :
+    ∃ d e : ℕ, ∃ A' : DefSet (M := M) S 1 d, ∃ B' : DefSet (M := M) S 1 e,
+      ∃ TA : SpecialBijection A A', ∃ TB : SpecialBijection B B',
+        GammaChainDefinable P TA.chain ∧ GammaChainDefinable P TB.chain ∧
+        TA.chain.Alternating (some false) ∧ TB.chain.Alternating previous ∧
+        IsRVPullback (carrier A') ∧ IsRVPullback (carrier B') ∧
+        Contractible (unaryConjugate TA TB f) ∧
+        Contractible (Map.inverse (unaryConjugate TA TB f)
+          (unaryConjugate_bijective TA TB f hf)) ∧
+        GammaGraphDefinable P (pointMapGraph (unaryConjugate TA TB f)) ∧
+        ∃! g : Map (keyImage A') (keyImage B'), Function.Bijective g ∧
+          ∀ a : A', g (toKeyImage A' a) = toKeyImage B' (unaryConjugate TA TB f a) := by
+  let v := Values.presentationValuation (M := M)
+  have hv := Values.presentation_compatible (M := M)
+  have ho := uniformVerticalObstacles hs hsmall v hv
+  let L := gammaLogicInput P
+  have hp : GammaPolynomialSupportInput P := gammaPolynomialSupportInput_of_fieldBase P FBase
+  obtain ⟨e,B',TB,hTBAlt,hTB,hB',hFinal⟩ := gamma_map_preparation_at_boundary
+    h00 v hv ho L hp hPS B hBDef (Map.inverse f hf) (gamma_inverse_map_graph f hf hfDef)
+    previous hTags
+  obtain ⟨d,A',TA,hTA,hAlt,hA',_,hForward,hReverse⟩ := gamma_matched_chain_induction
+    TB.chain TB.alternating hTB f hf hc hg hADef hfDef hA hB hB' hTag hFinal
+  have hBack : Contractible (Map.inverse (unaryConjugate TA TB f)
+      (unaryConjugate_bijective TA TB f hf)) := by
+    intro a b hab
+    rw [unaryConjugate_inverse,unaryConjugate_inverse]
+    exact hReverse a b hab
+  exact ⟨d,e,A',B',TA,TB,hTA,hTB,hAlt,hTBAlt,hA',hB',hForward,hBack,
+    gamma_unaryConjugate_graph TA TB f hTA hTB hfDef,
+    exists_unique_bijective_contraction _ (unaryConjugate_bijective TA TB f hf) hForward hBack⟩
+
 theorem gamma_prepared_bijective_contraction {κ : Cardinal} (hs : Saturated M κ)
     (h00 : M ⊨ Axioms.ACVF00) (hsmall : Cardinal.mk P.real < κ)
     (FBase : VFFieldBase P.real) (hPS : P.real ⊆ S)
@@ -38,23 +78,9 @@ theorem gamma_prepared_bijective_contraction {κ : Cardinal} (hs : Saturated M �
         GammaGraphDefinable P (pointMapGraph (unaryConjugate TA TB f)) ∧
         ∃! g : Map (keyImage A') (keyImage B'), Function.Bijective g ∧
           ∀ a : A', g (toKeyImage A' a) = toKeyImage B' (unaryConjugate TA TB f a) := by
-  let v := Values.presentationValuation (M := M)
-  have hv := Values.presentation_compatible (M := M)
-  have ho := uniformVerticalObstacles hs hsmall v hv
-  let L := gammaLogicInput P
-  have hp : GammaPolynomialSupportInput P := gammaPolynomialSupportInput_of_fieldBase P FBase
-  obtain ⟨e,B',TB,_,hTB,hB',hFinal⟩ := gamma_map_preparation_at_boundary
-    h00 v hv ho L hp hPS B hBDef (Map.inverse f hf) (gamma_inverse_map_graph f hf hfDef)
-    none (by intro h; cases h)
-  obtain ⟨d,A',TA,hTA,hAlt,hA',_,hForward,hReverse⟩ := gamma_matched_chain_induction
-    TB.chain TB.alternating hTB f hf hc hg hADef hfDef hA hB hB' hTag hFinal
-  have hBack : Contractible (Map.inverse (unaryConjugate TA TB f)
-      (unaryConjugate_bijective TA TB f hf)) := by
-    intro a b hab
-    rw [unaryConjugate_inverse,unaryConjugate_inverse]
-    exact hReverse a b hab
-  exact ⟨d,e,A',B',TA,TB,hTA,hTB,hAlt,hA',hB',hForward,hBack,
-    gamma_unaryConjugate_graph TA TB f hTA hTB hfDef,
-    exists_unique_bijective_contraction _ (unaryConjugate_bijective TA TB f hf) hForward hBack⟩
+  obtain ⟨d,e,A',B',TA,TB,hTA,hTB,hAlt,_,hA',hB',hc',hb',hg',hKeys⟩ :=
+    gamma_prepared_bijective_contraction_at_boundary hs h00 hsmall FBase hPS f hf hc hg hA hB
+      hTag hADef hBDef hfDef none (by intro h; cases h)
+  exact ⟨d,e,A',B',TA,TB,hTA,hTB,hAlt,hA',hB',hc',hb',hg',hKeys⟩
 
 end IntegrationInACVF.Section5
