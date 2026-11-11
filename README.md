@@ -36,8 +36,8 @@ Section3 type/axiom audits pass:348 generic and656 actual heads.
 All287 source hashes match; all983 previous complete types are unchanged,
 and all21 new complete types exactly match individually reviewed audits.
 Only propext, Classical.choice and Quot.sound occur. Evidence is in
-.scratch/local-coordinate-setup-1004/ and VERIFICATION.json. CI confirmation
-for this proof batch is pending. The full3.4 source bc7ad74 passed
+.scratch/local-coordinate-setup-1004/ and VERIFICATION.json. [CI42971655123](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42971655123) passed;
+all1004 full CI types and287 source hashes match the reviewed local archive. The full3.4 source bc7ad74 passed
 [CI42968768615](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42968768615)
 and was promoted to main at receipt bbcaa66 after exact type/hash matching.
 The receipt itself passed CI42970350599.
