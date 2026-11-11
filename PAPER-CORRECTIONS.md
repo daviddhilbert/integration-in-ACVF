@@ -1,4 +1,4 @@
-# Accepted corrections to arXiv:0809.0473v2
+# Corrections and checked boundaries in arXiv:0809.0473v2
 
 ## Lemma 3.11: nonempty relation
 
@@ -39,3 +39,42 @@ The corrected proposition is now proved by
 PuncturedBallObstruction.proposition_3_24. Exact actual quotient graphs and
 the independent Gamma interval obstruction supply every input. Standing
 genuine saturation,infinite cardinal,small real base andACVF00 are explicit.
+
+## Lemma 4.3: allow an empty radius set
+
+Author clarification in the section 4 chat, November 11, 2026
+(America/Los_Angeles): replace “is a singleton” by **“has at most one
+element”** in the displayed set of source radii.
+
+The identity on an ordinary open ball of radius beta has no subball with
+image radius alpha when alpha<beta. The radius set is empty on every
+possible inverse piece of a special preparation. The corrected conclusion
+allows this empty case without adding a restriction on alpha.
+
+The author explicitly approved this correction. Corrected Lemma 4.3 is
+now proved by RadiusPreparation.lemma_4_3; the independent actual-ball
+boundary is proved in RadiusBoundary. Exact verification is recorded under
+section 4.
+
+
+## Checked boundary after Definition 4.7: singleton first projection
+
+The unnumbered sentence claims that a nonbalanced 2-cell with nonzero
+paradigm is an open polydisc. Definition 4.7 also allows its first 1-cell
+to be a singleton. The actual definable cell
+`{1} × rv⁻¹(rv(1))`, with constant positioning function `0`, has nonzero
+paradigm and is not balanced, but its singleton first projection is not
+an open ball. Definition 2.2's open-polydisc convention therefore excludes it.
+
+OpenPolydiscBoundary.definable_cell, nonzero_paradigm, not_balanced and
+not_open_polydisc prove these assertions independently on the pinned native
+carriers. The definable-cell theorem works over any original Gamma base;
+the no-open-singleton conclusion uses ACVF00 and an explicit nontrivial
+Gamma value. No referee assertion is a proof input.
+
+Two precise replacements are already proved: CellRectangles.rectangle
+says the cell is a product of its first 1-cell and an open ball;
+CellRectangles.open_polydisc adds the hypothesis that the first projection
+is open. The author's wording choice was requested in the section 4 chat
+and is pending. This entry records a verified boundary, not an approved
+change to the printed sentence. Definition 4.7 and Lemma 4.8 are unchanged.
