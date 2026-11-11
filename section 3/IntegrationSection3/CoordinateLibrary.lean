@@ -1,0 +1,9 @@
+module
+
+public import IntegrationSection3.CoordinateSlices
+public import IntegrationSection3.CoordinateFibres
+public import IntegrationSection3.ImaginaryTupleDefinability
+public import IntegrationSection3.CodeSupportHull
+
+/-! Coordinate fibres and invariant parameter promotion,kept separate
+from the existing geometry entry points to avoid unrelated rebuilds. -/

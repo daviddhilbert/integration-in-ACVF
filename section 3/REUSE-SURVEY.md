@@ -507,3 +507,19 @@ all14 new full types exactly match individually reviewed audits,and all277
 source hashes match the successful983-head local root/type/axiom audit.
 Only permitted standard axioms. No referee claim,new outside citation or
 HK result is a proof input.
+
+## Coordinate fibres and invariant real-label promotion
+
+Pins unchanged. Inspected the exact full type and source of
+SpecialTransformations.ModelTheory.promote_definable_tuple_fibre in pinned
+Section3/GammaBaseTools. It promotes raw real constants to free variables;
+it does not by itself preserve invariance of finite imaginary codes at all
+new labels. CodeSupportHull proves that missing invariant extension using
+universal valid-code representatives. The finite tuple presentation itself
+is proved definable. RealParameterPromotion proves exact specialization and
+full original-base definability. No chosen representative is a final name.
+PointwiseCoordinatePartitions uses the project's checked full3.19; source
+and target context labels are the only added real names. Whole-map injection
+proves scalar fibre injection. The1004-head full local audit preserves all983
+old full types, matches all21 individual reviewed new types and287 source
+hashes, and uses only permitted axioms. Uniform global3.21 remains open.

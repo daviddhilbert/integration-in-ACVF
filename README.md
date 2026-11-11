@@ -31,15 +31,16 @@ and manual dispatch, with downloadable build and audit evidence.
 The current root imports the predecessor and the new Section 2 and 3 libraries.
 [Section 2](section%202/STATUS.md) records the prerequisite map and Corollary 2.15;
 [Section 3](section%203/STATUS.md) records the exact formalized scope and open work.
-The full local root build,inherited QE audit,Section2 audit and983
-Section3 type/axiom audits pass:336 generic and647 actual heads.
-All277 source hashes match; all969 previous complete types are unchanged,
-and all14 new complete types exactly match individually reviewed audits.
-Only propext,Classical.choice andQuot.sound occur. Evidence is in
-.scratch/local-closed-type-983/ andVERIFICATION.json. [CI42968768615](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42968768615) passed;
-all983 complete CI types and277 source hashes match the reviewed local archive. The preceding full3.15/3.19 source fed786f passed
-[CI42967337352](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42967337352)
-and was promoted to main at receipt39db258 after exact type/hash matching.
+The full local root build, inherited QE audit, Section2 audit and1004
+Section3 type/axiom audits pass:348 generic and656 actual heads.
+All287 source hashes match; all983 previous complete types are unchanged,
+and all21 new complete types exactly match individually reviewed audits.
+Only propext, Classical.choice and Quot.sound occur. Evidence is in
+.scratch/local-coordinate-setup-1004/ and VERIFICATION.json. CI confirmation
+for this proof batch is pending. The full3.4 source bc7ad74 passed
+[CI42968768615](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42968768615)
+and was promoted to main at receipt bbcaa66 after exact type/hash matching.
+The receipt itself passed CI42970350599.
 
 CompleteTypeBallAtomicity.lemma_3_4 proves full open/closed ball atomicity,
 including arbitrary unnamed radii and possibly undefinable complete types.

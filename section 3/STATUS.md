@@ -2,15 +2,16 @@
 
 Target: arXiv:0809.0473v2,through Proposition3.24.
 
-The full local root build,inherited QE audit,Section2 audit and983
-Section3 type/axiom audits pass:336 generic and647 actual heads.
-All277 source hashes match; all969 previous complete types are unchanged,
-and all14 new complete types exactly match individually reviewed audits.
-Only propext,Classical.choice andQuot.sound occur. Evidence is in
-.scratch/local-closed-type-983/ andVERIFICATION.json. [CI42968768615](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42968768615) passed;
-all983 complete CI types and277 source hashes match the reviewed local archive. The preceding full3.15/3.19 source fed786f passed
-[CI42967337352](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42967337352)
-and was promoted to main at receipt39db258 after exact type/hash matching.
+The full local root build, inherited QE audit, Section2 audit and1004
+Section3 type/axiom audits pass:348 generic and656 actual heads.
+All287 source hashes match; all983 previous complete types are unchanged,
+and all21 new complete types exactly match individually reviewed audits.
+Only propext, Classical.choice and Quot.sound occur. Evidence is in
+.scratch/local-coordinate-setup-1004/ and VERIFICATION.json. CI confirmation
+for this proof batch is pending. The full3.4 source bc7ad74 passed
+[CI42968768615](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42968768615)
+and was promoted to main at receipt bbcaa66 after exact type/hash matching.
+The receipt itself passed CI42970350599.
 
 ## Numbered results and exact scope
 
@@ -36,7 +37,8 @@ Green checks certify these exported types,not broader unstated claims.
 | 3.17 | Actual linear subballs and the stated exclusion for every given least-radius function. Centre/radius codes are internal; no old-imaginary cardinal bound. Existence of the least-radius function is not included in the checked export. |
 | 3.18 | Complete actual RV-linearity,with the same standing saturation/smallness/characteristic/nontrivial-value scope as3.16. The affine-error replacement avoids the printed endpoint inference. |
 | 3.19 | FullOpenToOpenPartition.proposition_3_19 constructs an actual finite disjoint partition into nonempty original-base definable pieces with actual OpenToOpen. Full original base; same standing scope as3.15. No finiteness or cardinal bound on old imaginary names. |
-| 3.20,3.21 | Mixed coordinate-fibre definition and partition theorem remain to be connected and proved. |
+| 3.20 | Actual coordinate slicing, scalar fibre maps, full uniform graph and restriction stability are checked. |
+| 3.21 | Pointwise coordinate partitions and globally invariant original-base promotion of finite real labels are checked. The uniform finite global partition remains open. |
 | 3.22 | Complete component and actual-hole conservation for finite disjoint thin families under an original-base definable open-to-open VF bijection. Full original base; onlyACVF and a genuine nontrivial value. No canonical-model,saturation orACVF00 premise. |
 | 3.23 | No definable bijection between any distinct actual atomic primitive shapes:open,closed,thin annulus. Full original base,ACVF00 and originally definable nontrivial value. No saturation or3.15 premise. |
 | 3.24 | Open. Induced RV/Gamma maps and the definable interval obstruction still need proof. Correct value intervals are closed and half-open; see REFERENCE-NOTES.md for the independent endpoint check. |
@@ -122,3 +124,18 @@ closed balls,with singleton/VF cases supplied by earlier checked exports.
 RealBallAtomicity covers every actual ball imaginary. The same intrinsic
 finite-hitting argument now applies to any splitting-ball family,so
 CompleteTypeBallAtomicity.lemma_3_4 has no open/closed or radius restriction.
+
+## Coordinate partition setup
+
+CoordinateSlices and CoordinateFibres define the actual deleted source and
+output contexts. Whole-map injectivity gives scalar fibre injectivity.
+CoordinateFibreSyntax proves the full uniform scalar graph from the entire
+partial tuple graph. PointwiseCoordinatePartitions applies full3.19 after
+adjoining precisely the finite real contexts, preserving every old imaginary.
+RealParameterPromotion promotes these label names to free variables using
+the pinned proved raw formula-promotion theorem. CodeSupportHull universally
+quantifies valid quotient representatives, making the promoted relation
+invariant for every new label tuple. No representative becomes a final name.
+
+Uniform compactness, definable gluing and refinement across all VF coordinate
+pairs are still required for3.21. Pointwise partitions do not discharge it.

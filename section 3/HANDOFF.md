@@ -1,14 +1,15 @@
 # Section3 continuation
 
-The full local root build,inherited QE audit,Section2 audit and983
-Section3 type/axiom audits pass:336 generic and647 actual heads.
-All277 source hashes match; all969 previous complete types are unchanged,
-and all14 new complete types exactly match individually reviewed audits.
-Only propext,Classical.choice andQuot.sound occur. Evidence is in
-.scratch/local-closed-type-983/ andVERIFICATION.json. [CI42968768615](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42968768615) passed;
-all983 complete CI types and277 source hashes match the reviewed local archive. The preceding full3.15/3.19 source fed786f passed
-[CI42967337352](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42967337352)
-and was promoted to main at receipt39db258 after exact type/hash matching.
+The full local root build, inherited QE audit, Section2 audit and1004
+Section3 type/axiom audits pass:348 generic and656 actual heads.
+All287 source hashes match; all983 previous complete types are unchanged,
+and all21 new complete types exactly match individually reviewed audits.
+Only propext, Classical.choice and Quot.sound occur. Evidence is in
+.scratch/local-coordinate-setup-1004/ and VERIFICATION.json. CI confirmation
+for this proof batch is pending. The full3.4 source bc7ad74 passed
+[CI42968768615](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42968768615)
+and was promoted to main at receipt bbcaa66 after exact type/hash matching.
+The receipt itself passed CI42970350599.
 
 FullCompleteTypeOpenImages.lemma_3_15 proves3.15 over the full original
 real/Gamma/ball base, for arbitrary open-ball radii inside a possibly
@@ -24,40 +25,32 @@ The two remaining numbered Section3 main targets are3.21 and3.24;
 Existence of the least-radius function supplied as input in3.17 remains
 a scope followup. Section2.34 remains open separately; Section2.15 is checked.
 
-Current proof entries:FullOpenCompleteTypeAtomicity.lemma_3_4_open,
+Current proof entries:CompleteTypeBallAtomicity.lemma_3_4,
 FullCompleteTypeOpenImages.lemma_3_15,
-FullOpenToOpenPartition.proposition_3_19. Generic profile results are in
-ProfileLibrary,kept separate from the core to avoid unrelated rebuilds.
-All943 previously published full types and the964 local intermediate types
-are unchanged; all26 new types exactly match individually reviewed audits.
-The969 archive includes its own Section2 receipt and full audit logs.
-Compare new CI types,all270 source hashes and both audit hashes against this
-archive before promoting main; do not compare Section2 against a later live
-receipt. Use set-e for publication shell sequences.
+FullOpenToOpenPartition.proposition_3_19. CoordinateLibrary is separate from
+existing generic geometry entry points. All983 old types are unchanged;
+all21 new types match their individual reviewed audits. Compare1004 CI
+against its own archive, including archived Section2, before main promotion.
+Use set-e for publication sequences.
 
-The referee attachment is reference only:AGENTS.md andREFERENCE-NOTES.md.
-Its proposed QE repair is not an input. The finite-hitting/profile route
-was developed independently and now supplies full open-ball3.4/3.15.
-The old .scratch/full-base-315-plan.md is historical. Full open/closed3.4
-is now CompleteTypeBallAtomicity.lemma_3_4; the closed root-free producer,
-closed self-centred code bridge and arbitrary splitting-ball hitting set
-are proved. All14 new full types exactly match individual reviewed audits.
-Compare983CI against the983 archive,including its archivedSection2.
-Ignored CoordinateSlices andCoordinateFibres drafts compile individually
-(five and four heads); they are not registered or counted in983. They
-define actual deleted-coordinate contexts,insertion,and scalar fibre maps,
-prove exact full scalar graph equality,and prove fibre-map injectivity from
-actual whole-map injectivity. Review them before integration for3.20/3.21.
-The existing pinned SpecialTransformations.ModelTheory.
-promote_definable_tuple_fibre (Section3/GammaBaseTools) already promotes
-finite real names to free tuple parameters; inspect and reuse its exact type.
+The referee attachment is reference only:AGENTS.md and REFERENCE-NOTES.md.
+Its proposed QE bridge is not used. Full3.4 follows the independent finite
+hitting/profile argument, including unnamed closed radii.
 
-Next3.21:define actual deleted-coordinate contexts and their fibre maps;
-apply full3.19 after finitely adjoining real context labels. Uniformize the
-finite partition formulas using genuine saturation over the small original
-base,then glue finite definable pieces and refine across finite VF coordinate
-pairs. A conditional pointwise partition is not the final uniform theorem.
-Reuse existing finite Boolean refinement and full graph/preimage syntax.
+Definition3.20 setup, pointwise coordinate partitions and globally invariant
+full-base real-label promotion are integrated and locally checked.
+PointwiseCoordinatePartitions uses full3.19 over exactly B plus finite real
+contexts. RealParameterPromotion and CodeSupportHull preserve arbitrary old
+imaginaries and restore code invariance at every promoted label tuple.
+
+Next3.21:define the original-base locus where each finite tuple of cell
+formulas is a valid scalar OpenToOpen partition. UnaryRelationFamilies is an
+ignored individually compiled four-head draft (not counted in1004); review
+it before registration. Build relational parameterized open-ball image tests
+and a definable valid-template locus. Use finite imaginary support and the
+common real presentation to apply genuine tuple finite-subcover saturation.
+Glue the finitely many templates on disjoint parameter cases; refine across
+all finite VF coordinate pairs. A conditional pointwise result is not full3.21.
 
 Next3.24:actual closed parent minus open hole has a closed value interval
 [rho,r],possibly one point; open parent minus open hole has(rho,r].
