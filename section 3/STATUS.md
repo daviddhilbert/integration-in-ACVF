@@ -13,10 +13,11 @@ snapshots. Only `propext`, `Classical.choice` and `Quot.sound` occur.
 
 `VERIFICATION.json` records the local checkpoint; `CORE-VERIFICATION.json`
 selects its 289 generic heads. Evidence is in `.scratch/local-complete-type-805/`.
-New CI confirmation is pending. The preceding source `276a104` passed
-[CI 42947193955](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42947193955),
-with all 794 complete types and 201 source hashes matched before main
-promotion at receipt `41eb7de`.
+Source `fc136c5` passed [CI 42949057513](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42949057513).
+All 805 complete types exactly match the reviewed local audit; all 205
+source hashes and both audit hashes match. This receipt promotes that
+verified checkpoint to main. The preceding main receipt `41eb7de` passed
+CI 42948389490.
 
 ## Numbered results
 

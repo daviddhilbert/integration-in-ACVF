@@ -9,9 +9,11 @@ Fresh full local root, inherited QE, Section 2 and805 Section3 checks pass:
 289 generic,516 actual heads;205 source hashes. All794 prior full types
 unchanged;11 new complete types exactly match individually reviewed audits.
 Only propext,Classical.choice,Quot.sound. Evidence .scratch/local-complete-type-805/;
-VERIFICATION.json. New CI pending: compare every type/hash before promotion.
+VERIFICATION.json. Sourcefc136c5 passed CI42949057513; every805 complete
+type and205 source hashes match reviewed local evidence. This receipt
+promotes it to main.
 Preceding source276a104 passed CI42947193955; all794types/201hashes matched;
-receipt41eb7de promoted to main. Check that receipt's CI42948389490.
+receipt41eb7de promoted to main. That receipt passed CI42948389490.
 
 Fifteen numbered Section 3 results are checked in exact scope: 3.2,3.3,
 3.4 at named radii plus singleton/VF,3.6,3.7,3.8,3.9,3.10,corrected3.11,
