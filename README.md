@@ -59,6 +59,9 @@ See [Section 4 status](section%204/STATUS.md).
 The Section 4 integration build and complete project verifiers pass locally
 for foundation and Sections 2–5. Section 4 adds 445 full-type/axiom audits;
 its source-matched evidence is [VERIFICATION.json](section%204/VERIFICATION.json).
+[Section 4 CI 43100323010](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/43100323010)
+passed, and its retained complete types, axiom records, source/pin hashes
+and audit hashes match the local receipt exactly.
 
 
 The full root build, inherited QE audit, all 68 Section 2 and all 1,244

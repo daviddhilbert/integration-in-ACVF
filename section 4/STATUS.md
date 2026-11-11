@@ -3,7 +3,7 @@
 Work is on `section-4/translation-offsets`, updated to CI-verified upstream `53b98da`.
 The user requested the whole section. All numbered lemmas and the balanced-cell observations now compile,
 including the full definable-cell conclusion of 4.8. Full local integration
-verification passed; remote CI and publication are active work.
+verification and source-matched CI passed.
 Dependency pins are unchanged. All dependencies needed for the current
 batch have now built locally from source.
 
@@ -112,7 +112,14 @@ VERIFICATION.json records every complete exported type, allowed axioms,
 exact source/pin hashes and root/project integration evidence. Only propext,
 Classical.choice and Quot.sound occur. Live logs are in
 `.scratch/section4-verified/`, `.scratch/section4-root-final.log` and
-`.scratch/section4-project-final.log`. Remote CI is pending publication.
+`.scratch/section4-project-final.log`. [CI 43100323010](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/43100323010)
+passed on proof commit 802eb9c (attempt 2; the initial attempt failed its
+GitHub toolchain download before compiling Lean). Downloaded artifact
+13892318636 matches all 445 complete types/axiom records, all 100 audited
+source/pin inputs, compiler, dependencies and both audit hashes exactly.
+The proof sources are promoted with only receipt/documentation updates
+following that checked commit. No new proof source or pin change is part
+of the publication record.
 
 ## Least-radius clarification
 
