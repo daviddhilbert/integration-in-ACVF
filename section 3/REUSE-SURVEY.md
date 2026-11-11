@@ -452,3 +452,20 @@ explicit. All12 new full types and both shape/component definitions are
 reviewed; all914 prior types unchanged and248source hashes match the
 fresh926-head root/type/axiom audit. Only permitted standard axioms.
 All six distinct ordered shape pairs and singleton/VF edge cases are checked.
+
+## Real-base3.19: both compactness steps and actual finite refinement
+
+Pins unchanged. Read the predecessor Section5 and Section9 statuses and
+searched their preparation/Jacobian exports; their scopes do not directly
+provide the required full interpreted-base open-to-open partition. No such
+conditional result is imported. Instead reuse exact checked
+Section3.TupleCompactness.raw_definable_formula_tuple,
+Saturated.definable_finite_subcover,andSaturated.normalize,from the pinned
+MIT predecessor. The new finite-tuple FIP proof and type-neighborhood
+argument use genuine saturation. Original-base bad configuration syntax
+uses the existing full ball presentation and open-kind chart equivalence.
+The actual inverse and finite Boolean refinement reuse checked project
+declarations. All17 new full types and definitions are reviewed; all926
+earlier full types unchanged in the successful943-head combined audit.
+Real-base3.19 retains its explicit empty imaginary base; no full-scope
+completion is claimed. No new outside citation or HK input.

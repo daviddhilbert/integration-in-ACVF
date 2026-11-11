@@ -42,3 +42,8 @@ this paper. VF itself is clopen by the sequel's explicit convention.
 No later theorem is counted as proved by generic logical helpers or by an
 interface assuming the missing geometry. Characteristic, saturation and
 smallness hypotheses must be visible in the final exported types.
+
+Proposition3.19 has a checked actual finite disjoint open-to-open partition
+over small real bases,with genuine saturation,ACVF00 and an original-base
+definable nontrivial Gamma value. The empty imaginary-base restriction is
+explicit; the full interpreted-base extension remains open.

@@ -31,16 +31,15 @@ and manual dispatch, with downloadable build and audit evidence.
 The current root imports the predecessor and the new Section 2 and 3 libraries.
 [Section 2](section%202/STATUS.md) records the prerequisite map and Corollary 2.15;
 [Section 3](section%203/STATUS.md) records the exact formalized scope and open work.
-The full local root build, inherited QE audit, Section 2 audit and 926
-Section 3 type/axiom audits pass: 328 generic and 598 actual heads.
-All 248 source hashes match; all 914 prior complete types are unchanged,
-and all 12 new complete types exactly match individually reviewed audits.
-Only propext, Classical.choice and Quot.sound occur. Evidence is in
-.scratch/local-primitive-distinction-926/ and VERIFICATION.json.
-All926 complete CI types and248 source hashes match the archived local audit.
-[CI42961486168](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42961486168) passed; this is the verified main checkpoint. The preceding complete3.22 source13cabca
-passed [CI42960151159](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42960151159);
-all914 complete types and244 hashes matched before main receipt4786753.
+The full local root build, inherited QE audit, Section2 audit and943
+Section3 type/axiom audits pass:328 generic and615 actual heads.
+All255 source hashes match; all926 previous complete types are unchanged,
+and all17 new complete types exactly match individually reviewed audits.
+Only propext,Classical.choice andQuot.sound occur. Evidence is in
+.scratch/local-open-partition-943/ andVERIFICATION.json. CI confirmation
+for this batch is pending. The preceding full3.23 checkpoint1cfc67d passed
+[CI42961486168](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42961486168)
+and was promoted to main at receipt e50f47e after exact type/hash matching.
 
 Proposition 3.23 is complete in
 AtomicPrimitiveDistinction.proposition_3_23 for every ordered pair of
@@ -74,3 +73,12 @@ lake env python3 'section 3/verify.py'
 lake env python3 'section 3/verify.py' --acvf
 lake env python3 'section 2/verify.py'
 ```
+
+Proposition3.19 is now proved over small real parameter bases in
+RealOpenToOpenPartition.proposition_3_19_real_base. The output is an actual
+finite disjoint partition of the actual VF source into nonempty subsets,
+each definable over the unchanged original base and each having the actual
+open-to-open property in both directions. Genuine saturation,small real
+base,ACVF00,original-base definable nontrivial Gamma value,and
+B.imaginary=empty are explicit. The full interpreted-base extension remains
+open,so the full-scope count remains four:3.15,3.19,3.21,3.24.
