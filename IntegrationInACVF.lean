@@ -5,6 +5,7 @@ import IntegrationSection3.ProfileLibrary
 import IntegrationSection3.CoordinateLibrary
 import IntegrationSection2.Library
 import IntegrationSection3ACVF.Library
+import IntegrationSection4.Library
 import IntegrationSection5.Library
 
 /-!

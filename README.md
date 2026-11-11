@@ -15,9 +15,10 @@ language, Lean 4.35.0 toolchain and pinned Mathlib revision are unchanged.
 | section 6 | The kernel of L without volume forms |
 | section 7 | The kernel of L with volume forms and integration |
 
-Section 1 is introductory and has no separate proof target. Sections 4–7
-remain placeholders. Read [WORKFLOW.md](WORKFLOW.md) and [AGENTS.md](AGENTS.md)
-before proof work.
+Section 1 is introductory and has no separate proof target. Section 4 has
+checked implementations of all numbered lemmas and its cell geometry.
+Section 5 is in progress; Sections 6–7 remain placeholders. Read
+[WORKFLOW.md](WORKFLOW.md) and [AGENTS.md](AGENTS.md) before proof work.
 
 ## Checked scope
 
@@ -43,7 +44,22 @@ The identity on VF has no least radius in GammaTop; no author correction
 or threshold-function-definability claim is made. This boundary does not
 refute the conditional exclusion.
 
+Section 4 proves Lemmas 4.1–4.4 and 4.8, the paradigm slope formulas,
+balanced hulls, ball correspondence and internal symmetry, and the unary
+cell-decomposition observation. The original Gamma base is retained; 4.8
+constructs the finite-arity RV map and proves every cell ingredient definable
+over its output labels. The approved “has at most one element” correction
+to 4.3 is used. The singleton boundary to the unqualified open-polydisc
+observation after 4.7 is independently checked, together with both valid
+replacement statements; the author's editorial choice is pending.
+See [Section 4 status](section%204/STATUS.md).
+
 ## Verification
+
+The Section 4 integration build and complete project verifiers pass locally
+for foundation and Sections 2–5. Section 4 adds 445 full-type/axiom audits;
+its source-matched evidence is [VERIFICATION.json](section%204/VERIFICATION.json).
+
 
 The full root build, inherited QE audit, all 68 Section 2 and all 1,244
 Section 3 type/axiom audits pass locally. All 54 previous Section 2 types

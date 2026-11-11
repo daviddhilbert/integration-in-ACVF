@@ -142,3 +142,88 @@ saturation with aleph0≤κ and small original P.real, together with the
 actual prepared bijection data from5.2. No internal code-set smallness or
 additional algebraicity theorem is assumed. Recheck this comparison against
 the final implementation for the whole-paper writeup.
+
+## Section 4: relation preparation in 4.2–4.4
+
+The checked 4.2 construction prepares the full radius/slope relation rather
+than choosing a definable least-radius function. On an ordinary inverse ball,
+constancy of this relation transfers the checked existence of linear subballs
+at every strictly smaller ball scale to its centre. Closure of the linear-radius
+locus supplies linearity on the whole ball. A simultaneously prepared finite
+open-to-open partition supplies the second property. Zero inverse fibres are
+singletons and are treated separately. This is a completed replacement route
+for comparison with the printed proof, retaining all standing hypotheses.
+
+Corrected 4.3 prepares the complete source/image radius relation, with both
+ordinary radii free. Equal-radius open image balls that meet are equal;
+injectivity then identifies their source balls. Uniformity on an inverse RV
+piece makes the set of source radii have at most one element. A whole-field
+source candidate is handled directly by image containment and the same
+intersection argument. Thus one preparation works for all ordinary target
+radii. Keep the author-approved empty-set correction separate from comparison
+of proofs.
+
+For 4.4 the inverse-difference relation is prepared directly. A nonzero
+translated RV fibre lies in an open subball excluding the positioning value.
+Its inverse image under the open-to-open bijection is an open ball missing
+the original point, so RV differences are constant there. The zero case is
+handled by injectivity. Preparing the full relation yields a singleton range
+on each inverse piece. These are independently proved Lean arguments;
+no HK result or annotated-referee claim is a proof input.
+
+## Section 4: uniform families and completed decomposition
+
+The checked vertical construction retains the complementary VF coordinates
+through barycentric root reduction. Descending its inverse head displacement
+produces one positioning map, uniformly in the first VF coordinate and all
+RV labels, and identifies every actual vertical fibre as a translated RV
+class. This replaces pointwise preparations and informal compactness gluing
+by an explicit uniform construction.
+
+For scalar positioning families, the locally constant image is finite:
+otherwise a nonalgebraic output, VF exchange, and finite fibres from exchange
+would force an entire open constant ball to be finite. Off the locally
+constant locus, a fibre without an open subball is finite by finite polynomial
+obstacles. Uniform finite-family bounds and intrinsic barycentric RV codes
+therefore give constant or injective refinements. Every context remains a
+free variable, and all intermediate means and imaginary representatives
+remain quantified in the original-base graph.
+
+Uniform linear preparation carries these contexts through the complete
+radius/slope relation and the checked coordinate open-to-open partition.
+An ordinary ball's open image under a Gamma-linear map has radius multiplied
+by the slope. Thus an entire nonzero difference RV class maps onto its entire
+output difference class. The singleton inverse-difference conclusion gives
+the forward containment in the balanced horizontal identity; this class-image
+equality gives the reverse containment.
+
+The full 4.8 theorem constructs the finite-arity original-base RV map.
+Uniform vertical charts retain the first VF coordinate. The actual scalar
+preparations split by positioning-image radius. Tagged RV maps glue the
+branches, and complete fibre identities identify their actual two-cells.
+There is no cell-existence or compactness-gluing hypothesis.
+
+All cell ingredients are proved definable over the output RV tuple.
+The uniform positioning graph quantifies its intermediate mixed point;
+RV-label specialization retains the original Gamma base. Both paradigms
+are recovered as definable singleton ranges of actual RV differences,
+including every possible balanced first paradigm. Verification evidence
+and exact source identities are recorded by the Section 4 verifier.
+
+## Section 4: balanced geometry and singleton boundary
+
+The nonzero translated RV class is an ordinary open ball with radius equal
+to the paradigm value. Valuation density proves the positioning point is a
+centre of its minimal closed hull. Reversing differences gives the first
+balanced hull as well. Both paradigm radii lie strictly inside the projection
+balls. The slope formula and open-to-open property identify the images of
+all balls at those radii. Injectivity and surjectivity give the actual ball
+bijection, and constancy of translated fibres gives the two rectangle unions
+expressing internal symmetry. These are checked geometric consequences,
+separate from definability and cell-decomposition existence.
+
+The unqualified open-polydisc observation after 4.7 has a singleton first-cell
+boundary. OpenPolydiscBoundary proves the actual definable counterexample;
+CellRectangles proves the product-of-a-1-cell-and-an-open-ball conclusion and
+the open-polydisc version with open first projection. This statement issue
+is recorded separately from comparison of mathematical proof routes.
