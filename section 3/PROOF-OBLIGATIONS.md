@@ -3,8 +3,8 @@
 ## Lemma 3.18: replacement for the left-endpoint estimate
 
 The complete replacement proof now compiles in `RVLinearity.lemma_3_18` and
-passes the fresh full 794-head local integration audit. CI confirmation
-is pending. It retains the original full parameter base,
+passes the fresh full 794-head local integration audit and CI 42947193955.
+All complete types and source hashes match. It retains the original full parameter base,
 with genuine saturation, infinite cardinal, small real base, ACVF00 and an
 original-base named nontrivial Gamma value explicit. The endpoint inference
 described below is not used by this proof.

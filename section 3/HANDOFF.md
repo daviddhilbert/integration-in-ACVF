@@ -9,8 +9,10 @@ Fresh full local root, inherited QE, Section 2 and 794 Section 3 checks pass:
 289 generic, 505 actual heads; 201 source hashes. Every prior 751 full type
 is unchanged, and all 43 new types exactly match individually compiled and
 manually reviewed audits. Only propext, Classical.choice and Quot.sound.
-See .scratch/local-rv-linear-794/ and VERIFICATION.json. New CI is pending;
-compare every artifact type and source hash before main promotion.
+See .scratch/local-rv-linear-794/ and VERIFICATION.json. Source 276a104
+passed CI 42947193955; all 794 full types, 201 source hashes and both audit
+hashes exactly match reviewed local evidence. This receipt promotes it
+to main.
 Preceding source 399f3a7 passed CI 42925183881, all types/hashes matched;
 receipt d234359 promoted it to main and passed CI 42941390575.
 
