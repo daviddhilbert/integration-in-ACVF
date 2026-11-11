@@ -44,7 +44,7 @@ types match individually reviewed audits; both earlier Section 2 types are
 unchanged. All source and audit hashes match the reviewed checkout; only
 `propext`, `Classical.choice` and `Quot.sound` occur. Evidence is archived in
 `.scratch/local-volume-descent-27/` with its own Section2 and Section3 logs.
-CI confirmation is pending. See `VERIFICATION.json` and `HANDOFF.md`.
+[CI43002045059](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/43002045059) passed; complete types and source/audit hashes match the local batch archive and publication checkout. See `VERIFICATION.json` and `HANDOFF.md`.
 
 ## Source reuse candidates for Section 3
 

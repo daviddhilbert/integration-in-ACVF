@@ -2,10 +2,10 @@
 
 The concrete volume-descent batch passed the full root build, inherited QE,
 all 27 Section 2 complete type/axiom audits and all 1,244 unchanged Section 3
-audits. CI confirmation is pending. Local evidence is archived in
+audits. [CI43002045059](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/43002045059) passed; complete types and source/audit hashes match the local batch archive and publication checkout. Local evidence is archived in
 `.scratch/local-volume-descent-27/`, with its own `Section2/` and `Section3/`.
-Compare complete CI types, source hashes and both audit hashes against these
-archives and the publication checkout before main promotion. Use `set -e`
+All27 Section2 and1244 Section3 complete CI types,17 and368 source hashes
+and both audit hashes match these archives and the publication checkout. Use `set -e`
 in publication shell sequences.
 
 `VolumeLiftDescent.corollary_2_34_positive` proves the two concrete volume

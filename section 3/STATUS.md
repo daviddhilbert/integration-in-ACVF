@@ -297,4 +297,4 @@ The subsequent Section2 volume-descent batch passes the full root and all
 bridge proves both volume conditions but retains the predecessor's explicit
 henselian graph or finite-extension reference input; unconditional2.34 remains
 open. Evidence is in .scratch/local-volume-descent-27/,including both section
-archives. CI confirmation for that integration batch is pending.
+archives. [CI43002045059](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/43002045059) confirms that integration batch after exact full type/source/audit matching.
