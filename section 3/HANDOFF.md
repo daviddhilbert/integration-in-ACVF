@@ -5,21 +5,20 @@ predecessor LANGUAGE-ERRATA.md. Use arXiv:0809.0473v2 through 3.24. Continuous
 work and pushes are authorized; no subagents. HK is background for proof
 ideas only: no citation or unproved input. Keep R.Nonempty in 3.11.
 
-The full local root build, inherited QE audit, Section 2 audit and 914
-Section 3 type/axiom audits pass: 328 generic and 586 actual heads.
-All 244 source hashes match; all 871 prior complete types are unchanged,
-and all 43 new complete types exactly match individually reviewed audits.
+The full local root build, inherited QE audit, Section 2 audit and 926
+Section 3 type/axiom audits pass: 328 generic and 598 actual heads.
+All 248 source hashes match; all 914 prior complete types are unchanged,
+and all 12 new complete types exactly match individually reviewed audits.
 Only propext, Classical.choice and Quot.sound occur. Evidence is in
-.scratch/local-thin-conservation-914/ and VERIFICATION.json.
-Source 13cabca passed [CI 42960151159](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42960151159).
-All 914 complete types,244 source hashes and both audit hashes match reviewed
-local evidence. This receipt promotes complete3.22 to main. Prior main
-receipt1a071cc passed CI42957711796.
+.scratch/local-primitive-distinction-926/ and VERIFICATION.json.
+New CI confirmation is pending. The preceding complete3.22 source13cabca
+passed [CI42960151159](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42960151159);
+all914 complete types and244 hashes matched before main receipt4786753.
 
-Sixteen numbered Section 3 results are checked in exact scope: 3.2,3.3,
+Seventeen numbered Section 3 results are checked in exact scope: 3.2,3.3,
 3.4 at named radii plus singleton/VF,3.6,3.7,3.8,3.9,3.10,corrected3.11,
-3.12 both,3.13,3.14,3.16,3.17,3.18 and3.22. Five remain:3.15,3.19,3.21,3.23,3.24
-(one lemma,four propositions);3.20 is a definition. The remaining3.4/3.15 issue concerns old ball parameters; the unnamed
+3.12 both,3.13,3.14,3.16,3.17,3.18,3.22 and3.23. Four remain:3.15,3.19,3.21,3.24
+(one lemma,three propositions);3.20 is a definition. The remaining3.4/3.15 issue concerns old ball parameters; the unnamed
 open-radius case over real/Gamma bases now works with undefinable complete types. Section2 has2.15 checked and2.34 open. Keep precise restrictions
 from STATUS:3.14 has only old Gamma names and the source ball imaginary;
 3.16/3.18 genuineSat/infiniteCardinal/smallReal/ACVF00/namedNontrivialDelta;
@@ -66,7 +65,7 @@ gives3.15 over real/Gamma bases, no saturation; named nontrivial delta stays
 explicit in3.15. Whole-VF case excluded by parameter-free zero. Do not
 count unrestricted3.15 or silently permit old ball parameters here.
 
-Next: extension with old ball parameters, then3.19,3.21,3.23,3.24 and Section2's2.34.
+Next: extension with old ball parameters, then3.19,3.21,3.24 and Section2's2.34.
 Do not extend3.3 to arbitrary undefinable complete-type sets without proof:
 its cut-parameter definability uses ambient definability. Self-centred RV
 profiles avoid that error in the now checked real/Gamma-base scope.
@@ -117,12 +116,42 @@ normalization; no new outside citation, unproved conservation or HK
 input is used. The patching argument replaces the printed regular-curve
 conservation step and is recorded for the final whole-paper writeup.
 
-Next3.23: ignored AtomicOpenToOpen.lean checks2heads giving actual
-OpenToOpen for definable atomic source/target VF sets, using the checked
-arbitrary-radius OpenSubballImages in both directions. No unrestricted
-3.15 assumption. Ignored ThinBallHoleConservation checks2heads: singleton
-family body equality and actual one-component hole count equality from3.22.
-Not registered. Need closed-vs-thin annulus contradiction from0/1 holes;
-handle singleton closed ball via thin-body infinitude and VF via
-atomic_not_contains_vf. Other two pairs have SeparationFunctions wrappers.
-Full3.15 with old ball parameters remains open; five results remain.
+Proposition 3.23 is complete in
+AtomicPrimitiveDistinction.proposition_3_23 for every ordered pair of
+distinct actual primitive shapes: open ball, closed ball and thin annulus.
+The original full real/Gamma/ball base, atomic source and target, complete
+partial VF graph, ACVF00 and an original-base definable nontrivial Gamma
+value remain explicit. No saturation or unrestricted3.15 premise is used.
+
+AtomicOpenToOpen proves that actual definable atomic source/target VF
+sets have the open-to-open property. It applies already checked
+arbitrary-radius OpenSubballImages in both directions with the actual
+definable inverse graph. This is the definable atomic ambient case;
+it does not assert3.15 for arbitrary undefinable complete-type sets.
+
+ThinBallHoleConservation gives actual one-component hole equality from
+complete3.22. ThinBallGeometry realizes an ordinary closed ball with
+zero holes, proves an actual thin annulus has the required thin
+presentation, and proves thin-body infinitude from an actual open subball.
+The closed/thin case is therefore the contradiction0=1. Singleton
+closed balls are excluded by thin-body infinitude; VF is excluded by
+atomicity. Open cases use the checked finite-to-one separation theorem
+on an actual inverse with finite actual fibres. The final theorem checks
+all six ordered pairs, with the three diagonal cases excluded by the
+stated inequality of primitive kinds.
+
+Registered12-head batch: AtomicOpenToOpen(2),ThinBallHoleConservation(2),
+ThinBallGeometry(4),AtomicPrimitiveDistinction(4). All source integration,
+full type review and standard-axiom checks pass; compare926CI before main.
+
+Next full3.15 extension with previously named balls. Ignored
+CompleteTypeNamedBalls.lean checks4heads, not registered: named original
+ball body is full-base definable; if a named ball is contained in b⊆A
+where A is a possibly undefinable complete type, then A=b=that ball.
+Every other named ball therefore has a point outside b. The named-ball
+case is atomic over the same base. These facts do not yet prove all
+RV-profile constancy or the old-ball-parameter extension. Beware polynomial
+roots after specializing multiple ball-centre codes: centres outside b
+alone do not make their generated coefficient field root-free on b.
+Do not extend3.3 to undefinable complete-type ambients without proof.
+Four Section3 results remain; Section2's2.34 is separate.

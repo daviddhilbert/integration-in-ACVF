@@ -441,3 +441,14 @@ not identify their interpretations. All871 prior types unchanged,43new
 types exactly match individual reviewed snapshots,244hashes match in the
 fresh914-head local audit; only standard axioms. Every quotient, graph,
 conservation and normalization bridge for full3.22 is proved.
+
+## Proposition3.23 from checked atomic maps and actual hole counts
+
+Pins unchanged. Reused exact full types of arbitrary-radius
+OpenSubballImages.image_open_of_atomic, actual inverse graph and
+SeparationFunctions.no_finite_to_one_to_open. No unrestricted3.15 or new
+outside citation is assumed. The definable atomic ambient hypothesis is
+explicit. All12 new full types and both shape/component definitions are
+reviewed; all914 prior types unchanged and248source hashes match the
+fresh926-head root/type/axiom audit. Only permitted standard axioms.
+All six distinct ordered shape pairs and singleton/VF edge cases are checked.
