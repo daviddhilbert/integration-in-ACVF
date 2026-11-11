@@ -551,4 +551,4 @@ monotonicity result is cited. FullGammaBounds supplies each controller
 premise from the already checked full-base ACVF00 theorem.
 All1042 old types are unchanged;9 new types match individual reviewed
 audits,and305 source hashes match the1051-head full local audit.
-No author-approved correction to3.24 has yet been received.
+The author has now explicitly approved the ordinary closed-parent correction.

@@ -1,31 +1,20 @@
-# Pending statement clarifications
+# Resolved statement clarifications
 
-## Proposition 3.24: the whole-field parent
+## Proposition 3.24: ordinary closed parent approved
 
-**Author approval is pending. No correction has been adopted.**
+The author explicitly approved: **exclude VF as the closed parent**, requiring
+an ordinary closed ball with radius in Gamma. See PAPER-CORRECTIONS.md for
+the corrected target. No extra restriction on the target's open parent was
+requested or adopted. The corrected proposition remains to be proved.
 
-Original Definition 2.2 calls VF clopen, with radius minus infinity.
-Under that convention, take the same parent VF and remove the same proper
-ordinary open ball in both source and target. The two resulting punctured
-balls coincide, so the identity is a definable open-to-open bijection.
-Their body is nonempty. This contradicts the literal boundary scope of3.24.
+The independent Lean theorem
+Proposition324WholeFieldBoundary.counterexample constructs a nonempty
+punctured whole field with one proper ordinary open hole. Its identity has
+a full definable graph, is a bijection and is OpenToOpen. The finite real
+base retains an originally named nontrivial Gamma value.
 
-The independent Lean theorem is
-`Proposition324WholeFieldBoundary.counterexample` in
-[the checked source](section%203/IntegrationSection3ACVF/Proposition324WholeFieldBoundary.lean).
-It constructs the actual punctured ball, one proper open hole, a nonempty
-body, a finite real parameter base, exactly one original Gamma name for
-an arbitrary nontrivial value, the full identity graph, actual bijectivity,
-and actual OpenToOpen. It uses only propext, Classical.choice and Quot.sound.
-The1051-head local root/type/axiom audit includes it; CI is pending.
-
-The author was asked whether3.24 should require the **closed parent to be
-ordinary, with radius in Gamma**, excluding VF. No answer has yet arrived.
-This is a proposed statement clarification, not an inferred approval.
-The ordinary-parent obstruction still requires induced RV/Gamma maps and
-an independently proved definable interval-bijection obstruction.
-
-This boundary check was developed independently from the paper's definitions.
-No referee assertion, suggested repair, new citation or HK theorem is an input.
-It is separate from the earlier finite-radius endpoint calculation recorded
-in REFERENCE-NOTES.md.
+The1051-head local audit and CI42975906264 passed, with exact complete type,
+source and audit hashes matched before main promotion. Only permitted
+standard axioms occur. The counterexample is separate from the finite-radius
+endpoint calculation recorded in REFERENCE-NOTES.md. It was developed
+independently from the definitions, without a referee or HK proof input.

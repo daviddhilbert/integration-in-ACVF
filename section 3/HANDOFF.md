@@ -5,8 +5,8 @@ Section3 type/axiom audits pass:350 generic and701 actual heads.
 All305 source hashes match; all1042 previous complete types are unchanged,
 and all9 new complete types exactly match individually reviewed audits.
 Only propext, Classical.choice and Quot.sound occur. Evidence is in
-.scratch/local-boundary-check-1051/ and VERIFICATION.json. CI confirmation
-for the boundary/order batch is pending. Full3.21 source07584cc passed
+.scratch/local-boundary-check-1051/ and VERIFICATION.json. [CI42975906264](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42975906264) passed;
+all1051 full CI types and305 source hashes match the reviewed local archive. Full3.21 source07584cc passed
 [CI42974291389](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42974291389)
 and was promoted to main at receipt1d91eb1 after exact type/hash matching.
 
@@ -38,9 +38,8 @@ Critical:Proposition324WholeFieldBoundary.counterexample checks the literal
 whole-field boundary of3.24. Actual parentVF is clopen,one proper ordinary
 open hole leaves a nonempty body,and the identity is definable,bijective
 andOpenToOpen. A nontrivial Gamma value is originally named; all remaining
-real names are finite. The author has been asked whether the closed parent
-must be ordinary with radius inGamma. Approval is pending; do not silently
-apply the correction or claim3.24 proved. See STATEMENT-QUESTIONS.md.
+real names are finite. The author approved an ordinary closed parent with radius inGamma. The
+corrected target is in PAPER-CORRECTIONS.md; it is not yet proved.
 
 FiniteOrderBounds andFullGammaBounds are new checked interval prerequisites:
 actual LUB/GLB,finite/interval dichotomy,and least points under explicit
@@ -55,4 +54,4 @@ actual induced RV graph and Gamma matching,then a checked definable-bijection
 obstruction for these interval types. No unproved Euler fact or HK citation.
 
 Section2.34 is open separately. Keep3.17's given least-radius-function scope
-explicit until its existence is proved. The checked3.24 whole-field counterexample requires the pending author clarification.
+explicit until its existence is proved. The checked3.24 whole-field counterexample is addressed by the approved ordinary closed-parent correction.

@@ -68,8 +68,8 @@ The full post-paper comparison writeup is tracked in `../PROOF-WRITEUP.md`.
 ## Proposition3.24 literal boundary
 
 The nonempty whole-field identity counterexample is checked in
-Proposition324WholeFieldBoundary.counterexample. The author was asked to
-excludeVFas closed parent by requiring an ordinary Gamma radius; approval
-is pending. Do not count an ordinary-parent theorem as the literal full
+Proposition324WholeFieldBoundary.counterexample. The author approved the request to
+excludeVFas closed parent by requiring an ordinary Gamma radius; that
+correction is now explicitly approved. Do not count an ordinary-parent theorem as the literal full
 statement without that clarification. Gamma interval and quotient-map work
 remain open. See ../STATEMENT-QUESTIONS.md.

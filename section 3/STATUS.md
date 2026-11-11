@@ -7,8 +7,8 @@ Section3 type/axiom audits pass:350 generic and701 actual heads.
 All305 source hashes match; all1042 previous complete types are unchanged,
 and all9 new complete types exactly match individually reviewed audits.
 Only propext, Classical.choice and Quot.sound occur. Evidence is in
-.scratch/local-boundary-check-1051/ and VERIFICATION.json. CI confirmation
-for the boundary/order batch is pending. Full3.21 source07584cc passed
+.scratch/local-boundary-check-1051/ and VERIFICATION.json. [CI42975906264](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42975906264) passed;
+all1051 full CI types and305 source hashes match the reviewed local archive. Full3.21 source07584cc passed
 [CI42974291389](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42974291389)
 and was promoted to main at receipt1d91eb1 after exact type/hash matching.
 
@@ -40,7 +40,7 @@ Green checks certify these exported types,not broader unstated claims.
 | 3.21 | CoordinatePartitions.proposition_3_21 constructs the full uniform finite nonempty disjoint original-base partition for all selected VF coordinate pairs of actual mixed finite tuple injections. Arbitrary finite coordinate index types include all mixed arities. Same standing saturation,smallness,ACVF00 and originally named nontrivial-value scope as3.19; no old-imaginary cardinal bound. |
 | 3.22 | Complete component and actual-hole conservation for finite disjoint thin families under an original-base definable open-to-open VF bijection. Full original base; onlyACVF and a genuine nontrivial value. No canonical-model,saturation orACVF00 premise. |
 | 3.23 | No definable bijection between any distinct actual atomic primitive shapes:open,closed,thin annulus. Full original base,ACVF00 and originally definable nontrivial value. No saturation or3.15 premise. |
-| 3.24 | The literal whole-field boundary has a checked nonempty identity counterexample:VF is clopen. Requiring an ordinary closed parent awaits author approval; the intended ordinary-parent obstruction remains open. See ../STATEMENT-QUESTIONS.md. |
+| 3.24 | The literal whole-field boundary has a checked nonempty identity counterexample:VF is clopen. The ordinary closed-parent restriction is author-approved; the intended ordinary-parent obstruction remains open. See ../STATEMENT-QUESTIONS.md. |
 
 Except where a row states otherwise,the atomic unary geometry in3.6--3.13
 retains its full-base ACVF00/originally definable nontrivial-value scope.
@@ -156,8 +156,8 @@ punctured whole field with one proper ordinary open hole. The same parent
 is both open and closed by Definition2.2. Its identity has a full definable
 graph, is a bijection and is OpenToOpen. The base has finitely many real
 parameters and exactly an originally named nontrivial Gamma value.
-The proposed exclusion of VF as closed parent is awaiting author approval.
-No correction is presumed from the referee report or elapsed time.
+The author approved exclusion of VF as closed parent; see PAPER-CORRECTIONS.md.
+The correction comes from the explicit author reply, not the referee report.
 
 FiniteOrderBounds independently derives LUB/GLB and the finite/interval
 dichotomy from actual finite order controllers. FullGammaBounds applies

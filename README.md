@@ -36,8 +36,8 @@ Section3 type/axiom audits pass:350 generic and701 actual heads.
 All305 source hashes match; all1042 previous complete types are unchanged,
 and all9 new complete types exactly match individually reviewed audits.
 Only propext, Classical.choice and Quot.sound occur. Evidence is in
-.scratch/local-boundary-check-1051/ and VERIFICATION.json. CI confirmation
-for the boundary/order batch is pending. Full3.21 source07584cc passed
+.scratch/local-boundary-check-1051/ and VERIFICATION.json. [CI42975906264](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42975906264) passed;
+all1051 full CI types and305 source hashes match the reviewed local archive. Full3.21 source07584cc passed
 [CI42974291389](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42974291389)
 and was promoted to main at receipt1d91eb1 after exact type/hash matching.
 
@@ -57,8 +57,8 @@ original-base partitions with the open-to-open property on all selected
 VF coordinate pairs in actual mixed finite tuple maps.
 
 The literal whole-field boundary of3.24 has a checked nonempty identity
-counterexample. The proposed ordinary closed-parent clarification awaits
-the author in [STATEMENT-QUESTIONS.md](STATEMENT-QUESTIONS.md).
+counterexample. The author approved the ordinary closed-parent restriction, recorded in
+[PAPER-CORRECTIONS.md](PAPER-CORRECTIONS.md). The corrected obstruction is open.
 
 The only remaining numbered Section3 main target is3.24;
 3.20 is a definition. Lemma3.4 now includes all unnamed open/closed radii.
