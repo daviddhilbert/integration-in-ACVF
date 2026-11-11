@@ -1,5 +1,18 @@
 # Section 2 reuse and new proofs
 
+The finite-immediate batch adds actual algebraic-envelope and valuation-ring
+transport. `AlgebraicEnvelopeBases` derives algebraicity and Galoisness of
+the comap bases from the actual algebraic closure. `ValuedSubfieldRestriction`
+constructs exact base field/ring equivalences. Mathlib's checked
+`AlgHom.liftNormal`, normal-embedding bijectivity and trace as a sum of all
+embeddings extend the earlier argument to non-Galois finite extensions.
+`FiniteImmediateSubfield` constructs the envelope internally, with degree
+transport from `rank_eq_of_equiv_equiv`. Primitive subextension degree is
+proved using actual independent powers and the minimal polynomial bound.
+The residue-image surjectivity and immediate-approximation arguments are
+proved directly on the actual field/residue maps. No new external result
+or accepted finite-extension reference is assumed in these ingredients.
+
 The henselian-support batch reuses the actual proved
 `Section6.HenselianInvariance.henselian_automorphism_invariance` (in namespace
 `SpecialTransformations.Section6`), the checked algebraically closed valued

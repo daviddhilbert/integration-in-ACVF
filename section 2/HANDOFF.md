@@ -1,5 +1,30 @@
 # Section 2 handoff
 
+Latest batch: `.scratch/local-finite-immediate-54/`. Full root,inherited QE,
+54 Section2 and1244 unchanged Section3 type/axiom audits pass. All41 prior
+Section2 types are unchanged; all13 new complete types match individual
+reviewed audits. Source counts are30 and368; only standard axioms occur.
+CI confirmation for this batch is pending. Use this batch's own Section2
+andSection3 archives for promotion.
+
+The actual ambient algebraic-extension henselianity theorem is now proved
+in `AlgebraicSubfieldHenselian`, with the envelope and Galois hypotheses
+constructed internally. `FiniteImmediateSubfield` similarly constructs the
+envelope and proves degree one for any finite immediate subfield extension;
+it adds no Galois hypothesis on that finite extension or on the original
+ambient over the base. `PrimitiveResidueDegree` proves that the primitive
+lift generates a subextension whose degree equals the full residue degree.
+`ResidueGeneratedSurjectivity` proves surjectivity of its residue inclusion.
+`ImmediateApproximationFromResidues` derives the needed actual approximation
+from equality of values and residue surjectivity. These statements assume
+neither the finite-extension reference nor the desired full degree equality.
+
+Next: finish field-image/degree transport to combine the primitive
+subextension with finite-immediate triviality, and supply the resulting
+degree equality to the Gauss graph construction. The full reference and
+unconditional2.34 remain open; these ingredients alone are not the assembled
+degree theorem.
+
 Newest batch: `.scratch/local-henselian-support-41/`. Its full root,inherited
 QE,41 Section2 and1244 Section3 type/axiom audits pass locally. All27 previous
 Section2 complete types and all1244 Section3 complete types are unchanged;

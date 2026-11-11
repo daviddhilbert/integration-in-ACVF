@@ -1,5 +1,22 @@
 # Section 2: preliminaries and review
 
+The finite-immediate batch passes the full root,inherited QE,54 Section2
+and1244 unchanged Section3 type/axiom audits. All41 previous Section2 types
+are unchanged; all13 new complete types match individual reviewed audits.
+All30/368 source hashes and both audit hashes match. Evidence is archived
+in `.scratch/local-finite-immediate-54/`, with its own Section2 andSection3
+logs and receipts. CI confirmation for this batch is pending.
+
+The new actual ambient-field results construct their algebraic envelopes:
+henselianity ascends to algebraic subfields, and arbitrary finite immediate
+subfield extensions have degree one. Galoisness of the finite extension is
+not assumed. A primitive residue lift generates a subextension of exactly
+the residue degree; its residue inclusion is surjective. Agreement of
+values and residues gives the actual immediate approximation. These are
+checked ingredients with no graph/reference or full degree-equality input.
+Their assembly into the full finite-extension degree theorem, and hence
+unconditional2.34, remains open.
+
 The subsequent henselian-support batch passes the full root,inherited QE,
 all 41 Section2 and1244 unchanged Section3 type/axiom audits. All27 earlier
 Section2 types are unchanged; all14 new complete types match individually

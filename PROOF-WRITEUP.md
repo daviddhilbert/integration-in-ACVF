@@ -1,5 +1,13 @@
 # Writeup of substantially different proofs
 
+The provisional2.34 field argument now extends trace-zero averaging to
+non-Galois finite extensions using all embeddings and a constructed Galois
+envelope. Actual algebraic-extension henselianity is also proved by this
+envelope descent. The primitive residue lift's subextension has the residue
+degree and surjects onto the residue field; equal values plus residue
+surjectivity give immediate approximation. Assembly into the complete
+finite-extension degree theorem is still pending.
+
 Further provisional2.34 input work: the checked support proves immediate
 finite Galois triviality by a trace-zero averaging argument, descends Hensel
 roots through Galois fixed fields, and obtains residue finiteness by lifting
