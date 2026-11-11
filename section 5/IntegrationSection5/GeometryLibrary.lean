@@ -35,3 +35,4 @@ import IntegrationSection5.PartialNaturalCoordinates
 import IntegrationSection5.UnaryPolydiscDimension
 import IntegrationSection5.ScalarGraphPreparation
 import IntegrationSection5.AllConstantAttachment
+import IntegrationSection5.UnaryPartition

@@ -1,28 +1,34 @@
 # Section5 continuation
 
-User requested uninterrupted work until the whole section is done. Do not
-end at this checkpoint. No subagents or external messages authorized.
+User requests uninterrupted work until the whole section is done. Do not end
+at this checkpoint. No subagents or external messages authorized.
 
-Lemmas5.1–5.2, Remark5.3 and Definition5.4 are checked. All601 complete
-types/axioms and the10435-job root/project integration pass, including Section4.
-All539 prior types are unchanged. The62 new types and actual data definitions
-were manually reviewed in552 readable lines. Evidence: `.scratch/section5-601-verified/`.
+Lemmas5.1–5.2, Remark5.3, Definition5.4 and full5.6 for positive VF arity are
+locally checked. All683 complete types/axioms,10458-job root build and full
+project audits pass, including Section4. All601 prior complete types unchanged.
+All82 new types, complete constructors and the recursive Gamma certificate
+were reviewed in920 readable lines without omissions. Evidence preserved in
+`.scratch/section5-683-verified/`. Exact pins unchanged.
 
-Section4 checked library802eb9c is merged. Uniform scalar-coordinate Gamma RV
-refinement, finite all-constant fibres, actual VF-preserving RV attachment and
-separating codes on its finite head fibres are now proved. Next combine the
-injective and singleton branches, construct finite Gamma-definable pieces,
-then actual relatively-unary coordinate updates/swaps and uniform induction.
-The scratch CoordinateInjectivityRefinement module compiles, but is outside
-the601 source inventory. Integrate it in the next batch.
+lemma_5_6 / lemma_5_6_iso construct finite disjoint covering Gamma pieces and
+actual existing UnaryChains over ONE common real presentation. Every factor
+has full original-Gamma certification. Scope: ACVF00, genuine saturation,
+aleph0≤κ, small G.real, namedδ>1, VF arity p+1. No VFFieldBase or code-set
+smallness. Uniform scalar refinements plus finite all-constant coding feed
+actual coordinate replacement/swaps and finite active-coordinate induction.
+This replacement proof is recorded in PROOF-WRITEUP.md; it establishes5.6,
+not the separate volume-preserving claim used later in Section7.
 
-All-order actual contraction sequences, first-n RV normalization and full
-original-Gamma normalized natural lifts remain checked. Global actual
-SpecialBijection bridge5.5, general5.6 and actual-cell5.7–5.8 remain open.
-See `.scratch/SECTION5-ACTIVE-PLAN.md` for the detailed implementation plan.
+Remaining: global actual SpecialBijection bridge5.5, actual2-cell5.7 and
+uniform4.8 assembly5.8. Standard sequences, first-n RV normalization and
+full Gamma natural lift are already checked. Section4 checked cell/family
+library802eb9c is merged, including actual balanced geometry and full4.8.
+See detailed implementation ledger `.scratch/SECTION5-ACTIVE-PLAN.md`.
 
-Main remains53b98da(302heads), with exact retained artifact comparison.
-Feature checkpoints392,467,539 were published. Do not promote a newer
-checkpoint until CI and exact retained receipt/source/type comparisons pass.
-Artifact downloads for392 timed out; direct gh returnedForbidden, not an
-automatic approval rejection. Git authentication currently works.
+601checkpoint39ec6be passed CI43106272819 and exact RETAINED artifact
+comparison13896050077;539checkpoint2a12c23 likewise passed exact comparison.
+Returned file IDs with file_ prefix and sdmnt URLs are Sediment-backed and
+can be materialized with download_file; the previous FileService assumption
+was mistaken. Current main36deb895 adds Section4 verification docs only
+relative to the merged Section4 code; that doc delta is merged here.
+The683 checkpoint needs its own CI and retained exact comparison before main.

@@ -227,3 +227,40 @@ boundary. OpenPolydiscBoundary proves the actual definable counterexample;
 CellRectangles proves the product-of-a-1-cell-and-an-open-ball conclusion and
 the open-polydisc version with open first projection. This statement issue
 is recorded separately from comparison of mathematical proof routes.
+
+## Section5: Lemma5.6 by scalar refinement and finite active-coordinate induction
+
+Verified in the683-head Section5 batch: lemma_5_6 and lemma_5_6_iso, with
+actual finite Gamma partitions and existing UnaryChains over one common
+internal real presentation. Full types, allowed axioms and root/project
+integration pass. Positive VF arity is explicit; the standing scope is
+ACVF00, genuine saturation, aleph0≤κ, small original real base and a named
+nontrivial Gamma value. No working-code smallness or VFFieldBase is assumed.
+
+The paper prepares each one-VF-dimensional image by standard contractions,
+uses the RV-weight dimension bound and the inverse-coordinate observation,
+and then invokes compactness in the coordinate induction. The checked proof
+instead refines all output scalar coordinates simultaneously into constant
+or injective branches on source-head fibres, uniformly in every frozen VF
+coordinate and old RV label. If all outputs are constant, the inverse head
+scalar at their fixed full VF tuple has finite image as its RV labels vary.
+A finite-family code separates the remaining source points. Thus every
+refined fibre has an injective output coordinate without using5.5's lift
+claim or a dimension argument.
+
+A finite first-tag partition chooses the coordinate. If that coordinate is
+already fixed by the remaining map, its injectivity makes the source fibre
+a singleton, so an active coordinate can be chosen. Attaching the RV code
+and replacing the selected input coordinate by the chosen output scalar are
+actual relatively unary bijections onto their actual images. Three explicit
+additive/subtractive unary updates implement any needed coordinate swap.
+The remaining bijection fixes one additional coordinate. Strong induction
+on the finite active-coordinate set, with definable pullbacks and finite
+gluing, constructs the complete partition and factor chains. A checked
+realization and parameter-extension argument gives one common real
+presentation while retaining every factor's full original-Gamma graph.
+
+This is a replacement proof of5.6 only. Its scalar replacements and swaps
+are not asserted to have Jacobian1; the distinct measure-preserving
+assertion used later in Section7 requires its own proof. No HK theorem or
+annotated-referee claim is a proof input.

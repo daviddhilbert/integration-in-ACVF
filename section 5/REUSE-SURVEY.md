@@ -214,3 +214,17 @@ VF parameters and old RV labels free. No unproved cell premise is assumed.
 The601 receipt hashes all reused Section4 Lean sources and its verifier.
 The62 new full types and actual data definitions were manually reviewed;
 full root/project checks pass including Section4.
+
+## Lemma5.6: scalar refinement and actual unary chains
+
+The683-head batch reuses the checked Section4 scalar family theorems to
+construct first-tag pieces and separate finite all-constant fibres. The
+predecessor's replacementGraphMap/scalar-image bridge and actual GammaIso
+operations supply full original-base replacement graphs. Arithmetic swaps
+are three actual definable unary bijections; their inverses and point formulas
+are proved. Gamma chains are realized as the existing UnaryChain over one
+common internal real base, with every factor's original-Gamma graph retained.
+The complete finite active-coordinate induction is proved, without importing
+a standard-contraction or dimension conclusion. All82 new full types and
+actual data constructors were manually reviewed;683-head audit and full
+root/project verification pass, with all601 prior complete types unchanged.

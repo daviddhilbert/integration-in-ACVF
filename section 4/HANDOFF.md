@@ -31,7 +31,10 @@ constructions, including every complete exported type, with only propext,
 Classical.choice and Quot.sound. Exact source and pin identities are in
 `.scratch/section4-verified/receipt.json`; final published evidence is recorded
 in VERIFICATION.json. Root build and full project integration checks passed for foundation and
-Sections 2–5; Sections 6–7 have no verifiers. Remote CI is pending publication.
+Sections 2–5; Sections 6–7 have no verifiers. CI 43100323010 passed on proof commit 802eb9c. Artifact 13892318636
+matches all complete types, axiom records, source/pin inputs and audit
+hashes exactly. Publication adds only receipt/documentation changes to
+those checked proof sources; see VERIFICATION.json.
 
 The author-approved 4.3 correction is recorded in PAPER-CORRECTIONS.md.
 OpenPolydiscBoundary checks the 4.7 singleton counterexample over any original
