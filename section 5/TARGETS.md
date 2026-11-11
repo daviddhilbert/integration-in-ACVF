@@ -20,7 +20,7 @@ real-base results alone do not settle the Gamma-named target.
 
 | Item | Intended Lean content | Initial proof boundary |
 | --- | --- | --- |
-| 5.1 | For an actual definable map between arbitrary mixed finite arities, produce two special bijections to RV-pullbacks with contractible conjugate. | Draft real-base proof, Gamma proof for a common real presentation, and the set-level wrapper that constructs that presentation internally. All await compilation and audit. |
+| 5.1 | For an actual definable map between arbitrary mixed finite arities, produce two special bijections to RV-pullbacks with contractible conjugate. | Draft real-base proof, Gamma proof for a common real presentation, and the set-level wrapper that constructs that presentation internally. All three versions compile; the complete 19-declaration type/axiom audit passed. Root integration is running. |
 | 5.2 | For a definable bijection in VF arity one, produce two special bijections whose conjugate induces an actual bijection of RV keys. | Open: compatible transformation construction and original-base focus/locus graphs. Quotient criterion drafted separately; inverse contractibility is not assumed to solve 5.2. |
 | 5.3 | The induced bijection is an RV[1,·] morphism in both directions, using the actual RV-algebraicity criterion. | Open; bijectivity alone does not establish the category condition. |
 | 5.4 | Relatively unary means every other VF coordinate is fixed; RV labels may change. Relative specialness additionally requires the actual fibrewise special bijections. | Basic predicate, inverse and composition calculus drafted. Fibrewise specialness and finite chains remain open. |
@@ -33,12 +33,12 @@ real-base results alone do not settle the Gamma-named target.
 
 Checked source declarations in the pinned predecessor provide map preparation,
 uniform vertical obstacles, invariant Gamma graph operations and polynomial
-support from the VF coefficient field. Their current local compilation is
-pending; historical dependency checks are not fresh build evidence here.
+support from the VF coefficient field. Their required import closure has now been built locally from source; the
+first sequel 5.1 batch passed its fresh complete type/axiom audit.
 
 The sequel's `CoordinatePartitions.proposition_3_21` is available on main.
 Its exact saturation, smallness, characteristic and nontrivial-value scope
 must be matched when used in 5.2. Section 3.24 and the least-radius existence
 followup in 3.17 remain open separately. They are not inputs to the first
-5.1 batch. Section 2.34 also remains open. Section 4 is being handled in a
+5.1 batch. Section 2.34 is now proved on the rebased main checkpoint `3c3e478`. Section 4 is being handled in a
 separate chat; no unchecked 2-cell theorem is imported as a proved premise.

@@ -69,7 +69,7 @@ theorem lemma_5_1_gamma_presented {κ : Cardinal} (hs : Saturated M κ)
   have hv := Values.presentation_compatible (M := M)
   have ho := uniformVerticalObstacles hs hsmall v hv
   let L := gammaLogicInput P
-  have hp := gammaPolynomialSupportInput_of_fieldBase P F
+  have hp : GammaPolynomialSupportInput P := gammaPolynomialSupportInput_of_fieldBase P F
   obtain ⟨s, B', TB, _, hTB, hB', _⟩ := gamma_map_preparation_at_boundary
     h00 v hv ho L hp hPS B hB (Map.id B) (gamma_identity_graph B hB)
     none (by intro h; cases h)

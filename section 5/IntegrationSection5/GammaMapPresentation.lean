@@ -15,6 +15,7 @@ attribute [local reducible] SpecialTransformations.DefinableGeometry.Space.prod
 open FirstOrder FirstOrder.Language
 open SpecialTransformations.Milestone0 SpecialTransformations.Milestone0.LRV
 open SpecialTransformations.Section5
+open SpecialTransformations.Section3
 
 namespace IntegrationInACVF.Section5
 
@@ -68,7 +69,9 @@ theorem lemma_5_1 {κ : Cardinal} (hs : Saturated M κ)
       GammaGraphDefinable P
         (pointMapGraph (Map.comp TB.toMap (Map.comp (Map.mk f hfr) TA.inverseMap))) := by
   obtain ⟨S, hPS, hAr, hBr, hfr⟩ := common_gamma_presentation A B f hA hB hf
-  exact ⟨S, hAr, hBr, hfr,
-    lemma_5_1_gamma_presented hs h00 hsmall F hPS hA hB (Map.mk f hfr) hf⟩
+  refine ⟨S, hAr, hBr, hfr, ?_⟩
+  exact lemma_5_1_gamma_presented hs h00 hsmall F hPS
+    (A := PresentedSet.mk A hAr) (B := PresentedSet.mk B hBr)
+    hA hB (Map.mk f hfr) hf
 
 end IntegrationInACVF.Section5

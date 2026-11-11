@@ -72,3 +72,18 @@ running build or source inspection as a passed proof certificate.
 union of the three finite-code parameter sets, apply existing parameter
 monotonicity, and retain the exact same source, target and function. The
 set-level 5.1 wrapper has no presentation or code-set smallness premise.
+
+## Checked first batch
+
+All required pinned dependencies were built from source. The 72-head Section 5
+build and complete type/axiom audit passed locally. The verifier prints proof
+arguments and deeply nested types without omissions and records the full
+types. Only the three permitted axioms occur. See VERIFICATION.json for exact
+source and audit identities. Wider root integration remains a separate run.
+
+The source focus is now constructed by composing the definable target-focus
+section with the given inverse, selecting exactly those source RV cells
+containing that point, and taking the VF coordinate as centre. Existing
+first-order relation, graph and parameter-base operations prove the entire
+locus and centre graphs over the original real base. The compatible-focus
+induction and invariant Gamma certificate remain distinct obligations.
