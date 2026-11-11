@@ -5,8 +5,8 @@ Section3 type/axiom audits pass:356 generic and744 actual heads.
 All318 source hashes match; all1051 previous complete types are unchanged,
 and all49 new complete types exactly match individually reviewed audits.
 Only propext, Classical.choice and Quot.sound occur. Evidence is in
-.scratch/local-radial-matching-1100/ and VERIFICATION.json. CI confirmation
-for the radial/RV/Gamma matching batch is pending. The preceding source948714a
+.scratch/local-radial-matching-1100/ and VERIFICATION.json. [CI42985506013](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42985506013) passed;
+all1100 full CI types and318 source hashes match the reviewed local archive. The preceding source948714a
 passed [CI42975906264](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42975906264)
 and was promoted to main with the approved3.24 correction at receiptc8f4270
 following exact type/source/audit matching.
@@ -32,9 +32,8 @@ Author explicitly approved excludingVF as the closed parent of3.24; see
 PAPER-CORRECTIONS.md. No restriction was added to the open target,soVFas
 target parent remains part of the corrected goal.
 
-The1100 archive includes its own Section2 logs/receipt. Compare all1100 full
-CI types,318 source hashes and both audit hashes against that archive and
-publication checkout before main promotion. Use its archivedSection2,not
+The1100 archive includes its own Section2 logs/receipt. All1100 full CI types,318 source hashes and both audit hashes match that
+archive and this publication checkout. Use its archivedSection2,not
 later live artifacts. Use set-e in publication shell sequences.
 
 New checked entries:AnnulusValueIntervals,PuncturedBallValueIntervals,
