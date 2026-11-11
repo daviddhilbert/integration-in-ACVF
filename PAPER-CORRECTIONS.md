@@ -35,5 +35,7 @@ Proposition324WholeFieldBoundary.counterexample. It retains a finite real
 base and an originally named nontrivial Gamma value.
 
 The author explicitly approved the ordinary closed-parent restriction.
-This approval is not a proof of the corrected proposition. Its quotient-map
-and definable interval-bijection obligations remain open.
+The corrected proposition is now proved by
+PuncturedBallObstruction.proposition_3_24. Exact actual quotient graphs and
+the independent Gamma interval obstruction supply every input. Standing
+genuine saturation,infinite cardinal,small real base andACVF00 are explicit.

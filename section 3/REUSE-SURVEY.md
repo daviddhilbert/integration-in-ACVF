@@ -593,3 +593,17 @@ then two-sided signs and definable-prefix LUB propagation. All36 new full
 types exactly match individual reviewed audits,including explicit dual
 orders. All1130 prior types are unchanged. Full1166-head local root/type/
 axiom audit and340 source hashes match; no outside citation introduced.
+
+## Corrected3.24: independent finite interval count
+
+Pins unchanged. No external theorem was imported. Actual finite sign codes
+give finite open-cell indices. Checked Gamma image/preimage syntax and
+piecewise strict monotonicity construct compatible source/target cuts.
+Actual finite-controller LUBs supply every endpoint; the independent
+right-endpoint count excludes nonprincipal-cut shortcuts. The actual
+bijection proves equality of finite point counts. Thus Icc-to-Ioc/Iic
+is impossible,including the targetVFclosed ray. PuncturedBallObstruction
+assembles the approved corrected3.24 with all helper premises supplied.
+All44 new full types match individual reviewed audits; all1166 prior types
+are unchanged. Full1210-head local root/type/axiom audit has357 source hashes.
+No Euler/Grothendieck/HK citation or referee assertion is a proof input.

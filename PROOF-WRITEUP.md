@@ -73,3 +73,27 @@ Comparison germs classify each interior point; actual prefix LUBs propagate
 coherent signs. No countability argument or unproved o-minimal Euler input.
 The finite interval-counting obstruction remains open; keep the full proof
 comparison provisional until corrected3.24 is assembled.
+
+## Completed corrected3.24 route for the future proof comparison
+
+PuncturedBallObstruction.proposition_3_24 now closes the author-approved
+ordinary closed-parent statement,includingVFas open target. Actual maximal
+open classes give the full definable RVquotient. Dominant cofinite matching,
+with the actual inverse supplying every target value,constructs the full
+definable Gamma bijection. Exact values are Icc for the source,Ioc for an
+ordinary open target,and Iic forVFtarget.
+
+The Gamma obstruction is independently proved from finite paired point/
+open-cell decompositions. Piecewise strict monotonicity holds in arbitrary
+possibly non-Archimedean Gamma via uniform positive windows and actual
+prefix LUBs. Target cuts control source-cell images and contain the images
+of source cuts. Actual pullback cells are convex and endpoint-free. Their
+actual LUBs lie in the ambient interval. Sending cells to right point
+endpoints counts Icc as one more point than open cell and Ioc/Iic as equal
+numbers; bijectivity preserves the point count,contradiction.
+
+No unproved Euler/Grothendieck theorem or HK citation is used. This is a
+completed proof route to compare with the printed proof in the requested
+whole-paper writeup. Ordinary syntax details alone are not claimed to be
+substantially different mathematics. Keep the approved boundary repair
+separate from proof comparison.3.17 and Section2.34 followups remain separate.
