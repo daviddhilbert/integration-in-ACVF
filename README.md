@@ -31,15 +31,15 @@ and manual dispatch, with downloadable build and audit evidence.
 The current root imports the predecessor and the new Section 2 and 3 libraries.
 [Section 2](section%202/STATUS.md) records the prerequisite map and Corollary 2.15;
 [Section 3](section%203/STATUS.md) records the exact formalized scope and open work.
-The full local root build, inherited QE audit, Section2 audit and1042
-Section3 type/axiom audits pass:350 generic and692 actual heads.
-All302 source hashes match; all1004 previous complete types are unchanged,
-and all38 new complete types exactly match individually reviewed audits.
+The full local root build, inherited QE audit, Section2 audit and1051
+Section3 type/axiom audits pass:350 generic and701 actual heads.
+All305 source hashes match; all1042 previous complete types are unchanged,
+and all9 new complete types exactly match individually reviewed audits.
 Only propext, Classical.choice and Quot.sound occur. Evidence is in
-.scratch/local-coordinate-partition-1042/ and VERIFICATION.json. [CI42974291389](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42974291389) passed;
-all1042 full CI types and302 source hashes match the reviewed local archive. The preceding coordinate setup source07a6e41 passed
-[CI42971655123](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42971655123)
-and was promoted to main at receipt1bef0aa after exact type/hash matching.
+.scratch/local-boundary-check-1051/ and VERIFICATION.json. CI confirmation
+for the boundary/order batch is pending. Full3.21 source07584cc passed
+[CI42974291389](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42974291389)
+and was promoted to main at receipt1d91eb1 after exact type/hash matching.
 
 CompleteTypeBallAtomicity.lemma_3_4 proves full open/closed ball atomicity,
 including arbitrary unnamed radii and possibly undefinable complete types.
@@ -55,6 +55,10 @@ finiteness or a cardinal bound on the originally named imaginary parameters.
 CoordinatePartitions.proposition_3_21 now supplies full uniform finite
 original-base partitions with the open-to-open property on all selected
 VF coordinate pairs in actual mixed finite tuple maps.
+
+The literal whole-field boundary of3.24 has a checked nonempty identity
+counterexample. The proposed ordinary closed-parent clarification awaits
+the author in [STATEMENT-QUESTIONS.md](STATEMENT-QUESTIONS.md).
 
 The only remaining numbered Section3 main target is3.24;
 3.20 is a definition. Lemma3.4 now includes all unnamed open/closed radii.

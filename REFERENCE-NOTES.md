@@ -40,3 +40,10 @@ Section3 comparisons:
 
 No assertion is made that all51 remarks have been independently verified.
 The existing no-HK-citation and outside-citation approval rules remain in force.
+
+A later independent check found a separate whole-field boundary problem in
+the literal3.24 statement:Definition2.2 callsVFclopen. Its nonempty identity
+counterexample is now checked in Proposition324WholeFieldBoundary.
+The proposed ordinary closed-parent clarification is awaiting the author;
+see STATEMENT-QUESTIONS.md. This was derived from the definitions,not taken
+as a claim or instruction from the referee attachment.

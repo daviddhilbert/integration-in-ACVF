@@ -537,3 +537,18 @@ promotion,and valid-template definability supply every local premise.
 The1042-head full root/type/axiom audit preserves all1004 prior full types,
 exactly matches38 individually reviewed new full types,and302 source hashes.
 Final3.21 has no finite original imaginary or local-choice hypothesis.
+
+## Independent3.24 boundary check and Gamma bounds
+
+Pins unchanged. Reused the actual proper gamma-ball geometry,full ball-code
+membership syntax,real-parameter specialization,and named Gamma singleton
+theorem after reviewing their full types. The counterexample uses actual
+Definition2.2 predicates and actual OpenToOpen,not a surrogate relation.
+It is nonempty and retains an original nontrivial Gamma name.
+Finite endpoint controllers,finite extrema and order-pattern preservation
+supply actual LUB/GLB and a finite/interval dichotomy. No unproved Euler or
+monotonicity result is cited. FullGammaBounds supplies each controller
+premise from the already checked full-base ACVF00 theorem.
+All1042 old types are unchanged;9 new types match individual reviewed
+audits,and305 source hashes match the1051-head full local audit.
+No author-approved correction to3.24 has yet been received.
