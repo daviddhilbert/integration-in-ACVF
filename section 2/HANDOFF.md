@@ -1,5 +1,30 @@
 # Section 2 handoff
 
+Newest batch: `.scratch/local-henselian-support-41/`. Its full root,inherited
+QE,41 Section2 and1244 Section3 type/axiom audits pass locally. All27 previous
+Section2 complete types and all1244 Section3 complete types are unchanged;
+all14 new full types match individual reviewed audits. Source counts are22
+and368. CI confirmation is pending. This archive has its own Section2 and
+Section3 evidence; use it for this batch's eventual promotion.
+
+`HenselianImmediateGalois` proves trace-kernel triviality and degree one for
+an actual finite Galois immediate extension over a henselian base in residue
+characteristic zero. `HenselianFixedField` proves henselianity by lifting a
+simple root in the algebraically closed envelope and descending it through
+the actual Galois fixed field. `HenselianAlgebraicTower` supplies comparison
+invariance from the checked predecessor theorem and ascends henselianity to
+intermediate fields within that envelope. `ResidueIndependentLifts` proves
+finiteness and the field-degree upper bound on the residue degree for any
+finite valued-field extension. `PrimitiveResidueLift` lifts a primitive
+residue generator without assuming the desired degree equality.
+
+These are proved supporting results, not a proof of the complete reference.
+Next: connect an arbitrary actual algebraic intermediate field to its
+algebraically closed Galois envelope, then prove the same-value finite
+extension's residue-degree equality using the primitive lift and trace.
+Do not infer that a non-Galois extension is Galois or assume the degree
+equality in constructing its primitive residue lift.
+
 The concrete volume-descent batch passed the full root build, inherited QE,
 all 27 Section 2 complete type/axiom audits and all 1,244 unchanged Section 3
 audits. [CI43002045059](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/43002045059) passed; complete types and source/audit hashes match the local batch archive and publication checkout. Local evidence is archived in

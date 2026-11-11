@@ -1,5 +1,13 @@
 # Writeup of substantially different proofs
 
+Further provisional2.34 input work: the checked support proves immediate
+finite Galois triviality by a trace-zero averaging argument, descends Hensel
+roots through Galois fixed fields, and obtains residue finiteness by lifting
+independent integral families. A primitive residue generator is then lifted
+without the desired field/residue degree equality as an input. The complete
+reference reduction and degree equality remain open; do not present these
+partial results as a completed replacement proof.
+
 Volume descent 2.34 now has a checked concrete bridge relative to the
 predecessor's explicit henselian finite-extension input. Record it as a
 provisional writeup candidate, pending resolution of that input and the final

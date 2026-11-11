@@ -1,5 +1,18 @@
 # Section 2 reuse and new proofs
 
+The henselian-support batch reuses the actual proved
+`Section6.HenselianInvariance.henselian_automorphism_invariance` (in namespace
+`SpecialTransformations.Section6`), the checked algebraically closed valued
+field Hensel bridge in `Section7/ValuationHenselian.lean`, and Mathlib's
+`InfiniteGalois.mem_range_algebraMap_iff_fixed`, trace as a sum of Galois
+automorphisms, basis/finite-dimension calculus and primitive element theorem.
+Complete source types and assumptions were inspected. These are already
+formalized results, not new external reference inputs. The residue-normalization
+calculation generalizes the pinned `ValuedPowerBasis.lean` proof. Primitive
+root lifting adapts `UnramifiedGenerator.lean` while replacing its use of the
+desired degree equality by the independently proved residue finiteness.
+The source notices and exact predecessor pin are retained in the new files.
+
 Source version: arXiv:0809.0473v2. Dependency revisions are fixed by
 `lake-manifest.json`; Special transformations is pinned at
 `9cc9760892092dd34cfad4a6dee655843c52f30c`.

@@ -1,5 +1,23 @@
 # Section 2: preliminaries and review
 
+The subsequent henselian-support batch passes the full root,inherited QE,
+all 41 Section2 and1244 unchanged Section3 type/axiom audits. All27 earlier
+Section2 types are unchanged; all14 new complete types match individually
+reviewed audits. All22/368 section source hashes and both audit hashes match.
+Only the three permitted standard axioms occur. Evidence is archived in
+`.scratch/local-henselian-support-41/`, including its own Section2 andSection3
+logs and receipts. CI confirmation for this batch is pending.
+
+The five new support modules prove finite Galois immediate-extension
+triviality in residue characteristic zero, Hensel descent through actual
+Galois fixed fields, henselianity of intermediate fields in an algebraically
+closed Galois envelope, residue-independent lifting and the finite residue
+degree bound, and lifting of a primitive residue generator. No desired
+finite-extension degree equality or graph reference is assumed in these new
+theorems. The envelope, approximation and field hypotheses remain explicit.
+They do not yet discharge the general finite-extension reference or make
+the concrete2.34 bridge unconditional.
+
 Source: arXiv:0809.0473v2, pp. 3–7. Section 1 is introductory and has no
 separate proof target. The existing section layout continues to exclude it.
 

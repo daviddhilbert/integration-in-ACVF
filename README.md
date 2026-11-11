@@ -89,3 +89,10 @@ The full root,inherited QE,27 Section2 and1244 unchanged Section3 audits pass
 locally; all new full types and source/audit hashes match reviewed evidence
 in .scratch/local-volume-descent-27/. [CI43002045059](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/43002045059) passed; complete types and source/audit hashes match the local batch archive and publication checkout. See
 [Section2 handoff](section%202/HANDOFF.md).
+
+The henselian-support batch passes the full root,inherited QE,41 Section2
+and1244 unchanged Section3 audits. It proves14 further field/residue support
+results without assuming the graph reference or desired degree equality.
+The full reference and unconditional2.34 remain open. Local evidence:
+.scratch/local-henselian-support-41/,with both section archives. CI confirmation
+for the henselian-support batch is pending.

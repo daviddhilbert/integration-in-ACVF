@@ -298,3 +298,10 @@ bridge proves both volume conditions but retains the predecessor's explicit
 henselian graph or finite-extension reference input; unconditional2.34 remains
 open. Evidence is in .scratch/local-volume-descent-27/,including both section
 archives. [CI43002045059](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/43002045059) confirms that integration batch after exact full type/source/audit matching.
+
+The henselian-support batch passes the full root,inherited QE,41 Section2
+and1244 unchanged Section3 audits. It proves14 further field/residue support
+results without assuming the graph reference or desired degree equality.
+The full reference and unconditional2.34 remain open. Local evidence:
+.scratch/local-henselian-support-41/,with both section archives. CI confirmation
+for the henselian-support batch is pending.

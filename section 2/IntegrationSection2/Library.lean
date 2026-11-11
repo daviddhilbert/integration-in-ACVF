@@ -10,3 +10,8 @@ import IntegrationSection2.GammaVolumeDescent
 import IntegrationSection2.VolumeBadLabels
 import IntegrationSection2.ConcreteVolumeMorphisms
 import IntegrationSection2.VolumeLiftDescent
+import IntegrationSection2.HenselianImmediateGalois
+import IntegrationSection2.HenselianFixedField
+import IntegrationSection2.HenselianAlgebraicTower
+import IntegrationSection2.ResidueIndependentLifts
+import IntegrationSection2.PrimitiveResidueLift
