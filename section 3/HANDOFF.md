@@ -5,8 +5,8 @@ Section3 type/axiom audits pass:356 generic and774 actual heads.
 All327 source hashes match; all1100 previous complete types are unchanged,
 and all30 new complete types exactly match individually reviewed audits.
 Only propext, Classical.choice and Quot.sound occur. Evidence is in
-.scratch/local-definable-matching-1130/ and VERIFICATION.json. CI confirmation
-for this batch is pending. The preceding source4921611 passed
+.scratch/local-definable-matching-1130/ and VERIFICATION.json. [CI42988577015](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42988577015) passed;
+all1130 full CI types and327 source hashes match the reviewed local archive. The preceding source4921611 passed
 [CI42985506013](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42985506013)
 and was promoted to main at receiptcd84a78 after exact type/source/audit matching.
 
@@ -31,9 +31,8 @@ Author explicitly approved excludingVF as the closed parent of3.24; see
 PAPER-CORRECTIONS.md. No restriction was added to the open target,soVFas
 target parent remains part of the corrected goal.
 
-The1130 archive includes its own Section2 logs/receipt. Compare all1130
-full CI types,327 source hashes and both audit hashes against that archive
-and publication checkout before main promotion. Compare its archivedSection2,
+The1130 archive includes its own Section2 logs/receipt. All1130 full CI types,327 source hashes and both audit hashes match
+that archive and this publication checkout. Compare its archivedSection2,
 not later live artifacts. Use set-e in publication shell sequences.
 
 The actual Gamma matching graph is now proved definable. The30 new heads
