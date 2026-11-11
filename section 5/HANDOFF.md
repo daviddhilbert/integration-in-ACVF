@@ -33,3 +33,16 @@ and5.7–5.8(actual2-cell geometry/uniform4.8). Section4 is active separately;
 do not assume its open results or send messages without authorization.
 The existing UnaryChain gives actual relatively-unary factors of specials
 and the arity-one5.6 case only. No full5.6 claim yet.
+
+
+Current continuation: Remark5.3 now complete locally in the227-head batch,
+with all197 earlier full types unchanged. Entry `UnaryRVCategory.lemma_5_3`
+constructs the actual RV[1,·] isomorphism, square and original-Gamma graphs
+in both directions. `UnaryRVIsomorphism.unaryRVHom` proves both category
+fields; the inverse laws are checked. The finite-image and cell-zero proofs
+have moved from scratch to checked source. Preserved227 receipt:
+.scratch/section5-227-verified/. Root and full project audits pass.
+The prior197-head9426f7e checkpoint passed CI43079850718; artifact13885675375
+matches the preserved receipt exactly and that checkpoint is promoted to main.
+Do not repeat5.3 work. Next: actual fibrewise relative-special witnesses5.4,
+coordinate-canonical factorization, then standard contractions5.5.

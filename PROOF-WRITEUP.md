@@ -109,3 +109,36 @@ All complete types and source/audit hashes match the reviewed local batch
 and publication checkout. Keep the final whole-paper comparison
 focused on the mathematical changes,not routine Lean transport. No new
 outside citation,HK theorem or referee claim is a proof input.
+
+
+## Verified replacement for Remark5.3
+
+The paper passes from VF algebraicity to RV algebraicity to recognize the
+induced map as an RV[1,·] isomorphism. The checked proof establishes the two
+actual category conditions directly. For a fixed input VF value x, vary the
+old RV labels. The complete original-Gamma graph has finite real support;
+after adjoining x, its RV-to-VF relation has singleton output fibres. The
+checked finite-image theorem therefore makes its VF output finite. Every
+RV key with a given first value has a representative with that same x,
+because the source is an RV-pullback. Contractibility identifies the key
+map there, so the target volume image is finite. Apply the argument to the
+actual inverse as well.
+
+For weight, the zero RV cell is a singleton whereas a nonzero cell has two
+distinct points: if x≠0 and a nonzero ε has valuation below1, then x+xε
+has the same RV class as x and differs from it. A mutually contractible
+bijection between RV-pullbacks consequently preserves zero versus nonzero
+VF coordinates in both directions. This proves unary weight preservation.
+The actual descended definable maps satisfy the inverse laws and retain
+full invariant original-Gamma graphs, yielding the pinned category Iso.
+
+Verified locally in the227-head full type/allowed-axiom audit and full
+root/project checks; exact source and scope in section5/VERIFICATION.json.
+Inspect `UnaryVFFibreFinite.unary_vf_fibre_image_finite`,
+`UnaryVolumeImages.rvContractionMap_finite_volume_images`,
+`UnaryCellZeros.unary_bijection_zero_iff`, `UnaryRVIsomorphism.unaryRVIso`
+and `UnaryRVCategory.lemma_5_3`. The standalone result needs ACVF, genuine
+saturation with aleph0≤κ and small original P.real, together with the
+actual prepared bijection data from5.2. No internal code-set smallness or
+additional algebraicity theorem is assumed. Recheck this comparison against
+the final implementation for the whole-paper writeup.

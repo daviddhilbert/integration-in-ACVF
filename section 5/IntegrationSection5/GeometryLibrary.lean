@@ -20,3 +20,4 @@ import IntegrationSection5.GammaPreparedBijection
 import IntegrationSection5.UnaryPaperBallBridge
 import IntegrationSection5.UnaryBijection
 import IntegrationSection5.PreparedCoordinatePartition
+import IntegrationSection5.UnaryRVCategory

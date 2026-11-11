@@ -120,3 +120,16 @@ The finite RV-to-VF image theorem is already formalized and requires
 genuine saturation and a small real base, not VFFieldBase or a new
 algebraicity reference. It will be specialized over finite original-base
 support plus a fixed VF input; this proof remains in scratch.
+
+
+November11 Remark5.3 batch: built and reused pinned
+`Section5.PullbackLift.pullbackObject`, `rawKeyMap`, and the actual
+`Section4.RVHom`/Category instances. `Map.descend` produces the quotient
+map and its commuting square. `ValuedFieldExtension.exists_nontrivial_predV`
+and `Balls.rv_eq_of_sub_lt` give two distinct points in every nonzero RV
+cell; no legacy unregistered Sec3Fibre module is imported.
+`FiniteImage.finite_rv_to_vf_relation_image` is used with actual normalized
+saturation, finite real support and the fixed VF input. It gives finite
+volume images without an internal code-set bound or an unproved
+RV-algebraicity premise. The category morphisms and inverse laws compile;
+all227 full type/allowed-axiom audits and root/project checks pass.

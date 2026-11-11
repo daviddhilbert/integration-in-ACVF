@@ -208,7 +208,37 @@ HEADLINES = [
     'IntegrationInACVF.Section5.coordinate_open_to_cellwise',
     'IntegrationInACVF.Section5.refined_coordinate_open_to_cellwise',
     'IntegrationInACVF.Section5.refined_conjugate_coordinate_geometry',
-    'IntegrationInACVF.Section5.unary_coordinate_partition'
+    'IntegrationInACVF.Section5.unary_coordinate_partition',
+    'IntegrationInACVF.Section5.inverse_map_bijective',
+    'IntegrationInACVF.Section5.inverse_map_inverse_apply',
+    'IntegrationInACVF.Section5.inverse_map_inverse_contractible',
+    'IntegrationInACVF.Section5.mixedKeyPoint',
+    'IntegrationInACVF.Section5.mixedKeyPointMap',
+    'IntegrationInACVF.Section5.gamma_key_relation',
+    'IntegrationInACVF.Section5.gamma_rvContractionMap_graph',
+    'IntegrationInACVF.Section5.rawKeyMap_eq_iff',
+    'IntegrationInACVF.Section5.rvContractionMap',
+    'IntegrationInACVF.Section5.rvContractionMap_spec',
+    'IntegrationInACVF.Section5.rawKeyImage_surjective',
+    'IntegrationInACVF.Section5.rvContractionMap_bijective',
+    'IntegrationInACVF.Section5.pullbackObject_value_key',
+    'IntegrationInACVF.Section5.rvContractionMap_volume_spec',
+    'IntegrationInACVF.Section5.rvWeight_unary',
+    'IntegrationInACVF.Section5.rvWeight_unary_tuple',
+    'IntegrationInACVF.Section5.nonzero_rv_cell_another',
+    'IntegrationInACVF.Section5.unary_bijection_maps_zero',
+    'IntegrationInACVF.Section5.unary_bijection_zero_iff',
+    'IntegrationInACVF.Section5.rvPullbackMapGraph',
+    'IntegrationInACVF.Section5.unaryIsoHomMap',
+    'IntegrationInACVF.Section5.unaryIsoInvMap',
+    'IntegrationInACVF.Section5.lemma_5_3',
+    'IntegrationInACVF.Section5.rvContractionMap_volumetric',
+    'IntegrationInACVF.Section5.unaryRVHom',
+    'IntegrationInACVF.Section5.unaryRVIso',
+    'IntegrationInACVF.Section5.unaryRVIso_spec',
+    'IntegrationInACVF.Section5.unary_vf_fibre_image_finite',
+    'IntegrationInACVF.Section5.unary_vf_fibre_image_finite_typed',
+    'IntegrationInACVF.Section5.rvContractionMap_finite_volume_images'
 ]
 
 ALLOWED = {'propext', 'Classical.choice', 'Quot.sound'}
@@ -294,7 +324,7 @@ def main():
             'complete_types': types,
             'audit_source_sha256': digest(audit),
             'audit_log_sha256': digest(OUT / 'HeadlineAudit.log'),
-            'scope': 'Lemmas 5.1 and 5.2 over the recorded original real/Gamma base scope; supporting quotient, coordinate geometry and relatively unary calculus. See STATUS.md for exact hypotheses and remaining Section5 targets.',
+            'scope': 'Lemmas 5.1, 5.2 and 5.3 over the recorded original real/Gamma base scope; supporting quotient, coordinate geometry and relatively unary calculus. See STATUS.md for exact hypotheses and remaining Section5 targets.',
             'build_scope': 'Incremental Lake Section 5 build and fresh full-type/axiom audit',
         }
         (OUT / 'receipt.json').write_text(json.dumps(receipt, indent=2) + '\n', encoding='utf-8')
