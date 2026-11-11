@@ -31,54 +31,41 @@ and manual dispatch, with downloadable build and audit evidence.
 The current root imports the predecessor and the new Section 2 and 3 libraries.
 [Section 2](section%202/STATUS.md) records the prerequisite map and Corollary 2.15;
 [Section 3](section%203/STATUS.md) records the exact formalized scope and open work.
-The full local root build, inherited QE audit, Section2 audit and943
-Section3 type/axiom audits pass:328 generic and615 actual heads.
-All255 source hashes match; all926 previous complete types are unchanged,
-and all17 new complete types exactly match individually reviewed audits.
-Only propext,Classical.choice andQuot.sound occur. Evidence is in
-.scratch/local-open-partition-943/ andVERIFICATION.json. [CI42964125581](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42964125581) passed;
-all943 complete CI types and255 source hashes match the archived local audit. The preceding full3.23 checkpoint1cfc67d passed
-[CI42961486168](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42961486168)
-and was promoted to main at receipt e50f47e after exact type/hash matching.
+The full local root build, inherited QE audit, Section2 audit and969
+Section3 type/axiom audits pass:336 generic and633 actual heads.
+All270 source hashes match. All943 previously published complete types
+are unchanged; all26 new complete types exactly match individually reviewed
+audits. Only propext,Classical.choice andQuot.sound occur. Evidence is in
+.scratch/local-full-partition-969/ andVERIFICATION.json. New CI confirmation
+is pending. The previous943-head source b11acf2 passed
+[CI42964125581](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42964125581)
+and was promoted to main at receipt66859e7 after exact type/hash comparison.
 
-Proposition 3.23 is complete in
-AtomicPrimitiveDistinction.proposition_3_23 for every ordered pair of
-distinct actual primitive shapes: open ball, closed ball and thin annulus.
-The original full real/Gamma/ball base, atomic source and target, complete
-partial VF graph, ACVF00 and an original-base definable nontrivial Gamma
-value remain explicit. No saturation or unrestricted3.15 premise is used.
+FullCompleteTypeOpenImages.lemma_3_15 proves3.15 over the full original
+real/Gamma/ball base, for arbitrary open-ball radii inside a possibly
+undefinable complete-type set. FullOpenToOpenPartition.proposition_3_19
+constructs an actual finite disjoint original-base definable open-to-open
+partition of any actual definable VF bijection. Genuine saturation,
+infinite cardinal,small original real base,ACVF00 and an original-base
+definable nontrivial Gamma value remain explicit. Neither theorem assumes
+finiteness or a cardinal bound on the originally named imaginary parameters.
 
-Checked Section 3 results are 3.2, 3.3, 3.4 at original-base definable radii
-plus singleton/VF cases, 3.6, 3.7, 3.8, 3.9, 3.10, corrected 3.11, 3.12,
-3.13, 3.14, 3.16, 3.17, 3.18, 3.22 and 3.23. Linearity results retain their stated
-saturation/small-base scope. Full real,
-Gamma and ball bases are retained where permitted.
-Lemma 3.14 keeps its restriction to the one source ball imaginary plus old
-Gamma names. ACVF(0,0) and an original-base definable nontrivial Gamma value
-remain explicit where used. See the section status for exact statements.
+The two remaining numbered Section3 main targets are3.21 and3.24;
+3.20 is a definition. Remaining scope followups are unnamed closed-ball
+radii in3.4 and existence of the least-radius function supplied as input
+in3.17. Section2.34 remains open separately; Section2.15 is checked.
 
-Four Section 3 results remain open: 3.15, 3.19, 3.21 and 3.24; 3.20 is a definition.
-The extension of 3.4 and 3.15 with old ball parameters remains open; the
-real/Gamma-base case now handles arbitrary open-ball radii.
-Section 2's 2.15 is checked and 2.34 remains open. Retain the author-approved
-nonemptiness correction to 3.11 in [PAPER-CORRECTIONS.md](PAPER-CORRECTIONS.md).
+Nineteen numbered Section3 results have checked implementations in the
+precise scopes listed in the section status. Keep the author-approved
+nonemptiness correction in3.11, recorded in PAPER-CORRECTIONS.md.
+The referee attachment is reference material only; see REFERENCE-NOTES.md.
 The remaining section folders are placeholders.
 
-For the targeted library and full headline audit:
+For the targeted libraries and full headline audits:
 
 ```sh
 lake build IntegrationSection3
 lake env python3 'section 3/verify.py'
-# Also compile and audit the actual ACVF ball presentation:
 lake env python3 'section 3/verify.py' --acvf
 lake env python3 'section 2/verify.py'
 ```
-
-Proposition3.19 is now proved over small real parameter bases in
-RealOpenToOpenPartition.proposition_3_19_real_base. The output is an actual
-finite disjoint partition of the actual VF source into nonempty subsets,
-each definable over the unchanged original base and each having the actual
-open-to-open property in both directions. Genuine saturation,small real
-base,ACVF00,original-base definable nontrivial Gamma value,and
-B.imaginary=empty are explicit. The full interpreted-base extension remains
-open,so the full-scope count remains four:3.15,3.19,3.21,3.24.

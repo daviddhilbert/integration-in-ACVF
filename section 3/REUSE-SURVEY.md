@@ -469,3 +469,25 @@ declarations. All17 new full types and definitions are reviewed; all926
 earlier full types unchanged in the successful943-head combined audit.
 Real-base3.19 retains its explicit empty imaginary base; no full-scope
 completion is claimed. No new outside citation or HK input.
+
+## Full original-base open3.4/3.15 and3.19
+
+Pins unchanged. Exact checked predecessor inputs are real/Gamma root-free
+profiles and open-ball atomicity,the genuine normalization/saturation and
+finite-subcover interfaces,and small finite real parameter extension.
+Mathlib.Order.Preorder.Finite.exists_maximalFor is reused after exact type
+inspection for finite membership profiles. Project inputs include actual
+C-minimal finite support,finite proper-subball non-covering,full interpreted
+range syntax and atomic_below_complete_type(with no nonalgebraicity premise).
+No unproved theorem from predecessor Sections5/9 is imported.
+
+Finite hitting points for splitting-open-ball families are constructed via
+internal finite real codes and finite covers. Complete types remain over
+their actual base. Intrinsic terminal classes eliminate those auxiliary
+points from the final atomicity proof. This is an independent replacement,
+not the referee report's proposed QE argument. Full3.19 then follows the
+paper's compactness proof using common real presentations only internally;
+finite original formula support removes any bound on all imaginary names.
+All26 new full types are manually reviewed and exactly match the combined
+969-head audit; all943 published types unchanged,all270 source hashes match.
+Only permitted standard axioms. No new outside citation or HK input.
