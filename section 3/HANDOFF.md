@@ -5,8 +5,8 @@ Section3 type/axiom audits pass:356 generic and888 actual heads.
 All368 source hashes match; all1210 previous complete types are unchanged,
 and all34 new complete types exactly match individually reviewed audits.
 Only propext, Classical.choice and Quot.sound occur. Evidence is in
-.scratch/local-least-radius-1244/ and VERIFICATION.json. CI confirmation
-for this batch is pending. The preceding sourceb2210a7 passed
+.scratch/local-least-radius-1244/ and VERIFICATION.json. [CI42997698267](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42997698267) passed;
+all1244 full CI types and368 source hashes match the reviewed local archive. The preceding sourceb2210a7 passed
 [CI42994511817](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42994511817)
 and was promoted to main at receiptce43208 after exact type/source/audit matching.
 
@@ -32,10 +32,9 @@ Author explicitly approved excludingVF as the closed parent of3.24; see
 PAPER-CORRECTIONS.md. No restriction was added to the open target,soVFas
 target parent remains part of the corrected goal.
 
-The1244 archive includes its own Section2 logs/receipt. Compare all1244
-full CI types,368 source hashes and both audit hashes against that archive
-and publication checkout before main promotion. Compare its archivedSection2,
-not later live artifacts. Use set-e in publication shell sequences.
+The1244 archive includes its own Section2 logs/receipt. All1244 full CI types,368 source hashes and both audit hashes match
+that archive and this publication checkout. Its archived Section2 complete types,
+source hashes and audit hashes also match. Use set-e in publication shell sequences.
 
 Corrected3.24 is unchanged and published atce43208 after exact CI matching.
 LeastLinearRadiusExistence.ordinary/ordinary_function now construct actual
