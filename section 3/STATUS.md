@@ -7,8 +7,8 @@ Section3 type/axiom audits pass:356 generic and810 actual heads.
 All340 source hashes match; all1130 previous complete types are unchanged,
 and all36 new complete types exactly match individually reviewed audits.
 Only propext, Classical.choice and Quot.sound occur. Evidence is in
-.scratch/local-gamma-monotonicity-1166/ and VERIFICATION.json. CI confirmation
-for this batch is pending. The preceding source4a43df1 passed
+.scratch/local-gamma-monotonicity-1166/ and VERIFICATION.json. [CI42991404874](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42991404874) passed;
+all1166 full CI types and340 source hashes match the reviewed local archive. The preceding source4a43df1 passed
 [CI42988577015](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42988577015)
 and was promoted to main at receiptebc2b32 after exact type/source/audit matching.
 
