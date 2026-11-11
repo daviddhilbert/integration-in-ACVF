@@ -551,6 +551,68 @@ HEADLINES = [
     'IntegrationInACVF.Section5.StandardContraction.normalizedObject_first',
     'IntegrationInACVF.Section5.InternalDimension.unary_polydisc_bound',
     'IntegrationInACVF.Section5.unary_injection_polydisc_weight_le',
+    'IntegrationInACVF.Section5.allConstantDomain',
+    'IntegrationInACVF.Section5.allConstantDomain_definable',
+    'IntegrationInACVF.Section5.allConstantDomain_subset',
+    'IntegrationInACVF.Section5.mem_allConstantDomain',
+    'IntegrationInACVF.Section5.allConstantCode',
+    'IntegrationInACVF.Section5.allConstantAttachment',
+    'IntegrationInACVF.Section5.allConstantAttachment_definable',
+    'IntegrationInACVF.Section5.allConstantAttachment_family_finite',
+    'IntegrationInACVF.Section5.all_constant_attachment_rv_code',
+    'IntegrationInACVF.Section5.all_constant_code_fibre_finite',
+    'IntegrationInACVF.Section5.gamma_head_scalar_graph',
+    'IntegrationInACVF.Section5.finite_mixed_family_rv_code',
+    'IntegrationInACVF.Section5.fixedVFInsertMap',
+    'IntegrationInACVF.Section5.fixed_vf_scalar_image_finite',
+    'IntegrationInACVF.Section5.MixedScalarFamilies.fromRefinement',
+    'IntegrationInACVF.Section5.MixedScalarFamilies.fromRefinement_values',
+    'IntegrationInACVF.Section5.MixedScalarFamilies.context',
+    'IntegrationInACVF.Section5.MixedScalarFamilies.family',
+    'IntegrationInACVF.Section5.MixedScalarFamilies.point_unique',
+    'IntegrationInACVF.Section5.MixedScalarFamilies.value',
+    'IntegrationInACVF.Section5.MixedScalarFamilies.value_on',
+    'IntegrationInACVF.Section5.MixedScalarFamilies.domain',
+    'IntegrationInACVF.Section5.MixedScalarFamilies.domain_family',
+    'IntegrationInACVF.Section5.MixedScalarFamilies.contextIndex',
+    'IntegrationInACVF.Section5.MixedScalarFamilies.context_code',
+    'IntegrationInACVF.Section5.MixedScalarFamilies.domain_vf',
+    'IntegrationInACVF.Section5.MixedScalarFamilies.value_vf',
+    'IntegrationInACVF.Section5.MixedScalarFamilies.graph_definable',
+    'IntegrationInACVF.Section5.MixedScalarFamilies.constant_or_injective_rv_refinement',
+    'IntegrationInACVF.Section5.RVAttachment.target',
+    'IntegrationInACVF.Section5.RVAttachment.toTarget',
+    'IntegrationInACVF.Section5.RVAttachment.attachment_injective',
+    'IntegrationInACVF.Section5.RVAttachment.toTarget_bijective',
+    'IntegrationInACVF.Section5.RVAttachment.gammaIso',
+    'IntegrationInACVF.Section5.RVAttachment.target_definable',
+    'IntegrationInACVF.Section5.RVAttachment.toTarget_vf',
+    'IntegrationInACVF.Section5.RVAttachment.toTarget_oldLabels',
+    'IntegrationInACVF.Section5.RVAttachment.toTarget_newLabels',
+    'IntegrationInACVF.Section5.RVAttachment.context_eq_iff',
+    'IntegrationInACVF.Section5.selectRVCode',
+    'IntegrationInACVF.Section5.rvCodeEqualizer',
+    'IntegrationInACVF.Section5.rvCodeEqualizer_definable',
+    'IntegrationInACVF.Section5.vfScalarPointMap',
+    'IntegrationInACVF.Section5.gamma_scalar_coordinate',
+    'IntegrationInACVF.Section5.coordinate_scalar_refinement',
+    'IntegrationInACVF.Section5.scalarGraphInsert',
+    'IntegrationInACVF.Section5.scalarGraphInsertMap',
+    'IntegrationInACVF.Section5.deleteSecond',
+    'IntegrationInACVF.Section5.deleteSecondMap',
+    'IntegrationInACVF.Section5.secondHeadPointMap',
+    'IntegrationInACVF.Section5.deleteSecond_scalarGraphInsert',
+    'IntegrationInACVF.Section5.scalarGraphInsert_reconstruct',
+    'IntegrationInACVF.Section5.scalarGraphMap',
+    'IntegrationInACVF.Section5.scalarGraphMap_injective',
+    'IntegrationInACVF.Section5.secondHead_scalarGraphInsert',
+    'IntegrationInACVF.Section5.gamma_scalarGraphMap_graph',
+    'IntegrationInACVF.Section5.TaggedScalarRefinement',
+    'IntegrationInACVF.Section5.pair_code_left',
+    'IntegrationInACVF.Section5.pair_code_right',
+    'IntegrationInACVF.Section5.TaggedScalarRefinement.pair_left',
+    'IntegrationInACVF.Section5.TaggedScalarRefinement.pair_right',
+    'IntegrationInACVF.Section5.finite_scalar_family_refinement',
 ]
 
 ALLOWED = {'propext', 'Classical.choice', 'Quot.sound'}
@@ -577,9 +639,10 @@ def main():
     status.write_text('RUNNING\n', encoding='utf-8')
     try:
         sources = sorted((ROOT / 'section 5' / 'IntegrationSection5').glob('*.lean'))
-        inputs = sources + [ROOT / p for p in (
+        support_sources = sorted((ROOT / 'section 4' / 'IntegrationSection4').glob('*.lean'))
+        inputs = sources + support_sources + [ROOT / p for p in (
             'lean-toolchain', 'lakefile.toml', 'lake-manifest.json',
-            'IntegrationInACVF.lean', 'section 5/verify.py')]
+            'IntegrationInACVF.lean', 'section 4/verify.py', 'section 5/verify.py')]
         before = {str(p.relative_to(ROOT)): digest(p) for p in inputs}
         run(['python3', 'scripts/prepare_ci.py'], 'DependencyPins.log')
         run(['lake', 'build', 'IntegrationSection5'], 'SectionBuild.log')
@@ -604,6 +667,8 @@ def main():
                          '#print IntegrationInACVF.Section5.GammaProgramDefinable\n'
                          '#print IntegrationInACVF.Section5.PartialContractionProgram\n'
                          '#print IntegrationInACVF.Section5.GammaPartialProgramDefinable\n'
+                         '#print IntegrationInACVF.Section5.TaggedScalarRefinement\n'
+                         '#print IntegrationInACVF.Section4.GammaRVMap\n'
                          + '\n'.join('#check @' + name + '\n#print axioms ' + name
                                      for name in HEADLINES) + '\n', encoding='utf-8')
         output = run(['lake', 'env', 'lean', str(audit)], 'HeadlineAudit.log')
@@ -631,6 +696,8 @@ def main():
                 raise RuntimeError('Pretty-printer omitted part of type for ' + name)
         if sources != sorted((ROOT / 'section 5' / 'IntegrationSection5').glob('*.lean')):
             raise RuntimeError('Section source inventory changed during verification')
+        if support_sources != sorted((ROOT / 'section 4' / 'IntegrationSection4').glob('*.lean')):
+            raise RuntimeError('Reused Section 4 source inventory changed during verification')
         after = {str(p.relative_to(ROOT)): digest(p) for p in inputs}
         if before != after:
             raise RuntimeError('Source or pin identity changed during verification')
@@ -644,7 +711,7 @@ def main():
             'complete_types': types,
             'audit_source_sha256': digest(audit),
             'audit_log_sha256': digest(OUT / 'HeadlineAudit.log'),
-            'scope': 'Lemmas 5.1–5.2, Remark 5.3, Definition 5.4, exact relative-special factorization and genuine uniform relative preparation over the recorded real/Gamma base scope. Actual standard contraction sequences in every permutation and natural pinned RV lift bijections are constructed. The full special-lift/prefix-normalization claims and5.6–5.8 remain in progress. See STATUS.md for exact hypotheses and remaining Section5 targets.',
+            'scope': 'Lemmas5.1–5.2, Remark5.3, Definition5.4; all-order actual contraction sequences, first-n RV-category normalization, full original-Gamma natural lifts; uniform scalar coordinate refinement, finite all-constant fibres and their separating codes. The global actual special-lift bridge of5.5, general5.6 and5.7–5.8 remain in progress. See STATUS.md.',
             'build_scope': 'Incremental Lake Section 5 build and fresh full-type/axiom audit',
         }
         (OUT / 'receipt.json').write_text(json.dumps(receipt, indent=2) + '\n', encoding='utf-8')

@@ -33,3 +33,5 @@ import IntegrationSection5.GammaPartialContraction
 import IntegrationSection5.PartialNaturalImage
 import IntegrationSection5.PartialNaturalCoordinates
 import IntegrationSection5.UnaryPolydiscDimension
+import IntegrationSection5.ScalarGraphPreparation
+import IntegrationSection5.AllConstantAttachment

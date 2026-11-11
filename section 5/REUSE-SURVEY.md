@@ -4,7 +4,7 @@ Started November 10, 2026 (America/Los_Angeles).
 
 | Source | Revision | License |
 | --- | --- | --- |
-| Special transformations | `9cc9760892092dd34cfad4a6dee655843c52f30c` | MIT |
+| Special transformations | `9cc9760892092dd34cfad4a6dee655843c52f30c` | No root license file found; source attribution retained |
 | ACVF-QE | `939346b0a99899e22a873479364e3cc5d142731c` | MIT |
 | Mathlib | `56a005855ea17e0b0958f73ec801ae140b0a1679` | Apache-2.0 |
 | Sequel starting checkpoint | `c8f4270` | Existing repository terms |
@@ -202,3 +202,15 @@ frozen-coordinate identities proved. No Section4 cell-existence assertion,
 external citation or HK theorem enters this batch. Nonzero RV-class
 infinitude is proved directly from the checked nontrivial-valuation axiom
 using an injective small-power sequence.
+
+## Checked Section4 uniform scalar families (601-head batch)
+
+Merged802eb9c2bed1e0383d52bbcf21acc6b1559771a8, whose full445-head
+audit and CI43100323010 passed. Actual GammaRVMap graphs, tagged disjoint
+joins, RV attachments, arbitrary-parameter scalar constant/injective families
+and finite-image-family refinements are reused through compiled declarations.
+Section5 bridges actual mixed tuples to raw uniform families with all frozen
+VF parameters and old RV labels free. No unproved cell premise is assumed.
+The601 receipt hashes all reused Section4 Lean sources and its verifier.
+The62 new full types and actual data definitions were manually reviewed;
+full root/project checks pass including Section4.

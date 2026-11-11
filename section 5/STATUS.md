@@ -2,10 +2,10 @@
 
 **Lemmas 5.1–5.2, Remark 5.3 and the definition/factorization part of 5.4 are locally checked** in the recorded original
 real/Gamma base scope. The full Section5 is still in progress. The current
-539-declaration full type/axiom audit passes with only propext,
-Classical.choice and Quot.sound. All467 prior complete types are unchanged.
-The root build and full project audits pass for foundation and Sections2,3,5;
-Sections4,6,7 have no local verifiers and are skipped.
+601-declaration full type/axiom audit passes with only propext,
+Classical.choice and Quot.sound. All539 prior complete types are unchanged.
+The root build and full project audits pass for foundation and Sections2,3,4,5;
+Sections6,7 have no local verifiers and are skipped.
 
 Lemma5.1 prepares arbitrary mixed finite maps. Lemma5.2 now constructs both
 special bijections for an arbitrary unary definable bijection and produces
@@ -122,3 +122,23 @@ verified replacement argument in PROOF-WRITEUP.md. The uniform relative
 preparation expands the checked finite-root argument underlying the paper's
 cited preparation theorem; it is not yet classified as a different proof of
 a completed numbered target.
+
+## Uniform scalar refinement for 5.6
+
+The checked Section4 cell/family library at802eb9c is now merged. Its full
+local and CI checks passed; Section5 retains its source hashes as proof inputs.
+Uniform original-Gamma codes simultaneously classify every output VF scalar
+as constant or injective on each source-head fibre with frozen complementary
+VF coordinates and old RV labels. For an actual bijection, all-constant code
+fibres are finite: the inverse head scalar has finite image when its full
+input VF tuple is fixed. An actual VF-preserving RV attachment and a constructed
+finite-family RV code separate those fibres. These are checked prerequisites,
+not the complete partition/factorization theorem5.6. All601 full types/axioms,
+the10435-job root build and full project verifier pass. The62 new complete
+types and actual data definitions were manually reviewed in552 readable lines.
+Preserved evidence: `.scratch/section5-601-verified/`.
+
+The next step combines the singleton all-constant case with tagged injective
+branches, constructs a finite definable coordinate partition, then proves
+actual relatively-unary coordinate updates and the uniform induction.
+The global-special bridge of5.5 and5.7–5.8 remain open.

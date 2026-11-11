@@ -3,33 +3,26 @@
 User requested uninterrupted work until the whole section is done. Do not
 end at this checkpoint. No subagents or external messages authorized.
 
-Lemmas5.1–5.2, Remark5.3 and Definition5.4 are checked. All539 complete
-types/axioms and root/project integration pass; all467 prior types unchanged.
-The72 new types and actual data definitions were reviewed in631 readable
-lines without omissions. Preserved receipt: `.scratch/section5-539-verified/`.
+Lemmas5.1–5.2, Remark5.3 and Definition5.4 are checked. All601 complete
+types/axioms and the10435-job root/project integration pass, including Section4.
+All539 prior types are unchanged. The62 new types and actual data definitions
+were manually reviewed in552 readable lines. Evidence: `.scratch/section5-601-verified/`.
 
-All-order actual contraction sequences, full original-Gamma natural graphs,
-first-n RV volume normalization, an actual RV-category normalization
-isomorphism, and the normalized natural GammaIso onto the pinned lift are
-proved. The global actual SpecialBijection bridge remains open; full5.5 is
-not yet counted complete. Uniform partial contractions with frozen VF
-parameters and exact active RV-pullback images are now proved. Finite-head
-RV encoding and the one-VF injection/RV-polydisc weight bound support5.6.
-The latter shrinks actual formulas to a finite internal real base and does
-not assume smallness of a working code set.
+Section4 checked library802eb9c is merged. Uniform scalar-coordinate Gamma RV
+refinement, finite all-constant fibres, actual VF-preserving RV attachment and
+separating codes on its finite head fibres are now proved. Next combine the
+injective and singleton branches, construct finite Gamma-definable pieces,
+then actual relatively-unary coordinate updates/swaps and uniform induction.
+The scratch CoordinateInjectivityRefinement module compiles, but is outside
+the601 source inventory. Integrate it in the next batch.
 
-Next5.6: uniform scalar graph in two active VF variables, partial contraction,
-one-nonzero-direction dimension bound, constant/injective RV refinement,
-then actual finite partition and relatively-unary factorization. The graph
-construction and full original-Gamma graph already compile in
-`.scratch/ScalarGraphPreparation.lean`; not in the539 source inventory.
-Integrate only after this checkpoint publication. See the detailed proof
-plan in `.scratch/SECTION5-ACTIVE-PLAN.md`. General5.6 and actual2-cell5.7–5.8
-remain open. No unchecked Section4 cell theorem is imported.
+All-order actual contraction sequences, first-n RV normalization and full
+original-Gamma normalized natural lifts remain checked. Global actual
+SpecialBijection bridge5.5, general5.6 and actual-cell5.7–5.8 remain open.
+See `.scratch/SECTION5-ACTIVE-PLAN.md` for the detailed implementation plan.
 
-Main is53b98da(302heads), exact local/CI artifact match. Feature467-head
-checkpoint33aefcd passed local integration and was pushed; CI43098005539
-was queued at the last check. Feature392-head ea267b3 passed CI43092680217,
-but retained artifact13890746340 downloads time out (direct gh endpoint
-Forbidden). Do not promote without retained artifact comparison. This is
-not an automatic approval rejection. Git authentication currently works.
+Main remains53b98da(302heads), with exact retained artifact comparison.
+Feature checkpoints392,467,539 were published. Do not promote a newer
+checkpoint until CI and exact retained receipt/source/type comparisons pass.
+Artifact downloads for392 timed out; direct gh returnedForbidden, not an
+automatic approval rejection. Git authentication currently works.
