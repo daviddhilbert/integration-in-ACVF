@@ -31,16 +31,16 @@ and manual dispatch, with downloadable build and audit evidence.
 The current root imports the predecessor and the new Section 2 and 3 libraries.
 [Section 2](section%202/STATUS.md) records the prerequisite map and Corollary 2.15;
 [Section 3](section%203/STATUS.md) records the exact formalized scope and open work.
-The full local project build, inherited QE audit, Section 2 audit and 855
-Section 3 type/axiom audits pass (322 generic, 533 actual-namespace heads).
+The full local project build, inherited QE audit, Section 2 audit and 871
+Section 3 type/axiom audits pass (323 generic, 548 actual-namespace heads).
 Lemma 3.18 is checked, and unnamed-radius open-ball 3.4 and 3.15 are checked
 over real/Gamma bases, including possibly undefinable complete types.
-Supporting 3.22 proofs now conserve components and holes for tagged
-residue-field lines and identify actual maximal open subballs with residue
-coordinates, including finite holes. Its induced definable quotient map
-and finite-family assembly remain open. All 855 complete types and 223 source hashes from
-[CI](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42954891823)
-match reviewed local evidence; only the standard Lean axioms occur.
+Supporting 3.22 proofs now cover residue conservation, actual ball and hole
+coordinates, their full LRV graphs and preservation of maximal open classes.
+Finite-family coordinate assembly and final graph application remain open.
+New CI confirmation is pending. The preceding 855-head checkpoint passed
+[CI](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42954891823),
+with every complete type and source hash matched to reviewed local evidence.
 
 Checked Section 3 results are 3.2, 3.3, 3.4 at original-base definable radii
 plus singleton/VF cases, 3.6, 3.7, 3.8, 3.9, 3.10, corrected 3.11, 3.12,

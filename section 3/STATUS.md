@@ -4,19 +4,20 @@ Source: arXiv:0809.0473v2, pp. 7–12, through Proposition 3.24.
 
 ## Verification
 
-The full local root build, inherited QE audit, Section 2 audit and **855
-Section 3 type/axiom audits pass** under pinned Lean 4.35.0: 322 generic and
-533 actual-namespace declarations. These are components, not numbered results.
-All 223 source hashes match. Every prior 824 complete type is unchanged;
-all 31 new types exactly match individually compiled and manually reviewed
-snapshots. Only `propext`, `Classical.choice` and `Quot.sound` occur.
+The full local root build, inherited QE audit, Section 2 audit and **871
+Section 3 type/axiom audits pass** under pinned Lean 4.35.0: 323 generic and
+548 actual-namespace declarations. These are components, not numbered results.
+All 230 source hashes match. Every prior 855 complete type is unchanged;
+all 16 new types match reviewed combined-context reprints. Fifteen match
+individual snapshots exactly; one has only two reviewed Exists-notation
+changes. Only `propext`, `Classical.choice` and `Quot.sound` occur.
 
 `VERIFICATION.json` records the local checkpoint; `CORE-VERIFICATION.json`
-selects its 322 generic heads. Evidence is in `.scratch/local-residue-conservation-855/`.
-Source `c424b30` passed [CI 42954891823](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42954891823).
-All 855 complete types, 223 source hashes and both audit hashes match the
-reviewed local evidence. This receipt promotes that verified checkpoint to
-main. The preceding main receipt `fe9f8c4` passed CI 42953576611.
+selects its 323 generic heads. Evidence is in `.scratch/local-quotient-map-871/`.
+New CI confirmation is pending. The preceding source `c424b30` passed
+[CI 42954891823](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42954891823),
+with all 855 complete types and 223 source hashes matched before main
+promotion at receipt `2a85441`.
 
 ## Numbered results
 
@@ -380,73 +381,61 @@ Gamma parameters, but no old ball parameters. That restriction is explicit
 in every relevant exported type. Thus unrestricted 3.15 remains on the six
 remaining-result list. No unproved full-base extension is assumed or counted.
 
-## Pure-field conservation components for 3.22
+## Checked components and remaining assembly for 3.22
 
-`FiniteFieldDefinableMaps` identifies the fixed points of finite-field
-Frobenius with the original finite field and proves invariance under ring
-automorphisms fixing the actual parameters. Thus definable graphs preserve
-a finite subfield containing their parameters and input coordinates.
-`LocallyFiniteDefinableInjection` uses a finite field containing the finite
-formula support and a target tuple to prove self-map surjectivity over an
-algebraic extension of a finite field.
+`ACFDefinableInjection` proves surjectivity of arbitrary definable injective
+self-maps on finite tuples over algebraically closed fields in every
+characteristic. The proof uses finite-field Frobenius, finite formula
+support and a fully checked first-order relation sentence, followed by
+checked ACF completeness and characteristic transfer. It does not assume
+the polynomial Ax theorem for arbitrary definable maps.
+`CofiniteDefinableInjection` and `CofiniteDefinableBijection` use actual
+definable finite patches and inverse graphs to prove deficit bounds,
+finite image complements and exact finite complement cardinalities.
 
-`LocallyFiniteRelations` expresses this without a function symbol.
-`DefinableInjectionSentence` proves the full semantics of its first-order
-sentence, including all variable blocks and uniqueness predicates.
-`ACFDefinableInjection` proves that sentence in every positive characteristic
-and transfers it to characteristic zero using checked Mathlib ACF
-completeness and transfer. Its final theorem applies to any actual
-partial-domain graph, finite tuple arity and algebraically closed field.
-No polynomiality, constructible-map surjectivity or conservation statement
-is assumed as an input.
+`FiniteTupleGraphs`, `TaggedLineMaps` and `TaggedCofiniteConservation`
+then prove both component and hole conservation for definable bijections
+of finite tagged affine-line unions minus finite subsets.
+`ResidueFieldConservation` and `ResidueTaggedConservation` supply the native
+residue-field version for actual RV-definable graphs, using the pinned
+predecessor's proved residue purity. Their helper scope retains
+`IsCanonical` explicitly; all residue parameters are allowed internally
+for intrinsic integer counts.
 
-`FiniteDefinablePatching` supplies definable finite patches.
-`CofiniteDefinableInjection` proves that an injective definable map from
-`X minus F` into `X minus G` forces `card G <= card F`; its image complement
-is finite with that same bound. `CofiniteDefinableBijection` builds the
-actual inverse graph and derives equality of the finite complement sizes.
+`AffineResidueChart`, `BallResidueChart`, `ResidueBallClasses` and
+`ResiduePunctures` identify actual maximal open subballs of an actual closed
+Gamma parent with native residue coordinates and construct the finite
+excluded coordinates for its actual holes, with exactly the same cardinality.
+Representative choices construct the quotient bijection only; no definable
+centre selector is asserted. These geometric results do not need
+canonical totalization.
 
-These are pure-field components. The residue-field graph interpretation,
-positive-component comparison, actual ball quotient and hole-count bridge
-still have to be assembled for 3.22. The six remaining full-scope numbered
-results are unchanged. No new external citation or unproved input is used.
+`ResidueReductionSyntax` proves a full quantifier-free LRV residue graph,
+its exact formula semantics, and its equivalence with the actual
+valuation-ring residue map. `CanonicalModelEquality` proves that a
+canonical structure equals its normalization. `AffineResidueSyntax`
+uses that equality and an existential ring equation to prove definability
+of the full affine residue-coordinate graph, eliminating VF division.
+Its canonical hypothesis stays explicit.
 
-## Actual residue coordinates and tagged conservation for 3.22
+`ThinFamilyGeometry` removes inactive containing parents before applying
+finite proper-subball non-covering, proving that every open ball in a
+finite thin family lies in a displayed maximal open class.
+`MaximalOpenClasses` proves that these are precisely the intrinsic maximal
+open balls for a disjoint family and that actual open-to-open bijections
+preserve maximality. `OpenToOpenQuotient` proves equality of the exact
+coordinate kernels when their fibres are these maximal open sets.
+`SurjectiveQuotientMap` constructs the induced actual bijection, proves
+factorization, and identifies its complete graph with the existential
+image of the original graph.
 
-`FiniteTupleGraphs` proves same-base composition and an actual definable
-inverse for finite tuple partial graphs. `TaggedLineMaps` encodes finite
-disjoint unions of actual affine lines by scalar tags and proves finite
-relabelings definable. `TaggedCofiniteConservation` proves that a definable
-bijection between such unions minus finite subsets preserves both the
-number of components and the total number of deleted points. Component
-inequality follows from the previously checked finite image-complement
-theorem and an infinite missing line; hole equality follows by relabeling
-and finite-complement conservation.
+Still needed for the full lemma: assemble the finite tagged coordinate
+families with the exact total hole count, supply their actual maximal
+fibres and full graph to these checked bridges, and normalize/transport
+the final canonical helper argument to all intended models. Full 3.22
+is not yet counted as complete; six full-scope numbered results remain.
 
-`ResidueFieldConservation` pulls actual RV-definable graphs back to native
-residue-field graphs using the predecessor's proved residue purity.
-`ResidueTaggedConservation` supplies both counts for those native graphs.
-Their helper scope explicitly retains `IsCanonical`; all residue parameters
-are allowed internally for the intrinsic count conclusions.
-
-`AffineResidueChart` proves that the actual residue of `(x-a)/r` parametrizes
-a closed valuation ball, with entire open-ball fibres. `BallResidueChart`
-transports this to the unchanged actual `gammaBall` and `ModelResidue`
-definitions. `ResidueBallClasses` realizes each coordinate as the actual
-ball imaginary, proves injectivity of its underlying point set and proves
-that every displayed maximal open class occurs. Arbitrary point choices
-are only used to construct the quotient bijection; no definable centre
-selector is claimed. `ResiduePunctures` constructs the finite excluded
-coordinate set for actual maximal open holes, proves its cardinality equals
-the actual hole count, and proves the exact punctured-body membership test.
-These geometric results do not need the canonical-totalization hypothesis.
-
-The induced definable map on these coordinates from an open-to-open
-bijection, its finite-family assembly, and canonical normalization before
-the final all-model conclusion remain to be proved. Full 3.22 and the six
-remaining full-scope numbered results are not counted as complete.
-
-Pure-field modules now have a separate `FieldLibrary` entry point, imported
-by the root and audit. Adding field results no longer changes the generic
-entry point imported by every valuation-ball module. All 824 prior full
-types remain exactly unchanged after this build-layout adjustment.
+The separate `FieldLibrary` entry point is imported by the root and audit.
+Adding field modules leaves the generic entry point imported by the
+valuation-ball modules unchanged, avoiding unrelated rebuilds. All prior
+full exported types remain unchanged.

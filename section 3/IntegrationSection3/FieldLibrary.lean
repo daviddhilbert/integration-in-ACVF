@@ -15,5 +15,7 @@ public import IntegrationSection3.TaggedLineMaps
 public import IntegrationSection3.TaggedCofiniteConservation
 public import IntegrationSection3.AffineResidueChart
 
+public import IntegrationSection3.SurjectiveQuotientMap
+
 /-! Pure-field graph and conservation results, kept separate so their additions
 do not rebuild the valuation-ball geometry entry point. -/

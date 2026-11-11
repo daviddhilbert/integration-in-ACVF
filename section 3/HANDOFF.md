@@ -5,14 +5,14 @@ predecessor LANGUAGE-ERRATA.md. Use arXiv:0809.0473v2 through 3.24. Continuous
 work and pushes are authorized; no subagents. HK is background for proof
 ideas only: no citation or unproved input. Keep R.Nonempty in 3.11.
 
-Fresh full local root, inherited QE, Section2 and855 Section3 checks pass:
-322generic,533actual heads;223source hashes. All824 prior complete types
-unchanged;31 new complete types exactly match individually reviewed audits.
-Only standard three axioms. .scratch/local-residue-conservation-855/ and
-VERIFICATION.json hold evidence. Sourcec424b30 passed CI42954891823; every855 complete
-type,223source hashes and both audit hashes match. This receipt promotes it
-to main. Preceding sourcee13d791 passed CI42952242946;
-all824types/213hashes matched; receiptfe9f8c4 promoted to main; CI42953576611 green.
+Fresh full local root, inherited QE, Section2 and871 Section3 checks pass:
+323generic,548actual heads;230source hashes. All855 prior complete types
+unchanged;16 new complete types match reviewed combined-context reprints; one
+individual display differs only in reviewed existential notation.
+Only standard three axioms. .scratch/local-quotient-map-871/ and
+VERIFICATION.json hold evidence. New CI pending; compare every type/hash
+before main promotion. Sourcec424b30 passed CI42954891823; all855types and
+223hashes matched; receipt2a85441 promoted to main. Check its CI.
 
 Fifteen numbered Section 3 results are checked in exact scope: 3.2,3.3,
 3.4 at named radii plus singleton/VF,3.6,3.7,3.8,3.9,3.10,corrected3.11,
@@ -81,36 +81,31 @@ Compile/full-type/axiom audit locally before push; CI confirms integration.
 Primary /workspace/integration-in-ACVF branch section-1-3/ordinary-separation;
 publication /workspace/integration-in-ACVF-publish. No PR created.
 
-New pure-field batch for3.22: FiniteFieldDefinableMaps,
-LocallyFiniteDefinableInjection,LocallyFiniteRelations,
-DefinableInjectionSentence,ACFDefinableInjection,FiniteDefinablePatching,
-CofiniteDefinableInjection,CofiniteDefinableBijection. General definable
-injective self-maps on finite tuples over any algebraically closed field
-are proved surjective, not assumed from the polynomial Ax theorem. The
-proof uses native finite-field Frobenius, a finite restriction containing
-the finite formula parameters and target tuple, then a fully checked
-first-order relation sentence and ACF completeness/characteristic transfer.
-Finite patching gives finite deficit inequalities, finite image complement
-and exact finite-complement counts for cofinite definable bijections.
-All19 new full types and all5 sentence definitions reviewed; no new axiom.
+3.22 current registered inputs: pure-field ACFDefinableInjection and
+CofiniteDefinableInjection/Bijection prove arbitrary definable self-map
+surjectivity and finite complement conservation. TaggedCofiniteConservation
+proves both line and deleted-point counts; native RV-to-residue purity
+bridges are ResidueFieldConservation/ResidueTaggedConservation, explicitly
+canonical. Actual Gamma balls, ball imaginaries and holes have exact
+native residue coordinates via AffineResidueChart,BallResidueChart,
+ResidueBallClasses,ResiduePunctures.
 
-Next3.22 bridge: actual residue field and tagged conservation are now
-registered and checked, not drafts: ResidueFieldConservation (3heads),
-ResidueTaggedConservation (1head), FiniteTupleGraphs (2), TaggedLineMaps (5),
-TaggedCofiniteConservation (2). FieldLibrary is a separate root/audit import.
-Residue pullback retains explicit IsCanonical and uses B=top,E=top inside
-the intrinsic count proof. Actual ball geometry is independently checked:
-AffineResidueChart (5), BallResidueChart (4), ResidueBallClasses (7),
-ResiduePunctures (2). The native ModelResidue parametrizes maximal open
-classes of actual closed Gamma balls, and actual maximal open holes give
-a finite excluded coordinate set with exactly the same cardinality.
+New registered batch: CanonicalModelEquality (1), ResidueReductionSyntax(5),
+AffineResidueSyntax(2), ThinFamilyGeometry(2), MaximalOpenClasses(3),
+OpenToOpenQuotient(2), SurjectiveQuotientMap(1generic). Full actual LRV
+coordinate graphs are proved, VF division eliminated by an existential
+ring equation. Maximal open balls in a finite disjoint thin family are
+exactly the displayed classes; open-to-open bijections preserve maximality
+and coordinate kernels. The generic quotient theorem constructs actual
+BijOn and proves its full graph is the existential image of the original.
 
-Still needed: prove an open-to-open bijection induces an actual definable
-bijection of the finite tagged cofinite residue-line families, then apply
-the checked conservation theorem. Build exact full RV graph, not a
-constructibility hypothesis. Preserve normalization/transport from the
-explicit canonical helper scope before claiming the all-model paper result.
-Ignored ResidueReductionSyntax is a compiler draft for the valuation-ring
-residue graph in LRV; not checked yet. All registered proofs are frozen
-during builds/audits; do not edit their inputs while a checker runs.
+Still needed for3.22: finite-family tagged coordinates and total hole
+cardinality; supply their exact native maximal fibres and full graph;
+apply checked conservation; normalize/transport the canonical helper
+conclusion to all intended models. No unproved constructibility input.
+Ignored SingleBallCoordinates.lean is individually checked (3heads),
+not yet registered: total native value function, actual cofinite image,
+exact entire-open-ball fibres for one thin component. AffineResidueDomain
+is an ignored compiler draft proving the full affine graph has exactly
+the closed parent as its native VF domain; inspect its status first.
 Full3.15 with old ball parameters remains open; six results remain.

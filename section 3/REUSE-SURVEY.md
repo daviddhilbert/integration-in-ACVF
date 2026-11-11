@@ -411,3 +411,21 @@ The new pure-field conservation proof applies to actual tagged-line graphs.
 The independent valuation geometry identifies actual maximal open classes
 and finite holes with actual residue coordinates. The induced definable
 quotient-map assembly remains a separate obligation for full 3.22.
+
+## Full affine residue graph and intrinsic maximal classes
+
+Pins unchanged. The pinned totalization's exact IsCanonical definition,
+Structure.ext, residue reduction formula and actual valuation comparison
+types were inspected. CanonicalModelEquality proves equality of the whole
+canonical interpretation with its normalization, without identifying
+quotients of different structures. Actual VF division is eliminated by
+an existential variable and the checked normalized field-error ring term.
+
+All16 new full types and8 new definitions were checked against individually
+compiled and reviewed snapshots; one display has only two reviewed
+existential-notation changes. All16 combined-context types match exactly in the fresh full871-head audit; all855 previous types
+are unchanged and230source hashes match. Standard axioms only. Finite
+proper-subball non-covering is the already formalized pinned theorem,
+not an unproved outside citation. Open-to-open kernel preservation and
+the exact existential graph of the induced quotient are proved, with
+finite-family coordinate assembly still a separate obligation.
