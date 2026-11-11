@@ -27,3 +27,10 @@ Check the existing Lean theorem and its hypotheses before using that exception.
 User clarification: HK may be consulted for background proof ideas, but do
 not cite HK or use its unproved results as formalization inputs. Reprove
 needed steps using these papers and checked Lean declarations.
+
+User request, November 10, 2026 (America/Los_Angeles): after the whole paper
+is formalized, prepare a mathematical writeup of proofs that differ
+substantially from the paper's proofs. Maintain PROOF-WRITEUP.md as a running
+ledger so the final writeup reflects the completed formal proofs. Separate
+verified replacements from provisional approaches; ordinary Lean plumbing
+does not by itself constitute a different mathematical proof.
