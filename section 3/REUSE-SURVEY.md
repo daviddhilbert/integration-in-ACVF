@@ -523,3 +523,17 @@ and target context labels are the only added real names. Whole-map injection
 proves scalar fibre injection. The1004-head full local audit preserves all983
 old full types, matches all21 individual reviewed new types and287 source
 hashes, and uses only permitted axioms. Uniform global3.21 remains open.
+
+## Full uniform coordinate partitions3.21
+
+Pins unchanged. Reused the checked genuine tuple finite-subcover theorem
+in pinned Section3/TupleCompactness after inspecting its exact source/type;
+finite index reindexing and inverse pullbacks are proved. Existing project
+Boolean refinement is extended to simultaneous finite cover refinement,
+including an empty family. All open-image tests quantify actual ball codes;
+forward and swapped restricted graphs give exactly actual OpenToOpen.
+No external citation,HK input or referee claim is used. Full3.19,real-label
+promotion,and valid-template definability supply every local premise.
+The1042-head full root/type/axiom audit preserves all1004 prior full types,
+exactly matches38 individually reviewed new full types,and302 source hashes.
+Final3.21 has no finite original imaginary or local-choice hypothesis.

@@ -31,16 +31,15 @@ and manual dispatch, with downloadable build and audit evidence.
 The current root imports the predecessor and the new Section 2 and 3 libraries.
 [Section 2](section%202/STATUS.md) records the prerequisite map and Corollary 2.15;
 [Section 3](section%203/STATUS.md) records the exact formalized scope and open work.
-The full local root build, inherited QE audit, Section2 audit and1004
-Section3 type/axiom audits pass:348 generic and656 actual heads.
-All287 source hashes match; all983 previous complete types are unchanged,
-and all21 new complete types exactly match individually reviewed audits.
+The full local root build, inherited QE audit, Section2 audit and1042
+Section3 type/axiom audits pass:350 generic and692 actual heads.
+All302 source hashes match; all1004 previous complete types are unchanged,
+and all38 new complete types exactly match individually reviewed audits.
 Only propext, Classical.choice and Quot.sound occur. Evidence is in
-.scratch/local-coordinate-setup-1004/ and VERIFICATION.json. [CI42971655123](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42971655123) passed;
-all1004 full CI types and287 source hashes match the reviewed local archive. The full3.4 source bc7ad74 passed
-[CI42968768615](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42968768615)
-and was promoted to main at receipt bbcaa66 after exact type/hash matching.
-The receipt itself passed CI42970350599.
+.scratch/local-coordinate-partition-1042/ and VERIFICATION.json. CI confirmation
+for full3.21 is pending. The preceding coordinate setup source07a6e41 passed
+[CI42971655123](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42971655123)
+and was promoted to main at receipt1bef0aa after exact type/hash matching.
 
 CompleteTypeBallAtomicity.lemma_3_4 proves full open/closed ball atomicity,
 including arbitrary unnamed radii and possibly undefinable complete types.
@@ -53,12 +52,16 @@ infinite cardinal,small original real base,ACVF00 and an original-base
 definable nontrivial Gamma value remain explicit. Neither theorem assumes
 finiteness or a cardinal bound on the originally named imaginary parameters.
 
-The two remaining numbered Section3 main targets are3.21 and3.24;
+CoordinatePartitions.proposition_3_21 now supplies full uniform finite
+original-base partitions with the open-to-open property on all selected
+VF coordinate pairs in actual mixed finite tuple maps.
+
+The only remaining numbered Section3 main target is3.24;
 3.20 is a definition. Lemma3.4 now includes all unnamed open/closed radii.
 Existence of the least-radius function supplied as input in3.17 remains
 a scope followup. Section2.34 remains open separately; Section2.15 is checked.
 
-Nineteen numbered Section3 results have checked implementations in the
+Twenty numbered Section3 results have checked implementations in the
 precise scopes listed in the section status. Keep the author-approved
 nonemptiness correction in3.11, recorded in PAPER-CORRECTIONS.md.
 The referee attachment is reference material only; see REFERENCE-NOTES.md.

@@ -34,3 +34,14 @@ not authorize a new cited theorem or unproved input.
 Add entries from later sections as their proofs are completed. The final
 selection and writeup must describe the final implementation, omitting
 abandoned approaches unless they explain a mathematical choice.
+
+## 3.21 comparison note
+
+CoordinatePartitions.proposition_3_21 follows the paper's compactness and
+finite refinement strategy. The formal development makes the validity
+predicate,real-label promotion with invariant code hulls,and full-graph
+gluing explicit. Simultaneous Boolean refinement replaces iterative pair
+refinement,but does not constitute a substantially different mathematical
+proof. No standalone replacement writeup is currently required for3.21.
+Local1042-head audit passed;CI pending. The3.4 and3.18 replacement entries
+remain relevant for the eventual whole-paper writeup.

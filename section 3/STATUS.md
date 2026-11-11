@@ -2,20 +2,19 @@
 
 Target: arXiv:0809.0473v2,through Proposition3.24.
 
-The full local root build, inherited QE audit, Section2 audit and1004
-Section3 type/axiom audits pass:348 generic and656 actual heads.
-All287 source hashes match; all983 previous complete types are unchanged,
-and all21 new complete types exactly match individually reviewed audits.
+The full local root build, inherited QE audit, Section2 audit and1042
+Section3 type/axiom audits pass:350 generic and692 actual heads.
+All302 source hashes match; all1004 previous complete types are unchanged,
+and all38 new complete types exactly match individually reviewed audits.
 Only propext, Classical.choice and Quot.sound occur. Evidence is in
-.scratch/local-coordinate-setup-1004/ and VERIFICATION.json. [CI42971655123](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42971655123) passed;
-all1004 full CI types and287 source hashes match the reviewed local archive. The full3.4 source bc7ad74 passed
-[CI42968768615](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42968768615)
-and was promoted to main at receipt bbcaa66 after exact type/hash matching.
-The receipt itself passed CI42970350599.
+.scratch/local-coordinate-partition-1042/ and VERIFICATION.json. CI confirmation
+for full3.21 is pending. The preceding coordinate setup source07a6e41 passed
+[CI42971655123](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42971655123)
+and was promoted to main at receipt1bef0aa after exact type/hash matching.
 
 ## Numbered results and exact scope
 
-Nineteen numbered results have checked implementations in the scopes below.
+Twenty numbered results have checked implementations in the scopes below.
 Green checks certify these exported types,not broader unstated claims.
 
 | Result | Checked conclusion and boundary |
@@ -38,7 +37,7 @@ Green checks certify these exported types,not broader unstated claims.
 | 3.18 | Complete actual RV-linearity,with the same standing saturation/smallness/characteristic/nontrivial-value scope as3.16. The affine-error replacement avoids the printed endpoint inference. |
 | 3.19 | FullOpenToOpenPartition.proposition_3_19 constructs an actual finite disjoint partition into nonempty original-base definable pieces with actual OpenToOpen. Full original base; same standing scope as3.15. No finiteness or cardinal bound on old imaginary names. |
 | 3.20 | Actual coordinate slicing, scalar fibre maps, full uniform graph and restriction stability are checked. |
-| 3.21 | Pointwise coordinate partitions and globally invariant original-base promotion of finite real labels are checked. The uniform finite global partition remains open. |
+| 3.21 | CoordinatePartitions.proposition_3_21 constructs the full uniform finite nonempty disjoint original-base partition for all selected VF coordinate pairs of actual mixed finite tuple injections. Arbitrary finite coordinate index types include all mixed arities. Same standing saturation,smallness,ACVF00 and originally named nontrivial-value scope as3.19; no old-imaginary cardinal bound. |
 | 3.22 | Complete component and actual-hole conservation for finite disjoint thin families under an original-base definable open-to-open VF bijection. Full original base; onlyACVF and a genuine nontrivial value. No canonical-model,saturation orACVF00 premise. |
 | 3.23 | No definable bijection between any distinct actual atomic primitive shapes:open,closed,thin annulus. Full original base,ACVF00 and originally definable nontrivial value. No saturation or3.15 premise. |
 | 3.24 | Open. Induced RV/Gamma maps and the definable interval obstruction still need proof. Correct value intervals are closed and half-open; see REFERENCE-NOTES.md for the independent endpoint check. |
@@ -47,7 +46,7 @@ Except where a row states otherwise,the atomic unary geometry in3.6--3.13
 retains its full-base ACVF00/originally definable nontrivial-value scope.
 See exported full types and VERIFICATION.json for the exact hypotheses.
 
-The two remaining numbered Section3 main targets are3.21 and3.24;
+The only remaining numbered Section3 main target is3.24;
 3.20 is a definition. Lemma3.4 now includes all unnamed open/closed radii.
 Existence of the least-radius function supplied as input in3.17 remains
 a scope followup. Section2.34 remains open separately; Section2.15 is checked.
@@ -137,5 +136,15 @@ the pinned proved raw formula-promotion theorem. CodeSupportHull universally
 quantifies valid quotient representatives, making the promoted relation
 invariant for every new label tuple. No representative becomes a final name.
 
-Uniform compactness, definable gluing and refinement across all VF coordinate
-pairs are still required for3.21. Pointwise partitions do not discharge it.
+Full3.21 is now proved. UnaryPartitionTemplates.valid is a definable test
+for an actual scalar partition, using forward open-ball images and the
+swapped restricted graph for the reverse test. Real-label promotion yields
+pointwise valid templates. Genuine tuple finite-subcover saturation gives
+finitely many templates. PartitionTemplateCases assigns them on disjoint
+parameter cases. CoordinateCellGluing uses the actual full partial tuple
+graph to define whole-domain pieces, with exact scalar fibres.
+CoordinatePairGluing proves actual disjointness and coverage, then discards
+empty global pieces. SingleCoordinatePartition.full_base removes the finite
+imaginary-support restriction. SimultaneousPartitions refines the resulting
+finite covers across all VF coordinate pairs, including the empty-pair case.
+Every output piece is definable over the original full base.

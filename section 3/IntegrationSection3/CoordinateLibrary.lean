@@ -4,6 +4,7 @@ public import IntegrationSection3.CoordinateSlices
 public import IntegrationSection3.CoordinateFibres
 public import IntegrationSection3.ImaginaryTupleDefinability
 public import IntegrationSection3.CodeSupportHull
+public import IntegrationSection3.SimultaneousPartitions
 
 /-! Coordinate fibres and invariant parameter promotion,kept separate
 from the existing geometry entry points to avoid unrelated rebuilds. -/
