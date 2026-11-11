@@ -38,9 +38,9 @@ over real/Gamma bases, including possibly undefinable complete types.
 Supporting 3.22 proofs now cover residue conservation, actual ball and hole
 coordinates, their full LRV graphs and preservation of maximal open classes.
 Finite-family coordinate assembly and final graph application remain open.
-New CI confirmation is pending. The preceding 855-head checkpoint passed
-[CI](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42954891823),
-with every complete type and source hash matched to reviewed local evidence.
+All 871 complete types and 230 source hashes from
+[CI](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42956568397)
+match reviewed local evidence; only the standard Lean axioms occur.
 
 Checked Section 3 results are 3.2, 3.3, 3.4 at original-base definable radii
 plus singleton/VF cases, 3.6, 3.7, 3.8, 3.9, 3.10, corrected 3.11, 3.12,

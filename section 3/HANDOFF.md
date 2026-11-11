@@ -10,9 +10,10 @@ Fresh full local root, inherited QE, Section2 and871 Section3 checks pass:
 unchanged;16 new complete types match reviewed combined-context reprints; one
 individual display differs only in reviewed existential notation.
 Only standard three axioms. .scratch/local-quotient-map-871/ and
-VERIFICATION.json hold evidence. New CI pending; compare every type/hash
-before main promotion. Sourcec424b30 passed CI42954891823; all855types and
-223hashes matched; receipt2a85441 promoted to main. Check its CI.
+VERIFICATION.json hold evidence. Source83b74b5 passed CI42956568397; every871 complete
+type,230source hashes and both audit hashes match. This receipt promotes it
+to main. Sourcec424b30 passed CI42954891823; all855types and
+223hashes matched; receipt2a85441 promoted to main; its CI42956008506 is green.
 
 Fifteen numbered Section 3 results are checked in exact scope: 3.2,3.3,
 3.4 at named radii plus singleton/VF,3.6,3.7,3.8,3.9,3.10,corrected3.11,
