@@ -9,9 +9,10 @@ Fresh full local root, inherited QE, Section2 and824 Section3 checks pass:
 308generic,516actual heads;213source hashes. All805 prior complete types
 unchanged;19 new complete types exactly match individually reviewed audits.
 Only standard three axioms. .scratch/local-acf-conservation-824/ and
-VERIFICATION.json hold evidence. New CI pending; compare all types/hashes
-before main promotion. Preceding sourcefc136c5 passed CI42949057513; all
-805types/205hashes matched; receipt6fee1a5 promoted to main. Check its CI.
+VERIFICATION.json hold evidence. Source e13d791 passed CI42952242946; every824 complete
+type,213source hashes and both audit hashes match. This receipt promotes it
+to main. Preceding sourcefc136c5 passed CI42949057513; all
+805types/205hashes matched; receipt6fee1a5 promoted to main. Its main CI42950124650 is green.
 
 Fifteen numbered Section 3 results are checked in exact scope: 3.2,3.3,
 3.4 at named radii plus singleton/VF,3.6,3.7,3.8,3.9,3.10,corrected3.11,

@@ -13,10 +13,10 @@ snapshots. Only `propext`, `Classical.choice` and `Quot.sound` occur.
 
 `VERIFICATION.json` records the local checkpoint; `CORE-VERIFICATION.json`
 selects its 308 generic heads. Evidence is in `.scratch/local-acf-conservation-824/`.
-New CI confirmation is pending. The preceding source `fc136c5` passed
-[CI 42949057513](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42949057513),
-with all 805 complete types and 205 source hashes matched before main
-promotion at receipt `6fee1a5`.
+Source `e13d791` passed [CI 42952242946](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42952242946).
+All 824 complete types, 213 source hashes and both audit hashes match the
+reviewed local evidence. This receipt promotes that verified checkpoint to
+main. The preceding main receipt `6fee1a5` passed CI 42950124650.
 
 ## Numbered results
 

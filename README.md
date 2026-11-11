@@ -38,9 +38,9 @@ over real/Gamma bases, including possibly undefinable complete types.
 Pure-field definable injective self-maps are now proved surjective, and
 cofinite definable bijections preserve finite complement cardinalities.
 These advance 3.22; its actual ball-quotient conclusion remains open.
-New CI confirmation is pending. The preceding 805-head checkpoint passed
-[CI](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42949057513),
-with every complete type and source hash matched to reviewed local evidence.
+All 824 complete types and 213 source hashes from
+[CI](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/42952242946)
+match reviewed local evidence; only the standard Lean axioms occur.
 
 Checked Section 3 results are 3.2, 3.3, 3.4 at original-base definable radii
 plus singleton/VF cases, 3.6, 3.7, 3.8, 3.9, 3.10, corrected 3.11, 3.12,
