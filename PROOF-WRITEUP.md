@@ -264,3 +264,58 @@ This is a replacement proof of5.6 only. Its scalar replacements and swaps
 are not asserted to have Jacobian1; the distinct measure-preserving
 assertion used later in Section7 requires its own proof. No HK theorem or
 annotated-referee claim is a proof input.
+
+## Section5: uniform nonrectangle comparison (checked case of5.8)
+
+This entry concerns the completed nonrectangle-family case of Corollary5.8.
+The full corollary still needs the actual finite-branch assembly; Definition5.5's
+global-special bridge also remains separate. The paper obtains uniformity by
+compactness after the pointwise2-cell argument. The formal family comparison
+instead retains one global positioning bijection and proves both category
+finite-image obligations directly, while all existing RV cell labels stay free.
+
+For each nonrectangle cell code, its position is a bijection between its two
+projections, in both the balanced and injective graph cases. Construct the two
+first-stage translations with this same global position and its inverse. Their
+contracted unary sources are Gamma-isomorphic to the passive projections, with
+the original code retained. Apply the checked unary matching theorem once to
+that global head-source bijection. Its actual special preparations, quotient
+isomorphism and commuting square share one internal real presentation. No
+smallness assumption is placed on that presentation.
+
+The two resulting RV2 volume profiles have a varying transverse label followed
+by the prepared unary volume. The transverse labels vanish together, because
+the two residuals vanish exactly on the positioning graph; uniform residual
+classes and the retained unary square transport this to every quotient key.
+Thus the checked unary weight comparison gives the RV2 weight comparison.
+
+To prove finite output volumes, fix an input RV2 volume and choose VF
+representatives u and z for its transverse and unary components. The unary
+pullback property realizes each input key with prepared VF coordinate z.
+Applying RV-to-VF finiteness to the actual inverse preparation and to its
+composition with the positioning inverse gives finite sets of recovered
+passive values y and centres c. The balanced horizontal identity (or the zero
+graph case) places c-u in the first projection and places its positioned value
+in the vertical fibre above c. The positioning map has finite VF image when
+its VF input ranges over the resulting finite set of c-u, even while all RV
+labels vary. Hence the differences between those positioned values and y
+range over a finite set; their RV classes are exactly the target transverse
+labels. The matched unary RV1 morphism already bounds the second volume
+coordinate. A finite product gives the complete RV2 volume-image condition.
+
+The inverse argument fixes v and z, recovers finitely many c and y, and applies
+the inverse positioning map to y+v. The source transverse class is represented
+by c minus that inverse-position value. Actual fibre identities prove these
+witness formulas, including the sign c-u in the forward direction. The same
+finite-set argument proves the inverse category condition. Domain-presentation
+and volume-coordinate isomorphisms then give the actual RV2 isomorphism of the
+two standard contraction objects, with complete originalGamma graphs.
+
+Scope: ACVF00, genuine saturation with aleph0≤κ, small original G.real,
+VFFieldBase G.real, and a named Gamma valueδ>1. Entry point:
+`PositionedCellLabelInjection.nonrectangle_standard_comparison` in
+`section 5/IntegrationSection5/NonrectangleRVComparison.lean`; the finite-image
+proofs are in NonrectangleFiniteProfiles and GammaFiniteCombinations. The1138
+checkpoint passes complete type/axiom review, the10569-job root build and all
+project verifiers. Preserve this case argument for the final writeup, and
+recheck its role after the remaining finite-branch assembly is complete.

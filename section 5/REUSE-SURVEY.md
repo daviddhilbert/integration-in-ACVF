@@ -293,3 +293,21 @@ finite partition covers the source and its case properties are proved.
 NonrectangleCellGeometry reuses the checked cell rectangle/graph/balanced
 classification with its explicit nontrivialδ hypothesis. All63 new complete
 types/constructors reviewed619lines;1031audits,root10547/fullproject PASS.
+
+## Uniform nonrectangle comparison,1138 declarations
+
+NonrectanglePositionIso constructs one actual originalGamma positioning iso
+on the full nonrectangle family using the shared cell-position metadata.
+MixedStripPreparation and MixedStripPresentation compute actual canonical/
+centripetal first stages, saturation and passive projection isos. MatchedUnaryPreparation
+is applied once globally and its square is retained by NonrectangleMatchedHeads.
+VariableUnaryProfiles supplies a generic category criterion; its finiteness
+premises are discharged by NonrectangleFiniteProfiles using checked
+FixedVFFiniteImage, recovered-coordinate Gamma isos and actual transverse
+geometry. No VF section of RV or arbitrary definable choice is introduced.
+The generic finite combination argument uses finite unions of fixed-VF images;
+all arithmetic is applied to finite sets, so no additional definability premise
+is needed for those set-theoretic operations. NonrectangleRVComparison transfers
+the resulting actual Gamma RV2 iso to both standard contraction objects.
+All107 new heads/constructors manually reviewed1495lines;1138 audit and
+root10569/fullproject PASS. Finite-branch gluing and5.5 remain open.

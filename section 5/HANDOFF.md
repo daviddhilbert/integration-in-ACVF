@@ -56,3 +56,19 @@ not in1031 inventory yet. This can feed5.2 ONCE globally, avoiding an assumed
 pointwise compactness assembly. Next: actual uniform first strip preparations,
 head-source Gamma presentations, matched tails, actual VF2 strip comparison
 and RV2 comparison, then branch assembly. Global5.5 bridge still open.
+
+Latest1138 checkpoint supersedes earlier pending statements. Uniform nonrectangle
+comparison is constructed by PositionedCellLabelInjection.nonrectangle_standard_comparison.
+Both actual contraction orders, RV2 morphisms/inverse laws and originalGamma
+graphs are produced globally. All107 new types/constructors over1031 reviewed
+1495 lines, all1031 previous full types/axioms exactly unchanged;1138 audit,
+root10569 jobs and wholeproject checks PASS. Evidence .scratch/section5-1138-verified/.
+Latest1031d5d57f9 CI43130190054 and exact artifact13905946620 comparison PASS.
+Remaining: actual finite RV-branch gluing of these nonrectangle and rectangle
+programs for5.8; actual globalSpecial bridge of5.5 including full-RV locus
+compatibility and explicit canonical RV presentation identifications.
+Scratch PartialCoordinateFocusDraft compiles geometry/definability/eta/inactive;
+originalGamma certificate currently has an error. It permits projection into
+an active unary focus only on its locus and allows a separate globally valid
+head tag; this can extend branch foci by inactivity on other RV code branches.
+Continue until the whole section is done; do not stop at this checkpoint.

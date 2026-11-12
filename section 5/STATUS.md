@@ -4,13 +4,13 @@
 The whole section remains in progress: uniform5.8 and the global actual
 SpecialBijection bridge of5.5 remain open.
 
-All1031 complete headline types and axiom audits pass, using only propext,
-Classical.choice and Quot.sound. All968 prior full types are unchanged.
-All63 new full types and complete constructors were reviewed in619
-readable lines without omissions. The root build completed10547 jobs.
-Project audits pass for foundation and Sections2,3,4,5; Sections6,7 have no
-verifiers and are skipped. Preserved evidence: `.scratch/section5-1031-verified/`.
-Hashes and scope: VERIFICATION.json.
+All1138 complete headline types and axiom audits pass, using only propext,
+Classical.choice and Quot.sound. All1031 previously published full types and
+axiom records are unchanged. All107 new full types and complete constructors
+were reviewed in1495 readable lines without omissions. The root build
+completed10569 jobs. Project audits pass for foundation and Sections2,3,4,5;
+Sections6,7 have no verifiers and are skipped. Preserved evidence:
+`.scratch/section5-1138-verified/`. Hashes and scope: VERIFICATION.json.
 
 The807 checkpoint526f674 passed CI43118540581 and an exact retained artifact
 comparison of all807 types/axioms, source hashes, pins and audit logs.
@@ -175,12 +175,41 @@ covering original-Gamma partition by RV-code-defined rectangle failure.
 Four-VF witnesses detect failure uniformly; the rectangle branch actually has
 rectangular fibres and every active nonrectangle slice is proved nonrectangular.
 NonrectangleCellGeometry proves that each such cell has balanced or injective
-graph positioning, hence a positioning bijection. Uniform nonrectangle
-contractions and actual finite-branch assembly remain open.
+graph positioning, hence a positioning bijection. Uniform nonrectangle comparison is now constructed below. Actual finite-branch
+assembly remains open.
 
 The968 checkpointfb486cc passed CI43126821714. Retained artifact13903754659
 has SHA256a2c928d96e2af9a2be9e8feb5e2b66f0e8927d301e921c555b533a75c21a016f.
 Every receipt field except timestamp, all968 complete types/axioms, all source
 hashes and pins, and retained audit-source/log hashes match exactly. The earlier
 912 workflow was cancelled by workflow concurrency when968 was pushed; it was
-superseded by this passing checkpoint. The1031 checkpoint awaits its own CI.
+superseded by this passing checkpoint. The1031 checkpointd5d57f9 passed CI43130190054 and exact retained
+artifact13905946620 comparison. Its SHA256 is
+1aeb5e929609414174af6e8e5739c2e218525fb94eeb64efe04dffe36d0d88c6;
+all1031 full types/axioms, receipt fields except timestamp, source hashes,
+pins and retained audit-source/log hashes match exactly.
+
+## Uniform nonrectangle comparison,1138 declarations
+
+NonrectangleRVComparison.nonrectangle_standard_comparison in namespace
+PositionedCellLabelInjection constructs both actual standard contractions and
+an actual GammaRVIso for the entire nonrectangle branch, with all cell RV codes
+free. The global positioning bijection, both canonical/centripetal first-stage
+preparations, their head saturation and passive projections are constructed.
+Lemma5.2 is applied once globally to the actual unary head-source bijection,
+retaining its commuting square and all old labels over one common real base.
+
+The varying first RV volume labels have the same absorbing status under the
+matched map. Both finite-volume-image obligations are proved: fixed prepared
+VF representatives give finitely many recovered passive values and centres;
+the actual positioning iso has finite VF image over the resulting finite set
+of transverse inputs. The geometric witnesses use c-u in the forward direction
+and the inverse position at y+v in the reverse direction. Both RV2 morphisms
+and inverse laws are constructed, then actual domain and volume presentations
+transfer them to the two standard contraction objects. No uniform RV comparison,
+finite-image conclusion or preparation is assumed in the producer.
+
+Scope: ACVF00, genuine saturation with aleph0≤κ, small G.real, VFFieldBase
+G.real and a named Gamma valueδ>1. There is no internal-code smallness premise.
+This settles the nonrectangle-family case, not the finite-branch assembly of
+Corollary5.8. That assembly and the global-special bridge of5.5 remain open.
