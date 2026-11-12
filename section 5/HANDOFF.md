@@ -124,3 +124,5 @@ projection isomorphisms compile and are audited. Final branch assembly remains.
 Compiled scratch profile-transfer and common ORIGINAL rectangle-product head
 pair constructors are newer than1345 and must be ported/audited next; see
 active plan. Continue until whole section is done; do not stop here.
+
+1442 checkpoint: common original rectangle-family first heads and actual nonrectangle profile Gamma RV[2] comparison are checked. All97 new types/constructors reviewed; root10633/full project audits PASS. Full5.8 branch assembly and5.5 global special bridge remain open. See STATUS.md for retained evidence.

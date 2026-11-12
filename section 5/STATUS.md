@@ -4,13 +4,13 @@
 The whole section remains in progress: uniform5.8 and the global actual
 SpecialBijection bridge of5.5 remain open.
 
-All1345 complete headline types and axiom audits pass, using only propext,
-Classical.choice and Quot.sound. All1257 previously published full types and
-axiom records are unchanged. All88 new full types and complete constructors
-were reviewed in1246 readable lines without omissions. The root build
-completed10612 jobs. Project audits pass for foundation and Sections2,3,4,5;
+All1442 complete headline types and axiom audits pass, using only propext,
+Classical.choice and Quot.sound. All1345 previously published full types and
+axiom records are unchanged. All97 new full types and complete constructors
+were reviewed in1274 readable lines without omissions. The root build
+completed10633 jobs. Project audits pass for foundation and Sections2,3,4,5;
 Sections6,7 have no verifiers and are skipped. Preserved evidence:
-`.scratch/section5-1345-verified/`.
+`.scratch/section5-1442-verified/`.
 
 VERIFICATION.json is now a compact index with source/pin identities, all
 axiom records, per-type hashes and full-receipt identities. VERIFICATION.json.gz
@@ -303,3 +303,20 @@ All receipt fields except timestamp, all1257 full types/axioms, source hashes,
 pins and retained audit-source/log hashes match local evidence exactly.
 Final tail assembly and the RV2 finite-branch comparison of5.8, and the
 actual global-special bridge of5.5, still remain open.
+
+## Common rectangle heads and nonrectangle profile comparison
+
+The1442 checkpoint constructs both whole first heads using one common
+preparation of the original rectangle family. CommonProductNComparison
+internally constructs the matched nonrectangle tails and the actual Gamma
+RV[2] comparison of their active profiles. It reuses the checked finite-image
+proofs for those actual local tails. Rectangle completion and the final RV
+branch assembly are still open at this checkpoint.
+
+The1345 proof checkpoint88f93e70 passed CI43150897001. Retained artifact
+13914788427 has ZIP SHA256
+334abb7f5b1e98f2a21b9d0f0b1ea17cb90852ca182480a55f3d02a3f6d3a243.
+All1345 complete types/axioms and every receipt field except checked_at_utc
+match. Retained audit source/log hashes were checked against their bytes.
+The printer budget was raised from1000000 to10000000 steps after a constructor
+type exceeded the earlier budget; omitted types remain rejected.

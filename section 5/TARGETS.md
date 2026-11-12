@@ -41,3 +41,5 @@ Its exact saturation, smallness, characteristic and nontrivial-value scope
 must be matched when used in 5.2. Section 3.24 and the least-radius existence
 followup in 3.17 remain open separately. They are not inputs to the first
 5.1 batch. Section 2.34 is now proved on the rebased main checkpoint `3c3e478`. The checked Section4 cell/family library at802eb9c is merged; its source identities are included in the601-head receipt.
+
+1442 checkpoint: common original rectangle-family first heads and actual nonrectangle profile Gamma RV[2] comparison are checked. All97 new types/constructors reviewed; root10633/full project audits PASS. Full5.8 branch assembly and5.5 global special bridge remain open. See STATUS.md for retained evidence.
