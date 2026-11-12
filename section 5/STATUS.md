@@ -4,13 +4,13 @@
 The whole section remains in progress: uniform5.8 and the global actual
 SpecialBijection bridge of5.5 remain open.
 
-All1442 complete headline types and axiom audits pass, using only propext,
-Classical.choice and Quot.sound. All1345 previously published full types and
-axiom records are unchanged. All97 new full types and complete constructors
-were reviewed in1274 readable lines without omissions. The root build
-completed10633 jobs. Project audits pass for foundation and Sections2,3,4,5;
-Sections6,7 have no verifiers and are skipped. Preserved evidence:
-`.scratch/section5-1442-verified/`.
+All1561 complete headline types and axiom audits pass, using only propext,
+Classical.choice and Quot.sound. All1442 previously published full types and
+axiom records are unchanged. All119 new full type and constructor interfaces
+were reviewed in1532 readable lines. The root build completed10655 jobs.
+Project audits pass for foundation and Sections2,3,4,5; Sections6,7 have no
+verifiers and are skipped. Preserved evidence:
+`.scratch/section5-1561-verified/`.
 
 VERIFICATION.json is now a compact index with source/pin identities, all
 axiom records, per-type hashes and full-receipt identities. VERIFICATION.json.gz
@@ -320,3 +320,19 @@ All1345 complete types/axioms and every receipt field except checked_at_utc
 match. Retained audit source/log hashes were checked against their bytes.
 The printer budget was raised from1000000 to10000000 steps after a constructor
 type exceeded the earlier budget; omitted types remain rejected.
+
+## Completed whole-family programs and surviving nonrectangle comparison
+
+The1561 checkpoint constructs both complete whole-family contraction programs,
+including the final rectangle tails. The actual nonrectangle Gamma RV[2]
+comparison survives those tails, with its volume coordinates proved equal to
+the final program volume selectors. Generic Gamma RV union gluing retains both
+morphisms and both Gamma graphs, reusing the pinned RVUnionCoproduct proof of
+finite volume images. The final rectangle comparison and its instantiation in
+the whole-family partition are not part of this checkpoint.
+
+The audit parser now locates all complete type starts in one pass rather than
+rescanning the full expanded log separately for each declaration. All1442
+prior complete types and axiom records remain byte-for-byte unchanged.
+The1442 feature checkpoint is0c6541cad28b8700fded5719c4952773ce834852;
+CI43156823106 is still running and has no retained-artifact comparison yet.

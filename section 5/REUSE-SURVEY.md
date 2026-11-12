@@ -351,3 +351,5 @@ by local-output/retained-old-label coordinates. Head-key padding retains full
 Gamma graphs, VF coordinates and old RV indices. All88 new full types and
 constructors were reviewed; root10612/fullproject/type/axiom checks pass.
 These are explicit proved construction criteria, not the final5.8 assembly.
+
+1561: reused pinned special_transformations9cc9760892092dd34cfad4a6dee655843c52f30c Section4/RVUnionCoproduct.lean: rvUnionDesc constructs both RVHom fields, using finite union of finite volume images; rvUnion_hom_ext and inl/inr laws prove the glued inverse laws. GammaRVUnion adds full original-Gamma union graph certificates over normalized LRV. The pinned source and license are unchanged. All119 additions passed manual type review, full type/allowed-axiom audit, root10655 and project verification.

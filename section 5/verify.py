@@ -1454,6 +1454,125 @@ HEADLINES = [
     'IntegrationInACVF.Section5.HeadPreparation.rvSliceRestriction',
     'IntegrationInACVF.Section5.HeadPreparation.rvSliceRestriction_gamma',
     'IntegrationInACVF.Section5.HeadPreparation.rvSliceRestriction_target_gamma',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductMatching.leftRectangleInputProjection',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductMatching.leftN_inactiveR',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductMatching.leftN_sub_target',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductMatching.leftNFinalImage',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductMatching.leftNFinalPadding',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductMatching.leftNProfileIndices',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductMatching.leftNFinalProfileIso',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductMatching.rightRectangleInputProjection',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductMatching.rightN_inactiveR',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductMatching.rightN_sub_target',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductMatching.rightNFinalImage',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductMatching.rightNFinalPadding',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductMatching.rightNProfileIndices',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductMatching.rightNFinalProfileIso',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductMatching.leftRectangleFirst',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductMatching.leftRectangleCompletion',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductMatching.leftTail',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductMatching.leftTail_graph',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductMatching.leftTail_target_gamma',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductMatching.leftAmbient_eq',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductMatching.leftProgram',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductMatching.leftProgram_gamma',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductMatching.rightRectangleFirst',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductMatching.rightRectangleCompletion',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductMatching.rightTail',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductMatching.rightTail_graph',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductMatching.rightTail_target_gamma',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductMatching.rightAmbient_eq',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductMatching.rightProgram',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductMatching.rightProgram_gamma',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductHeadPair.leftR_first',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductHeadPair.leftR_padding_oldIndex',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductHeadPair.rightR_first',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductHeadPair.rightR_padding_oldIndex',
+    'IntegrationInACVF.Section5.doubleCanonical_oldRV',
+    'IntegrationInACVF.Section5.doubleCanonical_projection',
+    'IntegrationInACVF.Section5.doubleCanonical_labels_of_unary',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductHeadPair.leftR_dSource',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductHeadPair.rightR_dSource',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductHeadPair.leftR_preMap_flag',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductHeadPair.rightR_preMap_flag',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductHeadPair.leftR_preMap_select',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductHeadPair.rightR_preMap_select',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductHeadPair.leftR_preMap_vf',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductHeadPair.rightR_preMap_vf',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductHeadPair.leftR_preMap_labels',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductHeadPair.rightR_preMap_labels',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductHeadPair.leftR_head_kernel',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductHeadPair.rightR_head_kernel',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductHeadPair.leftR_head_sameRV_kernel',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductHeadPair.rightR_head_sameRV_kernel',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductHeadPair.leftRPadding',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductHeadPair.rightRPadding',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductHeadPair.leftHead_boundary',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductHeadPair.rightHead_boundary',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductHeadPair.leftR_source',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductHeadPair.rightR_source',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductHeadPair.leftRHead',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductHeadPair.rightRHead',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductHeadPair.leftR_gamma',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductHeadPair.rightR_gamma',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductHeadPair.leftRHead_graph',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductHeadPair.rightRHead_graph',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductHeadPair.leftRHead_target_gamma',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductHeadPair.rightRHead_target_gamma',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductHeadPair.leftR_preMap',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductHeadPair.rightR_preMap',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductHeadPair.leftR_preMap_formula',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductHeadPair.rightR_preMap_formula',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductHeadPair.leftR_head_slice',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductHeadPair.rightR_head_slice',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductMatching.left_rectangle_tail',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductMatching.right_rectangle_tail',
+    'IntegrationInACVF.Section5.complementary_padded_completion',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductNComparison.final_nonrectangle_profile_comparison',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductMatching.leftNFinalIndices',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductMatching.rightNFinalIndices',
+    'IntegrationInACVF.Section5.PositionedCellLabelInjection.CommonProductNComparison.final_nonrectangle_program_profiles',
+    'IntegrationInACVF.Section5.normalizedRVUnionSet',
+    'IntegrationInACVF.Section5.normalizedRVUnionMap',
+    'IntegrationInACVF.Section5.normalizedRVUnionMap_left',
+    'IntegrationInACVF.Section5.normalizedRVUnionMap_right',
+    'IntegrationInACVF.Section5.gamma_rvMap_union',
+    'IntegrationInACVF.Section5.normalizedRVHomMap',
+    'IntegrationInACVF.Section5.gammaRVUnionIso',
+    'IntegrationInACVF.Section5.factorHeadProjection',
+    'IntegrationInACVF.Section5.head_projection_of_factor',
+    'IntegrationInACVF.Section5.headProjectionPaddingOfKernels',
+    'IntegrationInACVF.Section5.lifted_headKey_sameRV_iff',
+    'IntegrationInACVF.Section5.ProductRVBranchHead.head_sameRV_kernel',
+    'IntegrationInACVF.Section5.PaddedUnaryBranchExtension.inactive_sameRV',
+    'IntegrationInACVF.Section5.PaddedUnaryBranchExtension.oldLabels',
+    'IntegrationInACVF.Section5.PaddedUnaryBranchExtension.prefix_oldLabels',
+    'IntegrationInACVF.Section5.PaddedUnaryBranchExtension.active_image_whole',
+    'IntegrationInACVF.Section5.PaddedUnaryBranchExtension.active_slice',
+    'IntegrationInACVF.Section5.PaddedProductCompletion',
+    'IntegrationInACVF.Section5.PaddedProductCompletion.mk',
+    'IntegrationInACVF.Section5.PaddedProductCompletion.preparation',
+    'IntegrationInACVF.Section5.PaddedProductCompletion.boundary',
+    'IntegrationInACVF.Section5.PaddedProductCompletion.graph',
+    'IntegrationInACVF.Section5.padded_product_completion',
+    'IntegrationInACVF.Section5.PaddedProductCompletion.inactive_vf',
+    'IntegrationInACVF.Section5.PaddedProductCompletion.inactive_sameRV',
+    'IntegrationInACVF.Section5.PaddedProductCompletion.inactivePadding',
+    'IntegrationInACVF.Section5.rvSlice_map_image',
+    'IntegrationInACVF.Section5.inactiveProjectionPadding',
+    'IntegrationInACVF.Section5.SharedProductFirst',
+    'IntegrationInACVF.Section5.SharedProductFirst.mk',
+    'IntegrationInACVF.Section5.shared_product_first',
+    'IntegrationInACVF.Section5.SharedProductFirst.head_source_class',
+    'IntegrationInACVF.Section5.surjective_head_factor_kernel',
+    'IntegrationInACVF.Section5.surjective_head_factor_sameRV_kernel',
+    'IntegrationInACVF.Section5.gammaPointIsoOfSurjectiveKernels_sameRV_iff',
+    'IntegrationInACVF.Section5.pairedTailPreparation',
+    'IntegrationInACVF.Section5.pairedTailPreparation_graph',
+    'IntegrationInACVF.Section5.HeadPreparation.castSource_graph',
+    'IntegrationInACVF.Section5.HeadPreparation.castSource_target_gamma',
+    'IntegrationInACVF.Section5.twoStageProgram',
+    'IntegrationInACVF.Section5.twoStageProgram_gamma',
 ]
 
 ALLOWED = {'propext', 'Classical.choice', 'Quot.sound'}
@@ -1528,17 +1647,27 @@ def main():
             raise RuntimeError('Incomplete or unexpected axiom output')
         records = []
         types = {}
+        # Locate all type starts in one pass; rescanning the full expanded log
+        # separately for every declaration is quadratic in the audit size.
+        type_pattern = re.compile(r'(?m)^@?(' + '|'.join(re.escape(n) for n in HEADLINES)
+                                  + r')(?:\.\{[^}]*\})?\s*:')
+        type_starts = {}
+        for match in type_pattern.finditer(output):
+            name = match.group(1)
+            if name in type_starts:
+                raise RuntimeError('Duplicate complete type for ' + name)
+            type_starts[name] = match.start()
         for name, block in audits:
             axioms = {re.sub(r'\.\{[^}]*\}$', '', a.strip())
                       for a in block.split(',') if a.strip()}
             if axioms - ALLOWED:
                 raise RuntimeError('Unexpected axioms for ' + name)
             records.append({'name': name, 'axioms': sorted(axioms)})
-            match = re.search(r'(?m)^@?' + re.escape(name) + r'(?:\.\{[^}]*\})?\s*:', output)
-            if match is None:
+            if name not in type_starts:
                 raise RuntimeError('Missing complete type for ' + name)
-            end = output.index("\n'" + name + "'", match.start())
-            types[name] = output[match.start():end]
+            start = type_starts[name]
+            end = output.index("\n'" + name + "'", start)
+            types[name] = output[start:end]
             if '⋯' in types[name]:
                 raise RuntimeError('Pretty-printer omitted part of type for ' + name)
         if sources != sorted((ROOT / 'section 5' / 'IntegrationSection5').glob('*.lean')):
