@@ -4,12 +4,12 @@
 The whole section remains in progress: uniform5.8 and the global actual
 SpecialBijection bridge of5.5 remain open.
 
-All968 complete headline types and axiom audits pass, using only propext,
-Classical.choice and Quot.sound. All912 prior full types are unchanged.
-All56 new full types and complete constructors were reviewed in758
-readable lines without omissions. The root build completed10536 jobs.
+All1031 complete headline types and axiom audits pass, using only propext,
+Classical.choice and Quot.sound. All968 prior full types are unchanged.
+All63 new full types and complete constructors were reviewed in619
+readable lines without omissions. The root build completed10547 jobs.
 Project audits pass for foundation and Sections2,3,4,5; Sections6,7 have no
-verifiers and are skipped. Preserved evidence: `.scratch/section5-968-verified/`.
+verifiers and are skipped. Preserved evidence: `.scratch/section5-1031-verified/`.
 Hashes and scope: VERIFICATION.json.
 
 The807 checkpoint526f674 passed CI43118540581 and an exact retained artifact
@@ -154,3 +154,33 @@ injective commuting-lift dimension theorem proves weight, and fixed-VF
 coordinatewise finiteness proves finite-volume images. The input bijection
 and contractibility are explicit inputs here; this support theorem is not
 counted as the missing uniform5.8 comparison construction.
+
+## Checked uniform rectangle families and positioning metadata
+
+GammaRectangleFamilyComparison.gamma_rectangle_family_comparison constructs
+both actual standard contractions and a GammaRVIso for every original-Gamma
+mixed family whose RV fibres are rectangles. Unary preparations are constructed
+internally; shared RV coordinates, all retained tags, full program graphs,
+joint kernels and volume coordinates are computed. Empty and singleton factors
+are included. Scope: ACVF00, genuine saturation, small G.real and VFFieldBase
+G.real. The rectangle property is the explicit case hypothesis; this is not
+claimed as the whole5.8 comparison.
+
+PositionedCellLabelInjection.exists_positioned_cell_label_injection strengthens
+the constructed cell-label injection with ONE global original-Gamma positioning
+function. Its restrictions agree with the selected positions of every nonempty
+native-order cell slice. The source is arbitrary VF²×RV^m in the same scope
+as the cell-label injection. RVRectangleCases constructs a finite disjoint
+covering original-Gamma partition by RV-code-defined rectangle failure.
+Four-VF witnesses detect failure uniformly; the rectangle branch actually has
+rectangular fibres and every active nonrectangle slice is proved nonrectangular.
+NonrectangleCellGeometry proves that each such cell has balanced or injective
+graph positioning, hence a positioning bijection. Uniform nonrectangle
+contractions and actual finite-branch assembly remain open.
+
+The968 checkpointfb486cc passed CI43126821714. Retained artifact13903754659
+has SHA256a2c928d96e2af9a2be9e8feb5e2b66f0e8927d301e921c555b533a75c21a016f.
+Every receipt field except timestamp, all968 complete types/axioms, all source
+hashes and pins, and retained audit-source/log hashes match exactly. The earlier
+912 workflow was cancelled by workflow concurrency when968 was pushed; it was
+superseded by this passing checkpoint. The1031 checkpoint awaits its own CI.

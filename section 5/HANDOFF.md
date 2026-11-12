@@ -38,3 +38,21 @@ Scratch SharedRVUnaryHeadDraft.lean constructs shared-RV unary product head
 preparation, exact contracted source, and a full shared-RV product program;
 constructor compiled. Its kernel/volume extensions are being compiled.
 Continue until whole section is done; do not stop at this checkpoint.
+
+1031 local checkpoint PASS and ready for publication: uniform rectangle-family
+Gamma RV2 comparison is constructed internally (GammaRectangleFamilyComparison).
+PositionedCellLabelInjection constructs one globalGamma positioning function,
+RVRectangleCases constructs actualGamma RV-code-defined rectangle/nonrectangle
+branches, and NonrectangleCellGeometry proves the nonrectangle alternatives.
+All63 new complete types/constructors reviewed619 readablelines; all968 prior
+types unchanged;1031audit and root10547/fullproject PASS. Evidence
+`.scratch/section5-1031-verified/`. The968fb486cc CI43126821714 and exact retained
+artifact13903754659 comparison PASS.912CI was cancelled by newer push.
+
+Scratch NonrectanglePositionIsoDraft.lean now COMPILES an actual GLOBAL GammaIso
+between the first/second mixed unary projections of the nonrectangle branch,
+preserving the RV code and matching the selected positioning function. It is
+not in1031 inventory yet. This can feed5.2 ONCE globally, avoiding an assumed
+pointwise compactness assembly. Next: actual uniform first strip preparations,
+head-source Gamma presentations, matched tails, actual VF2 strip comparison
+and RV2 comparison, then branch assembly. Global5.5 bridge still open.

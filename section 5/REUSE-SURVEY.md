@@ -273,3 +273,23 @@ presentation from finite Gamma support. The general category iso retains
 both original-Gamma graphs, while MixedVolumeImages proves finite volume
 images from coordinatewise RV-to-VF finiteness. All56 new full types and
 constructors reviewed in758 lines;968 audits and full project checks pass.
+
+## Uniform product families and shared positioning,1031 declarations
+
+SharedRVProductProgram generalizes the checked native product construction to
+arbitrary common old RV tuples. SharedRVUnaryHeadPreparation uses the exact
+image theorem and explicit suffix/coverage compatibility of actual lifted
+unary chains; target saturation, program kernels, and both volume coordinates
+are proved. The actual Gamma RV2 quotient comparison follows from those
+computed kernels and volumes. MixedUnaryPreparations constructs both unary
+specials over one common internal base, preserving the originalGamma graphs.
+
+RVKeyedFunctions and PositionedCellLabelInjection transfer the actual selected
+vertical positioning function through an injective RV recoding and prove its
+agreement with all cell slices. No definable choice of arbitrary cell witnesses
+is assumed. RVRectangleCases expresses failure by fourVF coordinates and
+projects its actualGamma witness set to the existing RV code. The resulting
+finite partition covers the source and its case properties are proved.
+NonrectangleCellGeometry reuses the checked cell rectangle/graph/balanced
+classification with its explicit nontrivialδ hypothesis. All63 new complete
+types/constructors reviewed619lines;1031audits,root10547/fullproject PASS.
