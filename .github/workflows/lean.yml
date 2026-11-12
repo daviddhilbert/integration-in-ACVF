@@ -135,6 +135,9 @@ jobs:
         with:
           name: lean-verification-${{ github.sha }}
           include-hidden-files: true
+          # Full type/audit logs are highly repetitive; keep the complete
+          # evidence within the artifact downloader's size limit.
+          compression-level: 9
           if-no-files-found: warn
           retention-days: 30
           path: |

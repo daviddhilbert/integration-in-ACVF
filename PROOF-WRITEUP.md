@@ -319,3 +319,48 @@ proofs are in NonrectangleFiniteProfiles and GammaFiniteCombinations. The1138
 checkpoint passes complete type/axiom review, the10569-job root build and all
 project verifiers. Preserve this case argument for the final writeup, and
 recheck its role after the remaining finite-branch assembly is complete.
+
+## Section5.5: explicit finite RV presentations (verified)
+
+The paper's Notation2.5 identifies definably bijective presentations, and the
+paragraph before Definition5.5 calls the natural lift special. The implementation
+makes the presentation changes explicit. The actual global special chain runs
+between two mixed presentations; coordinate projections give original-Gamma
+bijections that fix every VF coordinate, from the source presentation to A and
+from the target presentation to the actual RV lift. Their square is the chosen
+natural lift map. The normalized version retains this square when the volume
+coordinates are placed first. A claim that the padded chain's own target is an
+RV-pullback is not part of this presentation statement; the chart target is the
+actual pinned RV lift. Preserve this precise distinction in the final writeup.
+
+The replacement construction retains a finite uniform trace of the chosen
+coordinatewise preparation algorithm. Finite vertical root centering supplies
+its focus/canonical steps. Before compiling, attach one RV Boolean flag for
+activity at every future focus, evaluated along the actual weak prefixes. At a
+current global image H, a weak focus with flag locus E becomes a genuine global
+focus with locus E intersect hull(H), and with centre obtained by projection to
+the weak stage. The centre has the same RV class as the active VF coordinate.
+Consequently the original point witnesses membership of the centred point in
+hull(H), including every retained flag label. The flags need not be recomputed
+at that centred point. Erase-independence pulls back through the projection.
+
+Replace each coordinate canonical map by the full canonical map and retain its
+extra RV labels. Insert empty foci to respect alternation, and canonical steps
+before consecutive foci. Updating the RV selectors proves a commuting square
+at every step. Bijectivity of the weak map and the actual special chain proves
+bijectivity of the final projection. This is an actual finite chain rather than
+a criterion assuming uniform specialness. Restriction, parameter extension,
+coordinate embeddings and arbitrary coordinate permutations retain the trace;
+the ordered natural map is assembled from these operations. Full original-Gamma
+certificates are proved for the trace, flags, actual global chain and charts.
+
+Scope: ACVF00, genuine saturation, small original G.real and VFFieldBase G.real.
+For the author's RV[n] scope, retain aleph0<=kappa and finite auxiliary RV fibres
+of A; the actual contraction volume maps are then proved finite. No smallness
+of the internally constructed real coding presentation is assumed. All 166 new
+complete type and constructor interfaces were reviewed in 1997 readable lines.
+All 1852 complete types and allowed-axiom audits pass; all 1686 prior records
+are exact. The 10708-job root build and full project verification pass. Evidence:
+.scratch/section5-final-1852-verified/ and the lossless retained receipt.
+Entry points: StandardSpecialPresentation,
+NormalizedStandardSpecialPresentation, FiniteStandardContractionData and lemma_5_5.

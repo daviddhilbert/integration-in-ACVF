@@ -17,7 +17,8 @@ language, Lean 4.35.0 toolchain and pinned Mathlib revision are unchanged.
 
 Section 1 is introductory and has no separate proof target. Section 4 has
 checked implementations of all numbered lemmas and its cell geometry.
-Section 5 is in progress; Sections 6–7 remain placeholders. Read
+Section 5 is complete in its recorded RV[k] scope; Sections 6–7 remain
+placeholders. Read
 [WORKFLOW.md](WORKFLOW.md) and [AGENTS.md](AGENTS.md) before proof work.
 
 ## Checked scope
@@ -54,7 +55,17 @@ observation after 4.7 is independently checked, together with both valid
 replacement statements; the author's editorial choice is pending.
 See [Section 4 status](section%204/STATUS.md).
 
+Section 5 formalizes the numbered results through Corollary 5.8 for the actual
+RV[k] categories with finite-to-one volume maps. Definition 5.5 makes the
+VF-fixed Gamma RV presentation charts explicit. Finite-source conditions and
+all parameter assumptions are recorded in [Section 5 status](section%205/STATUS.md).
+
 ## Verification
+
+The Section 5 checkpoint passes the 10708-job root build and all available
+project verifiers, with 1852 complete type/allowed-axiom audits. All 1686 prior
+records are exact; its complete receipt is retained losslessly alongside the
+[verification index](section%205/VERIFICATION.json).
 
 The Section 4 integration build and complete project verifiers pass locally
 for foundation and Sections 2–5. Section 4 adds 445 full-type/axiom audits;

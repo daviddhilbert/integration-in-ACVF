@@ -39,3 +39,9 @@ substantially from the paper's proofs. Maintain PROOF-WRITEUP.md as a running
 ledger so the final writeup reflects the completed formal proofs. Separate
 verified replacements from provisional approaches; ordinary Lean plumbing
 does not by itself constitute a different mathematical proof.
+
+Author clarification in the Section5 session: the active category targets in
+Section5 are RV[k], with finite-to-one volume maps. Abandon RV[k,*] as a target.
+Auxiliary RV arities remain arbitrary. Retain existing ambient lemmas only as
+internal proof support, and prove finite volume for the actual constructions.
+The finite-source hypotheses and all parameter assumptions must be explicit.

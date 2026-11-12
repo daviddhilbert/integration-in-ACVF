@@ -356,4 +356,17 @@ These are explicit proved construction criteria, not the final5.8 assembly.
 
 1686: completed both final branch kernels and volume formulas, Gamma RV partition gluing, whole-program comparison, and Corollary58.lemma_5_8. All125 additions passed full type/constructor review, allowed-axiom audit, root10670 and full project verification; all1561 prior records exact.
 
-Finite category scope (author November12): pinned Section4/RVCategories.lean defines finiteVolumeProperty and RVFiniteObject as the actual full subcategory RV[k]. Pinned Section9/RV-CATEGORY-AUDIT.md and Section10/README.md document the predecessor scope. Reuse the existing ambient comparisons as inputs and ObjectProperty.isoMk to produce actual finite-category isomorphisms after proving both volume maps finite. Scratch transfer uses already checked fixed_vf_scalar_image_finite and finite union of source RV fibres; no dependency or language changes. Finite restatements compile but are not yet audited.
+Finite category scope (author November12): pinned Section4/RVCategories.lean defines finiteVolumeProperty and RVFiniteObject as the actual full subcategory RV[k]. Pinned Section9/RV-CATEGORY-AUDIT.md and Section10/README.md document the predecessor scope. Reuse the existing ambient comparisons as inputs and ObjectProperty.isoMk to produce actual finite-category isomorphisms after proving both volume maps finite. The checked transfer uses fixed_vf_scalar_image_finite and finite unions of source RV fibres; no dependency or language changes. All finite restatements are included in the1852 full type/axiom audit and full project verification.
+
+Finite-trace bridge (verified in the1852 batch): GammaTraceCore adapts the already
+checked scalar-image/affineGraphMap proof of gamma_eta_graph from pinned
+special_transformations9cc9760892092dd34cfad4a6dee655843c52f30c Section5/GammaRestriction.lean.
+The graph proof does not use global RV-pullback geometry; actual global Focus
+geometry is constructed separately in FibreFocusPresentation. The pinned license
+and revision remain unchanged. GammaTraceFlags generalizes this project's
+GammaMembershipPreparation.gamma_membershipMap_graph from one VF coordinate to
+arbitrary finite VF arity and reuses checked Section4 GammaRVMap pair/attachment
+operations. The finite compiler and uniform trace retention were developed here;
+no unproved external result or new citation is a proof input.
+
+Final RV[k] checkpoint: all166 new complete types and constructor interfaces reviewed in1997 readable lines;1852 full type/allowed-axiom audits, root10708 and full project verification PASS. All1686 earlier complete types and axiom records are exact. The37 new modules supply finite-category restatements and actual global special presentations with explicit VF-fixed Gamma RV charts. No model, parameter-base, code-smallness or preparation conclusion is introduced as an open premise. See STATUS.md for exact scopes.
