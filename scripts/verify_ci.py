@@ -3,6 +3,10 @@
 
 Adapted from special-transformations/scripts/verify_ci.py at
 9cc9760892092dd34cfad4a6dee655843c52f30c. Run with lake env python3.
+
+--reuse-certified forwards the existing exact-receipt reuse option to the
+Section 6 verifier. Every full type and permitted-axiom report is still
+checked afresh; the default remains fresh compilation.
 """
 
 import json
@@ -93,6 +97,8 @@ def main():
             command = [sys.executable, str(verifier)]
             if number == 3:
                 command.append('--acvf')
+            if number == 6 and '--reuse-certified' in sys.argv:
+                command.append('--reuse-certified')
             result = subprocess.run(
                 command, cwd=ROOT,
                 stdout=log, stderr=subprocess.STDOUT)

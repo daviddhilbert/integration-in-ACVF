@@ -1,3 +1,4 @@
+import IntegrationSection6.Library
 import ACVFQE
 import IntegrationSection3.Library
 import IntegrationSection3.FieldLibrary
@@ -17,3 +18,7 @@ The sequel's Section 3 library develops Definition 3.1 and the finite-exception
 geometry used in Lemma 3.2. Its status distinguishes these checked components
 from the remaining connections to the ACVF imaginary expansion.
 -/
+
+/- Section 6 exports the RV[k] and graded RV[*] formalization, including
+   integration, definable families, Fubini and localization. The authorized
+   unfinished Section 5.8 input remains explicit in the final theorem types. -/

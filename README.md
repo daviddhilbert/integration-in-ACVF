@@ -17,7 +17,9 @@ language, Lean 4.35.0 toolchain and pinned Mathlib revision are unchanged.
 
 Section 1 is introductory and has no separate proof target. Section 4 has
 checked implementations of all numbered lemmas and its cell geometry.
-Section 5 is in progress; Sections 6–7 remain placeholders. Read
+Section 5 is in progress. Section 6 is implemented for RV[k] and graded RV[*],
+with its authorized Section 5.8 input explicit. The full project audit passes.
+Section 7 remains a placeholder. See [Section 6 status](section%206/STATUS.md). Read
 [WORKFLOW.md](WORKFLOW.md) and [AGENTS.md](AGENTS.md) before proof work.
 
 ## Checked scope
@@ -90,3 +92,13 @@ The referee attachment remains reference material only; see
 [REFERENCE-NOTES.md](REFERENCE-NOTES.md). The requested writeup of proofs
 that differ substantially from the paper is deferred until the whole paper
 is formalized; its current ledger is [PROOF-WRITEUP.md](PROOF-WRITEUP.md).
+
+Section 6 implements every numbered target for RV[k] and graded RV[*],
+including the kernel equivalence, additive and semiring integration,
+parameter-dependent definable functions and linearity, coordinate
+pushforwards/Fubini, and the principal-ideal/localization theorem. Only the
+explicit authorized Section 5.8 input remains in the final integration
+types. See [Section 6 status](section%206/STATUS.md) for standing hypotheses
+and verification evidence. The project verifier accepts `--reuse-certified`
+to use Section 6's sealed artifact checks while freshly auditing every full
+type and permitted-axiom report; default compilation remains fresh.
