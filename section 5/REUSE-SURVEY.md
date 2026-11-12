@@ -242,3 +242,15 @@ RVUnaryProfiles proves the extra constant-coordinate morphism obligations.
 All124 new full types/constructors reviewed;807 allowed-axiom checks,10491-job
 root build and full project verifier pass. Product/family compatibility and
 the global special-map bridge remain separate obligations.
+
+## Complete cell comparison,912 audited declarations
+
+Actual unary chains lift to either VF coordinate with explicit RV label
+suffix compatibility and coverage. Exact product images and computed kernels
+supply rectangle comparisons, including singleton factors. Original-Gamma
+graph composition certifies the quotient comparison and the matched-tail
+profile isomorphism in both directions. Section4 actual cell geometry proves
+the cases exhaustive. All105 new complete types/constructors reviewed;912
+allowed-axiom checks,10523-job root build and full project audits pass.
+The family construction5.8 remains open; pointwise cell comparisons are not
+used as an assumed uniform conclusion.

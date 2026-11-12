@@ -1,24 +1,21 @@
 # Section 5 status
 
-**Lemmas5.1–5.2, Remark5.3, Definition5.4 and Lemma5.6 are locally checked.**
-The balanced and bijective graph cases of5.7 now construct actual standard
-contractions in both orders with an actual pinned RV[2] isomorphism. The
-whole section remains in progress: product cases of5.7, full uniform5.8
-and the global actual SpecialBijection bridge of5.5 remain open.
+**Lemmas5.1–5.2, Remark5.3, Definition5.4, Lemma5.6 and all of Lemma5.7 are locally checked.**
+The whole section remains in progress: uniform5.8 and the global actual
+SpecialBijection bridge of5.5 remain open.
 
-All807 complete headline types and axiom audits pass, using only propext,
-Classical.choice and Quot.sound. All683 prior full types are unchanged.
-All124 new full types and complete data constructors were reviewed in1567
-readable lines without omissions. The root build completed10491 jobs.
+All912 complete headline types and axiom audits pass, using only propext,
+Classical.choice and Quot.sound. All807 prior full types are unchanged.
+All105 new full types and complete constructors were reviewed in1247
+readable lines without omissions. The root build completed10523 jobs.
 Project audits pass for foundation and Sections2,3,4,5; Sections6,7 have no
-verifiers and are skipped. Preserved evidence: `.scratch/section5-807-verified/`.
+verifiers and are skipped. Preserved evidence: `.scratch/section5-912-verified/`.
 Hashes and scope: VERIFICATION.json.
 
-The683 checkpoint30071af passed CI43111040742 and an exact retained artifact
-comparison of all683 types/axioms, source hashes, pins and audit logs. Main
-promotion was rejected by automatic approval review because the visible
-request did not explicitly authorize moving main. User approval is pending;
-work continues on the feature branch.
+The807 checkpoint526f674 passed CI43118540581 and an exact retained artifact
+comparison of all807 types/axioms, source hashes, pins and audit logs.
+The user explicitly approved the683 checkpoint fast-forward; remote main
+is confirmed at30071aff732eac857da238c91e11f76d59f498b4.
 
 ## Checked numbered results
 
@@ -97,9 +94,9 @@ all reused Section4 Lean sources and its verifier. The singleton first-cell
 boundary of the ancillary open-polydisc observation is recorded by Section4;
 its valid product conclusion suffices for the5.7 product case.
 
-Next: actual cell translations/product contractions, RV[2,·] isomorphisms
-for5.7, then the uniform4.8 family assembly for5.8. Neither5.7 nor5.8 is claimed
-from an assumed cell-existence or chosen-contraction compatibility premise.
+Next: the uniform4.8 family assembly for5.8 and the explicit global special
+presentation bridge for5.5. Neither is claimed from an assumed compatibility
+or preparation conclusion.
 
 ## Publication evidence
 
@@ -110,27 +107,28 @@ dependency hashes, and the retained audit-source/log hashes match the local
 receipt. The539-head checkpoint also has an exact retained comparison.
 Main advanced separately to36deb895 with Section4 verification documentation;
 that documentation-only delta is merged into the current proof checkpoint.
-The683 checkpoint still requires its own remote CI and retained comparison.
+The683 checkpoint passed CI43111040742 and exact retained artifact13896733651
+comparison. The807 checkpoint passed CI43118540581 and exact retained
+artifact13900877027 comparison. The912 proof checkpoint awaits its own CI.
 
 No HK theorem, referee assertion or new external citation is a proof input.
 The paper's precise5.5–5.8 statements and standing conventions were rechecked
 against arXiv:0809.0473v2 during this batch.
 
-## Constructed cases of5.7
+## Complete Lemma5.7
 
-CellBalancedStandard.lemma_5_7_balanced and lemma_5_7_bijective_graph construct
-both actual StandardContractions and an actual RV[2] isomorphism, from the
-actual Section4 DefinableCellData. Scope: ACVF00, genuine saturation,
-aleph0≤κ, small G.real, VFFieldBase G.real and namedδ>1. The graph case
-requires its stated zero paradigm and injective positioning; these are
-proved case hypotheses, not additional hypotheses on the complete5.7 target.
+GammaCellStandardExistence.lemma_5_7_gamma and lemma_5_7_gamma_cell_data
+construct both actual StandardContractions and an actual GammaRVIso for
+every actual Section4 DefinableTwoCell. Scope: ACVF00, genuine saturation,
+aleph0≤κ, small G.real, VFFieldBase G.real and namedδ>1. The common internal
+real presentation is constructed and its size is not an extra hypothesis.
+Both full programs and both directions of the RV[2] comparison have full
+original-Gamma graph certificates.
 
-The construction proves exact strip geometry, constructs the coordinate
-canonical/focus maps, proves head saturation while retaining the original
-head RV tag, computes the two unary contracted sources, and joins them by
-the actual positioning bijection. Full5.2–5.3 construct matched unary tails.
-Both full two-stage programs retain original-Gamma certificates. Explicit
-RV-domain and volume-reindex isomorphisms give the actual RV[2] comparison.
-The final wrappers currently export the category isomorphism over their
-internal real presentation; original-Gamma graphs of the final RV[2]
-comparison and the full uniform family construction are still to be exported.
+Balanced cells use matched unary tails after actual strip translations;
+injective zero-paradigm graphs use their actual positioning bijection.
+Rectangles, including singleton factors, lift actual unary specials and
+compare the two programs by their computed equal joint kernels and volume
+coordinates. Actual cell geometry proves these cases exhaustive. The final
+theorem assumes no case classification or contraction compatibility premise.
+The uniform RV-labelled family statement5.8 remains separate.
