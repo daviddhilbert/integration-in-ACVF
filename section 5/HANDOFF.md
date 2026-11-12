@@ -1,9 +1,20 @@
 # Section5 active handoff
 
 Continue until the whole section is done; the user did not request a checkpoint stop.
-Lemmas5.1–5.2, Remark5.3, Definition5.4, Lemma5.6 and ALL of5.7 are checked.
-Remaining: uniform family5.8 and the explicit global SpecialBijection presentation
-bridge5.5. See STATUS.md, TARGETS.md and `.scratch/SECTION5-ACTIVE-PLAN.md`.
+Active category scope is RV[k] only (author clarification November12), with
+finite-to-one volume maps; RV[k,*] is abandoned as a target. Existing ambient
+lemmas are internal inputs. The uniform5.8 ambient construction is now fully
+checked. Finite restatements of5.3,5.7,5.8 compile in scratch but need production
+integration and audits. The explicit global SpecialBijection presentation bridge
+of5.5 remains in progress, including original-Gamma certificates.
+
+Current local checkpoint:1686 complete types/axioms PASS, all1561 prior records
+EXACT,125 new full types/constructors manually reviewed in1532 lines; root10670
+and full project verification PASS. Evidence .scratch/section5-1686-verified/.
+CI1561 at20c73c9 passed43160706160; artifact13918363916 matches all local receipt
+fields except timestamp, including full types, axioms, pins/source and audit hashes.
+No inventory freeze remains after these checks. New scratch state and next steps:
+.scratch/SECTION5-LATEST-NOV12.md (supersedes historical entries below).
 
 The912-head full type/axiom audit passes, all807 prior types are unchanged;
 105 new complete types/constructors reviewed in1247 readable lines. Root10523

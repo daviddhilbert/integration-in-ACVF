@@ -1,16 +1,24 @@
 # Section 5 status
 
-**Lemmas5.1–5.2, Remark5.3, Definition5.4, Lemma5.6 and all of Lemma5.7 are locally checked.**
-The whole section remains in progress: uniform5.8 and the global actual
-SpecialBijection bridge of5.5 remain open.
+**The active category targets are RV[k], with finite-to-one volume maps.**
+The author requested this restriction on November12, following the predecessor's
+Section9 and Section10 scope. RV[k,*] is no longer a target. Previously checked
+ambient results remain available as proof inputs.
 
-All1561 complete headline types and axiom audits pass, using only propext,
-Classical.choice and Quot.sound. All1442 previously published full types and
-axiom records are unchanged. All119 new full type and constructor interfaces
-were reviewed in1532 readable lines. The root build completed10655 jobs.
+The whole section remains in progress. The actual uniform5.8 ambient comparison
+is now checked, including both whole-source standard contractions, all branch
+comparisons, their gluing, and full original-Gamma graphs. The finite-category
+restatements of5.3,5.7,5.8 compile in scratch; their full review and integration
+remain pending. The global actual SpecialBijection presentation bridge of5.5
+also remains under construction.
+
+All1686 complete headline types and axiom audits pass, using only propext,
+Classical.choice and Quot.sound. All1561 previously published full types and
+axiom records are unchanged. All125 new full type and constructor interfaces
+were reviewed in1532 readable lines. The root build completed10670 jobs.
 Project audits pass for foundation and Sections2,3,4,5; Sections6,7 have no
 verifiers and are skipped. Preserved evidence:
-`.scratch/section5-1561-verified/`.
+`.scratch/section5-1686-verified/`.
 
 VERIFICATION.json is now a compact index with source/pin identities, all
 axiom records, per-type hashes and full-receipt identities. VERIFICATION.json.gz
@@ -41,7 +49,7 @@ preparation, actual inverse-special geometry and compatible focus chains
 supply the proof. Entry points: UnaryBijection.lemma_5_2 and its presented
 wrapper in UnaryBijectionPreparation.
 
-Remark5.3 constructs an actual pinned RV[1,·] isomorphism with both morphism
+The ambient input for Remark5.3 constructs an actual pinned RV[1,·] isomorphism with both morphism
 fields, inverse laws, the induced-key square and full original-Gamma graphs.
 Given the actual prepared mutually contractible bijection, it needs only
 ACVF, genuine saturation, aleph0≤κ and small P.real. The finite-image and
@@ -101,7 +109,7 @@ all reused Section4 Lean sources and its verifier. The singleton first-cell
 boundary of the ancillary open-polydisc observation is recorded by Section4;
 its valid product conclusion suffices for the5.7 product case.
 
-Next: the uniform4.8 family assembly for5.8 and the explicit global special
+Next: audit and integrate the RV[k] restatements and finish the explicit global special
 presentation bridge for5.5. Neither is claimed from an assumed compatibility
 or preparation conclusion.
 
@@ -336,3 +344,11 @@ rescanning the full expanded log separately for each declaration. All1442
 prior complete types and axiom records remain byte-for-byte unchanged.
 The1442 feature checkpoint is0c6541cad28b8700fded5719c4952773ce834852;
 CI43156823106 is still running and has no retained-artifact comparison yet.
+
+## Latest integrated checkpoint:1686
+
+The uniform family comparison is constructed in Corollary58.lemma_5_8. Actual final rectangle kernels and volumes, final nonrectangle comparison, disjoint covering raw RV branch cuts, and original-Gamma categorical gluing supply both whole-source standard contractions and the comparison. No comparison, kernel, branch-gluing or finite-image conclusion is assumed. All1686 complete type/axiom checks and full project verification pass; root10670. All125 additions were manually reviewed, and all1561 prior full types/axioms are exact. Older checkpoint entries above describe historical boundaries, superseded by this entry and the active scope at the top.
+
+The1442 and1561 checkpoints both passed CI with exact retained-artifact comparisons (43156823106/artifact13917044844 and43160706160/artifact13918363916 respectively). The1686 checkpoint has not yet received its own CI comparison.
+
+Active remaining work: RV[k] finite-category restatements and their integration/audits, plus the actual global SpecialBijection presentation bridge for5.5. Scratch progress is not an audited result.

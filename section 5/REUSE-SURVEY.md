@@ -353,3 +353,7 @@ constructors were reviewed; root10612/fullproject/type/axiom checks pass.
 These are explicit proved construction criteria, not the final5.8 assembly.
 
 1561: reused pinned special_transformations9cc9760892092dd34cfad4a6dee655843c52f30c Section4/RVUnionCoproduct.lean: rvUnionDesc constructs both RVHom fields, using finite union of finite volume images; rvUnion_hom_ext and inl/inr laws prove the glued inverse laws. GammaRVUnion adds full original-Gamma union graph certificates over normalized LRV. The pinned source and license are unchanged. All119 additions passed manual type review, full type/allowed-axiom audit, root10655 and project verification.
+
+1686: completed both final branch kernels and volume formulas, Gamma RV partition gluing, whole-program comparison, and Corollary58.lemma_5_8. All125 additions passed full type/constructor review, allowed-axiom audit, root10670 and full project verification; all1561 prior records exact.
+
+Finite category scope (author November12): pinned Section4/RVCategories.lean defines finiteVolumeProperty and RVFiniteObject as the actual full subcategory RV[k]. Pinned Section9/RV-CATEGORY-AUDIT.md and Section10/README.md document the predecessor scope. Reuse the existing ambient comparisons as inputs and ObjectProperty.isoMk to produce actual finite-category isomorphisms after proving both volume maps finite. Scratch transfer uses already checked fixed_vf_scalar_image_finite and finite union of source RV fibres; no dependency or language changes. Finite restatements compile but are not yet audited.
