@@ -4,12 +4,12 @@
 The whole section remains in progress: uniform5.8 and the global actual
 SpecialBijection bridge of5.5 remain open.
 
-All912 complete headline types and axiom audits pass, using only propext,
-Classical.choice and Quot.sound. All807 prior full types are unchanged.
-All105 new full types and complete constructors were reviewed in1247
-readable lines without omissions. The root build completed10523 jobs.
+All968 complete headline types and axiom audits pass, using only propext,
+Classical.choice and Quot.sound. All912 prior full types are unchanged.
+All56 new full types and complete constructors were reviewed in758
+readable lines without omissions. The root build completed10536 jobs.
 Project audits pass for foundation and Sections2,3,4,5; Sections6,7 have no
-verifiers and are skipped. Preserved evidence: `.scratch/section5-912-verified/`.
+verifiers and are skipped. Preserved evidence: `.scratch/section5-968-verified/`.
 Hashes and scope: VERIFICATION.json.
 
 The807 checkpoint526f674 passed CI43118540581 and an exact retained artifact
@@ -132,3 +132,25 @@ compare the two programs by their computed equal joint kernels and volume
 coordinates. Actual cell geometry proves these cases exhaustive. The final
 theorem assumes no case classification or contraction compatibility premise.
 The uniform RV-labelled family statement5.8 remains separate.
+
+## Uniform family construction for5.8
+
+CellLabelInjection.exists_cell_label_injection constructs an actual
+original-Gamma definable bijection onto its image, fixing the entire VF
+coordinate tuple, for every source in VF²×RV^m. Every nonempty native-order
+RV slice of the image is an actual definable2-cell over its output RV tuple
+and the original base. The mixed vertical presentation, scalar row refinement
+and RV recoding are constructed; no uniform cell-existence premise is assumed.
+Scope: ACVF00, genuine saturation, aleph0≤κ, small G.real,
+VFGammaGeneratedBase G, and namedδ>1. This establishes the cell-label injection
+needed for5.8; its uniform contraction comparison remains open.
+
+MixedRVIsomorphism.mixedGammaRVIso constructs an actual RV[n] isomorphism
+from an actual mutually contractible definable bijection of RV-pullbacks,
+for arbitrary VF arity n. Full original-Gamma graphs of the sets and map,
+genuine saturation, aleph0≤κ and small G.real suffice. Internal small real
+presentations are constructed from finite Gamma support. The pinned checked
+injective commuting-lift dimension theorem proves weight, and fixed-VF
+coordinatewise finiteness proves finite-volume images. The input bijection
+and contractibility are explicit inputs here; this support theorem is not
+counted as the missing uniform5.8 comparison construction.

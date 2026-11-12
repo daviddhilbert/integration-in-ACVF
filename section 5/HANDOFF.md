@@ -23,3 +23,18 @@ Next: uniform cell decomposition and comparison; pinned Section4 LiftBijections
 contains a checked general weight inequality from an injective commuting lift,
 but its canonical/valued/small-base hypotheses need actual bridges.
 Do not assert pointwise5.7 implies a definable family of RV[2] isomorphisms.
+
+968 local checkpoint: cell-label injection constructed for arbitrary mixed
+VF²×RV^m source, with native coordinate order and full original-Gamma graphs.
+MixedRVIsomorphism now proves actual RV[n] isomorphisms in all VF arities
+from actual mutually contractible RP bijections; weight from checked pinned
+LiftBijections via a constructed small finite-support presentation, finite
+volume images from actual fixed-VF tuple finiteness. No internal-code
+smallness is assumed. All56 new full types/constructors reviewed in758
+readable lines;968-head audit and10536-job root/full project checks PASS.
+Evidence `.scratch/section5-968-verified/`. Uniform5.8 comparison and global5.5
+bridge remain open.912-head85093aa published; CI43124432925 pending.
+Scratch SharedRVUnaryHeadDraft.lean constructs shared-RV unary product head
+preparation, exact contracted source, and a full shared-RV product program;
+constructor compiled. Its kernel/volume extensions are being compiled.
+Continue until whole section is done; do not stop at this checkpoint.

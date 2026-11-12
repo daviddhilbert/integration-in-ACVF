@@ -254,3 +254,22 @@ the cases exhaustive. All105 new complete types/constructors reviewed;912
 allowed-axiom checks,10523-job root build and full project audits pass.
 The family construction5.8 remains open; pointwise cell comparisons are not
 used as an assumed uniform conclusion.
+
+## Mixed cell families and general RV comparison,968 declarations
+
+The twelve family modules generalize the existing repository's Section4
+VerticalPositionFamilies, VerticalPresentation, VerticalPullbackCells,
+FibreDefinability and PositionRowDefinability proofs to arbitrary old RV
+arity. Checked VerticalCharts and ScalarPositionDecomposition already
+provide the needed uniform inputs. Applying them to swapped VF input and
+recoding by the resulting RV map gives native-order cells with a VF-fixed
+actual injection. No new citation or assumed family-uniformity principle.
+
+Pinned special_transformations9cc9760 Section4.LiftBijections contains the
+actual injective commuting-lift weight theorem. Its full canonical, valued,
+Gamma-space coding, genuine saturation and small-real-base hypotheses are
+instantiated in MixedRVIsomorphism; SmallGammaPresentation constructs a small
+presentation from finite Gamma support. The general category iso retains
+both original-Gamma graphs, while MixedVolumeImages proves finite volume
+images from coordinatewise RV-to-VF finiteness. All56 new full types and
+constructors reviewed in758 lines;968 audits and full project checks pass.
