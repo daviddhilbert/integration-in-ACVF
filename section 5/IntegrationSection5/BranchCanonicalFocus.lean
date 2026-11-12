@@ -132,4 +132,3 @@ theorem canonical_focus_inactive_image {K : DefSet (M := M) S n (1+m)}
     exact hp
 
 end IntegrationInACVF.Section5
-

@@ -4,13 +4,13 @@
 The whole section remains in progress: uniform5.8 and the global actual
 SpecialBijection bridge of5.5 remain open.
 
-All1182 complete headline types and axiom audits pass, using only propext,
-Classical.choice and Quot.sound. All1138 previously published full types and
-axiom records are unchanged. All44 new full types and complete constructors
-were reviewed in650 readable lines without omissions. The root build
-completed10578 jobs. Project audits pass for foundation and Sections2,3,4,5;
+All1257 complete headline types and axiom audits pass, using only propext,
+Classical.choice and Quot.sound. All1182 previously published full types and
+axiom records are unchanged. All75 new full types and complete constructors
+were reviewed in909 readable lines without omissions. The root build
+completed10595 jobs. Project audits pass for foundation and Sections2,3,4,5;
 Sections6,7 have no verifiers and are skipped. Preserved evidence:
-`.scratch/section5-1182-verified/`.
+`.scratch/section5-1257-verified/`.
 
 VERIFICATION.json is now a compact index with source/pin identities, all
 axiom records, per-type hashes and full-receipt identities. VERIFICATION.json.gz
@@ -249,3 +249,27 @@ Artifact13908972724 has SHA256
 49f17b8dad6020c8849c3dfe4eb4f1a57056b9b8a91002d6744aa1e7ea1577d0.
 Every receipt field except timestamp, all1138 full types/axioms, source hashes,
 pins and retained audit-source/log hashes match the local receipt exactly.
+
+## Completed global first heads and quotient descent,1257 declarations
+
+GlobalCompletedHeads.global_completed_head_preparations constructs both
+whole-source first heads. The actual rectangle unary preparations are built
+internally over an extension of the existing real presentation. Canonical
+prefixes and empty foci meet the alternating boundaries. Exact product images
+prove saturation on the rectangle branch, while inactive VF and SameRV
+preservation retain saturation on the nonrectangle branch. No branch
+preparation or whole-target saturation is assumed in this producer.
+
+FixedVFHeadDescent constructs an actual Gamma isomorphism on head images
+from a VF-fixed, label-retaining, SameRV-preserving surjection. The kernel
+identity, definable descent, bijectivity and full Gamma graph are proved.
+InactiveBranchHeadIso applies it to the actual branch extension and retains
+the quotient square. RVSliceHeadImages proves exact branch images and exact
+RV-defined head-image slices. Tail gluing and final RV-category assembly of
+5.8, and the global-special bridge of5.5, remain open.
+
+The1182 checkpoint2db92b2 passed CI43142254507, job130931755723.
+Artifact13911047289 ZIP SHA256:
+aa86e81f7c540ca5b2474ec5eaa9769e247b953db15b02cd495aa883555d2c49.
+All receipt fields except timestamp, every full type and axiom record, pins,
+source hashes and retained audit-source/log hashes match local evidence exactly.

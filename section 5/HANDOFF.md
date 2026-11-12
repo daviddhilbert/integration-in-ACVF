@@ -99,3 +99,16 @@ RelativeSpecialRestrictionDraft, CanonicalHeadGeometryDraft,
 RVSliceTranslationImagesDraft, TranslationExtensionDraft,
 MixedUnaryPreparationOverDraft. See .scratch/SECTION5-ACTIVE-PLAN.md for sessions.
 Continue work; this checkpoint does not complete the section.
+
+Latest1257 checkpoint supersedes earlier pending statements: all75 additions
+reviewed in909 readable lines, all1182 earlier full types/axioms EXACT unchanged,
+1257 audit/root10595/fullproject PASS. Preserved section5-1257-verified.
+Global first heads in BOTH orders are now constructed with whole-target head
+saturation. The generic inactive extension has an actual Gamma head-image
+isomorphism and quotient square; RV branch images/head slices are computed.
+1182 feature2db92b2 CI43142254507/artifact13911047289 exact comparison PASS
+(SHA256 aa86e81f7c540ca5b2474ec5eaa9769e247b953db15b02cd495aa883555d2c49).
+Next: publish this coherent batch, continue matched tails and actual RV2 branch
+assembly, then globalSpecial5.5. New compiled scratch CompletedNonrectangleHead,
+CompletedHeadComparison, HeadIsoCoordinates and CanonicalUnaryBranchExtension
+are not part of1257. See active plan. Do not stop at this checkpoint.

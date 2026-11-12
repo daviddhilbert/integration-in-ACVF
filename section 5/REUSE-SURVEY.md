@@ -327,3 +327,15 @@ supplies the same actual position for both orders and proves selected-target
 head saturation from the checked cell identities. All44 new complete types
 and constructors reviewed650lines;1182 audits, root10578 and fullproject PASS.
 The finite program/category assembly and5.5 remain open.
+
+## Global branch first heads and head-key descent
+
+Reused the existing RelativeSpecialRestriction.specialRelativeBoundary_restrict,
+restrictPointMap and restrictPointImage, preserving actual alternating end kinds.
+SharedRVProductImage and unary_product_head_saturated supply the active product
+image and saturation. The pinned Map.descend supplies actual definable head-key
+descent; a new kernel proof derives bijectivity from fixed VF coordinates,
+retained old RV labels and SameRV preservation. Gamma graphs are existential
+compositions of the checked full graphs. This1257 batch compiles, all75 new
+full types/constructors were reviewed, and root/project/type/axiom checks pass.
+These results do not yet establish finite-branch RV-category assembly or5.5.

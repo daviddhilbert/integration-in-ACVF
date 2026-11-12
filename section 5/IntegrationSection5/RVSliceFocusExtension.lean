@@ -70,4 +70,3 @@ theorem rvSliceExtend_gamma {G : SpecialTransformations.Section3.GammaParameters
 
 end Focus
 end IntegrationInACVF.Section5
-
