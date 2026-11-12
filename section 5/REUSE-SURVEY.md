@@ -339,3 +339,15 @@ retained old RV labels and SameRV preservation. Gamma graphs are existential
 compositions of the checked full graphs. This1257 batch compiles, all75 new
 full types/constructors were reviewed, and root/project/type/axiom checks pass.
 These results do not yet establish finite-branch RV-category assembly or5.5.
+
+## Padded unary branch lifts
+
+The1345 batch reuses the actual shared-RV product-image theorem and
+specialRelativeBoundary_restrict to prove saturation of the extended active
+image. Projection bijectivity follows from its actual source padding iso,
+the given local special and the restricted global bijection. SameRV reflection
+uses the pinned special inverse-contractibility theorem and explicit coverage
+by local-output/retained-old-label coordinates. Head-key padding retains full
+Gamma graphs, VF coordinates and old RV indices. All88 new full types and
+constructors were reviewed; root10612/fullproject/type/axiom checks pass.
+These are explicit proved construction criteria, not the final5.8 assembly.

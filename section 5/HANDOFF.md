@@ -112,3 +112,15 @@ Next: publish this coherent batch, continue matched tails and actual RV2 branch
 assembly, then globalSpecial5.5. New compiled scratch CompletedNonrectangleHead,
 CompletedHeadComparison, HeadIsoCoordinates and CanonicalUnaryBranchExtension
 are not part of1257. See active plan. Do not stop at this checkpoint.
+
+Latest1345 checkpoint supersedes earlier pending statements:17 modules/88 new
+full types and constructors manually reviewed in1246 lines; all1257 previous
+FULL types/axioms EXACT unchanged, root10612/fullproject/type/axiom PASS.
+Evidence section5-1345-verified.1257 feature9c0aea0 CI43146870574 and artifact
+13913375877 exact comparison PASS (SHA256
+0ef04ed25115219dfed2aa4ef9f2435ad840a8e6f8e85576bd6556cc66e07453).
+Both matched N-tail branch extensions and generic padded branch-lift/image/
+projection isomorphisms compile and are audited. Final branch assembly remains.
+Compiled scratch profile-transfer and common ORIGINAL rectangle-product head
+pair constructors are newer than1345 and must be ported/audited next; see
+active plan. Continue until whole section is done; do not stop here.

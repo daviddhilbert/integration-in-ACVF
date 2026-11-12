@@ -4,13 +4,13 @@
 The whole section remains in progress: uniform5.8 and the global actual
 SpecialBijection bridge of5.5 remain open.
 
-All1257 complete headline types and axiom audits pass, using only propext,
-Classical.choice and Quot.sound. All1182 previously published full types and
-axiom records are unchanged. All75 new full types and complete constructors
-were reviewed in909 readable lines without omissions. The root build
-completed10595 jobs. Project audits pass for foundation and Sections2,3,4,5;
+All1345 complete headline types and axiom audits pass, using only propext,
+Classical.choice and Quot.sound. All1257 previously published full types and
+axiom records are unchanged. All88 new full types and complete constructors
+were reviewed in1246 readable lines without omissions. The root build
+completed10612 jobs. Project audits pass for foundation and Sections2,3,4,5;
 Sections6,7 have no verifiers and are skipped. Preserved evidence:
-`.scratch/section5-1257-verified/`.
+`.scratch/section5-1345-verified/`.
 
 VERIFICATION.json is now a compact index with source/pin identities, all
 axiom records, per-type hashes and full-receipt identities. VERIFICATION.json.gz
@@ -273,3 +273,33 @@ Artifact13911047289 ZIP SHA256:
 aa86e81f7c540ca5b2474ec5eaa9769e247b953db15b02cd495aa883555d2c49.
 All receipt fields except timestamp, every full type and axiom record, pins,
 source hashes and retained audit-source/log hashes match local evidence exactly.
+
+## Matched tail extensions and actual projection padding,1345 declarations
+
+CompletedNonrectangleMatching constructs matched unary preparations on the
+canonical forms of the completed nonrectangle head sources, over one common
+internal real base. CompletedNonrectangleTails constructs their two actual
+whole-tail branch extensions. CanonicalUnaryBranchExtension computes the exact
+active image and proves it RV-saturated; UnaryBranchProjection and
+UnaryBranchRVProjection construct genuine Gamma projection and RV-category
+isomorphisms. UnaryBranchSaturation proves the whole target is a pullback
+when its inactive input branch was head-saturated. This is a criterion, not
+an assertion that both final tails have been assembled.
+
+RVProjectionPadding retains an actual Gamma projection isomorphism and
+SameRV equivalence. Its source-product criterion is proved from the explicit
+RV-class condition; NonrectangleHeadRVClasses proves that condition for the
+actual old head presentations. HeadProjectionPadding and InactiveBranchPadding
+compute the inverse coordinate projections of actual inactive extensions.
+PaddedUnaryBranchLift constructs the active RV-saturated image and its actual
+Gamma projection padding to the given local prepared target, including suffix
+compatibility, inactive preservation and legal boundaries. No category
+comparison or finite-image conclusion is assumed in its producer.
+
+The1257 checkpoint9c0aea0 passed CI43146870574, job130946630647.
+Artifact13913375877 ZIP SHA256:
+0ef04ed25115219dfed2aa4ef9f2435ad840a8e6f8e85576bd6556cc66e07453.
+All receipt fields except timestamp, all1257 full types/axioms, source hashes,
+pins and retained audit-source/log hashes match local evidence exactly.
+Final tail assembly and the RV2 finite-branch comparison of5.8, and the
+actual global-special bridge of5.5, still remain open.
