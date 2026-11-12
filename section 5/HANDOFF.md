@@ -72,3 +72,30 @@ originalGamma certificate currently has an error. It permits projection into
 an active unary focus only on its locus and allows a separate globally valid
 head tag; this can extend branch foci by inactivity on other RV code branches.
 Continue until the whole section is done; do not stop at this checkpoint.
+
+Latest1182 checkpoint: all44 new full types/constructors over1138 reviewed650
+lines; all1138 previous complete types/axioms EXACT unchanged;1182 audit,
+root10578 and wholeproject PASS. Evidence .scratch/section5-1182-verified/.
+The1138feature9afcf55 CI43137005878 and retained artifact13908972724 compare
+EXACTLY (excepttimestamp); SHA49f17b8dad6020c8849c3dfe4eb4f1a57056b9b8a91002d6744aa1e7ea1577d0.
+Full versioned receipts now reside losslessly in VERIFICATION.json.gz; the JSON
+index records all source/pin/type/axiom identities and hashes. Run
+python3 'section 5/retain_verification.py' after a fresh passed audit to update
+both files. It rejects changed source inventory, source/audit hashes and a
+failed gzip round-trip. This avoids the100MiB GitHub blob limit without
+changing the complete raw local/CI receipts or exact artifact comparisons.
+
+Constructed global first stages: GlobalNonrectangleHeads, RVSliceTranslation,
+BranchCanonicalFocus and FocusExtension retain actual full-RV loci, Gamma
+certificates, relative-special alternation and exact active/inactive images.
+GammaRVPredicateChain extends actual unary chains on arbitrary RV-code
+branches, retaining suffix/coverage and inactive VF/SameRV preservation.
+Remaining5.8: rectangle first-stage preparation on the inactive canonical
+rectangle image; preserve N head saturation; glue actual unary tails and
+construct the final RV-category comparison. Remaining5.5: actual globalSpecial
+bridge with full-RV locus compatibility and canonical RV presentation alignment.
+Useful new scratch proofs (individually compiled, not inventory): EmptyFocusDraft,
+RelativeSpecialRestrictionDraft, CanonicalHeadGeometryDraft,
+RVSliceTranslationImagesDraft, TranslationExtensionDraft,
+MixedUnaryPreparationOverDraft. See .scratch/SECTION5-ACTIVE-PLAN.md for sessions.
+Continue work; this checkpoint does not complete the section.

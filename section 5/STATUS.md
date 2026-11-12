@@ -4,13 +4,20 @@
 The whole section remains in progress: uniform5.8 and the global actual
 SpecialBijection bridge of5.5 remain open.
 
-All1138 complete headline types and axiom audits pass, using only propext,
-Classical.choice and Quot.sound. All1031 previously published full types and
-axiom records are unchanged. All107 new full types and complete constructors
-were reviewed in1495 readable lines without omissions. The root build
-completed10569 jobs. Project audits pass for foundation and Sections2,3,4,5;
+All1182 complete headline types and axiom audits pass, using only propext,
+Classical.choice and Quot.sound. All1138 previously published full types and
+axiom records are unchanged. All44 new full types and complete constructors
+were reviewed in650 readable lines without omissions. The root build
+completed10578 jobs. Project audits pass for foundation and Sections2,3,4,5;
 Sections6,7 have no verifiers and are skipped. Preserved evidence:
-`.scratch/section5-1138-verified/`. Hashes and scope: VERIFICATION.json.
+`.scratch/section5-1182-verified/`.
+
+VERIFICATION.json is now a compact index with source/pin identities, all
+axiom records, per-type hashes and full-receipt identities. VERIFICATION.json.gz
+retains the complete unmodified receipt, including every full type, losslessly.
+Decompress it with `gzip -dc 'section 5/VERIFICATION.json.gz'`. The retention
+helper checks source/audit hashes, exact source inventory and byte-for-byte
+compression round-trip. Raw local and CI audit receipts keep the same format.
 
 The807 checkpoint526f674 passed CI43118540581 and an exact retained artifact
 comparison of all807 types/axioms, source hashes, pins and audit logs.
@@ -213,3 +220,32 @@ Scope: ACVF00, genuine saturation with aleph0≤κ, small G.real, VFFieldBase
 G.real and a named Gamma valueδ>1. There is no internal-code smallness premise.
 This settles the nonrectangle-family case, not the finite-branch assembly of
 Corollary5.8. That assembly and the global-special bridge of5.5 remain open.
+
+## Constructed branch extension and global first stages,1182 declarations
+
+GammaRVPredicateChain.gamma_unary_chain_rvPredicateLift constructs an actual
+alternating relative-special chain extension on any RV-code branch. It proves
+the active projection square, full originalGamma map/target certificates,
+old-label suffix compatibility, label coverage, inactive VF preservation and
+inactive SameRV preservation. A globally valid head tag is explicit at each
+focus boundary; it is constructed by the canonical steps. PartialCoordinateFocus
+and RVPredicateFocus construct the actual focus with its full-RV-invariant locus.
+These are embedding and boundary criteria, not a claimed final branch assembly.
+
+RVSliceTranslation.rvSlice_translation_preparation constructs one common real
+presentation, an actual canonical/centripetal preparation of the selected
+RV-code slice, and its extension to the whole source. Both Gamma graphs, the
+legal relative-special boundary, the complete on/off formula and exact active
+target image are proved. BranchCanonicalFocus also computes the exact inactive
+canonical image. GlobalNonrectangleHeads.global_nonrectangle_head_preparations
+constructs the shared position and both whole-source extensions in native and
+swapped order; their nonrectangle branch targets are actually head-saturated.
+InactiveHeadSaturation proves that a head-saturated branch stays head-saturated
+under an inactive unary extension fixing its VF coordinate and preserving RV keys.
+The rectangle stages, tail gluing, and final RV-category assembly still remain.
+
+The1138 proof checkpoint9afcf55 passed CI43137005878, job130914649155.
+Artifact13908972724 has SHA256
+49f17b8dad6020c8849c3dfe4eb4f1a57056b9b8a91002d6744aa1e7ea1577d0.
+Every receipt field except timestamp, all1138 full types/axioms, source hashes,
+pins and retained audit-source/log hashes match the local receipt exactly.

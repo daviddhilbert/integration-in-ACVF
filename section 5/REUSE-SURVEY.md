@@ -311,3 +311,19 @@ is needed for those set-theoretic operations. NonrectangleRVComparison transfers
 the resulting actual Gamma RV2 iso to both standard contraction objects.
 All107 new heads/constructors manually reviewed1495lines;1138 audit and
 root10569/fullproject PASS. Finite-branch gluing and5.5 remain open.
+
+## Explicit branch extension and global slice translation,1182 declarations
+
+PartialCoordinateFocus and FocusExtension reuse the existing focus geometry,
+intersecting loci with the ambient RV hull and supplying a separate globally
+valid head tag. RVPredicateFocus transports arbitrary existing RV-code
+predicates through hulls. GammaRVPredicateChain follows the checked unary lift
+induction with actual partial foci, including alternation boundaries, suffix
+compatibility, coverage and inactive RV-key preservation. No compactness-gluing
+conclusion is assumed. RVSliceTranslation constructs a common real presentation
+and actual selected-slice and whole-source canonical/focus maps; exact branch
+images and Gamma certificates are proved. The global nonrectangle producer
+supplies the same actual position for both orders and proves selected-target
+head saturation from the checked cell identities. All44 new complete types
+and constructors reviewed650lines;1182 audits, root10578 and fullproject PASS.
+The finite program/category assembly and5.5 remain open.
