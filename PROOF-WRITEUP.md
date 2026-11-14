@@ -445,3 +445,13 @@ graphs, interprets the density ratio exactly, and bounds the exception by
 its finite map. A finite internal code extension retains the full original
 Gamma chart, without a generation claim. This is checked implementation of
 the pending compactness step; witness promotion and7.5 are still open.
+
+
+Volume-object promotion now preserves full original-Gamma coordinate and
+density graphs exactly. Auxiliary names may occur in a finite exception
+certificate and are existentially quantified in its first-order validity;
+the geometric objects and comparison chart remain independent of them.
+Soundness reconstructs an actual volume isomorphism with that fixed chart.
+This checked implementation does not assume a Gamma-definable choice of
+exception map or auxiliary names. Complete comparison-witness promotion
+and the7.5 common-blowup comparison remain unfinished.

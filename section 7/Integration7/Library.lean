@@ -232,4 +232,15 @@ import Integration7.VolumeSchemaValiditySemantics
 import Integration7.WeightedJacobianSemantics
 import Integration7.WeightedPairCoordinates
 
+import Integration7.ExtraVolumeCertificateSemantics
+import Integration7.ExtraVolumeParameters
+import Integration7.ExtraVolumeRVValidity
+import Integration7.GammaDensityObjects
+import Integration7.GammaVolumeCertificateContexts
+import Integration7.GammaVolumeCertificateRealization
+import Integration7.GammaVolumeExistentialCertificates
+import Integration7.GammaVolumeObjectPromotion
+import Integration7.NonzeroDensityFormulas
+import Integration7.PromotedVolumeSchemaRows
+
 /-! Reconstructed Section 7 prerequisites. The section is not yet complete. -/

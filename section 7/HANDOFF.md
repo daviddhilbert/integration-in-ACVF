@@ -1,7 +1,7 @@
 # Section 7 continuation
 
 The current checked reconstruction checkpoint is described in `STATUS.md`:
-220 source modules plus their library entry point, with 947 distinct
+230 source modules plus their library entry point, with 971 distinct
 exported types and axiom reports inspected. The recovery account below
 records the earlier salvage stage; its two-module verification count is
 historical, not the current total. Additional reconstruction is continuing
@@ -104,3 +104,17 @@ exports passed the full712-line audit and the affected10,271-job build.
 Next promote actual original-base witnesses, then finish volume-blowup
 schemata, finite-cover/gluing and selected7.5. The internal extension still
 carries no VF-field or VF/Gamma generation claim. Do not repeat older audits.
+
+
+The twentieth batch promotes actual original-Gamma volume objects and
+proves exact canonical row interpretations. Its existential exception
+certificate schema has auxiliary parameters only in the exception/map;
+all geometry, densities and the comparison chart stay over the original
+parameter block. Validity is original-base definable and sound realization
+preserves the chart exactly. The24 exports passed full535-line review and
+the10,282-job affected build. Next prove comparison-witness promotion:
+encode the actual exception map over finitely many auxiliary real names
+(eliminate term-closure parameters first), establish ordinary/Gamma/RV
+validity from the actual isomorphism, then continue volume-blowup witness
+schemata/compactness/gluing. The strict earlier schema remains sound but
+must not be assumed to encode an arbitrary original-Gamma exception map.

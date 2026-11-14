@@ -6,11 +6,11 @@ as accepted by the author and recorded in `TARGETS.md`.
 
 ## Current checked local boundary
 
-`Integration7.Library` integrates 220 source modules plus its entry point.
-Full exported types and allowed-axiom reports for 947 distinct declarations
+`Integration7.Library` integrates 230 source modules plus its entry point.
+Full exported types and allowed-axiom reports for 971 distinct declarations
 have been inspected in targeted incremental batches. Only `propext`,
 `Classical.choice`, and `Quot.sound` occur. The latest affected-library
-build passed, including 10,271 jobs counting its cached dependency closure.
+build passed, including 10,282 jobs counting its cached dependency closure.
 `VERIFICATION.json` seals this source boundary and records the batch receipts.
 Unchanged earlier batches were not manually audited again.
 
@@ -344,3 +344,29 @@ The converse promotion of genuine original-base volume witnesses into
 these schemata is next. Elementary/iterated/common volume-blowup schemata,
 the finite witness cover and indexed gluing, and positive selected7.5
 remain open. This realization theorem does not discharge those obligations.
+
+
+## Volume-object promotion and existential exception certificates
+
+Actual original-Gamma volume presentations now promote to valid uniform
+coordinate-and-density schemata, with exact raw graph rows and exact
+canonical `RVVolumeSchemaRow` interpretations. Density fibres need not be
+finite. A globally nonzero guard leaves the given nonzero density row
+unchanged; the coordinate map retains its actual finite bound.
+
+`GammaRVVolumeIsoCertificateSchema` permits a finite auxiliary sorted tuple
+only in the exceptional set and its finite map. Its validity existentially
+quantifies that tuple, and is proved definable over the original real/Gamma
+base. Source/target objects, densities, chart and finite polynomial supports
+use only the original parameter block. Every valid row realizes an actual
+RVVolumeIso with exactly that original chart in a small containing context.
+This avoids demanding original-Gamma definability of an arbitrarily chosen
+exception map. No definable choice of auxiliary parameters is assumed.
+
+The twentieth 10-module/24-export batch passed full535-line type/axiom
+inspection and the affected10,282-job Library build. Complete comparison-
+witness promotion is still open: derive the actual finite exceptional-map
+encoding over auxiliary parameters, verify the promoted ordinary/Gamma/RV
+clauses, then assemble elementary/iterated/common volume-blowup schemata,
+finite-cover/gluing and positive selected7.5. No containing context gains
+VF-field or VF/Gamma generation merely by adding internal codes.

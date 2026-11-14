@@ -304,3 +304,19 @@ The original Gamma chart is retained exactly in the conclusion. No pin,
 citation, graph-field premise or generation assumption was added. The
 10-module/30-export batch passed712-line full review and the10,271-job build.
 Promotion and complete common-blowup witness compactness remain open.
+
+
+## Twentieth reconstruction batch: object promotion and exception names
+
+Native gamma_sorted_finite_object_promotion and tuple-relation promotion
+are reused on the actual coordinate graph and on the density viewed as an
+ordinary Gamma RV-valued function. Its fibres are not required finite.
+The full density graph and a nonzero guard prove exact promoted rows.
+Native first-order row projection existentially hides auxiliary exception
+names. Source/target coordinate and density graphs and the comparison
+chart never depend on those names. Exact semantic interpretation and
+finite-map dimension bounds prove soundness in a containing BaseContext.
+No new citation, pin, definable-choice principle or generation assumption
+was added. The10-module/24-export batch passed535-line full review and the
+10,282-job affected build. Promotion of complete comparison witnesses and
+the later common-blowup compactness/gluing are still open.
