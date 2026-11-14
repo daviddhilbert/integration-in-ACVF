@@ -1,6 +1,6 @@
 {
   "status": "Manually reviewed reconstruction boundary",
-  "scope": "184 reconstructed/recovered source modules plus their library; not full Section 7 completion",
+  "scope": "192 reconstructed/recovered source modules plus their library; not full Section 7 completion",
   "lean_toolchain": "leanprover/lean4:v4.35.0",
   "dependency_pins": {
     "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
@@ -32,7 +32,7 @@
     "section 7/Integration7/VolumeDensityRescaling.lean": "34e2da86c631eb869d07bbfdf501b249fb658583b99d0a19b018dab9a7f96b52",
     "section 7/Integration7/VolumeFormGluing.lean": "ca4cd92dee9c4ac0ba02b8606d1c868efe6994ca292f6c033185d5affd4928fd",
     "section 7/Integration7/VolumeForms.lean": "eda92eb71d08a2e59f765e4e071298bdc851522c80e1ac9a2885bbcaac1c9742",
-    "section 7/Integration7/Library.lean": "4f8692e17960953498a42d487dbfb0e6532f7dec3e575abf62a25eed9416785b",
+    "section 7/Integration7/Library.lean": "689556b1f8acc4957730d2800626bf8a07c07dbe4401bd5f5d821664a392b86b",
     "section 7/Integration7/CoordinateRVJacobian.lean": "35c6b2e73cc0c254084905786f16606631f53660e41982d1610bfe8fa536758e",
     "section 7/Integration7/ElementaryBlowupConstruction.lean": "b25f4eef226e7141c639aecd347566c4e384f2b582333bd9ddb751fd66c72945",
     "section 7/Integration7/EssentialBlowupChart.lean": "68b8614debb32e8ce5c29ba325420db01f00b83f96ed22dcc7cca2184164948b",
@@ -192,7 +192,15 @@
     "section 7/Integration7/VolumeFamilyChartGraphs.lean": "a3c3d75ee830f39653feadc7c7c927650bb9f6125f402961f0add95abea95c87",
     "section 7/Integration7/VolumeFamilyChartValues.lean": "c7390ecb0abd1e2d3780ba61b423d3886e4ff41ea09fa5370ac5789f13dfc5ba",
     "section 7/Integration7/VolumeFamilyNormalization.lean": "0b7364e17b77edf89de96df83395a930ab941fd77d7af8c412d450c62688be06",
-    "section 7/Integration7/VolumeIsoParameterExtension.lean": "41038e1243b9ef10a3ad5eac79e51028530b83ae2870fc34c2541b234cfbcc63"
+    "section 7/Integration7/VolumeIsoParameterExtension.lean": "41038e1243b9ef10a3ad5eac79e51028530b83ae2870fc34c2541b234cfbcc63",
+    "section 7/Integration7/BoundedVolumeIsoCertificates.lean": "1b20d31b26cfa512dcd233e957a7ee5e14e811668f821afbf2ee35e68015e05f",
+    "section 7/Integration7/EssentialFiniteVolumeSchemata.lean": "8bf2185809361f873fb482a1e959c3b389799ab6df1efde0147600bce5f988d2",
+    "section 7/Integration7/EssentialGammaVolumeSchemata.lean": "40e33a589a4b19e8e5a775c73f34d7e5645dfa54062d8a33e843d951e3fa4e5d",
+    "section 7/Integration7/FiniteRVMapBounds.lean": "5ed69740ad3d0696c42341f53d48799ef2d3e8241a1b48138fca6d57d19caa5c",
+    "section 7/Integration7/GammaDefinableTransforms.lean": "e497f8c0199aa4b9456063a3d6d95d3944352c0ecfc290e1566c2fabef0caa3c",
+    "section 7/Integration7/GammaVolumeChartGraphs.lean": "28713d92b6d185ddcfdd5e90a049020fc3d25e6a42a208afff17f1434d4d59e8",
+    "section 7/Integration7/GammaVolumeSchemaRestrictions.lean": "c1faf0fcf407f4dea7a5f9f0f9da9d709ec27ee70b1d5eff8cc9d5989c742258",
+    "section 7/Integration7/TupleVolumeChartGraphs.lean": "c1c72f639fdd109a078c8138894234a4a2157884df92d381a1772cacf158200e"
   },
   "declarations": [
     "IntegrationInACVF.Section7.centralPowersOreSet",
@@ -1003,7 +1011,37 @@
     "IntegrationInACVF.Section7.finiteVolumeIsoExtend",
     "IntegrationInACVF.Section7.finiteVolumeIsoExtend_apply",
     "IntegrationInACVF.Section7.RVVolumeIso.extend",
-    "IntegrationInACVF.Section7.RVVolumeIso.extend_apply"
+    "IntegrationInACVF.Section7.RVVolumeIso.extend_apply",
+    "IntegrationInACVF.Section7.RVVolumeIsoCertificate.exists_uniform_bound",
+    "IntegrationInACVF.Section7.RVVolumeIso.exists_bounded_certificate",
+    "IntegrationInACVF.Section7.nonzeroRVTuples_definable",
+    "IntegrationInACVF.Section7.essentialFiniteVolumeSchema",
+    "IntegrationInACVF.Section7.essentialFiniteVolumeSchema_valid",
+    "IntegrationInACVF.Section7.essentialFiniteVolumeSchema_rowVolume",
+    "IntegrationInACVF.Section7.essentialFiniteVolumeSchema_rowDomain",
+    "IntegrationInACVF.Section7.essentialDensityGraph",
+    "IntegrationInACVF.Section7.essentialDensityGraph_definable",
+    "IntegrationInACVF.Section7.essentialGammaVolumeSchema",
+    "IntegrationInACVF.Section7.essentialGammaVolumeSchema_valid",
+    "IntegrationInACVF.Section7.essentialGammaVolumeSchema_rowDensity",
+    "IntegrationInACVF.Section7.rawRVMapReverseGraph",
+    "IntegrationInACVF.Section7.rawRVMapReverseGraph_definable",
+    "IntegrationInACVF.Section7.rawRVMapReverseGraph_finite",
+    "IntegrationInACVF.Section7.finiteRVMap_uniform_bound",
+    "IntegrationInACVF.Section7.gamma_definable_transform",
+    "IntegrationInACVF.Section7.gamma_tupleVolumeChartGraph_definable",
+    "IntegrationInACVF.Section7.gamma_tupleVolumeChartGraphUnion_definable",
+    "IntegrationInACVF.Section7.restrictedVolumeGraph",
+    "IntegrationInACVF.Section7.restrictedVolumeGraph_definable",
+    "IntegrationInACVF.Section7.restrictedVolumeDomain",
+    "IntegrationInACVF.Section7.volumeRestrictedSchema",
+    "IntegrationInACVF.Section7.volumeRestrictedSchema_valid",
+    "IntegrationInACVF.Section7.volumeRestrictedSchema_rowVolume",
+    "IntegrationInACVF.Section7.tupleVolumeFamily",
+    "IntegrationInACVF.Section7.tupleVolumeChartGraph",
+    "IntegrationInACVF.Section7.mem_tupleVolumeChartGraph",
+    "IntegrationInACVF.Section7.tupleVolumeChartGraph_uniform",
+    "IntegrationInACVF.Section7.tupleVolumeChartGraph_proper"
   ],
   "manual_type_review_batches": [
     {
@@ -1073,6 +1111,10 @@
     {
       "receipt": "recovered-fifteenth-geometry-receipt.json",
       "reviewed_lines": 609
+    },
+    {
+      "receipt": "recovered-sixteenth-geometry-receipt.json",
+      "reviewed_lines": 425
     }
   ]
 }

@@ -1,7 +1,7 @@
 # Section 7 continuation
 
 The current checked reconstruction checkpoint is described in `STATUS.md`:
-184 source modules plus their library entry point, with 809 distinct
+192 source modules plus their library entry point, with 839 distinct
 exported types and axiom reports inspected. The recovery account below
 records the earlier salvage stage; its two-module verification count is
 historical, not the current total. Additional reconstruction is continuing
@@ -70,3 +70,9 @@ chart graphs and an actual finite certificate for every RV volume
 isomorphism. Complete common-blowup witness schemata, their finite cover
 and the selected contraction comparison remain to be proved. Small finite
 parameter contexts do not supply field or generation hypotheses.
+
+The sixteenth batch completes original-Gamma descent of the finite chart
+formulas and uniform bounds for exceptional maps. Exact essential finite
+and density schemata are checked. The next concrete step is encoding the
+volume correspondence of a chart and its first-order volume validity, then
+promoting and gluing complete common-blowup witnesses.

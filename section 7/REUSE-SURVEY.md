@@ -247,3 +247,17 @@ The 14-module/45-export batch passed compilation, its complete 609-line
 type/axiom review, and the affected 10,235-job library build. These formulas
 encode actual chart values; they do not assume a definable common-blowup
 relation or supply the unfinished witness cover for7.5.
+
+## Sixteenth reconstruction batch: original-base chart coding
+
+The generic finite RV-map bound reuses the already checked Section6
+gamma_uniform_finite_tuple_rows theorem, with the empty imaginary base and
+explicit normalization transport in a canonical model. Gamma chart descent
+uses the original invariant Relation interface and equality of representative
+rows, rather than extending the conclusion's base by chosen representatives.
+The tuple coordinate operation has separately proved uniform definability
+and proper-sort preservation. Exact schema restrictions reuse native
+gamma_family_row_exists_definable and finite-map row validity; reverse-fibre
+bounds decrease on restriction. No pin or reference changed. The8-module/
+30-export batch passed complete425-line type/axiom review and the affected
+10,243-job Library build; these checks do not certify full7.5.

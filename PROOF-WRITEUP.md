@@ -412,3 +412,10 @@ finite polynomial supports and smaller-dimensional exceptions needed by
 the compactness step for7.5. Its generic-cover argument reuses the checked
 predecessor's residue charts and full-dimension argument. This is verified
 implementation detail; the complete7.5 comparison remains open.
+
+
+The original-Gamma chart descent is now verified: the real chart operation
+is uniform in representative codes, and equal Gamma codes have identical
+input rows and hence identical output rows. Essential schema restriction
+retains the density and the finite bound. These are implementation details
+of the pending compactness argument, not a new proof of7.5.

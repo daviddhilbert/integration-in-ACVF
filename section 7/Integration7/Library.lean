@@ -192,4 +192,13 @@ import Integration7.VolumeFamilyChartValues
 import Integration7.VolumeFamilyNormalization
 import Integration7.VolumeIsoParameterExtension
 
+import Integration7.BoundedVolumeIsoCertificates
+import Integration7.EssentialFiniteVolumeSchemata
+import Integration7.EssentialGammaVolumeSchemata
+import Integration7.FiniteRVMapBounds
+import Integration7.GammaDefinableTransforms
+import Integration7.GammaVolumeChartGraphs
+import Integration7.GammaVolumeSchemaRestrictions
+import Integration7.TupleVolumeChartGraphs
+
 /-! Reconstructed Section 7 prerequisites. The section is not yet complete. -/
