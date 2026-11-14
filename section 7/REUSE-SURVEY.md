@@ -274,3 +274,18 @@ small-dimensional exceptional maps give both directions of the fixed-chart
 volume-isomorphism criterion. No external theorem, pin change, generation
 claim or new geometric premise was introduced. The8-module/29-export batch
 passed full418-line type/axiom review and the10,251-job affected Library build.
+
+## Eighteenth reconstruction batch: full volume validity formulas
+
+The native RVFinitaryFunction.dimension_image_le theorem applies to the
+singleton values of an actual definable map. Together with native finite
+RV append maps it moves exceptional sets to coordinate-and-density labels
+without increasing dimension. Their finite maps and uniform bounds are
+derived from the checked source certificate. Native real/Gamma row
+projection/subset operations express Gamma product balance and the
+supported Jacobian graph with the actual density ratio. The native
+GammaFiniteRVIsoSchema is reused on the exact essential source/target
+schemata. No graph-field premise, outside citation, generation assumption
+for internal codes or dependency change was introduced. The10-module/
+49-export batch passed639-line full review and the10,261-job Library build.
+Schema realization/promotion is explicitly outside this checked boundary.

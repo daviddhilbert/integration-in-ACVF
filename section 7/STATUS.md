@@ -6,11 +6,11 @@ as accepted by the author and recorded in `TARGETS.md`.
 
 ## Current checked local boundary
 
-`Integration7.Library` integrates 200 source modules plus its entry point.
-Full exported types and allowed-axiom reports for 868 distinct declarations
+`Integration7.Library` integrates 210 source modules plus its entry point.
+Full exported types and allowed-axiom reports for 917 distinct declarations
 have been inspected in targeted incremental batches. Only `propext`,
 `Classical.choice`, and `Quot.sound` occur. The latest affected-library
-build passed, including 10,251 jobs counting its cached dependency closure.
+build passed, including 10,261 jobs counting its cached dependency closure.
 `VERIFICATION.json` seals this source boundary and records the batch receipts.
 Unchanged earlier batches were not manually audited again.
 
@@ -35,8 +35,8 @@ order are retained. Positive selected fibres keep actual finiteness explicit.
 
 Receipts are under `.scratch/recovery/`: the initial algebra and
 groupification batches contribute 34 exports; the first geometric batch
-contributes 86, the second 59, the third 89, the fourth 26, the fifth 24, the sixth 70, the seventh 56, the eighth 65, the ninth 56, the tenth 23, the eleventh 43, the twelfth 47, the thirteenth 43, the fourteenth 43, the fifteenth 45, the sixteenth 30, and the seventeenth 29.
-The latest receipt is `recovered-seventeenth-geometry-receipt.json`.
+contributes 86, the second 59, the third 89, the fourth 26, the fifth 24, the sixth 70, the seventh 56, the eighth 65, the ninth 56, the tenth 23, the eleventh 43, the twelfth 47, the thirteenth 43, the fourteenth 43, the fifteenth 45, the sixteenth 30, the seventeenth 29, and the eighteenth 49.
+The latest receipt is `recovered-eighteenth-geometry-receipt.json`.
 These checks cover currently available sources, not the historical missing
 1,201-module/4,644-declaration working copy.
 
@@ -295,3 +295,29 @@ the affected Library build passed10,251 jobs. The remaining encoding step
 is to package all coordinate/density/chart/exception formulas into complete
 first-order isomorphism and common-blowup schemata, prove promotion and
 finite-cover/gluing, and apply them to the positive selected7.5 comparison.
+
+## Volume-isomorphism schema validity
+
+The eighteenth batch proves that the actual essential coordinate-and-density
+map has finite fibres. Imaging a small exception preserves its dimension
+bound, and pulling it back through this map proves the converse. Every
+actual RV volume isomorphism therefore supplies finite chart supports and
+a bounded exceptional map on the fixed coordinate-and-density label space.
+`rvVolumeIsoOfWeightLabelCharts` constructs the actual volume isomorphism
+from those charts and the pointwise Gamma equation.
+
+The weighted finite schema retains the original finite bound and exact
+coordinate/density values. The density-ratio term uses released RV inversion.
+Both pointwise Gamma validity and supported RV-Jacobian validity have
+first-order loci over the original real/Gamma base.
+`GammaRVVolumeIsoSchema` combines the two volume schemata, essential
+comparison chart, finite polynomial supports and an exception schema of
+explicitly smaller degree. Its complete validity locus is proved definable.
+
+All49 new exports passed complete639-line type/axiom review and the affected
+Library build passed10,261 jobs. Schema realization and promotion of actual
+original-Gamma witnesses are not yet proved; neither the common-blowup
+witness cover/gluing nor7.5 is claimed. Preserve original-base graph
+definability when constructing those witnesses: an arbitrary map in a
+containing context with extra representative codes does not supply it.
+Internal containing contexts do not acquire VF/Gamma generation.

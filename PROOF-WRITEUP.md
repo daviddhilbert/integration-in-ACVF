@@ -427,3 +427,12 @@ coordinate product times density, using equality of valuations. A finite
 polynomial chart certificate handles the RV equation outside its explicit
 small-dimensional exception. This prepares the pending7.5 compactness step
 and is not a completed replacement proof of that lemma.
+
+
+The bounded exception can now be coded on the actual coordinate-and-density
+label space: the finite weight map images the original small exception,
+and its finite pullback proves soundness. The original-Gamma first-order
+validity locus for the resulting volume-isomorphism schema is checked.
+Realization/promotion and the7.5 compactness/gluing argument remain open;
+this is still verified implementation detail rather than a completed
+replacement proof of7.5.

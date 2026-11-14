@@ -210,4 +210,15 @@ import Integration7.RVTupleProductTerms
 import Integration7.VolumeGammaWeightTuples
 import Integration7.VolumeSchemaCorrespondences
 
+import Integration7.FiniteImageVolumeExceptions
+import Integration7.GammaVolumeGammaValidity
+import Integration7.GammaVolumeIsomorphismSchemata
+import Integration7.GammaVolumeRVValidity
+import Integration7.GammaWeightedVolumeGraphs
+import Integration7.GammaWeightedVolumeSchemata
+import Integration7.RVDensityRatioGraph
+import Integration7.VolumeGammaWeightMaps
+import Integration7.WeightLabelVolumeCertificates
+import Integration7.WeightedJacobianFormulas
+
 /-! Reconstructed Section 7 prerequisites. The section is not yet complete. -/

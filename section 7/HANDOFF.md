@@ -1,7 +1,7 @@
 # Section 7 continuation
 
 The current checked reconstruction checkpoint is described in `STATUS.md`:
-200 source modules plus their library entry point, with 868 distinct
+210 source modules plus their library entry point, with 917 distinct
 exported types and axiom reports inspected. The recovery account below
 records the earlier salvage stage; its two-module verification count is
 historical, not the current total. Additional reconstruction is continuing
@@ -83,3 +83,13 @@ Its converse constructs the actual RV volume isomorphism from its finite
 chart certificate and the explicit Gamma product-balance formula. Next:
 assemble complete coordinate/density/chart/exception witness schemata and
 their validity/promotion/finite-cover/gluing proofs.7.5 is still open.
+
+The eighteenth batch establishes bounded exceptions on coordinate-and-
+density labels, both original-Gamma validity predicates and the finite
+`GammaRVVolumeIsoSchema.valid_definable` interface. Its structure has formula
+data, not an assumed Jacobian proof. Next prove the semantic coordinate
+identities for `weightedJacobianFormula`, realize valid schema rows as
+actual volume isomorphisms, and promote genuine original-base witnesses.
+Do not infer original-Gamma definability from an arbitrary comparison over
+a context containing extra representative codes. Complete common-blowup
+schemata, their finite cover/gluing and positive selected7.5 remain open.
