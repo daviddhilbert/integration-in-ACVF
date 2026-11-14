@@ -545,3 +545,223 @@ and the final positive selected Lemma 7.5 remain open. This boundary is
 the next authorized backup, 100 modules after the 264-module checkpoint.
 GitHub Actions run43591052527 completed successfully for the earlier
 252-module revision; it does not certify this newer boundary.
+
+
+## Unary volume common blowups
+
+`corollary_6_11_unary_volume_presented` constructs actual common forward
+volume blowups from a unary volume-preserving lift with its full original
+Gamma graph. Its source objects have literal finite-volume presentations
+and densities recorded as old RV labels. Both compatible special
+preparations are constructed in a genuine small containing context.
+The terminal RV volume isomorphism follows from the actual conjugated
+volume equation and the checked lift descent. The finite family of extra
+Gamma representatives is tracked explicitly; temporary contexts carry
+no additional VF-field or generation assumption.
+
+The 13-module/28-export batch passed the complete 684-line type/axiom
+review and the 10,778-job affected Library build. The checked boundary is
+377 modules plus Library, with 1,359 audited exports. The remaining work
+for Lemma 7.5 is to pass from unary slices to arbitrary standard
+contractions and complete the ordered head induction. Later Section 7
+statements also remain open.
+
+The authorized 364-module/1,331-export backup was published as
+`dfcd19415d6ea7ba4c4cbaaec75277d1ae8a9064` on
+`section-7/reconstructed-foundation`; all 439 file blob hashes, its parent,
+tree, branch head and unchanged main revision were verified. The local
+source archives were reopened and byte-verified at that boundary. The
+next backup remains near 464 modules; this batch adds no remote push.
+
+
+## RV slice densities and promotion in containing contexts
+
+The thirty-second batch constructs RV-prefix slice volume schemata with
+retained density labels, proves a uniform valid bound for every slice,
+and constructs `gammaVolumeSliceDensityAssemblyIso` preserving the full
+coordinate tuple and density. Given original-Gamma common formula
+witnesses on every slice, `gamma_volume_slice_density_common_uniformity`
+constructs the presentations and containing contexts and gives actual
+common forward blowups of the original objects.
+
+`finite_auxiliary_map_promotion_free` extracts finite sorted parameters
+from a genuine exception map in any real context. Consequently
+`gamma_volume_row_comparison_promotion_free` needs no equation identifying
+the whole context with the named term closure. Its full original-Gamma
+chart remains an explicit input. Object promotion likewise works from
+its exact original-Gamma domain, coordinate and density graphs.
+
+The eight-module/15-export batch passed its complete 360-line type/axiom
+review and the 10,791-job affected Library build. The checked boundary is
+385 modules plus Library, with 1,374 audited exports. To apply the slice
+uniformity theorem to the unary preparation proof, its actual focus
+chains must still supply original-Gamma formula witnesses. This has not
+been assumed or counted as established. Arbitrary same-order standard
+contractions, the positive selected Lemma 7.5 and later statements remain
+open. The next authorized GitHub backup remains near 464 modules.
+
+
+## Original-Gamma volume chart interfaces
+
+The thirty-third batch proves the full original-Gamma graph for retained
+coordinate densities, canonical native objects, essential domains and
+canonical coordinate-and-density preserving isomorphisms. These graphs
+are closed under composition and inverse. Original-Gamma admissibility
+transfers to a promoted schema row while retaining the original algebraicity
+base. `gamma_volume_blowup_row_promotion` constructs a formula witness
+from canonical blowup endpoint charts with those full Gamma graphs,
+without requiring the containing real context to equal the named closure.
+
+The six-module/13-export batch passed its complete 360-line type/axiom
+review and the 10,797-job affected Library build. The checked boundary is
+391 modules plus Library, with 1,387 audited exports. Instantiating these
+interfaces on the actual partial-focus chains, producing their formula
+witnesses and finishing arbitrary contraction comparison remain open.
+The final positive selected Lemma 7.5 is still in progress. The next
+GitHub backup remains near 464 modules.
+
+
+## Original-Gamma partial-focus volume witnesses
+
+The thirty-fourth batch constructs full and partial focus volume charts
+over the original Gamma base. Canonical transport commutes with the
+actual elementary object, using the proper RV multiplication formula.
+The full-focus chart and unchanged-complement chart preserve every
+coordinate and the retained density. Their coproduct and pullback partition
+charts remain original-Gamma definable. Finally,
+`gamma_partial_focus_volume_schema` constructs a genuine finite volume
+blowup formula witness in an arbitrary containing real context. No equality
+between that context and the original named closure is assumed.
+
+The 13-module/23-export batch passed its complete 619-line type/axiom
+review and the 10,837-job affected Library build. The checked boundary is
+404 modules plus Library, with 1,410 audited exports. Chain induction,
+unary family witness gluing and arbitrary contraction comparison remain
+open; positive selected Lemma 7.5 is still in progress. The next GitHub
+backup remains near 464 modules.
+
+
+## Unary common-volume-blowup formula witnesses
+
+The thirty-fifth batch proves `gamma_unary_special_volume_schema_pair`
+for complete alternating unary special chains, including canonical steps
+absorbed into source charts. `gamma_unary_volume_common_schema` combines
+two actual volume-preserving preparations and the original-Gamma terminal
+comparison into a finite common-blowup formula witness. The containing
+context may have extra internal real codes; its VF-field generation is
+not assumed. VF-fixed, density-preserving Gamma lift comparisons are
+realized in genuine small contexts and glue across all RV-prefix slices.
+
+The eight-module/10-export batch passed its complete 544-line type/axiom
+review and the 10,850-job affected Library build. The checked boundary is
+412 modules plus Library, with 1,420 audited exports. Arbitrary standard
+contraction natural maps can change VF coordinates, so their actual
+Jacobian-one/volume comparison still has to be connected to this slice
+argument. The ordered head induction and full positive selected Lemma 7.5
+remain open. The next GitHub backup remains near 464 modules.
+
+
+## Natural unary contraction volume maps
+
+The thirty-sixth batch proves that an actual VF-arity-one relatively
+special map is a special bijection over the original real base. Therefore
+every arbitrary unary ordered/standard contraction natural map has VF
+Jacobian one almost everywhere. Its normalized lift bijection preserves
+the transported volume form, whose retained density remains the original
+old-label coordinate. The mixed Jacobian is unchanged by altering only
+output RV labels. Finite-fibre pullback and composition control exceptions
+on prepared RV families, and their explicit VF-base projections are
+constructed and proved finite-to-one.
+
+The exact original-Gamma point formulas of selected-contraction and
+prepared-family slice lift charts are checked. Their small-context
+realizations preserve volume whenever their VF components follow the
+checked Jacobian-one maps. `gamma_unary_common_from_lift_charts` combines
+two such charts, allowing the VF coordinates to move, into a finite
+common-volume-blowup formula witness over the original Gamma base.
+
+The 11-module/28-export batch passed its complete 707-line type/axiom
+review and the 10,897-job affected Library build. The checked boundary is
+423 modules plus Library, with 1,448 audited exports. Instantiating these
+interfaces on the prepared selected slices and the subsequent ordered
+head induction remain open; positive selected Lemma 7.5 is not complete.
+The next GitHub backup remains near 464 modules.
+
+
+## Unary prepared selected-volume comparison
+
+The thirty-seventh batch constructs actual small-context selected slices,
+verifies their contraction and preparation VF charts, and applies the
+unary common-witness theorem on every RV-prefix slice. Uniform gluing
+proves `gamma_unary_prepared_volume_comparison` for an arbitrary unary
+standard contraction and its prepared indexed family. The starting
+containing context is arbitrary, so successive comparisons can be
+composed without merging unrelated small bases.
+
+Prepared indexed presentations retain the exact old density label.
+The canonical coordinate-density realization is genuinely volume
+isomorphic to that full indexed presentation. Applying the same volume
+coordinate permutation to both sides preserves common blowups: its
+determinant signs are explicitly canceled by simultaneous rescaling.
+
+The 11-module/20-export batch passed compilation, full 643-line
+type/axiom review and the 10,908-job affected Library build. The checked
+boundary is 434 modules plus Library, with 1,468 audited exports.
+The two-family unary composition and subsequent ordered head induction
+remain outside this checked boundary. Positive selected Lemma 7.5 is
+not complete. The next GitHub backup remains near 464 modules.
+
+
+## Unary selected families and arbitrary parameter bases
+
+`gamma_unary_fibrewise_volume_comparison` composes the two arbitrary
+unary contraction comparisons through one prepared family.
+`selected_unary_volume_comparison` instantiates it on actual selected
+volume families and their density graphs, using only the original
+fibrewise common-blowup hypothesis, the stated field/base conditions,
+and arbitrary unary standard contractions. Its conclusion is an actual
+common blowup in a containing context, with selected coordinates first.
+Restoring the full ordered target and proving the head induction remain
+separate obligations.
+
+`unary_bijection_preparation_in_context_without_field` names the
+generated coefficient field inside a genuine small context, applies
+checked preparation, and eliminates those names from every resulting
+chain and graph. Thus `gamma_unary_volume_common_schema_without_field`
+and the moving unary lift/slice/prepared comparisons require no VF-field
+hypothesis on frozen parameters. Witness formula base changes preserve
+all full rows, exceptional auxiliary arities, validity and exact chain
+lengths. The finite volume-witness cover can also be prepared over an
+arbitrary small real base under uncountable saturation.
+
+The 10-module/31-export batch passed compilation, complete 1,060-line
+type/axiom review and the 10,981-job affected Library build. The checked
+boundary is 444 modules plus Library, with 1,499 audited exports.
+Positive selected Lemma 7.5 is still open: the general head induction
+must retain original-base geometric witness data through uniform gluing.
+The next authorized GitHub backup remains near 464 modules.
+
+
+## Original-Gamma Jacobian and correction graphs
+
+The 20-module/46-export batch proves parameter extension for actual
+standard contractions, preserving their chosen maps and volume indices.
+`selected_unary_volume_comparison_without_field` compares arbitrary
+unary contractions of actual selected density-graph families under the
+original fibrewise common-blowup premise, without a coefficient-field
+hypothesis. The conclusion lives in a genuine containing small context;
+it does not assert common witnesses over the original named context.
+
+Generic RV Jacobians, including supported-chart fallback values, now
+have graphs definable over the original real/Gamma parameter base.
+The same holds for the head Jacobian after an elementary blowup, its
+unit-normalized correction and the packed nonzero cone-fibre map.
+The exceptional small set in the generic Jacobian theorem is not
+claimed Gamma-definable. These are inputs toward Gamma-preserving
+elementary comparison and ordered induction, which remain unfinished.
+
+The source batch compiled, its full 1,235-line type/axiom report was
+reviewed, and the affected Library build passed (11,002 jobs including
+cached dependencies). The checked boundary is 464 source modules plus
+Library and 1,545 audited exports. This is the next authorized backup
+boundary, 100 modules beyond the last published proof checkpoint.
