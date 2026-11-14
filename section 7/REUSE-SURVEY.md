@@ -320,3 +320,21 @@ No new citation, pin, definable-choice principle or generation assumption
 was added. The10-module/24-export batch passed535-line full review and the
 10,282-job affected build. Promotion of complete comparison witnesses and
 the later common-blowup compactness/gluing are still open.
+
+
+## Twenty-first reconstruction batch: comparison promotion
+
+Native Substructure.closure_induction and DefinableConstants.function_symbol/
+eliminate_parameters prove raw parameter elimination for term closure.
+The actual finite map then gives a GammaFiniteGraphPresentation over the
+named generators; checked native finite-object promotion supplies its
+exception schema with the same dimension and exact domain. Native raw
+Gamma graph flattening and tuple-relation promotion retain the original
+comparison chart. Actual essential bijectivity, constant nonzero-coordinate
+weight and the checked finite chart certificate prove all validity clauses.
+The combined promotion theorem explicitly assumes a named term-generated
+internal context and the full original-Gamma comparison graph; it does not
+infer either from arbitrary real containment. No new reference, pin or
+geometric premise was introduced into the7.5 target. The12-module/23-export
+batch passed625-line full review and the10,294-job affected build. Common-
+blowup formula operations, witness promotion/cover/gluing and7.5 remain open.

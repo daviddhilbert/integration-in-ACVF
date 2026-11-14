@@ -6,11 +6,11 @@ as accepted by the author and recorded in `TARGETS.md`.
 
 ## Current checked local boundary
 
-`Integration7.Library` integrates 230 source modules plus its entry point.
-Full exported types and allowed-axiom reports for 971 distinct declarations
+`Integration7.Library` integrates 242 source modules plus its entry point.
+Full exported types and allowed-axiom reports for 994 distinct declarations
 have been inspected in targeted incremental batches. Only `propext`,
 `Classical.choice`, and `Quot.sound` occur. The latest affected-library
-build passed, including 10,282 jobs counting its cached dependency closure.
+build passed, including 10,294 jobs counting its cached dependency closure.
 `VERIFICATION.json` seals this source boundary and records the batch receipts.
 Unchanged earlier batches were not manually audited again.
 
@@ -370,3 +370,33 @@ encoding over auxiliary parameters, verify the promoted ordinary/Gamma/RV
 clauses, then assemble elementary/iterated/common volume-blowup schemata,
 finite-cover/gluing and positive selected7.5. No containing context gains
 VF-field or VF/Gamma generation merely by adding internal codes.
+
+
+## Comparison promotion over a named internal context
+
+The twenty-first batch proves the reverse validity implications. An actual
+essential bijection gives ordinary row validity; exact weighted fibres and
+the actual volume isomorphism give Gamma validity; a finite actual chart
+certificate gives supported RV validity. `valid_of_rows` assembles them.
+
+Raw first-order definability over a term-generated substructure descends
+to its generators by definable-singleton parameter elimination. Actual
+finite exceptional maps therefore promote after naming their finite
+auxiliary tuple. `gamma_volume_comparison_promotion` promotes the full
+comparison to an existential certificate schema, retaining the exact
+original-Gamma chart. `gamma_volume_row_comparison_promotion` also preserves
+given source/target schemata exactly.
+
+These promotion theorems explicitly require the internal real context to
+be the term closure of the original real base plus the named original and
+auxiliary tuples. This is a literal description of that internal context,
+not a VF-field or VF/Gamma generation hypothesis. The actual comparison
+must carry its full original-Gamma graph; arbitrary real definability over
+a containing context is not sufficient. Extending this interface to every
+required common-blowup witness still requires the appropriate internal
+context construction/transport. No7.5 completion is claimed.
+
+The12-module/23-export batch passed full625-line type/axiom inspection and
+the affected10,294-job Library build. Next assemble volume schema row
+agreement and actual coproduct/elementary blowup formula operations, then
+complete common-blowup witness promotion, finite cover and indexed gluing.

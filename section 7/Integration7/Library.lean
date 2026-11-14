@@ -243,4 +243,17 @@ import Integration7.GammaVolumeObjectPromotion
 import Integration7.NonzeroDensityFormulas
 import Integration7.PromotedVolumeSchemaRows
 
+import Integration7.CanonicalRawGammaFormulas
+import Integration7.ExtraVolumeRVRecognition
+import Integration7.FiniteAuxiliaryMapPromotion
+import Integration7.GammaVolumeChartPromotion
+import Integration7.GammaVolumeComparisonPromotion
+import Integration7.GammaVolumeRowComparisonPromotion
+import Integration7.RawRVRelationFormulas
+import Integration7.RealFiniteVolumePresentations
+import Integration7.TermClosureDefinability
+import Integration7.VolumeCertificateRowRecognition
+import Integration7.VolumeSchemaOrdinaryValidity
+import Integration7.WeightedSchemaRowFibres
+
 /-! Reconstructed Section 7 prerequisites. The section is not yet complete. -/

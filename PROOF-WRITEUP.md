@@ -455,3 +455,12 @@ Soundness reconstructs an actual volume isomorphism with that fixed chart.
 This checked implementation does not assume a Gamma-definable choice of
 exception map or auxiliary names. Complete comparison-witness promotion
 and the7.5 common-blowup comparison remain unfinished.
+
+
+Comparison promotion is now checked for an internal context explicitly
+presented as the term closure of the original real base and named tuples.
+Raw singleton parameter elimination descends the actual exception-map
+formulas to those generators; its auxiliary tuple is then existentially
+hidden. The comparison chart retains its full original-Gamma certificate,
+and both endpoint schemata can be fixed exactly. This is implementation of
+the pending witness-compactness argument, not a completed proof of7.5.

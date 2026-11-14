@@ -1,7 +1,7 @@
 # Section 7 continuation
 
 The current checked reconstruction checkpoint is described in `STATUS.md`:
-230 source modules plus their library entry point, with 971 distinct
+242 source modules plus their library entry point, with 994 distinct
 exported types and axiom reports inspected. The recovery account below
 records the earlier salvage stage; its two-module verification count is
 historical, not the current total. Additional reconstruction is continuing
@@ -118,3 +118,17 @@ encode the actual exception map over finitely many auxiliary real names
 validity from the actual isomorphism, then continue volume-blowup witness
 schemata/compactness/gluing. The strict earlier schema remains sound but
 must not be assumed to encode an arbitrary original-Gamma exception map.
+
+
+The twenty-first batch proves complete comparison promotion in an explicitly
+named term-generated context (`gamma_volume_comparison_promotion`), with a
+fixed-endpoint variant (`gamma_volume_row_comparison_promotion`). Both keep
+the full original-Gamma chart hypothesis and literal context equality
+explicit. Raw term-closure elimination supplies promotion of the actual
+finite exception map. The ordinary/Gamma/RV clauses follow from geometry.
+All23 new exports passed625-line review and the10,294-job affected build.
+Next implement volume-schema same-row transport, coproduct and elementary
+blowup formula/presentation operations, then common witness schemata and
+actual promotion/finite-cover/indexed-gluing. Do not treat arbitrary enlarged
+real presentations as original-Gamma witnesses or assert field/generation
+for internal code contexts. Positive selected7.5 remains open.
