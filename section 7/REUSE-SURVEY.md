@@ -214,3 +214,14 @@ projection that preserves multiplication. Native cartesian reassociation
 and singleton-unit maps provide full product associativity and unit maps;
 the density proof uses ordinary multiplication, including the zero-degree
 convention. No commutativity of the full volume ring is used.
+
+## Fourteenth reconstruction batch: graded semiring congruence
+
+Used the actual coproduct fold charts on both sides, retaining coordinate
+order and density. All-degree density data handles the ordinary RV[0]
+convention without adding a point. The pinned Mathlib DirectSum.GMonoid and
+GSemiring interfaces assemble the proved geometric coherence laws. Both
+quotients are actual direct-sum semirings and the canonical projection is
+surjective. Fresh comparison with arXiv:0809.0473v2, Section7 lines1113–1120,
+identifies the completed relation statement as Lemma7.4. No external theorem
+or new generation hypothesis is used.

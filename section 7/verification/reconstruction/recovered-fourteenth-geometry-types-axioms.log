@@ -1,0 +1,519 @@
+@IntegrationInACVF.Section7.RVVolumeData.coprod : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {S : Set.{0} M} →
+        {n : ℕ} →
+          IntegrationInACVF.Section7.RVVolumeData S n →
+            IntegrationInACVF.Section7.RVVolumeData S n → IntegrationInACVF.Section7.RVVolumeData S n
+'IntegrationInACVF.Section7.RVVolumeData.coprod' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@IntegrationInACVF.Section7.RVVolumeData.coprod_toObject : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set.{0} M}
+  {n : ℕ} (D E : IntegrationInACVF.Section7.RVVolumeData S n),
+  Eq.{1} (D.coprod E).toObject (IntegrationInACVF.Section7.rvVolumeCoprod S n D.toObject E.toObject)
+'IntegrationInACVF.Section7.RVVolumeData.coprod_toObject' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.RVVolumeData.coprod_density_left : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set.{0} M}
+  {n : ℕ} (D E : IntegrationInACVF.Section7.RVVolumeData S n)
+  (u :
+    ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+        (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} D.underlying).domain)),
+  Eq.{1}
+    ((D.coprod E).form.value
+      (SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0}
+        (SpecialTransformations.Section4.rvCoprodLeftMap
+          (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} D.underlying)
+          (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} E.underlying))
+        u))
+    (D.form.value u)
+'IntegrationInACVF.Section7.RVVolumeData.coprod_density_left' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.RVVolumeData.coprod_density_right : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set.{0} M}
+  {n : ℕ} (D E : IntegrationInACVF.Section7.RVVolumeData S n)
+  (v :
+    ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+        (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} E.underlying).domain)),
+  Eq.{1}
+    ((D.coprod E).form.value
+      (SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0}
+        (SpecialTransformations.Section4.rvCoprodRightMap
+          (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} D.underlying)
+          (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} E.underlying))
+        v))
+    (E.form.value v)
+'IntegrationInACVF.Section7.RVVolumeData.coprod_density_right' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.rvVolumeCoprod_underlying : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set.{0} M}
+  (n : ℕ) (U V : IntegrationInACVF.Section7.RVVolumeObject S n),
+  Eq.{1} (IntegrationInACVF.Section7.rvVolumeUnderlying S n (IntegrationInACVF.Section7.rvVolumeCoprod S n U V))
+    (SpecialTransformations.Section4.rvFiniteCoprodObject (IntegrationInACVF.Section7.rvVolumeUnderlying S n U)
+      (IntegrationInACVF.Section7.rvVolumeUnderlying S n V))
+'IntegrationInACVF.Section7.rvVolumeCoprod_underlying' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.rvVolumeCoprod_density_left : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set.{0} M}
+  (n : ℕ) (U V : IntegrationInACVF.Section7.RVVolumeObject S n)
+  (u :
+    ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+        (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0}
+            (IntegrationInACVF.Section7.rvVolumeUnderlying S n U)).domain)),
+  Eq.{1}
+    ((IntegrationInACVF.Section7.rvVolumeForm S n (IntegrationInACVF.Section7.rvVolumeCoprod S n U V)).value
+      (Eq.rec.{1, 1}
+        (SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0}
+          (SpecialTransformations.Section4.rvCoprodLeftMap
+            (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0}
+              (IntegrationInACVF.Section7.rvVolumeUnderlying S n U))
+            (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0}
+              (IntegrationInACVF.Section7.rvVolumeUnderlying S n V)))
+          u)
+        ⋯))
+    ((IntegrationInACVF.Section7.rvVolumeForm S n U).value u)
+'IntegrationInACVF.Section7.rvVolumeCoprod_density_left' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.rvVolumeCoprod_density_right : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set.{0} M}
+  (n : ℕ) (U V : IntegrationInACVF.Section7.RVVolumeObject S n)
+  (v :
+    ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+        (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0}
+            (IntegrationInACVF.Section7.rvVolumeUnderlying S n V)).domain)),
+  Eq.{1}
+    ((IntegrationInACVF.Section7.rvVolumeForm S n (IntegrationInACVF.Section7.rvVolumeCoprod S n U V)).value
+      (Eq.rec.{1, 1}
+        (SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0}
+          (SpecialTransformations.Section4.rvCoprodRightMap
+            (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0}
+              (IntegrationInACVF.Section7.rvVolumeUnderlying S n U))
+            (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0}
+              (IntegrationInACVF.Section7.rvVolumeUnderlying S n V)))
+          v)
+        ⋯))
+    ((IntegrationInACVF.Section7.rvVolumeForm S n V).value v)
+'IntegrationInACVF.Section7.rvVolumeCoprod_density_right' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.rvVolumeIsoRefl : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      CanonicalStructure.IsCanonical →
+        (C : SpecialTransformations.Section3.BaseContext M) →
+          {n : ℕ} →
+            (U : IntegrationInACVF.Section7.RVVolumeObject (↑C.base) n) →
+              IntegrationInACVF.Section7.RVVolumeIsoInDegree (↑C.base) n U U
+'IntegrationInACVF.Section7.rvVolumeIsoRefl' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@IntegrationInACVF.Section7.rvVolumeIsoSymm : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      CanonicalStructure.IsCanonical →
+        (C : SpecialTransformations.Section3.BaseContext M) →
+          {n : ℕ} →
+            {U V : IntegrationInACVF.Section7.RVVolumeObject (↑C.base) n} →
+              IntegrationInACVF.Section7.RVVolumeIsoInDegree (↑C.base) n U V →
+                IntegrationInACVF.Section7.RVVolumeIsoInDegree (↑C.base) n V U
+'IntegrationInACVF.Section7.rvVolumeIsoSymm' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@IntegrationInACVF.Section7.rvVolumeIsoTrans : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      CanonicalStructure.IsCanonical →
+        (C : SpecialTransformations.Section3.BaseContext M) →
+          {n : ℕ} →
+            {U V W : IntegrationInACVF.Section7.RVVolumeObject (↑C.base) n} →
+              IntegrationInACVF.Section7.RVVolumeIsoInDegree (↑C.base) n U V →
+                IntegrationInACVF.Section7.RVVolumeIsoInDegree (↑C.base) n V W →
+                  IntegrationInACVF.Section7.RVVolumeIsoInDegree (↑C.base) n U W
+'IntegrationInACVF.Section7.rvVolumeIsoTrans' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@IntegrationInACVF.Section7.rvVolumeProductCoprodFoldIso : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      CanonicalStructure.IsCanonical →
+        (C : SpecialTransformations.Section3.BaseContext M) →
+          {n m : ℕ} →
+            (U : IntegrationInACVF.Section7.RVVolumeObject (↑C.base) n) →
+              (V W : IntegrationInACVF.Section7.RVVolumeObject (↑C.base) m) →
+                IntegrationInACVF.Section7.RVVolumeIsoInDegree (↑C.base) (HAdd.hAdd.{0, 0, 0} n m)
+                  (IntegrationInACVF.Section7.rvVolumeCoprod (↑C.base) (HAdd.hAdd.{0, 0, 0} n m)
+                    (IntegrationInACVF.Section7.rvVolumeProduct (↑C.base) n m U V)
+                    (IntegrationInACVF.Section7.rvVolumeProduct (↑C.base) n m U W))
+                  (IntegrationInACVF.Section7.rvVolumeProduct (↑C.base) n m U
+                    (IntegrationInACVF.Section7.rvVolumeCoprod (↑C.base) m V W))
+'IntegrationInACVF.Section7.rvVolumeProductCoprodFoldIso' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.rvVolumeProductRightDistribIso : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      CanonicalStructure.IsCanonical →
+        (C : SpecialTransformations.Section3.BaseContext M) →
+          {n m : ℕ} →
+            (U : IntegrationInACVF.Section7.RVVolumeObject (↑C.base) n) →
+              (V W : IntegrationInACVF.Section7.RVVolumeObject (↑C.base) m) →
+                IntegrationInACVF.Section7.RVVolumeIsoInDegree (↑C.base) (HAdd.hAdd.{0, 0, 0} n m)
+                  (IntegrationInACVF.Section7.rvVolumeProduct (↑C.base) n m U
+                    (IntegrationInACVF.Section7.rvVolumeCoprod (↑C.base) m V W))
+                  (IntegrationInACVF.Section7.rvVolumeCoprod (↑C.base) (HAdd.hAdd.{0, 0, 0} n m)
+                    (IntegrationInACVF.Section7.rvVolumeProduct (↑C.base) n m U V)
+                    (IntegrationInACVF.Section7.rvVolumeProduct (↑C.base) n m U W))
+'IntegrationInACVF.Section7.rvVolumeProductRightDistribIso' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.rvLeftProductCoprodFold : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {S : Set.{0} M} →
+        {k l : ℕ} →
+          (U V : SpecialTransformations.Section4.RVObject S k) →
+            (W : SpecialTransformations.Section4.RVObject S l) →
+              SpecialTransformations.Section4.RVHom
+                (SpecialTransformations.Section4.rvCoprodObject (SpecialTransformations.Section4.rvProductObject U W)
+                  (SpecialTransformations.Section4.rvProductObject V W))
+                (SpecialTransformations.Section4.rvProductObject (SpecialTransformations.Section4.rvCoprodObject U V) W)
+'IntegrationInACVF.Section7.rvLeftProductCoprodFold' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@IntegrationInACVF.Section7.rvLeftProductCoprodFold_left : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set.{0} M}
+  {k l : ℕ} (U V : SpecialTransformations.Section4.RVObject S k) (W : SpecialTransformations.Section4.RVObject S l)
+  (x :
+    ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+        (SpecialTransformations.Section4.rvProductObject U W).domain)),
+  Eq.{1}
+    (SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0}
+      (IntegrationInACVF.Section7.rvLeftProductCoprodFold U V W).map
+      (SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0}
+        (SpecialTransformations.Section4.rvCoprodLeftMap (SpecialTransformations.Section4.rvProductObject U W)
+          (SpecialTransformations.Section4.rvProductObject V W))
+        x))
+    (SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0}
+      (SpecialTransformations.Section4.rvProductMap (SpecialTransformations.Section4.rvCoprodLeftMap U V)
+        (SpecialTransformations.DefinableGeometry.Map.id.{0, 0} W.domain))
+      x)
+'IntegrationInACVF.Section7.rvLeftProductCoprodFold_left' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.rvLeftProductCoprodFold_right : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set.{0} M}
+  {k l : ℕ} (U V : SpecialTransformations.Section4.RVObject S k) (W : SpecialTransformations.Section4.RVObject S l)
+  (x :
+    ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+        (SpecialTransformations.Section4.rvProductObject V W).domain)),
+  Eq.{1}
+    (SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0}
+      (IntegrationInACVF.Section7.rvLeftProductCoprodFold U V W).map
+      (SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0}
+        (SpecialTransformations.Section4.rvCoprodRightMap (SpecialTransformations.Section4.rvProductObject U W)
+          (SpecialTransformations.Section4.rvProductObject V W))
+        x))
+    (SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0}
+      (SpecialTransformations.Section4.rvProductMap (SpecialTransformations.Section4.rvCoprodRightMap U V)
+        (SpecialTransformations.DefinableGeometry.Map.id.{0, 0} W.domain))
+      x)
+'IntegrationInACVF.Section7.rvLeftProductCoprodFold_right' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.rvLeftProductCoprodFold_bijective : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set.{0} M}
+  {k l : ℕ} (U V : SpecialTransformations.Section4.RVObject S k) (W : SpecialTransformations.Section4.RVObject S l),
+  Function.Bijective.{1, 1}
+    (SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0}
+      (IntegrationInACVF.Section7.rvLeftProductCoprodFold U V W).map)
+'IntegrationInACVF.Section7.rvLeftProductCoprodFold_bijective' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.rvVolumeLeftProductCoprodFoldIso : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      CanonicalStructure.IsCanonical →
+        (C : SpecialTransformations.Section3.BaseContext M) →
+          {n m : ℕ} →
+            (U V : IntegrationInACVF.Section7.RVVolumeObject (↑C.base) n) →
+              (W : IntegrationInACVF.Section7.RVVolumeObject (↑C.base) m) →
+                IntegrationInACVF.Section7.RVVolumeIsoInDegree (↑C.base) (HAdd.hAdd.{0, 0, 0} n m)
+                  (IntegrationInACVF.Section7.rvVolumeCoprod (↑C.base) (HAdd.hAdd.{0, 0, 0} n m)
+                    (IntegrationInACVF.Section7.rvVolumeProduct (↑C.base) n m U W)
+                    (IntegrationInACVF.Section7.rvVolumeProduct (↑C.base) n m V W))
+                  (IntegrationInACVF.Section7.rvVolumeProduct (↑C.base) n m
+                    (IntegrationInACVF.Section7.rvVolumeCoprod (↑C.base) n U V) W)
+'IntegrationInACVF.Section7.rvVolumeLeftProductCoprodFoldIso' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.rvVolumeProductLeftDistribIso : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      CanonicalStructure.IsCanonical →
+        (C : SpecialTransformations.Section3.BaseContext M) →
+          {n m : ℕ} →
+            (U V : IntegrationInACVF.Section7.RVVolumeObject (↑C.base) n) →
+              (W : IntegrationInACVF.Section7.RVVolumeObject (↑C.base) m) →
+                IntegrationInACVF.Section7.RVVolumeIsoInDegree (↑C.base) (HAdd.hAdd.{0, 0, 0} n m)
+                  (IntegrationInACVF.Section7.rvVolumeProduct (↑C.base) n m
+                    (IntegrationInACVF.Section7.rvVolumeCoprod (↑C.base) n U V) W)
+                  (IntegrationInACVF.Section7.rvVolumeCoprod (↑C.base) (HAdd.hAdd.{0, 0, 0} n m)
+                    (IntegrationInACVF.Section7.rvVolumeProduct (↑C.base) n m U W)
+                    (IntegrationInACVF.Section7.rvVolumeProduct (↑C.base) n m V W))
+'IntegrationInACVF.Section7.rvVolumeProductLeftDistribIso' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.rvVolumeEmpty_domain : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set.{0} M}
+  (n : ℕ),
+  Eq.{1}
+    (SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+      (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0}
+          (IntegrationInACVF.Section7.rvVolumeUnderlying S n (IntegrationInACVF.Section7.rvVolumeEmpty S n))).domain)
+    EmptyCollection.emptyCollection.{0}
+'IntegrationInACVF.Section7.rvVolumeEmpty_domain' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@IntegrationInACVF.Section7.rvVolumeProductRightZeroIso : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      CanonicalStructure.IsCanonical →
+        (C : SpecialTransformations.Section3.BaseContext M) →
+          {n m : ℕ} →
+            (U : IntegrationInACVF.Section7.RVVolumeObject (↑C.base) n) →
+              IntegrationInACVF.Section7.RVVolumeIsoInDegree (↑C.base) (HAdd.hAdd.{0, 0, 0} n m)
+                (IntegrationInACVF.Section7.rvVolumeProduct (↑C.base) n m U
+                  (IntegrationInACVF.Section7.rvVolumeEmpty (↑C.base) m))
+                (IntegrationInACVF.Section7.rvVolumeEmpty (↑C.base) (HAdd.hAdd.{0, 0, 0} n m))
+'IntegrationInACVF.Section7.rvVolumeProductRightZeroIso' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.rvVolumeProductLeftZeroIso : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      CanonicalStructure.IsCanonical →
+        (C : SpecialTransformations.Section3.BaseContext M) →
+          {n m : ℕ} →
+            (U : IntegrationInACVF.Section7.RVVolumeObject (↑C.base) m) →
+              IntegrationInACVF.Section7.RVVolumeIsoInDegree (↑C.base) (HAdd.hAdd.{0, 0, 0} n m)
+                (IntegrationInACVF.Section7.rvVolumeProduct (↑C.base) n m
+                  (IntegrationInACVF.Section7.rvVolumeEmpty (↑C.base) n) U)
+                (IntegrationInACVF.Section7.rvVolumeEmpty (↑C.base) (HAdd.hAdd.{0, 0, 0} n m))
+'IntegrationInACVF.Section7.rvVolumeProductLeftZeroIso' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.rvVolumeIsoClassesZeroAddCommMonoid : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        (C : SpecialTransformations.Section3.BaseContext M) →
+          AddCommMonoid.{0} (IntegrationInACVF.Section7.RVVolumeIsoClasses hc C 0)
+'IntegrationInACVF.Section7.rvVolumeIsoClassesZeroAddCommMonoid' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.rvVolumeBlowupClassesZeroAddCommMonoid : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        (C : SpecialTransformations.Section3.BaseContext M) →
+          AddCommMonoid.{0} (IntegrationInACVF.Section7.RVVolumeBlowupClasses hc C 0)
+'IntegrationInACVF.Section7.rvVolumeBlowupClassesZeroAddCommMonoid' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.rvVolumeIsoClass_heq_of_iso : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M) {n m : ℕ} (h : Eq.{1} n m)
+  (U : IntegrationInACVF.Section7.RVVolumeObject (↑C.base) n)
+  (V : IntegrationInACVF.Section7.RVVolumeObject (↑C.base) m)
+  (e : IntegrationInACVF.Section7.RVVolumeIsoInDegree (↑C.base) n U (Eq.rec.{1, 1} V ⋯)),
+  HEq.{1} (IntegrationInACVF.Section7.rvVolumeIsoClass hc C U) (IntegrationInACVF.Section7.rvVolumeIsoClass hc C V)
+'IntegrationInACVF.Section7.rvVolumeIsoClass_heq_of_iso' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.rvVolumeBlowupClass_heq_of_iso : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M) {n m : ℕ} (h : Eq.{1} n m)
+  (U : IntegrationInACVF.Section7.RVVolumeObject (↑C.base) n)
+  (V : IntegrationInACVF.Section7.RVVolumeObject (↑C.base) m)
+  (e : IntegrationInACVF.Section7.RVVolumeIsoInDegree (↑C.base) n U (Eq.rec.{1, 1} V ⋯)),
+  HEq.{1} (IntegrationInACVF.Section7.rvVolumeBlowupClass hc C U)
+    (IntegrationInACVF.Section7.rvVolumeBlowupClass hc C V)
+'IntegrationInACVF.Section7.rvVolumeBlowupClass_heq_of_iso' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.rvVolumeIsoClass_product : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M) {n m : ℕ}
+  (U : IntegrationInACVF.Section7.RVVolumeObject (↑C.base) n)
+  (V : IntegrationInACVF.Section7.RVVolumeObject (↑C.base) m),
+  Eq.{1}
+    (IntegrationInACVF.Section7.rvVolumeIsoClassesProduct hc C n m (IntegrationInACVF.Section7.rvVolumeIsoClass hc C U)
+      (IntegrationInACVF.Section7.rvVolumeIsoClass hc C V))
+    (IntegrationInACVF.Section7.rvVolumeIsoClass hc C (IntegrationInACVF.Section7.rvVolumeProduct (↑C.base) n m U V))
+'IntegrationInACVF.Section7.rvVolumeIsoClass_product' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@IntegrationInACVF.Section7.rvVolumeBlowupClass_product : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M) {n m : ℕ}
+  (U : IntegrationInACVF.Section7.RVVolumeObject (↑C.base) n)
+  (V : IntegrationInACVF.Section7.RVVolumeObject (↑C.base) m),
+  Eq.{1}
+    (IntegrationInACVF.Section7.rvVolumeBlowupClassesProduct hc C n m
+      (IntegrationInACVF.Section7.rvVolumeBlowupClass hc C U) (IntegrationInACVF.Section7.rvVolumeBlowupClass hc C V))
+    (IntegrationInACVF.Section7.rvVolumeBlowupClass hc C (IntegrationInACVF.Section7.rvVolumeProduct (↑C.base) n m U V))
+'IntegrationInACVF.Section7.rvVolumeBlowupClass_product' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.rvVolumeIsoClassesGMul : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        (C : SpecialTransformations.Section3.BaseContext M) →
+          GradedMonoid.GMul.{0, 0} (IntegrationInACVF.Section7.RVVolumeIsoClasses hc C)
+'IntegrationInACVF.Section7.rvVolumeIsoClassesGMul' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@IntegrationInACVF.Section7.rvVolumeIsoClassesGOne : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        (C : SpecialTransformations.Section3.BaseContext M) →
+          GradedMonoid.GOne.{0, 0} (IntegrationInACVF.Section7.RVVolumeIsoClasses hc C)
+'IntegrationInACVF.Section7.rvVolumeIsoClassesGOne' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@IntegrationInACVF.Section7.rvVolumeIsoClassesGMonoid : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        (C : SpecialTransformations.Section3.BaseContext M) →
+          GradedMonoid.GMonoid.{0, 0} (IntegrationInACVF.Section7.RVVolumeIsoClasses hc C)
+'IntegrationInACVF.Section7.rvVolumeIsoClassesGMonoid' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.rvVolumeIsoClassesGNonUnitalNonAssocSemiring : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        (C : SpecialTransformations.Section3.BaseContext M) →
+          DirectSum.GNonUnitalNonAssocSemiring.{0, 0} (IntegrationInACVF.Section7.RVVolumeIsoClasses hc C)
+'IntegrationInACVF.Section7.rvVolumeIsoClassesGNonUnitalNonAssocSemiring' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.rvVolumeIsoClassesGSemiring : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        (C : SpecialTransformations.Section3.BaseContext M) →
+          DirectSum.GSemiring.{0, 0} (IntegrationInACVF.Section7.RVVolumeIsoClasses hc C)
+'IntegrationInACVF.Section7.rvVolumeIsoClassesGSemiring' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.RVVolumeIsoSemiring : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      CanonicalStructure.IsCanonical → SpecialTransformations.Section3.BaseContext M → Type
+'IntegrationInACVF.Section7.RVVolumeIsoSemiring' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@IntegrationInACVF.Section7.rvVolumeBlowupClassesGMul : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        (C : SpecialTransformations.Section3.BaseContext M) →
+          GradedMonoid.GMul.{0, 0} (IntegrationInACVF.Section7.RVVolumeBlowupClasses hc C)
+'IntegrationInACVF.Section7.rvVolumeBlowupClassesGMul' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.rvVolumeBlowupClassesGOne : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        (C : SpecialTransformations.Section3.BaseContext M) →
+          GradedMonoid.GOne.{0, 0} (IntegrationInACVF.Section7.RVVolumeBlowupClasses hc C)
+'IntegrationInACVF.Section7.rvVolumeBlowupClassesGOne' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.rvVolumeBlowupClassesGMonoid : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        (C : SpecialTransformations.Section3.BaseContext M) →
+          GradedMonoid.GMonoid.{0, 0} (IntegrationInACVF.Section7.RVVolumeBlowupClasses hc C)
+'IntegrationInACVF.Section7.rvVolumeBlowupClassesGMonoid' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.rvVolumeBlowupClassesGNonUnitalNonAssocSemiring : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        (C : SpecialTransformations.Section3.BaseContext M) →
+          DirectSum.GNonUnitalNonAssocSemiring.{0, 0} (IntegrationInACVF.Section7.RVVolumeBlowupClasses hc C)
+'IntegrationInACVF.Section7.rvVolumeBlowupClassesGNonUnitalNonAssocSemiring' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.rvVolumeBlowupClassesGSemiring : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        (C : SpecialTransformations.Section3.BaseContext M) →
+          DirectSum.GSemiring.{0, 0} (IntegrationInACVF.Section7.RVVolumeBlowupClasses hc C)
+'IntegrationInACVF.Section7.rvVolumeBlowupClassesGSemiring' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.RVVolumeBlowupSemiring : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      CanonicalStructure.IsCanonical → SpecialTransformations.Section3.BaseContext M → Type
+'IntegrationInACVF.Section7.RVVolumeBlowupSemiring' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@IntegrationInACVF.Section7.rvVolumeGradedBlowupProjection : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        (C : SpecialTransformations.Section3.BaseContext M) →
+          RingHom.{0, 0} (IntegrationInACVF.Section7.RVVolumeIsoSemiring hc C)
+            (IntegrationInACVF.Section7.RVVolumeBlowupSemiring hc C)
+'IntegrationInACVF.Section7.rvVolumeGradedBlowupProjection' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.rvVolumeGradedBlowupProjection_of : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M) (n : ℕ)
+  (a : IntegrationInACVF.Section7.RVVolumeIsoClasses hc C n),
+  Eq.{1}
+    ((IntegrationInACVF.Section7.rvVolumeGradedBlowupProjection hc C)
+      ((DirectSum.of.{0, 0} (IntegrationInACVF.Section7.RVVolumeIsoClasses hc C) n) a))
+    ((DirectSum.of.{0, 0} (IntegrationInACVF.Section7.RVVolumeBlowupClasses hc C) n)
+      ((IntegrationInACVF.Section7.rvVolumeBlowupProjection hc C n) a))
+'IntegrationInACVF.Section7.rvVolumeGradedBlowupProjection_of' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.rvVolumeGradedBlowupProjection_surjective : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M),
+  Function.Surjective.{1, 1} ⇑(IntegrationInACVF.Section7.rvVolumeGradedBlowupProjection hc C)
+'IntegrationInACVF.Section7.rvVolumeGradedBlowupProjection_surjective' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.lemma_7_4 : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF],
+  CanonicalStructure.IsCanonical →
+    ∀ (C : SpecialTransformations.Section3.BaseContext M),
+      (∀ (n : ℕ), Equivalence.{1} (IntegrationInACVF.Section7.MuIsp (↑C.base) n)) ∧
+        (∀ (n : ℕ) (U U' V V' : IntegrationInACVF.Section7.RVVolumeObject (↑C.base) n),
+            IntegrationInACVF.Section7.MuIsp (↑C.base) n U U' →
+              IntegrationInACVF.Section7.MuIsp (↑C.base) n V V' →
+                IntegrationInACVF.Section7.MuIsp (↑C.base) n (IntegrationInACVF.Section7.rvVolumeCoprod (↑C.base) n U V)
+                  (IntegrationInACVF.Section7.rvVolumeCoprod (↑C.base) n U' V')) ∧
+          ∀ (n m : ℕ) (U U' : IntegrationInACVF.Section7.RVVolumeObject (↑C.base) n)
+            (V V' : IntegrationInACVF.Section7.RVVolumeObject (↑C.base) m),
+            IntegrationInACVF.Section7.MuIsp (↑C.base) n U U' →
+              IntegrationInACVF.Section7.MuIsp (↑C.base) m V V' →
+                IntegrationInACVF.Section7.MuIsp (↑C.base) (HAdd.hAdd.{0, 0, 0} n m)
+                  (IntegrationInACVF.Section7.rvVolumeProduct (↑C.base) n m U V)
+                  (IntegrationInACVF.Section7.rvVolumeProduct (↑C.base) n m U' V')
+'IntegrationInACVF.Section7.lemma_7_4' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]

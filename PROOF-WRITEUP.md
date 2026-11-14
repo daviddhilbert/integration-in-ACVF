@@ -398,3 +398,10 @@ and vertical-column argument follows its mathematical strategy. The checked
 polynomial tangent reasoning fills in its determinant justification; it is
 not currently classified as a different proof. Routine chart encoding and
 the ordinary four-piece refinement are likewise implementation detail.
+
+The reconstructed proof of Lemma7.4 now includes actual product charts,
+all ordinary RV[0] cases, both distributivity laws and the graded semiring
+quotient projection. These spell out the paper's formal congruence argument
+and are not currently classified as a substantially different mathematical
+proof. The direct left-distributivity chart preserves coordinate order; the
+separate block-swap argument retains its determinant sign.

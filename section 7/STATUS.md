@@ -6,11 +6,11 @@ as accepted by the author and recorded in `TARGETS.md`.
 
 ## Current checked local boundary
 
-`Integration7.Library` integrates 159 source modules plus its entry point.
-Full exported types and allowed-axiom reports for 721 distinct declarations
+`Integration7.Library` integrates 170 source modules plus its entry point.
+Full exported types and allowed-axiom reports for 764 distinct declarations
 have been inspected in targeted incremental batches. Only `propext`,
 `Classical.choice`, and `Quot.sound` occur. The latest affected-library
-build passed, including 10,210 jobs counting its cached dependency closure.
+build passed, including 10,221 jobs counting its cached dependency closure.
 `VERIFICATION.json` seals this source boundary and records the batch receipts.
 Unchanged earlier batches were not manually audited again.
 
@@ -35,8 +35,8 @@ order are retained. Positive selected fibres keep actual finiteness explicit.
 
 Receipts are under `.scratch/recovery/`: the initial algebra and
 groupification batches contribute 34 exports; the first geometric batch
-contributes 86, the second 59, the third 89, the fourth 26, the fifth 24, the sixth 70, the seventh 56, the eighth 65, the ninth 56, the tenth 23, the eleventh 43, the twelfth 47, and the thirteenth 43.
-The latest receipt is `recovered-thirteenth-geometry-receipt.json`.
+contributes 86, the second 59, the third 89, the fourth 26, the fifth 24, the sixth 70, the seventh 56, the eighth 65, the ninth 56, the tenth 23, the eleventh 43, the twelfth 47, the thirteenth 43, and the fourteenth 43.
+The latest receipt is `recovered-fourteenth-geometry-receipt.json`.
 These checks cover currently available sources, not the historical missing
 1,201-module/4,644-declaration working copy.
 
@@ -102,8 +102,8 @@ only the actual smaller-dimensional coordinate-zero locus. It also proves
 compatibility of common blowups with addition and constructs their genuine
 positive additive quotient and quotient homomorphism. Fresh access to the
 paper text confirmed the elementary comparison as Lemma 7.2; the checked
-numbered wrapper is `lemma_7_2`. Graded multiplicative compatibility in 7.4
-remains to be established.
+numbered wrapper is `lemma_7_2`. The later batches now establish the complete
+all-degree semiring congruence as `lemma_7_4`.
 
 Actual density graphs preserve the VF volume object and the exact selected
 fibre finiteness condition. `SelectedVFVolumeFamily` carries a raw same-base
@@ -128,16 +128,16 @@ normalized tangent projections determine the block determinant; generic
 existence supplies full and factor Jacobians. Exceptional products are
 bounded by the actual volume degrees, including auxiliary label domains.
 Signed coordinate permutations are checked and the recovered
-VolumeCoordinatePermutation module is promoted. Ordinary degree-zero
-factors still require their separate arguments; no commutativity of the
-whole volume ring or full multiplicative blowup congruence is claimed.
+VolumeCoordinatePermutation module is promoted. Ordinary degree-zero factors and multiplicative congruence were treated
+separately in the later batches below. Commutativity of the whole volume
+ring is not assumed.
 
 The uniform density-schema interface is recovered over the original real/
 Gamma base. Function-row validity is proved first-order definable, and valid
 rows have unique nonzero densities on exactly their object domain. These
 are inputs to the remaining uniform fibrewise comparison, not that theorem.
 All56 new full types and axiom reports were inspected in606 lines, and the
-affected Library build passed10,181 jobs including cached dependencies.
+affected Library build passed10,173 jobs including cached dependencies.
 
 ## Remaining work
 
@@ -172,8 +172,8 @@ both sides, including simultaneous replacement of both factors. Right
 multiplication uses the determinant sign and common density rescaling;
 commutativity of the entire volume ring is not assumed. All 43 new types
 and axiom reports were inspected in 586 lines; the affected library passed
-10,192 jobs. Ordinary RV[0] factors, unit coherence and the complete graded
-semiring quotient still require their separate constructions.
+10,192 jobs. The later batches below add ordinary RV[0] factors, unit
+coherence and the complete graded semiring quotient.
 
 ## Ordinary degree-zero factors
 
@@ -187,7 +187,7 @@ no impossible degree-zero almost-everywhere premise is used. Elementary and
 common blowups are compatible with these products on both sides. No artificial
 point is adjoined or cancelled. All 47 new types and axiom reports were
 inspected in 773 lines; the affected library passed 10,201 jobs. The complete
-graded multiplication/semiring interface still needs assembly and coherence.
+graded multiplication/semiring interface was assembled in the later batches.
 
 The 141-module checkpoint's GitHub Actions run43579893295 was still building
 the project when this checkpoint was prepared. This backup commit skips a
@@ -205,5 +205,19 @@ additive projection preserves that product. Density-bearing product data
 proves associativity and both unit isomorphisms for the original product
 in every degree. All 43 new exported types, including named instances, were
 inspected in 470 lines; the affected library passed 10,210 jobs. Full
-distributivity/zero coherence and the graded semiring assembly are still
-separate work. The selected-family comparison of 7.5 remains open.
+distributivity/zero coherence and the graded semiring assembly were completed
+in the fourteenth batch. The selected-family comparison of 7.5 remains open.
+
+## Lemma7.4 and graded semiring quotient
+
+The fourteenth batch proves both distributivity laws and both absorbing-zero
+laws for the original all-degree product. The left chart is constructed
+directly and preserves the original volume-coordinate order. The actual
+volume-isomorphism classes and common-blowup classes now form graded
+semirings, without a commutativity assumption. The canonical graded
+projection is a surjective semiring homomorphism. The numbered lemma_7_4
+states equivalence and compatibility with actual coproduct addition and
+all-degree multiplication, including ordinary RV[0]. The v2 statement was
+compared directly with the source paper. All 43 exported types, including
+named instances, were inspected in 519 lines; the affected library passed
+10,221 jobs. No part of Lemma7.5 is claimed by this congruence result.
