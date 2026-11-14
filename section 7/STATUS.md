@@ -1,52 +1,65 @@
 # Section 7 status
 
-The original working copy is unavailable. Reconstruction is active; the
-section is not complete. The accepted restriction of 7.5 to nonempty `E`
-is recorded in `TARGETS.md` and remains in force.
+Reconstruction is active; the section is not complete. The original working
+copy remains unavailable. Lemma 7.5 is restricted to nonempty selected `E`,
+as accepted by the author and recorded in `TARGETS.md`.
 
-## Checked reconstruction checkpoint
+## Current checked local boundary
 
-The first checked checkpoint consists of 24 source modules and their
-`Integration7.Library` entry point. It contains 13 recovered module texts
-and 11 reconstructed or reorganized support modules. Where imports were
-reduced to available providers, the original recovered text remains
-preserved separately under `.scratch/recovery/transcript/Integration7/`.
+`Integration7.Library` integrates 62 source modules plus its entry point.
+Full exported types and allowed-axiom reports for 294 distinct declarations
+have been inspected in targeted incremental batches. Only `propext`,
+`Classical.choice`, and `Quot.sound` occur. The latest affected-library
+build passed, including 9,669 jobs counting its cached dependency closure.
+`VERIFICATION.json` seals this source boundary and records the batch receipts.
+Unchanged earlier batches were not manually audited again.
 
-The checkpoint's library build passed, including 9,484 jobs counting its
-cached dependency closure. Full types and allowed-axiom output for 120
-distinct exports were inspected across three targeted batches: 14 exports
-from the first two independent algebra modules, 20 from the semiring
-groupification batch, and 86 from the geometric foundation batch. Only
-`propext`, `Classical.choice`, and `Quot.sound` occur in these reports.
-This is not a fresh build or audit of the missing 1,201-module Section 7.
+The elementary-blowup comparison is established as `elementaryBlowupIso`:
+actual elementary blowups of isomorphic positive-degree volume objects are
+volume-isomorphic. It uses the concrete admissible charts, the genuine
+finite-volume head map, a definable unit correction, and generic existence
+of the head and full RV Jacobians. Tangent projection and actual punctured
+residue lines identify the determinant; the small head exception gains one
+coordinate through the blowup chart. The head-arity-zero case uses the
+ordinary empty determinant pointwise. Gamma compatibility holds everywhere
+on essential labels and RV compatibility holds outside an RV-small set.
+No new Section 5.8 or graph-field hypothesis is present in this theorem.
 
-The checked material includes definable nonzero RV-valued volume forms,
-essential finite-volume objects, the actual generic RV and pointwise Gamma
-compatibility equations, coordinate selection, VF/RV fibres with their
-actual enlarged parameter base, density rescaling, lower-dimensional
-volume comparisons, tagged coproducts and their essential comparison,
-and the independent ring-completion/localization/normalization algebra.
+Other checked material includes volume forms and their operations, actual
+volume-isomorphism identity/composition/inversion/relabeling/gluing,
+coproducts, graded volume products, iterated-blowup data and Gamma upper-cut
+invariants. The independent semiring groupification, central localization
+and graded normalization algebra also compile and pass their audits.
+Ordinary RV[0], the single absorbing RV element and the reversed valuation
+order are retained. Positive selected fibres keep actual finiteness explicit.
 
-The semiring groupification has no cancellation or commutativity premise.
-The positive fibre construction keeps the selected-fibre finiteness
-hypothesis explicit. The small-dimension comparison uses the genuine RV
-dimension bound and a pointwise Gamma equation. These supporting facts do
-not discharge the missing geometric integration or common-blowup proofs.
+Receipts are under `.scratch/recovery/`: the initial algebra and
+groupification batches contribute 34 exports; the first geometric batch
+contributes 86, the second 59, the third 89, and the fourth 26.
+The fourth receipt is `recovered-fourth-geometry-receipt.json`.
+These checks cover currently available sources, not the historical missing
+1,201-module/4,644-declaration working copy.
 
-Verification receipts and full logs are in `.scratch/recovery/`. No
-replacement theorem-shaped saturation axiom or new Section 5.8 hypothesis
-has been introduced. Subsequent reconstruction files outside this checked
-entry point need their own compilation and targeted type/axiom checks.
+## Durable remote boundary
+
+The user-approved first 24-module/120-export checkpoint is saved on
+`section-7/reconstructed-foundation` at
+`2c6a6945eee43358e676930af3ec3325f56c7f33`. All 32 uploaded blobs were read
+back and verified. Main remains the pushed Section 6 revision
+`7d4acc730496b3bd05a22c268ffd89540ca694f9`.
+Subsequent local proofs are outside that exact upload approval.
+
+Sixty recovered original module texts remain unchanged in quarantine under
+`.scratch/recovery/transcript/Integration7/`. Canonical promoted copies may
+have narrowed imports or split providers. Rebuilt support is distinguished
+from recovered originals. Recovery archives include source hashes and audit
+logs; see `recovery-delivery/PACKAGING-RECEIPT.json`.
 
 ## Remaining work
 
-Reconnect the concrete elementary-blowup construction and essential chart,
-the volume-isomorphism operations, and the common-refinement and lift-kernel
-chains. Most of the previously reported contraction-order and function
-integration providers are still unavailable. The historical proof map in
-`.scratch/recovery/HISTORICAL-PROOF-MAP.md` records their former architecture
-and the remaining normalized function-module construction.
-
-The 60 recovered original module texts remain preserved, including those
-whose dependencies are not restored. Counts of source files, compiled
-modules, audited exports, and completed numbered statements are distinct.
+Build volume restrictions and overlap refinement, prove common refinement
+and transitivity for actual blowups, and reconnect the positive contraction,
+lift-kernel, graded integration and function-integration chains. The accepted
+nonempty-`E` scope must be witnessed at its consumers. The former architecture
+and unavailable providers are recorded in
+`.scratch/recovery/HISTORICAL-PROOF-MAP.md`.

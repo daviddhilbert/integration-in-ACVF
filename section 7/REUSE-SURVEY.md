@@ -65,3 +65,29 @@ Definitions or still-uncompiled reconstructed sources are not proofs of
 7.1–7.15. Source compilation, full types, axiom checks, and affected import
 checks are recorded per completed batch. No new Section 5.8 hypothesis is
 introduced by this reconstruction.
+
+## Elementary-blowup comparison reconstruction
+
+At the same pinned predecessor revision, `exists_definable_generic_RVJacobian`
+supplies actual head and full Jacobians. `isRVJacobianAt_zero_arity` handles
+the empty head without changing RV[0]. Section 6's
+`Admissible.finite_label_fibres` and the source finite-volume fibres prove
+that the unchanged head is finite-to-one. No finiteness conclusion is taken
+as an extra saturation premise.
+
+The new tangent calculation uses Mathlib's polynomial renaming, partial
+derivatives, polynomial roots, `Polynomial.derivative'`, and determinant
+expansion. The punctured vertical line consists of actual corrected chart
+points. Its polynomial identity forces the last tangent column; coordinate
+projection supplies the head block. Algebraic closedness of the residue
+field is obtained from the released `VFAlgClosed.isAlgClosed_vfType` and
+`ValOneEC.Johnson.isAlgClosed_residueField` declarations. Imported Mathlib
+sources retain their Apache-2.0 attribution.
+
+`elementaryBlowupIso` now compiles with full type and allowed-axiom inspection.
+The affected 62-module Library build passed. The complete fourth targeted
+batch has 26 exports; its receipt is
+`.scratch/recovery/recovered-fourth-geometry-receipt.json`. The theorem uses
+only the actual model/BaseContext hypotheses, source isomorphism and two
+concrete admissible elementary blowups; no graph-field or new Section 5.8
+input was added. Common refinement remains separate work.
