@@ -1,0 +1,304 @@
+{
+  "source_sha256": {
+    "section 7/Integration7/FibreRVJacobianComparison.lean": "35470a0684c2d5b31a56cb09ca1992fda913c00326358d3c10cee8bac06b6f50",
+    "section 7/Integration7/FibreTangentDeterminant.lean": "9c9a094dba9efa98ca103de13154d4a12d204377e837dee76449eabe15d7831d",
+    "section 7/Integration7/GammaVolumeIndexedCharts.lean": "f72868f33414e89adea5369f7c19e143b463d936206ce33618805a470e3f9892",
+    "section 7/Integration7/GammaVolumeIndexedPresentations.lean": "0cba67fc84afe184f5c774740d9b7133629e6cea1a55b4e69c207b33d8151fed",
+    "section 7/Integration7/IndexedEssentialVolumeDomains.lean": "277ff010cd3d67a3bae40274d5d6a9f925cb74a0b8a6fe03b1407a50c919ee2b",
+    "section 7/Integration7/IndexedVolumeRowSemantics.lean": "05ce0cf2497a156a4630e09cfd56a1cb1eec556a49f69f255584a136d8f20e23",
+    "section 7/Integration7/IndexedVolumeUnderlyingIsomorphisms.lean": "2c90e8e5aadf20ac6a34dd90b8b008513da8cd598bd863e1a09b54a1d242e040",
+    "section 7/Integration7/PolynomialTangentFibres.lean": "d48e0c9090e209bc12de5650ebfa4368f166a9838664c72a4f5e137decb64a06",
+    "section 7/Integration7/PolynomialTangentImages.lean": "ee01ac022d899ead95be3604efb0dd62c98829e93e0cb75602a8b0a3dbcc9cb9",
+    "section 7/Integration7/RVFibreDimensionBound.lean": "be243dc9a7c01a3ab8829fd0e4ddcc2b7890a8e2672433c670c65f83783a10e4",
+    "section 7/Integration7/RVParameterFibres.lean": "0dcfec3c0137c9e3de52714cf333c20137e9747a1cefcaeddc8a36661c3121f3",
+    "section 7/Integration7/RVParameterVolumeFibres.lean": "57b4967c9a3d2e6504e8a1732a17fef672015299b95c9a3a18ee96457a4fd356",
+    "section 7/Integration7/SmallExtendedRVExceptions.lean": "b1985e63c4758c963dca9cb0367f39fb5cd636b464487fb5a1926b2c69f13b19",
+    "section 7/Integration7/VolumeCertificateSmallContextRealization.lean": "9b600ac47921171893240ea16456519f4db4683daae4861efc55a8457597e882"
+  },
+  "declarations": [
+    "IntegrationInACVF.Section7.rvJacobian_eq_fixed_head_fibre",
+    "IntegrationInACVF.Section7.linearMap_det_of_fixed_head",
+    "IntegrationInACVF.Section7.residueJacobian_det_of_fixed_head_fibre",
+    "IntegrationInACVF.Section7.rvValues_indexed_split",
+    "IntegrationInACVF.Section7.indexedVolumeChartRelation",
+    "IntegrationInACVF.Section7.indexedVolumeChartRelation_chart",
+    "IntegrationInACVF.Section7.indexedVolumeChartRelation_gammaGraph",
+    "IntegrationInACVF.Section7.GammaRVVolumeSchema.indexedDensity",
+    "IntegrationInACVF.Section7.GammaRVVolumeSchema.IndexedPresentation",
+    "IntegrationInACVF.Section7.GammaRVVolumeSchema.indexedDensity_graph",
+    "IntegrationInACVF.Section7.GammaRVVolumeSchema.exists_indexedVolumePresentation",
+    "IntegrationInACVF.Section7.GammaRVVolumeSchema.indexedVolumePresentation",
+    "IntegrationInACVF.Section7.indexedVolume_domain_iff",
+    "IntegrationInACVF.Section7.indexedVolume_essential_domain_iff",
+    "IntegrationInACVF.Section7.indexedVolume_coordinates",
+    "IntegrationInACVF.Section7.indexedVolume_fibre_head",
+    "IntegrationInACVF.Section7.indexedRowVolumeObject",
+    "IntegrationInACVF.Section7.indexedRow_schemaRow",
+    "IntegrationInACVF.Section7.exists_indexedVolumeUnderlyingIso",
+    "IntegrationInACVF.Section7.insertHeadPair",
+    "IntegrationInACVF.Section7.insertHeadPair_productTuple",
+    "IntegrationInACVF.Section7.polynomialTangent_insertHeadPair",
+    "IntegrationInACVF.Section7.polynomialTangent_polynomialImage",
+    "IntegrationInACVF.Section7.rvMapFibre",
+    "IntegrationInACVF.Section7.rvDim_le_base_add_fibre",
+    "IntegrationInACVF.Section7.rvDim_lt_base_add_positive_fibre",
+    "IntegrationInACVF.Section7.rvInsertHeadMap",
+    "IntegrationInACVF.Section7.rvTupleFibre",
+    "IntegrationInACVF.Section7.rvTupleFibreEmbed",
+    "IntegrationInACVF.Section7.VolumeForm.rvTupleFibre",
+    "IntegrationInACVF.Section7.VolumeForm.rvTupleFibre_value",
+    "IntegrationInACVF.Section7.rvTupleFibreVolumeMap",
+    "IntegrationInACVF.Section7.rvTupleFibreVolumeMap_value",
+    "IntegrationInACVF.Section7.rvTupleFibreVolumeMap_finite",
+    "IntegrationInACVF.Section7.rvTupleVolumeFibre",
+    "IntegrationInACVF.Section7.rvDim_lt_of_small_extended_exception",
+    "IntegrationInACVF.Section7.GammaRVVolumeIsoCertificateSchema.realizeOnWithSmallBase"
+  ],
+  "manually_reviewed_lines": 652,
+  "audit_log": ".scratch/recovery/recovered-twenty-fifth-geometry-types-axioms.log",
+  "status": "PASS actual source compilation, full type/axiom review and affected library integration",
+  "scope": "Actual joint indexed volume presentations and precise fibre interpretations; exact essential-domain and original-Gamma joint-chart semantics; actual joint underlying essential bijection; polynomial tangent transport and fixed-head fibre determinant/RV Jacobian comparison; genuine RV base-plus-fibre dimension bounds and small-parameter descent of definable exceptions. Full indexed volume equations, indexed blowup/common-witness gluing, selected-family specialization and positive selected Lemma 7.5 remain open.",
+  "library_build_log": ".scratch/recovery/twenty-fifth-reconstruction-library-build.log",
+  "library_build_jobs_including_cached_dependencies": 10354,
+  "compilation": [
+    {
+      "module": "FibreRVJacobianComparison",
+      "source": "section 7/Integration7/FibreRVJacobianComparison.lean",
+      "source_sha256": "35470a0684c2d5b31a56cb09ca1992fda913c00326358d3c10cee8bac06b6f50",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/FibreRVJacobianComparison.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/FibreRVJacobianComparison.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.228,
+      "completed_at_utc": "2026-11-14T12:12:16.237337+00:00",
+      "log": ".scratch/recovery/FibreRVJacobianComparison-build.log"
+    },
+    {
+      "module": "FibreTangentDeterminant",
+      "source": "section 7/Integration7/FibreTangentDeterminant.lean",
+      "source_sha256": "9c9a094dba9efa98ca103de13154d4a12d204377e837dee76449eabe15d7831d",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/FibreTangentDeterminant.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/FibreTangentDeterminant.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.11,
+      "completed_at_utc": "2026-11-14T12:10:52.449791+00:00",
+      "log": ".scratch/recovery/FibreTangentDeterminant-build.log"
+    },
+    {
+      "module": "GammaVolumeIndexedCharts",
+      "source": "section 7/Integration7/GammaVolumeIndexedCharts.lean",
+      "source_sha256": "f72868f33414e89adea5369f7c19e143b463d936206ce33618805a470e3f9892",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/GammaVolumeIndexedCharts.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/GammaVolumeIndexedCharts.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 3.828,
+      "completed_at_utc": "2026-11-14T12:24:06.010487+00:00",
+      "log": ".scratch/recovery/GammaVolumeIndexedCharts-build.log"
+    },
+    {
+      "module": "GammaVolumeIndexedPresentations",
+      "source": "section 7/Integration7/GammaVolumeIndexedPresentations.lean",
+      "source_sha256": "0cba67fc84afe184f5c774740d9b7133629e6cea1a55b4e69c207b33d8151fed",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/GammaVolumeIndexedPresentations.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/GammaVolumeIndexedPresentations.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.073,
+      "completed_at_utc": "2026-11-14T12:17:14.963056+00:00",
+      "log": ".scratch/recovery/GammaVolumeIndexedPresentations-build.log"
+    },
+    {
+      "module": "IndexedEssentialVolumeDomains",
+      "source": "section 7/Integration7/IndexedEssentialVolumeDomains.lean",
+      "source_sha256": "277ff010cd3d67a3bae40274d5d6a9f925cb74a0b8a6fe03b1407a50c919ee2b",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/IndexedEssentialVolumeDomains.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/IndexedEssentialVolumeDomains.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 3.992,
+      "completed_at_utc": "2026-11-14T12:23:30.467419+00:00",
+      "log": ".scratch/recovery/IndexedEssentialVolumeDomains-build.log"
+    },
+    {
+      "module": "IndexedVolumeRowSemantics",
+      "source": "section 7/Integration7/IndexedVolumeRowSemantics.lean",
+      "source_sha256": "05ce0cf2497a156a4630e09cfd56a1cb1eec556a49f69f255584a136d8f20e23",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/IndexedVolumeRowSemantics.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/IndexedVolumeRowSemantics.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.201,
+      "completed_at_utc": "2026-11-14T12:20:41.664136+00:00",
+      "log": ".scratch/recovery/IndexedVolumeRowSemantics-build.log"
+    },
+    {
+      "module": "IndexedVolumeUnderlyingIsomorphisms",
+      "source": "section 7/Integration7/IndexedVolumeUnderlyingIsomorphisms.lean",
+      "source_sha256": "2c90e8e5aadf20ac6a34dd90b8b008513da8cd598bd863e1a09b54a1d242e040",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/IndexedVolumeUnderlyingIsomorphisms.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/IndexedVolumeUnderlyingIsomorphisms.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.372,
+      "completed_at_utc": "2026-11-14T12:26:37.293749+00:00",
+      "log": ".scratch/recovery/IndexedVolumeUnderlyingIsomorphisms-build.log"
+    },
+    {
+      "module": "PolynomialTangentFibres",
+      "source": "section 7/Integration7/PolynomialTangentFibres.lean",
+      "source_sha256": "d48e0c9090e209bc12de5650ebfa4368f166a9838664c72a4f5e137decb64a06",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/PolynomialTangentFibres.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/PolynomialTangentFibres.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.248,
+      "completed_at_utc": "2026-11-14T12:28:28.671427+00:00",
+      "log": ".scratch/recovery/PolynomialTangentFibres-build.log"
+    },
+    {
+      "module": "PolynomialTangentImages",
+      "source": "section 7/Integration7/PolynomialTangentImages.lean",
+      "source_sha256": "ee01ac022d899ead95be3604efb0dd62c98829e93e0cb75602a8b0a3dbcc9cb9",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/PolynomialTangentImages.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/PolynomialTangentImages.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.711,
+      "completed_at_utc": "2026-11-14T12:07:35.347985+00:00",
+      "log": ".scratch/recovery/PolynomialTangentImages-build.log"
+    },
+    {
+      "module": "RVFibreDimensionBound",
+      "source": "section 7/Integration7/RVFibreDimensionBound.lean",
+      "source_sha256": "be243dc9a7c01a3ab8829fd0e4ddcc2b7890a8e2672433c670c65f83783a10e4",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/RVFibreDimensionBound.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/RVFibreDimensionBound.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 3.815,
+      "completed_at_utc": "2026-11-14T12:13:37.701194+00:00",
+      "log": ".scratch/recovery/RVFibreDimensionBound-build.log"
+    },
+    {
+      "module": "RVParameterFibres",
+      "source": "section 7/Integration7/RVParameterFibres.lean",
+      "source_sha256": "0dcfec3c0137c9e3de52714cf333c20137e9747a1cefcaeddc8a36661c3121f3",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/RVParameterFibres.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/RVParameterFibres.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 3.913,
+      "completed_at_utc": "2026-11-14T12:18:29.318801+00:00",
+      "log": ".scratch/recovery/RVParameterFibres-build.log"
+    },
+    {
+      "module": "RVParameterVolumeFibres",
+      "source": "section 7/Integration7/RVParameterVolumeFibres.lean",
+      "source_sha256": "57b4967c9a3d2e6504e8a1732a17fef672015299b95c9a3a18ee96457a4fd356",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/RVParameterVolumeFibres.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/RVParameterVolumeFibres.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 3.391,
+      "completed_at_utc": "2026-11-14T12:18:36.269212+00:00",
+      "log": ".scratch/recovery/RVParameterVolumeFibres-build.log"
+    },
+    {
+      "module": "SmallExtendedRVExceptions",
+      "source": "section 7/Integration7/SmallExtendedRVExceptions.lean",
+      "source_sha256": "b1985e63c4758c963dca9cb0367f39fb5cd636b464487fb5a1926b2c69f13b19",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/SmallExtendedRVExceptions.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/SmallExtendedRVExceptions.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 3.559,
+      "completed_at_utc": "2026-11-14T12:18:32.877983+00:00",
+      "log": ".scratch/recovery/SmallExtendedRVExceptions-build.log"
+    },
+    {
+      "module": "VolumeCertificateSmallContextRealization",
+      "source": "section 7/Integration7/VolumeCertificateSmallContextRealization.lean",
+      "source_sha256": "9b600ac47921171893240ea16456519f4db4683daae4861efc55a8457597e882",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/VolumeCertificateSmallContextRealization.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/VolumeCertificateSmallContextRealization.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.158,
+      "completed_at_utc": "2026-11-14T12:16:01.966987+00:00",
+      "log": ".scratch/recovery/VolumeCertificateSmallContextRealization-build.log"
+    }
+  ],
+  "completed_at_utc": "2026-11-14T12:28:40.114633+00:00"
+}

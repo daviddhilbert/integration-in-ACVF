@@ -1,7 +1,7 @@
 # Section 7 continuation
 
 The current checked reconstruction checkpoint is described in `STATUS.md`:
-264 source modules plus their library entry point, with 1,046 distinct
+364 source modules plus their library entry point, with 1,331 distinct
 exported types and axiom reports inspected. The recovery account below
 records the earlier salvage stage; its two-module verification count is
 historical, not the current total. Additional reconstruction is continuing
@@ -167,3 +167,170 @@ The12-module/19-export batch passed full342-line type/axiom inspection and
 the affected10,316-job Library build. Earlier source leaves were unchanged
 and were not manually audited again. The252-module CI run43591052527 is
 separate and remains in progress at this checkpoint.
+
+
+## Common volume witnesses and their finite cover
+
+The twenty-fourth batch proves actual promotion of volume objects,
+isomorphisms, admissibility, blowups, finite chains and common forward
+blowups over the term context of the original named parameters. Parameter
+elimination supplies full original-Gamma graph definability and descends
+admissibility; it adds no field or VF/Gamma generation hypothesis.
+
+Finite chain and common-witness schemata have proved first-order validity.
+Their sound realization retains exact chain lengths. The compactness
+result `gamma_volume_common_finite_witness_cover` starts from actual
+common forward blowups in those named contexts and gives a finite family
+of valid witnesses, with a common bound on both chain lengths. It does not
+assume that an abstract common-blowup relation is definable.
+
+The10-module/26-export batch passed the complete540-line type/axiom review
+and the10,328-job affected Library build. Indexed volume gluing and the
+selected-family contraction comparison of positive selected7.5 remain
+open. The remote backup is still the264-module commit6638f17. At the user's
+request, further GitHub backups will be spaced about100 new modules apart;
+the next planned backup is around364 modules. Targeted local verification
+continues as proofs are added.
+
+
+
+## Indexed volume objects and fibre Jacobians
+
+The twenty-fifth batch constructs actual joint indexed volume
+presentations, appending the index volume to the fibre coordinates and
+retaining the fibre density. Their actual parameter fibres interpret the
+original schema rows exactly. Essential joint labels have precisely a
+nonzero base-volume tuple and an essential fibre label. Uniform valid
+comparison charts yield the actual underlying essential bijection with
+its exact original-Gamma joint chart; its volume equations remain separate.
+
+Polynomial maps carry tangent vectors to their differential images. A
+fixed-head fibre tangent embeds vertically, and the full correspondence
+matrix has the fibre determinant. Thus any defined full RV Jacobian equals
+the defined fixed-head fibre Jacobian. The generic-existence theorem is
+kept separate. Coordinate bases and algebraic-parameter elimination prove
+the RV dimension bound by base dimension plus a fibre bound, without
+choosing definable fibre maps. Small-parameter invariance descends a
+definable exceptional set from a containing context, whose smallness at
+the original cardinal is now retained by certificate realization.
+
+The14-module/37-export batch passed the full652-line type/axiom review and
+the10,354-job affected Library build. Full indexed Gamma/RV volume
+preservation, indexed blowup/common-witness gluing and the positive
+selected7.5 contraction comparison remain open. GitHub backups remain
+spaced about100 new modules apart, with264 saved remotely and the next
+planned near364.
+
+
+
+## Indexed volume equations
+
+The twenty-sixth batch proves `indexedVolumeIso`: a uniformly valid
+original-Gamma volume certificate gives the actual indexed volume
+isomorphism once its underlying chart is interpreted. The Gamma equation
+holds at every essential label. For the RV equation, a definable generic
+Jacobian is compared with the definable density ratio. On each fixed-index
+fibre, disagreement is contained in an actual local volume exception in
+a small containing context. Parameter invariance descends that dimension
+bound; the base-plus-fibre bound makes the global disagreement smaller
+than the joint volume degree. No definable choice of additional fibre
+parameters and no global definability of the Jacobian predicate is assumed.
+
+The 11-module/29-export batch passed its full 846-line type/axiom review
+and the 10,365-job affected Library build. The checked local boundary is
+299 modules plus Library, with 1,138 audited exports. Indexed blowup and
+common-witness gluing, selected-family specialization and positive selected
+Lemma 7.5 remain open. The next GitHub backup remains near 364 modules.
+
+
+## Indexed forward volume blowups
+
+The twenty-seventh batch realizes joint original-Gamma volume charts
+in finite containing contexts and transfers them between arbitrary
+presentations of equal full rows. Indexed assembly commutes with actual
+coproducts and elementary volume blowups: the complete coordinate tuples
+and scalar densities are preserved. Uniform fibre admissibility gives
+actual last-coordinate admissibility in the joint object. Bound-independent
+finite row maps and functional density graphs supply all derived indexed
+presentations.
+
+`GammaRVVolumeBlowupSchema.indexedRealize` constructs a genuine forward
+volume blowup. `GammaVolumeChainSchema.indexedRealize` and
+`GammaVolumeCommonSchema.indexedRealize` retain the exact chain lengths
+and the actual terminal volume comparison. Their conclusion is over a
+finite containing context; no field or VF/Gamma generation assertion is
+added. The index set may be infinite.
+
+The 16-module/28-export batch passed the complete 734-line type/axiom
+review and the 10,393-job affected Library build. The checked local boundary
+is 315 modules plus Library, with 1,166 audited exports. Finite-cover
+partition gluing and the selected-family specialization of positive
+Lemma 7.5 remain open. The next GitHub backup remains near 364 modules.
+
+
+## Finite volume-witness gluing and exact parameter transport
+
+The twenty-eighth batch glues a finite cover by original-Gamma volume
+witnesses over an actual RV base. Definable binary partitions and the empty
+index case are included. The result consists of actual common forward
+volume blowups in a finite containing context.
+
+Named-context promotion now retains zero extra parameters in every
+comparison certificate. Compactness supplies a finite cover by such
+witnesses. Full raw coordinate and density rows, supported RV Jacobian
+formulas, exceptions, admissibility and all internal charts transport
+through a parameter recoding. The exact chain lengths are retained.
+
+The 19-module/70-export batch passed its complete 1,152-line type/axiom
+review and the 10,418-job affected Library build. The checked local boundary
+is 334 modules plus Library, with 1,236 audited exports. VF preparation and
+the selected-family specialization of positive Lemma 7.5 remain open.
+The next GitHub backup remains near 364 modules.
+
+
+## VF preparation and actual focus volume blowups
+
+The twenty-ninth batch codes all primitive coordinate, density, exception
+and witness formulas by finite RV tuples, prepares them simultaneously
+on the VF base, and descends their exact rows to RV keys. The finite
+indexed gluing theorem then gives actual common forward volume blowups.
+`selected_family_volume_preparation` obtains these data from the concrete
+selected-family fibre hypothesis. Its endpoint bounds are proved by
+compactness, and adjoining the density graph is an actual fibre volume
+isomorphism. The VF field assumption remains on the original base.
+
+The contraction-side construction now includes canonical volume labels,
+full-focus elementary volume blowups, literal pullback presentations and
+partitions preserving every volume coordinate and the density. The active
+locus of an arbitrary last-coordinate focus is proved admissible.
+`partialFocusVolumeBlowup` assembles the active elementary blowup and the
+unchanged complement into one genuine volume blowup. No geometric
+comparison is assumed in its conclusion.
+
+The 26-module/82-export batch passed the complete 1,635-line type/axiom
+review and the 10,451-job affected Library build. The checked local boundary
+is 360 modules plus Library, with 1,318 audited exports. Iteration along
+special chains, comparison with arbitrary same-order contractions, and
+the final positive selected Lemma 7.5 remain open. The next GitHub backup
+remains near 364 modules; no smaller remote checkpoint was published.
+
+
+## Unary special-chain volume iteration
+
+`unary_special_volume_chain_pair` and `corollary_6_10_unary_volume`
+iterate actual volume blowups through unary special bijections. The number
+of blowups is the chain length, and the terminal comparison is an actual
+RV volume isomorphism with the canonical pullback object. The density is
+retained as an old RV label. `rvVolumeDensityGraphIso` supplies that label
+for an arbitrary positive RV volume object without changing its degree.
+The required small parameter context is explicit; no VF field or Gamma
+generation hypothesis is introduced on temporary contexts.
+
+The four-module/13-export batch passed the complete 253-line type/axiom
+review and the 10,455-job affected Library build. The checked boundary is
+364 modules plus Library, with 1,331 audited exports. The unary comparison
+of two different special preparations, arbitrary same-order contractions,
+and the final positive selected Lemma 7.5 remain open. This boundary is
+the next authorized backup, 100 modules after the 264-module checkpoint.
+GitHub Actions run43591052527 completed successfully for the earlier
+252-module revision; it does not certify this newer boundary.

@@ -1,0 +1,253 @@
+@IntegrationInACVF.Section7.canonicalFiniteRVKeys : {M : Type} →
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {S : Set.{0} M} →
+        {k : ℕ} →
+          SpecialTransformations.Section4.RVFiniteObject S (HAdd.hAdd.{0, 0, 0} k 1) →
+            SpecialTransformations.Section4.RVFiniteObject S (HAdd.hAdd.{0, 0, 0} k 1)
+'IntegrationInACVF.Section7.canonicalFiniteRVKeys' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@IntegrationInACVF.Section7.canonicalFiniteVolumeForm : {M : Type} →
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {S : Set.{0} M} →
+        {k : ℕ} →
+          (hc : CanonicalStructure.IsCanonical) →
+            (F : SpecialTransformations.Section4.RVFiniteObject S (HAdd.hAdd.{0, 0, 0} k 1)) →
+              IntegrationInACVF.Section7.VolumeForm
+                  (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0}
+                      (IntegrationInACVF.Section7.canonicalFiniteRVObject hc F)).domain →
+                IntegrationInACVF.Section7.VolumeForm
+                  (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0}
+                      (IntegrationInACVF.Section7.canonicalFiniteRVObject hc
+                        (IntegrationInACVF.Section7.canonicalFiniteRVKeys F))).domain
+'IntegrationInACVF.Section7.canonicalFiniteVolumeForm' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.canonicalVolumeFamilyIso : {M : Type} →
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {k : ℕ} →
+        (hc : CanonicalStructure.IsCanonical) →
+          (C : SpecialTransformations.Section3.BaseContext M) →
+            (F : SpecialTransformations.Section4.RVFiniteObject (↑C.base) (HAdd.hAdd.{0, 0, 0} k 1)) →
+              (ω :
+                  IntegrationInACVF.Section7.VolumeForm
+                    (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0}
+                        (IntegrationInACVF.Section7.canonicalFiniteRVObject hc F)).domain) →
+                IntegrationInACVF.Section7.RVVolumeIso
+                  { underlying := IntegrationInACVF.Section7.canonicalFiniteRVObject hc F, form := ω }
+                  {
+                    underlying :=
+                      IntegrationInACVF.Section7.canonicalFiniteRVObject hc
+                        (IntegrationInACVF.Section7.canonicalFiniteRVKeys F),
+                    form := IntegrationInACVF.Section7.canonicalFiniteVolumeForm hc F ω }
+'IntegrationInACVF.Section7.canonicalVolumeFamilyIso' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@IntegrationInACVF.Section7.canonicalFiniteVolumeForm_density : ∀ {M : Type}
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set.{0} M}
+  {k : ℕ} (hc : CanonicalStructure.IsCanonical)
+  (F : SpecialTransformations.Section4.RVFiniteObject S (HAdd.hAdd.{0, 0, 0} k 1))
+  (ω :
+    IntegrationInACVF.Section7.VolumeForm
+      (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0}
+          (IntegrationInACVF.Section7.canonicalFiniteRVObject hc F)).domain)
+  (δ : Fin (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} F).arity),
+  (∀
+      (u :
+        ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+            (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0}
+                (IntegrationInACVF.Section7.canonicalFiniteRVObject hc F)).domain)),
+      Eq.{1} (ω.value u) (↑u δ)) →
+    ∀
+      (u :
+        ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+            (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0}
+                (IntegrationInACVF.Section7.canonicalFiniteRVObject hc
+                  (IntegrationInACVF.Section7.canonicalFiniteRVKeys F))).domain)),
+      Eq.{1} ((IntegrationInACVF.Section7.canonicalFiniteVolumeForm hc F ω).value u)
+        (↑u (Fin.natAdd (HAdd.hAdd.{0, 0, 0} k 1) δ))
+'IntegrationInACVF.Section7.canonicalFiniteVolumeForm_density' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.appendRVVolumeDensity : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {S : Set.{0} M} →
+        {k : ℕ} →
+          (U : IntegrationInACVF.Section7.PositiveRVVolumeObject S k) →
+            SpecialTransformations.DefinableGeometry.Map.{0, 0}
+              (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.underlying).domain
+              (SpecialTransformations.DefinableGeometry.DefSet.univ.{0, 0}
+                (SpecialTransformations.Section4.rawRVSpace
+                  (HAdd.hAdd.{0, 0, 0} (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.underlying).arity 1))
+                S)
+'IntegrationInACVF.Section7.appendRVVolumeDensity' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@IntegrationInACVF.Section7.appendRVVolumeDensity_injective : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set.{0} M}
+  {k : ℕ} (U : IntegrationInACVF.Section7.PositiveRVVolumeObject S k),
+  Function.Injective.{1, 1}
+    (SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0} (IntegrationInACVF.Section7.appendRVVolumeDensity U))
+'IntegrationInACVF.Section7.appendRVVolumeDensity_injective' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.appendRVVolumeDensity_bijective : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set.{0} M}
+  {k : ℕ} (U : IntegrationInACVF.Section7.PositiveRVVolumeObject S k),
+  Function.Bijective.{1, 1}
+    (SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0}
+      (SpecialTransformations.DefinableGeometry.Map.toImage.{0, 0}
+        (IntegrationInACVF.Section7.appendRVVolumeDensity U)))
+'IntegrationInACVF.Section7.appendRVVolumeDensity_bijective' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.rvVolumeDensityProjection : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {S : Set.{0} M} →
+        {k : ℕ} →
+          (U : IntegrationInACVF.Section7.PositiveRVVolumeObject S k) →
+            SpecialTransformations.DefinableGeometry.Map.{0, 0}
+              (SpecialTransformations.DefinableGeometry.Map.image.{0, 0}
+                (IntegrationInACVF.Section7.appendRVVolumeDensity U))
+              (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.underlying).domain
+'IntegrationInACVF.Section7.rvVolumeDensityProjection' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.PositiveRVVolumeObject.densityGraph : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {S : Set.{0} M} →
+        {k : ℕ} →
+          IntegrationInACVF.Section7.PositiveRVVolumeObject S k → IntegrationInACVF.Section7.PositiveRVVolumeObject S k
+'IntegrationInACVF.Section7.PositiveRVVolumeObject.densityGraph' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.PositiveRVVolumeObject.densityGraph_density_last : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set.{0} M}
+  {k : ℕ} (U : IntegrationInACVF.Section7.PositiveRVVolumeObject S k)
+  (v :
+    ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+        (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.densityGraph.underlying).domain)),
+  Eq.{1} (U.densityGraph.form.value v)
+    (↑v (Fin.last (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.underlying).arity))
+'IntegrationInACVF.Section7.PositiveRVVolumeObject.densityGraph_density_last' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.rvVolumeDensityGraphIso : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {k : ℕ} →
+        CanonicalStructure.IsCanonical →
+          (C : SpecialTransformations.Section3.BaseContext M) →
+            (U : IntegrationInACVF.Section7.PositiveRVVolumeObject (↑C.base) k) →
+              IntegrationInACVF.Section7.RVVolumeIso U U.densityGraph
+'IntegrationInACVF.Section7.rvVolumeDensityGraphIso' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@IntegrationInACVF.Section7.unary_special_volume_chain_pair : ∀ {M : Type}
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M) {m l : ℕ}
+  {A : SpecialTransformations.Section5.DefSet (↑C.base) 1 m} {Z : SpecialTransformations.Section5.DefSet (↑C.base) 1 l}
+  (T : SpecialTransformations.Section5.Chain (↑C.base) 1 A Z),
+  (∀ (V : SpecialTransformations.DefinableGeometry.DefSet.{0, 0} (SpecialTransformations.Section4.rawRVSpace m) ↑C.base)
+      (v :
+        SpecialTransformations.DefinableGeometry.Map.{0, 0} V
+          (SpecialTransformations.DefinableGeometry.DefSet.univ.{0, 0} (SpecialTransformations.Section4.rawRVSpace 1)
+            ↑C.base))
+      (hV : SpecialTransformations.DefinableGeometry.Map.FiniteFibres.{0, 0} v)
+      (ω : IntegrationInACVF.Section7.VolumeForm (IntegrationInACVF.Section7.canonicalRawRVDomain hc V)),
+      IntegrationInACVF.Section6.PresentsLift { arity := m, domain := V, volume := v }
+          (IntegrationInACVF.Section6.normalizedPointSet A) →
+        ∀ (δ : Fin m),
+          (∀
+              (u :
+                ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+                    (IntegrationInACVF.Section7.canonicalRawRVDomain hc V))),
+              Eq.{1} (ω.value u) (↑u δ)) →
+            SpecialTransformations.Section5.Chain.Alternating none.{0} T →
+              ∃ (hZF :
+                SpecialTransformations.DefinableGeometry.Map.FiniteFibres.{0, 0}
+                  (SpecialTransformations.Section5.rvObjectVolume (SpecialTransformations.Section5.pullbackObject Z)))
+                (hδZ :
+                ∀ (z : ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} Z)),
+                  Ne.{1} (↑((↑z).2 (T.labelIndex δ))) SpecialTransformations.Milestone0.iRVZero.{0}),
+                ∃ W,
+                  IntegrationInACVF.Section7.IteratedVolumeBlowup T.length
+                      {
+                        underlying :=
+                          IntegrationInACVF.Section7.canonicalFiniteRVObject hc
+                            (CategoryTheory.ObjectProperty.FullSubcategory.mk.{0, 0}
+                              { arity := m, domain := V, volume := v } hV),
+                        form := ω }
+                      W ∧
+                    Nonempty.{1}
+                      (IntegrationInACVF.Section7.RVVolumeIso W
+                        (IntegrationInACVF.Section7.pullbackCoordinateVolumeObject hc Z hZF (T.labelIndex δ) hδZ))) ∧
+    ∀
+      (hAF :
+        SpecialTransformations.DefinableGeometry.Map.FiniteFibres.{0, 0}
+          (SpecialTransformations.Section5.rvObjectVolume (SpecialTransformations.Section5.pullbackObject A)))
+      (δ : Fin m)
+      (hδ :
+        ∀ (a : ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} A)),
+          Ne.{1} (↑((↑a).2 δ)) SpecialTransformations.Milestone0.iRVZero.{0}),
+      SpecialTransformations.Section5.IsRVPullback (SpecialTransformations.Section5.carrier A) →
+        SpecialTransformations.Section5.Chain.Alternating (some.{0} true) T →
+          ∃ (hZF :
+            SpecialTransformations.DefinableGeometry.Map.FiniteFibres.{0, 0}
+              (SpecialTransformations.Section5.rvObjectVolume (SpecialTransformations.Section5.pullbackObject Z)))
+            (hδZ :
+            ∀ (z : ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} Z)),
+              Ne.{1} (↑((↑z).2 (T.labelIndex δ))) SpecialTransformations.Milestone0.iRVZero.{0}),
+            ∃ W,
+              IntegrationInACVF.Section7.IteratedVolumeBlowup T.length
+                  (IntegrationInACVF.Section7.pullbackCoordinateVolumeObject hc A hAF δ hδ) W ∧
+                Nonempty.{1}
+                  (IntegrationInACVF.Section7.RVVolumeIso W
+                    (IntegrationInACVF.Section7.pullbackCoordinateVolumeObject hc Z hZF (T.labelIndex δ) hδZ))
+'IntegrationInACVF.Section7.unary_special_volume_chain_pair' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.corollary_6_10_unary_volume : ∀ {M : Type}
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M)
+  (F : SpecialTransformations.Section4.RVFiniteObject (↑C.base) 1)
+  (ω :
+    IntegrationInACVF.Section7.VolumeForm
+      (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0}
+          (IntegrationInACVF.Section7.canonicalFiniteRVObject hc F)).domain)
+  {A :
+    SpecialTransformations.Section5.DefSet (↑C.base) 1
+      (SpecialTransformations.Section5.rvObjectArity (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} F))},
+  IntegrationInACVF.Section6.PresentsLift (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} F)
+      (IntegrationInACVF.Section6.normalizedPointSet A) →
+    ∀
+      (δ :
+        Fin
+          (SpecialTransformations.Section5.rvObjectArity (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} F))),
+      (∀
+          (u :
+            ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+                (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0}
+                    (IntegrationInACVF.Section7.canonicalFiniteRVObject hc F)).domain)),
+          Eq.{1} (ω.value u) (↑u δ)) →
+        ∀ {l : ℕ} {Z : SpecialTransformations.Section5.DefSet (↑C.base) 1 l}
+          (T : SpecialTransformations.Section5.SpecialBijection A Z),
+          ∃ (hZF :
+            SpecialTransformations.DefinableGeometry.Map.FiniteFibres.{0, 0}
+              (SpecialTransformations.Section5.rvObjectVolume (SpecialTransformations.Section5.pullbackObject Z)))
+            (hδZ :
+            ∀ (z : ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} Z)),
+              Ne.{1} (↑((↑z).2 (T.chain.labelIndex δ))) SpecialTransformations.Milestone0.iRVZero.{0}),
+            ∃ W,
+              IntegrationInACVF.Section7.IteratedVolumeBlowup T.length
+                  { underlying := IntegrationInACVF.Section7.canonicalFiniteRVObject hc F, form := ω } W ∧
+                Nonempty.{1}
+                  (IntegrationInACVF.Section7.RVVolumeIso W
+                    (IntegrationInACVF.Section7.pullbackCoordinateVolumeObject hc Z hZF (T.chain.labelIndex δ) hδZ))
+'IntegrationInACVF.Section7.corollary_6_10_unary_volume' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
