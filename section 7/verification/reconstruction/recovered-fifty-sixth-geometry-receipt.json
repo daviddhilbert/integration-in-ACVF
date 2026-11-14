@@ -1,0 +1,252 @@
+{
+  "source_sha256": {
+    "section 7/Integration7/BalancedTranslationConstructedCommonBlowup.lean": "92a36144f99d7d33df527b75567f72fce406755a0a541bf92887002141ff4e28",
+    "section 7/Integration7/BalancedTranslationNormalizedVolumeComparison.lean": "6564e20ff02325c66c019f38a9e95708994a41ac987d600182f9dd9217e24797",
+    "section 7/Integration7/CanonicalContractionNormalizationObjects.lean": "23f530ccfbf57d52803802ee72b45a0a35b6ffd8bfe03ccbc488fb5389ee4ec2",
+    "section 7/Integration7/ConstantCoordinateDensityObjects.lean": "5e80ab6430371a8538b6269e4f0589be9ac237e38bb8d06ace29cddde4ed8920",
+    "section 7/Integration7/ContractionRetainedLabelValues.lean": "0fa5a980019f217353ca7950d503c4e378972175504f0a9e3723076b6c6f2133",
+    "section 7/Integration7/NormalizedContractionCoordinateGraphs.lean": "3243c688a4dac412a53d1650e2d23f6ea4e4631cb38dc83890b9e94a3423e335",
+    "section 7/Integration7/SmallDimensionContractionNormalization.lean": "3d155601c447ccd78eaf2a47d9fac0335aa548d1e79b3b54988e6461f96b1ac6",
+    "section 7/Integration7/TwoOrderProductCoordinateDensities.lean": "3a4c5fdd7048a985a5787cbd76f23d52caa044e167299ba788befe9489c22d7f",
+    "section 7/Integration7/TwoOrderProductNormalization.lean": "d74baf8ae445a717b83ef958f796b87d8fbe6795c260ba606ae813fc570a9dce",
+    "section 7/Integration7/TwoOrderProductNormalizedGammaObjects.lean": "f685eaacec6d3eb1ad2f827e269dc84609830205f6685009191a75eef02b4092",
+    "section 7/Integration7/TwoOrderProductProgramCertificates.lean": "e880964ebc6c6d1f52efa1addd3752b6195813c22c148516ee6dcf632dcf32f2"
+  },
+  "declarations": [
+    "IntegrationInACVF.Section7.balanced_translation_constructed_common_blowup",
+    "IntegrationInACVF.Section7.balanced_translation_normalized_volume_comparison",
+    "IntegrationInACVF.Section7.canonicalNormalizedFiniteContraction",
+    "IntegrationInACVF.Section7.canonicalFiniteNormalizationIso",
+    "IntegrationInACVF.Section7.canonical_finite_normalization_volume",
+    "IntegrationInACVF.Section7.volume_form_eq_of_value_eq",
+    "IntegrationInACVF.Section7.coordinate_density_eq_constant_volume",
+    "IntegrationInACVF.Section7.normalized_contraction_coordinate_density_eq_constant",
+    "IntegrationInACVF.Section7.raw_contraction_coordinate_density_eq_constant",
+    "IntegrationInACVF.Section7.raw_contraction_retained_label_value",
+    "IntegrationInACVF.Section7.normalized_contraction_retained_label_value",
+    "IntegrationInACVF.Section7.normalized_volume_contraction_domain_gamma",
+    "IntegrationInACVF.Section7.normalized_volume_contraction_coordinates_gamma",
+    "IntegrationInACVF.Section7.normalized_coordinate_density_volume_gamma",
+    "IntegrationInACVF.Section7.rawUnitVolumeContraction",
+    "IntegrationInACVF.Section7.normalizedUnitVolumeContraction",
+    "IntegrationInACVF.Section7.smallDimensionNormalizationVolumeIso",
+    "IntegrationInACVF.Section7.canonical_finite_normalization_gamma",
+    "IntegrationInACVF.Section7.small_dimension_normalization_volume_iso_gamma",
+    "IntegrationInACVF.Section7.fixed_rv_label_domain_retained_value",
+    "IntegrationInACVF.Section7.TwoOrderProductPreparations.head_normalized_coordinate_density",
+    "IntegrationInACVF.Section7.TwoOrderProductPreparations.tail_normalized_coordinate_density",
+    "IntegrationInACVF.Section7.TwoOrderProductPreparations.headRawFiniteRVObject",
+    "IntegrationInACVF.Section7.TwoOrderProductPreparations.tailRawFiniteRVObject",
+    "IntegrationInACVF.Section7.TwoOrderProductPreparations.headNormalizedVolumeObject",
+    "IntegrationInACVF.Section7.TwoOrderProductPreparations.tailNormalizedVolumeObject",
+    "IntegrationInACVF.Section7.TwoOrderProductPreparations.head_unit_volume_dimension_le_one",
+    "IntegrationInACVF.Section7.TwoOrderProductPreparations.tail_unit_volume_dimension_le_one",
+    "IntegrationInACVF.Section7.TwoOrderProductPreparations.headNormalizationVolumeIso",
+    "IntegrationInACVF.Section7.TwoOrderProductPreparations.tailNormalizationVolumeIso",
+    "IntegrationInACVF.Section7.TwoOrderProductPreparations.head_normalization_volume_iso_gamma",
+    "IntegrationInACVF.Section7.TwoOrderProductPreparations.tail_normalization_volume_iso_gamma",
+    "IntegrationInACVF.Section7.TwoOrderProductPreparations.normalized_volume_comparison",
+    "IntegrationInACVF.Section7.TwoOrderProductPreparations.head_normalized_volume_gamma",
+    "IntegrationInACVF.Section7.TwoOrderProductPreparations.tail_normalized_volume_gamma",
+    "IntegrationInACVF.Section7.TwoOrderProductPreparations.headNormalizedGammaObject",
+    "IntegrationInACVF.Section7.TwoOrderProductPreparations.tailNormalizedGammaObject",
+    "IntegrationInACVF.Section7.TwoOrderProductPreparations.head_contraction_gamma",
+    "IntegrationInACVF.Section7.TwoOrderProductPreparations.tail_contraction_gamma"
+  ],
+  "manually_reviewed_lines": 935,
+  "audit_log": ".scratch/recovery/recovered-fifty-sixth-geometry-types-axioms.log",
+  "status": "PASS actual source compilation, full type/axiom review and affected library integration",
+  "scope": "Actual normalized opposite-order contractions of horizontal and vertical images of a native balanced cell are original-Gamma volume-isomorphic and have a common blowup; every retained label is preserved and its selected density equals the common nonzero constant density. This concerns the constructed contractions. Arbitrary specified contraction comparisons, nonbalanced cells, uniform4.8 assembly and higher-dimensional exchange remain open. Lemma7.5 and Corollary7.6 retain their completed scopes;7.7-7.15 remain unfinished.",
+  "library_build_log": ".scratch/recovery/fifty-sixth-reconstruction-library-build.log",
+  "library_build_jobs_including_cached_dependencies": 11337,
+  "compilation": [
+    {
+      "module": "BalancedTranslationConstructedCommonBlowup",
+      "source": "section 7/Integration7/BalancedTranslationConstructedCommonBlowup.lean",
+      "source_sha256": "92a36144f99d7d33df527b75567f72fce406755a0a541bf92887002141ff4e28",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/BalancedTranslationConstructedCommonBlowup.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/BalancedTranslationConstructedCommonBlowup.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.219,
+      "completed_at_utc": "2026-11-14T20:58:28.316492+00:00",
+      "log": ".scratch/recovery/BalancedTranslationConstructedCommonBlowup-build.log"
+    },
+    {
+      "module": "BalancedTranslationNormalizedVolumeComparison",
+      "source": "section 7/Integration7/BalancedTranslationNormalizedVolumeComparison.lean",
+      "source_sha256": "6564e20ff02325c66c019f38a9e95708994a41ac987d600182f9dd9217e24797",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/BalancedTranslationNormalizedVolumeComparison.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/BalancedTranslationNormalizedVolumeComparison.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.076,
+      "completed_at_utc": "2026-11-14T20:56:10.654153+00:00",
+      "log": ".scratch/recovery/BalancedTranslationNormalizedVolumeComparison-build.log"
+    },
+    {
+      "module": "CanonicalContractionNormalizationObjects",
+      "source": "section 7/Integration7/CanonicalContractionNormalizationObjects.lean",
+      "source_sha256": "23f530ccfbf57d52803802ee72b45a0a35b6ffd8bfe03ccbc488fb5389ee4ec2",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/CanonicalContractionNormalizationObjects.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/CanonicalContractionNormalizationObjects.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 3.803,
+      "completed_at_utc": "2026-11-14T20:51:19.276653+00:00",
+      "log": ".scratch/recovery/CanonicalContractionNormalizationObjects-build.log"
+    },
+    {
+      "module": "ConstantCoordinateDensityObjects",
+      "source": "section 7/Integration7/ConstantCoordinateDensityObjects.lean",
+      "source_sha256": "5e80ab6430371a8538b6269e4f0589be9ac237e38bb8d06ace29cddde4ed8920",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/ConstantCoordinateDensityObjects.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/ConstantCoordinateDensityObjects.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.101,
+      "completed_at_utc": "2026-11-14T20:54:06.712747+00:00",
+      "log": ".scratch/recovery/ConstantCoordinateDensityObjects-build.log"
+    },
+    {
+      "module": "ContractionRetainedLabelValues",
+      "source": "section 7/Integration7/ContractionRetainedLabelValues.lean",
+      "source_sha256": "0fa5a980019f217353ca7950d503c4e378972175504f0a9e3723076b6c6f2133",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/ContractionRetainedLabelValues.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/ContractionRetainedLabelValues.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 3.911,
+      "completed_at_utc": "2026-11-14T20:51:17.544364+00:00",
+      "log": ".scratch/recovery/ContractionRetainedLabelValues-build.log"
+    },
+    {
+      "module": "NormalizedContractionCoordinateGraphs",
+      "source": "section 7/Integration7/NormalizedContractionCoordinateGraphs.lean",
+      "source_sha256": "3243c688a4dac412a53d1650e2d23f6ea4e4631cb38dc83890b9e94a3423e335",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/NormalizedContractionCoordinateGraphs.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/NormalizedContractionCoordinateGraphs.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.096,
+      "completed_at_utc": "2026-11-14T20:58:00.613876+00:00",
+      "log": ".scratch/recovery/NormalizedContractionCoordinateGraphs-build.log"
+    },
+    {
+      "module": "SmallDimensionContractionNormalization",
+      "source": "section 7/Integration7/SmallDimensionContractionNormalization.lean",
+      "source_sha256": "3d155601c447ccd78eaf2a47d9fac0335aa548d1e79b3b54988e6461f96b1ac6",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/SmallDimensionContractionNormalization.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/SmallDimensionContractionNormalization.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.042,
+      "completed_at_utc": "2026-11-14T20:53:05.443306+00:00",
+      "log": ".scratch/recovery/SmallDimensionContractionNormalization-build.log"
+    },
+    {
+      "module": "TwoOrderProductCoordinateDensities",
+      "source": "section 7/Integration7/TwoOrderProductCoordinateDensities.lean",
+      "source_sha256": "3a4c5fdd7048a985a5787cbd76f23d52caa044e167299ba788befe9489c22d7f",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/TwoOrderProductCoordinateDensities.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/TwoOrderProductCoordinateDensities.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.136,
+      "completed_at_utc": "2026-11-14T20:55:38.963124+00:00",
+      "log": ".scratch/recovery/TwoOrderProductCoordinateDensities-build.log"
+    },
+    {
+      "module": "TwoOrderProductNormalization",
+      "source": "section 7/Integration7/TwoOrderProductNormalization.lean",
+      "source_sha256": "d74baf8ae445a717b83ef958f796b87d8fbe6795c260ba606ae813fc570a9dce",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/TwoOrderProductNormalization.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/TwoOrderProductNormalization.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.664,
+      "completed_at_utc": "2026-11-14T20:55:02.582568+00:00",
+      "log": ".scratch/recovery/TwoOrderProductNormalization-build.log"
+    },
+    {
+      "module": "TwoOrderProductNormalizedGammaObjects",
+      "source": "section 7/Integration7/TwoOrderProductNormalizedGammaObjects.lean",
+      "source_sha256": "f685eaacec6d3eb1ad2f827e269dc84609830205f6685009191a75eef02b4092",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/TwoOrderProductNormalizedGammaObjects.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/TwoOrderProductNormalizedGammaObjects.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 3.882,
+      "completed_at_utc": "2026-11-14T20:58:04.496402+00:00",
+      "log": ".scratch/recovery/TwoOrderProductNormalizedGammaObjects-build.log"
+    },
+    {
+      "module": "TwoOrderProductProgramCertificates",
+      "source": "section 7/Integration7/TwoOrderProductProgramCertificates.lean",
+      "source_sha256": "e880964ebc6c6d1f52efa1addd3752b6195813c22c148516ee6dcf632dcf32f2",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/TwoOrderProductProgramCertificates.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/TwoOrderProductProgramCertificates.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.184,
+      "completed_at_utc": "2026-11-14T20:59:17.662897+00:00",
+      "log": ".scratch/recovery/TwoOrderProductProgramCertificates-build.log"
+    }
+  ],
+  "completed_at_utc": "2026-11-14T21:03:39.081238+00:00"
+}

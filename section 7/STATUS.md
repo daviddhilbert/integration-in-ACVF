@@ -12,11 +12,11 @@ coordinate. Lemma 7.7 is the active target; results 7.7–7.15 remain open.
 
 ## Current checked local boundary
 
-`Integration7.Library` integrates 664 source modules plus its entry point.
-Full exported types and allowed-axiom reports for 1,988 distinct declarations
+`Integration7.Library` integrates 765 source modules plus its entry point.
+Full exported types and allowed-axiom reports for 2,308 distinct declarations
 have been inspected in targeted incremental batches. Only `propext`,
 `Classical.choice`, and `Quot.sound` occur. The latest affected-library
-build passed, including 11,273 jobs counting its cached dependency closure.
+build passed, including 11,376 jobs counting its cached dependency closure.
 `VERIFICATION.json` seals this source boundary and records the batch receipts.
 Unchanged earlier batches were not manually audited again.
 
@@ -42,7 +42,7 @@ order are retained. Positive selected fibres keep actual finiteness explicit.
 Receipts are under `.scratch/recovery/`: the initial algebra and
 groupification batches contribute 34 exports; the first geometric batch
 contributes 86, the second 59, the third 89, the fourth 26, the fifth 24, the sixth 70, the seventh 56, the eighth 65, the ninth 56, the tenth 23, the eleventh 43, the twelfth 47, the thirteenth 43, the fourteenth 43, the fifteenth 45, the sixteenth 30, the seventeenth 29, and the eighteenth 49.
-The latest receipt is `recovered-fifty-second-geometry-receipt.json`.
+The latest receipt is `recovered-fifty-eighth-geometry-receipt.json`.
 These checks cover currently available sources, not the historical missing
 1,201-module/4,644-declaration working copy.
 
@@ -839,7 +839,7 @@ elementary comparison and ordered induction, which remain unfinished.
 
 The source batch compiled, its full 1,235-line type/axiom report was
 reviewed, and the affected Library build passed (11,002 jobs including
-cached dependencies). The checked boundary is 664 source modules plus
+cached dependencies). The checked boundary is 765 source modules plus
 Library and 1,545 audited exports. This is the next authorized backup
 boundary, 100 modules beyond the last published proof checkpoint.
 
@@ -962,7 +962,7 @@ head induction for positive selected Lemma 7.5 remain unfinished.
 
 The 21-module/38-export batch passed actual source compilation, complete
 1,057-line type/axiom review, including the prepared comparison definition,
-and the affected Library build (11,273 jobs including cached dependencies).
+and the affected Library build (11,376 jobs including cached dependencies).
 The checked boundary is 536 modules plus Library, with 1,723 audited exports.
 The next GitHub backup remains near 564 modules.
 
@@ -983,7 +983,7 @@ reindexing, block swapping and the actual coordinate-density assembly
 charts retain the geometric witnesses and center algebraicity.
 
 The 9-module/19-export batch passed actual source compilation, complete
-695-line type/axiom review and the affected Library build (11,273 jobs
+695-line type/axiom review and the affected Library build (11,376 jobs
 including cached dependencies). The checked boundary is 545 modules plus
 Library, with 1,742 audited exports. Higher-dimensional ordered head
 induction for positive selected Lemma 7.5 remains unfinished.
@@ -1018,7 +1018,7 @@ The head common-refinement composition and higher-dimensional ordered
 induction for positive selected Lemma 7.5 remain unfinished.
 
 The 19-module/44-export batch passed actual source compilation, complete
-881-line type/axiom review and the affected Library build (11,273 jobs
+881-line type/axiom review and the affected Library build (11,376 jobs
 including cached dependencies). The checked boundary is 564 modules plus
 Library, with 1,786 audited exports. This is the next 100-module backup
 boundary after the published 464-module checkpoint.
@@ -1058,7 +1058,7 @@ the original density. This batch does not identify these presentations
 with the older object frontend whose VF tags were reversed.
 
 The 14-module/29-export batch passed actual source compilation, one full
-891-line type/axiom review and the affected Library build (11,273 jobs
+891-line type/axiom review and the affected Library build (11,376 jobs
 including cached dependencies). The checked boundary is 578 modules plus
 Library, with 1,815 audited exports. Corollary 7.6 and subsequent results
 remain unfinished. The next requested backup boundary is about 664 modules.
@@ -1086,7 +1086,7 @@ fibre from a global almost-everywhere hypothesis. The arbitrary-dimensional
 exception comparison in Corollary 7.6 remains unfinished.
 
 The 8-module/16-export batch passed actual source compilation, one full
-459-line type/axiom review and the affected Library build (11,273 jobs
+459-line type/axiom review and the affected Library build (11,376 jobs
 including cached dependencies). The checked boundary is 586 modules plus
 Library, with 1,831 audited exports. No repeated earlier integrity audit
 was performed. The next requested backup boundary remains about 664 modules.
@@ -1112,7 +1112,7 @@ row-to-object interface left open in the preceding batch. The E-empty
 case remains outside the user-approved target.
 
 The 7-module/14-export batch passed actual source compilation, one full
-346-line type/axiom review and the affected Library build (11,273 jobs
+346-line type/axiom review and the affected Library build (11,376 jobs
 including cached dependencies). The checked boundary is 593 modules plus
 Library, with 1,845 audited exports. The arbitrary-dimensional version of
 Corollary 7.6 and 7.7-7.15 remain unfinished. Backup remains due at about
@@ -1138,7 +1138,7 @@ volume isomorphism, independently of contraction order. This establishes
 the lower-dimensional case needed for the remaining exception argument.
 
 The 8-module/18-export batch passed actual source compilation, one full
-316-line type/axiom review and the affected Library build (11,273 jobs
+316-line type/axiom review and the affected Library build (11,376 jobs
 including cached dependencies). The checked boundary is 601 modules plus
 Library, with 1,863 audited exports. General full-dimensional Corollary 7.6
 and 7.7-7.15 remain unfinished. Backup remains due at about 664 modules.
@@ -1158,7 +1158,7 @@ The ordered relative comparison under measure preservation on every fibre
 is a conditional support theorem. It is not counted as general Corollary
 7.6, whose exceptional-base argument remains active. The 12-module and
 17-export batch passed actual compilation, one full 773-line type/axiom
-review and the affected Library build (11,273 jobs including cached
+review and the affected Library build (11,376 jobs including cached
 dependencies). The checked boundary is 613 modules plus Library, with
 1,880 audited exports. General higher-dimensional 7.6 and 7.7-7.15 remain
 unfinished. Backup remains due at about 664 modules.
@@ -1186,7 +1186,7 @@ with unchanged densities. No all-fibres measure premise, new Section 5.8
 input or generation hypothesis has been added to Corollary 7.6.
 
 The 30-module/43-export batch passed actual compilation, one full
-1,832-line type/axiom review and the affected Library build (11,273 jobs
+1,832-line type/axiom review and the affected Library build (11,376 jobs
 including cached dependencies). The checked boundary is 643 modules plus
 Library and 1,923 audited exports. The next active target is 7.7; 7.7-7.15
 remain unfinished. Backup remains due at about 664 modules.
@@ -1209,9 +1209,90 @@ contraction comparison is proved in those contexts over the unchanged
 original base, on actual specified normalized contraction objects.
 
 The 21-module/65-export batch passed actual compilation, one complete
-1,608-line type/axiom review and the affected Library build (11,273 jobs
+1,608-line type/axiom review and the affected Library build (11,376 jobs
 including cached dependencies). This seals 664 modules plus Library and
 1,988 audited exports. Lemma7.7 still needs the balanced RV comparison and
 uniform cell-family assembly; 7.7-7.15 remain unfinished. The last 564-module
 backup passed GitHub Actions run43622491340. The next backup is due at
 about764 modules after saving this milestone.
+
+
+## Balanced unary RV volume comparison for 7.7
+
+`balanced_cell_unary_volume_preparation` constructs the actual unary
+projection bijection of a balanced native two-cell, compatible special
+preparations from the checked Lemma5.2, finite RV volume fibres, and an
+original-Gamma volume isomorphism between the two resulting product RV
+objects at every common nonzero constant density. Its existence scope
+keeps Lemma5.2’s VFFieldBase hypothesis, actual saturation and original-base
+smallness, a real presentation of the positioning graph, and the named
+nonzero paradigms. No two-cell comparison theorem is assumed.
+
+The prepared unary coordinate values are related by the original slope.
+Mutual contractibility identifies the inverse-special fibres as actual
+open balls; the realized difference cuts determine their radii exactly.
+Remark4.6 then gives equality of the products of the two Gamma volume
+coordinates. A finite RV[2] object with one constant coordinate has RV
+dimension at most1, so the RV Jacobian condition is vacuous in degree2.
+The constructed isomorphism retains its complete original-Gamma graph.
+
+The 14-module/41-export batch passed actual compilation, one complete
+1,206-line type/axiom review and the affected Library build (11,376 jobs
+including cached dependencies). The checked boundary is678 modules plus
+Library and2,029 audited exports. Lemma7.7 still needs identification with
+the specified two-coordinate contractions and uniform4.8 cell-family
+assembly; 7.7-7.15 remain unfinished. The durable backup is the664-module
+checkpoint46570a319f7bb9a44a53abed2377eca674fefd79; its CI run43633648775
+was in progress when published. The next backup remains due at about764
+modules, following the author’s100-module preference.
+
+
+## Actual fixed-label product contractions for 7.7
+
+The eighteenth new module in this batch completes `rv_class_product_standard_volume_preparation`: a supplied actual Gamma unary special with an RV-pullback target constructs an actual two-coordinate standard contraction of an RV-class product, retaining every fixed old RV label. The raw RV object of that contraction is exactly coordinate-preserving and volume-isomorphic to the product of the lifted unary pullback object with the fixed class coordinate, at every common nonzero constant density. The complete graph stays over the original Gamma base. Target finite volume is derived from source finite RV fibres and actual Gamma bijectivity.
+
+The fixed-label focus and chain lifts prove the commuting projection, carried labels, joint determination, exact target carrier, and RV-pullback property. Their projections to the original unary targets are actual Gamma bijections, mutually contractible, and induce actual RV isomorphisms preserving the unary volume coordinate. The standard raw label domain and both volume selectors are identified explicitly. An ordinary isomorphism from the normalized finite RV object is also checked.
+
+This is a product construction, not the full two-order lemma. Joining the fixed-head volume lift of the projection to the original unary targets, essential-domain and density-graph identifications, normalized volume objects, the opposite order and uniform4.8 cell-family assembly remain. Lemma7.5 and Corollary7.6 retain their previous completed scopes;7.7-7.15 remain unfinished.
+
+The18-module/85-export batch passed actual source compilation, one full1,702-line type/axiom review and the affected Library build (11,376 jobs including cached dependencies). The checked boundary is696 modules plus Library and2,114 audited exports. The next remote backup remains due around764 modules, following the author’s100-module preference.
+
+
+## Balanced translation product comparison over the original base
+
+`balanced_translation_product_volume_comparison` constructs actual opposite-order standard contractions of the horizontal and vertical product images of a native balanced cell. Their actual raw RV volume objects are original-Gamma volume-isomorphic, retaining every fixed old RV label and any common nonzero constant density. The real positioning presentation and actual Gamma centre graphs remain explicit; the latter have already been constructed by the checked translation-centre theorem. No contraction-comparison premise is assumed.
+
+The carried-label preparations project by actual Gamma RV isomorphisms to the original compatible unary targets. These projections preserve the unary volume coordinate; adjoining a fixed head or tail coordinate, essential restriction, and the opposite VF order are now all identified. The balance isomorphism from the prepared unary geometry composes with those actual maps in the same real presentation: the smaller RV dimension makes the RV Jacobian clause vacuous, while the pointwise Gamma equation is proved throughout.
+
+`lemma_5_2_gamma_presented_without_field` uses generated VF field names internally and eliminates them from every actual special-chain certificate and the full conjugate graph. The corresponding balanced unary, product and native product frontends therefore require genuine uncountable saturation and smallness of the original real base, without a VFFieldBase hypothesis. Characteristic00, the named value greater than1, actual balanced geometry, nonzero paradigms, their real presentation names and the fixed-label tuple certificates remain explicit.
+
+Lemma7.7 is not yet complete. The remaining bridges include normalized objects and their retained density-graph forms, comparison with arbitrary specified contractions via Corollary7.6, nonbalanced cells, uniform4.8 cell-family assembly and the higher-dimensional frozen-coordinate reduction. Lemma7.5 and Corollary7.6 retain their completed scopes;7.7-7.15 remain unfinished.
+
+The20-module/50-export batch passed actual source compilation, one full1,833-line type/axiom review and the affected Library build (11,376 jobs including cached dependencies). The checked boundary is716 modules plus Library and2,164 audited exports. The durable backup remains the664-module checkpoint46570a319f7bb9a44a53abed2377eca674fefd79. The next remote backup is still due around764 modules under the author’s100-module preference.
+
+
+## Normalized balanced translation comparison
+
+`balanced_translation_constructed_common_blowup` compares the actual normalized volume objects of the constructed opposite-order standard contractions on the horizontal and vertical translated images of a native balanced cell. The common blowup uses the proved original-Gamma volume isomorphism. The normalized objects are finite, every old RV label retains its source value, and a selected retained nonzero density coordinate gives exactly the constant-density form used in the comparison. Full original-Gamma endpoint and program certificates are proved. No new comparison or field-base premise is assumed.
+
+This does not complete Lemma7.7: comparisons with arbitrary specified original-cell contractions, nonbalanced cells, uniform4.8 cell-family assembly and higher-dimensional exchange remain open. The11-module/39-export batch passed actual compilation, one full935-line type/axiom review and Library integration (11,376 jobs including cached dependencies). The checked boundary is727 modules plus Library and2,203 exports. The next authorized remote backup remains due around764 modules.
+
+
+## Arbitrary balanced and degenerate cell contractions
+
+`balanced_cell_opposite_order_contraction_comparison` proves the balanced two-dimensional cell case of Lemma7.7 for arbitrary specified original-Gamma standard contractions in the two opposite orders. It constructs actual common forward blowup chains on their normalized finite volume objects, retaining all fixed old RV labels and the selected nonzero density. `gamma_named_balanced_cell_contraction_comparison` realizes the original Gamma names in a genuine small containing context, constructs the actual translation centres and real positioning presentations, and proves the required preservation of original VF independence internally. Nonzero paradigms and their real presentation names remain explicit. No VFFieldBase premise is added.
+
+The key presentation bridge rebuilds actual Gamma special chains over fixed common names while preserving their point values, focus geometry and alternation. The resulting product programs keep their actual target carriers and volume selectors. Their full original-Gamma volume comparison transfers to that presentation, where Corollary7.6 compares the arbitrary specified original-cell contractions to the constructed product contractions. The retained-coordinate density objects are proved equal to the actual normalized constant-density product objects before composition.
+
+`degenerate_cell_contractions_compare` handles zero-paradigm graph cells and singleton-first-projection cells in any specified contraction orders. The actual natural lift maps preserve VF dimension; these domains have VF dimension at most one, so their degree-two contraction objects have empty essential domains. The resulting volume isomorphism and common chains retain the original Gamma base.
+
+The23-module/55-export batch passed actual source compilation, one full1,400-line type/axiom review and Library integration (11,376 jobs including cached dependencies). The checked local boundary is750 modules plus Library and2,258 exports. No earlier batch was manually reviewed again. Complete Lemma7.7 still needs nonbalanced open rectangles, uniform4.8 cell-family assembly and higher-dimensional exchange;7.7-7.15 remain open. The durable backup remains checkpoint664; the next authorized backup is due around764 modules.
+
+
+## Rectangle preparations and parameter products
+
+The fifteenth new module in this batch establishes `RVParameterSpecialPreparation.head_product_map_bijective`: the actual contraction of a unary special preparation carrying an arbitrary RV parameter domain is definably bijective to the product of that domain with the original unary contraction. Surjectivity uses the actual special chain and exact source geometry, so no independent amalgamation of potentially overlapping coordinate selectors is assumed. The target pullback and both complete factor maps are proved on the actual label domains.
+
+`nativeUnaryRectangleContraction` builds an actual two-stage standard contraction from the two unary preparations. The first-factor action is proved relatively special by restricting the same unary chain to each frozen-coordinate fibre, including empty fibres; its complete graph retains the original Gamma base. Its first head image is exactly the second unary source over the entire first RV contraction. The second stage carries all these parameters. `gamma_unary_pullback_preparation_over_common_names` produces unary preparations in a specified common-name context without a VFFieldBase hypothesis.
+
+The15-module/50-export batch passed actual compilation, one full798-line type/axiom review and affected Library integration. The checked boundary is765 modules plus Library and2,308 exports. Earlier batches were not manually audited again. The balanced and degenerate cases remain established; the rectangle finite-volume and opposite-order comparisons, uniform4.8 family assembly and higher-dimensional exchange remain to be completed. This is a construction and ordinary output bijection, not yet the full rectangle volume comparison.

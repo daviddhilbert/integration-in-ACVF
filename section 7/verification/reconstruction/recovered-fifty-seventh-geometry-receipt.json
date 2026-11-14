@@ -1,0 +1,484 @@
+{
+  "source_sha256": {
+    "section 7/Integration7/BalancedCellOppositeOrderComparisons.lean": "7d5bb76587f2768ce7795a108e61037604e9e09c0749fb49561f69831a374baa",
+    "section 7/Integration7/BalancedTranslationCommonNameBlowup.lean": "52ed4d2c40457986663b3fc22f2ff39a9e2972c78b0157cb0b00517fc6172540",
+    "section 7/Integration7/ConstantLabelPreparationCommonNames.lean": "b42e04dbb21beb6310988f288ef352ee1c554ee07a5d4005a89a9d42da735614",
+    "section 7/Integration7/DegenerateCellContractionComparisons.lean": "88e4af4ceab5187e588d2781e6280edd3b43fb276d1acb84cc0976fa2d3961bd",
+    "section 7/Integration7/FixedLabelContractionLiftGeometry.lean": "54911f1fa3c7316757a5345a1731dca9e0047e8c04923ae993b35689a59b01e4",
+    "section 7/Integration7/FixedLabelContractionVolumeObjects.lean": "453d21d3fba3ef161f26a9c7c484817dafa2353c9d8b72f27e193094de466255",
+    "section 7/Integration7/FixedLabelSmallVFDimension.lean": "44e811b46e7c19d9f90e05fc2ad8ab728fe36bddd11af24e699bebd7016ef483",
+    "section 7/Integration7/FixedLabelTranslationCommonBlowups.lean": "b1c6312db405bbfc23c0041f4adaa700e19f6743dd7e44a6e43001ed0863f86a",
+    "section 7/Integration7/FixedLabelTranslationContractionComparisons.lean": "81a48ea830c368063c0921c1262db3a3077afcd8472c4835af3cc06f78e91285",
+    "section 7/Integration7/FixedLabelTranslationDensityForms.lean": "e816d5b40cb78d954d23e2c1ed1de23280dd11a74b59b706ebe97956c5de5e16",
+    "section 7/Integration7/FixedLabelTranslationVolumes.lean": "eca585eeb834ba0ce64e89fe7a1ec27e6884673a94491581c2753ad5a44738cc",
+    "section 7/Integration7/FixedRVLabelDomainBijections.lean": "2abaa3136dcccb6aafefb2e060e17f04a9ed3a17e1f1dcbb3d25cba060ba6bbe",
+    "section 7/Integration7/GammaNamedBalancedCellComparisons.lean": "4f58e35d7e5853aa9d480a76a31f9a9d9e31edcd70453b63fa1ec792784159d9",
+    "section 7/Integration7/GammaNamedFixedLabelTranslationComparisons.lean": "e78a6ddb392e1b27666e71f55e058acff4081a0d23f96f73fad0b4b0fb87cdfc",
+    "section 7/Integration7/GammaNativeCommonNames.lean": "d9b5ff5f5c1a8ab40178a04baedadea857ef4d045cb86495fa9d4922f790e98c",
+    "section 7/Integration7/GammaRVCommonNames.lean": "59b4566134b787cc9e3ba18f00217314e042008c40e4cb1ce37c9baeab95e631",
+    "section 7/Integration7/GammaSpecialCommonNames.lean": "8702060506c9f08f7eb23aa059253b8c9de3662898bb73047ff1f2ce6b47cf5f",
+    "section 7/Integration7/NativeBalancedTranslationCommonNames.lean": "afe2830bebd4c9adf5a087188a339adc9227f52c46b9a2faac1cd4c5d8ee8338",
+    "section 7/Integration7/TwoOrderProductCommonNameEssentialDomains.lean": "dbd02edc13339932ccfa7dd8f0227c439919bf4c9f53c5df3a59f7dd541451bc",
+    "section 7/Integration7/TwoOrderProductCommonNameGeometry.lean": "377b03270e516dd137a882015338867b960bcc36f608d89e576f0c7d668a6df9",
+    "section 7/Integration7/TwoOrderProductCommonNameVolumes.lean": "73c0cfca747110701f5c9fb9395f51e6f313fa47f1adbddab055077d008f4ff2",
+    "section 7/Integration7/TwoOrderProductCommonNames.lean": "cc52d55c4963f0ef55d480e4005d7a71cc9dd18e1bcb247f76750f2bd64697ee",
+    "section 7/Integration7/TwoOrderProductContractionVolumeIdentifications.lean": "ebfb2b2245311e83641583d12d95a83e4f085d07479031d1162caf7003d3e893"
+  },
+  "declarations": [
+    "IntegrationInACVF.Section7.balanced_cell_opposite_order_contraction_comparison",
+    "IntegrationInACVF.Section7.balanced_translation_common_blowup_in_context",
+    "IntegrationInACVF.Section7.ConstantRVLabelSpecialPreparation.present",
+    "IntegrationInACVF.Section7.degenerate_cell_contractions_compare",
+    "IntegrationInACVF.Section7.fixedLabelContractionLiftMap",
+    "IntegrationInACVF.Section7.fixed_label_contraction_lift_map_bijective",
+    "IntegrationInACVF.Section7.fixed_label_contraction_lift_dimension",
+    "IntegrationInACVF.Section7.fixed_label_contraction_essential_empty_of_small_dimension",
+    "IntegrationInACVF.Section7.small_dimension_fixed_label_contractions_compare",
+    "IntegrationInACVF.Section7.fixedLabelContractionGammaObject",
+    "IntegrationInACVF.Section7.fixed_label_vf_dimension_le_one_of_coordinate",
+    "IntegrationInACVF.Section7.native_graph_coordinate_determines",
+    "IntegrationInACVF.Section7.native_first_singleton_coordinate_determines",
+    "IntegrationInACVF.Section7.fixed_label_translation_contraction_common_blowup",
+    "IntegrationInACVF.Section7.fixed_label_translation_contraction_geometry",
+    "IntegrationInACVF.Section7.raw_fixed_rv_label_density_nonzero",
+    "IntegrationInACVF.Section7.fixedRVLabelDensityForm",
+    "IntegrationInACVF.Section7.fixed_rv_label_density_form_value",
+    "IntegrationInACVF.Section7.fixed_rv_label_translation_preserves_literal_density",
+    "IntegrationInACVF.Section7.fixed_pure_rv_label_fibres_finite",
+    "IntegrationInACVF.Section7.fixed_rv_label_translation_jacobian_one",
+    "IntegrationInACVF.Section7.fixed_rv_label_translation_preserves_volume",
+    "IntegrationInACVF.Section7.fixed_rv_label_projection_bijective",
+    "IntegrationInACVF.Section7.gamma_fixed_rv_label_projection",
+    "IntegrationInACVF.Section7.fixedRVLabelMap",
+    "IntegrationInACVF.Section7.fixed_rv_label_map_bijective",
+    "IntegrationInACVF.Section7.fixed_rv_label_map_vf",
+    "IntegrationInACVF.Section7.fixed_rv_label_map_relative",
+    "IntegrationInACVF.Section7.gamma_fixed_rv_label_map",
+    "IntegrationInACVF.Section7.gamma_named_balanced_cell_contraction_comparison",
+    "IntegrationInACVF.Section7.gamma_named_fixed_label_translation_contraction_geometry",
+    "IntegrationInACVF.Section7.gamma_native_set_common_names",
+    "IntegrationInACVF.Section7.gamma_native_graph_common_names",
+    "IntegrationInACVF.Section7.gamma_native_scalar_common_names",
+    "IntegrationInACVF.Section7.gamma_raw_rv_relation_common_names",
+    "IntegrationInACVF.Section7.gammaNativePresentation",
+    "IntegrationInACVF.Section7.gammaFocusPresentation",
+    "IntegrationInACVF.Section7.gammaChainPresentation",
+    "IntegrationInACVF.Section7.gamma_chain_presentation_gamma",
+    "IntegrationInACVF.Section7.gamma_chain_presentation_alternating",
+    "IntegrationInACVF.Section7.gamma_chain_presentation_apply",
+    "IntegrationInACVF.Section7.gammaSpecialPresentation",
+    "IntegrationInACVF.Section7.balanced_translation_centres_over_common_names",
+    "IntegrationInACVF.Section7.TwoOrderProductPreparations.head_present_essential_domain",
+    "IntegrationInACVF.Section7.TwoOrderProductPreparations.tail_present_essential_domain",
+    "IntegrationInACVF.Section7.TwoOrderProductPreparations.head_present_target_carrier",
+    "IntegrationInACVF.Section7.TwoOrderProductPreparations.tail_present_target_carrier",
+    "IntegrationInACVF.Section7.TwoOrderProductPreparations.head_present_volume_index",
+    "IntegrationInACVF.Section7.TwoOrderProductPreparations.tail_present_volume_index",
+    "IntegrationInACVF.Section7.TwoOrderProductPreparations.head_present_normalized_domain",
+    "IntegrationInACVF.Section7.TwoOrderProductPreparations.tail_present_normalized_domain",
+    "IntegrationInACVF.Section7.TwoOrderProductPreparations.normalized_volume_comparison_in_presentation",
+    "IntegrationInACVF.Section7.TwoOrderProductPreparations.present",
+    "IntegrationInACVF.Section7.TwoOrderProductPreparations.head_fixed_label_contraction_object",
+    "IntegrationInACVF.Section7.TwoOrderProductPreparations.tail_fixed_label_contraction_object"
+  ],
+  "manually_reviewed_lines": 1400,
+  "audit_log": ".scratch/recovery/recovered-fifty-seventh-geometry-types-axioms.log",
+  "status": "PASS actual source compilation, full type/axiom review and affected library integration",
+  "scope": "The balanced two-dimensional cell case of Lemma7.7 is proved for arbitrary specified original-Gamma opposite-order standard contractions on the actual fixed-label source, yielding original-Gamma common forward volume blowups on their normalized retained-density objects. The common-name frontend constructs the translation centres and discharges the generic-independence extension premise. Zero-paradigm graph cells and singleton-first-projection cells compare in arbitrary specified orders via empty essential domains. Complete7.7 still needs nonbalanced open rectangles, uniform4.8 cell-family assembly and higher-dimensional exchange;7.7-7.15 remain unfinished. Lemma7.5 and Corollary7.6 retain their completed scopes.",
+  "library_build_log": ".scratch/recovery/fifty-seventh-reconstruction-library-build.log",
+  "library_build_jobs_including_cached_dependencies": 11360,
+  "compilation": [
+    {
+      "module": "BalancedCellOppositeOrderComparisons",
+      "source": "section 7/Integration7/BalancedCellOppositeOrderComparisons.lean",
+      "source_sha256": "7d5bb76587f2768ce7795a108e61037604e9e09c0749fb49561f69831a374baa",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/BalancedCellOppositeOrderComparisons.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/BalancedCellOppositeOrderComparisons.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.579,
+      "completed_at_utc": "2026-11-14T21:34:50.829841+00:00",
+      "log": ".scratch/recovery/BalancedCellOppositeOrderComparisons-build.log"
+    },
+    {
+      "module": "BalancedTranslationCommonNameBlowup",
+      "source": "section 7/Integration7/BalancedTranslationCommonNameBlowup.lean",
+      "source_sha256": "52ed4d2c40457986663b3fc22f2ff39a9e2972c78b0157cb0b00517fc6172540",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/BalancedTranslationCommonNameBlowup.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/BalancedTranslationCommonNameBlowup.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 3.782,
+      "completed_at_utc": "2026-11-14T21:33:42.730574+00:00",
+      "log": ".scratch/recovery/BalancedTranslationCommonNameBlowup-build.log"
+    },
+    {
+      "module": "ConstantLabelPreparationCommonNames",
+      "source": "section 7/Integration7/ConstantLabelPreparationCommonNames.lean",
+      "source_sha256": "b42e04dbb21beb6310988f288ef352ee1c554ee07a5d4005a89a9d42da735614",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/ConstantLabelPreparationCommonNames.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/ConstantLabelPreparationCommonNames.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 3.939,
+      "completed_at_utc": "2026-11-14T21:07:55.594267+00:00",
+      "log": ".scratch/recovery/ConstantLabelPreparationCommonNames-build.log"
+    },
+    {
+      "module": "DegenerateCellContractionComparisons",
+      "source": "section 7/Integration7/DegenerateCellContractionComparisons.lean",
+      "source_sha256": "88e4af4ceab5187e588d2781e6280edd3b43fb276d1acb84cc0976fa2d3961bd",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/DegenerateCellContractionComparisons.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/DegenerateCellContractionComparisons.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.667,
+      "completed_at_utc": "2026-11-14T21:37:57.215118+00:00",
+      "log": ".scratch/recovery/DegenerateCellContractionComparisons-build.log"
+    },
+    {
+      "module": "FixedLabelContractionLiftGeometry",
+      "source": "section 7/Integration7/FixedLabelContractionLiftGeometry.lean",
+      "source_sha256": "54911f1fa3c7316757a5345a1731dca9e0047e8c04923ae993b35689a59b01e4",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/FixedLabelContractionLiftGeometry.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/FixedLabelContractionLiftGeometry.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.583,
+      "completed_at_utc": "2026-11-14T21:32:37.857062+00:00",
+      "log": ".scratch/recovery/FixedLabelContractionLiftGeometry-build.log"
+    },
+    {
+      "module": "FixedLabelContractionVolumeObjects",
+      "source": "section 7/Integration7/FixedLabelContractionVolumeObjects.lean",
+      "source_sha256": "453d21d3fba3ef161f26a9c7c484817dafa2353c9d8b72f27e193094de466255",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/FixedLabelContractionVolumeObjects.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/FixedLabelContractionVolumeObjects.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.333,
+      "completed_at_utc": "2026-11-14T21:26:22.097897+00:00",
+      "log": ".scratch/recovery/FixedLabelContractionVolumeObjects-build.log"
+    },
+    {
+      "module": "FixedLabelSmallVFDimension",
+      "source": "section 7/Integration7/FixedLabelSmallVFDimension.lean",
+      "source_sha256": "44e811b46e7c19d9f90e05fc2ad8ab728fe36bddd11af24e699bebd7016ef483",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/FixedLabelSmallVFDimension.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/FixedLabelSmallVFDimension.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.508,
+      "completed_at_utc": "2026-11-14T21:34:17.970825+00:00",
+      "log": ".scratch/recovery/FixedLabelSmallVFDimension-build.log"
+    },
+    {
+      "module": "FixedLabelTranslationCommonBlowups",
+      "source": "section 7/Integration7/FixedLabelTranslationCommonBlowups.lean",
+      "source_sha256": "b1c6312db405bbfc23c0041f4adaa700e19f6743dd7e44a6e43001ed0863f86a",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/FixedLabelTranslationCommonBlowups.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/FixedLabelTranslationCommonBlowups.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.172,
+      "completed_at_utc": "2026-11-14T21:26:59.949923+00:00",
+      "log": ".scratch/recovery/FixedLabelTranslationCommonBlowups-build.log"
+    },
+    {
+      "module": "FixedLabelTranslationContractionComparisons",
+      "source": "section 7/Integration7/FixedLabelTranslationContractionComparisons.lean",
+      "source_sha256": "81a48ea830c368063c0921c1262db3a3077afcd8472c4835af3cc06f78e91285",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/FixedLabelTranslationContractionComparisons.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/FixedLabelTranslationContractionComparisons.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.228,
+      "completed_at_utc": "2026-11-14T21:22:56.531086+00:00",
+      "log": ".scratch/recovery/FixedLabelTranslationContractionComparisons-build.log"
+    },
+    {
+      "module": "FixedLabelTranslationDensityForms",
+      "source": "section 7/Integration7/FixedLabelTranslationDensityForms.lean",
+      "source_sha256": "e816d5b40cb78d954d23e2c1ed1de23280dd11a74b59b706ebe97956c5de5e16",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/FixedLabelTranslationDensityForms.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/FixedLabelTranslationDensityForms.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.167,
+      "completed_at_utc": "2026-11-14T21:20:18.877815+00:00",
+      "log": ".scratch/recovery/FixedLabelTranslationDensityForms-build.log"
+    },
+    {
+      "module": "FixedLabelTranslationVolumes",
+      "source": "section 7/Integration7/FixedLabelTranslationVolumes.lean",
+      "source_sha256": "eca585eeb834ba0ce64e89fe7a1ec27e6884673a94491581c2753ad5a44738cc",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/FixedLabelTranslationVolumes.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/FixedLabelTranslationVolumes.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.18,
+      "completed_at_utc": "2026-11-14T21:18:20.611023+00:00",
+      "log": ".scratch/recovery/FixedLabelTranslationVolumes-build.log"
+    },
+    {
+      "module": "FixedRVLabelDomainBijections",
+      "source": "section 7/Integration7/FixedRVLabelDomainBijections.lean",
+      "source_sha256": "2abaa3136dcccb6aafefb2e060e17f04a9ed3a17e1f1dcbb3d25cba060ba6bbe",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/FixedRVLabelDomainBijections.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/FixedRVLabelDomainBijections.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 3.844,
+      "completed_at_utc": "2026-11-14T21:13:11.408234+00:00",
+      "log": ".scratch/recovery/FixedRVLabelDomainBijections-build.log"
+    },
+    {
+      "module": "GammaNamedBalancedCellComparisons",
+      "source": "section 7/Integration7/GammaNamedBalancedCellComparisons.lean",
+      "source_sha256": "4f58e35d7e5853aa9d480a76a31f9a9d9e31edcd70453b63fa1ec792784159d9",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/GammaNamedBalancedCellComparisons.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/GammaNamedBalancedCellComparisons.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.23,
+      "completed_at_utc": "2026-11-14T21:36:41.717665+00:00",
+      "log": ".scratch/recovery/GammaNamedBalancedCellComparisons-build.log"
+    },
+    {
+      "module": "GammaNamedFixedLabelTranslationComparisons",
+      "source": "section 7/Integration7/GammaNamedFixedLabelTranslationComparisons.lean",
+      "source_sha256": "e78a6ddb392e1b27666e71f55e058acff4081a0d23f96f73fad0b4b0fb87cdfc",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/GammaNamedFixedLabelTranslationComparisons.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/GammaNamedFixedLabelTranslationComparisons.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.287,
+      "completed_at_utc": "2026-11-14T21:24:11.239099+00:00",
+      "log": ".scratch/recovery/GammaNamedFixedLabelTranslationComparisons-build.log"
+    },
+    {
+      "module": "GammaNativeCommonNames",
+      "source": "section 7/Integration7/GammaNativeCommonNames.lean",
+      "source_sha256": "d9b5ff5f5c1a8ab40178a04baedadea857ef4d045cb86495fa9d4922f790e98c",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/GammaNativeCommonNames.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/GammaNativeCommonNames.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.502,
+      "completed_at_utc": "2026-11-14T21:05:33.103912+00:00",
+      "log": ".scratch/recovery/GammaNativeCommonNames-build.log"
+    },
+    {
+      "module": "GammaRVCommonNames",
+      "source": "section 7/Integration7/GammaRVCommonNames.lean",
+      "source_sha256": "59b4566134b787cc9e3ba18f00217314e042008c40e4cb1ce37c9baeab95e631",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/GammaRVCommonNames.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/GammaRVCommonNames.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.19,
+      "completed_at_utc": "2026-11-14T21:10:09.507314+00:00",
+      "log": ".scratch/recovery/GammaRVCommonNames-build.log"
+    },
+    {
+      "module": "GammaSpecialCommonNames",
+      "source": "section 7/Integration7/GammaSpecialCommonNames.lean",
+      "source_sha256": "8702060506c9f08f7eb23aa059253b8c9de3662898bb73047ff1f2ce6b47cf5f",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/GammaSpecialCommonNames.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/GammaSpecialCommonNames.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.365,
+      "completed_at_utc": "2026-11-14T21:07:20.100406+00:00",
+      "log": ".scratch/recovery/GammaSpecialCommonNames-build.log"
+    },
+    {
+      "module": "NativeBalancedTranslationCommonNames",
+      "source": "section 7/Integration7/NativeBalancedTranslationCommonNames.lean",
+      "source_sha256": "afe2830bebd4c9adf5a087188a339adc9227f52c46b9a2faac1cd4c5d8ee8338",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/NativeBalancedTranslationCommonNames.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/NativeBalancedTranslationCommonNames.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.298,
+      "completed_at_utc": "2026-11-14T21:35:28.276053+00:00",
+      "log": ".scratch/recovery/NativeBalancedTranslationCommonNames-build.log"
+    },
+    {
+      "module": "TwoOrderProductCommonNameEssentialDomains",
+      "source": "section 7/Integration7/TwoOrderProductCommonNameEssentialDomains.lean",
+      "source_sha256": "dbd02edc13339932ccfa7dd8f0227c439919bf4c9f53c5df3a59f7dd541451bc",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/TwoOrderProductCommonNameEssentialDomains.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/TwoOrderProductCommonNameEssentialDomains.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 12.088,
+      "completed_at_utc": "2026-11-14T21:21:40.128920+00:00",
+      "log": ".scratch/recovery/TwoOrderProductCommonNameEssentialDomains-build.log"
+    },
+    {
+      "module": "TwoOrderProductCommonNameGeometry",
+      "source": "section 7/Integration7/TwoOrderProductCommonNameGeometry.lean",
+      "source_sha256": "377b03270e516dd137a882015338867b960bcc36f608d89e576f0c7d668a6df9",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/TwoOrderProductCommonNameGeometry.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/TwoOrderProductCommonNameGeometry.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 9.323,
+      "completed_at_utc": "2026-11-14T21:16:07.301053+00:00",
+      "log": ".scratch/recovery/TwoOrderProductCommonNameGeometry-build.log"
+    },
+    {
+      "module": "TwoOrderProductCommonNameVolumes",
+      "source": "section 7/Integration7/TwoOrderProductCommonNameVolumes.lean",
+      "source_sha256": "73c0cfca747110701f5c9fb9395f51e6f313fa47f1adbddab055077d008f4ff2",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/TwoOrderProductCommonNameVolumes.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/TwoOrderProductCommonNameVolumes.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 21.241,
+      "completed_at_utc": "2026-11-14T21:33:38.947951+00:00",
+      "log": ".scratch/recovery/TwoOrderProductCommonNameVolumes-build.log"
+    },
+    {
+      "module": "TwoOrderProductCommonNames",
+      "source": "section 7/Integration7/TwoOrderProductCommonNames.lean",
+      "source_sha256": "cc52d55c4963f0ef55d480e4005d7a71cc9dd18e1bcb247f76750f2bd64697ee",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/TwoOrderProductCommonNames.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/TwoOrderProductCommonNames.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.313,
+      "completed_at_utc": "2026-11-14T21:08:32.360425+00:00",
+      "log": ".scratch/recovery/TwoOrderProductCommonNames-build.log"
+    },
+    {
+      "module": "TwoOrderProductContractionVolumeIdentifications",
+      "source": "section 7/Integration7/TwoOrderProductContractionVolumeIdentifications.lean",
+      "source_sha256": "ebfb2b2245311e83641583d12d95a83e4f085d07479031d1162caf7003d3e893",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/TwoOrderProductContractionVolumeIdentifications.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/TwoOrderProductContractionVolumeIdentifications.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.484,
+      "completed_at_utc": "2026-11-14T21:28:11.700705+00:00",
+      "log": ".scratch/recovery/TwoOrderProductContractionVolumeIdentifications-build.log"
+    }
+  ],
+  "completed_at_utc": "2026-11-14T21:41:12.545553+00:00"
+}
