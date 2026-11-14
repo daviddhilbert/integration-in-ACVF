@@ -1,7 +1,7 @@
 # Section 7 continuation
 
 The current checked reconstruction checkpoint is described in `STATUS.md`:
-192 source modules plus their library entry point, with 839 distinct
+200 source modules plus their library entry point, with 868 distinct
 exported types and axiom reports inspected. The recovery account below
 records the earlier salvage stage; its two-module verification count is
 historical, not the current total. Additional reconstruction is continuing
@@ -76,3 +76,10 @@ formulas and uniform bounds for exceptional maps. Exact essential finite
 and density schemata are checked. The next concrete step is encoding the
 volume correspondence of a chart and its first-order volume validity, then
 promoting and gluing complete common-blowup witnesses.
+
+The seventeenth batch derives original-Gamma volume-correspondence formulas
+and proves `rvVolumeIso_finite_formula_iff` for a fixed essential chart.
+Its converse constructs the actual RV volume isomorphism from its finite
+chart certificate and the explicit Gamma product-balance formula. Next:
+assemble complete coordinate/density/chart/exception witness schemata and
+their validity/promotion/finite-cover/gluing proofs.7.5 is still open.

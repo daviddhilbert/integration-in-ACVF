@@ -1,6 +1,6 @@
 {
   "status": "Manually reviewed reconstruction boundary",
-  "scope": "192 reconstructed/recovered source modules plus their library; not full Section 7 completion",
+  "scope": "200 reconstructed/recovered source modules plus their library; not full Section 7 completion",
   "lean_toolchain": "leanprover/lean4:v4.35.0",
   "dependency_pins": {
     "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
@@ -32,7 +32,7 @@
     "section 7/Integration7/VolumeDensityRescaling.lean": "34e2da86c631eb869d07bbfdf501b249fb658583b99d0a19b018dab9a7f96b52",
     "section 7/Integration7/VolumeFormGluing.lean": "ca4cd92dee9c4ac0ba02b8606d1c868efe6994ca292f6c033185d5affd4928fd",
     "section 7/Integration7/VolumeForms.lean": "eda92eb71d08a2e59f765e4e071298bdc851522c80e1ac9a2885bbcaac1c9742",
-    "section 7/Integration7/Library.lean": "689556b1f8acc4957730d2800626bf8a07c07dbe4401bd5f5d821664a392b86b",
+    "section 7/Integration7/Library.lean": "ab9753d242e59a9626ea171ea386b8149286ec7e7399739849e9525cfd7b1545",
     "section 7/Integration7/CoordinateRVJacobian.lean": "35c6b2e73cc0c254084905786f16606631f53660e41982d1610bfe8fa536758e",
     "section 7/Integration7/ElementaryBlowupConstruction.lean": "b25f4eef226e7141c639aecd347566c4e384f2b582333bd9ddb751fd66c72945",
     "section 7/Integration7/EssentialBlowupChart.lean": "68b8614debb32e8ce5c29ba325420db01f00b83f96ed22dcc7cca2184164948b",
@@ -200,7 +200,15 @@
     "section 7/Integration7/GammaDefinableTransforms.lean": "e497f8c0199aa4b9456063a3d6d95d3944352c0ecfc290e1566c2fabef0caa3c",
     "section 7/Integration7/GammaVolumeChartGraphs.lean": "28713d92b6d185ddcfdd5e90a049020fc3d25e6a42a208afff17f1434d4d59e8",
     "section 7/Integration7/GammaVolumeSchemaRestrictions.lean": "c1faf0fcf407f4dea7a5f9f0f9da9d709ec27ee70b1d5eff8cc9d5989c742258",
-    "section 7/Integration7/TupleVolumeChartGraphs.lean": "c1c72f639fdd109a078c8138894234a4a2157884df92d381a1772cacf158200e"
+    "section 7/Integration7/TupleVolumeChartGraphs.lean": "c1c72f639fdd109a078c8138894234a4a2157884df92d381a1772cacf158200e",
+    "section 7/Integration7/FiniteVolumeCertificateCriterion.lean": "d71f3d9400d02ab674af5a06a09ef6dd9f52ebf428f98e7f59cfa1201a1982c5",
+    "section 7/Integration7/FiniteVolumeFormulaCriterion.lean": "fd49083dea6851df33b86d47969b370c8ad79673be9ed5d5493c8df05525a409",
+    "section 7/Integration7/GammaTupleRelationComposition.lean": "525845681b04ad62c4f849736e829cd69cd732fb034731a11dc66f3bac408b07",
+    "section 7/Integration7/GammaTupleRelationInverse.lean": "7f3b9470131154f21d2d3b2b5133bee72fda9e56de37f49f7f3b8a14bf04503e",
+    "section 7/Integration7/RVProductGammaBalance.lean": "ba2069b9491e848b476b030fa6697cc5dd8e38e52c77c52099ba94b8eb5d5e4e",
+    "section 7/Integration7/RVTupleProductTerms.lean": "63a96f40d08117845333f0565b5f091eadf17176752702814631c51dac2232b4",
+    "section 7/Integration7/VolumeGammaWeightTuples.lean": "ef076f47ba6ec2b2fff3835afcd14f399c2a31ed66c195fe4536ec29c253e278",
+    "section 7/Integration7/VolumeSchemaCorrespondences.lean": "934c89e12fae255c3e98661aefe2bbc2215f2f38e4728a3b39fa89e293de6a2c"
   },
   "declarations": [
     "IntegrationInACVF.Section7.centralPowersOreSet",
@@ -1041,7 +1049,36 @@
     "IntegrationInACVF.Section7.tupleVolumeChartGraph",
     "IntegrationInACVF.Section7.mem_tupleVolumeChartGraph",
     "IntegrationInACVF.Section7.tupleVolumeChartGraph_uniform",
-    "IntegrationInACVF.Section7.tupleVolumeChartGraph_proper"
+    "IntegrationInACVF.Section7.tupleVolumeChartGraph_proper",
+    "IntegrationInACVF.Section7.gammaVolumeEquation_of_weight",
+    "IntegrationInACVF.Section7.RVVolumeIsoCertificate.toIso",
+    "IntegrationInACVF.Section7.RVVolumeIsoCertificate.toIso_underlying",
+    "IntegrationInACVF.Section7.rvVolumeIso_finite_certificate_iff",
+    "IntegrationInACVF.Section7.RVVolumeIsoCertificate.toIso_of_balance",
+    "IntegrationInACVF.Section7.rvVolumeIso_finite_formula_iff",
+    "IntegrationInACVF.Section7.familyRelationCompose",
+    "IntegrationInACVF.Section7.familyRelationCompose_definable",
+    "IntegrationInACVF.Section7.familyRelationCompose_append",
+    "IntegrationInACVF.Section7.familyRelationInverse",
+    "IntegrationInACVF.Section7.familyRelationInverse_definable",
+    "IntegrationInACVF.Section7.familyRelationInverse_append",
+    "IntegrationInACVF.Section7.rvProductGammaBalance",
+    "IntegrationInACVF.Section7.rvProductGammaBalance_raw_definable",
+    "IntegrationInACVF.Section7.rvProductGammaBalance_definable",
+    "IntegrationInACVF.Section7.rvProductGammaBalance_append",
+    "IntegrationInACVF.Section7.rvTupleProductTerm",
+    "IntegrationInACVF.Section7.rvTupleProductTerm_realize",
+    "IntegrationInACVF.Section7.volumeGammaWeightTuple",
+    "IntegrationInACVF.Section7.volumeGammaWeightTuple_nonzero",
+    "IntegrationInACVF.Section7.volumeGammaWeightTuple_absolute",
+    "IntegrationInACVF.Section7.volumeGammaWeightTuple_gamma_iff",
+    "IntegrationInACVF.Section7.volumeGammaWeightTuple_balance_iff",
+    "IntegrationInACVF.Section7.schemaVolumePairRelation",
+    "IntegrationInACVF.Section7.schemaVolumePairRelation_definable",
+    "IntegrationInACVF.Section7.schemaVolumePairRelation_append",
+    "IntegrationInACVF.Section7.schemaVolumeCorrespondence",
+    "IntegrationInACVF.Section7.schemaVolumeCorrespondence_definable",
+    "IntegrationInACVF.Section7.schemaVolumeCorrespondence_append"
   ],
   "manual_type_review_batches": [
     {
@@ -1115,6 +1152,10 @@
     {
       "receipt": "recovered-sixteenth-geometry-receipt.json",
       "reviewed_lines": 425
+    },
+    {
+      "receipt": "recovered-seventeenth-geometry-receipt.json",
+      "reviewed_lines": 418
     }
   ]
 }

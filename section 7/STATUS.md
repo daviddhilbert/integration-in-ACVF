@@ -6,11 +6,11 @@ as accepted by the author and recorded in `TARGETS.md`.
 
 ## Current checked local boundary
 
-`Integration7.Library` integrates 192 source modules plus its entry point.
-Full exported types and allowed-axiom reports for 839 distinct declarations
+`Integration7.Library` integrates 200 source modules plus its entry point.
+Full exported types and allowed-axiom reports for 868 distinct declarations
 have been inspected in targeted incremental batches. Only `propext`,
 `Classical.choice`, and `Quot.sound` occur. The latest affected-library
-build passed, including 10,243 jobs counting its cached dependency closure.
+build passed, including 10,251 jobs counting its cached dependency closure.
 `VERIFICATION.json` seals this source boundary and records the batch receipts.
 Unchanged earlier batches were not manually audited again.
 
@@ -35,8 +35,8 @@ order are retained. Positive selected fibres keep actual finiteness explicit.
 
 Receipts are under `.scratch/recovery/`: the initial algebra and
 groupification batches contribute 34 exports; the first geometric batch
-contributes 86, the second 59, the third 89, the fourth 26, the fifth 24, the sixth 70, the seventh 56, the eighth 65, the ninth 56, the tenth 23, the eleventh 43, the twelfth 47, the thirteenth 43, the fourteenth 43, the fifteenth 45, and the sixteenth 30.
-The latest receipt is `recovered-sixteenth-geometry-receipt.json`.
+contributes 86, the second 59, the third 89, the fourth 26, the fifth 24, the sixth 70, the seventh 56, the eighth 65, the ninth 56, the tenth 23, the eleventh 43, the twelfth 47, the thirteenth 43, the fourteenth 43, the fifteenth 45, the sixteenth 30, and the seventeenth 29.
+The latest receipt is `recovered-seventeenth-geometry-receipt.json`.
 These checks cover currently available sources, not the historical missing
 1,201-module/4,644-declaration working copy.
 
@@ -271,3 +271,27 @@ cover and gluing, and the selected-family comparison of7.5 remain open.
 The older 141-module CI run43579893295 has completed its project build and
 was auditing inherited/project headlines when this checkpoint was prepared.
 This is not a CI certificate for the current 192-module sources.
+
+## Finite formula criterion for a fixed essential chart
+
+The seventeenth batch derives the volume correspondence from the actual
+source volume graph, comparison chart and target volume graph by relation
+inversion and composition over the original Gamma base. Exact row formulas
+are proved. The explicit `rvTupleProductTerm` computes the real RV product,
+including the empty tuple. `rvProductGammaBalance` is a first-order predicate
+for equal Gamma products on nonzero RV tuples; it does not equate RV classes.
+
+The coordinate tuple followed by its density has Gamma product equal to the
+actual essential Gamma weight. `rvVolumeIso_finite_formula_iff` gives a
+necessary and sufficient criterion for an RV volume isomorphism whose
+underlying essential isomorphism is fixed: pointwise product balance and
+the actual finite polynomial chart certificate. The smaller-dimensional
+exception and its finite map remain explicit in that certificate, with a
+uniform bound already proved in the previous batch. This criterion does
+not assume the volume isomorphism in its converse direction.
+
+All29 new exported types and reports were inspected in the418-line audit;
+the affected Library build passed10,251 jobs. The remaining encoding step
+is to package all coordinate/density/chart/exception formulas into complete
+first-order isomorphism and common-blowup schemata, prove promotion and
+finite-cover/gluing, and apply them to the positive selected7.5 comparison.

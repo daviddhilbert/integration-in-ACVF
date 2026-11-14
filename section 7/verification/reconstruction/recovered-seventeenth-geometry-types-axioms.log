@@ -1,0 +1,418 @@
+@IntegrationInACVF.Section7.gammaVolumeEquation_of_weight : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set.{0} M}
+  {k : ℕ} {U V : IntegrationInACVF.Section7.PositiveRVVolumeObject S k}
+  (e : CategoryTheory.Iso.{0, 0} U.essential V.essential)
+  (u :
+    ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+        (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.essential).domain)),
+  Eq.{1} (IntegrationInACVF.Section7.essentialGammaWeight U u)
+      (IntegrationInACVF.Section7.essentialGammaWeight V
+        (SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0} (IntegrationInACVF.Section7.finiteIsoMap e) u)) →
+    Eq.{1} (SpecialTransformations.Section3.Values.vrv (U.essentialForm.value u))
+      (HMul.hMul.{0, 0, 0}
+        (SpecialTransformations.Section3.Values.vrv
+          (V.essentialForm.value
+            (SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0} (IntegrationInACVF.Section7.finiteIsoMap e) u)))
+        ↑(SpecialTransformations.Section9.rvGammaJacobian
+            ((CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.essential).value u)
+            ((CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} V.essential).value
+              (SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0} (IntegrationInACVF.Section7.finiteIsoMap e) u))
+            ⋯ ⋯))
+'IntegrationInACVF.Section7.gammaVolumeEquation_of_weight' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.RVVolumeIsoCertificate.toIso : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {S : Set.{0} M} →
+        {k : ℕ} →
+          {U V : IntegrationInACVF.Section7.PositiveRVVolumeObject S k} →
+            {e : CategoryTheory.Iso.{0, 0} U.essential V.essential} →
+              IntegrationInACVF.Section7.RVVolumeIsoCertificate U V e →
+                (∀
+                    (u :
+                      ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+                          (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.essential).domain)),
+                    Eq.{1} (IntegrationInACVF.Section7.essentialGammaWeight U u)
+                      (IntegrationInACVF.Section7.essentialGammaWeight V
+                        (SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0}
+                          (IntegrationInACVF.Section7.finiteIsoMap e) u))) →
+                  IntegrationInACVF.Section7.RVVolumeIso U V
+'IntegrationInACVF.Section7.RVVolumeIsoCertificate.toIso' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.RVVolumeIsoCertificate.toIso_underlying : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set.{0} M}
+  {k : ℕ} {U V : IntegrationInACVF.Section7.PositiveRVVolumeObject S k}
+  {e : CategoryTheory.Iso.{0, 0} U.essential V.essential} (H : IntegrationInACVF.Section7.RVVolumeIsoCertificate U V e)
+  (hΓ :
+    ∀
+      (u :
+        ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+            (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.essential).domain)),
+      Eq.{1} (IntegrationInACVF.Section7.essentialGammaWeight U u)
+        (IntegrationInACVF.Section7.essentialGammaWeight V
+          (SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0} (IntegrationInACVF.Section7.finiteIsoMap e) u))),
+  Eq.{1} (H.toIso hΓ).iso e
+'IntegrationInACVF.Section7.RVVolumeIsoCertificate.toIso_underlying' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.rvVolumeIso_finite_certificate_iff : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {k : ℕ},
+  CanonicalStructure.IsCanonical →
+    ∀ (C : SpecialTransformations.Section3.BaseContext M)
+      {U V : IntegrationInACVF.Section7.PositiveRVVolumeObject (↑C.base) k}
+      (e : CategoryTheory.Iso.{0, 0} U.essential V.essential),
+      (∃ f, Eq.{1} f.iso e) ↔
+        (∀
+            (u :
+              ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+                  (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.essential).domain)),
+            Eq.{1} (IntegrationInACVF.Section7.essentialGammaWeight U u)
+              (IntegrationInACVF.Section7.essentialGammaWeight V
+                (SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0} (IntegrationInACVF.Section7.finiteIsoMap e)
+                  u))) ∧
+          Nonempty.{1} (IntegrationInACVF.Section7.RVVolumeIsoCertificate U V e)
+'IntegrationInACVF.Section7.rvVolumeIso_finite_certificate_iff' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.RVVolumeIsoCertificate.toIso_of_balance : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {S : Set.{0} M} →
+        {k : ℕ} →
+          {U V : IntegrationInACVF.Section7.PositiveRVVolumeObject S k} →
+            {e : CategoryTheory.Iso.{0, 0} U.essential V.essential} →
+              IntegrationInACVF.Section7.RVVolumeIsoCertificate U V e →
+                (∀
+                    (u :
+                      ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+                          (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.essential).domain)),
+                    Membership.mem.{0, 0}
+                      (IntegrationInACVF.Section7.rvProductGammaBalance
+                        (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} k 1) 1))
+                      (Fin.append.{1}
+                        (SpecialTransformations.Section4.rvValues
+                          (IntegrationInACVF.Section7.volumeGammaWeightTuple U u))
+                        (SpecialTransformations.Section4.rvValues
+                          (IntegrationInACVF.Section7.volumeGammaWeightTuple V
+                            (SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0}
+                              (IntegrationInACVF.Section7.finiteIsoMap e) u))))) →
+                  IntegrationInACVF.Section7.RVVolumeIso U V
+'IntegrationInACVF.Section7.RVVolumeIsoCertificate.toIso_of_balance' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.rvVolumeIso_finite_formula_iff : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {k : ℕ},
+  CanonicalStructure.IsCanonical →
+    ∀ (C : SpecialTransformations.Section3.BaseContext M)
+      {U V : IntegrationInACVF.Section7.PositiveRVVolumeObject (↑C.base) k}
+      (e : CategoryTheory.Iso.{0, 0} U.essential V.essential),
+      (∃ f, Eq.{1} f.iso e) ↔
+        (∀
+            (u :
+              ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+                  (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.essential).domain)),
+            Membership.mem.{0, 0}
+              (IntegrationInACVF.Section7.rvProductGammaBalance (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} k 1) 1))
+              (Fin.append.{1}
+                (SpecialTransformations.Section4.rvValues (IntegrationInACVF.Section7.volumeGammaWeightTuple U u))
+                (SpecialTransformations.Section4.rvValues
+                  (IntegrationInACVF.Section7.volumeGammaWeightTuple V
+                    (SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0}
+                      (IntegrationInACVF.Section7.finiteIsoMap e) u))))) ∧
+          Nonempty.{1} (IntegrationInACVF.Section7.RVVolumeIsoCertificate U V e)
+'IntegrationInACVF.Section7.rvVolumeIso_finite_formula_iff' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.familyRelationCompose : {M : Type} →
+  {p a b c : ℕ} →
+    Set.{0} (Fin (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} p a) b) → M) →
+      Set.{0} (Fin (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} p b) c) → M) →
+        Set.{0} (Fin (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} p a) c) → M)
+'IntegrationInACVF.Section7.familyRelationCompose' depends on axioms: [propext, Quot.sound.{u}]
+@IntegrationInACVF.Section7.familyRelationCompose_definable : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {p a b c : ℕ}
+  (sp : Fin p → SpecialTransformations.Milestone0.SortTag)
+  {H : Set.{0} (Fin (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} p a) b) → M)}
+  {K : Set.{0} (Fin (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} p b) c) → M)},
+  SpecialTransformations.Section3.GammaParameters.DefinableOverBase B
+      (Fin.append.{1} (Fin.append.{1} sp fun x => SpecialTransformations.Milestone0.SortTag.rv) fun x =>
+        SpecialTransformations.Milestone0.SortTag.rv)
+      H →
+    SpecialTransformations.Section3.GammaParameters.DefinableOverBase B
+        (Fin.append.{1} (Fin.append.{1} sp fun x => SpecialTransformations.Milestone0.SortTag.rv) fun x =>
+          SpecialTransformations.Milestone0.SortTag.rv)
+        K →
+      SpecialTransformations.Section3.GammaParameters.DefinableOverBase B
+        (Fin.append.{1} (Fin.append.{1} sp fun x => SpecialTransformations.Milestone0.SortTag.rv) fun x =>
+          SpecialTransformations.Milestone0.SortTag.rv)
+        (IntegrationInACVF.Section7.familyRelationCompose H K)
+'IntegrationInACVF.Section7.familyRelationCompose_definable' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.familyRelationCompose_append : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {p a b c : ℕ}
+  (H : Set.{0} (Fin (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} p a) b) → M))
+  (K : Set.{0} (Fin (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} p b) c) → M)) (z : Fin p → M) (x : Fin a → M)
+  (v : Fin c → M),
+  Membership.mem.{0, 0} (IntegrationInACVF.Section7.familyRelationCompose H K) (Fin.append.{1} (Fin.append.{1} z x) v) ↔
+    ∃ y,
+      Membership.mem.{0, 0} H (Fin.append.{1} (Fin.append.{1} z x) y) ∧
+        Membership.mem.{0, 0} K (Fin.append.{1} (Fin.append.{1} z y) v)
+'IntegrationInACVF.Section7.familyRelationCompose_append' depends on axioms: [propext, Quot.sound.{u}]
+@IntegrationInACVF.Section7.familyRelationInverse : {M : Type} →
+  {p a b : ℕ} →
+    Set.{0} (Fin (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} p a) b) → M) →
+      Set.{0} (Fin (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} p b) a) → M)
+'IntegrationInACVF.Section7.familyRelationInverse' depends on axioms: [propext, Quot.sound.{u}]
+@IntegrationInACVF.Section7.familyRelationInverse_definable : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {p a b : ℕ}
+  (sp : Fin p → SpecialTransformations.Milestone0.SortTag)
+  {H : Set.{0} (Fin (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} p a) b) → M)},
+  SpecialTransformations.Section3.GammaParameters.DefinableOverBase B
+      (Fin.append.{1} (Fin.append.{1} sp fun x => SpecialTransformations.Milestone0.SortTag.rv) fun x =>
+        SpecialTransformations.Milestone0.SortTag.rv)
+      H →
+    SpecialTransformations.Section3.GammaParameters.DefinableOverBase B
+      (Fin.append.{1} (Fin.append.{1} sp fun x => SpecialTransformations.Milestone0.SortTag.rv) fun x =>
+        SpecialTransformations.Milestone0.SortTag.rv)
+      (IntegrationInACVF.Section7.familyRelationInverse H)
+'IntegrationInACVF.Section7.familyRelationInverse_definable' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.familyRelationInverse_append : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {p a b : ℕ}
+  (H : Set.{0} (Fin (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} p a) b) → M)) (z : Fin p → M) (x : Fin a → M)
+  (y : Fin b → M),
+  Membership.mem.{0, 0} (IntegrationInACVF.Section7.familyRelationInverse H) (Fin.append.{1} (Fin.append.{1} z y) x) ↔
+    Membership.mem.{0, 0} H (Fin.append.{1} (Fin.append.{1} z x) y)
+'IntegrationInACVF.Section7.familyRelationInverse_append' depends on axioms: [propext, Quot.sound.{u}]
+@IntegrationInACVF.Section7.rvProductGammaBalance : {M : Type} →
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    (n : ℕ) → Set.{0} (Fin (HAdd.hAdd.{0, 0, 0} n n) → M)
+'IntegrationInACVF.Section7.rvProductGammaBalance' depends on axioms: [propext]
+@IntegrationInACVF.Section7.rvProductGammaBalance_raw_definable : ∀ {M : Type}
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] (S : Set.{0} M)
+  (n : ℕ),
+  Set.Definable.{0, 0, 0, 0} S SpecialTransformations.Milestone0.LRV
+    (IntegrationInACVF.Section7.rvProductGammaBalance n)
+'IntegrationInACVF.Section7.rvProductGammaBalance_raw_definable' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.rvProductGammaBalance_definable : ∀ {M : Type}
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF],
+  CanonicalStructure.IsCanonical →
+    ∀ (B : SpecialTransformations.Section3.GammaParameters.Base) (n : ℕ),
+      SpecialTransformations.Section3.GammaParameters.DefinableOverBase B
+        (fun x => SpecialTransformations.Milestone0.SortTag.rv) (IntegrationInACVF.Section7.rvProductGammaBalance n)
+'IntegrationInACVF.Section7.rvProductGammaBalance_definable' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.rvProductGammaBalance_append : ∀ {M : Type}
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] (n : ℕ)
+  (t s : Fin n → CanonicalRV.RVSort M),
+  Membership.mem.{0, 0} (IntegrationInACVF.Section7.rvProductGammaBalance n)
+      (Fin.append.{1} (SpecialTransformations.Section4.rvValues t) (SpecialTransformations.Section4.rvValues s)) ↔
+    (∀ (i : Fin n), Ne.{1} (↑(t i)) SpecialTransformations.Milestone0.iRVZero.{0}) ∧
+      (∀ (i : Fin n), Ne.{1} (↑(s i)) SpecialTransformations.Milestone0.iRVZero.{0}) ∧
+        Eq.{1} (SpecialTransformations.Section3.Values.vrv (∏ i, t i))
+          (SpecialTransformations.Section3.Values.vrv (∏ i, s i))
+'IntegrationInACVF.Section7.rvProductGammaBalance_append' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+IntegrationInACVF.Section7.rvTupleProductTerm : (n : ℕ) →
+  FirstOrder.Language.Term.{0, 0, 0} SpecialTransformations.Milestone0.LRV (Fin n)
+'IntegrationInACVF.Section7.rvTupleProductTerm' depends on axioms: [propext]
+@IntegrationInACVF.Section7.rvTupleProductTerm_realize : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] (n : ℕ)
+  (t : Fin n → CanonicalRV.RVSort M),
+  Eq.{1}
+    (FirstOrder.Language.Term.realize.{0, 0, 0, 0} (SpecialTransformations.Section4.rvValues t)
+      (IntegrationInACVF.Section7.rvTupleProductTerm n))
+    ↑(∏ i, t i)
+'IntegrationInACVF.Section7.rvTupleProductTerm_realize' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.volumeGammaWeightTuple : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {S : Set.{0} M} →
+        {k : ℕ} →
+          (U : IntegrationInACVF.Section7.PositiveRVVolumeObject S k) →
+            ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+                  (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.essential).domain) →
+              Fin (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} k 1) 1) → CanonicalRV.RVSort M
+'IntegrationInACVF.Section7.volumeGammaWeightTuple' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@IntegrationInACVF.Section7.volumeGammaWeightTuple_nonzero : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set.{0} M}
+  {k : ℕ} (U : IntegrationInACVF.Section7.PositiveRVVolumeObject S k)
+  (u :
+    ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+        (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.essential).domain))
+  (i : Fin (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} k 1) 1)),
+  Ne.{1} (↑(IntegrationInACVF.Section7.volumeGammaWeightTuple U u i)) SpecialTransformations.Milestone0.iRVZero.{0}
+'IntegrationInACVF.Section7.volumeGammaWeightTuple_nonzero' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.volumeGammaWeightTuple_absolute : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set.{0} M}
+  {k : ℕ} (U : IntegrationInACVF.Section7.PositiveRVVolumeObject S k)
+  (u :
+    ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+        (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.essential).domain)),
+  Eq.{1}
+    (SpecialTransformations.Section3.RVOperations.absoluteHom
+      (∏ i, IntegrationInACVF.Section7.volumeGammaWeightTuple U u i))
+    (IntegrationInACVF.Section7.essentialGammaWeight U u)
+'IntegrationInACVF.Section7.volumeGammaWeightTuple_absolute' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.volumeGammaWeightTuple_gamma_iff : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set.{0} M}
+  {k : ℕ} (U V : IntegrationInACVF.Section7.PositiveRVVolumeObject S k)
+  (u :
+    ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+        (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.essential).domain))
+  (v :
+    ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+        (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} V.essential).domain)),
+  Eq.{1} (SpecialTransformations.Section3.Values.vrv (∏ i, IntegrationInACVF.Section7.volumeGammaWeightTuple U u i))
+      (SpecialTransformations.Section3.Values.vrv (∏ i, IntegrationInACVF.Section7.volumeGammaWeightTuple V v i)) ↔
+    Eq.{1} (IntegrationInACVF.Section7.essentialGammaWeight U u) (IntegrationInACVF.Section7.essentialGammaWeight V v)
+'IntegrationInACVF.Section7.volumeGammaWeightTuple_gamma_iff' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.volumeGammaWeightTuple_balance_iff : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set.{0} M}
+  {k : ℕ} (U V : IntegrationInACVF.Section7.PositiveRVVolumeObject S k)
+  (u :
+    ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+        (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.essential).domain))
+  (v :
+    ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+        (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} V.essential).domain)),
+  Membership.mem.{0, 0}
+      (IntegrationInACVF.Section7.rvProductGammaBalance (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} k 1) 1))
+      (Fin.append.{1} (SpecialTransformations.Section4.rvValues (IntegrationInACVF.Section7.volumeGammaWeightTuple U u))
+        (SpecialTransformations.Section4.rvValues (IntegrationInACVF.Section7.volumeGammaWeightTuple V v))) ↔
+    Eq.{1} (IntegrationInACVF.Section7.essentialGammaWeight U u) (IntegrationInACVF.Section7.essentialGammaWeight V v)
+'IntegrationInACVF.Section7.volumeGammaWeightTuple_balance_iff' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.schemaVolumePairRelation : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B : SpecialTransformations.Section3.GammaParameters.Base} →
+        {p a b d : ℕ} →
+          {sp : Fin p → SpecialTransformations.Milestone0.SortTag} →
+            IntegrationInACVF.Section6.GammaFiniteRVSchema B p a d sp →
+              IntegrationInACVF.Section6.GammaFiniteRVSchema B p b d sp →
+                Set.{0} (Fin (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} p a) b) → M) →
+                  Set.{0} (Fin (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} p d) d) → M)
+'IntegrationInACVF.Section7.schemaVolumePairRelation' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@IntegrationInACVF.Section7.schemaVolumePairRelation_definable : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {p a b d : ℕ}
+  {sp : Fin p → SpecialTransformations.Milestone0.SortTag}
+  (F : IntegrationInACVF.Section6.GammaFiniteRVSchema B p a d sp)
+  (G : IntegrationInACVF.Section6.GammaFiniteRVSchema B p b d sp)
+  {H : Set.{0} (Fin (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} p a) b) → M)},
+  SpecialTransformations.Section3.GammaParameters.DefinableOverBase B
+      (Fin.append.{1} (Fin.append.{1} sp fun x => SpecialTransformations.Milestone0.SortTag.rv) fun x =>
+        SpecialTransformations.Milestone0.SortTag.rv)
+      H →
+    SpecialTransformations.Section3.GammaParameters.DefinableOverBase B
+      (Fin.append.{1} (Fin.append.{1} sp fun x => SpecialTransformations.Milestone0.SortTag.rv) fun x =>
+        SpecialTransformations.Milestone0.SortTag.rv)
+      (IntegrationInACVF.Section7.schemaVolumePairRelation F G H)
+'IntegrationInACVF.Section7.schemaVolumePairRelation_definable' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.schemaVolumePairRelation_append : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {p a b d : ℕ}
+  {sp : Fin p → SpecialTransformations.Milestone0.SortTag}
+  (F : IntegrationInACVF.Section6.GammaFiniteRVSchema B p a d sp)
+  (G : IntegrationInACVF.Section6.GammaFiniteRVSchema B p b d sp)
+  (H : Set.{0} (Fin (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} p a) b) → M)) (z : Fin p → M) (u v : Fin d → M),
+  Membership.mem.{0, 0} (IntegrationInACVF.Section7.schemaVolumePairRelation F G H)
+      (Fin.append.{1} (Fin.append.{1} z u) v) ↔
+    ∃ x y,
+      Membership.mem.{0, 0} F.volume (Fin.append.{1} (Fin.append.{1} z x) u) ∧
+        Membership.mem.{0, 0} H (Fin.append.{1} (Fin.append.{1} z x) y) ∧
+          Membership.mem.{0, 0} G.volume (Fin.append.{1} (Fin.append.{1} z y) v)
+'IntegrationInACVF.Section7.schemaVolumePairRelation_append' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.schemaVolumeCorrespondence : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B : SpecialTransformations.Section3.GammaParameters.Base} →
+        {p a b d : ℕ} →
+          {sp : Fin p → SpecialTransformations.Milestone0.SortTag} →
+            IntegrationInACVF.Section6.GammaFiniteRVSchema B p a d sp →
+              IntegrationInACVF.Section6.GammaFiniteRVSchema B p b d sp →
+                Set.{0} (Fin (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} p a) b) → M) →
+                  Set.{0} (Fin (HAdd.hAdd.{0, 0, 0} p (HAdd.hAdd.{0, 0, 0} d d)) → M)
+'IntegrationInACVF.Section7.schemaVolumeCorrespondence' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.schemaVolumeCorrespondence_definable : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {p a b d : ℕ}
+  {sp : Fin p → SpecialTransformations.Milestone0.SortTag}
+  (F : IntegrationInACVF.Section6.GammaFiniteRVSchema B p a d sp)
+  (G : IntegrationInACVF.Section6.GammaFiniteRVSchema B p b d sp)
+  {H : Set.{0} (Fin (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} p a) b) → M)},
+  SpecialTransformations.Section3.GammaParameters.DefinableOverBase B
+      (Fin.append.{1} (Fin.append.{1} sp fun x => SpecialTransformations.Milestone0.SortTag.rv) fun x =>
+        SpecialTransformations.Milestone0.SortTag.rv)
+      H →
+    SpecialTransformations.Section3.GammaParameters.DefinableOverBase B
+      (Fin.append.{1} sp fun x => SpecialTransformations.Milestone0.SortTag.rv)
+      (IntegrationInACVF.Section7.schemaVolumeCorrespondence F G H)
+'IntegrationInACVF.Section7.schemaVolumeCorrespondence_definable' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.schemaVolumeCorrespondence_append : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {p a b d : ℕ}
+  {sp : Fin p → SpecialTransformations.Milestone0.SortTag}
+  (F : IntegrationInACVF.Section6.GammaFiniteRVSchema B p a d sp)
+  (G : IntegrationInACVF.Section6.GammaFiniteRVSchema B p b d sp)
+  (H : Set.{0} (Fin (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} p a) b) → M)) (z : Fin p → M) (u v : Fin d → M),
+  (∀ (i : Fin p), SpecialTransformations.Milestone0.sortEval.{0} (sp i) (z i)) →
+    (∀ (i : Fin d), SpecialTransformations.Milestone0.iRV.{0} (u i)) →
+      (∀ (i : Fin d), SpecialTransformations.Milestone0.iRV.{0} (v i)) →
+        (Membership.mem.{0, 0} (IntegrationInACVF.Section7.schemaVolumeCorrespondence F G H)
+            (Fin.append.{1} z (Fin.append.{1} u v)) ↔
+          ∃ x y,
+            Membership.mem.{0, 0} F.volume (Fin.append.{1} (Fin.append.{1} z x) u) ∧
+              Membership.mem.{0, 0} H (Fin.append.{1} (Fin.append.{1} z x) y) ∧
+                Membership.mem.{0, 0} G.volume (Fin.append.{1} (Fin.append.{1} z y) v))
+'IntegrationInACVF.Section7.schemaVolumeCorrespondence_append' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

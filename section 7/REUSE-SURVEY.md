@@ -261,3 +261,16 @@ gamma_family_row_exists_definable and finite-map row validity; reverse-fibre
 bounds decrease on restriction. No pin or reference changed. The8-module/
 30-export batch passed complete425-line type/axiom review and the affected
 10,243-job Library build; these checks do not certify full7.5.
+
+## Seventeenth reconstruction batch: finite formula criterion
+
+Reused native TupleBlockSwap inversion, original-Gamma row projection and
+preimage operations to derive actual volume correspondences. A direct
+parameter-free recursive product term uses only released RV multiplication
+and1. The native raw valuation preorder supplies Gamma product balance;
+the proof retains the distinction between equality in Gamma and in RV.
+The already checked essential Gamma weight, generic chart certificates and
+small-dimensional exceptional maps give both directions of the fixed-chart
+volume-isomorphism criterion. No external theorem, pin change, generation
+claim or new geometric premise was introduced. The8-module/29-export batch
+passed full418-line type/axiom review and the10,251-job affected Library build.

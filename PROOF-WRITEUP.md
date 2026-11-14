@@ -419,3 +419,11 @@ is uniform in representative codes, and equal Gamma codes have identical
 input rows and hence identical output rows. Essential schema restriction
 retains the density and the finite bound. These are implementation details
 of the pending compactness argument, not a new proof of7.5.
+
+
+The finite formula criterion for a fixed essential volume chart is now
+verified in both directions. Gamma weight is encoded by the actual RV
+coordinate product times density, using equality of valuations. A finite
+polynomial chart certificate handles the RV equation outside its explicit
+small-dimensional exception. This prepares the pending7.5 compactness step
+and is not a completed replacement proof of that lemma.
