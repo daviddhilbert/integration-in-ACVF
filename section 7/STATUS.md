@@ -6,11 +6,11 @@ as accepted by the author and recorded in `TARGETS.md`.
 
 ## Current checked local boundary
 
-`Integration7.Library` integrates 141 source modules plus its entry point.
-Full exported types and allowed-axiom reports for 631 distinct declarations
+`Integration7.Library` integrates 150 source modules plus its entry point.
+Full exported types and allowed-axiom reports for 678 distinct declarations
 have been inspected in targeted incremental batches. Only `propext`,
 `Classical.choice`, and `Quot.sound` occur. The latest affected-library
-build passed, including 10,192 jobs counting its cached dependency closure.
+build passed, including 10,201 jobs counting its cached dependency closure.
 `VERIFICATION.json` seals this source boundary and records the batch receipts.
 Unchanged earlier batches were not manually audited again.
 
@@ -35,8 +35,8 @@ order are retained. Positive selected fibres keep actual finiteness explicit.
 
 Receipts are under `.scratch/recovery/`: the initial algebra and
 groupification batches contribute 34 exports; the first geometric batch
-contributes 86, the second 59, the third 89, the fourth 26, the fifth 24, the sixth 70, the seventh 56, the eighth 65, the ninth 56, the tenth 23, and the eleventh 43.
-The latest receipt is `recovered-eleventh-geometry-receipt.json`.
+contributes 86, the second 59, the third 89, the fourth 26, the fifth 24, the sixth 70, the seventh 56, the eighth 65, the ninth 56, the tenth 23, the eleventh 43, and the twelfth 47.
+The latest receipt is `recovered-twelfth-geometry-receipt.json`.
 These checks cover currently available sources, not the historical missing
 1,201-module/4,644-declaration working copy.
 
@@ -174,3 +174,23 @@ commutativity of the entire volume ring is not assumed. All 43 new types
 and axiom reports were inspected in 586 lines; the affected library passed
 10,192 jobs. Ordinary RV[0] factors, unit coherence and the complete graded
 semiring quotient still require their separate constructions.
+
+## Ordinary degree-zero factors
+
+The twelfth batch gives actual left and right products with ordinary RV[0]
+objects, their coordinate/density identities, genuine volume isomorphisms,
+unit isomorphisms and distributivity. Their essential chart retains only the
+positive factor's volume coordinates. Its generic Jacobian is compared on
+nested correspondences with the positive factor's Jacobian. The exceptional
+set is controlled by the zero-dimensional factor's actual finite-volume bound;
+no impossible degree-zero almost-everywhere premise is used. Elementary and
+common blowups are compatible with these products on both sides. No artificial
+point is adjoined or cancelled. All 47 new types and axiom reports were
+inspected in 773 lines; the affected library passed 10,201 jobs. The complete
+graded multiplication/semiring interface still needs assembly and coherence.
+
+The 141-module checkpoint's GitHub Actions run43579893295 was still building
+the project when this checkpoint was prepared. This backup commit skips a
+duplicate CI dispatch so that running verification can finish. Its result
+will cover that exact earlier revision, not the newer 150-module boundary.
+The latter has the local source/type/axiom/library checks recorded above.

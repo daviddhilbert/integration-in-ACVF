@@ -1,6 +1,6 @@
 {
   "status": "Manually reviewed reconstruction boundary",
-  "scope": "141 reconstructed/recovered source modules plus their library; not full Section 7 completion",
+  "scope": "150 reconstructed/recovered source modules plus their library; not full Section 7 completion",
   "lean_toolchain": "leanprover/lean4:v4.35.0",
   "dependency_pins": {
     "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
@@ -32,7 +32,7 @@
     "section 7/Integration7/VolumeDensityRescaling.lean": "34e2da86c631eb869d07bbfdf501b249fb658583b99d0a19b018dab9a7f96b52",
     "section 7/Integration7/VolumeFormGluing.lean": "ca4cd92dee9c4ac0ba02b8606d1c868efe6994ca292f6c033185d5affd4928fd",
     "section 7/Integration7/VolumeForms.lean": "eda92eb71d08a2e59f765e4e071298bdc851522c80e1ac9a2885bbcaac1c9742",
-    "section 7/Integration7/Library.lean": "0e760a96c7ace7bee6a77c23b4bbaddca317d9dfa5101054a624a48e6fa2c976",
+    "section 7/Integration7/Library.lean": "eaa884ecfa3cb1873d7260533704c47c215dc586349a1269d845ac5f74aa5230",
     "section 7/Integration7/CoordinateRVJacobian.lean": "35c6b2e73cc0c254084905786f16606631f53660e41982d1610bfe8fa536758e",
     "section 7/Integration7/ElementaryBlowupConstruction.lean": "b25f4eef226e7141c639aecd347566c4e384f2b582333bd9ddb751fd66c72945",
     "section 7/Integration7/EssentialBlowupChart.lean": "68b8614debb32e8ce5c29ba325420db01f00b83f96ed22dcc7cca2184164948b",
@@ -149,7 +149,16 @@
     "section 7/Integration7/ElementaryVolumeProducts.lean": "00336f7fc5a06e0fa66ca1e1120ac9f374c5a0693ef94bb18f13543a2358cb8f",
     "section 7/Integration7/VolumeBlowupProducts.lean": "e1fb58a1cae8662908b59225079b513757c2930b394bff18193668e426e16a2c",
     "section 7/Integration7/VolumeBlowupRescaling.lean": "521e511b8594c61781ae267ab055439c5fdaae6e70b70fd2c666e075ea1f7037",
-    "section 7/Integration7/VolumeBlowupRightProducts.lean": "705f690e2d0cc68d22bfb517e7fa0ef73794d9f9fd12a1b14ad92242225f6092"
+    "section 7/Integration7/VolumeBlowupRightProducts.lean": "705f690e2d0cc68d22bfb517e7fa0ef73794d9f9fd12a1b14ad92242225f6092",
+    "section 7/Integration7/ZeroFactorVolumeObjects.lean": "ff1e93f8f114111512738151571084b78b35cc50c50beeae4841a54ff22473fc",
+    "section 7/Integration7/ZeroFactorVolumeSwap.lean": "61f17f364a00472db6b959b124a556ac8dd0033c5fdd2bd9caa1a57340ced7c3",
+    "section 7/Integration7/VolumeProductUnits.lean": "87866de235753aeb2c428c41a38f406390013dbb4c233c4a40f5c82540781b5b",
+    "section 7/Integration7/EssentialZeroProducts.lean": "babd0d8a6a2bbae6b3a4f2305006086b200a5dcaf15f87c4703282e5cd304e3f",
+    "section 7/Integration7/ZeroFactorVolumeMaps.lean": "739edb162a525b2cbdd039be27bb76b96f10cd3ea6a0a00a500a5d16abe41102",
+    "section 7/Integration7/ZeroFactorVolumeIsomorphisms.lean": "cb49741f5c417a37d41247e257bef137376c077c885617038c2251042be6e614",
+    "section 7/Integration7/ZeroFactorVolumeDistributivity.lean": "fd12b5e3b8dc9d46a72f2003867cc90ee6ab280ffc41b05f11ab1ee1969a4fd4",
+    "section 7/Integration7/ElementaryZeroVolumeProducts.lean": "9dde9cca71980532bad504b5f52de48b47f69c08458214add99c4303ab0cc85f",
+    "section 7/Integration7/ZeroFactorBlowupProducts.lean": "430eb25d0038a854a8b50ca62b3e2cc338d4e385fc7fcc39a4014b13d6b09ca2"
   },
   "declarations": [
     "IntegrationInACVF.Section7.centralPowersOreSet",
@@ -782,7 +791,54 @@
     "IntegrationInACVF.Section7.VolumeBlowupEquivalent.rescale",
     "IntegrationInACVF.Section7.VolumeBlowupEquivalent.reindexDegree",
     "IntegrationInACVF.Section7.VolumeBlowupEquivalent.product_right",
-    "IntegrationInACVF.Section7.VolumeBlowupEquivalent.prod"
+    "IntegrationInACVF.Section7.VolumeBlowupEquivalent.prod",
+    "IntegrationInACVF.Section7.PositiveRVVolumeObject.prod_zero",
+    "IntegrationInACVF.Section7.PositiveRVVolumeObject.zero_prod",
+    "IntegrationInACVF.Section7.positiveZeroProduct_coordinates",
+    "IntegrationInACVF.Section7.zeroPositiveProduct_coordinates",
+    "IntegrationInACVF.Section7.positiveZeroProduct_density",
+    "IntegrationInACVF.Section7.zeroPositiveProduct_density",
+    "IntegrationInACVF.Section7.volumeZeroProductSwap_coordinates",
+    "IntegrationInACVF.Section7.volumeZeroProductSwap_density",
+    "IntegrationInACVF.Section7.volumeZeroProductSwapIso",
+    "IntegrationInACVF.Section7.volumeProductRightUnitIso",
+    "IntegrationInACVF.Section7.volumeProductLeftUnitIso",
+    "IntegrationInACVF.Section7.zeroProductEssentialChart",
+    "IntegrationInACVF.Section7.zeroProductEssentialInverseChart",
+    "IntegrationInACVF.Section7.zeroProductEssentialChart_inverse",
+    "IntegrationInACVF.Section7.zeroProductEssentialInverseChart_chart",
+    "IntegrationInACVF.Section7.zeroProductEssentialChart_bijective",
+    "IntegrationInACVF.Section7.zeroProductEssentialChart_coordinates",
+    "IntegrationInACVF.Section7.zeroProductEssentialChart_density",
+    "IntegrationInACVF.Section7.zeroProductEssentialPackChart",
+    "IntegrationInACVF.Section7.zeroProductEssentialPackChart_bijective",
+    "IntegrationInACVF.Section7.zeroProductEssentialPackChart_unpack",
+    "IntegrationInACVF.Section7.RVVolumeIso.zeroProductMap",
+    "IntegrationInACVF.Section7.RVVolumeIso.zeroProductMap_bijective",
+    "IntegrationInACVF.Section7.RVVolumeIso.zeroProductMap_chart",
+    "IntegrationInACVF.Section7.RVVolumeIso.zeroProductMap_coordinates",
+    "IntegrationInACVF.Section7.RVVolumeIso.zeroProductMap_density",
+    "IntegrationInACVF.Section7.RVVolumeIso.zeroProductUnderlying",
+    "IntegrationInACVF.Section7.RVVolumeIso.zeroProductUnderlying_apply",
+    "IntegrationInACVF.Section7.RVVolumeIso.zeroProductMap_volumeRatio",
+    "IntegrationInACVF.Section7.RVVolumeIso.zeroProductCorrespondence_subset",
+    "IntegrationInACVF.Section7.RVVolumeIso.prod_zero",
+    "IntegrationInACVF.Section7.RVVolumeIso.zero_prod",
+    "IntegrationInACVF.Section7.volumeZeroProductCoprodFold_coordinates",
+    "IntegrationInACVF.Section7.volumeZeroProductCoprodFold_density",
+    "IntegrationInACVF.Section7.volumeZeroProductRightDistribIso",
+    "IntegrationInACVF.Section7.BlowupAdmissible.zero_product",
+    "IntegrationInACVF.Section7.ElementaryBlowup.zeroProductChart",
+    "IntegrationInACVF.Section7.ElementaryBlowup.zeroProductChart_bijective",
+    "IntegrationInACVF.Section7.ElementaryBlowup.zeroProductChart_pair",
+    "IntegrationInACVF.Section7.ElementaryBlowup.zeroProductChart_coordinates",
+    "IntegrationInACVF.Section7.ElementaryBlowup.zero_product",
+    "IntegrationInACVF.Section7.VolumeBlowup.zero_product",
+    "IntegrationInACVF.Section7.IteratedVolumeBlowup.zero_product",
+    "IntegrationInACVF.Section7.VolumeBlowupEquivalent.zero_product",
+    "IntegrationInACVF.Section7.VolumeBlowupEquivalent.product_zero",
+    "IntegrationInACVF.Section7.VolumeBlowupEquivalent.zero_prod",
+    "IntegrationInACVF.Section7.VolumeBlowupEquivalent.prod_zero"
   ],
   "manual_type_review_batches": [
     {
@@ -836,6 +892,10 @@
     {
       "receipt": "recovered-eleventh-geometry-receipt.json",
       "reviewed_lines": 586
+    },
+    {
+      "receipt": "recovered-twelfth-geometry-receipt.json",
+      "reviewed_lines": 773
     }
   ]
 }

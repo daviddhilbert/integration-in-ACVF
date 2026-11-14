@@ -192,3 +192,14 @@ field. Left multiplication of elementary blowups is proved by an actual
 product chart and algebraicity monotonicity. Right multiplication of common
 blowups follows from the signed swap and a proved common rescaling operation.
 Only the new batch and affected library were audited; no full repeat was run.
+
+## Twelfth reconstruction batch: ordinary RV[0] products
+
+Reused native finite RV products and coproduct charts, the checked generic RV
+Jacobian theorem and nested-correspondence comparison. The actual essential
+product is conjugated to the positive essential domain times the ordinary
+RV[0] domain. Only the positive Jacobian is used; the other domain's dimension
+bound is zero. Original unit-isomorphism source was promoted unchanged.
+The zero-factor elementary chart retains the old last coordinate and density,
+and yields actual multiplicative common-blowup compatibility without point
+cancellation. No new citations or dependencies were introduced.
