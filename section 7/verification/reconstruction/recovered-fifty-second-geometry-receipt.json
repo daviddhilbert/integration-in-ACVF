@@ -1,0 +1,458 @@
+{
+  "source_sha256": {
+    "section 7/Integration7/AffineMixedVFJacobians.lean": "04ab14d9bad88baacbc48ba33bfd63b96a33860573a6bbfc17af2bafa9426d80",
+    "section 7/Integration7/BalancedCellGammaProducts.lean": "1def58c07c691469dd26287b02d2dbfe17ce24e1d9dcb61d84f6c25773976879",
+    "section 7/Integration7/BalancedCellTranslationEquivalences.lean": "b5cc7aa416a331ae06367919227c35fa5c527304cb2d49efaf8c9b3ab24915a0",
+    "section 7/Integration7/BalancedInversePositionGraphs.lean": "d49f35c47fbfad53cb2d8b2094dd28a03aba993e909c802f3d4d090c546edcaa",
+    "section 7/Integration7/GammaNamedRelativeVolumeComparisons.lean": "1b290504b6887d8afb5475ebcf62410a8bd826353d34f6f50d87e0d6d04b727f",
+    "section 7/Integration7/GammaNamesGenericParameters.lean": "771d99bbcbba6bbd51b92b4366a793e9eaba31268162b5f576052f2c35adbdc2",
+    "section 7/Integration7/GammaNamesVolumeContexts.lean": "38098c3b92cd3596a82771686f919ce6be82344923acbe4f922c7cdd79e366ac",
+    "section 7/Integration7/GammaPositionCodeCentres.lean": "733551b454d45dbbbe5c5395da42c8458c9758fb2dc1856715140cef3e352e68",
+    "section 7/Integration7/GammaRelativeTranslations.lean": "f04b59c451d29a72d3d825a7e337bed86b2694f323bb142db213bb84cc57055c",
+    "section 7/Integration7/NativeBalancedCellImages.lean": "7e721107dbf9e91e090eedeb56d8d804055eedcf05355ba4a9b86bee4874edcb",
+    "section 7/Integration7/NativeBalancedTranslations.lean": "ac1bc282894cc8aa92b078da90230292b91398dfd51d68f7445426ca45d85cf1",
+    "section 7/Integration7/NativePositionCodeCentres.lean": "e6c4d05d6d6683f72eddedfb5cab6fa3aa2779568a1c31034a8c7e5bb242f80c",
+    "section 7/Integration7/NativeRelativeTranslationVolumes.lean": "289d9f3b1c193b61d1af143ae60023dfb29fece370663c7d9b7377cfce40cdf9",
+    "section 7/Integration7/NativeRelativeTranslations.lean": "0fc56fa00c6f00b1f05ddc1317810b31ba1167251c489027ed572490a2cb56a7",
+    "section 7/Integration7/NativeVFPairImages.lean": "09ba543010dab833b9fc5238a382cfd4bc8d79367068bb2fbadd7dad16812dc3",
+    "section 7/Integration7/OriginalBaseFiniteRelativeContractions.lean": "7c9331c6647ea2c7fe0481736a71fd3da0cb9170037d8507f4e403c9c52fb7c5",
+    "section 7/Integration7/OriginalBaseRelativeVolumeComparisons.lean": "232b80417b5651e24ff5e0e6ae03fceb198a9ca599215f11f33aa49c359b5680",
+    "section 7/Integration7/OtherCoordinateTranslationCentres.lean": "98fda293ac4642bdaf36613e0487fbcbcfa4ba2c7a55ce0e2ac7f8e4a456f8d8",
+    "section 7/Integration7/PureVFTranslationVolumeBijections.lean": "574c0dff7986e3bf38773e05af9a1999b82ddcaa33eb46556b477be7fae0992e",
+    "section 7/Integration7/RelativeFibreTranslationVolumes.lean": "bfd43ce451fb86d67ae88e7efba906a75d53bfb17b4615c978fc1de409965303",
+    "section 7/Integration7/VFCoordinatePreservingContractions.lean": "685b9f79c93c1152f6a5ceccfdb2e04891e775301e0994ff44f677bf9f42ef17"
+  },
+  "declarations": [
+    "IntegrationInACVF.Section7.mixed_vf_jacobian_eq_of_affine_vf",
+    "IntegrationInACVF.Section7.balanced_cell_gamma_difference_product",
+    "IntegrationInACVF.Section7.balancedPositionEquiv",
+    "IntegrationInACVF.Section7.balanced_position_inverse_value",
+    "IntegrationInACVF.Section7.balancedVerticalTranslationEquiv",
+    "IntegrationInACVF.Section7.balancedHorizontalTranslationEquiv",
+    "IntegrationInACVF.Section7.balanced_vertical_translation_value",
+    "IntegrationInACVF.Section7.balanced_horizontal_translation_value",
+    "IntegrationInACVF.Section7.balancedInversePosition",
+    "IntegrationInACVF.Section7.balanced_inverse_position_value",
+    "IntegrationInACVF.Section7.balanced_inverse_position_graph",
+    "IntegrationInACVF.Section7.gamma_named_relative_contraction_comparison",
+    "IntegrationInACVF.Section7.gamma_names_context_preserves_independence",
+    "IntegrationInACVF.Section7.gammaNamesContainingVolumeContext",
+    "IntegrationInACVF.Section7.gamma_names_containing_volume_context_contains",
+    "IntegrationInACVF.Section7.coordinate_position_gamma_graph",
+    "IntegrationInACVF.Section7.coordinate_position_native_gamma_graph",
+    "IntegrationInACVF.Section7.relativeTranslationGraphMap",
+    "IntegrationInACVF.Section7.gamma_relative_translation_graph",
+    "IntegrationInACVF.Section7.gamma_relative_translation_image",
+    "IntegrationInACVF.Section7.gamma_relative_translation_to_image_graph",
+    "IntegrationInACVF.Section7.balanced_vertical_native_centre_independent",
+    "IntegrationInACVF.Section7.balanced_vertical_native_image",
+    "IntegrationInACVF.Section7.balanced_horizontal_native_centre_independent",
+    "IntegrationInACVF.Section7.balanced_horizontal_native_image",
+    "IntegrationInACVF.Section7.BalancedTranslationCentres",
+    "IntegrationInACVF.Section7.balancedTranslationCentresOfPositionGraphs",
+    "IntegrationInACVF.Section7.balanced_translation_centres_exist",
+    "IntegrationInACVF.Section7.balanced_native_translation_images",
+    "IntegrationInACVF.Section7.balanced_native_translation_bijections",
+    "IntegrationInACVF.Section7.balanced_native_translation_jacobians",
+    "IntegrationInACVF.Section7.coordinate_position_centre_graph",
+    "IntegrationInACVF.Section7.coordinatePositionCentreMap",
+    "IntegrationInACVF.Section7.coordinate_position_centre_value",
+    "IntegrationInACVF.Section7.relativeTranslationFibreCentre",
+    "IntegrationInACVF.Section7.relative_translation_fibre_centre_value",
+    "IntegrationInACVF.Section7.native_relative_translation_jacobian_one",
+    "IntegrationInACVF.Section7.native_relative_translation_preserves_volume",
+    "IntegrationInACVF.Section7.relativeTranslationMap",
+    "IntegrationInACVF.Section7.relative_translation_map_value",
+    "IntegrationInACVF.Section7.relative_translation_erase",
+    "IntegrationInACVF.Section7.relative_translation_unary_relative",
+    "IntegrationInACVF.Section7.relative_translation_map_injective",
+    "IntegrationInACVF.Section7.relativeTranslationImage",
+    "IntegrationInACVF.Section7.relativeTranslationToImage",
+    "IntegrationInACVF.Section7.relative_translation_to_image_bijective",
+    "IntegrationInACVF.Section7.twoVFPointPairEquiv",
+    "IntegrationInACVF.Section7.nativeVFPairDomain",
+    "IntegrationInACVF.Section7.mem_native_vf_pair_domain",
+    "IntegrationInACVF.Section7.native_vf_pair_map_image",
+    "IntegrationInACVF.Section7.finite_relative_volume_comparison_of_generic_extension",
+    "IntegrationInACVF.Section7.ordered_relative_volume_comparison_of_generic_extension",
+    "IntegrationInACVF.Section7.ordered_relative_volume_schema_comparison_of_generic_extension",
+    "IntegrationInACVF.Section7.standard_relative_volume_schema_comparison_of_generic_extension",
+    "IntegrationInACVF.Section7.otherCoordinateCentreMap",
+    "IntegrationInACVF.Section7.other_coordinate_centre_value",
+    "IntegrationInACVF.Section7.other_coordinate_centre_independent",
+    "IntegrationInACVF.Section7.nativePureVFVolumeObject",
+    "IntegrationInACVF.Section7.translatedPureVFVolumeObject",
+    "IntegrationInACVF.Section7.pureVFTranslationVolumeBijection",
+    "IntegrationInACVF.Section7.relative_fibre_translation_defined_jacobian",
+    "IntegrationInACVF.Section7.relative_fibre_translation_jacobian_one",
+    "IntegrationInACVF.Section7.relative_fibre_translation_preserves_volume",
+    "IntegrationInACVF.Section7.vf_coordinate_preserving_contractions_compare",
+    "IntegrationInACVF.Section7.same_order_standard_volume_contractions_compare"
+  ],
+  "manually_reviewed_lines": 1608,
+  "audit_log": ".scratch/recovery/recovered-fifty-second-geometry-types-axioms.log",
+  "status": "PASS actual source compilation, full type/axiom review and affected library integration",
+  "scope": "Balanced-cell translations have actual native definable bijections, exact product images, original-Gamma centre and map graphs, and Jacobian one almost everywhere. Relative volume comparisons extend over original-Gamma-name realization contexts without enlarging the named base. Lemma 7.5 and Corollary 7.6 remain complete in their recorded scopes; 7.7-7.15 are unfinished.",
+  "library_build_log": ".scratch/recovery/fifty-second-reconstruction-library-build.log",
+  "library_build_jobs_including_cached_dependencies": 11273,
+  "compilation": [
+    {
+      "module": "AffineMixedVFJacobians",
+      "source": "section 7/Integration7/AffineMixedVFJacobians.lean",
+      "source_sha256": "04ab14d9bad88baacbc48ba33bfd63b96a33860573a6bbfc17af2bafa9426d80",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/AffineMixedVFJacobians.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/AffineMixedVFJacobians.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 3.838,
+      "completed_at_utc": "2026-11-14T19:23:13.746966+00:00",
+      "log": ".scratch/recovery/AffineMixedVFJacobians-build.log"
+    },
+    {
+      "module": "BalancedCellGammaProducts",
+      "source": "section 7/Integration7/BalancedCellGammaProducts.lean",
+      "source_sha256": "1def58c07c691469dd26287b02d2dbfe17ce24e1d9dcb61d84f6c25773976879",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/BalancedCellGammaProducts.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/BalancedCellGammaProducts.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 3.483,
+      "completed_at_utc": "2026-11-14T19:20:15.140979+00:00",
+      "log": ".scratch/recovery/BalancedCellGammaProducts-build.log"
+    },
+    {
+      "module": "BalancedCellTranslationEquivalences",
+      "source": "section 7/Integration7/BalancedCellTranslationEquivalences.lean",
+      "source_sha256": "b5cc7aa416a331ae06367919227c35fa5c527304cb2d49efaf8c9b3ab24915a0",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/BalancedCellTranslationEquivalences.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/BalancedCellTranslationEquivalences.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.028,
+      "completed_at_utc": "2026-11-14T19:20:11.657790+00:00",
+      "log": ".scratch/recovery/BalancedCellTranslationEquivalences-build.log"
+    },
+    {
+      "module": "BalancedInversePositionGraphs",
+      "source": "section 7/Integration7/BalancedInversePositionGraphs.lean",
+      "source_sha256": "d49f35c47fbfad53cb2d8b2094dd28a03aba993e909c802f3d4d090c546edcaa",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/BalancedInversePositionGraphs.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/BalancedInversePositionGraphs.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 3.981,
+      "completed_at_utc": "2026-11-14T19:37:08.500070+00:00",
+      "log": ".scratch/recovery/BalancedInversePositionGraphs-build.log"
+    },
+    {
+      "module": "GammaNamedRelativeVolumeComparisons",
+      "source": "section 7/Integration7/GammaNamedRelativeVolumeComparisons.lean",
+      "source_sha256": "1b290504b6887d8afb5475ebcf62410a8bd826353d34f6f50d87e0d6d04b727f",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/GammaNamedRelativeVolumeComparisons.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/GammaNamedRelativeVolumeComparisons.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.089,
+      "completed_at_utc": "2026-11-14T19:40:51.260329+00:00",
+      "log": ".scratch/recovery/GammaNamedRelativeVolumeComparisons-build.log"
+    },
+    {
+      "module": "GammaNamesGenericParameters",
+      "source": "section 7/Integration7/GammaNamesGenericParameters.lean",
+      "source_sha256": "771d99bbcbba6bbd51b92b4366a793e9eaba31268162b5f576052f2c35adbdc2",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/GammaNamesGenericParameters.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/GammaNamesGenericParameters.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 3.796,
+      "completed_at_utc": "2026-11-14T19:38:50.078544+00:00",
+      "log": ".scratch/recovery/GammaNamesGenericParameters-build.log"
+    },
+    {
+      "module": "GammaNamesVolumeContexts",
+      "source": "section 7/Integration7/GammaNamesVolumeContexts.lean",
+      "source_sha256": "38098c3b92cd3596a82771686f919ce6be82344923acbe4f922c7cdd79e366ac",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/GammaNamesVolumeContexts.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/GammaNamesVolumeContexts.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 3.861,
+      "completed_at_utc": "2026-11-14T19:29:12.277037+00:00",
+      "log": ".scratch/recovery/GammaNamesVolumeContexts-build.log"
+    },
+    {
+      "module": "GammaPositionCodeCentres",
+      "source": "section 7/Integration7/GammaPositionCodeCentres.lean",
+      "source_sha256": "733551b454d45dbbbe5c5395da42c8458c9758fb2dc1856715140cef3e352e68",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/GammaPositionCodeCentres.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/GammaPositionCodeCentres.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.048,
+      "completed_at_utc": "2026-11-14T19:36:43.736540+00:00",
+      "log": ".scratch/recovery/GammaPositionCodeCentres-build.log"
+    },
+    {
+      "module": "GammaRelativeTranslations",
+      "source": "section 7/Integration7/GammaRelativeTranslations.lean",
+      "source_sha256": "f04b59c451d29a72d3d825a7e337bed86b2694f323bb142db213bb84cc57055c",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/GammaRelativeTranslations.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/GammaRelativeTranslations.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 3.665,
+      "completed_at_utc": "2026-11-14T19:37:44.486220+00:00",
+      "log": ".scratch/recovery/GammaRelativeTranslations-build.log"
+    },
+    {
+      "module": "NativeBalancedCellImages",
+      "source": "section 7/Integration7/NativeBalancedCellImages.lean",
+      "source_sha256": "7e721107dbf9e91e090eedeb56d8d804055eedcf05355ba4a9b86bee4874edcb",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/NativeBalancedCellImages.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/NativeBalancedCellImages.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.037,
+      "completed_at_utc": "2026-11-14T19:27:44.385120+00:00",
+      "log": ".scratch/recovery/NativeBalancedCellImages-build.log"
+    },
+    {
+      "module": "NativeBalancedTranslations",
+      "source": "section 7/Integration7/NativeBalancedTranslations.lean",
+      "source_sha256": "ac1bc282894cc8aa92b078da90230292b91398dfd51d68f7445426ca45d85cf1",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/NativeBalancedTranslations.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/NativeBalancedTranslations.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.083,
+      "completed_at_utc": "2026-11-14T19:37:43.084916+00:00",
+      "log": ".scratch/recovery/NativeBalancedTranslations-build.log"
+    },
+    {
+      "module": "NativePositionCodeCentres",
+      "source": "section 7/Integration7/NativePositionCodeCentres.lean",
+      "source_sha256": "e6c4d05d6d6683f72eddedfb5cab6fa3aa2779568a1c31034a8c7e5bb242f80c",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/NativePositionCodeCentres.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/NativePositionCodeCentres.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.36,
+      "completed_at_utc": "2026-11-14T19:34:53.655559+00:00",
+      "log": ".scratch/recovery/NativePositionCodeCentres-build.log"
+    },
+    {
+      "module": "NativeRelativeTranslationVolumes",
+      "source": "section 7/Integration7/NativeRelativeTranslationVolumes.lean",
+      "source_sha256": "289d9f3b1c193b61d1af143ae60023dfb29fece370663c7d9b7377cfce40cdf9",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/NativeRelativeTranslationVolumes.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/NativeRelativeTranslationVolumes.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.064,
+      "completed_at_utc": "2026-11-14T19:25:23.030418+00:00",
+      "log": ".scratch/recovery/NativeRelativeTranslationVolumes-build.log"
+    },
+    {
+      "module": "NativeRelativeTranslations",
+      "source": "section 7/Integration7/NativeRelativeTranslations.lean",
+      "source_sha256": "0fc56fa00c6f00b1f05ddc1317810b31ba1167251c489027ed572490a2cb56a7",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/NativeRelativeTranslations.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/NativeRelativeTranslations.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 3.512,
+      "completed_at_utc": "2026-11-14T19:40:57.347156+00:00",
+      "log": ".scratch/recovery/NativeRelativeTranslations-build.log"
+    },
+    {
+      "module": "NativeVFPairImages",
+      "source": "section 7/Integration7/NativeVFPairImages.lean",
+      "source_sha256": "09ba543010dab833b9fc5238a382cfd4bc8d79367068bb2fbadd7dad16812dc3",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/NativeVFPairImages.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/NativeVFPairImages.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 3.888,
+      "completed_at_utc": "2026-11-14T19:26:05.140103+00:00",
+      "log": ".scratch/recovery/NativeVFPairImages-build.log"
+    },
+    {
+      "module": "OriginalBaseFiniteRelativeContractions",
+      "source": "section 7/Integration7/OriginalBaseFiniteRelativeContractions.lean",
+      "source_sha256": "7c9331c6647ea2c7fe0481736a71fd3da0cb9170037d8507f4e403c9c52fb7c5",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/OriginalBaseFiniteRelativeContractions.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/OriginalBaseFiniteRelativeContractions.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.499,
+      "completed_at_utc": "2026-11-14T19:40:41.766312+00:00",
+      "log": ".scratch/recovery/OriginalBaseFiniteRelativeContractions-build.log"
+    },
+    {
+      "module": "OriginalBaseRelativeVolumeComparisons",
+      "source": "section 7/Integration7/OriginalBaseRelativeVolumeComparisons.lean",
+      "source_sha256": "232b80417b5651e24ff5e0e6ae03fceb198a9ca599215f11f33aa49c359b5680",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/OriginalBaseRelativeVolumeComparisons.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/OriginalBaseRelativeVolumeComparisons.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 5.08,
+      "completed_at_utc": "2026-11-14T19:39:04.867745+00:00",
+      "log": ".scratch/recovery/OriginalBaseRelativeVolumeComparisons-build.log"
+    },
+    {
+      "module": "OtherCoordinateTranslationCentres",
+      "source": "section 7/Integration7/OtherCoordinateTranslationCentres.lean",
+      "source_sha256": "98fda293ac4642bdaf36613e0487fbcbcfa4ba2c7a55ce0e2ac7f8e4a456f8d8",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/OtherCoordinateTranslationCentres.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/OtherCoordinateTranslationCentres.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 3.985,
+      "completed_at_utc": "2026-11-14T19:27:44.319395+00:00",
+      "log": ".scratch/recovery/OtherCoordinateTranslationCentres-build.log"
+    },
+    {
+      "module": "PureVFTranslationVolumeBijections",
+      "source": "section 7/Integration7/PureVFTranslationVolumeBijections.lean",
+      "source_sha256": "574c0dff7986e3bf38773e05af9a1999b82ddcaa33eb46556b477be7fae0992e",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/PureVFTranslationVolumeBijections.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/PureVFTranslationVolumeBijections.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.146,
+      "completed_at_utc": "2026-11-14T19:40:09.638606+00:00",
+      "log": ".scratch/recovery/PureVFTranslationVolumeBijections-build.log"
+    },
+    {
+      "module": "RelativeFibreTranslationVolumes",
+      "source": "section 7/Integration7/RelativeFibreTranslationVolumes.lean",
+      "source_sha256": "bfd43ce451fb86d67ae88e7efba906a75d53bfb17b4615c978fc1de409965303",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/RelativeFibreTranslationVolumes.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/RelativeFibreTranslationVolumes.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 3.35,
+      "completed_at_utc": "2026-11-14T19:23:17.097564+00:00",
+      "log": ".scratch/recovery/RelativeFibreTranslationVolumes-build.log"
+    },
+    {
+      "module": "VFCoordinatePreservingContractions",
+      "source": "section 7/Integration7/VFCoordinatePreservingContractions.lean",
+      "source_sha256": "685b9f79c93c1152f6a5ceccfdb2e04891e775301e0994ff44f677bf9f42ef17",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/VFCoordinatePreservingContractions.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/VFCoordinatePreservingContractions.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 3.604,
+      "completed_at_utc": "2026-11-14T19:41:00.951910+00:00",
+      "log": ".scratch/recovery/VFCoordinatePreservingContractions-build.log"
+    }
+  ],
+  "completed_at_utc": "2026-11-14T19:42:25.237083+00:00"
+}

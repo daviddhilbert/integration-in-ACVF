@@ -945,3 +945,180 @@ The 19-module/44-export batch passed actual source compilation, complete
 including cached dependencies). The checked boundary is 564 modules plus
 Library, with 1,786 audited exports. This is the next 100-module backup
 boundary after the published 464-module checkpoint.
+
+
+## Positive selected Lemma 7.5: arbitrary dimension
+
+`lemma_7_5_positive` proves the positive-selected-degree comparison for
+arbitrary actual standard contractions in a common order, starting from
+the ordinary common-blowup hypothesis on the actual named VF fibres.
+The head comparison is composed from genuine frozen unary contractions,
+full raw coordinate equivalences, and actual original-Gamma common chains.
+The resulting ordered induction has no additional head comparison premise.
+
+The conclusion realizes the full coordinate and density rows of the
+chosen contraction targets by actual original-Gamma volume objects and
+common blowup chains. `standard_append_volume_index_closed` identifies
+the coordinates as the old selected coordinates followed by every VF tag
+in the common contraction order; `standard_append_density_index` retains
+the original density. This batch does not identify these presentations
+with the older object frontend whose VF tags were reversed.
+
+The 14-module/29-export batch passed actual source compilation, one full
+891-line type/axiom review and the affected Library build (11,126 jobs
+including cached dependencies). The checked boundary is 578 modules plus
+Library, with 1,815 audited exports. Corollary 7.6 and subsequent results
+remain unfinished. The next requested backup boundary is about 664 modules.
+
+
+## Unary Corollary 7.6 and actual fibre Jacobians
+
+`gamma_unary_contraction_volume_comparison` constructs actual original-
+Gamma common volume blowup chains for arbitrary chosen unary standard
+contractions of measure-preservingly isomorphic mixed sets with finite
+RV fibres. The measure hypothesis is the existing almost-everywhere VF
+volume equation. Conjugacy transports the actual forms; zero-prefix
+row semantics and the checked witness gluing give the actual chains.
+The original density is retained on the whole RV domain.
+
+`relative_mixed_vf_jacobian_on_coordinate_fibre` proves pointwise that
+a defined full mixed VF Jacobian of a relatively unary map equals the
+unary Jacobian on its actual fibre. It constructs the restricted chart,
+including source membership and the fixed output RV labels. The matrix
+proof identifies all other rows with the identity and computes the
+active diagonal determinant. `relative_volume_on_fibre_of_small_exception`
+transfers the measure equation when the witnessed exception intersects
+that fibre in a VF-small set. It does not assert that this holds on every
+fibre from a global almost-everywhere hypothesis. The arbitrary-dimensional
+exception comparison in Corollary 7.6 remains unfinished.
+
+The 8-module/16-export batch passed actual source compilation, one full
+459-line type/axiom review and the affected Library build (11,134 jobs
+including cached dependencies). The checked boundary is 586 modules plus
+Library, with 1,831 audited exports. No repeated earlier integrity audit
+was performed. The next requested backup boundary remains about 664 modules.
+
+
+## Lemma 7.5 completed in the accepted scope
+
+`lemma_7_5` proves the nonempty-selected-coordinate statement on the
+specified actual contraction objects. Its input is the ordinary common-
+blowup hypothesis on the actual named fibres only on the common VF
+projection. Empty fibres outside that projection compare directly. Its
+output supplies actual original-Gamma common forward blowup chains in an
+internally constructed containing context. `lemma_7_5_ordinary` forgets the
+extra Gamma certificates and returns the usual common-blowup relation.
+
+`standardAppendVolumeObject` retains the complete RV labels, every old
+selected coordinate, all contracted VF tags in the common order, and the
+original density. Its finiteness and nonvanishing are proved. Equal full
+coordinate/density rows are compared by an actual Gamma volume chart;
+`commonByGammaGeometry_on_objects` joins the containing contexts and
+transfers the actual chains to these specified objects. This closes the
+row-to-object interface left open in the preceding batch. The E-empty
+case remains outside the user-approved target.
+
+The 7-module/14-export batch passed actual source compilation, one full
+346-line type/axiom review and the affected Library build (11,141 jobs
+including cached dependencies). The checked boundary is 593 modules plus
+Library, with 1,845 audited exports. The arbitrary-dimensional version of
+Corollary 7.6 and 7.7-7.15 remain unfinished. Backup remains due at about
+664 modules, as requested.
+
+
+## Arbitrary forms in unary 7.6 and VF-small contractions
+
+`corollary_7_6_unary` proves the unary result for arbitrary original VF
+volume forms, actual volume-preserving bijections and specified actual
+density-graph contractions. The original-Gamma common chains retain the
+original density. Native map realization uses the shared language and
+actual raw-point presentations, preserving point values and bijectivity.
+
+`PositiveVFVolumeObject.standardContractionObject` constructs the actual
+standard contraction object in every positive degree with proved full
+Gamma graphs and retained nonzero density. The actual natural lift map
+is bijective and preserves VF dimension; no higher-dimensional Jacobian
+claim is included in that interface. A nonempty essential RV object lifts
+to full VF dimension, so any chosen contraction of a VF-small object has
+empty essential domain. Such objects compare by a genuine original-Gamma
+volume isomorphism, independently of contraction order. This establishes
+the lower-dimensional case needed for the remaining exception argument.
+
+The 8-module/18-export batch passed actual source compilation, one full
+316-line type/axiom review and the affected Library build (11,149 jobs
+including cached dependencies). The checked boundary is 601 modules plus
+Library, with 1,863 audited exports. General full-dimensional Corollary 7.6
+and 7.7-7.15 remain unfinished. Backup remains due at about 664 modules.
+
+
+## Relative heads and essential base indices
+
+Actual chosen head contractions now compare on every frozen fibre on which
+one witnessed global measure exception has VF dimension below one. Raw
+and normalized finite contraction objects are related by actual original-Gamma
+volume isomorphisms, including the first-head case with no old selected
+coordinates. Indexed uniformity now needs witnesses only on indices whose
+base volume coordinates are all nonzero; the other indices are discarded
+through proved volume isomorphisms containing the entire essential domain.
+
+The ordered relative comparison under measure preservation on every fibre
+is a conditional support theorem. It is not counted as general Corollary
+7.6, whose exceptional-base argument remains active. The 12-module and
+17-export batch passed actual compilation, one full 773-line type/axiom
+review and the affected Library build (11,163 jobs including cached
+dependencies). The checked boundary is 613 modules plus Library, with
+1,880 audited exports. General higher-dimensional 7.6 and 7.7-7.15 remain
+unfinished. Backup remains due at about 664 modules.
+
+
+## Corollary 7.6 completed in all positive dimensions
+
+`corollary_7_6` compares the actual specified density-graph standard
+contraction objects of arbitrary original volume forms. The full VF
+bijection is relatively unary in the first coordinate of the chosen
+common order, and only the original global almost-everywhere volume
+equation is required. The output consists of actual original-Gamma
+common forward blowup chains in a genuine containing context.
+
+The exceptional-fibre argument now proceeds through generic points:
+a VF-small global exception has small unary fibres at independent base
+tuples; compactness supplies finitely many witnesses covering all such
+tuples; every nonzero prepared RV cell has a generic inverse image.
+Essential-index gluing then compares the whole prepared objects. A
+positive-selected contraction induction valid at generic parameters
+extends the head comparison through every remaining specified step.
+Simultaneous VF permutations retain the actual mixed Jacobian, and the
+corresponding RV coordinate permutations retain common blowup geometry
+with unchanged densities. No all-fibres measure premise, new Section 5.8
+input or generation hypothesis has been added to Corollary 7.6.
+
+The 30-module/43-export batch passed actual compilation, one full
+1,832-line type/axiom review and the affected Library build (11,194 jobs
+including cached dependencies). The checked boundary is 643 modules plus
+Library and 1,923 audited exports. The next active target is 7.7; 7.7-7.15
+remain unfinished. Backup remains due at about 664 modules.
+
+
+## Balanced-cell translation milestone for 7.7
+
+Both translations are actual native definable bijections onto the
+paper’s two product domains. Their centres and complete map graphs retain
+the original real/Gamma base. They have mixed VF Jacobian one almost
+everywhere; pure VF domains with arbitrary transported original densities
+give actual full volume-preserving bijections. The balanced positioning
+function and its inverse have graphs over that same base. The Gamma
+product identity follows from the checked slope formula of Remark4.6.
+
+Original VF-independent tuples remain independent after adjoining real
+codes for the original Gamma names and taking the substructure closure:
+the generated VF field lies in the original algebraic closure. Relative
+contraction comparison is proved in those contexts over the unchanged
+original base, on actual specified normalized contraction objects.
+
+The 21-module/65-export batch passed actual compilation, one complete
+1,608-line type/axiom review and the affected Library build (11,273 jobs
+including cached dependencies). This seals 664 modules plus Library and
+1,988 audited exports. Lemma7.7 still needs the balanced RV comparison and
+uniform cell-family assembly; 7.7-7.15 remain unfinished. The last 564-module
+backup passed GitHub Actions run43622491340. The next backup is due at
+about764 modules after saving this milestone.
