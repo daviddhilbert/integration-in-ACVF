@@ -1,0 +1,204 @@
+@ElementaryBlowup.gammaWeight_formula : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF] {S : Set M}
+  {k : ℕ} {U W : PositiveRVVolumeObject S k} (b : ElementaryBlowup U W) (w : ↑W.essential.obj.domain.carrier),
+  essentialGammaWeight W w =
+    RVOperations.absoluteHom ((↑(b.essentialChartMap.toFun w)).2 0) *
+      essentialGammaWeight U
+        ((Map.prodFst U.essential.obj.domain (nonzeroBlowupConeSet S)).toFun (b.essentialChartMap.toFun w))
+'IntegrationInACVF.Section7.ElementaryBlowup.gammaWeight_formula' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@ElementaryBlowup.essentialGammaUpperBound : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF]
+  {S : Set M} {k : ℕ} {U W : PositiveRVVolumeObject S k} (b : ElementaryBlowup U W)
+  (a : (MonoidWithZeroHom.ofClass Values.presentationValuation).ValueGroup₀),
+  a ≠ 0 → (essentialGammaUpperBound U a ↔ essentialGammaUpperBound W a)
+'IntegrationInACVF.Section7.ElementaryBlowup.essentialGammaUpperBound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@VolumeBlowup.essentialGammaUpperBound : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF] {S : Set M}
+  {k : ℕ} {U W : PositiveRVVolumeObject S k} (b : VolumeBlowup U W)
+  (a : (MonoidWithZeroHom.ofClass Values.presentationValuation).ValueGroup₀),
+  a ≠ 0 → (essentialGammaUpperBound U a ↔ essentialGammaUpperBound W a)
+'IntegrationInACVF.Section7.VolumeBlowup.essentialGammaUpperBound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@IteratedVolumeBlowup.essentialGammaUpperBound : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF]
+  {S : Set M} {k : ℕ} {U W : PositiveRVVolumeObject S k} {n : ℕ},
+  IteratedVolumeBlowup n U W →
+    ∀ (a : (MonoidWithZeroHom.ofClass Values.presentationValuation).ValueGroup₀),
+      a ≠ 0 → (essentialGammaUpperBound U a ↔ essentialGammaUpperBound W a)
+'IntegrationInACVF.Section7.IteratedVolumeBlowup.essentialGammaUpperBound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@VolumeBlowupEquivalent.essentialGammaUpperBound : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF]
+  {S : Set M} {k : ℕ} {U W : PositiveRVVolumeObject S k},
+  VolumeBlowupEquivalent U W →
+    ∀ (a : (MonoidWithZeroHom.ofClass Values.presentationValuation).ValueGroup₀),
+      a ≠ 0 → (essentialGammaUpperBound U a ↔ essentialGammaUpperBound W a)
+'IntegrationInACVF.Section7.VolumeBlowupEquivalent.essentialGammaUpperBound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@ElementaryBlowup.head_ae_pullback : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF] {S : Set M}
+  {k : ℕ} {U W : PositiveRVVolumeObject S k} (b : ElementaryBlowup U W) {P : ↑U.essential.obj.domain.carrier → Prop},
+  RVAlmostEverywhere U.essential.obj.domain k P →
+    RVAlmostEverywhere W.essential.obj.domain (k + 1) fun w =>
+      P ((Map.prodFst U.essential.obj.domain (nonzeroBlowupConeSet S)).toFun (b.essentialChartMap.toFun w))
+'IntegrationInACVF.Section7.ElementaryBlowup.head_ae_pullback' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@ElementaryBlowup.exists_headJacobian_after_blowup : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF]
+  {k : ℕ},
+  CanonicalStructure.IsCanonical →
+    ∀ (C : BaseContext M) {U V WU WV : PositiveRVVolumeObject (↑C.base) k} (b : ElementaryBlowup U WU)
+      (c : ElementaryBlowup V WV) (f : RVVolumeIso U V),
+      ∃ J,
+        RVAlmostEverywhere WU.essential.obj.domain (k + 1) fun w =>
+          IsRVJacobianAt (volumeCorrespondence (finiteIsoMap (blowupHeadIso C f ⋯ ⋯))).carrier
+            (U.essential.obj.value
+                ((Map.prodFst U.essential.obj.domain (nonzeroBlowupConeSet ↑C.base)).toFun
+                  (b.essentialChartMap.toFun w)) ∘
+              Fin.castSucc)
+            (V.essential.obj.value
+                ((finiteIsoMap f.iso).toFun
+                  ((Map.prodFst U.essential.obj.domain (nonzeroBlowupConeSet ↑C.base)).toFun
+                    (b.essentialChartMap.toFun w))) ∘
+              Fin.castSucc)
+            (↑(J.toFun
+                  ((Map.prodFst U.essential.obj.domain (nonzeroBlowupConeSet ↑C.base)).toFun
+                    (b.essentialChartMap.toFun w)))
+              0)
+'IntegrationInACVF.Section7.ElementaryBlowup.exists_headJacobian_after_blowup' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@blowupCoordinates_residue_scale : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF] {k : ℕ}
+  (t : Fin (k + 1) → CanonicalRV.RVSort M) (s : CanonicalRV.RVSort M) (a : ResiduePurity.ModelResidue M),
+  blowupCoordinates t (s * ResiduePurity.residueRV a) =
+    ResiduePurity.residueScale (blowupCoordinates t s) (Fin.snoc (fun x => 1) a)
+'IntegrationInACVF.Section7.blowupCoordinates_residue_scale' depends on axioms: [propext, Classical.choice, Quot.sound]
+@ElementaryBlowup.correctedCorrespondence_line : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF]
+  {S : Set M} {k : ℕ} {U V WU WV : PositiveRVVolumeObject S k} (b : ElementaryBlowup U WU) (c : ElementaryBlowup V WV)
+  (f : RVVolumeIso U V) (J : Map U.essential.obj.domain (DefSet.univ (rawRVSpace 1) S))
+  (w : ↑WU.essential.obj.domain.carrier) (a : ResiduePurity.ModelResidue M),
+  a ≠ 0 →
+    SpecialTransformations.Section7.productTuple (Fin.snoc (fun x => 1) a) (Fin.snoc (fun x => 1) a) ∈
+      normalizedCorrespondence (volumeCorrespondence (b.correctedMap c f J)).carrier (WU.essential.obj.value w)
+        (WV.essential.obj.value ((b.correctedMap c f J).toFun w))
+'IntegrationInACVF.Section7.ElementaryBlowup.correctedCorrespondence_line' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@ElementaryBlowup.correctedCorrespondence_head : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF]
+  {k : ℕ} (C : BaseContext M) {U V WU WV : PositiveRVVolumeObject (↑C.base) k} (b : ElementaryBlowup U WU)
+  (c : ElementaryBlowup V WV) (f : RVVolumeIso U V)
+  (J : Map U.essential.obj.domain (DefSet.univ (rawRVSpace 1) ↑C.base)),
+  ∀ z ∈ (volumeCorrespondence (b.correctedMap c f J)).carrier,
+    z ∘ headPairIndex k ∈ (volumeCorrespondence (finiteIsoMap (blowupHeadIso C f ⋯ ⋯))).carrier
+'IntegrationInACVF.Section7.ElementaryBlowup.correctedCorrespondence_head' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@ElementaryBlowup.correctedJacobian_eq_volumeRatio : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF]
+  {k : ℕ} (C : BaseContext M) {U V WU WV : PositiveRVVolumeObject (↑C.base) k} (b : ElementaryBlowup U WU)
+  (c : ElementaryBlowup V WV) (f : RVVolumeIso U V)
+  (J : Map U.essential.obj.domain (DefSet.univ (rawRVSpace 1) ↑C.base)) (w : ↑WU.essential.obj.domain.carrier),
+  IsRVJacobianAt (volumeCorrespondence (finiteIsoMap (blowupHeadIso C f ⋯ ⋯))).carrier
+      (U.essential.obj.value
+          ((Map.prodFst U.essential.obj.domain (nonzeroBlowupConeSet ↑C.base)).toFun (b.essentialChartMap.toFun w)) ∘
+        Fin.castSucc)
+      (V.essential.obj.value
+          ((finiteIsoMap f.iso).toFun
+            ((Map.prodFst U.essential.obj.domain (nonzeroBlowupConeSet ↑C.base)).toFun (b.essentialChartMap.toFun w))) ∘
+        Fin.castSucc)
+      (↑(J.toFun
+            ((Map.prodFst U.essential.obj.domain (nonzeroBlowupConeSet ↑C.base)).toFun (b.essentialChartMap.toFun w)))
+        0) →
+    ∀ {ω : CanonicalRV.RVSort M},
+      IsRVJacobianAt (volumeCorrespondence (finiteIsoMap (b.correctedIso c f J))).carrier (WU.essential.obj.value w)
+          (WV.essential.obj.value ((finiteIsoMap (b.correctedIso c f J)).toFun w)) ω →
+        ω = volumeRatio WU WV (b.correctedIso c f J) w
+'IntegrationInACVF.Section7.ElementaryBlowup.correctedJacobian_eq_volumeRatio' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@elementaryBlowupIso : {M : Type} →
+  [inst : LRV.Structure M] →
+    [inst_1 : M ⊨ Axioms.ACVF] →
+      {k : ℕ} →
+        CanonicalStructure.IsCanonical →
+          (C : BaseContext M) →
+            {U V WU WV : PositiveRVVolumeObject (↑C.base) k} →
+              RVVolumeIso U V → ElementaryBlowup U WU → ElementaryBlowup V WV → RVVolumeIso WU WV
+'IntegrationInACVF.Section7.elementaryBlowupIso' depends on axioms: [propext, Classical.choice, Quot.sound]
+headPairIndex : (k : ℕ) → Fin (k + k) → Fin (k + 1 + (k + 1))
+'IntegrationInACVF.Section7.headPairIndex' depends on axioms: [propext, Quot.sound]
+headPairIndex_injective : ∀ (k : ℕ), Function.Injective (headPairIndex k)
+'IntegrationInACVF.Section7.headPairIndex_injective' depends on axioms: [propext, Quot.sound]
+headPairIndex_left : ∀ (k : ℕ) (i : Fin k),
+  headPairIndex k ((SpecialTransformations.Section7.productLeft k k) i) =
+    (SpecialTransformations.Section7.productLeft (k + 1) (k + 1)) i.castSucc
+'IntegrationInACVF.Section7.headPairIndex_left' depends on axioms: [propext, Quot.sound]
+headPairIndex_right : ∀ (k : ℕ) (i : Fin k),
+  headPairIndex k ((SpecialTransformations.Section7.productRight k k) i) =
+    (SpecialTransformations.Section7.productRight (k + 1) (k + 1)) i.castSucc
+'IntegrationInACVF.Section7.headPairIndex_right' depends on axioms: [propext, Quot.sound]
+@productTuple_comp_headPairIndex : ∀ {X : Type u_1} {k : ℕ} (x y : Fin (k + 1) → X),
+  SpecialTransformations.Section7.productTuple x y ∘ headPairIndex k =
+    SpecialTransformations.Section7.productTuple (x ∘ Fin.castSucc) (y ∘ Fin.castSucc)
+'IntegrationInACVF.Section7.productTuple_comp_headPairIndex' depends on axioms: [propext, Quot.sound]
+lastPairIndices : (k : ℕ) → Finset (Fin (k + 1 + (k + 1)))
+'IntegrationInACVF.Section7.lastPairIndices' depends on axioms: [propext, Quot.sound]
+@lastPair_indicator : ∀ {X : Type u_1} {k : ℕ} (a b : X),
+  (fun i => if i ∈ lastPairIndices k then a else b) =
+    SpecialTransformations.Section7.productTuple (Fin.snoc (fun x => b) a) (Fin.snoc (fun x => b) a)
+'IntegrationInACVF.Section7.lastPair_indicator' depends on axioms: [propext, Classical.choice, Quot.sound]
+@residueJacobian_det_of_head : ∀ {K : Type u_1} [inst : Field K] [Infinite K] {k : ℕ}
+  {C : Set (Fin (k + 1 + (k + 1)) → K)} {D : Set (Fin (k + k) → K)},
+  (∀ z ∈ C, z ∘ headPairIndex k ∈ D) →
+    (∀ (a : K),
+        a ≠ 0 → SpecialTransformations.Section7.productTuple (Fin.snoc (fun x => 1) a) (Fin.snoc (fun x => 1) a) ∈ C) →
+      ∀ (L : (Fin (k + 1) → K) →ₗ[K] Fin (k + 1) → K) (H : (Fin k → K) →ₗ[K] Fin k → K),
+        (∀ (x y : Fin (k + 1) → K),
+            IsPolynomialTangent C (fun x => 1) (SpecialTransformations.Section7.productTuple x y) ↔ y = L x) →
+          (∀ (x y : Fin k → K),
+              IsPolynomialTangent D (fun x => 1) (SpecialTransformations.Section7.productTuple x y) ↔ y = H x) →
+            (LinearMap.toMatrix' L).det = (LinearMap.toMatrix' H).det
+'IntegrationInACVF.Section7.residueJacobian_det_of_head' depends on axioms: [propext, Classical.choice, Quot.sound]
+@polynomialTangent_of_punctured_coordinate_line : ∀ {K : Type u_1} [inst : Field K] [Infinite K] {d : ℕ}
+  (I : Finset (Fin d)) (C : Set (Fin d → K)),
+  (∀ (a : K), a ≠ 0 → (fun i => if i ∈ I then a else 1) ∈ C) →
+    IsPolynomialTangent C (fun x => 1) fun i => if i ∈ I then 1 else 0
+'IntegrationInACVF.Section7.polynomialTangent_of_punctured_coordinate_line' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@polynomialTangent_projection : ∀ {K : Type u_1} [inst : Field K] {d e : ℕ} (ρ : Fin e → Fin d),
+  Function.Injective ρ →
+    ∀ {C : Set (Fin d → K)} {D : Set (Fin e → K)},
+      (∀ z ∈ C, z ∘ ρ ∈ D) → ∀ {p v : Fin d → K}, IsPolynomialTangent C p v → IsPolynomialTangent D (p ∘ ρ) (v ∘ ρ)
+'IntegrationInACVF.Section7.polynomialTangent_projection' depends on axioms: [propext, Classical.choice, Quot.sound]
+@normalizedCorrespondence_head_projection : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF] {k : ℕ}
+  {C : Set (Fin (k + 1 + (k + 1)) → CanonicalRV.RVSort M)} {D : Set (Fin (k + k) → CanonicalRV.RVSort M)},
+  (∀ z ∈ C, z ∘ headPairIndex k ∈ D) →
+    ∀ (t s : Fin (k + 1) → CanonicalRV.RVSort M),
+      ∀ z ∈ normalizedCorrespondence C t s,
+        z ∘ headPairIndex k ∈ normalizedCorrespondence D (t ∘ Fin.castSucc) (s ∘ Fin.castSucc)
+'IntegrationInACVF.Section7.normalizedCorrespondence_head_projection' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@rvJacobian_eq_head_mul_last_ratio : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF] {k : ℕ}
+  {C : Set (Fin (k + 1 + (k + 1)) → CanonicalRV.RVSort M)} {D : Set (Fin (k + k) → CanonicalRV.RVSort M)},
+  (∀ z ∈ C, z ∘ headPairIndex k ∈ D) →
+    ∀ {t s : Fin (k + 1) → CanonicalRV.RVSort M},
+      (∀ (a : ResiduePurity.ModelResidue M),
+          a ≠ 0 →
+            SpecialTransformations.Section7.productTuple (Fin.snoc (fun x => 1) a) (Fin.snoc (fun x => 1) a) ∈
+              normalizedCorrespondence C t s) →
+        ∀ {ω J : CanonicalRV.RVSort M},
+          IsRVJacobianAt C t s ω →
+            IsRVJacobianAt D (t ∘ Fin.castSucc) (s ∘ Fin.castSucc) J → ω = J * (s (Fin.last k) / t (Fin.last k))
+'IntegrationInACVF.Section7.rvJacobian_eq_head_mul_last_ratio' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@rvDim_productDomain_le : ∀ {M : Type} [inst : LRV.Structure M] [M ⊨ Axioms.ACVF] {S : Set M} {a b : ℕ}
+  (A : DefSet (rawRVSpace a) S) (B : DefSet (rawRVSpace b) S), rvDim (rvProductDomain A B) ≤ rvDim A + rvDim B
+'IntegrationInACVF.Section7.rvDim_productDomain_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RVAlmostEverywhere.product_right : ∀ {M : Type} [inst : LRV.Structure M] [M ⊨ Axioms.ACVF] {S : Set M} {a b n : ℕ}
+  {A : DefSet (rawRVSpace a) S} (B : DefSet (rawRVSpace b) S) {P : ↑A.carrier → Prop},
+  RVAlmostEverywhere A n P →
+    RVAlmostEverywhere (rvProductDomain A B) (n + b) fun u => P ((Map.prodFst A B).toFun ((rvUnpack A B).toFun u))
+'IntegrationInACVF.Section7.RVAlmostEverywhere.product_right' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,582 @@
+@rvJacobian_ne_zero : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF] {n : ℕ}
+  {D : Set (Fin (n + n) → CanonicalRV.RVSort M)} {t s : Fin n → CanonicalRV.RVSort M} {ω : CanonicalRV.RVSort M},
+  IsRVJacobianAt D t s ω → ω ≠ 0
+'IntegrationInACVF.Section7.rvJacobian_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+@blowupCorrection : {M : Type} →
+  [inst : LRV.Structure M] →
+    [M ⊨ Axioms.ACVF] →
+      CanonicalRV.RVSort M →
+        CanonicalRV.RVSort M → CanonicalRV.RVSort M → CanonicalRV.RVSort M → CanonicalRV.RVSort M → CanonicalRV.RVSort M
+'IntegrationInACVF.Section7.blowupCorrection' depends on axioms: [propext, Classical.choice, Quot.sound]
+@blowupCorrection_cancel : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF]
+  (J a b r s : CanonicalRV.RVSort M), J ≠ 0 → r ≠ 0 → s ≠ 0 → blowupCorrection J a b r s * (J * (s / r)) = a / b
+'IntegrationInACVF.Section7.blowupCorrection_cancel' depends on axioms: [propext, Classical.choice, Quot.sound]
+@blowupCorrection_absolute : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF]
+  (J a b r s : CanonicalRV.RVSort M),
+  J ≠ 0 →
+    r ≠ 0 →
+      s ≠ 0 →
+        RVOperations.absoluteHom (a / b) =
+            RVOperations.absoluteHom J * (RVOperations.absoluteHom s / RVOperations.absoluteHom r) →
+          RVOperations.absoluteHom (blowupCorrection J a b r s) = 1
+'IntegrationInACVF.Section7.blowupCorrection_absolute' depends on axioms: [propext, Classical.choice, Quot.sound]
+@blowupHeadVolume : {M : Type} →
+  [inst : LRV.Structure M] →
+    [inst_1 : M ⊨ Axioms.ACVF] →
+      {k : ℕ} →
+        {S : Set M} → (U : PositiveRVVolumeObject S k) → Map U.essential.obj.domain (DefSet.univ (rawRVSpace k) S)
+'IntegrationInACVF.Section7.blowupHeadVolume' depends on axioms: [propext, Classical.choice, Quot.sound]
+@blowupHeadVolume_finite : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF] {k : ℕ} (C : BaseContext M)
+  (U : PositiveRVVolumeObject (↑C.base) k), BlowupAdmissible U → (blowupHeadVolume U).FiniteFibres
+'IntegrationInACVF.Section7.blowupHeadVolume_finite' depends on axioms: [propext, Classical.choice, Quot.sound]
+@blowupHeadObject : {M : Type} →
+  [inst : LRV.Structure M] →
+    [inst_1 : M ⊨ Axioms.ACVF] →
+      {k : ℕ} →
+        (C : BaseContext M) → (U : PositiveRVVolumeObject (↑C.base) k) → BlowupAdmissible U → RVFiniteObject (↑C.base) k
+'IntegrationInACVF.Section7.blowupHeadObject' depends on axioms: [propext, Classical.choice, Quot.sound]
+@blowupHeadObject_value : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF] {k : ℕ} (C : BaseContext M)
+  (U : PositiveRVVolumeObject (↑C.base) k) (hU : BlowupAdmissible U) (u : ↑U.essential.obj.domain.carrier),
+  (blowupHeadObject C U hU).obj.value u = U.essential.obj.value u ∘ Fin.castSucc
+'IntegrationInACVF.Section7.blowupHeadObject_value' depends on axioms: [propext, Classical.choice, Quot.sound]
+@blowupHeadIso : {M : Type} →
+  [inst : LRV.Structure M] →
+    [inst_1 : M ⊨ Axioms.ACVF] →
+      {k : ℕ} →
+        (C : BaseContext M) →
+          {U V : PositiveRVVolumeObject (↑C.base) k} →
+            RVVolumeIso U V →
+              (hU : BlowupAdmissible U) → (hV : BlowupAdmissible V) → blowupHeadObject C U hU ≅ blowupHeadObject C V hV
+'IntegrationInACVF.Section7.blowupHeadIso' depends on axioms: [propext, Classical.choice, Quot.sound]
+@blowupHeadIso_map : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF] {k : ℕ} (C : BaseContext M)
+  {U V : PositiveRVVolumeObject (↑C.base) k} (f : RVVolumeIso U V) (hU : BlowupAdmissible U) (hV : BlowupAdmissible V)
+  (u : ↑U.essential.obj.domain.carrier), (finiteIsoMap (blowupHeadIso C f hU hV)).toFun u = (finiteIsoMap f.iso).toFun u
+'IntegrationInACVF.Section7.blowupHeadIso_map' depends on axioms: [propext, Classical.choice, Quot.sound]
+@blowupCoordinates_absolute_product : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF] {k : ℕ}
+  (t : Fin (k + 1) → CanonicalRV.RVSort M) (s : CanonicalRV.RVSort M),
+  ∏ i, RVOperations.absoluteHom (blowupCoordinates t s i) =
+    RVOperations.absoluteHom s * ∏ i, RVOperations.absoluteHom (t i)
+'IntegrationInACVF.Section7.blowupCoordinates_absolute_product' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@correctedConeFibreMap : {M : Type} →
+  [inst : LRV.Structure M] →
+    [inst_1 : M ⊨ Axioms.ACVF] →
+      {S : Set M} →
+        {k : ℕ} →
+          {U V : PositiveRVVolumeObject S k} →
+            RVVolumeIso U V →
+              Map U.essential.obj.domain (DefSet.univ (rawRVSpace 1) S) →
+                Map (U.essential.obj.domain.prod (nonzeroBlowupConeSet S))
+                  (V.essential.obj.domain.prod (nonzeroBlowupConeSet S))
+'IntegrationInACVF.Section7.correctedConeFibreMap' depends on axioms: [propext, Classical.choice, Quot.sound]
+@correctedConeFibreMap_bijective : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF] {S : Set M} {k : ℕ}
+  {U V : PositiveRVVolumeObject S k} (f : RVVolumeIso U V)
+  (J : Map U.essential.obj.domain (DefSet.univ (rawRVSpace 1) S)), Function.Bijective (correctedConeFibreMap f J).toFun
+'IntegrationInACVF.Section7.correctedConeFibreMap_bijective' depends on axioms: [propext, Classical.choice, Quot.sound]
+@ElementaryBlowup.correctedMap : {M : Type} →
+  [inst : LRV.Structure M] →
+    [inst_1 : M ⊨ Axioms.ACVF] →
+      {S : Set M} →
+        {k : ℕ} →
+          {U V WU WV : PositiveRVVolumeObject S k} →
+            ElementaryBlowup U WU →
+              ElementaryBlowup V WV →
+                RVVolumeIso U V →
+                  Map U.essential.obj.domain (DefSet.univ (rawRVSpace 1) S) →
+                    Map WU.essential.obj.domain WV.essential.obj.domain
+'IntegrationInACVF.Section7.ElementaryBlowup.correctedMap' depends on axioms: [propext, Classical.choice, Quot.sound]
+@ElementaryBlowup.correctedMap_bijective : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF] {S : Set M}
+  {k : ℕ} {U V WU WV : PositiveRVVolumeObject S k} (b : ElementaryBlowup U WU) (c : ElementaryBlowup V WV)
+  (f : RVVolumeIso U V) (J : Map U.essential.obj.domain (DefSet.univ (rawRVSpace 1) S)),
+  Function.Bijective (b.correctedMap c f J).toFun
+'IntegrationInACVF.Section7.ElementaryBlowup.correctedMap_bijective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@ElementaryBlowup.correctedMap_chart : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF] {S : Set M}
+  {k : ℕ} {U V WU WV : PositiveRVVolumeObject S k} (b : ElementaryBlowup U WU) (c : ElementaryBlowup V WV)
+  (f : RVVolumeIso U V) (J : Map U.essential.obj.domain (DefSet.univ (rawRVSpace 1) S))
+  (w : ↑WU.essential.obj.domain.carrier),
+  c.essentialChartMap.toFun ((b.correctedMap c f J).toFun w) =
+    (correctedConeFibreMap f J).toFun (b.essentialChartMap.toFun w)
+'IntegrationInACVF.Section7.ElementaryBlowup.correctedMap_chart' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@ElementaryBlowup.correctedMap_density : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF] {S : Set M}
+  {k : ℕ} {U V WU WV : PositiveRVVolumeObject S k} (b : ElementaryBlowup U WU) (c : ElementaryBlowup V WV)
+  (f : RVVolumeIso U V) (J : Map U.essential.obj.domain (DefSet.univ (rawRVSpace 1) S))
+  (w : ↑WU.essential.obj.domain.carrier),
+  WV.essentialForm.value ((b.correctedMap c f J).toFun w) =
+    V.essentialForm.value
+      ((finiteIsoMap f.iso).toFun
+        ((Map.prodFst U.essential.obj.domain (nonzeroBlowupConeSet S)).toFun (b.essentialChartMap.toFun w)))
+'IntegrationInACVF.Section7.ElementaryBlowup.correctedMap_density' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@ElementaryBlowup.correctedMap_coordinates : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF]
+  {S : Set M} {k : ℕ} {U V WU WV : PositiveRVVolumeObject S k} (b : ElementaryBlowup U WU) (c : ElementaryBlowup V WV)
+  (f : RVVolumeIso U V) (J : Map U.essential.obj.domain (DefSet.univ (rawRVSpace 1) S))
+  (w : ↑WU.essential.obj.domain.carrier),
+  WV.essential.obj.value ((b.correctedMap c f J).toFun w) =
+    blowupCoordinates
+      (V.essential.obj.value
+        ((finiteIsoMap f.iso).toFun
+          ((Map.prodFst U.essential.obj.domain (nonzeroBlowupConeSet S)).toFun (b.essentialChartMap.toFun w))))
+      (↑((headCorrectionMap f J).toFun
+              ((Map.prodFst U.essential.obj.domain (nonzeroBlowupConeSet S)).toFun (b.essentialChartMap.toFun w)))
+          0 *
+        (↑(b.essentialChartMap.toFun w)).2 0)
+'IntegrationInACVF.Section7.ElementaryBlowup.correctedMap_coordinates' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@ElementaryBlowup.correctedIso : {M : Type} →
+  [inst : LRV.Structure M] →
+    [inst_1 : M ⊨ Axioms.ACVF] →
+      {S : Set M} →
+        {k : ℕ} →
+          {U V WU WV : PositiveRVVolumeObject S k} →
+            ElementaryBlowup U WU →
+              ElementaryBlowup V WV →
+                RVVolumeIso U V →
+                  Map U.essential.obj.domain (DefSet.univ (rawRVSpace 1) S) → (WU.essential ≅ WV.essential)
+'IntegrationInACVF.Section7.ElementaryBlowup.correctedIso' depends on axioms: [propext, Classical.choice, Quot.sound]
+@ElementaryBlowup.correctedMap_weight_ratio : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF]
+  {S : Set M} {k : ℕ} {U V WU WV : PositiveRVVolumeObject S k} (b : ElementaryBlowup U WU) (c : ElementaryBlowup V WV)
+  (f : RVVolumeIso U V) (J : Map U.essential.obj.domain (DefSet.univ (rawRVSpace 1) S))
+  (w : ↑WU.essential.obj.domain.carrier),
+  (∏ i, RVOperations.absoluteHom (WV.essential.obj.value ((b.correctedMap c f J).toFun w) i)) /
+      ∏ i, RVOperations.absoluteHom (WU.essential.obj.value w i) =
+    (∏ i,
+        RVOperations.absoluteHom
+          (V.essential.obj.value
+            ((finiteIsoMap f.iso).toFun
+              ((Map.prodFst U.essential.obj.domain (nonzeroBlowupConeSet S)).toFun (b.essentialChartMap.toFun w)))
+            i)) /
+      ∏ i,
+        RVOperations.absoluteHom
+          (U.essential.obj.value
+            ((Map.prodFst U.essential.obj.domain (nonzeroBlowupConeSet S)).toFun (b.essentialChartMap.toFun w)) i)
+'IntegrationInACVF.Section7.ElementaryBlowup.correctedMap_weight_ratio' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@ElementaryBlowup.correctedIso_gamma : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF] {S : Set M}
+  {k : ℕ} {U V WU WV : PositiveRVVolumeObject S k} (b : ElementaryBlowup U WU) (c : ElementaryBlowup V WV)
+  (f : RVVolumeIso U V) (J : Map U.essential.obj.domain (DefSet.univ (rawRVSpace 1) S))
+  (w : ↑WU.essential.obj.domain.carrier),
+  Values.vrv (WU.essentialForm.value w) =
+    Values.vrv (WV.essentialForm.value ((finiteIsoMap (b.correctedIso c f J)).toFun w)) *
+      ↑(rvGammaJacobian (WU.essential.obj.value w)
+          (WV.essential.obj.value ((finiteIsoMap (b.correctedIso c f J)).toFun w)) ⋯ ⋯)
+'IntegrationInACVF.Section7.ElementaryBlowup.correctedIso_gamma' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@rawHeadCorrectionMap : {M : Type} →
+  [inst : LRV.Structure M] →
+    [inst_1 : M ⊨ Axioms.ACVF] →
+      {S : Set M} →
+        {k : ℕ} →
+          {U V : PositiveRVVolumeObject S k} →
+            RVVolumeIso U V →
+              Map U.essential.obj.domain (DefSet.univ (rawRVSpace 1) S) →
+                Map U.essential.obj.domain (DefSet.univ (rawRVSpace 1) S)
+'IntegrationInACVF.Section7.rawHeadCorrectionMap' depends on axioms: [propext, Classical.choice, Quot.sound]
+@rawHeadCorrectionMap_value : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF] {S : Set M} {k : ℕ}
+  {U V : PositiveRVVolumeObject S k} (f : RVVolumeIso U V)
+  (J : Map U.essential.obj.domain (DefSet.univ (rawRVSpace 1) S)) (u : ↑U.essential.obj.domain.carrier),
+  ↑((rawHeadCorrectionMap f J).toFun u) 0 = headCorrection f u (↑(J.toFun u) 0)
+'IntegrationInACVF.Section7.rawHeadCorrectionMap_value' depends on axioms: [propext, Classical.choice, Quot.sound]
+@headCorrectionMap : {M : Type} →
+  [inst : LRV.Structure M] →
+    [inst_1 : M ⊨ Axioms.ACVF] →
+      {S : Set M} →
+        {k : ℕ} →
+          {U V : PositiveRVVolumeObject S k} →
+            RVVolumeIso U V →
+              Map U.essential.obj.domain (DefSet.univ (rawRVSpace 1) S) →
+                Map U.essential.obj.domain (DefSet.univ (rawRVSpace 1) S)
+'IntegrationInACVF.Section7.headCorrectionMap' depends on axioms: [propext, Classical.choice, Quot.sound]
+@headCorrectionMap_absolute : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF] {S : Set M} {k : ℕ}
+  {U V : PositiveRVVolumeObject S k} (f : RVVolumeIso U V)
+  (J : Map U.essential.obj.domain (DefSet.univ (rawRVSpace 1) S)) (u : ↑U.essential.obj.domain.carrier),
+  RVOperations.absoluteHom (↑((headCorrectionMap f J).toFun u) 0) = 1
+'IntegrationInACVF.Section7.headCorrectionMap_absolute' depends on axioms: [propext, Classical.choice, Quot.sound]
+@headCorrectionMap_of_absolute_one : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF] {S : Set M}
+  {k : ℕ} {U V : PositiveRVVolumeObject S k} (f : RVVolumeIso U V)
+  (J : Map U.essential.obj.domain (DefSet.univ (rawRVSpace 1) S)) (u : ↑U.essential.obj.domain.carrier),
+  RVOperations.absoluteHom (headCorrection f u (↑(J.toFun u) 0)) = 1 →
+    ↑((headCorrectionMap f J).toFun u) 0 = headCorrection f u (↑(J.toFun u) 0)
+'IntegrationInACVF.Section7.headCorrectionMap_of_absolute_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@headCorrectionMap_of_jacobian : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF] {k : ℕ}
+  (C : BaseContext M) {U V : PositiveRVVolumeObject (↑C.base) k} (f : RVVolumeIso U V) (hU : BlowupAdmissible U)
+  (hV : BlowupAdmissible V) (J : Map U.essential.obj.domain (DefSet.univ (rawRVSpace 1) ↑C.base))
+  (u : ↑U.essential.obj.domain.carrier),
+  IsRVJacobianAt (volumeCorrespondence (finiteIsoMap (blowupHeadIso C f hU hV))).carrier
+      (U.essential.obj.value u ∘ Fin.castSucc) (V.essential.obj.value ((finiteIsoMap f.iso).toFun u) ∘ Fin.castSucc)
+      (↑(J.toFun u) 0) →
+    ↑((headCorrectionMap f J).toFun u) 0 = headCorrection f u (↑(J.toFun u) 0)
+'IntegrationInACVF.Section7.headCorrectionMap_of_jacobian' depends on axioms: [propext, Classical.choice, Quot.sound]
+@rvCoprodIsoExplicit : {M : Type} →
+  [inst : LRV.Structure M] →
+    [inst_1 : M ⊨ Axioms.ACVF] →
+      {S : Set M} →
+        {k : ℕ} → {U U' V V' : RVObject S k} → (U ≅ U') → (V ≅ V') → (rvCoprodObject U V ≅ rvCoprodObject U' V')
+'IntegrationInACVF.Section7.rvCoprodIsoExplicit' depends on axioms: [propext, Classical.choice, Quot.sound]
+@rvCoprodIsoExplicit_left : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF] {S : Set M} {k : ℕ}
+  {U U' V V' : RVObject S k} (e : U ≅ U') (f : V ≅ V') (u : ↑U.domain.carrier),
+  (rvCoprodIsoExplicit e f).hom.map.toFun ((rvCoprodLeftMap U V).toFun u) =
+    (rvCoprodLeftMap U' V').toFun (e.hom.map.toFun u)
+'IntegrationInACVF.Section7.rvCoprodIsoExplicit_left' depends on axioms: [propext, Classical.choice, Quot.sound]
+@rvCoprodIsoExplicit_right : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF] {S : Set M} {k : ℕ}
+  {U U' V V' : RVObject S k} (e : U ≅ U') (f : V ≅ V') (v : ↑V.domain.carrier),
+  (rvCoprodIsoExplicit e f).hom.map.toFun ((rvCoprodRightMap U V).toFun v) =
+    (rvCoprodRightMap U' V').toFun (f.hom.map.toFun v)
+'IntegrationInACVF.Section7.rvCoprodIsoExplicit_right' depends on axioms: [propext, Classical.choice, Quot.sound]
+@MuIsp : {M : Type} →
+  [inst : LRV.Structure M] →
+    [inst_1 : M ⊨ Axioms.ACVF] → (S : Set M) → (n : ℕ) → RVVolumeObject S n → RVVolumeObject S n → Prop
+'IntegrationInACVF.Section7.MuIsp' depends on axioms: [propext, Classical.choice, Quot.sound]
+@muIsp_zero_iff : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF] (S : Set M)
+  (U V : RVFiniteObject S 0), MuIsp S 0 U V ↔ Nonempty (U ≅ V)
+'IntegrationInACVF.Section7.muIsp_zero_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+@muIsp_succ_iff : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF] (S : Set M) (k : ℕ)
+  (U V : RVVolumeObject S (k + 1)), MuIsp S (k + 1) U V ↔ VolumeBlowupEquivalent U V
+'IntegrationInACVF.Section7.muIsp_succ_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+@muIsp_refl : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF],
+  CanonicalStructure.IsCanonical → ∀ (C : BaseContext M) {n : ℕ} (U : RVVolumeObject (↑C.base) n), MuIsp (↑C.base) n U U
+'IntegrationInACVF.Section7.muIsp_refl' depends on axioms: [propext, Classical.choice, Quot.sound]
+@muIsp_symm : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF],
+  CanonicalStructure.IsCanonical →
+    ∀ (C : BaseContext M) {n : ℕ} {U V : RVVolumeObject (↑C.base) n}, MuIsp (↑C.base) n U V → MuIsp (↑C.base) n V U
+'IntegrationInACVF.Section7.muIsp_symm' depends on axioms: [propext, Classical.choice, Quot.sound]
+@VolumeForm.one : {M : Type} →
+  [inst : LRV.Structure M] →
+    [inst_1 : M ⊨ Axioms.ACVF] →
+      {S : Set M} → {P : SpecialTransformations.DefinableGeometry.Space LRV M} → (A : DefSet P S) → VolumeForm A
+'IntegrationInACVF.Section7.VolumeForm.one' depends on axioms: [propext, Classical.choice, Quot.sound]
+@VolumeForm.one_value : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF] {S : Set M}
+  {P : SpecialTransformations.DefinableGeometry.Space LRV M} (A : DefSet P S) (a : ↑A.carrier),
+  (VolumeForm.one A).value a = 1
+'IntegrationInACVF.Section7.VolumeForm.one_value' depends on axioms: [propext, Classical.choice, Quot.sound]
+@rvVolumeUnderlying : {M : Type} →
+  [inst : LRV.Structure M] →
+    [inst_1 : M ⊨ Axioms.ACVF] → (S : Set M) → (n : ℕ) → RVVolumeObject S n → RVFiniteObject S n
+'IntegrationInACVF.Section7.rvVolumeUnderlying' depends on axioms: [propext, Classical.choice, Quot.sound]
+@rvVolumeForm : {M : Type} →
+  [inst : LRV.Structure M] →
+    [inst_1 : M ⊨ Axioms.ACVF] →
+      (S : Set M) → (n : ℕ) → (U : RVVolumeObject S n) → VolumeForm (rvVolumeUnderlying S n U).obj.domain
+'IntegrationInACVF.Section7.rvVolumeForm' depends on axioms: [propext, Classical.choice, Quot.sound]
+@rvVolumeOfForm : {M : Type} →
+  [inst : LRV.Structure M] →
+    [inst_1 : M ⊨ Axioms.ACVF] →
+      (S : Set M) → (n : ℕ) → (U : RVFiniteObject S n) → VolumeForm U.obj.domain → RVVolumeObject S n
+'IntegrationInACVF.Section7.rvVolumeOfForm' depends on axioms: [propext, Classical.choice, Quot.sound]
+@rvVolumeOfForm_underlying : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF] {S : Set M} (n : ℕ)
+  (U : RVFiniteObject S n) (ω : VolumeForm U.obj.domain), rvVolumeUnderlying S n (rvVolumeOfForm S n U ω) = U
+'IntegrationInACVF.Section7.rvVolumeOfForm_underlying' depends on axioms: [propext, Classical.choice, Quot.sound]
+@rvVolumeOfForm_density : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF] {S : Set M} (n : ℕ)
+  (U : RVFiniteObject S n) (ω : VolumeForm U.obj.domain),
+  (n = 0 → ∀ (a : ↑U.obj.domain.carrier), ω.value a = 1) →
+    ∀ (a : ↑U.obj.domain.carrier), (rvVolumeForm S n (rvVolumeOfForm S n U ω)).value (⋯ ▸ a) = ω.value a
+'IntegrationInACVF.Section7.rvVolumeOfForm_density' depends on axioms: [propext, Classical.choice, Quot.sound]
+@PositiveRVVolumeObject.prod : {M : Type} →
+  [inst : LRV.Structure M] →
+    [inst_1 : M ⊨ Axioms.ACVF] →
+      {S : Set M} →
+        {n m : ℕ} → PositiveRVVolumeObject S n → PositiveRVVolumeObject S m → PositiveRVVolumeObject S (n + 1 + m)
+'IntegrationInACVF.Section7.PositiveRVVolumeObject.prod' depends on axioms: [propext, Classical.choice, Quot.sound]
+@rvVolumeProduct : {M : Type} →
+  [inst : LRV.Structure M] →
+    [inst_1 : M ⊨ Axioms.ACVF] →
+      (S : Set M) → (n m : ℕ) → RVVolumeObject S n → RVVolumeObject S m → RVVolumeObject S (n + m)
+'IntegrationInACVF.Section7.rvVolumeProduct' depends on axioms: [propext, Classical.choice, Quot.sound]
+@rvVolumeProduct_underlying : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF] {S : Set M} (n m : ℕ)
+  (U : RVVolumeObject S n) (V : RVVolumeObject S m),
+  rvVolumeUnderlying S (n + m) (rvVolumeProduct S n m U V) =
+    rvFiniteProductObject (rvVolumeUnderlying S n U) (rvVolumeUnderlying S m V)
+'IntegrationInACVF.Section7.rvVolumeProduct_underlying' depends on axioms: [propext, Classical.choice, Quot.sound]
+@rvVolumeProduct_density : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF] {S : Set M} (n m : ℕ)
+  (U : RVVolumeObject S n) (V : RVVolumeObject S m)
+  (a : ↑(rvFiniteProductObject (rvVolumeUnderlying S n U) (rvVolumeUnderlying S m V)).obj.domain.carrier),
+  (rvVolumeForm S (n + m) (rvVolumeProduct S n m U V)).value (⋯ ▸ a) =
+    (rvVolumeForm S n U).value
+        ⟨(↑((rvUnpack (rvVolumeUnderlying S n U).obj.domain (rvVolumeUnderlying S m V).obj.domain).toFun a)).1, ⋯⟩ *
+      (rvVolumeForm S m V).value
+        ⟨(↑((rvUnpack (rvVolumeUnderlying S n U).obj.domain (rvVolumeUnderlying S m V).obj.domain).toFun a)).2, ⋯⟩
+'IntegrationInACVF.Section7.rvVolumeProduct_density' depends on axioms: [propext, Classical.choice, Quot.sound]
+@headCorrection : {M : Type} →
+  [inst : LRV.Structure M] →
+    [inst_1 : M ⊨ Axioms.ACVF] →
+      {S : Set M} →
+        {k : ℕ} →
+          {U V : PositiveRVVolumeObject S k} →
+            RVVolumeIso U V → ↑U.essential.obj.domain.carrier → CanonicalRV.RVSort M → CanonicalRV.RVSort M
+'IntegrationInACVF.Section7.headCorrection' depends on axioms: [propext, Classical.choice, Quot.sound]
+@headCorrection_absolute_one : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF] {k : ℕ}
+  (C : BaseContext M) {U V : PositiveRVVolumeObject (↑C.base) k} (f : RVVolumeIso U V) (hU : BlowupAdmissible U)
+  (hV : BlowupAdmissible V) (u : ↑U.essential.obj.domain.carrier) (J : CanonicalRV.RVSort M),
+  IsRVJacobianAt (volumeCorrespondence (finiteIsoMap (blowupHeadIso C f hU hV))).carrier
+      (U.essential.obj.value u ∘ Fin.castSucc) (V.essential.obj.value ((finiteIsoMap f.iso).toFun u) ∘ Fin.castSucc) J →
+    RVOperations.absoluteHom (headCorrection f u J) = 1
+'IntegrationInACVF.Section7.headCorrection_absolute_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+@VolumeBlowup : {M : Type} →
+  [inst : LRV.Structure M] →
+    [inst_1 : M ⊨ Axioms.ACVF] → {S : Set M} → {k : ℕ} → PositiveRVVolumeObject S k → PositiveRVVolumeObject S k → Type
+'IntegrationInACVF.Section7.VolumeBlowup' depends on axioms: [propext, Classical.choice, Quot.sound]
+@IteratedVolumeBlowup : {M : Type} →
+  [inst : LRV.Structure M] →
+    [inst_1 : M ⊨ Axioms.ACVF] →
+      {S : Set M} → {k : ℕ} → ℕ → PositiveRVVolumeObject S k → PositiveRVVolumeObject S k → Prop
+'IntegrationInACVF.Section7.IteratedVolumeBlowup' depends on axioms: [propext, Classical.choice, Quot.sound]
+@IteratedVolumeBlowup.of_step : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF] {S : Set M} {k : ℕ}
+  {U V : PositiveRVVolumeObject S k} (b : VolumeBlowup U V), IteratedVolumeBlowup 1 U V
+'IntegrationInACVF.Section7.IteratedVolumeBlowup.of_step' depends on axioms: [propext, Classical.choice, Quot.sound]
+@IteratedVolumeBlowup.trans : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF] {S : Set M} {k m n : ℕ}
+  {U V W : PositiveRVVolumeObject S k},
+  IteratedVolumeBlowup m U V → IteratedVolumeBlowup n V W → IteratedVolumeBlowup (m + n) U W
+'IntegrationInACVF.Section7.IteratedVolumeBlowup.trans' depends on axioms: [propext, Classical.choice, Quot.sound]
+@VolumeBlowupEquivalent : {M : Type} →
+  [inst : LRV.Structure M] →
+    [inst_1 : M ⊨ Axioms.ACVF] → {S : Set M} → {k : ℕ} → PositiveRVVolumeObject S k → PositiveRVVolumeObject S k → Prop
+'IntegrationInACVF.Section7.VolumeBlowupEquivalent' depends on axioms: [propext, Classical.choice, Quot.sound]
+@VolumeBlowup.on_coprod : {M : Type} →
+  [inst : LRV.Structure M] →
+    [inst_1 : M ⊨ Axioms.ACVF] →
+      {k : ℕ} →
+        CanonicalStructure.IsCanonical →
+          (C : BaseContext M) →
+            {A B : PositiveRVVolumeObject (↑C.base) k} →
+              ElementaryBlowup A B → (R : PositiveRVVolumeObject (↑C.base) k) → VolumeBlowup (A.coprod R) (B.coprod R)
+'IntegrationInACVF.Section7.VolumeBlowup.on_coprod' depends on axioms: [propext, Classical.choice, Quot.sound]
+@VolumeBlowup.transport : {M : Type} →
+  [inst : LRV.Structure M] →
+    [inst_1 : M ⊨ Axioms.ACVF] →
+      {k : ℕ} →
+        CanonicalStructure.IsCanonical →
+          (C : BaseContext M) →
+            {U U' W W' : PositiveRVVolumeObject (↑C.base) k} →
+              VolumeBlowup U W → RVVolumeIso U' U → RVVolumeIso W' W → VolumeBlowup U' W'
+'IntegrationInACVF.Section7.VolumeBlowup.transport' depends on axioms: [propext, Classical.choice, Quot.sound]
+@VolumeBlowupEquivalent.of_iso : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF] {k : ℕ}
+  (C : BaseContext M) {U V : PositiveRVVolumeObject (↑C.base) k} (f : RVVolumeIso U V), VolumeBlowupEquivalent U V
+'IntegrationInACVF.Section7.VolumeBlowupEquivalent.of_iso' depends on axioms: [propext, Classical.choice, Quot.sound]
+@VolumeBlowupEquivalent.refl : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF] {k : ℕ},
+  CanonicalStructure.IsCanonical →
+    ∀ (C : BaseContext M) (U : PositiveRVVolumeObject (↑C.base) k), VolumeBlowupEquivalent U U
+'IntegrationInACVF.Section7.VolumeBlowupEquivalent.refl' depends on axioms: [propext, Classical.choice, Quot.sound]
+@VolumeBlowupEquivalent.symm : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF] {k : ℕ},
+  CanonicalStructure.IsCanonical →
+    ∀ (C : BaseContext M) {U V : PositiveRVVolumeObject (↑C.base) k},
+      VolumeBlowupEquivalent U V → VolumeBlowupEquivalent V U
+'IntegrationInACVF.Section7.VolumeBlowupEquivalent.symm' depends on axioms: [propext, Classical.choice, Quot.sound]
+@VolumeBlowupEquivalent.of_blowup : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF] {k : ℕ},
+  CanonicalStructure.IsCanonical →
+    ∀ (C : BaseContext M) {U V : PositiveRVVolumeObject (↑C.base) k} (b : VolumeBlowup U V), VolumeBlowupEquivalent U V
+'IntegrationInACVF.Section7.VolumeBlowupEquivalent.of_blowup' depends on axioms: [propext, Classical.choice, Quot.sound]
+@polynomialTangent_mono : ∀ {K : Type u_1} [inst : Field K] {d : ℕ} {C D : Set (Fin d → K)},
+  C ⊆ D → ∀ {p v : Fin d → K}, IsPolynomialTangent C p v → IsPolynomialTangent D p v
+'IntegrationInACVF.Section7.polynomialTangent_mono' depends on axioms: [propext, Classical.choice, Quot.sound]
+@rvJacobian_eq_of_subset : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF] {n : ℕ}
+  {C D : Set (Fin (n + n) → CanonicalRV.RVSort M)},
+  C ⊆ D →
+    ∀ {t s : Fin n → CanonicalRV.RVSort M} {ω η : CanonicalRV.RVSort M},
+      IsRVJacobianAt C t s ω → IsRVJacobianAt D t s η → ω = η
+'IntegrationInACVF.Section7.rvJacobian_eq_of_subset' depends on axioms: [propext, Classical.choice, Quot.sound]
+@rvAbsoluteOne_iff_order : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF] (t : CanonicalRV.RVSort M),
+  RVOperations.absoluteHom t = 1 ↔ iLe (↑t) iRVOne ∧ iLe iRVOne ↑t
+'IntegrationInACVF.Section7.rvAbsoluteOne_iff_order' depends on axioms: [propext, Classical.choice, Quot.sound]
+@rvUnitNormalize : {M : Type} →
+  [inst : LRV.Structure M] →
+    [M ⊨ Axioms.ACVF] → (S : Set M) → Map (DefSet.univ (rawRVSpace 1) S) (DefSet.univ (rawRVSpace 1) S)
+'IntegrationInACVF.Section7.rvUnitNormalize' depends on axioms: [propext, Classical.choice, Quot.sound]
+@rvUnitNormalize_value : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF] (S : Set M)
+  (t : ↑(DefSet.univ (rawRVSpace 1) S).carrier),
+  ↑((rvUnitNormalize S).toFun t) 0 = if RVOperations.absoluteHom (↑t 0) = 1 then ↑t 0 else 1
+'IntegrationInACVF.Section7.rvUnitNormalize_value' depends on axioms: [propext, Classical.choice, Quot.sound]
+@rvUnitNormalize_absolute : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF] (S : Set M)
+  (t : ↑(DefSet.univ (rawRVSpace 1) S).carrier), RVOperations.absoluteHom (↑((rvUnitNormalize S).toFun t) 0) = 1
+'IntegrationInACVF.Section7.rvUnitNormalize_absolute' depends on axioms: [propext, Classical.choice, Quot.sound]
+@rvUnitNormalize_of_absolute_one : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF] (S : Set M)
+  (t : ↑(DefSet.univ (rawRVSpace 1) S).carrier),
+  RVOperations.absoluteHom (↑t 0) = 1 → ↑((rvUnitNormalize S).toFun t) 0 = ↑t 0
+'IntegrationInACVF.Section7.rvUnitNormalize_of_absolute_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+@rvScalarOne : {M : Type} →
+  [inst : LRV.Structure M] →
+    [M ⊨ Axioms.ACVF] →
+      {S : Set M} →
+        {P : SpecialTransformations.DefinableGeometry.Space LRV M} →
+          (A : DefSet P S) → Map A (DefSet.univ (rawRVSpace 1) S)
+'IntegrationInACVF.Section7.rvScalarOne' depends on axioms: [propext, Classical.choice, Quot.sound]
+@rvScalarOne_value : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF] {S : Set M}
+  {P : SpecialTransformations.DefinableGeometry.Space LRV M} (A : DefSet P S) (a : ↑A.carrier),
+  ↑((rvScalarOne A).toFun a) 0 = 1
+'IntegrationInACVF.Section7.rvScalarOne_value' depends on axioms: [propext, Classical.choice, Quot.sound]
+@rvInverse : {M : Type} →
+  [inst : LRV.Structure M] →
+    [M ⊨ Axioms.ACVF] → (S : Set M) → Map (DefSet.univ (rawRVSpace 1) S) (DefSet.univ (rawRVSpace 1) S)
+'IntegrationInACVF.Section7.rvInverse' depends on axioms: [propext, Classical.choice, Quot.sound]
+@rvInverse_value : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF] (S : Set M)
+  (t : ↑(DefSet.univ (rawRVSpace 1) S).carrier), ↑((rvInverse S).toFun t) 0 = (↑t 0)⁻¹
+'IntegrationInACVF.Section7.rvInverse_value' depends on axioms: [propext, Classical.choice, Quot.sound]
+@rvScalarMul : {M : Type} →
+  [inst : LRV.Structure M] →
+    [M ⊨ Axioms.ACVF] →
+      {S : Set M} →
+        {P : SpecialTransformations.DefinableGeometry.Space LRV M} →
+          {A : DefSet P S} →
+            Map A (DefSet.univ (rawRVSpace 1) S) →
+              Map A (DefSet.univ (rawRVSpace 1) S) → Map A (DefSet.univ (rawRVSpace 1) S)
+'IntegrationInACVF.Section7.rvScalarMul' depends on axioms: [propext, Classical.choice, Quot.sound]
+@rvScalarMul_value : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF] {S : Set M}
+  {P : SpecialTransformations.DefinableGeometry.Space LRV M} {A : DefSet P S}
+  (f g : Map A (DefSet.univ (rawRVSpace 1) S)) (a : ↑A.carrier),
+  ↑((rvScalarMul f g).toFun a) 0 = ↑(f.toFun a) 0 * ↑(g.toFun a) 0
+'IntegrationInACVF.Section7.rvScalarMul_value' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RVAlmostEverywhere.extend_injective : ∀ {M : Type} [inst : LRV.Structure M] [M ⊨ Axioms.ACVF] {S : Set M} {a b n : ℕ}
+  {A : DefSet (rawRVSpace a) S} {B : DefSet (rawRVSpace b) S} (F : Map A B),
+  Function.Injective F.toFun →
+    ∀ {P : ↑A.carrier → Prop},
+      RVAlmostEverywhere A n P → RVAlmostEverywhere B n fun b_1 => ∀ (a_1 : ↑A.carrier), F.toFun a_1 = b_1 → P a_1
+'IntegrationInACVF.Section7.RVAlmostEverywhere.extend_injective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@RVVolumeIso.coprodUnderlying : {M : Type} →
+  [inst : LRV.Structure M] →
+    [inst_1 : M ⊨ Axioms.ACVF] →
+      {S : Set M} →
+        {k : ℕ} →
+          {U U' V V' : PositiveRVVolumeObject S k} →
+            RVVolumeIso U U' → RVVolumeIso V V' → ((U.coprod V).essential ≅ (U'.coprod V').essential)
+'IntegrationInACVF.Section7.RVVolumeIso.coprodUnderlying' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RVVolumeIso.coprodUnderlying_left : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF] {S : Set M}
+  {k : ℕ} {U U' V V' : PositiveRVVolumeObject S k} (f : RVVolumeIso U U') (g : RVVolumeIso V V')
+  (u : ↑U.essential.obj.domain.carrier),
+  (finiteIsoMap (f.coprodUnderlying g)).toFun ((coprodEssentialLeftMap U V).toFun u) =
+    (coprodEssentialLeftMap U' V').toFun ((finiteIsoMap f.iso).toFun u)
+'IntegrationInACVF.Section7.RVVolumeIso.coprodUnderlying_left' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@RVVolumeIso.coprodUnderlying_right : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF] {S : Set M}
+  {k : ℕ} {U U' V V' : PositiveRVVolumeObject S k} (f : RVVolumeIso U U') (g : RVVolumeIso V V')
+  (v : ↑V.essential.obj.domain.carrier),
+  (finiteIsoMap (f.coprodUnderlying g)).toFun ((coprodEssentialRightMap U V).toFun v) =
+    (coprodEssentialRightMap U' V').toFun ((finiteIsoMap g.iso).toFun v)
+'IntegrationInACVF.Section7.RVVolumeIso.coprodUnderlying_right' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@RVVolumeIso.coprod : {M : Type} →
+  [inst : LRV.Structure M] →
+    [inst_1 : M ⊨ Axioms.ACVF] →
+      {k : ℕ} →
+        CanonicalStructure.IsCanonical →
+          (C : BaseContext M) →
+            {U U' V V' : PositiveRVVolumeObject (↑C.base) k} →
+              RVVolumeIso U U' → RVVolumeIso V V' → RVVolumeIso (U.coprod V) (U'.coprod V')
+'IntegrationInACVF.Section7.RVVolumeIso.coprod' depends on axioms: [propext, Classical.choice, Quot.sound]
+@VolumeForm.prod : {M : Type} →
+  [inst : LRV.Structure M] →
+    [inst_1 : M ⊨ Axioms.ACVF] →
+      {S : Set M} →
+        {P Q : SpecialTransformations.DefinableGeometry.Space LRV M} →
+          {A : DefSet P S} → {B : DefSet Q S} → VolumeForm A → VolumeForm B → VolumeForm (A.prod B)
+'IntegrationInACVF.Section7.VolumeForm.prod' depends on axioms: [propext, Classical.choice, Quot.sound]
+@VolumeForm.prod_value : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF] {S : Set M}
+  {P Q : SpecialTransformations.DefinableGeometry.Space LRV M} {A : DefSet P S} {B : DefSet Q S} (ω : VolumeForm A)
+  (η : VolumeForm B) (a : ↑(A.prod B).carrier),
+  (ω.prod η).value a = ω.value ((Map.prodFst A B).toFun a) * η.value ((Map.prodSnd A B).toFun a)
+'IntegrationInACVF.Section7.VolumeForm.prod_value' depends on axioms: [propext, Classical.choice, Quot.sound]
+@EmbeddedVolumeIso : {M : Type} →
+  [inst : LRV.Structure M] →
+    [inst_1 : M ⊨ Axioms.ACVF] →
+      {S : Set M} → {k : ℕ} → (U V : PositiveRVVolumeObject S k) → (U.essential ≅ V.essential) → Type
+'IntegrationInACVF.Section7.EmbeddedVolumeIso' depends on axioms: [propext, Classical.choice, Quot.sound]
+@EmbeddedVolumeIso.volumeRatio_eq : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF] {S : Set M} {k : ℕ}
+  {U V : PositiveRVVolumeObject S k} {e : U.essential ≅ V.essential} (p : EmbeddedVolumeIso U V e)
+  (u : ↑p.source.essential.obj.domain.carrier),
+  volumeRatio U V e (p.inclusion.toFun u) = volumeRatio p.source p.target p.iso.iso u
+'IntegrationInACVF.Section7.EmbeddedVolumeIso.volumeRatio_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+@EmbeddedVolumeIso.correspondence_subset : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF] {S : Set M}
+  {k : ℕ} {U V : PositiveRVVolumeObject S k} {e : U.essential ≅ V.essential} (p : EmbeddedVolumeIso U V e),
+  (volumeCorrespondence (finiteIsoMap p.iso.iso)).carrier ⊆ (volumeCorrespondence (finiteIsoMap e)).carrier
+'IntegrationInACVF.Section7.EmbeddedVolumeIso.correspondence_subset' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@EmbeddedVolumeIso.absolute_volumeRatio : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF] {S : Set M}
+  {k : ℕ} {U V : PositiveRVVolumeObject S k} {e : U.essential ≅ V.essential} (p : EmbeddedVolumeIso U V e)
+  (u : ↑p.source.essential.obj.domain.carrier),
+  RVOperations.absoluteHom (volumeRatio U V e (p.inclusion.toFun u)) =
+    (∏ i, RVOperations.absoluteHom (V.essential.obj.value ((finiteIsoMap e).toFun (p.inclusion.toFun u)) i)) /
+      ∏ i, RVOperations.absoluteHom (U.essential.obj.value (p.inclusion.toFun u) i)
+'IntegrationInACVF.Section7.EmbeddedVolumeIso.absolute_volumeRatio' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@EmbeddedVolumeIso.jacobian_of_defined : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF] {S : Set M}
+  {k : ℕ} {U V : PositiveRVVolumeObject S k} {e : U.essential ≅ V.essential} (p : EmbeddedVolumeIso U V e)
+  (u : ↑p.source.essential.obj.domain.carrier),
+  IsRVJacobianAt (volumeCorrespondence (finiteIsoMap p.iso.iso)).carrier (p.source.essential.obj.value u)
+      (p.target.essential.obj.value ((finiteIsoMap p.iso.iso).toFun u)) (volumeRatio p.source p.target p.iso.iso u) →
+    ∀ {ω : CanonicalRV.RVSort M},
+      IsRVJacobianAt (volumeCorrespondence (finiteIsoMap e)).carrier (U.essential.obj.value (p.inclusion.toFun u))
+          (V.essential.obj.value ((finiteIsoMap e).toFun (p.inclusion.toFun u))) ω →
+        IsRVJacobianAt (volumeCorrespondence (finiteIsoMap e)).carrier (U.essential.obj.value (p.inclusion.toFun u))
+          (V.essential.obj.value ((finiteIsoMap e).toFun (p.inclusion.toFun u)))
+          (volumeRatio U V e (p.inclusion.toFun u))
+'IntegrationInACVF.Section7.EmbeddedVolumeIso.jacobian_of_defined' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@RVVolumeIso.glue : {M : Type} →
+  [inst : LRV.Structure M] →
+    [inst_1 : M ⊨ Axioms.ACVF] →
+      {k : ℕ} →
+        CanonicalStructure.IsCanonical →
+          (C : BaseContext M) →
+            {U V : PositiveRVVolumeObject (↑C.base) k} →
+              (e : U.essential ≅ V.essential) →
+                (p q : EmbeddedVolumeIso U V e) →
+                  (∀ (u : ↑U.essential.obj.domain.carrier),
+                      (∃ a, p.inclusion.toFun a = u) ∨ ∃ b, q.inclusion.toFun b = u) →
+                    RVVolumeIso U V
+'IntegrationInACVF.Section7.RVVolumeIso.glue' depends on axioms: [propext, Classical.choice, Quot.sound]
+@EmbeddedVolumeIso.mk : {M : Type} →
+  [inst : LRV.Structure M] →
+    [inst_1 : M ⊨ Axioms.ACVF] →
+      {S : Set M} →
+        {k : ℕ} →
+          {U V : PositiveRVVolumeObject S k} →
+            {e : U.essential ≅ V.essential} →
+              (source target : PositiveRVVolumeObject S k) →
+                (iso : RVVolumeIso source target) →
+                  (inclusion : Map source.essential.obj.domain U.essential.obj.domain) →
+                    Function.Injective inclusion.toFun →
+                      (∀ (u : ↑source.essential.obj.domain.carrier),
+                          U.essential.obj.value (inclusion.toFun u) = source.essential.obj.value u) →
+                        (∀ (u : ↑source.essential.obj.domain.carrier),
+                            V.essential.obj.value ((finiteIsoMap e).toFun (inclusion.toFun u)) =
+                              target.essential.obj.value ((finiteIsoMap iso.iso).toFun u)) →
+                          (∀ (u : ↑source.essential.obj.domain.carrier),
+                              U.essentialForm.value (inclusion.toFun u) = source.essentialForm.value u) →
+                            (∀ (u : ↑source.essential.obj.domain.carrier),
+                                V.essentialForm.value ((finiteIsoMap e).toFun (inclusion.toFun u)) =
+                                  target.essentialForm.value ((finiteIsoMap iso.iso).toFun u)) →
+                              EmbeddedVolumeIso U V e
+'IntegrationInACVF.Section7.EmbeddedVolumeIso.mk' depends on axioms: [propext, Classical.choice, Quot.sound]
+@VolumeBlowup.mk : {M : Type} →
+  [inst : LRV.Structure M] →
+    [inst_1 : M ⊨ Axioms.ACVF] →
+      {S : Set M} →
+        {k : ℕ} →
+          {U W : PositiveRVVolumeObject S k} →
+            (locus complement blownLocus : PositiveRVVolumeObject S k) →
+              ElementaryBlowup locus blownLocus →
+                RVVolumeIso U (locus.coprod complement) →
+                  RVVolumeIso W (blownLocus.coprod complement) → VolumeBlowup U W
+'IntegrationInACVF.Section7.VolumeBlowup.mk' depends on axioms: [propext, Classical.choice, Quot.sound]
+@IteratedVolumeBlowup.refl : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF] {S : Set M} {k : ℕ}
+  (U : PositiveRVVolumeObject S k), IteratedVolumeBlowup 0 U U
+'IntegrationInACVF.Section7.IteratedVolumeBlowup.refl' depends on axioms: [propext, Classical.choice, Quot.sound]
+@IteratedVolumeBlowup.step : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF] {S : Set M} {k n : ℕ}
+  {U V W : PositiveRVVolumeObject S k},
+  Nonempty (VolumeBlowup U V) → IteratedVolumeBlowup n V W → IteratedVolumeBlowup (n + 1) U W
+'IntegrationInACVF.Section7.IteratedVolumeBlowup.step' depends on axioms: [propext, Classical.choice, Quot.sound]

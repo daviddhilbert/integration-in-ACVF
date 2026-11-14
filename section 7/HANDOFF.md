@@ -1,13 +1,15 @@
 # Section 7 continuation
 
 The current checked reconstruction checkpoint is described in `STATUS.md`:
-62 source modules plus their library entry point, with 294 distinct
+123 source modules plus their library entry point, with 565 distinct
 exported types and axiom reports inspected. The recovery account below
 records the earlier salvage stage; its two-module verification count is
 historical, not the current total. Additional reconstruction is continuing
-beyond this local checked entry point. The first 24-module checkpoint has
-been saved remotely at `2c6a6945eee43358e676930af3ec3325f56c7f33` on
-`section-7/reconstructed-foundation`; later work remains local.
+beyond this local checked entry point. Checked checkpoints are backed up on `section-7/reconstructed-foundation`;
+the earlier 62-module checkpoint is `3efb1cd01d723fe133c8fab113b2a7f6ae853584`.
+The user has authorized continuing checked backup pushes without another
+permission request. Published incremental evidence is under
+`verification/reconstruction/`.
 
 The accepted target is Lemma 7.5 with a nonempty selected coordinate set.
 See [TARGETS.md](TARGETS.md). The empty-set case is excluded from completion

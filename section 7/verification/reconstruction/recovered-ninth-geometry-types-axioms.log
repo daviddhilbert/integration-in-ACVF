@@ -1,0 +1,606 @@
+@IntegrationInACVF.Section7.coordinatePermutationLinear : {F : Type u_1} →
+  [inst : Field F] → {n : ℕ} → Equiv.Perm (Fin n) → (Fin n → F) →ₗ[F] Fin n → F
+'IntegrationInACVF.Section7.coordinatePermutationLinear' depends on axioms: [propext, Quot.sound]
+@IntegrationInACVF.Section7.coordinatePermutationLinear_det : ∀ {F : Type u_1} [inst : Field F] {n : ℕ}
+  (e : Equiv.Perm (Fin n)),
+  (LinearMap.toMatrix' (IntegrationInACVF.Section7.coordinatePermutationLinear e)).det = ↑↑(Equiv.Perm.sign e)
+'IntegrationInACVF.Section7.coordinatePermutationLinear_det' depends on axioms: [propext, Classical.choice, Quot.sound]
+@IntegrationInACVF.Section7.rvPermutationSign : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] → {n : ℕ} → Equiv.Perm (Fin n) → CanonicalRV.RVSort M
+'IntegrationInACVF.Section7.rvPermutationSign' depends on axioms: [propext, Classical.choice, Quot.sound]
+@IntegrationInACVF.Section7.rvPermutationSign_ne_zero : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {n : ℕ} (e : Equiv.Perm (Fin n)),
+  IntegrationInACVF.Section7.rvPermutationSign e ≠ 0
+'IntegrationInACVF.Section7.rvPermutationSign_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+@IntegrationInACVF.Section7.rvPermutationSign_absolute : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {n : ℕ} (e : Equiv.Perm (Fin n)),
+  SpecialTransformations.Section3.RVOperations.absoluteHom (IntegrationInACVF.Section7.rvPermutationSign e) = 1
+'IntegrationInACVF.Section7.rvPermutationSign_absolute' depends on axioms: [propext, Classical.choice, Quot.sound]
+@IntegrationInACVF.Section7.normalizedCorrespondence_permuted_coordinate : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {n : ℕ} (C : Set (Fin (n + n) → CanonicalRV.RVSort M))
+  (e : Equiv.Perm (Fin n)),
+  (∀ z ∈ C,
+      ∀ (i : Fin n),
+        z ((SpecialTransformations.Section7.productRight n n) i) =
+          z ((SpecialTransformations.Section7.productLeft n n) (e i))) →
+    ∀ (t : Fin n → CanonicalRV.RVSort M),
+      (∀ (i : Fin n), t i ≠ 0) →
+        ∀ z ∈ SpecialTransformations.Section9.normalizedCorrespondence C t (t ∘ ⇑e),
+          ∀ (i : Fin n),
+            z ((SpecialTransformations.Section7.productRight n n) i) =
+              z ((SpecialTransformations.Section7.productLeft n n) (e i))
+'IntegrationInACVF.Section7.normalizedCorrespondence_permuted_coordinate' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@IntegrationInACVF.Section7.rvJacobian_eq_permutationSign : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {n : ℕ} (C : Set (Fin (n + n) → CanonicalRV.RVSort M))
+  (e : Equiv.Perm (Fin n)),
+  (∀ z ∈ C,
+      ∀ (i : Fin n),
+        z ((SpecialTransformations.Section7.productRight n n) i) =
+          z ((SpecialTransformations.Section7.productLeft n n) (e i))) →
+    ∀ (t : Fin n → CanonicalRV.RVSort M) (ω : CanonicalRV.RVSort M),
+      SpecialTransformations.Section9.IsRVJacobianAt C t (t ∘ ⇑e) ω → ω = IntegrationInACVF.Section7.rvPermutationSign e
+'IntegrationInACVF.Section7.rvJacobian_eq_permutationSign' depends on axioms: [propext, Classical.choice, Quot.sound]
+@IntegrationInACVF.Section7.rvJacobian_coordinatePermutation_ae : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {n : ℕ},
+  CanonicalStructure.IsCanonical →
+    ∀ (C : SpecialTransformations.Section3.BaseContext M),
+      0 < n →
+        ∀ {U V : SpecialTransformations.Section4.RVFiniteObject (↑C.base) n} (f : U ≅ V) (e : Equiv.Perm (Fin n)),
+          (∀ (u : ↑U.obj.domain.carrier) (i : Fin n), ↑(U.obj.value u i) ≠ SpecialTransformations.Milestone0.iRVZero) →
+            (∀ (v : ↑V.obj.domain.carrier) (i : Fin n),
+                ↑(V.obj.value v i) ≠ SpecialTransformations.Milestone0.iRVZero) →
+              (∀ (u : ↑U.obj.domain.carrier),
+                  V.obj.value ((IntegrationInACVF.Section7.finiteIsoMap f).toFun u) = U.obj.value u ∘ ⇑e) →
+                IntegrationInACVF.Section7.RVAlmostEverywhere U.obj.domain n fun u =>
+                  SpecialTransformations.Section9.IsRVJacobianAt
+                    (SpecialTransformations.Section9.volumeCorrespondence
+                        (IntegrationInACVF.Section7.finiteIsoMap f)).carrier
+                    (U.obj.value u) (V.obj.value ((IntegrationInACVF.Section7.finiteIsoMap f).toFun u))
+                    (IntegrationInACVF.Section7.rvPermutationSign e)
+'IntegrationInACVF.Section7.rvJacobian_coordinatePermutation_ae' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@IntegrationInACVF.Section7.volumeRatio_of_permuted_density : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set M} {k : ℕ}
+  (U V : IntegrationInACVF.Section7.PositiveRVVolumeObject S k) (f : U.essential ≅ V.essential)
+  (e : Equiv.Perm (Fin (k + 1))),
+  (∀ (u : ↑U.essential.obj.domain.carrier),
+      V.essentialForm.value ((IntegrationInACVF.Section7.finiteIsoMap f).toFun u) =
+        (IntegrationInACVF.Section7.rvPermutationSign e)⁻¹ * U.essentialForm.value u) →
+    ∀ (u : ↑U.essential.obj.domain.carrier),
+      IntegrationInACVF.Section7.volumeRatio U V f u = IntegrationInACVF.Section7.rvPermutationSign e
+'IntegrationInACVF.Section7.volumeRatio_of_permuted_density' depends on axioms: [propext, Classical.choice, Quot.sound]
+@IntegrationInACVF.Section7.RVVolumeIso.of_permuted_coordinates : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {k : ℕ} →
+        CanonicalStructure.IsCanonical →
+          (C : SpecialTransformations.Section3.BaseContext M) →
+            {U V : IntegrationInACVF.Section7.PositiveRVVolumeObject (↑C.base) k} →
+              (f : U.essential ≅ V.essential) →
+                (e : Equiv.Perm (Fin (k + 1))) →
+                  (∀ (u : ↑U.essential.obj.domain.carrier),
+                      V.essential.obj.value ((IntegrationInACVF.Section7.finiteIsoMap f).toFun u) =
+                        U.essential.obj.value u ∘ ⇑e) →
+                    (∀ (u : ↑U.essential.obj.domain.carrier),
+                        V.essentialForm.value ((IntegrationInACVF.Section7.finiteIsoMap f).toFun u) =
+                          (IntegrationInACVF.Section7.rvPermutationSign e)⁻¹ * U.essentialForm.value u) →
+                      IntegrationInACVF.Section7.RVVolumeIso U V
+'IntegrationInACVF.Section7.RVVolumeIso.of_permuted_coordinates' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@IntegrationInACVF.Section7.RVVolumeIso.of_permuted_coordinates_full : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {k : ℕ} →
+        CanonicalStructure.IsCanonical →
+          (C : SpecialTransformations.Section3.BaseContext M) →
+            {U V : IntegrationInACVF.Section7.PositiveRVVolumeObject (↑C.base) k} →
+              (f : U.underlying ≅ V.underlying) →
+                (e : Equiv.Perm (Fin (k + 1))) →
+                  (∀ (u : ↑U.underlying.obj.domain.carrier),
+                      V.underlying.obj.value ((IntegrationInACVF.Section7.finiteIsoMap f).toFun u) =
+                        U.underlying.obj.value u ∘ ⇑e) →
+                    (∀ (u : ↑U.underlying.obj.domain.carrier),
+                        V.form.value ((IntegrationInACVF.Section7.finiteIsoMap f).toFun u) =
+                          (IntegrationInACVF.Section7.rvPermutationSign e)⁻¹ * U.form.value u) →
+                      IntegrationInACVF.Section7.RVVolumeIso U V
+'IntegrationInACVF.Section7.RVVolumeIso.of_permuted_coordinates_full' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@IntegrationInACVF.Section7.coordinatePairIndex : {n d : ℕ} → (Fin n → Fin d) → Fin (n + n) → Fin (d + d)
+'IntegrationInACVF.Section7.coordinatePairIndex' depends on axioms: [propext, Quot.sound]
+@IntegrationInACVF.Section7.coordinatePairIndex_injective : ∀ {n d : ℕ} (ρ : Fin n → Fin d),
+  Function.Injective ρ → Function.Injective (IntegrationInACVF.Section7.coordinatePairIndex ρ)
+'IntegrationInACVF.Section7.coordinatePairIndex_injective' depends on axioms: [propext, Quot.sound]
+@IntegrationInACVF.Section7.coordinatePairIndex_left : ∀ {n d : ℕ} (ρ : Fin n → Fin d) (i : Fin n),
+  IntegrationInACVF.Section7.coordinatePairIndex ρ ((SpecialTransformations.Section7.productLeft n n) i) =
+    (SpecialTransformations.Section7.productLeft d d) (ρ i)
+'IntegrationInACVF.Section7.coordinatePairIndex_left' depends on axioms: [propext, Quot.sound]
+@IntegrationInACVF.Section7.coordinatePairIndex_right : ∀ {n d : ℕ} (ρ : Fin n → Fin d) (i : Fin n),
+  IntegrationInACVF.Section7.coordinatePairIndex ρ ((SpecialTransformations.Section7.productRight n n) i) =
+    (SpecialTransformations.Section7.productRight d d) (ρ i)
+'IntegrationInACVF.Section7.coordinatePairIndex_right' depends on axioms: [propext, Quot.sound]
+@IntegrationInACVF.Section7.productTuple_comp_coordinatePairIndex : ∀ {X : Type u_1} {n d : ℕ} (ρ : Fin n → Fin d)
+  (x y : Fin d → X),
+  SpecialTransformations.Section7.productTuple x y ∘ IntegrationInACVF.Section7.coordinatePairIndex ρ =
+    SpecialTransformations.Section7.productTuple (x ∘ ρ) (y ∘ ρ)
+'IntegrationInACVF.Section7.productTuple_comp_coordinatePairIndex' depends on axioms: [propext, Quot.sound]
+@IntegrationInACVF.Section7.normalizedCorrespondence_coordinate_projection : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {n d : ℕ} (ρ : Fin n → Fin d)
+  {C : Set (Fin (d + d) → CanonicalRV.RVSort M)} {D : Set (Fin (n + n) → CanonicalRV.RVSort M)},
+  (∀ z ∈ C, z ∘ IntegrationInACVF.Section7.coordinatePairIndex ρ ∈ D) →
+    ∀ (t s : Fin d → CanonicalRV.RVSort M),
+      ∀ z ∈ SpecialTransformations.Section9.normalizedCorrespondence C t s,
+        z ∘ IntegrationInACVF.Section7.coordinatePairIndex ρ ∈
+          SpecialTransformations.Section9.normalizedCorrespondence D (t ∘ ρ) (s ∘ ρ)
+'IntegrationInACVF.Section7.normalizedCorrespondence_coordinate_projection' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@IntegrationInACVF.Section7.linearMap_det_of_complementary_blocks : ∀ {K : Type u_1} [inst : Field K] {n m : ℕ}
+  (L : (Fin (n + m) → K) →ₗ[K] Fin (n + m) → K) (H : (Fin n → K) →ₗ[K] Fin n → K) (G : (Fin m → K) →ₗ[K] Fin m → K),
+  (∀ (x : Fin (n + m) → K), L x ∘ Fin.castAdd m = H (x ∘ Fin.castAdd m)) →
+    (∀ (x : Fin (n + m) → K), L x ∘ Fin.natAdd n = G (x ∘ Fin.natAdd n)) →
+      (LinearMap.toMatrix' L).det = (LinearMap.toMatrix' H).det * (LinearMap.toMatrix' G).det
+'IntegrationInACVF.Section7.linearMap_det_of_complementary_blocks' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@IntegrationInACVF.Section7.residueJacobian_det_of_complementary_projections : ∀ {K : Type u_1} [inst : Field K]
+  {n m : ℕ} {C : Set (Fin (n + m + (n + m)) → K)} {A : Set (Fin (n + n) → K)} {B : Set (Fin (m + m) → K)},
+  (∀ z ∈ C, z ∘ IntegrationInACVF.Section7.coordinatePairIndex (Fin.castAdd m) ∈ A) →
+    (∀ z ∈ C, z ∘ IntegrationInACVF.Section7.coordinatePairIndex (Fin.natAdd n) ∈ B) →
+      ∀ (L : (Fin (n + m) → K) →ₗ[K] Fin (n + m) → K) (H : (Fin n → K) →ₗ[K] Fin n → K)
+        (G : (Fin m → K) →ₗ[K] Fin m → K),
+        (∀ (x y : Fin (n + m) → K),
+            SpecialTransformations.Section9.IsPolynomialTangent C (fun x => 1)
+                (SpecialTransformations.Section7.productTuple x y) ↔
+              y = L x) →
+          (∀ (x y : Fin n → K),
+              SpecialTransformations.Section9.IsPolynomialTangent A (fun x => 1)
+                  (SpecialTransformations.Section7.productTuple x y) ↔
+                y = H x) →
+            (∀ (x y : Fin m → K),
+                SpecialTransformations.Section9.IsPolynomialTangent B (fun x => 1)
+                    (SpecialTransformations.Section7.productTuple x y) ↔
+                  y = G x) →
+              (LinearMap.toMatrix' L).det = (LinearMap.toMatrix' H).det * (LinearMap.toMatrix' G).det
+'IntegrationInACVF.Section7.residueJacobian_det_of_complementary_projections' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@IntegrationInACVF.Section7.rvJacobian_eq_product_of_projections : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {n m : ℕ}
+  {C : Set (Fin (n + m + (n + m)) → CanonicalRV.RVSort M)} {A : Set (Fin (n + n) → CanonicalRV.RVSort M)}
+  {B : Set (Fin (m + m) → CanonicalRV.RVSort M)},
+  (∀ z ∈ C, z ∘ IntegrationInACVF.Section7.coordinatePairIndex (Fin.castAdd m) ∈ A) →
+    (∀ z ∈ C, z ∘ IntegrationInACVF.Section7.coordinatePairIndex (Fin.natAdd n) ∈ B) →
+      ∀ (t s : Fin n → CanonicalRV.RVSort M) (u v : Fin m → CanonicalRV.RVSort M) {ω J K : CanonicalRV.RVSort M},
+        SpecialTransformations.Section9.IsRVJacobianAt C (Fin.append t u) (Fin.append s v) ω →
+          SpecialTransformations.Section9.IsRVJacobianAt A t s J →
+            SpecialTransformations.Section9.IsRVJacobianAt B u v K → ω = J * K
+'IntegrationInACVF.Section7.rvJacobian_eq_product_of_projections' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@IntegrationInACVF.Section7.finiteVolumeDomain_dim_le : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {S : Set M} {n : ℕ} (U : SpecialTransformations.Section4.RVFiniteObject S n),
+  SpecialTransformations.Section4.rvDim U.obj.domain ≤ n
+'IntegrationInACVF.Section7.finiteVolumeDomain_dim_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+@IntegrationInACVF.Section7.RVAlmostEverywhere.product_right_bound : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {S : Set M} {a b n m : ℕ}
+  {A : SpecialTransformations.DefinableGeometry.DefSet (SpecialTransformations.Section4.rawRVSpace a) S}
+  (B : SpecialTransformations.DefinableGeometry.DefSet (SpecialTransformations.Section4.rawRVSpace b) S),
+  SpecialTransformations.Section4.rvDim B ≤ m →
+    ∀ {P : ↑A.carrier → Prop},
+      IntegrationInACVF.Section7.RVAlmostEverywhere A n P →
+        IntegrationInACVF.Section7.RVAlmostEverywhere (SpecialTransformations.Section4.rvProductDomain A B) (n + m)
+          fun u =>
+          P
+            ((SpecialTransformations.DefinableGeometry.Map.prodFst A B).toFun
+              ((SpecialTransformations.Section4.rvUnpack A B).toFun u))
+'IntegrationInACVF.Section7.RVAlmostEverywhere.product_right_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@IntegrationInACVF.Section7.RVAlmostEverywhere.product_left_bound : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {S : Set M} {a b n m : ℕ}
+  (A : SpecialTransformations.DefinableGeometry.DefSet (SpecialTransformations.Section4.rawRVSpace a) S)
+  {B : SpecialTransformations.DefinableGeometry.DefSet (SpecialTransformations.Section4.rawRVSpace b) S},
+  SpecialTransformations.Section4.rvDim A ≤ n →
+    ∀ {Q : ↑B.carrier → Prop},
+      IntegrationInACVF.Section7.RVAlmostEverywhere B m Q →
+        IntegrationInACVF.Section7.RVAlmostEverywhere (SpecialTransformations.Section4.rvProductDomain A B) (n + m)
+          fun u =>
+          Q
+            ((SpecialTransformations.DefinableGeometry.Map.prodSnd A B).toFun
+              ((SpecialTransformations.Section4.rvUnpack A B).toFun u))
+'IntegrationInACVF.Section7.RVAlmostEverywhere.product_left_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@IntegrationInACVF.Section7.RVAlmostEverywhere.product : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {a b n m : ℕ},
+  CanonicalStructure.IsCanonical →
+    ∀ (C : SpecialTransformations.Section3.BaseContext M)
+      {A : SpecialTransformations.DefinableGeometry.DefSet (SpecialTransformations.Section4.rawRVSpace a) ↑C.base}
+      {B : SpecialTransformations.DefinableGeometry.DefSet (SpecialTransformations.Section4.rawRVSpace b) ↑C.base},
+      SpecialTransformations.Section4.rvDim A ≤ n →
+        SpecialTransformations.Section4.rvDim B ≤ m →
+          ∀ {P : ↑A.carrier → Prop} {Q : ↑B.carrier → Prop},
+            IntegrationInACVF.Section7.RVAlmostEverywhere A n P →
+              IntegrationInACVF.Section7.RVAlmostEverywhere B m Q →
+                IntegrationInACVF.Section7.RVAlmostEverywhere (SpecialTransformations.Section4.rvProductDomain A B)
+                  (n + m) fun u =>
+                  P
+                      ((SpecialTransformations.DefinableGeometry.Map.prodFst A B).toFun
+                        ((SpecialTransformations.Section4.rvUnpack A B).toFun u)) ∧
+                    Q
+                      ((SpecialTransformations.DefinableGeometry.Map.prodSnd A B).toFun
+                        ((SpecialTransformations.Section4.rvUnpack A B).toFun u))
+'IntegrationInACVF.Section7.RVAlmostEverywhere.product' depends on axioms: [propext, Classical.choice, Quot.sound]
+@IntegrationInACVF.Section7.productEssentialChart : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {S : Set M} →
+        {n m : ℕ} →
+          (U : IntegrationInACVF.Section7.PositiveRVVolumeObject S n) →
+            (V : IntegrationInACVF.Section7.PositiveRVVolumeObject S m) →
+              SpecialTransformations.DefinableGeometry.Map (U.prod V).essential.obj.domain
+                (U.essential.obj.domain.prod V.essential.obj.domain)
+'IntegrationInACVF.Section7.productEssentialChart' depends on axioms: [propext, Classical.choice, Quot.sound]
+@IntegrationInACVF.Section7.productEssentialInverseChart : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {S : Set M} →
+        {n m : ℕ} →
+          (U : IntegrationInACVF.Section7.PositiveRVVolumeObject S n) →
+            (V : IntegrationInACVF.Section7.PositiveRVVolumeObject S m) →
+              SpecialTransformations.DefinableGeometry.Map (U.essential.obj.domain.prod V.essential.obj.domain)
+                (U.prod V).essential.obj.domain
+'IntegrationInACVF.Section7.productEssentialInverseChart' depends on axioms: [propext, Classical.choice, Quot.sound]
+@IntegrationInACVF.Section7.productEssentialChart_inverse : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set M} {n m : ℕ}
+  (U : IntegrationInACVF.Section7.PositiveRVVolumeObject S n)
+  (V : IntegrationInACVF.Section7.PositiveRVVolumeObject S m)
+  (p : ↑(U.essential.obj.domain.prod V.essential.obj.domain).carrier),
+  (IntegrationInACVF.Section7.productEssentialChart U V).toFun
+      ((IntegrationInACVF.Section7.productEssentialInverseChart U V).toFun p) =
+    p
+'IntegrationInACVF.Section7.productEssentialChart_inverse' depends on axioms: [propext, Classical.choice, Quot.sound]
+@IntegrationInACVF.Section7.productEssentialInverseChart_chart : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set M} {n m : ℕ}
+  (U : IntegrationInACVF.Section7.PositiveRVVolumeObject S n)
+  (V : IntegrationInACVF.Section7.PositiveRVVolumeObject S m) (w : ↑(U.prod V).essential.obj.domain.carrier),
+  (IntegrationInACVF.Section7.productEssentialInverseChart U V).toFun
+      ((IntegrationInACVF.Section7.productEssentialChart U V).toFun w) =
+    w
+'IntegrationInACVF.Section7.productEssentialInverseChart_chart' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@IntegrationInACVF.Section7.productEssentialChart_bijective : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set M} {n m : ℕ}
+  (U : IntegrationInACVF.Section7.PositiveRVVolumeObject S n)
+  (V : IntegrationInACVF.Section7.PositiveRVVolumeObject S m),
+  Function.Bijective (IntegrationInACVF.Section7.productEssentialChart U V).toFun
+'IntegrationInACVF.Section7.productEssentialChart_bijective' depends on axioms: [propext, Classical.choice, Quot.sound]
+@IntegrationInACVF.Section7.productEssentialChart_coordinates : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set M} {n m : ℕ}
+  (U : IntegrationInACVF.Section7.PositiveRVVolumeObject S n)
+  (V : IntegrationInACVF.Section7.PositiveRVVolumeObject S m) (w : ↑(U.prod V).essential.obj.domain.carrier),
+  (U.prod V).essential.obj.value w =
+    Fin.append
+      (U.essential.obj.value
+        ((SpecialTransformations.DefinableGeometry.Map.prodFst U.essential.obj.domain V.essential.obj.domain).toFun
+          ((IntegrationInACVF.Section7.productEssentialChart U V).toFun w)))
+      (V.essential.obj.value
+        ((SpecialTransformations.DefinableGeometry.Map.prodSnd U.essential.obj.domain V.essential.obj.domain).toFun
+          ((IntegrationInACVF.Section7.productEssentialChart U V).toFun w)))
+'IntegrationInACVF.Section7.productEssentialChart_coordinates' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@IntegrationInACVF.Section7.productEssentialChart_density : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set M} {n m : ℕ}
+  (U : IntegrationInACVF.Section7.PositiveRVVolumeObject S n)
+  (V : IntegrationInACVF.Section7.PositiveRVVolumeObject S m) (w : ↑(U.prod V).essential.obj.domain.carrier),
+  (U.prod V).essentialForm.value w =
+    U.essentialForm.value
+        ((SpecialTransformations.DefinableGeometry.Map.prodFst U.essential.obj.domain V.essential.obj.domain).toFun
+          ((IntegrationInACVF.Section7.productEssentialChart U V).toFun w)) *
+      V.essentialForm.value
+        ((SpecialTransformations.DefinableGeometry.Map.prodSnd U.essential.obj.domain V.essential.obj.domain).toFun
+          ((IntegrationInACVF.Section7.productEssentialChart U V).toFun w))
+'IntegrationInACVF.Section7.productEssentialChart_density' depends on axioms: [propext, Classical.choice, Quot.sound]
+@IntegrationInACVF.Section7.productEssentialPackChart : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {S : Set M} →
+        {n m : ℕ} →
+          (U : IntegrationInACVF.Section7.PositiveRVVolumeObject S n) →
+            (V : IntegrationInACVF.Section7.PositiveRVVolumeObject S m) →
+              SpecialTransformations.DefinableGeometry.Map (U.prod V).essential.obj.domain
+                (SpecialTransformations.Section4.rvProductDomain U.essential.obj.domain V.essential.obj.domain)
+'IntegrationInACVF.Section7.productEssentialPackChart' depends on axioms: [propext, Classical.choice, Quot.sound]
+@IntegrationInACVF.Section7.productEssentialPackChart_bijective : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set M} {n m : ℕ}
+  (U : IntegrationInACVF.Section7.PositiveRVVolumeObject S n)
+  (V : IntegrationInACVF.Section7.PositiveRVVolumeObject S m),
+  Function.Bijective (IntegrationInACVF.Section7.productEssentialPackChart U V).toFun
+'IntegrationInACVF.Section7.productEssentialPackChart_bijective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@IntegrationInACVF.Section7.productEssentialPackChart_unpack : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set M} {n m : ℕ}
+  (U : IntegrationInACVF.Section7.PositiveRVVolumeObject S n)
+  (V : IntegrationInACVF.Section7.PositiveRVVolumeObject S m) (w : ↑(U.prod V).essential.obj.domain.carrier),
+  (SpecialTransformations.Section4.rvUnpack U.essential.obj.domain V.essential.obj.domain).toFun
+      ((IntegrationInACVF.Section7.productEssentialPackChart U V).toFun w) =
+    (IntegrationInACVF.Section7.productEssentialChart U V).toFun w
+'IntegrationInACVF.Section7.productEssentialPackChart_unpack' depends on axioms: [propext, Classical.choice, Quot.sound]
+@IntegrationInACVF.Section7.RVVolumeIso.productMap : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {S : Set M} →
+        {n m : ℕ} →
+          {U U' : IntegrationInACVF.Section7.PositiveRVVolumeObject S n} →
+            {V V' : IntegrationInACVF.Section7.PositiveRVVolumeObject S m} →
+              IntegrationInACVF.Section7.RVVolumeIso U U' →
+                IntegrationInACVF.Section7.RVVolumeIso V V' →
+                  SpecialTransformations.DefinableGeometry.Map (U.prod V).essential.obj.domain
+                    (U'.prod V').essential.obj.domain
+'IntegrationInACVF.Section7.RVVolumeIso.productMap' depends on axioms: [propext, Classical.choice, Quot.sound]
+@IntegrationInACVF.Section7.RVVolumeIso.productMap_bijective : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set M} {n m : ℕ}
+  {U U' : IntegrationInACVF.Section7.PositiveRVVolumeObject S n}
+  {V V' : IntegrationInACVF.Section7.PositiveRVVolumeObject S m} (f : IntegrationInACVF.Section7.RVVolumeIso U U')
+  (g : IntegrationInACVF.Section7.RVVolumeIso V V'), Function.Bijective (f.productMap g).toFun
+'IntegrationInACVF.Section7.RVVolumeIso.productMap_bijective' depends on axioms: [propext, Classical.choice, Quot.sound]
+@IntegrationInACVF.Section7.RVVolumeIso.productMap_chart : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set M} {n m : ℕ}
+  {U U' : IntegrationInACVF.Section7.PositiveRVVolumeObject S n}
+  {V V' : IntegrationInACVF.Section7.PositiveRVVolumeObject S m} (f : IntegrationInACVF.Section7.RVVolumeIso U U')
+  (g : IntegrationInACVF.Section7.RVVolumeIso V V') (w : ↑(U.prod V).essential.obj.domain.carrier),
+  (IntegrationInACVF.Section7.productEssentialChart U' V').toFun ((f.productMap g).toFun w) =
+    ((IntegrationInACVF.Section7.finiteIsoMap f.iso).prodMap (IntegrationInACVF.Section7.finiteIsoMap g.iso)).toFun
+      ((IntegrationInACVF.Section7.productEssentialChart U V).toFun w)
+'IntegrationInACVF.Section7.RVVolumeIso.productMap_chart' depends on axioms: [propext, Classical.choice, Quot.sound]
+@IntegrationInACVF.Section7.RVVolumeIso.productMap_coordinates : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set M} {n m : ℕ}
+  {U U' : IntegrationInACVF.Section7.PositiveRVVolumeObject S n}
+  {V V' : IntegrationInACVF.Section7.PositiveRVVolumeObject S m} (f : IntegrationInACVF.Section7.RVVolumeIso U U')
+  (g : IntegrationInACVF.Section7.RVVolumeIso V V') (w : ↑(U.prod V).essential.obj.domain.carrier),
+  (U'.prod V').essential.obj.value ((f.productMap g).toFun w) =
+    Fin.append
+      (U'.essential.obj.value
+        ((IntegrationInACVF.Section7.finiteIsoMap f.iso).toFun
+          ((SpecialTransformations.DefinableGeometry.Map.prodFst U.essential.obj.domain V.essential.obj.domain).toFun
+            ((IntegrationInACVF.Section7.productEssentialChart U V).toFun w))))
+      (V'.essential.obj.value
+        ((IntegrationInACVF.Section7.finiteIsoMap g.iso).toFun
+          ((SpecialTransformations.DefinableGeometry.Map.prodSnd U.essential.obj.domain V.essential.obj.domain).toFun
+            ((IntegrationInACVF.Section7.productEssentialChart U V).toFun w))))
+'IntegrationInACVF.Section7.RVVolumeIso.productMap_coordinates' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@IntegrationInACVF.Section7.RVVolumeIso.productMap_density : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set M} {n m : ℕ}
+  {U U' : IntegrationInACVF.Section7.PositiveRVVolumeObject S n}
+  {V V' : IntegrationInACVF.Section7.PositiveRVVolumeObject S m} (f : IntegrationInACVF.Section7.RVVolumeIso U U')
+  (g : IntegrationInACVF.Section7.RVVolumeIso V V') (w : ↑(U.prod V).essential.obj.domain.carrier),
+  (U'.prod V').essentialForm.value ((f.productMap g).toFun w) =
+    U'.essentialForm.value
+        ((IntegrationInACVF.Section7.finiteIsoMap f.iso).toFun
+          ((SpecialTransformations.DefinableGeometry.Map.prodFst U.essential.obj.domain V.essential.obj.domain).toFun
+            ((IntegrationInACVF.Section7.productEssentialChart U V).toFun w))) *
+      V'.essentialForm.value
+        ((IntegrationInACVF.Section7.finiteIsoMap g.iso).toFun
+          ((SpecialTransformations.DefinableGeometry.Map.prodSnd U.essential.obj.domain V.essential.obj.domain).toFun
+            ((IntegrationInACVF.Section7.productEssentialChart U V).toFun w)))
+'IntegrationInACVF.Section7.RVVolumeIso.productMap_density' depends on axioms: [propext, Classical.choice, Quot.sound]
+@IntegrationInACVF.Section7.RVVolumeIso.productUnderlying : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {S : Set M} →
+        {n m : ℕ} →
+          {U U' : IntegrationInACVF.Section7.PositiveRVVolumeObject S n} →
+            {V V' : IntegrationInACVF.Section7.PositiveRVVolumeObject S m} →
+              IntegrationInACVF.Section7.RVVolumeIso U U' →
+                IntegrationInACVF.Section7.RVVolumeIso V V' → ((U.prod V).essential ≅ (U'.prod V').essential)
+'IntegrationInACVF.Section7.RVVolumeIso.productUnderlying' depends on axioms: [propext, Classical.choice, Quot.sound]
+@IntegrationInACVF.Section7.RVVolumeIso.productUnderlying_apply : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set M} {n m : ℕ}
+  {U U' : IntegrationInACVF.Section7.PositiveRVVolumeObject S n}
+  {V V' : IntegrationInACVF.Section7.PositiveRVVolumeObject S m} (f : IntegrationInACVF.Section7.RVVolumeIso U U')
+  (g : IntegrationInACVF.Section7.RVVolumeIso V V') (w : ↑(U.prod V).essential.obj.domain.carrier),
+  (IntegrationInACVF.Section7.finiteIsoMap (f.productUnderlying g)).toFun w = (f.productMap g).toFun w
+'IntegrationInACVF.Section7.RVVolumeIso.productUnderlying_apply' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@IntegrationInACVF.Section7.RVVolumeIso.productMap_volumeRatio : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set M} {n m : ℕ}
+  {U U' : IntegrationInACVF.Section7.PositiveRVVolumeObject S n}
+  {V V' : IntegrationInACVF.Section7.PositiveRVVolumeObject S m} (f : IntegrationInACVF.Section7.RVVolumeIso U U')
+  (g : IntegrationInACVF.Section7.RVVolumeIso V V') (w : ↑(U.prod V).essential.obj.domain.carrier),
+  IntegrationInACVF.Section7.volumeRatio (U.prod V) (U'.prod V') (f.productUnderlying g) w =
+    IntegrationInACVF.Section7.volumeRatio U U' f.iso
+        ((SpecialTransformations.DefinableGeometry.Map.prodFst U.essential.obj.domain V.essential.obj.domain).toFun
+          ((IntegrationInACVF.Section7.productEssentialChart U V).toFun w)) *
+      IntegrationInACVF.Section7.volumeRatio V V' g.iso
+        ((SpecialTransformations.DefinableGeometry.Map.prodSnd U.essential.obj.domain V.essential.obj.domain).toFun
+          ((IntegrationInACVF.Section7.productEssentialChart U V).toFun w))
+'IntegrationInACVF.Section7.RVVolumeIso.productMap_volumeRatio' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@IntegrationInACVF.Section7.RVVolumeIso.productCorrespondence_left : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set M} {n m : ℕ}
+  {U U' : IntegrationInACVF.Section7.PositiveRVVolumeObject S n}
+  {V V' : IntegrationInACVF.Section7.PositiveRVVolumeObject S m} (f : IntegrationInACVF.Section7.RVVolumeIso U U')
+  (g : IntegrationInACVF.Section7.RVVolumeIso V V'),
+  ∀ z ∈ (SpecialTransformations.Section9.volumeCorrespondence (f.productMap g)).carrier,
+    z ∘ IntegrationInACVF.Section7.coordinatePairIndex (Fin.castAdd (m + 1)) ∈
+      (SpecialTransformations.Section9.volumeCorrespondence (IntegrationInACVF.Section7.finiteIsoMap f.iso)).carrier
+'IntegrationInACVF.Section7.RVVolumeIso.productCorrespondence_left' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@IntegrationInACVF.Section7.RVVolumeIso.productCorrespondence_right : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set M} {n m : ℕ}
+  {U U' : IntegrationInACVF.Section7.PositiveRVVolumeObject S n}
+  {V V' : IntegrationInACVF.Section7.PositiveRVVolumeObject S m} (f : IntegrationInACVF.Section7.RVVolumeIso U U')
+  (g : IntegrationInACVF.Section7.RVVolumeIso V V'),
+  ∀ z ∈ (SpecialTransformations.Section9.volumeCorrespondence (f.productMap g)).carrier,
+    z ∘ IntegrationInACVF.Section7.coordinatePairIndex (Fin.natAdd (n + 1)) ∈
+      (SpecialTransformations.Section9.volumeCorrespondence (IntegrationInACVF.Section7.finiteIsoMap g.iso)).carrier
+'IntegrationInACVF.Section7.RVVolumeIso.productCorrespondence_right' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@IntegrationInACVF.Section7.absoluteWeight_append : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {p q : ℕ} (t : Fin p → CanonicalRV.RVSort M)
+  (s : Fin q → CanonicalRV.RVSort M),
+  ∏ i, SpecialTransformations.Section3.RVOperations.absoluteHom (Fin.append t s i) =
+    (∏ i, SpecialTransformations.Section3.RVOperations.absoluteHom (t i)) *
+      ∏ i, SpecialTransformations.Section3.RVOperations.absoluteHom (s i)
+'IntegrationInACVF.Section7.absoluteWeight_append' depends on axioms: [propext, Classical.choice, Quot.sound]
+@IntegrationInACVF.Section7.RVVolumeIso.prod : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {n m : ℕ} →
+        CanonicalStructure.IsCanonical →
+          (C : SpecialTransformations.Section3.BaseContext M) →
+            {U U' : IntegrationInACVF.Section7.PositiveRVVolumeObject (↑C.base) n} →
+              {V V' : IntegrationInACVF.Section7.PositiveRVVolumeObject (↑C.base) m} →
+                IntegrationInACVF.Section7.RVVolumeIso U U' →
+                  IntegrationInACVF.Section7.RVVolumeIso V V' →
+                    IntegrationInACVF.Section7.RVVolumeIso (U.prod V) (U'.prod V')
+'IntegrationInACVF.Section7.RVVolumeIso.prod' depends on axioms: [propext, Classical.choice, Quot.sound]
+@IntegrationInACVF.Section7.functionMapRowValid : {M : Type} →
+  [SpecialTransformations.Milestone0.LRV.Structure M] →
+    {p a b : ℕ} →
+      (Fin p → SpecialTransformations.Milestone0.SortTag) →
+        Set (Fin (p + a) → M) → Set (Fin (p + a + b) → M) → (Fin p → M) → Prop
+'IntegrationInACVF.Section7.functionMapRowValid' depends on axioms: [propext, Quot.sound]
+@IntegrationInACVF.Section7.gamma_functionMapRow_validity_definable : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {p a b : ℕ}
+  (sp : Fin p → SpecialTransformations.Milestone0.SortTag) (sx : Fin a → SpecialTransformations.Milestone0.SortTag)
+  (sy : Fin b → SpecialTransformations.Milestone0.SortTag) {D : Set (Fin (p + a) → M)} {V : Set (Fin (p + a + b) → M)},
+  SpecialTransformations.Section3.GammaParameters.DefinableOverBase B (Fin.append sp sx) D →
+    SpecialTransformations.Section3.GammaParameters.DefinableOverBase B (Fin.append (Fin.append sp sx) sy) V →
+      SpecialTransformations.Section3.GammaParameters.DefinableOverBase B sp
+        {z | IntegrationInACVF.Section7.functionMapRowValid sp D V z}
+'IntegrationInACVF.Section7.gamma_functionMapRow_validity_definable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@IntegrationInACVF.Section7.GammaRVVolumeSchema : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      SpecialTransformations.Section3.GammaParameters.Base →
+        (p : ℕ) →
+          ℕ →
+            ℕ →
+              (optParam (Fin p → SpecialTransformations.Milestone0.SortTag) fun x =>
+                  SpecialTransformations.Milestone0.SortTag.rv) →
+                Type
+'IntegrationInACVF.Section7.GammaRVVolumeSchema' depends on axioms: [propext, Classical.choice, Quot.sound]
+@IntegrationInACVF.Section7.GammaRVVolumeSchema.mk : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B : SpecialTransformations.Section3.GammaParameters.Base} →
+        {p a k : ℕ} →
+          {sp :
+              optParam (Fin p → SpecialTransformations.Milestone0.SortTag) fun x =>
+                SpecialTransformations.Milestone0.SortTag.rv} →
+            IntegrationInACVF.Section6.GammaFiniteRVSchema B p a (k + 1) sp →
+              (density : Set (Fin (p + a + 1) → M)) →
+                SpecialTransformations.Section3.GammaParameters.DefinableOverBase B
+                    (Fin.append (Fin.append sp fun x => SpecialTransformations.Milestone0.SortTag.rv) fun x =>
+                      SpecialTransformations.Milestone0.SortTag.rv)
+                    density →
+                  (∀ w ∈ density, w (Fin.last (p + a)) ≠ SpecialTransformations.Milestone0.iRVZero) →
+                    IntegrationInACVF.Section7.GammaRVVolumeSchema B p a k sp
+'IntegrationInACVF.Section7.GammaRVVolumeSchema.mk' depends on axioms: [propext, Classical.choice, Quot.sound]
+@IntegrationInACVF.Section7.GammaRVVolumeSchema.valid : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B : SpecialTransformations.Section3.GammaParameters.Base} →
+        {p a k : ℕ} →
+          {sp : Fin p → SpecialTransformations.Milestone0.SortTag} →
+            IntegrationInACVF.Section7.GammaRVVolumeSchema B p a k sp → (Fin p → M) → Prop
+'IntegrationInACVF.Section7.GammaRVVolumeSchema.valid' depends on axioms: [propext, Classical.choice, Quot.sound]
+@IntegrationInACVF.Section7.GammaRVVolumeSchema.valid_definable : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {p a k : ℕ}
+  {sp : Fin p → SpecialTransformations.Milestone0.SortTag}
+  (F : IntegrationInACVF.Section7.GammaRVVolumeSchema B p a k sp),
+  SpecialTransformations.Section3.GammaParameters.DefinableOverBase B sp {z | F.valid z}
+'IntegrationInACVF.Section7.GammaRVVolumeSchema.valid_definable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@IntegrationInACVF.Section7.GammaRVVolumeSchema.rowDensity : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B : SpecialTransformations.Section3.GammaParameters.Base} →
+        {p a k : ℕ} →
+          {sp : Fin p → SpecialTransformations.Milestone0.SortTag} →
+            IntegrationInACVF.Section7.GammaRVVolumeSchema B p a k sp →
+              (Fin p → M) → (Fin a → CanonicalRV.RVSort M) → (Fin 1 → CanonicalRV.RVSort M) → Prop
+'IntegrationInACVF.Section7.GammaRVVolumeSchema.rowDensity' depends on axioms: [propext, Classical.choice, Quot.sound]
+@IntegrationInACVF.Section7.GammaRVVolumeSchema.rowDensity_nonzero : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {p a k : ℕ}
+  {sp : Fin p → SpecialTransformations.Milestone0.SortTag}
+  (F : IntegrationInACVF.Section7.GammaRVVolumeSchema B p a k sp) (z : Fin p → M) (x : Fin a → CanonicalRV.RVSort M)
+  (y : Fin 1 → CanonicalRV.RVSort M), F.rowDensity z x y → ↑(y 0) ≠ SpecialTransformations.Milestone0.iRVZero
+'IntegrationInACVF.Section7.GammaRVVolumeSchema.rowDensity_nonzero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@IntegrationInACVF.Section7.GammaRVVolumeSchema.rowDensity_unique : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {p a k : ℕ}
+  {sp : Fin p → SpecialTransformations.Milestone0.SortTag}
+  (F : IntegrationInACVF.Section7.GammaRVVolumeSchema B p a k sp) (z : Fin p → M),
+  F.valid z → ∀ (x : ↑(F.object.rowDomain z)), ∃! y, F.rowDensity z (↑x) y
+'IntegrationInACVF.Section7.GammaRVVolumeSchema.rowDensity_unique' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@IntegrationInACVF.Section7.GammaRVVolumeSchema.rowDensity_support : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {p a k : ℕ}
+  {sp : Fin p → SpecialTransformations.Milestone0.SortTag}
+  (F : IntegrationInACVF.Section7.GammaRVVolumeSchema B p a k sp) (z : Fin p → M),
+  F.valid z →
+    ∀ (x : Fin a → CanonicalRV.RVSort M) (y : Fin 1 → CanonicalRV.RVSort M),
+      F.rowDensity z x y → x ∈ F.object.rowDomain z
+'IntegrationInACVF.Section7.GammaRVVolumeSchema.rowDensity_support' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

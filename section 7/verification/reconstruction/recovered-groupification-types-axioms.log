@@ -1,0 +1,151 @@
+IntegrationInACVF.Section7.SemiringGroupificationRelation.{u_1} : (R : Type u_1) →
+  [Semiring.{u_1} R] → FreeRing.{u_1} R → FreeRing.{u_1} R → Prop
+'IntegrationInACVF.Section7.SemiringGroupificationRelation' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+IntegrationInACVF.Section7.semiringGroupificationCongruence.{u_1} : (R : Type u_1) →
+  [Semiring.{u_1} R] → RingCon.{u_1} (FreeRing.{u_1} R)
+'IntegrationInACVF.Section7.semiringGroupificationCongruence' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+IntegrationInACVF.Section7.SemiringGroupification.{u_1} : (R : Type u_1) → [Semiring.{u_1} R] → Type u_1
+'IntegrationInACVF.Section7.SemiringGroupification' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+IntegrationInACVF.Section7.semiringGroupificationOf.{u_1} : (R : Type u_1) →
+  [inst : Semiring.{u_1} R] → RingHom.{u_1, u_1} R (IntegrationInACVF.Section7.SemiringGroupification.{u_1} R)
+'IntegrationInACVF.Section7.semiringGroupificationOf' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@IntegrationInACVF.Section7.semiringGroupification_lift_compatible.{u_1,
+    u_2} : ∀ {R : Type u_1} [inst : Semiring.{u_1} R] {T : Type u_2} [inst_1 : Ring.{u_2} T]
+  (f : RingHom.{u_1, u_2} R T),
+  LE.le.{u_1} (IntegrationInACVF.Section7.semiringGroupificationCongruence.{u_1} R)
+    (RingCon.ker.{u_1, u_2} (FreeRing.lift.{u_1, u_2} ⇑f))
+'IntegrationInACVF.Section7.semiringGroupification_lift_compatible' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.semiringGroupificationLift.{u_1,
+    u_2} : {R : Type u_1} →
+  [inst : Semiring.{u_1} R] →
+    {T : Type u_2} →
+      [inst_1 : Ring.{u_2} T] →
+        RingHom.{u_1, u_2} R T → RingHom.{u_1, u_2} (IntegrationInACVF.Section7.SemiringGroupification.{u_1} R) T
+'IntegrationInACVF.Section7.semiringGroupificationLift' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.semiringGroupificationLift_of.{u_1,
+    u_2} : ∀ {R : Type u_1} [inst : Semiring.{u_1} R] {T : Type u_2} [inst_1 : Ring.{u_2} T]
+  (f : RingHom.{u_1, u_2} R T) (a : R),
+  Eq.{u_2 + 1}
+    ((IntegrationInACVF.Section7.semiringGroupificationLift.{u_1, u_2} f)
+      ((IntegrationInACVF.Section7.semiringGroupificationOf.{u_1} R) a))
+    (f a)
+'IntegrationInACVF.Section7.semiringGroupificationLift_of' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.semiringGroupification_hom_ext.{u_1,
+    u_2} : ∀ {R : Type u_1} [inst : Semiring.{u_1} R] {T : Type u_2} [inst_1 : Ring.{u_2} T]
+  {f g : RingHom.{u_1, u_2} (IntegrationInACVF.Section7.SemiringGroupification.{u_1} R) T},
+  (∀ (a : R),
+      Eq.{u_2 + 1} (f ((IntegrationInACVF.Section7.semiringGroupificationOf.{u_1} R) a))
+        (g ((IntegrationInACVF.Section7.semiringGroupificationOf.{u_1} R) a))) →
+    Eq.{max (u_1 + 1) (u_2 + 1)} f g
+'IntegrationInACVF.Section7.semiringGroupification_hom_ext' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.semiringGroupificationMap.{u_1,
+    u_2} : {R : Type u_1} →
+  [inst : Semiring.{u_1} R] →
+    {T : Type u_2} →
+      [inst_1 : Semiring.{u_2} T] →
+        RingHom.{u_1, u_2} R T →
+          RingHom.{u_1, u_2} (IntegrationInACVF.Section7.SemiringGroupification.{u_1} R)
+            (IntegrationInACVF.Section7.SemiringGroupification.{u_2} T)
+'IntegrationInACVF.Section7.semiringGroupificationMap' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.semiringGroupificationMap_of.{u_1,
+    u_2} : ∀ {R : Type u_1} [inst : Semiring.{u_1} R] {T : Type u_2} [inst_1 : Semiring.{u_2} T]
+  (f : RingHom.{u_1, u_2} R T) (a : R),
+  Eq.{u_2 + 1}
+    ((IntegrationInACVF.Section7.semiringGroupificationMap.{u_1, u_2} f)
+      ((IntegrationInACVF.Section7.semiringGroupificationOf.{u_1} R) a))
+    ((IntegrationInACVF.Section7.semiringGroupificationOf.{u_2} T) (f a))
+'IntegrationInACVF.Section7.semiringGroupificationMap_of' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+IntegrationInACVF.Section7.semiringGroupificationMap_id.{u_1} : ∀ (R : Type u_1) [inst : Semiring.{u_1} R],
+  Eq.{u_1 + 1} (IntegrationInACVF.Section7.semiringGroupificationMap.{u_1, u_1} (RingHom.id.{u_1} R))
+    (RingHom.id.{u_1} (IntegrationInACVF.Section7.SemiringGroupification.{u_1} R))
+'IntegrationInACVF.Section7.semiringGroupificationMap_id' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.semiringGroupificationMap_comp.{u_1, u_2,
+    u_3} : ∀ {R : Type u_1} [inst : Semiring.{u_1} R] {T : Type u_2} [inst_1 : Semiring.{u_2} T] {U : Type u_3}
+  [inst_2 : Semiring.{u_3} U] (f : RingHom.{u_1, u_2} R T) (g : RingHom.{u_2, u_3} T U),
+  Eq.{max (u_1 + 1) (u_3 + 1)}
+    (IntegrationInACVF.Section7.semiringGroupificationMap.{u_1, u_3} (RingHom.comp.{u_1, u_2, u_3} g f))
+    (RingHom.comp.{u_1, u_2, u_3} (IntegrationInACVF.Section7.semiringGroupificationMap.{u_2, u_3} g)
+      (IntegrationInACVF.Section7.semiringGroupificationMap.{u_1, u_2} f))
+'IntegrationInACVF.Section7.semiringGroupificationMap_comp' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.semiringGroupification_exists_difference.{u_1} : ∀ {R : Type u_1} [inst : Semiring.{u_1} R]
+  (z : IntegrationInACVF.Section7.SemiringGroupification.{u_1} R),
+  ∃ a b,
+    Eq.{u_1 + 1} z
+      (HSub.hSub.{u_1, u_1, u_1} ((IntegrationInACVF.Section7.semiringGroupificationOf.{u_1} R) a)
+        ((IntegrationInACVF.Section7.semiringGroupificationOf.{u_1} R) b))
+'IntegrationInACVF.Section7.semiringGroupification_exists_difference' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.semiringGroupificationMap_surjective.{u_1,
+    u_2} : ∀ {R : Type u_1} [inst : Semiring.{u_1} R] {T : Type u_2} [inst_1 : Semiring.{u_2} T]
+  (f : RingHom.{u_1, u_2} R T),
+  Function.Surjective.{u_1 + 1, u_2 + 1} ⇑f →
+    Function.Surjective.{u_1 + 1, u_2 + 1} ⇑(IntegrationInACVF.Section7.semiringGroupificationMap.{u_1, u_2} f)
+'IntegrationInACVF.Section7.semiringGroupificationMap_surjective' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.semiringGroupificationEquiv.{u_1,
+    u_2} : {R : Type u_1} →
+  [inst : Semiring.{u_1} R] →
+    {T : Type u_2} →
+      [inst_1 : Semiring.{u_2} T] →
+        RingEquiv.{u_1, u_2} R T →
+          RingEquiv.{u_1, u_2} (IntegrationInACVF.Section7.SemiringGroupification.{u_1} R)
+            (IntegrationInACVF.Section7.SemiringGroupification.{u_2} T)
+'IntegrationInACVF.Section7.semiringGroupificationEquiv' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.semiringGroupificationEquiv_of.{u_1,
+    u_2} : ∀ {R : Type u_1} [inst : Semiring.{u_1} R] {T : Type u_2} [inst_1 : Semiring.{u_2} T]
+  (e : RingEquiv.{u_1, u_2} R T) (a : R),
+  Eq.{u_2 + 1}
+    ((IntegrationInACVF.Section7.semiringGroupificationEquiv.{u_1, u_2} e)
+      ((IntegrationInACVF.Section7.semiringGroupificationOf.{u_1} R) a))
+    ((IntegrationInACVF.Section7.semiringGroupificationOf.{u_2} T) (e a))
+'IntegrationInACVF.Section7.semiringGroupificationEquiv_of' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.SemiringGroupificationRelation.zero.{u_1} : ∀ {R : Type u_1} [inst : Semiring.{u_1} R],
+  IntegrationInACVF.Section7.SemiringGroupificationRelation.{u_1} R (FreeRing.of.{u_1} 0) 0
+'IntegrationInACVF.Section7.SemiringGroupificationRelation.zero' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.SemiringGroupificationRelation.one.{u_1} : ∀ {R : Type u_1} [inst : Semiring.{u_1} R],
+  IntegrationInACVF.Section7.SemiringGroupificationRelation.{u_1} R (FreeRing.of.{u_1} 1) 1
+'IntegrationInACVF.Section7.SemiringGroupificationRelation.one' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.SemiringGroupificationRelation.add.{u_1} : ∀ {R : Type u_1} [inst : Semiring.{u_1} R]
+  (a b : R),
+  IntegrationInACVF.Section7.SemiringGroupificationRelation.{u_1} R (FreeRing.of.{u_1} (HAdd.hAdd.{u_1, u_1, u_1} a b))
+    (HAdd.hAdd.{u_1, u_1, u_1} (FreeRing.of.{u_1} a) (FreeRing.of.{u_1} b))
+'IntegrationInACVF.Section7.SemiringGroupificationRelation.add' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.SemiringGroupificationRelation.mul.{u_1} : ∀ {R : Type u_1} [inst : Semiring.{u_1} R]
+  (a b : R),
+  IntegrationInACVF.Section7.SemiringGroupificationRelation.{u_1} R (FreeRing.of.{u_1} (HMul.hMul.{u_1, u_1, u_1} a b))
+    (HMul.hMul.{u_1, u_1, u_1} (FreeRing.of.{u_1} a) (FreeRing.of.{u_1} b))
+'IntegrationInACVF.Section7.SemiringGroupificationRelation.mul' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

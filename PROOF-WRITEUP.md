@@ -382,3 +382,19 @@ contraction's natural map is globally special. It uses no new Section 6
 hypothesis; only the authorized Section 5.8 input remains. The kernel theorem6.17 using this comparison and the subsequent
 integration statements6.18–6.22 are now verified in the 733-module,
 2,268-full-type/axiom audit. The final root build and project-wide QE/Sections2–6 audits also pass.
+
+## Section 7 reconstruction candidate
+
+The checked `Integration7.ElementaryBlowupIsomorphism.elementaryBlowupIso`
+construction (declaration `IntegrationInACVF.Section7.elementaryBlowupIso`)
+identifies the corrected RV Jacobian directly from normalized residue
+tangents. Coordinate projection gives the head block; polynomial vanishing
+on actual punctured vertical lines gives the last tangent column. Generic
+head and full Jacobians are obtained separately, with the dimension of the
+head exception controlled through the product chart. This avoids requiring
+a pointwise chain rule at exceptional labels. The formal argument is
+verified through the fourth and sixth reconstruction batches. Fresh comparison with Lemma7.2 in the v2 paper confirms that the head-block
+and vertical-column argument follows its mathematical strategy. The checked
+polynomial tangent reasoning fills in its determinant justification; it is
+not currently classified as a different proof. Routine chart encoding and
+the ordinary four-piece refinement are likewise implementation detail.

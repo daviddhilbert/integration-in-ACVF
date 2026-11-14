@@ -6,11 +6,11 @@ as accepted by the author and recorded in `TARGETS.md`.
 
 ## Current checked local boundary
 
-`Integration7.Library` integrates 62 source modules plus its entry point.
-Full exported types and allowed-axiom reports for 294 distinct declarations
+`Integration7.Library` integrates 123 source modules plus its entry point.
+Full exported types and allowed-axiom reports for 565 distinct declarations
 have been inspected in targeted incremental batches. Only `propext`,
 `Classical.choice`, and `Quot.sound` occur. The latest affected-library
-build passed, including 9,669 jobs counting its cached dependency closure.
+build passed, including 10,173 jobs counting its cached dependency closure.
 `VERIFICATION.json` seals this source boundary and records the batch receipts.
 Unchanged earlier batches were not manually audited again.
 
@@ -35,19 +35,26 @@ order are retained. Positive selected fibres keep actual finiteness explicit.
 
 Receipts are under `.scratch/recovery/`: the initial algebra and
 groupification batches contribute 34 exports; the first geometric batch
-contributes 86, the second 59, the third 89, and the fourth 26.
-The fourth receipt is `recovered-fourth-geometry-receipt.json`.
+contributes 86, the second 59, the third 89, the fourth 26, the fifth 24, the sixth 70, the seventh 56, the eighth 65, and the ninth 56.
+The latest receipt is `recovered-ninth-geometry-receipt.json`.
 These checks cover currently available sources, not the historical missing
 1,201-module/4,644-declaration working copy.
 
 ## Durable remote boundary
 
-The user-approved first 24-module/120-export checkpoint is saved on
-`section-7/reconstructed-foundation` at
-`2c6a6945eee43358e676930af3ec3325f56c7f33`. All 32 uploaded blobs were read
-back and verified. Main remains the pushed Section 6 revision
-`7d4acc730496b3bd05a22c268ffd89540ca694f9`.
-Subsequent local proofs are outside that exact upload approval.
+Checked reconstruction checkpoints are saved on
+`section-7/reconstructed-foundation`. The earlier 62-module/294-export
+checkpoint is `3efb1cd01d723fe133c8fab113b2a7f6ae853584`; all 70 file blob
+hashes, its ancestry and branch head were verified at publication. Its
+project build passed in GitHub Actions run43572697649; section audits were
+still running when this newer checkpoint was prepared.
+
+The user has authorized continuing checked GitHub backups without further
+permission. The current source boundary is recorded in VERIFICATION.json;
+reviewed incremental type/axiom reports and receipts are also preserved in
+`verification/reconstruction/`. Exact published revision receipts are kept
+locally under `.scratch/recovery/`. Main remains the Section6 revision
+`7d4acc730496b3bd05a22c268ffd89540ca694f9`. No pull request has been created.
 
 Sixty recovered original module texts remain unchanged in quarantine under
 `.scratch/recovery/transcript/Integration7/`. Canonical promoted copies may
@@ -55,10 +62,86 @@ have narrowed imports or split providers. Rebuilt support is distinguished
 from recovered originals. Recovery archives include source hashes and audit
 logs; see `recovery-delivery/PACKAGING-RECEIPT.json`.
 
+## Common refinement
+
+`volumeBlowup_diamond` constructs one genuine forward blowup on each
+branch using four actual definable pieces of the original source.
+`IteratedVolumeBlowup.common_refinement_of_iso` proves common refinement
+with exact complementary step counts, including isomorphic initial
+objects. It uses the independently proved diamond and the existing generic
+Section 6 finite-grid argument. `VolumeBlowupEquivalent.trans` and
+`muIspSetoid` therefore have no open confluence premise. The ordinary
+degree-zero relation remains ordinary RV isomorphism.
+
+The sixth batch also checks the actual source loci, their volume charts,
+complement images, essential restrictions, elementary partitions, coproduct
+structural isomorphisms, and the additive monoid of volume-isomorphism
+classes. All 70 new types and axioms were inspected in its 520-line report.
+
+## VF volume category and lift bridges
+
+The seventh incremental batch proves the exact bridge to the checked
+Section 2 density and volume-morphism interfaces, descent of a compatible
+volume-preserving lift, and existence of a prescribed volume-preserving
+lift of every positive RV volume isomorphism. The original VF/Gamma base
+generation hypothesis remains explicit in the existence direction. The
+checked Section 2 Gauss-graph construction supplies the predecessor input.
+
+The actual mixed VF volume objects and their lifts are reconstructed.
+Full volume-preserving bijections satisfy identity, composition, inversion
+and restriction. Almost-everywhere isomorphisms use actual definable
+subdomains with VF-small complements; composition uses their middle
+intersection and actual preimages/images. Their equivalence relation is
+proved. All 56 new exported types and axioms were inspected in a 563-line
+report. This is foundation work, not the remaining contraction theorem.
+
+## Density graphs and selected contraction objects
+
+The eighth batch proves the full original-lift comparison by discarding
+only the actual smaller-dimensional coordinate-zero locus. It also proves
+compatibility of common blowups with addition and constructs their genuine
+positive additive quotient and quotient homomorphism. Fresh access to the
+paper text confirmed the elementary comparison as Lemma 7.2; the checked
+numbered wrapper is `lemma_7_2`. Graded multiplicative compatibility in 7.4
+remains to be established.
+
+Actual density graphs preserve the VF volume object and the exact selected
+fibre finiteness condition. `SelectedVFVolumeFamily` carries a raw same-base
+domain, a nonempty selected tuple, its genuine finite fibres and density.
+Its rows and ordered augmented contraction objects are constructed. The
+latter retain every contracted VF tag and every old selected label. Their
+finite-volume property uses the checked Section 6 selected-finiteness
+theorem; their density is the retained original density-graph label.
+Existence of certified ordered programs retains the standing `VFFieldBase`
+assumption. There is no additional Section 5.8 premise.
+
+The 65 new full types and allowed-axiom reports were inspected in 654 lines;
+the affected Library build passed with 10,161 jobs including cached imports.
+The fibrewise common-blowup comparison of 7.5 is still open. Its construction
+objects must not be counted as that comparison theorem.
+
+## Products, signs and uniform density schemata
+
+`RVVolumeIso.prod` proves actual positive products of volume isomorphisms.
+Essential product charts are genuine definable bijections. Complementary
+normalized tangent projections determine the block determinant; generic
+existence supplies full and factor Jacobians. Exceptional products are
+bounded by the actual volume degrees, including auxiliary label domains.
+Signed coordinate permutations are checked and the recovered
+VolumeCoordinatePermutation module is promoted. Ordinary degree-zero
+factors still require their separate arguments; no commutativity of the
+whole volume ring or full multiplicative blowup congruence is claimed.
+
+The uniform density-schema interface is recovered over the original real/
+Gamma base. Function-row validity is proved first-order definable, and valid
+rows have unique nonzero densities on exactly their object domain. These
+are inputs to the remaining uniform fibrewise comparison, not that theorem.
+All56 new full types and axiom reports were inspected in606 lines, and the
+affected Library build passed10,173 jobs including cached dependencies.
+
 ## Remaining work
 
-Build volume restrictions and overlap refinement, prove common refinement
-and transitivity for actual blowups, and reconnect the positive contraction,
+Reconstruct the positive selected-family comparison and contraction-order,
 lift-kernel, graded integration and function-integration chains. The accepted
 nonempty-`E` scope must be witnessed at its consumers. The former architecture
 and unavailable providers are recorded in

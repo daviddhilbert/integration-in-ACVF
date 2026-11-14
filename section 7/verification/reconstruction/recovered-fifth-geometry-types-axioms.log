@@ -1,0 +1,227 @@
+@VolumeBlowup.via_locus : {M : Type} →
+  [inst : LRV.Structure M] →
+    [inst_1 : M ⊨ Axioms.ACVF] →
+      {k : ℕ} →
+        CanonicalStructure.IsCanonical →
+          (C : BaseContext M) →
+            (U : PositiveRVVolumeObject (↑C.base) k) →
+              (A : DefSet (rawRVSpace U.underlying.obj.arity) ↑C.base) →
+                (hA : A.carrier ⊆ U.underlying.obj.domain.carrier) →
+                  {P Q : PositiveRVVolumeObject (↑C.base) k} →
+                    RVVolumeIso P (U.restrict A hA) →
+                      ElementaryBlowup P Q → VolumeBlowup U (Q.coprod (U.restrict (U.underlying.obj.domain.sdiff A) ⋯))
+'IntegrationInACVF.Section7.VolumeBlowup.via_locus' depends on axioms: [propext, Classical.choice, Quot.sound]
+@VolumeBlowup.along_locus : {M : Type} →
+  [inst : LRV.Structure M] →
+    [inst_1 : M ⊨ Axioms.ACVF] →
+      {k : ℕ} →
+        CanonicalStructure.IsCanonical →
+          (C : BaseContext M) →
+            (U : PositiveRVVolumeObject (↑C.base) k) →
+              (A : DefSet (rawRVSpace U.underlying.obj.arity) ↑C.base) →
+                (hA : A.carrier ⊆ U.underlying.obj.domain.carrier) →
+                  {Q : PositiveRVVolumeObject (↑C.base) k} →
+                    ElementaryBlowup (U.restrict A hA) Q →
+                      VolumeBlowup U (Q.coprod (U.restrict (U.underlying.obj.domain.sdiff A) ⋯))
+'IntegrationInACVF.Section7.VolumeBlowup.along_locus' depends on axioms: [propext, Classical.choice, Quot.sound]
+@definableMapPreimage : {L : FirstOrder.Language} →
+  {M : Type} →
+    [inst : L.Structure M] →
+      {P Q : SpecialTransformations.DefinableGeometry.Space L M} →
+        {S : Set M} → {A : DefSet P S} → {B : DefSet Q S} → Map A B → DefSet Q S → DefSet P S
+'IntegrationInACVF.Section7.definableMapPreimage' depends on axioms: [propext, Classical.choice, Quot.sound]
+@definableMapPreimage_subset : ∀ {L : FirstOrder.Language} {M : Type} [inst : L.Structure M]
+  {P Q : SpecialTransformations.DefinableGeometry.Space L M} {S : Set M} {A : DefSet P S} {B : DefSet Q S} (F : Map A B)
+  (D : DefSet Q S), (definableMapPreimage F D).carrier ⊆ A.carrier
+'IntegrationInACVF.Section7.definableMapPreimage_subset' depends on axioms: [propext, Classical.choice, Quot.sound]
+@mem_definableMapPreimage : ∀ {L : FirstOrder.Language} {M : Type} [inst : L.Structure M]
+  {P Q : SpecialTransformations.DefinableGeometry.Space L M} {S : Set M} {A : DefSet P S} {B : DefSet Q S} (F : Map A B)
+  (D : DefSet Q S) (a : ↑A.carrier), ↑a ∈ (definableMapPreimage F D).carrier ↔ ↑(F.toFun a) ∈ D.carrier
+'IntegrationInACVF.Section7.mem_definableMapPreimage' depends on axioms: [propext, Classical.choice, Quot.sound]
+@BlowupAdmissible.restrict : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF] {S : Set M} {k : ℕ}
+  {U : PositiveRVVolumeObject S k},
+  BlowupAdmissible U →
+    ∀ (A : DefSet (rawRVSpace U.underlying.obj.arity) S) (hA : A.carrier ⊆ U.underlying.obj.domain.carrier),
+      BlowupAdmissible (U.restrict A hA)
+'IntegrationInACVF.Section7.BlowupAdmissible.restrict' depends on axioms: [propext, Classical.choice, Quot.sound]
+@ElementaryBlowup.sourcePreimage : {M : Type} →
+  [inst : LRV.Structure M] →
+    [inst_1 : M ⊨ Axioms.ACVF] →
+      {S : Set M} →
+        {k : ℕ} →
+          {U W : PositiveRVVolumeObject S k} →
+            ElementaryBlowup U W →
+              DefSet (rawRVSpace U.underlying.obj.arity) S → DefSet (rawRVSpace W.underlying.obj.arity) S
+'IntegrationInACVF.Section7.ElementaryBlowup.sourcePreimage' depends on axioms: [propext, Classical.choice, Quot.sound]
+@ElementaryBlowup.sourcePreimage_subset : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF] {S : Set M}
+  {k : ℕ} {U W : PositiveRVVolumeObject S k} (b : ElementaryBlowup U W)
+  (A : DefSet (rawRVSpace U.underlying.obj.arity) S), (b.sourcePreimage A).carrier ⊆ W.underlying.obj.domain.carrier
+'IntegrationInACVF.Section7.ElementaryBlowup.sourcePreimage_subset' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@ElementaryBlowup.mem_sourcePreimage : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF] {S : Set M}
+  {k : ℕ} {U W : PositiveRVVolumeObject S k} (b : ElementaryBlowup U W)
+  (A : DefSet (rawRVSpace U.underlying.obj.arity) S) (w : ↑W.underlying.obj.domain.carrier),
+  ↑w ∈ (b.sourcePreimage A).carrier ↔ ↑(b.projection.toFun w) ∈ A.carrier
+'IntegrationInACVF.Section7.ElementaryBlowup.mem_sourcePreimage' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@ElementaryBlowup.restrictedChart : {M : Type} →
+  [inst : LRV.Structure M] →
+    [inst_1 : M ⊨ Axioms.ACVF] →
+      {S : Set M} →
+        {k : ℕ} →
+          {U W : PositiveRVVolumeObject S k} →
+            (b : ElementaryBlowup U W) →
+              (A : DefSet (rawRVSpace U.underlying.obj.arity) S) → Map (b.sourcePreimage A) (A.prod (blowupConeSet S))
+'IntegrationInACVF.Section7.ElementaryBlowup.restrictedChart' depends on axioms: [propext, Classical.choice, Quot.sound]
+@ElementaryBlowup.restrictedChart_bijective : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF]
+  {S : Set M} {k : ℕ} {U W : PositiveRVVolumeObject S k} (b : ElementaryBlowup U W)
+  (A : DefSet (rawRVSpace U.underlying.obj.arity) S),
+  A.carrier ⊆ U.underlying.obj.domain.carrier → Function.Bijective (b.restrictedChart A).toFun
+'IntegrationInACVF.Section7.ElementaryBlowup.restrictedChart_bijective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@ElementaryBlowup.restrict : {M : Type} →
+  [inst : LRV.Structure M] →
+    [inst_1 : M ⊨ Axioms.ACVF] →
+      {S : Set M} →
+        {k : ℕ} →
+          {U W : PositiveRVVolumeObject S k} →
+            (b : ElementaryBlowup U W) →
+              (A : DefSet (rawRVSpace U.underlying.obj.arity) S) →
+                (hA : A.carrier ⊆ U.underlying.obj.domain.carrier) →
+                  ElementaryBlowup (U.restrict A hA) (W.restrict (b.sourcePreimage A) ⋯)
+'IntegrationInACVF.Section7.ElementaryBlowup.restrict' depends on axioms: [propext, Classical.choice, Quot.sound]
+@VolumeBlowup.transport_source : {M : Type} →
+  [inst : LRV.Structure M] →
+    [inst_1 : M ⊨ Axioms.ACVF] →
+      {k : ℕ} →
+        CanonicalStructure.IsCanonical →
+          (C : BaseContext M) →
+            {U U' W : PositiveRVVolumeObject (↑C.base) k} → VolumeBlowup U W → RVVolumeIso U' U → VolumeBlowup U' W
+'IntegrationInACVF.Section7.VolumeBlowup.transport_source' depends on axioms: [propext, Classical.choice, Quot.sound]
+@VolumeBlowup.transport_target : {M : Type} →
+  [inst : LRV.Structure M] →
+    [inst_1 : M ⊨ Axioms.ACVF] →
+      {k : ℕ} →
+        CanonicalStructure.IsCanonical →
+          (C : BaseContext M) →
+            {U W W' : PositiveRVVolumeObject (↑C.base) k} → VolumeBlowup U W → RVVolumeIso W' W → VolumeBlowup U W'
+'IntegrationInACVF.Section7.VolumeBlowup.transport_target' depends on axioms: [propext, Classical.choice, Quot.sound]
+@IteratedVolumeBlowup.transport_source : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF] {k : ℕ},
+  CanonicalStructure.IsCanonical →
+    ∀ (C : BaseContext M) {U U' W : PositiveRVVolumeObject (↑C.base) k} {n : ℕ},
+      IteratedVolumeBlowup n U W →
+        ∀ (f : RVVolumeIso U' U), ∃ W', IteratedVolumeBlowup n U' W' ∧ Nonempty (RVVolumeIso W' W)
+'IntegrationInACVF.Section7.IteratedVolumeBlowup.transport_source' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@RVVolumeIso.of_injective_restriction : {M : Type} →
+  [inst : LRV.Structure M] →
+    [inst_1 : M ⊨ Axioms.ACVF] →
+      {k : ℕ} →
+        CanonicalStructure.IsCanonical →
+          (C : BaseContext M) →
+            {U V L R : PositiveRVVolumeObject (↑C.base) k} →
+              (f : RVVolumeIso U V) →
+                (e : L.essential ≅ R.essential) →
+                  (i : Map L.essential.obj.domain U.essential.obj.domain) →
+                    Function.Injective i.toFun →
+                      (∀ (u : ↑L.essential.obj.domain.carrier),
+                          U.essential.obj.value (i.toFun u) = L.essential.obj.value u) →
+                        (∀ (u : ↑L.essential.obj.domain.carrier),
+                            V.essential.obj.value ((finiteIsoMap f.iso).toFun (i.toFun u)) =
+                              R.essential.obj.value ((finiteIsoMap e).toFun u)) →
+                          (∀ (u : ↑L.essential.obj.domain.carrier),
+                              U.essentialForm.value (i.toFun u) = L.essentialForm.value u) →
+                            (∀ (u : ↑L.essential.obj.domain.carrier),
+                                V.essentialForm.value ((finiteIsoMap f.iso).toFun (i.toFun u)) =
+                                  R.essentialForm.value ((finiteIsoMap e).toFun u)) →
+                              RVVolumeIso L R
+'IntegrationInACVF.Section7.RVVolumeIso.of_injective_restriction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@volumeComplementPartitionUnderlying : {M : Type} →
+  [inst : LRV.Structure M] →
+    [inst_1 : M ⊨ Axioms.ACVF] →
+      {S : Set M} →
+        {k : ℕ} →
+          (U : PositiveRVVolumeObject S k) →
+            (A : DefSet (rawRVSpace U.underlying.obj.arity) S) →
+              (hA : A.carrier ⊆ U.underlying.obj.domain.carrier) →
+                ((U.restrict A hA).coprod (U.restrict (U.underlying.obj.domain.sdiff A) ⋯)).underlying ≅ U.underlying
+'IntegrationInACVF.Section7.volumeComplementPartitionUnderlying' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@volumeComplementPartitionUnderlying_left : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF] {S : Set M}
+  {k : ℕ} (U : PositiveRVVolumeObject S k) (A : DefSet (rawRVSpace U.underlying.obj.arity) S)
+  (hA : A.carrier ⊆ U.underlying.obj.domain.carrier) (a : ↑A.carrier),
+  (finiteIsoMap (volumeComplementPartitionUnderlying U A hA)).toFun
+      ((rvCoprodLeftMap (U.restrict A hA).underlying.obj
+            (U.restrict (U.underlying.obj.domain.sdiff A) ⋯).underlying.obj).toFun
+        a) =
+    ⟨↑a, ⋯⟩
+'IntegrationInACVF.Section7.volumeComplementPartitionUnderlying_left' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@volumeComplementPartitionUnderlying_right : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF]
+  {S : Set M} {k : ℕ} (U : PositiveRVVolumeObject S k) (A : DefSet (rawRVSpace U.underlying.obj.arity) S)
+  (hA : A.carrier ⊆ U.underlying.obj.domain.carrier) (a : ↑(U.underlying.obj.domain.sdiff A).carrier),
+  (finiteIsoMap (volumeComplementPartitionUnderlying U A hA)).toFun
+      ((rvCoprodRightMap (U.restrict A hA).underlying.obj
+            (U.restrict (U.underlying.obj.domain.sdiff A) ⋯).underlying.obj).toFun
+        a) =
+    ⟨↑a, ⋯⟩
+'IntegrationInACVF.Section7.volumeComplementPartitionUnderlying_right' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@volumeComplementPartitionIso : {M : Type} →
+  [inst : LRV.Structure M] →
+    [inst_1 : M ⊨ Axioms.ACVF] →
+      {k : ℕ} →
+        CanonicalStructure.IsCanonical →
+          (C : BaseContext M) →
+            (U : PositiveRVVolumeObject (↑C.base) k) →
+              (A : DefSet (rawRVSpace U.underlying.obj.arity) ↑C.base) →
+                (hA : A.carrier ⊆ U.underlying.obj.domain.carrier) →
+                  RVVolumeIso ((U.restrict A hA).coprod (U.restrict (U.underlying.obj.domain.sdiff A) ⋯)) U
+'IntegrationInACVF.Section7.volumeComplementPartitionIso' depends on axioms: [propext, Classical.choice, Quot.sound]
+@volumeSubobjectImage : {M : Type} →
+  [inst : LRV.Structure M] →
+    [inst_1 : M ⊨ Axioms.ACVF] →
+      {S : Set M} →
+        {k : ℕ} →
+          {U V : PositiveRVVolumeObject S k} →
+            RVVolumeIso U V →
+              (A : DefSet (rawRVSpace U.underlying.obj.arity) S) →
+                A.carrier ⊆ U.essential.obj.domain.carrier → DefSet (rawRVSpace V.underlying.obj.arity) S
+'IntegrationInACVF.Section7.volumeSubobjectImage' depends on axioms: [propext, Classical.choice, Quot.sound]
+@volumeSubobjectImage_subset : ∀ {M : Type} [inst : LRV.Structure M] [inst_1 : M ⊨ Axioms.ACVF] {S : Set M} {k : ℕ}
+  {U V : PositiveRVVolumeObject S k} (f : RVVolumeIso U V) (A : DefSet (rawRVSpace U.underlying.obj.arity) S)
+  (hA : A.carrier ⊆ U.essential.obj.domain.carrier),
+  (volumeSubobjectImage f A hA).carrier ⊆ V.essential.obj.domain.carrier
+'IntegrationInACVF.Section7.volumeSubobjectImage_subset' depends on axioms: [propext, Classical.choice, Quot.sound]
+@volumeSubobjectUnderlyingIso : {M : Type} →
+  [inst : LRV.Structure M] →
+    [inst_1 : M ⊨ Axioms.ACVF] →
+      {S : Set M} →
+        {k : ℕ} →
+          {U V : PositiveRVVolumeObject S k} →
+            (f : RVVolumeIso U V) →
+              (A : DefSet (rawRVSpace U.underlying.obj.arity) S) →
+                (hA : A.carrier ⊆ U.essential.obj.domain.carrier) →
+                  (U.restrict A ⋯).underlying ≅ (V.restrict (volumeSubobjectImage f A hA) ⋯).underlying
+'IntegrationInACVF.Section7.volumeSubobjectUnderlyingIso' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RVVolumeIso.subobjectImage : {M : Type} →
+  [inst : LRV.Structure M] →
+    [inst_1 : M ⊨ Axioms.ACVF] →
+      {k : ℕ} →
+        CanonicalStructure.IsCanonical →
+          (C : BaseContext M) →
+            {U V : PositiveRVVolumeObject (↑C.base) k} →
+              (f : RVVolumeIso U V) →
+                (A : DefSet (rawRVSpace U.underlying.obj.arity) ↑C.base) →
+                  (hA : A.carrier ⊆ U.essential.obj.domain.carrier) →
+                    RVVolumeIso (U.restrict A ⋯) (V.restrict (volumeSubobjectImage f A hA) ⋯)
+'IntegrationInACVF.Section7.RVVolumeIso.subobjectImage' depends on axioms: [propext, Classical.choice, Quot.sound]

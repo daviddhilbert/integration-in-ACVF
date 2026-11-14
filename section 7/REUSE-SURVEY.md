@@ -91,3 +91,81 @@ batch has 26 exports; its receipt is
 only the actual model/BaseContext hypotheses, source isomorphism and two
 concrete admissible elementary blowups; no graph-field or new Section 5.8
 input was added. Common refinement remains separate work.
+
+## Actual common refinement
+
+The reconstructed volume overlap uses actual source images, complementary
+restrictions and density-preserving coproduct maps. The source geometry in
+`IntegrationSection6.OverlapRefinement` and `Confluence` was consulted for
+its architecture; an ordinary RV diamond was not used as a volume diamond.
+`volumeBlowup_diamond` proves the volume statement from the four pieces and
+the checked elementary-blowup comparison. The only imported combinatorial
+result is `IntegrationInACVF.Section6.Iteration.grid`, whose geometric
+hypothesis is supplied by the newly proved volume class diamond.
+
+The exact-length iterated common refinement and transitivity of actual
+common-blowup equivalence compiled, passed full type/allowed-axiom review,
+and passed the affected 88-module Library build. The 19-source sixth batch
+has 70 exports; no new Section 5.8 premise or theorem-shaped model input is
+present. The recovered `VolumeBlowupEquivalence`, `VolumeDegreeTransport`
+and `OrdinaryZeroVolumeRows` compile against these reconstructed providers.
+Ordinary degree-zero rows are support for the retained RV[0] convention,
+not an attempt to reopen the excluded empty-selected-set case of 7.5.
+
+## Concrete VF volume category and prescribed lifts
+
+`Section2VolumeBridge` identifies the density and volume-morphism definitions
+with Section2.ConcreteVolumeForms and ConcreteVolumeMorphisms. The positive
+lift existence theorem reuses the pinned predecessor's actual
+`theorem_9_16_finite_volume_of_reference_input`, supplying its graph input
+from the checked sequel `ConstructedGaussGraph.acvf_graph_input`. Generation
+of the original VF/Gamma base is retained. The reverse descent uses the
+checked `corollary_2_34_nonzero`, with actual label compatibility.
+
+The VF category uses native fixed-label partial derivatives, the checked
+generic mixed chain rule, actual same-base dimensions, and genuine
+subdomain images/preimages. The local determinant-one argument for maps
+preserving VF coordinates follows the checked private argument in
+Section9.SpecialJacobianGeneric; attribution is recorded in the source.
+It does not assert that a Jacobian is defined at every boundary point.
+The thirteen-module batch passed 56 full type/axiom inspections and its
+affected Library build (9,849 jobs counting cached dependencies).
+
+## Selected density graphs and positive ordered contractions
+
+The paper's v2 HTML/PDF became accessible through the web connector and
+Section7 was read directly. Definition7.1 and Lemma7.2 match the concrete
+elementary chart and corrected isomorphism. The numbered wrapper is now
+checked. Lemma7.5 retains the author-approved nonempty selected E scope.
+
+Density graphs and their actual volume bijections are rebuilt directly.
+NativeVolumeDomains converts the same raw points to the pinned Section5
+presentations using canonical normalization, without adding parameters.
+The construction of ordered augmented objects reuses
+`ordered_selected_fibres_finite` and the actual certified preparation
+program theorem. All contracted VF labels and selected original labels
+remain in their explicit recursive numerical order. Density transport
+follows original-label preservation. No comparison theorem is an object
+field. The standing VFFieldBase premise remains explicit for existence.
+The target fibrewise common-blowup comparison remains open.
+
+The ten-module batch passed65 full type/axiom checks, including named
+instances, and its affected Library build passed10,161 jobs with caches.
+
+## Positive products and signed coordinates
+
+Mathlib's actual `Matrix.det_permute`, `det_submatrix_equiv_self` and
+`det_fromBlocks_zero₂₁` are used with explicit coordinate maps. Polynomial
+tangent projection gives both complementary blocks; generic existence is
+kept separate from determinant comparison. The finite-volume maps bound
+RV dimensions by volume degrees, so auxiliary label arities do not enlarge
+the almost-everywhere threshold. The resulting positive product map has
+both genuine volume equations. Degree-zero factors and multiplicative
+common-blowup compatibility remain separate work.
+
+The original VolumeCoordinatePermutation and GammaRVVolumeSchemata texts
+were promoted unchanged after rebuilding their missing providers. The
+function-row validity theorem reuses checked original-base Gamma logical
+operations. No arbitrary Gamma representative is silently added to the
+generation hypothesis. All56 new exported types/axioms were inspected,
+and the affected Library build passed10,173 jobs including cached imports.

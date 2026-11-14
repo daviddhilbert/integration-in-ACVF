@@ -1,0 +1,71 @@
+@IntegrationInACVF.Section7.centralPowersOreSet : {R : Type u_1} →
+  [inst : Ring R] → (l : R) → [hl : Fact (∀ (x : R), Commute x l)] → OreLocalization.OreSet (Submonoid.powers l)
+'IntegrationInACVF.Section7.centralPowersOreSet' depends on axioms: [propext, Classical.choice, Quot.sound]
+@IntegrationInACVF.Section7.CentralAway : {R : Type u_1} →
+  [inst : Ring R] → (l : R) → [hl : Fact (∀ (x : R), Commute x l)] → Type u_1
+'IntegrationInACVF.Section7.CentralAway' depends on axioms: [propext, Classical.choice, Quot.sound]
+@IntegrationInACVF.Section7.centralAwayMap : {R : Type u_1} →
+  [inst : Ring R] → (l : R) → [hl : Fact (∀ (x : R), Commute x l)] → R →+* IntegrationInACVF.Section7.CentralAway l
+'IntegrationInACVF.Section7.centralAwayMap' depends on axioms: [propext, Classical.choice, Quot.sound]
+@IntegrationInACVF.Section7.centralAwayMap_point_isUnit : ∀ {R : Type u_1} [inst : Ring R] (l : R)
+  [hl : Fact (∀ (x : R), Commute x l)], IsUnit ((IntegrationInACVF.Section7.centralAwayMap l) l)
+'IntegrationInACVF.Section7.centralAwayMap_point_isUnit' depends on axioms: [propext, Classical.choice, Quot.sound]
+@IntegrationInACVF.Section7.centralAwayLift : {R : Type u_1} →
+  [inst : Ring R] →
+    (l : R) →
+      [hl : Fact (∀ (x : R), Commute x l)] →
+        {T : Type u_2} →
+          [inst_1 : Ring T] → (f : R →+* T) → IsUnit (f l) → IntegrationInACVF.Section7.CentralAway l →+* T
+'IntegrationInACVF.Section7.centralAwayLift' depends on axioms: [propext, Classical.choice, Quot.sound]
+@IntegrationInACVF.Section7.centralAwayLift_map : ∀ {R : Type u_1} [inst : Ring R] (l : R)
+  [hl : Fact (∀ (x : R), Commute x l)] {T : Type u_2} [inst_1 : Ring T] (f : R →+* T) (hf : IsUnit (f l)) (r : R),
+  (IntegrationInACVF.Section7.centralAwayLift l f hf) ((IntegrationInACVF.Section7.centralAwayMap l) r) = f r
+'IntegrationInACVF.Section7.centralAwayLift_map' depends on axioms: [propext, Classical.choice, Quot.sound]
+@IntegrationInACVF.Section7.centralAwayLift_unique : ∀ {R : Type u_1} [inst : Ring R] (l : R)
+  [hl : Fact (∀ (x : R), Commute x l)] {T : Type u_2} [inst_1 : Ring T] (f : R →+* T) (hf : IsUnit (f l))
+  (g : IntegrationInACVF.Section7.CentralAway l →+* T),
+  (∀ (r : R), g ((IntegrationInACVF.Section7.centralAwayMap l) r) = f r) →
+    g = IntegrationInACVF.Section7.centralAwayLift l f hf
+'IntegrationInACVF.Section7.centralAwayLift_unique' depends on axioms: [propext, Classical.choice, Quot.sound]
+@IntegrationInACVF.Section7.gradedUnitComponent : {A : ℕ → Type u_1} →
+  [inst : (n : ℕ) → AddCommGroup (A n)] →
+    [inst_1 : DirectSum.GRing A] → {T : Type u_2} → [inst_2 : Ring T] → (DirectSum ℕ A →+* T) → Tˣ → (n : ℕ) → A n →+ T
+'IntegrationInACVF.Section7.gradedUnitComponent' depends on axioms: [propext, Classical.choice, Quot.sound]
+@IntegrationInACVF.Section7.gradedUnitNormalize : {A : ℕ → Type u_1} →
+  [inst : (n : ℕ) → AddCommGroup (A n)] →
+    [inst_1 : DirectSum.GRing A] →
+      {T : Type u_2} →
+        [inst_2 : Ring T] →
+          (g : DirectSum ℕ A →+* T) → (u : Tˣ) → (∀ (x : DirectSum ℕ A), Commute (g x) ↑u) → DirectSum ℕ A →+* T
+'IntegrationInACVF.Section7.gradedUnitNormalize' depends on axioms: [propext, Classical.choice, Quot.sound]
+@IntegrationInACVF.Section7.gradedUnitNormalize_of : ∀ {A : ℕ → Type u_1} [inst : (n : ℕ) → AddCommGroup (A n)]
+  [inst_1 : DirectSum.GRing A] {T : Type u_2} [inst_2 : Ring T] (g : DirectSum ℕ A →+* T) (u : Tˣ)
+  (hu : ∀ (x : DirectSum ℕ A), Commute (g x) ↑u) (n : ℕ) (a : A n),
+  (IntegrationInACVF.Section7.gradedUnitNormalize g u hu) ((DirectSum.of A n) a) = g ((DirectSum.of A n) a) * ↑u⁻¹ ^ n
+'IntegrationInACVF.Section7.gradedUnitNormalize_of' depends on axioms: [propext, Classical.choice, Quot.sound]
+@IntegrationInACVF.Section7.gradedUnitNormalize_point : ∀ {A : ℕ → Type u_1} [inst : (n : ℕ) → AddCommGroup (A n)]
+  [inst_1 : DirectSum.GRing A] {T : Type u_2} [inst_2 : Ring T] (g : DirectSum ℕ A →+* T) (u : Tˣ)
+  (hu : ∀ (x : DirectSum ℕ A), Commute (g x) ↑u) (j : A 1),
+  g ((DirectSum.of A 1) j) = ↑u → (IntegrationInACVF.Section7.gradedUnitNormalize g u hu) ((DirectSum.of A 1) j) = 1
+'IntegrationInACVF.Section7.gradedUnitNormalize_point' depends on axioms: [propext, Classical.choice, Quot.sound]
+@IntegrationInACVF.Section7.GradedUnitZeroRing : {A : ℕ → Type u_1} →
+  [inst : (n : ℕ) → AddCommGroup (A n)] →
+    [inst_1 : DirectSum.GRing A] →
+      {T : Type u_2} →
+        [inst_2 : Ring T] → (g : DirectSum ℕ A →+* T) → (u : Tˣ) → (∀ (x : DirectSum ℕ A), Commute (g x) ↑u) → Subring T
+'IntegrationInACVF.Section7.GradedUnitZeroRing' depends on axioms: [propext, Classical.choice, Quot.sound]
+@IntegrationInACVF.Section7.gradedUnitZeroMap : {A : ℕ → Type u_1} →
+  [inst : (n : ℕ) → AddCommGroup (A n)] →
+    [inst_1 : DirectSum.GRing A] →
+      {T : Type u_2} →
+        [inst_2 : Ring T] →
+          (g : DirectSum ℕ A →+* T) →
+            (u : Tˣ) →
+              (hu : ∀ (x : DirectSum ℕ A), Commute (g x) ↑u) →
+                DirectSum ℕ A →+* ↥(IntegrationInACVF.Section7.GradedUnitZeroRing g u hu)
+'IntegrationInACVF.Section7.gradedUnitZeroMap' depends on axioms: [propext, Classical.choice, Quot.sound]
+@IntegrationInACVF.Section7.gradedUnitZeroMap_surjective : ∀ {A : ℕ → Type u_1} [inst : (n : ℕ) → AddCommGroup (A n)]
+  [inst_1 : DirectSum.GRing A] {T : Type u_2} [inst_2 : Ring T] (g : DirectSum ℕ A →+* T) (u : Tˣ)
+  (hu : ∀ (x : DirectSum ℕ A), Commute (g x) ↑u),
+  Function.Surjective ⇑(IntegrationInACVF.Section7.gradedUnitZeroMap g u hu)
+'IntegrationInACVF.Section7.gradedUnitZeroMap_surjective' depends on axioms: [propext, Classical.choice, Quot.sound]
