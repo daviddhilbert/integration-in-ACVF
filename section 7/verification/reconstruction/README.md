@@ -6,7 +6,7 @@ original local locations; this directory preserves published copies. INDEX.json
 records their byte hashes. The initial algebra receipt uses local names inside
 IntegrationInACVF.Section7; the registry uses their fully qualified names.
 
-The reports cover 678 distinct exports in 150 source modules plus Library.
+The reports cover 721 distinct exports in 159 source modules plus Library.
 They do not certify full Section 7 completion or the missing historical workspace.
 Only propext, Classical.choice and Quot.sound occur. Each batch receipt records
 the affected-library build. GitHub Actions separately builds and verifies the

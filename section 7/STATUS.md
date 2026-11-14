@@ -6,11 +6,11 @@ as accepted by the author and recorded in `TARGETS.md`.
 
 ## Current checked local boundary
 
-`Integration7.Library` integrates 150 source modules plus its entry point.
-Full exported types and allowed-axiom reports for 678 distinct declarations
+`Integration7.Library` integrates 159 source modules plus its entry point.
+Full exported types and allowed-axiom reports for 721 distinct declarations
 have been inspected in targeted incremental batches. Only `propext`,
 `Classical.choice`, and `Quot.sound` occur. The latest affected-library
-build passed, including 10,201 jobs counting its cached dependency closure.
+build passed, including 10,210 jobs counting its cached dependency closure.
 `VERIFICATION.json` seals this source boundary and records the batch receipts.
 Unchanged earlier batches were not manually audited again.
 
@@ -35,8 +35,8 @@ order are retained. Positive selected fibres keep actual finiteness explicit.
 
 Receipts are under `.scratch/recovery/`: the initial algebra and
 groupification batches contribute 34 exports; the first geometric batch
-contributes 86, the second 59, the third 89, the fourth 26, the fifth 24, the sixth 70, the seventh 56, the eighth 65, the ninth 56, the tenth 23, the eleventh 43, and the twelfth 47.
-The latest receipt is `recovered-twelfth-geometry-receipt.json`.
+contributes 86, the second 59, the third 89, the fourth 26, the fifth 24, the sixth 70, the seventh 56, the eighth 65, the ninth 56, the tenth 23, the eleventh 43, the twelfth 47, and the thirteenth 43.
+The latest receipt is `recovered-thirteenth-geometry-receipt.json`.
 These checks cover currently available sources, not the historical missing
 1,201-module/4,644-declaration working copy.
 
@@ -194,3 +194,16 @@ the project when this checkpoint was prepared. This backup commit skips a
 duplicate CI dispatch so that running verification can finish. Its result
 will cover that exact earlier revision, not the newer 150-module boundary.
 The latter has the local source/type/axiom/library checks recorded above.
+
+## All-degree quotient products and coherence
+
+The thirteenth batch proves muIsp_product for the original rvVolumeProduct
+in all degrees, including ordinary RV[0]. Actual volume isomorphisms also
+have their all-degree product. Both all-degree quotient families are additive
+commutative monoids with a well-defined graded product, and their surjective
+additive projection preserves that product. Density-bearing product data
+proves associativity and both unit isomorphisms for the original product
+in every degree. All 43 new exported types, including named instances, were
+inspected in 470 lines; the affected library passed 10,210 jobs. Full
+distributivity/zero coherence and the graded semiring assembly are still
+separate work. The selected-family comparison of 7.5 remains open.

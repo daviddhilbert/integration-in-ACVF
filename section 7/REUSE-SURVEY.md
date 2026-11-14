@@ -203,3 +203,14 @@ bound is zero. Original unit-isomorphism source was promoted unchanged.
 The zero-factor elementary chart retains the old last coordinate and density,
 and yields actual multiplicative common-blowup compatibility without point
 cancellation. No new citations or dependencies were introduced.
+
+## Thirteenth reconstruction batch: all-degree multiplication
+
+Connected the actual original product with the zero-factor charts using
+coordinate/density-preserving isomorphisms. All-degree MuIsp multiplicative
+congruence is proved by its four degree cases. Both all-degree quotient
+families use the actual coproduct and the proved product, with an additive
+projection that preserves multiplication. Native cartesian reassociation
+and singleton-unit maps provide full product associativity and unit maps;
+the density proof uses ordinary multiplication, including the zero-degree
+convention. No commutativity of the full volume ring is used.
