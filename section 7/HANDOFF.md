@@ -1,7 +1,7 @@
 # Section 7 continuation
 
 The current checked reconstruction checkpoint is described in `STATUS.md`:
-252 source modules plus their library entry point, with 1,027 distinct
+264 source modules plus their library entry point, with 1,046 distinct
 exported types and axiom reports inspected. The recovery account below
 records the earlier salvage stage; its two-module verification count is
 historical, not the current total. Additional reconstruction is continuing
@@ -144,3 +144,26 @@ presentations to these formula rows, realize the splitting certificates
 with exact row transport, then build common chains, finite-cover and
 indexed gluing. The earlier141-module CI revision ee03d8d passed run43579893295;
 the latest source boundary has only the separately recorded local checks.
+
+
+## Actual blowup witness realization
+
+The twenty-third batch connects the coproduct and elementary formula rows
+to actual volume objects, preserving their full coordinate and density
+graphs. Original-Gamma admissibility transfers to every containing small
+context by the checked algebraicity theorem. Comparison certificates now
+act on arbitrary actual endpoint interpretations and keep their exact
+original charts through finite internal parameter extensions.
+
+`GammaRVVolumeBlowupSchema.realizeOn` realizes every valid witness as an
+actual `VolumeBlowup` of the interpreted endpoints after a finite internal
+base extension. The center, remainder, elementary chart and both volume
+isomorphisms are constructed. No field or VF/Gamma generation property is
+asserted for the extension. This proves soundness; promotion of every
+required original-Gamma geometric witness, common chains, finite-cover/
+indexed gluing and positive selected7.5 remain open.
+
+The12-module/19-export batch passed full342-line type/axiom inspection and
+the affected10,316-job Library build. Earlier source leaves were unchanged
+and were not manually audited again. The252-module CI run43591052527 is
+separate and remains in progress at this checkpoint.

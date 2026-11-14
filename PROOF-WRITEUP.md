@@ -473,3 +473,13 @@ for the elementary construction. Full coordinate/density row equality
 makes the blowup-witness validity first order. The witness realization,
 promotion and compactness/gluing argument remain unfinished; these are
 checked implementation details of the intended7.5 proof.
+
+
+Section7 reconstruction update: sound geometric realization of the finite
+volume-blowup witness is checked in the264-module/1,046-export boundary.
+Normalization preserves literal tags, cone membership and the elementary
+coordinate program; the pulled-back density and exact comparison graphs
+match the formula data. This is explicit encoding and semantic transport,
+not a new mathematical replacement proof. Full witness promotion, compactness/
+gluing and positive selected7.5 remain open. The new19 exports passed the
+342-line incremental audit and10,316-job affected Library build.

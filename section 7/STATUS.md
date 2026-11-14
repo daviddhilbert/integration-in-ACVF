@@ -6,11 +6,11 @@ as accepted by the author and recorded in `TARGETS.md`.
 
 ## Current checked local boundary
 
-`Integration7.Library` integrates 252 source modules plus its entry point.
-Full exported types and allowed-axiom reports for 1,027 distinct declarations
+`Integration7.Library` integrates 264 source modules plus its entry point.
+Full exported types and allowed-axiom reports for 1,046 distinct declarations
 have been inspected in targeted incremental batches. Only `propext`,
 `Classical.choice`, and `Quot.sound` occur. The latest affected-library
-build passed, including 10,304 jobs counting its cached dependency closure.
+build passed, including 10,316 jobs counting its cached dependency closure.
 `VERIFICATION.json` seals this source boundary and records the batch receipts.
 Unchanged earlier batches were not manually audited again.
 
@@ -426,3 +426,26 @@ native relation-formula operations; it asserts no finite density fibres.
 The earlier141-module revision ee03d8d has separately passed GitHub Actions
 run43579893295, including the project build and all section verifier steps.
 That CI result does not certify this252-module revision.
+
+
+## Actual blowup witness realization
+
+The twenty-third batch connects the coproduct and elementary formula rows
+to actual volume objects, preserving their full coordinate and density
+graphs. Original-Gamma admissibility transfers to every containing small
+context by the checked algebraicity theorem. Comparison certificates now
+act on arbitrary actual endpoint interpretations and keep their exact
+original charts through finite internal parameter extensions.
+
+`GammaRVVolumeBlowupSchema.realizeOn` realizes every valid witness as an
+actual `VolumeBlowup` of the interpreted endpoints after a finite internal
+base extension. The center, remainder, elementary chart and both volume
+isomorphisms are constructed. No field or VF/Gamma generation property is
+asserted for the extension. This proves soundness; promotion of every
+required original-Gamma geometric witness, common chains, finite-cover/
+indexed gluing and positive selected7.5 remain open.
+
+The12-module/19-export batch passed full342-line type/axiom inspection and
+the affected10,316-job Library build. Earlier source leaves were unchanged
+and were not manually audited again. The252-module CI run43591052527 is
+separate and remains in progress at this checkpoint.

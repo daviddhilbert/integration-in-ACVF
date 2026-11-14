@@ -355,3 +355,26 @@ No new citation, geometric input or internal field-generation claim was
 introduced. The10-module/33-export batch passed441-line full review and the
 10,304-job affected build. Geometric blowup witness realization/promotion,
 common chains, finite-cover/indexed-gluing and7.5 remain open.
+
+
+## Twenty-third reconstruction batch: actual formula semantics
+
+The twenty-third batch connects the coproduct and elementary formula rows
+to actual volume objects, preserving their full coordinate and density
+graphs. Original-Gamma admissibility transfers to every containing small
+context by the checked algebraicity theorem. Comparison certificates now
+act on arbitrary actual endpoint interpretations and keep their exact
+original charts through finite internal parameter extensions.
+
+`GammaRVVolumeBlowupSchema.realizeOn` realizes every valid witness as an
+actual `VolumeBlowup` of the interpreted endpoints after a finite internal
+base extension. The center, remainder, elementary chart and both volume
+isomorphisms are constructed. No field or VF/Gamma generation property is
+asserted for the extension. This proves soundness; promotion of every
+required original-Gamma geometric witness, common chains, finite-cover/
+indexed gluing and positive selected7.5 remain open.
+
+The12-module/19-export batch passed full342-line type/axiom inspection and
+the affected10,316-job Library build. Earlier source leaves were unchanged
+and were not manually audited again. The252-module CI run43591052527 is
+separate and remains in progress at this checkpoint.
