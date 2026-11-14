@@ -125,4 +125,13 @@ import Integration7.RVVolumeProducts
 import Integration7.GammaFunctionRowValidity
 import Integration7.GammaRVVolumeSchemata
 
+import Integration7.GammaVolumeGraphPresentations
+import Integration7.GammaVolumeSchemaDensityGraphs
+import Integration7.GammaVolumeSchemaRealization
+import Integration7.CanonicalVolumePresentations
+import Integration7.CanonicalVolumeForms
+import Integration7.GammaVolumeCanonicalObjects
+import Integration7.VolumeParameterExtension
+import Integration7.GammaVolumePresentationContexts
+
 /-! Reconstructed Section 7 prerequisites. The section is not yet complete. -/

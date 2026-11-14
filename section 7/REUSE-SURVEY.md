@@ -169,3 +169,14 @@ function-row validity theorem reuses checked original-base Gamma logical
 operations. No arbitrary Gamma representative is silently added to the
 generation hypothesis. All56 new exported types/axioms were inspected,
 and the affected Library build passed10,173 jobs including cached imports.
+
+## Tenth reconstruction batch: volume graph realization
+
+Reused the checked Section 6 GammaFiniteGraphPresentation, finite-extra code
+extension and full Gamma relation specialization. Added a genuine functional
+density map using unique row outputs and exact support. Canonical raw RV
+adapters use normalize_eq_of_isCanonical on definability proofs while keeping
+points and functions unchanged. Presentation independence uses the checked
+coordinate/density-preserving volume isomorphism, hence the existing generic
+Jacobian proof rather than a new comparison premise. No new references or
+dependency changes were introduced.

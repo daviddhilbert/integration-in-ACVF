@@ -6,11 +6,11 @@ as accepted by the author and recorded in `TARGETS.md`.
 
 ## Current checked local boundary
 
-`Integration7.Library` integrates 123 source modules plus its entry point.
-Full exported types and allowed-axiom reports for 565 distinct declarations
+`Integration7.Library` integrates 131 source modules plus its entry point.
+Full exported types and allowed-axiom reports for 588 distinct declarations
 have been inspected in targeted incremental batches. Only `propext`,
 `Classical.choice`, and `Quot.sound` occur. The latest affected-library
-build passed, including 10,173 jobs counting its cached dependency closure.
+build passed, including 10,181 jobs counting its cached dependency closure.
 `VERIFICATION.json` seals this source boundary and records the batch receipts.
 Unchanged earlier batches were not manually audited again.
 
@@ -35,8 +35,8 @@ order are retained. Positive selected fibres keep actual finiteness explicit.
 
 Receipts are under `.scratch/recovery/`: the initial algebra and
 groupification batches contribute 34 exports; the first geometric batch
-contributes 86, the second 59, the third 89, the fourth 26, the fifth 24, the sixth 70, the seventh 56, the eighth 65, and the ninth 56.
-The latest receipt is `recovered-ninth-geometry-receipt.json`.
+contributes 86, the second 59, the third 89, the fourth 26, the fifth 24, the sixth 70, the seventh 56, the eighth 65, the ninth 56, and the tenth 23.
+The latest receipt is `recovered-tenth-geometry-receipt.json`.
 These checks cover currently available sources, not the historical missing
 1,201-module/4,644-declaration working copy.
 
@@ -137,7 +137,7 @@ Gamma base. Function-row validity is proved first-order definable, and valid
 rows have unique nonzero densities on exactly their object domain. These
 are inputs to the remaining uniform fibrewise comparison, not that theorem.
 All56 new full types and axiom reports were inspected in606 lines, and the
-affected Library build passed10,173 jobs including cached dependencies.
+affected Library build passed10,181 jobs including cached dependencies.
 
 ## Remaining work
 
@@ -146,3 +146,17 @@ lift-kernel, graded integration and function-integration chains. The accepted
 nonempty-`E` scope must be witnessed at its consumers. The former architecture
 and unavailable providers are recorded in
 `.scratch/recovery/HISTORICAL-PROOF-MAP.md`.
+
+## Uniform volume presentations
+
+The tenth batch realizes every valid Gamma RV volume-schema row as a genuine
+finite-volume object with a nonzero definable density. The full domain,
+coordinate and density graphs retain the original Gamma base plus the actual
+parameter row. Only finitely many representative codes are added to an internal
+real presentation. Their smallness is proved; generation of that code set is
+not asserted. Canonical normalization adapters retain the literal points and
+map values. Two presentations of the same graphs give genuine volume
+isomorphisms in a containing BaseContext. All 23 new types and axiom reports
+were inspected in 343 lines; the affected library passed 10,181 jobs.
+This supplies presentation independence, not the remaining uniform witness
+cover or the selected-family comparison of Lemma 7.5.
