@@ -289,3 +289,18 @@ schemata. No graph-field premise, outside citation, generation assumption
 for internal codes or dependency change was introduced. The10-module/
 49-export batch passed639-line full review and the10,261-job Library build.
 Schema realization/promotion is explicitly outside this checked boundary.
+
+
+## Nineteenth reconstruction batch: semantic realization
+
+Reused native `Map.ofFunctionalRelation` and its graph specification, native
+bijective row validity/unique reverse fibres, and the checked finite-map
+characterization of RV dimension. Native Gamma real specialization supplies
+only finite internal representative codes. The existing canonical raw-map
+and parameter-extension interfaces retain literal coordinates and density.
+The new exact row semantics prove both volume clauses and identify the
+schema-derived coordinate correspondence with the actual map's image.
+The original Gamma chart is retained exactly in the conclusion. No pin,
+citation, graph-field premise or generation assumption was added. The
+10-module/30-export batch passed712-line full review and the10,271-job build.
+Promotion and complete common-blowup witness compactness remain open.

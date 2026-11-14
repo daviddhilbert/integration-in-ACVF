@@ -1,7 +1,7 @@
 # Section 7 continuation
 
 The current checked reconstruction checkpoint is described in `STATUS.md`:
-210 source modules plus their library entry point, with 917 distinct
+220 source modules plus their library entry point, with 947 distinct
 exported types and axiom reports inspected. The recovery account below
 records the earlier salvage stage; its two-module verification count is
 historical, not the current total. Additional reconstruction is continuing
@@ -93,3 +93,14 @@ actual volume isomorphisms, and promote genuine original-base witnesses.
 Do not infer original-Gamma definability from an arbitrary comparison over
 a context containing extra representative codes. Complete common-blowup
 schemata, their finite cover/gluing and positive selected7.5 remain open.
+
+
+The nineteenth batch completes sound realization of every valid original-
+Gamma volume-isomorphism schema row. `GammaRVVolumeIsoSchema.realize` gives
+actual source/target presentations and an RVVolumeIso in a small containing
+context; its full chart is exactly the original schema row. Both volume
+clauses and the exception dimension are proved from validity. All 30 new
+exports passed the full712-line audit and the affected10,271-job build.
+Next promote actual original-base witnesses, then finish volume-blowup
+schemata, finite-cover/gluing and selected7.5. The internal extension still
+carries no VF-field or VF/Gamma generation claim. Do not repeat older audits.

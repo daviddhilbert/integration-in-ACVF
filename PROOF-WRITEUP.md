@@ -436,3 +436,12 @@ validity locus for the resulting volume-isomorphism schema is checked.
 Realization/promotion and the7.5 compactness/gluing argument remain open;
 this is still verified implementation detail rather than a completed
 replacement proof of7.5.
+
+
+Valid original-Gamma volume-isomorphism schema rows now realize actual
+volume isomorphisms. The proof reconstructs the essential chart from its
+bijectivity formula, derives the actual correspondence from the coordinate
+graphs, interprets the density ratio exactly, and bounds the exception by
+its finite map. A finite internal code extension retains the full original
+Gamma chart, without a generation claim. This is checked implementation of
+the pending compactness step; witness promotion and7.5 are still open.

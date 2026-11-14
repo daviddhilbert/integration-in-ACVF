@@ -6,11 +6,11 @@ as accepted by the author and recorded in `TARGETS.md`.
 
 ## Current checked local boundary
 
-`Integration7.Library` integrates 210 source modules plus its entry point.
-Full exported types and allowed-axiom reports for 917 distinct declarations
+`Integration7.Library` integrates 220 source modules plus its entry point.
+Full exported types and allowed-axiom reports for 947 distinct declarations
 have been inspected in targeted incremental batches. Only `propext`,
 `Classical.choice`, and `Quot.sound` occur. The latest affected-library
-build passed, including 10,261 jobs counting its cached dependency closure.
+build passed, including 10,271 jobs counting its cached dependency closure.
 `VERIFICATION.json` seals this source boundary and records the batch receipts.
 Unchanged earlier batches were not manually audited again.
 
@@ -321,3 +321,26 @@ witness cover/gluing nor7.5 is claimed. Preserve original-base graph
 definability when constructing those witnesses: an arbitrary map in a
 containing context with extra representative codes does not supply it.
 Internal containing contexts do not acquire VF/Gamma generation.
+
+
+## Sound realization of volume-isomorphism rows
+
+The nineteenth batch proves exact typed density-ratio and supported chart
+semantics, and identifies the derived schema correspondence with the actual
+coordinate correspondence of its chart. A valid essential chart constructs
+an actual definable bijection. Gamma validity gives pointwise essential
+weight balance; RV validity gives the actual polynomial chart values off
+the coded exception. Its finite map proves the strict dimension bound.
+
+`GammaRVVolumeIsoSchema.realize` now constructs the source and target volume
+presentations, a small containing BaseContext, and an actual RVVolumeIso
+realizing the original chart exactly. Only finite internal representative
+codes are added. The original real/Gamma chart remains the full graph
+certificate; no VF-field or VF/Gamma generation assertion is made about
+the containing context. The 10-module/30-export batch passed its full
+712-line type/axiom review and the affected 10,271-job Library build.
+
+The converse promotion of genuine original-base volume witnesses into
+these schemata is next. Elementary/iterated/common volume-blowup schemata,
+the finite witness cover and indexed gluing, and positive selected7.5
+remain open. This realization theorem does not discharge those obligations.

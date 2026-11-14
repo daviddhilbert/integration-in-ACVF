@@ -221,4 +221,15 @@ import Integration7.VolumeGammaWeightMaps
 import Integration7.WeightLabelVolumeCertificates
 import Integration7.WeightedJacobianFormulas
 
+import Integration7.CanonicalVolumeSchemaRows
+import Integration7.GammaFinitePresentationContexts
+import Integration7.GammaVolumeIsoSchemaContexts
+import Integration7.GammaVolumeIsoSchemaRealization
+import Integration7.TupleVolumeChartSemantics
+import Integration7.VolumeSchemaRowSemantics
+import Integration7.VolumeSchemaUnderlyingIsomorphisms
+import Integration7.VolumeSchemaValiditySemantics
+import Integration7.WeightedJacobianSemantics
+import Integration7.WeightedPairCoordinates
+
 /-! Reconstructed Section 7 prerequisites. The section is not yet complete. -/
