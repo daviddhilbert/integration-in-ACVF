@@ -6,11 +6,11 @@ as accepted by the author and recorded in `TARGETS.md`.
 
 ## Current checked local boundary
 
-`Integration7.Library` integrates 170 source modules plus its entry point.
-Full exported types and allowed-axiom reports for 764 distinct declarations
+`Integration7.Library` integrates 184 source modules plus its entry point.
+Full exported types and allowed-axiom reports for 809 distinct declarations
 have been inspected in targeted incremental batches. Only `propext`,
 `Classical.choice`, and `Quot.sound` occur. The latest affected-library
-build passed, including 10,221 jobs counting its cached dependency closure.
+build passed, including 10,235 jobs counting its cached dependency closure.
 `VERIFICATION.json` seals this source boundary and records the batch receipts.
 Unchanged earlier batches were not manually audited again.
 
@@ -35,8 +35,8 @@ order are retained. Positive selected fibres keep actual finiteness explicit.
 
 Receipts are under `.scratch/recovery/`: the initial algebra and
 groupification batches contribute 34 exports; the first geometric batch
-contributes 86, the second 59, the third 89, the fourth 26, the fifth 24, the sixth 70, the seventh 56, the eighth 65, the ninth 56, the tenth 23, the eleventh 43, the twelfth 47, the thirteenth 43, and the fourteenth 43.
-The latest receipt is `recovered-fourteenth-geometry-receipt.json`.
+contributes 86, the second 59, the third 89, the fourth 26, the fifth 24, the sixth 70, the seventh 56, the eighth 65, the ninth 56, the tenth 23, the eleventh 43, the twelfth 47, the thirteenth 43, the fourteenth 43, and the fifteenth 45.
+The latest receipt is `recovered-fifteenth-geometry-receipt.json`.
 These checks cover currently available sources, not the historical missing
 1,201-module/4,644-declaration working copy.
 
@@ -221,3 +221,27 @@ all-degree multiplication, including ordinary RV[0]. The v2 statement was
 compared directly with the source paper. All 43 exported types, including
 named instances, were inspected in 519 lines; the affected library passed
 10,221 jobs. No part of Lemma7.5 is claimed by this congruence result.
+
+## Uniform finite volume-isomorphism certificates
+
+The fifteenth batch proves parameter extension for actual positive volume
+objects, essential isomorphisms, both volume equations, elementary charts
+and common forward blowups with exact lengths. Finite VF tuples have genuine
+small substructure contexts; neither VF-field closure nor VF/Gamma generation
+is asserted for those contexts. Selected rows retain their coordinates and
+density.
+
+The native polynomial residue charts have now been parameterized uniformly.
+`volumeFamilyChartGraph_definable` proves first-order definability with the
+parameter tuple free. `RVVolumeIso.exists_finite_volume_charts` proves a
+finite generic cover for every actual volume isomorphism.
+`RVVolumeIso.exists_finite_certificate` supplies the actual exceptional set
+and a finite-fibre map into fewer RV coordinates; the converse certificate
+lemma proves the RV volume equation. No Jacobian existence field or open
+geometric obligation was added. The verifier also accepts Lean's explicit
+“does not depend on any axioms” report for the finite witness index alias.
+
+All 45 new exported types and reports were inspected in the 609-line audit;
+the affected Library build passed 10,235 jobs. The next step remains encoding
+and gluing complete common-blowup witnesses over original parameter names.
+The accepted positive selected-degree Lemma7.5 remains open.

@@ -405,3 +405,10 @@ quotient projection. These spell out the paper's formal congruence argument
 and are not currently classified as a substantially different mathematical
 proof. The direct left-distributivity chart preserves coordinate order; the
 separate block-swap argument retains its determinant sign.
+
+
+The reconstructed uniform Jacobian certificate proof makes explicit the
+finite polynomial supports and smaller-dimensional exceptions needed by
+the compactness step for7.5. Its generic-cover argument reuses the checked
+predecessor's residue charts and full-dimension argument. This is verified
+implementation detail; the complete7.5 comparison remains open.

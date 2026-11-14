@@ -1,7 +1,7 @@
 # Section 7 continuation
 
 The current checked reconstruction checkpoint is described in `STATUS.md`:
-170 source modules plus their library entry point, with 764 distinct
+184 source modules plus their library entry point, with 809 distinct
 exported types and axiom reports inspected. The recovery account below
 records the earlier salvage stage; its two-module verification count is
 historical, not the current total. Additional reconstruction is continuing
@@ -64,3 +64,9 @@ positive selected-degree headline and scope documentation, exhibit
 nonemptiness at its consumers, and resume the remaining applications.
 Do not restart completed proofs or repeat a full audit merely because
 this scope restriction was accepted.
+
+The fifteenth reconstruction batch adds uniform certified residue-Jacobian
+chart graphs and an actual finite certificate for every RV volume
+isomorphism. Complete common-blowup witness schemata, their finite cover
+and the selected contraction comparison remain to be proved. Small finite
+parameter contexts do not supply field or generation hypotheses.

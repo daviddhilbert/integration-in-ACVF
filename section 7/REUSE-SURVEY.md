@@ -225,3 +225,25 @@ quotients are actual direct-sum semirings and the canonical projection is
 surjective. Fresh comparison with arXiv:0809.0473v2, Section7 lines1113–1120,
 identifies the completed relation statement as Lemma7.4. No external theorem
 or new generation hypothesis is used.
+
+## Fifteenth reconstruction batch: uniform volume certificates
+
+Reused pinned predecessor Section4.RVParameterInvariance.rvDim_extend_le,
+Section4.SmallGeneratedBase.small_generated_finite_extension, and the actual
+Section6.ParameterExtension maps. The parameterized chart normalization,
+certificates and output adapt the logical construction in the predecessor's
+Section9.VolumeChartCertificates, VolumeChartOutput and
+ResidueChartCertificateLogic; the native arithmetic and tangent proofs are
+imported directly. The finite generic cover uses
+exists_finite_volume_chart_cover and
+exists_chartValue_of_full_volumePair_dimension from the pinned Section9
+sources. These are already formalized results, with the original canonical
+structure, BaseContext, finite-volume, nonzero-coordinate and positive-degree
+hypotheses retained. Revision remains 9cc9760892092dd34cfad4a6dee655843c52f30c;
+no dependency or citation was added. No LICENSE file was available at that
+checkout root, so no new licensing claim is made for adapted source.
+
+The 14-module/45-export batch passed compilation, its complete 609-line
+type/axiom review, and the affected 10,235-job library build. These formulas
+encode actual chart values; they do not assume a definable common-blowup
+relation or supply the unfinished witness cover for7.5.

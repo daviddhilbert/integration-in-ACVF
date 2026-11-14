@@ -46,6 +46,8 @@ set_option pp.proofs false
     if result.returncode:
         raise RuntimeError(f'Lean audit failed; see {log}')
     reports = re.findall(r"'([^']+)' depends on axioms: \[([^]]*)\]", result.stdout, re.S)
+    reports += [(name, '') for name in re.findall(
+        r"'([^']+)' does not depend on any axioms", result.stdout)]
     if {name for name, _ in reports} != set(names) or len(reports) != len(names):
         raise RuntimeError('Missing or unexpected axiom reports')
     for name, body in reports:
