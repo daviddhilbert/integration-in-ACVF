@@ -338,3 +338,20 @@ infer either from arbitrary real containment. No new reference, pin or
 geometric premise was introduced into the7.5 target. The12-module/23-export
 batch passed625-line full review and the10,294-job affected build. Common-
 blowup formula operations, witness promotion/cover/gluing and7.5 remain open.
+
+
+## Twenty-second reconstruction batch: geometric density formulas
+
+Native same-row formulas, graph presentation congruence, label-image/tagged
+coproduct formula operations and elementary coordinate programs are reused
+without changing the pins. The density template uses their formula fields
+only and does not claim finite fibres. Nonzero density guards preserve the
+given typed rows. Native tag injectivity/disjointness proves coproduct
+functionality; the old-label projection proves elementary functionality.
+Actual native coproducts and explicitly Gamma-admissible elementary objects
+provide valid finite bounds. Full coordinate/density row equality and the
+proved comparison validity yield the first-order blowup-witness locus.
+No new citation, geometric input or internal field-generation claim was
+introduced. The10-module/33-export batch passed441-line full review and the
+10,304-job affected build. Geometric blowup witness realization/promotion,
+common chains, finite-cover/indexed-gluing and7.5 remain open.

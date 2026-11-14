@@ -256,4 +256,15 @@ import Integration7.VolumeCertificateRowRecognition
 import Integration7.VolumeSchemaOrdinaryValidity
 import Integration7.WeightedSchemaRowFibres
 
+import Integration7.GammaFunctionalRowRecognition
+import Integration7.GammaVolumeBlowupSchemata
+import Integration7.GammaVolumeCoproductDensities
+import Integration7.GammaVolumeCoproductFormulas
+import Integration7.GammaVolumeElementaryBounds
+import Integration7.GammaVolumeElementaryDensities
+import Integration7.GammaVolumeElementaryFormulas
+import Integration7.GammaVolumePresentationCongruence
+import Integration7.GammaVolumeSchemaBounds
+import Integration7.GammaVolumeSchemaRowEquality
+
 /-! Reconstructed Section 7 prerequisites. The section is not yet complete. -/

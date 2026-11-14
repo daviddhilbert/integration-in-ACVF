@@ -6,11 +6,11 @@ as accepted by the author and recorded in `TARGETS.md`.
 
 ## Current checked local boundary
 
-`Integration7.Library` integrates 242 source modules plus its entry point.
-Full exported types and allowed-axiom reports for 994 distinct declarations
+`Integration7.Library` integrates 252 source modules plus its entry point.
+Full exported types and allowed-axiom reports for 1,027 distinct declarations
 have been inspected in targeted incremental batches. Only `propext`,
 `Classical.choice`, and `Quot.sound` occur. The latest affected-library
-build passed, including 10,294 jobs counting its cached dependency closure.
+build passed, including 10,304 jobs counting its cached dependency closure.
 `VERIFICATION.json` seals this source boundary and records the batch receipts.
 Unchanged earlier batches were not manually audited again.
 
@@ -400,3 +400,29 @@ The12-module/23-export batch passed full625-line type/axiom inspection and
 the affected10,294-job Library build. Next assemble volume schema row
 agreement and actual coproduct/elementary blowup formula operations, then
 complete common-blowup witness promotion, finite cover and indexed gluing.
+
+
+## Density formulas for geometric blowup witnesses
+
+The twenty-second batch supplies full volume-schema row equality and
+presentation transport. Coproduct schemata keep the original density on
+each tagged summand, with proved exact support, uniqueness and first-order
+function validity. Elementary schemata use the native last-coordinate
+blowup and pull the density back along the old-label projection. Valid
+coordinate-map bounds are obtained from actual finite coproducts and,
+for elementary blowups, explicit original-Gamma admissibility.
+
+`GammaRVVolumeBlowupSchema` now has finite center/remainder data and source/
+result volume-comparison certificates. Its validity checks full coordinate
+and density row equality, admissibility and both comparison certificates;
+the complete locus is proved original-base definable. This is formula data
+and validity only: realization and promotion of geometric blowup witnesses
+are next, followed by chains/common witnesses, finite cover and indexed
+gluing. Positive selected7.5 remains open.
+
+The10-module/33-export batch passed full441-line type/axiom review and the
+affected10,304-job Library build. The densityTemplate is used only for
+native relation-formula operations; it asserts no finite density fibres.
+The earlier141-module revision ee03d8d has separately passed GitHub Actions
+run43579893295, including the project build and all section verifier steps.
+That CI result does not certify this252-module revision.

@@ -464,3 +464,12 @@ formulas to those generators; its auxiliary tuple is then existentially
 hidden. The comparison chart retains its full original-Gamma certificate,
 and both endpoint schemata can be fixed exactly. This is implementation of
 the pending witness-compactness argument, not a completed proof of7.5.
+
+
+Coproduct and elementary-blowup volume formula operations now retain the
+actual density and have proved function validity. Native finite objects
+provide the coordinate bounds, with original-Gamma admissibility explicit
+for the elementary construction. Full coordinate/density row equality
+makes the blowup-witness validity first order. The witness realization,
+promotion and compactness/gluing argument remain unfinished; these are
+checked implementation details of the intended7.5 proof.

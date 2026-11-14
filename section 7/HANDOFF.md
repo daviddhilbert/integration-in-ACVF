@@ -1,7 +1,7 @@
 # Section 7 continuation
 
 The current checked reconstruction checkpoint is described in `STATUS.md`:
-242 source modules plus their library entry point, with 994 distinct
+252 source modules plus their library entry point, with 1,027 distinct
 exported types and axiom reports inspected. The recovery account below
 records the earlier salvage stage; its two-module verification count is
 historical, not the current total. Additional reconstruction is continuing
@@ -132,3 +132,15 @@ blowup formula/presentation operations, then common witness schemata and
 actual promotion/finite-cover/indexed-gluing. Do not treat arbitrary enlarged
 real presentations as original-Gamma witnesses or assert field/generation
 for internal code contexts. Positive selected7.5 remains open.
+
+
+The twenty-second batch establishes exact coproduct/elementary density
+formulas and function validity, existence of valid coordinate-map bounds,
+full schema-row equality/presentation transport, and GammaRVVolumeBlowupSchema
+with proved original-base validity. The10 modules/33 exports passed the
+full441-line audit and10,304-job affected build. Its geometric realization
+and promotion remain open. Next connect actual coproduct/elementary
+presentations to these formula rows, realize the splitting certificates
+with exact row transport, then build common chains, finite-cover and
+indexed gluing. The earlier141-module CI revision ee03d8d passed run43579893295;
+the latest source boundary has only the separately recorded local checks.
