@@ -1,0 +1,1390 @@
+@IntegrationInACVF.Section7.RVMapGamma.preimage : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {S : Set.{0} M} {a b : Nat}
+  {A : SpecialTransformations.DefinableGeometry.DefSet.{0, 0} (SpecialTransformations.Section4.rawRVSpace a) S}
+  {D : SpecialTransformations.DefinableGeometry.DefSet.{0, 0} (SpecialTransformations.Section4.rawRVSpace b) S}
+  {f : SpecialTransformations.DefinableGeometry.Map.{0, 0} A D},
+  IntegrationInACVF.Section7.RVMapGamma f B →
+    ∀ (E : SpecialTransformations.DefinableGeometry.DefSet.{0, 0} (SpecialTransformations.Section4.rawRVSpace b) S),
+      SpecialTransformations.Section5.GammaSetDefinable B
+          (Set.ofPred.{0} fun (q : SpecialTransformations.Section5.Point 0 b) =>
+            Membership.mem.{0, 0} (SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} E) q.2) →
+        SpecialTransformations.Section5.GammaSetDefinable B
+          (Set.ofPred.{0} fun (p : SpecialTransformations.Section5.Point 0 a) =>
+            Membership.mem.{0, 0}
+              (SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+                (IntegrationInACVF.Section7.definableMapPreimage.{0, 0} f E))
+              p.2)
+'IntegrationInACVF.Section7.RVMapGamma.preimage' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@IntegrationInACVF.Section7.ElementaryBlowup.packedChartMap : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {S : Set.{0} M} →
+        {k : Nat} →
+          {U W : IntegrationInACVF.Section7.PositiveRVVolumeObject S k} →
+            IntegrationInACVF.Section7.ElementaryBlowup U W →
+              SpecialTransformations.DefinableGeometry.Map.{0, 0}
+                (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} W.underlying).domain
+                (SpecialTransformations.Section4.rvProductDomain
+                  (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.underlying).domain
+                  (IntegrationInACVF.Section7.blowupConeSet S))
+'IntegrationInACVF.Section7.ElementaryBlowup.packedChartMap' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.ElementaryBlowup.packedChartMap_bijective : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set.{0} M}
+  {k : Nat} {U W : IntegrationInACVF.Section7.PositiveRVVolumeObject S k}
+  (b : IntegrationInACVF.Section7.ElementaryBlowup U W),
+  Function.Bijective.{1, 1} (SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0} b.packedChartMap)
+'IntegrationInACVF.Section7.ElementaryBlowup.packedChartMap_bijective' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.ElementaryBlowup.gamma_essential_packed_chart : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set.{0} M}
+  {k : Nat} {B : SpecialTransformations.Section3.GammaParameters.Base}
+  {U W : IntegrationInACVF.Section7.PositiveRVVolumeObject S k} (b : IntegrationInACVF.Section7.ElementaryBlowup U W),
+  IntegrationInACVF.Section7.VolumeObjectGamma W B →
+    IntegrationInACVF.Section7.RVMapGamma b.packedChartMap B →
+      IntegrationInACVF.Section7.RVMapGamma b.packedEssentialChartMap B
+'IntegrationInACVF.Section7.ElementaryBlowup.gamma_essential_packed_chart' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.ElementaryBlowup.gamma_projection : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set.{0} M}
+  {k : Nat} {B : SpecialTransformations.Section3.GammaParameters.Base}
+  {U W : IntegrationInACVF.Section7.PositiveRVVolumeObject S k} (b : IntegrationInACVF.Section7.ElementaryBlowup U W),
+  CanonicalStructure.IsCanonical →
+    IntegrationInACVF.Section7.RVMapGamma b.packedChartMap B → IntegrationInACVF.Section7.RVMapGamma b.projection B
+'IntegrationInACVF.Section7.ElementaryBlowup.gamma_projection' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.ElementaryBlowup.gamma_source_preimage : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set.{0} M}
+  {k : Nat} {B : SpecialTransformations.Section3.GammaParameters.Base}
+  {U W : IntegrationInACVF.Section7.PositiveRVVolumeObject S k} (b : IntegrationInACVF.Section7.ElementaryBlowup U W),
+  CanonicalStructure.IsCanonical →
+    IntegrationInACVF.Section7.RVMapGamma b.packedChartMap B →
+      ∀
+        (A :
+          SpecialTransformations.DefinableGeometry.DefSet.{0, 0}
+            (SpecialTransformations.Section4.rawRVSpace
+              (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.underlying).arity)
+            S),
+        SpecialTransformations.Section5.GammaSetDefinable B
+            (Set.ofPred.{0}
+              fun
+                (p :
+                  SpecialTransformations.Section5.Point 0
+                    (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.underlying).arity) =>
+              Membership.mem.{0, 0} (SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} A) p.2) →
+          SpecialTransformations.Section5.GammaSetDefinable B
+            (Set.ofPred.{0}
+              fun
+                (p :
+                  SpecialTransformations.Section5.Point 0
+                    (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} W.underlying).arity) =>
+              Membership.mem.{0, 0}
+                (SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} (b.sourcePreimage A)) p.2)
+'IntegrationInACVF.Section7.ElementaryBlowup.gamma_source_preimage' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.ElementaryBlowup.gamma_restricted_packed_chart : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set.{0} M}
+  {k : Nat} {B : SpecialTransformations.Section3.GammaParameters.Base}
+  {U W : IntegrationInACVF.Section7.PositiveRVVolumeObject S k} (b : IntegrationInACVF.Section7.ElementaryBlowup U W),
+  CanonicalStructure.IsCanonical →
+    IntegrationInACVF.Section7.RVMapGamma b.packedChartMap B →
+      ∀
+        (A :
+          SpecialTransformations.DefinableGeometry.DefSet.{0, 0}
+            (SpecialTransformations.Section4.rawRVSpace
+              (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.underlying).arity)
+            S)
+        (hA :
+          LE.le.{0} (SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} A)
+            (SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+              (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.underlying).domain)),
+        SpecialTransformations.Section5.GammaSetDefinable B
+            (Set.ofPred.{0}
+              fun
+                (p :
+                  SpecialTransformations.Section5.Point 0
+                    (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.underlying).arity) =>
+              Membership.mem.{0, 0} (SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} A) p.2) →
+          IntegrationInACVF.Section7.RVMapGamma (b.restrict A hA).packedChartMap B
+'IntegrationInACVF.Section7.ElementaryBlowup.gamma_restricted_packed_chart' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.gamma_canonical_full_packed_chart : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {k : Nat}
+  {B : SpecialTransformations.Section3.GammaParameters.Base},
+  CanonicalStructure.IsCanonical →
+    ∀ (C : SpecialTransformations.Section3.BaseContext M)
+      (U : IntegrationInACVF.Section7.PositiveRVVolumeObject (↑C.base) k)
+      (hAd : IntegrationInACVF.Section7.BlowupAdmissible U),
+      IntegrationInACVF.Section7.VolumeObjectGamma U B →
+        IntegrationInACVF.Section7.RVMapGamma (IntegrationInACVF.Section7.elementaryVolumeBlowup C U hAd).packedChartMap
+          B
+'IntegrationInACVF.Section7.gamma_canonical_full_packed_chart' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.gamma_rv_left_tag_map : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {S : Set.{0} M} {a : Nat},
+  CanonicalStructure.IsCanonical →
+    ∀ (A : SpecialTransformations.DefinableGeometry.DefSet.{0, 0} (SpecialTransformations.Section4.rawRVSpace a) S)
+      (b : Nat),
+      SpecialTransformations.Section5.GammaSetDefinable B
+          (Set.ofPred.{0} fun (p : SpecialTransformations.Section5.Point 0 a) =>
+            Membership.mem.{0, 0} (SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} A) p.2) →
+        IntegrationInACVF.Section7.RVMapGamma (SpecialTransformations.Section4.rvLeftTagMap A b) B
+'IntegrationInACVF.Section7.gamma_rv_left_tag_map' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@IntegrationInACVF.Section7.gamma_rv_right_tag_map : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {S : Set.{0} M} {a : Nat},
+  CanonicalStructure.IsCanonical →
+    ∀ (A : SpecialTransformations.DefinableGeometry.DefSet.{0, 0} (SpecialTransformations.Section4.rawRVSpace a) S)
+      (b : Nat),
+      SpecialTransformations.Section5.GammaSetDefinable B
+          (Set.ofPred.{0} fun (p : SpecialTransformations.Section5.Point 0 a) =>
+            Membership.mem.{0, 0} (SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} A) p.2) →
+        IntegrationInACVF.Section7.RVMapGamma (SpecialTransformations.Section4.rvRightTagMap A b) B
+'IntegrationInACVF.Section7.gamma_rv_right_tag_map' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@IntegrationInACVF.Section7.VolumeObjectGamma.identity_iso : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {k : Nat}
+  {B : SpecialTransformations.Section3.GammaParameters.Base} (hc : CanonicalStructure.IsCanonical)
+  (C : SpecialTransformations.Section3.BaseContext M)
+  {U : IntegrationInACVF.Section7.PositiveRVVolumeObject (↑C.base) k},
+  IntegrationInACVF.Section7.VolumeObjectGamma U B →
+    (IntegrationInACVF.Section7.RVVolumeIso.refl hc C U).GammaDefinable B
+'IntegrationInACVF.Section7.VolumeObjectGamma.identity_iso' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.gamma_volume_coprod_swap : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {k : Nat}
+  {B : SpecialTransformations.Section3.GammaParameters.Base} (hc : CanonicalStructure.IsCanonical)
+  (C : SpecialTransformations.Section3.BaseContext M)
+  {U V : IntegrationInACVF.Section7.PositiveRVVolumeObject (↑C.base) k},
+  IntegrationInACVF.Section7.VolumeObjectGamma U B →
+    IntegrationInACVF.Section7.VolumeObjectGamma V B →
+      (IntegrationInACVF.Section7.volumeCoprodSwap hc C U V).GammaDefinable B
+'IntegrationInACVF.Section7.gamma_volume_coprod_swap' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@IntegrationInACVF.Section7.gamma_volume_iso_of_label_identity : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {k : Nat}
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {S : Set.{0} M},
+  CanonicalStructure.IsCanonical →
+    ∀ {U V : IntegrationInACVF.Section7.PositiveRVVolumeObject S k} (e : IntegrationInACVF.Section7.RVVolumeIso U V),
+      IntegrationInACVF.Section7.VolumeObjectGamma U B →
+        ∀
+          (ha :
+            Eq.{1} (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.underlying).arity
+              (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} V.underlying).arity),
+          (∀
+              (u :
+                ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+                    (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.essential).domain)),
+              Eq.{1}
+                (↑(SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0}
+                    (IntegrationInACVF.Section7.finiteIsoMap e.iso) u))
+                (Function.comp.{1, 1, 1} (↑u) (Fin.cast ⋯))) →
+            e.GammaDefinable B
+'IntegrationInACVF.Section7.gamma_volume_iso_of_label_identity' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.gamma_volume_restriction_carrier_iso : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {k : Nat}
+  {B : SpecialTransformations.Section3.GammaParameters.Base} (hc : CanonicalStructure.IsCanonical)
+  (C : SpecialTransformations.Section3.BaseContext M)
+  (U : IntegrationInACVF.Section7.PositiveRVVolumeObject (↑C.base) k),
+  IntegrationInACVF.Section7.VolumeObjectGamma U B →
+    ∀
+      (A D :
+        SpecialTransformations.DefinableGeometry.DefSet.{0, 0}
+          (SpecialTransformations.Section4.rawRVSpace
+            (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.underlying).arity)
+          ↑C.base)
+      (hA :
+        LE.le.{0} (SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} A)
+          (SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+            (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.underlying).domain))
+      (hD :
+        LE.le.{0} (SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} D)
+          (SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+            (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.underlying).domain))
+      (he :
+        Eq.{1} (SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} A)
+          (SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} D)),
+      SpecialTransformations.Section5.GammaSetDefinable B
+          (Set.ofPred.{0}
+            fun
+              (p :
+                SpecialTransformations.Section5.Point 0
+                  (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.underlying).arity) =>
+            Membership.mem.{0, 0} (SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} A) p.2) →
+        (IntegrationInACVF.Section7.volumeRestrictionCarrierIso hc C U A D hA hD he).GammaDefinable B
+'IntegrationInACVF.Section7.gamma_volume_restriction_carrier_iso' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.gamma_volume_restriction_trans_iso : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {k : Nat}
+  {B : SpecialTransformations.Section3.GammaParameters.Base} (hc : CanonicalStructure.IsCanonical)
+  (C : SpecialTransformations.Section3.BaseContext M)
+  (U : IntegrationInACVF.Section7.PositiveRVVolumeObject (↑C.base) k),
+  IntegrationInACVF.Section7.VolumeObjectGamma U B →
+    ∀
+      (A D :
+        SpecialTransformations.DefinableGeometry.DefSet.{0, 0}
+          (SpecialTransformations.Section4.rawRVSpace
+            (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.underlying).arity)
+          ↑C.base)
+      (hA :
+        LE.le.{0} (SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} A)
+          (SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+            (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.underlying).domain))
+      (hDA :
+        LE.le.{0} (SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} D)
+          (SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} A)),
+      SpecialTransformations.Section5.GammaSetDefinable B
+          (Set.ofPred.{0}
+            fun
+              (p :
+                SpecialTransformations.Section5.Point 0
+                  (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.underlying).arity) =>
+            Membership.mem.{0, 0} (SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} A) p.2) →
+        SpecialTransformations.Section5.GammaSetDefinable B
+            (Set.ofPred.{0}
+              fun
+                (p :
+                  SpecialTransformations.Section5.Point 0
+                    (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.underlying).arity) =>
+              Membership.mem.{0, 0} (SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} D) p.2) →
+          (IntegrationInACVF.Section7.volumeRestrictionTransIso hc C U A D hA hDA).GammaDefinable B
+'IntegrationInACVF.Section7.gamma_volume_restriction_trans_iso' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.gamma_actual_volume_complement_partition : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {k : Nat}
+  {B : SpecialTransformations.Section3.GammaParameters.Base} (hc : CanonicalStructure.IsCanonical)
+  (C : SpecialTransformations.Section3.BaseContext M)
+  (U : IntegrationInACVF.Section7.PositiveRVVolumeObject (↑C.base) k),
+  IntegrationInACVF.Section7.VolumeObjectGamma U B →
+    ∀
+      (A :
+        SpecialTransformations.DefinableGeometry.DefSet.{0, 0}
+          (SpecialTransformations.Section4.rawRVSpace
+            (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.underlying).arity)
+          ↑C.base)
+      (hA :
+        LE.le.{0} (SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} A)
+          (SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+            (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.underlying).domain)),
+      SpecialTransformations.Section5.GammaSetDefinable B
+          (Set.ofPred.{0}
+            fun
+              (p :
+                SpecialTransformations.Section5.Point 0
+                  (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.underlying).arity) =>
+            Membership.mem.{0, 0} (SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} A) p.2) →
+        (IntegrationInACVF.Section7.volumeComplementPartitionIso hc C U A hA).GammaDefinable B
+'IntegrationInACVF.Section7.gamma_actual_volume_complement_partition' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.GammaBlowupCenter : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {S : Set.{0} M} →
+        {k : Nat} →
+          IntegrationInACVF.Section7.PositiveRVVolumeObject S k →
+            SpecialTransformations.Section3.GammaParameters.Base → Prop
+'IntegrationInACVF.Section7.GammaBlowupCenter' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@IntegrationInACVF.Section7.GammaBlowupCenter.restrict : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {S : Set.{0} M} {k : Nat}
+  {U : IntegrationInACVF.Section7.PositiveRVVolumeObject S k},
+  IntegrationInACVF.Section7.GammaBlowupCenter U B →
+    ∀
+      (A :
+        SpecialTransformations.DefinableGeometry.DefSet.{0, 0}
+          (SpecialTransformations.Section4.rawRVSpace
+            (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.underlying).arity)
+          S)
+      (hA :
+        LE.le.{0} (SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} A)
+          (SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+            (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.underlying).domain)),
+      IntegrationInACVF.Section7.GammaBlowupCenter (U.restrict A hA) B
+'IntegrationInACVF.Section7.GammaBlowupCenter.restrict' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.GammaBlowupCenter.canonical : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {S : Set.{0} M} {k : Nat}
+  (hc : CanonicalStructure.IsCanonical)
+  (U : IntegrationInACVF.Section6.FiniteRV.GammaObjectAt B S (HAdd.hAdd.{0, 0, 0} k 1))
+  (ω :
+    IntegrationInACVF.Section7.VolumeForm
+      (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0}
+          (IntegrationInACVF.Section7.canonicalFiniteRVObject hc U.object)).domain),
+  IntegrationInACVF.Section6.GammaAdmissible U.toGamma.toGammaRVObject (Fin.last k) →
+    IntegrationInACVF.Section7.GammaBlowupCenter
+      { underlying := IntegrationInACVF.Section7.canonicalFiniteRVObject hc U.object, form := ω } B
+'IntegrationInACVF.Section7.GammaBlowupCenter.canonical' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.GammaBlowupCenter.schema_row : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {S : Set.{0} M} {k p : Nat}
+  {sp : Fin p → SpecialTransformations.Milestone0.SortTag} (z : Fin p → M)
+  (U : IntegrationInACVF.Section7.PositiveRVVolumeObject S k),
+  IntegrationInACVF.Section7.BlowupAdmissible U →
+    IntegrationInACVF.Section7.GammaBlowupCenter U
+        { real := Union.union.{0} B.real (Set.range.{0, 1} z), gamma := B.gamma } →
+      ∀
+        (F :
+          IntegrationInACVF.Section7.GammaRVVolumeSchema B p
+            (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.underlying).arity k sp),
+        IntegrationInACVF.Section7.RVVolumeSchemaRow U F z →
+          ∀
+            (P :
+              IntegrationInACVF.Section6.GammaFiniteGraphPresentation
+                { real := Union.union.{0} B.real (Set.range.{0, 1} z), gamma := B.gamma }
+                (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.underlying).arity (HAdd.hAdd.{0, 0, 0} k 1)
+                (F.object.rowDomain z) (F.object.rowVolume z)),
+            IntegrationInACVF.Section6.GammaAdmissible P.toGamma.toGammaRVObject (Fin.last k)
+'IntegrationInACVF.Section7.GammaBlowupCenter.schema_row' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.VolumeBlowup.GammaDefinable : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {k : Nat} →
+        {S : Set.{0} M} →
+          {U W : IntegrationInACVF.Section7.PositiveRVVolumeObject S k} →
+            IntegrationInACVF.Section7.VolumeBlowup U W → SpecialTransformations.Section3.GammaParameters.Base → Prop
+'IntegrationInACVF.Section7.VolumeBlowup.GammaDefinable' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.VolumeBlowup.GammaDefinable.on_coprod : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {k : Nat}
+  {B : SpecialTransformations.Section3.GammaParameters.Base} (hc : CanonicalStructure.IsCanonical)
+  (C : SpecialTransformations.Section3.BaseContext M)
+  {A D : IntegrationInACVF.Section7.PositiveRVVolumeObject (↑C.base) k}
+  (b : IntegrationInACVF.Section7.ElementaryBlowup A D)
+  (R : IntegrationInACVF.Section7.PositiveRVVolumeObject (↑C.base) k),
+  IntegrationInACVF.Section7.VolumeObjectGamma A B →
+    IntegrationInACVF.Section7.VolumeObjectGamma D B →
+      IntegrationInACVF.Section7.VolumeObjectGamma R B →
+        IntegrationInACVF.Section7.RVMapGamma b.packedChartMap B →
+          IntegrationInACVF.Section7.GammaBlowupCenter A B →
+            (IntegrationInACVF.Section7.VolumeBlowup.on_coprod hc C b R).GammaDefinable B
+'IntegrationInACVF.Section7.VolumeBlowup.GammaDefinable.on_coprod' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.VolumeBlowup.GammaDefinable.transport : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {k : Nat}
+  {B : SpecialTransformations.Section3.GammaParameters.Base} (hc : CanonicalStructure.IsCanonical)
+  (C : SpecialTransformations.Section3.BaseContext M)
+  {U U' W W' : IntegrationInACVF.Section7.PositiveRVVolumeObject (↑C.base) k}
+  {b : IntegrationInACVF.Section7.VolumeBlowup U W},
+  b.GammaDefinable B →
+    ∀ (f : IntegrationInACVF.Section7.RVVolumeIso U' U) (g : IntegrationInACVF.Section7.RVVolumeIso W' W),
+      f.GammaDefinable B →
+        g.GammaDefinable B → (IntegrationInACVF.Section7.VolumeBlowup.transport hc C b f g).GammaDefinable B
+'IntegrationInACVF.Section7.VolumeBlowup.GammaDefinable.transport' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.VolumeObjectGamma.canonical_blowup : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {k : Nat}
+  {B : SpecialTransformations.Section3.GammaParameters.Base} (hc : CanonicalStructure.IsCanonical)
+  (C : SpecialTransformations.Section3.BaseContext M)
+  (A R : IntegrationInACVF.Section7.PositiveRVVolumeObject (↑C.base) k),
+  IntegrationInACVF.Section7.VolumeObjectGamma A B →
+    IntegrationInACVF.Section7.VolumeObjectGamma R B →
+      ∀ (hAd : IntegrationInACVF.Section7.BlowupAdmissible A),
+        IntegrationInACVF.Section7.GammaBlowupCenter A B →
+          (IntegrationInACVF.Section7.VolumeBlowup.on_coprod hc C
+                (IntegrationInACVF.Section7.elementaryVolumeBlowup C A hAd) R).GammaDefinable
+            B
+'IntegrationInACVF.Section7.VolumeObjectGamma.canonical_blowup' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.ElementaryBlowup.exists_gamma_canonical_iso : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {k : Nat}
+  {B : SpecialTransformations.Section3.GammaParameters.Base},
+  CanonicalStructure.IsCanonical →
+    ∀ (C : SpecialTransformations.Section3.BaseContext M)
+      {U W : IntegrationInACVF.Section7.PositiveRVVolumeObject (↑C.base) k}
+      (b : IntegrationInACVF.Section7.ElementaryBlowup U W),
+      IntegrationInACVF.Section7.VolumeObjectGamma U B →
+        IntegrationInACVF.Section7.VolumeObjectGamma W B →
+          IntegrationInACVF.Section7.RVMapGamma b.packedChartMap B →
+            Exists.{1}
+              fun
+                (e :
+                  IntegrationInACVF.Section7.RVVolumeIso (IntegrationInACVF.Section7.elementaryVolumeObject C U ⋯) W) =>
+              e.GammaDefinable B
+'IntegrationInACVF.Section7.ElementaryBlowup.exists_gamma_canonical_iso' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.ElementaryBlowup.exists_gamma_partition_iso : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {k : Nat}
+  {B : SpecialTransformations.Section3.GammaParameters.Base},
+  CanonicalStructure.IsCanonical →
+    ∀ (C : SpecialTransformations.Section3.BaseContext M)
+      {U W : IntegrationInACVF.Section7.PositiveRVVolumeObject (↑C.base) k}
+      (b : IntegrationInACVF.Section7.ElementaryBlowup U W),
+      IntegrationInACVF.Section7.VolumeObjectGamma U B →
+        IntegrationInACVF.Section7.VolumeObjectGamma W B →
+          IntegrationInACVF.Section7.RVMapGamma b.packedChartMap B →
+            ∀
+              (A :
+                SpecialTransformations.DefinableGeometry.DefSet.{0, 0}
+                  (SpecialTransformations.Section4.rawRVSpace
+                    (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.underlying).arity)
+                  ↑C.base)
+              (hA :
+                LE.le.{0} (SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} A)
+                  (SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+                    (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.underlying).domain)),
+              SpecialTransformations.Section5.GammaSetDefinable B
+                  (Set.ofPred.{0}
+                    fun
+                      (p :
+                        SpecialTransformations.Section5.Point 0
+                          (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.underlying).arity) =>
+                    Membership.mem.{0, 0} (SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} A) p.2) →
+                Exists.{1}
+                  fun
+                    (e :
+                      IntegrationInACVF.Section7.RVVolumeIso
+                        ((IntegrationInACVF.Section7.elementaryVolumeObject C (U.restrict A hA) ⋯).coprod
+                          (IntegrationInACVF.Section7.elementaryVolumeObject C
+                            (U.restrict
+                              (SpecialTransformations.DefinableGeometry.DefSet.sdiff.{0, 0}
+                                (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.underlying).domain A)
+                              ⋯)
+                            ⋯))
+                        W) =>
+                  e.GammaDefinable B
+'IntegrationInACVF.Section7.ElementaryBlowup.exists_gamma_partition_iso' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.gamma_charted_volume_blowup_promotion : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {p k : Nat}
+  {sp : Fin p → SpecialTransformations.Milestone0.SortTag} {κ : Cardinal.{0}},
+  CanonicalStructure.IsCanonical →
+    ∀ (C : SpecialTransformations.Section3.BaseContext M),
+      LE.le.{1} Cardinal.aleph0.{0} κ →
+        SpecialTransformations.Section3.Saturated M κ →
+          FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00 →
+            LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ →
+              LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) κ →
+                ∀ (z : Fin p → M),
+                  (∀ (i : Fin p), SpecialTransformations.Milestone0.sortEval.{0} (sp i) (z i)) →
+                    ∀ {U V : IntegrationInACVF.Section7.PositiveRVVolumeObject (↑C.base) k}
+                      (F :
+                        IntegrationInACVF.Section7.GammaRVVolumeSchema B p
+                          (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.underlying).arity k sp)
+                      (G :
+                        IntegrationInACVF.Section7.GammaRVVolumeSchema B p
+                          (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} V.underlying).arity k sp),
+                      F.valid z →
+                        G.valid z →
+                          IntegrationInACVF.Section7.RVVolumeSchemaRow U F z →
+                            IntegrationInACVF.Section7.RVVolumeSchemaRow V G z →
+                              ∀ (b : IntegrationInACVF.Section7.VolumeBlowup U V),
+                                b.GammaDefinable
+                                    { real := Union.union.{0} B.real (Set.range.{0, 1} z), gamma := B.gamma } →
+                                  Exists.{1} fun (H : IntegrationInACVF.Section7.GammaRVVolumeBlowupSchema F G) =>
+                                    H.valid z
+'IntegrationInACVF.Section7.gamma_charted_volume_blowup_promotion' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.GammaVolumeObjects : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      SpecialTransformations.Section3.GammaParameters.Base → Set.{0} M → Nat → Type
+'IntegrationInACVF.Section7.GammaVolumeObjects' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@IntegrationInACVF.Section7.gammaVolumeIsoSetoid : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      CanonicalStructure.IsCanonical →
+        (C : SpecialTransformations.Section3.BaseContext M) →
+          (B : SpecialTransformations.Section3.GammaParameters.Base) →
+            (k : Nat) → Setoid.{1} (IntegrationInACVF.Section7.GammaVolumeObjects B (↑C.base) k)
+'IntegrationInACVF.Section7.gammaVolumeIsoSetoid' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@IntegrationInACVF.Section7.GammaVolumeIsoClasses : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      CanonicalStructure.IsCanonical →
+        SpecialTransformations.Section3.BaseContext M →
+          SpecialTransformations.Section3.GammaParameters.Base → Nat → Type
+'IntegrationInACVF.Section7.GammaVolumeIsoClasses' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@IntegrationInACVF.Section7.gammaVolumeIsoClass : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        (C : SpecialTransformations.Section3.BaseContext M) →
+          (B : SpecialTransformations.Section3.GammaParameters.Base) →
+            {k : Nat} →
+              IntegrationInACVF.Section7.GammaVolumeObjects B (↑C.base) k →
+                IntegrationInACVF.Section7.GammaVolumeIsoClasses hc C B k
+'IntegrationInACVF.Section7.gammaVolumeIsoClass' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@IntegrationInACVF.Section7.gammaVolumeIsoClass_eq_iff : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M)
+  (B : SpecialTransformations.Section3.GammaParameters.Base) {k : Nat}
+  {U V : IntegrationInACVF.Section7.GammaVolumeObjects B (↑C.base) k},
+  Iff
+    (Eq.{1} (IntegrationInACVF.Section7.gammaVolumeIsoClass hc C B U)
+      (IntegrationInACVF.Section7.gammaVolumeIsoClass hc C B V))
+    (Exists.{1} fun (e : IntegrationInACVF.Section7.RVVolumeIso ↑U ↑V) => e.GammaDefinable B)
+'IntegrationInACVF.Section7.gammaVolumeIsoClass_eq_iff' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.gammaVolumeIsoClass_iso : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M)
+  (B : SpecialTransformations.Section3.GammaParameters.Base) {k : Nat}
+  {U V : IntegrationInACVF.Section7.GammaVolumeObjects B (↑C.base) k}
+  (e : IntegrationInACVF.Section7.RVVolumeIso ↑U ↑V),
+  e.GammaDefinable B →
+    Eq.{1} (IntegrationInACVF.Section7.gammaVolumeIsoClass hc C B U)
+      (IntegrationInACVF.Section7.gammaVolumeIsoClass hc C B V)
+'IntegrationInACVF.Section7.gammaVolumeIsoClass_iso' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@IntegrationInACVF.Section7.GammaIteratedVolumeBlowup : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (B : SpecialTransformations.Section3.GammaParameters.Base) →
+        (S : Set.{0} M) →
+          (k : Nat) →
+            Nat →
+              IntegrationInACVF.Section7.GammaVolumeObjects B S k →
+                IntegrationInACVF.Section7.GammaVolumeObjects B S k → Prop
+'IntegrationInACVF.Section7.GammaIteratedVolumeBlowup' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.GammaIteratedVolumeBlowup.toOrdinary : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {S : Set.{0} M} {k n : Nat}
+  {U V : IntegrationInACVF.Section7.GammaVolumeObjects B S k},
+  IntegrationInACVF.Section7.GammaIteratedVolumeBlowup B S k n U V →
+    IntegrationInACVF.Section7.IteratedVolumeBlowup n ↑U ↑V
+'IntegrationInACVF.Section7.GammaIteratedVolumeBlowup.toOrdinary' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.GammaIteratedVolumeBlowup.trans : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {S : Set.{0} M} {k m n : Nat}
+  {U V W : IntegrationInACVF.Section7.GammaVolumeObjects B S k},
+  IntegrationInACVF.Section7.GammaIteratedVolumeBlowup B S k m U V →
+    IntegrationInACVF.Section7.GammaIteratedVolumeBlowup B S k n V W →
+      IntegrationInACVF.Section7.GammaIteratedVolumeBlowup B S k (HAdd.hAdd.{0, 0, 0} m n) U W
+'IntegrationInACVF.Section7.GammaIteratedVolumeBlowup.trans' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.GammaIteratedVolumeBlowup.transport_source : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {k n : Nat},
+  CanonicalStructure.IsCanonical →
+    ∀ (C : SpecialTransformations.Section3.BaseContext M)
+      {U U' W : IntegrationInACVF.Section7.GammaVolumeObjects B (↑C.base) k},
+      IntegrationInACVF.Section7.GammaIteratedVolumeBlowup B (↑C.base) k n U W →
+        ∀ (f : IntegrationInACVF.Section7.RVVolumeIso ↑U' ↑U),
+          f.GammaDefinable B →
+            Exists.{1} fun (W' : IntegrationInACVF.Section7.GammaVolumeObjects B (↑C.base) k) =>
+              And (IntegrationInACVF.Section7.GammaIteratedVolumeBlowup B (↑C.base) k n U' W')
+                (Exists.{1} fun (e : IntegrationInACVF.Section7.RVVolumeIso ↑W' ↑W) => e.GammaDefinable B)
+'IntegrationInACVF.Section7.GammaIteratedVolumeBlowup.transport_source' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.gamma_volume_essential_embedding_iso : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {k : Nat}
+  {B : SpecialTransformations.Section3.GammaParameters.Base} (hc : CanonicalStructure.IsCanonical)
+  (C : SpecialTransformations.Section3.BaseContext M)
+  {U V : IntegrationInACVF.Section7.PositiveRVVolumeObject (↑C.base) k}
+  (i :
+    SpecialTransformations.DefinableGeometry.Map.{0, 0}
+      (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.essential).domain
+      (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} V.essential).domain)
+  (hi : Function.Injective.{1, 1} (SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0} i))
+  (hcoord :
+    ∀
+      (u :
+        ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+            (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.essential).domain)),
+      Eq.{1}
+        ((CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} V.essential).value
+          (SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0} i u))
+        ((CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.essential).value u))
+  (hφ :
+    ∀
+      (u :
+        ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+            (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.essential).domain)),
+      Eq.{1} (V.essentialForm.value (SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0} i u))
+        (U.essentialForm.value u)),
+  IntegrationInACVF.Section7.RVMapGamma i B →
+    (IntegrationInACVF.Section7.volumeIsoOfEssentialEmbedding hc C i hi hcoord hφ).GammaDefinable B
+'IntegrationInACVF.Section7.gamma_volume_essential_embedding_iso' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.gamma_coprod_essential_left_map : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {k : Nat}
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {S : Set.{0} M},
+  CanonicalStructure.IsCanonical →
+    ∀ (U V : IntegrationInACVF.Section7.PositiveRVVolumeObject S k),
+      IntegrationInACVF.Section7.VolumeObjectGamma U B →
+        IntegrationInACVF.Section7.RVMapGamma (IntegrationInACVF.Section7.coprodEssentialLeftMap U V) B
+'IntegrationInACVF.Section7.gamma_coprod_essential_left_map' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.gamma_coprod_essential_right_map : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {k : Nat}
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {S : Set.{0} M},
+  CanonicalStructure.IsCanonical →
+    ∀ (U V : IntegrationInACVF.Section7.PositiveRVVolumeObject S k),
+      IntegrationInACVF.Section7.VolumeObjectGamma V B →
+        IntegrationInACVF.Section7.RVMapGamma (IntegrationInACVF.Section7.coprodEssentialRightMap U V) B
+'IntegrationInACVF.Section7.gamma_coprod_essential_right_map' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.RVMapGamma.image : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {S : Set.{0} M} {a b : Nat}
+  {A : SpecialTransformations.DefinableGeometry.DefSet.{0, 0} (SpecialTransformations.Section4.rawRVSpace a) S}
+  {D : SpecialTransformations.DefinableGeometry.DefSet.{0, 0} (SpecialTransformations.Section4.rawRVSpace b) S}
+  {f : SpecialTransformations.DefinableGeometry.Map.{0, 0} A D},
+  IntegrationInACVF.Section7.RVMapGamma f B →
+    SpecialTransformations.Section5.GammaSetDefinable B
+      (Set.ofPred.{0} fun (p : SpecialTransformations.Section5.Point 0 b) =>
+        Membership.mem.{0, 0}
+          (SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+            (SpecialTransformations.DefinableGeometry.Map.image.{0, 0} f))
+          p.2)
+'IntegrationInACVF.Section7.RVMapGamma.image' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@IntegrationInACVF.Section7.gamma_volume_coprod_left_image_iso : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {k : Nat}
+  {B : SpecialTransformations.Section3.GammaParameters.Base} (hc : CanonicalStructure.IsCanonical)
+  (C : SpecialTransformations.Section3.BaseContext M)
+  (U V : IntegrationInACVF.Section7.PositiveRVVolumeObject (↑C.base) k),
+  IntegrationInACVF.Section7.VolumeObjectGamma U B →
+    (IntegrationInACVF.Section7.volumeCoprodLeftImageIso hc C U V).GammaDefinable B
+'IntegrationInACVF.Section7.gamma_volume_coprod_left_image_iso' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.gamma_volume_coprod_right_image_iso : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {k : Nat}
+  {B : SpecialTransformations.Section3.GammaParameters.Base} (hc : CanonicalStructure.IsCanonical)
+  (C : SpecialTransformations.Section3.BaseContext M)
+  (U V : IntegrationInACVF.Section7.PositiveRVVolumeObject (↑C.base) k),
+  IntegrationInACVF.Section7.VolumeObjectGamma V B →
+    (IntegrationInACVF.Section7.volumeCoprodRightImageIso hc C U V).GammaDefinable B
+'IntegrationInACVF.Section7.gamma_volume_coprod_right_image_iso' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.gamma_containing_essential_restriction_iso : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {k : Nat}
+  {B : SpecialTransformations.Section3.GammaParameters.Base} (hc : CanonicalStructure.IsCanonical)
+  (C : SpecialTransformations.Section3.BaseContext M)
+  (U : IntegrationInACVF.Section7.PositiveRVVolumeObject (↑C.base) k),
+  IntegrationInACVF.Section7.VolumeObjectGamma U B →
+    ∀
+      (A :
+        SpecialTransformations.DefinableGeometry.DefSet.{0, 0}
+          (SpecialTransformations.Section4.rawRVSpace
+            (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.underlying).arity)
+          ↑C.base)
+      (hA :
+        LE.le.{0} (SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} A)
+          (SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+            (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.underlying).domain))
+      (hess :
+        LE.le.{0}
+          (SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+            (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.essential).domain)
+          (SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} A)),
+      SpecialTransformations.Section5.GammaSetDefinable B
+          (Set.ofPred.{0}
+            fun
+              (p :
+                SpecialTransformations.Section5.Point 0
+                  (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.underlying).arity) =>
+            Membership.mem.{0, 0} (SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} A) p.2) →
+        (IntegrationInACVF.Section7.volumeIsoOfContainingEssentialRestriction hc C U A hA hess).GammaDefinable B
+'IntegrationInACVF.Section7.gamma_containing_essential_restriction_iso' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.gamma_volume_coprod_left_complement_iso : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {k : Nat}
+  {B : SpecialTransformations.Section3.GammaParameters.Base} (hc : CanonicalStructure.IsCanonical)
+  (C : SpecialTransformations.Section3.BaseContext M)
+  (U V : IntegrationInACVF.Section7.PositiveRVVolumeObject (↑C.base) k),
+  IntegrationInACVF.Section7.VolumeObjectGamma U B →
+    IntegrationInACVF.Section7.VolumeObjectGamma V B →
+      (IntegrationInACVF.Section7.volumeCoprodLeftComplementIso hc C U V).GammaDefinable B
+'IntegrationInACVF.Section7.gamma_volume_coprod_left_complement_iso' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.gamma_volume_subobject_image : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {k : Nat}
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {S : Set.{0} M}
+  {U V : IntegrationInACVF.Section7.PositiveRVVolumeObject S k} (f : IntegrationInACVF.Section7.RVVolumeIso U V),
+  f.GammaDefinable B →
+    ∀
+      (A :
+        SpecialTransformations.DefinableGeometry.DefSet.{0, 0}
+          (SpecialTransformations.Section4.rawRVSpace
+            (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.underlying).arity)
+          S)
+      (hA :
+        LE.le.{0} (SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} A)
+          (SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+            (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.essential).domain)),
+      SpecialTransformations.Section5.GammaSetDefinable B
+          (Set.ofPred.{0}
+            fun
+              (p :
+                SpecialTransformations.Section5.Point 0
+                  (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.underlying).arity) =>
+            Membership.mem.{0, 0} (SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} A) p.2) →
+        SpecialTransformations.Section5.GammaSetDefinable B
+          (Set.ofPred.{0}
+            fun
+              (q :
+                SpecialTransformations.Section5.Point 0
+                  (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} V.underlying).arity) =>
+            Membership.mem.{0, 0}
+              (SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+                (IntegrationInACVF.Section7.volumeSubobjectImage f A hA))
+              q.2)
+'IntegrationInACVF.Section7.gamma_volume_subobject_image' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.gamma_volume_subobject_iso : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {k : Nat}
+  {B : SpecialTransformations.Section3.GammaParameters.Base} (hc : CanonicalStructure.IsCanonical)
+  (C : SpecialTransformations.Section3.BaseContext M)
+  {U V : IntegrationInACVF.Section7.PositiveRVVolumeObject (↑C.base) k}
+  (f : IntegrationInACVF.Section7.RVVolumeIso U V),
+  f.GammaDefinable B →
+    IntegrationInACVF.Section7.VolumeObjectGamma U B →
+      ∀
+        (A :
+          SpecialTransformations.DefinableGeometry.DefSet.{0, 0}
+            (SpecialTransformations.Section4.rawRVSpace
+              (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.underlying).arity)
+            ↑C.base)
+        (hA :
+          LE.le.{0} (SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} A)
+            (SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+              (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.essential).domain)),
+        SpecialTransformations.Section5.GammaSetDefinable B
+            (Set.ofPred.{0}
+              fun
+                (p :
+                  SpecialTransformations.Section5.Point 0
+                    (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.underlying).arity) =>
+              Membership.mem.{0, 0} (SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} A) p.2) →
+          (IntegrationInACVF.Section7.RVVolumeIso.subobjectImage hc C f A hA).GammaDefinable B
+'IntegrationInACVF.Section7.gamma_volume_subobject_iso' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.gamma_volume_complement_image_iso : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {k : Nat}
+  {B : SpecialTransformations.Section3.GammaParameters.Base} (hc : CanonicalStructure.IsCanonical)
+  (C : SpecialTransformations.Section3.BaseContext M)
+  {U V : IntegrationInACVF.Section7.PositiveRVVolumeObject (↑C.base) k}
+  (f : IntegrationInACVF.Section7.RVVolumeIso U V),
+  f.GammaDefinable B →
+    IntegrationInACVF.Section7.VolumeObjectGamma U B →
+      ∀
+        (A :
+          SpecialTransformations.DefinableGeometry.DefSet.{0, 0}
+            (SpecialTransformations.Section4.rawRVSpace
+              (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.underlying).arity)
+            ↑C.base)
+        (hA :
+          LE.le.{0} (SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} A)
+            (SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+              (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.essential).domain)),
+        SpecialTransformations.Section5.GammaSetDefinable B
+            (Set.ofPred.{0}
+              fun
+                (p :
+                  SpecialTransformations.Section5.Point 0
+                    (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.underlying).arity) =>
+              Membership.mem.{0, 0} (SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} A) p.2) →
+          (IntegrationInACVF.Section7.RVVolumeIso.complementImage hc C f A hA).GammaDefinable B
+'IntegrationInACVF.Section7.gamma_volume_complement_image_iso' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.VolumeBlowup.GammaDefinable.gamma_source_locus : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {k : Nat}
+  {B : SpecialTransformations.Section3.GammaParameters.Base} (hc : CanonicalStructure.IsCanonical)
+  (C : SpecialTransformations.Section3.BaseContext M)
+  {U W : IntegrationInACVF.Section7.PositiveRVVolumeObject (↑C.base) k}
+  {b : IntegrationInACVF.Section7.VolumeBlowup U W},
+  b.GammaDefinable B →
+    SpecialTransformations.Section5.GammaSetDefinable B
+      (Set.ofPred.{0}
+        fun
+          (p :
+            SpecialTransformations.Section5.Point 0
+              (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.underlying).arity) =>
+        Membership.mem.{0, 0}
+          (SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+            (IntegrationInACVF.Section7.VolumeBlowup.sourceLocus hc C b))
+          p.2)
+'IntegrationInACVF.Section7.VolumeBlowup.GammaDefinable.gamma_source_locus' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.VolumeBlowup.GammaDefinable.gamma_source_locus_chart : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {k : Nat}
+  {B : SpecialTransformations.Section3.GammaParameters.Base} (hc : CanonicalStructure.IsCanonical)
+  (C : SpecialTransformations.Section3.BaseContext M)
+  {U W : IntegrationInACVF.Section7.PositiveRVVolumeObject (↑C.base) k}
+  {b : IntegrationInACVF.Section7.VolumeBlowup U W},
+  b.GammaDefinable B → (IntegrationInACVF.Section7.VolumeBlowup.sourceLocusChart hc C b).GammaDefinable B
+'IntegrationInACVF.Section7.VolumeBlowup.GammaDefinable.gamma_source_locus_chart' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.VolumeBlowup.GammaDefinable.gamma_source_complement_iso : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {k : Nat}
+  {B : SpecialTransformations.Section3.GammaParameters.Base} (hc : CanonicalStructure.IsCanonical)
+  (C : SpecialTransformations.Section3.BaseContext M)
+  {U W : IntegrationInACVF.Section7.PositiveRVVolumeObject (↑C.base) k}
+  {b : IntegrationInACVF.Section7.VolumeBlowup U W},
+  b.GammaDefinable B → (IntegrationInACVF.Section7.VolumeBlowup.sourceComplementIso hc C b).GammaDefinable B
+'IntegrationInACVF.Section7.VolumeBlowup.GammaDefinable.gamma_source_complement_iso' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.VolumeBlowup.GammaDefinable.gamma_result_on_source_locus : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {k : Nat}
+  {B : SpecialTransformations.Section3.GammaParameters.Base} (hc : CanonicalStructure.IsCanonical)
+  (C : SpecialTransformations.Section3.BaseContext M)
+  {U W : IntegrationInACVF.Section7.PositiveRVVolumeObject (↑C.base) k}
+  {b : IntegrationInACVF.Section7.VolumeBlowup U W},
+  b.GammaDefinable B → (IntegrationInACVF.Section7.VolumeBlowup.resultOnSourceLocus hc C b).GammaDefinable B
+'IntegrationInACVF.Section7.VolumeBlowup.GammaDefinable.gamma_result_on_source_locus' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.gamma_volume_split_complement : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {k : Nat}
+  {B : SpecialTransformations.Section3.GammaParameters.Base} (hc : CanonicalStructure.IsCanonical)
+  (C : SpecialTransformations.Section3.BaseContext M)
+  (U : IntegrationInACVF.Section7.PositiveRVVolumeObject (↑C.base) k),
+  IntegrationInACVF.Section7.VolumeObjectGamma U B →
+    ∀
+      (A D :
+        SpecialTransformations.DefinableGeometry.DefSet.{0, 0}
+          (SpecialTransformations.Section4.rawRVSpace
+            (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.underlying).arity)
+          ↑C.base)
+      (hD :
+        LE.le.{0} (SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} D)
+          (SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+            (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.underlying).domain)),
+      SpecialTransformations.Section5.GammaSetDefinable B
+          (Set.ofPred.{0}
+            fun
+              (p :
+                SpecialTransformations.Section5.Point 0
+                  (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.underlying).arity) =>
+            Membership.mem.{0, 0} (SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} A) p.2) →
+        SpecialTransformations.Section5.GammaSetDefinable B
+            (Set.ofPred.{0}
+              fun
+                (p :
+                  SpecialTransformations.Section5.Point 0
+                    (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.underlying).arity) =>
+              Membership.mem.{0, 0} (SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} D) p.2) →
+          (IntegrationInACVF.Section7.volumeSplitComplement hc C U A D hD).GammaDefinable B
+'IntegrationInACVF.Section7.gamma_volume_split_complement' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.VolumeOverlapRefinement.GammaDefinable : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {k : Nat} →
+        (hc : CanonicalStructure.IsCanonical) →
+          (C : SpecialTransformations.Section3.BaseContext M) →
+            {U V W : IntegrationInACVF.Section7.PositiveRVVolumeObject (↑C.base) k} →
+              {h : IntegrationInACVF.Section7.VolumeBlowup U V} →
+                {g : IntegrationInACVF.Section7.VolumeBlowup U W} →
+                  IntegrationInACVF.Section7.VolumeOverlapRefinement hc C h g →
+                    SpecialTransformations.Section3.GammaParameters.Base → Prop
+'IntegrationInACVF.Section7.VolumeOverlapRefinement.GammaDefinable' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.gamma_volume_overlap_refinement : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {k : Nat}
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M)
+  (P : SpecialTransformations.Section3.GammaParameters.Base)
+  {U V W : IntegrationInACVF.Section7.PositiveRVVolumeObject (↑C.base) k}
+  (h : IntegrationInACVF.Section7.VolumeBlowup U V) (g : IntegrationInACVF.Section7.VolumeBlowup U W),
+  IntegrationInACVF.Section7.VolumeObjectGamma U P →
+    h.GammaDefinable P →
+      g.GammaDefinable P →
+        IntegrationInACVF.Section7.VolumeOverlapRefinement.GammaDefinable hc C
+          (IntegrationInACVF.Section7.volumeOverlapRefinement hc C h g) P
+'IntegrationInACVF.Section7.gamma_volume_overlap_refinement' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.gamma_volume_coprod_assoc : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {k : Nat}
+  {B : SpecialTransformations.Section3.GammaParameters.Base} (hc : CanonicalStructure.IsCanonical)
+  (C : SpecialTransformations.Section3.BaseContext M)
+  {U V W : IntegrationInACVF.Section7.PositiveRVVolumeObject (↑C.base) k},
+  IntegrationInACVF.Section7.VolumeObjectGamma U B →
+    IntegrationInACVF.Section7.VolumeObjectGamma V B →
+      IntegrationInACVF.Section7.VolumeObjectGamma W B →
+        (IntegrationInACVF.Section7.volumeCoprodAssoc hc C U V W).GammaDefinable B
+'IntegrationInACVF.Section7.gamma_volume_coprod_assoc' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.volumeCoprodExchange : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {k : Nat} →
+        CanonicalStructure.IsCanonical →
+          (C : SpecialTransformations.Section3.BaseContext M) →
+            (U V W : IntegrationInACVF.Section7.PositiveRVVolumeObject (↑C.base) k) →
+              IntegrationInACVF.Section7.RVVolumeIso (U.coprod (V.coprod W)) (V.coprod (U.coprod W))
+'IntegrationInACVF.Section7.volumeCoprodExchange' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@IntegrationInACVF.Section7.gamma_volume_coprod_exchange : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {k : Nat}
+  {B : SpecialTransformations.Section3.GammaParameters.Base} (hc : CanonicalStructure.IsCanonical)
+  (C : SpecialTransformations.Section3.BaseContext M)
+  {U V W : IntegrationInACVF.Section7.PositiveRVVolumeObject (↑C.base) k},
+  IntegrationInACVF.Section7.VolumeObjectGamma U B →
+    IntegrationInACVF.Section7.VolumeObjectGamma V B →
+      IntegrationInACVF.Section7.VolumeObjectGamma W B →
+        (IntegrationInACVF.Section7.volumeCoprodExchange hc C U V W).GammaDefinable B
+'IntegrationInACVF.Section7.gamma_volume_coprod_exchange' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.volumeCoprodReverseOuter : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {k : Nat} →
+        CanonicalStructure.IsCanonical →
+          (C : SpecialTransformations.Section3.BaseContext M) →
+            (U V W E : IntegrationInACVF.Section7.PositiveRVVolumeObject (↑C.base) k) →
+              IntegrationInACVF.Section7.RVVolumeIso (U.coprod ((V.coprod W).coprod E))
+                (W.coprod ((V.coprod U).coprod E))
+'IntegrationInACVF.Section7.volumeCoprodReverseOuter' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@IntegrationInACVF.Section7.gamma_volume_coprod_reverse_outer : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {k : Nat}
+  {B : SpecialTransformations.Section3.GammaParameters.Base} (hc : CanonicalStructure.IsCanonical)
+  (C : SpecialTransformations.Section3.BaseContext M)
+  {U V W E : IntegrationInACVF.Section7.PositiveRVVolumeObject (↑C.base) k},
+  IntegrationInACVF.Section7.VolumeObjectGamma U B →
+    IntegrationInACVF.Section7.VolumeObjectGamma V B →
+      IntegrationInACVF.Section7.VolumeObjectGamma W B →
+        IntegrationInACVF.Section7.VolumeObjectGamma E B →
+          (IntegrationInACVF.Section7.volumeCoprodReverseOuter hc C U V W E).GammaDefinable B
+'IntegrationInACVF.Section7.gamma_volume_coprod_reverse_outer' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.gamma_volume_blowup_diamond : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {k : Nat}
+  {B : SpecialTransformations.Section3.GammaParameters.Base},
+  CanonicalStructure.IsCanonical →
+    ∀ (C : SpecialTransformations.Section3.BaseContext M)
+      {U V W : IntegrationInACVF.Section7.PositiveRVVolumeObject (↑C.base) k},
+      IntegrationInACVF.Section7.VolumeObjectGamma U B →
+        ∀ (h : IntegrationInACVF.Section7.VolumeBlowup U V) (g : IntegrationInACVF.Section7.VolumeBlowup U W),
+          h.GammaDefinable B →
+            g.GammaDefinable B →
+              Exists.{1} fun (V' : IntegrationInACVF.Section7.PositiveRVVolumeObject (↑C.base) k) =>
+                Exists.{1} fun (W' : IntegrationInACVF.Section7.PositiveRVVolumeObject (↑C.base) k) =>
+                  And (IntegrationInACVF.Section7.VolumeObjectGamma V' B)
+                    (And (IntegrationInACVF.Section7.VolumeObjectGamma W' B)
+                      (Exists.{1} fun (bv : IntegrationInACVF.Section7.VolumeBlowup V V') =>
+                        Exists.{1} fun (bw : IntegrationInACVF.Section7.VolumeBlowup W W') =>
+                          And (bv.GammaDefinable B)
+                            (And (bw.GammaDefinable B)
+                              (Exists.{1} fun (e : IntegrationInACVF.Section7.RVVolumeIso V' W') =>
+                                e.GammaDefinable B))))
+'IntegrationInACVF.Section7.gamma_volume_blowup_diamond' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.gammaVolumeClassBlowup : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        (C : SpecialTransformations.Section3.BaseContext M) →
+          (B : SpecialTransformations.Section3.GammaParameters.Base) →
+            (k : Nat) →
+              IntegrationInACVF.Section7.GammaVolumeIsoClasses hc C B k →
+                IntegrationInACVF.Section7.GammaVolumeIsoClasses hc C B k → Prop
+'IntegrationInACVF.Section7.gammaVolumeClassBlowup' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@IntegrationInACVF.Section7.gammaVolumeClassBlowup_diamond : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M)
+  (B : SpecialTransformations.Section3.GammaParameters.Base) (k : Nat),
+  IntegrationInACVF.Section6.Iteration.Diamond.{0} (IntegrationInACVF.Section7.gammaVolumeClassBlowup hc C B k)
+'IntegrationInACVF.Section7.gammaVolumeClassBlowup_diamond' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.GammaIteratedVolumeBlowup.classSteps : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M)
+  (B : SpecialTransformations.Section3.GammaParameters.Base) {k n : Nat}
+  {U V : IntegrationInACVF.Section7.GammaVolumeObjects B (↑C.base) k},
+  IntegrationInACVF.Section7.GammaIteratedVolumeBlowup B (↑C.base) k n U V →
+    IntegrationInACVF.Section6.Iteration.Steps.{0} (IntegrationInACVF.Section7.gammaVolumeClassBlowup hc C B k) n
+      (IntegrationInACVF.Section7.gammaVolumeIsoClass hc C B U)
+      (IntegrationInACVF.Section7.gammaVolumeIsoClass hc C B V)
+'IntegrationInACVF.Section7.GammaIteratedVolumeBlowup.classSteps' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.gammaIteratedVolumeBlowup_of_classSteps : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M)
+  (B : SpecialTransformations.Section3.GammaParameters.Base) {k n : Nat}
+  {a b : IntegrationInACVF.Section7.GammaVolumeIsoClasses hc C B k},
+  IntegrationInACVF.Section6.Iteration.Steps.{0} (IntegrationInACVF.Section7.gammaVolumeClassBlowup hc C B k) n a b →
+    ∀ {U : IntegrationInACVF.Section7.GammaVolumeObjects B (↑C.base) k},
+      Eq.{1} (IntegrationInACVF.Section7.gammaVolumeIsoClass hc C B U) a →
+        Exists.{1} fun (V : IntegrationInACVF.Section7.GammaVolumeObjects B (↑C.base) k) =>
+          And (IntegrationInACVF.Section7.GammaIteratedVolumeBlowup B (↑C.base) k n U V)
+            (Eq.{1} (IntegrationInACVF.Section7.gammaVolumeIsoClass hc C B V) b)
+'IntegrationInACVF.Section7.gammaIteratedVolumeBlowup_of_classSteps' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.GammaIteratedVolumeBlowup.common_refinement_of_iso : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF],
+  CanonicalStructure.IsCanonical →
+    ∀ (C : SpecialTransformations.Section3.BaseContext M) (B : SpecialTransformations.Section3.GammaParameters.Base)
+      {k m n : Nat} {U U' V W : IntegrationInACVF.Section7.GammaVolumeObjects B (↑C.base) k}
+      (f : IntegrationInACVF.Section7.RVVolumeIso ↑U ↑U'),
+      f.GammaDefinable B →
+        IntegrationInACVF.Section7.GammaIteratedVolumeBlowup B (↑C.base) k m U V →
+          IntegrationInACVF.Section7.GammaIteratedVolumeBlowup B (↑C.base) k n U' W →
+            Exists.{1} fun (V' : IntegrationInACVF.Section7.GammaVolumeObjects B (↑C.base) k) =>
+              Exists.{1} fun (W' : IntegrationInACVF.Section7.GammaVolumeObjects B (↑C.base) k) =>
+                And (IntegrationInACVF.Section7.GammaIteratedVolumeBlowup B (↑C.base) k n V V')
+                  (And (IntegrationInACVF.Section7.GammaIteratedVolumeBlowup B (↑C.base) k m W W')
+                    (Exists.{1} fun (e : IntegrationInACVF.Section7.RVVolumeIso ↑V' ↑W') => e.GammaDefinable B))
+'IntegrationInACVF.Section7.GammaIteratedVolumeBlowup.common_refinement_of_iso' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.GammaVolumeBlowupEquivalent : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (B : SpecialTransformations.Section3.GammaParameters.Base) →
+        (S : Set.{0} M) →
+          (k : Nat) →
+            IntegrationInACVF.Section7.GammaVolumeObjects B S k →
+              IntegrationInACVF.Section7.GammaVolumeObjects B S k → Prop
+'IntegrationInACVF.Section7.GammaVolumeBlowupEquivalent' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.GammaVolumeBlowupEquivalent.of_iso : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (C : SpecialTransformations.Section3.BaseContext M) (B : SpecialTransformations.Section3.GammaParameters.Base)
+  {k : Nat} {U V : IntegrationInACVF.Section7.GammaVolumeObjects B (↑C.base) k}
+  (f : IntegrationInACVF.Section7.RVVolumeIso ↑U ↑V),
+  f.GammaDefinable B → IntegrationInACVF.Section7.GammaVolumeBlowupEquivalent B (↑C.base) k U V
+'IntegrationInACVF.Section7.GammaVolumeBlowupEquivalent.of_iso' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.GammaVolumeBlowupEquivalent.refl : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF],
+  CanonicalStructure.IsCanonical →
+    ∀ (C : SpecialTransformations.Section3.BaseContext M) (B : SpecialTransformations.Section3.GammaParameters.Base)
+      {k : Nat} (U : IntegrationInACVF.Section7.GammaVolumeObjects B (↑C.base) k),
+      IntegrationInACVF.Section7.GammaVolumeBlowupEquivalent B (↑C.base) k U U
+'IntegrationInACVF.Section7.GammaVolumeBlowupEquivalent.refl' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.GammaVolumeBlowupEquivalent.symm : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF],
+  CanonicalStructure.IsCanonical →
+    ∀ (C : SpecialTransformations.Section3.BaseContext M) (B : SpecialTransformations.Section3.GammaParameters.Base)
+      {k : Nat} {U V : IntegrationInACVF.Section7.GammaVolumeObjects B (↑C.base) k},
+      IntegrationInACVF.Section7.GammaVolumeBlowupEquivalent B (↑C.base) k U V →
+        IntegrationInACVF.Section7.GammaVolumeBlowupEquivalent B (↑C.base) k V U
+'IntegrationInACVF.Section7.GammaVolumeBlowupEquivalent.symm' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.GammaVolumeBlowupEquivalent.toOrdinary : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF],
+  CanonicalStructure.IsCanonical →
+    ∀ (C : SpecialTransformations.Section3.BaseContext M) (B : SpecialTransformations.Section3.GammaParameters.Base)
+      {k : Nat} {U V : IntegrationInACVF.Section7.GammaVolumeObjects B (↑C.base) k},
+      IntegrationInACVF.Section7.GammaVolumeBlowupEquivalent B (↑C.base) k U V →
+        IntegrationInACVF.Section7.VolumeBlowupEquivalent ↑U ↑V
+'IntegrationInACVF.Section7.GammaVolumeBlowupEquivalent.toOrdinary' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.GammaVolumeBlowupEquivalent.of_blowup : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF],
+  CanonicalStructure.IsCanonical →
+    ∀ (C : SpecialTransformations.Section3.BaseContext M) (B : SpecialTransformations.Section3.GammaParameters.Base)
+      {k : Nat} {U V : IntegrationInACVF.Section7.GammaVolumeObjects B (↑C.base) k}
+      (b : IntegrationInACVF.Section7.VolumeBlowup ↑U ↑V),
+      b.GammaDefinable B → IntegrationInACVF.Section7.GammaVolumeBlowupEquivalent B (↑C.base) k U V
+'IntegrationInACVF.Section7.GammaVolumeBlowupEquivalent.of_blowup' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.GammaVolumeBlowupEquivalent.trans : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF],
+  CanonicalStructure.IsCanonical →
+    ∀ (C : SpecialTransformations.Section3.BaseContext M) (B : SpecialTransformations.Section3.GammaParameters.Base)
+      {k : Nat} {U V W : IntegrationInACVF.Section7.GammaVolumeObjects B (↑C.base) k},
+      IntegrationInACVF.Section7.GammaVolumeBlowupEquivalent B (↑C.base) k U V →
+        IntegrationInACVF.Section7.GammaVolumeBlowupEquivalent B (↑C.base) k V W →
+          IntegrationInACVF.Section7.GammaVolumeBlowupEquivalent B (↑C.base) k U W
+'IntegrationInACVF.Section7.GammaVolumeBlowupEquivalent.trans' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.gamma_charted_volume_chain_promotion : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {p k : Nat}
+  {sp : Fin p → SpecialTransformations.Milestone0.SortTag} {κ : Cardinal.{0}},
+  CanonicalStructure.IsCanonical →
+    ∀ (C : SpecialTransformations.Section3.BaseContext M),
+      LE.le.{1} Cardinal.aleph0.{0} κ →
+        SpecialTransformations.Section3.Saturated M κ →
+          FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00 →
+            LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ →
+              LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) κ →
+                ∀ (z : Fin p → M),
+                  (∀ (i : Fin p), SpecialTransformations.Milestone0.sortEval.{0} (sp i) (z i)) →
+                    ∀
+                      {U V :
+                        IntegrationInACVF.Section7.GammaVolumeObjects
+                          { real := Union.union.{0} B.real (Set.range.{0, 1} z), gamma := B.gamma } (↑C.base) k}
+                      {r : Nat}
+                      (F :
+                        IntegrationInACVF.Section7.GammaRVVolumeSchema B p
+                          (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} (↑U).underlying).arity k sp)
+                      (G :
+                        IntegrationInACVF.Section7.GammaRVVolumeSchema B p
+                          (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} (↑V).underlying).arity k sp),
+                      F.valid z →
+                        G.valid z →
+                          IntegrationInACVF.Section7.RVVolumeSchemaRow (↑U) F z →
+                            IntegrationInACVF.Section7.RVVolumeSchemaRow (↑V) G z →
+                              IntegrationInACVF.Section7.GammaIteratedVolumeBlowup
+                                  { real := Union.union.{0} B.real (Set.range.{0, 1} z), gamma := B.gamma } (↑C.base) k
+                                  r U V →
+                                Exists.{1} fun (H : IntegrationInACVF.Section7.GammaVolumeChainSchema F G r) =>
+                                  H.valid z
+'IntegrationInACVF.Section7.gamma_charted_volume_chain_promotion' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.gamma_charted_volume_common_promotion : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {p k : Nat}
+  {sp : Fin p → SpecialTransformations.Milestone0.SortTag} {κ : Cardinal.{0}},
+  CanonicalStructure.IsCanonical →
+    ∀ (C : SpecialTransformations.Section3.BaseContext M),
+      LE.le.{1} Cardinal.aleph0.{0} κ →
+        SpecialTransformations.Section3.Saturated M κ →
+          FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00 →
+            LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ →
+              LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) κ →
+                ∀ (z : Fin p → M),
+                  (∀ (i : Fin p), SpecialTransformations.Milestone0.sortEval.{0} (sp i) (z i)) →
+                    ∀
+                      {U V :
+                        IntegrationInACVF.Section7.GammaVolumeObjects
+                          { real := Union.union.{0} B.real (Set.range.{0, 1} z), gamma := B.gamma } (↑C.base) k}
+                      (F :
+                        IntegrationInACVF.Section7.GammaRVVolumeSchema B p
+                          (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} (↑U).underlying).arity k sp)
+                      (G :
+                        IntegrationInACVF.Section7.GammaRVVolumeSchema B p
+                          (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} (↑V).underlying).arity k sp),
+                      F.valid z →
+                        G.valid z →
+                          IntegrationInACVF.Section7.RVVolumeSchemaRow (↑U) F z →
+                            IntegrationInACVF.Section7.RVVolumeSchemaRow (↑V) G z →
+                              IntegrationInACVF.Section7.GammaVolumeBlowupEquivalent
+                                  { real := Union.union.{0} B.real (Set.range.{0, 1} z), gamma := B.gamma } (↑C.base) k
+                                  U V →
+                                Exists.{1} fun (H : IntegrationInACVF.Section7.GammaVolumeCommonSchema F G) => H.valid z
+'IntegrationInACVF.Section7.gamma_charted_volume_common_promotion' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+structure IntegrationInACVF.Section7.VolumeBlowup.GammaDefinable {M : Type}
+  [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {k : Nat} {S : Set.{0} M}
+  {U W : IntegrationInACVF.Section7.PositiveRVVolumeObject S k} (b : IntegrationInACVF.Section7.VolumeBlowup U W)
+  (B : SpecialTransformations.Section3.GammaParameters.Base) : Prop
+number of parameters: 9
+fields:
+  IntegrationInACVF.Section7.VolumeBlowup.GammaDefinable.locus : IntegrationInACVF.Section7.VolumeObjectGamma b.locus B
+  IntegrationInACVF.Section7.VolumeBlowup.GammaDefinable.complement : IntegrationInACVF.Section7.VolumeObjectGamma
+      b.complement B
+  IntegrationInACVF.Section7.VolumeBlowup.GammaDefinable.blown : IntegrationInACVF.Section7.VolumeObjectGamma
+      b.blownLocus B
+  IntegrationInACVF.Section7.VolumeBlowup.GammaDefinable.elementary : IntegrationInACVF.Section7.RVMapGamma
+      b.elementary.packedChartMap B
+  IntegrationInACVF.Section7.VolumeBlowup.GammaDefinable.centerAlgebraic : IntegrationInACVF.Section7.GammaBlowupCenter
+      b.locus B
+  IntegrationInACVF.Section7.VolumeBlowup.GammaDefinable.source : b.sourceIso.GammaDefinable B
+  IntegrationInACVF.Section7.VolumeBlowup.GammaDefinable.target : b.targetIso.GammaDefinable B
+constructor:
+  IntegrationInACVF.Section7.VolumeBlowup.GammaDefinable.mk {M : Type}
+    [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {k : Nat}
+    {S : Set.{0} M} {U W : IntegrationInACVF.Section7.PositiveRVVolumeObject S k}
+    {b : IntegrationInACVF.Section7.VolumeBlowup U W} {B : SpecialTransformations.Section3.GammaParameters.Base}
+    (locus : IntegrationInACVF.Section7.VolumeObjectGamma b.locus B)
+    (complement : IntegrationInACVF.Section7.VolumeObjectGamma b.complement B)
+    (blown : IntegrationInACVF.Section7.VolumeObjectGamma b.blownLocus B)
+    (elementary : IntegrationInACVF.Section7.RVMapGamma b.elementary.packedChartMap B)
+    (centerAlgebraic : IntegrationInACVF.Section7.GammaBlowupCenter b.locus B) (source : b.sourceIso.GammaDefinable B)
+    (target : b.targetIso.GammaDefinable B) : b.GammaDefinable B
+structure IntegrationInACVF.Section7.VolumeOverlapRefinement.GammaDefinable {M : Type}
+  [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {k : Nat}
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M)
+  {U V W : IntegrationInACVF.Section7.PositiveRVVolumeObject (↑C.base) k}
+  {h : IntegrationInACVF.Section7.VolumeBlowup U V} {g : IntegrationInACVF.Section7.VolumeBlowup U W}
+  (F : IntegrationInACVF.Section7.VolumeOverlapRefinement hc C h g)
+  (B : SpecialTransformations.Section3.GammaParameters.Base) : Prop
+number of parameters: 13
+fields:
+  IntegrationInACVF.Section7.VolumeOverlapRefinement.GammaDefinable.left : SpecialTransformations.Section5.GammaSetDefinable
+      B
+      (Set.ofPred.{0}
+        fun
+          (p :
+            SpecialTransformations.Section5.Point 0
+              (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} h.locus.underlying).arity) =>
+        Membership.mem.{0, 0} (SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} F.left) p.2)
+  IntegrationInACVF.Section7.VolumeOverlapRefinement.GammaDefinable.right : SpecialTransformations.Section5.GammaSetDefinable
+      B
+      (Set.ofPred.{0}
+        fun
+          (p :
+            SpecialTransformations.Section5.Point 0
+              (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} g.locus.underlying).arity) =>
+        Membership.mem.{0, 0} (SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} F.right) p.2)
+  IntegrationInACVF.Section7.VolumeOverlapRefinement.GammaDefinable.overlap : F.overlap.GammaDefinable B
+  IntegrationInACVF.Section7.VolumeOverlapRefinement.GammaDefinable.exterior : IntegrationInACVF.Section7.VolumeObjectGamma
+      F.exterior B
+  IntegrationInACVF.Section7.VolumeOverlapRefinement.GammaDefinable.left_remainder : F.left_remainder.GammaDefinable B
+  IntegrationInACVF.Section7.VolumeOverlapRefinement.GammaDefinable.right_remainder : F.right_remainder.GammaDefinable B
+constructor:
+  IntegrationInACVF.Section7.VolumeOverlapRefinement.GammaDefinable.mk {M : Type}
+    [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {k : Nat}
+    {hc : CanonicalStructure.IsCanonical} {C : SpecialTransformations.Section3.BaseContext M}
+    {U V W : IntegrationInACVF.Section7.PositiveRVVolumeObject (↑C.base) k}
+    {h : IntegrationInACVF.Section7.VolumeBlowup U V} {g : IntegrationInACVF.Section7.VolumeBlowup U W}
+    {F : IntegrationInACVF.Section7.VolumeOverlapRefinement hc C h g}
+    {B : SpecialTransformations.Section3.GammaParameters.Base}
+    (left :
+      SpecialTransformations.Section5.GammaSetDefinable B
+        (Set.ofPred.{0}
+          fun
+            (p :
+              SpecialTransformations.Section5.Point 0
+                (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} h.locus.underlying).arity) =>
+          Membership.mem.{0, 0} (SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} F.left) p.2))
+    (right :
+      SpecialTransformations.Section5.GammaSetDefinable B
+        (Set.ofPred.{0}
+          fun
+            (p :
+              SpecialTransformations.Section5.Point 0
+                (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} g.locus.underlying).arity) =>
+          Membership.mem.{0, 0} (SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} F.right) p.2))
+    (overlap : F.overlap.GammaDefinable B) (exterior : IntegrationInACVF.Section7.VolumeObjectGamma F.exterior B)
+    (left_remainder : F.left_remainder.GammaDefinable B) (right_remainder : F.right_remainder.GammaDefinable B) :
+    IntegrationInACVF.Section7.VolumeOverlapRefinement.GammaDefinable hc C F B
+inductive IntegrationInACVF.Section7.GammaIteratedVolumeBlowup : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (B : SpecialTransformations.Section3.GammaParameters.Base) →
+        (S : Set.{0} M) →
+          (k : Nat) →
+            Nat →
+              IntegrationInACVF.Section7.GammaVolumeObjects B S k →
+                IntegrationInACVF.Section7.GammaVolumeObjects B S k → Prop
+number of parameters: 6
+constructors:
+IntegrationInACVF.Section7.GammaIteratedVolumeBlowup.refl : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {S : Set.{0} M} {k : Nat}
+  (U : IntegrationInACVF.Section7.GammaVolumeObjects B S k),
+  IntegrationInACVF.Section7.GammaIteratedVolumeBlowup B S k 0 U U
+IntegrationInACVF.Section7.GammaIteratedVolumeBlowup.step : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {S : Set.{0} M} {k n : Nat}
+  {U V W : IntegrationInACVF.Section7.GammaVolumeObjects B S k},
+  (Exists.{1} fun (b : IntegrationInACVF.Section7.VolumeBlowup ↑U ↑V) => b.GammaDefinable B) →
+    IntegrationInACVF.Section7.GammaIteratedVolumeBlowup B S k n V W →
+      IntegrationInACVF.Section7.GammaIteratedVolumeBlowup B S k (HAdd.hAdd.{0, 0, 0} n 1) U W

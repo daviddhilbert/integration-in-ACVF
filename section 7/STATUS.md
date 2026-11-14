@@ -6,11 +6,11 @@ as accepted by the author and recorded in `TARGETS.md`.
 
 ## Current checked local boundary
 
-`Integration7.Library` integrates 464 source modules plus its entry point.
-Full exported types and allowed-axiom reports for 1,545 distinct declarations
+`Integration7.Library` integrates 564 source modules plus its entry point.
+Full exported types and allowed-axiom reports for 1,786 distinct declarations
 have been inspected in targeted incremental batches. Only `propext`,
 `Classical.choice`, and `Quot.sound` occur. The latest affected-library
-build passed, including 10,981 jobs counting its cached dependency closure.
+build passed, including 11,112 jobs counting its cached dependency closure.
 `VERIFICATION.json` seals this source boundary and records the batch receipts.
 Unchanged earlier batches were not manually audited again.
 
@@ -833,6 +833,186 @@ elementary comparison and ordered induction, which remain unfinished.
 
 The source batch compiled, its full 1,235-line type/axiom report was
 reviewed, and the affected Library build passed (11,002 jobs including
-cached dependencies). The checked boundary is 464 source modules plus
+cached dependencies). The checked boundary is 564 source modules plus
 Library and 1,545 audited exports. This is the next authorized backup
 boundary, 100 modules beyond the last published proof checkpoint.
+
+
+## Original-Gamma elementary comparison
+
+`VolumeObjectGamma.elementary_comparison` proves actual volume
+isomorphism of canonical elementary blowups, retaining the original
+Gamma graph. It applies directly to actual objects with full Gamma
+coordinate and density graphs and ordinary admissible centers.
+`exists_gamma_elementaryBlowupIso` also handles arbitrary elementary
+charts whose packed essential maps have full Gamma graphs. The proof
+chooses the checked Gamma head Jacobian and uses the actual corrected
+map and the already proved almost-everywhere volume Jacobian equation.
+
+The coordinate, density and packed-chart graphs of canonical elementary
+blowups follow directly from those of the original actual object.
+Restrictions, inverse maps and tagged coproducts preserve their full
+graphs. This removes a presentation-change obstacle in the pending
+Gamma refinement argument. No new Gamma algebraicity is inferred from
+ordinary admissibility, and this batch does not finish Lemma 7.5.
+
+The 14-module/28-export batch passed source compilation, full type/axiom
+review, explicit existential endpoint-type inspection and the affected
+Library build (11,016 jobs including cached dependencies). The checked
+boundary is 478 modules plus Library, with 1,573 audited exports.
+The 464-module checkpoint was uploaded as commit
+81636ccb0409fe4eb5e3557255c5aa1065c9ca5a; all 557 remote blob identities,
+its ancestry and branch ref were checked. Main was unchanged. CI was
+running at publication. Two local recovery archives were reopened and
+byte-verified at the same 464-module boundary.
+
+
+## Original-Gamma geometric common refinements
+
+`gamma_volume_blowup_diamond` constructs a genuine square of actual
+volume blowups, retaining full original-Gamma charts on both new steps
+and their endpoint isomorphism. Full elementary charts include degenerate
+labels. The original-base center algebraicity, encoded by
+`GammaBlowupCenter`, passes to the two new restricted centers.
+
+`GammaIteratedVolumeBlowup.common_refinement_of_iso` applies the already
+checked finite-grid argument to Gamma volume-isomorphism classes and
+realizes actual chains with the exact two opposite lengths.
+`GammaVolumeBlowupEquivalent.trans` composes common refinements while
+retaining original-Gamma geometric data. No quotient-class permutation
+is used to select an unchecked comparison chart.
+
+`gamma_charted_volume_common_promotion` converts these geometric
+witnesses into valid common-witness formulas in any genuine containing
+context. Center admissibility remains over the original real/Gamma base.
+The exceptional-set certificates still have explicit auxiliary parameters;
+the theorem does not claim `NoAuxiliary` or a named-context equality.
+Preparing such general certificates and the ordered head induction for
+positive selected Lemma 7.5 remain unfinished.
+
+The 25-module/75-export batch passed source compilation, complete
+1,390-line type/axiom review (including explicit existential endpoint
+types and the new structure/inductive constructors), and the affected
+Library build (11,041 jobs including cached dependencies). The checked
+boundary is 503 modules plus Library, with 1,648 audited exports.
+The next GitHub backup remains near 564 modules.
+
+
+## Preparation with general auxiliary exception certificates
+
+`certificateWithFrozenParameters_valid` removes the auxiliary-free
+restriction from certificate recoding. The geometric source, target,
+coordinate/density rows and comparison chart descend to the prepared
+RV key. The old parameter tuple is retained existentially inside the
+exception certificate, alongside its original auxiliary tuple. A new
+ignored prefix makes that same finite exception map a valid witness at
+the new key. No old parameters are added to the fixed base or to the
+geometric labels. The actual exceptional row, its finite-fibre bound,
+chart supports, exception degree and exact blowup lengths are retained.
+
+`commonWithFrozenParameters_valid` extends this construction through
+complete common-witness formulas. Only their geometric primitive rows
+need finite VF codes. Thus `prepare_volume_geometry_cover_in_context`
+and `volume_formula_prepared_common_uniformity_in_context` prepare and
+glue arbitrary finite formula-witness covers in genuine small contexts.
+Neither a coefficient-field hypothesis, `NoAuxiliary`, nor equality
+with a named term context is required.
+
+`gamma_geometric_prepared_volume_uniformity` applies this to original-
+Gamma geometric common refinements in arbitrary contexts.
+`gamma_unary_volume_comparison_from_formula_witnesses` compares arbitrary
+unary standard contractions from general formula witnesses, preserving
+the original chosen contraction objects and retained densities. Its
+conclusion is actual common blowup equivalence in a containing context;
+full Gamma indexed realization and the ordered head induction for
+positive selected Lemma 7.5 remain unfinished.
+
+This is a verified replacement for the earlier auxiliary-free coding
+shortcut: it avoids any need to code arbitrary auxiliary VF parameters
+by RV parameters or choose their values uniformly.
+
+The 12-module/37-export batch passed source compilation, complete
+979-line type/axiom review (with explicit endpoint types and the recoding
+definition), and the affected Library build (11,053 jobs including cached
+dependencies). The checked boundary is 515 modules plus Library, with
+1,685 audited exports. The next GitHub backup remains near 564 modules.
+
+
+## Gamma indexed realization and unary preparation
+
+General common-witness formulas now realize indexed elementary blowups,
+finite chains and finite-cover common refinements with full original-Gamma
+coordinate, density and comparison graphs. Center algebraicity remains
+over the original real/Gamma base. Coproducts and finite partition gluing
+retain this geometry; arbitrary auxiliary exception parameters are allowed.
+
+`HasPreparedGammaVolumeCommonComparison` records the strengthened prepared
+family conclusion. `volume_formula_prepared_gamma_uniformity_in_context`
+constructs it from pointwise general formula witnesses in genuine small
+contexts. `gamma_unary_prepared_volume_comparison_with_geometry` compares
+an arbitrary chosen unary contraction with the prepared family using
+actual Gamma common blowups. Gamma block-swap composition and the ordered
+head induction for positive selected Lemma 7.5 remain unfinished.
+
+The 21-module/38-export batch passed actual source compilation, complete
+1,057-line type/axiom review, including the prepared comparison definition,
+and the affected Library build (11,112 jobs including cached dependencies).
+The checked boundary is 536 modules plus Library, with 1,723 audited exports.
+The next GitHub backup remains near 564 modules.
+
+
+## Unary comparison with original-Gamma geometry
+
+`gamma_unary_volume_comparison_with_geometry` strengthens the unary
+positive selected-volume comparison to actual common blowup chains with
+full original-Gamma geometry, from arbitrary valid formula witnesses.
+It preserves the original chosen contractions through parameter enlargement.
+No auxiliary-free restriction or coefficient-field premise is added.
+
+Simultaneous coordinate permutations preserve Gamma common blowups by
+correcting their common determinant sign with an original-base term
+constant. Term-closure parameter elimination shows this constant adds
+no parameters to the original Gamma graph. Density rescaling, degree
+reindexing, block swapping and the actual coordinate-density assembly
+charts retain the geometric witnesses and center algebraicity.
+
+The 9-module/19-export batch passed actual source compilation, complete
+695-line type/axiom review and the affected Library build (11,112 jobs
+including cached dependencies). The checked boundary is 545 modules plus
+Library, with 1,742 audited exports. Higher-dimensional ordered head
+induction for positive selected Lemma 7.5 remains unfinished.
+The next GitHub backup remains near 564 modules.
+
+
+## Actual frozen head fibres and their unary comparisons
+
+`headCoordinateFibrePreparation` restricts an actual head preparation to a
+genuine unary head preparation, and `headCoordinateFibreContraction` makes
+it an actual unary standard contraction. Their original-Gamma graphs name
+exactly the complementary VF tuple. `head_fibre_raw_volume_equivalence`
+identifies their raw RV output with the original head-contracted fibre,
+preserving the full selected volume tuple and all labels. The induction
+interface retains old selected coordinates first, then appends the new
+head tag; selected finiteness and the retained density are proved.
+
+`unary_selected_normalization_volume_iso` realizes the raw-to-normalized
+comparison as an actual Gamma volume isomorphism, preserving the selected
+volume coordinates and density. `selected_coordinate_density_schema_row`
+identifies arbitrary selected finite presentations with their full volume
+schema rows. `selected_volume_head_formula_witnesses` specializes the
+original pointwise geometric hypothesis to valid unary witnesses after
+freezing the tail. Equal-base and row transport preserve geometric data.
+
+`volume_common_gamma_in_term_context` supplies original-Gamma geometry
+for ordinary common witnesses in an actual term-generated named context;
+center algebraicity descends by term parameter elimination. No statement
+identifies a general containing context with that term closure.
+
+The head common-refinement composition and higher-dimensional ordered
+induction for positive selected Lemma 7.5 remain unfinished.
+
+The 19-module/44-export batch passed actual source compilation, complete
+881-line type/axiom review and the affected Library build (11,112 jobs
+including cached dependencies). The checked boundary is 564 modules plus
+Library, with 1,786 audited exports. This is the next 100-module backup
+boundary after the published 464-module checkpoint.

@@ -1,0 +1,268 @@
+{
+  "source_sha256": {
+    "section 7/Integration7/ExtraVolumeRowTransport.lean": "c2838e97e610cf3d1566614a9997125bd8cb68bba56b11c43b8eb462cc72736d",
+    "section 7/Integration7/GammaIgnoredParameterRecoding.lean": "74152d542b1b0f505395c44fb34312dca3a0cb2ab59c2202c45efaba38e27344",
+    "section 7/Integration7/FrozenVolumeCertificateRecoding.lean": "772262b42ee9711fdeda63d785e51f803f195e7a96c7a30680f75580443e8a8a",
+    "section 7/Integration7/FrozenVolumeWitnessRecoding.lean": "0b8c79dec15c7dae753c66ba4cf9bf10a4b439af8cca0bd19e9861e5ee50daa8",
+    "section 7/Integration7/PreparedVolumeGeometryAgreements.lean": "c8eff505924e90cb9b2888f4ed84d929bdde78e095366ccca899ceb562ca7c5f",
+    "section 7/Integration7/VolumeGeometryVFCodesInBase.lean": "e65d491a470b24050679d8e050f93d3410bc1ed5e39a8653cd5a5f95cab743d8",
+    "section 7/Integration7/PreparedVolumeGeometryContexts.lean": "fbecae710c87fee335ed8e2e98b94ed4a30ff55343111c5206ddd7b117b16a08",
+    "section 7/Integration7/PreparedVolumeGeometryGluing.lean": "2a7db274cb442854d6eeb12eb7b1b785ed90131bc569b95ae9a6300e868ce506",
+    "section 7/Integration7/VolumeFormulaWitnessCovers.lean": "17476e389611c6acde76b9d64192bc8c899c005b9051d1a78119cee5d5c282d7",
+    "section 7/Integration7/FormulaVolumeUniformityContexts.lean": "119f99510f53185ec4199b0f9200f48fa8087ee72bfc1e52588ec0a5a94b3df9",
+    "section 7/Integration7/GammaGeometricCommonWitnesses.lean": "7c5e2a133aeb103f0ee37ee9e3142a87232ee95fad98b4d7c1bceefb8345dad5",
+    "section 7/Integration7/UnaryVolumeComparisonFromFormulaWitnesses.lean": "ad78fde1dc77cc169d93dad7676bea30e11eb82f0505a922e02c66e4e0c35261"
+  },
+  "declarations": [
+    "IntegrationInACVF.Section7.extraVolumeChartRVRowValid_of_rowAgreement",
+    "IntegrationInACVF.Section6.ignoreParameterPrefix",
+    "IntegrationInACVF.Section6.ignoreParameterPrefixRelation",
+    "IntegrationInACVF.Section6.append_ignoreParameterPrefix",
+    "IntegrationInACVF.Section6.append_ignoreParameterPrefixRelation",
+    "IntegrationInACVF.Section6.GammaParameterRecode.ignorePrefix",
+    "IntegrationInACVF.Section6.GammaParameterRecode.ignorePrefix_rows",
+    "IntegrationInACVF.Section6.GammaParameterRecode.ignorePrefix_valid",
+    "IntegrationInACVF.Section7.GammaVolumeParameterRecode.certificateWithFrozenParameters",
+    "IntegrationInACVF.Section7.GammaVolumeParameterRecode.CertificateGeometryAgreement",
+    "IntegrationInACVF.Section7.GammaVolumeParameterRecode.certificateWithFrozenParameters_valid",
+    "IntegrationInACVF.Section7.GammaVolumeParameterRecode.blowupWithFrozenParameters",
+    "IntegrationInACVF.Section7.GammaVolumeParameterRecode.chainWithFrozenParameters",
+    "IntegrationInACVF.Section7.GammaVolumeParameterRecode.commonWithFrozenParameters",
+    "IntegrationInACVF.Section7.GammaVolumeParameterRecode.BlowupGeometryAgreement",
+    "IntegrationInACVF.Section7.GammaVolumeParameterRecode.ChainGeometryAgreement",
+    "IntegrationInACVF.Section7.GammaVolumeParameterRecode.CommonGeometryAgreement",
+    "IntegrationInACVF.Section7.GammaVolumeParameterRecode.blowupWithFrozenParameters_valid",
+    "IntegrationInACVF.Section7.GammaVolumeParameterRecode.chainWithFrozenParameters_valid",
+    "IntegrationInACVF.Section7.GammaVolumeParameterRecode.commonWithFrozenParameters_valid",
+    "IntegrationInACVF.Section7.gamma_prepared_volume_certificate_geometry_agreement",
+    "IntegrationInACVF.Section7.gamma_prepared_volume_blowup_geometry_agreement",
+    "IntegrationInACVF.Section7.gamma_prepared_volume_chain_geometry_agreement",
+    "IntegrationInACVF.Section7.gamma_prepared_volume_common_geometry_agreement",
+    "IntegrationInACVF.Section7.volume_certificate_geometry_vf_code_in_base",
+    "IntegrationInACVF.Section7.volume_blowup_geometry_vf_code_in_base",
+    "IntegrationInACVF.Section7.volume_chain_geometry_vf_code_in_base",
+    "IntegrationInACVF.Section7.volume_common_geometry_vf_code_in_base",
+    "IntegrationInACVF.Section7.volume_common_geometry_cover_vf_code_in_base",
+    "IntegrationInACVF.Section7.prepare_volume_geometry_cover_in_context",
+    "IntegrationInACVF.Section7.prepared_volume_geometry_gluing",
+    "IntegrationInACVF.Section7.volume_formula_common_finite_cover",
+    "IntegrationInACVF.Section7.volume_formula_prepared_common_uniformity_in_context",
+    "IntegrationInACVF.Section7.GammaRVVolumeSchema.commonByGammaGeometry",
+    "IntegrationInACVF.Section7.gamma_volume_formula_witness_from_geometry",
+    "IntegrationInACVF.Section7.gamma_geometric_prepared_volume_uniformity",
+    "IntegrationInACVF.Section7.gamma_unary_volume_comparison_from_formula_witnesses"
+  ],
+  "manually_reviewed_lines": 979,
+  "audit_log": ".scratch/recovery/recovered-forty-second-geometry-types-axioms.log",
+  "status": "PASS actual source compilation, full type/axiom review and affected library integration",
+  "scope": "General auxiliary volume certificates are recoded by retaining the old parameter tuple existentially in each exception map. Full geometric rows and exact chain lengths survive preparation. Arbitrary finite witness covers now prepare and glue in genuine containing contexts without NoAuxiliary or named-context equality. Unary selected contractions compare from general formula witnesses. Full Gamma indexed realization and ordered head induction for positive selected Lemma 7.5 remain open.",
+  "library_build_log": ".scratch/recovery/forty-second-reconstruction-library-build.log",
+  "library_build_jobs_including_cached_dependencies": 11053,
+  "compilation": [
+    {
+      "module": "ExtraVolumeRowTransport",
+      "source": "section 7/Integration7/ExtraVolumeRowTransport.lean",
+      "source_sha256": "c2838e97e610cf3d1566614a9997125bd8cb68bba56b11c43b8eb462cc72736d",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/ExtraVolumeRowTransport.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/ExtraVolumeRowTransport.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.086,
+      "completed_at_utc": "2026-11-14T16:55:19.883116+00:00",
+      "log": ".scratch/recovery/ExtraVolumeRowTransport-build.log"
+    },
+    {
+      "module": "GammaIgnoredParameterRecoding",
+      "source": "section 7/Integration7/GammaIgnoredParameterRecoding.lean",
+      "source_sha256": "74152d542b1b0f505395c44fb34312dca3a0cb2ab59c2202c45efaba38e27344",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/GammaIgnoredParameterRecoding.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/GammaIgnoredParameterRecoding.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 3.925,
+      "completed_at_utc": "2026-11-14T16:54:40.934610+00:00",
+      "log": ".scratch/recovery/GammaIgnoredParameterRecoding-build.log"
+    },
+    {
+      "module": "FrozenVolumeCertificateRecoding",
+      "source": "section 7/Integration7/FrozenVolumeCertificateRecoding.lean",
+      "source_sha256": "772262b42ee9711fdeda63d785e51f803f195e7a96c7a30680f75580443e8a8a",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/FrozenVolumeCertificateRecoding.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/FrozenVolumeCertificateRecoding.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.033,
+      "completed_at_utc": "2026-11-14T16:55:44.093866+00:00",
+      "log": ".scratch/recovery/FrozenVolumeCertificateRecoding-build.log"
+    },
+    {
+      "module": "FrozenVolumeWitnessRecoding",
+      "source": "section 7/Integration7/FrozenVolumeWitnessRecoding.lean",
+      "source_sha256": "0b8c79dec15c7dae753c66ba4cf9bf10a4b439af8cca0bd19e9861e5ee50daa8",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/FrozenVolumeWitnessRecoding.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/FrozenVolumeWitnessRecoding.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.108,
+      "completed_at_utc": "2026-11-14T16:56:48.431329+00:00",
+      "log": ".scratch/recovery/FrozenVolumeWitnessRecoding-build.log"
+    },
+    {
+      "module": "PreparedVolumeGeometryAgreements",
+      "source": "section 7/Integration7/PreparedVolumeGeometryAgreements.lean",
+      "source_sha256": "c8eff505924e90cb9b2888f4ed84d929bdde78e095366ccca899ceb562ca7c5f",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/PreparedVolumeGeometryAgreements.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/PreparedVolumeGeometryAgreements.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 3.544,
+      "completed_at_utc": "2026-11-14T16:57:45.861719+00:00",
+      "log": ".scratch/recovery/PreparedVolumeGeometryAgreements-build.log"
+    },
+    {
+      "module": "VolumeGeometryVFCodesInBase",
+      "source": "section 7/Integration7/VolumeGeometryVFCodesInBase.lean",
+      "source_sha256": "e65d491a470b24050679d8e050f93d3410bc1ed5e39a8653cd5a5f95cab743d8",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/VolumeGeometryVFCodesInBase.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/VolumeGeometryVFCodesInBase.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.113,
+      "completed_at_utc": "2026-11-14T16:57:42.317703+00:00",
+      "log": ".scratch/recovery/VolumeGeometryVFCodesInBase-build.log"
+    },
+    {
+      "module": "PreparedVolumeGeometryContexts",
+      "source": "section 7/Integration7/PreparedVolumeGeometryContexts.lean",
+      "source_sha256": "fbecae710c87fee335ed8e2e98b94ed4a30ff55343111c5206ddd7b117b16a08",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/PreparedVolumeGeometryContexts.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/PreparedVolumeGeometryContexts.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.142,
+      "completed_at_utc": "2026-11-14T16:58:12.141590+00:00",
+      "log": ".scratch/recovery/PreparedVolumeGeometryContexts-build.log"
+    },
+    {
+      "module": "PreparedVolumeGeometryGluing",
+      "source": "section 7/Integration7/PreparedVolumeGeometryGluing.lean",
+      "source_sha256": "2a7db274cb442854d6eeb12eb7b1b785ed90131bc569b95ae9a6300e868ce506",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/PreparedVolumeGeometryGluing.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/PreparedVolumeGeometryGluing.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 3.819,
+      "completed_at_utc": "2026-11-14T16:58:15.961881+00:00",
+      "log": ".scratch/recovery/PreparedVolumeGeometryGluing-build.log"
+    },
+    {
+      "module": "VolumeFormulaWitnessCovers",
+      "source": "section 7/Integration7/VolumeFormulaWitnessCovers.lean",
+      "source_sha256": "17476e389611c6acde76b9d64192bc8c899c005b9051d1a78119cee5d5c282d7",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/VolumeFormulaWitnessCovers.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/VolumeFormulaWitnessCovers.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.142,
+      "completed_at_utc": "2026-11-14T16:58:32.103149+00:00",
+      "log": ".scratch/recovery/VolumeFormulaWitnessCovers-build.log"
+    },
+    {
+      "module": "FormulaVolumeUniformityContexts",
+      "source": "section 7/Integration7/FormulaVolumeUniformityContexts.lean",
+      "source_sha256": "119f99510f53185ec4199b0f9200f48fa8087ee72bfc1e52588ec0a5a94b3df9",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/FormulaVolumeUniformityContexts.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/FormulaVolumeUniformityContexts.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.265,
+      "completed_at_utc": "2026-11-14T16:58:57.140967+00:00",
+      "log": ".scratch/recovery/FormulaVolumeUniformityContexts-build.log"
+    },
+    {
+      "module": "GammaGeometricCommonWitnesses",
+      "source": "section 7/Integration7/GammaGeometricCommonWitnesses.lean",
+      "source_sha256": "7c5e2a133aeb103f0ee37ee9e3142a87232ee95fad98b4d7c1bceefb8345dad5",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/GammaGeometricCommonWitnesses.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/GammaGeometricCommonWitnesses.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.211,
+      "completed_at_utc": "2026-11-14T17:00:05.433776+00:00",
+      "log": ".scratch/recovery/GammaGeometricCommonWitnesses-build.log"
+    },
+    {
+      "module": "UnaryVolumeComparisonFromFormulaWitnesses",
+      "source": "section 7/Integration7/UnaryVolumeComparisonFromFormulaWitnesses.lean",
+      "source_sha256": "ad78fde1dc77cc169d93dad7676bea30e11eb82f0505a922e02c66e4e0c35261",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/UnaryVolumeComparisonFromFormulaWitnesses.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/UnaryVolumeComparisonFromFormulaWitnesses.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.772,
+      "completed_at_utc": "2026-11-14T16:59:41.451403+00:00",
+      "log": ".scratch/recovery/UnaryVolumeComparisonFromFormulaWitnesses-build.log"
+    }
+  ],
+  "completed_at_utc": "2026-11-14T17:02:25.667351+00:00"
+}

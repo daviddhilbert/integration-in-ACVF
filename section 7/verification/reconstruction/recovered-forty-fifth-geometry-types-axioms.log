@@ -1,0 +1,881 @@
+@IntegrationInACVF.Section7.gamma_coordinate_density_equivalence_realize : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {k : Nat} (hc : CanonicalStructure.IsCanonical)
+  (C : SpecialTransformations.Section3.BaseContext M)
+  (U V : SpecialTransformations.Section5.GammaRVFiniteObject B (HAdd.hAdd.{0, 0, 0} k 1))
+  (hUC : LE.le.{0} U.codes ↑C.base) (hVC : LE.le.{0} V.codes ↑C.base)
+  (δ : Fin (SpecialTransformations.Section5.rvObjectArity U.object))
+  (ε : Fin (SpecialTransformations.Section5.rvObjectArity V.object))
+  (hδ :
+    ∀
+      (u :
+        ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+            (SpecialTransformations.Section5.rvObjectDomain U.object))),
+      Ne.{1} (↑(↑u δ)) SpecialTransformations.Milestone0.iRVZero.{0})
+  (hε :
+    ∀
+      (v :
+        ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+            (SpecialTransformations.Section5.rvObjectDomain V.object))),
+      Ne.{1} (↑(↑v ε)) SpecialTransformations.Milestone0.iRVZero.{0})
+  (e : SpecialTransformations.Section7.GammaRVIso U.toGammaRVObject V.toGammaRVObject),
+  (∀
+      (u :
+        ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+            (SpecialTransformations.Section5.rvObjectDomain U.object))),
+      Eq.{1} (SpecialTransformations.Section7.gammaVolumeValue V.toGammaRVObject (e.equiv u))
+        (SpecialTransformations.Section7.gammaVolumeValue U.toGammaRVObject u)) →
+    (∀
+        (u :
+          ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+              (SpecialTransformations.Section5.rvObjectDomain U.object))),
+        Eq.{1} (↑(e.equiv u) ε) (↑u δ)) →
+      Exists.{2} fun (D : SpecialTransformations.Section3.BaseContext M) =>
+        Exists.{0} fun (hCD : LE.le.{0} ↑C.base ↑D.base) =>
+          Exists.{1}
+            fun
+              (f :
+                IntegrationInACVF.Section7.RVVolumeIso
+                  ((IntegrationInACVF.Section7.gammaCoordinateDensityObject hc C U hUC δ hδ).extend hCD)
+                  ((IntegrationInACVF.Section7.gammaCoordinateDensityObject hc C V hVC ε hε).extend hCD)) =>
+            f.GammaDefinable B
+'IntegrationInACVF.Section7.gamma_coordinate_density_equivalence_realize' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.gamma_equal_label_equivalence_graph : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {a : Nat}
+  (U V : Set.{0} (Fin a → SpecialTransformations.Section5.RV)),
+  SpecialTransformations.Section5.GammaSetDefinable B
+      (Set.ofPred.{0} fun (p : SpecialTransformations.Section5.Point 0 a) => Membership.mem.{0, 0} U p.2) →
+    ∀ (e : Equiv.{1, 1} ↑U ↑V),
+      (∀ (u : ↑U), Eq.{1} ↑(e u) ↑u) →
+        SpecialTransformations.Section5.GammaGraphDefinable B fun (p q : SpecialTransformations.Section5.Point 0 a) =>
+          Exists.{1} fun (u : ↑U) => And (Eq.{1} (↑u) p.2) (Eq.{1} (↑(e u)) q.2)
+'IntegrationInACVF.Section7.gamma_equal_label_equivalence_graph' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.RVVolumeSchemaRow.transport_rows : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B B' : SpecialTransformations.Section3.GammaParameters.Base} {S : Set.{0} M} {p q k : Nat}
+  {sp : Fin p → SpecialTransformations.Milestone0.SortTag} {sq : Fin q → SpecialTransformations.Milestone0.SortTag}
+  {U : IntegrationInACVF.Section7.PositiveRVVolumeObject S k}
+  {F :
+    IntegrationInACVF.Section7.GammaRVVolumeSchema B p
+      (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.underlying).arity k sp}
+  {G :
+    IntegrationInACVF.Section7.GammaRVVolumeSchema B' q
+      (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.underlying).arity k sq}
+  {z : Fin p → M} {t : Fin q → M},
+  IntegrationInACVF.Section7.RVVolumeSchemaRow U F z →
+    (∀
+        (r :
+          Fin (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.underlying).arity →
+            SpecialTransformations.Section5.RV)
+        (y : Fin (HAdd.hAdd.{0, 0, 0} k 1) → SpecialTransformations.Section5.RV),
+        Iff (F.object.rowVolume z r y) (G.object.rowVolume t r y)) →
+      (∀ (r : Fin (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} U.underlying).arity → CanonicalRV.RVSort M)
+          (w : Fin 1 → CanonicalRV.RVSort M), Iff (F.rowDensity z r w) (G.rowDensity t r w)) →
+        IntegrationInACVF.Section7.RVVolumeSchemaRow U G t
+'IntegrationInACVF.Section7.RVVolumeSchemaRow.transport_rows' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.GammaRVVolumeSchema.commonByGammaGeometry_transport_rows : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B B' : SpecialTransformations.Section3.GammaParameters.Base} {p q a b k : Nat}
+  {sp : Fin p → SpecialTransformations.Milestone0.SortTag} {sq : Fin q → SpecialTransformations.Milestone0.SortTag}
+  {F : IntegrationInACVF.Section7.GammaRVVolumeSchema B p a k sp}
+  {G : IntegrationInACVF.Section7.GammaRVVolumeSchema B p b k sp}
+  {F' : IntegrationInACVF.Section7.GammaRVVolumeSchema B' q a k sq}
+  {G' : IntegrationInACVF.Section7.GammaRVVolumeSchema B' q b k sq} {z : Fin p → M} {t : Fin q → M},
+  Eq.{1} { real := Union.union.{0} B.real (Set.range.{0, 1} z), gamma := B.gamma }
+      { real := Union.union.{0} B'.real (Set.range.{0, 1} t), gamma := B'.gamma } →
+    (∀ (r : Fin a → SpecialTransformations.Section5.RV)
+        (y : Fin (HAdd.hAdd.{0, 0, 0} k 1) → SpecialTransformations.Section5.RV),
+        Iff (F.object.rowVolume z r y) (F'.object.rowVolume t r y)) →
+      (∀ (r : Fin a → CanonicalRV.RVSort M) (w : Fin 1 → CanonicalRV.RVSort M),
+          Iff (F.rowDensity z r w) (F'.rowDensity t r w)) →
+        (∀ (r : Fin b → SpecialTransformations.Section5.RV)
+            (y : Fin (HAdd.hAdd.{0, 0, 0} k 1) → SpecialTransformations.Section5.RV),
+            Iff (G.object.rowVolume z r y) (G'.object.rowVolume t r y)) →
+          (∀ (r : Fin b → CanonicalRV.RVSort M) (w : Fin 1 → CanonicalRV.RVSort M),
+              Iff (G.rowDensity z r w) (G'.rowDensity t r w)) →
+            F.commonByGammaGeometry G z → F'.commonByGammaGeometry G' t
+'IntegrationInACVF.Section7.GammaRVVolumeSchema.commonByGammaGeometry_transport_rows' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.gamma_rv_map_graph_of_parameter_closure : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {S : Set.{0} M} {a b : Nat},
+  CanonicalStructure.IsCanonical →
+    Eq.{1} S
+        ↑(LowerAdjoint.toFun.{0, 0}
+            (FirstOrder.Language.Substructure.closure.{0, 0, 0} SpecialTransformations.Milestone0.LRV) B.real) →
+      ∀ {A : SpecialTransformations.DefinableGeometry.DefSet.{0, 0} (SpecialTransformations.Section4.rawRVSpace a) S}
+        {D : SpecialTransformations.DefinableGeometry.DefSet.{0, 0} (SpecialTransformations.Section4.rawRVSpace b) S}
+        (f : SpecialTransformations.DefinableGeometry.Map.{0, 0} A D), IntegrationInACVF.Section7.RVMapGamma f B
+'IntegrationInACVF.Section7.gamma_rv_map_graph_of_parameter_closure' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.VolumeObjectGamma.of_term_context : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {k : Nat},
+  CanonicalStructure.IsCanonical →
+    ∀ (C : SpecialTransformations.Section3.BaseContext M),
+      Eq.{1} ↑C.base
+          ↑(LowerAdjoint.toFun.{0, 0}
+              (FirstOrder.Language.Substructure.closure.{0, 0, 0} SpecialTransformations.Milestone0.LRV) B.real) →
+        ∀ (U : IntegrationInACVF.Section7.PositiveRVVolumeObject (↑C.base) k),
+          IntegrationInACVF.Section7.VolumeObjectGamma U B
+'IntegrationInACVF.Section7.VolumeObjectGamma.of_term_context' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.RVVolumeIso.gamma_of_term_context : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {k : Nat},
+  CanonicalStructure.IsCanonical →
+    ∀ (C : SpecialTransformations.Section3.BaseContext M),
+      Eq.{1} ↑C.base
+          ↑(LowerAdjoint.toFun.{0, 0}
+              (FirstOrder.Language.Substructure.closure.{0, 0, 0} SpecialTransformations.Milestone0.LRV) B.real) →
+        ∀ {U V : IntegrationInACVF.Section7.PositiveRVVolumeObject (↑C.base) k}
+          (e : IntegrationInACVF.Section7.RVVolumeIso U V), e.GammaDefinable B
+'IntegrationInACVF.Section7.RVVolumeIso.gamma_of_term_context' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.BlowupAdmissible.gamma_of_term_context : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {k : Nat},
+  CanonicalStructure.IsCanonical →
+    ∀ (C : SpecialTransformations.Section3.BaseContext M),
+      Eq.{1} ↑C.base
+          ↑(LowerAdjoint.toFun.{0, 0}
+              (FirstOrder.Language.Substructure.closure.{0, 0, 0} SpecialTransformations.Milestone0.LRV) B.real) →
+        ∀ {U : IntegrationInACVF.Section7.PositiveRVVolumeObject (↑C.base) k},
+          IntegrationInACVF.Section7.BlowupAdmissible U → IntegrationInACVF.Section7.GammaBlowupCenter U B
+'IntegrationInACVF.Section7.BlowupAdmissible.gamma_of_term_context' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.VolumeBlowup.gamma_of_term_context : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {k : Nat},
+  CanonicalStructure.IsCanonical →
+    ∀ (C : SpecialTransformations.Section3.BaseContext M),
+      Eq.{1} ↑C.base
+          ↑(LowerAdjoint.toFun.{0, 0}
+              (FirstOrder.Language.Substructure.closure.{0, 0, 0} SpecialTransformations.Milestone0.LRV) B.real) →
+        ∀ {U V : IntegrationInACVF.Section7.PositiveRVVolumeObject (↑C.base) k}
+          (b : IntegrationInACVF.Section7.VolumeBlowup U V), b.GammaDefinable B
+'IntegrationInACVF.Section7.VolumeBlowup.gamma_of_term_context' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.iterated_volume_blowup_gamma_in_term_context : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {k n : Nat} (hc : CanonicalStructure.IsCanonical)
+  (C : SpecialTransformations.Section3.BaseContext M)
+  (hBase :
+    Eq.{1} ↑C.base
+      ↑(LowerAdjoint.toFun.{0, 0}
+          (FirstOrder.Language.Substructure.closure.{0, 0, 0} SpecialTransformations.Milestone0.LRV) B.real))
+  {U V : IntegrationInACVF.Section7.PositiveRVVolumeObject (↑C.base) k},
+  IntegrationInACVF.Section7.IteratedVolumeBlowup n U V →
+    IntegrationInACVF.Section7.GammaIteratedVolumeBlowup B (↑C.base) k n (Subtype.mk.{1} U ⋯) (Subtype.mk.{1} V ⋯)
+'IntegrationInACVF.Section7.iterated_volume_blowup_gamma_in_term_context' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.volume_common_gamma_in_term_context : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {k : Nat} (hc : CanonicalStructure.IsCanonical)
+  (C : SpecialTransformations.Section3.BaseContext M)
+  (hBase :
+    Eq.{1} ↑C.base
+      ↑(LowerAdjoint.toFun.{0, 0}
+          (FirstOrder.Language.Substructure.closure.{0, 0, 0} SpecialTransformations.Milestone0.LRV) B.real))
+  {U V : IntegrationInACVF.Section7.PositiveRVVolumeObject (↑C.base) k},
+  IntegrationInACVF.Section7.VolumeBlowupEquivalent U V →
+    IntegrationInACVF.Section7.GammaVolumeBlowupEquivalent B (↑C.base) k (Subtype.mk.{1} U ⋯) (Subtype.mk.{1} V ⋯)
+'IntegrationInACVF.Section7.volume_common_gamma_in_term_context' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.GammaVolumeObjects.rebase : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B B' : SpecialTransformations.Section3.GammaParameters.Base} →
+        {S : Set.{0} M} →
+          {k : Nat} →
+            IntegrationInACVF.Section7.GammaVolumeObjects B S k →
+              Eq.{1} B B' → IntegrationInACVF.Section7.GammaVolumeObjects B' S k
+'IntegrationInACVF.Section7.GammaVolumeObjects.rebase' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.GammaVolumeBlowupEquivalent.rebase : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B B' : SpecialTransformations.Section3.GammaParameters.Base} {S : Set.{0} M} {k : Nat}
+  {U V : IntegrationInACVF.Section7.GammaVolumeObjects B S k},
+  IntegrationInACVF.Section7.GammaVolumeBlowupEquivalent B S k U V →
+    ∀ (h : Eq.{1} B B'), IntegrationInACVF.Section7.GammaVolumeBlowupEquivalent B' S k (U.rebase h) (V.rebase h)
+'IntegrationInACVF.Section7.GammaVolumeBlowupEquivalent.rebase' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.headAppendVolumeIndex : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {S : Set.{0} M} →
+        {n a k : Nat} →
+          {U : SpecialTransformations.Section5.DefSet S (HAdd.hAdd.{0, 0, 0} n 1) a} →
+            (T : IntegrationInACVF.Section5.HeadPreparation U) →
+              (Fin (HAdd.hAdd.{0, 0, 0} k 1) → Fin a) →
+                Fin (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} k 1) 1) → Fin (HAdd.hAdd.{0, 0, 0} 1 T.arity)
+'IntegrationInACVF.Section7.headAppendVolumeIndex' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@IntegrationInACVF.Section7.head_append_selected_fibres_finite : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {S : Set.{0} M} {n a k : Nat}
+  {U : SpecialTransformations.Section5.DefSet S (HAdd.hAdd.{0, 0, 0} n 1) a} {κ : Cardinal.{0}},
+  LE.le.{1} Cardinal.aleph0.{0} κ →
+    SpecialTransformations.Section3.Saturated M κ →
+      LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ →
+        ∀ (T : IntegrationInACVF.Section5.HeadPreparation U),
+          SpecialTransformations.Section5.GammaGraphDefinable B (SpecialTransformations.Section5.pointMapGraph T.map) →
+            SpecialTransformations.Section5.GammaSetDefinable B (SpecialTransformations.Section5.carrier T.target) →
+              ∀ (ρ : Fin (HAdd.hAdd.{0, 0, 0} k 1) → Fin a),
+                (∀ (x : Fin (HAdd.hAdd.{0, 0, 0} n 1) → SpecialTransformations.Section5.VF)
+                    (t : Fin (HAdd.hAdd.{0, 0, 0} k 1) → SpecialTransformations.Section5.RV),
+                    Set.Finite.{0}
+                      (Set.ofPred.{0} fun (r : Fin a → SpecialTransformations.Section5.RV) =>
+                        And (Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier U) (Prod.mk.{0, 0} x r))
+                          (Eq.{1} (Function.comp.{1, 1, 1} r ρ) t))) →
+                  ∀ (x : Fin n → SpecialTransformations.Section5.VF)
+                    (t : Fin (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} k 1) 1) → SpecialTransformations.Section5.RV),
+                    Set.Finite.{0}
+                      (Set.ofPred.{0}
+                        fun (r : Fin (HAdd.hAdd.{0, 0, 0} 1 T.arity) → SpecialTransformations.Section5.RV) =>
+                        And
+                          (Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier T.contractedSet)
+                            (Prod.mk.{0, 0} x r))
+                          (Eq.{1} (Function.comp.{1, 1, 1} r (IntegrationInACVF.Section7.headAppendVolumeIndex T ρ)) t))
+'IntegrationInACVF.Section7.head_append_selected_fibres_finite' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.head_retained_density_nonzero : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set.{0} M}
+  {n a : Nat} {U : SpecialTransformations.Section5.DefSet S (HAdd.hAdd.{0, 0, 0} n 1) a}
+  (T : IntegrationInACVF.Section5.HeadPreparation U) (δ : Fin a),
+  (∀
+      (p :
+        SpecialTransformations.DefinableGeometry.Space.Carrier.{0, 0}
+          (SpecialTransformations.Section5.pointSpace (HAdd.hAdd.{0, 0, 0} n 1) a)),
+      Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier U) p →
+        Ne.{1} (↑(p.2 δ)) SpecialTransformations.Milestone0.iRVZero.{0}) →
+    ∀
+      (p :
+        SpecialTransformations.DefinableGeometry.Space.Carrier.{0, 0}
+          (SpecialTransformations.Section5.pointSpace n (HAdd.hAdd.{0, 0, 0} 1 T.arity))),
+      Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier T.contractedSet) p →
+        Ne.{1} (↑(p.2 (Fin.natAdd 1 (IntegrationInACVF.Section5.suffixIndex ⋯ δ))))
+          SpecialTransformations.Milestone0.iRVZero.{0}
+'IntegrationInACVF.Section7.head_retained_density_nonzero' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.headCoordinateFibreContraction : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {S : Set.{0} M} →
+        {n a : Nat} →
+          {U : SpecialTransformations.Section5.DefSet S (HAdd.hAdd.{0, 0, 0} n 1) a} →
+            IntegrationInACVF.Section5.HeadPreparation U →
+              (x : Fin n → SpecialTransformations.Section5.VF) →
+                IntegrationInACVF.Section5.StandardContraction
+                  (IntegrationInACVF.Section5.coordinateFibre U 0 (IntegrationInACVF.Section6.headFrozenTuple x))
+                  (Equiv.refl.{1} (Fin 1))
+'IntegrationInACVF.Section7.headCoordinateFibreContraction' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.gamma_head_coordinate_fibre_contraction : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set.{0} M}
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {n a : Nat}
+  {U : SpecialTransformations.Section5.DefSet S (HAdd.hAdd.{0, 0, 0} n 1) a}
+  (T : IntegrationInACVF.Section5.HeadPreparation U),
+  SpecialTransformations.Section5.GammaGraphDefinable B (SpecialTransformations.Section5.pointMapGraph T.map) →
+    SpecialTransformations.Section5.GammaSetDefinable B (SpecialTransformations.Section5.carrier T.target) →
+      ∀ (x : Fin n → SpecialTransformations.Section5.VF),
+        IntegrationInACVF.Section5.GammaProgramDefinable
+          { real := Union.union.{0} B.real (Set.range.{0, 1} fun (j : Fin n) => ↑(x j)), gamma := B.gamma }
+          (IntegrationInACVF.Section7.headCoordinateFibreContraction T x).program
+'IntegrationInACVF.Section7.gamma_head_coordinate_fibre_contraction' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.head_coordinate_fibre_contraction_domain : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set.{0} M}
+  {n a : Nat} {U : SpecialTransformations.Section5.DefSet S (HAdd.hAdd.{0, 0, 0} n 1) a}
+  (T : IntegrationInACVF.Section5.HeadPreparation U) (x : Fin n → SpecialTransformations.Section5.VF)
+  (r : Fin (HAdd.hAdd.{0, 0, 0} 1 T.arity) → SpecialTransformations.Section5.RV),
+  Iff
+    (Membership.mem.{0, 0}
+      (SpecialTransformations.Section5.carrier (IntegrationInACVF.Section7.headCoordinateFibreContraction T x).target)
+      (Prod.mk.{0, 0} Fin.elim0.{1} r))
+    (Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier T.contractedSet) (Prod.mk.{0, 0} x r))
+'IntegrationInACVF.Section7.head_coordinate_fibre_contraction_domain' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.headCoordinateFibrePreparation : {M : Type} →
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {S : Set.{0} M} →
+        {n a : Nat} →
+          {U : SpecialTransformations.Section5.DefSet S (HAdd.hAdd.{0, 0, 0} n 1) a} →
+            IntegrationInACVF.Section5.HeadPreparation U →
+              (x : Fin n → SpecialTransformations.Section5.VF) →
+                IntegrationInACVF.Section5.HeadPreparation
+                  (IntegrationInACVF.Section5.coordinateFibre U 0 (IntegrationInACVF.Section6.headFrozenTuple x))
+'IntegrationInACVF.Section7.headCoordinateFibrePreparation' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.gamma_head_coordinate_fibre_preparation_map : ∀ {M : Type}
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set.{0} M}
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {n a : Nat}
+  {U : SpecialTransformations.Section5.DefSet S (HAdd.hAdd.{0, 0, 0} n 1) a}
+  (T : IntegrationInACVF.Section5.HeadPreparation U),
+  SpecialTransformations.Section5.GammaGraphDefinable B (SpecialTransformations.Section5.pointMapGraph T.map) →
+    ∀ (x : Fin n → SpecialTransformations.Section5.VF),
+      SpecialTransformations.Section5.GammaGraphDefinable
+        { real := Union.union.{0} B.real (Set.range.{0, 1} fun (j : Fin n) => ↑(x j)), gamma := B.gamma }
+        (SpecialTransformations.Section5.pointMapGraph
+          (IntegrationInACVF.Section7.headCoordinateFibrePreparation T x).map)
+'IntegrationInACVF.Section7.gamma_head_coordinate_fibre_preparation_map' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.gamma_head_coordinate_fibre_preparation_target : ∀ {M : Type}
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set.{0} M}
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {n a : Nat}
+  {U : SpecialTransformations.Section5.DefSet S (HAdd.hAdd.{0, 0, 0} n 1) a}
+  (T : IntegrationInACVF.Section5.HeadPreparation U),
+  SpecialTransformations.Section5.GammaSetDefinable B (SpecialTransformations.Section5.carrier T.target) →
+    ∀ (x : Fin n → SpecialTransformations.Section5.VF),
+      SpecialTransformations.Section5.GammaSetDefinable
+        { real := Union.union.{0} B.real (Set.range.{0, 1} fun (j : Fin n) => ↑(x j)), gamma := B.gamma }
+        (SpecialTransformations.Section5.carrier (IntegrationInACVF.Section7.headCoordinateFibrePreparation T x).target)
+'IntegrationInACVF.Section7.gamma_head_coordinate_fibre_preparation_target' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.head_coordinate_fibre_volume_index : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set.{0} M}
+  {n a : Nat} {U : SpecialTransformations.Section5.DefSet S (HAdd.hAdd.{0, 0, 0} n 1) a}
+  (T : IntegrationInACVF.Section5.HeadPreparation U) (x : Fin n → SpecialTransformations.Section5.VF),
+  Eq.{1} ((IntegrationInACVF.Section7.headCoordinateFibreContraction T x).volumeIndex 0) (Fin.castAdd T.arity 0)
+'IntegrationInACVF.Section7.head_coordinate_fibre_volume_index' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.head_coordinate_fibre_old_label_index : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set.{0} M}
+  {n a : Nat} {U : SpecialTransformations.Section5.DefSet S (HAdd.hAdd.{0, 0, 0} n 1) a}
+  (T : IntegrationInACVF.Section5.HeadPreparation U) (x : Fin n → SpecialTransformations.Section5.VF) (δ : Fin a),
+  Eq.{1} (IntegrationInACVF.Section5.suffixIndex ⋯ δ) (Fin.natAdd 1 (IntegrationInACVF.Section5.suffixIndex ⋯ δ))
+'IntegrationInACVF.Section7.head_coordinate_fibre_old_label_index' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.head_fibre_raw_volume_equivalence : ∀ {M : Type}
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {S : Set.{0} M} {n a k : Nat}
+  {U : SpecialTransformations.Section5.DefSet S (HAdd.hAdd.{0, 0, 0} n 1) a} {κ : Cardinal.{0}}
+  (hκ : LE.le.{1} Cardinal.aleph0.{0} κ) (hs : SpecialTransformations.Section3.Saturated M κ)
+  (hreal : LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ) (hBS : LE.le.{0} B.real S)
+  (hU : SpecialTransformations.Section5.GammaSetDefinable B (SpecialTransformations.Section5.carrier U))
+  (ρ : Fin (HAdd.hAdd.{0, 0, 0} k 1) → Fin a)
+  (hfin :
+    ∀ (x : Fin (HAdd.hAdd.{0, 0, 0} n 1) → SpecialTransformations.Section5.VF)
+      (t : Fin (HAdd.hAdd.{0, 0, 0} k 1) → SpecialTransformations.Section5.RV),
+      Set.Finite.{0}
+        (Set.ofPred.{0} fun (r : Fin a → SpecialTransformations.Section5.RV) =>
+          And (Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier U) (Prod.mk.{0, 0} x r))
+            (Eq.{1} (Function.comp.{1, 1, 1} r ρ) t)))
+  (T : IntegrationInACVF.Section5.HeadPreparation U)
+  (hT : SpecialTransformations.Section5.GammaGraphDefinable B (SpecialTransformations.Section5.pointMapGraph T.map))
+  (hTarget : SpecialTransformations.Section5.GammaSetDefinable B (SpecialTransformations.Section5.carrier T.target))
+  (x : Fin n → SpecialTransformations.Section5.VF)
+  (P :
+    IntegrationInACVF.Section6.SelectedLabelFibrePresentation B T.contractedSet
+      (IntegrationInACVF.Section7.headAppendVolumeIndex T ρ) x),
+  let Z := IntegrationInACVF.Section7.headFibreRawVolumeObject hκ hs hreal hBS hU ρ hfin T hT hTarget x;
+  Exists.{1}
+    fun
+      (e :
+        SpecialTransformations.Section7.GammaRVIso
+          (IntegrationInACVF.Section6.GammaFiniteGraphPresentation.toGamma P).toGammaRVObject Z.toGammaRVObject) =>
+    And
+      (∀
+        (u :
+          ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+              (SpecialTransformations.Section5.rvObjectDomain
+                (IntegrationInACVF.Section6.GammaFiniteGraphPresentation.toGamma P).object))),
+        Eq.{1} (SpecialTransformations.Section7.gammaVolumeValue Z.toGammaRVObject (e.equiv u))
+          (SpecialTransformations.Section7.gammaVolumeValue
+            (IntegrationInACVF.Section6.GammaFiniteGraphPresentation.toGamma P).toGammaRVObject u))
+      (∀
+        (u :
+          ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+              (SpecialTransformations.Section5.rvObjectDomain
+                (IntegrationInACVF.Section6.GammaFiniteGraphPresentation.toGamma P).object))),
+        Eq.{1} ↑(e.equiv u) ↑u)
+'IntegrationInACVF.Section7.head_fibre_raw_volume_equivalence' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.head_coordinate_fibre_base : ∀ {M : Type}
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {n : Nat}
+  (S : Set.{0} M) (x : Fin n → SpecialTransformations.Section5.VF),
+  Eq.{1} (IntegrationInACVF.Section5.coordinateFibreBase S 0 (IntegrationInACVF.Section6.headFrozenTuple x))
+    (Union.union.{0} S (Set.range.{0, 1} fun (j : Fin n) => ↑(x j)))
+'IntegrationInACVF.Section7.head_coordinate_fibre_base' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.headFibreRawVolumeObject : {M : Type} →
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B : SpecialTransformations.Section3.GammaParameters.Base} →
+        {S : Set.{0} M} →
+          {n a k : Nat} →
+            {U : SpecialTransformations.Section5.DefSet S (HAdd.hAdd.{0, 0, 0} n 1) a} →
+              {κ : Cardinal.{0}} →
+                LE.le.{1} Cardinal.aleph0.{0} κ →
+                  SpecialTransformations.Section3.Saturated M κ →
+                    LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ →
+                      LE.le.{0} B.real S →
+                        SpecialTransformations.Section5.GammaSetDefinable B
+                            (SpecialTransformations.Section5.carrier U) →
+                          (ρ : Fin (HAdd.hAdd.{0, 0, 0} k 1) → Fin a) →
+                            (∀ (x : Fin (HAdd.hAdd.{0, 0, 0} n 1) → SpecialTransformations.Section5.VF)
+                                (t : Fin (HAdd.hAdd.{0, 0, 0} k 1) → SpecialTransformations.Section5.RV),
+                                Set.Finite.{0}
+                                  (Set.ofPred.{0} fun (r : Fin a → SpecialTransformations.Section5.RV) =>
+                                    And
+                                      (Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier U)
+                                        (Prod.mk.{0, 0} x r))
+                                      (Eq.{1} (Function.comp.{1, 1, 1} r ρ) t))) →
+                              (T : IntegrationInACVF.Section5.HeadPreparation U) →
+                                SpecialTransformations.Section5.GammaGraphDefinable B
+                                    (SpecialTransformations.Section5.pointMapGraph T.map) →
+                                  SpecialTransformations.Section5.GammaSetDefinable B
+                                      (SpecialTransformations.Section5.carrier T.target) →
+                                    (x : Fin n → SpecialTransformations.Section5.VF) →
+                                      SpecialTransformations.Section5.GammaRVFiniteObject
+                                        { real := Union.union.{0} B.real (Set.range.{0, 1} fun (j : Fin n) => ↑(x j)),
+                                          gamma := B.gamma }
+                                        (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} k 1) 1)
+'IntegrationInACVF.Section7.headFibreRawVolumeObject' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@IntegrationInACVF.Section7.head_fibre_raw_domain : ∀ {M : Type}
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {S : Set.{0} M} {n a k : Nat}
+  {U : SpecialTransformations.Section5.DefSet S (HAdd.hAdd.{0, 0, 0} n 1) a} {κ : Cardinal.{0}}
+  (hκ : LE.le.{1} Cardinal.aleph0.{0} κ) (hs : SpecialTransformations.Section3.Saturated M κ)
+  (hreal : LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ) (hBS : LE.le.{0} B.real S)
+  (hU : SpecialTransformations.Section5.GammaSetDefinable B (SpecialTransformations.Section5.carrier U))
+  (ρ : Fin (HAdd.hAdd.{0, 0, 0} k 1) → Fin a)
+  (hfin :
+    ∀ (x : Fin (HAdd.hAdd.{0, 0, 0} n 1) → SpecialTransformations.Section5.VF)
+      (t : Fin (HAdd.hAdd.{0, 0, 0} k 1) → SpecialTransformations.Section5.RV),
+      Set.Finite.{0}
+        (Set.ofPred.{0} fun (r : Fin a → SpecialTransformations.Section5.RV) =>
+          And (Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier U) (Prod.mk.{0, 0} x r))
+            (Eq.{1} (Function.comp.{1, 1, 1} r ρ) t)))
+  (T : IntegrationInACVF.Section5.HeadPreparation U)
+  (hT : SpecialTransformations.Section5.GammaGraphDefinable B (SpecialTransformations.Section5.pointMapGraph T.map))
+  (hTarget : SpecialTransformations.Section5.GammaSetDefinable B (SpecialTransformations.Section5.carrier T.target))
+  (x : Fin n → SpecialTransformations.Section5.VF)
+  (r : Fin (HAdd.hAdd.{0, 0, 0} 1 T.arity) → SpecialTransformations.Section5.RV),
+  Iff
+    (Membership.mem.{0, 0}
+      (SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+        (SpecialTransformations.Section5.rvObjectDomain
+          (IntegrationInACVF.Section7.headFibreRawVolumeObject hκ hs hreal hBS hU ρ hfin T hT hTarget x).object))
+      r)
+    (Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier T.contractedSet) (Prod.mk.{0, 0} x r))
+'IntegrationInACVF.Section7.head_fibre_raw_domain' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@IntegrationInACVF.Section7.head_fibre_raw_volume : ∀ {M : Type}
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {S : Set.{0} M} {n a k : Nat}
+  {U : SpecialTransformations.Section5.DefSet S (HAdd.hAdd.{0, 0, 0} n 1) a} {κ : Cardinal.{0}}
+  (hκ : LE.le.{1} Cardinal.aleph0.{0} κ) (hs : SpecialTransformations.Section3.Saturated M κ)
+  (hreal : LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ) (hBS : LE.le.{0} B.real S)
+  (hU : SpecialTransformations.Section5.GammaSetDefinable B (SpecialTransformations.Section5.carrier U))
+  (ρ : Fin (HAdd.hAdd.{0, 0, 0} k 1) → Fin a)
+  (hfin :
+    ∀ (x : Fin (HAdd.hAdd.{0, 0, 0} n 1) → SpecialTransformations.Section5.VF)
+      (t : Fin (HAdd.hAdd.{0, 0, 0} k 1) → SpecialTransformations.Section5.RV),
+      Set.Finite.{0}
+        (Set.ofPred.{0} fun (r : Fin a → SpecialTransformations.Section5.RV) =>
+          And (Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier U) (Prod.mk.{0, 0} x r))
+            (Eq.{1} (Function.comp.{1, 1, 1} r ρ) t)))
+  (T : IntegrationInACVF.Section5.HeadPreparation U)
+  (hT : SpecialTransformations.Section5.GammaGraphDefinable B (SpecialTransformations.Section5.pointMapGraph T.map))
+  (hTarget : SpecialTransformations.Section5.GammaSetDefinable B (SpecialTransformations.Section5.carrier T.target))
+  (x : Fin n → SpecialTransformations.Section5.VF)
+  (r :
+    ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+        (SpecialTransformations.Section5.rvObjectDomain
+          (IntegrationInACVF.Section7.headFibreRawVolumeObject hκ hs hreal hBS hU ρ hfin T hT hTarget x).object))),
+  Eq.{1}
+    (SpecialTransformations.Section7.gammaVolumeValue
+      (IntegrationInACVF.Section7.headFibreRawVolumeObject hκ hs hreal hBS hU ρ hfin T hT hTarget x).toGammaRVObject r)
+    (Function.comp.{1, 1, 1} (↑r) (IntegrationInACVF.Section7.headAppendVolumeIndex T ρ))
+'IntegrationInACVF.Section7.head_fibre_raw_volume' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@IntegrationInACVF.Section7.headVolumeParameterContext : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    {n : Nat} →
+      SpecialTransformations.Section3.BaseContext M →
+        (Fin n → SpecialTransformations.Section5.VF) → SpecialTransformations.Section3.BaseContext M
+'IntegrationInACVF.Section7.headVolumeParameterContext' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.head_volume_context_contains : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {n : Nat}
+  (C : SpecialTransformations.Section3.BaseContext M) (x : Fin n → SpecialTransformations.Section5.VF),
+  LE.le.{0} (Union.union.{0} (↑C.base) (Set.range.{0, 1} fun (j : Fin n) => ↑(x j)))
+    ↑(IntegrationInACVF.Section7.headVolumeParameterContext C x).base
+'IntegrationInACVF.Section7.head_volume_context_contains' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.head_volume_context_contains_fibre_base : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {n : Nat}
+  (C : SpecialTransformations.Section3.BaseContext M) (x : Fin n → SpecialTransformations.Section5.VF),
+  LE.le.{0} (IntegrationInACVF.Section5.coordinateFibreBase (↑C.base) 0 (IntegrationInACVF.Section6.headFrozenTuple x))
+    ↑(IntegrationInACVF.Section7.headVolumeParameterContext C x).base
+'IntegrationInACVF.Section7.head_volume_context_contains_fibre_base' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.head_volume_context_contains_original_base : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {n : Nat}
+  (C : SpecialTransformations.Section3.BaseContext M),
+  LE.le.{0} B.real ↑C.base →
+    ∀ (x : Fin n → SpecialTransformations.Section5.VF),
+      LE.le.{0} (Union.union.{0} B.real (Set.range.{0, 1} fun (j : Fin n) => ↑(x j)))
+        ↑(IntegrationInACVF.Section7.headVolumeParameterContext C x).base
+'IntegrationInACVF.Section7.head_volume_context_contains_original_base' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.mixedRetainedLabelVolumeForm : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {S : Set.{0} M} →
+        {n a : Nat} →
+          (A :
+              SpecialTransformations.DefinableGeometry.DefSet.{0, 0} (SpecialTransformations.Section4.rawMixedSpace n a)
+                S) →
+            (δ : Fin a) →
+              (∀ (p : ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} A)),
+                  Ne.{1} (↑((↑p).2 δ)) SpecialTransformations.Milestone0.iRVZero.{0}) →
+                IntegrationInACVF.Section7.VolumeForm A
+'IntegrationInACVF.Section7.mixedRetainedLabelVolumeForm' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.mixed_retained_label_volume_form_value : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set.{0} M}
+  {n a : Nat}
+  (A : SpecialTransformations.DefinableGeometry.DefSet.{0, 0} (SpecialTransformations.Section4.rawMixedSpace n a) S)
+  (δ : Fin a)
+  (hδ :
+    ∀ (p : ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} A)),
+      Ne.{1} (↑((↑p).2 δ)) SpecialTransformations.Milestone0.iRVZero.{0})
+  (p : ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} A)),
+  Eq.{1} ((IntegrationInACVF.Section7.mixedRetainedLabelVolumeForm A δ hδ).value p) ((↑p).2 δ)
+'IntegrationInACVF.Section7.mixed_retained_label_volume_form_value' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.selected_fibre_retained_density_nonzero : ∀ {M : Type}
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {S : Set.{0} M} {p a k : Nat}
+  (U : SpecialTransformations.Section5.DefSet S p a) (ρ : Fin (HAdd.hAdd.{0, 0, 0} k 1) → Fin a) (δ : Fin a),
+  (∀
+      (q :
+        SpecialTransformations.DefinableGeometry.Space.Carrier.{0, 0} (SpecialTransformations.Section5.pointSpace p a)),
+      Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier U) q →
+        Ne.{1} (↑(q.2 δ)) SpecialTransformations.Milestone0.iRVZero.{0}) →
+    ∀ (x : Fin p → SpecialTransformations.Section5.VF)
+      (P : IntegrationInACVF.Section6.SelectedLabelFibrePresentation B U ρ x)
+      (u : ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} P.domain)),
+      Ne.{1} (↑(↑u δ)) SpecialTransformations.Milestone0.iRVZero.{0}
+'IntegrationInACVF.Section7.selected_fibre_retained_density_nonzero' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.selected_coordinate_density_schema_row : ∀ {M : Type}
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {S : Set.{0} M} {p a k : Nat}
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M)
+  (U : SpecialTransformations.Section5.DefSet S p a)
+  (hU : SpecialTransformations.Section5.GammaSetDefinable B (SpecialTransformations.Section5.carrier U))
+  (ρ : Fin (HAdd.hAdd.{0, 0, 0} k 1) → Fin a) (δ : Fin a)
+  (hδ :
+    ∀
+      (q :
+        SpecialTransformations.DefinableGeometry.Space.Carrier.{0, 0} (SpecialTransformations.Section5.pointSpace p a)),
+      Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier U) q →
+        Ne.{1} (↑(q.2 δ)) SpecialTransformations.Milestone0.iRVZero.{0})
+  (x : Fin p → SpecialTransformations.Section5.VF)
+  (P : IntegrationInACVF.Section6.SelectedLabelFibrePresentation B U ρ x) (hP : LE.le.{0} P.codes ↑C.base),
+  IntegrationInACVF.Section7.RVVolumeSchemaRow
+    (IntegrationInACVF.Section7.gammaCoordinateDensityObject hc C
+      (IntegrationInACVF.Section6.GammaFiniteGraphPresentation.toGamma P) hP δ ⋯)
+    (IntegrationInACVF.Section7.gammaSelectedVolumeSchema U hU ρ δ) fun (j : Fin p) => ↑(x j)
+'IntegrationInACVF.Section7.selected_coordinate_density_schema_row' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.selected_volume_head_geometric_common : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set.{0} M}
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {n a b k : Nat}
+  (U : SpecialTransformations.Section5.DefSet S (HAdd.hAdd.{0, 0, 0} n 1) a)
+  (V : SpecialTransformations.Section5.DefSet S (HAdd.hAdd.{0, 0, 0} n 1) b)
+  (hU : SpecialTransformations.Section5.GammaSetDefinable B (SpecialTransformations.Section5.carrier U))
+  (hV : SpecialTransformations.Section5.GammaSetDefinable B (SpecialTransformations.Section5.carrier V))
+  (ρ : Fin (HAdd.hAdd.{0, 0, 0} k 1) → Fin a) (τ : Fin (HAdd.hAdd.{0, 0, 0} k 1) → Fin b) (δ : Fin a) (ε : Fin b),
+  (∀
+      (p :
+        SpecialTransformations.DefinableGeometry.Space.Carrier.{0, 0}
+          (SpecialTransformations.Section5.pointSpace (HAdd.hAdd.{0, 0, 0} n 1) a)),
+      Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier U) p →
+        Ne.{1} (↑(p.2 δ)) SpecialTransformations.Milestone0.iRVZero.{0}) →
+    (∀
+        (p :
+          SpecialTransformations.DefinableGeometry.Space.Carrier.{0, 0}
+            (SpecialTransformations.Section5.pointSpace (HAdd.hAdd.{0, 0, 0} n 1) b)),
+        Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier V) p →
+          Ne.{1} (↑(p.2 ε)) SpecialTransformations.Milestone0.iRVZero.{0}) →
+      (∀ (x : Fin (HAdd.hAdd.{0, 0, 0} n 1) → SpecialTransformations.Section5.VF),
+          (IntegrationInACVF.Section7.gammaSelectedVolumeSchema U hU ρ δ).commonByGammaGeometry
+            (IntegrationInACVF.Section7.gammaSelectedVolumeSchema V hV τ ε) fun (j : Fin (HAdd.hAdd.{0, 0, 0} n 1)) =>
+            ↑(x j)) →
+        ∀ (x : Fin n → SpecialTransformations.Section5.VF) (z : Fin 1 → SpecialTransformations.Section5.VF),
+          (IntegrationInACVF.Section7.gammaSelectedVolumeSchema
+                (IntegrationInACVF.Section5.coordinateFibre U 0 (IntegrationInACVF.Section6.headFrozenTuple x)) ⋯ ρ
+                δ).commonByGammaGeometry
+            (IntegrationInACVF.Section7.gammaSelectedVolumeSchema
+              (IntegrationInACVF.Section5.coordinateFibre V 0 (IntegrationInACVF.Section6.headFrozenTuple x)) ⋯ τ ε)
+            fun (j : Fin 1) => ↑(z j)
+'IntegrationInACVF.Section7.selected_volume_head_geometric_common' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.selected_volume_head_formula_witnesses : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set.{0} M}
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {n a b k : Nat} {κ : Cardinal.{0}},
+  CanonicalStructure.IsCanonical →
+    LE.le.{1} Cardinal.aleph0.{0} κ →
+      SpecialTransformations.Section3.Saturated M κ →
+        FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00 →
+          LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ →
+            LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) κ →
+              ∀ (U : SpecialTransformations.Section5.DefSet S (HAdd.hAdd.{0, 0, 0} n 1) a)
+                (V : SpecialTransformations.Section5.DefSet S (HAdd.hAdd.{0, 0, 0} n 1) b)
+                (hU : SpecialTransformations.Section5.GammaSetDefinable B (SpecialTransformations.Section5.carrier U))
+                (hV : SpecialTransformations.Section5.GammaSetDefinable B (SpecialTransformations.Section5.carrier V))
+                (ρ : Fin (HAdd.hAdd.{0, 0, 0} k 1) → Fin a) (τ : Fin (HAdd.hAdd.{0, 0, 0} k 1) → Fin b) (δ : Fin a)
+                (ε : Fin b),
+                (∀
+                    (p :
+                      SpecialTransformations.DefinableGeometry.Space.Carrier.{0, 0}
+                        (SpecialTransformations.Section5.pointSpace (HAdd.hAdd.{0, 0, 0} n 1) a)),
+                    Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier U) p →
+                      Ne.{1} (↑(p.2 δ)) SpecialTransformations.Milestone0.iRVZero.{0}) →
+                  (∀
+                      (p :
+                        SpecialTransformations.DefinableGeometry.Space.Carrier.{0, 0}
+                          (SpecialTransformations.Section5.pointSpace (HAdd.hAdd.{0, 0, 0} n 1) b)),
+                      Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier V) p →
+                        Ne.{1} (↑(p.2 ε)) SpecialTransformations.Milestone0.iRVZero.{0}) →
+                    (∀ (x : Fin (HAdd.hAdd.{0, 0, 0} n 1) → SpecialTransformations.Section5.VF),
+                        (IntegrationInACVF.Section7.gammaSelectedVolumeSchema U hU ρ δ).commonByGammaGeometry
+                          (IntegrationInACVF.Section7.gammaSelectedVolumeSchema V hV τ ε)
+                          fun (j : Fin (HAdd.hAdd.{0, 0, 0} n 1)) => ↑(x j)) →
+                      ∀ (x : Fin n → SpecialTransformations.Section5.VF) (NF NG : Nat),
+                        (∀ (z : Fin 1 → SpecialTransformations.Section5.VF),
+                            ((IntegrationInACVF.Section7.gammaSelectedVolumeSchema
+                                      (IntegrationInACVF.Section5.coordinateFibre U 0
+                                        (IntegrationInACVF.Section6.headFrozenTuple x))
+                                      ⋯ ρ δ).withBound
+                                  NF).valid
+                              fun (j : Fin 1) => ↑(z j)) →
+                          (∀ (z : Fin 1 → SpecialTransformations.Section5.VF),
+                              ((IntegrationInACVF.Section7.gammaSelectedVolumeSchema
+                                        (IntegrationInACVF.Section5.coordinateFibre V 0
+                                          (IntegrationInACVF.Section6.headFrozenTuple x))
+                                        ⋯ τ ε).withBound
+                                    NG).valid
+                                fun (j : Fin 1) => ↑(z j)) →
+                            ∀ (z : Fin 1 → SpecialTransformations.Section5.VF),
+                              Exists.{1}
+                                fun
+                                  (H :
+                                    IntegrationInACVF.Section7.GammaVolumeCommonSchema
+                                      ((IntegrationInACVF.Section7.gammaSelectedVolumeSchema
+                                            (IntegrationInACVF.Section5.coordinateFibre U 0
+                                              (IntegrationInACVF.Section6.headFrozenTuple x))
+                                            ⋯ ρ δ).withBound
+                                        NF)
+                                      ((IntegrationInACVF.Section7.gammaSelectedVolumeSchema
+                                            (IntegrationInACVF.Section5.coordinateFibre V 0
+                                              (IntegrationInACVF.Section6.headFrozenTuple x))
+                                            ⋯ τ ε).withBound
+                                        NG)) =>
+                                H.valid fun (j : Fin 1) => ↑(z j)
+'IntegrationInACVF.Section7.selected_volume_head_formula_witnesses' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.selected_volume_head_coordinate_rows : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set.{0} M}
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {n a k : Nat}
+  (U : SpecialTransformations.Section5.DefSet S (HAdd.hAdd.{0, 0, 0} n 1) a)
+  (hU : SpecialTransformations.Section5.GammaSetDefinable B (SpecialTransformations.Section5.carrier U))
+  (ρ : Fin (HAdd.hAdd.{0, 0, 0} k 1) → Fin a) (δ : Fin a) (x : Fin n → SpecialTransformations.Section5.VF)
+  (z : Fin 1 → SpecialTransformations.Section5.VF) (r : Fin a → SpecialTransformations.Section5.RV)
+  (y : Fin (HAdd.hAdd.{0, 0, 0} k 1) → SpecialTransformations.Section5.RV),
+  Iff
+    ((IntegrationInACVF.Section7.gammaSelectedVolumeSchema U hU ρ δ).object.rowVolume
+      (fun (j : Fin (HAdd.hAdd.{0, 0, 0} n 1)) => ↑(Fin.cons.{1} (z 0) x j)) r y)
+    ((IntegrationInACVF.Section7.gammaSelectedVolumeSchema
+            (IntegrationInACVF.Section5.coordinateFibre U 0 (IntegrationInACVF.Section6.headFrozenTuple x)) ⋯ ρ
+            δ).object.rowVolume
+      (fun (j : Fin 1) => ↑(z j)) r y)
+'IntegrationInACVF.Section7.selected_volume_head_coordinate_rows' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.selected_volume_head_density_rows : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set.{0} M}
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {n a k : Nat}
+  (U : SpecialTransformations.Section5.DefSet S (HAdd.hAdd.{0, 0, 0} n 1) a)
+  (hU : SpecialTransformations.Section5.GammaSetDefinable B (SpecialTransformations.Section5.carrier U))
+  (ρ : Fin (HAdd.hAdd.{0, 0, 0} k 1) → Fin a) (δ : Fin a),
+  (∀
+      (p :
+        SpecialTransformations.DefinableGeometry.Space.Carrier.{0, 0}
+          (SpecialTransformations.Section5.pointSpace (HAdd.hAdd.{0, 0, 0} n 1) a)),
+      Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier U) p →
+        Ne.{1} (↑(p.2 δ)) SpecialTransformations.Milestone0.iRVZero.{0}) →
+    ∀ (x : Fin n → SpecialTransformations.Section5.VF) (z : Fin 1 → SpecialTransformations.Section5.VF)
+      (r : Fin a → SpecialTransformations.Section5.RV) (w : Fin 1 → SpecialTransformations.Section5.RV),
+      Iff
+        ((IntegrationInACVF.Section7.gammaSelectedVolumeSchema U hU ρ δ).rowDensity
+          (fun (j : Fin (HAdd.hAdd.{0, 0, 0} n 1)) => ↑(Fin.cons.{1} (z 0) x j)) r w)
+        ((IntegrationInACVF.Section7.gammaSelectedVolumeSchema
+              (IntegrationInACVF.Section5.coordinateFibre U 0 (IntegrationInACVF.Section6.headFrozenTuple x)) ⋯ ρ
+              δ).rowDensity
+          (fun (j : Fin 1) => ↑(z j)) r w)
+'IntegrationInACVF.Section7.selected_volume_head_density_rows' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.selected_volume_schema_uniform_bound : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {S : Set.{0} M} {p a k : Nat} {κ : Cardinal.{0}},
+  LE.le.{1} Cardinal.aleph0.{0} κ →
+    SpecialTransformations.Section3.Saturated M κ →
+      LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ →
+        LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) κ →
+          ∀ (U : SpecialTransformations.Section5.DefSet S p a)
+            (hU : SpecialTransformations.Section5.GammaSetDefinable B (SpecialTransformations.Section5.carrier U))
+            (ρ : Fin (HAdd.hAdd.{0, 0, 0} k 1) → Fin a) (δ : Fin a),
+            (∀
+                (q :
+                  SpecialTransformations.DefinableGeometry.Space.Carrier.{0, 0}
+                    (SpecialTransformations.Section5.pointSpace p a)),
+                Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier U) q →
+                  Ne.{1} (↑(q.2 δ)) SpecialTransformations.Milestone0.iRVZero.{0}) →
+              (∀ (x : Fin p → SpecialTransformations.Section5.VF)
+                  (t : Fin (HAdd.hAdd.{0, 0, 0} k 1) → SpecialTransformations.Section5.RV),
+                  Set.Finite.{0}
+                    (Set.ofPred.{0} fun (r : Fin a → SpecialTransformations.Section5.RV) =>
+                      And (Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier U) (Prod.mk.{0, 0} x r))
+                        (Eq.{1} (Function.comp.{1, 1, 1} r ρ) t))) →
+                Exists.{1} fun (N : Nat) =>
+                  ∀ (x : Fin p → SpecialTransformations.Section5.VF),
+                    ((IntegrationInACVF.Section7.gammaSelectedVolumeSchema U hU ρ δ).withBound N).valid
+                      fun (j : Fin p) => ↑(x j)
+'IntegrationInACVF.Section7.selected_volume_schema_uniform_bound' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.unary_selected_normalization_volume_iso : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {a k : Nat} {κ : Cardinal.{0}}
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M)
+  (hκ : LE.le.{1} Cardinal.aleph0.{0} κ) (hs : SpecialTransformations.Section3.Saturated M κ)
+  (hreal : LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ) (hBC : LE.le.{0} B.real ↑C.base)
+  (U : SpecialTransformations.Section5.DefSet (↑C.base) 1 a)
+  (hU : SpecialTransformations.Section5.GammaSetDefinable B (SpecialTransformations.Section5.carrier U))
+  (ρ : Fin (HAdd.hAdd.{0, 0, 0} k 1) → Fin a)
+  (hfin :
+    ∀ (x : Fin 1 → SpecialTransformations.Section5.VF)
+      (t : Fin (HAdd.hAdd.{0, 0, 0} k 1) → SpecialTransformations.Section5.RV),
+      Set.Finite.{0}
+        (Set.ofPred.{0} fun (r : Fin a → SpecialTransformations.Section5.RV) =>
+          And (Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier U) (Prod.mk.{0, 0} x r))
+            (Eq.{1} (Function.comp.{1, 1, 1} r ρ) t)))
+  {σ : Equiv.Perm.{1} (Fin 1)} (T : IntegrationInACVF.Section5.StandardContraction U σ)
+  (hT : IntegrationInACVF.Section5.GammaProgramDefinable B T.program) (δ : Fin a)
+  (hδ :
+    ∀ (p : ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} U)),
+      Ne.{1} (↑((↑p).2 δ)) SpecialTransformations.Milestone0.iRVZero.{0}),
+  let Z :=
+    IntegrationInACVF.Section6.gammaSwapVolumeBlocks
+      (IntegrationInACVF.Section6.FiniteRV.gammaRawSelectedContraction hκ hs hreal hBC hU ρ hfin T hT);
+  let R := IntegrationInACVF.Section6.FiniteRV.gammaPrependSelectedContraction hκ hs hreal hBC hU ρ hfin T hT;
+  Exists.{0}
+    fun
+      (hZ :
+        ∀
+          (u :
+            ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+                (SpecialTransformations.Section5.rvObjectDomain Z.object))),
+          Ne.{1} (↑(↑u (IntegrationInACVF.Section5.suffixIndex ⋯ δ))) SpecialTransformations.Milestone0.iRVZero.{0}) =>
+    Exists.{2} fun (D : SpecialTransformations.Section3.BaseContext M) =>
+      Exists.{0} fun (hCD : LE.le.{0} ↑C.base ↑D.base) =>
+        Exists.{1}
+          fun
+            (f :
+              IntegrationInACVF.Section7.RVVolumeIso
+                ((IntegrationInACVF.Section7.gammaCoordinateDensityObject hc C Z ⋯
+                      (IntegrationInACVF.Section5.suffixIndex ⋯ δ) hZ).extend
+                  hCD)
+                ((IntegrationInACVF.Section7.gammaCoordinateDensityObject hc C R ⋯
+                      (IntegrationInACVF.Section6.FiniteRV.contractionOldLabelIndex T δ) ⋯).extend
+                  hCD)) =>
+          f.GammaDefinable B
+'IntegrationInACVF.Section7.unary_selected_normalization_volume_iso' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.unary_special_relative : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set.{0} M}
+  {a b : Nat} {A : SpecialTransformations.Section5.DefSet S 1 a} {D : SpecialTransformations.Section5.DefSet S 1 b}
+  (T : SpecialTransformations.Section5.SpecialBijection A D), IntegrationInACVF.Section5.SpecialRelative T.toMap 0
+'IntegrationInACVF.Section7.unary_special_relative' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
