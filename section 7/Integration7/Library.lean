@@ -134,4 +134,15 @@ import Integration7.GammaVolumeCanonicalObjects
 import Integration7.VolumeParameterExtension
 import Integration7.GammaVolumePresentationContexts
 
+import Integration7.VolumeProductPointwise
+import Integration7.PermutationSignParameters
+import Integration7.SignedVolumeProductSwap
+import Integration7.VolumeProductAssociativity
+import Integration7.RVProductCoproductCharts
+import Integration7.VolumeProductDistributivity
+import Integration7.ElementaryVolumeProducts
+import Integration7.VolumeBlowupProducts
+import Integration7.VolumeBlowupRescaling
+import Integration7.VolumeBlowupRightProducts
+
 /-! Reconstructed Section 7 prerequisites. The section is not yet complete. -/

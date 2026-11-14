@@ -180,3 +180,15 @@ points and functions unchanged. Presentation independence uses the checked
 coordinate/density-preserving volume isomorphism, hence the existing generic
 Jacobian proof rather than a new comparison premise. No new references or
 dependency changes were introduced.
+
+## Eleventh reconstruction batch: positive products and blowups
+
+Reused native RV cartesian associators, coproduct maps and elementary
+right-product coordinate algebra. The new explicit distributivity chart
+retains pointwise coordinates and densities. The recovered signed product
+swap was promoted with narrowed imports; its original text remains in
+quarantine. Named determinant signs belong to the native residue parameter
+field. Left multiplication of elementary blowups is proved by an actual
+product chart and algebraicity monotonicity. Right multiplication of common
+blowups follows from the signed swap and a proved common rescaling operation.
+Only the new batch and affected library were audited; no full repeat was run.

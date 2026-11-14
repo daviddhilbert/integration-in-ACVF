@@ -6,11 +6,11 @@ as accepted by the author and recorded in `TARGETS.md`.
 
 ## Current checked local boundary
 
-`Integration7.Library` integrates 131 source modules plus its entry point.
-Full exported types and allowed-axiom reports for 588 distinct declarations
+`Integration7.Library` integrates 141 source modules plus its entry point.
+Full exported types and allowed-axiom reports for 631 distinct declarations
 have been inspected in targeted incremental batches. Only `propext`,
 `Classical.choice`, and `Quot.sound` occur. The latest affected-library
-build passed, including 10,181 jobs counting its cached dependency closure.
+build passed, including 10,192 jobs counting its cached dependency closure.
 `VERIFICATION.json` seals this source boundary and records the batch receipts.
 Unchanged earlier batches were not manually audited again.
 
@@ -35,8 +35,8 @@ order are retained. Positive selected fibres keep actual finiteness explicit.
 
 Receipts are under `.scratch/recovery/`: the initial algebra and
 groupification batches contribute 34 exports; the first geometric batch
-contributes 86, the second 59, the third 89, the fourth 26, the fifth 24, the sixth 70, the seventh 56, the eighth 65, the ninth 56, and the tenth 23.
-The latest receipt is `recovered-tenth-geometry-receipt.json`.
+contributes 86, the second 59, the third 89, the fourth 26, the fifth 24, the sixth 70, the seventh 56, the eighth 65, the ninth 56, the tenth 23, and the eleventh 43.
+The latest receipt is `recovered-eleventh-geometry-receipt.json`.
 These checks cover currently available sources, not the historical missing
 1,201-module/4,644-declaration working copy.
 
@@ -160,3 +160,17 @@ isomorphisms in a containing BaseContext. All 23 new types and axiom reports
 were inspected in 343 lines; the affected library passed 10,181 jobs.
 This supplies presentation independence, not the remaining uniform witness
 cover or the selected-family comparison of Lemma 7.5.
+
+## Positive multiplicative compatibility
+
+The eleventh batch proves actual positive product associativity and right
+distributivity, together with the signed product swap. A product chart
+constructs an elementary blowup of R times U from an elementary blowup of U.
+It retains the actual admissibility, last coordinate and density. The genuine
+positive common-blowup relation is now compatible with multiplication on
+both sides, including simultaneous replacement of both factors. Right
+multiplication uses the determinant sign and common density rescaling;
+commutativity of the entire volume ring is not assumed. All 43 new types
+and axiom reports were inspected in 586 lines; the affected library passed
+10,192 jobs. Ordinary RV[0] factors, unit coherence and the complete graded
+semiring quotient still require their separate constructions.
