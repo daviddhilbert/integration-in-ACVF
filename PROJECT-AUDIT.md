@@ -38,7 +38,7 @@ The current receipt is
 | 4 | 445 | Numbered lemmas and cell geometry in the approved scope. |
 | 5 | 1,852 | All active RV[k] targets complete, with explicit RV presentation charts for 5.5. |
 | 6 | 2,273 | 736 registered modules; numbered finite-category results retain their universal Section 5.8 input; the actual fixed-base input is now proved. |
-| 7 | 4,373 | 1,422 modules plus Library; geometry through 7.10 and substantial partial function/ring constructions. |
+| 7 | 4,789 | 1,521 modules plus Library; geometry through 7.10, all homogeneous head fibre values, normalized total integration and the normalized commutative ring presentation. |
 
 The three new Section 6 modules convert the actual Section 5 RV-category
 isomorphisms and prove `completed_section5_two_order_input` on bases
@@ -49,39 +49,56 @@ This does not yet supply `Section5TwoOrderInputAll`, whose quantification
 also covers arbitrary frozen parameter bases; that stronger interface must
 be connected without silently assuming the required generation conditions.
 
-The latest Section 7 batch proves inverse family/base Jacobian agreement,
-actual volume-preserving bijections on the full selected-family lifts and
-change of variables for their literal positive canonical integrals. Its
-eight new modules and seventeen exported declarations compile, pass the
-full-type/axiom checks, and are integrated into Library. Evidence is in
-`section 7/verification/reconstruction/`, batch one hundred.
+Section 7 now has actual normalized coefficients: the degree-zero fraction
+range in the localization at the central point class, a commutative ring,
+and an isomorphism with the raw Grothendieck ring modulo point = cone = 1.
+The normalized function space is an actual scalar extension and its total
+integral is linear. Prefix-then-total integration agrees on every normalized
+function. Positive homogeneous Fubini holds for every coordinate projection.
+Head rows equal the actual frozen unary fibre integrals in every homogeneous
+degree, including ordinary RV[0]. The positive homogeneous Jacobian transform descends to the supported AE
+quotient, is additive and commutes with all coefficient degrees. Its
+normalized finite graded assembly is an actual linear operator on the full
+normalized function module. Actual restriction splits the supported module
+for every definable VF domain, with an injective inclusion, a geometric
+support submodule and an idempotent projection. Bijections between arbitrary
+definable VF subsets preserve the integral of every source-supported
+normalized function, including ordinary RV[0] family generators. These
+function modules have positive VF dimension: index n means n+1 VF coordinates.
+All standing parameter, saturation and Gamma hypotheses remain explicit.
 
 Section 7 still needs:
 
-- **7.11:** the full pointwise fibre-integral identification and arbitrary
-  coordinate comparison on the full graded AE function space. Exact head
-  and prefix Fubini and total integral linearity are proved. The partial
-  head map is a `ZeroHom`; full scalar linearity must not be inferred.
-- **7.12:** representative independence and descent of the Jacobian
-  transform on the AE function quotient, followed by the ordinary and
-  finite graded function statements. Inverse-density comparison and
-  preservation of the actual full lifted positive integral are proved.
-- **7.13:** the actual RV kernel's degree-one principal relation and its
-  connection to the normalized coefficient ring. Universal groupification
-  and supporting localization algebra are already proved.
-- **7.14–7.15:** normalized-coefficient Fubini and change of variables.
+- **7.11:** full partial-operator scalar linearity and arbitrary-coordinate
+  assembly on the complete graded and normalized function spaces. The
+  existing partial head map is a `ZeroHom`; linearity is still to be proved.
+- **7.12:** unnormalized full graded Jacobian assembly; normalized
+  definable-domain change of variables is proved as described above.
+- **7.13:** the raw, unlocalized principal-kernel identification. Elementary
+  relation generation is proved in source degrees at least two and in all
+  degrees after point normalization. The degree-one ordinary-head
+  factorization has a checked counterexample; this does not disprove the
+  principal-ideal statement itself. The normalized ring presentation above
+  is proved independently of that unresolved raw identification.
+- **7.14:** full normalized partial operators and their pointwise fibre
+  interpretation, beyond the proved total and positive homogeneous formulas.
 
 The accepted nonempty-selected-coordinate scope of 7.5 is retained;
 ordinary RV[0] is included. No new statement relaxation was introduced.
 
 ## Publication and verification scope
 
-Before this integration, the published Section 7 checkpoint was
-`8d0d1c1f03c5377acf3bc0d195bbb8435389f373`, with 1,383 modules and
-4,278 exports. Its [CI run 43701336994](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/43701336994)
-passed in 9 minutes 38 seconds. The combined checked changes are prepared
-for `section-7/reconstructed-foundation`, preserving the completed Section 5
-branch as a merge parent. Main is unchanged at
+The previous published checkpoint on `section-7/reconstructed-foundation`
+was `9149bd45be3c774ba7eaacbf7ef39e1739ac09dc`. Its mathematical boundary had
+1,422 Section 7 modules and 4,373 exports and includes the completed Section 5
+branch as a merge parent. [CI run 43742595088](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/43742595088)
+passed its project build and all section verifiers in 49 minutes 18 seconds.
+The project build took 43 minutes 23 seconds and saved its compiled cache;
+audit dispatch took 3 minutes 36 seconds. A subsequent warm runtime has not
+yet been measured. The next mathematical checkpoint adds 99 checked Section 7 modules,
+bringing the branch source boundary to 1,521 modules and 4,789 exports.
+Its new CI result is pending and must be distinguished from
+that earlier successful run. Main is unchanged at
 `7d4acc730496b3bd05a22c268ffd89540ca694f9`.
 
 The three CI dispatch regression tests pass. The targeted fresh checks
@@ -140,3 +157,9 @@ Evidence is in `.scratch/project-audit-20261115/`, including `build.log`,
 source and dependency inventories, source snapshots, and the exact local/
 remote source comparison. Individual full audit logs are indexed there
 under `.scratch/sectionN-verified/HeadlineAudit.log`.
+
+The actual normalized coefficient ring, function scalar extension and linear total integral are now checked; positive homogeneous normalized Jacobian and representative prefix-Fubini identities are included. Full operator assembly and the raw principal-kernel statement remain open.
+
+The normalized coefficient ring now has the exact common-degree homogeneous fraction characterization and an explicit ring equivalence to the raw RV volume ring quotient imposing point=cone=1. Stabilization proves all common-blowup relations after point inversion. This does not discharge the unlocalized single-principal-kernel statement.
+
+Positive homogeneous pointwise head-fibre semantics are now checked in the genuine definable closure of the frozen tuple, using the proved VF field property. Ordinary degree-zero and arbitrary-coordinate full graded assembly remain open.

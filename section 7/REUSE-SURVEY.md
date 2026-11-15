@@ -1699,3 +1699,140 @@ The inverse mixed-family Jacobian density now agrees with the inverse pure-base 
 `selected_family_jacobian_canonical_integral` proves equality of the literal positive-family canonical integrals under this actual Jacobian transform. This closes the inverse-density and full-lift bridges previously recorded as open. AE function representative independence/descent, the full pointwise fibre-integral identification, arbitrary-coordinate full-graded comparison and the principal-relation/normalized-coefficient results7.13-7.15 remain open. Ordinary RV[0] and the accepted nonempty-selected scope of7.5 are unchanged.
 
 This8-module/17-export batch passed actual source compilation, one complete412-line new type/axiom review and an affected Library build with12,297 jobs including cached dependencies. Only propext, Classical.choice and Quot.sound occur. The sealed local boundary is1,422 source modules plus Library and4,373 exports. Earlier proof batches were not audited again.
+
+
+## Definable-parameter descent and positive function Jacobian transformation
+
+The positive common-blowup relation now descends from a containing context
+whose extra names are individually definable over the original context.
+This proves injectivity of positive volume-class extension along such
+extensions. A nonzero density scalar may therefore be definable over the
+base without belonging to its smaller term-generated substructure.
+
+The actual Jacobian-transformed fibre is isomorphic to the original fibre
+rescaled by the inverse base Jacobian. Its common-blowup relation descends
+from the context containing the inverse-image tuple to the genuine target
+fibre context. The definable image of an exceptional source set remains
+VF-small. Thus the actual transform preserves AE equivalence.
+
+SupportedAERVVolumeFunction is the genuine AE quotient of positive
+homogeneous families supported on the specified definable domain; its
+zero-extension forgetful map to the existing function space is injective.
+The Jacobian transform descends to this quotient, and
+supported_volume_function_jacobian_integral proves its canonical integral
+identity. This closes positive homogeneous function representative
+independence for7.12. It does not assert the ordinary degree-zero/full
+graded Jacobian assembly or the remaining7.11 and7.13-7.15 obligations.
+
+All8 new modules and27 exports compile; all404 complete audit lines were
+reviewed in three blocks, with only propext, Classical.choice and Quot.sound.
+The affected Library build passes12,305 jobs including cached dependencies.
+The checked boundary is1,430 modules plus Library and4,400 exports. Earlier
+exports were not reaudited. Evidence is batch one hundred one under
+verification/reconstruction/.
+
+
+## Actual point/cone factors and the ordinary-degree-zero boundary
+
+The degree-one unit-density point and RV cone satisfy the actual common
+volume blowup relation. Both are concrete finite-volume category objects,
+and their isomorphism and elementary chart are constructed explicitly.
+
+Dropping an admissible last coordinate retains finite volume fibres. With
+positive remaining degree, admissibleHeadVolumeFactor moves the last
+coordinate into the density. admissibleHeadPointVolumeIso proves the
+actual source factorization: the essential RV domain has smaller dimension,
+and the pointwise Gamma weight is unchanged. The cone factor follows by
+transporting the elementary blowup through that isomorphism using the
+already checked elementaryBlowupIso theorem, followed by the actual left
+product of the basic point blowup. This avoids a new cone-Jacobian proof.
+
+The actual graded-semiring equalities and
+elementary_positive_image_eq_of_basic prove that every elementary relation
+in source degrees at least two follows from the concrete degree-one basic
+pair under any semiring homomorphism identifying that pair. No assumption
+of the full desired principal-kernel identification occurs in this result.
+
+There is a checked boundary in the factorization preceding7.13. Definition
+10.3 of the predecessor (arXiv:1006.2467v1, page28) explicitly sets
+muRV[0]=RV[0], in agreement with our definitions. An admissible degree-one
+point with density c and |c| different from1 cannot be volume-isomorphic to
+any ordinary RV[0] object times the unit-density degree-one point:
+nonunit_density_point_has_no_ordinary_head_factor and its admissible
+corollary prove this. Every such ordinary product has essential Gamma
+weight1, whereas the source has weight|c|, and actual volume isomorphisms
+preserve that weight. Thus the printed head-factor argument cannot be
+applied in this boundary case with the recorded convention. This is not a
+disproof of the principal-ideal theorem itself. No correction is adopted
+and the remaining degree-one/kernel issue stays explicit.
+
+All9 new modules and35 exports compile; all561 complete type/axiom audit
+lines were reviewed in three blocks, with only the three permitted axioms.
+The affected Library build passes12,314 jobs including cached dependencies.
+The checked boundary is1,439 modules plus Library and4,435 exports; older
+exports were not reaudited. Evidence is batch one hundred two under
+verification/reconstruction/.
+
+
+## Actual normalized coefficients and function integration
+
+The degree-one unit point is now central in the actual graded common-blowup semiring and its groupification. The unsigned point swap is a genuine volume isomorphism: its essential RV dimension is below the total degree, and its full Gamma weight is preserved. Central Ore localization therefore supplies an actual point inverse. Homogeneous dehomogenization defines the coefficient subring `NormalizedRVVolumeRing`, characterized here by differences of normalized finite homogeneous sums. The more precise single homogeneous-fraction characterization is still pending. This construction uses the actual geometric blowup quotient and does not assume the unfinished raw principal-ideal presentation.
+
+`NormalizedVolumeFunction` is the actual balanced scalar extension of the full graded AE function semimodule to these coefficients. The implementation reuses Mathlib's checked `Module.Relations` presentation and universal property (pinned revision, Apache-2.0), because the standard tensor product requires a commutative base and the raw graded semiring has only the established semiring structure. Zero, addition and scalar balancing are proved relations, not extra hypotheses. `normalizedVolumeIntegral` is an actual linear map and is uniquely determined by the checked graded integral on generators. The point acts as one. Prefix Fubini holds on actual graded representatives, and the positive supported homogeneous Jacobian identity passes to the normalized integral.
+
+The remaining scope includes actual pointwise fibre semantics, arbitrary-coordinate full graded comparison, normalized partial-integral/Jacobian operator assembly, the raw principal-kernel statement and the unresolved Section6 arbitrary-base interface. The accepted ordinary degree-zero convention is retained. This10-module/59-export batch passed actual source builds, one complete736-line type/axiom review and Library integration (12,324 jobs including cached dependencies), with only propext, Classical.choice and Quot.sound. The sealed Section7 boundary is1,449 modules plus Library and4,494 exports.
+
+
+## Homogeneous fractions and the normalized basic presentation
+
+The coefficient ring now has the exact degree-zero fraction description: every element is a difference of two homogeneous classes of the same degree divided by that power of the point, and every such fraction belongs. Finite homogeneous sums are put over a common degree by multiplying by actual powers of the point; this uses neither cancellation nor commutativity.
+
+The degree-one factorization boundary is bypassed after localization by a proved stabilization: multiply a degree-one elementary blowup on the left by the unit point, apply the established degree-two factorization, then cancel the invertible point image. Thus every elementary, iterated and common-blowup relation is forced in any semiring image identifying the concrete basic pair and making the point a unit. The resulting quotient map exists and is unique.
+
+`normalizedBasicVolumeQuotientEquiv` identifies the actual homogeneous fraction ring with an explicit `RingQuot` of the raw RV volume Grothendieck ring imposing point=1 and cone=1. Both maps and inverse laws are proved. Mathlib's pinned `RingQuot` API is reused under Apache-2.0. This is the normalized coefficient presentation, not a claim that the still-open unlocalized kernel is a single principal ideal. Ordinary RV[0] is unchanged. Normalized function linear maps are determined by positive homogeneous functions: ordinary functions are represented by their actual product with the point, which maps to one.
+
+This8-module/50-export batch (including both relation constructors) passed actual builds, one complete810-line type/axiom review and Library integration (12,332 jobs including cached dependencies), using only propext, Classical.choice and Quot.sound. The checked boundary is1,457 modules plus Library and4,544 exports. Remaining work includes pointwise fibre semantics, arbitrary-coordinate full graded comparison, normalized partial-integral/Jacobian operators, the raw principal-kernel statement and Section6 parameter scope.
+
+
+## Positive homogeneous pointwise fibre semantics
+
+`selected_head_integral_is_frozen_fibre_integral` and `pointwise_rv_volume_head_integral_fibre_value` identify the actual positive homogeneous head-integral row with the actual unary fibre integral, in coefficient-first coordinate order. The containing context is the definable closure of the original real context and frozen VF tuple. Its smallness, actual VF field property, containment and definability of additional names are proved; no fresh Gamma representative is added. The original Gamma names and nontrivial value hypotheses are retained.
+
+The contraction producer needed only the actual VF field property. The generalized field-base canonical integral has the checked same-order comparison and agrees with the previously defined canonical integral whenever its original generation hypotheses apply. Freezing commutes with the actual density graph; the inherited unary contraction has the literal frozen source. Its full target-label domain, old selected tuple, new head tag and retained nonzero density match the head row, giving a genuine volume isomorphism. This closes positive homogeneous pointwise head-fibre semantics. Ordinary degree-zero fibre semantics and arbitrary-coordinate full graded comparison remain open, as do full normalized partial-integral/Jacobian operators, the raw principal-kernel claim and Section6 parameter scope.
+
+This11-module/40-export batch passed actual builds, one complete589-line type/axiom review and Library integration (12,343 jobs including cached dependencies), using only propext, Classical.choice and Quot.sound. The checked boundary is1,468 modules plus Library and4,584 exports. The new real definable-closure/field bridges reuse pinned predecessor declarations; no dependency, language or category convention changes were made.
+
+
+## Ordinary fibre values and normalized coordinate Fubini
+
+Actual ordinary degree-zero head rows equal the frozen unary integrals; together with batch105 this covers every homogeneous degree. Normalized prefix-then-total integration descends to an S-linear functional on all normalized functions and equals total integration. Every unsigned RV volume-coordinate permutation becomes invisible after point normalization, giving positive homogeneous Fubini for every VF coordinate projection. The actual normalized coefficient ring is commutative, including ordinary degree-zero coefficients. Full normalized partial operators and graded Jacobian assembly, the raw unlocalized principal-kernel statement and the Section6 universal parameter bridge remain open.
+
+This 11-module/47-export batch passed actual source compilation, a complete 756-line new type/axiom review and Library integration with 12,354 jobs including cached dependencies. The first attempt built ten modules and exposed an instance elaboration error in the last; the corrected last module and Library then built successfully. Only propext, Classical.choice and Quot.sound occur. The local sealed boundary is 1,479 modules plus Library and 4,631 exports. Earlier batches were not audited again.
+
+
+## Additive and scalar-compatible supported Jacobian transforms
+
+The actual supported positive AE function quotient now has additive and ordinary coefficient module structures. Its Jacobian transform is additive and ordinary-linear and commutes with every positive constant coefficient action, giving compatibility with coefficients in every degree. Density rescaling is a genuine additive operation on common-blowup classes and commutes with ordinary and positive coefficient multiplication. The full normalized Jacobian operator, partial-integral linearity, raw principal-kernel identification and universal Section6 parameter bridge still require assembly or proof.
+
+The 11-module/35-export batch passed actual module compilation, one complete 666-line type/axiom review and Library integration with 12,365 jobs including cached dependencies. Only propext, Classical.choice and Quot.sound occur. The sealed local boundary is 1,490 modules plus Library and 4,666 exports. Earlier proof batches were not audited again.
+
+
+## Linear graded and normalized supported change of variables
+
+The supported positive homogeneous functions assemble into an actual module over the full graded coefficient semiring. Its Jacobian transform is R-linear. The balanced scalar extension carries an actual normalized-coefficient-linear Jacobian operator, a linear forgetful map to the existing normalized full function module and a linear integral. Change of variables is proved for every element of that normalized supported module. Identification with the full normalized function space, including ordinary degree-zero generators, is still to be proved; partial-integral linearity, raw principal-kernel identification and the Section6 universal parameter bridge remain open.
+
+The 10-module/39-export batch passed actual source compilation, one complete 522-line type/axiom review and Library integration with 12,375 jobs including cached dependencies. Only propext, Classical.choice and Quot.sound occur. The local sealed boundary is 1,500 modules plus Library and 4,705 exports. Earlier batches were not audited again.
+
+
+## Point padding and full normalized global change of variables
+
+The positive-degree normalized function module is now genuinely isomorphic to the full normalized finite graded module, including ordinary RV[0]. The two maps are literal positive inclusion and padding by the actual central point coefficient; both composites multiply by the point, which normalization sends to one. On the full VF domain the supported presentation module is identified with the existing normalized function module. Every global definable VF bijection therefore induces an actual normalized-coefficient-linear Jacobian operator on that full module, with positive and ordinary generator formulas and change of variables for every normalized function. Arbitrary definable source/target subsets still need support restriction and splitting. Full partial-integral linearity, the raw principal-kernel identification and the Section6 universal parameter bridge remain open.
+
+The 10-module/32-export batch passed actual source compilation, one complete 460-line type/axiom review and Library integration with 12,385 jobs including cached dependencies. Only propext, Classical.choice and Quot.sound occur. The sealed local boundary is 1,510 modules plus Library and 4,737 exports. Earlier batches were not audited again.
+
+
+## General definable-domain normalized change of variables
+
+Restriction to any definable VF subset is now an actual normalized-coefficient-linear retraction onto the supported function module. Its forgetful map is injective, its image is an actual submodule, and the corresponding support projection is idempotent with precisely that image. Bijections between arbitrary definable VF subsets induce an actual linear Jacobian operator on the existing full normalized function module; its geometric generator formula determines it uniquely. The total integral is preserved for every source-supported normalized function, including ordinary RV[0] family generators by actual point padding. These function statements are in positive VF dimension (the module index n denotes n+1 VF coordinates), with all standing base, saturation and Gamma hypotheses retained. Full partial-integral scalar linearity and normalized pointwise Fubini assembly, the raw unlocalized principal-kernel identification, unnormalized full Jacobian assembly and the Section6 universal parameter bridge remain open.
+
+The 11-module/52-export batch passed actual source compilation, one complete 847-line type/axiom review and Library integration with 12,396 jobs including cached dependencies. Only propext, Classical.choice and Quot.sound occur. The sealed local boundary is 1,521 modules plus Library and 4,789 exports. Earlier batches were not audited again.

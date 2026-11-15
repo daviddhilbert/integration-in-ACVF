@@ -1,0 +1,98 @@
+import Integration7.GradedSemiringActionLifts
+import Integration7.GradedSemiringActionLinearMaps
+import Integration7.GradedSemiringActionShifts
+import Integration7.GradedShiftLinearEmbeddings
+import Integration7.NormalizedSupportedVolumeFunctions
+import Integration7.NormalizedSupportedVolumeIntegrals
+import Integration7.SemimoduleScalarExtensionMaps
+import Integration7.SupportedPositiveGradedActions
+import Integration7.SupportedPositiveGradedForget
+import Integration7.SupportedPositiveGradedJacobians
+set_option pp.universes true
+set_option pp.proofs false
+set_option pp.deepTerms true
+set_option pp.maxSteps 10000000
+set_option pp.notation false
+set_option pp.funBinderTypes true
+set_option pp.piBinderTypes true
+
+
+
+#check @IntegrationInACVF.Section7.graded_injective_maps_heq
+#print axioms IntegrationInACVF.Section7.graded_injective_maps_heq
+#check @IntegrationInACVF.Section7.GradedSemiringAction.lift
+#print axioms IntegrationInACVF.Section7.GradedSemiringAction.lift
+#check @IntegrationInACVF.Section7.gradedComponentMapToSum
+#print axioms IntegrationInACVF.Section7.gradedComponentMapToSum
+#check @IntegrationInACVF.Section7.graded_component_map_to_sum_of
+#print axioms IntegrationInACVF.Section7.graded_component_map_to_sum_of
+#check @IntegrationInACVF.Section7.gradedSemiringActionLinearMap
+#print axioms IntegrationInACVF.Section7.gradedSemiringActionLinearMap
+#check @IntegrationInACVF.Section7.gradedDegreeAddEquiv
+#print axioms IntegrationInACVF.Section7.gradedDegreeAddEquiv
+#check @IntegrationInACVF.Section7.graded_degree_add_equiv_heq
+#print axioms IntegrationInACVF.Section7.graded_degree_add_equiv_heq
+#check @IntegrationInACVF.Section7.gradedShiftComponentAction
+#print axioms IntegrationInACVF.Section7.gradedShiftComponentAction
+#check @IntegrationInACVF.Section7.graded_shift_component_action_heq
+#print axioms IntegrationInACVF.Section7.graded_shift_component_action_heq
+#check @IntegrationInACVF.Section7.graded_action_apply_heq
+#print axioms IntegrationInACVF.Section7.graded_action_apply_heq
+#check @IntegrationInACVF.Section7.GradedSemiringAction.shift
+#print axioms IntegrationInACVF.Section7.GradedSemiringAction.shift
+#check @IntegrationInACVF.Section7.gradedShiftToSum
+#print axioms IntegrationInACVF.Section7.gradedShiftToSum
+#check @IntegrationInACVF.Section7.graded_shift_to_sum_of
+#print axioms IntegrationInACVF.Section7.graded_shift_to_sum_of
+#check @IntegrationInACVF.Section7.gradedShiftLinearEmbedding
+#print axioms IntegrationInACVF.Section7.gradedShiftLinearEmbedding
+#check @IntegrationInACVF.Section7.NormalizedSupportedVolumeFunction
+#print axioms IntegrationInACVF.Section7.NormalizedSupportedVolumeFunction
+#check @IntegrationInACVF.Section7.normalizedSupportedVolumeGenerator
+#print axioms IntegrationInACVF.Section7.normalizedSupportedVolumeGenerator
+#check @IntegrationInACVF.Section7.normalizedSupportedVolumeForget
+#print axioms IntegrationInACVF.Section7.normalizedSupportedVolumeForget
+#check @IntegrationInACVF.Section7.normalizedSupportedVolumeJacobian
+#print axioms IntegrationInACVF.Section7.normalizedSupportedVolumeJacobian
+#check @IntegrationInACVF.Section7.normalized_supported_volume_forget_generator
+#print axioms IntegrationInACVF.Section7.normalized_supported_volume_forget_generator
+#check @IntegrationInACVF.Section7.normalized_supported_volume_jacobian_generator
+#print axioms IntegrationInACVF.Section7.normalized_supported_volume_jacobian_generator
+#check @IntegrationInACVF.Section7.normalizedSupportedVolumeIntegral
+#print axioms IntegrationInACVF.Section7.normalizedSupportedVolumeIntegral
+#check @IntegrationInACVF.Section7.normalized_supported_volume_change_of_variables
+#print axioms IntegrationInACVF.Section7.normalized_supported_volume_change_of_variables
+#check @IntegrationInACVF.Section7.normalized_supported_volume_change_of_variables_value
+#print axioms IntegrationInACVF.Section7.normalized_supported_volume_change_of_variables_value
+#check @IntegrationInACVF.Section7.scalarExtensionMap
+#print axioms IntegrationInACVF.Section7.scalarExtensionMap
+#check @IntegrationInACVF.Section7.scalar_extension_map_generator
+#print axioms IntegrationInACVF.Section7.scalar_extension_map_generator
+#check @IntegrationInACVF.Section7.scalar_extension_map_id
+#print axioms IntegrationInACVF.Section7.scalar_extension_map_id
+#check @IntegrationInACVF.Section7.scalar_extension_map_comp
+#print axioms IntegrationInACVF.Section7.scalar_extension_map_comp
+#check @IntegrationInACVF.Section7.supportedPositiveComponentAction
+#print axioms IntegrationInACVF.Section7.supportedPositiveComponentAction
+#check @IntegrationInACVF.Section7.supported_volume_forget_degree_heq
+#print axioms IntegrationInACVF.Section7.supported_volume_forget_degree_heq
+#check @IntegrationInACVF.Section7.supported_positive_component_action_forget
+#print axioms IntegrationInACVF.Section7.supported_positive_component_action_forget
+#check @IntegrationInACVF.Section7.supportedPositiveGradedAction
+#print axioms IntegrationInACVF.Section7.supportedPositiveGradedAction
+#check @IntegrationInACVF.Section7.SupportedPositiveGradedVolumeFunction
+#print axioms IntegrationInACVF.Section7.SupportedPositiveGradedVolumeFunction
+#check @IntegrationInACVF.Section7.supportedPositiveGradedVolumeFunctionModule
+#print axioms IntegrationInACVF.Section7.supportedPositiveGradedVolumeFunctionModule
+#check @IntegrationInACVF.Section7.supportedPositiveGradedForget
+#print axioms IntegrationInACVF.Section7.supportedPositiveGradedForget
+#check @IntegrationInACVF.Section7.supported_positive_graded_forget_of
+#print axioms IntegrationInACVF.Section7.supported_positive_graded_forget_of
+#check @IntegrationInACVF.Section7.supported_volume_jacobian_degree_heq
+#print axioms IntegrationInACVF.Section7.supported_volume_jacobian_degree_heq
+#check @IntegrationInACVF.Section7.supported_positive_graded_jacobian_action
+#print axioms IntegrationInACVF.Section7.supported_positive_graded_jacobian_action
+#check @IntegrationInACVF.Section7.supportedPositiveGradedJacobian
+#print axioms IntegrationInACVF.Section7.supportedPositiveGradedJacobian
+#check @IntegrationInACVF.Section7.supported_positive_graded_jacobian_of
+#print axioms IntegrationInACVF.Section7.supported_positive_graded_jacobian_of

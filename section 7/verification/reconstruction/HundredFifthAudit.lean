@@ -1,0 +1,101 @@
+import Integration7.DefinablyClosedVolumeContexts
+import Integration7.FieldBaseVolumeFamilyIntegrals
+import Integration7.FrozenHeadIntegralValues
+import Integration7.FrozenHeadVolumeIntegrals
+import Integration7.HeadFibreContractionCoordinates
+import Integration7.HeadFibreContractionSources
+import Integration7.HeadFibreDensityGraphs
+import Integration7.HeadFibreIntegralIsomorphisms
+import Integration7.MixedHeadFibres
+import Integration7.SelectedHeadFibreRows
+import Integration7.SelectedVolumeHeadFibres
+set_option pp.universes true
+set_option pp.proofs false
+set_option pp.deepTerms true
+set_option pp.maxSteps 10000000
+set_option pp.notation false
+set_option pp.funBinderTypes true
+set_option pp.piBinderTypes true
+
+
+
+#check @IntegrationInACVF.Section7.definablyClosedVolumeContext
+#print axioms IntegrationInACVF.Section7.definablyClosedVolumeContext
+#check @IntegrationInACVF.Section7.definably_closed_volume_context_contains
+#print axioms IntegrationInACVF.Section7.definably_closed_volume_context_contains
+#check @IntegrationInACVF.Section7.definably_closed_volume_context_names
+#print axioms IntegrationInACVF.Section7.definably_closed_volume_context_names
+#check @IntegrationInACVF.Section7.definablyClosedVolumeContextField
+#print axioms IntegrationInACVF.Section7.definablyClosedVolumeContextField
+#check @IntegrationInACVF.Section7.selectedFamilyFieldIntegralContraction
+#print axioms IntegrationInACVF.Section7.selectedFamilyFieldIntegralContraction
+#check @IntegrationInACVF.Section7.selectedFamilyFieldCanonicalIntegral
+#print axioms IntegrationInACVF.Section7.selectedFamilyFieldCanonicalIntegral
+#check @IntegrationInACVF.Section7.selected_family_field_integral_independent
+#print axioms IntegrationInACVF.Section7.selected_family_field_integral_independent
+#check @IntegrationInACVF.Section7.selected_family_field_integral_eq_canonical
+#print axioms IntegrationInACVF.Section7.selected_family_field_integral_eq_canonical
+#check @IntegrationInACVF.Section7.selectedFamilyFieldAppendedIntegral
+#print axioms IntegrationInACVF.Section7.selectedFamilyFieldAppendedIntegral
+#check @IntegrationInACVF.Section7.selected_family_field_appended_integral_contraction
+#print axioms IntegrationInACVF.Section7.selected_family_field_appended_integral_contraction
+#check @IntegrationInACVF.Section7.selectedFamilyFrozenHeadAppendedIntegral
+#print axioms IntegrationInACVF.Section7.selectedFamilyFrozenHeadAppendedIntegral
+#check @IntegrationInACVF.Section7.selected_head_integral_is_frozen_fibre_integral
+#print axioms IntegrationInACVF.Section7.selected_head_integral_is_frozen_fibre_integral
+#check @IntegrationInACVF.Section7.pointwise_rv_volume_head_integral_fibre_value
+#print axioms IntegrationInACVF.Section7.pointwise_rv_volume_head_integral_fibre_value
+#check @IntegrationInACVF.Section7.frozenHeadVolumeContext
+#print axioms IntegrationInACVF.Section7.frozenHeadVolumeContext
+#check @IntegrationInACVF.Section7.frozen_head_volume_context_contains
+#print axioms IntegrationInACVF.Section7.frozen_head_volume_context_contains
+#check @IntegrationInACVF.Section7.frozen_head_volume_context_common_names
+#print axioms IntegrationInACVF.Section7.frozen_head_volume_context_common_names
+#check @IntegrationInACVF.Section7.SelectedVFVolumeFamily.frozenHeadFamily
+#print axioms IntegrationInACVF.Section7.SelectedVFVolumeFamily.frozenHeadFamily
+#check @IntegrationInACVF.Section7.selectedFamilyFrozenHeadIntegral
+#print axioms IntegrationInACVF.Section7.selectedFamilyFrozenHeadIntegral
+#check @IntegrationInACVF.Section7.selected_family_frozen_head_integral_independent
+#print axioms IntegrationInACVF.Section7.selected_family_frozen_head_integral_independent
+#check @IntegrationInACVF.Section7.head_fibre_contraction_label_domain
+#print axioms IntegrationInACVF.Section7.head_fibre_contraction_label_domain
+#check @IntegrationInACVF.Section7.head_fibre_contraction_append_index
+#print axioms IntegrationInACVF.Section7.head_fibre_contraction_append_index
+#check @IntegrationInACVF.Section7.head_fibre_contraction_density_index
+#print axioms IntegrationInACVF.Section7.head_fibre_contraction_density_index
+#check @IntegrationInACVF.Section7.head_fibre_contraction_base_subset
+#print axioms IntegrationInACVF.Section7.head_fibre_contraction_base_subset
+#check @IntegrationInACVF.Section7.head_fibre_density_contraction_source
+#print axioms IntegrationInACVF.Section7.head_fibre_density_contraction_source
+#check @IntegrationInACVF.Section7.headFibreStandardContraction
+#print axioms IntegrationInACVF.Section7.headFibreStandardContraction
+#check @IntegrationInACVF.Section7.volume_density_graph_mem_iff
+#print axioms IntegrationInACVF.Section7.volume_density_graph_mem_iff
+#check @IntegrationInACVF.Section7.head_fibre_density_graph_domain
+#print axioms IntegrationInACVF.Section7.head_fibre_density_graph_domain
+#check @IntegrationInACVF.Section7.headFibreIntegralVolumeIso
+#print axioms IntegrationInACVF.Section7.headFibreIntegralVolumeIso
+#check @IntegrationInACVF.Section7.mixedHeadInsert
+#print axioms IntegrationInACVF.Section7.mixedHeadInsert
+#check @IntegrationInACVF.Section7.mixedHeadFibre
+#print axioms IntegrationInACVF.Section7.mixedHeadFibre
+#check @IntegrationInACVF.Section7.mixedHeadFibreEmbed
+#print axioms IntegrationInACVF.Section7.mixedHeadFibreEmbed
+#check @IntegrationInACVF.Section7.VolumeForm.mixedHeadFibre
+#print axioms IntegrationInACVF.Section7.VolumeForm.mixedHeadFibre
+#check @IntegrationInACVF.Section7.VolumeForm.mixedHeadFibre_value
+#print axioms IntegrationInACVF.Section7.VolumeForm.mixedHeadFibre_value
+#check @IntegrationInACVF.Section7.head_fibre_row_context_contains
+#print axioms IntegrationInACVF.Section7.head_fibre_row_context_contains
+#check @IntegrationInACVF.Section7.selectedHeadFibreRowIso
+#print axioms IntegrationInACVF.Section7.selectedHeadFibreRowIso
+#check @IntegrationInACVF.Section7.SelectedVFVolumeFamily.headFibre
+#print axioms IntegrationInACVF.Section7.SelectedVFVolumeFamily.headFibre
+#check @IntegrationInACVF.Section7.SelectedVFVolumeFamily.headFibre_domain
+#print axioms IntegrationInACVF.Section7.SelectedVFVolumeFamily.headFibre_domain
+#check @IntegrationInACVF.Section7.SelectedVFVolumeFamily.headFibre_density
+#print axioms IntegrationInACVF.Section7.SelectedVFVolumeFamily.headFibre_density
+#check @IntegrationInACVF.Section7.SelectedVFVolumeFamily.extendContext
+#print axioms IntegrationInACVF.Section7.SelectedVFVolumeFamily.extendContext
+#check @IntegrationInACVF.Section7.SelectedVFVolumeFamily.extendContext_density
+#print axioms IntegrationInACVF.Section7.SelectedVFVolumeFamily.extendContext_density

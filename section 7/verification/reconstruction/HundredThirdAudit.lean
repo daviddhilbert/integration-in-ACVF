@@ -1,0 +1,138 @@
+import Integration7.CentralVolumePointClasses
+import Integration7.CentralVolumePointRing
+import Integration7.GradedSemiringUnitNormalization
+import Integration7.LowerDimensionVolumeProductSwaps
+import Integration7.NormalizedPositiveJacobianIntegrals
+import Integration7.NormalizedPrefixFubini
+import Integration7.NormalizedVolumeCoefficientRing
+import Integration7.NormalizedVolumeFunctions
+import Integration7.SemimoduleScalarExtension
+import Integration7.UnitPointVolumeSwaps
+set_option pp.universes true
+set_option pp.proofs false
+set_option pp.deepTerms true
+set_option pp.maxSteps 10000000
+set_option pp.notation false
+set_option pp.funBinderTypes true
+set_option pp.piBinderTypes true
+
+
+
+#check @IntegrationInACVF.Section7.volumePointClass
+#print axioms IntegrationInACVF.Section7.volumePointClass
+#check @IntegrationInACVF.Section7.volume_point_product_swap_positive
+#print axioms IntegrationInACVF.Section7.volume_point_product_swap_positive
+#check @IntegrationInACVF.Section7.volume_point_class_commutes_component
+#print axioms IntegrationInACVF.Section7.volume_point_class_commutes_component
+#check @IntegrationInACVF.Section7.volume_point_class_commutes
+#print axioms IntegrationInACVF.Section7.volume_point_class_commutes
+#check @IntegrationInACVF.Section7.volumePointRing
+#print axioms IntegrationInACVF.Section7.volumePointRing
+#check @IntegrationInACVF.Section7.volume_point_ring_commutes
+#print axioms IntegrationInACVF.Section7.volume_point_ring_commutes
+#check @IntegrationInACVF.Section7.volumePointRingCentralFact
+#print axioms IntegrationInACVF.Section7.volumePointRingCentralFact
+#check @IntegrationInACVF.Section7.gradedSemiringUnitComponent
+#print axioms IntegrationInACVF.Section7.gradedSemiringUnitComponent
+#check @IntegrationInACVF.Section7.gradedSemiringUnitNormalize
+#print axioms IntegrationInACVF.Section7.gradedSemiringUnitNormalize
+#check @IntegrationInACVF.Section7.graded_semiring_unit_normalize_of
+#print axioms IntegrationInACVF.Section7.graded_semiring_unit_normalize_of
+#check @IntegrationInACVF.Section7.graded_semiring_unit_normalize_point
+#print axioms IntegrationInACVF.Section7.graded_semiring_unit_normalize_point
+#check @IntegrationInACVF.Section7.unsignedProductSwapObject
+#print axioms IntegrationInACVF.Section7.unsignedProductSwapObject
+#check @IntegrationInACVF.Section7.unsigned_product_swap_density
+#print axioms IntegrationInACVF.Section7.unsigned_product_swap_density
+#check @IntegrationInACVF.Section7.volumeUnsignedProductSwapIsoOfDim
+#print axioms IntegrationInACVF.Section7.volumeUnsignedProductSwapIsoOfDim
+#check @IntegrationInACVF.Section7.normalizedPositiveVolumeFunction
+#print axioms IntegrationInACVF.Section7.normalizedPositiveVolumeFunction
+#check @IntegrationInACVF.Section7.normalized_positive_integral_eq_of_canonical
+#print axioms IntegrationInACVF.Section7.normalized_positive_integral_eq_of_canonical
+#check @IntegrationInACVF.Section7.normalized_positive_jacobian_integral
+#print axioms IntegrationInACVF.Section7.normalized_positive_jacobian_integral
+#check @IntegrationInACVF.Section7.normalized_volume_prefix_fubini
+#print axioms IntegrationInACVF.Section7.normalized_volume_prefix_fubini
+#check @IntegrationInACVF.Section7.VolumePointLocalization
+#print axioms IntegrationInACVF.Section7.VolumePointLocalization
+#check @IntegrationInACVF.Section7.volumePointLocalizationMap
+#print axioms IntegrationInACVF.Section7.volumePointLocalizationMap
+#check @IntegrationInACVF.Section7.volumePointLocalizationCoefficients
+#print axioms IntegrationInACVF.Section7.volumePointLocalizationCoefficients
+#check @IntegrationInACVF.Section7.volumeLocalizedPointUnit
+#print axioms IntegrationInACVF.Section7.volumeLocalizedPointUnit
+#check @IntegrationInACVF.Section7.volume_localized_point_unit_value
+#print axioms IntegrationInACVF.Section7.volume_localized_point_unit_value
+#check @IntegrationInACVF.Section7.volume_localized_coefficients_commute_point
+#print axioms IntegrationInACVF.Section7.volume_localized_coefficients_commute_point
+#check @IntegrationInACVF.Section7.normalizedVolumeSemiringMap
+#print axioms IntegrationInACVF.Section7.normalizedVolumeSemiringMap
+#check @IntegrationInACVF.Section7.normalized_volume_semiring_homogeneous
+#print axioms IntegrationInACVF.Section7.normalized_volume_semiring_homogeneous
+#check @IntegrationInACVF.Section7.normalized_volume_semiring_point
+#print axioms IntegrationInACVF.Section7.normalized_volume_semiring_point
+#check @IntegrationInACVF.Section7.normalizedVolumeRingMap
+#print axioms IntegrationInACVF.Section7.normalizedVolumeRingMap
+#check @IntegrationInACVF.Section7.NormalizedRVVolumeRing
+#print axioms IntegrationInACVF.Section7.NormalizedRVVolumeRing
+#check @IntegrationInACVF.Section7.normalizedVolumeRingProjection
+#print axioms IntegrationInACVF.Section7.normalizedVolumeRingProjection
+#check @IntegrationInACVF.Section7.normalized_volume_ring_projection_surjective
+#print axioms IntegrationInACVF.Section7.normalized_volume_ring_projection_surjective
+#check @IntegrationInACVF.Section7.normalizedVolumeCoefficientMap
+#print axioms IntegrationInACVF.Section7.normalizedVolumeCoefficientMap
+#check @IntegrationInACVF.Section7.normalized_volume_coefficient_point
+#print axioms IntegrationInACVF.Section7.normalized_volume_coefficient_point
+#check @IntegrationInACVF.Section7.normalized_volume_ring_range_iff_difference
+#print axioms IntegrationInACVF.Section7.normalized_volume_ring_range_iff_difference
+#check @IntegrationInACVF.Section7.NormalizedVolumeFunction
+#print axioms IntegrationInACVF.Section7.NormalizedVolumeFunction
+#check @IntegrationInACVF.Section7.normalizedVolumeFunctionGenerator
+#print axioms IntegrationInACVF.Section7.normalizedVolumeFunctionGenerator
+#check @IntegrationInACVF.Section7.normalized_volume_function_generator_smul
+#print axioms IntegrationInACVF.Section7.normalized_volume_function_generator_smul
+#check @IntegrationInACVF.Section7.normalized_volume_function_point
+#print axioms IntegrationInACVF.Section7.normalized_volume_function_point
+#check @IntegrationInACVF.Section7.normalizedVolumeIntegralOnGenerators
+#print axioms IntegrationInACVF.Section7.normalizedVolumeIntegralOnGenerators
+#check @IntegrationInACVF.Section7.normalized_volume_integral_generators_smul
+#print axioms IntegrationInACVF.Section7.normalized_volume_integral_generators_smul
+#check @IntegrationInACVF.Section7.normalizedVolumeIntegral
+#print axioms IntegrationInACVF.Section7.normalizedVolumeIntegral
+#check @IntegrationInACVF.Section7.normalized_volume_integral_generator
+#print axioms IntegrationInACVF.Section7.normalized_volume_integral_generator
+#check @IntegrationInACVF.Section7.normalized_volume_integral_unique
+#print axioms IntegrationInACVF.Section7.normalized_volume_integral_unique
+#check @IntegrationInACVF.Section7.semimoduleScalarExtensionRelations
+#print axioms IntegrationInACVF.Section7.semimoduleScalarExtensionRelations
+#check @IntegrationInACVF.Section7.SemimoduleScalarExtension
+#print axioms IntegrationInACVF.Section7.SemimoduleScalarExtension
+#check @IntegrationInACVF.Section7.scalarExtensionGenerator
+#print axioms IntegrationInACVF.Section7.scalarExtensionGenerator
+#check @IntegrationInACVF.Section7.scalar_extension_generator_zero
+#print axioms IntegrationInACVF.Section7.scalar_extension_generator_zero
+#check @IntegrationInACVF.Section7.scalar_extension_generator_add
+#print axioms IntegrationInACVF.Section7.scalar_extension_generator_add
+#check @IntegrationInACVF.Section7.scalar_extension_generator_smul
+#print axioms IntegrationInACVF.Section7.scalar_extension_generator_smul
+#check @IntegrationInACVF.Section7.scalarExtensionGeneratorHom
+#print axioms IntegrationInACVF.Section7.scalarExtensionGeneratorHom
+#check @IntegrationInACVF.Section7.scalarExtensionSolution
+#print axioms IntegrationInACVF.Section7.scalarExtensionSolution
+#check @IntegrationInACVF.Section7.scalarExtensionLift
+#print axioms IntegrationInACVF.Section7.scalarExtensionLift
+#check @IntegrationInACVF.Section7.scalar_extension_lift_generator
+#print axioms IntegrationInACVF.Section7.scalar_extension_lift_generator
+#check @IntegrationInACVF.Section7.scalar_extension_linearMap_ext
+#print axioms IntegrationInACVF.Section7.scalar_extension_linearMap_ext
+#check @IntegrationInACVF.Section7.scalar_extension_lift_unique
+#print axioms IntegrationInACVF.Section7.scalar_extension_lift_unique
+#check @IntegrationInACVF.Section7.finite_rv_object_dimension_bound
+#print axioms IntegrationInACVF.Section7.finite_rv_object_dimension_bound
+#check @IntegrationInACVF.Section7.essential_rv_dimension_le
+#print axioms IntegrationInACVF.Section7.essential_rv_dimension_le
+#check @IntegrationInACVF.Section7.point_product_essential_dimension_lt
+#print axioms IntegrationInACVF.Section7.point_product_essential_dimension_lt
+#check @IntegrationInACVF.Section7.volumeUnitPointSwapIso
+#print axioms IntegrationInACVF.Section7.volumeUnitPointSwapIso

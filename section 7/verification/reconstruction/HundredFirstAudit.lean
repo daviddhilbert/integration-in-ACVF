@@ -1,0 +1,73 @@
+import Integration7.DefinableBaseMapValues
+import Integration7.DefinableDensityRescaling
+import Integration7.DefinableVolumeParameterDescent
+import Integration7.NamedMapValueDefinability
+import Integration7.SelectedJacobianAlmostEverywhere
+import Integration7.SelectedJacobianRowComparison
+import Integration7.SelectedJacobianRowIsomorphisms
+import Integration7.SupportedVolumeFunctionJacobians
+
+set_option pp.universes true
+set_option pp.proofs false
+set_option pp.deepTerms true
+set_option pp.maxSteps 10000000
+set_option pp.notation false
+set_option pp.funBinderTypes true
+set_option pp.piBinderTypes true
+
+
+
+#check @IntegrationInACVF.Section7.vf_map_value_coordinate_definable
+#print axioms IntegrationInACVF.Section7.vf_map_value_coordinate_definable
+#check @IntegrationInACVF.Section7.vf_rv_map_value_coordinate_definable
+#print axioms IntegrationInACVF.Section7.vf_rv_map_value_coordinate_definable
+#check @IntegrationInACVF.Section7.rvScalarDefinableConstant
+#print axioms IntegrationInACVF.Section7.rvScalarDefinableConstant
+#check @IntegrationInACVF.Section7.VolumeForm.rescaleDefinable
+#print axioms IntegrationInACVF.Section7.VolumeForm.rescaleDefinable
+#check @IntegrationInACVF.Section7.PositiveRVVolumeObject.rescaleDefinable
+#print axioms IntegrationInACVF.Section7.PositiveRVVolumeObject.rescaleDefinable
+#check @IntegrationInACVF.Section7.positive_rescale_definable_density
+#print axioms IntegrationInACVF.Section7.positive_rescale_definable_density
+#check @IntegrationInACVF.Section7.VolumeBlowupEquivalent.rescale_definable
+#print axioms IntegrationInACVF.Section7.VolumeBlowupEquivalent.rescale_definable
+#check @IntegrationInACVF.Section7.VolumeBlowupEquivalent.descend_definable
+#print axioms IntegrationInACVF.Section7.VolumeBlowupEquivalent.descend_definable
+#check @IntegrationInACVF.Section7.positive_volume_class_extend_injective_definable
+#print axioms IntegrationInACVF.Section7.positive_volume_class_extend_injective_definable
+#check @IntegrationInACVF.Section7.map_singleton_definable
+#print axioms IntegrationInACVF.Section7.map_singleton_definable
+#check @IntegrationInACVF.Section7.raw_vf_singleton_preimage
+#print axioms IntegrationInACVF.Section7.raw_vf_singleton_preimage
+#check @IntegrationInACVF.Section7.raw_rv_singleton_preimage
+#print axioms IntegrationInACVF.Section7.raw_rv_singleton_preimage
+#check @IntegrationInACVF.Section7.raw_vf_singleton_definable
+#print axioms IntegrationInACVF.Section7.raw_vf_singleton_definable
+#check @IntegrationInACVF.Section7.tuple_singleton_coordinate_definable
+#print axioms IntegrationInACVF.Section7.tuple_singleton_coordinate_definable
+#check @IntegrationInACVF.Section7.finite_volume_parameter_context_definable
+#print axioms IntegrationInACVF.Section7.finite_volume_parameter_context_definable
+#check @IntegrationInACVF.Section7.selected_jacobian_row_empty_outside
+#print axioms IntegrationInACVF.Section7.selected_jacobian_row_empty_outside
+#check @IntegrationInACVF.Section7.selected_jacobian_preserves_ae_equivalence
+#print axioms IntegrationInACVF.Section7.selected_jacobian_preserves_ae_equivalence
+#check @IntegrationInACVF.Section7.selected_jacobian_row_comparison
+#print axioms IntegrationInACVF.Section7.selected_jacobian_row_comparison
+#check @IntegrationInACVF.Section7.selectedJacobianRowIso
+#print axioms IntegrationInACVF.Section7.selectedJacobianRowIso
+#check @IntegrationInACVF.Section7.SupportedVolumeFunctionPresentation
+#print axioms IntegrationInACVF.Section7.SupportedVolumeFunctionPresentation
+#check @IntegrationInACVF.Section7.supportedVolumeFunctionSetoid
+#print axioms IntegrationInACVF.Section7.supportedVolumeFunctionSetoid
+#check @IntegrationInACVF.Section7.SupportedAERVVolumeFunction
+#print axioms IntegrationInACVF.Section7.SupportedAERVVolumeFunction
+#check @IntegrationInACVF.Section7.supportedVolumeFunctionForget
+#print axioms IntegrationInACVF.Section7.supportedVolumeFunctionForget
+#check @IntegrationInACVF.Section7.supported_volume_function_forget_injective
+#print axioms IntegrationInACVF.Section7.supported_volume_function_forget_injective
+#check @IntegrationInACVF.Section7.SupportedVolumeFunctionPresentation.jacobianTransform
+#print axioms IntegrationInACVF.Section7.SupportedVolumeFunctionPresentation.jacobianTransform
+#check @IntegrationInACVF.Section7.supportedVolumeFunctionJacobian
+#print axioms IntegrationInACVF.Section7.supportedVolumeFunctionJacobian
+#check @IntegrationInACVF.Section7.supported_volume_function_jacobian_integral
+#print axioms IntegrationInACVF.Section7.supported_volume_function_jacobian_integral

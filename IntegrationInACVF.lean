@@ -20,5 +20,6 @@ from the remaining connections to the ACVF imaginary expansion.
 -/
 
 /- Section 6 exports the RV[k] and graded RV[*] formalization, including
-   integration, definable families, Fubini and localization. The authorized
-   unfinished Section 5.8 input remains explicit in the final theorem types. -/
+   integration, definable families, Fubini and localization. The completed
+   Section 5.8 theorem supplies the fixed-base input. The stronger universal
+   interface over arbitrary frozen parameter bases remains explicit. -/

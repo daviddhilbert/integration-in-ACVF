@@ -1,0 +1,810 @@
+@IntegrationInACVF.Section7.direct_sum_point_power_homogeneous.{u_1} : ∀ {A : Nat → Type u_1}
+  [inst : (n : Nat) → AddCommMonoid.{u_1} (A n)] [inst_1 : DirectSum.GSemiring.{0, u_1} A] (j : A 1) (m : Nat),
+  Exists.{u_1 + 1} fun (a : A m) =>
+    Eq.{u_1 + 1} (HPow.hPow.{u_1, 0, u_1} ((DirectSum.of.{0, u_1} A 1) j) m) ((DirectSum.of.{0, u_1} A m) a)
+'IntegrationInACVF.Section7.direct_sum_point_power_homogeneous' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.normalized_homogeneous_shift_right.{u_1,
+    u_2} : ∀ {A : Nat → Type u_1} [inst : (n : Nat) → AddCommMonoid.{u_1} (A n)]
+  [inst_1 : DirectSum.GSemiring.{0, u_1} A] {T : Type u_2} [inst_2 : Semiring.{u_2} T]
+  (φ : RingHom.{u_1, u_2} (DirectSum.{0, u_1} Nat A) T) (j : A 1),
+  Eq.{u_2 + 1} (φ ((DirectSum.of.{0, u_1} A 1) j)) 1 →
+    ∀ {n : Nat} (a : A n) (m : Nat),
+      Exists.{u_1 + 1} fun (b : A (HAdd.hAdd.{0, 0, 0} n m)) =>
+        Eq.{u_2 + 1} (φ ((DirectSum.of.{0, u_1} A n) a)) (φ ((DirectSum.of.{0, u_1} A (HAdd.hAdd.{0, 0, 0} n m)) b))
+'IntegrationInACVF.Section7.normalized_homogeneous_shift_right' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.normalized_homogeneous_shift_left.{u_1,
+    u_2} : ∀ {A : Nat → Type u_1} [inst : (n : Nat) → AddCommMonoid.{u_1} (A n)]
+  [inst_1 : DirectSum.GSemiring.{0, u_1} A] {T : Type u_2} [inst_2 : Semiring.{u_2} T]
+  (φ : RingHom.{u_1, u_2} (DirectSum.{0, u_1} Nat A) T) (j : A 1),
+  Eq.{u_2 + 1} (φ ((DirectSum.of.{0, u_1} A 1) j)) 1 →
+    ∀ {m : Nat} (a : A m) (n : Nat),
+      Exists.{u_1 + 1} fun (b : A (HAdd.hAdd.{0, 0, 0} n m)) =>
+        Eq.{u_2 + 1} (φ ((DirectSum.of.{0, u_1} A m) a)) (φ ((DirectSum.of.{0, u_1} A (HAdd.hAdd.{0, 0, 0} n m)) b))
+'IntegrationInACVF.Section7.normalized_homogeneous_shift_left' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.normalized_finite_sum_homogeneous.{u_1,
+    u_2} : ∀ {A : Nat → Type u_1} [inst : (n : Nat) → AddCommMonoid.{u_1} (A n)]
+  [inst_1 : DirectSum.GSemiring.{0, u_1} A] {T : Type u_2} [inst_2 : Semiring.{u_2} T]
+  (φ : RingHom.{u_1, u_2} (DirectSum.{0, u_1} Nat A) T) (j : A 1),
+  Eq.{u_2 + 1} (φ ((DirectSum.of.{0, u_1} A 1) j)) 1 →
+    ∀ (x : DirectSum.{0, u_1} Nat A),
+      Exists.{1} fun (n : Nat) =>
+        Exists.{u_1 + 1} fun (a : A n) => Eq.{u_2 + 1} (φ x) (φ ((DirectSum.of.{0, u_1} A n) a))
+'IntegrationInACVF.Section7.normalized_finite_sum_homogeneous' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.volume_iso_semiring_class_iso : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M) {k : Nat}
+  {U V : IntegrationInACVF.Section7.PositiveRVVolumeObject (↑C.base) k}
+  (e : IntegrationInACVF.Section7.RVVolumeIso U V),
+  Eq.{1} (IntegrationInACVF.Section7.volumeIsoSemiringClass hc C U)
+    (IntegrationInACVF.Section7.volumeIsoSemiringClass hc C V)
+'IntegrationInACVF.Section7.volume_iso_semiring_class_iso' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.volume_iso_semiring_class_coprod : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M) {k : Nat}
+  (U V : IntegrationInACVF.Section7.PositiveRVVolumeObject (↑C.base) k),
+  Eq.{1} (IntegrationInACVF.Section7.volumeIsoSemiringClass hc C (U.coprod V))
+    (HAdd.hAdd.{0, 0, 0} (IntegrationInACVF.Section7.volumeIsoSemiringClass hc C U)
+      (IntegrationInACVF.Section7.volumeIsoSemiringClass hc C V))
+'IntegrationInACVF.Section7.volume_iso_semiring_class_coprod' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.localized_elementary_volume_image_eq.{u_1} : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M) {R : Type u_1}
+  [inst_2 : Semiring.{u_1} R] (f : RingHom.{0, u_1} (IntegrationInACVF.Section7.RVVolumeIsoSemiring hc C) R),
+  IsUnit.{u_1}
+      (f
+        (IntegrationInACVF.Section7.volumeIsoSemiringClass hc C
+          (IntegrationInACVF.Section7.degreeOnePointVolumeObject ↑C.base))) →
+    Eq.{u_1 + 1}
+        (f
+          (IntegrationInACVF.Section7.volumeIsoSemiringClass hc C
+            (IntegrationInACVF.Section7.degreeOnePointVolumeObject ↑C.base)))
+        (f
+          (IntegrationInACVF.Section7.volumeIsoSemiringClass hc C
+            (IntegrationInACVF.Section7.degreeOneConeVolumeObject ↑C.base))) →
+      ∀ {k : Nat} {U W : IntegrationInACVF.Section7.PositiveRVVolumeObject (↑C.base) k}
+        (b : IntegrationInACVF.Section7.ElementaryBlowup U W),
+        Eq.{u_1 + 1} (f (IntegrationInACVF.Section7.volumeIsoSemiringClass hc C U))
+          (f (IntegrationInACVF.Section7.volumeIsoSemiringClass hc C W))
+'IntegrationInACVF.Section7.localized_elementary_volume_image_eq' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.localized_volume_blowup_image_eq.{u_1} : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M) {R : Type u_1}
+  [inst_2 : Semiring.{u_1} R] (f : RingHom.{0, u_1} (IntegrationInACVF.Section7.RVVolumeIsoSemiring hc C) R),
+  IsUnit.{u_1}
+      (f
+        (IntegrationInACVF.Section7.volumeIsoSemiringClass hc C
+          (IntegrationInACVF.Section7.degreeOnePointVolumeObject ↑C.base))) →
+    Eq.{u_1 + 1}
+        (f
+          (IntegrationInACVF.Section7.volumeIsoSemiringClass hc C
+            (IntegrationInACVF.Section7.degreeOnePointVolumeObject ↑C.base)))
+        (f
+          (IntegrationInACVF.Section7.volumeIsoSemiringClass hc C
+            (IntegrationInACVF.Section7.degreeOneConeVolumeObject ↑C.base))) →
+      ∀ {k : Nat} {U W : IntegrationInACVF.Section7.PositiveRVVolumeObject (↑C.base) k}
+        (b : IntegrationInACVF.Section7.VolumeBlowup U W),
+        Eq.{u_1 + 1} (f (IntegrationInACVF.Section7.volumeIsoSemiringClass hc C U))
+          (f (IntegrationInACVF.Section7.volumeIsoSemiringClass hc C W))
+'IntegrationInACVF.Section7.localized_volume_blowup_image_eq' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.localized_iterated_volume_image_eq.{u_1} : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M) {R : Type u_1}
+  [inst_2 : Semiring.{u_1} R] (f : RingHom.{0, u_1} (IntegrationInACVF.Section7.RVVolumeIsoSemiring hc C) R),
+  IsUnit.{u_1}
+      (f
+        (IntegrationInACVF.Section7.volumeIsoSemiringClass hc C
+          (IntegrationInACVF.Section7.degreeOnePointVolumeObject ↑C.base))) →
+    Eq.{u_1 + 1}
+        (f
+          (IntegrationInACVF.Section7.volumeIsoSemiringClass hc C
+            (IntegrationInACVF.Section7.degreeOnePointVolumeObject ↑C.base)))
+        (f
+          (IntegrationInACVF.Section7.volumeIsoSemiringClass hc C
+            (IntegrationInACVF.Section7.degreeOneConeVolumeObject ↑C.base))) →
+      ∀ {k d : Nat} {U W : IntegrationInACVF.Section7.PositiveRVVolumeObject (↑C.base) k},
+        IntegrationInACVF.Section7.IteratedVolumeBlowup d U W →
+          Eq.{u_1 + 1} (f (IntegrationInACVF.Section7.volumeIsoSemiringClass hc C U))
+            (f (IntegrationInACVF.Section7.volumeIsoSemiringClass hc C W))
+'IntegrationInACVF.Section7.localized_iterated_volume_image_eq' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.localized_common_volume_blowup_image_eq.{u_1} : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M) {R : Type u_1}
+  [inst_2 : Semiring.{u_1} R] (f : RingHom.{0, u_1} (IntegrationInACVF.Section7.RVVolumeIsoSemiring hc C) R),
+  IsUnit.{u_1}
+      (f
+        (IntegrationInACVF.Section7.volumeIsoSemiringClass hc C
+          (IntegrationInACVF.Section7.degreeOnePointVolumeObject ↑C.base))) →
+    Eq.{u_1 + 1}
+        (f
+          (IntegrationInACVF.Section7.volumeIsoSemiringClass hc C
+            (IntegrationInACVF.Section7.degreeOnePointVolumeObject ↑C.base)))
+        (f
+          (IntegrationInACVF.Section7.volumeIsoSemiringClass hc C
+            (IntegrationInACVF.Section7.degreeOneConeVolumeObject ↑C.base))) →
+      ∀ {k : Nat} {U W : IntegrationInACVF.Section7.PositiveRVVolumeObject (↑C.base) k},
+        IntegrationInACVF.Section7.VolumeBlowupEquivalent U W →
+          Eq.{u_1 + 1} (f (IntegrationInACVF.Section7.volumeIsoSemiringClass hc C U))
+            (f (IntegrationInACVF.Section7.volumeIsoSemiringClass hc C W))
+'IntegrationInACVF.Section7.localized_common_volume_blowup_image_eq' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.localized_muIsp_image_eq.{u_1} : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M) {R : Type u_1}
+  [inst_2 : Semiring.{u_1} R] (f : RingHom.{0, u_1} (IntegrationInACVF.Section7.RVVolumeIsoSemiring hc C) R),
+  IsUnit.{u_1}
+      (f
+        (IntegrationInACVF.Section7.volumeIsoSemiringClass hc C
+          (IntegrationInACVF.Section7.degreeOnePointVolumeObject ↑C.base))) →
+    Eq.{u_1 + 1}
+        (f
+          (IntegrationInACVF.Section7.volumeIsoSemiringClass hc C
+            (IntegrationInACVF.Section7.degreeOnePointVolumeObject ↑C.base)))
+        (f
+          (IntegrationInACVF.Section7.volumeIsoSemiringClass hc C
+            (IntegrationInACVF.Section7.degreeOneConeVolumeObject ↑C.base))) →
+      ∀ {n : Nat} {U V : IntegrationInACVF.Section7.RVVolumeObject (↑C.base) n},
+        IntegrationInACVF.Section7.MuIsp (↑C.base) n U V →
+          Eq.{u_1 + 1} (f (IntegrationInACVF.Section7.volumeIsoSemiringClass hc C U))
+            (f (IntegrationInACVF.Section7.volumeIsoSemiringClass hc C V))
+'IntegrationInACVF.Section7.localized_muIsp_image_eq' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@IntegrationInACVF.Section7.localizedVolumeBlowupComponent.{u_1} : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        (C : SpecialTransformations.Section3.BaseContext M) →
+          {R : Type u_1} →
+            [inst_2 : Semiring.{u_1} R] →
+              (f : RingHom.{0, u_1} (IntegrationInACVF.Section7.RVVolumeIsoSemiring hc C) R) →
+                IsUnit.{u_1}
+                    (f
+                      (IntegrationInACVF.Section7.volumeIsoSemiringClass hc C
+                        (IntegrationInACVF.Section7.degreeOnePointVolumeObject ↑C.base))) →
+                  Eq.{u_1 + 1}
+                      (f
+                        (IntegrationInACVF.Section7.volumeIsoSemiringClass hc C
+                          (IntegrationInACVF.Section7.degreeOnePointVolumeObject ↑C.base)))
+                      (f
+                        (IntegrationInACVF.Section7.volumeIsoSemiringClass hc C
+                          (IntegrationInACVF.Section7.degreeOneConeVolumeObject ↑C.base))) →
+                    (n : Nat) → AddMonoidHom.{0, u_1} (IntegrationInACVF.Section7.RVVolumeBlowupClasses hc C n) R
+'IntegrationInACVF.Section7.localizedVolumeBlowupComponent' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.localizedVolumeBlowupDescend.{u_1} : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        (C : SpecialTransformations.Section3.BaseContext M) →
+          {R : Type u_1} →
+            [inst_2 : Semiring.{u_1} R] →
+              (f : RingHom.{0, u_1} (IntegrationInACVF.Section7.RVVolumeIsoSemiring hc C) R) →
+                IsUnit.{u_1}
+                    (f
+                      (IntegrationInACVF.Section7.volumeIsoSemiringClass hc C
+                        (IntegrationInACVF.Section7.degreeOnePointVolumeObject ↑C.base))) →
+                  Eq.{u_1 + 1}
+                      (f
+                        (IntegrationInACVF.Section7.volumeIsoSemiringClass hc C
+                          (IntegrationInACVF.Section7.degreeOnePointVolumeObject ↑C.base)))
+                      (f
+                        (IntegrationInACVF.Section7.volumeIsoSemiringClass hc C
+                          (IntegrationInACVF.Section7.degreeOneConeVolumeObject ↑C.base))) →
+                    RingHom.{0, u_1} (IntegrationInACVF.Section7.RVVolumeBlowupSemiring hc C) R
+'IntegrationInACVF.Section7.localizedVolumeBlowupDescend' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.localized_volume_blowup_descend_class.{u_1} : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M) {R : Type u_1}
+  [inst_2 : Semiring.{u_1} R] (f : RingHom.{0, u_1} (IntegrationInACVF.Section7.RVVolumeIsoSemiring hc C) R)
+  (hj :
+    IsUnit.{u_1}
+      (f
+        (IntegrationInACVF.Section7.volumeIsoSemiringClass hc C
+          (IntegrationInACVF.Section7.degreeOnePointVolumeObject ↑C.base))))
+  (hBasic :
+    Eq.{u_1 + 1}
+      (f
+        (IntegrationInACVF.Section7.volumeIsoSemiringClass hc C
+          (IntegrationInACVF.Section7.degreeOnePointVolumeObject ↑C.base)))
+      (f
+        (IntegrationInACVF.Section7.volumeIsoSemiringClass hc C
+          (IntegrationInACVF.Section7.degreeOneConeVolumeObject ↑C.base))))
+  {n : Nat} (U : IntegrationInACVF.Section7.RVVolumeObject (↑C.base) n),
+  Eq.{u_1 + 1}
+    ((IntegrationInACVF.Section7.localizedVolumeBlowupDescend.{u_1} hc C f hj hBasic)
+      ((DirectSum.of.{0, 0} (IntegrationInACVF.Section7.RVVolumeBlowupClasses hc C) n)
+        (IntegrationInACVF.Section7.rvVolumeBlowupClass hc C U)))
+    (f (IntegrationInACVF.Section7.volumeIsoSemiringClass hc C U))
+'IntegrationInACVF.Section7.localized_volume_blowup_descend_class' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.localized_volume_blowup_descend_projection.{u_1} : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M) {R : Type u_1}
+  [inst_2 : Semiring.{u_1} R] (f : RingHom.{0, u_1} (IntegrationInACVF.Section7.RVVolumeIsoSemiring hc C) R)
+  (hj :
+    IsUnit.{u_1}
+      (f
+        (IntegrationInACVF.Section7.volumeIsoSemiringClass hc C
+          (IntegrationInACVF.Section7.degreeOnePointVolumeObject ↑C.base))))
+  (hBasic :
+    Eq.{u_1 + 1}
+      (f
+        (IntegrationInACVF.Section7.volumeIsoSemiringClass hc C
+          (IntegrationInACVF.Section7.degreeOnePointVolumeObject ↑C.base)))
+      (f
+        (IntegrationInACVF.Section7.volumeIsoSemiringClass hc C
+          (IntegrationInACVF.Section7.degreeOneConeVolumeObject ↑C.base)))),
+  Eq.{u_1 + 1}
+    (RingHom.comp.{0, 0, u_1} (IntegrationInACVF.Section7.localizedVolumeBlowupDescend.{u_1} hc C f hj hBasic)
+      (IntegrationInACVF.Section7.rvVolumeGradedBlowupProjection hc C))
+    f
+'IntegrationInACVF.Section7.localized_volume_blowup_descend_projection' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.localized_volume_blowup_descend_unique.{u_1} : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M) {R : Type u_1}
+  [inst_2 : Semiring.{u_1} R] (f : RingHom.{0, u_1} (IntegrationInACVF.Section7.RVVolumeIsoSemiring hc C) R)
+  (hj :
+    IsUnit.{u_1}
+      (f
+        (IntegrationInACVF.Section7.volumeIsoSemiringClass hc C
+          (IntegrationInACVF.Section7.degreeOnePointVolumeObject ↑C.base))))
+  (hBasic :
+    Eq.{u_1 + 1}
+      (f
+        (IntegrationInACVF.Section7.volumeIsoSemiringClass hc C
+          (IntegrationInACVF.Section7.degreeOnePointVolumeObject ↑C.base)))
+      (f
+        (IntegrationInACVF.Section7.volumeIsoSemiringClass hc C
+          (IntegrationInACVF.Section7.degreeOneConeVolumeObject ↑C.base))))
+  (g : RingHom.{0, u_1} (IntegrationInACVF.Section7.RVVolumeBlowupSemiring hc C) R),
+  Eq.{u_1 + 1} (RingHom.comp.{0, 0, u_1} g (IntegrationInACVF.Section7.rvVolumeGradedBlowupProjection hc C)) f →
+    Eq.{u_1 + 1} g (IntegrationInACVF.Section7.localizedVolumeBlowupDescend.{u_1} hc C f hj hBasic)
+'IntegrationInACVF.Section7.localized_volume_blowup_descend_unique' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.normalizedBasicVolumeMap : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        (C : SpecialTransformations.Section3.BaseContext M) →
+          RingHom.{0, 0} (IntegrationInACVF.Section7.RVVolumeIsoSemiring hc C)
+            (Subtype.{1} fun (x : IntegrationInACVF.Section7.VolumePointLocalization hc C) =>
+              Membership.mem.{0, 0} (IntegrationInACVF.Section7.NormalizedRVVolumeRing hc C) x)
+'IntegrationInACVF.Section7.normalizedBasicVolumeMap' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@IntegrationInACVF.Section7.normalized_basic_volume_point : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M),
+  Eq.{1}
+    ((IntegrationInACVF.Section7.normalizedBasicVolumeMap hc C)
+      (IntegrationInACVF.Section7.volumeIsoSemiringClass hc C
+        (IntegrationInACVF.Section7.degreeOnePointVolumeObject ↑C.base)))
+    1
+'IntegrationInACVF.Section7.normalized_basic_volume_point' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.normalized_basic_volume_cone : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M),
+  Eq.{1}
+    ((IntegrationInACVF.Section7.normalizedBasicVolumeMap hc C)
+      (IntegrationInACVF.Section7.volumeIsoSemiringClass hc C
+        (IntegrationInACVF.Section7.degreeOneConeVolumeObject ↑C.base)))
+    1
+'IntegrationInACVF.Section7.normalized_basic_volume_cone' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.normalizedBasicVolumeRingMap.{u_1} : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        (C : SpecialTransformations.Section3.BaseContext M) →
+          {T : Type u_1} →
+            [inst_2 : Ring.{u_1} T] →
+              (f : RingHom.{0, u_1} (IntegrationInACVF.Section7.RVVolumeIsoSemiring hc C) T) →
+                Eq.{u_1 + 1}
+                    (f
+                      (IntegrationInACVF.Section7.volumeIsoSemiringClass hc C
+                        (IntegrationInACVF.Section7.degreeOnePointVolumeObject ↑C.base)))
+                    1 →
+                  Eq.{u_1 + 1}
+                      (f
+                        (IntegrationInACVF.Section7.volumeIsoSemiringClass hc C
+                          (IntegrationInACVF.Section7.degreeOneConeVolumeObject ↑C.base)))
+                      1 →
+                    RingHom.{0, u_1} (IntegrationInACVF.Section7.RVVolumeBlowupRing hc C) T
+'IntegrationInACVF.Section7.normalizedBasicVolumeRingMap' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.normalized_basic_volume_ring_point.{u_1} : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M) {T : Type u_1}
+  [inst_2 : Ring.{u_1} T] (f : RingHom.{0, u_1} (IntegrationInACVF.Section7.RVVolumeIsoSemiring hc C) T)
+  (hj :
+    Eq.{u_1 + 1}
+      (f
+        (IntegrationInACVF.Section7.volumeIsoSemiringClass hc C
+          (IntegrationInACVF.Section7.degreeOnePointVolumeObject ↑C.base)))
+      1)
+  (hcone :
+    Eq.{u_1 + 1}
+      (f
+        (IntegrationInACVF.Section7.volumeIsoSemiringClass hc C
+          (IntegrationInACVF.Section7.degreeOneConeVolumeObject ↑C.base)))
+      1),
+  Eq.{u_1 + 1}
+    ((IntegrationInACVF.Section7.normalizedBasicVolumeRingMap.{u_1} hc C f hj hcone)
+      (IntegrationInACVF.Section7.volumePointRing hc C))
+    1
+'IntegrationInACVF.Section7.normalized_basic_volume_ring_point' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.normalizedBasicVolumeLift.{u_1} : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        (C : SpecialTransformations.Section3.BaseContext M) →
+          {T : Type u_1} →
+            [inst_2 : Ring.{u_1} T] →
+              (f : RingHom.{0, u_1} (IntegrationInACVF.Section7.RVVolumeIsoSemiring hc C) T) →
+                Eq.{u_1 + 1}
+                    (f
+                      (IntegrationInACVF.Section7.volumeIsoSemiringClass hc C
+                        (IntegrationInACVF.Section7.degreeOnePointVolumeObject ↑C.base)))
+                    1 →
+                  Eq.{u_1 + 1}
+                      (f
+                        (IntegrationInACVF.Section7.volumeIsoSemiringClass hc C
+                          (IntegrationInACVF.Section7.degreeOneConeVolumeObject ↑C.base)))
+                      1 →
+                    RingHom.{0, u_1}
+                      (Subtype.{1} fun (x : IntegrationInACVF.Section7.VolumePointLocalization hc C) =>
+                        Membership.mem.{0, 0} (IntegrationInACVF.Section7.NormalizedRVVolumeRing hc C) x)
+                      T
+'IntegrationInACVF.Section7.normalizedBasicVolumeLift' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.normalized_basic_volume_lift_map.{u_1} : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M) {T : Type u_1}
+  [inst_2 : Ring.{u_1} T] (f : RingHom.{0, u_1} (IntegrationInACVF.Section7.RVVolumeIsoSemiring hc C) T)
+  (hj :
+    Eq.{u_1 + 1}
+      (f
+        (IntegrationInACVF.Section7.volumeIsoSemiringClass hc C
+          (IntegrationInACVF.Section7.degreeOnePointVolumeObject ↑C.base)))
+      1)
+  (hcone :
+    Eq.{u_1 + 1}
+      (f
+        (IntegrationInACVF.Section7.volumeIsoSemiringClass hc C
+          (IntegrationInACVF.Section7.degreeOneConeVolumeObject ↑C.base)))
+      1)
+  (a : IntegrationInACVF.Section7.RVVolumeIsoSemiring hc C),
+  Eq.{u_1 + 1}
+    ((IntegrationInACVF.Section7.normalizedBasicVolumeLift.{u_1} hc C f hj hcone)
+      ((IntegrationInACVF.Section7.normalizedBasicVolumeMap hc C) a))
+    (f a)
+'IntegrationInACVF.Section7.normalized_basic_volume_lift_map' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.normalized_basic_volume_hom_ext.{u_1} : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M) {T : Type u_1}
+  [inst_2 : Ring.{u_1} T]
+  {g h :
+    RingHom.{0, u_1}
+      (Subtype.{1} fun (x : IntegrationInACVF.Section7.VolumePointLocalization hc C) =>
+        Membership.mem.{0, 0} (IntegrationInACVF.Section7.NormalizedRVVolumeRing hc C) x)
+      T},
+  (∀ (a : IntegrationInACVF.Section7.RVVolumeIsoSemiring hc C),
+      Eq.{u_1 + 1} (g ((IntegrationInACVF.Section7.normalizedBasicVolumeMap hc C) a))
+        (h ((IntegrationInACVF.Section7.normalizedBasicVolumeMap hc C) a))) →
+    Eq.{u_1 + 1} g h
+'IntegrationInACVF.Section7.normalized_basic_volume_hom_ext' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.normalized_basic_volume_lift_unique.{u_1} : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M) {T : Type u_1}
+  [inst_2 : Ring.{u_1} T] (f : RingHom.{0, u_1} (IntegrationInACVF.Section7.RVVolumeIsoSemiring hc C) T)
+  (hj :
+    Eq.{u_1 + 1}
+      (f
+        (IntegrationInACVF.Section7.volumeIsoSemiringClass hc C
+          (IntegrationInACVF.Section7.degreeOnePointVolumeObject ↑C.base)))
+      1)
+  (hcone :
+    Eq.{u_1 + 1}
+      (f
+        (IntegrationInACVF.Section7.volumeIsoSemiringClass hc C
+          (IntegrationInACVF.Section7.degreeOneConeVolumeObject ↑C.base)))
+      1)
+  (g :
+    RingHom.{0, u_1}
+      (Subtype.{1} fun (x : IntegrationInACVF.Section7.VolumePointLocalization hc C) =>
+        Membership.mem.{0, 0} (IntegrationInACVF.Section7.NormalizedRVVolumeRing hc C) x)
+      T),
+  (∀ (a : IntegrationInACVF.Section7.RVVolumeIsoSemiring hc C),
+      Eq.{u_1 + 1} (g ((IntegrationInACVF.Section7.normalizedBasicVolumeMap hc C) a)) (f a)) →
+    Eq.{u_1 + 1} g (IntegrationInACVF.Section7.normalizedBasicVolumeLift.{u_1} hc C f hj hcone)
+'IntegrationInACVF.Section7.normalized_basic_volume_lift_unique' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.RawRVVolumeRing : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      CanonicalStructure.IsCanonical → SpecialTransformations.Section3.BaseContext M → Type
+'IntegrationInACVF.Section7.RawRVVolumeRing' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@IntegrationInACVF.Section7.NormalizedBasicVolumeRelation : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        (C : SpecialTransformations.Section3.BaseContext M) →
+          IntegrationInACVF.Section7.RawRVVolumeRing hc C → IntegrationInACVF.Section7.RawRVVolumeRing hc C → Prop
+'IntegrationInACVF.Section7.NormalizedBasicVolumeRelation' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.NormalizedBasicVolumeQuotient : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      CanonicalStructure.IsCanonical → SpecialTransformations.Section3.BaseContext M → Type
+'IntegrationInACVF.Section7.NormalizedBasicVolumeQuotient' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.normalizedBasicQuotientCoefficients : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        (C : SpecialTransformations.Section3.BaseContext M) →
+          RingHom.{0, 0} (IntegrationInACVF.Section7.RVVolumeIsoSemiring hc C)
+            (IntegrationInACVF.Section7.NormalizedBasicVolumeQuotient hc C)
+'IntegrationInACVF.Section7.normalizedBasicQuotientCoefficients' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.normalized_basic_quotient_point : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M),
+  Eq.{1}
+    ((IntegrationInACVF.Section7.normalizedBasicQuotientCoefficients hc C)
+      (IntegrationInACVF.Section7.volumeIsoSemiringClass hc C
+        (IntegrationInACVF.Section7.degreeOnePointVolumeObject ↑C.base)))
+    1
+'IntegrationInACVF.Section7.normalized_basic_quotient_point' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.normalized_basic_quotient_cone : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M),
+  Eq.{1}
+    ((IntegrationInACVF.Section7.normalizedBasicQuotientCoefficients hc C)
+      (IntegrationInACVF.Section7.volumeIsoSemiringClass hc C
+        (IntegrationInACVF.Section7.degreeOneConeVolumeObject ↑C.base)))
+    1
+'IntegrationInACVF.Section7.normalized_basic_quotient_cone' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.normalizedVolumeToBasicQuotient : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        (C : SpecialTransformations.Section3.BaseContext M) →
+          RingHom.{0, 0}
+            (Subtype.{1} fun (x : IntegrationInACVF.Section7.VolumePointLocalization hc C) =>
+              Membership.mem.{0, 0} (IntegrationInACVF.Section7.NormalizedRVVolumeRing hc C) x)
+            (IntegrationInACVF.Section7.NormalizedBasicVolumeQuotient hc C)
+'IntegrationInACVF.Section7.normalizedVolumeToBasicQuotient' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.normalized_basic_relation_map : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M)
+  {x y : IntegrationInACVF.Section7.RawRVVolumeRing hc C},
+  IntegrationInACVF.Section7.NormalizedBasicVolumeRelation hc C x y →
+    Eq.{1}
+      ((IntegrationInACVF.Section7.semiringGroupificationLift.{0, 0}
+          (IntegrationInACVF.Section7.normalizedBasicVolumeMap hc C))
+        x)
+      ((IntegrationInACVF.Section7.semiringGroupificationLift.{0, 0}
+          (IntegrationInACVF.Section7.normalizedBasicVolumeMap hc C))
+        y)
+'IntegrationInACVF.Section7.normalized_basic_relation_map' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.normalizedBasicQuotientToVolume : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        (C : SpecialTransformations.Section3.BaseContext M) →
+          RingHom.{0, 0} (IntegrationInACVF.Section7.NormalizedBasicVolumeQuotient hc C)
+            (Subtype.{1} fun (x : IntegrationInACVF.Section7.VolumePointLocalization hc C) =>
+              Membership.mem.{0, 0} (IntegrationInACVF.Section7.NormalizedRVVolumeRing hc C) x)
+'IntegrationInACVF.Section7.normalizedBasicQuotientToVolume' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.normalized_volume_to_basic_map : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M)
+  (a : IntegrationInACVF.Section7.RVVolumeIsoSemiring hc C),
+  Eq.{1}
+    ((IntegrationInACVF.Section7.normalizedVolumeToBasicQuotient hc C)
+      ((IntegrationInACVF.Section7.normalizedBasicVolumeMap hc C) a))
+    ((IntegrationInACVF.Section7.normalizedBasicQuotientCoefficients hc C) a)
+'IntegrationInACVF.Section7.normalized_volume_to_basic_map' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.normalized_basic_to_volume_map : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M)
+  (a : IntegrationInACVF.Section7.RVVolumeIsoSemiring hc C),
+  Eq.{1}
+    ((IntegrationInACVF.Section7.normalizedBasicQuotientToVolume hc C)
+      ((IntegrationInACVF.Section7.normalizedBasicQuotientCoefficients hc C) a))
+    ((IntegrationInACVF.Section7.normalizedBasicVolumeMap hc C) a)
+'IntegrationInACVF.Section7.normalized_basic_to_volume_map' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.normalized_basic_quotient_left_inverse : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M),
+  Function.LeftInverse.{1, 1} ⇑(IntegrationInACVF.Section7.normalizedBasicQuotientToVolume hc C)
+    ⇑(IntegrationInACVF.Section7.normalizedVolumeToBasicQuotient hc C)
+'IntegrationInACVF.Section7.normalized_basic_quotient_left_inverse' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.normalized_basic_quotient_right_inverse : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M),
+  Function.RightInverse.{1, 1} ⇑(IntegrationInACVF.Section7.normalizedBasicQuotientToVolume hc C)
+    ⇑(IntegrationInACVF.Section7.normalizedVolumeToBasicQuotient hc C)
+'IntegrationInACVF.Section7.normalized_basic_quotient_right_inverse' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.normalizedBasicVolumeQuotientEquiv : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        (C : SpecialTransformations.Section3.BaseContext M) →
+          RingEquiv.{0, 0}
+            (Subtype.{1} fun (x : IntegrationInACVF.Section7.VolumePointLocalization hc C) =>
+              Membership.mem.{0, 0} (IntegrationInACVF.Section7.NormalizedRVVolumeRing hc C) x)
+            (IntegrationInACVF.Section7.NormalizedBasicVolumeQuotient hc C)
+'IntegrationInACVF.Section7.normalizedBasicVolumeQuotientEquiv' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.normalized_ordinary_function_positive_generator : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M) (n : Nat)
+  (f : IntegrationInACVF.Section7.AEOrdinaryRVVolumeFunction hc C n),
+  Eq.{1}
+    ((IntegrationInACVF.Section7.normalizedVolumeFunctionGenerator hc C n)
+      ((DirectSum.of.{0, 0} (IntegrationInACVF.Section7.AEVolumeFunctionComponent hc C n) 0) f))
+    (IntegrationInACVF.Section7.normalizedPositiveVolumeFunction hc C n 0
+      (IntegrationInACVF.Section7.aeOrdinaryRVVolumeFunctionPositiveCoefficientProduct hc C n 0
+        (IntegrationInACVF.Section7.positiveVolumeBlowupClass hc C
+          (IntegrationInACVF.Section7.degreeOnePointVolumeObject ↑C.base))
+        f))
+'IntegrationInACVF.Section7.normalized_ordinary_function_positive_generator' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.normalized_volume_function_linearMap_ext_positive : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M) {N : Type}
+  [inst_2 : AddCommGroup.{0} N]
+  [inst_3 :
+    Module.{0, 0}
+      (Subtype.{1} fun (x : IntegrationInACVF.Section7.VolumePointLocalization hc C) =>
+        Membership.mem.{0, 0} (IntegrationInACVF.Section7.NormalizedRVVolumeRing hc C) x)
+      N]
+  (n : Nat)
+  {I J :
+    LinearMap.{0, 0, 0, 0}
+      (RingHom.id.{0}
+        (Subtype.{1} fun (x : IntegrationInACVF.Section7.VolumePointLocalization hc C) =>
+          Membership.mem.{0, 0} (IntegrationInACVF.Section7.NormalizedRVVolumeRing hc C) x))
+      (IntegrationInACVF.Section7.NormalizedVolumeFunction hc C n) N},
+  (∀ (k : Nat) (f : IntegrationInACVF.Section7.AERVVolumeFunction hc C n k),
+      Eq.{1} (I (IntegrationInACVF.Section7.normalizedPositiveVolumeFunction hc C n k f))
+        (J (IntegrationInACVF.Section7.normalizedPositiveVolumeFunction hc C n k f))) →
+    Eq.{1} I J
+'IntegrationInACVF.Section7.normalized_volume_function_linearMap_ext_positive' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.normalized_volume_ring_range_iff_homogeneous_fraction : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M)
+  (x : IntegrationInACVF.Section7.VolumePointLocalization hc C),
+  Iff (Membership.mem.{0, 0} (RingHom.range.{0, 0} (IntegrationInACVF.Section7.normalizedVolumeRingMap hc C)) x)
+    (Exists.{1} fun (n : Nat) =>
+      Exists.{1} fun (a : IntegrationInACVF.Section7.RVVolumeBlowupClasses hc C n) =>
+        Exists.{1} fun (b : IntegrationInACVF.Section7.RVVolumeBlowupClasses hc C n) =>
+          Eq.{1} x
+            (HMul.hMul.{0, 0, 0}
+              (HSub.hSub.{0, 0, 0}
+                ((IntegrationInACVF.Section7.volumePointLocalizationCoefficients hc C)
+                  ((DirectSum.of.{0, 0} (IntegrationInACVF.Section7.RVVolumeBlowupClasses hc C) n) a))
+                ((IntegrationInACVF.Section7.volumePointLocalizationCoefficients hc C)
+                  ((DirectSum.of.{0, 0} (IntegrationInACVF.Section7.RVVolumeBlowupClasses hc C) n) b)))
+              (HPow.hPow.{0, 0, 0} (↑(Inv.inv.{0} (IntegrationInACVF.Section7.volumeLocalizedPointUnit hc C))) n)))
+'IntegrationInACVF.Section7.normalized_volume_ring_range_iff_homogeneous_fraction' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.normalized_volume_coefficient_homogeneous : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M)
+  (x :
+    Subtype.{1} fun (x : IntegrationInACVF.Section7.VolumePointLocalization hc C) =>
+      Membership.mem.{0, 0} (IntegrationInACVF.Section7.NormalizedRVVolumeRing hc C) x),
+  Exists.{1} fun (n : Nat) =>
+    Exists.{1} fun (a : IntegrationInACVF.Section7.RVVolumeBlowupClasses hc C n) =>
+      Exists.{1} fun (b : IntegrationInACVF.Section7.RVVolumeBlowupClasses hc C n) =>
+        Eq.{1} (↑x)
+          (HMul.hMul.{0, 0, 0}
+            (HSub.hSub.{0, 0, 0}
+              ((IntegrationInACVF.Section7.volumePointLocalizationCoefficients hc C)
+                ((DirectSum.of.{0, 0} (IntegrationInACVF.Section7.RVVolumeBlowupClasses hc C) n) a))
+              ((IntegrationInACVF.Section7.volumePointLocalizationCoefficients hc C)
+                ((DirectSum.of.{0, 0} (IntegrationInACVF.Section7.RVVolumeBlowupClasses hc C) n) b)))
+            (HPow.hPow.{0, 0, 0} (↑(Inv.inv.{0} (IntegrationInACVF.Section7.volumeLocalizedPointUnit hc C))) n))
+'IntegrationInACVF.Section7.normalized_volume_coefficient_homogeneous' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.normalizedVolumeRingLift.{u_1} : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        (C : SpecialTransformations.Section3.BaseContext M) →
+          {T : Type u_1} →
+            [inst_2 : Ring.{u_1} T] →
+              (g : RingHom.{0, u_1} (IntegrationInACVF.Section7.RVVolumeBlowupRing hc C) T) →
+                Eq.{u_1 + 1} (g (IntegrationInACVF.Section7.volumePointRing hc C)) 1 →
+                  RingHom.{0, u_1}
+                    (Subtype.{1} fun (x : IntegrationInACVF.Section7.VolumePointLocalization hc C) =>
+                      Membership.mem.{0, 0} (IntegrationInACVF.Section7.NormalizedRVVolumeRing hc C) x)
+                    T
+'IntegrationInACVF.Section7.normalizedVolumeRingLift' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@IntegrationInACVF.Section7.normalized_volume_local_lift_semiring.{u_1} : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M) {T : Type u_1}
+  [inst_2 : Ring.{u_1} T] (g : RingHom.{0, u_1} (IntegrationInACVF.Section7.RVVolumeBlowupRing hc C) T)
+  (hj : Eq.{u_1 + 1} (g (IntegrationInACVF.Section7.volumePointRing hc C)) 1)
+  (a : IntegrationInACVF.Section7.RVVolumeBlowupSemiring hc C),
+  Eq.{u_1 + 1}
+    ((IntegrationInACVF.Section7.centralAwayLift.{0, u_1} (IntegrationInACVF.Section7.volumePointRing hc C) g ⋯)
+      ((IntegrationInACVF.Section7.normalizedVolumeSemiringMap hc C) a))
+    (g
+      ((IntegrationInACVF.Section7.semiringGroupificationOf.{0}
+          (IntegrationInACVF.Section7.RVVolumeBlowupSemiring hc C))
+        a))
+'IntegrationInACVF.Section7.normalized_volume_local_lift_semiring' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.normalized_volume_ring_lift_coefficient.{u_1} : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M) {T : Type u_1}
+  [inst_2 : Ring.{u_1} T] (g : RingHom.{0, u_1} (IntegrationInACVF.Section7.RVVolumeBlowupRing hc C) T)
+  (hj : Eq.{u_1 + 1} (g (IntegrationInACVF.Section7.volumePointRing hc C)) 1)
+  (a : IntegrationInACVF.Section7.RVVolumeBlowupSemiring hc C),
+  Eq.{u_1 + 1}
+    ((IntegrationInACVF.Section7.normalizedVolumeRingLift.{u_1} hc C g hj)
+      ((IntegrationInACVF.Section7.normalizedVolumeCoefficientMap hc C) a))
+    (g
+      ((IntegrationInACVF.Section7.semiringGroupificationOf.{0}
+          (IntegrationInACVF.Section7.RVVolumeBlowupSemiring hc C))
+        a))
+'IntegrationInACVF.Section7.normalized_volume_ring_lift_coefficient' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.normalized_volume_ring_hom_ext.{u_1} : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M) {T : Type u_1}
+  [inst_2 : Ring.{u_1} T]
+  {f h :
+    RingHom.{0, u_1}
+      (Subtype.{1} fun (x : IntegrationInACVF.Section7.VolumePointLocalization hc C) =>
+        Membership.mem.{0, 0} (IntegrationInACVF.Section7.NormalizedRVVolumeRing hc C) x)
+      T},
+  (∀ (a : IntegrationInACVF.Section7.RVVolumeBlowupSemiring hc C),
+      Eq.{u_1 + 1} (f ((IntegrationInACVF.Section7.normalizedVolumeCoefficientMap hc C) a))
+        (h ((IntegrationInACVF.Section7.normalizedVolumeCoefficientMap hc C) a))) →
+    Eq.{u_1 + 1} f h
+'IntegrationInACVF.Section7.normalized_volume_ring_hom_ext' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.normalized_volume_ring_lift_unique.{u_1} : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M) {T : Type u_1}
+  [inst_2 : Ring.{u_1} T] (g : RingHom.{0, u_1} (IntegrationInACVF.Section7.RVVolumeBlowupRing hc C) T)
+  (hj : Eq.{u_1 + 1} (g (IntegrationInACVF.Section7.volumePointRing hc C)) 1)
+  (f :
+    RingHom.{0, u_1}
+      (Subtype.{1} fun (x : IntegrationInACVF.Section7.VolumePointLocalization hc C) =>
+        Membership.mem.{0, 0} (IntegrationInACVF.Section7.NormalizedRVVolumeRing hc C) x)
+      T),
+  (∀ (a : IntegrationInACVF.Section7.RVVolumeBlowupSemiring hc C),
+      Eq.{u_1 + 1} (f ((IntegrationInACVF.Section7.normalizedVolumeCoefficientMap hc C) a))
+        (g
+          ((IntegrationInACVF.Section7.semiringGroupificationOf.{0}
+              (IntegrationInACVF.Section7.RVVolumeBlowupSemiring hc C))
+            a))) →
+    Eq.{u_1 + 1} f (IntegrationInACVF.Section7.normalizedVolumeRingLift.{u_1} hc C g hj)
+'IntegrationInACVF.Section7.normalized_volume_ring_lift_unique' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.NormalizedBasicVolumeRelation.point : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {hc : CanonicalStructure.IsCanonical} {C : SpecialTransformations.Section3.BaseContext M},
+  IntegrationInACVF.Section7.NormalizedBasicVolumeRelation hc C
+    ((IntegrationInACVF.Section7.semiringGroupificationOf.{0} (IntegrationInACVF.Section7.RVVolumeIsoSemiring hc C))
+      (IntegrationInACVF.Section7.volumeIsoSemiringClass hc C
+        (IntegrationInACVF.Section7.degreeOnePointVolumeObject ↑C.base)))
+    1
+'IntegrationInACVF.Section7.NormalizedBasicVolumeRelation.point' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.NormalizedBasicVolumeRelation.cone : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {hc : CanonicalStructure.IsCanonical} {C : SpecialTransformations.Section3.BaseContext M},
+  IntegrationInACVF.Section7.NormalizedBasicVolumeRelation hc C
+    ((IntegrationInACVF.Section7.semiringGroupificationOf.{0} (IntegrationInACVF.Section7.RVVolumeIsoSemiring hc C))
+      (IntegrationInACVF.Section7.volumeIsoSemiringClass hc C
+        (IntegrationInACVF.Section7.degreeOneConeVolumeObject ↑C.base)))
+    1
+'IntegrationInACVF.Section7.NormalizedBasicVolumeRelation.cone' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

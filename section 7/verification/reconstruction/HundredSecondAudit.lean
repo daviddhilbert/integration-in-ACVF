@@ -1,0 +1,90 @@
+import Integration7.AdmissibleHeadPointIsomorphisms
+import Integration7.AdmissibleHeadPointMaps
+import Integration7.AdmissibleHeadVolumeFactors
+import Integration7.BasicVolumeRelation
+import Integration7.BasicVolumeRelationObjects
+import Integration7.ElementaryPrincipalVolumeFactors
+import Integration7.EssentialFiniteBijections
+import Integration7.OrdinaryHeadFactorBoundary
+import Integration7.PositiveElementaryBasicGeneration
+
+set_option pp.universes true
+set_option pp.proofs false
+set_option pp.deepTerms true
+set_option pp.maxSteps 10000000
+set_option pp.notation false
+set_option pp.funBinderTypes true
+set_option pp.piBinderTypes true
+
+
+
+#check @IntegrationInACVF.Section7.admissible_head_point_preserves_essential
+#print axioms IntegrationInACVF.Section7.admissible_head_point_preserves_essential
+#check @IntegrationInACVF.Section7.admissible_essential_dimension_lt
+#print axioms IntegrationInACVF.Section7.admissible_essential_dimension_lt
+#check @IntegrationInACVF.Section7.admissibleHeadPointVolumeIso
+#print axioms IntegrationInACVF.Section7.admissibleHeadPointVolumeIso
+#check @IntegrationInACVF.Section7.admissibleHeadPointPair
+#print axioms IntegrationInACVF.Section7.admissibleHeadPointPair
+#check @IntegrationInACVF.Section7.admissible_head_point_pair_bijective
+#print axioms IntegrationInACVF.Section7.admissible_head_point_pair_bijective
+#check @IntegrationInACVF.Section7.admissibleHeadPointMap
+#print axioms IntegrationInACVF.Section7.admissibleHeadPointMap
+#check @IntegrationInACVF.Section7.admissible_head_point_map_bijective
+#print axioms IntegrationInACVF.Section7.admissible_head_point_map_bijective
+#check @IntegrationInACVF.Section7.admissible_head_point_unpack
+#print axioms IntegrationInACVF.Section7.admissible_head_point_unpack
+#check @IntegrationInACVF.Section7.admissible_head_point_map_coordinates
+#print axioms IntegrationInACVF.Section7.admissible_head_point_map_coordinates
+#check @IntegrationInACVF.Section7.admissible_head_point_map_density
+#print axioms IntegrationInACVF.Section7.admissible_head_point_map_density
+#check @IntegrationInACVF.Section7.admissible_head_volume_fibres_finite
+#print axioms IntegrationInACVF.Section7.admissible_head_volume_fibres_finite
+#check @IntegrationInACVF.Section7.admissibleHeadFiniteObject
+#print axioms IntegrationInACVF.Section7.admissibleHeadFiniteObject
+#check @IntegrationInACVF.Section7.admissibleHeadVolumeFactor
+#print axioms IntegrationInACVF.Section7.admissibleHeadVolumeFactor
+#check @IntegrationInACVF.Section7.admissible_head_factor_coordinates
+#print axioms IntegrationInACVF.Section7.admissible_head_factor_coordinates
+#check @IntegrationInACVF.Section7.admissible_head_factor_density
+#print axioms IntegrationInACVF.Section7.admissible_head_factor_density
+#check @IntegrationInACVF.Section7.VolumeBlowup.ofElementary
+#print axioms IntegrationInACVF.Section7.VolumeBlowup.ofElementary
+#check @IntegrationInACVF.Section7.degreeOneBasicElementaryIso
+#print axioms IntegrationInACVF.Section7.degreeOneBasicElementaryIso
+#check @IntegrationInACVF.Section7.degree_one_basic_volume_relation
+#print axioms IntegrationInACVF.Section7.degree_one_basic_volume_relation
+#check @IntegrationInACVF.Section7.degreeOnePointVolumeObject
+#print axioms IntegrationInACVF.Section7.degreeOnePointVolumeObject
+#check @IntegrationInACVF.Section7.degreeOneConeVolumeObject
+#print axioms IntegrationInACVF.Section7.degreeOneConeVolumeObject
+#check @IntegrationInACVF.Section7.degree_one_point_volume_coordinates
+#print axioms IntegrationInACVF.Section7.degree_one_point_volume_coordinates
+#check @IntegrationInACVF.Section7.degreeOnePointAdmissible
+#print axioms IntegrationInACVF.Section7.degreeOnePointAdmissible
+#check @IntegrationInACVF.Section7.elementaryHeadConeVolumeIso
+#print axioms IntegrationInACVF.Section7.elementaryHeadConeVolumeIso
+#check @IntegrationInACVF.Section7.elementary_volume_positive_factorization
+#print axioms IntegrationInACVF.Section7.elementary_volume_positive_factorization
+#check @IntegrationInACVF.Section7.finiteEssentialRestrictionMap
+#print axioms IntegrationInACVF.Section7.finiteEssentialRestrictionMap
+#check @IntegrationInACVF.Section7.finite_essential_restriction_bijective
+#print axioms IntegrationInACVF.Section7.finite_essential_restriction_bijective
+#check @IntegrationInACVF.Section7.finiteEssentialIsoOfFullBijection
+#print axioms IntegrationInACVF.Section7.finiteEssentialIsoOfFullBijection
+#check @IntegrationInACVF.Section7.ordinary_zero_point_product_weight
+#print axioms IntegrationInACVF.Section7.ordinary_zero_point_product_weight
+#check @IntegrationInACVF.Section7.nonunit_density_point_has_no_ordinary_head_factor
+#print axioms IntegrationInACVF.Section7.nonunit_density_point_has_no_ordinary_head_factor
+#check @IntegrationInACVF.Section7.admissible_nonunit_point_has_no_ordinary_head_factor
+#print axioms IntegrationInACVF.Section7.admissible_nonunit_point_has_no_ordinary_head_factor
+#check @IntegrationInACVF.Section7.volumeIsoSemiringClass
+#print axioms IntegrationInACVF.Section7.volumeIsoSemiringClass
+#check @IntegrationInACVF.Section7.volume_iso_semiring_class_positive_product
+#print axioms IntegrationInACVF.Section7.volume_iso_semiring_class_positive_product
+#check @IntegrationInACVF.Section7.elementary_positive_semiring_factorization
+#print axioms IntegrationInACVF.Section7.elementary_positive_semiring_factorization
+#check @IntegrationInACVF.Section7.elementary_positive_image_eq_of_basic
+#print axioms IntegrationInACVF.Section7.elementary_positive_image_eq_of_basic
+#check @IntegrationInACVF.Section7.basic_volume_relation_projection
+#print axioms IntegrationInACVF.Section7.basic_volume_relation_projection
