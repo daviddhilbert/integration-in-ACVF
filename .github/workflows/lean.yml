@@ -114,11 +114,11 @@ jobs:
           mkdir -p .scratch/ci-verified
           lake build 2>&1 | tee .scratch/ci-verified/Build.log
 
-      # Save before the audits, so a later cancellation does not discard
-      # a successfully compiled project. Lake validates source/import traces
-      # after a restore and rebuilds the modules affected by each change.
+      # Preserve completed modules even if a newer checkpoint cancels this
+      # build. Lake validates source/import traces after a restore, so partial
+      # caches cannot make an incomplete or failed module pass verification.
       - name: Save compiled project modules
-        if: ${{ steps.project-cache.outputs.cache-hit != 'true' }}
+        if: ${{ always() && steps.project-cache.outputs.cache-hit != 'true' && (steps.build.outcome == 'success' || steps.build.outcome == 'failure' || steps.build.outcome == 'cancelled') }}
         uses: actions/cache/save@v4
         with:
           path: |
