@@ -1,0 +1,29 @@
+import Integration7.ContractionParameterExtension
+set_option pp.universes true
+set_option pp.proofs false
+set_option pp.deepTerms true
+set_option pp.maxSteps 10000000
+set_option pp.notation true
+set_option pp.funBinderTypes true
+set_option pp.piBinderTypes true
+
+
+
+#check @IntegrationInACVF.Section5.specialRelative_extendBase
+#print axioms IntegrationInACVF.Section5.specialRelative_extendBase
+#check @IntegrationInACVF.Section5.HeadPreparation.extendBase
+#print axioms IntegrationInACVF.Section5.HeadPreparation.extendBase
+#check @IntegrationInACVF.Section5.OrderedContractionProgram.extendBase
+#print axioms IntegrationInACVF.Section5.OrderedContractionProgram.extendBase
+#check @IntegrationInACVF.Section5.OrderedContractionProgram.extendBase_value
+#print axioms IntegrationInACVF.Section5.OrderedContractionProgram.extendBase_value
+#check @IntegrationInACVF.Section5.OrderedContractionProgram.extendBase_gamma
+#print axioms IntegrationInACVF.Section5.OrderedContractionProgram.extendBase_gamma
+#check @IntegrationInACVF.Section5.OrderedContractionProgram.extendBase_volumeIndex
+#print axioms IntegrationInACVF.Section5.OrderedContractionProgram.extendBase_volumeIndex
+#check @IntegrationInACVF.Section5.StandardContraction.extendBase
+#print axioms IntegrationInACVF.Section5.StandardContraction.extendBase
+#check @IntegrationInACVF.Section5.StandardContraction.extendBase_value
+#print axioms IntegrationInACVF.Section5.StandardContraction.extendBase_value
+#check @IntegrationInACVF.Section5.StandardContraction.extendBase_volumeIndex
+#print axioms IntegrationInACVF.Section5.StandardContraction.extendBase_volumeIndex

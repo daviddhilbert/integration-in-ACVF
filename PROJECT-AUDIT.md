@@ -1,8 +1,8 @@
 # Whole-project audit — November 15, 2026
 
 Dates use America/Los_Angeles. The project is **not complete**: Section 7
-still has the function and normalization obligations listed below, and the
-Section 6 universal parameter interface still needs connection.
+still has the three raw volume obligations listed below. The Section 6
+finite-VF-parameter connection is now proved in the closed interfaces.
 
 ## Correction and completed integration
 
@@ -37,17 +37,24 @@ The current receipt is
 | 3 | 1,244 | Numbered results through 3.24 in the documented scopes and approved corrections. |
 | 4 | 445 | Numbered lemmas and cell geometry in the approved scope. |
 | 5 | 1,852 | All active RV[k] targets complete, with explicit RV presentation charts for 5.5. |
-| 6 | 2,273 | 736 registered modules; numbered finite-category results retain their universal Section 5.8 input; the actual fixed-base input is now proved. |
-| 7 | 5,074 | 1,621 modules plus Library; geometry through 7.10, all homogeneous head fibre values, normalized linear partial integrals, supported-domain Fubini, normalized change of variables and the normalized commutative ring presentation. |
+| 6 | 2,273 + closed API below | 736 original registered modules. The closed generated-base kernel, integration, function and localization interfaces are checked in the new Section 7 batch; their open universal Section 5.8 premise has been removed. |
+| 7 | 5,526 | 1,750 modules plus Library; geometry through 7.10, full raw linear head/prefix/coordinate operators, normalized supported 7.14–7.15, normalized commutative ring presentation, and closed generated-base Section 6 interfaces. |
 
 The three new Section 6 modules convert the actual Section 5 RV-category
 isomorphisms and prove `completed_section5_two_order_input` on bases
 satisfying 5.8's actual standing hypotheses. Their five complete types and
 axiom reports were reviewed, and the affected library build passes.
 Evidence is in `section 6/verification/completed-section5/`.
-This does not yet supply `Section5TwoOrderInputAll`, whose quantification
-also covers arbitrary frozen parameter bases; that stronger interface must
-be connected without silently assuming the required generation conditions.
+The new closed Section 6 API does not require that universal premise.
+It descends the completed Section 5 theorem through definable parameter
+closure after every finite VF tuple. Realizing selected RV labels as VF
+tails supplies ordinary selected contraction comparisons, retaining zero
+RV labels. This gives arbitrary-order independence and the kernel theorem,
+then the actual integration, definable-function, Fubini and localization
+interfaces. These entrypoints are in
+`IntegrationInACVF.Section7.CompletedSection6`; canonical-model and all
+standing saturation, field, characteristic and parameter hypotheses remain
+visible. The legacy conditional interfaces are preserved.
 
 Section 7 now has actual normalized coefficients: the degree-zero fraction
 range in the localization at the central point class, a commutative ring,
@@ -79,40 +86,47 @@ support. Total Fubini holds on every supported normalized input.
 
 Section 7 still needs:
 
-- **7.11:** raw partial-integral scalar assembly across all ordinary and
-  positive components. The normalized linear operators and full graded
-  generator comparisons are proved.
-- **7.12:** unnormalized full graded Jacobian assembly; normalized
-  definable-domain change of variables is proved as described above.
-- **7.13:** the raw, unlocalized principal-kernel identification. Elementary
-  relation generation is proved in source degrees at least two and in all
-  degrees after point normalization. The degree-one ordinary-head
-  factorization has a checked counterexample; this does not disprove the
-  principal-ideal statement itself. The normalized ring presentation above
-  is proved independently of that unresolved raw identification.
-- **7.14:** any remaining pointwise normalized evaluation connections,
-  beyond the proved homogeneous frozen-fibre interpretations, full graded
-  generator comparisons, normalized linear operators and supported Fubini.
+- **7.11:** raw coordinate-order/Fubini comparison. Head, prefix and arbitrary
+  coordinate operators are already linear over the full raw graded semiring,
+  including every ordinary/positive coefficient and input case. Total
+  integration in the displayed split order is proved.
+- **7.12:** ordinary-input raw Jacobian assembly and its integral identity.
+  Positive-supported raw and full normalized change of variables are proved.
+- **7.13:** the raw, unlocalized single-generator kernel-ideal identification.
+  Elementary factorization is proved for source degrees at least two. The
+  degree-one source requires an ordinary degree-zero factor that forgets
+  density, and that factorization has a checked counterexample. Removing
+  degree-zero source objects alone does not address this degree-one relation.
+  This does not disprove principal-ideal generation after groupification.
+
+The normalized supported identities are exported as `theorem_7_14` and
+`theorem_7_15` in positive VF dimension. The normalized ring presentation is
+proved independently of the unresolved raw principal-ideal identification.
 
 The accepted nonempty-selected-coordinate scope of 7.5 is retained;
 ordinary RV[0] is included. No new statement relaxation was introduced.
 
 ## Publication and verification scope
 
-The preceding published checkpoint on `section-7/reconstructed-foundation`
-is `2a73c6f3d38ebe8d60777f290fcfb20473a69ac0`, with 1,521 Section 7 modules
-and 4,789 exports. [CI run 43751241565](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/43751241565)
-passed in 9 minutes 31 seconds: project build 3 minutes 50 seconds and audit
-dispatch 3 minutes 32 seconds. This verifies the warm project-cache speedup
-from the previous run's 49 minutes 18 seconds (43 minutes 23 seconds building).
+The durable published checkpoint on `section-7/reconstructed-foundation`
+is `ad0b91c9c3a44ed804a56b8a131f4ad5d5656832`, with 1,621 Section 7 modules
+and 5,074 exports. [CI run 43761938221](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/43761938221)
+passed in 8 minutes 20 seconds. The preceding run passed in 9 minutes
+31 seconds; compatible compiled-module caching removed the earlier repeated
+43-minute project compilation.
 
-The current checkpoint adds 100 checked modules and 285 exports, reaching
-1,621 modules plus Library and 5,074 exports. Each proof batch received one
-complete new-declaration type/axiom review and an affected Library build.
-The final batch built successfully in 12,496 Lake jobs including cached
-dependencies; its 739-line review covers all 43 new exports. A new CI result
-must be distinguished from the successful preceding checkpoint. Main
-remains `7d4acc730496b3bd05a22c268ffd89540ca694f9`.
+The current checked local checkpoint adds 129 modules and 452 exports,
+reaching 1,750 modules plus Library and 5,526 exports. Each proof batch
+received one complete new-declaration type/axiom review and an affected
+Library build. The latest 96-module batch passed 13,030 Lake jobs including
+cached dependencies and a complete 6,112-line review of its 361 new exports.
+One shared parameter-extension provider was consolidated with its native
+Section 5 implementation; its nine exported helper types/axiom reports
+received a separate 109-line revalidation. Successful compiler traces cover
+every new module. The root now imports `Integration7.Library` and builds.
+Publication of this new checkpoint is pending; its CI must be distinguished
+from the preceding published run. Main remains
+`7d4acc730496b3bd05a22c268ffd89540ca694f9`.
 
 The three CI dispatch regression tests pass. The targeted fresh checks
 above supplement the earlier whole-project audit below; its counts and

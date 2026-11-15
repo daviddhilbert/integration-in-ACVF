@@ -1,0 +1,109 @@
+@IntegrationInACVF.Section5.specialRelative_extendBase : ∀ {M : Type}
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {S R : Set.{0} M}
+  {n m l : ℕ} {A : SpecialTransformations.Section5.DefSet S n m} {B : SpecialTransformations.Section5.DefSet S n l}
+  (f : SpecialTransformations.Section5.Map A B) (hSR : S ⊆ R) {i : Fin n},
+  IntegrationInACVF.Section5.SpecialRelative f i →
+    IntegrationInACVF.Section5.SpecialRelative (IntegrationInACVF.Section5.extendPointMap f hSR) i
+'IntegrationInACVF.Section5.specialRelative_extendBase' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section5.HeadPreparation.extendBase : {M : Type} →
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {S R : Set.{0} M} →
+        {n m : ℕ} →
+          {A : SpecialTransformations.Section5.DefSet S (HAdd.hAdd.{0, 0, 0} n 1) m} →
+            IntegrationInACVF.Section5.HeadPreparation A →
+              (hSR : S ⊆ R) →
+                IntegrationInACVF.Section5.HeadPreparation (SpecialTransformations.Section5.extendBase A hSR)
+'IntegrationInACVF.Section5.HeadPreparation.extendBase' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section5.OrderedContractionProgram.extendBase : {M : Type} →
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {S R : Set.{0} M} →
+        (hSR : S ⊆ R) →
+          {n a b : ℕ} →
+            {A : SpecialTransformations.Section5.DefSet S n a} →
+              {U : SpecialTransformations.Section5.DefSet S 0 b} →
+                IntegrationInACVF.Section5.OrderedContractionProgram S A U →
+                  IntegrationInACVF.Section5.OrderedContractionProgram R
+                    (SpecialTransformations.Section5.extendBase A hSR)
+                    (SpecialTransformations.Section5.extendBase U hSR)
+'IntegrationInACVF.Section5.OrderedContractionProgram.extendBase' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section5.OrderedContractionProgram.extendBase_value : ∀ {M : Type}
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {S R : Set.{0} M}
+  {n a b : ℕ} (hSR : S ⊆ R) {A : SpecialTransformations.Section5.DefSet S n a}
+  {U : SpecialTransformations.Section5.DefSet S 0 b} (T : IntegrationInACVF.Section5.OrderedContractionProgram S A U)
+  (p :
+    ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+        (SpecialTransformations.Section5.extendBase A hSR))),
+  Eq.{1}
+    ↑(SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0}
+        (IntegrationInACVF.Section5.OrderedContractionProgram.extendBase hSR T).toMap p)
+    ↑(SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0} T.toMap (Subtype.mk.{1} ↑p ⋯))
+'IntegrationInACVF.Section5.OrderedContractionProgram.extendBase_value' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section5.OrderedContractionProgram.extendBase_gamma : ∀ {M : Type}
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {S R : Set.{0} M}
+  {n a b : ℕ} {P : SpecialTransformations.Section3.GammaParameters.Base} (hSR : S ⊆ R)
+  {A : SpecialTransformations.Section5.DefSet S n a} {U : SpecialTransformations.Section5.DefSet S 0 b}
+  (T : IntegrationInACVF.Section5.OrderedContractionProgram S A U),
+  IntegrationInACVF.Section5.GammaProgramDefinable P T →
+    IntegrationInACVF.Section5.GammaProgramDefinable P
+      (IntegrationInACVF.Section5.OrderedContractionProgram.extendBase hSR T)
+'IntegrationInACVF.Section5.OrderedContractionProgram.extendBase_gamma' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section5.OrderedContractionProgram.extendBase_volumeIndex : ∀ {M : Type}
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {S R : Set.{0} M}
+  {n a b : ℕ} (hSR : S ⊆ R) {A : SpecialTransformations.Section5.DefSet S n a}
+  {U : SpecialTransformations.Section5.DefSet S 0 b} (T : IntegrationInACVF.Section5.OrderedContractionProgram S A U)
+  (i : Fin n),
+  Eq.{1} ((IntegrationInACVF.Section5.OrderedContractionProgram.extendBase hSR T).volumeIndex i) (T.volumeIndex i)
+'IntegrationInACVF.Section5.OrderedContractionProgram.extendBase_volumeIndex' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section5.StandardContraction.extendBase : {M : Type} →
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {S R : Set.{0} M} →
+        {n a : ℕ} →
+          {A : SpecialTransformations.Section5.DefSet S n a} →
+            {σ : Equiv.Perm.{1} (Fin n)} →
+              IntegrationInACVF.Section5.StandardContraction A σ →
+                (hSR : S ⊆ R) →
+                  IntegrationInACVF.Section5.StandardContraction (SpecialTransformations.Section5.extendBase A hSR) σ
+'IntegrationInACVF.Section5.StandardContraction.extendBase' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section5.StandardContraction.extendBase_value : ∀ {M : Type}
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {S R : Set.{0} M}
+  {n a : ℕ} {A : SpecialTransformations.Section5.DefSet S n a} {σ : Equiv.Perm.{1} (Fin n)}
+  (T : IntegrationInACVF.Section5.StandardContraction A σ) (hSR : S ⊆ R)
+  (p :
+    ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+        (SpecialTransformations.Section5.extendBase A hSR))),
+  Eq.{1} ↑(SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0} (T.extendBase hSR).toMap p)
+    ↑(SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0} T.toMap (Subtype.mk.{1} ↑p ⋯))
+'IntegrationInACVF.Section5.StandardContraction.extendBase_value' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section5.StandardContraction.extendBase_volumeIndex : ∀ {M : Type}
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {S R : Set.{0} M}
+  {n a : ℕ} {A : SpecialTransformations.Section5.DefSet S n a} {σ : Equiv.Perm.{1} (Fin n)}
+  (T : IntegrationInACVF.Section5.StandardContraction A σ) (hSR : S ⊆ R) (i : Fin n),
+  Eq.{1} ((T.extendBase hSR).volumeIndex i) (T.volumeIndex i)
+'IntegrationInACVF.Section5.StandardContraction.extendBase_volumeIndex' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

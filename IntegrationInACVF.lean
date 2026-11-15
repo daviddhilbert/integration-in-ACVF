@@ -8,6 +8,7 @@ import IntegrationSection2.Library
 import IntegrationSection3ACVF.Library
 import IntegrationSection4.Library
 import IntegrationSection5.Library
+import Integration7.Library
 
 /-!
 # Integration in algebraically closed valued fields
@@ -20,6 +21,8 @@ from the remaining connections to the ACVF imaginary expansion.
 -/
 
 /- Section 6 exports the RV[k] and graded RV[*] formalization, including
-   integration, definable families, Fubini and localization. The completed
-   Section 5.8 theorem supplies the fixed-base input. The stronger universal
-   interface over arbitrary frozen parameter bases remains explicit. -/
+   integration, definable families, Fubini and localization. The closed
+   generated-base entrypoints in IntegrationInACVF.Section7.CompletedSection6
+   derive the needed finite-VF-parameter inputs from the completed Section 5
+   theorem. Their standing model, saturation and parameter hypotheses remain
+   explicit. Section 7's status records its remaining raw volume obligations. -/

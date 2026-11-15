@@ -19,12 +19,15 @@ Section 1 is introductory and has no separate proof target. Section 4 has
 checked implementations of all numbered lemmas and its cell geometry.
 Section 5 is complete in its accepted RV[k] scope on the published
 `section-5/contracting-to-rv` branch; those sources are now integrated locally.
-Section 6 has checked results for RV[k] and graded RV[*], with a universal
-Section 5.8 parameter interface still explicit. Section 7 now has normalized
-linear partial integrals on full and supported function spaces, exact
-projected supports, total Fubini and normalized change of variables. Its raw
-principal-kernel identification, raw graded operator assembly and remaining
-pointwise evaluation connections are unfinished. The project is not fully
+Section 6 now has closed generated-base interfaces for RV[k] and graded
+RV[*], deriving the required finite-VF-parameter inputs from the completed
+Section 5 theorem. These entrypoints live in
+`IntegrationInACVF.Section7.CompletedSection6`. Section 7 has raw linear
+head, prefix and coordinate operators, normalized linear partial integrals
+on full and supported function spaces, supported total Fubini, normalized
+change of variables and the normalized commutative ring presentation.
+Its raw coordinate-order comparison, ordinary-input raw Jacobian assembly
+and unlocalized principal-kernel identification remain unfinished. The project is not fully
 formalized. See
 [Section 5 status](section%205/STATUS.md),
 [Section 6 status](section%206/STATUS.md) and
@@ -105,14 +108,16 @@ The referee attachment remains reference material only; see
 that differ substantially from the paper is deferred until the whole paper
 is formalized; its current ledger is [PROOF-WRITEUP.md](PROOF-WRITEUP.md).
 
-Section 6 implements every numbered target for RV[k] and graded RV[*],
-including the kernel equivalence, additive and semiring integration,
-parameter-dependent definable functions and linearity, coordinate
-pushforwards/Fubini, and the principal-ideal/localization theorem. The
-Section 5.8 input remains explicit in the final integration types. The actual
-fixed-base theorem is proved; its stronger universal parameter interface
-is still open. See [Section 6 status](section%206/STATUS.md) for standing hypotheses
-and verification evidence. The project verifier accepts `--reuse-certified`
+Section 6's closed entrypoints include the kernel equivalence, additive
+and semiring integration, parameter-dependent definable functions and
+linearity, coordinate pushforwards/Fubini, and the principal-ideal and
+localization theorem. They retain the standing canonical-model,
+saturation, characteristic, field and VF/Gamma-generation hypotheses;
+the earlier universal Section 5.8 premise is no longer assumed.
+The older conditional interfaces remain available. See
+[Section 6 status](section%206/STATUS.md) and
+[Section 7 status](section%207/STATUS.md) for their locations and evidence.
+The project verifier accepts `--reuse-certified`
 to use Section 6's sealed artifact checks while freshly auditing every full
 type and permitted-axiom report; default compilation remains fresh.
 

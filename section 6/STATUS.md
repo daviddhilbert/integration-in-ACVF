@@ -9,9 +9,18 @@ were reviewed; the affected Library and root import build. The registered
 boundary is **736 modules and 2,273 exports**. Evidence is versioned under
 `verification/completed-section5/`.
 
-The older final integration interface `Section5TwoOrderInputAll` still
-quantifies over arbitrary frozen parameter bases and is not discharged by
-this fixed-base producer. Its connection remains an integration obligation.
+The older final integration interface `Section5TwoOrderInputAll` remains
+available as a legacy conditional API. The new closed API in
+`IntegrationInACVF.Section7.CompletedSection6` derives the needed
+finite-VF-parameter inputs from the completed Section 5 theorem via
+definable-closure descent. It proves ordinary and selected contraction-order
+independence without discarding zero RV labels, then the kernel equivalence,
+Proposition 6.18, Theorem 6.19, Remark 6.20, Proposition 6.21 and Theorem 6.22.
+The standing canonical-model, saturation, characteristic, field and
+generated-base hypotheses remain explicit. These 96 supporting/interface
+modules and their 361 exports are registered in Section 7, whose complete
+new type/axiom review and 13,030-job Library build passed. The combined root
+also builds. See Section 7's `verification/reconstruction/` batch123 receipt.
 The historical scope and evidence below describe the prior 733-module run.
 Section 7 now has its own verifier; older statements that it has none are
 historical. See the root PROJECT-AUDIT.md for the current project boundary.
