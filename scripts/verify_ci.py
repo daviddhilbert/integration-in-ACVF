@@ -7,6 +7,8 @@ Adapted from special-transformations/scripts/verify_ci.py at
 --reuse-certified forwards the existing exact-receipt reuse option to the
 Section 6 verifier. Every full type and permitted-axiom report is still
 checked afresh; the default remains fresh compilation.
+--use-lake-build lets Section 6 audit the Lake-validated project artifacts
+instead of compiling the same sources again in a private output directory.
 """
 
 import json
@@ -15,6 +17,7 @@ from pathlib import Path
 import re
 import subprocess
 import sys
+import time
 
 ROOT = Path(__file__).resolve().parent.parent
 QE_HEADLINES = [
@@ -80,12 +83,15 @@ def main():
     out = ROOT / '.scratch' / 'ci-verified'
     out.mkdir(parents=True, exist_ok=True)
     outcomes = {}
+    durations = {}
+    started = time.monotonic()
     try:
         audit_foundation()
         outcomes['foundation'] = 'success'
     except Exception as exc:
         print(str(exc), file=sys.stderr)
         outcomes['foundation'] = 'failure'
+    durations['foundation'] = round(time.monotonic() - started, 3)
 
     for number in range(2, 8):
         verifier = ROOT / f'section {number}' / 'verify.py'
@@ -99,13 +105,21 @@ def main():
                 command.append('--acvf')
             if number == 6 and '--reuse-certified' in sys.argv:
                 command.append('--reuse-certified')
+            if number == 6 and '--use-lake-build' in sys.argv:
+                command.append('--use-lake-build')
+            print(f'Starting {label} verification', flush=True)
+            started = time.monotonic()
             result = subprocess.run(
                 command, cwd=ROOT,
                 stdout=log, stderr=subprocess.STDOUT)
         outcomes[label] = 'success' if result.returncode == 0 else 'failure'
+        durations[label] = round(time.monotonic() - started, 3)
+        print(f'{label}: {outcomes[label]} in {durations[label]:.1f}s', flush=True)
 
     (out / 'summary.json').write_text(
         json.dumps(outcomes, indent=2) + '\n', encoding='utf-8')
+    (out / 'durations.json').write_text(
+        json.dumps(durations, indent=2) + '\n', encoding='utf-8')
     output = os.environ.get('GITHUB_OUTPUT')
     if output:
         with Path(output).open('a', encoding='utf-8') as stream:

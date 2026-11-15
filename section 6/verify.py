@@ -7,7 +7,9 @@ The draft RV modules are excluded explicitly and recorded in the receipt.
 By default every selected source is freshly compiled. --reuse-certified may
 reuse an artifact only when its passed-receipt seal, source, every direct
 import artifact, output artifact, toolchain and manifest identities match.
-Every full exported type and axiom report is checked afresh in either mode.
+--use-lake-build validates the selected library through Lake and audits its
+compiled artifacts directly, avoiding a second private compilation in CI.
+Every full exported type and axiom report is checked afresh in every mode.
 """
 
 import hashlib
@@ -137,21 +139,24 @@ def main():
             if re.search(r'\b(?:sorry|admit|axiom)\b', p.read_text(encoding='utf-8')):
                 raise RuntimeError(f'Unchecked declaration marker in {p}')
         env = dict(os.environ)
-        fresh = OUT / 'lib'
+        use_lake_build = '--use-lake-build' in sys.argv
+        fresh = ROOT / '.lake/build/lib/lean' if use_lake_build else OUT / 'lib'
         # Remove the earlier isolated prerequisite artifact: a Section4 directory
         # shadows Lake's whole Section4 module prefix. Native pinned dependencies
         # are now built by Lake and are reused, with their source identity recorded.
-        if (fresh / 'Section4').exists():
+        if not use_lake_build and (fresh / 'Section4').exists():
             shutil.rmtree(fresh / 'Section4')
+        if use_lake_build:
+            run(['lake', 'build', 'IntegrationSection6.Library'], 'LakeBuild', env)
         env['LEAN_PATH'] = str(fresh) + os.pathsep + env.get('LEAN_PATH', '')
-        for module, source in PREREQUISITES:
+        for module, source in ([] if use_lake_build else PREREQUISITES):
             target = fresh / (module.replace('.', '/') + '.olean')
             target.parent.mkdir(parents=True, exist_ok=True)
             run(['lean', '-o', str(target), str(source)], module, env)
         state_path = OUT / 'certified-state.json'
         old_state = {}
         receipt_path = OUT / 'certificate.json'
-        if '--reuse-certified' in sys.argv and state_path.exists() and receipt_path.exists():
+        if not use_lake_build and '--reuse-certified' in sys.argv and state_path.exists() and receipt_path.exists():
             candidate = json.loads(state_path.read_text(encoding='utf-8'))
             if (candidate.get('receipt_sha256') == digest(receipt_path)
                     and candidate.get('toolchain') == (ROOT / 'lean-toolchain').read_text()
@@ -168,7 +173,7 @@ def main():
                 import_cache[name] = {'path': str(path), 'sha256': digest(path)}
             return import_cache[name]
         next_state = {}
-        fresh_modules, reused_modules = [], []
+        fresh_modules, reused_modules, lake_built_modules = [], [], []
         for m, source in zip(MODULES, sources):
             target = fresh / 'IntegrationSection6' / (m + '.olean')
             target.parent.mkdir(parents=True, exist_ok=True)
@@ -177,7 +182,11 @@ def main():
                     r'^import\s+([\w.]+)', source.read_text(encoding='utf-8'), re.M)}}
             if target.exists():
                 signature['artifact'] = digest(target)
-            if old_state.get(m) == signature:
+            if use_lake_build:
+                if not target.is_file():
+                    raise RuntimeError('Missing Lake-validated selected artifact: ' + m)
+                lake_built_modules.append(m)
+            elif old_state.get(m) == signature:
                 reused_modules.append(m)
             else:
                 run(['lean', '-o', str(target), str(source)], m, env)
@@ -232,7 +241,10 @@ def main():
             'sources': after, 'dependencies': pins,
             'selected_modules': MODULES, 'fresh_modules': fresh_modules,
             'certified_reused_modules': reused_modules,
-            'artifact_source_import_identities': next_state, 'fresh_pinned_prerequisites': [m for m, _ in PREREQUISITES],
+            'lake_built_modules': lake_built_modules,
+            'compilation_mode': 'lake-validated' if use_lake_build else 'isolated-source',
+            'artifact_source_import_identities': next_state,
+            'fresh_pinned_prerequisites': [] if use_lake_build else [m for m, _ in PREREQUISITES],
             'reused_pinned_source_hashes': {str(p.relative_to(ROOT)): digest(p) for p in PINNED_SOURCES},
             'excluded_unverified_drafts': sorted(p.stem for p in (SECTION / 'IntegrationSection6').glob('*.lean') if p.stem not in MODULES),
             'configuration_sha256': {p: digest(ROOT / p) for p in
@@ -249,7 +261,8 @@ def main():
             'provenance': 'Written only after successful source/import/artifact checks and fresh full-type/axiom audit.'
         }, indent=2) + '\n', encoding='utf-8')
         status.write_text('PASS\n', encoding='utf-8')
-        print(f'PASS: {len(fresh_modules)} fresh modules; {len(reused_modules)} certified-reused modules; {len(HEADLINES)} full types and allowed-axiom audits.')
+        print(f'PASS: {len(fresh_modules)} fresh modules; {len(reused_modules)} certified-reused modules; '
+              f'{len(lake_built_modules)} Lake-validated modules; {len(HEADLINES)} full types and allowed-axiom audits.')
         print(receipt['scope'])
     except Exception:
         status.write_text('FAIL\n', encoding='utf-8')

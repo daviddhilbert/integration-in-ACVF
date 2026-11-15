@@ -102,3 +102,13 @@ types. See [Section 6 status](section%206/STATUS.md) for standing hypotheses
 and verification evidence. The project verifier accepts `--reuse-certified`
 to use Section 6's sealed artifact checks while freshly auditing every full
 type and permitted-axiom report; default compilation remains fresh.
+
+CI caches the project's compiled modules as well as its pinned predecessors.
+The project cache is keyed by the toolchain, dependency manifest, Lake
+configuration and commit, with compatible earlier commits used as a fallback.
+Lake checks the restored source/import traces and rebuilds affected modules.
+Generated `*.setup.json` compiler inputs are excluded from the cache.
+CI uses `--use-lake-build` so Section 6 audits these Lake-validated artifacts
+instead of compiling the same library a second time in isolation. Every
+headline type and axiom report is still checked afresh, and per-section audit
+times are retained in `durations.json`. A cold cache still needs a full build.

@@ -31,6 +31,9 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Check CI verifier dispatch
+        run: python3 -m unittest discover -s scripts -p 'test_verify_ci.py'
+
       - name: Install the pinned Lean toolchain
         id: setup
         shell: bash
@@ -90,6 +93,18 @@ jobs:
             .lake/packages/acvf_qe/.lake/build
           key: predecessor-${{ runner.os }}-${{ hashFiles('lean-toolchain', 'lake-manifest.json') }}
 
+      - name: Restore compiled project modules
+        id: project-cache
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            .lake/build/lib
+            .lake/build/ir/**/*.c*
+            .lake/build/ir/**/*.ir*
+          key: project-v1-${{ runner.os }}-${{ hashFiles('lean-toolchain', 'lake-manifest.json', 'lakefile.toml') }}-${{ github.sha }}
+          restore-keys: |
+            project-v1-${{ runner.os }}-${{ hashFiles('lean-toolchain', 'lake-manifest.json', 'lakefile.toml') }}-
+
       - name: Build the project and predecessor import
         id: build
         env:
@@ -97,12 +112,25 @@ jobs:
         shell: bash
         run: |
           mkdir -p .scratch/ci-verified
-          lake -R build 2>&1 | tee .scratch/ci-verified/Build.log
+          lake build 2>&1 | tee .scratch/ci-verified/Build.log
+
+      # Save before the audits, so a later cancellation does not discard
+      # a successfully compiled project. Lake validates source/import traces
+      # after a restore and rebuilds the modules affected by each change.
+      - name: Save compiled project modules
+        if: ${{ steps.project-cache.outputs.cache-hit != 'true' }}
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            .lake/build/lib
+            .lake/build/ir/**/*.c*
+            .lake/build/ir/**/*.ir*
+          key: project-v1-${{ runner.os }}-${{ hashFiles('lean-toolchain', 'lake-manifest.json', 'lakefile.toml') }}-${{ github.sha }}
 
       - name: Audit inherited headlines and run available section verifiers
         id: audits
         if: ${{ !cancelled() && steps.build.outcome == 'success' }}
-        run: lake env python3 scripts/verify_ci.py
+        run: lake env python3 scripts/verify_ci.py --use-lake-build
 
       - name: Publish verification summary
         if: ${{ always() }}
