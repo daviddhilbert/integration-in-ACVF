@@ -1,0 +1,338 @@
+{
+  "source_sha256": {
+    "section 7/Integration7/GammaScalarMapDescent.lean": "a047a8f955689bd29c5d0ee0afc86160130767aa1270174e1b9f70be67f02808",
+    "section 7/Integration7/NativeScalarReplacementMaps.lean": "12133693fa72cb552d461c84bb9b29bbdce3de7f52846bdf72f81928d178fa7c",
+    "section 7/Integration7/TranslatedRVCoordinateSaturation.lean": "a811c21203b2325a2f449a9cccfa59fcd41531d49551118c3710c338e2b1c03d",
+    "section 7/Integration7/UniformBalancedCellGeometry.lean": "2020c26b4563a15af66a473acd156e2c2f964dea5575553618f3667f13ecc743",
+    "section 7/Integration7/UniformBalancedHeadPositionDomains.lean": "7698215c81b2582e0353e3f7583430ce3d97224680492331e7bbe88ae5c40c20",
+    "section 7/Integration7/UniformBalancedHorizontalCentreValues.lean": "de881a94b1ec9a10a2f3afbe63eb3b8864d2df25164f0683f183a8f2c27a430d",
+    "section 7/Integration7/UniformBalancedHorizontalCentres.lean": "e4ab574e569e8ae17ba2675c77ecb6fb2baa8baaa3d201cb571846393ae4fb97",
+    "section 7/Integration7/UniformBalancedHorizontalContractions.lean": "9d7727a49235fbc9cb0f38bd368a612709c7859d4f270e676cce90e62e576efa",
+    "section 7/Integration7/UniformBalancedHorizontalFibres.lean": "023f781df5aa51c9337ff225987c0448f219edb1c5817f3fd24831d1c4218172",
+    "section 7/Integration7/UniformBalancedHorizontalTranslations.lean": "7731bb5a813e42fe4701c6b3453911d89b02d067d8798fa6ffde8aebaba3b86d",
+    "section 7/Integration7/UniformBalancedPositionMaps.lean": "bae4e65794206940c3c0b38fc505a8965579e50d575395f0e8de04a9590404c9",
+    "section 7/Integration7/UniformBalancedPositionPreparations.lean": "faa8706f2040a3712ba8f267b71757e2dfbf7dc8c0891d85e150b571ddbb7df6",
+    "section 7/Integration7/UniformCellPositionRows.lean": "94ecdc95878bac2eadb602418d38b72d791e05d51b8d35e4bb2c7dd2f471659b",
+    "section 7/Integration7/UniformCellTailPositions.lean": "0f12eab968b0d6336fa25488fab66c21bfc26d3521dcd282eaba3ea79b78a0fa",
+    "section 7/Integration7/UniformCellTranslationContractionReductions.lean": "d6cbf2e747111eab1dce72ae5831c62248da6b8914bbe9fe5bd9c6cdbffe8955"
+  },
+  "declarations": [
+    "IntegrationInACVF.Section7.nativeScalarDescent",
+    "IntegrationInACVF.Section7.native_scalar_descent_value",
+    "IntegrationInACVF.Section7.gamma_native_scalar_descent_graph",
+    "IntegrationInACVF.Section7.nativeScalarReplacementMap",
+    "IntegrationInACVF.Section7.native_scalar_replacement_value",
+    "IntegrationInACVF.Section7.gamma_native_scalar_replacement_graph",
+    "IntegrationInACVF.Section7.native_scalar_replacement_to_image_bijective",
+    "IntegrationInACVF.Section7.translated_rv_coordinate_saturated",
+    "IntegrationInACVF.Section7.swapped_horizontal_saturated",
+    "IntegrationInACVF.Section7.UniformMixedCellPresentation.BalancedRows",
+    "IntegrationInACVF.Section7.UniformMixedCellPresentation.balanced_centre_injective",
+    "IntegrationInACVF.Section7.UniformMixedCellPresentation.balanced_centre_covers_head",
+    "IntegrationInACVF.Section7.UniformMixedCellPresentation.balanced_centre_in_head_projection",
+    "IntegrationInACVF.Section7.UniformMixedCellPresentation.head_to_position_image_surjective",
+    "IntegrationInACVF.Section7.UniformMixedCellPresentation.position_image_eq_head_projection",
+    "IntegrationInACVF.Section7.UniformMixedCellPresentation.horizontal_centre_on_graph",
+    "IntegrationInACVF.Section7.gamma_native_coordinate_project_graph",
+    "IntegrationInACVF.Section7.UniformMixedCellPresentation.headToPositionImage",
+    "IntegrationInACVF.Section7.UniformMixedCellPresentation.horizontalCentreMap",
+    "IntegrationInACVF.Section7.UniformMixedCellPresentation.head_to_position_image_gamma",
+    "IntegrationInACVF.Section7.UniformMixedCellPresentation.horizontal_centre_graph_gamma",
+    "IntegrationInACVF.Section7.UniformMixedCellPresentation.horizontal_centre_constant",
+    "IntegrationInACVF.Section7.UniformMixedCellPresentation.horizontal_translation_swapped_head_saturated",
+    "IntegrationInACVF.Section7.UniformMixedCellPresentation.horizontal_translation_standard_contraction_exists",
+    "IntegrationInACVF.Section7.UniformMixedCellPresentation.horizontal_graph_fibre",
+    "IntegrationInACVF.Section7.UniformMixedCellPresentation.source_horizontal_fibre",
+    "IntegrationInACVF.Section7.UniformMixedCellPresentation.horizontalTranslationImage",
+    "IntegrationInACVF.Section7.UniformMixedCellPresentation.horizontalTranslation",
+    "IntegrationInACVF.Section7.UniformMixedCellPresentation.horizontal_translation_bijective",
+    "IntegrationInACVF.Section7.UniformMixedCellPresentation.horizontal_translation_graph_gamma",
+    "IntegrationInACVF.Section7.UniformMixedCellPresentation.horizontal_translation_image_gamma",
+    "IntegrationInACVF.Section7.UniformMixedCellPresentation.horizontal_translation_jacobian_one",
+    "IntegrationInACVF.Section7.UniformMixedCellPresentation.positionMap",
+    "IntegrationInACVF.Section7.UniformMixedCellPresentation.positionImage",
+    "IntegrationInACVF.Section7.UniformMixedCellPresentation.position_map_on_graph",
+    "IntegrationInACVF.Section7.UniformMixedCellPresentation.position_map_injective",
+    "IntegrationInACVF.Section7.UniformMixedCellPresentation.position_map_gamma",
+    "IntegrationInACVF.Section7.UniformMixedCellPresentation.position_to_image_bijective",
+    "IntegrationInACVF.Section7.UniformMixedCellPresentation.position_image_covers_head",
+    "IntegrationInACVF.Section7.UniformMixedCellPresentation.tail_key_image_gamma",
+    "IntegrationInACVF.Section7.UniformMixedCellPresentation.position_image_gamma",
+    "IntegrationInACVF.Section7.UniformMixedCellPresentation.position_compatible_preparation_exists",
+    "IntegrationInACVF.Section7.UniformMixedCellPresentation.row",
+    "IntegrationInACVF.Section7.UniformMixedCellPresentation.localPosition",
+    "IntegrationInACVF.Section7.UniformMixedCellPresentation.parameter_fibre_relation",
+    "IntegrationInACVF.Section7.UniformMixedCellPresentation.local_position_cell_data",
+    "IntegrationInACVF.Section7.UniformMixedCellPresentation.centre_eq_local_position",
+    "IntegrationInACVF.Section7.gamma_native_tail_key_graph",
+    "IntegrationInACVF.Section7.UniformMixedCellPresentation.tailPositionMap",
+    "IntegrationInACVF.Section7.UniformMixedCellPresentation.tail_position_map_value",
+    "IntegrationInACVF.Section7.UniformMixedCellPresentation.tail_position_graph_gamma",
+    "IntegrationInACVF.Section7.UniformMixedCellPresentation.vertical_contraction_reduction",
+    "IntegrationInACVF.Section7.UniformMixedCellPresentation.horizontal_contraction_reduction"
+  ],
+  "manually_reviewed_lines": 1019,
+  "audit_log": ".scratch/recovery/recovered-sixty-third-geometry-types-axioms.log",
+  "status": "PASS actual source compilation, full type/axiom review and affected library integration",
+  "scope": "Uniform balanced-row families have actual original-Gamma positioning and inverse-centre maps, whole-family horizontal translations with VF Jacobian one almost everywhere, complete horizontal RV fibres and actual opposite-order standard contractions. The positioning image equals the labelled head projection. Compatible unary preparations are constructed in one genuine small containing context. Specified contractions in either order reduce to constructed contractions of their corresponding translated family with original-Gamma forward volume blowup chains and the same literal retained density. BalancedRows is the explicit balanced subcase, not a proof that all cells are balanced. The full global RV-volume comparison between the two translated families, the family case partition, higher-dimensional exchange and7.8-7.15 remain open.",
+  "library_build_log": ".scratch/recovery/sixty-third-reconstruction-library-build.log",
+  "library_build_jobs_including_cached_dependencies": 11540,
+  "compilation": [
+    {
+      "module": "GammaScalarMapDescent",
+      "source": "section 7/Integration7/GammaScalarMapDescent.lean",
+      "source_sha256": "a047a8f955689bd29c5d0ee0afc86160130767aa1270174e1b9f70be67f02808",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/GammaScalarMapDescent.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/GammaScalarMapDescent.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 3.332,
+      "completed_at_utc": "2026-11-14T23:19:45.698082+00:00",
+      "log": ".scratch/recovery/GammaScalarMapDescent-build.log"
+    },
+    {
+      "module": "NativeScalarReplacementMaps",
+      "source": "section 7/Integration7/NativeScalarReplacementMaps.lean",
+      "source_sha256": "12133693fa72cb552d461c84bb9b29bbdce3de7f52846bdf72f81928d178fa7c",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/NativeScalarReplacementMaps.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/NativeScalarReplacementMaps.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 3.992,
+      "completed_at_utc": "2026-11-14T23:23:28.862005+00:00",
+      "log": ".scratch/recovery/NativeScalarReplacementMaps-build.log"
+    },
+    {
+      "module": "TranslatedRVCoordinateSaturation",
+      "source": "section 7/Integration7/TranslatedRVCoordinateSaturation.lean",
+      "source_sha256": "a811c21203b2325a2f449a9cccfa59fcd41531d49551118c3710c338e2b1c03d",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/TranslatedRVCoordinateSaturation.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/TranslatedRVCoordinateSaturation.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.091,
+      "completed_at_utc": "2026-11-14T23:31:54.257037+00:00",
+      "log": ".scratch/recovery/TranslatedRVCoordinateSaturation-build.log"
+    },
+    {
+      "module": "UniformBalancedCellGeometry",
+      "source": "section 7/Integration7/UniformBalancedCellGeometry.lean",
+      "source_sha256": "2020c26b4563a15af66a473acd156e2c2f964dea5575553618f3667f13ecc743",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/UniformBalancedCellGeometry.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/UniformBalancedCellGeometry.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 3.713,
+      "completed_at_utc": "2026-11-14T23:21:46.822265+00:00",
+      "log": ".scratch/recovery/UniformBalancedCellGeometry-build.log"
+    },
+    {
+      "module": "UniformBalancedHeadPositionDomains",
+      "source": "section 7/Integration7/UniformBalancedHeadPositionDomains.lean",
+      "source_sha256": "7698215c81b2582e0353e3f7583430ce3d97224680492331e7bbe88ae5c40c20",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/UniformBalancedHeadPositionDomains.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/UniformBalancedHeadPositionDomains.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.087,
+      "completed_at_utc": "2026-11-14T23:35:35.727543+00:00",
+      "log": ".scratch/recovery/UniformBalancedHeadPositionDomains-build.log"
+    },
+    {
+      "module": "UniformBalancedHorizontalCentreValues",
+      "source": "section 7/Integration7/UniformBalancedHorizontalCentreValues.lean",
+      "source_sha256": "de881a94b1ec9a10a2f3afbe63eb3b8864d2df25164f0683f183a8f2c27a430d",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/UniformBalancedHorizontalCentreValues.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/UniformBalancedHorizontalCentreValues.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.103,
+      "completed_at_utc": "2026-11-14T23:29:29.716855+00:00",
+      "log": ".scratch/recovery/UniformBalancedHorizontalCentreValues-build.log"
+    },
+    {
+      "module": "UniformBalancedHorizontalCentres",
+      "source": "section 7/Integration7/UniformBalancedHorizontalCentres.lean",
+      "source_sha256": "e4ab574e569e8ae17ba2675c77ecb6fb2baa8baaa3d201cb571846393ae4fb97",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/UniformBalancedHorizontalCentres.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/UniformBalancedHorizontalCentres.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 3.975,
+      "completed_at_utc": "2026-11-14T23:25:54.403015+00:00",
+      "log": ".scratch/recovery/UniformBalancedHorizontalCentres-build.log"
+    },
+    {
+      "module": "UniformBalancedHorizontalContractions",
+      "source": "section 7/Integration7/UniformBalancedHorizontalContractions.lean",
+      "source_sha256": "9d7727a49235fbc9cb0f38bd368a612709c7859d4f270e676cce90e62e576efa",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/UniformBalancedHorizontalContractions.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/UniformBalancedHorizontalContractions.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.389,
+      "completed_at_utc": "2026-11-14T23:32:17.650787+00:00",
+      "log": ".scratch/recovery/UniformBalancedHorizontalContractions-build.log"
+    },
+    {
+      "module": "UniformBalancedHorizontalFibres",
+      "source": "section 7/Integration7/UniformBalancedHorizontalFibres.lean",
+      "source_sha256": "023f781df5aa51c9337ff225987c0448f219edb1c5817f3fd24831d1c4218172",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/UniformBalancedHorizontalFibres.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/UniformBalancedHorizontalFibres.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 3.75,
+      "completed_at_utc": "2026-11-14T23:30:50.294973+00:00",
+      "log": ".scratch/recovery/UniformBalancedHorizontalFibres-build.log"
+    },
+    {
+      "module": "UniformBalancedHorizontalTranslations",
+      "source": "section 7/Integration7/UniformBalancedHorizontalTranslations.lean",
+      "source_sha256": "7731bb5a813e42fe4701c6b3453911d89b02d067d8798fa6ffde8aebaba3b86d",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/UniformBalancedHorizontalTranslations.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/UniformBalancedHorizontalTranslations.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 3.627,
+      "completed_at_utc": "2026-11-14T23:25:58.030606+00:00",
+      "log": ".scratch/recovery/UniformBalancedHorizontalTranslations-build.log"
+    },
+    {
+      "module": "UniformBalancedPositionMaps",
+      "source": "section 7/Integration7/UniformBalancedPositionMaps.lean",
+      "source_sha256": "bae4e65794206940c3c0b38fc505a8965579e50d575395f0e8de04a9590404c9",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/UniformBalancedPositionMaps.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/UniformBalancedPositionMaps.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.075,
+      "completed_at_utc": "2026-11-14T23:24:15.383813+00:00",
+      "log": ".scratch/recovery/UniformBalancedPositionMaps-build.log"
+    },
+    {
+      "module": "UniformBalancedPositionPreparations",
+      "source": "section 7/Integration7/UniformBalancedPositionPreparations.lean",
+      "source_sha256": "faa8706f2040a3712ba8f267b71757e2dfbf7dc8c0891d85e150b571ddbb7df6",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/UniformBalancedPositionPreparations.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/UniformBalancedPositionPreparations.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.088,
+      "completed_at_utc": "2026-11-14T23:34:31.110002+00:00",
+      "log": ".scratch/recovery/UniformBalancedPositionPreparations-build.log"
+    },
+    {
+      "module": "UniformCellPositionRows",
+      "source": "section 7/Integration7/UniformCellPositionRows.lean",
+      "source_sha256": "94ecdc95878bac2eadb602418d38b72d791e05d51b8d35e4bb2c7dd2f471659b",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/UniformCellPositionRows.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/UniformCellPositionRows.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.109,
+      "completed_at_utc": "2026-11-14T23:21:32.433654+00:00",
+      "log": ".scratch/recovery/UniformCellPositionRows-build.log"
+    },
+    {
+      "module": "UniformCellTailPositions",
+      "source": "section 7/Integration7/UniformCellTailPositions.lean",
+      "source_sha256": "0f12eab968b0d6336fa25488fab66c21bfc26d3521dcd282eaba3ea79b78a0fa",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/UniformCellTailPositions.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/UniformCellTailPositions.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 3.44,
+      "completed_at_utc": "2026-11-14T23:21:50.262727+00:00",
+      "log": ".scratch/recovery/UniformCellTailPositions-build.log"
+    },
+    {
+      "module": "UniformCellTranslationContractionReductions",
+      "source": "section 7/Integration7/UniformCellTranslationContractionReductions.lean",
+      "source_sha256": "d6cbf2e747111eab1dce72ae5831c62248da6b8914bbe9fe5bd9c6cdbffe8955",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/UniformCellTranslationContractionReductions.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/UniformCellTranslationContractionReductions.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.389,
+      "completed_at_utc": "2026-11-14T23:35:42.398121+00:00",
+      "log": ".scratch/recovery/UniformCellTranslationContractionReductions-build.log"
+    }
+  ],
+  "completed_at_utc": "2026-11-14T23:36:39.809797+00:00"
+}

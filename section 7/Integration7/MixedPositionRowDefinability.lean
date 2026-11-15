@@ -1,0 +1,52 @@
+import Integration7.MixedVerticalPullbackCells
+import IntegrationSection4.PositionRowDefinability
+
+/-! Positioning graphs for the mixed-label vertical presentation, using
+Section4's checked uniform scalar-position graph descent. -/
+noncomputable section
+set_option backward.isDefEq.respectTransparency false
+open FirstOrder FirstOrder.Language
+open SpecialTransformations.Milestone0 SpecialTransformations.Milestone0.LRV
+open SpecialTransformations.Section3 SpecialTransformations.Section3.GammaParameters
+open SpecialTransformations.Section5
+open IntegrationInACVF.Section4
+
+namespace IntegrationInACVF.Section7.MixedVerticalPresentation
+
+variable {M : Type} [sM : LRV.Structure M] [hM : M ⊨ Axioms.ACVF] {m : ℕ}
+variable {G : GammaParameters.Base (M := M)} {A : Set (Point (M := M) 2 m)}
+
+def scalarPosition (V : MixedVerticalPresentation G A)
+    (u : GammaFamilySyntax.domain (GammaScalarFamilies.family V.domain)) : VF (M := M) :=
+  V.position ⟨u.val,(Set.ext_iff.mp (GammaScalarFamilies.domain_eq V.domain) _).mp u.property⟩
+
+theorem scalarPosition_graph (V : MixedVerticalPresentation G A) :
+    GammaScalarGraphDefinable G (fun p y =>
+      ∃ u : GammaFamilySyntax.domain (GammaScalarFamilies.family V.domain), u.val = p ∧ V.scalarPosition u = y) := by
+  apply GammaScalarGraphDefinable.congr V.position_graph
+  intro p y
+  constructor
+  · rintro ⟨u,hu,hy⟩
+    exact ⟨⟨u.val,(Set.ext_iff.mp (GammaScalarFamilies.domain_eq V.domain) _).mpr u.property⟩,hu,hy⟩
+  · rintro ⟨u,hu,hy⟩
+    exact ⟨⟨u.val,(Set.ext_iff.mp (GammaScalarFamilies.domain_eq V.domain) _).mp u.property⟩,hu,hy⟩
+
+theorem scalarPosition_value (V : MixedVerticalPresentation G A)
+    (u : GammaFamilySyntax.domain (GammaScalarFamilies.family V.domain)) :
+    (V.scalarPosition u).val = GammaScalarFamilies.value V.position
+      (GammaFamilySyntax.labels u.val) (vfAt u.val 0).val :=
+  (GammaScalarFamilies.value_on V.position
+    ⟨u.val,(Set.ext_iff.mp (GammaScalarFamilies.domain_eq V.domain) _).mp u.property⟩).symm
+
+theorem position_definable {d : ℕ} (V : MixedVerticalPresentation G A)
+    (Q : GammaRVMap G (GammaFamilySyntax.domain (GammaScalarFamilies.family V.domain)) d) (a₀ : A)
+    (row : PositionRow Q (V.scalarProjection a₀) (GammaScalarFamilies.value V.position) V.paradigm_index) :
+    DefinableOverBase (RVLabelSlices.labelBase G ((V.pullback Q).toFun a₀)) (fun _ : Fin 2 => .vf)
+      (Cells.positionCodes (Cells.first (mixedPairFibre (V.pullback Q) a₀)) row.position) := by
+  have h := PositionRowDefinability.definable Q V.scalarPosition V.scalarPosition_graph
+    (GammaScalarFamilies.value V.position) V.scalarPosition_value row
+  have hFirst : Cells.first (mixedPairFibre (V.pullback Q) a₀) = row.domain := by
+    rw [V.pullback_fibre Q a₀ row,CellsFromFibres.first_eq]
+  rwa [← hFirst] at h
+
+end IntegrationInACVF.Section7.MixedVerticalPresentation
