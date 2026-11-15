@@ -105,9 +105,12 @@ jobs:
             .lake/build/lib
             .lake/build/ir/**/*.c*
             .lake/build/ir/**/*.ir*
-          key: project-v1-${{ runner.os }}-${{ hashFiles('lean-toolchain', 'lake-manifest.json', 'lakefile.toml') }}-${{ github.sha }}
+          key: project-v2-${{ runner.os }}-${{ hashFiles('lean-toolchain', 'lake-manifest.json') }}-${{ hashFiles('lakefile.toml') }}-${{ github.sha }}
           restore-keys: |
+            project-v2-${{ runner.os }}-${{ hashFiles('lean-toolchain', 'lake-manifest.json') }}-${{ hashFiles('lakefile.toml') }}-
+            project-v2-${{ runner.os }}-${{ hashFiles('lean-toolchain', 'lake-manifest.json') }}-
             project-v1-${{ runner.os }}-${{ hashFiles('lean-toolchain', 'lake-manifest.json', 'lakefile.toml') }}-
+            project-v1-${{ runner.os }}-
 
       - name: Build the project and predecessor import
         id: build
@@ -129,7 +132,7 @@ jobs:
             .lake/build/lib
             .lake/build/ir/**/*.c*
             .lake/build/ir/**/*.ir*
-          key: project-v1-${{ runner.os }}-${{ hashFiles('lean-toolchain', 'lake-manifest.json', 'lakefile.toml') }}-${{ github.sha }}
+          key: project-v2-${{ runner.os }}-${{ hashFiles('lean-toolchain', 'lake-manifest.json') }}-${{ hashFiles('lakefile.toml') }}-${{ github.sha }}
 
       - name: Audit inherited headlines and run available section verifiers
         id: audits
