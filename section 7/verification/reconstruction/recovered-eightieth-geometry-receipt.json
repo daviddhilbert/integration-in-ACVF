@@ -1,0 +1,494 @@
+{
+  "source_sha256": {
+    "section 7/Integration7/AllDegreeVFVolumeClasses.lean": "9a18626830f1442eed935f4514dc600e9368637de77d93100402b7677ec468aa",
+    "section 7/Integration7/AllDegreeVolumeLiftKernel.lean": "d1f7d3c4e46a9d6c6b3b80b7d28b9b0697c0b1b86615161975595796467f233d",
+    "section 7/Integration7/FiniteCategoryStructureTransport.lean": "995f80033469a930448e664d195e8aa0e8bfdebeed6b939c68f0de8382660b25",
+    "section 7/Integration7/MixedVFProductCharts.lean": "4fd8e48627071a5e8d6f53ff5a6a3a6db4030947d8ab43bf4b2e3b63ee777207",
+    "section 7/Integration7/MixedVFProductJacobians.lean": "28ee056d6163b9ca5772a1f785d3a58f62827315fddebd0daac3d5195013c642",
+    "section 7/Integration7/OrdinaryFiniteCoproductIsomorphisms.lean": "a7a3c5ce1aab4560c9ae9fb3c0dc3f047566b9f581f1dd246a75d56f3482719e",
+    "section 7/Integration7/OrdinaryFiniteLiftSurjectivity.lean": "e6244bb75a2e153763a7feeb4e7b2aa4772295c2f1cf22c81f2743c92bcf2d86",
+    "section 7/Integration7/OrdinaryZeroLiftCoproducts.lean": "247f2fb59edd92c2e4cfb6d5fa94c0b3c16bfdb607b62e16ab1d6565927fdbf3",
+    "section 7/Integration7/OrdinaryZeroLiftIsomorphisms.lean": "bcdf84a7c1e8fb358ebf3cfe0d655e0b0d79b615d8425e0ad4ef9d08808223ee",
+    "section 7/Integration7/PositiveVFVolumeAdditiveStructure.lean": "d720a0a916e61ee8453f20b7517055e90aec97d468c12de13a97abebeabc399f",
+    "section 7/Integration7/PositiveVFVolumeProductMaps.lean": "d351a382158bcdaa845bc1f15fc913c49bd044df3ad9f3dfa2e8aa18debe09d8",
+    "section 7/Integration7/PositiveVFVolumeProducts.lean": "9e09a892508ede4390f81165d5ded14db9ef4a59c974b78fe8602c8698c18bdb",
+    "section 7/Integration7/PositiveVolumeIntegrationEquivalence.lean": "7d859c4560d08e958db158d879e68d771a5ef7d21dc9d9eb0549022df0c576a4",
+    "section 7/Integration7/PositiveVolumeLiftSurjectivity.lean": "81e75b8dc31f5e38abbb719677d238081f3f68d34906fd64d0c3575c36e81582",
+    "section 7/Integration7/VFBlockProductCoordinates.lean": "93af7220743d893b0455abb9629afe2db3f2bd710eaebe83ad03a73876d957ec",
+    "section 7/Integration7/VFBlockProductJacobians.lean": "456d957d7bc61cf09ed96d9c41c351fd486fa5fcc3ee0fc7a424ae2729afa015",
+    "section 7/Integration7/VFBlockProductPartials.lean": "8903b747ad49717a99ebb3a04f038af25a87fc10768f0b2c3bfaa87474bb5b5b",
+    "section 7/Integration7/VFProductAlmostEverywhere.lean": "08db3a468f7f17289336a509040abb8a09ab2d5bebce75ffc6d98b67b6fc6392",
+    "section 7/Integration7/VFVolumeProductBijections.lean": "5a8f7c81cfb9b951467d4cb982a2533a2a633130212271c4f1cc39a03416919b",
+    "section 7/Integration7/VolumeIntegrationEquivalence.lean": "807357d5d0382264ded8a385e6b21c8d02c2d426caee6d23e3d89842611a07bb",
+    "section 7/Integration7/ZeroVFVolumeClasses.lean": "2f683557a24569ae4af0b6af3d36fa5f26902890baa8fef3844edf24dbec6ef1",
+    "section 7/Integration7/ZeroVFVolumeCoproductClasses.lean": "a7334feed0e269e970c52a9c42d6c40701132acce120f07809230841c2e519d0",
+    "section 7/Integration7/ZeroVolumeIntegration.lean": "81499cdb2905b567550a9cb733fab3a08bdfc78a60c74f0a64cfb190c4270c19"
+  },
+  "declarations": [
+    "IntegrationInACVF.Section7.VFVolumeIsoInDegree",
+    "IntegrationInACVF.Section7.VFVolumeIsoClasses",
+    "IntegrationInACVF.Section7.vfVolumeIsoClass",
+    "IntegrationInACVF.Section7.vfVolumeIsoClassesAdd",
+    "IntegrationInACVF.Section7.vfVolumeIsoClassesZero",
+    "IntegrationInACVF.Section7.vfVolumeIsoClassesAddCommMonoid",
+    "IntegrationInACVF.Section7.proposition_7_8_all_degrees",
+    "IntegrationInACVF.Section7.vfFiniteStructureEquiv",
+    "IntegrationInACVF.Section7.rvFiniteStructureEquiv",
+    "IntegrationInACVF.Section7.finite_structure_transport_lift",
+    "IntegrationInACVF.Section7.positive_vf_volume_product_map_pair",
+    "IntegrationInACVF.Section7.is_vf_chart_at_product",
+    "IntegrationInACVF.Section7.has_mixed_vf_jacobian_product",
+    "IntegrationInACVF.Section7.ordinaryFiniteAmbientIso",
+    "IntegrationInACVF.Section7.ordinaryFiniteCoprodIso",
+    "IntegrationInACVF.Section7.ordinary_finite_lift_presentation_exists",
+    "IntegrationInACVF.Section7.ordinary_zero_lift_coprod_carrier",
+    "IntegrationInACVF.Section7.ordinaryZeroLiftCoprodIso",
+    "IntegrationInACVF.Section7.zero_lift_label_map_bijective",
+    "IntegrationInACVF.Section7.ordinaryZeroLiftIsoOfRVIso",
+    "IntegrationInACVF.Section7.ordinaryRVIsoOfZeroLiftIso",
+    "IntegrationInACVF.Section7.ordinary_zero_lift_iso_iff",
+    "IntegrationInACVF.Section7.positive_volume_lift_on_blowup_classes_zero",
+    "IntegrationInACVF.Section7.positive_volume_integration_zero",
+    "IntegrationInACVF.Section7.positiveVFVolumeAddCommMonoid",
+    "IntegrationInACVF.Section7.positiveVFVolumeProductMap",
+    "IntegrationInACVF.Section7.positive_vf_volume_product_map_bijective",
+    "IntegrationInACVF.Section7.positive_vf_volume_product_map_density",
+    "IntegrationInACVF.Section7.PositiveVFVolumeObject.prod",
+    "IntegrationInACVF.Section7.positive_vf_volume_product_density",
+    "IntegrationInACVF.Section7.positiveVFVolumeIsoClassesAdd",
+    "IntegrationInACVF.Section7.positive_volume_lift_on_blowup_classes_add",
+    "IntegrationInACVF.Section7.positiveVolumeIntegrationEquiv",
+    "IntegrationInACVF.Section7.proposition_7_9_positive",
+    "IntegrationInACVF.Section7.positive_volume_lift_bijection_exists",
+    "IntegrationInACVF.Section7.positive_volume_lift_on_blowup_classes_surjective",
+    "IntegrationInACVF.Section7.tupleBlockProduct",
+    "IntegrationInACVF.Section7.append_perturb_left_left",
+    "IntegrationInACVF.Section7.append_perturb_left_right",
+    "IntegrationInACVF.Section7.append_perturb_right_left",
+    "IntegrationInACVF.Section7.append_perturb_right_right",
+    "IntegrationInACVF.Section7.tuple_block_product_append",
+    "IntegrationInACVF.Section7.has_vf_jacobian_block_product",
+    "IntegrationInACVF.Section7.vf_partial_zero_of_coordinate_unchanged",
+    "IntegrationInACVF.Section7.vf_block_product_partial_left_left",
+    "IntegrationInACVF.Section7.vf_block_product_partial_right_right",
+    "IntegrationInACVF.Section7.vf_block_product_partial_left_right",
+    "IntegrationInACVF.Section7.vf_block_product_partial_right_left",
+    "IntegrationInACVF.Section7.vf_almost_everywhere_product",
+    "IntegrationInACVF.Section7.preserves_vf_volume_product",
+    "IntegrationInACVF.Section7.VFVolumeBijection.prod",
+    "IntegrationInACVF.Section7.volumeIntegrationEquiv",
+    "IntegrationInACVF.Section7.proposition_7_9",
+    "IntegrationInACVF.Section7.zeroVFVolumeIsoSetoid",
+    "IntegrationInACVF.Section7.ZeroVFVolumeIsoClasses",
+    "IntegrationInACVF.Section7.zeroVFVolumeIsoClass",
+    "IntegrationInACVF.Section7.zeroVolumeLiftOnClasses",
+    "IntegrationInACVF.Section7.zero_volume_lift_on_classes_bijective",
+    "IntegrationInACVF.Section7.zeroVolumeIntegrationEquiv",
+    "IntegrationInACVF.Section7.zero_vf_volume_coprod_class",
+    "IntegrationInACVF.Section7.zeroVFVolumeIsoClassesAdd",
+    "IntegrationInACVF.Section7.zeroVFVolumeIsoClassesZero",
+    "IntegrationInACVF.Section7.zeroVFVolumeAddCommMonoid",
+    "IntegrationInACVF.Section7.zeroVolumeIntegrationAddEquiv",
+    "IntegrationInACVF.Section7.proposition_7_9_zero"
+  ],
+  "manually_reviewed_lines": 859,
+  "audit_log": ".scratch/recovery/recovered-eightieth-geometry-types-axioms.log",
+  "status": "PASS actual source compilation, full type/axiom review and affected library integration",
+  "scope": "Propositions 7.8 and 7.9 are proved in all degrees, retaining ordinary degree zero and the original-base standing hypotheses in positive degrees. Actual fixed coproducts give addition in every degree. Actual positive VF Cartesian products, product Jacobians and full volume-bijection products are proved. Almost-everywhere product isomorphisms, graded multiplicativity 7.10 and 7.11-7.15 remain open.",
+  "library_build_log": ".scratch/recovery/eightieth-reconstruction-library-build.log",
+  "library_build_jobs_including_cached_dependencies": 11961,
+  "compilation": [
+    {
+      "module": "AllDegreeVFVolumeClasses",
+      "source": "section 7/Integration7/AllDegreeVFVolumeClasses.lean",
+      "source_sha256": "9a18626830f1442eed935f4514dc600e9368637de77d93100402b7677ec468aa",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/AllDegreeVFVolumeClasses.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/AllDegreeVFVolumeClasses.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.594,
+      "completed_at_utc": "2026-11-15T05:29:56.960301+00:00",
+      "log": ".scratch/recovery/AllDegreeVFVolumeClasses-build.log"
+    },
+    {
+      "module": "AllDegreeVolumeLiftKernel",
+      "source": "section 7/Integration7/AllDegreeVolumeLiftKernel.lean",
+      "source_sha256": "d1f7d3c4e46a9d6c6b3b80b7d28b9b0697c0b1b86615161975595796467f233d",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/AllDegreeVolumeLiftKernel.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/AllDegreeVolumeLiftKernel.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 3.615,
+      "completed_at_utc": "2026-11-15T05:30:00.575500+00:00",
+      "log": ".scratch/recovery/AllDegreeVolumeLiftKernel-build.log"
+    },
+    {
+      "module": "FiniteCategoryStructureTransport",
+      "source": "section 7/Integration7/FiniteCategoryStructureTransport.lean",
+      "source_sha256": "995f80033469a930448e664d195e8aa0e8bfdebeed6b939c68f0de8382660b25",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/FiniteCategoryStructureTransport.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/FiniteCategoryStructureTransport.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 3.469,
+      "completed_at_utc": "2026-11-15T05:26:55.462197+00:00",
+      "log": ".scratch/recovery/FiniteCategoryStructureTransport-build.log"
+    },
+    {
+      "module": "MixedVFProductCharts",
+      "source": "section 7/Integration7/MixedVFProductCharts.lean",
+      "source_sha256": "4fd8e48627071a5e8d6f53ff5a6a3a6db4030947d8ab43bf4b2e3b63ee777207",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/MixedVFProductCharts.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/MixedVFProductCharts.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.271,
+      "completed_at_utc": "2026-11-15T05:40:06.549562+00:00",
+      "log": ".scratch/recovery/MixedVFProductCharts-build.log"
+    },
+    {
+      "module": "MixedVFProductJacobians",
+      "source": "section 7/Integration7/MixedVFProductJacobians.lean",
+      "source_sha256": "28ee056d6163b9ca5772a1f785d3a58f62827315fddebd0daac3d5195013c642",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/MixedVFProductJacobians.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/MixedVFProductJacobians.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 3.536,
+      "completed_at_utc": "2026-11-15T05:40:10.086113+00:00",
+      "log": ".scratch/recovery/MixedVFProductJacobians-build.log"
+    },
+    {
+      "module": "OrdinaryFiniteCoproductIsomorphisms",
+      "source": "section 7/Integration7/OrdinaryFiniteCoproductIsomorphisms.lean",
+      "source_sha256": "a7a3c5ce1aab4560c9ae9fb3c0dc3f047566b9f581f1dd246a75d56f3482719e",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/OrdinaryFiniteCoproductIsomorphisms.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/OrdinaryFiniteCoproductIsomorphisms.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.07,
+      "completed_at_utc": "2026-11-15T05:32:49.243899+00:00",
+      "log": ".scratch/recovery/OrdinaryFiniteCoproductIsomorphisms-build.log"
+    },
+    {
+      "module": "OrdinaryFiniteLiftSurjectivity",
+      "source": "section 7/Integration7/OrdinaryFiniteLiftSurjectivity.lean",
+      "source_sha256": "e6244bb75a2e153763a7feeb4e7b2aa4772295c2f1cf22c81f2743c92bcf2d86",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/OrdinaryFiniteLiftSurjectivity.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/OrdinaryFiniteLiftSurjectivity.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.186,
+      "completed_at_utc": "2026-11-15T05:28:15.683707+00:00",
+      "log": ".scratch/recovery/OrdinaryFiniteLiftSurjectivity-build.log"
+    },
+    {
+      "module": "OrdinaryZeroLiftCoproducts",
+      "source": "section 7/Integration7/OrdinaryZeroLiftCoproducts.lean",
+      "source_sha256": "247f2fb59edd92c2e4cfb6d5fa94c0b3c16bfdb607b62e16ab1d6565927fdbf3",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/OrdinaryZeroLiftCoproducts.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/OrdinaryZeroLiftCoproducts.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 3.584,
+      "completed_at_utc": "2026-11-15T05:32:52.828132+00:00",
+      "log": ".scratch/recovery/OrdinaryZeroLiftCoproducts-build.log"
+    },
+    {
+      "module": "OrdinaryZeroLiftIsomorphisms",
+      "source": "section 7/Integration7/OrdinaryZeroLiftIsomorphisms.lean",
+      "source_sha256": "bcdf84a7c1e8fb358ebf3cfe0d655e0b0d79b615d8425e0ad4ef9d08808223ee",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/OrdinaryZeroLiftIsomorphisms.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/OrdinaryZeroLiftIsomorphisms.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 3.935,
+      "completed_at_utc": "2026-11-15T05:26:49.232323+00:00",
+      "log": ".scratch/recovery/OrdinaryZeroLiftIsomorphisms-build.log"
+    },
+    {
+      "module": "PositiveVFVolumeAdditiveStructure",
+      "source": "section 7/Integration7/PositiveVFVolumeAdditiveStructure.lean",
+      "source_sha256": "d720a0a916e61ee8453f20b7517055e90aec97d468c12de13a97abebeabc399f",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/PositiveVFVolumeAdditiveStructure.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/PositiveVFVolumeAdditiveStructure.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.833,
+      "completed_at_utc": "2026-11-15T05:23:16.278871+00:00",
+      "log": ".scratch/recovery/PositiveVFVolumeAdditiveStructure-build.log"
+    },
+    {
+      "module": "PositiveVFVolumeProductMaps",
+      "source": "section 7/Integration7/PositiveVFVolumeProductMaps.lean",
+      "source_sha256": "d351a382158bcdaa845bc1f15fc913c49bd044df3ad9f3dfa2e8aa18debe09d8",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/PositiveVFVolumeProductMaps.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/PositiveVFVolumeProductMaps.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 3.976,
+      "completed_at_utc": "2026-11-15T05:34:10.319736+00:00",
+      "log": ".scratch/recovery/PositiveVFVolumeProductMaps-build.log"
+    },
+    {
+      "module": "PositiveVFVolumeProducts",
+      "source": "section 7/Integration7/PositiveVFVolumeProducts.lean",
+      "source_sha256": "9e09a892508ede4390f81165d5ded14db9ef4a59c974b78fe8602c8698c18bdb",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/PositiveVFVolumeProducts.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/PositiveVFVolumeProducts.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.093,
+      "completed_at_utc": "2026-11-15T05:33:48.114530+00:00",
+      "log": ".scratch/recovery/PositiveVFVolumeProducts-build.log"
+    },
+    {
+      "module": "PositiveVolumeIntegrationEquivalence",
+      "source": "section 7/Integration7/PositiveVolumeIntegrationEquivalence.lean",
+      "source_sha256": "7d859c4560d08e958db158d879e68d771a5ef7d21dc9d9eb0549022df0c576a4",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/PositiveVolumeIntegrationEquivalence.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/PositiveVolumeIntegrationEquivalence.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.451,
+      "completed_at_utc": "2026-11-15T05:21:58.633816+00:00",
+      "log": ".scratch/recovery/PositiveVolumeIntegrationEquivalence-build.log"
+    },
+    {
+      "module": "PositiveVolumeLiftSurjectivity",
+      "source": "section 7/Integration7/PositiveVolumeLiftSurjectivity.lean",
+      "source_sha256": "81e75b8dc31f5e38abbb719677d238081f3f68d34906fd64d0c3575c36e81582",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/PositiveVolumeLiftSurjectivity.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/PositiveVolumeLiftSurjectivity.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.642,
+      "completed_at_utc": "2026-11-15T05:20:21.675415+00:00",
+      "log": ".scratch/recovery/PositiveVolumeLiftSurjectivity-build.log"
+    },
+    {
+      "module": "VFBlockProductCoordinates",
+      "source": "section 7/Integration7/VFBlockProductCoordinates.lean",
+      "source_sha256": "93af7220743d893b0455abb9629afe2db3f2bd710eaebe83ad03a73876d957ec",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/VFBlockProductCoordinates.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/VFBlockProductCoordinates.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 2.064,
+      "completed_at_utc": "2026-11-15T05:35:40.144939+00:00",
+      "log": ".scratch/recovery/VFBlockProductCoordinates-build.log"
+    },
+    {
+      "module": "VFBlockProductJacobians",
+      "source": "section 7/Integration7/VFBlockProductJacobians.lean",
+      "source_sha256": "456d957d7bc61cf09ed96d9c41c351fd486fa5fcc3ee0fc7a424ae2729afa015",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/VFBlockProductJacobians.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/VFBlockProductJacobians.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.025,
+      "completed_at_utc": "2026-11-15T05:37:41.646878+00:00",
+      "log": ".scratch/recovery/VFBlockProductJacobians-build.log"
+    },
+    {
+      "module": "VFBlockProductPartials",
+      "source": "section 7/Integration7/VFBlockProductPartials.lean",
+      "source_sha256": "8903b747ad49717a99ebb3a04f038af25a87fc10768f0b2c3bfaa87474bb5b5b",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/VFBlockProductPartials.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/VFBlockProductPartials.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.162,
+      "completed_at_utc": "2026-11-15T05:35:44.307911+00:00",
+      "log": ".scratch/recovery/VFBlockProductPartials-build.log"
+    },
+    {
+      "module": "VFProductAlmostEverywhere",
+      "source": "section 7/Integration7/VFProductAlmostEverywhere.lean",
+      "source_sha256": "08db3a468f7f17289336a509040abb8a09ab2d5bebce75ffc6d98b67b6fc6392",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/VFProductAlmostEverywhere.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/VFProductAlmostEverywhere.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.127,
+      "completed_at_utc": "2026-11-15T05:38:43.234825+00:00",
+      "log": ".scratch/recovery/VFProductAlmostEverywhere-build.log"
+    },
+    {
+      "module": "VFVolumeProductBijections",
+      "source": "section 7/Integration7/VFVolumeProductBijections.lean",
+      "source_sha256": "5a8f7c81cfb9b951467d4cb982a2533a2a633130212271c4f1cc39a03416919b",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/VFVolumeProductBijections.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/VFVolumeProductBijections.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 3.52,
+      "completed_at_utc": "2026-11-15T05:40:13.606831+00:00",
+      "log": ".scratch/recovery/VFVolumeProductBijections-build.log"
+    },
+    {
+      "module": "VolumeIntegrationEquivalence",
+      "source": "section 7/Integration7/VolumeIntegrationEquivalence.lean",
+      "source_sha256": "807357d5d0382264ded8a385e6b21c8d02c2d426caee6d23e3d89842611a07bb",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/VolumeIntegrationEquivalence.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/VolumeIntegrationEquivalence.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.235,
+      "completed_at_utc": "2026-11-15T05:30:04.810982+00:00",
+      "log": ".scratch/recovery/VolumeIntegrationEquivalence-build.log"
+    },
+    {
+      "module": "ZeroVFVolumeClasses",
+      "source": "section 7/Integration7/ZeroVFVolumeClasses.lean",
+      "source_sha256": "2f683557a24569ae4af0b6af3d36fa5f26902890baa8fef3844edf24dbec6ef1",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/ZeroVFVolumeClasses.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/ZeroVFVolumeClasses.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 3.449,
+      "completed_at_utc": "2026-11-15T05:28:19.133515+00:00",
+      "log": ".scratch/recovery/ZeroVFVolumeClasses-build.log"
+    },
+    {
+      "module": "ZeroVFVolumeCoproductClasses",
+      "source": "section 7/Integration7/ZeroVFVolumeCoproductClasses.lean",
+      "source_sha256": "a7334feed0e269e970c52a9c42d6c40701132acce120f07809230841c2e519d0",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/ZeroVFVolumeCoproductClasses.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/ZeroVFVolumeCoproductClasses.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 3.531,
+      "completed_at_utc": "2026-11-15T05:32:56.359848+00:00",
+      "log": ".scratch/recovery/ZeroVFVolumeCoproductClasses-build.log"
+    },
+    {
+      "module": "ZeroVolumeIntegration",
+      "source": "section 7/Integration7/ZeroVolumeIntegration.lean",
+      "source_sha256": "81499cdb2905b567550a9cb733fab3a08bdfc78a60c74f0a64cfb190c4270c19",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/ZeroVolumeIntegration.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/ZeroVolumeIntegration.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 3.973,
+      "completed_at_utc": "2026-11-15T05:28:52.033982+00:00",
+      "log": ".scratch/recovery/ZeroVolumeIntegration-build.log"
+    }
+  ],
+  "completed_at_utc": "2026-11-15T05:43:52.354263+00:00"
+}

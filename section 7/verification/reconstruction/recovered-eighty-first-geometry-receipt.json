@@ -1,0 +1,423 @@
+{
+  "source_sha256": {
+    "section 7/Integration7/AllDegreeVFVolumeClassProducts.lean": "51fab94753dbaa38f8e8a3321e0fa4e757ee6e3f57a6a6068b220f98b38bb0f6",
+    "section 7/Integration7/GradedAdditiveEquivalenceSemiring.lean": "11f48742a4dada93cdd1403315387c373e3fbb3e0581232d0741f9adcfd6315e",
+    "section 7/Integration7/MixedDomainProductJacobians.lean": "dcac3db54a694314bdcda9d44e15054d7a1205aabbf3e5c1af90eb17a1befb60",
+    "section 7/Integration7/OrdinaryFiniteProductIsomorphisms.lean": "b950910c8bca4c5c0a2481e57a7ccf9946785ec98f459929a8f13ed6608add07",
+    "section 7/Integration7/PositiveVFVolumeClassProducts.lean": "aa871f47e207c384de0152abd787f8f0c4c5b5a981235d20d115e1045411a0fc",
+    "section 7/Integration7/PositiveVolumeIntegrationProducts.lean": "5f63c829123e3681ff1f0a188c463d501cd3b07a766dd2b8ab501212fec7e770",
+    "section 7/Integration7/VFAlmostEverywhereProductLeft.lean": "2c0b6b069ede1d77c60f2678b98261a50ec6a10c89d4508961f68e59ec4d7afb",
+    "section 7/Integration7/VFProductCofullDomains.lean": "589daff67fea4703e524b6e92c55e156d8f5b76ecf646e4956dc8a1b21ece227",
+    "section 7/Integration7/VFVolumeProductIsomorphisms.lean": "e36ea5a3521cd27af9a8213eb0fed8d527e8955c135b6adc3178eeedfef537d6",
+    "section 7/Integration7/VFVolumeProductRestrictions.lean": "f84133ee8bab24bd40b2f53788843dc1266d620e3f89eb7ce2ad58a00d049e6e",
+    "section 7/Integration7/VolumeIntegrationSemiringEquivalence.lean": "920ac980468091e66f3d797a40f04efba857a5bd696f8df38ef746d8ba9452e2",
+    "section 7/Integration7/VolumeLiftProductBijections.lean": "6283dcdb4f1a59830376cc70be3cde5ce68da5b0d4edf4166a4afa2da278ca2f",
+    "section 7/Integration7/VolumeLiftProductDomains.lean": "f5ca4fae867a9cd5be91262b4d0c32e4386b18caaea0023ed76dc03b08146b75",
+    "section 7/Integration7/ZeroCoefficientProductSymmetry.lean": "3b4970051ea9092bb7b8fb484ac473300f0469a7b1d5ddb2174d4c8c9e0671e2",
+    "section 7/Integration7/ZeroFactorVFVolumeClassProducts.lean": "96cdc0863c92eda5f73cdaa11f3ec28cdffa99e37e52f7b912540a338819c354",
+    "section 7/Integration7/ZeroFactorVFVolumeIsomorphisms.lean": "3569a95ed6a078339b00b7cf0704504c25302a469df204d98c75e6ee30ae4950",
+    "section 7/Integration7/ZeroFactorVFVolumeProducts.lean": "40115ea22a0c5558d3aad08f932a061d152a7349f246cbeee3fa001c128227f1",
+    "section 7/Integration7/ZeroFactorVolumeLiftProducts.lean": "628a51121ef65efd5b16e1d4cf4dd9570d979c1a0a1d56e656c1f7c6ce6d411a",
+    "section 7/Integration7/ZeroVFVolumeClassProducts.lean": "6377b5fd584b19b9616674afa624284621bb20e26a88ac28a3d6ecd6853ccb43"
+  },
+  "declarations": [
+    "IntegrationInACVF.Section7.volumeIntegrationEquivAsEquiv",
+    "IntegrationInACVF.Section7.vfVolumeClassesProduct",
+    "IntegrationInACVF.Section7.vf_volume_integration_product",
+    "IntegrationInACVF.Section7.vf_volume_classes_product_positive",
+    "IntegrationInACVF.Section7.vf_volume_classes_product_zero",
+    "IntegrationInACVF.Section7.vf_volume_classes_product_positive_zero",
+    "IntegrationInACVF.Section7.dependent_degree_map_heq",
+    "IntegrationInACVF.Section7.vf_volume_classes_product_zero_positive",
+    "IntegrationInACVF.Section7.gradedAddEquivGMul",
+    "IntegrationInACVF.Section7.gradedAddEquivGOne",
+    "IntegrationInACVF.Section7.gradedAddEquivSigma",
+    "IntegrationInACVF.Section7.graded_add_equiv_sigma_mul",
+    "IntegrationInACVF.Section7.graded_add_equiv_sigma_one",
+    "IntegrationInACVF.Section7.gradedAddEquivGSemiring",
+    "IntegrationInACVF.Section7.gradedAddEquivSemiringEquiv",
+    "IntegrationInACVF.Section7.mixedDomainProductMap",
+    "IntegrationInACVF.Section7.mixed_domain_product_map_bijective",
+    "IntegrationInACVF.Section7.mixed_domain_product_map_pair",
+    "IntegrationInACVF.Section7.is_vf_chart_at_mixed_domain_product",
+    "IntegrationInACVF.Section7.has_mixed_vf_jacobian_domain_product",
+    "IntegrationInACVF.Section7.ordinaryFiniteProductIso",
+    "IntegrationInACVF.Section7.positiveVFVolumeClassesProduct",
+    "IntegrationInACVF.Section7.positive_vf_volume_classes_product_class",
+    "IntegrationInACVF.Section7.positive_volume_lift_on_blowup_classes_product",
+    "IntegrationInACVF.Section7.positive_volume_integration_product",
+    "IntegrationInACVF.Section7.vf_almost_everywhere_product_left",
+    "IntegrationInACVF.Section7.vf_volume_product_cofull",
+    "IntegrationInACVF.Section7.VFVolumeIso.prod",
+    "IntegrationInACVF.Section7.mixed_product_domain_subset",
+    "IntegrationInACVF.Section7.vf_volume_product_restrict_density",
+    "IntegrationInACVF.Section7.vfVolumeProductRestrictionBijection",
+    "IntegrationInACVF.Section7.volumeIntegrationEquivWithMonoids",
+    "IntegrationInACVF.Section7.VFVolumeSemiring",
+    "IntegrationInACVF.Section7.vfVolumeGradedSemiringStructure",
+    "IntegrationInACVF.Section7.volumeGradedIntegrationEquiv",
+    "IntegrationInACVF.Section7.volume_graded_integration_of",
+    "IntegrationInACVF.Section7.vf_volume_semiring_of_mul_of",
+    "IntegrationInACVF.Section7.proposition_7_10",
+    "IntegrationInACVF.Section7.volume_graded_integration_lift",
+    "IntegrationInACVF.Section7.theorem_7_10",
+    "IntegrationInACVF.Section7.volumeLiftProductMap",
+    "IntegrationInACVF.Section7.volume_lift_product_map_bijective",
+    "IntegrationInACVF.Section7.volume_lift_product_map_density",
+    "IntegrationInACVF.Section7.volumeLiftProductBijection",
+    "IntegrationInACVF.Section7.volumeLiftProductIso",
+    "IntegrationInACVF.Section7.ordinary_lift_product_domain",
+    "IntegrationInACVF.Section7.positive_volume_blowup_class_heq_of_cast_iso",
+    "IntegrationInACVF.Section7.rv_volume_blowup_classes_zero_product_swap",
+    "IntegrationInACVF.Section7.positiveVFZeroCoefficientProduct",
+    "IntegrationInACVF.Section7.positive_volume_lift_zero_coefficient_product",
+    "IntegrationInACVF.Section7.positive_volume_integration_zero_coefficient_product",
+    "IntegrationInACVF.Section7.vf_product_cofull_left",
+    "IntegrationInACVF.Section7.vfVolumeZeroProductRestrictionBijection",
+    "IntegrationInACVF.Section7.VFVolumeIso.prod_zero",
+    "IntegrationInACVF.Section7.PositiveVFVolumeObject.prod_zero",
+    "IntegrationInACVF.Section7.positive_vf_zero_product_density_pair",
+    "IntegrationInACVF.Section7.preserves_vf_volume_zero_product",
+    "IntegrationInACVF.Section7.VFVolumeBijection.prod_zero",
+    "IntegrationInACVF.Section7.volumeLiftZeroProductMap",
+    "IntegrationInACVF.Section7.volume_lift_zero_product_map_bijective",
+    "IntegrationInACVF.Section7.volume_lift_zero_product_map_density",
+    "IntegrationInACVF.Section7.volumeLiftZeroProductBijection",
+    "IntegrationInACVF.Section7.ordinaryZeroLiftProductIso",
+    "IntegrationInACVF.Section7.zeroVFVolumeClassesProduct",
+    "IntegrationInACVF.Section7.zero_volume_lift_on_classes_product",
+    "IntegrationInACVF.Section7.zero_volume_integration_product"
+  ],
+  "manually_reviewed_lines": 1032,
+  "audit_log": ".scratch/recovery/recovered-eighty-first-geometry-types-axioms.log",
+  "status": "PASS actual source compilation, full type/axiom review and affected library integration",
+  "scope": "Theorem7.10 is proved: the graded integration semiring equivalence is compatible with actual positive Cartesian products, ordinary degree-zero products, and the geometric degree-zero coefficient action via ordinary full lifts. Propositions7.8 and7.9 remain established in all degrees. Original-base standing hypotheses are explicit; no Section5.8 input is added. Function integration7.11-7.12 and ring/normalized-coefficient applications7.13-7.15 remain open.",
+  "library_build_log": ".scratch/recovery/eighty-first-reconstruction-library-build.log",
+  "library_build_jobs_including_cached_dependencies": 11980,
+  "compilation": [
+    {
+      "module": "AllDegreeVFVolumeClassProducts",
+      "source": "section 7/Integration7/AllDegreeVFVolumeClassProducts.lean",
+      "source_sha256": "51fab94753dbaa38f8e8a3321e0fa4e757ee6e3f57a6a6068b220f98b38bb0f6",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/AllDegreeVFVolumeClassProducts.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/AllDegreeVFVolumeClassProducts.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 5.008,
+      "completed_at_utc": "2026-11-15T05:54:32.259374+00:00",
+      "log": ".scratch/recovery/AllDegreeVFVolumeClassProducts-build.log"
+    },
+    {
+      "module": "GradedAdditiveEquivalenceSemiring",
+      "source": "section 7/Integration7/GradedAdditiveEquivalenceSemiring.lean",
+      "source_sha256": "11f48742a4dada93cdd1403315387c373e3fbb3e0581232d0741f9adcfd6315e",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/GradedAdditiveEquivalenceSemiring.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/GradedAdditiveEquivalenceSemiring.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 1.601,
+      "completed_at_utc": "2026-11-15T05:57:29.099482+00:00",
+      "log": ".scratch/recovery/GradedAdditiveEquivalenceSemiring-build.log"
+    },
+    {
+      "module": "MixedDomainProductJacobians",
+      "source": "section 7/Integration7/MixedDomainProductJacobians.lean",
+      "source_sha256": "dcac3db54a694314bdcda9d44e15054d7a1205aabbf3e5c1af90eb17a1befb60",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/MixedDomainProductJacobians.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/MixedDomainProductJacobians.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.084,
+      "completed_at_utc": "2026-11-15T05:48:20.545618+00:00",
+      "log": ".scratch/recovery/MixedDomainProductJacobians-build.log"
+    },
+    {
+      "module": "OrdinaryFiniteProductIsomorphisms",
+      "source": "section 7/Integration7/OrdinaryFiniteProductIsomorphisms.lean",
+      "source_sha256": "b950910c8bca4c5c0a2481e57a7ccf9946785ec98f459929a8f13ed6608add07",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/OrdinaryFiniteProductIsomorphisms.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/OrdinaryFiniteProductIsomorphisms.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.222,
+      "completed_at_utc": "2026-11-15T05:50:38.095794+00:00",
+      "log": ".scratch/recovery/OrdinaryFiniteProductIsomorphisms-build.log"
+    },
+    {
+      "module": "PositiveVFVolumeClassProducts",
+      "source": "section 7/Integration7/PositiveVFVolumeClassProducts.lean",
+      "source_sha256": "aa871f47e207c384de0152abd787f8f0c4c5b5a981235d20d115e1045411a0fc",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/PositiveVFVolumeClassProducts.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/PositiveVFVolumeClassProducts.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 3.653,
+      "completed_at_utc": "2026-11-15T05:46:54.437694+00:00",
+      "log": ".scratch/recovery/PositiveVFVolumeClassProducts-build.log"
+    },
+    {
+      "module": "PositiveVolumeIntegrationProducts",
+      "source": "section 7/Integration7/PositiveVolumeIntegrationProducts.lean",
+      "source_sha256": "5f63c829123e3681ff1f0a188c463d501cd3b07a766dd2b8ab501212fec7e770",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/PositiveVolumeIntegrationProducts.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/PositiveVolumeIntegrationProducts.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.285,
+      "completed_at_utc": "2026-11-15T05:47:55.295392+00:00",
+      "log": ".scratch/recovery/PositiveVolumeIntegrationProducts-build.log"
+    },
+    {
+      "module": "VFAlmostEverywhereProductLeft",
+      "source": "section 7/Integration7/VFAlmostEverywhereProductLeft.lean",
+      "source_sha256": "2c0b6b069ede1d77c60f2678b98261a50ec6a10c89d4508961f68e59ec4d7afb",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/VFAlmostEverywhereProductLeft.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/VFAlmostEverywhereProductLeft.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 3.929,
+      "completed_at_utc": "2026-11-15T05:49:25.182422+00:00",
+      "log": ".scratch/recovery/VFAlmostEverywhereProductLeft-build.log"
+    },
+    {
+      "module": "VFProductCofullDomains",
+      "source": "section 7/Integration7/VFProductCofullDomains.lean",
+      "source_sha256": "589daff67fea4703e524b6e92c55e156d8f5b76ecf646e4956dc8a1b21ece227",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/VFProductCofullDomains.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/VFProductCofullDomains.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 3.361,
+      "completed_at_utc": "2026-11-15T05:44:57.051081+00:00",
+      "log": ".scratch/recovery/VFProductCofullDomains-build.log"
+    },
+    {
+      "module": "VFVolumeProductIsomorphisms",
+      "source": "section 7/Integration7/VFVolumeProductIsomorphisms.lean",
+      "source_sha256": "e36ea5a3521cd27af9a8213eb0fed8d527e8955c135b6adc3178eeedfef537d6",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/VFVolumeProductIsomorphisms.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/VFVolumeProductIsomorphisms.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 3.27,
+      "completed_at_utc": "2026-11-15T05:45:00.321049+00:00",
+      "log": ".scratch/recovery/VFVolumeProductIsomorphisms-build.log"
+    },
+    {
+      "module": "VFVolumeProductRestrictions",
+      "source": "section 7/Integration7/VFVolumeProductRestrictions.lean",
+      "source_sha256": "f84133ee8bab24bd40b2f53788843dc1266d620e3f89eb7ce2ad58a00d049e6e",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/VFVolumeProductRestrictions.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/VFVolumeProductRestrictions.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.734,
+      "completed_at_utc": "2026-11-15T05:44:53.689053+00:00",
+      "log": ".scratch/recovery/VFVolumeProductRestrictions-build.log"
+    },
+    {
+      "module": "VolumeIntegrationSemiringEquivalence",
+      "source": "section 7/Integration7/VolumeIntegrationSemiringEquivalence.lean",
+      "source_sha256": "920ac980468091e66f3d797a40f04efba857a5bd696f8df38ef746d8ba9452e2",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/VolumeIntegrationSemiringEquivalence.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/VolumeIntegrationSemiringEquivalence.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.934,
+      "completed_at_utc": "2026-11-15T05:57:34.034217+00:00",
+      "log": ".scratch/recovery/VolumeIntegrationSemiringEquivalence-build.log"
+    },
+    {
+      "module": "VolumeLiftProductBijections",
+      "source": "section 7/Integration7/VolumeLiftProductBijections.lean",
+      "source_sha256": "6283dcdb4f1a59830376cc70be3cde5ce68da5b0d4edf4166a4afa2da278ca2f",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/VolumeLiftProductBijections.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/VolumeLiftProductBijections.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.258,
+      "completed_at_utc": "2026-11-15T05:47:51.010067+00:00",
+      "log": ".scratch/recovery/VolumeLiftProductBijections-build.log"
+    },
+    {
+      "module": "VolumeLiftProductDomains",
+      "source": "section 7/Integration7/VolumeLiftProductDomains.lean",
+      "source_sha256": "f5ca4fae867a9cd5be91262b4d0c32e4386b18caaea0023ed76dc03b08146b75",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/VolumeLiftProductDomains.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/VolumeLiftProductDomains.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 3.991,
+      "completed_at_utc": "2026-11-15T05:46:50.784648+00:00",
+      "log": ".scratch/recovery/VolumeLiftProductDomains-build.log"
+    },
+    {
+      "module": "ZeroCoefficientProductSymmetry",
+      "source": "section 7/Integration7/ZeroCoefficientProductSymmetry.lean",
+      "source_sha256": "3b4970051ea9092bb7b8fb484ac473300f0469a7b1d5ddb2174d4c8c9e0671e2",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/ZeroCoefficientProductSymmetry.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/ZeroCoefficientProductSymmetry.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.279,
+      "completed_at_utc": "2026-11-15T05:53:04.770114+00:00",
+      "log": ".scratch/recovery/ZeroCoefficientProductSymmetry-build.log"
+    },
+    {
+      "module": "ZeroFactorVFVolumeClassProducts",
+      "source": "section 7/Integration7/ZeroFactorVFVolumeClassProducts.lean",
+      "source_sha256": "96cdc0863c92eda5f73cdaa11f3ec28cdffa99e37e52f7b912540a338819c354",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/ZeroFactorVFVolumeClassProducts.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/ZeroFactorVFVolumeClassProducts.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.53,
+      "completed_at_utc": "2026-11-15T05:52:12.485243+00:00",
+      "log": ".scratch/recovery/ZeroFactorVFVolumeClassProducts-build.log"
+    },
+    {
+      "module": "ZeroFactorVFVolumeIsomorphisms",
+      "source": "section 7/Integration7/ZeroFactorVFVolumeIsomorphisms.lean",
+      "source_sha256": "3569a95ed6a078339b00b7cf0704504c25302a469df204d98c75e6ee30ae4950",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/ZeroFactorVFVolumeIsomorphisms.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/ZeroFactorVFVolumeIsomorphisms.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.273,
+      "completed_at_utc": "2026-11-15T05:51:22.500066+00:00",
+      "log": ".scratch/recovery/ZeroFactorVFVolumeIsomorphisms-build.log"
+    },
+    {
+      "module": "ZeroFactorVFVolumeProducts",
+      "source": "section 7/Integration7/ZeroFactorVFVolumeProducts.lean",
+      "source_sha256": "40115ea22a0c5558d3aad08f932a061d152a7349f246cbeee3fa001c128227f1",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/ZeroFactorVFVolumeProducts.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/ZeroFactorVFVolumeProducts.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 3.456,
+      "completed_at_utc": "2026-11-15T05:49:28.638357+00:00",
+      "log": ".scratch/recovery/ZeroFactorVFVolumeProducts-build.log"
+    },
+    {
+      "module": "ZeroFactorVolumeLiftProducts",
+      "source": "section 7/Integration7/ZeroFactorVolumeLiftProducts.lean",
+      "source_sha256": "628a51121ef65efd5b16e1d4cf4dd9570d979c1a0a1d56e656c1f7c6ce6d411a",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/ZeroFactorVolumeLiftProducts.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/ZeroFactorVolumeLiftProducts.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 3.587,
+      "completed_at_utc": "2026-11-15T05:51:26.087179+00:00",
+      "log": ".scratch/recovery/ZeroFactorVolumeLiftProducts-build.log"
+    },
+    {
+      "module": "ZeroVFVolumeClassProducts",
+      "source": "section 7/Integration7/ZeroVFVolumeClassProducts.lean",
+      "source_sha256": "6377b5fd584b19b9616674afa624284621bb20e26a88ac28a3d6ecd6853ccb43",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/ZeroVFVolumeClassProducts.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/ZeroVFVolumeClassProducts.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 3.77,
+      "completed_at_utc": "2026-11-15T05:50:41.866294+00:00",
+      "log": ".scratch/recovery/ZeroVFVolumeClassProducts-build.log"
+    }
+  ],
+  "completed_at_utc": "2026-11-15T05:59:32.043259+00:00"
+}

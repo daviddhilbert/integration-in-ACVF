@@ -1,0 +1,434 @@
+{
+  "source_sha256": {
+    "section 7/Integration7/EmptyPullbackVolumeObjects.lean": "59ebe5bfa29312ed6aff620cfecc190a2b7ee2dfb20bcbf9e904f9cba99666d1",
+    "section 7/Integration7/FinitePullbackVolumeGluing.lean": "dd4eb35d9313200a611405fc660f960cfcd0b4e3c009ff102edbe4b652a9413d",
+    "section 7/Integration7/FinitePullbackVolumeUnions.lean": "46971ff1ca46da6a69dc79f721f75889fa05f788830a1350f3c5f2639b8e5936",
+    "section 7/Integration7/NativeFiniteMixedUnions.lean": "ac03eac27bd9a93c5b39f03410b104c22417d0af6865d8f32c4769536a60beab",
+    "section 7/Integration7/NativePreparedMixedPartitions.lean": "7e383118831eb195bb7c1dd6c089ca958413c672b45c772d2d33bdd4c3940279",
+    "section 7/Integration7/NativePreparedPartitionExistence.lean": "a969378825addf2a807c3002fbc5ac709c2b9042d57816c91948111589a4f10f",
+    "section 7/Integration7/NativeVolumeUnaryPartitions.lean": "76182b691922562eac74ad63bf6c5c6053c40f09c70b282fb66c172cb7d7d123",
+    "section 7/Integration7/PreparedPieceVolumeChains.lean": "4ab547ca92b0a744830688dbafc1054ebf3408e7f8afd6be5793cedfd824cd89",
+    "section 7/Integration7/PreparedVolumePartitionGluing.lean": "5df762620b2111319422857ef716a06b2090733b34cb675cd99691e8ed10e199",
+    "section 7/Integration7/PullbackOriginalVolumeClasses.lean": "08004c827fd018fcb4ccf788eb8028814212ebe809dff33f0c05c275b282db62",
+    "section 7/Integration7/PullbackUnaryChainVolumeComparison.lean": "e30fd5e75bac61d435df0211a255167aeb25bf4706df23bd14f6c36adf922c87",
+    "section 7/Integration7/PullbackVolumeKernel.lean": "a1c760dd8b5c50478cc3479f8067a74ec28fd59c3eec9cd53b16d565b9c5e277",
+    "section 7/Integration7/RelativeVolumeArbitraryContractions.lean": "ebd16a7118d5035380b10c97346b7680c842fe8074213fa5b459e4e1fd4e1040",
+    "section 7/Integration7/RetainedDensityGraphContractionComparisons.lean": "a27796e733cc29b5eeda3874906df2a123e9ce03d242d26f294d87ef31246daa",
+    "section 7/Integration7/SpecialPullbackVolumeComparisons.lean": "a490fff386f3efd42776212a53efbeb290b14c27948483ad0bdd1e9d31cf8704",
+    "section 7/Integration7/SpecialPullbackVolumeObjects.lean": "03f5b0d09a88d57a2ee0fbefc2054cc6d3584a4483aa5a992f2c63fa93bbd518",
+    "section 7/Integration7/SpecialRetainedVolumeChains.lean": "379de76bc5ece429a2d7e7017f98a40a57cc8f386f24618bd3abdcb132a0595b",
+    "section 7/Integration7/UnaryChainInverses.lean": "5bf9769560b2c28fa3a9d37c53be051fc0cf98eaa88b571c0ae0191ba2b80821",
+    "section 7/Integration7/UnaryChainVolumeContractions.lean": "ab3226b0c2c747bf5c85b991df220d1ca66a617cffdb7f4c7af14acb516d6464",
+    "section 7/Integration7/UnaryChainVolumeOperations.lean": "4e9976de333cfa412e4c01f3edd245b57ccb2cc945f98bc9ffe89e1483a63703",
+    "section 7/Integration7/UnaryChainVolumePreservation.lean": "9d48818cd4d4ce827dbc2c9117f7d01ede933a9002e9c003d7bef857c7d80d2a"
+  },
+  "declarations": [
+    "IntegrationInACVF.Section7.pullback_volume_essential_empty",
+    "IntegrationInACVF.Section7.CommonContextVolumeEquivalent.of_empty_essential",
+    "IntegrationInACVF.Section7.finite_pullback_volume_unions_compare",
+    "IntegrationInACVF.Section7.finite_pullback_volume_union_covers",
+    "IntegrationInACVF.Section7.finite_pullback_volume_partition_gluing",
+    "IntegrationInACVF.Section7.finitePullbackVolumePiece",
+    "IntegrationInACVF.Section7.finitePullbackVolumeUnion",
+    "IntegrationInACVF.Section7.finite_pullback_volume_union_split",
+    "IntegrationInACVF.Section7.nativeMixedFiniteUnionSet",
+    "IntegrationInACVF.Section7.native_mixed_union_empty",
+    "IntegrationInACVF.Section7.native_mixed_union_insert",
+    "IntegrationInACVF.Section7.native_mixed_union_definable",
+    "IntegrationInACVF.Section7.nativeMixedFiniteUnion",
+    "IntegrationInACVF.Section7.native_mixed_union_subset",
+    "IntegrationInACVF.Section7.native_mixed_union_disjoint",
+    "IntegrationInACVF.Section7.native_mixed_union_pullback",
+    "IntegrationInACVF.Section7.NativePreparedMixedPartition",
+    "IntegrationInACVF.Section7.native_prepared_mixed_partition_exists",
+    "IntegrationInACVF.Section7.NativeVolumeUnaryPartition",
+    "IntegrationInACVF.Section7.native_volume_unary_partition_exists",
+    "IntegrationInACVF.Section7.prepared_piece_volume_chain_exists",
+    "IntegrationInACVF.Section7.prepared_volume_partition_gluing",
+    "IntegrationInACVF.Section7.pullback_original_volume_contraction_comparison",
+    "IntegrationInACVF.Section7.pullback_unary_chain_volume_comparison",
+    "IntegrationInACVF.Section7.pullback_volume_bijection_kernel",
+    "IntegrationInACVF.Section7.relative_volume_contractions_all_orders",
+    "IntegrationInACVF.Section7.retained_density_graph_contraction_comparison",
+    "IntegrationInACVF.Section7.special_pullback_volume_comparison",
+    "IntegrationInACVF.Section7.special_target_finite_labels",
+    "IntegrationInACVF.Section7.special_pullback_volume_finite",
+    "IntegrationInACVF.Section7.specialPullbackVolumeGammaObject",
+    "IntegrationInACVF.Section7.special_retained_density_nonzero",
+    "IntegrationInACVF.Section7.specialRetainedVolumeForm",
+    "IntegrationInACVF.Section7.special_unary_chain_volume_data",
+    "IntegrationInACVF.Section5.UnaryChain.inverse",
+    "IntegrationInACVF.Section5.UnaryChain.inverse_apply",
+    "IntegrationInACVF.Section5.UnaryChain.inverse_to_map",
+    "IntegrationInACVF.Section7.unary_chain_volume_contractions_compare",
+    "IntegrationInACVF.Section7.unary_chain_volume_data_inverse",
+    "IntegrationInACVF.Section7.unary_chain_volume_data_append",
+    "IntegrationInACVF.Section7.unary_chain_volume_data_preserves"
+  ],
+  "manually_reviewed_lines": 1003,
+  "audit_log": ".scratch/recovery/recovered-seventy-eighth-geometry-types-axioms.log",
+  "status": "PASS actual source compilation, full type/axiom review and affected library integration",
+  "scope": "Actual unary factor chains with transported original densities preserve volume contraction classes. Finite simultaneous special preparation, genuine restricted special bijections and actual pullback-volume gluing prove pullback_volume_bijection_kernel for full volume-preserving bijections of positive-dimensional RV-pullbacks. The almost-everywhere bridge of Proposition7.8 and7.9-7.15 remain open.",
+  "library_build_log": ".scratch/recovery/seventy-eighth-reconstruction-library-build.log",
+  "library_build_jobs_including_cached_dependencies": 11915,
+  "compilation": [
+    {
+      "module": "EmptyPullbackVolumeObjects",
+      "source": "section 7/Integration7/EmptyPullbackVolumeObjects.lean",
+      "source_sha256": "59ebe5bfa29312ed6aff620cfecc190a2b7ee2dfb20bcbf9e904f9cba99666d1",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/EmptyPullbackVolumeObjects.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/EmptyPullbackVolumeObjects.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.397,
+      "completed_at_utc": "2026-11-15T04:50:07.634878+00:00",
+      "log": ".scratch/recovery/EmptyPullbackVolumeObjects-build.log"
+    },
+    {
+      "module": "FinitePullbackVolumeGluing",
+      "source": "section 7/Integration7/FinitePullbackVolumeGluing.lean",
+      "source_sha256": "dd4eb35d9313200a611405fc660f960cfcd0b4e3c009ff102edbe4b652a9413d",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/FinitePullbackVolumeGluing.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/FinitePullbackVolumeGluing.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 6.178,
+      "completed_at_utc": "2026-11-15T04:51:32.707972+00:00",
+      "log": ".scratch/recovery/FinitePullbackVolumeGluing-build.log"
+    },
+    {
+      "module": "FinitePullbackVolumeUnions",
+      "source": "section 7/Integration7/FinitePullbackVolumeUnions.lean",
+      "source_sha256": "46971ff1ca46da6a69dc79f721f75889fa05f788830a1350f3c5f2639b8e5936",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/FinitePullbackVolumeUnions.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/FinitePullbackVolumeUnions.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.194,
+      "completed_at_utc": "2026-11-15T04:48:30.143648+00:00",
+      "log": ".scratch/recovery/FinitePullbackVolumeUnions-build.log"
+    },
+    {
+      "module": "NativeFiniteMixedUnions",
+      "source": "section 7/Integration7/NativeFiniteMixedUnions.lean",
+      "source_sha256": "ac03eac27bd9a93c5b39f03410b104c22417d0af6865d8f32c4769536a60beab",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/NativeFiniteMixedUnions.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/NativeFiniteMixedUnions.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 3.567,
+      "completed_at_utc": "2026-11-15T04:47:49.052351+00:00",
+      "log": ".scratch/recovery/NativeFiniteMixedUnions-build.log"
+    },
+    {
+      "module": "NativePreparedMixedPartitions",
+      "source": "section 7/Integration7/NativePreparedMixedPartitions.lean",
+      "source_sha256": "7e383118831eb195bb7c1dd6c089ca958413c672b45c772d2d33bdd4c3940279",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/NativePreparedMixedPartitions.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/NativePreparedMixedPartitions.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 3.533,
+      "completed_at_utc": "2026-11-15T04:47:52.586065+00:00",
+      "log": ".scratch/recovery/NativePreparedMixedPartitions-build.log"
+    },
+    {
+      "module": "NativePreparedPartitionExistence",
+      "source": "section 7/Integration7/NativePreparedPartitionExistence.lean",
+      "source_sha256": "a969378825addf2a807c3002fbc5ac709c2b9042d57816c91948111589a4f10f",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/NativePreparedPartitionExistence.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/NativePreparedPartitionExistence.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.632,
+      "completed_at_utc": "2026-11-15T04:49:02.019679+00:00",
+      "log": ".scratch/recovery/NativePreparedPartitionExistence-build.log"
+    },
+    {
+      "module": "NativeVolumeUnaryPartitions",
+      "source": "section 7/Integration7/NativeVolumeUnaryPartitions.lean",
+      "source_sha256": "76182b691922562eac74ad63bf6c5c6053c40f09c70b282fb66c172cb7d7d123",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/NativeVolumeUnaryPartitions.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/NativeVolumeUnaryPartitions.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.397,
+      "completed_at_utc": "2026-11-15T04:55:32.880824+00:00",
+      "log": ".scratch/recovery/NativeVolumeUnaryPartitions-build.log"
+    },
+    {
+      "module": "PreparedPieceVolumeChains",
+      "source": "section 7/Integration7/PreparedPieceVolumeChains.lean",
+      "source_sha256": "4ab547ca92b0a744830688dbafc1054ebf3408e7f8afd6be5793cedfd824cd89",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/PreparedPieceVolumeChains.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/PreparedPieceVolumeChains.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.2,
+      "completed_at_utc": "2026-11-15T04:59:55.606826+00:00",
+      "log": ".scratch/recovery/PreparedPieceVolumeChains-build.log"
+    },
+    {
+      "module": "PreparedVolumePartitionGluing",
+      "source": "section 7/Integration7/PreparedVolumePartitionGluing.lean",
+      "source_sha256": "5df762620b2111319422857ef716a06b2090733b34cb675cd99691e8ed10e199",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/PreparedVolumePartitionGluing.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/PreparedVolumePartitionGluing.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.94,
+      "completed_at_utc": "2026-11-15T05:00:28.194831+00:00",
+      "log": ".scratch/recovery/PreparedVolumePartitionGluing-build.log"
+    },
+    {
+      "module": "PullbackOriginalVolumeClasses",
+      "source": "section 7/Integration7/PullbackOriginalVolumeClasses.lean",
+      "source_sha256": "08004c827fd018fcb4ccf788eb8028814212ebe809dff33f0c05c275b282db62",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/PullbackOriginalVolumeClasses.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/PullbackOriginalVolumeClasses.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 3.833,
+      "completed_at_utc": "2026-11-15T04:43:06.936217+00:00",
+      "log": ".scratch/recovery/PullbackOriginalVolumeClasses-build.log"
+    },
+    {
+      "module": "PullbackUnaryChainVolumeComparison",
+      "source": "section 7/Integration7/PullbackUnaryChainVolumeComparison.lean",
+      "source_sha256": "e30fd5e75bac61d435df0211a255167aeb25bf4706df23bd14f6c36adf922c87",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/PullbackUnaryChainVolumeComparison.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/PullbackUnaryChainVolumeComparison.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.609,
+      "completed_at_utc": "2026-11-15T04:43:42.560200+00:00",
+      "log": ".scratch/recovery/PullbackUnaryChainVolumeComparison-build.log"
+    },
+    {
+      "module": "PullbackVolumeKernel",
+      "source": "section 7/Integration7/PullbackVolumeKernel.lean",
+      "source_sha256": "a1c760dd8b5c50478cc3479f8067a74ec28fd59c3eec9cd53b16d565b9c5e277",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/PullbackVolumeKernel.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/PullbackVolumeKernel.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.783,
+      "completed_at_utc": "2026-11-15T05:00:58.225329+00:00",
+      "log": ".scratch/recovery/PullbackVolumeKernel-build.log"
+    },
+    {
+      "module": "RelativeVolumeArbitraryContractions",
+      "source": "section 7/Integration7/RelativeVolumeArbitraryContractions.lean",
+      "source_sha256": "ebd16a7118d5035380b10c97346b7680c842fe8074213fa5b459e4e1fd4e1040",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/RelativeVolumeArbitraryContractions.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/RelativeVolumeArbitraryContractions.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.873,
+      "completed_at_utc": "2026-11-15T04:38:45.507373+00:00",
+      "log": ".scratch/recovery/RelativeVolumeArbitraryContractions-build.log"
+    },
+    {
+      "module": "RetainedDensityGraphContractionComparisons",
+      "source": "section 7/Integration7/RetainedDensityGraphContractionComparisons.lean",
+      "source_sha256": "a27796e733cc29b5eeda3874906df2a123e9ce03d242d26f294d87ef31246daa",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/RetainedDensityGraphContractionComparisons.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/RetainedDensityGraphContractionComparisons.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.41,
+      "completed_at_utc": "2026-11-15T04:43:03.102369+00:00",
+      "log": ".scratch/recovery/RetainedDensityGraphContractionComparisons-build.log"
+    },
+    {
+      "module": "SpecialPullbackVolumeComparisons",
+      "source": "section 7/Integration7/SpecialPullbackVolumeComparisons.lean",
+      "source_sha256": "a490fff386f3efd42776212a53efbeb290b14c27948483ad0bdd1e9d31cf8704",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/SpecialPullbackVolumeComparisons.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/SpecialPullbackVolumeComparisons.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 5.099,
+      "completed_at_utc": "2026-11-15T04:57:00.398476+00:00",
+      "log": ".scratch/recovery/SpecialPullbackVolumeComparisons-build.log"
+    },
+    {
+      "module": "SpecialPullbackVolumeObjects",
+      "source": "section 7/Integration7/SpecialPullbackVolumeObjects.lean",
+      "source_sha256": "03f5b0d09a88d57a2ee0fbefc2054cc6d3584a4483aa5a992f2c63fa93bbd518",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/SpecialPullbackVolumeObjects.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/SpecialPullbackVolumeObjects.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.345,
+      "completed_at_utc": "2026-11-15T04:56:35.835218+00:00",
+      "log": ".scratch/recovery/SpecialPullbackVolumeObjects-build.log"
+    },
+    {
+      "module": "SpecialRetainedVolumeChains",
+      "source": "section 7/Integration7/SpecialRetainedVolumeChains.lean",
+      "source_sha256": "379de76bc5ece429a2d7e7017f98a40a57cc8f386f24618bd3abdcb132a0595b",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/SpecialRetainedVolumeChains.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/SpecialRetainedVolumeChains.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.351,
+      "completed_at_utc": "2026-11-15T04:54:14.400516+00:00",
+      "log": ".scratch/recovery/SpecialRetainedVolumeChains-build.log"
+    },
+    {
+      "module": "UnaryChainInverses",
+      "source": "section 7/Integration7/UnaryChainInverses.lean",
+      "source_sha256": "5bf9769560b2c28fa3a9d37c53be051fc0cf98eaa88b571c0ae0191ba2b80821",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/UnaryChainInverses.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/UnaryChainInverses.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.217,
+      "completed_at_utc": "2026-11-15T04:53:23.721784+00:00",
+      "log": ".scratch/recovery/UnaryChainInverses-build.log"
+    },
+    {
+      "module": "UnaryChainVolumeContractions",
+      "source": "section 7/Integration7/UnaryChainVolumeContractions.lean",
+      "source_sha256": "ab3226b0c2c747bf5c85b991df220d1ca66a617cffdb7f4c7af14acb516d6464",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/UnaryChainVolumeContractions.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/UnaryChainVolumeContractions.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.615,
+      "completed_at_utc": "2026-11-15T04:39:56.506056+00:00",
+      "log": ".scratch/recovery/UnaryChainVolumeContractions-build.log"
+    },
+    {
+      "module": "UnaryChainVolumeOperations",
+      "source": "section 7/Integration7/UnaryChainVolumeOperations.lean",
+      "source_sha256": "4e9976de333cfa412e4c01f3edd245b57ccb2cc945f98bc9ffe89e1483a63703",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/UnaryChainVolumeOperations.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/UnaryChainVolumeOperations.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 3.612,
+      "completed_at_utc": "2026-11-15T04:53:27.334309+00:00",
+      "log": ".scratch/recovery/UnaryChainVolumeOperations-build.log"
+    },
+    {
+      "module": "UnaryChainVolumePreservation",
+      "source": "section 7/Integration7/UnaryChainVolumePreservation.lean",
+      "source_sha256": "9d48818cd4d4ce827dbc2c9117f7d01ede933a9002e9c003d7bef857c7d80d2a",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/UnaryChainVolumePreservation.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/UnaryChainVolumePreservation.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.309,
+      "completed_at_utc": "2026-11-15T04:51:32.530238+00:00",
+      "log": ".scratch/recovery/UnaryChainVolumePreservation-build.log"
+    }
+  ],
+  "completed_at_utc": "2026-11-15T05:02:37.960041+00:00"
+}
