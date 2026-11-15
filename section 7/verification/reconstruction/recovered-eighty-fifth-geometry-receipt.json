@@ -1,0 +1,286 @@
+{
+  "source_sha256": {
+    "section 7/Integration7/CanonicalVolumeIntegralContractionFormula.lean": "218aba7717e70d0f0c1b322c4d1a2516007be51ee2026be5a0cacc0cadff0904",
+    "section 7/Integration7/CoordinateVolumeIntegralNormalizers.lean": "3938af80c00ee4a80ceeed849885b18d93aa38f33683c6aa03e96411195bff8a",
+    "section 7/Integration7/NativeCoordinateFamilyRowIdentifications.lean": "ee5c0d380fe8a1a5fac631ef9c559bd026e8b4f6a5e7c9ef2c25cbac51276c77",
+    "section 7/Integration7/NonemptyVolumeCoordinateProjections.lean": "d9795d812e5b7c1e2ed76f8448514da9d1d6c30840dd475c6c64ee90ceadbd62",
+    "section 7/Integration7/PermutedDensityGraphFamilyIntegrals.lean": "918a51b79178a56a1abaa350978481042f5ea7d4167cdd002a93c4e76ac048f5",
+    "section 7/Integration7/PermutedNativeContractionVolumeCharts.lean": "73d546a35124552bdf5a936c316362e666eca8da30d093090e54194c150ac884",
+    "section 7/Integration7/PositiveCoordinateVolumeFubini.lean": "c69ad660081607dd68e83530fcebc511ec0a423d5ea425af6d2dbc90d103084b",
+    "section 7/Integration7/PositiveSetCoordinateVolumeFubini.lean": "e522da3f89ff4704a61e8639fef958212d7ff09becd2a3e6d706c6f76b6ce182",
+    "section 7/Integration7/SelectedIntegralNormalizationIsomorphisms.lean": "ecb0bc7b0ca90c1e28069c56b578481502d2fee0d0d4fbc82e1e86e362af19b5",
+    "section 7/Integration7/VolumeClassCoordinatePermutations.lean": "ac9c32c660b9a12fc1381cba9e1d8ee51bc1ab4865f0e39e2686a73e74cae028",
+    "section 7/Integration7/VolumeClassDegreeReindexing.lean": "5bf553a4cacc19bf588c104fdedfef63ba88f76caba0d218a7d46be3a796e46e",
+    "section 7/Integration7/VolumeFunctionIntegralCoordinateNormalization.lean": "aa1d64511348880d1f29ca33e509ebd9cbc30e6300b0aa922a04f32aab40a3bb",
+    "section 7/Integration7/VolumeFunctionIntegralPermutationCovariance.lean": "0d66f47aa60065270d8b6a89db8bc48ead7bcaa3ad9c13a91209d252be64e440"
+  },
+  "declarations": [
+    "IntegrationInACVF.Section7.selected_family_canonical_integral_standard_formula",
+    "IntegrationInACVF.Section7.append_volume_degree_split",
+    "IntegrationInACVF.Section7.coordinateVolumeIntegralNormalizer",
+    "IntegrationInACVF.Section7.ae_rv_volume_integral_reindex_base_heq",
+    "IntegrationInACVF.Section7.nativeCoordinateFamilyRowIso",
+    "IntegrationInACVF.Section7.nonempty_coordinate_card_positive",
+    "IntegrationInACVF.Section7.nonemptyVolumeCoordinateProjection",
+    "IntegrationInACVF.Section7.nonempty_volume_coordinate_projection_retained",
+    "IntegrationInACVF.Section7.nonempty_volume_coordinate_projection_range",
+    "IntegrationInACVF.Section7.permutedFamilyDensityGraphRowIso",
+    "IntegrationInACVF.Section7.permuted_density_graph_native_carrier",
+    "IntegrationInACVF.Section7.permuted_density_graph_family_integral_formula",
+    "IntegrationInACVF.Section7.identityContractionOnPermutedSource",
+    "IntegrationInACVF.Section7.identity_contraction_permuted_source_volume",
+    "IntegrationInACVF.Section7.selected_permuted_source_volume_index",
+    "IntegrationInACVF.Section7.permutedNativeContractionVolumeIso",
+    "IntegrationInACVF.Section7.normalizedCoordinateVolumeIntegral",
+    "IntegrationInACVF.Section7.normalized_coordinate_volume_integral_eq_total",
+    "IntegrationInACVF.Section7.positive_coordinate_volume_fubini",
+    "IntegrationInACVF.Section7.positive_set_coordinate_volume_fubini",
+    "IntegrationInACVF.Section7.selectedIntegralNormalizationIso",
+    "IntegrationInACVF.Section7.VolumeBlowupEquivalent.permuteVolume",
+    "IntegrationInACVF.Section7.positiveVolumeClassPermute",
+    "IntegrationInACVF.Section7.positive_volume_class_permute_representative",
+    "IntegrationInACVF.Section7.volumePermutationCancelIso",
+    "IntegrationInACVF.Section7.positiveVolumeClassPermutationEquiv",
+    "IntegrationInACVF.Section7.positiveVolumeClassReindexDegree",
+    "IntegrationInACVF.Section7.positive_volume_class_reindex_degree_representative",
+    "IntegrationInACVF.Section7.positive_volume_class_reindex_degree_heq",
+    "IntegrationInACVF.Section7.positiveVolumeClassDegreeReindexEquiv",
+    "IntegrationInACVF.Section7.canonicalFromAppendedVolumeClass",
+    "IntegrationInACVF.Section7.selected_family_appended_canonical_coordinate_formula",
+    "IntegrationInACVF.Section7.ae_rv_volume_integral_coordinate_formula",
+    "IntegrationInACVF.Section7.ae_rv_volume_integral_from_appended",
+    "IntegrationInACVF.Section7.selected_family_canonical_integral_permute_base",
+    "IntegrationInACVF.Section7.ae_rv_volume_function_integral_permute_base",
+    "IntegrationInACVF.Section7.ae_rv_volume_function_integral_restore_order"
+  ],
+  "manually_reviewed_lines": 610,
+  "audit_log": ".scratch/recovery/recovered-eighty-fifth-geometry-types-axioms.log",
+  "status": "PASS actual source compilation, full type/axiom review and affected library integration",
+  "scope": "Propositions7.8-7.9 and Theorem7.10 remain established. Positive homogeneous almost-everywhere function integrals and actual coordinate pushforwards satisfy Fubini for all nonempty coordinate subsets after explicit coordinate-only normalization to the original global RV order. VF permutation covariance and canonical/appended integral identification are proved by actual volume charts. Full pointwise fibre identification, the complete function semimodule, ordinary degree-zero coefficients and7.12 remain open. Universal-groupification ring equivalence is established; principal-relation and normalized-coefficient parts of7.13-7.15 remain open.",
+  "library_build_log": ".scratch/recovery/eighty-fifth-reconstruction-library-build.log",
+  "library_build_jobs_including_cached_dependencies": 12040,
+  "compilation": [
+    {
+      "module": "CanonicalVolumeIntegralContractionFormula",
+      "source": "section 7/Integration7/CanonicalVolumeIntegralContractionFormula.lean",
+      "source_sha256": "218aba7717e70d0f0c1b322c4d1a2516007be51ee2026be5a0cacc0cadff0904",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/CanonicalVolumeIntegralContractionFormula.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/CanonicalVolumeIntegralContractionFormula.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.347,
+      "completed_at_utc": "2026-11-15T06:57:56.880727+00:00",
+      "log": ".scratch/recovery/CanonicalVolumeIntegralContractionFormula-build.log"
+    },
+    {
+      "module": "CoordinateVolumeIntegralNormalizers",
+      "source": "section 7/Integration7/CoordinateVolumeIntegralNormalizers.lean",
+      "source_sha256": "3938af80c00ee4a80ceeed849885b18d93aa38f33683c6aa03e96411195bff8a",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/CoordinateVolumeIntegralNormalizers.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/CoordinateVolumeIntegralNormalizers.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 6.584,
+      "completed_at_utc": "2026-11-15T07:04:39.789662+00:00",
+      "log": ".scratch/recovery/CoordinateVolumeIntegralNormalizers-build.log"
+    },
+    {
+      "module": "NativeCoordinateFamilyRowIdentifications",
+      "source": "section 7/Integration7/NativeCoordinateFamilyRowIdentifications.lean",
+      "source_sha256": "ee5c0d380fe8a1a5fac631ef9c559bd026e8b4f6a5e7c9ef2c25cbac51276c77",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/NativeCoordinateFamilyRowIdentifications.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/NativeCoordinateFamilyRowIdentifications.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.46,
+      "completed_at_utc": "2026-11-15T06:57:57.001183+00:00",
+      "log": ".scratch/recovery/NativeCoordinateFamilyRowIdentifications-build.log"
+    },
+    {
+      "module": "NonemptyVolumeCoordinateProjections",
+      "source": "section 7/Integration7/NonemptyVolumeCoordinateProjections.lean",
+      "source_sha256": "d9795d812e5b7c1e2ed76f8448514da9d1d6c30840dd475c6c64ee90ceadbd62",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/NonemptyVolumeCoordinateProjections.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/NonemptyVolumeCoordinateProjections.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.486,
+      "completed_at_utc": "2026-11-15T07:07:18.909930+00:00",
+      "log": ".scratch/recovery/NonemptyVolumeCoordinateProjections-build.log"
+    },
+    {
+      "module": "PermutedDensityGraphFamilyIntegrals",
+      "source": "section 7/Integration7/PermutedDensityGraphFamilyIntegrals.lean",
+      "source_sha256": "918a51b79178a56a1abaa350978481042f5ea7d4167cdd002a93c4e76ac048f5",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/PermutedDensityGraphFamilyIntegrals.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/PermutedDensityGraphFamilyIntegrals.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 6.291,
+      "completed_at_utc": "2026-11-15T06:58:52.531395+00:00",
+      "log": ".scratch/recovery/PermutedDensityGraphFamilyIntegrals-build.log"
+    },
+    {
+      "module": "PermutedNativeContractionVolumeCharts",
+      "source": "section 7/Integration7/PermutedNativeContractionVolumeCharts.lean",
+      "source_sha256": "73d546a35124552bdf5a936c316362e666eca8da30d093090e54194c150ac884",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/PermutedNativeContractionVolumeCharts.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/PermutedNativeContractionVolumeCharts.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 5.247,
+      "completed_at_utc": "2026-11-15T07:00:40.109295+00:00",
+      "log": ".scratch/recovery/PermutedNativeContractionVolumeCharts-build.log"
+    },
+    {
+      "module": "PositiveCoordinateVolumeFubini",
+      "source": "section 7/Integration7/PositiveCoordinateVolumeFubini.lean",
+      "source_sha256": "c69ad660081607dd68e83530fcebc511ec0a423d5ea425af6d2dbc90d103084b",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/PositiveCoordinateVolumeFubini.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/PositiveCoordinateVolumeFubini.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 5.605,
+      "completed_at_utc": "2026-11-15T07:04:45.395158+00:00",
+      "log": ".scratch/recovery/PositiveCoordinateVolumeFubini-build.log"
+    },
+    {
+      "module": "PositiveSetCoordinateVolumeFubini",
+      "source": "section 7/Integration7/PositiveSetCoordinateVolumeFubini.lean",
+      "source_sha256": "e522da3f89ff4704a61e8639fef958212d7ff09becd2a3e6d706c6f76b6ce182",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/PositiveSetCoordinateVolumeFubini.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/PositiveSetCoordinateVolumeFubini.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.463,
+      "completed_at_utc": "2026-11-15T07:07:23.373699+00:00",
+      "log": ".scratch/recovery/PositiveSetCoordinateVolumeFubini-build.log"
+    },
+    {
+      "module": "SelectedIntegralNormalizationIsomorphisms",
+      "source": "section 7/Integration7/SelectedIntegralNormalizationIsomorphisms.lean",
+      "source_sha256": "ecb0bc7b0ca90c1e28069c56b578481502d2fee0d0d4fbc82e1e86e362af19b5",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/SelectedIntegralNormalizationIsomorphisms.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/SelectedIntegralNormalizationIsomorphisms.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 6.314,
+      "completed_at_utc": "2026-11-15T07:02:27.388562+00:00",
+      "log": ".scratch/recovery/SelectedIntegralNormalizationIsomorphisms-build.log"
+    },
+    {
+      "module": "VolumeClassCoordinatePermutations",
+      "source": "section 7/Integration7/VolumeClassCoordinatePermutations.lean",
+      "source_sha256": "ac9c32c660b9a12fc1381cba9e1d8ee51bc1ab4865f0e39e2686a73e74cae028",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/VolumeClassCoordinatePermutations.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/VolumeClassCoordinatePermutations.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.214,
+      "completed_at_utc": "2026-11-15T06:56:27.503073+00:00",
+      "log": ".scratch/recovery/VolumeClassCoordinatePermutations-build.log"
+    },
+    {
+      "module": "VolumeClassDegreeReindexing",
+      "source": "section 7/Integration7/VolumeClassDegreeReindexing.lean",
+      "source_sha256": "5bf553a4cacc19bf588c104fdedfef63ba88f76caba0d218a7d46be3a796e46e",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/VolumeClassDegreeReindexing.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/VolumeClassDegreeReindexing.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 5.33,
+      "completed_at_utc": "2026-11-15T07:02:26.397645+00:00",
+      "log": ".scratch/recovery/VolumeClassDegreeReindexing-build.log"
+    },
+    {
+      "module": "VolumeFunctionIntegralCoordinateNormalization",
+      "source": "section 7/Integration7/VolumeFunctionIntegralCoordinateNormalization.lean",
+      "source_sha256": "aa1d64511348880d1f29ca33e509ebd9cbc30e6300b0aa922a04f32aab40a3bb",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/VolumeFunctionIntegralCoordinateNormalization.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/VolumeFunctionIntegralCoordinateNormalization.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 6.909,
+      "completed_at_utc": "2026-11-15T07:03:29.713732+00:00",
+      "log": ".scratch/recovery/VolumeFunctionIntegralCoordinateNormalization-build.log"
+    },
+    {
+      "module": "VolumeFunctionIntegralPermutationCovariance",
+      "source": "section 7/Integration7/VolumeFunctionIntegralPermutationCovariance.lean",
+      "source_sha256": "0d66f47aa60065270d8b6a89db8bc48ead7bcaa3ad9c13a91209d252be64e440",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/VolumeFunctionIntegralPermutationCovariance.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/VolumeFunctionIntegralPermutationCovariance.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.951,
+      "completed_at_utc": "2026-11-15T07:01:55.630813+00:00",
+      "log": ".scratch/recovery/VolumeFunctionIntegralPermutationCovariance-build.log"
+    }
+  ],
+  "completed_at_utc": "2026-11-15T07:09:08.163673+00:00"
+}

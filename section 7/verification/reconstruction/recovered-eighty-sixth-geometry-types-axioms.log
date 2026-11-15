@@ -1,0 +1,1022 @@
+@IntegrationInACVF.Section7.ae_selected_volume_family_sum_congr : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {n a b c d k : Nat} (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M)
+  (F : IntegrationInACVF.Section7.SelectedVFVolumeFamily C (HAdd.hAdd.{0, 0, 0} n 1) a k)
+  (F' : IntegrationInACVF.Section7.SelectedVFVolumeFamily C (HAdd.hAdd.{0, 0, 0} n 1) b k)
+  (G : IntegrationInACVF.Section7.SelectedVFVolumeFamily C (HAdd.hAdd.{0, 0, 0} n 1) c k)
+  (G' : IntegrationInACVF.Section7.SelectedVFVolumeFamily C (HAdd.hAdd.{0, 0, 0} n 1) d k),
+  IntegrationInACVF.Section7.AERVVolumeFunctionEquivalent hc C (Sigma.mk.{0, 0} a F) (Sigma.mk.{0, 0} b F') →
+    IntegrationInACVF.Section7.AERVVolumeFunctionEquivalent hc C (Sigma.mk.{0, 0} c G) (Sigma.mk.{0, 0} d G') →
+      IntegrationInACVF.Section7.AERVVolumeFunctionEquivalent hc C
+        (Sigma.mk.{0, 0}
+          (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} 1 (HAdd.hAdd.{0, 0, 0} a c)) (HAdd.hAdd.{0, 0, 0} k 1))
+          (IntegrationInACVF.Section7.selectedVolumeFamilySum F G))
+        (Sigma.mk.{0, 0}
+          (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} 1 (HAdd.hAdd.{0, 0, 0} b d)) (HAdd.hAdd.{0, 0, 0} k 1))
+          (IntegrationInACVF.Section7.selectedVolumeFamilySum F' G'))
+'IntegrationInACVF.Section7.ae_selected_volume_family_sum_congr' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.aeRVVolumeFunctionAdd : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        (C : SpecialTransformations.Section3.BaseContext M) →
+          (n k : Nat) → Add.{0} (IntegrationInACVF.Section7.AERVVolumeFunction hc C n k)
+'IntegrationInACVF.Section7.aeRVVolumeFunctionAdd' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@IntegrationInACVF.Section7.aeRVVolumeFunctionZero : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        (C : SpecialTransformations.Section3.BaseContext M) →
+          (n k : Nat) → Zero.{0} (IntegrationInACVF.Section7.AERVVolumeFunction hc C n k)
+'IntegrationInACVF.Section7.aeRVVolumeFunctionZero' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@IntegrationInACVF.Section7.ae_rv_volume_function_add_representatives : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {n k : Nat}
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M)
+  (F G : IntegrationInACVF.Section7.SelectedVolumeFunctionPresentation C (HAdd.hAdd.{0, 0, 0} n 1) k),
+  Eq.{1}
+    (HAdd.hAdd.{0, 0, 0} (Quotient.mk.{1} (IntegrationInACVF.Section7.aeRVVolumeFunctionSetoid hc C n k) F)
+      (Quotient.mk.{1} (IntegrationInACVF.Section7.aeRVVolumeFunctionSetoid hc C n k) G))
+    (Quotient.mk.{1} (IntegrationInACVF.Section7.aeRVVolumeFunctionSetoid hc C n k)
+      (Sigma.mk.{0, 0}
+        (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} 1 (HAdd.hAdd.{0, 0, 0} (Sigma.fst.{0, 0} F) (Sigma.fst.{0, 0} G)))
+          (HAdd.hAdd.{0, 0, 0} k 1))
+        (IntegrationInACVF.Section7.selectedVolumeFamilySum (Sigma.snd.{0, 0} F) (Sigma.snd.{0, 0} G))))
+'IntegrationInACVF.Section7.ae_rv_volume_function_add_representatives' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.aeRVVolumeFunctionAddCommMonoid : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        (C : SpecialTransformations.Section3.BaseContext M) →
+          (n k : Nat) → AddCommMonoid.{0} (IntegrationInACVF.Section7.AERVVolumeFunction hc C n k)
+'IntegrationInACVF.Section7.aeRVVolumeFunctionAddCommMonoid' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.aeRVVolumeFunctionIntegralAddHom : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        (C : SpecialTransformations.Section3.BaseContext M) →
+          (Ξ : Set.{0} SpecialTransformations.Section3.Values.Gamma) →
+            LT.lt.{1} (Cardinal.mk.{0} ↑Ξ) C.κ →
+              SpecialTransformations.Section3.GammaParameters.VFGammaGeneratedBase { real := ↑C.base, gamma := Ξ } →
+                LE.le.{0}
+                    (SpecialTransformations.Section3.GammaParameters.commonRealNames { real := ↑C.base, gamma := Ξ })
+                    ↑C.base →
+                  (γ : SpecialTransformations.Section3.Values.Gamma) →
+                    Membership.mem.{0, 0} Ξ γ →
+                      LT.lt.{0} 1 γ →
+                        (n k : Nat) →
+                          AddMonoidHom.{0, 0} (IntegrationInACVF.Section7.AERVVolumeFunction hc C n k)
+                            (IntegrationInACVF.Section7.PositiveVolumeBlowupClasses hc C
+                              (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} k 1) n))
+'IntegrationInACVF.Section7.aeRVVolumeFunctionIntegralAddHom' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.ae_rv_volume_function_integral_add : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M)
+  (Ξ : Set.{0} SpecialTransformations.Section3.Values.Gamma) (hΞ : LT.lt.{1} (Cardinal.mk.{0} ↑Ξ) C.κ)
+  (hGenerated : SpecialTransformations.Section3.GammaParameters.VFGammaGeneratedBase { real := ↑C.base, gamma := Ξ })
+  (hNames :
+    LE.le.{0} (SpecialTransformations.Section3.GammaParameters.commonRealNames { real := ↑C.base, gamma := Ξ }) ↑C.base)
+  (γ : SpecialTransformations.Section3.Values.Gamma) (hγ : Membership.mem.{0, 0} Ξ γ) (hγ1 : LT.lt.{0} 1 γ) {n k : Nat}
+  (f g : IntegrationInACVF.Section7.AERVVolumeFunction hc C n k),
+  Eq.{1}
+    (IntegrationInACVF.Section7.aeRVVolumeFunctionIntegral hc C Ξ hΞ hGenerated hNames γ hγ hγ1
+      (HAdd.hAdd.{0, 0, 0} f g))
+    (HAdd.hAdd.{0, 0, 0} (IntegrationInACVF.Section7.aeRVVolumeFunctionIntegral hc C Ξ hΞ hGenerated hNames γ hγ hγ1 f)
+      (IntegrationInACVF.Section7.aeRVVolumeFunctionIntegral hc C Ξ hΞ hGenerated hNames γ hγ hγ1 g))
+'IntegrationInACVF.Section7.ae_rv_volume_function_integral_add' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.DefinableVFVolumeFamily : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      SpecialTransformations.Section3.BaseContext M → Nat → Nat → Nat → Type
+'IntegrationInACVF.Section7.DefinableVFVolumeFamily' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@IntegrationInACVF.Section7.SelectedVFVolumeFamily.toDefinable : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {n a k : Nat} →
+        {C : SpecialTransformations.Section3.BaseContext M} →
+          IntegrationInACVF.Section7.SelectedVFVolumeFamily C n a k →
+            IntegrationInACVF.Section7.DefinableVFVolumeFamily C n a k
+'IntegrationInACVF.Section7.SelectedVFVolumeFamily.toDefinable' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.DefinableVFVolumeFamily.rowObject : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {n a k : Nat} →
+        {C : SpecialTransformations.Section3.BaseContext M} →
+          IntegrationInACVF.Section7.DefinableVFVolumeFamily C n a k →
+            (x : Fin n → SpecialTransformations.Milestone0.Transfer.VFType) →
+              IntegrationInACVF.Section7.PositiveRVVolumeObject
+                (Union.union.{0} (↑C.base) (Set.range.{0, 1} fun (i : Fin n) => ↑(x i))) k
+'IntegrationInACVF.Section7.DefinableVFVolumeFamily.rowObject' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.DefinableVFVolumeFamily.rowInContext : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {n a k : Nat} →
+        {C : SpecialTransformations.Section3.BaseContext M} →
+          IntegrationInACVF.Section7.DefinableVFVolumeFamily C n a k →
+            (x : Fin n → SpecialTransformations.Milestone0.Transfer.VFType) →
+              IntegrationInACVF.Section7.PositiveRVVolumeObject
+                (↑(IntegrationInACVF.Section7.vfParameterVolumeContext C x).base) k
+'IntegrationInACVF.Section7.DefinableVFVolumeFamily.rowInContext' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.DefinableVFVolumeFamily.rowInContext_volume : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {n a k : Nat}
+  {C : SpecialTransformations.Section3.BaseContext M} (F : IntegrationInACVF.Section7.DefinableVFVolumeFamily C n a k)
+  (x : Fin n → SpecialTransformations.Milestone0.Transfer.VFType)
+  (r :
+    ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+        (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} (F.rowInContext x).underlying).domain)),
+  Eq.{1} ((CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} (F.rowInContext x).underlying).value r)
+    ↑(SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0} F.volume (Subtype.mk.{1} (Prod.mk.{0, 0} x ↑r) ⋯))
+'IntegrationInACVF.Section7.DefinableVFVolumeFamily.rowInContext_volume' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.DefinableVFVolumeFamily.rowInContext_density : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {n a k : Nat}
+  {C : SpecialTransformations.Section3.BaseContext M} (F : IntegrationInACVF.Section7.DefinableVFVolumeFamily C n a k)
+  (x : Fin n → SpecialTransformations.Milestone0.Transfer.VFType)
+  (r :
+    ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+        (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} (F.rowInContext x).underlying).domain)),
+  Eq.{1} ((F.rowInContext x).form.value r) (F.form.value (Subtype.mk.{1} (Prod.mk.{0, 0} x ↑r) ⋯))
+'IntegrationInACVF.Section7.DefinableVFVolumeFamily.rowInContext_density' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.volumeFamilyCoprodDomain : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {C : SpecialTransformations.Section3.BaseContext M} →
+        {n a b k : Nat} →
+          IntegrationInACVF.Section7.DefinableVFVolumeFamily C n a k →
+            IntegrationInACVF.Section7.DefinableVFVolumeFamily C n b k →
+              SpecialTransformations.DefinableGeometry.DefSet.{0, 0}
+                (SpecialTransformations.Section4.rawMixedSpace n (HAdd.hAdd.{0, 0, 0} 1 (HAdd.hAdd.{0, 0, 0} a b)))
+                ↑C.base
+'IntegrationInACVF.Section7.volumeFamilyCoprodDomain' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@IntegrationInACVF.Section7.volumeFamilyCoprodVolumeMap : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {C : SpecialTransformations.Section3.BaseContext M} →
+        {n a b k : Nat} →
+          (F : IntegrationInACVF.Section7.DefinableVFVolumeFamily C n a k) →
+            (G : IntegrationInACVF.Section7.DefinableVFVolumeFamily C n b k) →
+              SpecialTransformations.DefinableGeometry.Map.{0, 0}
+                (IntegrationInACVF.Section7.volumeFamilyCoprodDomain F G)
+                (SpecialTransformations.DefinableGeometry.DefSet.univ.{0, 0}
+                  (SpecialTransformations.Section4.rawRVSpace (HAdd.hAdd.{0, 0, 0} k 1)) ↑C.base)
+'IntegrationInACVF.Section7.volumeFamilyCoprodVolumeMap' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.volumeFamilyCoprodForm : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {C : SpecialTransformations.Section3.BaseContext M} →
+        {n a b k : Nat} →
+          (F : IntegrationInACVF.Section7.DefinableVFVolumeFamily C n a k) →
+            (G : IntegrationInACVF.Section7.DefinableVFVolumeFamily C n b k) →
+              IntegrationInACVF.Section7.VolumeForm (IntegrationInACVF.Section7.volumeFamilyCoprodDomain F G)
+'IntegrationInACVF.Section7.volumeFamilyCoprodForm' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@IntegrationInACVF.Section7.volumeFamilyCoprodLeftMap : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {C : SpecialTransformations.Section3.BaseContext M} →
+        {n a b k : Nat} →
+          (F : IntegrationInACVF.Section7.DefinableVFVolumeFamily C n a k) →
+            (G : IntegrationInACVF.Section7.DefinableVFVolumeFamily C n b k) →
+              SpecialTransformations.DefinableGeometry.Map.{0, 0} F.domain
+                (IntegrationInACVF.Section7.volumeFamilyCoprodDomain F G)
+'IntegrationInACVF.Section7.volumeFamilyCoprodLeftMap' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.volumeFamilyCoprodRightMap : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {C : SpecialTransformations.Section3.BaseContext M} →
+        {n a b k : Nat} →
+          (F : IntegrationInACVF.Section7.DefinableVFVolumeFamily C n a k) →
+            (G : IntegrationInACVF.Section7.DefinableVFVolumeFamily C n b k) →
+              SpecialTransformations.DefinableGeometry.Map.{0, 0} G.domain
+                (IntegrationInACVF.Section7.volumeFamilyCoprodDomain F G)
+'IntegrationInACVF.Section7.volumeFamilyCoprodRightMap' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.volume_family_coprod_volume_left : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {C : SpecialTransformations.Section3.BaseContext M} {n a b k : Nat}
+  (F : IntegrationInACVF.Section7.DefinableVFVolumeFamily C n a k)
+  (G : IntegrationInACVF.Section7.DefinableVFVolumeFamily C n b k)
+  (u : ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} F.domain)),
+  Eq.{1}
+    (SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0}
+      (IntegrationInACVF.Section7.volumeFamilyCoprodVolumeMap F G)
+      (SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0}
+        (IntegrationInACVF.Section7.volumeFamilyCoprodLeftMap F G) u))
+    (SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0} F.volume u)
+'IntegrationInACVF.Section7.volume_family_coprod_volume_left' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.volume_family_coprod_volume_right : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {C : SpecialTransformations.Section3.BaseContext M} {n a b k : Nat}
+  (F : IntegrationInACVF.Section7.DefinableVFVolumeFamily C n a k)
+  (G : IntegrationInACVF.Section7.DefinableVFVolumeFamily C n b k)
+  (u : ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} G.domain)),
+  Eq.{1}
+    (SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0}
+      (IntegrationInACVF.Section7.volumeFamilyCoprodVolumeMap F G)
+      (SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0}
+        (IntegrationInACVF.Section7.volumeFamilyCoprodRightMap F G) u))
+    (SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0} G.volume u)
+'IntegrationInACVF.Section7.volume_family_coprod_volume_right' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.volume_family_coprod_density_left : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {C : SpecialTransformations.Section3.BaseContext M} {n a b k : Nat}
+  (F : IntegrationInACVF.Section7.DefinableVFVolumeFamily C n a k)
+  (G : IntegrationInACVF.Section7.DefinableVFVolumeFamily C n b k)
+  (u : ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} F.domain)),
+  Eq.{1}
+    ((IntegrationInACVF.Section7.volumeFamilyCoprodForm F G).value
+      (SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0}
+        (IntegrationInACVF.Section7.volumeFamilyCoprodLeftMap F G) u))
+    (F.form.value u)
+'IntegrationInACVF.Section7.volume_family_coprod_density_left' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.volume_family_coprod_density_right : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {C : SpecialTransformations.Section3.BaseContext M} {n a b k : Nat}
+  (F : IntegrationInACVF.Section7.DefinableVFVolumeFamily C n a k)
+  (G : IntegrationInACVF.Section7.DefinableVFVolumeFamily C n b k)
+  (u : ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} G.domain)),
+  Eq.{1}
+    ((IntegrationInACVF.Section7.volumeFamilyCoprodForm F G).value
+      (SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0}
+        (IntegrationInACVF.Section7.volumeFamilyCoprodRightMap F G) u))
+    (G.form.value u)
+'IntegrationInACVF.Section7.volume_family_coprod_density_right' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.DefinableVFVolumeFamily.coprod : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {C : SpecialTransformations.Section3.BaseContext M} →
+        {n a b k : Nat} →
+          IntegrationInACVF.Section7.DefinableVFVolumeFamily C n a k →
+            IntegrationInACVF.Section7.DefinableVFVolumeFamily C n b k →
+              IntegrationInACVF.Section7.DefinableVFVolumeFamily C n (HAdd.hAdd.{0, 0, 0} 1 (HAdd.hAdd.{0, 0, 0} a b)) k
+'IntegrationInACVF.Section7.DefinableVFVolumeFamily.coprod' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.definable_volume_family_coprod_cases : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {C : SpecialTransformations.Section3.BaseContext M} {n a b k : Nat}
+  (F : IntegrationInACVF.Section7.DefinableVFVolumeFamily C n a k)
+  (G : IntegrationInACVF.Section7.DefinableVFVolumeFamily C n b k)
+  (p : ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} (F.coprod G).domain)),
+  Or
+    (Exists.{1} fun (u : ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} F.domain)) =>
+      Eq.{1}
+        (SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0}
+          (IntegrationInACVF.Section7.volumeFamilyCoprodLeftMap F G) u)
+        p)
+    (Exists.{1} fun (v : ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} G.domain)) =>
+      Eq.{1}
+        (SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0}
+          (IntegrationInACVF.Section7.volumeFamilyCoprodRightMap F G) v)
+        p)
+'IntegrationInACVF.Section7.definable_volume_family_coprod_cases' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.forgetVolumeGraphLabels : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {C : SpecialTransformations.Section3.BaseContext M} →
+        {n a k : Nat} →
+          (F : IntegrationInACVF.Section7.DefinableVFVolumeFamily C n a k) →
+            SpecialTransformations.DefinableGeometry.Map.{0, 0} F.toSelected.fullLift.domain
+              (SpecialTransformations.DefinableGeometry.DefSet.univ.{0, 0}
+                (SpecialTransformations.Section4.rawMixedSpace (HAdd.hAdd.{0, 0, 0} n (HAdd.hAdd.{0, 0, 0} k 1)) a)
+                ↑C.base)
+'IntegrationInACVF.Section7.forgetVolumeGraphLabels' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@IntegrationInACVF.Section7.forget_volume_graph_labels_value : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {C : SpecialTransformations.Section3.BaseContext M} {n a k : Nat}
+  (F : IntegrationInACVF.Section7.DefinableVFVolumeFamily C n a k)
+  (q : ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} F.toSelected.fullLift.domain)),
+  Eq.{1}
+    (↑(SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0} (IntegrationInACVF.Section7.forgetVolumeGraphLabels F)
+        q))
+    (Prod.mk.{0, 0} (↑q).1 (Function.comp.{1, 1, 1} (↑q).2 (Fin.castAdd (HAdd.hAdd.{0, 0, 0} k 1))))
+'IntegrationInACVF.Section7.forget_volume_graph_labels_value' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.forget_volume_graph_labels_injective : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {C : SpecialTransformations.Section3.BaseContext M} {n a k : Nat}
+  (F : IntegrationInACVF.Section7.DefinableVFVolumeFamily C n a k),
+  Function.Injective.{1, 1}
+    (SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0} (IntegrationInACVF.Section7.forgetVolumeGraphLabels F))
+'IntegrationInACVF.Section7.forget_volume_graph_labels_injective' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.forget_volume_graph_labels_to_image_bijective : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {C : SpecialTransformations.Section3.BaseContext M} {n a k : Nat}
+  (F : IntegrationInACVF.Section7.DefinableVFVolumeFamily C n a k),
+  Function.Bijective.{1, 1}
+    (SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0}
+      (SpecialTransformations.DefinableGeometry.Map.toImage.{0, 0}
+        (IntegrationInACVF.Section7.forgetVolumeGraphLabels F)))
+'IntegrationInACVF.Section7.forget_volume_graph_labels_to_image_bijective' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.DefinableVFVolumeFamily.fullLift : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {C : SpecialTransformations.Section3.BaseContext M} →
+        {n a k : Nat} →
+          IntegrationInACVF.Section7.DefinableVFVolumeFamily C n a k →
+            IntegrationInACVF.Section7.PositiveVFVolumeObject (↑C.base) (HAdd.hAdd.{0, 0, 0} n k)
+'IntegrationInACVF.Section7.DefinableVFVolumeFamily.fullLift' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.definableVolumeFamilySelectionLiftBijection : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {C : SpecialTransformations.Section3.BaseContext M} →
+        {n a k : Nat} →
+          CanonicalStructure.IsCanonical →
+            (F : IntegrationInACVF.Section7.DefinableVFVolumeFamily C n a k) →
+              IntegrationInACVF.Section7.VFVolumeBijection F.toSelected.fullLift F.fullLift
+'IntegrationInACVF.Section7.definableVolumeFamilySelectionLiftBijection' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.DefinableVFVolumeFamily.fullLiftBaseProjection : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {C : SpecialTransformations.Section3.BaseContext M} →
+        {n a k : Nat} →
+          (F : IntegrationInACVF.Section7.DefinableVFVolumeFamily C n a k) →
+            SpecialTransformations.DefinableGeometry.Map.{0, 0} F.fullLift.domain F.domain
+'IntegrationInACVF.Section7.DefinableVFVolumeFamily.fullLiftBaseProjection' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.DefinableVFVolumeFamily.fullLift_density : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {C : SpecialTransformations.Section3.BaseContext M} {n a k : Nat}
+  (F : IntegrationInACVF.Section7.DefinableVFVolumeFamily C n a k)
+  (p : ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} F.fullLift.domain)),
+  Eq.{1} (F.fullLift.form.value p)
+    (F.form.value (SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0} F.fullLiftBaseProjection p))
+'IntegrationInACVF.Section7.DefinableVFVolumeFamily.fullLift_density' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.DefinableVFVolumeFamily.fullLiftBaseProjection_value : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {C : SpecialTransformations.Section3.BaseContext M} {n a k : Nat}
+  (F : IntegrationInACVF.Section7.DefinableVFVolumeFamily C n a k)
+  (p : ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} F.fullLift.domain)),
+  Eq.{1} (↑(SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0} F.fullLiftBaseProjection p))
+    (Prod.mk.{0, 0} (Function.comp.{1, 1, 1} (↑p).1 (Fin.castAdd (HAdd.hAdd.{0, 0, 0} k 1))) (↑p).2)
+'IntegrationInACVF.Section7.DefinableVFVolumeFamily.fullLiftBaseProjection_value' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.DefinableVFVolumeFamily.fullLift_volume_constraint : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {C : SpecialTransformations.Section3.BaseContext M} {n a k : Nat}
+  (F : IntegrationInACVF.Section7.DefinableVFVolumeFamily C n a k)
+  (p : ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} F.fullLift.domain)),
+  Eq.{1} (SpecialTransformations.Section4.tupleRV (Function.comp.{1, 1, 1} (↑p).1 (Fin.natAdd n)))
+    ↑(SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0} F.volume
+        (SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0} F.fullLiftBaseProjection p))
+'IntegrationInACVF.Section7.DefinableVFVolumeFamily.fullLift_volume_constraint' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.mem_definable_volume_family_full_lift : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {C : SpecialTransformations.Section3.BaseContext M} {n a k : Nat}
+  (F : IntegrationInACVF.Section7.DefinableVFVolumeFamily C n a k)
+  (x : Fin (HAdd.hAdd.{0, 0, 0} n (HAdd.hAdd.{0, 0, 0} k 1)) → SpecialTransformations.Milestone0.Transfer.VFType)
+  (r : Fin a → CanonicalRV.RVSort M),
+  Iff
+    (Membership.mem.{0, 0} (SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} F.fullLift.domain)
+      (Prod.mk.{0, 0} x r))
+    (Exists.{1} fun (p : ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} F.domain)) =>
+      And (Eq.{1} (↑p) (Prod.mk.{0, 0} (Function.comp.{1, 1, 1} x (Fin.castAdd (HAdd.hAdd.{0, 0, 0} k 1))) r))
+        (Eq.{1} (SpecialTransformations.Section4.tupleRV (Function.comp.{1, 1, 1} x (Fin.natAdd n)))
+          ↑(SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0} F.volume p)))
+'IntegrationInACVF.Section7.mem_definable_volume_family_full_lift' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.DefinableVFVolumeFamily.selectionRowMap : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {C : SpecialTransformations.Section3.BaseContext M} →
+        {n a k : Nat} →
+          (F : IntegrationInACVF.Section7.DefinableVFVolumeFamily C n a k) →
+            (x : Fin n → SpecialTransformations.Milestone0.Transfer.VFType) →
+              SpecialTransformations.DefinableGeometry.Map.{0, 0}
+                (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} (F.rowInContext x).underlying).domain
+                (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0}
+                    (F.toSelected.rowInContext x).underlying).domain
+'IntegrationInACVF.Section7.DefinableVFVolumeFamily.selectionRowMap' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.DefinableVFVolumeFamily.selectionRowMap_value : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {C : SpecialTransformations.Section3.BaseContext M} {n a k : Nat}
+  (F : IntegrationInACVF.Section7.DefinableVFVolumeFamily C n a k)
+  (x : Fin n → SpecialTransformations.Milestone0.Transfer.VFType)
+  (r :
+    ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+        (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} (F.rowInContext x).underlying).domain)),
+  Eq.{1} (↑(SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0} (F.selectionRowMap x) r))
+    (Fin.append.{1} (↑r)
+      ((CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} (F.rowInContext x).underlying).value r))
+'IntegrationInACVF.Section7.DefinableVFVolumeFamily.selectionRowMap_value' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.DefinableVFVolumeFamily.selectionRowMap_bijective : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {C : SpecialTransformations.Section3.BaseContext M} {n a k : Nat}
+  (F : IntegrationInACVF.Section7.DefinableVFVolumeFamily C n a k)
+  (x : Fin n → SpecialTransformations.Milestone0.Transfer.VFType),
+  Function.Bijective.{1, 1} (SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0} (F.selectionRowMap x))
+'IntegrationInACVF.Section7.DefinableVFVolumeFamily.selectionRowMap_bijective' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.DefinableVFVolumeFamily.selectionRowMap_coordinates : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {C : SpecialTransformations.Section3.BaseContext M} {n a k : Nat}
+  (F : IntegrationInACVF.Section7.DefinableVFVolumeFamily C n a k)
+  (x : Fin n → SpecialTransformations.Milestone0.Transfer.VFType)
+  (r :
+    ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+        (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} (F.rowInContext x).underlying).domain)),
+  Eq.{1}
+    ((CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} (F.toSelected.rowInContext x).underlying).value
+      (SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0} (F.selectionRowMap x) r))
+    ((CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} (F.rowInContext x).underlying).value r)
+'IntegrationInACVF.Section7.DefinableVFVolumeFamily.selectionRowMap_coordinates' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.DefinableVFVolumeFamily.selectionRowMap_density : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {C : SpecialTransformations.Section3.BaseContext M} {n a k : Nat}
+  (F : IntegrationInACVF.Section7.DefinableVFVolumeFamily C n a k)
+  (x : Fin n → SpecialTransformations.Milestone0.Transfer.VFType)
+  (r :
+    ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+        (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} (F.rowInContext x).underlying).domain)),
+  Eq.{1}
+    ((F.toSelected.rowInContext x).form.value
+      (SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0} (F.selectionRowMap x) r))
+    ((F.rowInContext x).form.value r)
+'IntegrationInACVF.Section7.DefinableVFVolumeFamily.selectionRowMap_density' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.DefinableVFVolumeFamily.selectionRowIso : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {C : SpecialTransformations.Section3.BaseContext M} →
+        {n a k : Nat} →
+          CanonicalStructure.IsCanonical →
+            (F : IntegrationInACVF.Section7.DefinableVFVolumeFamily C n a k) →
+              (x : Fin n → SpecialTransformations.Milestone0.Transfer.VFType) →
+                IntegrationInACVF.Section7.RVVolumeIso (F.rowInContext x) (F.toSelected.rowInContext x)
+'IntegrationInACVF.Section7.DefinableVFVolumeFamily.selectionRowIso' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.DefinableVFVolumeFamily.toSelected : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {C : SpecialTransformations.Section3.BaseContext M} →
+        {n a k : Nat} →
+          IntegrationInACVF.Section7.DefinableVFVolumeFamily C n a k →
+            IntegrationInACVF.Section7.SelectedVFVolumeFamily C n (HAdd.hAdd.{0, 0, 0} a (HAdd.hAdd.{0, 0, 0} k 1)) k
+'IntegrationInACVF.Section7.DefinableVFVolumeFamily.toSelected' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.DefinableVFVolumeFamily.toSelected_density : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {C : SpecialTransformations.Section3.BaseContext M} {n a k : Nat}
+  (F : IntegrationInACVF.Section7.DefinableVFVolumeFamily C n a k)
+  (q : ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} F.toSelected.domain)),
+  Eq.{1} (F.toSelected.form.value q)
+    (F.form.value
+      (SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0}
+        (IntegrationInACVF.Section7.mixedRVMapGraphProjection F.volume) q))
+'IntegrationInACVF.Section7.DefinableVFVolumeFamily.toSelected_density' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.DefinableVFVolumeFamily.toSelected_volume : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {C : SpecialTransformations.Section3.BaseContext M} {n a k : Nat}
+  (F : IntegrationInACVF.Section7.DefinableVFVolumeFamily C n a k)
+  (q : ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} F.toSelected.domain)),
+  Eq.{1}
+    (↑(SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0} F.volume
+        (SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0}
+          (IntegrationInACVF.Section7.mixedRVMapGraphProjection F.volume) q)))
+    (Function.comp.{1, 1, 1} (↑q).2 F.toSelected.selected)
+'IntegrationInACVF.Section7.DefinableVFVolumeFamily.toSelected_volume' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.mixed_rv_map_graph_projection_append : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set.{0} M}
+  {n a d : Nat}
+  {A : SpecialTransformations.DefinableGeometry.DefSet.{0, 0} (SpecialTransformations.Section4.rawMixedSpace n a) S}
+  (g :
+    SpecialTransformations.DefinableGeometry.Map.{0, 0} A
+      (SpecialTransformations.DefinableGeometry.DefSet.univ.{0, 0} (SpecialTransformations.Section4.rawRVSpace d) S))
+  (p : ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} A)),
+  Eq.{1}
+    (SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0} (IntegrationInACVF.Section7.mixedRVMapGraphProjection g)
+      (SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0}
+        (SpecialTransformations.DefinableGeometry.Map.toImage.{0, 0} (IntegrationInACVF.Section7.appendMixedRVMap g))
+        p))
+    p
+'IntegrationInACVF.Section7.mixed_rv_map_graph_projection_append' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.appendMixedRVMap : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    {S : Set.{0} M} →
+      {n a d : Nat} →
+        {A :
+            SpecialTransformations.DefinableGeometry.DefSet.{0, 0} (SpecialTransformations.Section4.rawMixedSpace n a)
+              S} →
+          SpecialTransformations.DefinableGeometry.Map.{0, 0} A
+              (SpecialTransformations.DefinableGeometry.DefSet.univ.{0, 0}
+                (SpecialTransformations.Section4.rawRVSpace d) S) →
+            SpecialTransformations.DefinableGeometry.Map.{0, 0} A
+              (SpecialTransformations.DefinableGeometry.DefSet.univ.{0, 0}
+                (SpecialTransformations.Section4.rawMixedSpace n (HAdd.hAdd.{0, 0, 0} a d)) S)
+'IntegrationInACVF.Section7.appendMixedRVMap' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@IntegrationInACVF.Section7.append_mixed_rv_map_value : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set.{0} M}
+  {n a d : Nat}
+  {A : SpecialTransformations.DefinableGeometry.DefSet.{0, 0} (SpecialTransformations.Section4.rawMixedSpace n a) S}
+  (g :
+    SpecialTransformations.DefinableGeometry.Map.{0, 0} A
+      (SpecialTransformations.DefinableGeometry.DefSet.univ.{0, 0} (SpecialTransformations.Section4.rawRVSpace d) S))
+  (p : ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} A)),
+  Eq.{1}
+    (↑(SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0} (IntegrationInACVF.Section7.appendMixedRVMap g) p))
+    (Prod.mk.{0, 0} (↑p).1 (Fin.append.{1} (↑p).2 ↑(SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0} g p)))
+'IntegrationInACVF.Section7.append_mixed_rv_map_value' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.append_mixed_rv_map_injective : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set.{0} M}
+  {n a d : Nat}
+  {A : SpecialTransformations.DefinableGeometry.DefSet.{0, 0} (SpecialTransformations.Section4.rawMixedSpace n a) S}
+  (g :
+    SpecialTransformations.DefinableGeometry.Map.{0, 0} A
+      (SpecialTransformations.DefinableGeometry.DefSet.univ.{0, 0} (SpecialTransformations.Section4.rawRVSpace d) S)),
+  Function.Injective.{1, 1}
+    (SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0} (IntegrationInACVF.Section7.appendMixedRVMap g))
+'IntegrationInACVF.Section7.append_mixed_rv_map_injective' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.mixedRVMapGraph : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    {S : Set.{0} M} →
+      {n a d : Nat} →
+        {A :
+            SpecialTransformations.DefinableGeometry.DefSet.{0, 0} (SpecialTransformations.Section4.rawMixedSpace n a)
+              S} →
+          SpecialTransformations.DefinableGeometry.Map.{0, 0} A
+              (SpecialTransformations.DefinableGeometry.DefSet.univ.{0, 0}
+                (SpecialTransformations.Section4.rawRVSpace d) S) →
+            SpecialTransformations.DefinableGeometry.DefSet.{0, 0}
+              (SpecialTransformations.Section4.rawMixedSpace n (HAdd.hAdd.{0, 0, 0} a d)) S
+'IntegrationInACVF.Section7.mixedRVMapGraph' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@IntegrationInACVF.Section7.append_mixed_rv_map_to_image_bijective : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set.{0} M}
+  {n a d : Nat}
+  {A : SpecialTransformations.DefinableGeometry.DefSet.{0, 0} (SpecialTransformations.Section4.rawMixedSpace n a) S}
+  (g :
+    SpecialTransformations.DefinableGeometry.Map.{0, 0} A
+      (SpecialTransformations.DefinableGeometry.DefSet.univ.{0, 0} (SpecialTransformations.Section4.rawRVSpace d) S)),
+  Function.Bijective.{1, 1}
+    (SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0}
+      (SpecialTransformations.DefinableGeometry.Map.toImage.{0, 0} (IntegrationInACVF.Section7.appendMixedRVMap g)))
+'IntegrationInACVF.Section7.append_mixed_rv_map_to_image_bijective' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.mixedRVMapGraphProjection : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {S : Set.{0} M} →
+        {n a d : Nat} →
+          {A :
+              SpecialTransformations.DefinableGeometry.DefSet.{0, 0} (SpecialTransformations.Section4.rawMixedSpace n a)
+                S} →
+            (g :
+                SpecialTransformations.DefinableGeometry.Map.{0, 0} A
+                  (SpecialTransformations.DefinableGeometry.DefSet.univ.{0, 0}
+                    (SpecialTransformations.Section4.rawRVSpace d) S)) →
+              SpecialTransformations.DefinableGeometry.Map.{0, 0} (IntegrationInACVF.Section7.mixedRVMapGraph g) A
+'IntegrationInACVF.Section7.mixedRVMapGraphProjection' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.mixed_rv_map_graph_projection_value : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set.{0} M}
+  {n a d : Nat}
+  {A : SpecialTransformations.DefinableGeometry.DefSet.{0, 0} (SpecialTransformations.Section4.rawMixedSpace n a) S}
+  (g :
+    SpecialTransformations.DefinableGeometry.Map.{0, 0} A
+      (SpecialTransformations.DefinableGeometry.DefSet.univ.{0, 0} (SpecialTransformations.Section4.rawRVSpace d) S))
+  (q :
+    ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} (IntegrationInACVF.Section7.mixedRVMapGraph g))),
+  Eq.{1}
+    (↑(SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0}
+        (IntegrationInACVF.Section7.mixedRVMapGraphProjection g) q))
+    (Prod.mk.{0, 0} (↑q).1 (Function.comp.{1, 1, 1} (↑q).2 (Fin.castAdd d)))
+'IntegrationInACVF.Section7.mixed_rv_map_graph_projection_value' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.mixed_rv_map_graph_retained_tuple : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set.{0} M}
+  {n a d : Nat}
+  {A : SpecialTransformations.DefinableGeometry.DefSet.{0, 0} (SpecialTransformations.Section4.rawMixedSpace n a) S}
+  (g :
+    SpecialTransformations.DefinableGeometry.Map.{0, 0} A
+      (SpecialTransformations.DefinableGeometry.DefSet.univ.{0, 0} (SpecialTransformations.Section4.rawRVSpace d) S))
+  (q :
+    ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} (IntegrationInACVF.Section7.mixedRVMapGraph g))),
+  Eq.{1}
+    (↑(SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0} g
+        (SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0}
+          (IntegrationInACVF.Section7.mixedRVMapGraphProjection g) q)))
+    (Function.comp.{1, 1, 1} (↑q).2 (Fin.natAdd a))
+'IntegrationInACVF.Section7.mixed_rv_map_graph_retained_tuple' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.selected_to_definable_family_full_lift_carrier : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {C : SpecialTransformations.Section3.BaseContext M} {n a k : Nat}
+  (F : IntegrationInACVF.Section7.SelectedVFVolumeFamily C n a k),
+  Eq.{1} (SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} F.fullLift.domain)
+    (SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} F.toDefinable.fullLift.domain)
+'IntegrationInACVF.Section7.selected_to_definable_family_full_lift_carrier' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.selectedToDefinableFamilyLiftBijection : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {C : SpecialTransformations.Section3.BaseContext M} →
+        {n a k : Nat} →
+          CanonicalStructure.IsCanonical →
+            (F : IntegrationInACVF.Section7.SelectedVFVolumeFamily C n a k) →
+              IntegrationInACVF.Section7.VFVolumeBijection F.fullLift F.toDefinable.fullLift
+'IntegrationInACVF.Section7.selectedToDefinableFamilyLiftBijection' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.selectedFamilySumLiftBijection : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {C : SpecialTransformations.Section3.BaseContext M} →
+        {n a b k : Nat} →
+          CanonicalStructure.IsCanonical →
+            (F : IntegrationInACVF.Section7.SelectedVFVolumeFamily C n a k) →
+              (G : IntegrationInACVF.Section7.SelectedVFVolumeFamily C n b k) →
+                IntegrationInACVF.Section7.VFVolumeBijection
+                  (IntegrationInACVF.Section7.selectedVolumeFamilySum F G).fullLift (F.fullLift.coprod G.fullLift)
+'IntegrationInACVF.Section7.selectedFamilySumLiftBijection' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.selectedToDefinableVolumeRowIso : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {C : SpecialTransformations.Section3.BaseContext M} →
+        {n a k : Nat} →
+          CanonicalStructure.IsCanonical →
+            (F : IntegrationInACVF.Section7.SelectedVFVolumeFamily C n a k) →
+              (x : Fin n → SpecialTransformations.Milestone0.Transfer.VFType) →
+                IntegrationInACVF.Section7.RVVolumeIso (F.rowInContext x) (F.toDefinable.rowInContext x)
+'IntegrationInACVF.Section7.selectedToDefinableVolumeRowIso' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.selectedVolumeFamilySum : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {C : SpecialTransformations.Section3.BaseContext M} →
+        {n a b k : Nat} →
+          IntegrationInACVF.Section7.SelectedVFVolumeFamily C n a k →
+            IntegrationInACVF.Section7.SelectedVFVolumeFamily C n b k →
+              IntegrationInACVF.Section7.SelectedVFVolumeFamily C n
+                (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} 1 (HAdd.hAdd.{0, 0, 0} a b)) (HAdd.hAdd.{0, 0, 0} k 1)) k
+'IntegrationInACVF.Section7.selectedVolumeFamilySum' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@IntegrationInACVF.Section7.selected_volume_family_sum_row_class : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {C : SpecialTransformations.Section3.BaseContext M} {n a b k : Nat} (hc : CanonicalStructure.IsCanonical)
+  (F : IntegrationInACVF.Section7.SelectedVFVolumeFamily C n a k)
+  (G : IntegrationInACVF.Section7.SelectedVFVolumeFamily C n b k)
+  (x : Fin n → SpecialTransformations.Milestone0.Transfer.VFType),
+  Eq.{1}
+    (IntegrationInACVF.Section7.positiveVolumeBlowupClass hc (IntegrationInACVF.Section7.vfParameterVolumeContext C x)
+      ((IntegrationInACVF.Section7.selectedVolumeFamilySum F G).rowInContext x))
+    (HAdd.hAdd.{0, 0, 0}
+      (IntegrationInACVF.Section7.positiveVolumeBlowupClass hc (IntegrationInACVF.Section7.vfParameterVolumeContext C x)
+        (F.rowInContext x))
+      (IntegrationInACVF.Section7.positiveVolumeBlowupClass hc (IntegrationInACVF.Section7.vfParameterVolumeContext C x)
+        (G.rowInContext x)))
+'IntegrationInACVF.Section7.selected_volume_family_sum_row_class' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.selectedZeroVolumeFamily : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (C : SpecialTransformations.Section3.BaseContext M) →
+        (n k : Nat) → IntegrationInACVF.Section7.SelectedVFVolumeFamily C n (HAdd.hAdd.{0, 0, 0} k 1) k
+'IntegrationInACVF.Section7.selectedZeroVolumeFamily' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@IntegrationInACVF.Section7.selected_zero_volume_family_row_class : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M) (n k : Nat)
+  (x : Fin n → SpecialTransformations.Milestone0.Transfer.VFType),
+  Eq.{1}
+    (IntegrationInACVF.Section7.positiveVolumeBlowupClass hc (IntegrationInACVF.Section7.vfParameterVolumeContext C x)
+      ((IntegrationInACVF.Section7.selectedZeroVolumeFamily C n k).rowInContext x))
+    0
+'IntegrationInACVF.Section7.selected_zero_volume_family_row_class' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.volumeFamilyCoprodRowIso : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {C : SpecialTransformations.Section3.BaseContext M} →
+        {n a b k : Nat} →
+          CanonicalStructure.IsCanonical →
+            (F : IntegrationInACVF.Section7.DefinableVFVolumeFamily C n a k) →
+              (G : IntegrationInACVF.Section7.DefinableVFVolumeFamily C n b k) →
+                (x : Fin n → SpecialTransformations.Milestone0.Transfer.VFType) →
+                  IntegrationInACVF.Section7.RVVolumeIso ((F.coprod G).rowInContext x)
+                    ((F.rowInContext x).coprod (G.rowInContext x))
+'IntegrationInACVF.Section7.volumeFamilyCoprodRowIso' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@IntegrationInACVF.Section7.volume_family_coprod_row_class : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {C : SpecialTransformations.Section3.BaseContext M} {n a b k : Nat} (hc : CanonicalStructure.IsCanonical)
+  (F : IntegrationInACVF.Section7.DefinableVFVolumeFamily C n a k)
+  (G : IntegrationInACVF.Section7.DefinableVFVolumeFamily C n b k)
+  (x : Fin n → SpecialTransformations.Milestone0.Transfer.VFType),
+  Eq.{1}
+    (IntegrationInACVF.Section7.positiveVolumeBlowupClass hc (IntegrationInACVF.Section7.vfParameterVolumeContext C x)
+      ((F.coprod G).rowInContext x))
+    (HAdd.hAdd.{0, 0, 0}
+      (IntegrationInACVF.Section7.positiveVolumeBlowupClass hc (IntegrationInACVF.Section7.vfParameterVolumeContext C x)
+        (F.rowInContext x))
+      (IntegrationInACVF.Section7.positiveVolumeBlowupClass hc (IntegrationInACVF.Section7.vfParameterVolumeContext C x)
+        (G.rowInContext x)))
+'IntegrationInACVF.Section7.volume_family_coprod_row_class' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.volume_family_coprod_row_carrier : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {C : SpecialTransformations.Section3.BaseContext M} {n a b k : Nat}
+  (F : IntegrationInACVF.Section7.DefinableVFVolumeFamily C n a k)
+  (G : IntegrationInACVF.Section7.DefinableVFVolumeFamily C n b k)
+  (x : Fin n → SpecialTransformations.Milestone0.Transfer.VFType),
+  Eq.{1}
+    (SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+      (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} ((F.coprod G).rowInContext x).underlying).domain)
+    (SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+      (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0}
+          ((F.rowInContext x).coprod (G.rowInContext x)).underlying).domain)
+'IntegrationInACVF.Section7.volume_family_coprod_row_carrier' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.volumeFamilyCoprodRowLeftMap : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {C : SpecialTransformations.Section3.BaseContext M} →
+        {n a b k : Nat} →
+          (F : IntegrationInACVF.Section7.DefinableVFVolumeFamily C n a k) →
+            (G : IntegrationInACVF.Section7.DefinableVFVolumeFamily C n b k) →
+              (x : Fin n → SpecialTransformations.Milestone0.Transfer.VFType) →
+                SpecialTransformations.DefinableGeometry.Map.{0, 0}
+                  (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} (F.rowInContext x).underlying).domain
+                  (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0}
+                      ((F.coprod G).rowInContext x).underlying).domain
+'IntegrationInACVF.Section7.volumeFamilyCoprodRowLeftMap' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.volumeFamilyCoprodRowRightMap : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {C : SpecialTransformations.Section3.BaseContext M} →
+        {n a b k : Nat} →
+          (F : IntegrationInACVF.Section7.DefinableVFVolumeFamily C n a k) →
+            (G : IntegrationInACVF.Section7.DefinableVFVolumeFamily C n b k) →
+              (x : Fin n → SpecialTransformations.Milestone0.Transfer.VFType) →
+                SpecialTransformations.DefinableGeometry.Map.{0, 0}
+                  (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} (G.rowInContext x).underlying).domain
+                  (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0}
+                      ((F.coprod G).rowInContext x).underlying).domain
+'IntegrationInACVF.Section7.volumeFamilyCoprodRowRightMap' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.volume_family_coprod_row_left_coordinates : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {C : SpecialTransformations.Section3.BaseContext M} {n a b k : Nat}
+  (F : IntegrationInACVF.Section7.DefinableVFVolumeFamily C n a k)
+  (G : IntegrationInACVF.Section7.DefinableVFVolumeFamily C n b k)
+  (x : Fin n → SpecialTransformations.Milestone0.Transfer.VFType)
+  (r :
+    ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+        (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} (F.rowInContext x).underlying).domain)),
+  Eq.{1}
+    ((CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} ((F.coprod G).rowInContext x).underlying).value
+      (SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0}
+        (IntegrationInACVF.Section7.volumeFamilyCoprodRowLeftMap F G x) r))
+    ((CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} (F.rowInContext x).underlying).value r)
+'IntegrationInACVF.Section7.volume_family_coprod_row_left_coordinates' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.volume_family_coprod_row_right_coordinates : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {C : SpecialTransformations.Section3.BaseContext M} {n a b k : Nat}
+  (F : IntegrationInACVF.Section7.DefinableVFVolumeFamily C n a k)
+  (G : IntegrationInACVF.Section7.DefinableVFVolumeFamily C n b k)
+  (x : Fin n → SpecialTransformations.Milestone0.Transfer.VFType)
+  (r :
+    ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+        (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} (G.rowInContext x).underlying).domain)),
+  Eq.{1}
+    ((CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} ((F.coprod G).rowInContext x).underlying).value
+      (SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0}
+        (IntegrationInACVF.Section7.volumeFamilyCoprodRowRightMap F G x) r))
+    ((CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} (G.rowInContext x).underlying).value r)
+'IntegrationInACVF.Section7.volume_family_coprod_row_right_coordinates' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.volume_family_coprod_row_left_density : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {C : SpecialTransformations.Section3.BaseContext M} {n a b k : Nat}
+  (F : IntegrationInACVF.Section7.DefinableVFVolumeFamily C n a k)
+  (G : IntegrationInACVF.Section7.DefinableVFVolumeFamily C n b k)
+  (x : Fin n → SpecialTransformations.Milestone0.Transfer.VFType)
+  (r :
+    ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+        (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} (F.rowInContext x).underlying).domain)),
+  Eq.{1}
+    (((F.coprod G).rowInContext x).form.value
+      (SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0}
+        (IntegrationInACVF.Section7.volumeFamilyCoprodRowLeftMap F G x) r))
+    ((F.rowInContext x).form.value r)
+'IntegrationInACVF.Section7.volume_family_coprod_row_left_density' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.volume_family_coprod_row_right_density : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {C : SpecialTransformations.Section3.BaseContext M} {n a b k : Nat}
+  (F : IntegrationInACVF.Section7.DefinableVFVolumeFamily C n a k)
+  (G : IntegrationInACVF.Section7.DefinableVFVolumeFamily C n b k)
+  (x : Fin n → SpecialTransformations.Milestone0.Transfer.VFType)
+  (r :
+    ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+        (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0} (G.rowInContext x).underlying).domain)),
+  Eq.{1}
+    (((F.coprod G).rowInContext x).form.value
+      (SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0}
+        (IntegrationInACVF.Section7.volumeFamilyCoprodRowRightMap F G x) r))
+    ((G.rowInContext x).form.value r)
+'IntegrationInACVF.Section7.volume_family_coprod_row_right_density' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.selected_family_canonical_integral_add : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {n a b k : Nat}
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M)
+  (Ξ : Set.{0} SpecialTransformations.Section3.Values.Gamma),
+  LT.lt.{1} (Cardinal.mk.{0} ↑Ξ) C.κ →
+    ∀
+      (hGenerated :
+        SpecialTransformations.Section3.GammaParameters.VFGammaGeneratedBase { real := ↑C.base, gamma := Ξ }),
+      LE.le.{0} (SpecialTransformations.Section3.GammaParameters.commonRealNames { real := ↑C.base, gamma := Ξ })
+          ↑C.base →
+        ∀ (γ : SpecialTransformations.Section3.Values.Gamma),
+          Membership.mem.{0, 0} Ξ γ →
+            LT.lt.{0} 1 γ →
+              ∀ (F : IntegrationInACVF.Section7.SelectedVFVolumeFamily C (HAdd.hAdd.{0, 0, 0} n 1) a k)
+                (G : IntegrationInACVF.Section7.SelectedVFVolumeFamily C (HAdd.hAdd.{0, 0, 0} n 1) b k),
+                Eq.{1}
+                  (IntegrationInACVF.Section7.selectedFamilyCanonicalIntegralValue hc C Ξ hGenerated
+                    (IntegrationInACVF.Section7.selectedVolumeFamilySum F G))
+                  (HAdd.hAdd.{0, 0, 0}
+                    (IntegrationInACVF.Section7.selectedFamilyCanonicalIntegralValue hc C Ξ hGenerated F)
+                    (IntegrationInACVF.Section7.selectedFamilyCanonicalIntegralValue hc C Ξ hGenerated G))
+'IntegrationInACVF.Section7.selected_family_canonical_integral_add' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.selected_zero_family_full_lift_empty : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (C : SpecialTransformations.Section3.BaseContext M) (n k : Nat),
+  Eq.{1} (IntegrationInACVF.Section7.selectedZeroVolumeFamily C n k).fullLift.domain
+    (SpecialTransformations.DefinableGeometry.DefSet.empty.{0, 0}
+      (SpecialTransformations.Section4.rawMixedSpace (HAdd.hAdd.{0, 0, 0} n (HAdd.hAdd.{0, 0, 0} k 1))
+        (HAdd.hAdd.{0, 0, 0} k 1))
+      ↑C.base)
+'IntegrationInACVF.Section7.selected_zero_family_full_lift_empty' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.selected_family_canonical_integral_zero : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M)
+  (Ξ : Set.{0} SpecialTransformations.Section3.Values.Gamma),
+  LT.lt.{1} (Cardinal.mk.{0} ↑Ξ) C.κ →
+    ∀
+      (hGenerated :
+        SpecialTransformations.Section3.GammaParameters.VFGammaGeneratedBase { real := ↑C.base, gamma := Ξ }),
+      LE.le.{0} (SpecialTransformations.Section3.GammaParameters.commonRealNames { real := ↑C.base, gamma := Ξ })
+          ↑C.base →
+        ∀ (γ : SpecialTransformations.Section3.Values.Gamma),
+          Membership.mem.{0, 0} Ξ γ →
+            LT.lt.{0} 1 γ →
+              ∀ (n k : Nat),
+                Eq.{1}
+                  (IntegrationInACVF.Section7.selectedFamilyCanonicalIntegralValue hc C Ξ hGenerated
+                    (IntegrationInACVF.Section7.selectedZeroVolumeFamily C (HAdd.hAdd.{0, 0, 0} n 1) k))
+                  0
+'IntegrationInACVF.Section7.selected_family_canonical_integral_zero' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.definableVolumeFamilyLiftCoprodBijection : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {C : SpecialTransformations.Section3.BaseContext M} →
+        {n a b k : Nat} →
+          CanonicalStructure.IsCanonical →
+            (F : IntegrationInACVF.Section7.DefinableVFVolumeFamily C n a k) →
+              (G : IntegrationInACVF.Section7.DefinableVFVolumeFamily C n b k) →
+                IntegrationInACVF.Section7.VFVolumeBijection (F.fullLift.coprod G.fullLift) (F.coprod G).fullLift
+'IntegrationInACVF.Section7.definableVolumeFamilyLiftCoprodBijection' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.volume_family_lift_coprod_carrier : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {C : SpecialTransformations.Section3.BaseContext M} {n a b k : Nat}
+  (F : IntegrationInACVF.Section7.DefinableVFVolumeFamily C n a k)
+  (G : IntegrationInACVF.Section7.DefinableVFVolumeFamily C n b k),
+  Eq.{1} (SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} (F.coprod G).fullLift.domain)
+    (SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} (F.fullLift.coprod G.fullLift).domain)
+'IntegrationInACVF.Section7.volume_family_lift_coprod_carrier' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

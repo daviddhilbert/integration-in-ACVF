@@ -1,0 +1,406 @@
+{
+  "source_sha256": {
+    "section 7/Integration7/AERVVolumeFunctions.lean": "a0b90139d452bc6bf8ac5285894006646e96a1c295242cf2767ddecdec3ea1ad",
+    "section 7/Integration7/CanonicalVolumeFamilyIntegrals.lean": "e64ed5cf0184ac48791f9470f12d7dc914c47f42ace37bef3040b023173fb3ff",
+    "section 7/Integration7/IntegrationCoordinateDensityFormula.lean": "00e90af1941c63d57ffb6122841a58d86473b758f17c2f4883cf1f977ced076d",
+    "section 7/Integration7/IntegrationStandardContractionFormula.lean": "0b80c89d0ffc7cdda86cfc0b163ba6689255f01791a527cff883ff513119c337",
+    "section 7/Integration7/PointwiseRVVolumeFunctions.lean": "76bfb73e2c465f23fa8312a1d56b3940000a9f4147ea5a4781878539f241112c",
+    "section 7/Integration7/PureVFDimensionUnions.lean": "8c56b8804622205ff1ebef680076dc909d9f8ce17feb408cabac13825ede8143",
+    "section 7/Integration7/SelectedCoordinateVolumeRealizations.lean": "5754231c3a4df1c925791be3532cb470338ac950b9e5dacacc0161dec257a55e",
+    "section 7/Integration7/SelectedFamilyCofullLifts.lean": "3381885451ae24e78946a14656990fa8da3a023b8375670eccfd238f798fb6cd",
+    "section 7/Integration7/SelectedFamilyFullLifts.lean": "d23141d43d01d582d44558b8e975865050c932b20e48695c0c4040ca3ef8ee91",
+    "section 7/Integration7/SelectedFamilyIntegral.lean": "05a98d8372962c217bcbe18e85dd9ec4852ce644519ff660cbcd6d9a45259423",
+    "section 7/Integration7/SelectedFamilyIntegralComparison.lean": "8a4b3ad9222a511e38992483928dee9cfee32ca134bc76bc4e994c4a40ff1de5",
+    "section 7/Integration7/SelectedFamilyRestrictions.lean": "f86a4f10ea2437b8a5c1c57e7ff2e60a4cf763249c545f0ee708c99aefa5f47b",
+    "section 7/Integration7/SelectedFamilySmallIntegrals.lean": "48ca43992fbeaef71be43bb0d159fb46bf91c020e47c139a8ecc2fbfec588164",
+    "section 7/Integration7/SelectedIntegralCoordinateCharts.lean": "163edcdd66c2b523a18f4d59eea2eb84fc6edc74977c83bd9cf8edd456692c26",
+    "section 7/Integration7/SelectedIntegralCoordinateOrder.lean": "6bf577c08ba40049e4f6e7a3fa5a1beecddae482e1b89fa07317671c7c94a4ad",
+    "section 7/Integration7/VFBaseDimensionBounds.lean": "9f8e77b18650cd157252e5968a4f3be1fa81cd55a4531229bfef4d51210c48c6",
+    "section 7/Integration7/VolumeFamilyBaseExceptions.lean": "de53d5182c554fa9745f607ce3015f8212a367662c929102fb003c22dfc1b2a1",
+    "section 7/Integration7/VolumeIntegrationGroupification.lean": "e256c1d249511db5d2ca1c8f482b1d438fa2107b277892ddf4b32ef0df5151f7"
+  },
+  "declarations": [
+    "IntegrationInACVF.Section7.AERVVolumeFunctionEquivalent",
+    "IntegrationInACVF.Section7.ae_rv_volume_function_equivalent_of_pointwise",
+    "IntegrationInACVF.Section7.aeRVVolumeFunctionSetoid",
+    "IntegrationInACVF.Section7.AERVVolumeFunction",
+    "IntegrationInACVF.Section7.pointwiseToAERVVolumeFunction",
+    "IntegrationInACVF.Section7.pointwise_to_ae_rv_volume_function_surjective",
+    "IntegrationInACVF.Section7.SelectedVFVolumeFamily.canonicalIntegralObject",
+    "IntegrationInACVF.Section7.selected_family_canonical_integral_comparison",
+    "IntegrationInACVF.Section7.selectedFamilyCanonicalIntegralValue",
+    "IntegrationInACVF.Section7.selected_family_canonical_integral_value_independent",
+    "IntegrationInACVF.Section7.SelectedVFVolumeFamily.canonicalVFRealization",
+    "IntegrationInACVF.Section7.selected_family_canonical_integral_realization",
+    "IntegrationInACVF.Section7.positive_volume_integration_coordinate_density",
+    "IntegrationInACVF.Section7.positive_volume_integration_standard_contraction",
+    "IntegrationInACVF.Section7.SelectedVolumeFunctionPresentation",
+    "IntegrationInACVF.Section7.pointwiseRVVolumeFunctionSetoid",
+    "IntegrationInACVF.Section7.PointwiseRVVolumeFunction",
+    "IntegrationInACVF.Section7.pointwiseRVVolumeFunctionValue",
+    "IntegrationInACVF.Section7.pointwiseRVVolumeFunction_ext",
+    "IntegrationInACVF.Section7.pointwiseRVVolumeFunctionIntegral",
+    "IntegrationInACVF.Section7.pointwise_rv_volume_function_integral_representative",
+    "IntegrationInACVF.Section7.pureVFGraphMap",
+    "IntegrationInACVF.Section7.pure_vf_graph_map_bijective",
+    "IntegrationInACVF.Section7.pure_vf_graph_dimension",
+    "IntegrationInACVF.Section7.pure_vf_graph_union",
+    "IntegrationInACVF.Section7.pure_vf_dim_union",
+    "IntegrationInACVF.Section7.selectedCoordinateVolumeRealization",
+    "IntegrationInACVF.Section7.selected_coordinate_volume_realization_density",
+    "IntegrationInACVF.Section7.selected_coordinate_volume_realization_integral",
+    "IntegrationInACVF.Section7.selectedFamilyFullLiftRestrictionBijection",
+    "IntegrationInACVF.Section7.selectedFamilyCofullLiftIso",
+    "IntegrationInACVF.Section7.selected_family_full_lift_class_remove_small",
+    "IntegrationInACVF.Section7.selected_family_full_lift_class_remove_small_base",
+    "IntegrationInACVF.Section7.selected_rv_vf_tail_lift_dim_le",
+    "IntegrationInACVF.Section7.SelectedVFVolumeFamily.fullLift",
+    "IntegrationInACVF.Section7.SelectedVFVolumeFamily.fullLift_density",
+    "IntegrationInACVF.Section7.SelectedVFVolumeFamily.fullLift_dimension_le",
+    "IntegrationInACVF.Section7.SelectedVFVolumeFamily.fullLift_small_of_small_domain",
+    "IntegrationInACVF.Section7.selectedFamilyIntegralContraction",
+    "IntegrationInACVF.Section7.selectedFamilyIntegralValue",
+    "IntegrationInACVF.Section7.selected_family_integral_value_independent",
+    "IntegrationInACVF.Section7.selected_family_integral_comparison",
+    "IntegrationInACVF.Section7.SelectedVFVolumeFamily.restrict",
+    "IntegrationInACVF.Section7.selected_family_full_lift_restrict_subset",
+    "IntegrationInACVF.Section7.selected_family_full_lift_restrict_cofull",
+    "IntegrationInACVF.Section7.raw_native_vf_arity_cast_dimension",
+    "IntegrationInACVF.Section7.selected_coordinate_volume_realization_dimension_le",
+    "IntegrationInACVF.Section7.selected_standard_volume_integral_zero_of_small_domain",
+    "IntegrationInACVF.Section7.selected_append_degree_eq",
+    "IntegrationInACVF.Section7.selected_integral_coordinate_chart_coordinates",
+    "IntegrationInACVF.Section7.selectedIntegralCoordinateChart",
+    "IntegrationInACVF.Section7.selected_integral_coordinate_chart_density",
+    "IntegrationInACVF.Section7.VolumeBlowupEquivalent.of_reindexDegree",
+    "IntegrationInACVF.Section7.appendedToOriginalVolumePermutation",
+    "IntegrationInACVF.Section7.identity_selected_volume_index_from_append",
+    "IntegrationInACVF.Section7.pure_vf_has_dimension_bound",
+    "IntegrationInACVF.Section7.mixed_domain_vf_dim_le_base",
+    "IntegrationInACVF.Section7.selected_family_full_lift_small_over_small_base",
+    "IntegrationInACVF.Section7.SelectedVFVolumeFamily.outsideBase",
+    "IntegrationInACVF.Section7.selectedFamilyOutsideBaseRowIso",
+    "IntegrationInACVF.Section7.selected_family_outside_base_difference_supported",
+    "IntegrationInACVF.Section7.ae_volume_family_outside_base",
+    "IntegrationInACVF.Section7.full_volume_lift_class_outside_base",
+    "IntegrationInACVF.Section7.VFVolumeRing",
+    "IntegrationInACVF.Section7.RVVolumeBlowupRing",
+    "IntegrationInACVF.Section7.volumeIntegrationRingEquiv",
+    "IntegrationInACVF.Section7.volume_integration_ring_of"
+  ],
+  "manually_reviewed_lines": 1109,
+  "audit_log": ".scratch/recovery/recovered-eighty-second-geometry-types-axioms.log",
+  "status": "PASS actual source compilation, full type/axiom review and affected library integration",
+  "scope": "Propositions7.8-7.9 and Theorem7.10 remain established. Positive homogeneous volume-family pointwise integral independence, actual VF realizations, selected standard-contraction formulas, and VF-small base exception removal are proved. The actual almost-everywhere function quotient is defined, but its integral descent, coordinate pushforwards and7.11-7.12 remain open. The universal-groupification integration ring equivalence is proved; the principal-relation identification and normalized-coefficient parts of7.13-7.15 remain open.",
+  "library_build_log": ".scratch/recovery/eighty-second-reconstruction-library-build.log",
+  "library_build_jobs_including_cached_dependencies": 11998,
+  "compilation": [
+    {
+      "module": "AERVVolumeFunctions",
+      "source": "section 7/Integration7/AERVVolumeFunctions.lean",
+      "source_sha256": "a0b90139d452bc6bf8ac5285894006646e96a1c295242cf2767ddecdec3ea1ad",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/AERVVolumeFunctions.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/AERVVolumeFunctions.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.382,
+      "completed_at_utc": "2026-11-15T06:14:13.900479+00:00",
+      "log": ".scratch/recovery/AERVVolumeFunctions-build.log"
+    },
+    {
+      "module": "CanonicalVolumeFamilyIntegrals",
+      "source": "section 7/Integration7/CanonicalVolumeFamilyIntegrals.lean",
+      "source_sha256": "e64ed5cf0184ac48791f9470f12d7dc914c47f42ace37bef3040b023173fb3ff",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/CanonicalVolumeFamilyIntegrals.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/CanonicalVolumeFamilyIntegrals.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.965,
+      "completed_at_utc": "2026-11-15T06:20:23.683730+00:00",
+      "log": ".scratch/recovery/CanonicalVolumeFamilyIntegrals-build.log"
+    },
+    {
+      "module": "IntegrationCoordinateDensityFormula",
+      "source": "section 7/Integration7/IntegrationCoordinateDensityFormula.lean",
+      "source_sha256": "00e90af1941c63d57ffb6122841a58d86473b758f17c2f4883cf1f977ced076d",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/IntegrationCoordinateDensityFormula.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/IntegrationCoordinateDensityFormula.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.614,
+      "completed_at_utc": "2026-11-15T06:09:47.108984+00:00",
+      "log": ".scratch/recovery/IntegrationCoordinateDensityFormula-build.log"
+    },
+    {
+      "module": "IntegrationStandardContractionFormula",
+      "source": "section 7/Integration7/IntegrationStandardContractionFormula.lean",
+      "source_sha256": "0b80c89d0ffc7cdda86cfc0b163ba6689255f01791a527cff883ff513119c337",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/IntegrationStandardContractionFormula.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/IntegrationStandardContractionFormula.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.826,
+      "completed_at_utc": "2026-11-15T06:05:53.566028+00:00",
+      "log": ".scratch/recovery/IntegrationStandardContractionFormula-build.log"
+    },
+    {
+      "module": "PointwiseRVVolumeFunctions",
+      "source": "section 7/Integration7/PointwiseRVVolumeFunctions.lean",
+      "source_sha256": "76bfb73e2c465f23fa8312a1d56b3940000a9f4147ea5a4781878539f241112c",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/PointwiseRVVolumeFunctions.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/PointwiseRVVolumeFunctions.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.64,
+      "completed_at_utc": "2026-11-15T06:03:18.198957+00:00",
+      "log": ".scratch/recovery/PointwiseRVVolumeFunctions-build.log"
+    },
+    {
+      "module": "PureVFDimensionUnions",
+      "source": "section 7/Integration7/PureVFDimensionUnions.lean",
+      "source_sha256": "8c56b8804622205ff1ebef680076dc909d9f8ce17feb408cabac13825ede8143",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/PureVFDimensionUnions.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/PureVFDimensionUnions.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.191,
+      "completed_at_utc": "2026-11-15T06:14:09.518287+00:00",
+      "log": ".scratch/recovery/PureVFDimensionUnions-build.log"
+    },
+    {
+      "module": "SelectedCoordinateVolumeRealizations",
+      "source": "section 7/Integration7/SelectedCoordinateVolumeRealizations.lean",
+      "source_sha256": "5754231c3a4df1c925791be3532cb470338ac950b9e5dacacc0161dec257a55e",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/SelectedCoordinateVolumeRealizations.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/SelectedCoordinateVolumeRealizations.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 5.254,
+      "completed_at_utc": "2026-11-15T06:15:34.159384+00:00",
+      "log": ".scratch/recovery/SelectedCoordinateVolumeRealizations-build.log"
+    },
+    {
+      "module": "SelectedFamilyCofullLifts",
+      "source": "section 7/Integration7/SelectedFamilyCofullLifts.lean",
+      "source_sha256": "3381885451ae24e78946a14656990fa8da3a023b8375670eccfd238f798fb6cd",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/SelectedFamilyCofullLifts.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/SelectedFamilyCofullLifts.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.29,
+      "completed_at_utc": "2026-11-15T06:11:39.782318+00:00",
+      "log": ".scratch/recovery/SelectedFamilyCofullLifts-build.log"
+    },
+    {
+      "module": "SelectedFamilyFullLifts",
+      "source": "section 7/Integration7/SelectedFamilyFullLifts.lean",
+      "source_sha256": "d23141d43d01d582d44558b8e975865050c932b20e48695c0c4040ca3ef8ee91",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/SelectedFamilyFullLifts.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/SelectedFamilyFullLifts.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.1,
+      "completed_at_utc": "2026-11-15T06:07:54.377527+00:00",
+      "log": ".scratch/recovery/SelectedFamilyFullLifts-build.log"
+    },
+    {
+      "module": "SelectedFamilyIntegral",
+      "source": "section 7/Integration7/SelectedFamilyIntegral.lean",
+      "source_sha256": "05a98d8372962c217bcbe18e85dd9ec4852ce644519ff660cbcd6d9a45259423",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/SelectedFamilyIntegral.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/SelectedFamilyIntegral.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.294,
+      "completed_at_utc": "2026-11-15T06:02:28.526522+00:00",
+      "log": ".scratch/recovery/SelectedFamilyIntegral-build.log"
+    },
+    {
+      "module": "SelectedFamilyIntegralComparison",
+      "source": "section 7/Integration7/SelectedFamilyIntegralComparison.lean",
+      "source_sha256": "8a4b3ad9222a511e38992483928dee9cfee32ca134bc76bc4e994c4a40ff1de5",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/SelectedFamilyIntegralComparison.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/SelectedFamilyIntegralComparison.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.733,
+      "completed_at_utc": "2026-11-15T06:02:24.232136+00:00",
+      "log": ".scratch/recovery/SelectedFamilyIntegralComparison-build.log"
+    },
+    {
+      "module": "SelectedFamilyRestrictions",
+      "source": "section 7/Integration7/SelectedFamilyRestrictions.lean",
+      "source_sha256": "f86a4f10ea2437b8a5c1c57e7ff2e60a4cf763249c545f0ee708c99aefa5f47b",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/SelectedFamilyRestrictions.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/SelectedFamilyRestrictions.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 3.805,
+      "completed_at_utc": "2026-11-15T06:10:02.859105+00:00",
+      "log": ".scratch/recovery/SelectedFamilyRestrictions-build.log"
+    },
+    {
+      "module": "SelectedFamilySmallIntegrals",
+      "source": "section 7/Integration7/SelectedFamilySmallIntegrals.lean",
+      "source_sha256": "48ca43992fbeaef71be43bb0d159fb46bf91c020e47c139a8ecc2fbfec588164",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/SelectedFamilySmallIntegrals.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/SelectedFamilySmallIntegrals.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 5.124,
+      "completed_at_utc": "2026-11-15T06:16:50.901768+00:00",
+      "log": ".scratch/recovery/SelectedFamilySmallIntegrals-build.log"
+    },
+    {
+      "module": "SelectedIntegralCoordinateCharts",
+      "source": "section 7/Integration7/SelectedIntegralCoordinateCharts.lean",
+      "source_sha256": "163edcdd66c2b523a18f4d59eea2eb84fc6edc74977c83bd9cf8edd456692c26",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/SelectedIntegralCoordinateCharts.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/SelectedIntegralCoordinateCharts.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.582,
+      "completed_at_utc": "2026-11-15T06:19:25.223124+00:00",
+      "log": ".scratch/recovery/SelectedIntegralCoordinateCharts-build.log"
+    },
+    {
+      "module": "SelectedIntegralCoordinateOrder",
+      "source": "section 7/Integration7/SelectedIntegralCoordinateOrder.lean",
+      "source_sha256": "6bf577c08ba40049e4f6e7a3fa5a1beecddae482e1b89fa07317671c7c94a4ad",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/SelectedIntegralCoordinateOrder.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/SelectedIntegralCoordinateOrder.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.666,
+      "completed_at_utc": "2026-11-15T06:18:26.669361+00:00",
+      "log": ".scratch/recovery/SelectedIntegralCoordinateOrder-build.log"
+    },
+    {
+      "module": "VFBaseDimensionBounds",
+      "source": "section 7/Integration7/VFBaseDimensionBounds.lean",
+      "source_sha256": "9f8e77b18650cd157252e5968a4f3be1fa81cd55a4531229bfef4d51210c48c6",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/VFBaseDimensionBounds.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/VFBaseDimensionBounds.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.051,
+      "completed_at_utc": "2026-11-15T06:09:59.053970+00:00",
+      "log": ".scratch/recovery/VFBaseDimensionBounds-build.log"
+    },
+    {
+      "module": "VolumeFamilyBaseExceptions",
+      "source": "section 7/Integration7/VolumeFamilyBaseExceptions.lean",
+      "source_sha256": "de53d5182c554fa9745f607ce3015f8212a367662c929102fb003c22dfc1b2a1",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/VolumeFamilyBaseExceptions.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/VolumeFamilyBaseExceptions.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.27,
+      "completed_at_utc": "2026-11-15T06:15:39.560008+00:00",
+      "log": ".scratch/recovery/VolumeFamilyBaseExceptions-build.log"
+    },
+    {
+      "module": "VolumeIntegrationGroupification",
+      "source": "section 7/Integration7/VolumeIntegrationGroupification.lean",
+      "source_sha256": "e256c1d249511db5d2ca1c8f482b1d438fa2107b277892ddf4b32ef0df5151f7",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/VolumeIntegrationGroupification.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/VolumeIntegrationGroupification.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.234,
+      "completed_at_utc": "2026-11-15T06:11:44.016829+00:00",
+      "log": ".scratch/recovery/VolumeIntegrationGroupification-build.log"
+    }
+  ],
+  "completed_at_utc": "2026-11-15T06:23:40.005110+00:00"
+}
