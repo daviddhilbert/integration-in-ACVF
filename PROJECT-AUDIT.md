@@ -38,7 +38,7 @@ The current receipt is
 | 4 | 445 | Numbered lemmas and cell geometry in the approved scope. |
 | 5 | 1,852 | All active RV[k] targets complete, with explicit RV presentation charts for 5.5. |
 | 6 | 2,273 | 736 registered modules; numbered finite-category results retain their universal Section 5.8 input; the actual fixed-base input is now proved. |
-| 7 | 4,789 | 1,521 modules plus Library; geometry through 7.10, all homogeneous head fibre values, normalized total integration and the normalized commutative ring presentation. |
+| 7 | 5,074 | 1,621 modules plus Library; geometry through 7.10, all homogeneous head fibre values, normalized linear partial integrals, supported-domain Fubini, normalized change of variables and the normalized commutative ring presentation. |
 
 The three new Section 6 modules convert the actual Section 5 RV-category
 isomorphisms and prove `completed_section5_two_order_input` on bases
@@ -67,11 +67,21 @@ normalized function, including ordinary RV[0] family generators. These
 function modules have positive VF dimension: index n means n+1 VF coordinates.
 All standing parameter, saturation and Gamma hypotheses remain explicit.
 
+The actual positive head integral now commutes with every positive constant
+coefficient over a VF field base, including the definable closure of each
+frozen VF tuple. Actual point padding proves the separately constructed
+ordinary-input head map agrees with the normalized operator. Head, prefix
+and arbitrary nonempty coordinate pushforwards are linear on the full
+normalized module and have the complete graded generator formulas. Their
+supported-domain versions have exactly the literal definable projected
+support and agree with the unmodified full operators after forgetting
+support. Total Fubini holds on every supported normalized input.
+
 Section 7 still needs:
 
-- **7.11:** full partial-operator scalar linearity and arbitrary-coordinate
-  assembly on the complete graded and normalized function spaces. The
-  existing partial head map is a `ZeroHom`; linearity is still to be proved.
+- **7.11:** raw partial-integral scalar assembly across all ordinary and
+  positive components. The normalized linear operators and full graded
+  generator comparisons are proved.
 - **7.12:** unnormalized full graded Jacobian assembly; normalized
   definable-domain change of variables is proved as described above.
 - **7.13:** the raw, unlocalized principal-kernel identification. Elementary
@@ -80,26 +90,29 @@ Section 7 still needs:
   factorization has a checked counterexample; this does not disprove the
   principal-ideal statement itself. The normalized ring presentation above
   is proved independently of that unresolved raw identification.
-- **7.14:** full normalized partial operators and their pointwise fibre
-  interpretation, beyond the proved total and positive homogeneous formulas.
+- **7.14:** any remaining pointwise normalized evaluation connections,
+  beyond the proved homogeneous frozen-fibre interpretations, full graded
+  generator comparisons, normalized linear operators and supported Fubini.
 
 The accepted nonempty-selected-coordinate scope of 7.5 is retained;
 ordinary RV[0] is included. No new statement relaxation was introduced.
 
 ## Publication and verification scope
 
-The previous published checkpoint on `section-7/reconstructed-foundation`
-was `9149bd45be3c774ba7eaacbf7ef39e1739ac09dc`. Its mathematical boundary had
-1,422 Section 7 modules and 4,373 exports and includes the completed Section 5
-branch as a merge parent. [CI run 43742595088](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/43742595088)
-passed its project build and all section verifiers in 49 minutes 18 seconds.
-The project build took 43 minutes 23 seconds and saved its compiled cache;
-audit dispatch took 3 minutes 36 seconds. A subsequent warm runtime has not
-yet been measured. The next mathematical checkpoint adds 99 checked Section 7 modules,
-bringing the branch source boundary to 1,521 modules and 4,789 exports.
-Its new CI result is pending and must be distinguished from
-that earlier successful run. Main is unchanged at
-`7d4acc730496b3bd05a22c268ffd89540ca694f9`.
+The preceding published checkpoint on `section-7/reconstructed-foundation`
+is `2a73c6f3d38ebe8d60777f290fcfb20473a69ac0`, with 1,521 Section 7 modules
+and 4,789 exports. [CI run 43751241565](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/43751241565)
+passed in 9 minutes 31 seconds: project build 3 minutes 50 seconds and audit
+dispatch 3 minutes 32 seconds. This verifies the warm project-cache speedup
+from the previous run's 49 minutes 18 seconds (43 minutes 23 seconds building).
+
+The current checkpoint adds 100 checked modules and 285 exports, reaching
+1,621 modules plus Library and 5,074 exports. Each proof batch received one
+complete new-declaration type/axiom review and an affected Library build.
+The final batch built successfully in 12,496 Lake jobs including cached
+dependencies; its 739-line review covers all 43 new exports. A new CI result
+must be distinguished from the successful preceding checkpoint. Main
+remains `7d4acc730496b3bd05a22c268ffd89540ca694f9`.
 
 The three CI dispatch regression tests pass. The targeted fresh checks
 above supplement the earlier whole-project audit below; its counts and

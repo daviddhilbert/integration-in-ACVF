@@ -1,0 +1,45 @@
+import Integration7.SelectedHeadIntegralRowAddition
+import Integration7.AEVolumeHeadZeros
+import Integration7.AERVVolumeFunctionAdditiveStructure
+
+/-! The actual positive homogeneous partial integral is additive on
+almost-everywhere classes, with its existing geometric representative. -/
+noncomputable section
+set_option backward.isDefEq.respectTransparency false
+open FirstOrder FirstOrder.Language
+open SpecialTransformations.Milestone0 SpecialTransformations.Milestone0.LRV
+open SpecialTransformations.Section3 SpecialTransformations.Section3.GammaParameters
+namespace IntegrationInACVF.Section7
+variable {M : Type} [LRV.Structure M] [M ⊨ Axioms.ACVF] {n k : ℕ}
+variable (hc : CanonicalStructure.IsCanonical (M := M)) (C : BaseContext M)
+variable (Ξ : Set (Values.Gamma (M := M))) (hΞ : Cardinal.mk Ξ < C.κ)
+variable (hGenerated : VFGammaGeneratedBase (⟨(C.base : Set M),Ξ⟩ : Base (M := M)))
+variable (hNames : commonRealNames (⟨(C.base : Set M),Ξ⟩ : Base (M := M)) ⊆ (C.base : Set M))
+variable (γ : Values.Gamma (M := M)) (hγ : γ ∈ Ξ) (hγ1 : 1 < γ)
+
+theorem ae_rv_volume_head_integral_add
+    (f g : AERVVolumeFunction hc C (n+1) k) :
+    aeRVVolumeFunctionHeadIntegral hc C Ξ hΞ hGenerated hNames γ hγ hγ1 (f+g) =
+      aeRVVolumeFunctionHeadIntegral hc C Ξ hΞ hGenerated hNames γ hγ hγ1 f +
+      aeRVVolumeFunctionHeadIntegral hc C Ξ hΞ hGenerated hNames γ hγ hγ1 g := by
+  induction f using Quotient.inductionOn with
+  | h F =>
+    induction g using Quotient.inductionOn with
+    | h G =>
+      apply Quotient.sound
+      apply ae_rv_volume_function_equivalent_of_pointwise hc C
+      intro x
+      exact (selected_head_integral_sum_row_class hc C Ξ hΞ hNames γ hγ hγ1 F.2 G.2
+        (selectedFamilyHeadPreparation hc Ξ hGenerated F.2)
+        (selectedFamilyHeadPreparation hc Ξ hGenerated G.2)
+        (selectedFamilyHeadPreparation hc Ξ hGenerated (selectedVolumeFamilySum F.2 G.2)) x).trans
+        (selected_volume_family_sum_row_class hc
+          (F.2.headIntegral hc Ξ (selectedFamilyHeadPreparation hc Ξ hGenerated F.2))
+          (G.2.headIntegral hc Ξ (selectedFamilyHeadPreparation hc Ξ hGenerated G.2)) x).symm
+
+def aeRVVolumeHeadIntegralAddHom (n k : ℕ) :
+    AERVVolumeFunction hc C (n+1) k →+ AERVVolumeFunction hc C n (k+1) where
+  toFun := aeRVVolumeFunctionHeadIntegral hc C Ξ hΞ hGenerated hNames γ hγ hγ1
+  map_zero' := ae_positive_head_integral_zero hc C Ξ hΞ hGenerated hNames γ hγ hγ1 n k
+  map_add' := ae_rv_volume_head_integral_add hc C Ξ hΞ hGenerated hNames γ hγ hγ1
+end IntegrationInACVF.Section7

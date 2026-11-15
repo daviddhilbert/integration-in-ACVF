@@ -1,0 +1,68 @@
+import Integration7.AEOrdinaryHeadIntegralAdditivity
+import Integration7.AEVolumeHeadIntegralAddHom
+import Integration7.FieldBaseUnaryIntegralAdditivity
+import Integration7.FieldBaseUnaryIntegralBijections
+import Integration7.FieldBaseUnaryIntegralPartitions
+import Integration7.FrozenOrdinaryHeadIntegralAdditivity
+import Integration7.GradedAEVolumeHeadIntegralAddHom
+import Integration7.GradedAEVolumePrefixIntegralAddHom
+import Integration7.OrdinaryFrozenCoproductBijections
+import Integration7.UnaryRawSelectedVolumeCharts
+import Integration7.VFCoproductLabelCutBijections
+import Integration7.VFVolumeObjectLabelCuts
+set_option pp.universes true
+set_option pp.proofs false
+set_option pp.deepTerms true
+set_option pp.maxSteps 10000000
+set_option pp.notation false
+set_option pp.funBinderTypes true
+set_option pp.piBinderTypes true
+
+
+
+#check @IntegrationInACVF.Section7.ae_ordinary_rv_volume_head_integral_add
+#print axioms IntegrationInACVF.Section7.ae_ordinary_rv_volume_head_integral_add
+#check @IntegrationInACVF.Section7.aeOrdinaryRVVolumeHeadIntegralAddHom
+#print axioms IntegrationInACVF.Section7.aeOrdinaryRVVolumeHeadIntegralAddHom
+#check @IntegrationInACVF.Section7.ae_volume_component_head_integral_add
+#print axioms IntegrationInACVF.Section7.ae_volume_component_head_integral_add
+#check @IntegrationInACVF.Section7.aeVolumeComponentHeadIntegralAddHom
+#print axioms IntegrationInACVF.Section7.aeVolumeComponentHeadIntegralAddHom
+#check @IntegrationInACVF.Section7.unary_field_volume_integral_add
+#print axioms IntegrationInACVF.Section7.unary_field_volume_integral_add
+#check @IntegrationInACVF.Section7.unary_field_volume_integral_bijection
+#print axioms IntegrationInACVF.Section7.unary_field_volume_integral_bijection
+#check @IntegrationInACVF.Section7.unary_field_volume_integral_label_partition
+#print axioms IntegrationInACVF.Section7.unary_field_volume_integral_label_partition
+#check @IntegrationInACVF.Section7.ordinary_family_frozen_head_integral_add
+#print axioms IntegrationInACVF.Section7.ordinary_family_frozen_head_integral_add
+#check @IntegrationInACVF.Section7.ordinary_head_integral_sum_row_class
+#print axioms IntegrationInACVF.Section7.ordinary_head_integral_sum_row_class
+#check @IntegrationInACVF.Section7.graded_ae_volume_head_integral_add
+#print axioms IntegrationInACVF.Section7.graded_ae_volume_head_integral_add
+#check @IntegrationInACVF.Section7.gradedAEVolumeHeadIntegralAddHom
+#print axioms IntegrationInACVF.Section7.gradedAEVolumeHeadIntegralAddHom
+#check @IntegrationInACVF.Section7.graded_ae_volume_prefix_integral_add
+#print axioms IntegrationInACVF.Section7.graded_ae_volume_prefix_integral_add
+#check @IntegrationInACVF.Section7.gradedAEVolumePrefixIntegralAddHom
+#print axioms IntegrationInACVF.Section7.gradedAEVolumePrefixIntegralAddHom
+#check @IntegrationInACVF.Section7.ordinaryFamilyFullCoprodBijection
+#print axioms IntegrationInACVF.Section7.ordinaryFamilyFullCoprodBijection
+#check @IntegrationInACVF.Section7.ordinary_frozen_head_coprod_carrier
+#print axioms IntegrationInACVF.Section7.ordinary_frozen_head_coprod_carrier
+#check @IntegrationInACVF.Section7.ordinaryFrozenHeadCoprodBijection
+#print axioms IntegrationInACVF.Section7.ordinaryFrozenHeadCoprodBijection
+#check @IntegrationInACVF.Section7.unaryRawSelectedVolumeIso
+#print axioms IntegrationInACVF.Section7.unaryRawSelectedVolumeIso
+#check @IntegrationInACVF.Section7.vfCoprodLeftCut
+#print axioms IntegrationInACVF.Section7.vfCoprodLeftCut
+#check @IntegrationInACVF.Section7.vfCoprodRightCut
+#print axioms IntegrationInACVF.Section7.vfCoprodRightCut
+#check @IntegrationInACVF.Section7.vfCoprodLeftCutBijection
+#print axioms IntegrationInACVF.Section7.vfCoprodLeftCutBijection
+#check @IntegrationInACVF.Section7.vfCoprodRightCutBijection
+#print axioms IntegrationInACVF.Section7.vfCoprodRightCutBijection
+#check @IntegrationInACVF.Section7.PositiveVFVolumeObject.onRVLabels
+#print axioms IntegrationInACVF.Section7.PositiveVFVolumeObject.onRVLabels
+#check @IntegrationInACVF.Section7.vf_volume_object_label_cut_density_graph
+#print axioms IntegrationInACVF.Section7.vf_volume_object_label_cut_density_graph

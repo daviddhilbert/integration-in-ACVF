@@ -1,0 +1,983 @@
+@IntegrationInACVF.Section7.unary_field_integral_retained_contraction : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {a : Nat}
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M)
+  (Ξ : Set.{0} SpecialTransformations.Section3.Values.Gamma),
+  LT.lt.{1} (Cardinal.mk.{0} ↑Ξ) C.κ →
+    ∀ (FBase : SpecialTransformations.Section3.VFFieldBase ↑C.base),
+      LE.le.{0} (SpecialTransformations.Section3.GammaParameters.commonRealNames { real := ↑C.base, gamma := Ξ })
+          ↑C.base →
+        ∀ (γ : SpecialTransformations.Section3.Values.Gamma),
+          Membership.mem.{0, 0} Ξ γ →
+            LT.lt.{0} 1 γ →
+              ∀ (A : SpecialTransformations.Section5.DefSet (↑C.base) 1 a)
+                (hfin :
+                  ∀ (x : Fin 1 → SpecialTransformations.Section5.VF),
+                    Set.Finite.{0}
+                      (Set.ofPred.{0} fun (r : Fin a → SpecialTransformations.Section5.RV) =>
+                        Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier A) (Prod.mk.{0, 0} x r)))
+                (ω : IntegrationInACVF.Section7.VolumeForm (SpecialTransformations.Section9.rawSpecialSet hc A))
+                (δ : Fin a),
+                (∀
+                    (q :
+                      ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+                          (SpecialTransformations.Section9.rawSpecialSet hc A))),
+                    Eq.{1} (ω.value q) ((↑q).2 δ)) →
+                  ∀
+                    (hδ :
+                      ∀
+                        (p :
+                          SpecialTransformations.DefinableGeometry.Space.Carrier.{0, 0}
+                            (SpecialTransformations.Section5.pointSpace 1 a)),
+                        Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier A) p →
+                          Ne.{1} (↑(p.2 δ)) SpecialTransformations.Milestone0.iRVZero.{0})
+                    (T : IntegrationInACVF.Section5.StandardContraction A (Equiv.refl.{1} (Fin 1))),
+                    Eq.{1}
+                      (IntegrationInACVF.Section7.positiveVolumeBlowupClass hc C
+                        (IntegrationInACVF.Section7.rawStandardVolumeObject hc C Ξ A hfin δ hδ T))
+                      (IntegrationInACVF.Section7.unaryFieldVolumeIntegral hc C Ξ FBase
+                        (IntegrationInACVF.Section7.nativeMixedVFVolumeObject hc A hfin ω))
+'IntegrationInACVF.Section7.unary_field_integral_retained_contraction' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.field_base_unary_special_preparation : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {a : Nat}
+  (C : SpecialTransformations.Section3.BaseContext M) (Ξ : Set.{0} SpecialTransformations.Section3.Values.Gamma)
+  (FBase : SpecialTransformations.Section3.VFFieldBase ↑C.base)
+  (A : SpecialTransformations.Section5.DefSet (↑C.base) 1 a),
+  Exists.{1} fun (b : Nat) =>
+    Exists.{1} fun (B : SpecialTransformations.Section5.DefSet (↑C.base) 1 b) =>
+      Exists.{1} fun (T : SpecialTransformations.Section5.SpecialBijection A B) =>
+        And (SpecialTransformations.Section5.GammaChainDefinable { real := ↑C.base, gamma := Ξ } T.chain)
+          (SpecialTransformations.Section5.IsRVPullback (SpecialTransformations.Section5.carrier B))
+'IntegrationInACVF.Section7.field_base_unary_special_preparation' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.independent_head_appended_volume_coordinates : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {P : SpecialTransformations.Section3.GammaParameters.Base} {a b d p k : Nat} (hc : CanonicalStructure.IsCanonical)
+  (C : SpecialTransformations.Section3.BaseContext M) {A : SpecialTransformations.Section5.DefSet (↑C.base) 1 a}
+  {B : SpecialTransformations.Section5.DefSet (↑C.base) 1 b} {T : SpecialTransformations.Section5.SpecialBijection A B}
+  {H : SpecialTransformations.Section5.DefSet (↑C.base) 1 (HAdd.hAdd.{0, 0, 0} a d)}
+  {Q : SpecialTransformations.Section5.DefSet (↑C.base) 0 (HAdd.hAdd.{0, 0, 0} a d)}
+  (L : IntegrationInACVF.Section7.RVLabelConstraintSpecialPreparation T H Q (Fin.castAdd d) P)
+  (hPullback : SpecialTransformations.Section5.IsRVPullback (SpecialTransformations.Section5.carrier B))
+  (σ : Fin (HAdd.hAdd.{0, 0, 0} p 1) → Fin d) (ρ : Fin (HAdd.hAdd.{0, 0, 0} k 1) → Fin a)
+  (u :
+    ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+        (IntegrationInACVF.Section7.rawVolumeContractionLabels hc
+          (SpecialTransformations.Section5.headImage L.target)))),
+  Eq.{1}
+    ((IntegrationInACVF.Section7.independentHeadProductCoordinateObject hc C L σ
+          (IntegrationInACVF.Section7.headAppendVolumeIndex
+            (IntegrationInACVF.Section7.unarySpecialHeadPreparation T hPullback) ρ)).value
+      u)
+    (Fin.append.{1}
+      (Function.comp.{1, 1, 1} ↑u fun (j : Fin (HAdd.hAdd.{0, 0, 0} p 1)) =>
+        Fin.natAdd 1 (IntegrationInACVF.Section5.suffixIndex ⋯ (Fin.natAdd a (σ j))))
+      (Fin.append.{1}
+        (Function.comp.{1, 1, 1} ↑u fun (j : Fin (HAdd.hAdd.{0, 0, 0} k 1)) =>
+          Fin.natAdd 1 (IntegrationInACVF.Section5.suffixIndex ⋯ (Fin.castAdd d (ρ j))))
+        fun (x : Fin 1) => ↑u 0))
+'IntegrationInACVF.Section7.independent_head_appended_volume_coordinates' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.independent_head_product_original_density : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {P : SpecialTransformations.Section3.GammaParameters.Base} {a b d p k : Nat} (hc : CanonicalStructure.IsCanonical)
+  (C : SpecialTransformations.Section3.BaseContext M) {A : SpecialTransformations.Section5.DefSet (↑C.base) 1 a}
+  {B : SpecialTransformations.Section5.DefSet (↑C.base) 1 b} {T : SpecialTransformations.Section5.SpecialBijection A B}
+  {H : SpecialTransformations.Section5.DefSet (↑C.base) 1 (HAdd.hAdd.{0, 0, 0} a d)}
+  {Q : SpecialTransformations.Section5.DefSet (↑C.base) 0 (HAdd.hAdd.{0, 0, 0} a d)}
+  (L : IntegrationInACVF.Section7.RVLabelConstraintSpecialPreparation T H Q (Fin.castAdd d) P)
+  (R : SpecialTransformations.Section5.DefSet (↑C.base) 0 d)
+  (hQ :
+    ∀ (q : SpecialTransformations.Section5.Point 0 (HAdd.hAdd.{0, 0, 0} a d)),
+      Iff (Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier Q) q)
+        (Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier R)
+          (Prod.mk.{0, 0} Fin.elim0.{1} (Function.comp.{1, 1, 1} q.2 (Fin.natAdd a)))))
+  (σ : Fin (HAdd.hAdd.{0, 0, 0} p 1) → Fin d) (τ : Fin (HAdd.hAdd.{0, 0, 0} k 1) → Fin (HAdd.hAdd.{0, 0, 0} 1 b))
+  (δ : Fin d) (ε : Fin a)
+  (hR :
+    ∀ (t : Fin (HAdd.hAdd.{0, 0, 0} p 1) → SpecialTransformations.Section5.RV),
+      Set.Finite.{0}
+        (Set.ofPred.{0} fun (r : Fin d → SpecialTransformations.Section5.RV) =>
+          And (Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier R) (Prod.mk.{0, 0} Fin.elim0.{1} r))
+            (Eq.{1} (Function.comp.{1, 1, 1} r σ) t)))
+  (hB :
+    ∀ (t : Fin (HAdd.hAdd.{0, 0, 0} k 1) → SpecialTransformations.Section5.RV),
+      Set.Finite.{0}
+        (Set.ofPred.{0} fun (r : Fin (HAdd.hAdd.{0, 0, 0} 1 b) → SpecialTransformations.Section5.RV) =>
+          And
+            (Membership.mem.{0, 0}
+              (SpecialTransformations.Section5.carrier (SpecialTransformations.Section5.headImage B))
+              (Prod.mk.{0, 0} Fin.elim0.{1} r))
+            (Eq.{1} (Function.comp.{1, 1, 1} r τ) t)))
+  (hδ :
+    ∀ (q : ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} R)),
+      Ne.{1} (↑((↑q).2 δ)) SpecialTransformations.Milestone0.iRVZero.{0})
+  (hε :
+    ∀
+      (q :
+        ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+            (SpecialTransformations.Section5.headImage B))),
+      Ne.{1} (↑((↑q).2 (Fin.natAdd 1 (IntegrationInACVF.Section5.suffixIndex ⋯ ε))))
+        SpecialTransformations.Milestone0.iRVZero.{0})
+  (u :
+    ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+        (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0}
+            (IntegrationInACVF.Section7.independentHeadProductVolumeObject hc C L R hQ σ τ δ
+                (Fin.natAdd 1 (IntegrationInACVF.Section5.suffixIndex ⋯ ε)) hR hB hδ hε).underlying).domain)),
+  Eq.{1}
+    ((IntegrationInACVF.Section7.independentHeadProductVolumeObject hc C L R hQ σ τ δ
+            (Fin.natAdd 1 (IntegrationInACVF.Section5.suffixIndex ⋯ ε)) hR hB hδ hε).form.value
+      u)
+    (HMul.hMul.{0, 0, 0} (↑u (Fin.natAdd 1 (IntegrationInACVF.Section5.suffixIndex ⋯ (Fin.natAdd a δ))))
+      (↑u (Fin.natAdd 1 (IntegrationInACVF.Section5.suffixIndex ⋯ (Fin.castAdd d ε)))))
+'IntegrationInACVF.Section7.independent_head_product_original_density' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.RVLabelConstraintSpecialPreparation.nativeIndependentHeadProductMap : {M : Type} →
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {P : SpecialTransformations.Section3.GammaParameters.Base} →
+        {S : Set.{0} M} →
+          {a b d : Nat} →
+            {A : SpecialTransformations.Section5.DefSet S 1 a} →
+              {B : SpecialTransformations.Section5.DefSet S 1 b} →
+                {T : SpecialTransformations.Section5.SpecialBijection A B} →
+                  {H : SpecialTransformations.Section5.DefSet S 1 (HAdd.hAdd.{0, 0, 0} a d)} →
+                    {Q : SpecialTransformations.Section5.DefSet S 0 (HAdd.hAdd.{0, 0, 0} a d)} →
+                      (hc : CanonicalStructure.IsCanonical) →
+                        (L : IntegrationInACVF.Section7.RVLabelConstraintSpecialPreparation T H Q (Fin.castAdd d) P) →
+                          (R : SpecialTransformations.Section5.DefSet S 0 d) →
+                            (∀ (q : SpecialTransformations.Section5.Point 0 (HAdd.hAdd.{0, 0, 0} a d)),
+                                Iff (Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier Q) q)
+                                  (Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier R)
+                                    (Prod.mk.{0, 0} Fin.elim0.{1} (Function.comp.{1, 1, 1} q.2 (Fin.natAdd a))))) →
+                              SpecialTransformations.DefinableGeometry.Map.{0, 0}
+                                (IntegrationInACVF.Section7.rawVolumeContractionLabels hc
+                                  (SpecialTransformations.Section5.headImage L.target))
+                                (SpecialTransformations.Section4.rvProductDomain
+                                  (IntegrationInACVF.Section7.rawVolumeContractionLabels hc R)
+                                  (IntegrationInACVF.Section7.rawVolumeContractionLabels hc
+                                    (SpecialTransformations.Section5.headImage B)))
+'IntegrationInACVF.Section7.RVLabelConstraintSpecialPreparation.nativeIndependentHeadProductMap' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.RVLabelConstraintSpecialPreparation.native_independent_head_product_map_bijective : ∀
+  {M : Type} [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {P : SpecialTransformations.Section3.GammaParameters.Base} {S : Set.{0} M} {a b d : Nat}
+  {A : SpecialTransformations.Section5.DefSet S 1 a} {B : SpecialTransformations.Section5.DefSet S 1 b}
+  {T : SpecialTransformations.Section5.SpecialBijection A B}
+  {H : SpecialTransformations.Section5.DefSet S 1 (HAdd.hAdd.{0, 0, 0} a d)}
+  {Q : SpecialTransformations.Section5.DefSet S 0 (HAdd.hAdd.{0, 0, 0} a d)} (hc : CanonicalStructure.IsCanonical)
+  (L : IntegrationInACVF.Section7.RVLabelConstraintSpecialPreparation T H Q (Fin.castAdd d) P)
+  (R : SpecialTransformations.Section5.DefSet S 0 d)
+  (hQ :
+    ∀ (q : SpecialTransformations.Section5.Point 0 (HAdd.hAdd.{0, 0, 0} a d)),
+      Iff (Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier Q) q)
+        (Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier R)
+          (Prod.mk.{0, 0} Fin.elim0.{1} (Function.comp.{1, 1, 1} q.2 (Fin.natAdd a))))),
+  Function.Bijective.{1, 1}
+    (SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0}
+      (IntegrationInACVF.Section7.RVLabelConstraintSpecialPreparation.nativeIndependentHeadProductMap hc L R hQ))
+'IntegrationInACVF.Section7.RVLabelConstraintSpecialPreparation.native_independent_head_product_map_bijective' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.RVLabelConstraintSpecialPreparation.native_independent_head_product_map_value : ∀ {M : Type}
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {P : SpecialTransformations.Section3.GammaParameters.Base} {S : Set.{0} M} {a b d : Nat}
+  {A : SpecialTransformations.Section5.DefSet S 1 a} {B : SpecialTransformations.Section5.DefSet S 1 b}
+  {T : SpecialTransformations.Section5.SpecialBijection A B}
+  {H : SpecialTransformations.Section5.DefSet S 1 (HAdd.hAdd.{0, 0, 0} a d)}
+  {Q : SpecialTransformations.Section5.DefSet S 0 (HAdd.hAdd.{0, 0, 0} a d)} (hc : CanonicalStructure.IsCanonical)
+  (L : IntegrationInACVF.Section7.RVLabelConstraintSpecialPreparation T H Q (Fin.castAdd d) P)
+  (R : SpecialTransformations.Section5.DefSet S 0 d)
+  (hQ :
+    ∀ (q : SpecialTransformations.Section5.Point 0 (HAdd.hAdd.{0, 0, 0} a d)),
+      Iff (Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier Q) q)
+        (Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier R)
+          (Prod.mk.{0, 0} Fin.elim0.{1} (Function.comp.{1, 1, 1} q.2 (Fin.natAdd a)))))
+  (u :
+    ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+        (IntegrationInACVF.Section7.rawVolumeContractionLabels hc
+          (SpecialTransformations.Section5.headImage L.target)))),
+  Eq.{1}
+    (↑(SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0}
+        (IntegrationInACVF.Section7.RVLabelConstraintSpecialPreparation.nativeIndependentHeadProductMap hc L R hQ) u))
+    (Fin.append.{1} (Function.comp.{1, 1, 1} (↑u) (Function.comp.{1, 1, 1} L.headParameters (Fin.natAdd a)))
+      (Function.comp.{1, 1, 1} (↑u) L.headProjection))
+'IntegrationInACVF.Section7.RVLabelConstraintSpecialPreparation.native_independent_head_product_map_value' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.independent_head_product_selected_fibres_finite : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {P : SpecialTransformations.Section3.GammaParameters.Base} {a b d p k : Nat},
+  CanonicalStructure.IsCanonical →
+    ∀ (C : SpecialTransformations.Section3.BaseContext M) {A : SpecialTransformations.Section5.DefSet (↑C.base) 1 a}
+      {B : SpecialTransformations.Section5.DefSet (↑C.base) 1 b}
+      {T : SpecialTransformations.Section5.SpecialBijection A B}
+      {H : SpecialTransformations.Section5.DefSet (↑C.base) 1 (HAdd.hAdd.{0, 0, 0} a d)}
+      {Q : SpecialTransformations.Section5.DefSet (↑C.base) 0 (HAdd.hAdd.{0, 0, 0} a d)}
+      (L : IntegrationInACVF.Section7.RVLabelConstraintSpecialPreparation T H Q (Fin.castAdd d) P)
+      (R : SpecialTransformations.Section5.DefSet (↑C.base) 0 d),
+      (∀ (q : SpecialTransformations.Section5.Point 0 (HAdd.hAdd.{0, 0, 0} a d)),
+          Iff (Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier Q) q)
+            (Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier R)
+              (Prod.mk.{0, 0} Fin.elim0.{1} (Function.comp.{1, 1, 1} q.2 (Fin.natAdd a))))) →
+        ∀ (σ : Fin (HAdd.hAdd.{0, 0, 0} p 1) → Fin d)
+          (τ : Fin (HAdd.hAdd.{0, 0, 0} k 1) → Fin (HAdd.hAdd.{0, 0, 0} 1 b)) (δ : Fin d)
+          (ε : Fin (HAdd.hAdd.{0, 0, 0} 1 b)),
+          (∀ (t : Fin (HAdd.hAdd.{0, 0, 0} p 1) → SpecialTransformations.Section5.RV),
+              Set.Finite.{0}
+                (Set.ofPred.{0} fun (r : Fin d → SpecialTransformations.Section5.RV) =>
+                  And
+                    (Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier R) (Prod.mk.{0, 0} Fin.elim0.{1} r))
+                    (Eq.{1} (Function.comp.{1, 1, 1} r σ) t))) →
+            (∀ (t : Fin (HAdd.hAdd.{0, 0, 0} k 1) → SpecialTransformations.Section5.RV),
+                Set.Finite.{0}
+                  (Set.ofPred.{0} fun (r : Fin (HAdd.hAdd.{0, 0, 0} 1 b) → SpecialTransformations.Section5.RV) =>
+                    And
+                      (Membership.mem.{0, 0}
+                        (SpecialTransformations.Section5.carrier (SpecialTransformations.Section5.headImage B))
+                        (Prod.mk.{0, 0} Fin.elim0.{1} r))
+                      (Eq.{1} (Function.comp.{1, 1, 1} r τ) t))) →
+              (∀ (q : ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} R)),
+                  Ne.{1} (↑((↑q).2 δ)) SpecialTransformations.Milestone0.iRVZero.{0}) →
+                (∀
+                    (q :
+                      ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+                          (SpecialTransformations.Section5.headImage B))),
+                    Ne.{1} (↑((↑q).2 ε)) SpecialTransformations.Milestone0.iRVZero.{0}) →
+                  ∀
+                    (t :
+                      Fin (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} p 1) k) 1) →
+                        SpecialTransformations.Section5.RV),
+                    Set.Finite.{0}
+                      (Set.ofPred.{0}
+                        fun (r : Fin (HAdd.hAdd.{0, 0, 0} 1 L.arity) → SpecialTransformations.Section5.RV) =>
+                        And
+                          (Membership.mem.{0, 0}
+                            (SpecialTransformations.Section5.carrier
+                              (SpecialTransformations.Section5.headImage L.target))
+                            (Prod.mk.{0, 0} Fin.elim0.{1} r))
+                          (Eq.{1}
+                            (Function.comp.{1, 1, 1} r
+                              (Fin.append.{1}
+                                (Function.comp.{1, 1, 1} L.headParameters (Function.comp.{1, 1, 1} (Fin.natAdd a) σ))
+                                (Function.comp.{1, 1, 1} L.headProjection τ)))
+                            t))
+'IntegrationInACVF.Section7.independent_head_product_selected_fibres_finite' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.independent_head_product_volume_class : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {P : SpecialTransformations.Section3.GammaParameters.Base} {a b d p k : Nat} (hc : CanonicalStructure.IsCanonical)
+  (C : SpecialTransformations.Section3.BaseContext M) {A : SpecialTransformations.Section5.DefSet (↑C.base) 1 a}
+  {B : SpecialTransformations.Section5.DefSet (↑C.base) 1 b} {T : SpecialTransformations.Section5.SpecialBijection A B}
+  {H : SpecialTransformations.Section5.DefSet (↑C.base) 1 (HAdd.hAdd.{0, 0, 0} a d)}
+  {Q : SpecialTransformations.Section5.DefSet (↑C.base) 0 (HAdd.hAdd.{0, 0, 0} a d)}
+  (L : IntegrationInACVF.Section7.RVLabelConstraintSpecialPreparation T H Q (Fin.castAdd d) P)
+  (R : SpecialTransformations.Section5.DefSet (↑C.base) 0 d)
+  (hQ :
+    ∀ (q : SpecialTransformations.Section5.Point 0 (HAdd.hAdd.{0, 0, 0} a d)),
+      Iff (Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier Q) q)
+        (Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier R)
+          (Prod.mk.{0, 0} Fin.elim0.{1} (Function.comp.{1, 1, 1} q.2 (Fin.natAdd a)))))
+  (σ : Fin (HAdd.hAdd.{0, 0, 0} p 1) → Fin d) (τ : Fin (HAdd.hAdd.{0, 0, 0} k 1) → Fin (HAdd.hAdd.{0, 0, 0} 1 b))
+  (δ : Fin d) (ε : Fin (HAdd.hAdd.{0, 0, 0} 1 b))
+  (hR :
+    ∀ (t : Fin (HAdd.hAdd.{0, 0, 0} p 1) → SpecialTransformations.Section5.RV),
+      Set.Finite.{0}
+        (Set.ofPred.{0} fun (r : Fin d → SpecialTransformations.Section5.RV) =>
+          And (Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier R) (Prod.mk.{0, 0} Fin.elim0.{1} r))
+            (Eq.{1} (Function.comp.{1, 1, 1} r σ) t)))
+  (hB :
+    ∀ (t : Fin (HAdd.hAdd.{0, 0, 0} k 1) → SpecialTransformations.Section5.RV),
+      Set.Finite.{0}
+        (Set.ofPred.{0} fun (r : Fin (HAdd.hAdd.{0, 0, 0} 1 b) → SpecialTransformations.Section5.RV) =>
+          And
+            (Membership.mem.{0, 0}
+              (SpecialTransformations.Section5.carrier (SpecialTransformations.Section5.headImage B))
+              (Prod.mk.{0, 0} Fin.elim0.{1} r))
+            (Eq.{1} (Function.comp.{1, 1, 1} r τ) t)))
+  (hδ :
+    ∀ (q : ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} R)),
+      Ne.{1} (↑((↑q).2 δ)) SpecialTransformations.Milestone0.iRVZero.{0})
+  (hε :
+    ∀
+      (q :
+        ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+            (SpecialTransformations.Section5.headImage B))),
+      Ne.{1} (↑((↑q).2 ε)) SpecialTransformations.Milestone0.iRVZero.{0}),
+  Eq.{1}
+    (IntegrationInACVF.Section7.positiveVolumeBlowupClass hc C
+      (IntegrationInACVF.Section7.independentHeadProductVolumeObject hc C L R hQ σ τ δ ε hR hB hδ hε))
+    (IntegrationInACVF.Section7.rvVolumeBlowupClassesProduct hc C (HAdd.hAdd.{0, 0, 0} p 1) (HAdd.hAdd.{0, 0, 0} k 1)
+      (IntegrationInACVF.Section7.positiveVolumeBlowupClass hc C
+        (IntegrationInACVF.Section7.nativeCoordinateDensityVolumeObject hc C R σ δ hR hδ))
+      (IntegrationInACVF.Section7.positiveVolumeBlowupClass hc C
+        (IntegrationInACVF.Section7.nativeCoordinateDensityVolumeObject hc C
+          (SpecialTransformations.Section5.headImage B) τ ε hB hε)))
+'IntegrationInACVF.Section7.independent_head_product_volume_class' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.independent_head_product_volume_iso_gamma : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {P : SpecialTransformations.Section3.GammaParameters.Base} {a b d p k : Nat} (hc : CanonicalStructure.IsCanonical)
+  (C : SpecialTransformations.Section3.BaseContext M) {A : SpecialTransformations.Section5.DefSet (↑C.base) 1 a}
+  {B : SpecialTransformations.Section5.DefSet (↑C.base) 1 b} {T : SpecialTransformations.Section5.SpecialBijection A B}
+  {H : SpecialTransformations.Section5.DefSet (↑C.base) 1 (HAdd.hAdd.{0, 0, 0} a d)}
+  {Q : SpecialTransformations.Section5.DefSet (↑C.base) 0 (HAdd.hAdd.{0, 0, 0} a d)}
+  (L : IntegrationInACVF.Section7.RVLabelConstraintSpecialPreparation T H Q (Fin.castAdd d) P)
+  (R : SpecialTransformations.Section5.DefSet (↑C.base) 0 d)
+  (hQ :
+    ∀ (q : SpecialTransformations.Section5.Point 0 (HAdd.hAdd.{0, 0, 0} a d)),
+      Iff (Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier Q) q)
+        (Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier R)
+          (Prod.mk.{0, 0} Fin.elim0.{1} (Function.comp.{1, 1, 1} q.2 (Fin.natAdd a)))))
+  (σ : Fin (HAdd.hAdd.{0, 0, 0} p 1) → Fin d) (τ : Fin (HAdd.hAdd.{0, 0, 0} k 1) → Fin (HAdd.hAdd.{0, 0, 0} 1 b))
+  (δ : Fin d) (ε : Fin (HAdd.hAdd.{0, 0, 0} 1 b))
+  (hR :
+    ∀ (t : Fin (HAdd.hAdd.{0, 0, 0} p 1) → SpecialTransformations.Section5.RV),
+      Set.Finite.{0}
+        (Set.ofPred.{0} fun (r : Fin d → SpecialTransformations.Section5.RV) =>
+          And (Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier R) (Prod.mk.{0, 0} Fin.elim0.{1} r))
+            (Eq.{1} (Function.comp.{1, 1, 1} r σ) t)))
+  (hB :
+    ∀ (t : Fin (HAdd.hAdd.{0, 0, 0} k 1) → SpecialTransformations.Section5.RV),
+      Set.Finite.{0}
+        (Set.ofPred.{0} fun (r : Fin (HAdd.hAdd.{0, 0, 0} 1 b) → SpecialTransformations.Section5.RV) =>
+          And
+            (Membership.mem.{0, 0}
+              (SpecialTransformations.Section5.carrier (SpecialTransformations.Section5.headImage B))
+              (Prod.mk.{0, 0} Fin.elim0.{1} r))
+            (Eq.{1} (Function.comp.{1, 1, 1} r τ) t)))
+  (hδ :
+    ∀ (q : ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} R)),
+      Ne.{1} (↑((↑q).2 δ)) SpecialTransformations.Milestone0.iRVZero.{0})
+  (hε :
+    ∀
+      (q :
+        ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+            (SpecialTransformations.Section5.headImage B))),
+      Ne.{1} (↑((↑q).2 ε)) SpecialTransformations.Milestone0.iRVZero.{0}),
+  Eq.{1} ↑C.base
+      ↑(LowerAdjoint.toFun.{0, 0}
+          (FirstOrder.Language.Substructure.closure.{0, 0, 0} SpecialTransformations.Milestone0.LRV) P.real) →
+    (IntegrationInACVF.Section7.independentHeadProductVolumeIso hc C L R hQ σ τ δ ε hR hB hδ hε).GammaDefinable P
+'IntegrationInACVF.Section7.independent_head_product_volume_iso_gamma' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.RVLabelConstraintSpecialPreparation.head_carried_eq_old_suffix : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {P : SpecialTransformations.Section3.GammaParameters.Base} {S : Set.{0} M} {a b d : Nat}
+  {A : SpecialTransformations.Section5.DefSet S 1 a} {B : SpecialTransformations.Section5.DefSet S 1 b}
+  {T : SpecialTransformations.Section5.SpecialBijection A B}
+  {H : SpecialTransformations.Section5.DefSet S 1 (HAdd.hAdd.{0, 0, 0} a d)}
+  {Q : SpecialTransformations.Section5.DefSet S 0 (HAdd.hAdd.{0, 0, 0} a d)}
+  (L : IntegrationInACVF.Section7.RVLabelConstraintSpecialPreparation T H Q (Fin.castAdd d) P)
+  (q :
+    ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+        (SpecialTransformations.Section5.headImage L.target)))
+  (j : Fin (HAdd.hAdd.{0, 0, 0} a d)),
+  Eq.{1} ((↑q).2 (L.headParameters j)) ((↑q).2 (Fin.natAdd 1 (IntegrationInACVF.Section5.suffixIndex ⋯ j)))
+'IntegrationInACVF.Section7.RVLabelConstraintSpecialPreparation.head_carried_eq_old_suffix' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.RVLabelConstraintSpecialPreparation.head_prepared_old_labels : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {P : SpecialTransformations.Section3.GammaParameters.Base} {S : Set.{0} M} {a b d : Nat}
+  {A : SpecialTransformations.Section5.DefSet S 1 a} {B : SpecialTransformations.Section5.DefSet S 1 b}
+  {T : SpecialTransformations.Section5.SpecialBijection A B}
+  {H : SpecialTransformations.Section5.DefSet S 1 (HAdd.hAdd.{0, 0, 0} a d)}
+  {Q : SpecialTransformations.Section5.DefSet S 0 (HAdd.hAdd.{0, 0, 0} a d)}
+  (L : IntegrationInACVF.Section7.RVLabelConstraintSpecialPreparation T H Q (Fin.castAdd d) P)
+  (q :
+    ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+        (SpecialTransformations.Section5.headImage L.target)))
+  (j : Fin a),
+  Eq.{1} ((↑q).2 (L.headProjection (Fin.natAdd 1 (IntegrationInACVF.Section5.suffixIndex ⋯ j))))
+    ((↑q).2 (Fin.natAdd 1 (IntegrationInACVF.Section5.suffixIndex ⋯ (Fin.castAdd d j))))
+'IntegrationInACVF.Section7.RVLabelConstraintSpecialPreparation.head_prepared_old_labels' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.RVLabelConstraintSpecialPreparation.head_coefficient_old_labels : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {P : SpecialTransformations.Section3.GammaParameters.Base} {S : Set.{0} M} {a b d : Nat}
+  {A : SpecialTransformations.Section5.DefSet S 1 a} {B : SpecialTransformations.Section5.DefSet S 1 b}
+  {T : SpecialTransformations.Section5.SpecialBijection A B}
+  {H : SpecialTransformations.Section5.DefSet S 1 (HAdd.hAdd.{0, 0, 0} a d)}
+  {Q : SpecialTransformations.Section5.DefSet S 0 (HAdd.hAdd.{0, 0, 0} a d)}
+  (L : IntegrationInACVF.Section7.RVLabelConstraintSpecialPreparation T H Q (Fin.castAdd d) P)
+  (q :
+    ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+        (SpecialTransformations.Section5.headImage L.target)))
+  (j : Fin d),
+  Eq.{1} ((↑q).2 (L.headParameters (Fin.natAdd a j)))
+    ((↑q).2 (Fin.natAdd 1 (IntegrationInACVF.Section5.suffixIndex ⋯ (Fin.natAdd a j))))
+'IntegrationInACVF.Section7.RVLabelConstraintSpecialPreparation.head_coefficient_old_labels' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.independentHeadProductCoordinateObject : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {P : SpecialTransformations.Section3.GammaParameters.Base} →
+        {a b d p k : Nat} →
+          CanonicalStructure.IsCanonical →
+            (C : SpecialTransformations.Section3.BaseContext M) →
+              {A : SpecialTransformations.Section5.DefSet (↑C.base) 1 a} →
+                {B : SpecialTransformations.Section5.DefSet (↑C.base) 1 b} →
+                  {T : SpecialTransformations.Section5.SpecialBijection A B} →
+                    {H : SpecialTransformations.Section5.DefSet (↑C.base) 1 (HAdd.hAdd.{0, 0, 0} a d)} →
+                      {Q : SpecialTransformations.Section5.DefSet (↑C.base) 0 (HAdd.hAdd.{0, 0, 0} a d)} →
+                        IntegrationInACVF.Section7.RVLabelConstraintSpecialPreparation T H Q (Fin.castAdd d) P →
+                          (Fin (HAdd.hAdd.{0, 0, 0} p 1) → Fin d) →
+                            (Fin (HAdd.hAdd.{0, 0, 0} k 1) → Fin (HAdd.hAdd.{0, 0, 0} 1 b)) →
+                              SpecialTransformations.Section4.RVObject (↑C.base)
+                                (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} p 1) k) 1)
+'IntegrationInACVF.Section7.independentHeadProductCoordinateObject' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.independentHeadProductCoordinateIso : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {P : SpecialTransformations.Section3.GammaParameters.Base} →
+        {a b d p k : Nat} →
+          (hc : CanonicalStructure.IsCanonical) →
+            (C : SpecialTransformations.Section3.BaseContext M) →
+              {A : SpecialTransformations.Section5.DefSet (↑C.base) 1 a} →
+                {B : SpecialTransformations.Section5.DefSet (↑C.base) 1 b} →
+                  {T : SpecialTransformations.Section5.SpecialBijection A B} →
+                    {H : SpecialTransformations.Section5.DefSet (↑C.base) 1 (HAdd.hAdd.{0, 0, 0} a d)} →
+                      {Q : SpecialTransformations.Section5.DefSet (↑C.base) 0 (HAdd.hAdd.{0, 0, 0} a d)} →
+                        (L : IntegrationInACVF.Section7.RVLabelConstraintSpecialPreparation T H Q (Fin.castAdd d) P) →
+                          (R : SpecialTransformations.Section5.DefSet (↑C.base) 0 d) →
+                            (∀ (q : SpecialTransformations.Section5.Point 0 (HAdd.hAdd.{0, 0, 0} a d)),
+                                Iff (Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier Q) q)
+                                  (Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier R)
+                                    (Prod.mk.{0, 0} Fin.elim0.{1} (Function.comp.{1, 1, 1} q.2 (Fin.natAdd a))))) →
+                              (σ : Fin (HAdd.hAdd.{0, 0, 0} p 1) → Fin d) →
+                                (τ : Fin (HAdd.hAdd.{0, 0, 0} k 1) → Fin (HAdd.hAdd.{0, 0, 0} 1 b)) →
+                                  (δ : Fin d) →
+                                    (ε : Fin (HAdd.hAdd.{0, 0, 0} 1 b)) →
+                                      (hR :
+                                          ∀ (t : Fin (HAdd.hAdd.{0, 0, 0} p 1) → SpecialTransformations.Section5.RV),
+                                            Set.Finite.{0}
+                                              (Set.ofPred.{0} fun (r : Fin d → SpecialTransformations.Section5.RV) =>
+                                                And
+                                                  (Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier R)
+                                                    (Prod.mk.{0, 0} Fin.elim0.{1} r))
+                                                  (Eq.{1} (Function.comp.{1, 1, 1} r σ) t))) →
+                                        (hB :
+                                            ∀ (t : Fin (HAdd.hAdd.{0, 0, 0} k 1) → SpecialTransformations.Section5.RV),
+                                              Set.Finite.{0}
+                                                (Set.ofPred.{0}
+                                                  fun
+                                                    (r :
+                                                      Fin (HAdd.hAdd.{0, 0, 0} 1 b) →
+                                                        SpecialTransformations.Section5.RV) =>
+                                                  And
+                                                    (Membership.mem.{0, 0}
+                                                      (SpecialTransformations.Section5.carrier
+                                                        (SpecialTransformations.Section5.headImage B))
+                                                      (Prod.mk.{0, 0} Fin.elim0.{1} r))
+                                                    (Eq.{1} (Function.comp.{1, 1, 1} r τ) t))) →
+                                          (hδ :
+                                              ∀
+                                                (q :
+                                                  ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} R)),
+                                                Ne.{1} (↑((↑q).2 δ)) SpecialTransformations.Milestone0.iRVZero.{0}) →
+                                            (hε :
+                                                ∀
+                                                  (q :
+                                                    ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+                                                        (SpecialTransformations.Section5.headImage B))),
+                                                  Ne.{1} (↑((↑q).2 ε)) SpecialTransformations.Milestone0.iRVZero.{0}) →
+                                              CategoryTheory.Iso.{0, 0}
+                                                (IntegrationInACVF.Section7.independentHeadProductCoordinateObject hc C
+                                                  L σ τ)
+                                                (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0}
+                                                  ((IntegrationInACVF.Section7.leftObject✝ hc C R σ δ hR hδ).prod
+                                                      (IntegrationInACVF.Section7.rightObject✝ hc C τ ε hB
+                                                        hε)).underlying)
+'IntegrationInACVF.Section7.independentHeadProductCoordinateIso' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.independentHeadProductVolumeObject : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {P : SpecialTransformations.Section3.GammaParameters.Base} →
+        {a b d p k : Nat} →
+          CanonicalStructure.IsCanonical →
+            (C : SpecialTransformations.Section3.BaseContext M) →
+              {A : SpecialTransformations.Section5.DefSet (↑C.base) 1 a} →
+                {B : SpecialTransformations.Section5.DefSet (↑C.base) 1 b} →
+                  {T : SpecialTransformations.Section5.SpecialBijection A B} →
+                    {H : SpecialTransformations.Section5.DefSet (↑C.base) 1 (HAdd.hAdd.{0, 0, 0} a d)} →
+                      {Q : SpecialTransformations.Section5.DefSet (↑C.base) 0 (HAdd.hAdd.{0, 0, 0} a d)} →
+                        IntegrationInACVF.Section7.RVLabelConstraintSpecialPreparation T H Q (Fin.castAdd d) P →
+                          (R : SpecialTransformations.Section5.DefSet (↑C.base) 0 d) →
+                            (∀ (q : SpecialTransformations.Section5.Point 0 (HAdd.hAdd.{0, 0, 0} a d)),
+                                Iff (Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier Q) q)
+                                  (Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier R)
+                                    (Prod.mk.{0, 0} Fin.elim0.{1} (Function.comp.{1, 1, 1} q.2 (Fin.natAdd a))))) →
+                              (σ : Fin (HAdd.hAdd.{0, 0, 0} p 1) → Fin d) →
+                                (τ : Fin (HAdd.hAdd.{0, 0, 0} k 1) → Fin (HAdd.hAdd.{0, 0, 0} 1 b)) →
+                                  (δ : Fin d) →
+                                    (ε : Fin (HAdd.hAdd.{0, 0, 0} 1 b)) →
+                                      (∀ (t : Fin (HAdd.hAdd.{0, 0, 0} p 1) → SpecialTransformations.Section5.RV),
+                                          Set.Finite.{0}
+                                            (Set.ofPred.{0} fun (r : Fin d → SpecialTransformations.Section5.RV) =>
+                                              And
+                                                (Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier R)
+                                                  (Prod.mk.{0, 0} Fin.elim0.{1} r))
+                                                (Eq.{1} (Function.comp.{1, 1, 1} r σ) t))) →
+                                        (∀ (t : Fin (HAdd.hAdd.{0, 0, 0} k 1) → SpecialTransformations.Section5.RV),
+                                            Set.Finite.{0}
+                                              (Set.ofPred.{0}
+                                                fun
+                                                  (r :
+                                                    Fin (HAdd.hAdd.{0, 0, 0} 1 b) →
+                                                      SpecialTransformations.Section5.RV) =>
+                                                And
+                                                  (Membership.mem.{0, 0}
+                                                    (SpecialTransformations.Section5.carrier
+                                                      (SpecialTransformations.Section5.headImage B))
+                                                    (Prod.mk.{0, 0} Fin.elim0.{1} r))
+                                                  (Eq.{1} (Function.comp.{1, 1, 1} r τ) t))) →
+                                          (∀ (q : ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} R)),
+                                              Ne.{1} (↑((↑q).2 δ)) SpecialTransformations.Milestone0.iRVZero.{0}) →
+                                            (∀
+                                                (q :
+                                                  ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+                                                      (SpecialTransformations.Section5.headImage B))),
+                                                Ne.{1} (↑((↑q).2 ε)) SpecialTransformations.Milestone0.iRVZero.{0}) →
+                                              IntegrationInACVF.Section7.PositiveRVVolumeObject (↑C.base)
+                                                (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} p 1) k)
+'IntegrationInACVF.Section7.independentHeadProductVolumeObject' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.independentHeadProductVolumeIso : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {P : SpecialTransformations.Section3.GammaParameters.Base} →
+        {a b d p k : Nat} →
+          (hc : CanonicalStructure.IsCanonical) →
+            (C : SpecialTransformations.Section3.BaseContext M) →
+              {A : SpecialTransformations.Section5.DefSet (↑C.base) 1 a} →
+                {B : SpecialTransformations.Section5.DefSet (↑C.base) 1 b} →
+                  {T : SpecialTransformations.Section5.SpecialBijection A B} →
+                    {H : SpecialTransformations.Section5.DefSet (↑C.base) 1 (HAdd.hAdd.{0, 0, 0} a d)} →
+                      {Q : SpecialTransformations.Section5.DefSet (↑C.base) 0 (HAdd.hAdd.{0, 0, 0} a d)} →
+                        (L : IntegrationInACVF.Section7.RVLabelConstraintSpecialPreparation T H Q (Fin.castAdd d) P) →
+                          (R : SpecialTransformations.Section5.DefSet (↑C.base) 0 d) →
+                            (hQ :
+                                ∀ (q : SpecialTransformations.Section5.Point 0 (HAdd.hAdd.{0, 0, 0} a d)),
+                                  Iff (Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier Q) q)
+                                    (Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier R)
+                                      (Prod.mk.{0, 0} Fin.elim0.{1} (Function.comp.{1, 1, 1} q.2 (Fin.natAdd a))))) →
+                              (σ : Fin (HAdd.hAdd.{0, 0, 0} p 1) → Fin d) →
+                                (τ : Fin (HAdd.hAdd.{0, 0, 0} k 1) → Fin (HAdd.hAdd.{0, 0, 0} 1 b)) →
+                                  (δ : Fin d) →
+                                    (ε : Fin (HAdd.hAdd.{0, 0, 0} 1 b)) →
+                                      (hR :
+                                          ∀ (t : Fin (HAdd.hAdd.{0, 0, 0} p 1) → SpecialTransformations.Section5.RV),
+                                            Set.Finite.{0}
+                                              (Set.ofPred.{0} fun (r : Fin d → SpecialTransformations.Section5.RV) =>
+                                                And
+                                                  (Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier R)
+                                                    (Prod.mk.{0, 0} Fin.elim0.{1} r))
+                                                  (Eq.{1} (Function.comp.{1, 1, 1} r σ) t))) →
+                                        (hB :
+                                            ∀ (t : Fin (HAdd.hAdd.{0, 0, 0} k 1) → SpecialTransformations.Section5.RV),
+                                              Set.Finite.{0}
+                                                (Set.ofPred.{0}
+                                                  fun
+                                                    (r :
+                                                      Fin (HAdd.hAdd.{0, 0, 0} 1 b) →
+                                                        SpecialTransformations.Section5.RV) =>
+                                                  And
+                                                    (Membership.mem.{0, 0}
+                                                      (SpecialTransformations.Section5.carrier
+                                                        (SpecialTransformations.Section5.headImage B))
+                                                      (Prod.mk.{0, 0} Fin.elim0.{1} r))
+                                                    (Eq.{1} (Function.comp.{1, 1, 1} r τ) t))) →
+                                          (hδ :
+                                              ∀
+                                                (q :
+                                                  ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} R)),
+                                                Ne.{1} (↑((↑q).2 δ)) SpecialTransformations.Milestone0.iRVZero.{0}) →
+                                            (hε :
+                                                ∀
+                                                  (q :
+                                                    ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+                                                        (SpecialTransformations.Section5.headImage B))),
+                                                  Ne.{1} (↑((↑q).2 ε)) SpecialTransformations.Milestone0.iRVZero.{0}) →
+                                              IntegrationInACVF.Section7.RVVolumeIso
+                                                (IntegrationInACVF.Section7.independentHeadProductVolumeObject hc C L R
+                                                  hQ σ τ δ ε hR hB hδ hε)
+                                                ((IntegrationInACVF.Section7.nativeCoordinateDensityVolumeObject hc C R
+                                                      σ δ hR hδ).prod
+                                                  (IntegrationInACVF.Section7.nativeCoordinateDensityVolumeObject hc C
+                                                    (SpecialTransformations.Section5.headImage B) τ ε hB hε))
+'IntegrationInACVF.Section7.independentHeadProductVolumeIso' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.independent_head_product_volume_density : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {P : SpecialTransformations.Section3.GammaParameters.Base} {a b d p k : Nat} (hc : CanonicalStructure.IsCanonical)
+  (C : SpecialTransformations.Section3.BaseContext M) {A : SpecialTransformations.Section5.DefSet (↑C.base) 1 a}
+  {B : SpecialTransformations.Section5.DefSet (↑C.base) 1 b} {T : SpecialTransformations.Section5.SpecialBijection A B}
+  {H : SpecialTransformations.Section5.DefSet (↑C.base) 1 (HAdd.hAdd.{0, 0, 0} a d)}
+  {Q : SpecialTransformations.Section5.DefSet (↑C.base) 0 (HAdd.hAdd.{0, 0, 0} a d)}
+  (L : IntegrationInACVF.Section7.RVLabelConstraintSpecialPreparation T H Q (Fin.castAdd d) P)
+  (R : SpecialTransformations.Section5.DefSet (↑C.base) 0 d)
+  (hQ :
+    ∀ (q : SpecialTransformations.Section5.Point 0 (HAdd.hAdd.{0, 0, 0} a d)),
+      Iff (Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier Q) q)
+        (Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier R)
+          (Prod.mk.{0, 0} Fin.elim0.{1} (Function.comp.{1, 1, 1} q.2 (Fin.natAdd a)))))
+  (σ : Fin (HAdd.hAdd.{0, 0, 0} p 1) → Fin d) (τ : Fin (HAdd.hAdd.{0, 0, 0} k 1) → Fin (HAdd.hAdd.{0, 0, 0} 1 b))
+  (δ : Fin d) (ε : Fin (HAdd.hAdd.{0, 0, 0} 1 b))
+  (hR :
+    ∀ (t : Fin (HAdd.hAdd.{0, 0, 0} p 1) → SpecialTransformations.Section5.RV),
+      Set.Finite.{0}
+        (Set.ofPred.{0} fun (r : Fin d → SpecialTransformations.Section5.RV) =>
+          And (Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier R) (Prod.mk.{0, 0} Fin.elim0.{1} r))
+            (Eq.{1} (Function.comp.{1, 1, 1} r σ) t)))
+  (hB :
+    ∀ (t : Fin (HAdd.hAdd.{0, 0, 0} k 1) → SpecialTransformations.Section5.RV),
+      Set.Finite.{0}
+        (Set.ofPred.{0} fun (r : Fin (HAdd.hAdd.{0, 0, 0} 1 b) → SpecialTransformations.Section5.RV) =>
+          And
+            (Membership.mem.{0, 0}
+              (SpecialTransformations.Section5.carrier (SpecialTransformations.Section5.headImage B))
+              (Prod.mk.{0, 0} Fin.elim0.{1} r))
+            (Eq.{1} (Function.comp.{1, 1, 1} r τ) t)))
+  (hδ :
+    ∀ (q : ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} R)),
+      Ne.{1} (↑((↑q).2 δ)) SpecialTransformations.Milestone0.iRVZero.{0})
+  (hε :
+    ∀
+      (q :
+        ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+            (SpecialTransformations.Section5.headImage B))),
+      Ne.{1} (↑((↑q).2 ε)) SpecialTransformations.Milestone0.iRVZero.{0})
+  (u :
+    ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+        (CategoryTheory.ObjectProperty.FullSubcategory.obj.{0, 0}
+            (IntegrationInACVF.Section7.independentHeadProductVolumeObject hc C L R hQ σ τ δ ε hR hB hδ
+                hε).underlying).domain)),
+  Eq.{1} ((IntegrationInACVF.Section7.independentHeadProductVolumeObject hc C L R hQ σ τ δ ε hR hB hδ hε).form.value u)
+    (HMul.hMul.{0, 0, 0} (↑u (L.headParameters (Fin.natAdd a δ))) (↑u (L.headProjection ε)))
+'IntegrationInACVF.Section7.independent_head_product_volume_density' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.RVLabelConstraintSpecialPreparation.independentCoefficientMap : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {P : SpecialTransformations.Section3.GammaParameters.Base} →
+        {S : Set.{0} M} →
+          {a b d : Nat} →
+            {A : SpecialTransformations.Section5.DefSet S 1 a} →
+              {B : SpecialTransformations.Section5.DefSet S 1 b} →
+                {T : SpecialTransformations.Section5.SpecialBijection A B} →
+                  {H : SpecialTransformations.Section5.DefSet S 1 (HAdd.hAdd.{0, 0, 0} a d)} →
+                    {Q : SpecialTransformations.Section5.DefSet S 0 (HAdd.hAdd.{0, 0, 0} a d)} →
+                      (L : IntegrationInACVF.Section7.RVLabelConstraintSpecialPreparation T H Q (Fin.castAdd d) P) →
+                        (R : SpecialTransformations.Section5.DefSet S 0 d) →
+                          (∀ (q : SpecialTransformations.Section5.Point 0 (HAdd.hAdd.{0, 0, 0} a d)),
+                              Iff (Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier Q) q)
+                                (Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier R)
+                                  (Prod.mk.{0, 0} Fin.elim0.{1} (Function.comp.{1, 1, 1} q.2 (Fin.natAdd a))))) →
+                            SpecialTransformations.Section5.Map (SpecialTransformations.Section5.headImage L.target) R
+'IntegrationInACVF.Section7.RVLabelConstraintSpecialPreparation.independentCoefficientMap' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.RVLabelConstraintSpecialPreparation.independentHeadProductMap : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {P : SpecialTransformations.Section3.GammaParameters.Base} →
+        {S : Set.{0} M} →
+          {a b d : Nat} →
+            {A : SpecialTransformations.Section5.DefSet S 1 a} →
+              {B : SpecialTransformations.Section5.DefSet S 1 b} →
+                {T : SpecialTransformations.Section5.SpecialBijection A B} →
+                  {H : SpecialTransformations.Section5.DefSet S 1 (HAdd.hAdd.{0, 0, 0} a d)} →
+                    {Q : SpecialTransformations.Section5.DefSet S 0 (HAdd.hAdd.{0, 0, 0} a d)} →
+                      (L : IntegrationInACVF.Section7.RVLabelConstraintSpecialPreparation T H Q (Fin.castAdd d) P) →
+                        (R : SpecialTransformations.Section5.DefSet S 0 d) →
+                          (∀ (q : SpecialTransformations.Section5.Point 0 (HAdd.hAdd.{0, 0, 0} a d)),
+                              Iff (Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier Q) q)
+                                (Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier R)
+                                  (Prod.mk.{0, 0} Fin.elim0.{1} (Function.comp.{1, 1, 1} q.2 (Fin.natAdd a))))) →
+                            SpecialTransformations.Section5.Map (SpecialTransformations.Section5.headImage L.target)
+                              (SpecialTransformations.Section5.PresentedSet.prod R
+                                (SpecialTransformations.Section5.headImage B))
+'IntegrationInACVF.Section7.RVLabelConstraintSpecialPreparation.independentHeadProductMap' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.RVLabelConstraintSpecialPreparation.independent_head_product_map_bijective : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {P : SpecialTransformations.Section3.GammaParameters.Base} {S : Set.{0} M} {a b d : Nat}
+  {A : SpecialTransformations.Section5.DefSet S 1 a} {B : SpecialTransformations.Section5.DefSet S 1 b}
+  {T : SpecialTransformations.Section5.SpecialBijection A B}
+  {H : SpecialTransformations.Section5.DefSet S 1 (HAdd.hAdd.{0, 0, 0} a d)}
+  {Q : SpecialTransformations.Section5.DefSet S 0 (HAdd.hAdd.{0, 0, 0} a d)}
+  (L : IntegrationInACVF.Section7.RVLabelConstraintSpecialPreparation T H Q (Fin.castAdd d) P)
+  (R : SpecialTransformations.Section5.DefSet S 0 d)
+  (hQ :
+    ∀ (q : SpecialTransformations.Section5.Point 0 (HAdd.hAdd.{0, 0, 0} a d)),
+      Iff (Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier Q) q)
+        (Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier R)
+          (Prod.mk.{0, 0} Fin.elim0.{1} (Function.comp.{1, 1, 1} q.2 (Fin.natAdd a))))),
+  Function.Bijective.{1, 1}
+    (SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0} (L.independentHeadProductMap R hQ))
+'IntegrationInACVF.Section7.RVLabelConstraintSpecialPreparation.independent_head_product_map_bijective' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.RVLabelConstraintSpecialPreparation.rawIndependentHeadProductMap : {M : Type} →
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {P : SpecialTransformations.Section3.GammaParameters.Base} →
+        {S : Set.{0} M} →
+          {a b d : Nat} →
+            {A : SpecialTransformations.Section5.DefSet S 1 a} →
+              {B : SpecialTransformations.Section5.DefSet S 1 b} →
+                {T : SpecialTransformations.Section5.SpecialBijection A B} →
+                  {H : SpecialTransformations.Section5.DefSet S 1 (HAdd.hAdd.{0, 0, 0} a d)} →
+                    {Q : SpecialTransformations.Section5.DefSet S 0 (HAdd.hAdd.{0, 0, 0} a d)} →
+                      (L : IntegrationInACVF.Section7.RVLabelConstraintSpecialPreparation T H Q (Fin.castAdd d) P) →
+                        (R : SpecialTransformations.Section5.DefSet S 0 d) →
+                          (∀ (q : SpecialTransformations.Section5.Point 0 (HAdd.hAdd.{0, 0, 0} a d)),
+                              Iff (Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier Q) q)
+                                (Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier R)
+                                  (Prod.mk.{0, 0} Fin.elim0.{1} (Function.comp.{1, 1, 1} q.2 (Fin.natAdd a))))) →
+                            SpecialTransformations.DefinableGeometry.Map.{0, 0}
+                              (SpecialTransformations.DefinableGeometry.Map.image.{0, 0}
+                                (IntegrationInACVF.Section5.rawLabelMap
+                                  (SpecialTransformations.Section5.headImage L.target)))
+                              (SpecialTransformations.DefinableGeometry.Map.image.{0, 0}
+                                (SpecialTransformations.Section4.rvPack
+                                  (SpecialTransformations.Section5.Map.image (IntegrationInACVF.Section5.rawLabelMap R))
+                                  (SpecialTransformations.Section5.Map.image
+                                    (IntegrationInACVF.Section5.rawLabelMap
+                                      (SpecialTransformations.Section5.headImage B)))))
+'IntegrationInACVF.Section7.RVLabelConstraintSpecialPreparation.rawIndependentHeadProductMap' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.RVLabelConstraintSpecialPreparation.raw_independent_head_product_map_bijective : ∀
+  {M : Type} [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {P : SpecialTransformations.Section3.GammaParameters.Base} {S : Set.{0} M} {a b d : Nat}
+  {A : SpecialTransformations.Section5.DefSet S 1 a} {B : SpecialTransformations.Section5.DefSet S 1 b}
+  {T : SpecialTransformations.Section5.SpecialBijection A B}
+  {H : SpecialTransformations.Section5.DefSet S 1 (HAdd.hAdd.{0, 0, 0} a d)}
+  {Q : SpecialTransformations.Section5.DefSet S 0 (HAdd.hAdd.{0, 0, 0} a d)}
+  (L : IntegrationInACVF.Section7.RVLabelConstraintSpecialPreparation T H Q (Fin.castAdd d) P)
+  (R : SpecialTransformations.Section5.DefSet S 0 d)
+  (hQ :
+    ∀ (q : SpecialTransformations.Section5.Point 0 (HAdd.hAdd.{0, 0, 0} a d)),
+      Iff (Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier Q) q)
+        (Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier R)
+          (Prod.mk.{0, 0} Fin.elim0.{1} (Function.comp.{1, 1, 1} q.2 (Fin.natAdd a))))),
+  Function.Bijective.{1, 1}
+    (SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0} (L.rawIndependentHeadProductMap R hQ))
+'IntegrationInACVF.Section7.RVLabelConstraintSpecialPreparation.raw_independent_head_product_map_bijective' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.RVLabelConstraintSpecialPreparation.raw_independent_head_product_map_value : ∀ {M : Type}
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {P : SpecialTransformations.Section3.GammaParameters.Base} {S : Set.{0} M} {a b d : Nat}
+  {A : SpecialTransformations.Section5.DefSet S 1 a} {B : SpecialTransformations.Section5.DefSet S 1 b}
+  {T : SpecialTransformations.Section5.SpecialBijection A B}
+  {H : SpecialTransformations.Section5.DefSet S 1 (HAdd.hAdd.{0, 0, 0} a d)}
+  {Q : SpecialTransformations.Section5.DefSet S 0 (HAdd.hAdd.{0, 0, 0} a d)}
+  (L : IntegrationInACVF.Section7.RVLabelConstraintSpecialPreparation T H Q (Fin.castAdd d) P)
+  (R : SpecialTransformations.Section5.DefSet S 0 d)
+  (hQ :
+    ∀ (q : SpecialTransformations.Section5.Point 0 (HAdd.hAdd.{0, 0, 0} a d)),
+      Iff (Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier Q) q)
+        (Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier R)
+          (Prod.mk.{0, 0} Fin.elim0.{1} (Function.comp.{1, 1, 1} q.2 (Fin.natAdd a)))))
+  (u :
+    ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+        (SpecialTransformations.Section5.Map.image
+          (IntegrationInACVF.Section5.rawLabelMap (SpecialTransformations.Section5.headImage L.target))))),
+  Eq.{1} (↑(SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0} (L.rawIndependentHeadProductMap R hQ) u))
+    (Fin.append.{1} (Function.comp.{1, 1, 1} (↑u) (Function.comp.{1, 1, 1} L.headParameters (Fin.natAdd a)))
+      (Function.comp.{1, 1, 1} (↑u) L.headProjection))
+'IntegrationInACVF.Section7.RVLabelConstraintSpecialPreparation.raw_independent_head_product_map_value' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.RVLabelConstraintSpecialPreparation.canonicalIndependentHeadProductMap : {M : Type} →
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {P : SpecialTransformations.Section3.GammaParameters.Base} →
+        {S : Set.{0} M} →
+          {a b d : Nat} →
+            {A : SpecialTransformations.Section5.DefSet S 1 a} →
+              {B : SpecialTransformations.Section5.DefSet S 1 b} →
+                {T : SpecialTransformations.Section5.SpecialBijection A B} →
+                  {H : SpecialTransformations.Section5.DefSet S 1 (HAdd.hAdd.{0, 0, 0} a d)} →
+                    {Q : SpecialTransformations.Section5.DefSet S 0 (HAdd.hAdd.{0, 0, 0} a d)} →
+                      (hc : CanonicalStructure.IsCanonical) →
+                        (L : IntegrationInACVF.Section7.RVLabelConstraintSpecialPreparation T H Q (Fin.castAdd d) P) →
+                          (R : SpecialTransformations.Section5.DefSet S 0 d) →
+                            (∀ (q : SpecialTransformations.Section5.Point 0 (HAdd.hAdd.{0, 0, 0} a d)),
+                                Iff (Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier Q) q)
+                                  (Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier R)
+                                    (Prod.mk.{0, 0} Fin.elim0.{1} (Function.comp.{1, 1, 1} q.2 (Fin.natAdd a))))) →
+                              SpecialTransformations.DefinableGeometry.Map.{0, 0}
+                                (IntegrationInACVF.Section7.canonicalRawRVDomain hc
+                                  (SpecialTransformations.DefinableGeometry.Map.image.{0, 0}
+                                    (IntegrationInACVF.Section5.rawLabelMap
+                                      (SpecialTransformations.Section5.headImage L.target))))
+                                (IntegrationInACVF.Section7.canonicalRawRVDomain hc
+                                  (SpecialTransformations.DefinableGeometry.Map.image.{0, 0}
+                                    (SpecialTransformations.Section4.rvPack
+                                      (SpecialTransformations.Section5.Map.image
+                                        (IntegrationInACVF.Section5.rawLabelMap R))
+                                      (SpecialTransformations.Section5.Map.image
+                                        (IntegrationInACVF.Section5.rawLabelMap
+                                          (SpecialTransformations.Section5.headImage B))))))
+'IntegrationInACVF.Section7.RVLabelConstraintSpecialPreparation.canonicalIndependentHeadProductMap' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.RVLabelConstraintSpecialPreparation.canonical_independent_head_product_map_bijective : ∀
+  {M : Type} [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {P : SpecialTransformations.Section3.GammaParameters.Base} {S : Set.{0} M} {a b d : Nat}
+  {A : SpecialTransformations.Section5.DefSet S 1 a} {B : SpecialTransformations.Section5.DefSet S 1 b}
+  {T : SpecialTransformations.Section5.SpecialBijection A B}
+  {H : SpecialTransformations.Section5.DefSet S 1 (HAdd.hAdd.{0, 0, 0} a d)}
+  {Q : SpecialTransformations.Section5.DefSet S 0 (HAdd.hAdd.{0, 0, 0} a d)} (hc : CanonicalStructure.IsCanonical)
+  (L : IntegrationInACVF.Section7.RVLabelConstraintSpecialPreparation T H Q (Fin.castAdd d) P)
+  (R : SpecialTransformations.Section5.DefSet S 0 d)
+  (hQ :
+    ∀ (q : SpecialTransformations.Section5.Point 0 (HAdd.hAdd.{0, 0, 0} a d)),
+      Iff (Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier Q) q)
+        (Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier R)
+          (Prod.mk.{0, 0} Fin.elim0.{1} (Function.comp.{1, 1, 1} q.2 (Fin.natAdd a))))),
+  Function.Bijective.{1, 1}
+    (SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0}
+      (IntegrationInACVF.Section7.RVLabelConstraintSpecialPreparation.canonicalIndependentHeadProductMap hc L R hQ))
+'IntegrationInACVF.Section7.RVLabelConstraintSpecialPreparation.canonical_independent_head_product_map_bijective' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.RVLabelConstraintSpecialPreparation.canonical_independent_head_product_map_gamma : ∀
+  {M : Type} [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {P : SpecialTransformations.Section3.GammaParameters.Base} {S : Set.{0} M} {a b d : Nat}
+  {A : SpecialTransformations.Section5.DefSet S 1 a} {B : SpecialTransformations.Section5.DefSet S 1 b}
+  {T : SpecialTransformations.Section5.SpecialBijection A B}
+  {H : SpecialTransformations.Section5.DefSet S 1 (HAdd.hAdd.{0, 0, 0} a d)}
+  {Q : SpecialTransformations.Section5.DefSet S 0 (HAdd.hAdd.{0, 0, 0} a d)} (hc : CanonicalStructure.IsCanonical)
+  (L : IntegrationInACVF.Section7.RVLabelConstraintSpecialPreparation T H Q (Fin.castAdd d) P)
+  (R : SpecialTransformations.Section5.DefSet S 0 d)
+  (hQ :
+    ∀ (q : SpecialTransformations.Section5.Point 0 (HAdd.hAdd.{0, 0, 0} a d)),
+      Iff (Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier Q) q)
+        (Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier R)
+          (Prod.mk.{0, 0} Fin.elim0.{1} (Function.comp.{1, 1, 1} q.2 (Fin.natAdd a))))),
+  IntegrationInACVF.Section7.RVMapGamma
+    (IntegrationInACVF.Section7.RVLabelConstraintSpecialPreparation.canonicalIndependentHeadProductMap hc L R hQ) P
+'IntegrationInACVF.Section7.RVLabelConstraintSpecialPreparation.canonical_independent_head_product_map_gamma' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.independentRVLabelConstraint : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {d : Nat} →
+        (C : SpecialTransformations.Section3.BaseContext M) →
+          (Ξ : Set.{0} SpecialTransformations.Section3.Values.Gamma) →
+            LE.le.{0} (SpecialTransformations.Section3.GammaParameters.commonRealNames { real := ↑C.base, gamma := Ξ })
+                ↑C.base →
+              (a : Nat) →
+                SpecialTransformations.Section5.DefSet (↑C.base) 0 d →
+                  SpecialTransformations.Section5.DefSet (↑C.base) 0 (HAdd.hAdd.{0, 0, 0} a d)
+'IntegrationInACVF.Section7.independentRVLabelConstraint' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.independent_rv_label_constraint_mem : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {d : Nat}
+  (C : SpecialTransformations.Section3.BaseContext M) (Ξ : Set.{0} SpecialTransformations.Section3.Values.Gamma)
+  (hNames :
+    LE.le.{0} (SpecialTransformations.Section3.GammaParameters.commonRealNames { real := ↑C.base, gamma := Ξ }) ↑C.base)
+  (a : Nat) (R : SpecialTransformations.Section5.DefSet (↑C.base) 0 d)
+  (q : SpecialTransformations.Section5.Point 0 (HAdd.hAdd.{0, 0, 0} a d)),
+  Iff
+    (Membership.mem.{0, 0}
+      (SpecialTransformations.Section5.carrier (IntegrationInACVF.Section7.independentRVLabelConstraint C Ξ hNames a R))
+      q)
+    (Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier R)
+      (Prod.mk.{0, 0} Fin.elim0.{1} (Function.comp.{1, 1, 1} q.2 (Fin.natAdd a))))
+'IntegrationInACVF.Section7.independent_rv_label_constraint_mem' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.independentRVProductSource : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {a d : Nat} →
+        CanonicalStructure.IsCanonical →
+          (C : SpecialTransformations.Section3.BaseContext M) →
+            SpecialTransformations.Section5.DefSet (↑C.base) 1 a →
+              SpecialTransformations.Section5.DefSet (↑C.base) 0 d →
+                SpecialTransformations.Section5.DefSet (↑C.base) 1 (HAdd.hAdd.{0, 0, 0} a d)
+'IntegrationInACVF.Section7.independentRVProductSource' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.independent_rv_product_source_mem : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {a d : Nat}
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M)
+  (A : SpecialTransformations.Section5.DefSet (↑C.base) 1 a) (R : SpecialTransformations.Section5.DefSet (↑C.base) 0 d)
+  (p : SpecialTransformations.Section5.Point 1 (HAdd.hAdd.{0, 0, 0} a d)),
+  Iff
+    (Membership.mem.{0, 0}
+      (SpecialTransformations.Section5.carrier (IntegrationInACVF.Section7.independentRVProductSource hc C A R)) p)
+    (And
+      (Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier A)
+        (IntegrationInACVF.Section7.retainVFLabels (Fin.castAdd d) p))
+      (Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier R)
+        (Prod.mk.{0, 0} Fin.elim0.{1} (Function.comp.{1, 1, 1} p.2 (Fin.natAdd a)))))
+'IntegrationInACVF.Section7.independent_rv_product_source_mem' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.independent_rv_special_preparation_exists : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {a b d : Nat}
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M)
+  (Ξ : Set.{0} SpecialTransformations.Section3.Values.Gamma)
+  (hNames :
+    LE.le.{0} (SpecialTransformations.Section3.GammaParameters.commonRealNames { real := ↑C.base, gamma := Ξ }) ↑C.base)
+  {A : SpecialTransformations.Section5.DefSet (↑C.base) 1 a} {B : SpecialTransformations.Section5.DefSet (↑C.base) 1 b}
+  (T : SpecialTransformations.Section5.SpecialBijection A B),
+  SpecialTransformations.Section5.GammaChainDefinable { real := ↑C.base, gamma := Ξ } T.chain →
+    SpecialTransformations.Section5.IsRVPullback (SpecialTransformations.Section5.carrier B) →
+      ∀ (R : SpecialTransformations.Section5.DefSet (↑C.base) 0 d),
+        Nonempty.{1}
+          (IntegrationInACVF.Section7.RVLabelConstraintSpecialPreparation T
+            (IntegrationInACVF.Section7.independentRVProductSource hc C A R)
+            (IntegrationInACVF.Section7.independentRVLabelConstraint C Ξ hNames a R) (Fin.castAdd d)
+            { real := ↑C.base, gamma := Ξ })
+'IntegrationInACVF.Section7.independent_rv_special_preparation_exists' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
