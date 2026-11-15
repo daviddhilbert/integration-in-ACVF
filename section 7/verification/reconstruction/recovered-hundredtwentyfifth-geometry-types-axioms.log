@@ -1,0 +1,185 @@
+@IntegrationInACVF.Section7.rescaledPointLiftOrdinaryFamily : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (C : SpecialTransformations.Section3.BaseContext M) →
+        (c : CanonicalRV.RVSort M) →
+          Membership.mem.{0, 0} C.base ↑c → Ne.{1} c 0 → IntegrationInACVF.Section7.OrdinaryVFVolumeFamily C 1 0
+'IntegrationInACVF.Section7.rescaledPointLiftOrdinaryFamily' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.rescaled_point_lift_ordinary_family_equal : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (C : SpecialTransformations.Section3.BaseContext M) (c d : CanonicalRV.RVSort M)
+  (hcS : Membership.mem.{0, 0} C.base ↑c) (hc0 : Ne.{1} c 0) (hdS : Membership.mem.{0, 0} C.base ↑d) (hd0 : Ne.{1} d 0),
+  Eq.{1} (IntegrationInACVF.Section7.rescaledPointLiftOrdinaryFamily C c hcS hc0)
+    (IntegrationInACVF.Section7.rescaledPointLiftOrdinaryFamily C d hdS hd0)
+'IntegrationInACVF.Section7.rescaled_point_lift_ordinary_family_equal' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.rescaled_point_lift_integrals_unequal : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M)
+  (Ξ : Set.{0} SpecialTransformations.Section3.Values.Gamma) (hΞ : LT.lt.{1} (Cardinal.mk.{0} ↑Ξ) C.κ)
+  (hGenerated : SpecialTransformations.Section3.GammaParameters.VFGammaGeneratedBase { real := ↑C.base, gamma := Ξ })
+  (hNames : SpecialTransformations.Section3.GammaParameters.commonRealNames { real := ↑C.base, gamma := Ξ } ⊆ ↑C.base)
+  (γ : SpecialTransformations.Section3.Values.Gamma) (hγ : Membership.mem.{0, 0} Ξ γ) (hγ1 : LT.lt.{0} 1 γ)
+  (c d : CanonicalRV.RVSort M) (hcS : Membership.mem.{0, 0} C.base ↑c) (hc0 : Ne.{1} c 0)
+  (hdS : Membership.mem.{0, 0} C.base ↑d) (hd0 : Ne.{1} d 0),
+  Ne.{1} (SpecialTransformations.Section3.RVOperations.absoluteHom c)
+      (SpecialTransformations.Section3.RVOperations.absoluteHom d) →
+    Ne.{1}
+      ((IntegrationInACVF.Section7.positiveVolumeIntegrationEquiv hc C Ξ hΞ hGenerated hNames γ hγ hγ1)
+        (IntegrationInACVF.Section7.positiveVFVolumeIsoClass hc C
+          (IntegrationInACVF.Section7.rvVolumeLift
+            ((IntegrationInACVF.Section7.degreeOnePointVolumeObject ↑C.base).rescale c hcS hc0))))
+      ((IntegrationInACVF.Section7.positiveVolumeIntegrationEquiv hc C Ξ hΞ hGenerated hNames γ hγ hγ1)
+        (IntegrationInACVF.Section7.positiveVFVolumeIsoClass hc C
+          (IntegrationInACVF.Section7.rvVolumeLift
+            ((IntegrationInACVF.Section7.degreeOnePointVolumeObject ↑C.base).rescale d hdS hd0))))
+'IntegrationInACVF.Section7.rescaled_point_lift_integrals_unequal' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.no_ordinary_family_map_recovers_all_point_densities : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M)
+  (Ξ : Set.{0} SpecialTransformations.Section3.Values.Gamma) (hΞ : LT.lt.{1} (Cardinal.mk.{0} ↑Ξ) C.κ)
+  (hGenerated : SpecialTransformations.Section3.GammaParameters.VFGammaGeneratedBase { real := ↑C.base, gamma := Ξ })
+  (hNames : SpecialTransformations.Section3.GammaParameters.commonRealNames { real := ↑C.base, gamma := Ξ } ⊆ ↑C.base)
+  (γ : SpecialTransformations.Section3.Values.Gamma) (hγ : Membership.mem.{0, 0} Ξ γ) (hγ1 : LT.lt.{0} 1 γ)
+  (c d : CanonicalRV.RVSort M),
+  Membership.mem.{0, 0} C.base ↑c →
+    Ne.{1} c 0 →
+      Membership.mem.{0, 0} C.base ↑d →
+        Ne.{1} d 0 →
+          Ne.{1} (SpecialTransformations.Section3.RVOperations.absoluteHom c)
+              (SpecialTransformations.Section3.RVOperations.absoluteHom d) →
+            ¬∃ (J :
+                IntegrationInACVF.Section7.OrdinaryVFVolumeFamily C 1 0 →
+                  IntegrationInACVF.Section7.PositiveVolumeBlowupClasses hc C 0),
+                ∀ (e : CanonicalRV.RVSort M) (heS : Membership.mem.{0, 0} C.base ↑e) (he0 : Ne.{1} e 0),
+                  Eq.{1} (J (IntegrationInACVF.Section7.rescaledPointLiftOrdinaryFamily C e heS he0))
+                    ((IntegrationInACVF.Section7.positiveVolumeIntegrationEquiv hc C Ξ hΞ hGenerated hNames γ hγ hγ1)
+                      (IntegrationInACVF.Section7.positiveVFVolumeIsoClass hc C
+                        (IntegrationInACVF.Section7.rvVolumeLift
+                          ((IntegrationInACVF.Section7.degreeOnePointVolumeObject ↑C.base).rescale e heS he0))))
+'IntegrationInACVF.Section7.no_ordinary_family_map_recovers_all_point_densities' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.rawVolumeDegreeComponent : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        (C : SpecialTransformations.Section3.BaseContext M) →
+          (n : ℕ) →
+            AddMonoidHom.{0, 0} (IntegrationInACVF.Section7.RawRVVolumeRing hc C)
+              (Algebra.GrothendieckAddGroup.{0} (IntegrationInACVF.Section7.RVVolumeIsoClasses hc C n))
+'IntegrationInACVF.Section7.rawVolumeDegreeComponent' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@IntegrationInACVF.Section7.raw_volume_degree_component_of : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M) (n : ℕ)
+  (a : IntegrationInACVF.Section7.RVVolumeIsoSemiring hc C),
+  Eq.{1}
+    ((IntegrationInACVF.Section7.rawVolumeDegreeComponent hc C n)
+      ((IntegrationInACVF.Section7.semiringGroupificationOf.{0} (IntegrationInACVF.Section7.RVVolumeIsoSemiring hc C))
+        a))
+    (Algebra.GrothendieckAddGroup.of.{0} (a n))
+'IntegrationInACVF.Section7.raw_volume_degree_component_of' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.graded_volume_blowup_projection_component : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M) (n : ℕ)
+  (a : IntegrationInACVF.Section7.RVVolumeIsoSemiring hc C),
+  Eq.{1} (((IntegrationInACVF.Section7.rvVolumeGradedBlowupProjection hc C) a) n)
+    ((IntegrationInACVF.Section7.rvVolumeBlowupProjection hc C n) (a n))
+'IntegrationInACVF.Section7.graded_volume_blowup_projection_component' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.degree_zero_volume_blowup_projection_injective : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M),
+  Function.Injective.{1, 1} ⇑(IntegrationInACVF.Section7.rvVolumeBlowupProjection hc C 0)
+'IntegrationInACVF.Section7.degree_zero_volume_blowup_projection_injective' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.raw_volume_kernel_degree_zero : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M)
+  (x : IntegrationInACVF.Section7.RawRVVolumeRing hc C),
+  Membership.mem.{0, 0} (IntegrationInACVF.Section7.rawVolumeKernelIdeal hc C) x →
+    Eq.{1} ((IntegrationInACVF.Section7.rawVolumeDegreeComponent hc C 0) x) 0
+'IntegrationInACVF.Section7.raw_volume_kernel_degree_zero' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.rawVolumeHomogeneousAdditiveMap : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        (C : SpecialTransformations.Section3.BaseContext M) →
+          (n : ℕ) →
+            AddMonoidHom.{0, 0}
+              (Algebra.GrothendieckAddGroup.{0} (IntegrationInACVF.Section7.RVVolumeIsoClasses hc C n))
+              (IntegrationInACVF.Section7.RawRVVolumeRing hc C)
+'IntegrationInACVF.Section7.rawVolumeHomogeneousAdditiveMap' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.raw_volume_homogeneous_component_retraction : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M) (n : ℕ)
+  (x : Algebra.GrothendieckAddGroup.{0} (IntegrationInACVF.Section7.RVVolumeIsoClasses hc C n)),
+  Eq.{1}
+    ((IntegrationInACVF.Section7.rawVolumeDegreeComponent hc C n)
+      ((IntegrationInACVF.Section7.rawVolumeHomogeneousAdditiveMap hc C n) x))
+    x
+'IntegrationInACVF.Section7.raw_volume_homogeneous_component_retraction' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.raw_volume_homogeneous_degree_zero_kernel : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M)
+  (x : Algebra.GrothendieckAddGroup.{0} (IntegrationInACVF.Section7.RVVolumeIsoClasses hc C 0)),
+  Membership.mem.{0, 0} (IntegrationInACVF.Section7.rawVolumeKernelIdeal hc C)
+      ((IntegrationInACVF.Section7.rawVolumeHomogeneousAdditiveMap hc C 0) x) →
+    Eq.{1} x 0
+'IntegrationInACVF.Section7.raw_volume_homogeneous_degree_zero_kernel' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.semiringGroupificationAdditiveLift.{u_1,
+    u_2} : {R : Type u_1} →
+  [inst : Semiring.{u_1} R] →
+    {A : Type u_2} →
+      [inst_1 : AddCommGroup.{u_2} A] →
+        AddMonoidHom.{u_1, u_2} R A →
+          AddMonoidHom.{u_1, u_2} (IntegrationInACVF.Section7.SemiringGroupification.{u_1} R) A
+'IntegrationInACVF.Section7.semiringGroupificationAdditiveLift' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.semiring_groupification_additive_lift_of.{u_1,
+    u_2} : ∀ {R : Type u_1} [inst : Semiring.{u_1} R] {A : Type u_2} [inst_1 : AddCommGroup.{u_2} A]
+  (f : AddMonoidHom.{u_1, u_2} R A) (a : R),
+  Eq.{u_2 + 1}
+    ((IntegrationInACVF.Section7.semiringGroupificationAdditiveLift.{u_1, u_2} f)
+      ((IntegrationInACVF.Section7.semiringGroupificationOf.{u_1} R) a))
+    (f a)
+'IntegrationInACVF.Section7.semiring_groupification_additive_lift_of' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.semiring_groupification_additive_hom_ext.{u_1,
+    u_2} : ∀ {R : Type u_1} [inst : Semiring.{u_1} R] {A : Type u_2} [inst_1 : AddCommGroup.{u_2} A]
+  {f g : AddMonoidHom.{u_1, u_2} (IntegrationInACVF.Section7.SemiringGroupification.{u_1} R) A},
+  (∀ (a : R),
+      Eq.{u_2 + 1} (f ((IntegrationInACVF.Section7.semiringGroupificationOf.{u_1} R) a))
+        (g ((IntegrationInACVF.Section7.semiringGroupificationOf.{u_1} R) a))) →
+    Eq.{max (u_1 + 1) (u_2 + 1)} f g
+'IntegrationInACVF.Section7.semiring_groupification_additive_hom_ext' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

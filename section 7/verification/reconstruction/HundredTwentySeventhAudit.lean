@@ -1,0 +1,45 @@
+import Integration7.SelectedFamilyDensityRescaleIntegrals
+import Integration7.SelectedVolumeDensityRescaling
+import Integration7.VFVolumeDensityRescaling
+import Integration7.VFVolumeRescalingClasses
+import Integration7.VolumeIntegrationDensityRescaling
+set_option pp.universes true
+set_option pp.proofs false
+set_option pp.deepTerms true
+set_option pp.maxSteps 10000000
+set_option pp.notation true
+set_option pp.funBinderTypes true
+set_option pp.piBinderTypes true
+
+
+
+#check @IntegrationInACVF.Section7.selectedFamilyFullLiftRescaleBijection
+#print axioms IntegrationInACVF.Section7.selectedFamilyFullLiftRescaleBijection
+#check @IntegrationInACVF.Section7.selected_family_canonical_integral_density_rescale
+#print axioms IntegrationInACVF.Section7.selected_family_canonical_integral_density_rescale
+#check @IntegrationInACVF.Section7.ae_rv_volume_integral_density_rescale
+#print axioms IntegrationInACVF.Section7.ae_rv_volume_integral_density_rescale
+#check @IntegrationInACVF.Section7.SelectedVFVolumeFamily.rescale
+#print axioms IntegrationInACVF.Section7.SelectedVFVolumeFamily.rescale
+#check @IntegrationInACVF.Section7.rescaledSelectedFamilyRowIso
+#print axioms IntegrationInACVF.Section7.rescaledSelectedFamilyRowIso
+#check @IntegrationInACVF.Section7.selected_volume_rescale_row_class
+#print axioms IntegrationInACVF.Section7.selected_volume_rescale_row_class
+#check @IntegrationInACVF.Section7.ae_selected_volume_density_rescale
+#print axioms IntegrationInACVF.Section7.ae_selected_volume_density_rescale
+#check @IntegrationInACVF.Section7.aeRVVolumeFunctionRescale
+#print axioms IntegrationInACVF.Section7.aeRVVolumeFunctionRescale
+#check @IntegrationInACVF.Section7.PositiveVFVolumeObject.rescale
+#print axioms IntegrationInACVF.Section7.PositiveVFVolumeObject.rescale
+#check @IntegrationInACVF.Section7.VFVolumeBijection.rescale
+#print axioms IntegrationInACVF.Section7.VFVolumeBijection.rescale
+#check @IntegrationInACVF.Section7.VFVolumeIso.rescale
+#print axioms IntegrationInACVF.Section7.VFVolumeIso.rescale
+#check @IntegrationInACVF.Section7.positiveVFVolumeClassRescale
+#print axioms IntegrationInACVF.Section7.positiveVFVolumeClassRescale
+#check @IntegrationInACVF.Section7.positive_vf_volume_class_rescale_representative
+#print axioms IntegrationInACVF.Section7.positive_vf_volume_class_rescale_representative
+#check @IntegrationInACVF.Section7.vfVolumeRescaleLiftBijection
+#print axioms IntegrationInACVF.Section7.vfVolumeRescaleLiftBijection
+#check @IntegrationInACVF.Section7.positive_volume_integration_density_rescale
+#print axioms IntegrationInACVF.Section7.positive_volume_integration_density_rescale

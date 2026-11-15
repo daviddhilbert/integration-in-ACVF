@@ -23,11 +23,13 @@ Section 6 now has closed generated-base interfaces for RV[k] and graded
 RV[*], deriving the required finite-VF-parameter inputs from the completed
 Section 5 theorem. These entrypoints live in
 `IntegrationInACVF.Section7.CompletedSection6`. Section 7 has raw linear
-head, prefix and coordinate operators, normalized linear partial integrals
-on full and supported function spaces, supported total Fubini, normalized
-change of variables and the normalized commutative ring presentation.
-Its raw coordinate-order comparison, ordinary-input raw Jacobian assembly
-and unlocalized principal-kernel identification remain unfinished. The project is not fully
+head, prefix and coordinate operators, raw ring-linear Fubini on actual
+supported functions including ordinary values, positive-value raw change
+of variables, normalized supported change of variables and the normalized
+commutative ring presentation. Its full-input raw point-padded identity
+retains the point coefficient explicitly. Ordinary-input unpadded raw
+change of variables and the unlocalized single-generator kernel
+identification remain unfinished. The project is not fully
 formalized. See
 [Section 5 status](section%205/STATUS.md),
 [Section 6 status](section%206/STATUS.md) and

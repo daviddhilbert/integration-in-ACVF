@@ -1,0 +1,43 @@
+import Integration7.OrdinaryFibreDensityBoundary
+import Integration7.RawVolumeDegreeComponents
+import Integration7.SemiringGroupificationAdditiveMaps
+set_option pp.universes true
+set_option pp.proofs false
+set_option pp.deepTerms true
+set_option pp.maxSteps 10000000
+set_option pp.notation true
+set_option pp.funBinderTypes true
+set_option pp.piBinderTypes true
+
+
+
+#check @IntegrationInACVF.Section7.rescaledPointLiftOrdinaryFamily
+#print axioms IntegrationInACVF.Section7.rescaledPointLiftOrdinaryFamily
+#check @IntegrationInACVF.Section7.rescaled_point_lift_ordinary_family_equal
+#print axioms IntegrationInACVF.Section7.rescaled_point_lift_ordinary_family_equal
+#check @IntegrationInACVF.Section7.rescaled_point_lift_integrals_unequal
+#print axioms IntegrationInACVF.Section7.rescaled_point_lift_integrals_unequal
+#check @IntegrationInACVF.Section7.no_ordinary_family_map_recovers_all_point_densities
+#print axioms IntegrationInACVF.Section7.no_ordinary_family_map_recovers_all_point_densities
+#check @IntegrationInACVF.Section7.rawVolumeDegreeComponent
+#print axioms IntegrationInACVF.Section7.rawVolumeDegreeComponent
+#check @IntegrationInACVF.Section7.raw_volume_degree_component_of
+#print axioms IntegrationInACVF.Section7.raw_volume_degree_component_of
+#check @IntegrationInACVF.Section7.graded_volume_blowup_projection_component
+#print axioms IntegrationInACVF.Section7.graded_volume_blowup_projection_component
+#check @IntegrationInACVF.Section7.degree_zero_volume_blowup_projection_injective
+#print axioms IntegrationInACVF.Section7.degree_zero_volume_blowup_projection_injective
+#check @IntegrationInACVF.Section7.raw_volume_kernel_degree_zero
+#print axioms IntegrationInACVF.Section7.raw_volume_kernel_degree_zero
+#check @IntegrationInACVF.Section7.rawVolumeHomogeneousAdditiveMap
+#print axioms IntegrationInACVF.Section7.rawVolumeHomogeneousAdditiveMap
+#check @IntegrationInACVF.Section7.raw_volume_homogeneous_component_retraction
+#print axioms IntegrationInACVF.Section7.raw_volume_homogeneous_component_retraction
+#check @IntegrationInACVF.Section7.raw_volume_homogeneous_degree_zero_kernel
+#print axioms IntegrationInACVF.Section7.raw_volume_homogeneous_degree_zero_kernel
+#check @IntegrationInACVF.Section7.semiringGroupificationAdditiveLift
+#print axioms IntegrationInACVF.Section7.semiringGroupificationAdditiveLift
+#check @IntegrationInACVF.Section7.semiring_groupification_additive_lift_of
+#print axioms IntegrationInACVF.Section7.semiring_groupification_additive_lift_of
+#check @IntegrationInACVF.Section7.semiring_groupification_additive_hom_ext
+#print axioms IntegrationInACVF.Section7.semiring_groupification_additive_hom_ext

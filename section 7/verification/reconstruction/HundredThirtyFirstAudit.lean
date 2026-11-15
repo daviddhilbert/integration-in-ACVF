@@ -1,0 +1,52 @@
+import Integration7.RawHomogeneousSupportAlgebra
+import Integration7.RawPositiveGradedChangeOfVariables
+import Integration7.RawSection7FunctionTheorems
+import Integration7.RawSupportedVolumeRange
+set_option pp.universes true
+set_option pp.proofs false
+set_option pp.deepTerms true
+set_option pp.maxSteps 10000000
+set_option pp.notation true
+set_option pp.funBinderTypes true
+set_option pp.piBinderTypes true
+
+
+
+#check @IntegrationInACVF.Section7.raw_volume_component_support_degree_heq
+#print axioms IntegrationInACVF.Section7.raw_volume_component_support_degree_heq
+#check @IntegrationInACVF.Section7.raw_volume_component_zero_has_support
+#print axioms IntegrationInACVF.Section7.raw_volume_component_zero_has_support
+#check @IntegrationInACVF.Section7.raw_volume_component_add_preserves_support
+#print axioms IntegrationInACVF.Section7.raw_volume_component_add_preserves_support
+#check @IntegrationInACVF.Section7.raw_volume_component_coefficient_preserves_support
+#print axioms IntegrationInACVF.Section7.raw_volume_component_coefficient_preserves_support
+#check @IntegrationInACVF.Section7.raw_positive_appended_jacobian_integral
+#print axioms IntegrationInACVF.Section7.raw_positive_appended_jacobian_integral
+#check @IntegrationInACVF.Section7.rawSupportedPositiveGradedIntegral
+#print axioms IntegrationInACVF.Section7.rawSupportedPositiveGradedIntegral
+#check @IntegrationInACVF.Section7.raw_supported_positive_graded_integral_of
+#print axioms IntegrationInACVF.Section7.raw_supported_positive_graded_integral_of
+#check @IntegrationInACVF.Section7.raw_positive_graded_change_of_variables
+#print axioms IntegrationInACVF.Section7.raw_positive_graded_change_of_variables
+#check @IntegrationInACVF.Section7.proposition_7_11
+#print axioms IntegrationInACVF.Section7.proposition_7_11
+#check @IntegrationInACVF.Section7.proposition_7_12_positive
+#print axioms IntegrationInACVF.Section7.proposition_7_12_positive
+#check @IntegrationInACVF.Section7.rawVolumeComponentSupportAddSubmonoid
+#print axioms IntegrationInACVF.Section7.rawVolumeComponentSupportAddSubmonoid
+#check @IntegrationInACVF.Section7.RawSupportedVolumeComponent
+#print axioms IntegrationInACVF.Section7.RawSupportedVolumeComponent
+#check @IntegrationInACVF.Section7.rawSupportedComponentCoefficient
+#print axioms IntegrationInACVF.Section7.rawSupportedComponentCoefficient
+#check @IntegrationInACVF.Section7.rawSupportedVolumeGradedAction
+#print axioms IntegrationInACVF.Section7.rawSupportedVolumeGradedAction
+#check @IntegrationInACVF.Section7.rawSupportedVolumeGradedModule
+#print axioms IntegrationInACVF.Section7.rawSupportedVolumeGradedModule
+#check @IntegrationInACVF.Section7.rawSupportedVolumeComponentForget
+#print axioms IntegrationInACVF.Section7.rawSupportedVolumeComponentForget
+#check @IntegrationInACVF.Section7.raw_supported_volume_component_forget_of
+#print axioms IntegrationInACVF.Section7.raw_supported_volume_component_forget_of
+#check @IntegrationInACVF.Section7.raw_supported_volume_span_eq_range
+#print axioms IntegrationInACVF.Section7.raw_supported_volume_span_eq_range
+#check @IntegrationInACVF.Section7.raw_supported_volume_iff_componentwise
+#print axioms IntegrationInACVF.Section7.raw_supported_volume_iff_componentwise

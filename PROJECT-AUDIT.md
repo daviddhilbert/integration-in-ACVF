@@ -1,7 +1,7 @@
 # Whole-project audit — November 15, 2026
 
 Dates use America/Los_Angeles. The project is **not complete**: Section 7
-still has the three raw volume obligations listed below. The Section 6
+still has the two raw volume obligations listed below. The Section 6
 finite-VF-parameter connection is now proved in the closed interfaces.
 
 ## Correction and completed integration
@@ -38,7 +38,7 @@ The current receipt is
 | 4 | 445 | Numbered lemmas and cell geometry in the approved scope. |
 | 5 | 1,852 | All active RV[k] targets complete, with explicit RV presentation charts for 5.5. |
 | 6 | 2,273 + closed API below | 736 original registered modules. The closed generated-base kernel, integration, function and localization interfaces are checked in the new Section 7 batch; their open universal Section 5.8 premise has been removed. |
-| 7 | 5,526 | 1,750 modules plus Library; geometry through 7.10, full raw linear head/prefix/coordinate operators, normalized supported 7.14–7.15, normalized commutative ring presentation, and closed generated-base Section 6 interfaces. |
+| 7 | 5,784 | 1,799 checked modules plus Library; geometry through 7.10, raw supported 7.11 including ordinary values, positive-value raw 7.12, normalized supported 7.14–7.15, exact raw kernel presentation by basic and degree-one elementary relations, and closed generated-base Section 6 interfaces. |
 
 The three new Section 6 modules convert the actual Section 5 RV-category
 isomorphisms and prove `completed_section5_two_order_input` on bases
@@ -84,12 +84,16 @@ supported-domain versions have exactly the literal definable projected
 support and agree with the unmodified full operators after forgetting
 support. Total Fubini holds on every supported normalized input.
 
+Raw Proposition 7.11 is now checked as `proposition_7_11_ring` over the raw Grothendieck ring: its actual signed
+coordinate integral preserves literal projected supports and the raw total
+for every nonempty coordinate subset. The supported module is proved equal
+to the componentwise space of actual supported presentations in every degree,
+including ordinary RV[0]. This required no changed coefficient convention.
+The published 1,750-module checkpoint passed CI run43769978730; later local
+batches passed new-export type/axiom audits and affected Library builds.
+
 Section 7 still needs:
 
-- **7.11:** raw coordinate-order/Fubini comparison. Head, prefix and arbitrary
-  coordinate operators are already linear over the full raw graded semiring,
-  including every ordinary/positive coefficient and input case. Total
-  integration in the displayed split order is proved.
 - **7.12:** ordinary-input raw Jacobian assembly and its integral identity.
   Positive-supported raw and full normalized change of variables are proved.
 - **7.13:** the raw, unlocalized single-generator kernel-ideal identification.
@@ -190,3 +194,17 @@ The actual normalized coefficient ring, function scalar extension and linear tot
 The normalized coefficient ring now has the exact common-degree homogeneous fraction characterization and an explicit ring equivalence to the raw RV volume ring quotient imposing point=cone=1. Stabilization proves all common-blowup relations after point inversion. This does not discharge the unlocalized single-principal-kernel statement.
 
 Positive homogeneous pointwise head-fibre semantics are now checked in the genuine definable closure of the frozen tuple, using the proved VF field property. Ordinary degree-zero and arbitrary-coordinate full graded assembly remain open.
+
+
+The raw ideal now has the exact smaller presentation in
+`RawBoundaryKernelPresentation.lean`: the basic relation together with all
+actual degree-one elementary relations generates the whole kernel. Its
+quotient is canonically the VF volume ring. The checked equivalence
+`raw_principal_kernel_iff_degree_one` isolates the single-generator question
+precisely; it neither assumes nor proves that remaining containment.
+
+The full raw supported function space also has a checked point-padded
+change-of-variables identity over the actual Grothendieck coefficient ring:
+the transformed integral equals the point coefficient times the original
+integral. This retains the raw point factor and is not an unproved
+cancellation or a replacement for the still-open ordinary-valued7.12 target.

@@ -1,0 +1,55 @@
+import Integration7.RawPointPaddedChangeOfVariables
+import Integration7.RawRingSupportedFunctionIntegrals
+import Integration7.ScalarExtensionLinearFunctionals
+set_option pp.universes true
+set_option pp.proofs false
+set_option pp.deepTerms true
+set_option pp.maxSteps 10000000
+set_option pp.notation true
+set_option pp.funBinderTypes true
+set_option pp.piBinderTypes true
+
+
+
+#check @IntegrationInACVF.Section7.rawAEVolumePointPadding
+#print axioms IntegrationInACVF.Section7.rawAEVolumePointPadding
+#check @IntegrationInACVF.Section7.raw_ae_volume_point_padding_of
+#print axioms IntegrationInACVF.Section7.raw_ae_volume_point_padding_of
+#check @IntegrationInACVF.Section7.raw_ae_volume_point_padding_inclusion
+#print axioms IntegrationInACVF.Section7.raw_ae_volume_point_padding_inclusion
+#check @IntegrationInACVF.Section7.raw_point_padding_preserves_support
+#print axioms IntegrationInACVF.Section7.raw_point_padding_preserves_support
+#check @IntegrationInACVF.Section7.rawSupportedVolumePointPadding
+#print axioms IntegrationInACVF.Section7.rawSupportedVolumePointPadding
+#check @IntegrationInACVF.Section7.raw_supported_volume_point_padding_forget
+#print axioms IntegrationInACVF.Section7.raw_supported_volume_point_padding_forget
+#check @IntegrationInACVF.Section7.raw_supported_point_padding_integral
+#print axioms IntegrationInACVF.Section7.raw_supported_point_padding_integral
+#check @IntegrationInACVF.Section7.raw_point_padded_change_of_variables
+#print axioms IntegrationInACVF.Section7.raw_point_padded_change_of_variables
+#check @IntegrationInACVF.Section7.RawRingSupportedVolumeFunction
+#print axioms IntegrationInACVF.Section7.RawRingSupportedVolumeFunction
+#check @IntegrationInACVF.Section7.RawRingSupportedPositiveVolumeFunction
+#print axioms IntegrationInACVF.Section7.RawRingSupportedPositiveVolumeFunction
+#check @IntegrationInACVF.Section7.rawRingSupportedVolumeIntegral
+#print axioms IntegrationInACVF.Section7.rawRingSupportedVolumeIntegral
+#check @IntegrationInACVF.Section7.rawRingSupportedCoordinateIntegral
+#print axioms IntegrationInACVF.Section7.rawRingSupportedCoordinateIntegral
+#check @IntegrationInACVF.Section7.proposition_7_11_ring
+#print axioms IntegrationInACVF.Section7.proposition_7_11_ring
+#check @IntegrationInACVF.Section7.rawRingSupportedPositiveVolumeIntegral
+#print axioms IntegrationInACVF.Section7.rawRingSupportedPositiveVolumeIntegral
+#check @IntegrationInACVF.Section7.rawRingSupportedPositiveJacobian
+#print axioms IntegrationInACVF.Section7.rawRingSupportedPositiveJacobian
+#check @IntegrationInACVF.Section7.proposition_7_12_positive_ring
+#print axioms IntegrationInACVF.Section7.proposition_7_12_positive_ring
+#check @IntegrationInACVF.Section7.rawRingPointPaddedJacobian
+#print axioms IntegrationInACVF.Section7.rawRingPointPaddedJacobian
+#check @IntegrationInACVF.Section7.raw_ring_point_padded_change_of_variables
+#print axioms IntegrationInACVF.Section7.raw_ring_point_padded_change_of_variables
+#check @IntegrationInACVF.Section7.scalarExtensionFunctional
+#print axioms IntegrationInACVF.Section7.scalarExtensionFunctional
+#check @IntegrationInACVF.Section7.scalar_extension_functional_generator
+#print axioms IntegrationInACVF.Section7.scalar_extension_functional_generator
+#check @IntegrationInACVF.Section7.scalar_extension_functional_natural
+#print axioms IntegrationInACVF.Section7.scalar_extension_functional_natural

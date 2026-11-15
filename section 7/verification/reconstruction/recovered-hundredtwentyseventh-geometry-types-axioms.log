@@ -1,0 +1,224 @@
+@IntegrationInACVF.Section7.selectedFamilyFullLiftRescaleBijection : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {n a k : ℕ} →
+        CanonicalStructure.IsCanonical →
+          (C : SpecialTransformations.Section3.BaseContext M) →
+            (F : IntegrationInACVF.Section7.SelectedVFVolumeFamily C n a k) →
+              (c : CanonicalRV.RVSort M) →
+                (hcS : Membership.mem.{0, 0} C.base ↑c) →
+                  (hc0 : Ne.{1} c 0) →
+                    IntegrationInACVF.Section7.VFVolumeBijection (F.rescale c hcS hc0).fullLift
+                      (F.fullLift.rescale c hcS hc0)
+'IntegrationInACVF.Section7.selectedFamilyFullLiftRescaleBijection' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.selected_family_canonical_integral_density_rescale : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {n a k : ℕ}
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M)
+  (Ξ : Set.{0} SpecialTransformations.Section3.Values.Gamma),
+  LT.lt.{1} (Cardinal.mk.{0} ↑Ξ) C.κ →
+    ∀
+      (hGenerated :
+        SpecialTransformations.Section3.GammaParameters.VFGammaGeneratedBase { real := ↑C.base, gamma := Ξ }),
+      SpecialTransformations.Section3.GammaParameters.commonRealNames { real := ↑C.base, gamma := Ξ } ⊆ ↑C.base →
+        ∀ (γ : SpecialTransformations.Section3.Values.Gamma),
+          Membership.mem.{0, 0} Ξ γ →
+            LT.lt.{0} 1 γ →
+              ∀ (F : IntegrationInACVF.Section7.SelectedVFVolumeFamily C (HAdd.hAdd.{0, 0, 0} n 1) a k)
+                (c : CanonicalRV.RVSort M) (hcS : Membership.mem.{0, 0} C.base ↑c) (hc0 : Ne.{1} c 0),
+                Eq.{1}
+                  (IntegrationInACVF.Section7.selectedFamilyCanonicalIntegralValue hc C Ξ hGenerated
+                    (F.rescale c hcS hc0))
+                  ((IntegrationInACVF.Section7.positiveVolumeClassRescaleDefinable hc C c ⋯ hc0)
+                    (IntegrationInACVF.Section7.selectedFamilyCanonicalIntegralValue hc C Ξ hGenerated F))
+'IntegrationInACVF.Section7.selected_family_canonical_integral_density_rescale' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.ae_rv_volume_integral_density_rescale : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {n k : ℕ}
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M)
+  (Ξ : Set.{0} SpecialTransformations.Section3.Values.Gamma) (hΞ : LT.lt.{1} (Cardinal.mk.{0} ↑Ξ) C.κ)
+  (hGenerated : SpecialTransformations.Section3.GammaParameters.VFGammaGeneratedBase { real := ↑C.base, gamma := Ξ })
+  (hNames : SpecialTransformations.Section3.GammaParameters.commonRealNames { real := ↑C.base, gamma := Ξ } ⊆ ↑C.base)
+  (γ : SpecialTransformations.Section3.Values.Gamma) (hγ : Membership.mem.{0, 0} Ξ γ) (hγ1 : LT.lt.{0} 1 γ)
+  (f : IntegrationInACVF.Section7.AERVVolumeFunction hc C n k) (c : CanonicalRV.RVSort M)
+  (hcS : Membership.mem.{0, 0} C.base ↑c) (hc0 : Ne.{1} c 0),
+  Eq.{1}
+    (IntegrationInACVF.Section7.aeRVVolumeFunctionIntegral hc C Ξ hΞ hGenerated hNames γ hγ hγ1
+      (IntegrationInACVF.Section7.aeRVVolumeFunctionRescale hc C c hcS hc0 f))
+    ((IntegrationInACVF.Section7.positiveVolumeClassRescaleDefinable hc C c ⋯ hc0)
+      (IntegrationInACVF.Section7.aeRVVolumeFunctionIntegral hc C Ξ hΞ hGenerated hNames γ hγ hγ1 f))
+'IntegrationInACVF.Section7.ae_rv_volume_integral_density_rescale' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.SelectedVFVolumeFamily.rescale : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {C : SpecialTransformations.Section3.BaseContext M} →
+        {n a k : ℕ} →
+          IntegrationInACVF.Section7.SelectedVFVolumeFamily C n a k →
+            (c : CanonicalRV.RVSort M) →
+              Membership.mem.{0, 0} C.base ↑c → Ne.{1} c 0 → IntegrationInACVF.Section7.SelectedVFVolumeFamily C n a k
+'IntegrationInACVF.Section7.SelectedVFVolumeFamily.rescale' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.rescaledSelectedFamilyRowIso : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {C : SpecialTransformations.Section3.BaseContext M} →
+        {n a k : ℕ} →
+          CanonicalStructure.IsCanonical →
+            (F : IntegrationInACVF.Section7.SelectedVFVolumeFamily C n a k) →
+              (c : CanonicalRV.RVSort M) →
+                (hcS : Membership.mem.{0, 0} C.base ↑c) →
+                  (hc0 : Ne.{1} c 0) →
+                    (x : Fin n → SpecialTransformations.Milestone0.Transfer.VFType) →
+                      IntegrationInACVF.Section7.RVVolumeIso ((F.rescale c hcS hc0).rowInContext x)
+                        ((F.rowInContext x).rescaleDefinable c ⋯ hc0)
+'IntegrationInACVF.Section7.rescaledSelectedFamilyRowIso' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.selected_volume_rescale_row_class : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {C : SpecialTransformations.Section3.BaseContext M} {n a k : ℕ} (hc : CanonicalStructure.IsCanonical)
+  (F : IntegrationInACVF.Section7.SelectedVFVolumeFamily C n a k) (c : CanonicalRV.RVSort M)
+  (hcS : Membership.mem.{0, 0} C.base ↑c) (hc0 : Ne.{1} c 0)
+  (x : Fin n → SpecialTransformations.Milestone0.Transfer.VFType),
+  Eq.{1}
+    (IntegrationInACVF.Section7.positiveVolumeBlowupClass hc (IntegrationInACVF.Section7.vfParameterVolumeContext C x)
+      ((F.rescale c hcS hc0).rowInContext x))
+    ((IntegrationInACVF.Section7.positiveVolumeClassRescaleDefinable hc
+        (IntegrationInACVF.Section7.vfParameterVolumeContext C x) c ⋯ hc0)
+      (IntegrationInACVF.Section7.positiveVolumeBlowupClass hc (IntegrationInACVF.Section7.vfParameterVolumeContext C x)
+        (F.rowInContext x)))
+'IntegrationInACVF.Section7.selected_volume_rescale_row_class' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.ae_selected_volume_density_rescale : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {C : SpecialTransformations.Section3.BaseContext M} {n a b k : ℕ} (hc : CanonicalStructure.IsCanonical)
+  (F : IntegrationInACVF.Section7.SelectedVFVolumeFamily C (HAdd.hAdd.{0, 0, 0} n 1) a k)
+  (G : IntegrationInACVF.Section7.SelectedVFVolumeFamily C (HAdd.hAdd.{0, 0, 0} n 1) b k) (c : CanonicalRV.RVSort M)
+  (hcS : Membership.mem.{0, 0} C.base ↑c) (hc0 : Ne.{1} c 0),
+  IntegrationInACVF.Section7.AERVVolumeFunctionEquivalent hc C (Sigma.mk.{0, 0} a F) (Sigma.mk.{0, 0} b G) →
+    IntegrationInACVF.Section7.AERVVolumeFunctionEquivalent hc C (Sigma.mk.{0, 0} a (F.rescale c hcS hc0))
+      (Sigma.mk.{0, 0} b (G.rescale c hcS hc0))
+'IntegrationInACVF.Section7.ae_selected_volume_density_rescale' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.aeRVVolumeFunctionRescale : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {n k : ℕ} →
+        (hc : CanonicalStructure.IsCanonical) →
+          (C : SpecialTransformations.Section3.BaseContext M) →
+            (c : CanonicalRV.RVSort M) →
+              Membership.mem.{0, 0} C.base ↑c →
+                Ne.{1} c 0 →
+                  IntegrationInACVF.Section7.AERVVolumeFunction hc C n k →
+                    IntegrationInACVF.Section7.AERVVolumeFunction hc C n k
+'IntegrationInACVF.Section7.aeRVVolumeFunctionRescale' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.PositiveVFVolumeObject.rescale : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {S : Set.{0} M} →
+        {k : ℕ} →
+          IntegrationInACVF.Section7.PositiveVFVolumeObject S k →
+            (c : CanonicalRV.RVSort M) →
+              Membership.mem.{0, 0} S ↑c → Ne.{1} c 0 → IntegrationInACVF.Section7.PositiveVFVolumeObject S k
+'IntegrationInACVF.Section7.PositiveVFVolumeObject.rescale' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.VFVolumeBijection.rescale : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {S : Set.{0} M} →
+        {k : ℕ} →
+          {U V : IntegrationInACVF.Section7.PositiveVFVolumeObject S k} →
+            IntegrationInACVF.Section7.VFVolumeBijection U V →
+              (c : CanonicalRV.RVSort M) →
+                (hc : Membership.mem.{0, 0} S ↑c) →
+                  (h0 : Ne.{1} c 0) →
+                    IntegrationInACVF.Section7.VFVolumeBijection (U.rescale c hc h0) (V.rescale c hc h0)
+'IntegrationInACVF.Section7.VFVolumeBijection.rescale' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.VFVolumeIso.rescale : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {S : Set.{0} M} →
+        {k : ℕ} →
+          {U V : IntegrationInACVF.Section7.PositiveVFVolumeObject S k} →
+            IntegrationInACVF.Section7.VFVolumeIso U V →
+              (c : CanonicalRV.RVSort M) →
+                (hc : Membership.mem.{0, 0} S ↑c) →
+                  (h0 : Ne.{1} c 0) → IntegrationInACVF.Section7.VFVolumeIso (U.rescale c hc h0) (V.rescale c hc h0)
+'IntegrationInACVF.Section7.VFVolumeIso.rescale' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@IntegrationInACVF.Section7.positiveVFVolumeClassRescale : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {k : ℕ} →
+        (hc : CanonicalStructure.IsCanonical) →
+          (C : SpecialTransformations.Section3.BaseContext M) →
+            (c : CanonicalRV.RVSort M) →
+              Membership.mem.{0, 0} C.base ↑c →
+                Ne.{1} c 0 →
+                  IntegrationInACVF.Section7.PositiveVFVolumeIsoClasses hc C k →
+                    IntegrationInACVF.Section7.PositiveVFVolumeIsoClasses hc C k
+'IntegrationInACVF.Section7.positiveVFVolumeClassRescale' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.positive_vf_volume_class_rescale_representative : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {k : ℕ}
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M) (c : CanonicalRV.RVSort M)
+  (hcS : Membership.mem.{0, 0} C.base ↑c) (hc0 : Ne.{1} c 0)
+  (U : IntegrationInACVF.Section7.PositiveVFVolumeObject (↑C.base) k),
+  Eq.{1}
+    (IntegrationInACVF.Section7.positiveVFVolumeClassRescale hc C c hcS hc0
+      (IntegrationInACVF.Section7.positiveVFVolumeIsoClass hc C U))
+    (IntegrationInACVF.Section7.positiveVFVolumeIsoClass hc C (U.rescale c hcS hc0))
+'IntegrationInACVF.Section7.positive_vf_volume_class_rescale_representative' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.vfVolumeRescaleLiftBijection : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {k : ℕ} →
+        CanonicalStructure.IsCanonical →
+          (C : SpecialTransformations.Section3.BaseContext M) →
+            (U : IntegrationInACVF.Section7.PositiveRVVolumeObject (↑C.base) k) →
+              (c : CanonicalRV.RVSort M) →
+                (hcS : Membership.mem.{0, 0} C.base ↑c) →
+                  (hc0 : Ne.{1} c 0) →
+                    IntegrationInACVF.Section7.VFVolumeBijection
+                      ((IntegrationInACVF.Section7.rvVolumeLift U).rescale c hcS hc0)
+                      (IntegrationInACVF.Section7.rvVolumeLift (U.rescaleDefinable c ⋯ hc0))
+'IntegrationInACVF.Section7.vfVolumeRescaleLiftBijection' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.positive_volume_integration_density_rescale : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {k : ℕ}
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M)
+  (Ξ : Set.{0} SpecialTransformations.Section3.Values.Gamma) (hΞ : LT.lt.{1} (Cardinal.mk.{0} ↑Ξ) C.κ)
+  (hGenerated : SpecialTransformations.Section3.GammaParameters.VFGammaGeneratedBase { real := ↑C.base, gamma := Ξ })
+  (hNames : SpecialTransformations.Section3.GammaParameters.commonRealNames { real := ↑C.base, gamma := Ξ } ⊆ ↑C.base)
+  (γ : SpecialTransformations.Section3.Values.Gamma) (hγ : Membership.mem.{0, 0} Ξ γ) (hγ1 : LT.lt.{0} 1 γ)
+  (c : CanonicalRV.RVSort M) (hcS : Membership.mem.{0, 0} C.base ↑c) (hc0 : Ne.{1} c 0)
+  (x : IntegrationInACVF.Section7.PositiveVFVolumeIsoClasses hc C k),
+  Eq.{1}
+    ((IntegrationInACVF.Section7.positiveVolumeIntegrationEquiv hc C Ξ hΞ hGenerated hNames γ hγ hγ1)
+      (IntegrationInACVF.Section7.positiveVFVolumeClassRescale hc C c hcS hc0 x))
+    ((IntegrationInACVF.Section7.positiveVolumeClassRescaleDefinable hc C c ⋯ hc0)
+      ((IntegrationInACVF.Section7.positiveVolumeIntegrationEquiv hc C Ξ hΞ hGenerated hNames γ hγ hγ1) x))
+'IntegrationInACVF.Section7.positive_volume_integration_density_rescale' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

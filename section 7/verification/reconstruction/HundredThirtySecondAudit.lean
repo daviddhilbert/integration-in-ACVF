@@ -1,0 +1,29 @@
+import Integration7.RawBoundaryKernelPresentation
+set_option pp.universes true
+set_option pp.proofs false
+set_option pp.deepTerms true
+set_option pp.maxSteps 10000000
+set_option pp.notation true
+set_option pp.funBinderTypes true
+set_option pp.piBinderTypes true
+
+
+
+#check @IntegrationInACVF.Section7.rawDegreeOneElementaryDifferences
+#print axioms IntegrationInACVF.Section7.rawDegreeOneElementaryDifferences
+#check @IntegrationInACVF.Section7.rawBoundaryVolumeGenerators
+#print axioms IntegrationInACVF.Section7.rawBoundaryVolumeGenerators
+#check @IntegrationInACVF.Section7.rawBoundaryVolumeRelationIdeal
+#print axioms IntegrationInACVF.Section7.rawBoundaryVolumeRelationIdeal
+#check @IntegrationInACVF.Section7.rawBoundaryVolumeRelationIdealTwoSided
+#print axioms IntegrationInACVF.Section7.rawBoundaryVolumeRelationIdealTwoSided
+#check @IntegrationInACVF.Section7.raw_boundary_relation_ideal_le_kernel
+#print axioms IntegrationInACVF.Section7.raw_boundary_relation_ideal_le_kernel
+#check @IntegrationInACVF.Section7.raw_volume_kernel_eq_boundary_relations
+#print axioms IntegrationInACVF.Section7.raw_volume_kernel_eq_boundary_relations
+#check @IntegrationInACVF.Section7.rawBoundaryVolumeQuotientEquiv
+#print axioms IntegrationInACVF.Section7.rawBoundaryVolumeQuotientEquiv
+#check @IntegrationInACVF.Section7.raw_principal_kernel_iff_degree_one
+#print axioms IntegrationInACVF.Section7.raw_principal_kernel_iff_degree_one
+#check @IntegrationInACVF.Section7.volumeIntegrationBoundaryKernelEquiv
+#print axioms IntegrationInACVF.Section7.volumeIntegrationBoundaryKernelEquiv

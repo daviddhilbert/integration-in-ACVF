@@ -1,0 +1,89 @@
+import Integration7.BlowupVolumeGradedDecomposition
+import Integration7.GradedVolumeKernelComponents
+import Integration7.HomogeneousVolumeIntegrationQuotient
+import Integration7.RawVolumeGradedDecomposition
+import Integration7.VolumeDegreeKernelQuotients
+set_option pp.universes true
+set_option pp.proofs false
+set_option pp.deepTerms true
+set_option pp.maxSteps 10000000
+set_option pp.notation true
+set_option pp.funBinderTypes true
+set_option pp.piBinderTypes true
+
+
+
+#check @IntegrationInACVF.Section7.blowupVolumeHomogeneousAdditiveMap
+#print axioms IntegrationInACVF.Section7.blowupVolumeHomogeneousAdditiveMap
+#check @IntegrationInACVF.Section7.BlowupVolumeGradedAddGroup
+#print axioms IntegrationInACVF.Section7.BlowupVolumeGradedAddGroup
+#check @IntegrationInACVF.Section7.blowupVolumePositiveGradingMap
+#print axioms IntegrationInACVF.Section7.blowupVolumePositiveGradingMap
+#check @IntegrationInACVF.Section7.blowupVolumeDecomposition
+#print axioms IntegrationInACVF.Section7.blowupVolumeDecomposition
+#check @IntegrationInACVF.Section7.blowup_volume_decomposition_of_homogeneous
+#print axioms IntegrationInACVF.Section7.blowup_volume_decomposition_of_homogeneous
+#check @IntegrationInACVF.Section7.blowupVolumeComposition
+#print axioms IntegrationInACVF.Section7.blowupVolumeComposition
+#check @IntegrationInACVF.Section7.blowup_volume_composition_of
+#print axioms IntegrationInACVF.Section7.blowup_volume_composition_of
+#check @IntegrationInACVF.Section7.blowup_volume_homogeneous_additive_map_of
+#print axioms IntegrationInACVF.Section7.blowup_volume_homogeneous_additive_map_of
+#check @IntegrationInACVF.Section7.blowup_volume_grading_left_inverse
+#print axioms IntegrationInACVF.Section7.blowup_volume_grading_left_inverse
+#check @IntegrationInACVF.Section7.blowup_volume_grading_right_inverse
+#print axioms IntegrationInACVF.Section7.blowup_volume_grading_right_inverse
+#check @IntegrationInACVF.Section7.blowupVolumeGradedAddEquiv
+#print axioms IntegrationInACVF.Section7.blowupVolumeGradedAddEquiv
+#check @IntegrationInACVF.Section7.volumeDegreeGroupProjection
+#print axioms IntegrationInACVF.Section7.volumeDegreeGroupProjection
+#check @IntegrationInACVF.Section7.volume_degree_group_projection_of
+#print axioms IntegrationInACVF.Section7.volume_degree_group_projection_of
+#check @IntegrationInACVF.Section7.gradedVolumeGroupProjection
+#print axioms IntegrationInACVF.Section7.gradedVolumeGroupProjection
+#check @IntegrationInACVF.Section7.graded_volume_group_projection_of
+#print axioms IntegrationInACVF.Section7.graded_volume_group_projection_of
+#check @IntegrationInACVF.Section7.graded_volume_group_projection_component
+#print axioms IntegrationInACVF.Section7.graded_volume_group_projection_component
+#check @IntegrationInACVF.Section7.raw_volume_projection_grading
+#print axioms IntegrationInACVF.Section7.raw_volume_projection_grading
+#check @IntegrationInACVF.Section7.raw_volume_kernel_iff_degree_components
+#print axioms IntegrationInACVF.Section7.raw_volume_kernel_iff_degree_components
+#check @IntegrationInACVF.Section7.rawHomogeneousVolumeQuotientEquiv
+#print axioms IntegrationInACVF.Section7.rawHomogeneousVolumeQuotientEquiv
+#check @IntegrationInACVF.Section7.volumeIntegrationHomogeneousKernelEquiv
+#print axioms IntegrationInACVF.Section7.volumeIntegrationHomogeneousKernelEquiv
+#check @IntegrationInACVF.Section7.RawVolumeGradedAddGroup
+#print axioms IntegrationInACVF.Section7.RawVolumeGradedAddGroup
+#check @IntegrationInACVF.Section7.rawVolumePositiveGradingMap
+#print axioms IntegrationInACVF.Section7.rawVolumePositiveGradingMap
+#check @IntegrationInACVF.Section7.rawVolumeDecomposition
+#print axioms IntegrationInACVF.Section7.rawVolumeDecomposition
+#check @IntegrationInACVF.Section7.raw_volume_decomposition_of_homogeneous
+#print axioms IntegrationInACVF.Section7.raw_volume_decomposition_of_homogeneous
+#check @IntegrationInACVF.Section7.rawVolumeComposition
+#print axioms IntegrationInACVF.Section7.rawVolumeComposition
+#check @IntegrationInACVF.Section7.raw_volume_composition_of
+#print axioms IntegrationInACVF.Section7.raw_volume_composition_of
+#check @IntegrationInACVF.Section7.raw_volume_homogeneous_additive_map_of
+#print axioms IntegrationInACVF.Section7.raw_volume_homogeneous_additive_map_of
+#check @IntegrationInACVF.Section7.raw_volume_grading_left_inverse
+#print axioms IntegrationInACVF.Section7.raw_volume_grading_left_inverse
+#check @IntegrationInACVF.Section7.raw_volume_grading_right_inverse
+#print axioms IntegrationInACVF.Section7.raw_volume_grading_right_inverse
+#check @IntegrationInACVF.Section7.rawVolumeGradedAddEquiv
+#print axioms IntegrationInACVF.Section7.rawVolumeGradedAddEquiv
+#check @IntegrationInACVF.Section7.volumeDegreeKernelAddSubgroup
+#print axioms IntegrationInACVF.Section7.volumeDegreeKernelAddSubgroup
+#check @IntegrationInACVF.Section7.volume_degree_group_projection_surjective
+#print axioms IntegrationInACVF.Section7.volume_degree_group_projection_surjective
+#check @IntegrationInACVF.Section7.volumeDegreeKernelQuotientEquiv
+#print axioms IntegrationInACVF.Section7.volumeDegreeKernelQuotientEquiv
+#check @IntegrationInACVF.Section7.volumeGradedKernelQuotientAddEquiv
+#print axioms IntegrationInACVF.Section7.volumeGradedKernelQuotientAddEquiv
+#check @IntegrationInACVF.Section7.raw_volume_decomposition_homogeneous
+#print axioms IntegrationInACVF.Section7.raw_volume_decomposition_homogeneous
+#check @IntegrationInACVF.Section7.volume_degree_kernel_iff_raw_homogeneous
+#print axioms IntegrationInACVF.Section7.volume_degree_kernel_iff_raw_homogeneous
+#check @IntegrationInACVF.Section7.volumeIntegrationGradedKernelQuotientAddEquiv
+#print axioms IntegrationInACVF.Section7.volumeIntegrationGradedKernelQuotientAddEquiv
