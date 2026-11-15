@@ -24,8 +24,9 @@ explicit declaration parameters, typed proof-value elisions and all axiom
 reports. This took 16 seconds instead of expanding a 572 MB proof-term
 report. `--full-proof-terms` retains the historical rendering. Fresh type
 hashes use the new format and are not claimed to equal old rendering hashes.
-The unchanged published full receipt is preserved in
-`section 5/verification/upstream-1852/`; the current receipt is
+The unchanged expanded receipt remains available at the completed Section 5
+commit linked above; its redundant copy was removed from the current tree.
+The current receipt is
 `section 5/VERIFICATION.json` with its lossless compressed full evidence.
 
 ## Current checked mathematical boundary

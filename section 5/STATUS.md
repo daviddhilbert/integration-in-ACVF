@@ -100,4 +100,6 @@ Readable type rendering with typed proof-value elisions avoids the old
 572 MB expanded proof dump. All declaration parameters and axiom checks
 remain; use --full-proof-terms to request the historical output format.
 Current rendering hashes differ from the preserved expanded hashes under
-verification/upstream-1852/. No Section 5 proof source was changed.
+the published Section 5 commit 73aa1e6. The redundant expanded receipt copy
+was removed from the current branch; Git history was preserved. No Section 5
+proof source was changed.
