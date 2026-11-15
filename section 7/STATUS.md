@@ -8,15 +8,17 @@ The accepted positive-degree Lemma 7.5 is complete as `lemma_7_5` and
 `lemma_7_5_ordinary`, on actual specified contraction volume objects.
 Corollary 7.6 is complete in every positive VF dimension, for arbitrary
 original forms and any specified common order beginning with the active
-coordinate. Lemma 7.7 is the active target; results 7.7–7.15 remain open.
+coordinate. Lemma 7.7 is complete for the paper’s first-two order exchange.
+The common-blowup to equal-lift-class direction of Proposition 7.8 is complete
+in positive degree. Its converse is the active target; 7.9–7.15 remain open.
 
 ## Current checked local boundary
 
-`Integration7.Library` integrates 865 source modules plus its entry point.
-Full exported types and allowed-axiom reports for 2,706 distinct declarations
+`Integration7.Library` integrates 1,071 source modules plus its entry point.
+Full exported types and allowed-axiom reports for 3,419 distinct declarations
 have been inspected in targeted incremental batches. Only `propext`,
 `Classical.choice`, and `Quot.sound` occur. The latest affected-library
-build passed, including 11,565 jobs counting its cached dependency closure.
+build passed, including 11,865 jobs counting its cached dependency closure.
 `VERIFICATION.json` seals this source boundary and records the batch receipts.
 Unchanged earlier batches were not manually audited again.
 
@@ -42,7 +44,7 @@ order are retained. Positive selected fibres keep actual finiteness explicit.
 Receipts are under `.scratch/recovery/`: the initial algebra and
 groupification batches contribute 34 exports; the first geometric batch
 contributes 86, the second 59, the third 89, the fourth 26, the fifth 24, the sixth 70, the seventh 56, the eighth 65, the ninth 56, the tenth 23, the eleventh 43, the twelfth 47, the thirteenth 43, the fourteenth 43, the fifteenth 45, the sixteenth 30, the seventeenth 29, and the eighteenth 49.
-The latest receipt is `recovered-sixty-fourth-geometry-receipt.json`.
+The latest receipt is `recovered-seventy-sixth-geometry-receipt.json`.
 These checks cover currently available sources, not the historical missing
 1,201-module/4,644-declaration working copy.
 
@@ -1417,3 +1419,72 @@ The two actual full preparations are relatively unary after restoring the VF coo
 `canonical_contraction_key_square`, `canonical_contraction_coordinates` and `canonical_contraction_retained_labels` strengthen the existing canonical Gamma finite contraction isomorphism to exact key, entire volume-tuple and all old-label identities. `canonical_pullback_contraction_volume_comparison` then connects the actual pullback coordinate-density volume object to its actual normalized contraction volume object. The containing contexts are joined by `CommonContextVolumeEquivalent.trans`, retaining common forward Gamma blowups throughout. Combining these connections with the actual matching prepared-volume isomorphism and both translations proves the opposite order; Corollary7.6 supplies the same-order cases.
 
 The14-module/25-export batch passed actual source compilation, one complete872-line new type/axiom review and Library integration (11,672 jobs, including cached dependencies). The checked boundary is965 source modules plus Library, with3,101 exports. Earlier batches were not manually audited again. Matching and different-ball refined cases are now individually complete. Their partition assembly, the original zero/rectangle/balanced partition assembly, higher-dimensional exchange and7.8-7.15 remain open.
+
+
+## Complete VF-two standard contraction volume comparison
+
+`two_vf_standard_contractions_compare` proves the full VF-two case of Lemma7.7 for any two specified standard contraction orders of a Gamma-definable native family with finite RV fibres and any retained nonzero density coordinate. The conclusion gives common forward original-Gamma volume blowups in a genuine containing context. The standing VF/Gamma-generated base, cardinal and common-name context hypotheses, including preservation of VF independence, remain explicit. No unproved RV-Jacobian or atomicity input is assumed.
+
+The matching and different families are complementary RV-label cuts of one actual pair-key refinement. Restrictions of specified contraction programs retain their literal target arities and all volume, density and old-label selectors. Normalization commutes with those cuts, so identity maps identify the actual normalized restrictions with volume-object restrictions. Gamma binary volume partition isomorphisms assemble the whole balanced graph family. The original zero/rectangle/balanced RV-label partition is then assembled by a Gamma ternary volume isomorphism, and Corollary7.6 removes the original graph refinement. All comparisons preserve arbitrary specified contraction orders and nonconstant retained density.
+
+The16-module/44-export batch passed actual source compilation, one complete1,175-line new type/axiom review and Library integration (11,688 jobs, including cached dependencies). The checked boundary is981 source modules plus Library, with3,145 exports. Earlier batches were not manually audited again. Higher-dimensional coordinate exchange, the full all-dimensional7.7 and7.8-7.15 remain open.
+
+
+## Lemma7.7: all-dimensional first-two contraction exchange
+
+`lemma_7_7_native` proves the original-Gamma comparison for arbitrary specified contractions whose first two coordinates are exchanged and whose remaining coordinate orders agree. `lemma_7_7` states the paper's explicit permutation conditions for actual positive VF volume objects and their existing normalized standard contraction objects. The standing VF/Gamma generation, cardinal and common-name context assumptions remain visible. Arbitrary retained nonconstant density is allowed; no Section5.8 input, RV atomicity or unproved Jacobian comparison is assumed.
+
+The higher-dimensional proof reuses Section6's actual frozen-prefix programs. A generated closure of the frozen coefficient base permits application of the completed VF-two theorem. A new small containing context adds only RV representatives before definable closure; an independent tuple argument proves that its VF coefficient extension preserves the required independence. Definable-name elimination descends full volume objects, elementary charts, algebraic blowup centers and both common forward chains to exactly the original frozen real/Gamma base. The literal raw volume and density rows are recovered from the normalized comparison.
+
+The first two actual contracted VF tags give a selected degree of2, so the accepted positive-degree Lemma7.5 appends the remaining contractions. Exact selector identities, including the first-two permutation and every old density coordinate, identify the resulting rows with the specified full standard contractions. The ordinary RV[0] convention is unchanged.
+
+The12-module/30-export batch passed actual source compilation and one complete671-line new type/axiom review. The affected Library build is recorded in its verification receipt. The checked boundary is993 source modules plus Library, with3,175 exports. Earlier batches were not manually audited again. Lemma7.7 is complete in its recorded standing scope; Proposition7.8 and7.9-7.15 remain open.
+
+
+## Proposition7.8: common blowups have volume-isomorphic lifts
+
+`ElementaryBlowup.nonempty_volume_lift_iso` constructs the canonical focus using Section6.12, proves its actual VF map has Jacobian1 and retains all original RV labels, and hence preserves any nonzero original density. Literal normalized and actual elementary objects are identified through full coordinate- and density-preserving RV maps. No lift-invariance or Jacobian premise is assumed.
+
+`VFVolumeIso.coprod` joins actual volume isomorphisms using disjoint RV tags while fixing the VF degree. The domain and density of the RV coproduct lift agree literally with those of the tagged VF coproduct. The glued map's Jacobian equation holds away from a definable VF-small exception, and the genuine cofull source and target domains are retained.
+
+`VolumeBlowup.nonempty_volume_lift_iso`, `IteratedVolumeBlowup.nonempty_volume_lift_iso` and `VolumeBlowupEquivalent.nonempty_volume_lift_iso` extend elementary invariance through arbitrary loci, finite forward chains and common forward blowups. `positiveVolumeLiftOnBlowupClasses` is therefore defined on the genuine common-blowup quotient. This proves the common-blowup to equal-lift-class direction of Proposition7.8 in every positive degree over the explicit original VF/Gamma-generated base, including arbitrary nonconstant density. The converse kernel direction and7.9-7.15 remain open.
+
+The23-module/76-export batch passed actual source compilation, one complete1,142-line new type/axiom review and the affected Library build (11,779 jobs including cached dependencies). The checked boundary is1,016 source modules plus Library, with3,251 exports. Earlier types and proofs were not audited again.
+
+
+## Actual volume densities on Section5.6 factors
+
+The VF Jacobian of any actual mixed definable bijection is nonzero almost everywhere. A total definable Jacobian map, with zero RV values replaced by1, gives an actual nonzero density. `transportedVFVolumeForm` transports any original density through a genuine bijection, and `preserves_transported_vf_volume` proves the full almost-everywhere volume equation. Multiplication, inversion and division of actual forms are definable.
+
+`unary_chain_volume_data_of_composite` assigns actual intermediate forms to every finite relatively unary factorization of a volume-preserving composite. Its proof uses transported densities and cancellation, with no assumption that arbitrary Section5.6 factors have Jacobian1. `unary_chain_realize_common_names` realizes the original Gamma factors over a fixed base containing their common names, retaining their point maps and Gamma certificates. `unary_partition_volume_densities` attaches these densities to each actual Section5.6 partition factor and retains pointwise agreement with the specified original map. The kernel converse of Proposition7.8 still requires contraction-order comparisons retaining already selected RV coordinates and final partition assembly; it is not claimed by these support results.
+
+The10-module/28-export batch passed actual source compilation, one complete457-line new type/axiom review and the affected Library build. The checked boundary is1,026 source modules plus Library, with3,279 exports. Earlier types and proofs were not audited again.
+
+
+## Selected RV coordinates realized by actual VF tails
+
+`selectedRVVFTailLift` realizes a selected RV tuple by additional VF coordinates satisfying their literal RV equalities, including selected zero values. Projection onto the original domain is surjective, and finiteness at fixed selected labels becomes actual finite RV fibres. The construction uses no additional real or Gamma parameters.
+
+Maps retaining the selected labels lift while fixing every added VF coordinate. Their literal projection/tail formulas, bijectivity, original-Gamma graphs and relative unary coordinate are proved. An active unary fibre is precisely the original coordinate fibre cut by the fixed RV tuple of the added VF tail. Restricting the supplied genuine unary special preparation proves relative specialness of the lifted map; no global special-chain lift is assumed.
+
+`HeadPreparation.selectedVFTail` lifts any specified head preparation and proves both relative specialness and head saturation. Taking its contracted image commutes with the selected VF realization, with the selector shifted past the actual new RV head tag. These are support results for comparison of contraction orders retaining already selected RV coordinates. They do not yet assert full selected contraction-program comparison or the Proposition7.8 converse.
+
+The13-module/54-export batch passed actual source compilation, one complete865-line new type/axiom review and the affected Library build (11,831 jobs including cached dependencies). The checked boundary is1,039 source modules plus Library, with3,333 exports. Earlier types and proofs were not audited again.
+
+
+## Full selected VF-tail programs and their RV projection
+
+`selectedRVVFTailPartialProgram` lifts every specified ordered contraction program while leaving the selected VF tail uncontracted. The induction uses the actual lifted head preparations, literal endpoint equalities and selector identities. Its full program graph remains definable over the original Gamma base. Appending the canonical ordered contraction of the remaining RV pullback produces a full program and a contractible tail map fixing all remaining VF coordinates.
+
+`canonicalSelectedTailRVProjection` maps the final pure RV domain onto the original contraction domain by retaining its literal old RV suffix. Contractibility proves injectivity; the VF-tail projection proves surjectivity. Its graph is definable over the original Gamma base. The complete program's original VF volume block, added selected-volume block and retained density agree pointwise with the corresponding coordinates after this projection. These are construction and coordinate results; the actual RV volume chart and selected contraction-order comparison are still to be assembled.
+
+The15-module/49-export batch passed actual source compilation, one complete685-line new type/axiom review and the affected Library build (11,846 jobs including cached dependencies). The checked boundary is1,054 source modules plus Library, with3,382 exports. Earlier types and proofs were not audited again.
+
+
+## First-two exchange with retained selected RV volume
+
+`selected_first_two_standard_volume_exchange` proves common forward Gamma volume blowups for arbitrary standard contraction programs whose orders exchange their first two coordinates and agree thereafter. The source need only have finite RV labels at fixed VF coordinates and fixed selected RV tuple. Every selected old RV coordinate and the retained nonconstant density remain part of the actual volume object. The real base is the specified context; its standing Gamma cardinality, common-name and VF/Gamma generation hypotheses are explicit. No Section5.8 input is introduced.
+
+The proof realizes the selected tuple by additional VF coordinates over the same base. The full lifted program is an actual standard contraction in the extended order, with exact restored VF selectors. Its canonical final RV projection is bijective, preserves the entire original-order VF block, the selected old RV block and the density, and induces the genuine volume isomorphism `selectedVFTailVolumeIso`. Raw-to-normalized contraction volume comparison then permits applying completed Lemma7.7 and descending through these charts. Simultaneous coordinate restoration avoids identifying contraction-order tags with original-coordinate tags.
+
+This closes selected first-two exchange. Same-head induction and arbitrary-order independence remain to be assembled before the Proposition7.8 converse;7.9-7.15 are still open. The17-module/37-export batch passed actual source compilation, one full748-line new type/axiom review and the affected Library build (11,865 jobs including cached dependencies). The checked boundary is1,071 source modules plus Library, with3,419 exports. Earlier proof types were not audited again.

@@ -1,0 +1,347 @@
+{
+  "source_sha256": {
+    "section 7/Integration7/BalancedGraphFamilyAllOrderComparisons.lean": "1cdac9aabd7a6d468e9cc504141d8684023b28881c454cc654b76a6b4fc0b9b5",
+    "section 7/Integration7/CommonContextVolumePartitions.lean": "47e3a4ab0144212c44f6b85da04c2224c34dd02cc397aeb348255b555f82d95d",
+    "section 7/Integration7/GammaVolumeThreePartPartitions.lean": "afaaff4a87830d011a7a4b69b518b32187289e1dfaa4446c230a40e3cf858c0b",
+    "section 7/Integration7/MatchingPreparedRVLabelCuts.lean": "b13e852ea0a135012023da3331a84e07bc65daa95aa1747173e1a58db2c7729a",
+    "section 7/Integration7/NormalizedRVLabelCutCarriers.lean": "3afd390a3d55fcf7ac6d5b64db89694094d886fe0152ed70b361295b09b5c49e",
+    "section 7/Integration7/PreparedPairContractionRestrictions.lean": "cf204a4c6a51f10bbacfd204f7d867ef0ac9fddab2d71b84eea5a42d126d93e6",
+    "section 7/Integration7/PreparedPairFamilies.lean": "09177ec4771da8081d66ffa81c026a0d5b394e903c87fcb07d9c4939d01ba276",
+    "section 7/Integration7/PreparedPairFamilyAllOrderComparisons.lean": "2d084e251b8b8bc286397a74dd6d069d653fddf273aa975bc5b212aedfb4373c",
+    "section 7/Integration7/StandardBinaryRestrictionVolumePartitions.lean": "0cd6af24949dd15fb82ecc7f7b9b9188d267a6fda62d994cad14b5e7eed48599",
+    "section 7/Integration7/StandardRestrictionNormalizedCarriers.lean": "5ae97553d00f6ea6096f57ae55a7fc10784c67bbf16914efd46955042ed5f5ef",
+    "section 7/Integration7/StandardRestrictionVolumeIdentifications.lean": "1e8cd936a006d90a114879b183c86f0b6ca2edc78170ba232e3867bb49072d2f",
+    "section 7/Integration7/StandardTernaryRestrictionVolumePartitions.lean": "358d96bcd7155a18d023989060deba7721caca64bb89faf692796cfc4779060b",
+    "section 7/Integration7/TwoVFStandardContractionComparisons.lean": "3cdb285afdf510b60d6a40692ae5678a8199ba6bb328612249e5cf7fa1fa6da3",
+    "section 7/Integration7/UniformBalancedPartComparisons.lean": "dbe469319f22bc3a9772ed5b3dd40c72ffa7757104a9be68eb17c407e9755bb7",
+    "section 7/Integration7/UniformCellGraphFamilyComparison.lean": "6c9a8b75b4357203c801f013ea702f2373a7845d303c0ff18c527b1f92b8fa07",
+    "section 7/Integration7/UniformCellShapePartitionArrays.lean": "da35559b06f954740977c135712f611f7bbf3aef41d9f517f5741a742d5962e0"
+  },
+  "declarations": [
+    "IntegrationInACVF.Section7.UniformMixedCellPresentation.balanced_graph_family_contractions_compare",
+    "IntegrationInACVF.Section7.GammaVolumeObjects.restrict",
+    "IntegrationInACVF.Section7.GammaVolumeObjects.complement",
+    "IntegrationInACVF.Section7.CommonContextVolumeEquivalent.coprod",
+    "IntegrationInACVF.Section7.CommonContextVolumeEquivalent.of_complementary_restrictions",
+    "IntegrationInACVF.Section7.gamma_volume_object_partition",
+    "IntegrationInACVF.Section7.gamma_volume_three_part_partition",
+    "IntegrationInACVF.Section7.UniformBalancedPositionPreparation.matchingPreparedRVLabels",
+    "IntegrationInACVF.Section7.UniformBalancedPositionPreparation.matching_prepared_rv_labels_gamma",
+    "IntegrationInACVF.Section7.UniformBalancedPositionPreparation.differentPreparedRVLabels",
+    "IntegrationInACVF.Section7.UniformBalancedPositionPreparation.different_prepared_rv_labels_gamma",
+    "IntegrationInACVF.Section7.UniformBalancedPositionPreparation.matching_prepared_mem_labels",
+    "IntegrationInACVF.Section7.UniformBalancedPositionPreparation.different_prepared_mem_labels",
+    "IntegrationInACVF.Section7.UniformBalancedPositionPreparation.matching_prepared_eq_label_cut",
+    "IntegrationInACVF.Section7.UniformBalancedPositionPreparation.different_prepared_eq_label_cut",
+    "IntegrationInACVF.Section7.raw_label_cut_image_mem",
+    "IntegrationInACVF.Section7.first_volume_label_cut_mem",
+    "IntegrationInACVF.Section7.UniformBalancedPositionPreparation.matching_pair_contraction_presentation",
+    "IntegrationInACVF.Section7.UniformBalancedPositionPreparation.different_pair_contraction_presentation",
+    "IntegrationInACVF.Section7.UniformBalancedPositionPreparation.wholePreparedPairFamily",
+    "IntegrationInACVF.Section7.UniformBalancedPositionPreparation.whole_prepared_pair_family_gamma",
+    "IntegrationInACVF.Section7.UniformBalancedPositionPreparation.whole_prepared_pair_family_finite_labels",
+    "IntegrationInACVF.Section7.UniformBalancedPositionPreparation.matching_prepared_subset_whole",
+    "IntegrationInACVF.Section7.UniformBalancedPositionPreparation.different_prepared_subset_whole",
+    "IntegrationInACVF.Section7.UniformBalancedPositionPreparation.matching_prepared_graph_mem",
+    "IntegrationInACVF.Section7.UniformBalancedPositionPreparation.different_prepared_graph_mem",
+    "IntegrationInACVF.Section7.UniformBalancedPositionPreparation.whole_prepared_pair_contractions_compare",
+    "IntegrationInACVF.Section7.standard_binary_restriction_volume_partition",
+    "IntegrationInACVF.Section7.StandardTargetRestrictionPresentation.old_label_index",
+    "IntegrationInACVF.Section7.StandardTargetRestrictionPresentation.normalized_carrier",
+    "IntegrationInACVF.Section7.standard_restriction_volume_identification",
+    "IntegrationInACVF.Section7.standard_ternary_restriction_volume_partition",
+    "IntegrationInACVF.Section7.two_vf_standard_contractions_compare",
+    "IntegrationInACVF.Section7.UniformMixedCellPresentation.balanced_native_part_contractions_compare",
+    "IntegrationInACVF.Section7.UniformMixedCellPresentation.graph_family_contractions_compare",
+    "IntegrationInACVF.Section7.UniformMixedCellPresentation.shapeNativePieces",
+    "IntegrationInACVF.Section7.UniformMixedCellPresentation.shapeRVLabels",
+    "IntegrationInACVF.Section7.UniformMixedCellPresentation.shape_native_piece_gamma",
+    "IntegrationInACVF.Section7.UniformMixedCellPresentation.shape_native_piece_finite_labels",
+    "IntegrationInACVF.Section7.UniformMixedCellPresentation.shape_native_piece_subset",
+    "IntegrationInACVF.Section7.UniformMixedCellPresentation.shape_rv_labels_gamma",
+    "IntegrationInACVF.Section7.UniformMixedCellPresentation.shape_rv_labels_cover",
+    "IntegrationInACVF.Section7.UniformMixedCellPresentation.shape_rv_labels_disjoint",
+    "IntegrationInACVF.Section7.UniformMixedCellPresentation.shape_contraction_presentations"
+  ],
+  "manually_reviewed_lines": 1175,
+  "audit_log": ".scratch/recovery/recovered-seventieth-geometry-types-axioms.log",
+  "status": "PASS actual source compilation, full type/axiom review and affected library integration",
+  "scope": "The complete VF-two case of Lemma7.7 is proved for arbitrary specified contraction orders and arbitrary retained nonzero density over the original Gamma base, under the recorded standing generation, cardinal and parameter-context hypotheses. Actual matching/different and zero/rectangle/balanced partitions are assembled using literal normalized contraction restrictions and Gamma volume partition isomorphisms. Higher-dimensional coordinate exchange and7.8-7.15 remain open.",
+  "library_build_log": ".scratch/recovery/seventieth-reconstruction-library-build.log",
+  "library_build_jobs_including_cached_dependencies": 11688,
+  "compilation": [
+    {
+      "module": "BalancedGraphFamilyAllOrderComparisons",
+      "source": "section 7/Integration7/BalancedGraphFamilyAllOrderComparisons.lean",
+      "source_sha256": "1cdac9aabd7a6d468e9cc504141d8684023b28881c454cc654b76a6b4fc0b9b5",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/BalancedGraphFamilyAllOrderComparisons.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/BalancedGraphFamilyAllOrderComparisons.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.511,
+      "completed_at_utc": "2026-11-15T02:29:25.430916+00:00",
+      "log": ".scratch/recovery/BalancedGraphFamilyAllOrderComparisons-build.log"
+    },
+    {
+      "module": "CommonContextVolumePartitions",
+      "source": "section 7/Integration7/CommonContextVolumePartitions.lean",
+      "source_sha256": "47e3a4ab0144212c44f6b85da04c2224c34dd02cc397aeb348255b555f82d95d",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/CommonContextVolumePartitions.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/CommonContextVolumePartitions.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.85,
+      "completed_at_utc": "2026-11-15T02:25:32.321005+00:00",
+      "log": ".scratch/recovery/CommonContextVolumePartitions-build.log"
+    },
+    {
+      "module": "GammaVolumeThreePartPartitions",
+      "source": "section 7/Integration7/GammaVolumeThreePartPartitions.lean",
+      "source_sha256": "afaaff4a87830d011a7a4b69b518b32187289e1dfaa4446c230a40e3cf858c0b",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/GammaVolumeThreePartPartitions.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/GammaVolumeThreePartPartitions.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 3.993,
+      "completed_at_utc": "2026-11-15T02:32:28.831348+00:00",
+      "log": ".scratch/recovery/GammaVolumeThreePartPartitions-build.log"
+    },
+    {
+      "module": "MatchingPreparedRVLabelCuts",
+      "source": "section 7/Integration7/MatchingPreparedRVLabelCuts.lean",
+      "source_sha256": "b13e852ea0a135012023da3331a84e07bc65daa95aa1747173e1a58db2c7729a",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/MatchingPreparedRVLabelCuts.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/MatchingPreparedRVLabelCuts.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.465,
+      "completed_at_utc": "2026-11-15T02:20:44.966768+00:00",
+      "log": ".scratch/recovery/MatchingPreparedRVLabelCuts-build.log"
+    },
+    {
+      "module": "NormalizedRVLabelCutCarriers",
+      "source": "section 7/Integration7/NormalizedRVLabelCutCarriers.lean",
+      "source_sha256": "3afd390a3d55fcf7ac6d5b64db89694094d886fe0152ed70b361295b09b5c49e",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/NormalizedRVLabelCutCarriers.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/NormalizedRVLabelCutCarriers.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.059,
+      "completed_at_utc": "2026-11-15T02:22:33.255944+00:00",
+      "log": ".scratch/recovery/NormalizedRVLabelCutCarriers-build.log"
+    },
+    {
+      "module": "PreparedPairContractionRestrictions",
+      "source": "section 7/Integration7/PreparedPairContractionRestrictions.lean",
+      "source_sha256": "cf204a4c6a51f10bbacfd204f7d867ef0ac9fddab2d71b84eea5a42d126d93e6",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/PreparedPairContractionRestrictions.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/PreparedPairContractionRestrictions.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.406,
+      "completed_at_utc": "2026-11-15T02:21:27.514971+00:00",
+      "log": ".scratch/recovery/PreparedPairContractionRestrictions-build.log"
+    },
+    {
+      "module": "PreparedPairFamilies",
+      "source": "section 7/Integration7/PreparedPairFamilies.lean",
+      "source_sha256": "09177ec4771da8081d66ffa81c026a0d5b394e903c87fcb07d9c4939d01ba276",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/PreparedPairFamilies.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/PreparedPairFamilies.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.575,
+      "completed_at_utc": "2026-11-15T02:19:50.806621+00:00",
+      "log": ".scratch/recovery/PreparedPairFamilies-build.log"
+    },
+    {
+      "module": "PreparedPairFamilyAllOrderComparisons",
+      "source": "section 7/Integration7/PreparedPairFamilyAllOrderComparisons.lean",
+      "source_sha256": "2d084e251b8b8bc286397a74dd6d069d653fddf273aa975bc5b212aedfb4373c",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/PreparedPairFamilyAllOrderComparisons.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/PreparedPairFamilyAllOrderComparisons.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 5.048,
+      "completed_at_utc": "2026-11-15T02:28:38.979594+00:00",
+      "log": ".scratch/recovery/PreparedPairFamilyAllOrderComparisons-build.log"
+    },
+    {
+      "module": "StandardBinaryRestrictionVolumePartitions",
+      "source": "section 7/Integration7/StandardBinaryRestrictionVolumePartitions.lean",
+      "source_sha256": "0cd6af24949dd15fb82ecc7f7b9b9188d267a6fda62d994cad14b5e7eed48599",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/StandardBinaryRestrictionVolumePartitions.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/StandardBinaryRestrictionVolumePartitions.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 6.838,
+      "completed_at_utc": "2026-11-15T02:27:32.902415+00:00",
+      "log": ".scratch/recovery/StandardBinaryRestrictionVolumePartitions-build.log"
+    },
+    {
+      "module": "StandardRestrictionNormalizedCarriers",
+      "source": "section 7/Integration7/StandardRestrictionNormalizedCarriers.lean",
+      "source_sha256": "5ae97553d00f6ea6096f57ae55a7fc10784c67bbf16914efd46955042ed5f5ef",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/StandardRestrictionNormalizedCarriers.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/StandardRestrictionNormalizedCarriers.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.117,
+      "completed_at_utc": "2026-11-15T02:23:24.054471+00:00",
+      "log": ".scratch/recovery/StandardRestrictionNormalizedCarriers-build.log"
+    },
+    {
+      "module": "StandardRestrictionVolumeIdentifications",
+      "source": "section 7/Integration7/StandardRestrictionVolumeIdentifications.lean",
+      "source_sha256": "1e8cd936a006d90a114879b183c86f0b6ca2edc78170ba232e3867bb49072d2f",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/StandardRestrictionVolumeIdentifications.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/StandardRestrictionVolumeIdentifications.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 5.718,
+      "completed_at_utc": "2026-11-15T02:24:38.510481+00:00",
+      "log": ".scratch/recovery/StandardRestrictionVolumeIdentifications-build.log"
+    },
+    {
+      "module": "StandardTernaryRestrictionVolumePartitions",
+      "source": "section 7/Integration7/StandardTernaryRestrictionVolumePartitions.lean",
+      "source_sha256": "358d96bcd7155a18d023989060deba7721caca64bb89faf692796cfc4779060b",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/StandardTernaryRestrictionVolumePartitions.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/StandardTernaryRestrictionVolumePartitions.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 8.957,
+      "completed_at_utc": "2026-11-15T02:33:23.994257+00:00",
+      "log": ".scratch/recovery/StandardTernaryRestrictionVolumePartitions-build.log"
+    },
+    {
+      "module": "TwoVFStandardContractionComparisons",
+      "source": "section 7/Integration7/TwoVFStandardContractionComparisons.lean",
+      "source_sha256": "3cdb285afdf510b60d6a40692ae5678a8199ba6bb328612249e5cf7fa1fa6da3",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/TwoVFStandardContractionComparisons.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/TwoVFStandardContractionComparisons.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.533,
+      "completed_at_utc": "2026-11-15T02:35:50.540217+00:00",
+      "log": ".scratch/recovery/TwoVFStandardContractionComparisons-build.log"
+    },
+    {
+      "module": "UniformBalancedPartComparisons",
+      "source": "section 7/Integration7/UniformBalancedPartComparisons.lean",
+      "source_sha256": "dbe469319f22bc3a9772ed5b3dd40c72ffa7757104a9be68eb17c407e9755bb7",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/UniformBalancedPartComparisons.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/UniformBalancedPartComparisons.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.667,
+      "completed_at_utc": "2026-11-15T02:31:00.920061+00:00",
+      "log": ".scratch/recovery/UniformBalancedPartComparisons-build.log"
+    },
+    {
+      "module": "UniformCellGraphFamilyComparison",
+      "source": "section 7/Integration7/UniformCellGraphFamilyComparison.lean",
+      "source_sha256": "6c9a8b75b4357203c801f013ea702f2373a7845d303c0ff18c527b1f92b8fa07",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/UniformCellGraphFamilyComparison.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/UniformCellGraphFamilyComparison.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.805,
+      "completed_at_utc": "2026-11-15T02:35:13.473173+00:00",
+      "log": ".scratch/recovery/UniformCellGraphFamilyComparison-build.log"
+    },
+    {
+      "module": "UniformCellShapePartitionArrays",
+      "source": "section 7/Integration7/UniformCellShapePartitionArrays.lean",
+      "source_sha256": "da35559b06f954740977c135712f611f7bbf3aef41d9f517f5741a742d5962e0",
+      "command": [
+        "lean",
+        "-R",
+        "/workspace/integration-in-ACVF/section 7",
+        "-o",
+        "/workspace/integration-in-ACVF/.scratch/recovery/verified/Integration7/UniformCellShapePartitionArrays.olean",
+        "/workspace/integration-in-ACVF/section 7/Integration7/UniformCellShapePartitionArrays.lean"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 4.851,
+      "completed_at_utc": "2026-11-15T02:34:16.739792+00:00",
+      "log": ".scratch/recovery/UniformCellShapePartitionArrays-build.log"
+    }
+  ],
+  "completed_at_utc": "2026-11-15T02:39:05.032572+00:00"
+}
