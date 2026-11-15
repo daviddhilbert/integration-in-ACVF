@@ -1605,3 +1605,98 @@ This14-module/43-export batch passed actual source compilation, one complete597-
 Positive-coefficient compatibility with the canonical/appended integral remains open: the canonical VF realization orders the original VF base before the coefficient realization, and this must be connected by explicit volume-coordinate identifications. Mixed ordinary/positive scalar coherence, ordinary degree-zero-valued function spaces, full pointwise fibre identification,7.12 and the principal-relation/normalized-coefficient conclusions of7.13-7.15 also remain open.
 
 This9-module/27-export batch passed actual source compilation, one complete410-line new type/axiom review and one affected Library build (12,081 jobs including cached dependencies). The checked local boundary is1,280 source modules plus Library and4,024 exports. Earlier exports were not audited again. This reaches the next roughly100-module backup interval after the1,179-module remote checkpoint.
+
+
+## Actual coefficient-first VF realizations and integral covariance
+
+`positive_vf_volume_integral_permutation_covariance` proves covariance of the actual positive integration equivalence for an arbitrary VF volume object and arbitrary density: permuting the VF coordinates permutes the resulting RV volume tuple by exactly the same permutation, retaining the density. `permutedRawContractionVolumeIso` proves the literal coordinate statement on an actual ordered contraction program. The density graph and native-domain charts extend it from retained coordinate densities to arbitrary original forms through genuine VF-preserving volume bijections.
+
+`SelectedVFVolumeFamily.appendedFullLift` is the actual coefficient-first VF realization: its front VF block realizes the selected RV tuple, and its remaining VF block is the original family base. `selected_family_appended_integral_full_lift` proves that integration of this actual object is the appended family integral. The proof uses the explicit VF covariance, arithmetic degree identifications and the established appended/canonical RV coordinate chart. It does not identify an unsigned coordinate permutation with a volume-preserving map. `mem_appended_family_full_lift` and `appendedFullLift_density` give the literal carrier and original-density formulas.
+
+`DefinableVFVolumeFamily.appendedFullLift` handles arbitrary definable volume maps. It forgets the selected presentation's redundant graph labels through `definableVolumeFamilyAppendedSelectionBijection`, an actual VF-preserving volume bijection. `mem_definable_appended_family_lift` gives its exact carrier: the original base point belongs to the family, and the front VF tuple realizes its volume map. The original density is retained. `vfPreservingLabelImageBijection` packages this genuine geometric label-image construction with a proved finite-RV-fibre condition.
+
+This closes the earlier open bridge identifying the coefficient-first family integral with an actual full VF realization. Positive-coefficient integral compatibility still requires its product comparison with a coefficient VF lift. Mixed scalar coherence, degree-zero-valued functions, full pointwise fibre identification,7.12 and the principal-relation/normalized-coefficient conclusions of7.13-7.15 remain open.
+
+This12-module/38-export batch passed actual source compilation, one complete525-line new type/axiom review and one affected Library build (12,093 jobs including cached dependencies). The checked local boundary is1,292 source modules plus Library and4,062 exports. Earlier exports were not audited again. Remote backup remains1,280 modules at0db36604e7c1f8de0fe04c767fa528f9084abafd; the next backup is due around1,380.
+
+
+## Positive coefficient compatibility of actual appended integration
+
+`ae_rv_volume_appended_integral_positive_coefficient` proves that the actual coefficient-first AE integral preserves multiplication by a positive common-blowup coefficient class. Its HEq changes only the arithmetic expression for the total degree. The selected-family representative formula is `selected_family_appended_integral_positive_coefficient`.
+
+The geometric proof is `selectedPositiveCoefficientAppendedLiftBijection`. The full VF realization has blocks consisting of the coefficient realization, the original family-volume realization, and the original VF base. `appendedCoefficientLiftProductMap` swaps only the RV domain-label blocks, fixes every VF coordinate, is genuinely bijective, and preserves the original product density. `appendedCoefficientLiftProductBijection` therefore identifies it with the actual Cartesian product of the coefficient VF lift and family realization, with the explicit arithmetic degree cast. The checked7.10 integration-product theorem and actual coefficient-lift identity then give the integral formula. No unsigned VF permutation is assumed volume preserving.
+
+`aeRVVolumeFunctionAppendedIntegralAddHom` and `aeRVVolumeFunctionAppendedIntegralOrdinaryLinearMap` establish additive and ordinary-RV[0]-linear integration in this same coefficient-first convention. `canonicalFromAppendedVolumeOrdinaryLinearEquiv` proves that the explicit canonical/appended coordinate identification is ordinary linear, using actual coproduct and degree-zero product charts.
+
+This completes the positive-coefficient integral compatibility previously left open. Mixed ordinary/positive scalar coherence, full graded function-space assembly including ordinary degree-zero-valued functions, full pointwise fibre-integral identification,7.12 and the principal-relation/normalized-coefficient conclusions of7.13-7.15 remain open.
+
+This13-module/29-export batch passed actual source compilation, one complete417-line new type/axiom review and one affected Library build (12,106 jobs including cached dependencies). The checked local boundary is1,305 source modules plus Library and4,091 exports. Earlier exports were not audited again. Remote backup remains1,280 modules at0db36604e7c1f8de0fe04c767fa528f9084abafd; the next backup is due around1,380.
+
+
+## Ordinary degree-zero-valued AE integration and mixed scalar coherence
+
+`AEOrdinaryRVVolumeFunction` is the genuine AE quotient of finite ordinary RV[0] row families, with no assigned row density. `aeOrdinaryRVVolumeFunctionIntegral` integrates the actual original family domain with unit VF form; `aeOrdinaryRVVolumeFunctionIntegralAddHom` proves additivity for actual pointwise tagged coproducts and the literal empty family.
+
+Its descent is unconditional under the recorded BaseContext assumptions. Equality of ordinary row classes gives actual finite RV isomorphisms over the term closure of the original real base and each VF tuple. `gamma_rv_map_graph_of_term_closure` eliminates those term parameters. `ordinary_volume_family_uniform_bijection` then uses the already checked Section6 `gamma_mixed_fibre_uniformity` over the original real base and empty Gamma parameter set to obtain one genuine definable bijection preserving every VF coordinate. Its Jacobian and the unit densities are checked by `VFVolumeBijection.of_preserving_vf_and_density`. Removing a VF-small base exception preserves the full VF volume class because RV labels add no VF dimension. This proves `ordinary_volume_full_class_eq_of_ae` and the actual quotient realization/integral, without applying the excluded empty-selected case of7.5, assuming field generation for a term context, or adding a Section5.8 hypothesis.
+
+`ae_rv_volume_positive_coefficient_smul_left` and `ae_rv_volume_positive_coefficient_smul_right` prove both mixed ordinary/positive scalar compatibilities on actual AE functions. `aeRVVolumeFunctionPositiveCoefficientOrdinaryBilinearMap` packages the positive-coefficient action as a genuine bilinear map over ordinary RV[0]. The coefficient commutative semiring is proved by the actual swap of two degree-zero finite RV factors; positive-product commutativity is not asserted.
+
+Full graded assembly, scalar and positive-coefficient products involving ordinary-valued functions, full pointwise fibre-integral identification,7.12 and the principal-relation/normalized-coefficient conclusions of7.13-7.15 remain open.
+
+This19-module/51-export batch passed actual source compilation, one complete694-line new type/axiom review and one affected Library build (12,199 jobs including cached dependencies). The checked local boundary is1,324 source modules plus Library and4,142 exports. Earlier exports were not audited again. Remote backup remains1,280 modules at0db36604e7c1f8de0fe04c767fa528f9084abafd; the next backup is due around1,380.
+
+
+## Ordinary function scalar compatibility and the finite graded integral
+
+`aeOrdinaryRVVolumeFunctionModule` gives the genuine ordinary RV[0] scalar action on ordinary-valued AE functions. It is represented by an actual finite RV factor. `ordinaryVolumeScalarRealizationBijection` identifies its full unit-density VF realization with the Cartesian product by that factor's VF lift. The checked product-integration theorem proves `ae_ordinary_rv_volume_integral_smul`, packaged as `aeOrdinaryRVVolumeFunctionIntegralLinearMap`.
+
+`aeOrdinaryRVVolumeFunctionPositiveCoefficientProduct` multiplies an ordinary-valued AE function by an actual positive common-blowup coefficient. The row class is its ordinary fibre class acting on the extended positive coefficient. `aeOrdinaryRVVolumeFunctionPositiveCoefficientBilinearMap` proves ordinary bilinearity, and `ae_ordinary_positive_coefficient_assoc` proves compatibility with a further positive coefficient action.
+
+`ordinaryPositiveCoefficientLiftBijection` is the actual coefficient-first VF comparison: it fixes every VF coordinate, swaps only the RV label blocks, preserves the original positive coefficient density, and introduces no density on the ordinary family. Thus `ae_ordinary_positive_coefficient_appended_integral` proves the genuine integral-product formula. Its HEq changes only the arithmetic expression of the total degree.
+
+`GradedAEVolumeFunction` now assembles ordinary degree zero and all positive homogeneous degrees as a finite direct sum. `gradedAEVolumeIntegralOrdinaryLinearMap` integrates this full space linearly over ordinary RV[0], placing the component of coefficient degree j over VF base arity n+1 into total degree n+j+1. Positive components use the checked coefficient-first integral with an explicit arithmetic degree identification. This does not yet assert a semimodule over the full graded coefficient semiring.
+
+The remaining7.11 work is the full graded coefficient action/module and integral linearity over it, together with full pointwise fibre-integral identification and the remaining degree-zero coordinate Fubini bridge.7.12 and the principal-relation/normalized-coefficient conclusions of7.13-7.15 remain open.
+
+This17-module/48-export batch passed actual source compilation, one complete709-line new type/axiom review and one affected Library build (12,216 jobs including cached dependencies). The checked local boundary is1,341 source modules plus Library and4,190 exports. Earlier exports were not audited again. Remote proof backup remains1,280 modules; the next proof backup is due around1,380. The checkpoint branch separately contains the checked CI optimization and cancellation-cache fixes. Its current head45231668689d9b6c91f1872d0d5f8acfb7eebb91, tree fd771c5d3e9fdea5bf97857a327b9d6eb3a73ae8, is the parent of the next proof backup. CI run43696538789 was pending at publication; no warm-cache runtime or remote CI success is claimed.
+
+
+## Full graded function linearity and ordinary first-head integration
+
+`gradedAEVolumeFunctionModule` supplies the actual action of the full graded common-blowup coefficient semiring on the finite graded AE function space. Its component action covers ordinary/ordinary, ordinary/positive, positive/ordinary and positive/positive degrees. The genuine row products, previously checked bilinearity and associativity prove all action laws. `gradedAEVolumeIntegralLinearMap` is the resulting integral linear over the full graded coefficient semiring; `graded_ae_volume_integral_smul` proves its actual product formula. No new action or integral compatibility hypothesis is assumed.
+
+`OrdinaryVFVolumeFamily.headIntegral` contracts the unit-density VF realization's density graph and selects exactly the new head tag. Finite-label head preparation with zero old selected coordinates proves actual finiteness. This does not invoke an empty-selected version of Lemma7.5. `ordinaryHeadIntegralVolumeIso` identifies the first head tag followed by the remaining contracted VF tags with the original full VF contraction. `ordinary_family_appended_head_fubini` gives the genuine iterated integral identity; its HEq changes only the arithmetic expression of total degree.
+
+`ordinary_volume_family_bijection_fixing_vf` retains all VF coordinates in the ordinary finite-fibre uniformity construction. It gives original-Gamma geometric head comparisons at generic retained tuples. A finite formula-witness cover proves `ordinary_family_head_integral_comparison_of_pointwise`, including independence from the chosen head preparation. The input here is pointwise equality of ordinary rows. Extending this conclusion to ordinary source presentations equal outside a VF-small exception remains open and is not counted as proved.
+
+The remaining7.11 work is ordinary AE head descent and the full pointwise fibre-integral identification, followed by assembly of the full graded coordinate Fubini statement.7.12 and the principal-relation/normalized-coefficient conclusions of7.13-7.15 remain open.
+
+This13-module/40-export batch passed actual source compilation, one complete658-line new type/axiom review and one affected Library build (12,229 jobs including cached dependencies). The checked local boundary is1,354 source modules plus Library and4,230 exports. Earlier exports were not audited again. Remote proof backup remains1,280 modules; the next proof backup is due around1,380. The CI optimization head is45231668689d9b6c91f1872d0d5f8acfb7eebb91 (treefd771c5d3e9fdea5bf97857a327b9d6eb3a73ae8), the required parent of the next proof backup. Its first cold-cache run43696538789 was still building when last inspected; no warm-cache runtime or remote CI success is claimed.
+
+
+## Finite-row geometry for ordinary head descent
+
+`gamma_ordinary_unary_prepared_volume_slice_witness` and `gamma_ordinary_unary_prepared_volume_comparison_with_geometry` prove the first-volume-coordinate unary comparison using actual finite-label slice lift charts with unit VF Jacobian. There are zero old selected volume coordinates, and the output has the sole new head volume tag. This argument uses the checked unary common-schema geometry and does not assume an empty-selected version of Lemma7.5.
+
+`gamma_finite_row_isomorphism_formula_witness` promotes actual finite Gamma row isomorphisms to chart witnesses with the given endpoint formulas. `generic_finite_isomorphism_preparation_in_context` prepares a finite witness cover so that every essential prepared RV cell carries a valid recoded chart. Nonzero prepared cells contain actual inverse images generic over the original VF parameter field. The original Gamma formulas and their full graph certificates are retained.
+
+`gamma_indexed_ordinary_row_bijection` uniformizes these charts to an actual bijection fixing every RV index coordinate. `indexed_ordinary_label_equiv_volume` proves preservation of the complete base volume tuple when the fibre has ordinary degree zero. `gamma_indexed_ordinary_unit_volume_comparison` realizes the resulting unit-density volume isomorphism in a genuine small containing context, with its original-Gamma graph. `gamma_unit_coordinate_density_iso` supplies the exact chart between a retained unit density and the literal unit form in degree one.
+
+The finite-membership and partition preparation lemmas also preserve original-Gamma certificates on the global special chain and all restricted pieces, without a VF/Gamma generation assumption on an arbitrary containing term context.
+
+These are proved geometric prerequisites for ordinary AE head descent. The remaining assembly must restrict the prepared ordinary indexed objects to nonzero base-volume indices, compare both specified unary contractions, and then use the checked finite formula-witness descent. Ordinary AE head descent and the full pointwise fibre-integral identification are not yet asserted.7.12 and the principal-relation/normalized-coefficient conclusions of7.13-7.15 remain open.
+
+This16-module/30-export batch passed actual source compilation, one complete1,228-line new type/axiom review and one affected Library build (12,245 jobs including cached dependencies). The checked local boundary is1,370 source modules plus Library and4,260 exports. Earlier exports were not audited again. Remote proof backup remains1,280 modules; the next proof backup is due around1,380. Its required parent is CI optimization head45231668689d9b6c91f1872d0d5f8acfb7eebb91, treefd771c5d3e9fdea5bf97857a327b9d6eb3a73ae8. The first cold-cache CI run43696538789 was still building when last inspected; no warm-cache runtime or remote CI success is claimed.
+
+
+## Ordinary unary comparison from generic row isomorphisms
+
+`gamma_ordinary_unary_raw_comparison_from_generic_geometry` proves actual original-Gamma common forward volume blowups of two specified raw unary finite contractions. Its inputs are generic finite ordinary-row isomorphism formula witnesses, literal empty old-volume rows, matching native source sets and retained unit densities. The preparation and all volume charts are constructed; no VF/Gamma generation condition is imposed on the containing term context.
+
+The proof restricts ordinary indexed objects to nonzero base-volume indices. Every essential volume label lies over one of those indices. Formula-chart uniformity gives an actual unit-density volume isomorphism on the restriction, and the containing-essential restriction charts restore the whole volume objects. Unit-density labels are retained through the actual prepared indexed presentation.
+
+The zero-old-selected unary prepared comparisons compare both specified contractions to these indexed objects. Parameter-extension label charts retain original-Gamma geometry. Finally the empty-selected volume tuple is identified with the ordinary normalized tuple, and the checked first-volume normalization charts recover the raw finite contraction endpoints. No empty-selected version of Lemma 7.5 is assumed.
+
+Ordinary AE head descent still requires applying this comparison to the generic rows of the frozen head fibres and assembling the existing head presentation charts. Full pointwise fibre-integral identification, 7.12 and the principal-relation/normalized-coefficient conclusions of 7.13–7.15 remain open.
+
+This 13-module/18-export batch passed actual source compilation, one complete 893-line new type/axiom review and one affected Library build (12,258 jobs including cached dependencies). The checked local boundary is 1,383 source modules plus Library and 4,278 exports. Earlier exports were not audited again. The next authorized proof backup uses CI head 45231668689d9b6c91f1872d0d5f8acfb7eebb91 as parent; the published CI cache and Section 6 compilation changes are preserved. No measured warm-cache CI runtime is claimed.
