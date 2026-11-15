@@ -86,3 +86,15 @@ CellRectangles.open_polydisc adds the hypothesis that the first projection
 is open. The author explicitly approved the general product statement.
 The open-polydisc version remains a proved consequence with an open first
 projection. Definition 4.7 and Lemma 4.8 are unchanged.
+
+## Lemma 7.5: accepted nonempty selected-coordinate scope
+
+The author explicitly accepted formalizing and applying Lemma 7.5 only
+when the selected coordinate set `E` is nonempty. In the fixed-degree
+formalization its selected RV degree is `k + 1`. The fibrewise common-blowup
+hypothesis, specified contraction order and actual parameter base are retained.
+
+The empty `E` case is outside this accepted target, rather than an unfinished
+proof obligation. Every use must supply the positive selected degree; this
+restriction does not remove ordinary RV[0] coefficients from function spaces.
+See [Section 7 targets](section%207/TARGETS.md) for the precise scope.

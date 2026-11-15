@@ -228,3 +228,145 @@ The complete finite active-coordinate induction is proved, without importing
 a standard-contraction or dimension conclusion. All82 new full types and
 actual data constructors were manually reviewed;683-head audit and full
 root/project verification pass, with all601 prior complete types unchanged.
+
+
+## Cell comparison checkpoint,807 audited declarations
+
+The actual Section4 cell geometry at pinned merged source802eb9c supplies
+balanced horizontal/vertical fibres, nonemptiness and simultaneous paradigm
+degeneracy. No external result is assumed. Matched unary preparations use
+this repository's completed5.2 and5.3 with their exact original-base scope.
+Pinned Section4 rvIsoOfCarrierEq, rvIsoOfVolumePreservingBijection and
+rvReindexVolumeIso reconcile actual key domains and restore volume ordering.
+RVUnaryProfiles proves the extra constant-coordinate morphism obligations.
+All124 new full types/constructors reviewed;807 allowed-axiom checks,10491-job
+root build and full project verifier pass. Product/family compatibility and
+the global special-map bridge remain separate obligations.
+
+## Complete cell comparison,912 audited declarations
+
+Actual unary chains lift to either VF coordinate with explicit RV label
+suffix compatibility and coverage. Exact product images and computed kernels
+supply rectangle comparisons, including singleton factors. Original-Gamma
+graph composition certifies the quotient comparison and the matched-tail
+profile isomorphism in both directions. Section4 actual cell geometry proves
+the cases exhaustive. All105 new complete types/constructors reviewed;912
+allowed-axiom checks,10523-job root build and full project audits pass.
+The family construction5.8 remains open; pointwise cell comparisons are not
+used as an assumed uniform conclusion.
+
+## Mixed cell families and general RV comparison,968 declarations
+
+The twelve family modules generalize the existing repository's Section4
+VerticalPositionFamilies, VerticalPresentation, VerticalPullbackCells,
+FibreDefinability and PositionRowDefinability proofs to arbitrary old RV
+arity. Checked VerticalCharts and ScalarPositionDecomposition already
+provide the needed uniform inputs. Applying them to swapped VF input and
+recoding by the resulting RV map gives native-order cells with a VF-fixed
+actual injection. No new citation or assumed family-uniformity principle.
+
+Pinned special_transformations9cc9760 Section4.LiftBijections contains the
+actual injective commuting-lift weight theorem. Its full canonical, valued,
+Gamma-space coding, genuine saturation and small-real-base hypotheses are
+instantiated in MixedRVIsomorphism; SmallGammaPresentation constructs a small
+presentation from finite Gamma support. The general category iso retains
+both original-Gamma graphs, while MixedVolumeImages proves finite volume
+images from coordinatewise RV-to-VF finiteness. All56 new full types and
+constructors reviewed in758 lines;968 audits and full project checks pass.
+
+## Uniform product families and shared positioning,1031 declarations
+
+SharedRVProductProgram generalizes the checked native product construction to
+arbitrary common old RV tuples. SharedRVUnaryHeadPreparation uses the exact
+image theorem and explicit suffix/coverage compatibility of actual lifted
+unary chains; target saturation, program kernels, and both volume coordinates
+are proved. The actual Gamma RV2 quotient comparison follows from those
+computed kernels and volumes. MixedUnaryPreparations constructs both unary
+specials over one common internal base, preserving the originalGamma graphs.
+
+RVKeyedFunctions and PositionedCellLabelInjection transfer the actual selected
+vertical positioning function through an injective RV recoding and prove its
+agreement with all cell slices. No definable choice of arbitrary cell witnesses
+is assumed. RVRectangleCases expresses failure by fourVF coordinates and
+projects its actualGamma witness set to the existing RV code. The resulting
+finite partition covers the source and its case properties are proved.
+NonrectangleCellGeometry reuses the checked cell rectangle/graph/balanced
+classification with its explicit nontrivialδ hypothesis. All63 new complete
+types/constructors reviewed619lines;1031audits,root10547/fullproject PASS.
+
+## Uniform nonrectangle comparison,1138 declarations
+
+NonrectanglePositionIso constructs one actual originalGamma positioning iso
+on the full nonrectangle family using the shared cell-position metadata.
+MixedStripPreparation and MixedStripPresentation compute actual canonical/
+centripetal first stages, saturation and passive projection isos. MatchedUnaryPreparation
+is applied once globally and its square is retained by NonrectangleMatchedHeads.
+VariableUnaryProfiles supplies a generic category criterion; its finiteness
+premises are discharged by NonrectangleFiniteProfiles using checked
+FixedVFFiniteImage, recovered-coordinate Gamma isos and actual transverse
+geometry. No VF section of RV or arbitrary definable choice is introduced.
+The generic finite combination argument uses finite unions of fixed-VF images;
+all arithmetic is applied to finite sets, so no additional definability premise
+is needed for those set-theoretic operations. NonrectangleRVComparison transfers
+the resulting actual Gamma RV2 iso to both standard contraction objects.
+All107 new heads/constructors manually reviewed1495lines;1138 audit and
+root10569/fullproject PASS. Finite-branch gluing and5.5 remain open.
+
+## Explicit branch extension and global slice translation,1182 declarations
+
+PartialCoordinateFocus and FocusExtension reuse the existing focus geometry,
+intersecting loci with the ambient RV hull and supplying a separate globally
+valid head tag. RVPredicateFocus transports arbitrary existing RV-code
+predicates through hulls. GammaRVPredicateChain follows the checked unary lift
+induction with actual partial foci, including alternation boundaries, suffix
+compatibility, coverage and inactive RV-key preservation. No compactness-gluing
+conclusion is assumed. RVSliceTranslation constructs a common real presentation
+and actual selected-slice and whole-source canonical/focus maps; exact branch
+images and Gamma certificates are proved. The global nonrectangle producer
+supplies the same actual position for both orders and proves selected-target
+head saturation from the checked cell identities. All44 new complete types
+and constructors reviewed650lines;1182 audits, root10578 and fullproject PASS.
+The finite program/category assembly and5.5 remain open.
+
+## Global branch first heads and head-key descent
+
+Reused the existing RelativeSpecialRestriction.specialRelativeBoundary_restrict,
+restrictPointMap and restrictPointImage, preserving actual alternating end kinds.
+SharedRVProductImage and unary_product_head_saturated supply the active product
+image and saturation. The pinned Map.descend supplies actual definable head-key
+descent; a new kernel proof derives bijectivity from fixed VF coordinates,
+retained old RV labels and SameRV preservation. Gamma graphs are existential
+compositions of the checked full graphs. This1257 batch compiles, all75 new
+full types/constructors were reviewed, and root/project/type/axiom checks pass.
+These results do not yet establish finite-branch RV-category assembly or5.5.
+
+## Padded unary branch lifts
+
+The1345 batch reuses the actual shared-RV product-image theorem and
+specialRelativeBoundary_restrict to prove saturation of the extended active
+image. Projection bijectivity follows from its actual source padding iso,
+the given local special and the restricted global bijection. SameRV reflection
+uses the pinned special inverse-contractibility theorem and explicit coverage
+by local-output/retained-old-label coordinates. Head-key padding retains full
+Gamma graphs, VF coordinates and old RV indices. All88 new full types and
+constructors were reviewed; root10612/fullproject/type/axiom checks pass.
+These are explicit proved construction criteria, not the final5.8 assembly.
+
+1561: reused pinned special_transformations9cc9760892092dd34cfad4a6dee655843c52f30c Section4/RVUnionCoproduct.lean: rvUnionDesc constructs both RVHom fields, using finite union of finite volume images; rvUnion_hom_ext and inl/inr laws prove the glued inverse laws. GammaRVUnion adds full original-Gamma union graph certificates over normalized LRV. The pinned source and license are unchanged. All119 additions passed manual type review, full type/allowed-axiom audit, root10655 and project verification.
+
+1686: completed both final branch kernels and volume formulas, Gamma RV partition gluing, whole-program comparison, and Corollary58.lemma_5_8. All125 additions passed full type/constructor review, allowed-axiom audit, root10670 and full project verification; all1561 prior records exact.
+
+Finite category scope (author November12): pinned Section4/RVCategories.lean defines finiteVolumeProperty and RVFiniteObject as the actual full subcategory RV[k]. Pinned Section9/RV-CATEGORY-AUDIT.md and Section10/README.md document the predecessor scope. Reuse the existing ambient comparisons as inputs and ObjectProperty.isoMk to produce actual finite-category isomorphisms after proving both volume maps finite. The checked transfer uses fixed_vf_scalar_image_finite and finite unions of source RV fibres; no dependency or language changes. All finite restatements are included in the1852 full type/axiom audit and full project verification.
+
+Finite-trace bridge (verified in the1852 batch): GammaTraceCore adapts the already
+checked scalar-image/affineGraphMap proof of gamma_eta_graph from pinned
+special_transformations9cc9760892092dd34cfad4a6dee655843c52f30c Section5/GammaRestriction.lean.
+The graph proof does not use global RV-pullback geometry; actual global Focus
+geometry is constructed separately in FibreFocusPresentation. The pinned license
+and revision remain unchanged. GammaTraceFlags generalizes this project's
+GammaMembershipPreparation.gamma_membershipMap_graph from one VF coordinate to
+arbitrary finite VF arity and reuses checked Section4 GammaRVMap pair/attachment
+operations. The finite compiler and uniform trace retention were developed here;
+no unproved external result or new citation is a proof input.
+
+Final RV[k] checkpoint: all166 new complete types and constructor interfaces reviewed in1997 readable lines;1852 full type/allowed-axiom audits, root10708 and full project verification PASS. All1686 earlier complete types and axiom records are exact. The37 new modules supply finite-category restatements and actual global special presentations with explicit VF-fixed Gamma RV charts. No model, parameter-base, code-smallness or preparation conclusion is introduced as an open premise. See STATUS.md for exact scopes.

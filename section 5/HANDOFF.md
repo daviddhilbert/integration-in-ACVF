@@ -1,34 +1,35 @@
-# Section5 continuation
+# Section 5 handoff
 
-User requests uninterrupted work until the whole section is done. Do not end
-at this checkpoint. No subagents or external messages authorized.
+The active numbered Section 5 targets are complete in the author's RV[k] scope.
+Use STATUS.md for the entry points and exact assumptions. RV[k,*] is abandoned
+as a target; ambient machinery is internal proof support. Arbitrary auxiliary
+RV arities remain allowed, with finite RV fibres on the applicable sources.
 
-Lemmas5.1–5.2, Remark5.3, Definition5.4 and full5.6 for positive VF arity are
-locally checked. All683 complete types/axioms,10458-job root build and full
-project audits pass, including Section4. All601 prior complete types unchanged.
-All82 new types, complete constructors and the recursive Gamma certificate
-were reviewed in920 readable lines without omissions. Evidence preserved in
-`.scratch/section5-683-verified/`. Exact pins unchanged.
+1852 complete type/axiom audits and full project verification pass. All 1686 prior
+records are exact; 166 new full types/constructors were reviewed in 1997 lines.
+Root 10708 passed. Evidence: .scratch/section5-final-1852-verified/ and the versioned
+compact index plus lossless full receipt. Pins and toolchain are unchanged.
 
-lemma_5_6 / lemma_5_6_iso construct finite disjoint covering Gamma pieces and
-actual existing UnaryChains over ONE common real presentation. Every factor
-has full original-Gamma certification. Scope: ACVF00, genuine saturation,
-aleph0≤κ, small G.real, namedδ>1, VF arity p+1. No VFFieldBase or code-set
-smallness. Uniform scalar refinements plus finite all-constant coding feed
-actual coordinate replacement/swaps and finite active-coordinate induction.
-This replacement proof is recorded in PROOF-WRITEUP.md; it establishes5.6,
-not the separate volume-preserving claim used later in Section7.
+Definition 5.5 uses explicit VF-fixed RV presentation charts under the paper's
+Notation 2.5. StandardSpecialPresentation and NormalizedStandardSpecialPresentation
+carry actual global special chains, full Gamma certificates and exact squares
+to the actual natural lifts. The padded chain target is not asserted to be an
+RV-pullback; the chart target is the actual pinned lift. Preserve this precision
+when using the result downstream.
 
-Remaining: global actual SpecialBijection bridge5.5, actual2-cell5.7 and
-uniform4.8 assembly5.8. Standard sequences, first-n RV normalization and
-full Gamma natural lift are already checked. Section4 checked cell/family
-library802eb9c is merged, including actual balanced geometry and full4.8.
-See detailed implementation ledger `.scratch/SECTION5-ACTIVE-PLAN.md`.
+Primary finite declarations: lemma_5_1_finite, lemma_5_2_finite,
+lemma_5_3_finite, lemma_5_5, lemma_5_6_finite, lemma_5_7_finite,
+lemma_5_8_finite. The Definition 5.4 factorization and coordinate-injectivity
+observation after 5.5 remain checked. FiniteStandardContractionData methods
+provide actual RV[n] objects, Gamma normalization and the normalized special
+presentation. Finite comparisons expose actual GammaRVFiniteIso values.
 
-601checkpoint39ec6be passed CI43106272819 and exact RETAINED artifact
-comparison13896050077;539checkpoint2a12c23 likewise passed exact comparison.
-Returned file IDs with file_ prefix and sdmnt URLs are Sediment-backed and
-can be materialized with download_file; the previous FileService assumption
-was mistaken. Current main36deb895 adds Section4 verification docs only
-relative to the merged Section4 code; that doc delta is merged here.
-The683 checkpoint needs its own CI and retained exact comparison before main.
+The replacement proofs are recorded in PROOF-WRITEUP.md for the future writeup
+after the whole paper is formalized. Do not substitute external unproved
+citations or introduce smallness of the internal coding presentation.
+
+Keep all source inventories and verifiers frozen during future audits. Never
+edit a source while it or a downstream importer is being compiled. Compile,
+review full types and constructors, run allowed-axiom and root/project checks,
+and confirm CI/artifact identity before publishing another proof checkpoint.
+No main promotion beyond 30071af is authorized in this session.

@@ -1,0 +1,616 @@
+@IntegrationInACVF.Section6.FiniteRV.gammaStandardComparisonOfNormalizedIso : {M : Type} →
+  [sM : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [hM :
+        @FirstOrder.Language.Theory.Model.{0, 0, 0} SpecialTransformations.Milestone0.LRV M sM
+          SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B : @SpecialTransformations.Section3.GammaParameters.Base M sM hM} →
+        {S : Set.{0} M} →
+          {n a : Nat} →
+            {κ : Cardinal.{0}} →
+              (hκ : @LE.le.{1} Cardinal.{0} Cardinal.instLE.{0} Cardinal.aleph0.{0} κ) →
+                (hs : @SpecialTransformations.Section3.Saturated M sM κ) →
+                  (hsmall :
+                      @LT.lt.{1} Cardinal.{0}
+                        (@Preorder.toLT.{1} Cardinal.{0}
+                          (@PartialOrder.toPreorder.{1} Cardinal.{0} Cardinal.partialOrder.{0}))
+                        (Cardinal.mk.{0}
+                          (@Set.Elem.{0} M (@SpecialTransformations.Section3.GammaParameters.Base.real M sM hM B)))
+                        κ) →
+                    (hBS :
+                        @LE.le.{0} (Set.{0} M) (@Set.instLE.{0} M)
+                          (@SpecialTransformations.Section3.GammaParameters.Base.real M sM hM B) S) →
+                      {A : @SpecialTransformations.Section5.DefSet M sM hM S n a} →
+                        (hA :
+                            @SpecialTransformations.Section5.GammaSetDefinable M sM hM n a B
+                              (@SpecialTransformations.Section5.carrier M sM
+                                (@SpecialTransformations.Section5.pointSpace M sM hM n a) S A)) →
+                          (hfin :
+                              ∀ (x : Fin n → @SpecialTransformations.Section5.VF M sM),
+                                @Set.Finite.{0} (Fin a → @SpecialTransformations.Section5.RV M sM)
+                                  (@Set.ofPred.{0} (Fin a → @SpecialTransformations.Section5.RV M sM) fun r =>
+                                    @Membership.mem.{0, 0}
+                                      (Prod.{0, 0} (Fin n → @SpecialTransformations.Section5.VF M sM)
+                                        (Fin a → @SpecialTransformations.Section5.RV M sM))
+                                      (Set.{0}
+                                        (@SpecialTransformations.DefinableGeometry.Space.Carrier.{0, 0}
+                                          SpecialTransformations.Milestone0.LRV M (@CanonicalStructure.normalize M sM)
+                                          (@SpecialTransformations.Section5.pointSpace M sM hM n a)))
+                                      (@Set.instMembership.{0}
+                                        (@SpecialTransformations.DefinableGeometry.Space.Carrier.{0, 0}
+                                          SpecialTransformations.Milestone0.LRV M (@CanonicalStructure.normalize M sM)
+                                          (@SpecialTransformations.Section5.pointSpace M sM hM n a)))
+                                      (@SpecialTransformations.Section5.carrier M sM
+                                        (@SpecialTransformations.Section5.pointSpace M sM hM n a) S A)
+                                      (@Prod.mk.{0, 0} (Fin n → @SpecialTransformations.Section5.VF M sM)
+                                        (Fin a → @SpecialTransformations.Section5.RV M sM) x r))) →
+                            {σ υ : Equiv.Perm.{1} (Fin n)} →
+                              (C : @IntegrationInACVF.Section5.StandardContraction M sM hM S n a A σ) →
+                                (D : @IntegrationInACVF.Section5.StandardContraction M sM hM S n a A υ) →
+                                  (hC :
+                                      @IntegrationInACVF.Section5.GammaProgramDefinable M sM hM S B n a
+                                        (@IntegrationInACVF.Section5.StandardContraction.arity M sM hM S n a A σ C)
+                                        (@IntegrationInACVF.Section5.vfPermutationImage M sM hM S n a A σ)
+                                        (@IntegrationInACVF.Section5.StandardContraction.target M sM hM S n a A σ C)
+                                        (@IntegrationInACVF.Section5.StandardContraction.program M sM hM S n a A σ C)) →
+                                    (hD :
+                                        @IntegrationInACVF.Section5.GammaProgramDefinable M sM hM S B n a
+                                          (@IntegrationInACVF.Section5.StandardContraction.arity M sM hM S n a A υ D)
+                                          (@IntegrationInACVF.Section5.vfPermutationImage M sM hM S n a A υ)
+                                          (@IntegrationInACVF.Section5.StandardContraction.target M sM hM S n a A υ D)
+                                          (@IntegrationInACVF.Section5.StandardContraction.program M sM hM S n a A υ
+                                            D)) →
+                                      @IntegrationInACVF.Section5.GammaRVIso M sM hM S n B
+                                          (@IntegrationInACVF.Section5.StandardContraction.normalizedObject M sM hM S n
+                                            a A σ C)
+                                          (@IntegrationInACVF.Section5.StandardContraction.normalizedObject M sM hM S n
+                                            a A υ D) →
+                                        @SpecialTransformations.Section7.GammaRVIso M sM hM B n
+                                          (@SpecialTransformations.Section5.GammaRVFiniteObject.toGammaRVObject M sM hM
+                                            B n
+                                            (@IntegrationInACVF.Section6.FiniteRV.gammaFiniteContraction M sM hM B S n a
+                                              κ hκ hs hsmall hBS A hA hfin σ C hC))
+                                          (@SpecialTransformations.Section5.GammaRVFiniteObject.toGammaRVObject M sM hM
+                                            B n
+                                            (@IntegrationInACVF.Section6.FiniteRV.gammaFiniteContraction M sM hM B S n a
+                                              κ hκ hs hsmall hBS A hA hfin υ D hD))
+'IntegrationInACVF.Section6.FiniteRV.gammaStandardComparisonOfNormalizedIso' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section6.FiniteRV.gammaStandardComparisonOfNativeIso : {M : Type} →
+  [sM : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [hM :
+        @FirstOrder.Language.Theory.Model.{0, 0, 0} SpecialTransformations.Milestone0.LRV M sM
+          SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B : @SpecialTransformations.Section3.GammaParameters.Base M sM hM} →
+        {S : Set.{0} M} →
+          {n a : Nat} →
+            {κ : Cardinal.{0}} →
+              (hκ : @LE.le.{1} Cardinal.{0} Cardinal.instLE.{0} Cardinal.aleph0.{0} κ) →
+                (hs : @SpecialTransformations.Section3.Saturated M sM κ) →
+                  (hsmall :
+                      @LT.lt.{1} Cardinal.{0}
+                        (@Preorder.toLT.{1} Cardinal.{0}
+                          (@PartialOrder.toPreorder.{1} Cardinal.{0} Cardinal.partialOrder.{0}))
+                        (Cardinal.mk.{0}
+                          (@Set.Elem.{0} M (@SpecialTransformations.Section3.GammaParameters.Base.real M sM hM B)))
+                        κ) →
+                    (hBS :
+                        @LE.le.{0} (Set.{0} M) (@Set.instLE.{0} M)
+                          (@SpecialTransformations.Section3.GammaParameters.Base.real M sM hM B) S) →
+                      {A : @SpecialTransformations.Section5.DefSet M sM hM S n a} →
+                        (hA :
+                            @SpecialTransformations.Section5.GammaSetDefinable M sM hM n a B
+                              (@SpecialTransformations.Section5.carrier M sM
+                                (@SpecialTransformations.Section5.pointSpace M sM hM n a) S A)) →
+                          (hfin :
+                              ∀ (x : Fin n → @SpecialTransformations.Section5.VF M sM),
+                                @Set.Finite.{0} (Fin a → @SpecialTransformations.Section5.RV M sM)
+                                  (@Set.ofPred.{0} (Fin a → @SpecialTransformations.Section5.RV M sM) fun r =>
+                                    @Membership.mem.{0, 0}
+                                      (Prod.{0, 0} (Fin n → @SpecialTransformations.Section5.VF M sM)
+                                        (Fin a → @SpecialTransformations.Section5.RV M sM))
+                                      (Set.{0}
+                                        (@SpecialTransformations.DefinableGeometry.Space.Carrier.{0, 0}
+                                          SpecialTransformations.Milestone0.LRV M (@CanonicalStructure.normalize M sM)
+                                          (@SpecialTransformations.Section5.pointSpace M sM hM n a)))
+                                      (@Set.instMembership.{0}
+                                        (@SpecialTransformations.DefinableGeometry.Space.Carrier.{0, 0}
+                                          SpecialTransformations.Milestone0.LRV M (@CanonicalStructure.normalize M sM)
+                                          (@SpecialTransformations.Section5.pointSpace M sM hM n a)))
+                                      (@SpecialTransformations.Section5.carrier M sM
+                                        (@SpecialTransformations.Section5.pointSpace M sM hM n a) S A)
+                                      (@Prod.mk.{0, 0} (Fin n → @SpecialTransformations.Section5.VF M sM)
+                                        (Fin a → @SpecialTransformations.Section5.RV M sM) x r))) →
+                            {σ υ : Equiv.Perm.{1} (Fin n)} →
+                              (C : @IntegrationInACVF.Section5.StandardContraction M sM hM S n a A σ) →
+                                (D : @IntegrationInACVF.Section5.StandardContraction M sM hM S n a A υ) →
+                                  (hC :
+                                      @IntegrationInACVF.Section5.GammaProgramDefinable M sM hM S B n a
+                                        (@IntegrationInACVF.Section5.StandardContraction.arity M sM hM S n a A σ C)
+                                        (@IntegrationInACVF.Section5.vfPermutationImage M sM hM S n a A σ)
+                                        (@IntegrationInACVF.Section5.StandardContraction.target M sM hM S n a A σ C)
+                                        (@IntegrationInACVF.Section5.StandardContraction.program M sM hM S n a A σ C)) →
+                                    (hD :
+                                        @IntegrationInACVF.Section5.GammaProgramDefinable M sM hM S B n a
+                                          (@IntegrationInACVF.Section5.StandardContraction.arity M sM hM S n a A υ D)
+                                          (@IntegrationInACVF.Section5.vfPermutationImage M sM hM S n a A υ)
+                                          (@IntegrationInACVF.Section5.StandardContraction.target M sM hM S n a A υ D)
+                                          (@IntegrationInACVF.Section5.StandardContraction.program M sM hM S n a A υ
+                                            D)) →
+                                      @IntegrationInACVF.Section5.GammaRVIso M sM hM S n B
+                                          (@IntegrationInACVF.Section5.StandardContraction.contractionObject M sM hM S n
+                                            a A σ C)
+                                          (@IntegrationInACVF.Section5.StandardContraction.contractionObject M sM hM S n
+                                            a A υ D) →
+                                        @SpecialTransformations.Section7.GammaRVIso M sM hM B n
+                                          (@SpecialTransformations.Section5.GammaRVFiniteObject.toGammaRVObject M sM hM
+                                            B n
+                                            (@IntegrationInACVF.Section6.FiniteRV.gammaFiniteContraction M sM hM B S n a
+                                              κ hκ hs hsmall hBS A hA hfin σ C hC))
+                                          (@SpecialTransformations.Section5.GammaRVFiniteObject.toGammaRVObject M sM hM
+                                            B n
+                                            (@IntegrationInACVF.Section6.FiniteRV.gammaFiniteContraction M sM hM B S n a
+                                              κ hκ hs hsmall hBS A hA hfin υ D hD))
+'IntegrationInACVF.Section6.FiniteRV.gammaStandardComparisonOfNativeIso' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section6.FiniteRV.completed_section5_two_order_refinement : ∀ {M : Type}
+  [sM : SpecialTransformations.Milestone0.LRV.Structure M]
+  [hM :
+    @FirstOrder.Language.Theory.Model.{0, 0, 0} SpecialTransformations.Milestone0.LRV M sM
+      SpecialTransformations.Milestone0.Axioms.ACVF]
+  {κ : Cardinal.{0}} (hκ : @LE.le.{1} Cardinal.{0} Cardinal.instLE.{0} Cardinal.aleph0.{0} κ)
+  (hs : @SpecialTransformations.Section3.Saturated M sM κ),
+  @FirstOrder.Language.Theory.Model.{0, 0, 0} SpecialTransformations.Milestone0.LRV M sM
+      SpecialTransformations.Milestone0.Axioms.ACVF00 →
+    ∀ (B : @SpecialTransformations.Section3.GammaParameters.Base M sM hM)
+      (hsmall :
+        @LT.lt.{1} Cardinal.{0}
+          (@Preorder.toLT.{1} Cardinal.{0} (@PartialOrder.toPreorder.{1} Cardinal.{0} Cardinal.partialOrder.{0}))
+          (Cardinal.mk.{0} (@Set.Elem.{0} M (@SpecialTransformations.Section3.GammaParameters.Base.real M sM hM B))) κ),
+      @SpecialTransformations.Section3.GammaParameters.VFGammaGeneratedBase M sM hM B →
+        ∀ (δ : @SpecialTransformations.Section3.Values.Gamma M sM hM),
+          @Membership.mem.{0, 0} (@SpecialTransformations.Section3.Values.Gamma M sM hM)
+              (Set.{0} (@SpecialTransformations.Section3.Values.Gamma M sM hM))
+              (@Set.instMembership.{0} (@SpecialTransformations.Section3.Values.Gamma M sM hM))
+              (@SpecialTransformations.Section3.GammaParameters.Base.gamma M sM hM B) δ →
+            @LT.lt.{0} (@SpecialTransformations.Section3.Values.Gamma M sM hM)
+                (@Preorder.toLT.{0} (@SpecialTransformations.Section3.Values.Gamma M sM hM)
+                  (@PartialOrder.toPreorder.{0} (@SpecialTransformations.Section3.Values.Gamma M sM hM)
+                    (@SemilatticeInf.toPartialOrder.{0} (@SpecialTransformations.Section3.Values.Gamma M sM hM)
+                      (@Lattice.toSemilatticeInf.{0} (@SpecialTransformations.Section3.Values.Gamma M sM hM)
+                        (@DistribLattice.toLattice.{0} (@SpecialTransformations.Section3.Values.Gamma M sM hM)
+                          (@instDistribLatticeOfLinearOrder.{0} (@SpecialTransformations.Section3.Values.Gamma M sM hM)
+                            (@SpecialTransformations.Section3.Values.gammaOrder M sM hM)))))))
+                (@OfNat.ofNat.{0} (@SpecialTransformations.Section3.Values.Gamma M sM hM) (nat_lit 1)
+                  (@One.toOfNat1.{0} (@SpecialTransformations.Section3.Values.Gamma M sM hM)
+                    (@InvOneClass.toOne.{0} (@SpecialTransformations.Section3.Values.Gamma M sM hM)
+                      (@DivInvOneMonoid.toInvOneClass.{0} (@SpecialTransformations.Section3.Values.Gamma M sM hM)
+                        (@DivisionMonoid.toDivInvOneMonoid.{0} (@SpecialTransformations.Section3.Values.Gamma M sM hM)
+                          (@DivisionCommMonoid.toDivisionMonoid.{0}
+                            (@SpecialTransformations.Section3.Values.Gamma M sM hM)
+                            (@CommGroup.toDivisionCommMonoid.{0} (@SpecialTransformations.Section3.Values.Gamma M sM hM)
+                              (@SpecialTransformations.Section3.Values.gammaGroup M sM hM))))))))
+                δ →
+              ∀
+                (FBase :
+                  @SpecialTransformations.Section3.VFFieldBase M sM hM
+                    (@SpecialTransformations.Section3.GammaParameters.Base.real M sM hM B))
+                {a : Nat}
+                (U :
+                  @SpecialTransformations.Section5.DefSet M sM hM (@Set.univ.{0} M)
+                    (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) a),
+                @SpecialTransformations.Section5.GammaSetDefinable M sM hM
+                    (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) a B
+                    (@SpecialTransformations.Section5.carrier M sM
+                      (@SpecialTransformations.Section5.pointSpace M sM hM
+                        (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) a)
+                      (@Set.univ.{0} M) U) →
+                  (∀
+                      (x :
+                        Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) →
+                          @SpecialTransformations.Section5.VF M sM),
+                      @Set.Finite.{0} (Fin a → @SpecialTransformations.Section5.RV M sM)
+                        (@Set.ofPred.{0} (Fin a → @SpecialTransformations.Section5.RV M sM) fun r =>
+                          @Membership.mem.{0, 0}
+                            (Prod.{0, 0}
+                              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) →
+                                @SpecialTransformations.Section5.VF M sM)
+                              (Fin a → @SpecialTransformations.Section5.RV M sM))
+                            (Set.{0}
+                              (@SpecialTransformations.DefinableGeometry.Space.Carrier.{0, 0}
+                                SpecialTransformations.Milestone0.LRV M (@CanonicalStructure.normalize M sM)
+                                (@SpecialTransformations.Section5.pointSpace M sM hM
+                                  (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) a)))
+                            (@Set.instMembership.{0}
+                              (@SpecialTransformations.DefinableGeometry.Space.Carrier.{0, 0}
+                                SpecialTransformations.Milestone0.LRV M (@CanonicalStructure.normalize M sM)
+                                (@SpecialTransformations.Section5.pointSpace M sM hM
+                                  (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) a)))
+                            (@SpecialTransformations.Section5.carrier M sM
+                              (@SpecialTransformations.Section5.pointSpace M sM hM
+                                (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) a)
+                              (@Set.univ.{0} M) U)
+                            (@Prod.mk.{0, 0}
+                              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) →
+                                @SpecialTransformations.Section5.VF M sM)
+                              (Fin a → @SpecialTransformations.Section5.RV M sM) x r))) →
+                    ∃ b V,
+                      ∃ (hV :
+                        @SpecialTransformations.Section5.GammaSetDefinable M sM hM
+                          (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) b B
+                          (@SpecialTransformations.Section5.carrier M sM
+                            (@SpecialTransformations.Section5.pointSpace M sM hM
+                              (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) b)
+                            (@Set.univ.{0} M) V))
+                        (hfinV :
+                        ∀
+                          (x :
+                            Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) →
+                              @SpecialTransformations.Section5.VF M sM),
+                          @Set.Finite.{0} (Fin b → @SpecialTransformations.Section5.RV M sM)
+                            (@Set.ofPred.{0} (Fin b → @SpecialTransformations.Section5.RV M sM) fun r =>
+                              @Membership.mem.{0, 0}
+                                (Prod.{0, 0}
+                                  (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) →
+                                    @SpecialTransformations.Section5.VF M sM)
+                                  (Fin b → @SpecialTransformations.Section5.RV M sM))
+                                (Set.{0}
+                                  (@SpecialTransformations.DefinableGeometry.Space.Carrier.{0, 0}
+                                    SpecialTransformations.Milestone0.LRV M (@CanonicalStructure.normalize M sM)
+                                    (@SpecialTransformations.Section5.pointSpace M sM hM
+                                      (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) b)))
+                                (@Set.instMembership.{0}
+                                  (@SpecialTransformations.DefinableGeometry.Space.Carrier.{0, 0}
+                                    SpecialTransformations.Milestone0.LRV M (@CanonicalStructure.normalize M sM)
+                                    (@SpecialTransformations.Section5.pointSpace M sM hM
+                                      (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) b)))
+                                (@SpecialTransformations.Section5.carrier M sM
+                                  (@SpecialTransformations.Section5.pointSpace M sM hM
+                                    (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) b)
+                                  (@Set.univ.{0} M) V)
+                                (@Prod.mk.{0, 0}
+                                  (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) →
+                                    @SpecialTransformations.Section5.VF M sM)
+                                  (Fin b → @SpecialTransformations.Section5.RV M sM) x r))),
+                        ∃ f,
+                          And
+                            (@Function.Bijective.{1, 1}
+                              (@Set.Elem.{0}
+                                (@SpecialTransformations.DefinableGeometry.Space.Carrier.{0, 0}
+                                  SpecialTransformations.Milestone0.LRV M (@CanonicalStructure.normalize M sM)
+                                  (@SpecialTransformations.Section5.pointSpace M sM hM
+                                    (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) a))
+                                (@SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+                                  SpecialTransformations.Milestone0.LRV M (@CanonicalStructure.normalize M sM)
+                                  (@SpecialTransformations.Section5.pointSpace M sM hM
+                                    (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) a)
+                                  (@Set.univ.{0} M) U))
+                              (@Set.Elem.{0}
+                                (@SpecialTransformations.DefinableGeometry.Space.Carrier.{0, 0}
+                                  SpecialTransformations.Milestone0.LRV M (@CanonicalStructure.normalize M sM)
+                                  (@SpecialTransformations.Section5.pointSpace M sM hM
+                                    (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) b))
+                                (@SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+                                  SpecialTransformations.Milestone0.LRV M (@CanonicalStructure.normalize M sM)
+                                  (@SpecialTransformations.Section5.pointSpace M sM hM
+                                    (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) b)
+                                  (@Set.univ.{0} M) V))
+                              (@SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0}
+                                SpecialTransformations.Milestone0.LRV M (@CanonicalStructure.normalize M sM)
+                                (@SpecialTransformations.Section5.pointSpace M sM hM
+                                  (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) a)
+                                (@SpecialTransformations.Section5.pointSpace M sM hM
+                                  (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) b)
+                                (@Set.univ.{0} M) U V f))
+                            (And
+                              (@SpecialTransformations.Section5.GammaGraphDefinable M sM hM
+                                (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) a B
+                                (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) b
+                                (@SpecialTransformations.Section5.pointMapGraph M sM hM (@Set.univ.{0} M)
+                                  (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) a
+                                  (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) b U V f))
+                              (And
+                                (∀
+                                  (u :
+                                    @Set.Elem.{0}
+                                      (@SpecialTransformations.DefinableGeometry.Space.Carrier.{0, 0}
+                                        SpecialTransformations.Milestone0.LRV M (@CanonicalStructure.normalize M sM)
+                                        (@SpecialTransformations.Section5.pointSpace M sM hM
+                                          (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) a))
+                                      (@SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+                                        SpecialTransformations.Milestone0.LRV M (@CanonicalStructure.normalize M sM)
+                                        (@SpecialTransformations.Section5.pointSpace M sM hM
+                                          (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) a)
+                                        (@Set.univ.{0} M) U)),
+                                  @Eq.{1}
+                                    (@SpecialTransformations.DefinableGeometry.Space.Carrier.{0, 0}
+                                      SpecialTransformations.Milestone0.LRV M (@CanonicalStructure.normalize M sM)
+                                      (@SpecialTransformations.Section4.vfSpace M sM hM
+                                        (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+                                    (@Prod.fst.{0, 0}
+                                      (@SpecialTransformations.DefinableGeometry.Space.Carrier.{0, 0}
+                                        SpecialTransformations.Milestone0.LRV M (@CanonicalStructure.normalize M sM)
+                                        (@SpecialTransformations.Section4.vfSpace M sM hM
+                                          (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+                                      (@SpecialTransformations.DefinableGeometry.Space.Carrier.{0, 0}
+                                        SpecialTransformations.Milestone0.LRV M (@CanonicalStructure.normalize M sM)
+                                        (@SpecialTransformations.Section4.rvSpace M sM hM b))
+                                      (@Subtype.val.{1}
+                                        (@SpecialTransformations.DefinableGeometry.Space.Carrier.{0, 0}
+                                          SpecialTransformations.Milestone0.LRV M (@CanonicalStructure.normalize M sM)
+                                          (@SpecialTransformations.Section5.pointSpace M sM hM
+                                            (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) b))
+                                        (fun x =>
+                                          @Membership.mem.{0, 0}
+                                            (@SpecialTransformations.DefinableGeometry.Space.Carrier.{0, 0}
+                                              SpecialTransformations.Milestone0.LRV M
+                                              (@CanonicalStructure.normalize M sM)
+                                              (@SpecialTransformations.Section5.pointSpace M sM hM
+                                                (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) b))
+                                            (Set.{0}
+                                              (@SpecialTransformations.DefinableGeometry.Space.Carrier.{0, 0}
+                                                SpecialTransformations.Milestone0.LRV M
+                                                (@CanonicalStructure.normalize M sM)
+                                                (@SpecialTransformations.Section5.pointSpace M sM hM
+                                                  (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) b)))
+                                            (@Set.instMembership.{0}
+                                              (@SpecialTransformations.DefinableGeometry.Space.Carrier.{0, 0}
+                                                SpecialTransformations.Milestone0.LRV M
+                                                (@CanonicalStructure.normalize M sM)
+                                                (@SpecialTransformations.Section5.pointSpace M sM hM
+                                                  (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) b)))
+                                            (@SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+                                              SpecialTransformations.Milestone0.LRV M
+                                              (@CanonicalStructure.normalize M sM)
+                                              (@SpecialTransformations.Section5.pointSpace M sM hM
+                                                (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) b)
+                                              (@Set.univ.{0} M) V)
+                                            x)
+                                        (@SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0}
+                                          SpecialTransformations.Milestone0.LRV M (@CanonicalStructure.normalize M sM)
+                                          (@SpecialTransformations.Section5.pointSpace M sM hM
+                                            (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) a)
+                                          (@SpecialTransformations.Section5.pointSpace M sM hM
+                                            (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) b)
+                                          (@Set.univ.{0} M) U V f u)))
+                                    (@Prod.fst.{0, 0}
+                                      (@SpecialTransformations.DefinableGeometry.Space.Carrier.{0, 0}
+                                        SpecialTransformations.Milestone0.LRV M (@CanonicalStructure.normalize M sM)
+                                        (@SpecialTransformations.Section4.vfSpace M sM hM
+                                          (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+                                      (@SpecialTransformations.DefinableGeometry.Space.Carrier.{0, 0}
+                                        SpecialTransformations.Milestone0.LRV M (@CanonicalStructure.normalize M sM)
+                                        (@SpecialTransformations.Section4.rvSpace M sM hM a))
+                                      (@Subtype.val.{1}
+                                        (@SpecialTransformations.DefinableGeometry.Space.Carrier.{0, 0}
+                                          SpecialTransformations.Milestone0.LRV M (@CanonicalStructure.normalize M sM)
+                                          (@SpecialTransformations.Section5.pointSpace M sM hM
+                                            (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) a))
+                                        (fun x =>
+                                          @Membership.mem.{0, 0}
+                                            (@SpecialTransformations.DefinableGeometry.Space.Carrier.{0, 0}
+                                              SpecialTransformations.Milestone0.LRV M
+                                              (@CanonicalStructure.normalize M sM)
+                                              (@SpecialTransformations.Section5.pointSpace M sM hM
+                                                (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) a))
+                                            (Set.{0}
+                                              (@SpecialTransformations.DefinableGeometry.Space.Carrier.{0, 0}
+                                                SpecialTransformations.Milestone0.LRV M
+                                                (@CanonicalStructure.normalize M sM)
+                                                (@SpecialTransformations.Section5.pointSpace M sM hM
+                                                  (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) a)))
+                                            (@Set.instMembership.{0}
+                                              (@SpecialTransformations.DefinableGeometry.Space.Carrier.{0, 0}
+                                                SpecialTransformations.Milestone0.LRV M
+                                                (@CanonicalStructure.normalize M sM)
+                                                (@SpecialTransformations.Section5.pointSpace M sM hM
+                                                  (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) a)))
+                                            (@SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0}
+                                              SpecialTransformations.Milestone0.LRV M
+                                              (@CanonicalStructure.normalize M sM)
+                                              (@SpecialTransformations.Section5.pointSpace M sM hM
+                                                (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) a)
+                                              (@Set.univ.{0} M) U)
+                                            x)
+                                        u)))
+                                (∃ T E,
+                                  ∃ (hT :
+                                    @IntegrationInACVF.Section5.GammaProgramDefinable M sM hM (@Set.univ.{0} M) B
+                                      (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) b
+                                      (@IntegrationInACVF.Section5.StandardContraction.arity M sM hM (@Set.univ.{0} M)
+                                        (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) b V
+                                        (Equiv.refl.{1}
+                                          (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+                                        T)
+                                      (@IntegrationInACVF.Section5.vfPermutationImage M sM hM (@Set.univ.{0} M)
+                                        (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) b V
+                                        (Equiv.refl.{1}
+                                          (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))))
+                                      (@IntegrationInACVF.Section5.StandardContraction.target M sM hM (@Set.univ.{0} M)
+                                        (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) b V
+                                        (Equiv.refl.{1}
+                                          (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+                                        T)
+                                      (@IntegrationInACVF.Section5.StandardContraction.program M sM hM (@Set.univ.{0} M)
+                                        (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) b V
+                                        (Equiv.refl.{1}
+                                          (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+                                        T))
+                                    (hE :
+                                    @IntegrationInACVF.Section5.GammaProgramDefinable M sM hM (@Set.univ.{0} M) B
+                                      (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) b
+                                      (@IntegrationInACVF.Section5.StandardContraction.arity M sM hM (@Set.univ.{0} M)
+                                        (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) b V
+                                        (@Equiv.swap.{1}
+                                          (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                                          (instDecidableEqFin
+                                            (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                                          (@OfNat.ofNat.{0}
+                                            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                                            (nat_lit 0)
+                                            (@Fin.instOfNat
+                                              (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) ⋯
+                                              (nat_lit 0)))
+                                          (@OfNat.ofNat.{0}
+                                            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                                            (nat_lit 1)
+                                            (@Fin.instOfNat
+                                              (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) ⋯
+                                              (nat_lit 1))))
+                                        E)
+                                      (@IntegrationInACVF.Section5.vfPermutationImage M sM hM (@Set.univ.{0} M)
+                                        (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) b V
+                                        (@Equiv.swap.{1}
+                                          (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                                          (instDecidableEqFin
+                                            (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                                          (@OfNat.ofNat.{0}
+                                            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                                            (nat_lit 0)
+                                            (@Fin.instOfNat
+                                              (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) ⋯
+                                              (nat_lit 0)))
+                                          (@OfNat.ofNat.{0}
+                                            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                                            (nat_lit 1)
+                                            (@Fin.instOfNat
+                                              (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) ⋯
+                                              (nat_lit 1)))))
+                                      (@IntegrationInACVF.Section5.StandardContraction.target M sM hM (@Set.univ.{0} M)
+                                        (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) b V
+                                        (@Equiv.swap.{1}
+                                          (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                                          (instDecidableEqFin
+                                            (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                                          (@OfNat.ofNat.{0}
+                                            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                                            (nat_lit 0)
+                                            (@Fin.instOfNat
+                                              (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) ⋯
+                                              (nat_lit 0)))
+                                          (@OfNat.ofNat.{0}
+                                            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                                            (nat_lit 1)
+                                            (@Fin.instOfNat
+                                              (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) ⋯
+                                              (nat_lit 1))))
+                                        E)
+                                      (@IntegrationInACVF.Section5.StandardContraction.program M sM hM (@Set.univ.{0} M)
+                                        (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) b V
+                                        (@Equiv.swap.{1}
+                                          (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                                          (instDecidableEqFin
+                                            (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                                          (@OfNat.ofNat.{0}
+                                            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                                            (nat_lit 0)
+                                            (@Fin.instOfNat
+                                              (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) ⋯
+                                              (nat_lit 0)))
+                                          (@OfNat.ofNat.{0}
+                                            (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                                            (nat_lit 1)
+                                            (@Fin.instOfNat
+                                              (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) ⋯
+                                              (nat_lit 1))))
+                                        E)),
+                                    Nonempty.{1}
+                                      (@SpecialTransformations.Section7.GammaRVIso M sM hM B
+                                        (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))
+                                        (@SpecialTransformations.Section5.GammaRVFiniteObject.toGammaRVObject M sM hM B
+                                          (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))
+                                          (@IntegrationInACVF.Section6.FiniteRV.gammaFiniteContraction M sM hM B
+                                            (@Set.univ.{0} M)
+                                            (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) b κ hκ hs
+                                            hsmall ⋯ V hV hfinV
+                                            (Equiv.refl.{1}
+                                              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+                                            T hT))
+                                        (@SpecialTransformations.Section5.GammaRVFiniteObject.toGammaRVObject M sM hM B
+                                          (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))
+                                          (@IntegrationInACVF.Section6.FiniteRV.gammaFiniteContraction M sM hM B
+                                            (@Set.univ.{0} M)
+                                            (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) b κ hκ hs
+                                            hsmall ⋯ V hV hfinV
+                                            (@Equiv.swap.{1}
+                                              (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                                              (instDecidableEqFin
+                                                (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                                              (@OfNat.ofNat.{0}
+                                                (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                                                (nat_lit 0)
+                                                (@Fin.instOfNat
+                                                  (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) ⋯
+                                                  (nat_lit 0)))
+                                              (@OfNat.ofNat.{0}
+                                                (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+                                                (nat_lit 1)
+                                                (@Fin.instOfNat
+                                                  (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) ⋯
+                                                  (nat_lit 1))))
+                                            E hE))))))
+'IntegrationInACVF.Section6.FiniteRV.completed_section5_two_order_refinement' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+IntegrationInACVF.Section6.fin_two_permutation_cases : ∀
+  (σ : Equiv.Perm.{1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))),
+  Or
+    (@Eq.{1} (Equiv.Perm.{1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))) σ
+      (Equiv.refl.{1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))))
+    (@Eq.{1} (Equiv.Perm.{1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))) σ
+      (@Equiv.swap.{1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+        (instDecidableEqFin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+        (@OfNat.ofNat.{0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))) (nat_lit 0)
+          (@Fin.instOfNat (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) ⋯ (nat_lit 0)))
+        (@OfNat.ofNat.{0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))) (nat_lit 1)
+          (@Fin.instOfNat (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) ⋯ (nat_lit 1)))))
+'IntegrationInACVF.Section6.fin_two_permutation_cases' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section6.completed_section5_two_order_input : ∀ {M : Type}
+  [sM : SpecialTransformations.Milestone0.LRV.Structure M]
+  [hM :
+    @FirstOrder.Language.Theory.Model.{0, 0, 0} SpecialTransformations.Milestone0.LRV M sM
+      SpecialTransformations.Milestone0.Axioms.ACVF]
+  {κ : Cardinal.{0}} (hκ : @LE.le.{1} Cardinal.{0} Cardinal.instLE.{0} Cardinal.aleph0.{0} κ)
+  (hs : @SpecialTransformations.Section3.Saturated M sM κ),
+  @FirstOrder.Language.Theory.Model.{0, 0, 0} SpecialTransformations.Milestone0.LRV M sM
+      SpecialTransformations.Milestone0.Axioms.ACVF00 →
+    ∀ (B : @SpecialTransformations.Section3.GammaParameters.Base M sM hM)
+      (hsmall :
+        @LT.lt.{1} Cardinal.{0}
+          (@Preorder.toLT.{1} Cardinal.{0} (@PartialOrder.toPreorder.{1} Cardinal.{0} Cardinal.partialOrder.{0}))
+          (Cardinal.mk.{0} (@Set.Elem.{0} M (@SpecialTransformations.Section3.GammaParameters.Base.real M sM hM B))) κ),
+      @SpecialTransformations.Section3.GammaParameters.VFGammaGeneratedBase M sM hM B →
+        ∀ (δ : @SpecialTransformations.Section3.Values.Gamma M sM hM),
+          @Membership.mem.{0, 0} (@SpecialTransformations.Section3.Values.Gamma M sM hM)
+              (Set.{0} (@SpecialTransformations.Section3.Values.Gamma M sM hM))
+              (@Set.instMembership.{0} (@SpecialTransformations.Section3.Values.Gamma M sM hM))
+              (@SpecialTransformations.Section3.GammaParameters.Base.gamma M sM hM B) δ →
+            @LT.lt.{0} (@SpecialTransformations.Section3.Values.Gamma M sM hM)
+                (@Preorder.toLT.{0} (@SpecialTransformations.Section3.Values.Gamma M sM hM)
+                  (@PartialOrder.toPreorder.{0} (@SpecialTransformations.Section3.Values.Gamma M sM hM)
+                    (@SemilatticeInf.toPartialOrder.{0} (@SpecialTransformations.Section3.Values.Gamma M sM hM)
+                      (@Lattice.toSemilatticeInf.{0} (@SpecialTransformations.Section3.Values.Gamma M sM hM)
+                        (@DistribLattice.toLattice.{0} (@SpecialTransformations.Section3.Values.Gamma M sM hM)
+                          (@instDistribLatticeOfLinearOrder.{0} (@SpecialTransformations.Section3.Values.Gamma M sM hM)
+                            (@SpecialTransformations.Section3.Values.gammaOrder M sM hM)))))))
+                (@OfNat.ofNat.{0} (@SpecialTransformations.Section3.Values.Gamma M sM hM) (nat_lit 1)
+                  (@One.toOfNat1.{0} (@SpecialTransformations.Section3.Values.Gamma M sM hM)
+                    (@InvOneClass.toOne.{0} (@SpecialTransformations.Section3.Values.Gamma M sM hM)
+                      (@DivInvOneMonoid.toInvOneClass.{0} (@SpecialTransformations.Section3.Values.Gamma M sM hM)
+                        (@DivisionMonoid.toDivInvOneMonoid.{0} (@SpecialTransformations.Section3.Values.Gamma M sM hM)
+                          (@DivisionCommMonoid.toDivisionMonoid.{0}
+                            (@SpecialTransformations.Section3.Values.Gamma M sM hM)
+                            (@CommGroup.toDivisionCommMonoid.{0} (@SpecialTransformations.Section3.Values.Gamma M sM hM)
+                              (@SpecialTransformations.Section3.Values.gammaGroup M sM hM))))))))
+                δ →
+              ∀
+                (FBase :
+                  @SpecialTransformations.Section3.VFFieldBase M sM hM
+                    (@SpecialTransformations.Section3.GammaParameters.Base.real M sM hM B)),
+                @IntegrationInACVF.Section6.Section5TwoOrderInput M sM hM B κ hκ hs hsmall
+'IntegrationInACVF.Section6.completed_section5_two_order_input' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

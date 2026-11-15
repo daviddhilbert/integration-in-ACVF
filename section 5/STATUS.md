@@ -1,109 +1,103 @@
 # Section 5 status
 
-**Lemmas5.1–5.2, Remark5.3, Definition5.4 and Lemma5.6 are locally checked.**
-The whole section remains in progress: the global actual SpecialBijection
-bridge in5.5 and actual two-cell results5.7–5.8 are still open.
+The active Section 5 targets are complete in the author's RV[k] scope. RV[k]
+means the pinned full subcategory of objects with finite-to-one volume maps.
+Auxiliary RV arities are arbitrary. The finite-source condition is
+FiniteMixedRVFibres: fixing all VF coordinates leaves finitely many RV labels.
+The former ambient category is retained only as internal proof support.
 
-All683 complete headline types and axiom audits pass, using only propext,
-Classical.choice and Quot.sound. All601 prior types are unchanged. All82 new
-full types, complete data constructors and the recursive original-Gamma
-certificate were reviewed in920 readable lines without omissions. The root
-build completed10458 jobs. Full project audits pass for foundation and
-Sections2,3,4,5; Sections6,7 have no verifiers and are skipped. Preserved
-receipt: `.scratch/section5-683-verified/`; hashes and scope: VERIFICATION.json.
+Definition 5.5 is formalized with explicit original-Gamma RV presentation charts,
+as described below. All other numbered results retain their recorded statements
+and standing assumptions, restricted to finite RV fibres where applicable.
 
-## Checked numbered results
+## Active entry points
 
-Lemma5.1 prepares arbitrary mixed finite maps with actual special bijections,
-RV-pullback targets and a contractible conjugate. The set-level wrapper
-constructs its common real presentation internally. It uses ACVF00, genuine
-saturation, small P.real and VFFieldBase P.real; no internal-code smallness
-or target preparation premise is introduced.
+| Item | Entry point | Constructed result |
+| --- | --- | --- |
+| 5.1 | [lemma_5_1_finite](IntegrationSection5/FiniteGeometryPreparation.lean) | Two actual Gamma special bijections to RV-pullbacks, a contractible conjugate with its full Gamma graph, and finite volume maps for both prepared objects. |
+| 5.2 | [lemma_5_2_finite](IntegrationSection5/FiniteGeometryPreparation.lean) | Both actual special preparations, mutual contractibility, the unique commuting key bijection, and an actual RV[1] isomorphism with both Gamma graphs. Target finiteness follows from source finiteness. |
+| 5.3 | [lemma_5_3_finite](IntegrationSection5/FiniteNumbered.lean) | The actual finite-category isomorphism and induced-key square for the prepared mutually contractible unary bijection. |
+| 5.4 | [special_relativeSpecial_factorization](IntegrationSection5/RelativeSpecialFactorization.lean) | Actual coordinate-fibre special witnesses and exact relatively-special factorization. Complementary VF coordinates are the added fibre parameters. Finite RV fibres are preserved by Gamma bijections. |
+| 5.5 | [lemma_5_5](IntegrationSection5/FiniteStandardContractionData.lean) | Internally presented standard contraction for every VF order, native and normalized RV[n] objects, natural Gamma lift isomorphism, and actual global special presentation. |
+| 5.6 | [lemma_5_6_finite](IntegrationSection5/FiniteUnaryPartition.lean) | A finite disjoint covering Gamma partition, actual relatively unary factors, a common real realization, and finite RV fibres at every intermediate factor. |
+| 5.7 | [lemma_5_7_finite](IntegrationSection5/FiniteNumbered.lean) | Both actual standard contractions and an actual Gamma RV[2] isomorphism for every definable 2-cell. Finite volume is derived without an additional source hypothesis. |
+| 5.8 | [lemma_5_8_finite](IntegrationSection5/FiniteRVComparison.lean) | A VF-fixed positioned cell-label injection and both whole-source standard contractions, with an actual Gamma RV[2] comparison and both finite volume maps. |
 
-Lemma5.2 constructs both specials for an arbitrary unary definable bijection,
-mutual contractibility and the unique commuting definable RV-key bijection.
-Its original-base scope is ACVF00, genuine saturation with aleph0≤κ, small
-P.real, VFFieldBase P.real and a named Gamma value δ with1<δ. The complete
-original map graph is explicit. Checked Proposition3.21, finite membership
-preparation, actual inverse-special geometry and compatible focus chains
-supply the proof. Entry points: UnaryBijection.lemma_5_2 and its presented
-wrapper in UnaryBijectionPreparation.
+The files live in IntegrationSection5. The declaration namespace is
+IntegrationInACVF.Section5; the links identify their source modules.
+GammaRVFiniteIso stores an isomorphism in the actual RVFiniteObject category
+and the complete original-Gamma graphs of its hom and inverse.
 
-Remark5.3 constructs an actual pinned RV[1,·] isomorphism with both morphism
-fields, inverse laws, the induced-key square and full original-Gamma graphs.
-Given the actual prepared mutually contractible bijection, it needs only
-ACVF, genuine saturation, aleph0≤κ and small P.real. The finite-image and
-singleton/nonzero-cell replacement is recorded in PROOF-WRITEUP.md.
-Entry point: lemma_5_3 in UnaryRVCategory.
+## The explicit presentation in 5.5
 
-Definition5.4 has actual coordinate-fibre maps and fibrewise special witnesses.
-Only complementary VF coordinates enlarge the fibre's real base. Restricted
-foci intersect their own fibre RV hull. Descending one-coordinate canonical
-factors reproduce the full canonical map, including its labels. Every actual
-special bijection factors into actual relatively special factors, in all
-arities. The original-Gamma fibre, map and focus graphs are retained.
-Entry point: special_relativeSpecial_factorization.
+The paper identifies definably bijective presentations in Notation 2.5 and calls
+the natural map before Definition 5.5 special. StandardSpecialPresentation makes
+the changes of RV presentation explicit: an actual pinned SpecialBijection,
+its complete Gamma chain certificate, two Gamma isomorphism charts, and a
+commuting square with the chosen natural lift. Both charts preserve all VF
+coordinates and are given by RV coordinate projections on their domains.
 
-Lemma5.6 now constructs a finite disjoint covering original-Gamma partition
-and actual relatively unary definable bijections whose compositions equal
-the given map on each piece. One common internal real base presents every
-piece and every factor. GammaUnaryChainDefinable certifies every actual
-factor over the original Gamma base; the enlarged code set is not a new
-smallness hypothesis. Entry points: lemma_5_6 and lemma_5_6_iso in UnaryPartition.
-The scope is ACVF00, genuine saturation with aleph0≤κ, small G.real, a named
-δ with1<δ and **positive VF arity p+1**. No VFFieldBase hypothesis is needed.
-Pure RV arity0 is excluded explicitly: RelativelyUnary requires a VF index.
+FiniteStandardContractionData.normalizedSpecialPresentation additionally gives
+the chart onto the actual pinned normalized lift, with volume coordinates
+first, and its exact square with normalizedNaturalLiftMap. This does not assert
+that the padded special-chain target itself is an RV-pullback; its chart target
+is the actual RV lift. No literal unchanged-RV-arity special witness is claimed.
 
-The5.6 proof uses checked uniform scalar constant/injective refinements.
-When all output VF coordinates are constant on a source-head/code fibre,
-the inverse scalar's finite image at fixed target VF tuple makes that fibre
-finite. Constructed RV labels separate it. First nonconstant tags give a
-finite definable partition. Actual coding and coordinate replacement, plus
-three arithmetic unary steps for a VF swap, fix one more target coordinate.
-Strong induction on the finite active-coordinate set supplies the result,
-with frozen VF coordinates and RV labels left free throughout. This replaces
-the paper's contraction/dimension proof; see PROOF-WRITEUP.md.
+The finite compiler constructs activity flags internally from the actual finite
+preparation trace. Each weak focus becomes a genuine global focus on the flag
+locus intersected with the current RV hull. Full canonical steps and empty
+foci enforce alternation. Actual projection squares and bijections give the
+charts. Original-Gamma certificates are retained through restriction, parameter
+extension, coordinate lifting and permutations. No uniform trace, comparison,
+finite image, flag certificate or preparation conclusion is a premise of the
+numbered producers.
 
-## Standard contraction progress and remaining targets
+FiniteStandardContractionData.gammaNormalizationIso is an actual Gamma RV[n]
+isomorphism from the selected-volume object to its first-n normalization.
+FiniteStandardContractionData.naturalLiftIso gives the normalized Gamma lift.
 
-Uniform relative preparation is constructed from saturation, finite root
-means and strict root reduction. Actual unary fibre specials retain legal
-alternation and full original-Gamma graphs. gamma_head_preparation restricts
-this to arbitrary sources. Certified ordered programs construct a standard
-contraction sequence for every coordinate permutation. Its natural map is
-bijective onto the actual pinned lift, with explicit volume-coordinate
-selector and commuting square. The coordinate-injectivity observation after5.5
-is proved. No preparation conclusion or working-code smallness is assumed.
+## Hypotheses
 
-First-n volume normalization is an actual pinned RV-category isomorphism.
-The normalized natural lift is bijective, satisfies the square and has full
-original-Gamma certificates. The additional **global actual SpecialBijection
-bridge remains open**; full5.5 is not yet counted complete. Uniform partial
-contractions with frozen VF parameters, exact active RV-pullback geometry,
-finite-head RV encoding and the unary-injection RV-weight bound remain
-checked support.
+All declarations use the pinned LRV and its single absorbing RV element.
+The finite producers retain genuine saturation, aleph0<=kappa and small
+original G.real. Preparation results use ACVF00 and VFFieldBase G.real where
+shown in their full types. Lemmas 5.2, 5.7, 5.8 retain a named Gamma value delta>1;
+5.8 also retains VFGammaGeneratedBase G. The presented 5.3 statement needs only
+the checked prepared-map hypotheses and the recorded saturation/smallness.
 
-The checked Section4 library at802eb9c is merged, including full uniform4.8,
-actual cell positioning graphs and balanced geometry. The683 verifier hashes
-all reused Section4 Lean sources and its verifier. The singleton first-cell
-boundary of the ancillary open-polydisc observation is recorded by Section4;
-its valid product conclusion suffices for the5.7 product case.
+Lemma 5.6 has positive VF arity p+1 and requires a Gamma value delta>1; its actual
+full type does not require delta membership in G.gamma or VFFieldBase. The
+zero-VF case is outside that relatively-unary statement. Lemma 5.5 covers all
+finite arities, including zero. No theorem assumes that an internally enlarged
+real code set is small.
 
-Next: actual cell translations/product contractions, RV[2,·] isomorphisms
-for5.7, then the uniform4.8 family assembly for5.8. Neither5.7 nor5.8 is claimed
-from an assumed cell-existence or chosen-contraction compatibility premise.
+## Verification
 
-## Publication evidence
+1852 complete headline types and allowed-axiom audits PASS. All 1686 prior full
+types and axiom records are exact. All 166 additions, including structure and
+inductive constructor interfaces, were manually reviewed in 1997 readable lines.
+Root build: 10708 jobs. The whole-project verifier passes foundation and
+Sections 2, 3, 4, 5; Sections 6, 7 have no verifiers and are skipped.
 
-The601-head checkpoint39ec6be passed CI43106272819. Retained artifact13896050077
-has SHA25616e8d01f54639803fa37c62074f228944f54a9a2bbe8b2271c21bdead2a03086.
-Every receipt field except timestamp, all601 complete types, all source and
-dependency hashes, and the retained audit-source/log hashes match the local
-receipt. The539-head checkpoint also has an exact retained comparison.
-Main advanced separately to36deb895 with Section4 verification documentation;
-that documentation-only delta is merged into the current proof checkpoint.
-The683 checkpoint still requires its own remote CI and retained comparison.
+Evidence is retained in .scratch/section5-final-1852-verified/. VERIFICATION.json is
+the compact source/pin/type-hash/axiom index; VERIFICATION.json.gz retains the
+complete unmodified raw receipt losslessly. Only propext, Classical.choice and
+Quot.sound are allowed. Dependency pins and the Lean toolchain are unchanged.
 
-No HK theorem, referee assertion or new external citation is a proof input.
-The paper's precise5.5–5.8 statements and standing conventions were rechecked
-against arXiv:0809.0473v2 during this batch.
+The prior 1686 checkpoint is ceb309c9e2e98fadd6fdc10252b0d99590a2febe.
+Publication and CI for this 1852 proof revision are checked after local
+verification; exact artifact comparisons are recorded in .scratch/.
+This session promoted only the explicitly approved 30071af checkpoint. Remote main
+has since advanced separately to 0055851; that work is preserved. No additional
+main promotion is authorized here.
+
+## Combined-project integration, November 15
+
+All 395 Lean sources match the completed published branch at 73aa1e6.
+The fresh integrated verifier checks all 1,852 exports and gives exactly
+its published axiom records; Section 5 and the combined root build pass.
+Readable type rendering with typed proof-value elisions avoids the old
+572 MB expanded proof dump. All declaration parameters and axiom checks
+remain; use --full-proof-terms to request the historical output format.
+Current rendering hashes differ from the preserved expanded hashes under
+verification/upstream-1852/. No Section 5 proof source was changed.

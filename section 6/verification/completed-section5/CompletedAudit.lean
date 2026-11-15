@@ -1,0 +1,15 @@
+import IntegrationSection6.CompletedSection5TwoOrderInput
+set_option pp.explicit true
+set_option pp.universes true
+set_option pp.proofs false
+set_option format.width 120
+#check @IntegrationInACVF.Section6.FiniteRV.gammaStandardComparisonOfNormalizedIso
+#print axioms IntegrationInACVF.Section6.FiniteRV.gammaStandardComparisonOfNormalizedIso
+#check @IntegrationInACVF.Section6.FiniteRV.gammaStandardComparisonOfNativeIso
+#print axioms IntegrationInACVF.Section6.FiniteRV.gammaStandardComparisonOfNativeIso
+#check @IntegrationInACVF.Section6.FiniteRV.completed_section5_two_order_refinement
+#print axioms IntegrationInACVF.Section6.FiniteRV.completed_section5_two_order_refinement
+#check @IntegrationInACVF.Section6.fin_two_permutation_cases
+#print axioms IntegrationInACVF.Section6.fin_two_permutation_cases
+#check @IntegrationInACVF.Section6.completed_section5_two_order_input
+#print axioms IntegrationInACVF.Section6.completed_section5_two_order_input

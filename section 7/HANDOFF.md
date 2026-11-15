@@ -1433,3 +1433,74 @@ The zero-old-selected unary prepared comparisons compare both specified contract
 Ordinary AE head descent still requires applying this comparison to the generic rows of the frozen head fibres and assembling the existing head presentation charts. Full pointwise fibre-integral identification, 7.12 and the principal-relation/normalized-coefficient conclusions of 7.13–7.15 remain open.
 
 This 13-module/18-export batch passed actual source compilation, one complete 893-line new type/axiom review and one affected Library build (12,258 jobs including cached dependencies). The checked local boundary is 1,383 source modules plus Library and 4,278 exports. Earlier exports were not audited again. The next authorized proof backup uses CI head 45231668689d9b6c91f1872d0d5f8acfb7eebb91 as parent; the published CI cache and Section 6 compilation changes are preserved. No measured warm-cache CI runtime is claimed.
+
+
+## Ordinary AE first-head integration and Fubini
+
+`ordinary_family_head_integral_comparison_of_ae` proves that ordinary RV[0]-valued families equal outside a definable VF-small set have equal positive-valued first-head integrals outside a definable VF-small set in the retained base. Both head preparations are arbitrary. `aeOrdinaryRVVolumeFunctionHeadIntegral` therefore defines the actual AE quotient map, and `ae_ordinary_rv_volume_function_head_integral_representative` identifies its value for every chosen head preparation.
+
+The proof appends the genuine unit density by an actual definable bijection preserving every VF coordinate and restricts this chart to each row over the original base plus its VF tuple. Ordinary row-class equality gives an actual finite Gamma row isomorphism. It is promoted to a finite formula chart with the given endpoint schemata. A uniform formula bound also covers zero selected coordinates.
+
+At a generic frozen VF tail, generic unary points give generic full VF tuples by algebraic independence over the actual generated tuple field. The previously checked ordinary unary comparison gives common forward blowups of both raw unary contractions, with full original-Gamma geometry. The head fibre presentation charts recover the specified head objects. A finite formula-witness cover then descends this comparison to one original-base definable small exception. This avoids assuming that an arbitrary frozen containing term context is VF/Gamma generated. The chosen quotient map retains the established generation assumption only on the original global context.
+
+`ae_ordinary_rv_volume_function_appended_head_fubini` proves total Fubini on this actual ordinary AE quotient using the already checked presentation-level contraction concatenation. Its heterogeneous equality records only the arithmetic total-degree identification. Together with the positive homogeneous result, first-head Fubini is now established on every homogeneous coefficient component, including ordinary degree zero.
+
+Assembly on the full finite graded function space and full pointwise fibre-integral identification remain to be completed. 7.12 and the principal-relation/normalized-coefficient conclusions of 7.13–7.15 remain open.
+
+This 12-module/18-export batch passed actual source compilation, one complete 587-line new type/axiom review and one affected Library build (12,270 jobs including cached dependencies). The checked local boundary is 1,395 source modules plus Library and 4,296 exports. Earlier exports were not audited again. The durable source backup is the 1,383-module checkpoint 8d0d1c1f03c5377acf3bc0d195bbb8435389f373, tree a36ad857a8d827f25adc886602472727ea19d499. The next proof backup is due around 1,483 modules. Its CI optimization files are preserved; the first canceled cold build successfully saved its completed project modules, and the next run restored the cache. No completed warm-runtime measurement is claimed.
+
+
+## Full finite graded first-head Fubini
+
+`gradedAEVolumeHeadIntegral` is the actual zero-preserving first-head map on the full finite graded AE function space. Degree zero uses the ordinary AE head integral, and each positive homogeneous degree uses the checked positive head map. Empty-domain contraction geometry proves zero preservation in every component. The dependent finite sum therefore defines the map independently of a finite support bound.
+
+`graded_ae_volume_head_integral_component` identifies every degree j+1 output with the genuine head integral of input degree j. `graded_ae_volume_head_integral_zero_component` proves that its ordinary output component vanishes. These are exact formulas on the actual AE quotients.
+
+`graded_ae_volume_head_fubini` proves the exact first-head Fubini equality for arbitrary finitely graded AE functions, including the ordinary component. It combines the homogeneous contraction-based Fubini proofs, the established additive total integral and the finite support decomposition. Arithmetic degree identifications are checked by the homogeneous total-degree equality; no coordinate permutation or unsigned Jacobian identity is inserted.
+
+The total integral is already linear over the full graded coefficient semiring. This head-map construction is packaged as a ZeroHom; partial-head additivity or full coefficient linearity is not asserted here. Full pointwise fibre-integral identification, 7.12 and the principal-relation/normalized-coefficient conclusions of 7.13–7.15 remain open.
+
+This 6-module/16-export batch passed actual source compilation, one complete 258-line new type/axiom review and one affected Library build (12,276 jobs including cached dependencies). The checked local boundary is 1,401 source modules plus Library and 4,312 exports. Earlier exports were not audited again. The durable proof backup remains the 1,383-module checkpoint 8d0d1c1f03c5377acf3bc0d195bbb8435389f373; the next source backup is due around 1,483 modules.
+
+CI performance is now measured: GitHub Actions run 43701336994 on that published 1,383-module checkpoint passed the complete build and all section audits. Its creation time was 09:52:33 UTC and final status time 10:02:11 UTC on November 15, 2026, an elapsed 578 seconds (9 minutes 38 seconds). It includes 103 new Section 7 modules since the preceding proof checkpoint. The first canceled cold build saved its completed project modules, and this run restored and saved the project cache successfully. Local receipts record the remote result. The published optimization retains every headline type/axiom audit while reusing Lake-validated compilation artifacts and avoiding the duplicate Section 6 isolated compilation.
+
+
+## Full graded prefix Fubini and inverse-Jacobian transport
+
+`gradedAEVolumePrefixIntegral` integrates any VF prefix while retaining a nonempty VF base. It is the actual composition of the checked full graded head maps, with zero preservation. `graded_ae_volume_prefix_fubini` proves exact equality of its total integral with the original total integral. `graded_ae_volume_prefix_integral_of` identifies each homogeneous input with its actual iterated homogeneous head integral. The positive prefix map is the existing selected-family prefix map; ordinary inputs use their first ordinary head and then the positive prefix map. Only arithmetic degree identifications are heterogeneous.
+
+`inverseJacobianVFVolumeForm` is the literal product of the definable inverse-Jacobian density and the original form pulled back by the inverse bijection. The already checked total Jacobian map replaces exceptional zero values by one, so the form is everywhere definable and nonzero. `mixed_inverse_jacobian_density_balance_ae` proves the inverse/forward product law almost everywhere using the actual chain rule and the identity Jacobian. `preserves_inverse_jacobian_vf_volume` proves measure preservation for this actual form.
+
+`inverseJacobianVFVolumeBijection` constructs a genuine volume-preserving bijection from a positive VF volume object to its inverse-Jacobian transform. `inverse_jacobian_vf_volume_integral` gives the corresponding equality under the established integration equivalence. This proves the object-level change-of-variables bridge; the full function-level assertion of Proposition 7.12 is not yet asserted.
+
+`mixedVFBaseMap` changes only the VF tuple of a family by a specified definable base bijection and retains all RV labels. Its actual image map is a bijection, and selected RV fibre finiteness follows from the inverse base tuple. `SelectedVFVolumeFamily.pushforwardBase` constructs the unweighted family pushforward, with its literal inverse-base fibre and transported density formulas. The remaining function-level bridge must apply the inverse base-Jacobian correction, identify the full lift Jacobian with the base Jacobian, and descend through AE representatives.
+
+Full pointwise fibre-integral identification, arbitrary-coordinate graded comparison and the principal-relation/normalized-coefficient conclusions of 7.13–7.15 remain open. Ordinary RV[0] and the accepted nonempty-selected scope of Lemma 7.5 are retained.
+
+This 6-module/24-export batch passed actual source compilation, one complete 460-line new type/axiom review and one affected Library build (12,282 jobs including cached dependencies). The checked local boundary is 1,407 source modules plus Library and 4,336 exports. Earlier exports were not audited again. The durable proof backup is still the 1,383-module checkpoint 8d0d1c1f03c5377acf3bc0d195bbb8435389f373; the next proof backup is due around 1,483 modules. GitHub Actions run 43701336994 passed the published checkpoint and every section audit in an observed 9 minutes 38 seconds after the CI cache and duplicate-compilation fixes. No new push was made for local receipt-only updates.
+
+
+## Actual family Jacobian transforms and base-Jacobian agreement
+
+`SelectedVFVolumeFamily.jacobianPushforward` constructs the actual positive selected-family Jacobian transform along a definable VF base bijection. Its domain is the genuine image family, its selected RV coordinates are unchanged, and its density is the transported original form multiplied by the inverse base-Jacobian density. `jacobianPushforward_density` is the literal value formula at every image point. This construction does not yet assert AE representative independence or preservation of the full lifted integral.
+
+The base Jacobian uses an actual mixed presentation of the pure VF map with an empty RV tuple. The empty-graph map is a definable bijection, and the inverse-Jacobian density pulls back to a nonzero definable form on the pure VF target. No additional parameter names or formal Jacobian predicates are introduced.
+
+`has_mixed_vf_jacobian_base_product` proves that attaching fixed RV labels leaves the base Jacobian unchanged. `mixed_vf_base_jacobian_eq` compares the actual family map with this ambient map whenever both Jacobians are defined. `mixed_vf_base_jacobian_density_at_generic` supplies the actual equality of the definable Jacobian densities at every generic family point using the checked differentiability and nonzero-Jacobian theorems.
+
+`vf_almost_everywhere_maps_eq_of_generic` descends generic agreement of actual definable maps to one original-base definable VF-small exception, by the complement of the definable diagonal and the VF transcendence-degree bound. `mixed_vf_base_jacobian_density_agreement_ae` applies it to the actual family and base-Jacobian density maps. `VFAlmostEverywhere.at_independent` provides the converse use of an already witnessed small exception at a generic point.
+
+The remaining change-of-variables work is to compare the inverse densities, lift the corrected family map while fixing the coefficient VF tags, and descend through AE function representatives. Full pointwise fibre-integral identification, arbitrary-coordinate graded comparison and the principal-relation/normalized-coefficient conclusions of 7.13–7.15 remain open.
+
+This 7-module/20-export batch passed actual source compilation, one complete 375-line new type/axiom review and one affected Library build (12,289 jobs including cached dependencies). The checked local boundary is 1,414 source modules plus Library and 4,356 exports. Earlier exports were not audited again. The durable proof backup remains the 1,383-module checkpoint 8d0d1c1f03c5377acf3bc0d195bbb8435389f373; the next proof backup is due around 1,483 modules. Its GitHub Actions run 43701336994 passed the complete build and every section audit in the observed 9 minutes 38 seconds after the CI optimization.
+
+
+## Inverse family densities and full lifted Jacobian change of variables
+
+The inverse mixed-family Jacobian density now agrees with the inverse pure-base Jacobian outside one actual original-base VF-small exception. The proof cancels the established nonzero forward density from the two actual inverse/forward balance laws, first at generic points and then on a definable cofull set. `selected_family_jacobian_pushforward_preserves_volume` proves the volume equation for the actual corrected mixed family.
+
+`selectedTailLiftMap` realizes an actual RV-label-preserving map while fixing every additional coefficient VF coordinate. It is bijective whenever the original map is bijective. General raw mixed-domain product AE and Jacobian arguments avoid assuming finite RV fibres of an intermediate family. Restriction to the literal selected-tail realization gives `selectedFamilyJacobianFullLiftBijection`, a genuine full volume-preserving bijection from `F.fullLift` to the corrected family's full lift.
+
+`selected_family_jacobian_canonical_integral` proves equality of the literal positive-family canonical integrals under this actual Jacobian transform. This closes the inverse-density and full-lift bridges previously recorded as open. AE function representative independence/descent, the full pointwise fibre-integral identification, arbitrary-coordinate full-graded comparison and the principal-relation/normalized-coefficient results7.13-7.15 remain open. Ordinary RV[0] and the accepted nonempty-selected scope of7.5 are unchanged.
+
+This8-module/17-export batch passed actual source compilation, one complete412-line new type/axiom review and an affected Library build with12,297 jobs including cached dependencies. Only propext, Classical.choice and Quot.sound occur. The sealed local boundary is1,422 source modules plus Library and4,373 exports. Earlier proof batches were not audited again.

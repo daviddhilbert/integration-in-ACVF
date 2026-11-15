@@ -1,0 +1,52 @@
+import Integration7.InverseMixedVFBaseDensities
+import Integration7.MixedDomainProductAlmostEverywhere
+import Integration7.MixedDomainVolumeProducts
+import Integration7.SelectedFamilyJacobianFullLifts
+import Integration7.SelectedFamilyJacobianIntegrals
+import Integration7.SelectedFamilyJacobianPreservation
+import Integration7.SelectedTailLiftMaps
+import Integration7.SelectedTailVolumePreservation
+
+set_option pp.universes true
+set_option pp.proofs false
+set_option pp.deepTerms true
+set_option pp.maxSteps 10000000
+set_option pp.notation false
+set_option pp.funBinderTypes true
+set_option pp.piBinderTypes true
+
+
+#check @IntegrationInACVF.Section7.inverse_mixed_vf_base_density_at_generic
+#print axioms IntegrationInACVF.Section7.inverse_mixed_vf_base_density_at_generic
+#check @IntegrationInACVF.Section7.inverse_mixed_vf_base_density_agreement_ae
+#print axioms IntegrationInACVF.Section7.inverse_mixed_vf_base_density_agreement_ae
+#check @IntegrationInACVF.Section7.vf_almost_everywhere_mixed_product
+#print axioms IntegrationInACVF.Section7.vf_almost_everywhere_mixed_product
+#check @IntegrationInACVF.Section7.mixedDomainProductVolumeForm
+#print axioms IntegrationInACVF.Section7.mixedDomainProductVolumeForm
+#check @IntegrationInACVF.Section7.mixed_domain_product_volume_value
+#print axioms IntegrationInACVF.Section7.mixed_domain_product_volume_value
+#check @IntegrationInACVF.Section7.preserves_vf_volume_mixed_product
+#print axioms IntegrationInACVF.Section7.preserves_vf_volume_mixed_product
+#check @IntegrationInACVF.Section7.selectedFamilyJacobianFullLiftBijection
+#print axioms IntegrationInACVF.Section7.selectedFamilyJacobianFullLiftBijection
+#check @IntegrationInACVF.Section7.selected_family_jacobian_canonical_integral
+#print axioms IntegrationInACVF.Section7.selected_family_jacobian_canonical_integral
+#check @IntegrationInACVF.Section7.selected_family_jacobian_pushforward_preserves_volume
+#print axioms IntegrationInACVF.Section7.selected_family_jacobian_pushforward_preserves_volume
+#check @IntegrationInACVF.Section7.selectedTailProductInclusion
+#print axioms IntegrationInACVF.Section7.selectedTailProductInclusion
+#check @IntegrationInACVF.Section7.selected_tail_product_unpack
+#print axioms IntegrationInACVF.Section7.selected_tail_product_unpack
+#check @IntegrationInACVF.Section7.selectedTailLiftMap
+#print axioms IntegrationInACVF.Section7.selectedTailLiftMap
+#check @IntegrationInACVF.Section7.selected_tail_lift_map_value
+#print axioms IntegrationInACVF.Section7.selected_tail_lift_map_value
+#check @IntegrationInACVF.Section7.selected_tail_lift_map_projection
+#print axioms IntegrationInACVF.Section7.selected_tail_lift_map_projection
+#check @IntegrationInACVF.Section7.selected_tail_lift_map_bijective
+#print axioms IntegrationInACVF.Section7.selected_tail_lift_map_bijective
+#check @IntegrationInACVF.Section7.selected_tail_product_volume_value
+#print axioms IntegrationInACVF.Section7.selected_tail_product_volume_value
+#check @IntegrationInACVF.Section7.preserves_vf_volume_selected_tail
+#print axioms IntegrationInACVF.Section7.preserves_vf_volume_selected_tail

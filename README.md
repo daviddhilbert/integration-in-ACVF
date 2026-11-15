@@ -17,9 +17,15 @@ language, Lean 4.35.0 toolchain and pinned Mathlib revision are unchanged.
 
 Section 1 is introductory and has no separate proof target. Section 4 has
 checked implementations of all numbered lemmas and its cell geometry.
-Section 5 is in progress. Section 6 is implemented for RV[k] and graded RV[*],
-with its authorized Section 5.8 input explicit. The full project audit passes.
-Section 7 remains a placeholder. See [Section 6 status](section%206/STATUS.md). Read
+Section 5 is complete in its accepted RV[k] scope on the published
+`section-5/contracting-to-rv` branch; those sources are now integrated locally.
+Section 6 is implemented for RV[k] and graded RV[*],
+with its authorized Section 5.8 input explicit. Section 7 has substantial checked
+proofs through 7.10 and partial function-integration results, but 7.11–7.15
+remain incomplete. The project is not fully formalized. See
+[Section 5 status](section%205/STATUS.md),
+[Section 6 status](section%206/STATUS.md) and
+[Section 7 status](section%207/STATUS.md). Read
 [WORKFLOW.md](WORKFLOW.md) and [AGENTS.md](AGENTS.md) before proof work.
 
 ## Checked scope
@@ -58,6 +64,9 @@ CellRectangles.rectangle.
 See [Section 4 status](section%204/STATUS.md).
 
 ## Verification
+
+The [whole-project audit](PROJECT-AUDIT.md) records the current checked
+boundary, publication state and unfinished mathematical obligations.
 
 The Section 4 integration build and complete project verifiers pass locally
 for foundation and Sections 2–5. Section 4 adds 445 full-type/axiom audits;

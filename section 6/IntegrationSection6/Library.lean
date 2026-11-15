@@ -731,4 +731,8 @@ import IntegrationSection6.DefinableFunctionOperations
 import IntegrationSection6.FamilyIntegralScalars
 import IntegrationSection6.LinearFunctionIntegration
 
+import IntegrationSection6.CompletedSection5Comparisons
+import IntegrationSection6.CompletedSection5Refinements
+import IntegrationSection6.CompletedSection5TwoOrderInput
+
 /-! Section6 uses RV[k] with finite volume fibres. See STATUS.md for the verified scope and remaining targets. -/

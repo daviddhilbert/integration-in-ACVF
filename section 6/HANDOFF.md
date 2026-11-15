@@ -1,3 +1,23 @@
+# November 15 integration update
+
+The completed Section 5 branch is integrated. Three checked modules
+(`CompletedSection5Comparisons`, `CompletedSection5Refinements`,
+`CompletedSection5TwoOrderInput`) now prove the actual two-order input over
+each base satisfying the displayed standing hypotheses of 5.8, with no
+5.8 assumption in that producer. All five exported types and axiom reports
+were reviewed; the affected Library and root import build. The registered
+boundary is **736 modules and 2,273 exports**. Evidence is versioned under
+`verification/completed-section5/`.
+
+The older final integration interface `Section5TwoOrderInputAll` still
+quantifies over arbitrary frozen parameter bases and is not discharged by
+this fixed-base producer. Its connection remains an integration obligation.
+The historical scope and evidence below describe the prior 733-module run.
+Section 7 now has its own verifier; older statements that it has none are
+historical. See the root PROJECT-AUDIT.md for the current project boundary.
+
+---
+
 # Section 6 — completion verification
 
 All numbered Section 6 targets are implemented for RV[k] and graded RV[*].
