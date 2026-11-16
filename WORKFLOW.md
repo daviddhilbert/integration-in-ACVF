@@ -82,6 +82,17 @@ remaining obstacles and next step. A running audit is not a passed certificate.
 
 ## 7. Publish
 
+### Standing rule for Palomar submissions
+
+Author instruction, November 16, 2026, for this and future formalization projects:
+select a couple of main mathematical results for Palomar, following the Special
+transformations submission example. Whole-paper coverage and registration of
+every section are not submission requirements unless the author explicitly
+requests them. The full development may remain in the repository. State exactly
+which results are selected, retain their actual hypotheses, consult Palomar's
+current guidelines directly, and complete its required checks for that selection.
+Carry this rule into the AGENTS.md or WORKFLOW.md of future projects.
+
 Review the intended diff, preserve unrelated work, publish within the current
 user authorization and verify the remote revision. Report the verification
 scope and any unresolved checks. Stop at a requested handoff.

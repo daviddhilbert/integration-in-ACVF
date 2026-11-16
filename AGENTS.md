@@ -3,6 +3,11 @@
 Read [WORKFLOW.md](WORKFLOW.md) before substantive work. Preserve unrelated edits.
 The numbered folders are for sections of arXiv:0809.0473v2, not the predecessor.
 
+Standing Palomar rule (author, November 16, 2026): select a couple of main
+results, following Special transformations; do not require the whole paper
+unless explicitly requested. See WORKFLOW.md, "Standing rule for Palomar
+submissions", and carry the rule into future formalization projects.
+
 Use the pinned Special transformations and ACVF-QE dependencies; reuse their
 language and definitions rather than copying or restarting the earlier proofs.
 Read the predecessor's LANGUAGE-ERRATA.md and relevant section status before
