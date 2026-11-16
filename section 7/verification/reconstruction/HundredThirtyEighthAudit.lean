@@ -1,0 +1,440 @@
+import Integration7.HKAEZeroChangeOfVariables
+import Integration7.HKAEZeroFunctionAddition
+import Integration7.HKAEZeroIntegralAddHom
+import Integration7.HKAEZeroIntegralLinearMap
+import Integration7.HKAEZeroIntegrals
+import Integration7.HKAEZeroModules
+import Integration7.HKAEZeroRealizationClasses
+import Integration7.HKAEZeroScalarActions
+import Integration7.HKAEZeroVolumeFunctions
+import Integration7.HKBasicVolumeDescent
+import Integration7.HKCentralVolumePointClasses
+import Integration7.HKCentralVolumePointRing
+import Integration7.HKConstrainedBijectionCharts
+import Integration7.HKConstrainedBijectionRealization
+import Integration7.HKDensityEqualityGraphs
+import Integration7.HKGenericConstrainedCharts
+import Integration7.HKGenericMixedFibreConstraints
+import Integration7.HKGradedClassIntegration
+import Integration7.HKMixedFibreConstraintPromotion
+import Integration7.HKMixedFibreConstraintRealization
+import Integration7.HKMixedFibreConstraintRows
+import Integration7.HKMixedGraphConstraints
+import Integration7.HKNormalizedBasicVolumePresentation
+import Integration7.HKNormalizedVolumeCoefficientRing
+import Integration7.HKNormalizedVolumeHomogeneousFractions
+import Integration7.HKNormalizedVolumeUniversalProperty
+import Integration7.HKPointIsomorphismCodes
+import Integration7.HKPureVFGammaLoci
+import Integration7.HKSection7ClassTheorems
+import Integration7.HKUpstreamZeroDescent
+import Integration7.HKVFClassCartesianProducts
+import Integration7.HKVFClassSemiringGeometry
+import Integration7.HKWeightedVFZeroClassProducts
+import Integration7.HKWeightedVFZeroIsomorphisms
+import Integration7.HKWeightedVFZeroProducts
+import Integration7.HKWeightedZeroLiftProducts
+import Integration7.HKZeroCoefficientExtensions
+import Integration7.HKZeroCoefficientScalarRows
+import Integration7.HKZeroCoefficientSemiring
+import Integration7.HKZeroCoefficientSymmetry
+import Integration7.HKZeroFamilyCoproducts
+import Integration7.HKZeroFamilyHeadFubini
+import Integration7.HKZeroFamilyHeadIntegrals
+import Integration7.HKZeroFamilyRestrictions
+import Integration7.HKZeroFamilyRowIsomorphisms
+import Integration7.HKZeroFamilyScalarProducts
+import Integration7.HKZeroFamilyUniformBijections
+import Integration7.HKZeroLiftCoproducts
+import Integration7.HKZeroScalarRealizations
+import Integration7.HKZeroVFClassProducts
+import Integration7.HKZeroVFCoproductClasses
+import Integration7.HKZeroVFCoproductIsomorphisms
+import Integration7.HKZeroVFCoproducts
+import Integration7.HKZeroVFProducts
+set_option pp.universes true
+set_option pp.proofs false
+set_option pp.deepTerms true
+set_option pp.maxSteps 10000000
+set_option pp.notation true
+set_option pp.funBinderTypes true
+set_option pp.piBinderTypes true
+
+
+
+#check @IntegrationInACVF.Section7.HK.ae_zero_change_of_variables_integral
+#print axioms IntegrationInACVF.Section7.HK.ae_zero_change_of_variables_integral
+#check @IntegrationInACVF.Section7.HK.ae_zero_family_coprod_congr
+#print axioms IntegrationInACVF.Section7.HK.ae_zero_family_coprod_congr
+#check @IntegrationInACVF.Section7.HK.aeZeroVolumeFunctionAdd
+#print axioms IntegrationInACVF.Section7.HK.aeZeroVolumeFunctionAdd
+#check @IntegrationInACVF.Section7.HK.aeZeroVolumeFunctionZero
+#print axioms IntegrationInACVF.Section7.HK.aeZeroVolumeFunctionZero
+#check @IntegrationInACVF.Section7.HK.aeZeroVolumeFunctionAddCommMonoid
+#print axioms IntegrationInACVF.Section7.HK.aeZeroVolumeFunctionAddCommMonoid
+#check @IntegrationInACVF.Section7.HK.aeZeroVolumeFunctionIntegralAddHom
+#print axioms IntegrationInACVF.Section7.HK.aeZeroVolumeFunctionIntegralAddHom
+#check @IntegrationInACVF.Section7.HK.ae_zero_volume_integral_smul
+#print axioms IntegrationInACVF.Section7.HK.ae_zero_volume_integral_smul
+#check @IntegrationInACVF.Section7.HK.aeZeroVolumeFunctionIntegralLinearMap
+#print axioms IntegrationInACVF.Section7.HK.aeZeroVolumeFunctionIntegralLinearMap
+#check @IntegrationInACVF.Section7.HK.aeZeroVolumeFunctionIntegral
+#print axioms IntegrationInACVF.Section7.HK.aeZeroVolumeFunctionIntegral
+#check @IntegrationInACVF.Section7.HK.aeZeroVolumeFunctionIntegral_representative
+#print axioms IntegrationInACVF.Section7.HK.aeZeroVolumeFunctionIntegral_representative
+#check @IntegrationInACVF.Section7.HK.aeZeroVolumeFunctionModule
+#print axioms IntegrationInACVF.Section7.HK.aeZeroVolumeFunctionModule
+#check @IntegrationInACVF.Section7.HK.zero_volume_full_class_eq_of_ae
+#print axioms IntegrationInACVF.Section7.HK.zero_volume_full_class_eq_of_ae
+#check @IntegrationInACVF.Section7.HK.aeZeroVolumeFunctionRealizationClass
+#print axioms IntegrationInACVF.Section7.HK.aeZeroVolumeFunctionRealizationClass
+#check @IntegrationInACVF.Section7.HK.aeZeroVolumeFunctionRealizationClass_representative
+#print axioms IntegrationInACVF.Section7.HK.aeZeroVolumeFunctionRealizationClass_representative
+#check @IntegrationInACVF.Section7.HK.ae_zero_volume_scalar_congr
+#print axioms IntegrationInACVF.Section7.HK.ae_zero_volume_scalar_congr
+#check @IntegrationInACVF.Section7.HK.aeZeroVolumeFunctionSMul
+#print axioms IntegrationInACVF.Section7.HK.aeZeroVolumeFunctionSMul
+#check @IntegrationInACVF.Section7.HK.ZeroVolumeFunctionPresentation
+#print axioms IntegrationInACVF.Section7.HK.ZeroVolumeFunctionPresentation
+#check @IntegrationInACVF.Section7.HK.AEZeroVolumeFunctionEquivalent
+#print axioms IntegrationInACVF.Section7.HK.AEZeroVolumeFunctionEquivalent
+#check @IntegrationInACVF.Section7.HK.ae_zero_volume_equivalent_of_pointwise
+#print axioms IntegrationInACVF.Section7.HK.ae_zero_volume_equivalent_of_pointwise
+#check @IntegrationInACVF.Section7.HK.aeZeroVolumeFunctionSetoid
+#print axioms IntegrationInACVF.Section7.HK.aeZeroVolumeFunctionSetoid
+#check @IntegrationInACVF.Section7.HK.AEZeroVolumeFunction
+#print axioms IntegrationInACVF.Section7.HK.AEZeroVolumeFunction
+#check @IntegrationInACVF.Section7.HK.basic_volume_relation_respected
+#print axioms IntegrationInACVF.Section7.HK.basic_volume_relation_respected
+#check @IntegrationInACVF.Section7.HK.basicVolumeBlowupDescend
+#print axioms IntegrationInACVF.Section7.HK.basicVolumeBlowupDescend
+#check @IntegrationInACVF.Section7.HK.basic_volume_blowup_descend_class
+#print axioms IntegrationInACVF.Section7.HK.basic_volume_blowup_descend_class
+#check @IntegrationInACVF.Section7.HK.basic_volume_blowup_descend_projection
+#print axioms IntegrationInACVF.Section7.HK.basic_volume_blowup_descend_projection
+#check @IntegrationInACVF.Section7.HK.volumePointClass
+#print axioms IntegrationInACVF.Section7.HK.volumePointClass
+#check @IntegrationInACVF.Section7.HK.volume_point_product_swap_positive
+#print axioms IntegrationInACVF.Section7.HK.volume_point_product_swap_positive
+#check @IntegrationInACVF.Section7.HK.volume_point_class_commutes_component
+#print axioms IntegrationInACVF.Section7.HK.volume_point_class_commutes_component
+#check @IntegrationInACVF.Section7.HK.volume_point_class_commutes
+#print axioms IntegrationInACVF.Section7.HK.volume_point_class_commutes
+#check @IntegrationInACVF.Section7.HK.volumePointRing
+#print axioms IntegrationInACVF.Section7.HK.volumePointRing
+#check @IntegrationInACVF.Section7.HK.volume_point_ring_commutes
+#print axioms IntegrationInACVF.Section7.HK.volume_point_ring_commutes
+#check @IntegrationInACVF.Section7.HK.volumePointRingCentralFact
+#print axioms IntegrationInACVF.Section7.HK.volumePointRingCentralFact
+#check @IntegrationInACVF.Section7.HK.finite_bijection_glue_within
+#print axioms IntegrationInACVF.Section7.HK.finite_bijection_glue_within
+#check @IntegrationInACVF.Section7.HK.uniform_bijection_chart_within
+#print axioms IntegrationInACVF.Section7.HK.uniform_bijection_chart_within
+#check @IntegrationInACVF.Section7.HK.promote_row_bijection_within
+#print axioms IntegrationInACVF.Section7.HK.promote_row_bijection_within
+#check @IntegrationInACVF.Section7.HK.constrained_total_graph
+#print axioms IntegrationInACVF.Section7.HK.constrained_total_graph
+#check @IntegrationInACVF.Section7.HK.fibre_bijection_within
+#print axioms IntegrationInACVF.Section7.HK.fibre_bijection_within
+#check @IntegrationInACVF.Section7.HK.rvScalarToMixedPoint
+#print axioms IntegrationInACVF.Section7.HK.rvScalarToMixedPoint
+#check @IntegrationInACVF.Section7.HK.form_gamma_graph
+#print axioms IntegrationInACVF.Section7.HK.form_gamma_graph
+#check @IntegrationInACVF.Section7.HK.densityEqualRelation
+#print axioms IntegrationInACVF.Section7.HK.densityEqualRelation
+#check @IntegrationInACVF.Section7.HK.density_equal_gamma_graph
+#print axioms IntegrationInACVF.Section7.HK.density_equal_gamma_graph
+#check @IntegrationInACVF.Section7.HK.generic_bijection_chart_within
+#print axioms IntegrationInACVF.Section7.HK.generic_bijection_chart_within
+#check @IntegrationInACVF.Section7.HK.generic_mixed_fibre_constrained
+#print axioms IntegrationInACVF.Section7.HK.generic_mixed_fibre_constrained
+#check @IntegrationInACVF.Section7.HK.vfClassesAddCommMonoid
+#print axioms IntegrationInACVF.Section7.HK.vfClassesAddCommMonoid
+#check @IntegrationInACVF.Section7.HK.classIntegrationAddEquiv
+#print axioms IntegrationInACVF.Section7.HK.classIntegrationAddEquiv
+#check @IntegrationInACVF.Section7.HK.VFClassSemiring
+#print axioms IntegrationInACVF.Section7.HK.VFClassSemiring
+#check @IntegrationInACVF.Section7.HK.vfClassGradedSemiring
+#print axioms IntegrationInACVF.Section7.HK.vfClassGradedSemiring
+#check @IntegrationInACVF.Section7.HK.gradedClassIntegrationEquiv
+#print axioms IntegrationInACVF.Section7.HK.gradedClassIntegrationEquiv
+#check @IntegrationInACVF.Section7.HK.VFClassRing
+#print axioms IntegrationInACVF.Section7.HK.VFClassRing
+#check @IntegrationInACVF.Section7.HK.classIntegrationRingEquiv
+#print axioms IntegrationInACVF.Section7.HK.classIntegrationRingEquiv
+#check @IntegrationInACVF.Section7.HK.classIntegrationPrincipalQuotientEquiv
+#print axioms IntegrationInACVF.Section7.HK.classIntegrationPrincipalQuotientEquiv
+#check @IntegrationInACVF.Section7.HK.mixed_fibre_row_constrained_chart
+#print axioms IntegrationInACVF.Section7.HK.mixed_fibre_row_constrained_chart
+#check @IntegrationInACVF.Section7.HK.mixed_fibre_constrained_chart
+#print axioms IntegrationInACVF.Section7.HK.mixed_fibre_constrained_chart
+#check @IntegrationInACVF.Section7.HK.relation_of_sorted_fibre_constraint
+#print axioms IntegrationInACVF.Section7.HK.relation_of_sorted_fibre_constraint
+#check @IntegrationInACVF.Section7.HK.mixed_fibre_chart_realization
+#print axioms IntegrationInACVF.Section7.HK.mixed_fibre_chart_realization
+#check @IntegrationInACVF.Section7.HK.gamma_mixed_fibre_constrained_restricted
+#print axioms IntegrationInACVF.Section7.HK.gamma_mixed_fibre_constrained_restricted
+#check @IntegrationInACVF.Section7.HK.mixedFibreConstraintCoordinates
+#print axioms IntegrationInACVF.Section7.HK.mixedFibreConstraintCoordinates
+#check @IntegrationInACVF.Section7.HK.mixedFibreConstraintSort
+#print axioms IntegrationInACVF.Section7.HK.mixedFibreConstraintSort
+#check @IntegrationInACVF.Section7.HK.mixedFibreConstraint
+#print axioms IntegrationInACVF.Section7.HK.mixedFibreConstraint
+#check @IntegrationInACVF.Section7.HK.mixed_fibre_constraint_definable
+#print axioms IntegrationInACVF.Section7.HK.mixed_fibre_constraint_definable
+#check @IntegrationInACVF.Section7.HK.mixed_fibre_constraint_pack
+#print axioms IntegrationInACVF.Section7.HK.mixed_fibre_constraint_pack
+#check @IntegrationInACVF.Section7.HK.repeat_coordinates_of_common_prefix
+#print axioms IntegrationInACVF.Section7.HK.repeat_coordinates_of_common_prefix
+#check @IntegrationInACVF.Section7.HK.pointRelationCodes
+#print axioms IntegrationInACVF.Section7.HK.pointRelationCodes
+#check @IntegrationInACVF.Section7.HK.point_relation_codes_iff
+#print axioms IntegrationInACVF.Section7.HK.point_relation_codes_iff
+#check @IntegrationInACVF.Section7.HK.mixedGraphConstraintSort
+#print axioms IntegrationInACVF.Section7.HK.mixedGraphConstraintSort
+#check @IntegrationInACVF.Section7.HK.mixedGraphConstraint
+#print axioms IntegrationInACVF.Section7.HK.mixedGraphConstraint
+#check @IntegrationInACVF.Section7.HK.mixed_graph_constraint_definable
+#print axioms IntegrationInACVF.Section7.HK.mixed_graph_constraint_definable
+#check @IntegrationInACVF.Section7.HK.mixed_graph_constraint_on_points
+#print axioms IntegrationInACVF.Section7.HK.mixed_graph_constraint_on_points
+#check @IntegrationInACVF.Section7.HK.relation_of_constraint_and_common_vf
+#print axioms IntegrationInACVF.Section7.HK.relation_of_constraint_and_common_vf
+#check @IntegrationInACVF.Section7.HK.normalizedBasicVolumeMap
+#print axioms IntegrationInACVF.Section7.HK.normalizedBasicVolumeMap
+#check @IntegrationInACVF.Section7.HK.normalized_basic_volume_point
+#print axioms IntegrationInACVF.Section7.HK.normalized_basic_volume_point
+#check @IntegrationInACVF.Section7.HK.normalized_basic_volume_cone
+#print axioms IntegrationInACVF.Section7.HK.normalized_basic_volume_cone
+#check @IntegrationInACVF.Section7.HK.normalizedBasicVolumeRingMap
+#print axioms IntegrationInACVF.Section7.HK.normalizedBasicVolumeRingMap
+#check @IntegrationInACVF.Section7.HK.normalized_basic_volume_ring_point
+#print axioms IntegrationInACVF.Section7.HK.normalized_basic_volume_ring_point
+#check @IntegrationInACVF.Section7.HK.normalizedBasicVolumeLift
+#print axioms IntegrationInACVF.Section7.HK.normalizedBasicVolumeLift
+#check @IntegrationInACVF.Section7.HK.normalized_basic_volume_lift_map
+#print axioms IntegrationInACVF.Section7.HK.normalized_basic_volume_lift_map
+#check @IntegrationInACVF.Section7.HK.normalized_basic_volume_hom_ext
+#print axioms IntegrationInACVF.Section7.HK.normalized_basic_volume_hom_ext
+#check @IntegrationInACVF.Section7.HK.normalized_basic_volume_lift_unique
+#print axioms IntegrationInACVF.Section7.HK.normalized_basic_volume_lift_unique
+#check @IntegrationInACVF.Section7.HK.VolumePointLocalization
+#print axioms IntegrationInACVF.Section7.HK.VolumePointLocalization
+#check @IntegrationInACVF.Section7.HK.volumePointLocalizationMap
+#print axioms IntegrationInACVF.Section7.HK.volumePointLocalizationMap
+#check @IntegrationInACVF.Section7.HK.volumePointLocalizationCoefficients
+#print axioms IntegrationInACVF.Section7.HK.volumePointLocalizationCoefficients
+#check @IntegrationInACVF.Section7.HK.volumeLocalizedPointUnit
+#print axioms IntegrationInACVF.Section7.HK.volumeLocalizedPointUnit
+#check @IntegrationInACVF.Section7.HK.volume_localized_point_unit_value
+#print axioms IntegrationInACVF.Section7.HK.volume_localized_point_unit_value
+#check @IntegrationInACVF.Section7.HK.volume_localized_coefficients_commute_point
+#print axioms IntegrationInACVF.Section7.HK.volume_localized_coefficients_commute_point
+#check @IntegrationInACVF.Section7.HK.normalizedVolumeSemiringMap
+#print axioms IntegrationInACVF.Section7.HK.normalizedVolumeSemiringMap
+#check @IntegrationInACVF.Section7.HK.normalized_volume_semiring_homogeneous
+#print axioms IntegrationInACVF.Section7.HK.normalized_volume_semiring_homogeneous
+#check @IntegrationInACVF.Section7.HK.normalized_volume_semiring_point
+#print axioms IntegrationInACVF.Section7.HK.normalized_volume_semiring_point
+#check @IntegrationInACVF.Section7.HK.normalizedVolumeRingMap
+#print axioms IntegrationInACVF.Section7.HK.normalizedVolumeRingMap
+#check @IntegrationInACVF.Section7.HK.NormalizedRVVolumeRing
+#print axioms IntegrationInACVF.Section7.HK.NormalizedRVVolumeRing
+#check @IntegrationInACVF.Section7.HK.normalizedVolumeRingProjection
+#print axioms IntegrationInACVF.Section7.HK.normalizedVolumeRingProjection
+#check @IntegrationInACVF.Section7.HK.normalized_volume_ring_projection_surjective
+#print axioms IntegrationInACVF.Section7.HK.normalized_volume_ring_projection_surjective
+#check @IntegrationInACVF.Section7.HK.normalizedVolumeCoefficientMap
+#print axioms IntegrationInACVF.Section7.HK.normalizedVolumeCoefficientMap
+#check @IntegrationInACVF.Section7.HK.normalized_volume_coefficient_point
+#print axioms IntegrationInACVF.Section7.HK.normalized_volume_coefficient_point
+#check @IntegrationInACVF.Section7.HK.normalized_volume_ring_range_iff_difference
+#print axioms IntegrationInACVF.Section7.HK.normalized_volume_ring_range_iff_difference
+#check @IntegrationInACVF.Section7.HK.normalized_volume_ring_range_iff_homogeneous_fraction
+#print axioms IntegrationInACVF.Section7.HK.normalized_volume_ring_range_iff_homogeneous_fraction
+#check @IntegrationInACVF.Section7.HK.normalized_volume_coefficient_homogeneous
+#print axioms IntegrationInACVF.Section7.HK.normalized_volume_coefficient_homogeneous
+#check @IntegrationInACVF.Section7.HK.normalizedVolumeRingLift
+#print axioms IntegrationInACVF.Section7.HK.normalizedVolumeRingLift
+#check @IntegrationInACVF.Section7.HK.normalized_volume_local_lift_semiring
+#print axioms IntegrationInACVF.Section7.HK.normalized_volume_local_lift_semiring
+#check @IntegrationInACVF.Section7.HK.normalized_volume_ring_lift_coefficient
+#print axioms IntegrationInACVF.Section7.HK.normalized_volume_ring_lift_coefficient
+#check @IntegrationInACVF.Section7.HK.normalized_volume_ring_hom_ext
+#print axioms IntegrationInACVF.Section7.HK.normalized_volume_ring_hom_ext
+#check @IntegrationInACVF.Section7.HK.normalized_volume_ring_lift_unique
+#print axioms IntegrationInACVF.Section7.HK.normalized_volume_ring_lift_unique
+#check @IntegrationInACVF.Section7.HK.sorted_iso_congr_value
+#print axioms IntegrationInACVF.Section7.HK.sorted_iso_congr_value
+#check @IntegrationInACVF.Section7.HK.point_iso_sorted_code
+#print axioms IntegrationInACVF.Section7.HK.point_iso_sorted_code
+#check @IntegrationInACVF.Section7.HK.gamma_pure_vf_locus
+#print axioms IntegrationInACVF.Section7.HK.gamma_pure_vf_locus
+#check @IntegrationInACVF.Section7.HK.class_integration_lift
+#print axioms IntegrationInACVF.Section7.HK.class_integration_lift
+#check @IntegrationInACVF.Section7.HK.volume_graded_integration_of
+#print axioms IntegrationInACVF.Section7.HK.volume_graded_integration_of
+#check @IntegrationInACVF.Section7.HK.volume_graded_integration_lift
+#print axioms IntegrationInACVF.Section7.HK.volume_graded_integration_lift
+#check @IntegrationInACVF.Section7.HK.theorem_7_10
+#print axioms IntegrationInACVF.Section7.HK.theorem_7_10
+#check @IntegrationInACVF.Section7.HK.theorem_7_13
+#print axioms IntegrationInACVF.Section7.HK.theorem_7_13
+#check @IntegrationInACVF.Section7.HK.upstreamZeroVolumeDescent
+#print axioms IntegrationInACVF.Section7.HK.upstreamZeroVolumeDescent
+#check @IntegrationInACVF.Section7.HK.upstreamZeroVolumeDescent_labels
+#print axioms IntegrationInACVF.Section7.HK.upstreamZeroVolumeDescent_labels
+#check @IntegrationInACVF.Section7.HK.volumeIntegrationEquivAsEquiv
+#print axioms IntegrationInACVF.Section7.HK.volumeIntegrationEquivAsEquiv
+#check @IntegrationInACVF.Section7.HK.vfVolumeClassesProduct
+#print axioms IntegrationInACVF.Section7.HK.vfVolumeClassesProduct
+#check @IntegrationInACVF.Section7.HK.vf_volume_integration_product
+#print axioms IntegrationInACVF.Section7.HK.vf_volume_integration_product
+#check @IntegrationInACVF.Section7.HK.vf_volume_classes_product_positive
+#print axioms IntegrationInACVF.Section7.HK.vf_volume_classes_product_positive
+#check @IntegrationInACVF.Section7.HK.vf_volume_classes_product_zero
+#print axioms IntegrationInACVF.Section7.HK.vf_volume_classes_product_zero
+#check @IntegrationInACVF.Section7.HK.vf_volume_classes_product_positive_zero
+#print axioms IntegrationInACVF.Section7.HK.vf_volume_classes_product_positive_zero
+#check @IntegrationInACVF.Section7.HK.dependent_degree_map_heq
+#print axioms IntegrationInACVF.Section7.HK.dependent_degree_map_heq
+#check @IntegrationInACVF.Section7.HK.vf_volume_classes_product_zero_positive
+#print axioms IntegrationInACVF.Section7.HK.vf_volume_classes_product_zero_positive
+#check @IntegrationInACVF.Section7.HK.class_integration_equiv_geometric
+#print axioms IntegrationInACVF.Section7.HK.class_integration_equiv_geometric
+#check @IntegrationInACVF.Section7.HK.vf_graded_product_geometric
+#print axioms IntegrationInACVF.Section7.HK.vf_graded_product_geometric
+#check @IntegrationInACVF.Section7.HK.vf_graded_product_positive
+#print axioms IntegrationInACVF.Section7.HK.vf_graded_product_positive
+#check @IntegrationInACVF.Section7.HK.vf_graded_product_zero
+#print axioms IntegrationInACVF.Section7.HK.vf_graded_product_zero
+#check @IntegrationInACVF.Section7.HK.vf_graded_product_positive_zero
+#print axioms IntegrationInACVF.Section7.HK.vf_graded_product_positive_zero
+#check @IntegrationInACVF.Section7.HK.positiveVFZeroCoefficientProduct
+#print axioms IntegrationInACVF.Section7.HK.positiveVFZeroCoefficientProduct
+#check @IntegrationInACVF.Section7.HK.positive_volume_lift_zero_coefficient_product
+#print axioms IntegrationInACVF.Section7.HK.positive_volume_lift_zero_coefficient_product
+#check @IntegrationInACVF.Section7.HK.positive_volume_integration_zero_coefficient_product
+#print axioms IntegrationInACVF.Section7.HK.positive_volume_integration_zero_coefficient_product
+#check @IntegrationInACVF.Section7.HK.weightedVFZeroRestrictionBijection
+#print axioms IntegrationInACVF.Section7.HK.weightedVFZeroRestrictionBijection
+#check @IntegrationInACVF.Section7.HK.weightedVFZeroProductIso
+#print axioms IntegrationInACVF.Section7.HK.weightedVFZeroProductIso
+#check @IntegrationInACVF.Section7.HK.positiveVFZeroProduct
+#print axioms IntegrationInACVF.Section7.HK.positiveVFZeroProduct
+#check @IntegrationInACVF.Section7.HK.positiveVFZeroProduct_density_pair
+#print axioms IntegrationInACVF.Section7.HK.positiveVFZeroProduct_density_pair
+#check @IntegrationInACVF.Section7.HK.preserves_weighted_vf_zero_product
+#print axioms IntegrationInACVF.Section7.HK.preserves_weighted_vf_zero_product
+#check @IntegrationInACVF.Section7.HK.weightedVFZeroProductBijection
+#print axioms IntegrationInACVF.Section7.HK.weightedVFZeroProductBijection
+#check @IntegrationInACVF.Section7.HK.weightedLiftZeroProductMap
+#print axioms IntegrationInACVF.Section7.HK.weightedLiftZeroProductMap
+#check @IntegrationInACVF.Section7.HK.weighted_lift_zero_product_map_bijective
+#print axioms IntegrationInACVF.Section7.HK.weighted_lift_zero_product_map_bijective
+#check @IntegrationInACVF.Section7.HK.weighted_lift_zero_product_map_density
+#print axioms IntegrationInACVF.Section7.HK.weighted_lift_zero_product_map_density
+#check @IntegrationInACVF.Section7.HK.weightedLiftZeroProductBijection
+#print axioms IntegrationInACVF.Section7.HK.weightedLiftZeroProductBijection
+#check @IntegrationInACVF.Section7.HK.zeroVolumeCoefficientExtend
+#print axioms IntegrationInACVF.Section7.HK.zeroVolumeCoefficientExtend
+#check @IntegrationInACVF.Section7.HK.zeroCoefficientPositiveModule
+#print axioms IntegrationInACVF.Section7.HK.zeroCoefficientPositiveModule
+#check @IntegrationInACVF.Section7.HK.zero_volume_coefficient_smul_eq_right_product
+#print axioms IntegrationInACVF.Section7.HK.zero_volume_coefficient_smul_eq_right_product
+#check @IntegrationInACVF.Section7.HK.zeroProductSwapIso
+#print axioms IntegrationInACVF.Section7.HK.zeroProductSwapIso
+#check @IntegrationInACVF.Section7.HK.zeroCoefficientCommSemiring
+#print axioms IntegrationInACVF.Section7.HK.zeroCoefficientCommSemiring
+#check @IntegrationInACVF.Section7.HK.rv_volume_blowup_classes_zero_product_swap
+#print axioms IntegrationInACVF.Section7.HK.rv_volume_blowup_classes_zero_product_swap
+#check @IntegrationInACVF.Section7.HK.ZeroVFVolumeFamily.coprod
+#print axioms IntegrationInACVF.Section7.HK.ZeroVFVolumeFamily.coprod
+#check @IntegrationInACVF.Section7.HK.ZeroVFVolumeFamily.coprod_full_object
+#print axioms IntegrationInACVF.Section7.HK.ZeroVFVolumeFamily.coprod_full_object
+#check @IntegrationInACVF.Section7.HK.zeroFamilyCoprodRowIso
+#print axioms IntegrationInACVF.Section7.HK.zeroFamilyCoprodRowIso
+#check @IntegrationInACVF.Section7.HK.zero_family_coprod_row_class
+#print axioms IntegrationInACVF.Section7.HK.zero_family_coprod_row_class
+#check @IntegrationInACVF.Section7.HK.zeroFamily
+#print axioms IntegrationInACVF.Section7.HK.zeroFamily
+#check @IntegrationInACVF.Section7.HK.zero_family_row_class
+#print axioms IntegrationInACVF.Section7.HK.zero_family_row_class
+#check @IntegrationInACVF.Section7.HK.zero_family_integral_contraction_formula
+#print axioms IntegrationInACVF.Section7.HK.zero_family_integral_contraction_formula
+#check @IntegrationInACVF.Section7.HK.zero_family_appended_head_fubini
+#print axioms IntegrationInACVF.Section7.HK.zero_family_appended_head_fubini
+#check @IntegrationInACVF.Section7.HK.ZeroVFVolumeFamily.densityGraph_label_nonzero
+#print axioms IntegrationInACVF.Section7.HK.ZeroVFVolumeFamily.densityGraph_label_nonzero
+#check @IntegrationInACVF.Section7.HK.ZeroVFVolumeFamily.headIntegral
+#print axioms IntegrationInACVF.Section7.HK.ZeroVFVolumeFamily.headIntegral
+#check @IntegrationInACVF.Section7.HK.ZeroVFVolumeFamily.headIntegral_selected
+#print axioms IntegrationInACVF.Section7.HK.ZeroVFVolumeFamily.headIntegral_selected
+#check @IntegrationInACVF.Section7.HK.zeroFamilyHeadPreparation
+#print axioms IntegrationInACVF.Section7.HK.zeroFamilyHeadPreparation
+#check @IntegrationInACVF.Section7.HK.ZeroVFVolumeFamily.restrict
+#print axioms IntegrationInACVF.Section7.HK.ZeroVFVolumeFamily.restrict
+#check @IntegrationInACVF.Section7.HK.ZeroVFVolumeFamily.outsideBase
+#print axioms IntegrationInACVF.Section7.HK.ZeroVFVolumeFamily.outsideBase
+#check @IntegrationInACVF.Section7.HK.zero_family_outside_base_mem
+#print axioms IntegrationInACVF.Section7.HK.zero_family_outside_base_mem
+#check @IntegrationInACVF.Section7.HK.zeroFamilyOutsideBaseRowIso
+#print axioms IntegrationInACVF.Section7.HK.zeroFamilyOutsideBaseRowIso
+#check @IntegrationInACVF.Section7.HK.zero_family_outside_base_row_empty
+#print axioms IntegrationInACVF.Section7.HK.zero_family_outside_base_row_empty
+#check @IntegrationInACVF.Section7.HK.zero_family_full_class_outside_base
+#print axioms IntegrationInACVF.Section7.HK.zero_family_full_class_outside_base
+#check @IntegrationInACVF.Section7.HK.zero_outside_rows_eq_of_ae
+#print axioms IntegrationInACVF.Section7.HK.zero_outside_rows_eq_of_ae
+#check @IntegrationInACVF.Section7.HK.zero_volume_family_row_gamma_iso
+#print axioms IntegrationInACVF.Section7.HK.zero_volume_family_row_gamma_iso
+#check @IntegrationInACVF.Section7.HK.ZeroVFVolumeFamily.prodZero
+#print axioms IntegrationInACVF.Section7.HK.ZeroVFVolumeFamily.prodZero
+#check @IntegrationInACVF.Section7.HK.zeroVolumeCoefficientInContext
+#print axioms IntegrationInACVF.Section7.HK.zeroVolumeCoefficientInContext
+#check @IntegrationInACVF.Section7.HK.zeroVolumeFamilyScalarRowIso
+#print axioms IntegrationInACVF.Section7.HK.zeroVolumeFamilyScalarRowIso
+#check @IntegrationInACVF.Section7.HK.zero_volume_family_scalar_row_class
+#print axioms IntegrationInACVF.Section7.HK.zero_volume_family_scalar_row_class
+#check @IntegrationInACVF.Section7.HK.zero_volume_family_uniform_bijection
+#print axioms IntegrationInACVF.Section7.HK.zero_volume_family_uniform_bijection
+#check @IntegrationInACVF.Section7.HK.zero_volume_full_class_eq_of_pointwise
+#print axioms IntegrationInACVF.Section7.HK.zero_volume_full_class_eq_of_pointwise
+#check @IntegrationInACVF.Section7.HK.zeroLiftCoprodIso
+#print axioms IntegrationInACVF.Section7.HK.zeroLiftCoprodIso
+#check @IntegrationInACVF.Section7.HK.zeroVolumeScalarRealizationBijection
+#print axioms IntegrationInACVF.Section7.HK.zeroVolumeScalarRealizationBijection
+#check @IntegrationInACVF.Section7.HK.zero_volume_family_scalar_full_class
+#print axioms IntegrationInACVF.Section7.HK.zero_volume_family_scalar_full_class
+#check @IntegrationInACVF.Section7.HK.zeroVFClassesProduct
+#print axioms IntegrationInACVF.Section7.HK.zeroVFClassesProduct
+#check @IntegrationInACVF.Section7.HK.zero_lift_classes_product
+#print axioms IntegrationInACVF.Section7.HK.zero_lift_classes_product
+#check @IntegrationInACVF.Section7.HK.zero_integration_classes_product
+#print axioms IntegrationInACVF.Section7.HK.zero_integration_classes_product
+#check @IntegrationInACVF.Section7.HK.zero_vf_coprod_class
+#print axioms IntegrationInACVF.Section7.HK.zero_vf_coprod_class
+#check @IntegrationInACVF.Section7.HK.vfCoprodAmbientIso
+#print axioms IntegrationInACVF.Section7.HK.vfCoprodAmbientIso
+#check @IntegrationInACVF.Section7.HK.zeroVFCoprodIso
+#print axioms IntegrationInACVF.Section7.HK.zeroVFCoprodIso
+#check @IntegrationInACVF.Section7.HK.zeroVFCoprod
+#print axioms IntegrationInACVF.Section7.HK.zeroVFCoprod
+#check @IntegrationInACVF.Section7.HK.zeroVFCoprodLeftMap
+#print axioms IntegrationInACVF.Section7.HK.zeroVFCoprodLeftMap
+#check @IntegrationInACVF.Section7.HK.zeroVFCoprodRightMap
+#print axioms IntegrationInACVF.Section7.HK.zeroVFCoprodRightMap
+#check @IntegrationInACVF.Section7.HK.zero_vf_coprod_cases
+#print axioms IntegrationInACVF.Section7.HK.zero_vf_coprod_cases
+#check @IntegrationInACVF.Section7.HK.zero_vf_coprod_density_left
+#print axioms IntegrationInACVF.Section7.HK.zero_vf_coprod_density_left
+#check @IntegrationInACVF.Section7.HK.zero_vf_coprod_density_right
+#print axioms IntegrationInACVF.Section7.HK.zero_vf_coprod_density_right
+#check @IntegrationInACVF.Section7.HK.zeroVFProduct
+#print axioms IntegrationInACVF.Section7.HK.zeroVFProduct
+#check @IntegrationInACVF.Section7.HK.zeroVFProduct_density_pair
+#print axioms IntegrationInACVF.Section7.HK.zeroVFProduct_density_pair
+#check @IntegrationInACVF.Section7.HK.zeroVFProductIso
+#print axioms IntegrationInACVF.Section7.HK.zeroVFProductIso
+#check @IntegrationInACVF.Section7.HK.zeroLiftProductIso
+#print axioms IntegrationInACVF.Section7.HK.zeroLiftProductIso

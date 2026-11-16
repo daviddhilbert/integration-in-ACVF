@@ -1,5 +1,17 @@
 # Section 2 handoff
 
+The corrected weighted-zero Corollary 2.34 is checked in
+`WeightedZeroVolumeDescent.lean`, directly in upstream `MeasuredRVZero`.
+Its determinant-one argument preserves the exact RV form and the given
+label map. The four new exports passed full type/axiom review, and the
+Section 2 verifier passed all **72** reports under predecessor
+`25852c85a31c67069b148bd31348128318303510`. See
+`verification/hk-zero/receipt.json`. Positive descent and 2.15 are unchanged.
+The old PUnit zero interface remains its neutral-form specialization.
+
+## Historical ordinary-zero checkpoint
+
+
 The final all-degree Corollary 2.34 has no graph or finite-extension
 reference hypothesis. Entry points:
 

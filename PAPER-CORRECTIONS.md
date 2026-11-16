@@ -1,5 +1,24 @@
 # Corrections and checked boundaries in arXiv:0809.0473v2
 
+## Measured degree zero: adopt the HK convention
+
+Author instruction in this session, November 15, 2026
+(America/Los_Angeles): “let's do it the HK way then,” followed by the
+instruction to include the special-transformations repository.
+
+Retain definable nonzero RV-valued volume forms in both µRV[0] and µVF[0],
+as in HK Definitions 8.10 and 8.13. Degree-zero isomorphisms preserve the
+exact RV weight, with empty-coordinate Jacobian 1. Products multiply both
+forms, including mixed degree-zero products. Ordinary RV[0] and VF[0] are
+unchanged and embed by assigning form 1. The predecessor's Definitions
+10.1/10.3 and the sequel's inherited convention must be corrected together.
+
+This replaces the measured-zero identifications µRV[0] = RV[0] and
+µVF[0] = VF[0]. It does not add an unproved HK theorem as a formal input.
+The accepted nonempty-E scope of 7.5 remains unchanged. The migration and
+its downstream extensions are not yet Lean-verified; prior audits retain
+their original scope. See [the whole-project impact review](HK-CONVENTION-REVIEW.md).
+
 ## Lemma 3.11: nonempty relation
 
 Author clarification in this session, November 10, 2026

@@ -23,6 +23,8 @@ HEADLINES += ['IntegrationInACVF.Section2.ValuedSubfieldRestriction.henselian_if
 DEFINITIONS += ['IntegrationInACVF.Section2.ValuedSubfieldRestriction.fieldEquiv', 'IntegrationInACVF.Section2.ValuedSubfieldRestriction.ringEquiv', 'IntegrationInACVF.Section2.AlgebraicEnvelopeBases.baseMap']
 HEADLINES += ['IntegrationInACVF.Section2.EmbeddedValuationTransport.henselian_iff', 'IntegrationInACVF.Section2.FieldDegreeTransport.finrank', 'IntegrationInACVF.Section2.FieldDegreeTransport.finite_left', 'IntegrationInACVF.Section2.FiniteImmediateEmbedded.finrank_eq_one', 'IntegrationInACVF.Section2.EmbeddedAlgebraicHenselian.henselian', 'IntegrationInACVF.Section2.EmbeddedResidueCharacteristic.charZero', 'IntegrationInACVF.Section2.EmbeddedIntermediateHenselian.henselian', 'IntegrationInACVF.Section2.EmbeddedFiniteResidueDegree.residue_degree', 'IntegrationInACVF.Section2.ResidueZeroCharacteristic.field_charZero', 'IntegrationInACVF.Section2.ConstructedGaussGraph.graph_input', 'IntegrationInACVF.Section2.ConstructedGaussGraph.acvf_graph_input', 'IntegrationInACVF.Section2.corollary_2_34_nonzero', 'IntegrationInACVF.Section2.corollary_2_34', 'IntegrationInACVF.Section2.VolumeDescentAllDegrees.corollary_2_34_all_degrees']
 DEFINITIONS += ['IntegrationInACVF.Section2.EmbeddedValuationTransport.ringEquiv', 'IntegrationInACVF.Section2.VolumeDescentAllDegrees.Form', 'IntegrationInACVF.Section2.VolumeDescentAllDegrees.PreservesLift', 'IntegrationInACVF.Section2.VolumeDescentAllDegrees.IsVolumeIsomorphism']
+HEADLINES += ['IntegrationInACVF.Section2.WeightedZeroVolumeDescent.labelMap', 'IntegrationInACVF.Section2.WeightedZeroVolumeDescent.labelMap_bijective', 'IntegrationInACVF.Section2.WeightedZeroVolumeDescent.corollary_2_34_zero_weighted', 'IntegrationInACVF.Section2.WeightedZeroVolumeDescent.corollary_2_34_zero_weighted_map']
+
 ALLOWED = {'propext', 'Classical.choice', 'Quot.sound'}
 
 
@@ -85,7 +87,7 @@ def main():
             'headline_audits': records,
             'audit_source_sha256': digest(audit),
             'audit_log_sha256': digest(OUT / 'HeadlineAudit.log'),
-            'scope': 'Corollary2.15 and actual Corollary2.34 in every degree; all graph and finite-extension obligations supplied by checked embedded proofs; standing model/base/lift/measure hypotheses explicit',
+            'scope': 'Corollary2.15 and Corollary2.34: positive-degree embedded proofs and corrected upstream weighted zero, retaining exact RV weights and the supplied label map; the legacy zero interface is the neutral-form specialization; standing model/base/lift/measure hypotheses explicit',
             'build_scope': 'Incremental Lake Section 2 build and fresh type/axiom audit',
         }
         (OUT / 'receipt.json').write_text(json.dumps(receipt, indent=2) + '\n', encoding='utf-8')

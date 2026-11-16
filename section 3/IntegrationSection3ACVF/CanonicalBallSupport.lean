@@ -24,7 +24,7 @@ def ballFamily : Set (Set M) := {b | IsBall b} ∪ {Set.univ}
 theorem encodedBall_nonempty {B : Set M} (hB : IsBall B) : B.Nonempty := by
   obtain ⟨Γ,hΓ,v,hv⟩ := VFValued.exists_valuation_predV (M := M)
   letI := hΓ
-  obtain ⟨a,r,he | he⟩ := encodedBall_disc v hv B hB
+  obtain ⟨a,(⟨r,he⟩ | ⟨r,he⟩)⟩ := encodedBall_disc v hv B hB
   · exact ⟨a.val,(Set.ext_iff.mp he a).mpr (Balls.centre_mem_openDisc v a r)⟩
   · exact ⟨a.val,(Set.ext_iff.mp he a).mpr (Balls.centre_mem_closedDisc v a r)⟩
 

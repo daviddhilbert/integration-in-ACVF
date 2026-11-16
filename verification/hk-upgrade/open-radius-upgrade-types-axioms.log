@@ -1,0 +1,463 @@
+@IntegrationInACVF.Section3ACVF.PolynomialEscape.outside_closed : ∀ {M : Type}
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {Γ : Type}
+  [inst : LinearOrderedCommGroupWithZero.{0} Γ]
+  (v : Valuation.{0, 0} SpecialTransformations.Milestone0.Transfer.VFType Γ),
+  (∃ x, Ne.{1} x 0 ∧ LT.lt.{0} (v x) 1) →
+    ∀ (a r : SpecialTransformations.Milestone0.Transfer.VFType), ∃ x, ¬LE.le.{0} (v (HSub.hSub.{0, 0, 0} x a)) (v r)
+'IntegrationInACVF.Section3ACVF.PolynomialEscape.outside_closed' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section3ACVF.PolynomialEscape.finite_polynomial_escape : ∀ {M : Type}
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {Γ : Type}
+  [inst : LinearOrderedCommGroupWithZero.{0} Γ]
+  (v : Valuation.{0, 0} SpecialTransformations.Milestone0.Transfer.VFType Γ),
+  (∀ (x y : SpecialTransformations.Milestone0.Transfer.VFType),
+      SpecialTransformations.Milestone0.VFValued.predV x y ↔ LE.le.{0} (v x) (v y)) →
+    (∃ x, Ne.{1} x 0 ∧ LT.lt.{0} (v x) 1) →
+      ∀ (F : Finset.{0} (Polynomial.{0} SpecialTransformations.Milestone0.Transfer.VFType))
+        (a r : SpecialTransformations.Milestone0.Transfer.VFType),
+        (∀ (p : Polynomial.{0} SpecialTransformations.Milestone0.Transfer.VFType),
+            Membership.mem.{0, 0} F p →
+              ∀ (c : SpecialTransformations.Milestone0.Transfer.VFType),
+                Membership.mem.{0, 0} (Polynomial.roots.{0} p) c → ¬LE.le.{0} (v (HSub.hSub.{0, 0, 0} c a)) (v r)) →
+          ∃ x,
+            ¬LE.le.{0} (v (HSub.hSub.{0, 0, 0} x a)) (v r) ∧
+              ∀ (p : Polynomial.{0} SpecialTransformations.Milestone0.Transfer.VFType),
+                Membership.mem.{0, 0} F p →
+                  Eq.{1} (SpecialTransformations.Milestone0.iRv.{0} ↑(Polynomial.eval.{0} x p))
+                    (SpecialTransformations.Milestone0.iRv.{0} ↑(Polynomial.eval.{0} a p))
+'IntegrationInACVF.Section3ACVF.PolynomialEscape.finite_polynomial_escape' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section3ACVF.PolynomialEscape.same_rv_escape : ∀ {M : Type}
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {Γ : Type}
+  [inst : LinearOrderedCommGroupWithZero.{0} Γ]
+  (v : Valuation.{0, 0} SpecialTransformations.Milestone0.Transfer.VFType Γ),
+  (∀ (x y : SpecialTransformations.Milestone0.Transfer.VFType),
+      SpecialTransformations.Milestone0.VFValued.predV x y ↔ LE.le.{0} (v x) (v y)) →
+    (∃ x, Ne.{1} x 0 ∧ LT.lt.{0} (v x) 1) →
+      ∀ (F : Finset.{0} (Polynomial.{0} SpecialTransformations.Milestone0.Transfer.VFType))
+        (a r : SpecialTransformations.Milestone0.Transfer.VFType),
+        ¬LE.le.{0} (v (HSub.hSub.{0, 0, 0} 0 a)) (v r) →
+          (∀ (p : Polynomial.{0} SpecialTransformations.Milestone0.Transfer.VFType),
+              Membership.mem.{0, 0} F p →
+                ∀ (c : SpecialTransformations.Milestone0.Transfer.VFType),
+                  Membership.mem.{0, 0} (Polynomial.roots.{0} p) c → ¬LE.le.{0} (v (HSub.hSub.{0, 0, 0} c a)) (v r)) →
+            ∃ x,
+              ¬LE.le.{0} (v (HSub.hSub.{0, 0, 0} x a)) (v r) ∧
+                Eq.{1} (SpecialTransformations.Milestone0.iRv.{0} ↑x) (SpecialTransformations.Milestone0.iRv.{0} ↑a) ∧
+                  ∀ (p : Polynomial.{0} SpecialTransformations.Milestone0.Transfer.VFType),
+                    Membership.mem.{0, 0} F p →
+                      Eq.{1} (SpecialTransformations.Milestone0.iRv.{0} ↑(Polynomial.eval.{0} x p))
+                        (SpecialTransformations.Milestone0.iRv.{0} ↑(Polynomial.eval.{0} a p))
+'IntegrationInACVF.Section3ACVF.PolynomialEscape.same_rv_escape' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section3ACVF.PolynomialEscape.closed_escape_in_rv_fibre : ∀ {M : Type}
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {Γ : Type}
+  [inst : LinearOrderedCommGroupWithZero.{0} Γ]
+  (v : Valuation.{0, 0} SpecialTransformations.Milestone0.Transfer.VFType Γ),
+  (∀ (x y : SpecialTransformations.Milestone0.Transfer.VFType),
+      SpecialTransformations.Milestone0.VFValued.predV x y ↔ LE.le.{0} (v x) (v y)) →
+    (∃ x, Ne.{1} x 0 ∧ LT.lt.{0} (v x) 1) →
+      ∀ (F : Finset.{0} (Polynomial.{0} SpecialTransformations.Milestone0.Transfer.VFType))
+        (a r : SpecialTransformations.Milestone0.Transfer.VFType) (t : CanonicalRV.RVSort M),
+        Ne.{1} (↑t) SpecialTransformations.Milestone0.iRVZero.{0} →
+          (∀ (x : SpecialTransformations.Milestone0.Transfer.VFType),
+              LE.le.{0} (v (HSub.hSub.{0, 0, 0} x a)) (v r) → Eq.{1} (CanonicalRV.encodedRv x) t) →
+            (∀ (p : Polynomial.{0} SpecialTransformations.Milestone0.Transfer.VFType),
+                Membership.mem.{0, 0} F p →
+                  ∀ (c : SpecialTransformations.Milestone0.Transfer.VFType),
+                    Membership.mem.{0, 0} (Polynomial.roots.{0} p) c → ¬LE.le.{0} (v (HSub.hSub.{0, 0, 0} c a)) (v r)) →
+              ∃ x,
+                ¬LE.le.{0} (v (HSub.hSub.{0, 0, 0} x a)) (v r) ∧
+                  Eq.{1} (CanonicalRV.encodedRv x) t ∧
+                    ∀ (p : Polynomial.{0} SpecialTransformations.Milestone0.Transfer.VFType),
+                      Membership.mem.{0, 0} F p →
+                        Eq.{1} (SpecialTransformations.Milestone0.iRv.{0} ↑(Polynomial.eval.{0} x p))
+                          (SpecialTransformations.Milestone0.iRv.{0} ↑(Polynomial.eval.{0} a p))
+'IntegrationInACVF.Section3ACVF.PolynomialEscape.closed_escape_in_rv_fibre' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section3ACVF.OpenBallRVGeometry.rv_sub_constant : ∀ {M : Type}
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {Q : Set.{0} M},
+  IntegrationInACVF.Section3ACVF.PaperBalls.IsOpenBall Q →
+    ∀ (c x y : SpecialTransformations.Milestone0.Transfer.VFType),
+      ↑c ∉ Q →
+        Membership.mem.{0, 0} Q ↑x →
+          Membership.mem.{0, 0} Q ↑y →
+            Eq.{1} (SpecialTransformations.Milestone0.iRv.{0} ↑(HSub.hSub.{0, 0, 0} x c))
+              (SpecialTransformations.Milestone0.iRv.{0} ↑(HSub.hSub.{0, 0, 0} y c))
+'IntegrationInACVF.Section3ACVF.OpenBallRVGeometry.rv_sub_constant' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section3ACVF.CompleteTypeRVProfiles.presentation : ∀ {M : Type}
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {m : ℕ}
+  (B : IntegrationInACVF.Section3ACVF.FullBaseAtomicity.Base),
+  (∀ (i : IntegrationInACVF.Section3ACVF.ParameterPresentation.Name),
+      Membership.mem.{0, 0} (IntegrationInACVF.Section3.ImaginaryParameters.Base.imaginary.{0, 0} B) i →
+        ∃ γ, Eq.{1} i (Sum.inr.{0, 0} γ)) →
+    ∀ (R : Set.{0} (Fin (HAdd.hAdd.{0, 0, 0} m 1) → M)),
+      IntegrationInACVF.Section3ACVF.FullBaseAtomicity.OverBase B R →
+        ∃ T,
+          Set.Finite.{0} T ∧
+            ∃ p ψ,
+              FirstOrder.Language.BoundedFormula.IsQF.{0, 0, 0} ψ ∧
+                SpecialTransformations.Milestone0.LRV.WellSorted p.sorts
+                    SpecialTransformations.Section3.MixedPolynomialSyntax.contextSort ψ ∧
+                  (∀ (i : Fin p.length) (hi : SpecialTransformations.Milestone0.iVF.{0} (p.values i)),
+                      Membership.mem.{0, 0}
+                        (SpecialTransformations.Section3.vfParameterField
+                          (IntegrationInACVF.Section3.ImaginaryParameters.Base.real.{0, 0} B))
+                        (Subtype.mk.{1} (p.values i) hi)) ∧
+                    ∀ (x : SpecialTransformations.Milestone0.Transfer.VFType) (ys : Fin m → M),
+                      (∀ (j : Fin m), SpecialTransformations.Milestone0.iRV.{0} (ys j)) →
+                        (FirstOrder.Language.BoundedFormula.Realize.{0, 0, 0, 0} ψ p.values (Fin.cons.{1} (↑x) ys) ↔
+                          Membership.mem.{0, 0} R (Fin.cons.{1} (↑x) ys))
+'IntegrationInACVF.Section3ACVF.CompleteTypeRVProfiles.presentation' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section3ACVF.CompleteTypeRVProfiles.constant_on_open_ball : ∀ {M : Type}
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {m : ℕ}
+  (B : IntegrationInACVF.Section3ACVF.FullBaseAtomicity.Base),
+  (∀ (i : IntegrationInACVF.Section3ACVF.ParameterPresentation.Name),
+      Membership.mem.{0, 0} (IntegrationInACVF.Section3.ImaginaryParameters.Base.imaginary.{0, 0} B) i →
+        ∃ γ, Eq.{1} i (Sum.inr.{0, 0} γ)) →
+    ∀ {A : Set.{0} M},
+      IntegrationInACVF.Section3ACVF.FullBallCoset.CompleteType B A →
+        Set.Infinite.{0} A →
+          ∀ (a : SpecialTransformations.Milestone0.Transfer.VFType) (α : SpecialTransformations.Section3.Values.Gamma),
+            IntegrationInACVF.Section3ACVF.GammaRadiusAtomicity.gammaBall a α true ⊆ A →
+              ∀ (R : Set.{0} (Fin (HAdd.hAdd.{0, 0, 0} m 1) → M)),
+                IntegrationInACVF.Section3ACVF.FullBaseAtomicity.OverBase B R →
+                  ∀ (x y : SpecialTransformations.Milestone0.Transfer.VFType),
+                    Membership.mem.{0, 0} (IntegrationInACVF.Section3ACVF.GammaRadiusAtomicity.gammaBall a α true) ↑x →
+                      Membership.mem.{0, 0} (IntegrationInACVF.Section3ACVF.GammaRadiusAtomicity.gammaBall a α true)
+                          ↑y →
+                        ∀ (ys : Fin m → M),
+                          (∀ (j : Fin m), SpecialTransformations.Milestone0.iRV.{0} (ys j)) →
+                            (Membership.mem.{0, 0} R (Fin.cons.{1} (↑x) ys) ↔
+                              Membership.mem.{0, 0} R (Fin.cons.{1} (↑y) ys))
+'IntegrationInACVF.Section3ACVF.CompleteTypeRVProfiles.constant_on_open_ball' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section3ACVF.ValuativeCentreGeometry.valuativeCentre_unique : ∀ {M : Type}
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {D : Set.{0} M},
+  (D ⊆ Set.ofPred.{0} fun x => SpecialTransformations.Milestone0.iVF.{0} x) →
+    Set.Nonempty.{0} D →
+      ∀ {c d : SpecialTransformations.Section3.Values.GammaTop},
+        IntegrationInACVF.Section3ACVF.PaperBalls.HasValuativeCentre D c →
+          IntegrationInACVF.Section3ACVF.PaperBalls.HasValuativeCentre D d → Eq.{1} c d
+'IntegrationInACVF.Section3ACVF.ValuativeCentreGeometry.valuativeCentre_unique' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section3ACVF.ValuativeCentreGeometry.valuativeCentre_exists : ∀ {M : Type}
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {D : Set.{0} M},
+  SpecialTransformations.Milestone0.IsBall.{0} D → ∃ c, IntegrationInACVF.Section3ACVF.PaperBalls.HasValuativeCentre D c
+'IntegrationInACVF.Section3ACVF.ValuativeCentreGeometry.valuativeCentre_exists' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section4.EmptyInteriorFinite.finite_of_no_open : ∀ {M : Type}
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] (S U : Set.{0} M),
+  SpecialTransformations.Section3.DefinableAt S SpecialTransformations.Milestone0.SortTag.vf U →
+    (∀ (D : Set.{0} M), IntegrationInACVF.Section3ACVF.PaperBalls.IsOpenBall D → D ⊆ U → False) → Set.Finite.{0} U
+'IntegrationInACVF.Section4.EmptyInteriorFinite.finite_of_no_open' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section4.RelativeObstaclePreparation.zero_obstacles : ∀ {M : Type}
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set.{0} M}
+  {n m l k : ℕ} {A : SpecialTransformations.Section5.DefSet S (HAdd.hAdd.{0, 0, 0} n 1) m}
+  {B : SpecialTransformations.Section5.DefSet S (HAdd.hAdd.{0, 0, 0} n 1) l} {Γ : Type}
+  [inst : LinearOrderedCommGroupWithZero.{0} Γ] (v : Valuation.{0, 0} SpecialTransformations.Section5.VF Γ),
+  (∀ (x y : SpecialTransformations.Section5.VF),
+      SpecialTransformations.Milestone0.VFValued.predV x y ↔ LE.le.{0} (v x) (v y)) →
+    ∀ (U : Set.{0} (SpecialTransformations.Section5.Point (HAdd.hAdd.{0, 0, 0} n 1) k))
+      (R : SpecialTransformations.Section5.VerticalRootFamily A),
+      (∀ (p : SpecialTransformations.Section5.Point n m) (a : SpecialTransformations.Section5.VF)
+          (r : SpecialTransformations.Section3.Balls.OpenRadius Γ),
+          (∀ (x : SpecialTransformations.Section5.VF),
+              Membership.mem.{0, 0} (SpecialTransformations.Section3.Balls.openDisc v a r) x →
+                Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier A)
+                  (SpecialTransformations.Section5.insertHead x p)) →
+            (∀ (x : SpecialTransformations.Section5.VF),
+                Membership.mem.{0, 0} (R.fibre p) x → x ∉ SpecialTransformations.Section3.Balls.openDisc v a r) →
+              ∀ (x : SpecialTransformations.Section5.VF),
+                Membership.mem.{0, 0} (SpecialTransformations.Section3.Balls.openDisc v a r) x →
+                  ∀ (y : SpecialTransformations.Section5.VF),
+                    Membership.mem.{0, 0} (SpecialTransformations.Section3.Balls.openDisc v a r) y →
+                      ∀ (ys : Fin k → SpecialTransformations.Section5.RV),
+                        Membership.mem.{0, 0} U (Prod.mk.{0, 0} (SpecialTransformations.Section5.insertHead x p).1 ys) ↔
+                          Membership.mem.{0, 0} U
+                            (Prod.mk.{0, 0} (SpecialTransformations.Section5.insertHead y p).1 ys)) →
+        ∀ (T : IntegrationInACVF.Section4.RelativeBijection A B),
+          SpecialTransformations.Section5.HeadSaturated (SpecialTransformations.Section5.carrier B) →
+            (∀ (a : ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} A)),
+                Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier R.set) ↑a →
+                  Eq.{1}
+                    (SpecialTransformations.Section5.vfAt
+                      (↑(SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0} T.toMap a)) 0)
+                    0) →
+              ∀ (b c : ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} B)),
+                SpecialTransformations.Section5.SameRV ↑b ↑c →
+                  SpecialTransformations.Section5.TailEq ↑b ↑c →
+                    ∀ (ys : Fin k → SpecialTransformations.Section5.RV),
+                      Membership.mem.{0, 0} U
+                          (Prod.mk.{0, 0}
+                            (↑(SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0} T.inverseMap b)).1 ys) ↔
+                        Membership.mem.{0, 0} U
+                          (Prod.mk.{0, 0}
+                            (↑(SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0} T.inverseMap c)).1 ys)
+'IntegrationInACVF.Section4.RelativeObstaclePreparation.zero_obstacles' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section4.RelativeObstaclePreparation.prepare : ∀ {M : Type}
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set.{0} M}
+  {n m k : ℕ} {κ : Cardinal.{0}},
+  SpecialTransformations.Section3.Saturated M κ →
+    LT.lt.{1} (Cardinal.mk.{0} ↑S) κ →
+      FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00 →
+        ∀ (A : SpecialTransformations.Section5.DefSet S (HAdd.hAdd.{0, 0, 0} n 1) m),
+          SpecialTransformations.Section5.IsRVPullback (SpecialTransformations.Section5.carrier A) →
+            (∃ j, SpecialTransformations.Section5.Tagged (SpecialTransformations.Section5.carrier A) 0 j) →
+              ∀
+                (f :
+                  SpecialTransformations.Section5.Map A
+                    (SpecialTransformations.Section5.PresentedSet.univ (SpecialTransformations.Section5.pointSpace 0 k)
+                      S)),
+                ∃ l B T,
+                  SpecialTransformations.Section5.HeadSaturated (SpecialTransformations.Section5.carrier B) ∧
+                    (∃ j, SpecialTransformations.Section5.Tagged (SpecialTransformations.Section5.carrier B) 0 j) ∧
+                      ∀ (b c : ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} B)),
+                        SpecialTransformations.Section5.SameRV ↑b ↑c →
+                          SpecialTransformations.Section5.TailEq ↑b ↑c →
+                            Eq.{1}
+                              (SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0} f
+                                (SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0} T.inverseMap b))
+                              (SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0} f
+                                (SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0} T.inverseMap c))
+'IntegrationInACVF.Section4.RelativeObstaclePreparation.prepare' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section5.sameRV_zero_iff : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {m : ℕ}
+  {p q : SpecialTransformations.Section5.Point 1 m},
+  SpecialTransformations.Section5.SameRV p q →
+    (Eq.{1} (SpecialTransformations.Section5.vfAt p 0) 0 ↔ Eq.{1} (SpecialTransformations.Section5.vfAt q 0) 0)
+'IntegrationInACVF.Section5.sameRV_zero_iff' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@IntegrationInACVF.Section5.eq_of_sameRV_of_zero : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {m : ℕ}
+  {p q : SpecialTransformations.Section5.Point 1 m},
+  SpecialTransformations.Section5.SameRV p q → Eq.{1} (SpecialTransformations.Section5.vfAt p 0) 0 → Eq.{1} p q
+'IntegrationInACVF.Section5.eq_of_sameRV_of_zero' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@IntegrationInACVF.Section5.unary_open_polydisc_sameRV : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {m : ℕ}
+  {E : Set.{0} (SpecialTransformations.Section5.Point 1 m)},
+  SpecialTransformations.Section5.IsUnaryOpenPolydisc E →
+    (∀ (p : SpecialTransformations.Section5.Point 1 m),
+        Membership.mem.{0, 0} E p → Ne.{1} (SpecialTransformations.Section5.vfAt p 0) 0) →
+      ∀ {x y : SpecialTransformations.Section5.Point 1 m},
+        Membership.mem.{0, 0} E x → Membership.mem.{0, 0} E y → SpecialTransformations.Section5.SameRV x y
+'IntegrationInACVF.Section5.unary_open_polydisc_sameRV' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section5.rvCellImage : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {S : Set.{0} M} →
+        {m l : ℕ} →
+          {A : SpecialTransformations.Section5.DefSet S 1 m} →
+            {B : SpecialTransformations.Section5.DefSet S 1 l} →
+              (↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} A) →
+                  ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} B)) →
+                ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} A) →
+                  Set.{0} (SpecialTransformations.Section5.Point 1 l)
+'IntegrationInACVF.Section5.rvCellImage' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@IntegrationInACVF.Section5.contractible_of_centred_open_images : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set.{0} M}
+  {m l : ℕ} {A : SpecialTransformations.Section5.DefSet S 1 m} {B : SpecialTransformations.Section5.DefSet S 1 l}
+  (f :
+    ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} A) →
+      ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} B)),
+  (∀ (a : ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} A)),
+      Eq.{1} (SpecialTransformations.Section5.vfAt (↑(f a)) 0) 0 ↔
+        Eq.{1} (SpecialTransformations.Section5.vfAt (↑a) 0) 0) →
+    (∀ (a : ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} A)),
+        Ne.{1} (SpecialTransformations.Section5.vfAt (↑a) 0) 0 →
+          SpecialTransformations.Section5.IsUnaryOpenPolydisc (IntegrationInACVF.Section5.rvCellImage f a)) →
+      SpecialTransformations.Section5.Contractible f
+'IntegrationInACVF.Section5.contractible_of_centred_open_images' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section5.relative_zero_obstacles : ∀ {M : Type}
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set.{0} M}
+  {n m k : ℕ} {A : SpecialTransformations.Section5.DefSet S (HAdd.hAdd.{0, 0, 0} n 1) m} {Γ : Type}
+  [inst_1 : LinearOrderedCommGroupWithZero.{0} Γ] (v : Valuation.{0, 0} SpecialTransformations.Section5.VF Γ),
+  (∀ (x y : SpecialTransformations.Section5.VF),
+      SpecialTransformations.Milestone0.VFValued.predV x y ↔ LE.le.{0} (v x) (v y)) →
+    ∀ (U : Set.{0} (SpecialTransformations.Section5.Point (HAdd.hAdd.{0, 0, 0} n 1) k))
+      (R : SpecialTransformations.Section5.VerticalRootFamily A),
+      (∀ (p : SpecialTransformations.Section5.Point n m) (a : SpecialTransformations.Section5.VF)
+          (r : SpecialTransformations.Section3.Balls.OpenRadius Γ),
+          (∀ (x : SpecialTransformations.Section5.VF),
+              Membership.mem.{0, 0} (SpecialTransformations.Section3.Balls.openDisc v a r) x →
+                Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier A)
+                  (SpecialTransformations.Section5.insertHead x p)) →
+            (∀ (x : SpecialTransformations.Section5.VF),
+                Membership.mem.{0, 0} (R.fibre p) x → x ∉ SpecialTransformations.Section3.Balls.openDisc v a r) →
+              ∀ (x : SpecialTransformations.Section5.VF),
+                Membership.mem.{0, 0} (SpecialTransformations.Section3.Balls.openDisc v a r) x →
+                  ∀ (y : SpecialTransformations.Section5.VF),
+                    Membership.mem.{0, 0} (SpecialTransformations.Section3.Balls.openDisc v a r) y →
+                      ∀ (ys : Fin k → SpecialTransformations.Section5.RV),
+                        Membership.mem.{0, 0} U (Prod.mk.{0, 0} (SpecialTransformations.Section5.insertHead x p).1 ys) ↔
+                          Membership.mem.{0, 0} U
+                            (Prod.mk.{0, 0} (SpecialTransformations.Section5.insertHead y p).1 ys)) →
+        ∀ (T : IntegrationInACVF.Section5.HeadPreparation A),
+          (∀ (a : ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} A)),
+              Membership.mem.{0, 0} (SpecialTransformations.Section5.carrier R.set) ↑a →
+                Eq.{1}
+                  (SpecialTransformations.Section5.vfAt
+                    (↑(SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0} T.map a)) 0)
+                  0) →
+            ∀ (b c : ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} T.target)),
+              SpecialTransformations.Section5.SameRV ↑b ↑c →
+                SpecialTransformations.Section5.TailEq ↑b ↑c →
+                  ∀ (ys : Fin k → SpecialTransformations.Section5.RV),
+                    Membership.mem.{0, 0} U
+                        (Prod.mk.{0, 0} (↑(SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0} T.inverseMap b)).1
+                          ys) ↔
+                      Membership.mem.{0, 0} U
+                        (Prod.mk.{0, 0} (↑(SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0} T.inverseMap c)).1
+                          ys)
+'IntegrationInACVF.Section5.relative_zero_obstacles' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@IntegrationInACVF.Section5.relative_prepare_realRV : ∀ {M : Type}
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set.{0} M}
+  {n m k : ℕ} {κ : Cardinal.{0}},
+  SpecialTransformations.Section3.Saturated M κ →
+    LT.lt.{1} (Cardinal.mk.{0} ↑S) κ →
+      FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00 →
+        ∀ (A : SpecialTransformations.Section5.DefSet S (HAdd.hAdd.{0, 0, 0} n 1) m),
+          SpecialTransformations.Section5.IsRVPullback (SpecialTransformations.Section5.carrier A) →
+            (∃ j, SpecialTransformations.Section5.Tagged (SpecialTransformations.Section5.carrier A) 0 j) →
+              ∀
+                (f :
+                  SpecialTransformations.Section5.Map A
+                    (SpecialTransformations.Section5.PresentedSet.univ (SpecialTransformations.Section5.pointSpace 0 k)
+                      S)),
+                ∃ T,
+                  IntegrationInACVF.Section5.SpecialRelativeBoundary T.map 0 (some.{0} false) (some.{0} false) ∧
+                    (∃ j,
+                        SpecialTransformations.Section5.Tagged (SpecialTransformations.Section5.carrier T.target) 0 j) ∧
+                      ∀ (b c : ↑(SpecialTransformations.DefinableGeometry.DefSet.carrier.{0, 0} T.target)),
+                        SpecialTransformations.Section5.SameRV ↑b ↑c →
+                          SpecialTransformations.Section5.TailEq ↑b ↑c →
+                            Eq.{1}
+                              (SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0} f
+                                (SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0} T.inverseMap b))
+                              (SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0} f
+                                (SpecialTransformations.DefinableGeometry.Map.toFun.{0, 0} T.inverseMap c))
+'IntegrationInACVF.Section5.relative_prepare_realRV' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@IntegrationInACVF.Section3ACVF.CanonicalBallSupport.ballFamily : {M : Type} →
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] → Set.{0} (Set.{0} M)
+'IntegrationInACVF.Section3ACVF.CanonicalBallSupport.ballFamily' depends on axioms: [propext]
+@IntegrationInACVF.Section3ACVF.CanonicalBallSupport.encodedBall_nonempty : ∀ {M : Type}
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {B : Set.{0} M},
+  SpecialTransformations.Milestone0.IsBall.{0} B → Set.Nonempty.{0} B
+'IntegrationInACVF.Section3ACVF.CanonicalBallSupport.encodedBall_nonempty' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section3ACVF.CanonicalBallSupport.encodedBall_isValBall : ∀ {M : Type}
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {Γ : Type}
+  [inst : LinearOrderedCommGroupWithZero.{0} Γ]
+  (v : Valuation.{0, 0} SpecialTransformations.Milestone0.Transfer.VFType Γ),
+  (∀ (x y : SpecialTransformations.Milestone0.Transfer.VFType),
+      SpecialTransformations.Milestone0.VFValued.predV x y ↔ LE.le.{0} (v x) (v y)) →
+    ∀ {B : Set.{0} M},
+      SpecialTransformations.Milestone0.IsBall.{0} B →
+        ValOneEC.Johnson.IsValBall.{0, 0} v (Set.ofPred.{0} fun x => Membership.mem.{0, 0} B ↑x)
+'IntegrationInACVF.Section3ACVF.CanonicalBallSupport.encodedBall_isValBall' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section3ACVF.CanonicalBallSupport.valuation_nontrivial : ∀ {M : Type}
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {Γ : Type}
+  [inst : LinearOrderedCommGroupWithZero.{0} Γ]
+  (v : Valuation.{0, 0} SpecialTransformations.Milestone0.Transfer.VFType Γ),
+  (∀ (x y : SpecialTransformations.Milestone0.Transfer.VFType),
+      SpecialTransformations.Milestone0.VFValued.predV x y ↔ LE.le.{0} (v x) (v y)) →
+    ∀ (δ : SpecialTransformations.Section3.Values.Gamma), LT.lt.{0} 1 δ → ∃ x, LT.lt.{0} 1 (v x)
+'IntegrationInACVF.Section3ACVF.CanonicalBallSupport.valuation_nontrivial' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section3ACVF.CanonicalBallSupport.encoded_avoids_finite_proper_subballs : ∀ {M : Type}
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (δ : SpecialTransformations.Section3.Values.Gamma),
+  LT.lt.{0} 1 δ →
+    IntegrationInACVF.Section3.MinimalBallSupport.AvoidsFiniteProperSubballs.{0}
+      (Set.ofPred.{0} fun b => SpecialTransformations.Milestone0.IsBall.{0} b)
+'IntegrationInACVF.Section3ACVF.CanonicalBallSupport.encoded_avoids_finite_proper_subballs' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section3ACVF.CanonicalBallSupport.ballFamily_laminar : ∀ {M : Type}
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF],
+  IntegrationInACVF.Section3.IsLaminar.{0} IntegrationInACVF.Section3ACVF.CanonicalBallSupport.ballFamily
+'IntegrationInACVF.Section3ACVF.CanonicalBallSupport.ballFamily_laminar' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section3ACVF.CanonicalBallSupport.ballFamily_avoids : ∀ {M : Type}
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (δ : SpecialTransformations.Section3.Values.Gamma),
+  LT.lt.{0} 1 δ →
+    IntegrationInACVF.Section3.MinimalBallSupport.AvoidsFiniteProperSubballs.{0}
+      IntegrationInACVF.Section3ACVF.CanonicalBallSupport.ballFamily
+'IntegrationInACVF.Section3ACVF.CanonicalBallSupport.ballFamily_avoids' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section3ACVF.CanonicalBallSupport.minimal_support_encoded : ∀ {M : Type}
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {F : Finset.{0} (Set.{0} M)} {A : Set.{0} M},
+  IntegrationInACVF.Section3.MinimalBallSupport.IsMinimalSupport.{0}
+      IntegrationInACVF.Section3ACVF.CanonicalBallSupport.ballFamily F A →
+    ∀ (b : Set.{0} M), Membership.mem.{0, 0} F b → SpecialTransformations.Milestone0.IsBall.{0} b
+'IntegrationInACVF.Section3ACVF.CanonicalBallSupport.minimal_support_encoded' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section3ACVF.CanonicalBallSupport.exists_unique_minimal_support : ∀ {M : Type}
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : IntegrationInACVF.Section3ACVF.FullBaseAtomicity.Base) (δ : SpecialTransformations.Section3.Values.Gamma),
+  LT.lt.{0} 1 δ →
+    ∀ (A : Set.{0} M),
+      IntegrationInACVF.Section3ACVF.FullBaseAtomicity.OverBase B
+          (Set.ofPred.{0} fun z => Membership.mem.{0, 0} A (z 0)) →
+        (A ⊆ Set.ofPred.{0} fun x => SpecialTransformations.Milestone0.iVF.{0} x) →
+          ExistsUnique.{1} fun F =>
+            IntegrationInACVF.Section3.MinimalBallSupport.IsMinimalSupport.{0}
+              IntegrationInACVF.Section3ACVF.CanonicalBallSupport.ballFamily F A
+'IntegrationInACVF.Section3ACVF.CanonicalBallSupport.exists_unique_minimal_support' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

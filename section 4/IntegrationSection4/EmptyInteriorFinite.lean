@@ -45,15 +45,15 @@ theorem finite_of_no_open (S U : Set M) (hU : DefinableAt S .vf U)
     have hz := (Values.vrv_eq_infinity_iff (CanonicalRV.encodedRv r)).mp he
     exact hr0 ((CanonicalRV.encodedRv_zero_iff r).mp hz)
   let γ : Values.Gamma (M := M) := ⟨Values.vfValueHom r,hγ0⟩
-  let R : Balls.Radius (Values.presentationType (M := M)) := ↑(OrderDual.toDual ρ)
+  let R : Balls.OpenRadius (Values.presentationType (M := M)) := Balls.openRadius ρ hρ0
   have hMem (y : VFType (M := M)) : y.val ∈ gammaBall X γ true ↔ y ∈ Balls.openDisc v X R := by
     rw [GammaCosetGeometry.gammaBall_mem_valuation v hv X r γ rfl y]
     have hr : v r = ρ := hcv
-    simp only [Balls.openDisc,R,OrderDual.ofDual_toDual,if_neg hρ0,Set.mem_setOf_eq,hr]
+    simp only [Balls.openDisc,Balls.openRadius,R,OrderDual.ofDual_toDual,Units.val_mk0,Set.mem_setOf_eq,hr]
   have hAvoid : ∀ z ∈ Q, z ∉ Balls.openDisc v X R := by
     intro z hz hm
     have hl : v (z-X) < ρ := by
-      simpa only [Balls.openDisc,R,OrderDual.ofDual_toDual,if_neg hρ0,Set.mem_setOf_eq] using hm
+      simpa only [Balls.openDisc,Balls.openRadius,R,OrderDual.ofDual_toDual,Units.val_mk0,Set.mem_setOf_eq] using hm
     exact not_lt_of_ge (hρle z hz) hl
   have hX : X ∈ Balls.openDisc v X R := Balls.centre_mem_openDisc v X R
   apply hNo (gammaBall X γ true) (Or.inr ⟨X,γ,rfl⟩)

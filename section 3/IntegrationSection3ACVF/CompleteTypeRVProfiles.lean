@@ -95,10 +95,10 @@ theorem constant_on_open_ball (B : FullBaseAtomicity.Base (M := M))
       exact Values.infinity_eq_zero.symm
     exact α.property (hr.symm.trans hi)
   have hvr : v r ≠ 0 := v.ne_zero_iff.mpr hrNZ
-  let ρ : Balls.Radius Γ := ↑(OrderDual.toDual (v r))
+  let ρ : Balls.OpenRadius Γ := Balls.openRadius (v r) hvr
   have hm (u : VFType (M := M)) : u.val ∈ gammaBall a α true ↔ u ∈ Balls.openDisc v a ρ :=
     (GammaCosetGeometry.gammaBall_mem_valuation v hv a r α hr u).trans
-      (by simp [ρ,Balls.openDisc,hvr])
+      (by simp [ρ,Balls.openDisc,Balls.openRadius])
   have hAvoid (c : VFType (M := M)) (hc : c ∈ F) : c ∉ Balls.openDisc v a ρ := by
     intro hcB
     exact Set.disjoint_left.mp hdis (hsub ((hm c).mpr hcB)) ⟨c,hc,rfl⟩

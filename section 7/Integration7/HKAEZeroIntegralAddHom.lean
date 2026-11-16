@@ -1,0 +1,34 @@
+import Integration7.HKAEZeroIntegrals
+import Integration7.HKAEZeroFunctionAddition
+import Integration7.PositiveVFVolumeAdditiveStructure
+
+/-! Weighted-zero-valued integration is additive for the actual glued
+family forms and sends the genuinely empty family to zero. -/
+noncomputable section
+set_option backward.isDefEq.respectTransparency false
+open FirstOrder FirstOrder.Language
+open SpecialTransformations.Milestone0 SpecialTransformations.Milestone0.LRV
+open SpecialTransformations.Section3 SpecialTransformations.Section3.GammaParameters
+
+namespace IntegrationInACVF.Section7.HK
+variable {M : Type} [LRV.Structure M] [M ⊨ Axioms.ACVF]
+
+def aeZeroVolumeFunctionIntegralAddHom
+    (hc : CanonicalStructure.IsCanonical (M := M)) (C : BaseContext M)
+    (Ξ : Set (Values.Gamma (M := M))) (hΞ : Cardinal.mk Ξ < C.κ)
+    (hGenerated : VFGammaGeneratedBase (⟨(C.base : Set M),Ξ⟩ : Base (M := M)))
+    (hNames : commonRealNames (⟨(C.base : Set M),Ξ⟩ : Base (M := M)) ⊆ (C.base : Set M))
+    (γ : Values.Gamma (M := M)) (hγ : γ ∈ Ξ) (hγ1 : 1 < γ) (n : ℕ) :
+    AEZeroVolumeFunction hc C n →+ PositiveVolumeBlowupClasses hc C n where
+  toFun := aeZeroVolumeFunctionIntegral hc C Ξ hΞ hGenerated hNames γ hγ hγ1
+  map_zero' := by
+    change positiveVolumeIntegrationEquiv hc C Ξ hΞ hGenerated hNames γ hγ hγ1
+      (positiveVFVolumeIsoClass hc C (ordinaryZeroVolumeFamily C (n+1)).fullVFObject) = 0
+    rw [ordinary_zero_volume_family_full_object]
+    exact positive_volume_integration_zero hc C Ξ hΞ hGenerated hNames γ hγ hγ1
+  map_add' f g := Quotient.inductionOn₂ f g (fun F G => by
+    change positiveVolumeIntegrationEquiv hc C Ξ hΞ hGenerated hNames γ hγ hγ1
+      (positiveVFVolumeIsoClass hc C F.2.fullVFObject + positiveVFVolumeIsoClass hc C G.2.fullVFObject) = _
+    exact map_add (positiveVolumeIntegrationEquiv hc C Ξ hΞ hGenerated hNames γ hγ hγ1) _ _)
+
+end IntegrationInACVF.Section7.HK

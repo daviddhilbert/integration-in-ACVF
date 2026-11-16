@@ -1,0 +1,69 @@
+import IntegrationSection3ACVF.PolynomialEscape
+import IntegrationSection3ACVF.OpenBallRVGeometry
+import IntegrationSection3ACVF.CompleteTypeRVProfiles
+import IntegrationSection3ACVF.ValuativeCentreGeometry
+import IntegrationSection4.EmptyInteriorFinite
+import IntegrationSection4.RelativeObstaclePreparation
+import IntegrationSection5.UnaryBallImages
+import IntegrationSection5.RelativeObstaclePreparation
+import IntegrationSection3ACVF.CanonicalBallSupport
+set_option pp.universes true
+set_option pp.proofs false
+set_option pp.deepTerms true
+set_option pp.maxSteps 10000000
+#check @IntegrationInACVF.Section3ACVF.PolynomialEscape.outside_closed
+#print axioms IntegrationInACVF.Section3ACVF.PolynomialEscape.outside_closed
+#check @IntegrationInACVF.Section3ACVF.PolynomialEscape.finite_polynomial_escape
+#print axioms IntegrationInACVF.Section3ACVF.PolynomialEscape.finite_polynomial_escape
+#check @IntegrationInACVF.Section3ACVF.PolynomialEscape.same_rv_escape
+#print axioms IntegrationInACVF.Section3ACVF.PolynomialEscape.same_rv_escape
+#check @IntegrationInACVF.Section3ACVF.PolynomialEscape.closed_escape_in_rv_fibre
+#print axioms IntegrationInACVF.Section3ACVF.PolynomialEscape.closed_escape_in_rv_fibre
+#check @IntegrationInACVF.Section3ACVF.OpenBallRVGeometry.rv_sub_constant
+#print axioms IntegrationInACVF.Section3ACVF.OpenBallRVGeometry.rv_sub_constant
+#check @IntegrationInACVF.Section3ACVF.CompleteTypeRVProfiles.presentation
+#print axioms IntegrationInACVF.Section3ACVF.CompleteTypeRVProfiles.presentation
+#check @IntegrationInACVF.Section3ACVF.CompleteTypeRVProfiles.constant_on_open_ball
+#print axioms IntegrationInACVF.Section3ACVF.CompleteTypeRVProfiles.constant_on_open_ball
+#check @IntegrationInACVF.Section3ACVF.ValuativeCentreGeometry.valuativeCentre_unique
+#print axioms IntegrationInACVF.Section3ACVF.ValuativeCentreGeometry.valuativeCentre_unique
+#check @IntegrationInACVF.Section3ACVF.ValuativeCentreGeometry.valuativeCentre_exists
+#print axioms IntegrationInACVF.Section3ACVF.ValuativeCentreGeometry.valuativeCentre_exists
+#check @IntegrationInACVF.Section4.EmptyInteriorFinite.finite_of_no_open
+#print axioms IntegrationInACVF.Section4.EmptyInteriorFinite.finite_of_no_open
+#check @IntegrationInACVF.Section4.RelativeObstaclePreparation.zero_obstacles
+#print axioms IntegrationInACVF.Section4.RelativeObstaclePreparation.zero_obstacles
+#check @IntegrationInACVF.Section4.RelativeObstaclePreparation.prepare
+#print axioms IntegrationInACVF.Section4.RelativeObstaclePreparation.prepare
+#check @IntegrationInACVF.Section5.sameRV_zero_iff
+#print axioms IntegrationInACVF.Section5.sameRV_zero_iff
+#check @IntegrationInACVF.Section5.eq_of_sameRV_of_zero
+#print axioms IntegrationInACVF.Section5.eq_of_sameRV_of_zero
+#check @IntegrationInACVF.Section5.unary_open_polydisc_sameRV
+#print axioms IntegrationInACVF.Section5.unary_open_polydisc_sameRV
+#check @IntegrationInACVF.Section5.rvCellImage
+#print axioms IntegrationInACVF.Section5.rvCellImage
+#check @IntegrationInACVF.Section5.contractible_of_centred_open_images
+#print axioms IntegrationInACVF.Section5.contractible_of_centred_open_images
+#check @IntegrationInACVF.Section5.relative_zero_obstacles
+#print axioms IntegrationInACVF.Section5.relative_zero_obstacles
+#check @IntegrationInACVF.Section5.relative_prepare_realRV
+#print axioms IntegrationInACVF.Section5.relative_prepare_realRV
+#check @IntegrationInACVF.Section3ACVF.CanonicalBallSupport.ballFamily
+#print axioms IntegrationInACVF.Section3ACVF.CanonicalBallSupport.ballFamily
+#check @IntegrationInACVF.Section3ACVF.CanonicalBallSupport.encodedBall_nonempty
+#print axioms IntegrationInACVF.Section3ACVF.CanonicalBallSupport.encodedBall_nonempty
+#check @IntegrationInACVF.Section3ACVF.CanonicalBallSupport.encodedBall_isValBall
+#print axioms IntegrationInACVF.Section3ACVF.CanonicalBallSupport.encodedBall_isValBall
+#check @IntegrationInACVF.Section3ACVF.CanonicalBallSupport.valuation_nontrivial
+#print axioms IntegrationInACVF.Section3ACVF.CanonicalBallSupport.valuation_nontrivial
+#check @IntegrationInACVF.Section3ACVF.CanonicalBallSupport.encoded_avoids_finite_proper_subballs
+#print axioms IntegrationInACVF.Section3ACVF.CanonicalBallSupport.encoded_avoids_finite_proper_subballs
+#check @IntegrationInACVF.Section3ACVF.CanonicalBallSupport.ballFamily_laminar
+#print axioms IntegrationInACVF.Section3ACVF.CanonicalBallSupport.ballFamily_laminar
+#check @IntegrationInACVF.Section3ACVF.CanonicalBallSupport.ballFamily_avoids
+#print axioms IntegrationInACVF.Section3ACVF.CanonicalBallSupport.ballFamily_avoids
+#check @IntegrationInACVF.Section3ACVF.CanonicalBallSupport.minimal_support_encoded
+#print axioms IntegrationInACVF.Section3ACVF.CanonicalBallSupport.minimal_support_encoded
+#check @IntegrationInACVF.Section3ACVF.CanonicalBallSupport.exists_unique_minimal_support
+#print axioms IntegrationInACVF.Section3ACVF.CanonicalBallSupport.exists_unique_minimal_support

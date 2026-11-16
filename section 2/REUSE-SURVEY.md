@@ -116,3 +116,16 @@ reference inputs with a larger pretty-printer limit for long category types.
 Reprinting all previous 1,244 Section 3 types at that larger limit gave
 exactly the same types; their omissions were proof arguments rather than
 omitted type structure. Pins and dependency sources are unchanged.
+
+
+## Published weighted zero
+
+Consume predecessor `25852c85a31c67069b148bd31348128318303510`, including
+weighted proof revision `d7d74197031665b4c1e9ea4486c1898ff32f2d50`.
+Reuse `ZeroForm`, `MeasuredRVZero`, the actual weighted lift and the checked
+zero-arity Jacobian/label-bijection theorems. The zero descent keeps the
+ordinary label isomorphism and its complete form, without a finite-extension
+reference, a small exception at zero or an unproved HK result. The new
+four-export audit was reviewed once, and all 72 Section 2 reports passed
+under the updated pin. The prior all-degree PUnit branch is the neutral
+specialization only.

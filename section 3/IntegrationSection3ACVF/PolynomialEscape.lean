@@ -48,13 +48,13 @@ theorem finite_polynomial_escape (v : Valuation (VFType (M := M)) Γ)
         (zero_le : (0 : Γ) ≤ v r))
     have hd0 : v d ≠ 0 := ne_of_gt (by
       simpa only [ValOneEC.openBall,Set.mem_ofPred_eq,sub_self,map_zero] using ha)
-    have hopen : Balls.openDisc v a (↑(OrderDual.toDual (v d)) : Balls.Radius Γ) =
+    have hopen : Balls.openDisc v a (Balls.openRadius (v d) hd0) =
         ValOneEC.openBall v a (v d) := by
-      simp [Balls.openDisc,hd0,ValOneEC.openBall]
+      simp [Balls.openDisc,Balls.openRadius,ValOneEC.openBall]
     refine ⟨x,hxout,?_⟩
     intro p hp
     apply polynomial_rv_constant_openDisc v hv p a
-      (↑(OrderDual.toDual (v d)) : Balls.Radius Γ)
+      (Balls.openRadius (v d) hd0)
     · intro c hc
       rw [hopen]
       exact havoid c (hrootmem p hp c hc)

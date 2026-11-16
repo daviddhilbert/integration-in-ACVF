@@ -32,7 +32,7 @@ theorem valuativeCentre_exists {D : Set M} (hD : IsBall D) :
   · exact ⟨Values.infinity,by rw [PaperBalls.HasValuativeCentre,if_pos h0]⟩
   · obtain ⟨Γ,hΓ,v,hv⟩ := VFValued.exists_valuation_predV (M := M)
     letI := hΓ
-    obtain ⟨a,r,he | he⟩ := SpecialTransformations.Section3.encodedBall_disc v hv D hD
+    obtain ⟨a,(⟨r,he⟩ | ⟨r,he⟩)⟩ := SpecialTransformations.Section3.encodedBall_disc v hv D hD
     · have hn : (0 : VFType (M := M)) ∉ Balls.openDisc v a r := by
         intro hx
         exact h0 ((Set.ext_iff.mp he 0).mpr hx)

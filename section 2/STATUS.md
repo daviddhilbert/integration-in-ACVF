@@ -1,5 +1,15 @@
 # Section 2: preliminaries and review
 
+**Weighted measured-zero correction checked.**
+`WeightedZeroVolumeDescent.corollary_2_34_zero_weighted` uses the actual
+published predecessor category and proves exact RV-form preservation on
+all zero-degree points. It retains the supplied ordinary label map.
+The new module, its four complete types/axiom reports and Section 2 Library
+passed under predecessor `25852c85a31c67069b148bd31348128318303510`.
+The full Section 2 verifier passed all 72 reports; only the three allowed
+standard axioms occur. Evidence is in `VERIFICATION.json` and
+`verification/hk-zero/`. Existing positive-degree descent and 2.15 remain.
+
 Source: arXiv:0809.0473v2, pp. 3–7. Section 1 is introductory. The numbered
 section layout continues to exclude it. The shared language and pinned
 predecessor are reused; source types and hypotheses are checked separately
@@ -18,8 +28,9 @@ explicit. Both complete theorem types are unchanged in the current audit.
 for actual essential isomorphisms of arbitrary original finite-volume RV
 objects in positive degree, and `corollary_2_34_nonzero` for nondegenerate
 objects. `VolumeDescentAllDegrees.corollary_2_34_all_degrees` covers every
-natural degree. Its zero-degree objects carry PUnit data and impose no
-volume equation, exactly as `mRV[0] = RV[0]`.
+natural degree in its legacy interface. Its PUnit zero branch is now the
+neutral-form specialization. The unrestricted measured zero target is the
+weighted upstream theorem above, with its actual pointwise measure equation.
 
 The conclusion is the two actual volume conditions on the supplied genuine
 underlying RV isomorphism. The RV equation holds off a definable RV-small

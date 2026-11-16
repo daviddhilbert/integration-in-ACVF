@@ -34,3 +34,4 @@ import IntegrationSection2.ResidueZeroCharacteristic
 import IntegrationSection2.ConstructedGaussGraph
 import IntegrationSection2.VolumeDescentTheorem
 import IntegrationSection2.VolumeDescentAllDegrees
+import IntegrationSection2.WeightedZeroVolumeDescent

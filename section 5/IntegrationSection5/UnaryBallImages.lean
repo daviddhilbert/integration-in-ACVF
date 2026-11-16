@@ -42,12 +42,12 @@ theorem unary_open_polydisc_sameRV {E : Set (Point (M := M) 1 m)}
   obtain ⟨c, r, hr, t, rfl⟩ := hE
   obtain ⟨Γ, hΓ, v, hv⟩ := VFValued.exists_valuation_predV (M := M)
   letI := hΓ
-  let R : Balls.Radius Γ := some (OrderDual.toDual (v r))
   have hvr : v r ≠ 0 := (v.ne_zero_iff).mpr hr
+  let R : Balls.OpenRadius Γ := Balls.openRadius (v r) hvr
   have hm (z : VF (M := M)) :
       (¬ VFValued.predV r (z - c)) ↔ z ∈ Balls.openDisc v c R := by
     rw [hv, not_le]
-    simp [Balls.openDisc, R, hvr]
+    simp [Balls.openDisc, Balls.openRadius, R]
   have hzero : (0 : VF (M := M)) ∉ Balls.openDisc v c R := by
     intro h
     exact hz (![0], t) ⟨(hm 0).mpr h, rfl⟩ rfl

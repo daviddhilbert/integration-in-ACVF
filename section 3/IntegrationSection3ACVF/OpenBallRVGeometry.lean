@@ -31,11 +31,11 @@ theorem rv_sub_constant {Q : Set M} (hOpen : PaperBalls.IsOpenBall Q)
         exact Values.infinity_eq_zero.symm
       exact α.property (hr.symm.trans hz)
     have hvr0 : v r ≠ 0 := (v.ne_zero_iff).mpr hr0
-    let R : Balls.Radius Γ := ↑(OrderDual.toDual (v r))
+    let R : Balls.OpenRadius Γ := Balls.openRadius (v r) hvr0
     have hm (u : VFType (M := M)) : u.val ∈ Q ↔ u ∈ Balls.openDisc v a R := by
       rw [he]
       exact (GammaCosetGeometry.gammaBall_mem_valuation v hv a r α hr u).trans
-        (by simp [R,Balls.openDisc,hvr0])
+        (by simp [R,Balls.openDisc,Balls.openRadius])
     exact Balls.rv_sub_constant_openDisc v hv a c R
       (fun h => hc ((hm c).mpr h)) x y ((hm x).mp hx) ((hm y).mp hy)
 

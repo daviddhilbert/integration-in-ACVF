@@ -1,8 +1,15 @@
 # Whole-project audit — November 15, 2026
 
-Dates use America/Los_Angeles. The project is **not complete**: Section 7
-still has the two raw volume obligations listed below. The Section 6
-finite-VF-parameter connection is now proved in the closed interfaces.
+Dates use America/Los_Angeles. The project is **not complete**. The accepted
+HK weighted measured-zero correction now uses published predecessor
+`25852c85a31c67069b148bd31348128318303510`. The Section 7 registry has
+1,899 checked modules / 6,246 audited exports. Corrected class-level 7.10
+and the actual single-generator principal-ideal 7.13 are proved. Weighted-zero
+AE integration is additive and coefficient-linear; corrected function-level
+Fubini, supported change of variables and normalized functions remain active.
+The root build passes under the new pin (13,406 jobs including cache).
+The historical account below retains the scope of its original ordinary-zero
+interfaces. See [the correction status](section%207/HK-CORRECTION-STATUS.md).
 
 ## Correction and completed integration
 
@@ -33,12 +40,12 @@ The current receipt is
 
 | Section | Audited exports | Actual boundary |
 | --- | ---: | --- |
-| 2 | 68 | 2.15 and all-degree 2.34 in their recorded scopes. |
+| 2 | 72 | 2.15 and all-degree 2.34 in their recorded scopes. |
 | 3 | 1,244 | Numbered results through 3.24 in the documented scopes and approved corrections. |
 | 4 | 445 | Numbered lemmas and cell geometry in the approved scope. |
 | 5 | 1,852 | All active RV[k] targets complete, with explicit RV presentation charts for 5.5. |
 | 6 | 2,273 + closed API below | 736 original registered modules. The closed generated-base kernel, integration, function and localization interfaces are checked in the new Section 7 batch; their open universal Section 5.8 premise has been removed. |
-| 7 | 5,784 | 1,799 checked modules plus Library; geometry through 7.10, raw supported 7.11 including ordinary values, positive-value raw 7.12, normalized supported 7.14–7.15, exact raw kernel presentation by basic and degree-one elementary relations, and closed generated-base Section 6 interfaces. |
+| 7 | 6,246 local; 5,784 published | 1,899 checked local modules plus Library; corrected scope above, legacy scope follows: geometry through 7.10, raw supported 7.11 including ordinary values, positive-value raw 7.12, normalized supported 7.14–7.15, exact raw kernel presentation by basic and degree-one elementary relations, and closed generated-base Section 6 interfaces. |
 
 The three new Section 6 modules convert the actual Section 5 RV-category
 isomorphisms and prove `completed_section5_two_order_input` on bases
@@ -89,14 +96,16 @@ coordinate integral preserves literal projected supports and the raw total
 for every nonempty coordinate subset. The supported module is proved equal
 to the componentwise space of actual supported presentations in every degree,
 including ordinary RV[0]. This required no changed coefficient convention.
-The published 1,750-module checkpoint passed CI run43769978730; later local
-batches passed new-export type/axiom audits and affected Library builds.
+The published 1,799-module checkpoint at `fbb7d4b0971eeff6e7b16f631f405889baf3753e`
+passed CI run43776256489 in9m20s, including every available section verifier.
+The latest three local modules passed their fresh type/axiom audit, Library
+integration and full root build; their boundary is1,802 modules/5,798 exports.
 
 Section 7 still needs:
 
 - **7.12:** ordinary-input raw Jacobian assembly and its integral identity.
   Positive-supported raw and full normalized change of variables are proved.
-- **7.13:** the raw, unlocalized single-generator kernel-ideal identification.
+- **Assertion preceding 7.13:** the raw, unlocalized single-generator kernel-ideal identification.
   Elementary factorization is proved for source degrees at least two. The
   degree-one source requires an ordinary degree-zero factor that forgets
   density, and that factorization has a checked counterexample. Removing
@@ -208,3 +217,13 @@ change-of-variables identity over the actual Grothendieck coefficient ring:
 the transformed integral equals the point coefficient times the original
 integral. This retains the raw point factor and is not an unproved
 cancellation or a replacement for the still-open ordinary-valued7.12 target.
+
+
+The numbered Theorem7.13 itself is now checked locally as `theorem_7_13`
+and `theorem_7_13_kernel_quotient`. The direct sum of the actual degree
+quotients carries the canonical ring structure, retains its original
+addition, has its unit in degree zero, and multiplies degrees n,m into
+degree n+m. The single-generator assertion preceding that theorem is
+separate and remains open. This local three-module addition follows
+the published1,799-module checkpoint; its fresh14-export audit and
+affected Library build passed.

@@ -1,0 +1,11 @@
+import IntegrationSection2.WeightedZeroVolumeDescent
+set_option pp.universes true
+set_option pp.proofs false
+#check @IntegrationInACVF.Section2.WeightedZeroVolumeDescent.labelMap
+#print axioms IntegrationInACVF.Section2.WeightedZeroVolumeDescent.labelMap
+#check @IntegrationInACVF.Section2.WeightedZeroVolumeDescent.labelMap_bijective
+#print axioms IntegrationInACVF.Section2.WeightedZeroVolumeDescent.labelMap_bijective
+#check @IntegrationInACVF.Section2.WeightedZeroVolumeDescent.corollary_2_34_zero_weighted
+#print axioms IntegrationInACVF.Section2.WeightedZeroVolumeDescent.corollary_2_34_zero_weighted
+#check @IntegrationInACVF.Section2.WeightedZeroVolumeDescent.corollary_2_34_zero_weighted_map
+#print axioms IntegrationInACVF.Section2.WeightedZeroVolumeDescent.corollary_2_34_zero_weighted_map

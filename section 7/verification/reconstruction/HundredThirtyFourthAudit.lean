@@ -1,0 +1,41 @@
+import Integration7.AdditiveEquivalenceRingTransport
+import Integration7.BlowupVolumeHomogeneousProducts
+import Integration7.GradedVolumeKernelQuotientRing
+set_option pp.universes true
+set_option pp.proofs false
+set_option pp.deepTerms true
+set_option pp.maxSteps 10000000
+set_option pp.notation true
+set_option pp.funBinderTypes true
+set_option pp.piBinderTypes true
+
+
+
+#check @IntegrationInACVF.Section7.ringOfAdditiveEquivalence
+#print axioms IntegrationInACVF.Section7.ringOfAdditiveEquivalence
+#check @IntegrationInACVF.Section7.ringEquivOfAdditiveEquivalence
+#print axioms IntegrationInACVF.Section7.ringEquivOfAdditiveEquivalence
+#check @IntegrationInACVF.Section7.blowup_volume_homogeneous_mul_of
+#print axioms IntegrationInACVF.Section7.blowup_volume_homogeneous_mul_of
+#check @IntegrationInACVF.Section7.blowup_volume_homogeneous_product_closed
+#print axioms IntegrationInACVF.Section7.blowup_volume_homogeneous_product_closed
+#check @IntegrationInACVF.Section7.blowup_volume_homogeneous_unit
+#print axioms IntegrationInACVF.Section7.blowup_volume_homogeneous_unit
+#check @IntegrationInACVF.Section7.VolumeGradedKernelQuotient
+#print axioms IntegrationInACVF.Section7.VolumeGradedKernelQuotient
+#check @IntegrationInACVF.Section7.volumeGradedKernelQuotientCompositionEquiv
+#print axioms IntegrationInACVF.Section7.volumeGradedKernelQuotientCompositionEquiv
+#check @IntegrationInACVF.Section7.volumeGradedKernelQuotientRing
+#print axioms IntegrationInACVF.Section7.volumeGradedKernelQuotientRing
+#check @IntegrationInACVF.Section7.volumeGradedKernelQuotientRingEquiv
+#print axioms IntegrationInACVF.Section7.volumeGradedKernelQuotientRingEquiv
+#check @IntegrationInACVF.Section7.volume_graded_kernel_composition_of
+#print axioms IntegrationInACVF.Section7.volume_graded_kernel_composition_of
+#check @IntegrationInACVF.Section7.volume_graded_kernel_homogeneous_product
+#print axioms IntegrationInACVF.Section7.volume_graded_kernel_homogeneous_product
+#check @IntegrationInACVF.Section7.volume_graded_kernel_unit_degree_zero
+#print axioms IntegrationInACVF.Section7.volume_graded_kernel_unit_degree_zero
+#check @IntegrationInACVF.Section7.theorem_7_13
+#print axioms IntegrationInACVF.Section7.theorem_7_13
+#check @IntegrationInACVF.Section7.theorem_7_13_kernel_quotient
+#print axioms IntegrationInACVF.Section7.theorem_7_13_kernel_quotient

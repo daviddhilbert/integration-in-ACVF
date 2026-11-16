@@ -31,7 +31,7 @@ theorem zero_obstacles {Γ : Type} [LinearOrderedCommGroupWithZero Γ]
     (v : Valuation (VF (M := M)) Γ)
     (hv : ∀ x y : VF (M := M), VFValued.predV x y ↔ v x ≤ v y)
     (U : Set (Point (M := M) (n + 1) k)) (R : VerticalRootFamily A)
-    (hO : ∀ (p : Point (M := M) n m) (a : VF (M := M)) (r : SpecialTransformations.Section3.Balls.Radius Γ),
+    (hO : ∀ (p : Point (M := M) n m) (a : VF (M := M)) (r : SpecialTransformations.Section3.Balls.OpenRadius Γ),
       (∀ x ∈ SpecialTransformations.Section3.Balls.openDisc v a r, insertHead x p ∈ carrier A) →
       (∀ x ∈ R.fibre p, x ∉ SpecialTransformations.Section3.Balls.openDisc v a r) →
       ∀ x ∈ SpecialTransformations.Section3.Balls.openDisc v a r, ∀ y ∈ SpecialTransformations.Section3.Balls.openDisc v a r,
@@ -59,14 +59,15 @@ theorem zero_obstacles {Γ : Type} [LinearOrderedCommGroupWithZero Γ]
     let a₀ := T.inverseMap b
     let p := dropHead id a₀.val
     let centre := vfAt a₀.val 0
-    let ρ : SpecialTransformations.Section3.Balls.Radius Γ := ↑(OrderDual.toDual (v (vfAt b.val 0)))
     have hrad : v (vfAt b.val 0) ≠ 0 := (map_ne_zero v).mpr hb
+    let ρ : SpecialTransformations.Section3.Balls.OpenRadius Γ :=
+      SpecialTransformations.Section3.Balls.openRadius (v (vfAt b.val 0)) hrad
     have hmem (x : VF (M := M)) (hx : x ∈ SpecialTransformations.Section3.Balls.openDisc v centre ρ) :
         insertHead x p ∈ T.inverseSlice b := by
       rw [he]
       refine ⟨?_, (fun _ => rfl), rfl⟩
       change v (x - centre) < v (vfAt b.val 0)
-      simpa only [SpecialTransformations.Section3.Balls.openDisc, ρ, OrderDual.ofDual_toDual, if_neg hrad,
+      simpa only [SpecialTransformations.Section3.Balls.openDisc, SpecialTransformations.Section3.Balls.openRadius, ρ, OrderDual.ofDual_toDual, Units.val_mk0,
         Set.mem_ofPred_eq] using hx
     have hball : ∀ x ∈ SpecialTransformations.Section3.Balls.openDisc v centre ρ, insertHead x p ∈ carrier A := by
       intro x hx
@@ -85,7 +86,7 @@ theorem zero_obstacles {Γ : Type} [LinearOrderedCommGroupWithZero Γ]
         by rw [T.apply_inverse]; intro i; exact (htail i).symm⟩
     rw [he] at hcF
     have hy : vfAt (T.inverseMap c).val 0 ∈ SpecialTransformations.Section3.Balls.openDisc v centre ρ := by
-      simpa only [SpecialTransformations.Section3.Balls.openDisc, ρ, OrderDual.ofDual_toDual, if_neg hrad,
+      simpa only [SpecialTransformations.Section3.Balls.openDisc, SpecialTransformations.Section3.Balls.openRadius, ρ, OrderDual.ofDual_toDual, Units.val_mk0,
         Set.mem_ofPred_eq] using hcF.1
     have hpC : dropHead id (T.inverseMap c).val = p := Prod.ext (funext hcF.2.1) hcF.2.2
     have hOrigB : insertHead centre p = a₀.val := insertHead_dropHead a₀.val

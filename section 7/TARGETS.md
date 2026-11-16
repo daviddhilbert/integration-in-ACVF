@@ -1,5 +1,15 @@
 # Section 7 target scope
 
+## Accepted measured degree-zero convention
+
+The author now requests HK's weighted µRV[0] and µVF[0], consistently with
+the special-transformations repository. Retain nonzero definable RV forms
+at zero, use exact weight-preserving isomorphisms, and multiply weights in
+all products. Ordinary RV[0]/VF[0] remain available by the unit-form inclusion.
+This supersedes the previous instruction to retain ordinary *measured*
+degree zero. Existing checked proofs still have their old types; migration
+is pending. See [the impact review](../HK-CONVENTION-REVIEW.md).
+
 ## Accepted restriction of Lemma 7.5
 
 Formalize and use Lemma 7.5 only when its selected coordinate set `E`
@@ -31,9 +41,10 @@ function-space definition. The former does not by itself obstruct
 7.11–7.15. Account explicitly for the degree-one point when passing to
 normalized coefficients, where its image is one.
 
-Do not change the ordinary RV[0] convention or assume an unfinished
-geometric input to make an application type-check. No new Section 5.8
-input is authorized by this scope decision.
+Keep ordinary RV[0] unchanged and distinguish it from the newly accepted
+weighted measured category. Do not assume an unfinished geometric input to
+make an application type-check. No new Section 5.8 input is authorized by
+the nonempty-E scope decision.
 
 ## Verification
 

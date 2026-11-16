@@ -1,8 +1,10 @@
 import IntegrationSection2.VolumeDescentTheorem
 
-/-! All-degree form of Corollary 2.34. Degree zero has no volume
-data or measure equation, exactly as mRV[0]=RV[0]. Positive degrees
-use the actual definable nonzero forms and essential restrictions. -/
+/-! The legacy all-degree interface retains the neutral-form specialization
+at zero and the full positive-degree forms. Under the author's corrected
+weighted measured-zero convention, the unrestricted zero-degree result is
+`WeightedZeroVolumeDescent.corollary_2_34_zero_weighted`, using the published
+upstream objects and retaining exact RV weights. -/
 
 open Set Classical FirstOrder FirstOrder.Language CategoryTheory
 open SpecialTransformations.Milestone0 SpecialTransformations.Milestone0.LRV

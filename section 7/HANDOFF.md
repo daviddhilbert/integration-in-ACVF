@@ -1,5 +1,27 @@
 # Section 7 continuation
 
+**Current target:** adopt weighted measured degree zero in both this project
+and special-transformations, as authorized November 15, 2026. Read
+[HK-CONVENTION-REVIEW.md](../HK-CONVENTION-REVIEW.md) before implementation.
+The checked local boundary is now 1,820 modules plus Library / 5,910
+exports: 1,802 unchanged legacy modules and 18 new staging modules.
+The published boundary remains 1,799 modules / 5,784 exports. Read
+[HK-CORRECTION-STATUS.md](HK-CORRECTION-STATUS.md) for the actual checked
+corrections and remaining migration. The old recovery stages below are
+historical.
+
+The author has transferred predecessor implementation to the Special
+transformations session. [The standalone handoff](../SPECIAL-TRANSFORMATIONS-HANDOFF.md)
+records its exact scope and the interfaces needed here. Continue this
+repository's work separately and consume a checked predecessor revision
+when available; the pin has not yet changed.
+
+**Current pause:** the author approved waiting for the checked upstream
+weighted-zero interface before further correction here. The in-flight
+batch136 is finished and its 33 new types/axioms were reviewed once.
+Preserve the 18-module / 112-export staging work; resume by adapting it
+to the actual upstream definitions, rather than extending parallel ones.
+
 The current checked reconstruction checkpoint is described in `STATUS.md`:
 865 source modules plus their library entry point, with 2,706 distinct
 exported types and axiom reports inspected. The recovery account below
@@ -1802,3 +1824,54 @@ The 1-module/9-export batch passed actual source compilation, one complete 98-li
 The actual central point coefficient pads every full raw graded function into positive coefficient degrees through a full-coefficient linear map. Actual supported functions remain supported on the same definable domain, and restriction to the existing supported positive quotient has the unchanged forgetful image. Its raw integral is exactly the point coefficient times the original integral. Combining with the genuine positive Jacobian map proves the all-input identity I(Jac(phi)(point*f))=point*I(f), without raw point cancellation. A generic natural extension of linear functionals through the checked balanced scalar extension then constructs the actual supported function modules over the unnormalized Grothendieck ring. Proposition7.11 extends as proposition_7_11_ring to all ordinary and positive family generators, their finite sums, full ring scalars and formal differences. Proposition7.12_positive_ring is proved on the positive supported ring module. The full-input point-padded Jacobian identity extends to these ring modules using the actual centrality of the point. This is an additional checked identity, not a silent replacement for the unresolved ordinary-input unpadded7.12 statement. The degree-one single-generator ideal containment remains open; no normalization or ordinary density convention has been changed.
 
 The 3-module/21-export batch passed actual source compilation, one complete 358-line type/axiom review and Library integration with 13,079 jobs including cached dependencies. Only propext, Classical.choice and Quot.sound occur. The sealed local boundary is 1,799 modules plus Library and 5,784 exports. Earlier batches were not audited again.
+
+
+## Theorem7.13 actual graded ring quotient
+
+The completed geometric degree components are proved closed under their actual ring product: degree n times degree m lies in degree n+m, and the unit has degree zero. A ring transport through an additive equivalence preserves the original addition, zero, negation and integer scalar operations. Applying this to the independently checked component quotients gives an actual ring on their direct sum, with the canonical ring equivalence to the common-blowup ring and explicit homogeneous product and unit proofs. The named theorem_7_13 is the canonical VF-volume-ring isomorphism with this graded direct sum, and theorem_7_13_kernel_quotient is the canonical isomorphism with the raw RV ring modulo its actual kernel. This establishes the numbered Theorem7.13 as stated with I defined to be the actual homogeneous kernel. The single-generator assertion in the preceding paragraph remains a distinct unresolved claim; no principal-ideal assumption, changed degree-zero convention or new geometric input is used. Raw7.11 and positive7.12 ring identities were already checked; ordinary-input unpadded7.12 remains unresolved.
+
+The 3-module/14-export batch passed actual source compilation, one complete 209-line type/axiom review and Library integration with 13,082 jobs including cached dependencies. Only propext, Classical.choice and Quot.sound occur. The sealed local boundary is 1,802 modules plus Library and 5,798 exports. Earlier batches were not audited again.
+
+
+## Current handoff after the actual graded ring theorem
+
+Local:1,802 modules/5,798 audited exports, Library and full root PASS.
+Published:1,799/5,784 atfbb7d4b0971eeff6e7b16f631f405889baf3753e,
+CI43776256489 PASS9m20s. Only3 checked local modules follow that checkpoint.
+Raw7.11 is closed on actual supported semiring and ring modules, including
+ordinary values. The numbered7.13 is closed as the actual kernel quotient
+and graded direct-sum ring; its homogeneous product and degree-zero unit
+are proved. Positive-value raw7.12 and the all-input point-padded identity
+are checked. Ordinary-value unpadded7.12 and the principal-generator
+assertion immediately preceding7.13 remain unresolved. Two mathematical
+target questions were sent to the author and remain unanswered; no target
+or degree-zero convention has been changed. The accepted nonempty-selected-E
+restriction of7.5 is preserved and is not an outstanding obligation.
+
+
+## HK weighted-zero foundation and degree-one geometric factorization
+
+The staged IntegrationInACVF.Section7.HK API retains an actual nonzero definable density in degree zero, with exact weight-preserving isomorphisms and the ordinary neutral-form embedding. Corrected all-degree Cartesian products retain both forms, agree with specialized mixed scalar products, and respect measured isomorphisms in every pair of degrees. Multiplying corresponding positive forms by arbitrary varying definable weights preserves their actual volume isomorphism, and elementary blowups commute with a weighted zero factor. For every actual degree-one elementary blowup, the source and target are now proved volume-isomorphic to products of the same genuine weighted zero object with the unit-form point and cone, respectively; the result is also stated for the actual corrected all-degree product. This closes the degree-one geometric factorization obstruction under the accepted convention, without asserting that the old ordinary-zero factorization became valid. Weighted zero-valued VF families retain densities in rows, parameter extension, full VF realization and point padding. Their inverse-Jacobian transport is again a zero-valued weighted family, and its full VF volume class and actual positive-degree total integral are preserved. This is a theorem about actual family presentations, not yet descent to the corrected full AE function quotient or a completed new Proposition 7.12. The original all-degree graded semiring/ring, zero VF category/lift and function assembly remain to be migrated; the new geometric factorization is not itself a completed principal-ideal theorem. Positive geometric results are reused with their recorded standing assumptions. Special-transformations implementation remains in its separate session, and dependency pins are unchanged.
+
+The 13-module/79-export batch passed actual source compilation, one complete 1042-line type/axiom review and Library integration with 13,095 jobs including cached dependencies. Only propext, Classical.choice and Quot.sound occur. The sealed local boundary is 1,815 modules plus Library and 5,877 exports. Earlier batches were not audited again.
+
+
+## Staged weighted zero lift and exact zero descent
+
+Sequel-local staging presents every ordinary finite zero VF object with its actual nonzero definable RV form and exact weight-preserving isomorphisms. The zero lift pulls back the form, preserves and reflects measured isomorphism, and is surjective over the same canonical BaseContext by transporting density through the checked ordinary finite lift presentation. It therefore gives an actual equivalence of weighted zero isomorphism classes. Combining this with unchanged positive-degree classification gives an all-degree set equivalence and the actual lift/integration generator formula under the corrected convention; no additive, multiplicative or full ring structure is asserted for this new assembly. The weighted zero form of Corollary 2.34 is also proved using the actual zero-arity Jacobian and retaining the supplied underlying label isomorphism. The old Section 2 and old all-degree declarations retain their original types. The author has now decided to wait for the special-transformations session to establish the shared weighted-zero interface before continuing migration. These checked local models and proofs are preserved as staging and adapter candidates, not as a replacement upstream release. No further parallel category implementation or dependency-pin update is planned until the upstream checked interface is available.
+
+The 5-module/33-export batch passed actual source compilation, one complete 413-line type/axiom review and Library integration with 13,100 jobs including cached dependencies. Only propext, Classical.choice and Quot.sound occur. The sealed local boundary is 1,820 modules plus Library and 5,910 exports. Earlier batches were not audited again.
+
+
+## Weighted-zero upstream compatibility and the actual principal kernel
+
+Exact full-form RV/VF zero adapters to predecessor 25852c8; corrected coproduct/product coherence and common-blowup semirings in every degree; genuine weighted zero factors for degree-one elementary blowups; raw kernel equal to the two-sided ideal generated by the single point-minus-cone relation. No degree-one cancellation, localization, or open kernel hypothesis is assumed. Additive zero integration is established; concrete VF product agreement and function-space/normalized assembly remain separate obligations.
+
+The 25-module/148-export batch passed actual source compilation, one complete 1712-line type/axiom review and Library integration with 13,150 jobs including cached dependencies. Only propext, Classical.choice and Quot.sound occur. The sealed local boundary is 1,845 modules plus Library and 6,058 exports. Earlier batches were not audited again.
+
+
+## Weighted-zero function integration and geometric class algebra
+
+Exact-density constrained compactness and generic mixed-fibre charts; weighted-zero almost-everywhere functions, additive and coefficient-linear integration, and representative change of variables; concrete weighted VF coproduct and Cartesian-product agreement in zero and mixed degrees; corrected class-level Theorems 7.10 and 7.13; presentation-level first-head Fubini; central-point normalization and its basic-relation universal property. The function-level head operator still requires almost-everywhere descent and assembly with positive coefficient degrees; normalized function Theorems 7.14–7.15 remain unfinished. No weighted-zero point cancellation or open Fubini/kernel premise is used.
+
+The 54-module/188-export batch passed actual source compilation, one complete 2905-line type/axiom review and Library integration with 13,194 jobs including cached dependencies. Only propext, Classical.choice and Quot.sound occur. The sealed local boundary is 1,899 modules plus Library and 6,246 exports. Earlier batches were not audited again.

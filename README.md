@@ -3,7 +3,7 @@
 Formalization of Yimu Yin's
 [Integration in algebraically closed valued fields](https://arxiv.org/abs/0809.0473v2).
 This is the sequel to [Special transformations](https://github.com/daviddhilbert/special-transformations),
-pinned at `9cc9760892092dd34cfad4a6dee655843c52f30c`. The common ACVF-QE
+pinned at `25852c85a31c67069b148bd31348128318303510`. The common ACVF-QE
 language, Lean 4.35.0 toolchain and pinned Mathlib revision are unchanged.
 
 | Directory | Paper section |
@@ -22,19 +22,24 @@ Section 5 is complete in its accepted RV[k] scope on the published
 Section 6 now has closed generated-base interfaces for RV[k] and graded
 RV[*], deriving the required finite-VF-parameter inputs from the completed
 Section 5 theorem. These entrypoints live in
-`IntegrationInACVF.Section7.CompletedSection6`. Section 7 has raw linear
-head, prefix and coordinate operators, raw ring-linear Fubini on actual
-supported functions including ordinary values, positive-value raw change
-of variables, normalized supported change of variables and the normalized
-commutative ring presentation. Its full-input raw point-padded identity
-retains the point coefficient explicitly. Ordinary-input unpadded raw
-change of variables and the unlocalized single-generator kernel
-identification remain unfinished. The project is not fully
-formalized. See
-[Section 5 status](section%205/STATUS.md),
-[Section 6 status](section%206/STATUS.md) and
-[Section 7 status](section%207/STATUS.md). Read
-[WORKFLOW.md](WORKFLOW.md) and [AGENTS.md](AGENTS.md) before proof work.
+`IntegrationInACVF.Section7.CompletedSection6`. The corrected Section 7 class algebra now includes weighted zero degrees,
+its lift/integration equivalence, and the actual single-generator principal
+kernel (Theorems 7.10 and 7.13). Weighted-zero AE function integration is
+additive and coefficient-linear. The corrected function-level Fubini,
+supported change of variables and normalized function assembly remain
+unfinished. Earlier ordinary-zero function interfaces retain their legacy
+scope. The project is not complete. The checked Section 7 registry contains
+1,899 modules plus Library and 6,246 audited exports.
+See [Section 5 status](section%205/STATUS.md),
+[Section 6 status](section%206/STATUS.md), and
+[Section 7 correction status](section%207/HK-CORRECTION-STATUS.md).
+Read [WORKFLOW.md](WORKFLOW.md) and [AGENTS.md](AGENTS.md) before proof work.
+
+The author has adopted HK's weighted measured degree zero in this project
+and special-transformations. The published upstream API is now consumed;
+ordinary RV[0] stays ordinary. Sections 3–6 retain their mathematical scope.
+[The impact review](HK-CONVENTION-REVIEW.md) records the required changes.
+Ordinary RV[0] and the completed unmeasured Sections 3–6 are retained.
 
 ## Checked scope
 
@@ -44,8 +49,8 @@ all degrees. The generic RV equation and the Gamma equation at every
 essential label are proved separately. Henselian ascent, finite immediate
 triviality, primitive residue lifting and the required degree equality
 supply the Gauss graph input. No graph or finite-extension reference
-hypothesis remains in the final theorem. Degree zero has no volume data
-or equation, exactly as `mRV[0] = RV[0]`. See [Section 2 status](section%202/STATUS.md).
+hypothesis remains in the final theorem. Its weighted degree-zero extension retains the supplied label isomorphism
+and proves exact preservation of the actual RV form. See [Section 2 status](section%202/STATUS.md).
 
 All 21 numbered Section 3 results through Proposition 3.24 have checked
 implementations in their [recorded scopes](section%203/STATUS.md), including
