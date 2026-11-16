@@ -5,14 +5,18 @@ import json
 from pathlib import Path
 import re
 import subprocess
+import sys
 
 ROOT = Path(__file__).resolve().parent.parent
 SECTION = ROOT / 'section 7'
 OUT = ROOT / '.scratch/section7-verified'
 ALLOWED = {'propext', 'Classical.choice', 'Quot.sound'}
+sys.path.insert(0, str(ROOT / 'scripts'))
+from check_shared_foundation import verify as verify_shared_foundation
 
 
 def main():
+    shared_providers = verify_shared_foundation(ROOT)
     registry = json.loads((SECTION / 'VERIFICATION.json').read_text())
     for relative, expected in registry['source_sha256'].items():
         actual = hashlib.sha256((ROOT / relative).read_bytes()).hexdigest()
@@ -55,7 +59,8 @@ set_option pp.proofs false
         if not axioms <= ALLOWED:
             raise RuntimeError(f'Unapproved axioms for {name}: {sorted(axioms - ALLOWED)}')
     receipt = {'status': 'PASS', 'scope': registry['scope'], 'exports': len(names),
-               'source_sha256': registry['source_sha256'], 'audit_log': str(log.relative_to(ROOT))}
+               'source_sha256': registry['source_sha256'], 'audit_log': str(log.relative_to(ROOT)),
+               'shared_proof_providers': shared_providers}
     (OUT / 'receipt.json').write_text(json.dumps(receipt, indent=2) + '\n')
     print(f'PASS: {len(names)} Section 7 exports. Scope: {registry["scope"]}')
 

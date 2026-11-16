@@ -72,6 +72,9 @@ jobs:
         id: pins
         run: python3 scripts/prepare_ci.py
 
+      - name: Check shared proof ownership and provenance
+        run: python3 scripts/check_shared_foundation.py
+
       - name: Restore compiled pinned predecessors
         id: predecessor-cache
         uses: actions/cache/restore@v4
@@ -79,7 +82,10 @@ jobs:
           path: |
             .lake/packages/special_transformations/.lake/build
             .lake/packages/acvf_qe/.lake/build
+            .lake/packages/hilbert-mathlib/.lake/build
           key: predecessor-${{ runner.os }}-${{ hashFiles('lean-toolchain', 'lake-manifest.json') }}
+          restore-keys: |
+            predecessor-${{ runner.os }}-
 
       - name: Build the pinned predecessor
         id: predecessor-build
@@ -97,6 +103,7 @@ jobs:
           path: |
             .lake/packages/special_transformations/.lake/build
             .lake/packages/acvf_qe/.lake/build
+            .lake/packages/hilbert-mathlib/.lake/build
           key: predecessor-${{ runner.os }}-${{ hashFiles('lean-toolchain', 'lake-manifest.json') }}
 
       - name: Restore compiled project modules
@@ -111,6 +118,7 @@ jobs:
           restore-keys: |
             project-v2-${{ runner.os }}-${{ hashFiles('lean-toolchain', 'lake-manifest.json') }}-${{ hashFiles('lakefile.toml') }}-
             project-v2-${{ runner.os }}-${{ hashFiles('lean-toolchain', 'lake-manifest.json') }}-
+            project-v2-${{ runner.os }}-
             project-v1-${{ runner.os }}-${{ hashFiles('lean-toolchain', 'lake-manifest.json', 'lakefile.toml') }}-
             project-v1-${{ runner.os }}-
 
@@ -177,5 +185,6 @@ jobs:
           path: |
             lean-toolchain
             lake-manifest.json
+            .scratch/shared-foundation.json
             .scratch/ci-verified/
             .scratch/section*-verified/

@@ -19,7 +19,11 @@ def main():
     for package in packages:
         if package['type'] != 'git':
             raise RuntimeError(f"Unpinned dependency: {package['name']}")
-        directory = ROOT / manifest['packagesDir'] / package['name']
+        # Lake serializes a hyphenated package name as a quoted Lean Name,
+        # while its checkout directory uses the unquoted component.
+        name = package['name']
+        directory_name = name[1:-1] if name.startswith('«') and name.endswith('»') else name
+        directory = ROOT / manifest['packagesDir'] / directory_name
         revision = subprocess.check_output(
             ['git', '-C', str(directory), 'rev-parse', 'HEAD'], text=True).strip()
         if revision != package['rev']:

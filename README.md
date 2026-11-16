@@ -16,6 +16,13 @@ This is the sequel to [Special transformations](https://github.com/daviddhilbert
 It reuses the common ACVF-QE language and pinned dependencies; exact versions
 and reproduction details are recorded below and in `lake-manifest.json`.
 
+Thirteen reusable algebra, grading and finite-coordinate modules are provided
+by the pinned [hilbert-mathlib](https://github.com/daviddhilbert/hilbert-mathlib)
+dependency. Their original module paths remain compatibility imports, with
+unchanged declaration names and mathematical statements.
+[SHARED-FOUNDATION.json](SHARED-FOUNDATION.json) records the exact proof
+providers and source fingerprints. CI checks those identities before building.
+
 The [mathematical blueprint](blueprint/README.md) covers Sections 2–7 with
 71 selected nodes, 87 linked Lean declarations and a clickable dependency graph.
 The [v1.0.0 release](https://github.com/daviddhilbert/integration-in-ACVF/releases/tag/v1.0.0)

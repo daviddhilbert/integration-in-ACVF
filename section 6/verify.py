@@ -180,7 +180,7 @@ def main():
             target.parent.mkdir(parents=True, exist_ok=True)
             signature = {'source': digest(source), 'imports': {
                 name: import_identity(name) for name in re.findall(
-                    r'^import\s+([\w.]+)', source.read_text(encoding='utf-8'), re.M)}}
+                    r'^(?:(?:public|private)\s+)?import\s+([\w.]+)', source.read_text(encoding='utf-8'), re.M)}}
             if target.exists():
                 signature['artifact'] = digest(target)
             if use_lake_build:
@@ -229,8 +229,10 @@ def main():
         manifest = json.loads((ROOT / 'lake-manifest.json').read_text(encoding='utf-8'))
         pins = []
         for p in manifest['packages']:
+            name = p['name']
+            directory_name = name[1:-1] if name.startswith('«') and name.endswith('»') else name
             actual = subprocess.check_output(
-                ['git', '-C', str(ROOT / manifest['packagesDir'] / p['name']),
+                ['git', '-C', str(ROOT / manifest['packagesDir'] / directory_name),
                  'rev-parse', 'HEAD'], text=True).strip()
             if actual != p['rev']:
                 raise RuntimeError('Changed dependency pin: ' + p['name'])
