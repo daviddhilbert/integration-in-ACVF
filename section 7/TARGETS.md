@@ -7,8 +7,8 @@ the special-transformations repository. Retain nonzero definable RV forms
 at zero, use exact weight-preserving isomorphisms, and multiply weights in
 all products. Ordinary RV[0]/VF[0] remain available by the unit-form inclusion.
 This supersedes the previous instruction to retain ordinary *measured*
-degree zero. Existing checked proofs still have their old types; migration
-is pending. See [the impact review](../HK-CONVENTION-REVIEW.md).
+degree zero. The corrected checked interfaces now use the HK namespace; legacy
+interfaces retain their old types. See COMPLETION.md for the completed target. See [the impact review](../HK-CONVENTION-REVIEW.md).
 
 ## Accepted restriction of Lemma 7.5
 

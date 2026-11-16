@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Check the curated Section 7 reconstruction boundary, not full coverage."""
+"""Verify the registered Section 7 sources, exported types and allowed axioms."""
 import hashlib
 import json
 from pathlib import Path
@@ -57,7 +57,7 @@ set_option pp.proofs false
     receipt = {'status': 'PASS', 'scope': registry['scope'], 'exports': len(names),
                'source_sha256': registry['source_sha256'], 'audit_log': str(log.relative_to(ROOT))}
     (OUT / 'receipt.json').write_text(json.dumps(receipt, indent=2) + '\n')
-    print(f'PASS: {len(names)} Section 7 reconstruction exports; full section remains incomplete.')
+    print(f'PASS: {len(names)} Section 7 exports. Scope: {registry["scope"]}')
 
 
 if __name__ == '__main__':

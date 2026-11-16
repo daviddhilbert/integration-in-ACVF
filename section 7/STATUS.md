@@ -1,50 +1,41 @@
 # Section 7 status
 
-**Active target: HK weighted measured degree zero.** The checked upstream
-revision is `25852c85a31c67069b148bd31348128318303510`. Correction and remaining
-Section 7 formalization have resumed. The corrected `IntegrationInACVF.Section7.HK`
-interfaces include exact weighted RV/VF zero adapters, the geometric graded
-class algebra, Theorem 7.10 and the single-generator principal-ideal Theorem
-7.13. Weighted-zero AE integration is additive and coefficient-linear.
-The actual corrected AE head descent, full finite graded raw additive Fubini,
-supported raw Jacobian identity, full graded coefficient action and total-integral
-linearity are checked. The normalized supported theorems 7.14–7.15 are checked in the latest
-incremental batch. Full raw-coefficient operator linearity and the balanced
-unnormalized ring-function assembly remain a separate open boundary.
-The full root build passes under the new pin (13,508 jobs including cache).
-See [the correction status](HK-CORRECTION-STATUS.md) for the current boundary.
-The paragraphs below recording earlier results describe their legacy types;
-they do not certify the remaining corrected function targets. The accepted
-nonempty-E scope of Lemma 7.5 is unchanged.
+**The active Section 7 mathematical targets are complete in the accepted scope.**
+See [the completion record](COMPLETION.md) for the exact result map and standing
+hypotheses. The public entrypoint is `Integration7.HKCorrectedSection7Results`.
+The corrected namespace is `IntegrationInACVF.Section7.HK` and the pinned
+weighted-zero predecessor is `25852c85a31c67069b148bd31348128318303510`.
 
-Reconstruction is active; the section is not complete. The original working
-copy remains unavailable. Lemma 7.5 is restricted to nonempty selected `E`,
-as accepted by the author and recorded in `TARGETS.md`.
+Raw head/prefix/coordinate integration and global/supported Jacobians have
+full corrected coefficient linearity. Balanced unnormalized ring-valued
+Fubini and unpadded change of variables hold in all function degrees.
+The actual principal kernel, class 7.10/7.13, normalized 7.14–7.15 and
+commutativity of the corrected normalized coefficient ring are proved.
+The accepted nonempty-E restriction of 7.5 is retained.
 
-The accepted positive-degree Lemma 7.5 is complete as `lemma_7_5` and
-`lemma_7_5_ordinary`, on actual specified contraction volume objects.
-Corollary 7.6 is complete in every positive VF dimension, for arbitrary
-original forms and any specified common order beginning with the active
-coordinate. Lemma 7.7 is complete for the paper’s first-two order exchange.
-Propositions 7.8 and 7.9 and Theorem 7.10 are complete over the recorded
-original-base standing hypotheses. Raw Proposition 7.11 is complete as `proposition_7_11` and `proposition_7_11_ring`, including ordinary values,
-every nonempty coordinate subset and actual projected supports. The positive-value
-raw change-of-variables theorems are `proposition_7_12_positive` and its ring version; the ordinary-value
-scope of 7.12 and the single-generator assertion immediately before 7.13 remain open.
-The numbered Theorem 7.13 itself is proved as `theorem_7_13`: the actual
-kernel quotient and graded direct-sum ring, with checked homogeneous multiplication.
-The normalized supported identities
-7.14 and 7.15 are proved in positive VF dimension.
+## Current checked boundary
 
-## Current checked local boundary
+`Integration7.Library` integrates 2,041 source modules plus its entrypoint.
+All 6,711 registered exports have complete incremental type/axiom reviews;
+only propext, Classical.choice and Quot.sound occur. The latest affected
+Library build passed 13,336 jobs, and the final root build passed 13,548
+jobs including valid cached dependencies. Final automated project verification passed for the foundation and every section. The final 40 modules / 140 exports were reviewed once in two
+batches; earlier batches were not manually audited again.
 
-`Integration7.Library` integrates 2,001 source modules plus its entry point.
-Full exported types and allowed-axiom reports for 6,571 distinct declarations
-have been inspected in targeted incremental batches. Only `propext`,
-`Classical.choice`, and `Quot.sound` occur. The latest affected-library
-build passed, including 13,296 jobs counting its cached dependency closure.
-`VERIFICATION.json` seals this source boundary and records the batch receipts.
-Unchanged earlier batches were not manually audited again.
+## Publication
+
+The completed 2,041-module / 6,711-export source is the completion revision on
+`section-7/reconstructed-foundation`. The previous 2,001-module checkpoint is
+`f032c6ae97948837191867cf94a749637708d5a4`. Full local project verification passed;
+remote CI is reported independently and remains pending until it finishes.
+The final workflow preserves an in-progress cache-building run before starting
+the next revision, avoiding repeated cold-build cancellations.
+
+## Historical implementation and recovery ledger
+
+The material below records earlier source boundaries and original legacy
+interfaces. Earlier open obligations are superseded by the completion record;
+they are retained as provenance, not as current proof obligations.
 
 The elementary-blowup comparison is established as `elementaryBlowupIso`:
 actual elementary blowups of isomorphic positive-degree volume objects are
@@ -71,29 +62,6 @@ contributes 86, the second 59, the third 89, the fourth 26, the fifth 24, the si
 The latest receipt is `recovered-hundredthirtyeighth-geometry-receipt.json`.
 These checks cover currently available sources, not the historical missing
 1,201-module/4,644-declaration working copy.
-
-## Durable remote boundary
-
-The published checkpoint on `section-7/reconstructed-foundation` is
-`fbb7d4b0971eeff6e7b16f631f405889baf3753e`: 1,799 modules plus Library and
-5,784 audited exports. All 116 intended changed file hashes and the remote
-head were verified. GitHub Actions run43776256489 passed all builds,
-section verifiers and evidence retention in 9m20s; its project build took
-2m55s and its audits took 2m52s. Only source, documentation and text
-verification records were uploaded.
-
-The latest local boundary is 1,802 modules and 5,798 audited exports.
-Its three additional modules complete the actual graded ring structure
-and numbered Theorem7.13. Their fresh type/axiom audit, affected Library
-build and full root build passed; they are not included in the published
-1,799-module CI run. Routine backups remain about 100 modules apart.
-
-The user has authorized continuing checked GitHub backups without further
-permission. The current source boundary is recorded in VERIFICATION.json;
-reviewed incremental type/axiom reports and receipts are also preserved in
-`verification/reconstruction/`. Exact published revision receipts are kept
-locally under `.scratch/recovery/`. Main remains the Section6 revision
-`7d4acc730496b3bd05a22c268ffd89540ca694f9`. No pull request has been created.
 
 Sixty recovered original module texts remain unchanged in quarantine under
 `.scratch/recovery/transcript/Integration7/`. Canonical promoted copies may
@@ -2199,3 +2167,17 @@ The 15-module/60-export batch passed actual source compilation, one complete 102
 Unsigned positive volume-coordinate permutations are invisible in the actual corrected normalized coefficient ring by the genuine point-stabilized volume isomorphism and point = 1. Exact unsigned product swaps prove commutation of positive homogeneous classes; multiplying arbitrary weighted-zero classes by the point raises them to positive degree only after normalization. Finite sums and formal differences then prove commutativity of the complete corrected normalized coefficient ring. No raw graded commutativity, point cancellation, or comparison of the old and new normalized rings is assumed.
 
 The 3-module/12-export batch passed actual source compilation, one complete 151-line type/axiom review and Library integration with 13,296 jobs including cached dependencies. Only propext, Classical.choice and Quot.sound occur. The sealed local boundary is 2,001 modules plus Library and 6,571 exports. Earlier batches were not audited again.
+
+
+## Raw head and prefix linearity with weighted measured zero
+
+Every actual weighted finite degree-zero coefficient now admits an exact original-base density-graph presentation. Genuine product-density special preparations and full coordinate-density charts prove its scalar law for unary field-base integration on both positive-selected and weighted-zero-valued families. The latter also satisfies the positive-coefficient law, with both original forms retained. Actual frozen unary comparisons and injective definable-parameter descent give all four homogeneous AE head scalar laws. Finite direct-sum induction therefore constructs the actual raw head integral as a linear map over the full corrected graded coefficient semiring, including zero coefficient and zero input degrees. Iterated heads give the same full linear prefix operators and their total Fubini identity. No additional generation condition is imposed on frozen field bases, no positive padding is cancelled, and no raw scalar law is assumed as an input. Arbitrary-coordinate and supported Jacobian full scalar assembly and the balanced unnormalized ring-function results remain open; corrected normalized Theorems 7.14 and 7.15 were already sealed.
+
+The 25-module/70-export batch passed actual source compilation, one complete 1791-line type/axiom review and Library integration with 13,321 jobs including cached dependencies. Only propext, Classical.choice and Quot.sound occur. The sealed local boundary is 2,026 modules plus Library and 6,641 exports. Earlier batches were not audited again.
+
+
+## Full corrected raw operators and balanced ring functions
+
+Definable inverse-Jacobian density rescaling commutes with genuine weighted zero/positive products. Exact row comparisons descend through the actual definable parameter context, including literal empty target rows, and prove all homogeneous coefficient laws for global and supported Jacobian operators. The actual finite graded supported functions carry a faithful module over the full corrected coefficient semiring. Their range is exactly the previously proved literal support space. Arbitrary-coordinate integrals and supported Jacobians are full linear maps, and their actual total integrals satisfy corrected Propositions HK.proposition_7_11 and HK.proposition_7_12 on all function degrees. Balanced scalar extension constructs the unnormalized supported function modules over the corrected Grothendieck ring and proves HK.proposition_7_11_ring and HK.proposition_7_12_ring on every ring-valued function and formal difference, without point padding. The new public entrypoint is Integration7.HKCorrectedSection7Results. This closes the previously recorded raw scalar and unnormalized ring assembly boundary. Corrected normalized 7.14–7.15 and class 7.10/7.13 were already sealed. The accepted nonempty-selected scope of 7.5, positive VF dimensions of the function interfaces, actual finiteness, parameter, characteristic, saturation and generation hypotheses remain explicit; no open geometric theorem or raw cancellation premise is assumed.
+
+The 15-module/70-export batch passed actual source compilation, one complete 1356-line type/axiom review and Library integration with 13,336 jobs including cached dependencies. Only propext, Classical.choice and Quot.sound occur. The sealed local boundary is 2,041 modules plus Library and 6,711 exports. Earlier batches were not audited again.

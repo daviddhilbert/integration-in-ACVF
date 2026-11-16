@@ -1,66 +1,50 @@
 # Weighted measured-zero correction
 
-**Active: final function and ring assembly.** The published predecessor is
-`25852c85a31c67069b148bd31348128318303510`, including weighted-zero proof
-commit `d7d7419`. Lean, Mathlib and QE pins are unchanged. Corrected interfaces
-use `IntegrationInACVF.Section7.HK`; legacy interfaces keep their original scope.
+**The accepted correction and active Section 7 mathematical targets are complete.**
+See [COMPLETION.md](COMPLETION.md) for the result map and precise scope. The public
+corrected entrypoint is `Integration7.HKCorrectedSection7Results`.
+
+The predecessor is `25852c85a31c67069b148bd31348128318303510`, including weighted-zero
+proof commit `d7d7419`. Lean, Mathlib and QE pins are unchanged. Corrected interfaces
+use `IntegrationInACVF.Section7.HK`; legacy interfaces retain their original scope.
 
 ## Checked boundary
 
-The sealed registry contains **2,001 modules plus Library / 6,571 exports**.
-Batches 139–143 each passed actual source compilation and one complete new
-exported-type/axiom review, followed by affected Library integration. The latest
-Library build passed 13,296 jobs including valid cached dependencies. Only
-`propext`, `Classical.choice` and `Quot.sound` occur. Earlier types were not
-manually audited again.
+The sealed registry contains **2,041 source modules plus Library / 6,711 exports**.
+The final two batches add 40 modules / 140 exports, each with actual source
+compilation, one complete exported-type/axiom review (1,791 and 1,356 lines), and
+Library integration. The final Library build passed 13,336 jobs and the final
+root build passed 13,548 jobs including valid cached dependencies. Only propext,
+Classical.choice and Quot.sound occur. Earlier exports were not manually audited again.
 
-Checked results include exact weighted RV/VF-zero adapters and upstream
-compatibility, corrected all-degree geometric coproducts/products, the genuine
-weighted degree-one blowup factors, the actual point-minus-cone principal
-kernel, and corrected class Theorems 7.10 and 7.13. Weighted-zero AE families
-retain arbitrary original densities. Their actual head integral descends to AE
-classes; finite graded raw additive Fubini includes every nonempty coordinate
-projection and literal projected support. The full unpadded raw supported
-Jacobian identity is additive in all function degrees. All corrected coefficient
-actions satisfy their unit, distributivity and associativity laws, and total
-integration is linear over the full corrected graded semiring. Its actual scalar
-extension constructs the normalized function module and normalized linear integral.
+Exact weighted RV/VF zero adapters, geometric coproducts/products, genuine
+weighted degree-one blowup factors, and the actual point-minus-cone principal
+kernel prove corrected class 7.10 and 7.13. Actual head/prefix/coordinate and
+supported Jacobian operators are linear over the full corrected graded coefficient
+semiring, including zero coefficients and zero-valued inputs. Balanced scalar
+extension proves raw supported 7.11/7.12 over the corrected Grothendieck ring on
+every function and formal difference. Corrected normalized supported 7.14/7.15
+and commutativity of the normalized coefficient ring are proved. No raw point
+padding is cancelled. The accepted nonempty-selected scope of 7.5 and standing
+hypotheses remain explicit; the function interfaces have positive VF dimension.
 
-Section 2 weighted-zero descent and the nine open-radius consumers in Sections
-3–5 were adapted; their new/changed export deltas were reviewed once. No new pure
-Gamma/RES campaign or general coarsening functor is required.
+Section 2 exact weighted-zero descent and the nine open-radius consumers in
+Sections 3–5 were adapted and reviewed once. No new pure Gamma/RES campaign or
+general coarsening functor is part of the accepted target.
 
-## Normalized function results
+There is no remaining Section 7 mathematical proof obligation in this scope.
 
-Corrected normalized supported Fubini and change of variables, including named
-Theorems `HK.theorem_7_14` and `HK.theorem_7_15`, passed actual source compilation,
-Library integration and one complete 1,028-line review of the 60 new exports.
-Positive-degree generation is used only after the point is proved equal to one.
-A generic operator descent proves full normalized scalar compatibility from
-positive-coefficient laws; it does not cancel raw point padding. Supported
-normalized functions are exactly the span of all actual corrected supported
-presentations, including weighted zero.
+## Automation and publication
 
-The actual corrected normalized coefficient ring is also proved commutative,
-using geometric positive product swaps and point stabilization.
+The final full-project automated verification passed for the foundation and Sections 2–7 at the sealed 2,041-module / 6,711-export boundary. The Section 7 audit took 46.7 seconds. No fresh remote CI pass is claimed yet.
 
-## Remaining boundary
-
-The additive raw coordinate and Jacobian identities do not yet certify full
-raw-coefficient operator linearity or its balanced unnormalized ring-function
-assembly. These are tracked separately from the normalized theorems. No section
-completion claim is made while that boundary remains unresolved.
-
-## Publication and automation
-
-The published 1,899-module / 6,246-export checkpoint is
-`7c6a8c9df9b7fb3cd6734c493dc5f812005f1c53` on
-`section-7/reconstructed-foundation`. The next approximately 100-module backup
-is due after the current new batch. The root build passed at 2,001 modules (13,508 jobs including cache). All-section
-automated verification passed at 1,998 modules; the subsequent three normalized
-coefficient modules passed their incremental full review and affected root build.
-GitHub CI for that revision is still pending; no fresh CI pass is claimed.
+The completed source is the 2,041-module / 6,711-export completion revision on
+`section-7/reconstructed-foundation`. The previous checkpoint is
+`f032c6ae97948837191867cf94a749637708d5a4` (2,001 modules / 6,571 exports).
+The final 40-module increment is task-completion publication; routine intermediate
+backup cadence remains about 100 modules. The final workflow preserves an
+in-progress cache-warming run instead of cancelling it on every new push.
 
 Versioned incremental receipts are under `verification/reconstruction/`;
-`verification/hk-upgrade/` records dependency compatibility evidence. Historical
-receipts retain their original types/revisions.
+`../verification/hk-upgrade/` records integration evidence. Historical receipts
+retain their original types and revisions.

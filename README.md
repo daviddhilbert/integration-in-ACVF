@@ -22,16 +22,17 @@ Section 5 is complete in its accepted RV[k] scope on the published
 Section 6 now has closed generated-base interfaces for RV[k] and graded
 RV[*], deriving the required finite-VF-parameter inputs from the completed
 Section 5 theorem. These entrypoints live in
-`IntegrationInACVF.Section7.CompletedSection6`. The corrected Section 7 class algebra now includes weighted zero degrees,
-its lift/integration equivalence, and the actual single-generator principal
-kernel (Theorems 7.10 and 7.13). Weighted-zero AE functions and their full corrected graded coefficient action
-are checked, and total integration is linear. Actual raw additive Fubini and
-unpadded supported change of variables include weighted-zero values. Corrected
-normalized supported Theorems 7.14 and 7.15 are checked. Full raw-coefficient
-operator linearity and balanced unnormalized ring-function assembly remain open.
-Earlier ordinary-zero interfaces retain their legacy scope. The project is not
-complete. The checked Section 7 registry contains 2,001 modules plus Library and
-6,571 audited exports.
+`IntegrationInACVF.Section7.CompletedSection6`. Section 7 is complete in its accepted scope, including the HK weighted
+measured-zero correction. Its corrected class algebra and actual principal
+kernel (7.10/7.13), full coefficient-linear raw operators, balanced ring-valued
+supported Fubini/change of variables (7.11/7.12), and normalized supported
+7.14/7.15 are checked. The accepted nonempty-E restriction of 7.5 and all
+standing hypotheses remain explicit. The public entrypoint is
+`Integration7.HKCorrectedSection7Results`. The sealed registry contains 2,041
+modules plus Library and 6,711 audited exports. See the
+[Section 7 completion record](section%207/COMPLETION.md). Earlier ordinary-zero
+interfaces retain their historical scope; other sections' documented scope
+boundaries are unchanged.
 See [Section 5 status](section%205/STATUS.md),
 [Section 6 status](section%206/STATUS.md), and
 [Section 7 correction status](section%207/HK-CORRECTION-STATUS.md).

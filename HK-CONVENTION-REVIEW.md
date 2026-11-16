@@ -1,5 +1,7 @@
 # Review of the HK degree-zero convention
 
+**Implementation status:** the accepted downstream correction and active Section 7 targets are now proved; see [the completion record](section%207/COMPLETION.md). The impact inventory below is the historical migration review, not a current list of unfinished tasks.
+
 Reviewed November 15, 2026 (America/Los_Angeles), following the author's
 instruction: “let's do it the HK way then.” The accepted target now retains
 volume forms in **both measured degree-zero categories**, µRV[0] and µVF[0].

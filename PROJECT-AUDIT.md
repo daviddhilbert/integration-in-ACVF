@@ -1,20 +1,22 @@
 # Whole-project audit — November 15, 2026
 
-Dates use America/Los_Angeles. The project is **not complete**. The accepted
-HK weighted measured-zero correction now uses published predecessor
-`25852c85a31c67069b148bd31348128318303510`. The Section 7 registry has
-1,998 checked modules / 6,571 audited exports. Corrected class-level 7.10
-and the actual single-generator principal-ideal 7.13 are proved. The corrected
-finite graded function module and its coefficient-linear integral are checked.
-Raw additive Fubini and supported unpadded change of variables include weighted
-zero, and normalized supported Theorems 7.14–7.15 are checked. Full raw-coefficient
-operator linearity and balanced unnormalized ring-function assembly remain open.
-The current root build passes (13,508 jobs including cache); full-project
-automated verification passed at 1,998 modules. The subsequent three normalized
-coefficient modules passed actual compilation, their 151-line new type/axiom
-review and the affected root build; unchanged sections were not checked again.
-The historical account below retains the scope of its original ordinary-zero
-interfaces. See [the correction status](section%207/HK-CORRECTION-STATUS.md).
+Dates use America/Los_Angeles. The active Section 7 mathematical targets and
+the accepted HK weighted measured-zero correction are complete in their
+recorded scope. The upstream pin is `25852c85a31c67069b148bd31348128318303510`.
+The sealed Section 7 registry contains 2,041 modules / 6,711 audited exports.
+The final 40 modules / 140 exports establish full raw coefficient linearity,
+actual supported coordinate and Jacobian maps, and balanced unnormalized
+ring-valued Fubini and change of variables in every function degree. Corrected
+class 7.10/7.13, normalized 7.14/7.15 and normalized coefficient commutativity
+were already checked. See [Section 7 completion](section%207/COMPLETION.md).
+
+The final root build passed 13,548 jobs including valid cached dependencies.
+Final automated project verification passed for the foundation and every section; publication and remote CI are reported separately. All standing hypotheses, positive VF dimensions of
+the function interfaces, and the accepted nonempty-selected scope of 7.5 are
+retained. Other sections' existing documented scope boundaries and approved
+corrections are unchanged. The account below retains its historical legacy
+interfaces; earlier Section 7 open-boundary paragraphs are superseded by the
+completion record.
 
 ## Correction and completed integration
 
@@ -50,7 +52,7 @@ The current receipt is
 | 4 | 445 | Numbered lemmas and cell geometry in the approved scope. |
 | 5 | 1,852 | All active RV[k] targets complete, with explicit RV presentation charts for 5.5. |
 | 6 | 2,273 + closed API below | 736 original registered modules. The closed generated-base kernel, integration, function and localization interfaces are checked in the new Section 7 batch; their open universal Section 5.8 premise has been removed. |
-| 7 | 6,571 local; 6,246 published | 2,001 checked local modules plus Library; corrected scope above, legacy scope follows: geometry through 7.10, raw supported 7.11 including ordinary values, positive-value raw 7.12, normalized supported 7.14–7.15, exact raw kernel presentation by basic and degree-one elementary relations, and closed generated-base Section 6 interfaces. |
+| 7 | 6,711 in the completion revision | 2,041 checked local modules plus Library. All active corrected targets complete, including full raw semiring/ring function integration and normalized supported 7.14–7.15. See COMPLETION.md for exact scope. |
 
 The three new Section 6 modules convert the actual Section 5 RV-category
 isomorphisms and prove `completed_section5_two_order_input` on bases

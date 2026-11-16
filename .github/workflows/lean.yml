@@ -10,7 +10,9 @@ permissions:
 
 concurrency:
   group: lean-${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+  # Finish cache warming before the next revision restores its artifacts.
+  # Cancelling a large dependency upgrade repeatedly can discard that work.
+  cancel-in-progress: false
 
 jobs:
   verify:
