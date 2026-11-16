@@ -1,0 +1,151 @@
+@IntegrationInACVF.Section7.HK.normalized_basic_volume_images_commute : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M)
+  (a b : IntegrationInACVF.Section7.HK.RVVolumeIsoSemiring hc C),
+  Commute.{0} ((IntegrationInACVF.Section7.HK.normalizedBasicVolumeMap hc C) a)
+    ((IntegrationInACVF.Section7.HK.normalizedBasicVolumeMap hc C) b)
+'IntegrationInACVF.Section7.HK.normalized_basic_volume_images_commute' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.HK.normalized_volume_ring_basic_difference : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M)
+  (x : ↥(IntegrationInACVF.Section7.HK.NormalizedRVVolumeRing hc C)),
+  ∃ (a : IntegrationInACVF.Section7.HK.RVVolumeIsoSemiring hc C) (b :
+    IntegrationInACVF.Section7.HK.RVVolumeIsoSemiring hc C),
+    Eq.{1} x
+      (HSub.hSub.{0, 0, 0} ((IntegrationInACVF.Section7.HK.normalizedBasicVolumeMap hc C) a)
+        ((IntegrationInACVF.Section7.HK.normalizedBasicVolumeMap hc C) b))
+'IntegrationInACVF.Section7.HK.normalized_volume_ring_basic_difference' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.HK.normalized_volume_ring_mul_comm : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M)
+  (x y : ↥(IntegrationInACVF.Section7.HK.NormalizedRVVolumeRing hc C)),
+  Eq.{1} (HMul.hMul.{0, 0, 0} x y) (HMul.hMul.{0, 0, 0} y x)
+'IntegrationInACVF.Section7.HK.normalized_volume_ring_mul_comm' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.HK.normalizedRVVolumeCommRing : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        (C : SpecialTransformations.Section3.BaseContext M) →
+          CommRing.{0} ↥(IntegrationInACVF.Section7.HK.NormalizedRVVolumeRing hc C)
+'IntegrationInACVF.Section7.HK.normalizedRVVolumeCommRing' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.HK.normalized_basic_volume_coordinate_invariance : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {k : ℕ}
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M)
+  (U : IntegrationInACVF.Section7.PositiveRVVolumeObject (↑C.base) k)
+  (σ : Equiv.Perm.{1} (Fin (HAdd.hAdd.{0, 0, 0} k 1))),
+  Eq.{1}
+    ((IntegrationInACVF.Section7.HK.normalizedBasicVolumeMap hc C)
+      (IntegrationInACVF.Section7.HK.volumeIsoSemiringClass hc C U))
+    ((IntegrationInACVF.Section7.HK.normalizedBasicVolumeMap hc C)
+      (IntegrationInACVF.Section7.HK.volumeIsoSemiringClass hc C (U.permuteVolume σ)))
+'IntegrationInACVF.Section7.HK.normalized_basic_volume_coordinate_invariance' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.HK.normalized_basic_volume_class : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M) {n : ℕ}
+  (U : IntegrationInACVF.Section7.HK.RVVolumeObject (↑C.base) n),
+  Eq.{1}
+    ((IntegrationInACVF.Section7.HK.normalizedBasicVolumeMap hc C)
+      (IntegrationInACVF.Section7.HK.volumeIsoSemiringClass hc C U))
+    ((IntegrationInACVF.Section7.HK.normalizedVolumeCoefficientMap hc C)
+      ((DirectSum.of.{0, 0} (IntegrationInACVF.Section7.HK.RVBlowupClasses hc C) n)
+        (IntegrationInACVF.Section7.HK.rvVolumeBlowupClass hc C U)))
+'IntegrationInACVF.Section7.HK.normalized_basic_volume_class' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.HK.normalized_volume_coordinate_invariance : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {k : ℕ}
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M)
+  (σ : Equiv.Perm.{1} (Fin (HAdd.hAdd.{0, 0, 0} k 1)))
+  (a : IntegrationInACVF.Section7.PositiveVolumeBlowupClasses hc C k),
+  Eq.{1}
+    ((IntegrationInACVF.Section7.HK.normalizedVolumeCoefficientMap hc C)
+      ((DirectSum.of.{0, 0} (IntegrationInACVF.Section7.HK.RVBlowupClasses hc C) (HAdd.hAdd.{0, 0, 0} k 1)) a))
+    ((IntegrationInACVF.Section7.HK.normalizedVolumeCoefficientMap hc C)
+      ((DirectSum.of.{0, 0} (IntegrationInACVF.Section7.HK.RVBlowupClasses hc C) (HAdd.hAdd.{0, 0, 0} k 1))
+        (IntegrationInACVF.Section7.positiveVolumeClassPermute hc C σ a)))
+'IntegrationInACVF.Section7.HK.normalized_volume_coordinate_invariance' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.HK.volume_iso_semiring_class_reindex_degree : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M) {a b : ℕ} (h : Eq.{1} a b)
+  (U : IntegrationInACVF.Section7.PositiveRVVolumeObject (↑C.base) b),
+  Eq.{1} (IntegrationInACVF.Section7.HK.volumeIsoSemiringClass hc C (U.reindexDegree h))
+    (IntegrationInACVF.Section7.HK.volumeIsoSemiringClass hc C U)
+'IntegrationInACVF.Section7.HK.volume_iso_semiring_class_reindex_degree' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.HK.normalized_basic_positive_classes_commute : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {n m : ℕ}
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M)
+  (U : IntegrationInACVF.Section7.PositiveRVVolumeObject (↑C.base) n)
+  (V : IntegrationInACVF.Section7.PositiveRVVolumeObject (↑C.base) m),
+  Commute.{0}
+    ((IntegrationInACVF.Section7.HK.normalizedBasicVolumeMap hc C)
+      (IntegrationInACVF.Section7.HK.volumeIsoSemiringClass hc C U))
+    ((IntegrationInACVF.Section7.HK.normalizedBasicVolumeMap hc C)
+      (IntegrationInACVF.Section7.HK.volumeIsoSemiringClass hc C V))
+'IntegrationInACVF.Section7.HK.normalized_basic_positive_classes_commute' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.HK.volume_iso_semiring_class_product : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {n m : ℕ}
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M)
+  (U : IntegrationInACVF.Section7.HK.RVVolumeObject (↑C.base) n)
+  (V : IntegrationInACVF.Section7.HK.RVVolumeObject (↑C.base) m),
+  Eq.{1}
+    (IntegrationInACVF.Section7.HK.volumeIsoSemiringClass hc C
+      (IntegrationInACVF.Section7.HK.product (↑C.base) n m U V))
+    (HMul.hMul.{0, 0, 0} (IntegrationInACVF.Section7.HK.volumeIsoSemiringClass hc C U)
+      (IntegrationInACVF.Section7.HK.volumeIsoSemiringClass hc C V))
+'IntegrationInACVF.Section7.HK.volume_iso_semiring_class_product' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.HK.normalized_basic_homogeneous_positive : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {n : ℕ}
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M)
+  (U : IntegrationInACVF.Section7.HK.RVVolumeObject (↑C.base) n),
+  Eq.{1}
+    ((IntegrationInACVF.Section7.HK.normalizedBasicVolumeMap hc C)
+      (IntegrationInACVF.Section7.HK.volumeIsoSemiringClass hc C U))
+    ((IntegrationInACVF.Section7.HK.normalizedBasicVolumeMap hc C)
+      (IntegrationInACVF.Section7.HK.volumeIsoSemiringClass hc C
+        (IntegrationInACVF.Section7.HK.product (↑C.base) n 1 U
+          (IntegrationInACVF.Section7.degreeOnePointVolumeObject ↑C.base))))
+'IntegrationInACVF.Section7.HK.normalized_basic_homogeneous_positive' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@IntegrationInACVF.Section7.HK.normalized_basic_homogeneous_classes_commute : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {n m : ℕ}
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M)
+  (U : IntegrationInACVF.Section7.HK.RVVolumeObject (↑C.base) n)
+  (V : IntegrationInACVF.Section7.HK.RVVolumeObject (↑C.base) m),
+  Commute.{0}
+    ((IntegrationInACVF.Section7.HK.normalizedBasicVolumeMap hc C)
+      (IntegrationInACVF.Section7.HK.volumeIsoSemiringClass hc C U))
+    ((IntegrationInACVF.Section7.HK.normalizedBasicVolumeMap hc C)
+      (IntegrationInACVF.Section7.HK.volumeIsoSemiringClass hc C V))
+'IntegrationInACVF.Section7.HK.normalized_basic_homogeneous_classes_commute' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

@@ -2032,3 +2032,38 @@ The 25-module/148-export batch passed actual source compilation, one complete 17
 Exact-density constrained compactness and generic mixed-fibre charts; weighted-zero almost-everywhere functions, additive and coefficient-linear integration, and representative change of variables; concrete weighted VF coproduct and Cartesian-product agreement in zero and mixed degrees; corrected class-level Theorems 7.10 and 7.13; presentation-level first-head Fubini; central-point normalization and its basic-relation universal property. The function-level head operator still requires almost-everywhere descent and assembly with positive coefficient degrees; normalized function Theorems 7.14–7.15 remain unfinished. No weighted-zero point cancellation or open Fubini/kernel premise is used.
 
 The 54-module/188-export batch passed actual source compilation, one complete 2905-line type/axiom review and Library integration with 13,194 jobs including cached dependencies. Only propext, Classical.choice and Quot.sound occur. The sealed local boundary is 1,899 modules plus Library and 6,246 exports. Earlier batches were not audited again.
+
+
+## Weighted-zero AE head descent and first-coordinate Fubini
+
+Exact-density finite row promotion, constrained generic preparation and essential-index uniformization now compare specified unary and head contractions on their original Gamma base. Arbitrary weighted zero families descend to a preparation-independent AE head operator; quotient-level first-head Fubini and head additivity are proved using actual weighted frozen unary fibres. Weighted measured-zero coefficients also act on positive-valued AE functions by genuine finite RV factors multiplying both forms, with all module laws checked fibrewise. The full graded/support/change-of-variables and normalized function assembly remains unfinished; no degree-one point cancellation or open head-descent premise is assumed.
+
+The 34-module/65-export batch passed actual source compilation, one complete 1925-line type/axiom review and Library integration with 13,228 jobs including cached dependencies. Only propext, Classical.choice and Quot.sound occur. The sealed local boundary is 1,933 modules plus Library and 6,311 exports. Earlier batches were not audited again.
+
+
+## Corrected finite graded raw Fubini and change of variables
+
+The weighted-zero Jacobian transform preserves exact density labels, descends to supported AE functions and is additive. Combining it with the existing positive-degree transforms proves raw change of variables for every finite graded supported function. Corrected actual head and prefix integrals assemble in the HK graded space. Coordinate permutations use the actual global Jacobian transform, retaining its determinant in the density. This proves total Fubini for every nonempty retained coordinate set, including weighted-zero inputs, with preservation of the literal projected support. Weighted-zero parameter extension is semilinear on positive coefficients. These are additive raw results; full graded scalar linearity and corrected normalized function results 7.14–7.15 remain to be proved. No weighted-zero point padding is cancelled and no principal-kernel or coordinate-invariance premise is assumed.
+
+The 26-module/116-export batch passed actual source compilation, one complete 1992-line type/axiom review and Library integration with 13,254 jobs including cached dependencies. Only propext, Classical.choice and Quot.sound occur. The sealed local boundary is 1,959 modules plus Library and 6,427 exports. Earlier batches were not audited again.
+
+
+## Complete corrected graded coefficient action and normalized integral
+
+Actual positive coefficients now multiply weighted-zero-valued families with both original densities retained. Their row formulas prove bilinearity, mixed scalar compatibility and associativity. Together with the weighted-zero actions this constructs the full corrected finite graded function module. Explicit weighted Cartesian realization bijections prove compatibility of the actual homogeneous integrals with every coefficient degree; hence the full graded integral is linear over the corrected all-degree semiring. Its actual scalar extension constructs the normalized function module and its unique normalized linear integral. No raw weighted-zero point padding is cancelled. Remaining are corrected coordinate and supported Jacobian operator descent and normalized Fubini/change-of-variables theorems 7.14–7.15; raw additive identities and literal support preservation were sealed in the previous batch.
+
+The 24-module/72-export batch passed actual source compilation, one complete 1091-line type/axiom review and Library integration with 13,278 jobs including cached dependencies. Only propext, Classical.choice and Quot.sound occur. The sealed local boundary is 1,983 modules plus Library and 6,499 exports. Earlier batches were not audited again.
+
+
+## Corrected normalized supported Theorems 7.14 and 7.15
+
+The corrected normalized function module is proved equivalent to its positive-degree presentation module after the actual point is set equal to one. A generic descent theorem derives full normalized scalar compatibility from positive homogeneous coefficient laws and compatibility with the point and its multiples; no raw point cancellation is used. Actual signed coordinate integrals descend to the whole corrected normalized module and satisfy total Fubini for every nonempty retained projection. Restriction followed by the genuine supported positive Jacobian transform descends to a normalized map; it preserves literal target support and the integral. Supported normalized functions are exactly the span of all actual corrected supported graded presentations, including weighted-zero functions. This proves the corrected named supported Theorems HK.theorem_7_14 and HK.theorem_7_15 with all standing field, saturation, base, generation and Gamma hypotheses visible. The corrected raw identities are separately named proposition_7_11_additive and proposition_7_12_additive. Full raw-coefficient operator linearity and the balanced unnormalized ring-function assembly remain open; no full Section 7 completion is claimed.
+
+The 15-module/60-export batch passed actual source compilation, one complete 1028-line type/axiom review and Library integration with 13,293 jobs including cached dependencies. Only propext, Classical.choice and Quot.sound occur. The sealed local boundary is 1,998 modules plus Library and 6,559 exports. Earlier batches were not audited again.
+
+
+## Corrected normalized coefficient commutativity
+
+Unsigned positive volume-coordinate permutations are invisible in the actual corrected normalized coefficient ring by the genuine point-stabilized volume isomorphism and point = 1. Exact unsigned product swaps prove commutation of positive homogeneous classes; multiplying arbitrary weighted-zero classes by the point raises them to positive degree only after normalization. Finite sums and formal differences then prove commutativity of the complete corrected normalized coefficient ring. No raw graded commutativity, point cancellation, or comparison of the old and new normalized rings is assumed.
+
+The 3-module/12-export batch passed actual source compilation, one complete 151-line type/axiom review and Library integration with 13,296 jobs including cached dependencies. Only propext, Classical.choice and Quot.sound occur. The sealed local boundary is 2,001 modules plus Library and 6,571 exports. Earlier batches were not audited again.

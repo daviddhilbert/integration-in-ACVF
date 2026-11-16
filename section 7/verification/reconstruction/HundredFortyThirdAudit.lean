@@ -1,0 +1,37 @@
+import Integration7.HKNormalizedVolumeCommRing
+import Integration7.HKNormalizedVolumeCoordinateInvariance
+import Integration7.HKNormalizedVolumeProductCommutativity
+set_option pp.universes true
+set_option pp.proofs false
+set_option pp.deepTerms true
+set_option pp.maxSteps 10000000
+set_option pp.notation true
+set_option pp.funBinderTypes true
+set_option pp.piBinderTypes true
+
+
+
+#check @IntegrationInACVF.Section7.HK.normalized_basic_volume_images_commute
+#print axioms IntegrationInACVF.Section7.HK.normalized_basic_volume_images_commute
+#check @IntegrationInACVF.Section7.HK.normalized_volume_ring_basic_difference
+#print axioms IntegrationInACVF.Section7.HK.normalized_volume_ring_basic_difference
+#check @IntegrationInACVF.Section7.HK.normalized_volume_ring_mul_comm
+#print axioms IntegrationInACVF.Section7.HK.normalized_volume_ring_mul_comm
+#check @IntegrationInACVF.Section7.HK.normalizedRVVolumeCommRing
+#print axioms IntegrationInACVF.Section7.HK.normalizedRVVolumeCommRing
+#check @IntegrationInACVF.Section7.HK.normalized_basic_volume_coordinate_invariance
+#print axioms IntegrationInACVF.Section7.HK.normalized_basic_volume_coordinate_invariance
+#check @IntegrationInACVF.Section7.HK.normalized_basic_volume_class
+#print axioms IntegrationInACVF.Section7.HK.normalized_basic_volume_class
+#check @IntegrationInACVF.Section7.HK.normalized_volume_coordinate_invariance
+#print axioms IntegrationInACVF.Section7.HK.normalized_volume_coordinate_invariance
+#check @IntegrationInACVF.Section7.HK.volume_iso_semiring_class_reindex_degree
+#print axioms IntegrationInACVF.Section7.HK.volume_iso_semiring_class_reindex_degree
+#check @IntegrationInACVF.Section7.HK.normalized_basic_positive_classes_commute
+#print axioms IntegrationInACVF.Section7.HK.normalized_basic_positive_classes_commute
+#check @IntegrationInACVF.Section7.HK.volume_iso_semiring_class_product
+#print axioms IntegrationInACVF.Section7.HK.volume_iso_semiring_class_product
+#check @IntegrationInACVF.Section7.HK.normalized_basic_homogeneous_positive
+#print axioms IntegrationInACVF.Section7.HK.normalized_basic_homogeneous_positive
+#check @IntegrationInACVF.Section7.HK.normalized_basic_homogeneous_classes_commute
+#print axioms IntegrationInACVF.Section7.HK.normalized_basic_homogeneous_classes_commute

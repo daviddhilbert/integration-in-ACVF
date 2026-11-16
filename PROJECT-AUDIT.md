@@ -3,11 +3,16 @@
 Dates use America/Los_Angeles. The project is **not complete**. The accepted
 HK weighted measured-zero correction now uses published predecessor
 `25852c85a31c67069b148bd31348128318303510`. The Section 7 registry has
-1,899 checked modules / 6,246 audited exports. Corrected class-level 7.10
-and the actual single-generator principal-ideal 7.13 are proved. Weighted-zero
-AE integration is additive and coefficient-linear; corrected function-level
-Fubini, supported change of variables and normalized functions remain active.
-The root build passes under the new pin (13,406 jobs including cache).
+1,998 checked modules / 6,571 audited exports. Corrected class-level 7.10
+and the actual single-generator principal-ideal 7.13 are proved. The corrected
+finite graded function module and its coefficient-linear integral are checked.
+Raw additive Fubini and supported unpadded change of variables include weighted
+zero, and normalized supported Theorems 7.14–7.15 are checked. Full raw-coefficient
+operator linearity and balanced unnormalized ring-function assembly remain open.
+The current root build passes (13,508 jobs including cache); full-project
+automated verification passed at 1,998 modules. The subsequent three normalized
+coefficient modules passed actual compilation, their 151-line new type/axiom
+review and the affected root build; unchanged sections were not checked again.
 The historical account below retains the scope of its original ordinary-zero
 interfaces. See [the correction status](section%207/HK-CORRECTION-STATUS.md).
 
@@ -45,7 +50,7 @@ The current receipt is
 | 4 | 445 | Numbered lemmas and cell geometry in the approved scope. |
 | 5 | 1,852 | All active RV[k] targets complete, with explicit RV presentation charts for 5.5. |
 | 6 | 2,273 + closed API below | 736 original registered modules. The closed generated-base kernel, integration, function and localization interfaces are checked in the new Section 7 batch; their open universal Section 5.8 premise has been removed. |
-| 7 | 6,246 local; 5,784 published | 1,899 checked local modules plus Library; corrected scope above, legacy scope follows: geometry through 7.10, raw supported 7.11 including ordinary values, positive-value raw 7.12, normalized supported 7.14–7.15, exact raw kernel presentation by basic and degree-one elementary relations, and closed generated-base Section 6 interfaces. |
+| 7 | 6,571 local; 6,246 published | 2,001 checked local modules plus Library; corrected scope above, legacy scope follows: geometry through 7.10, raw supported 7.11 including ordinary values, positive-value raw 7.12, normalized supported 7.14–7.15, exact raw kernel presentation by basic and degree-one elementary relations, and closed generated-base Section 6 interfaces. |
 
 The three new Section 6 modules convert the actual Section 5 RV-category
 isomorphisms and prove `completed_section5_two_order_input` on bases

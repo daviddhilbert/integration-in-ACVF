@@ -24,12 +24,14 @@ RV[*], deriving the required finite-VF-parameter inputs from the completed
 Section 5 theorem. These entrypoints live in
 `IntegrationInACVF.Section7.CompletedSection6`. The corrected Section 7 class algebra now includes weighted zero degrees,
 its lift/integration equivalence, and the actual single-generator principal
-kernel (Theorems 7.10 and 7.13). Weighted-zero AE function integration is
-additive and coefficient-linear. The corrected function-level Fubini,
-supported change of variables and normalized function assembly remain
-unfinished. Earlier ordinary-zero function interfaces retain their legacy
-scope. The project is not complete. The checked Section 7 registry contains
-1,899 modules plus Library and 6,246 audited exports.
+kernel (Theorems 7.10 and 7.13). Weighted-zero AE functions and their full corrected graded coefficient action
+are checked, and total integration is linear. Actual raw additive Fubini and
+unpadded supported change of variables include weighted-zero values. Corrected
+normalized supported Theorems 7.14 and 7.15 are checked. Full raw-coefficient
+operator linearity and balanced unnormalized ring-function assembly remain open.
+Earlier ordinary-zero interfaces retain their legacy scope. The project is not
+complete. The checked Section 7 registry contains 2,001 modules plus Library and
+6,571 audited exports.
 See [Section 5 status](section%205/STATUS.md),
 [Section 6 status](section%206/STATUS.md), and
 [Section 7 correction status](section%207/HK-CORRECTION-STATUS.md).

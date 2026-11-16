@@ -1,0 +1,45 @@
+import Integration7.GammaVolumeSliceAssemblyGeometry
+import Integration7.GammaVolumePresentationGeometry
+import IntegrationSection6.GammaSwappedVolumes
+
+/-! Swapping an empty old-volume block and the sole VF tag retains
+the arbitrary coordinate density and the original-Gamma chart. -/
+noncomputable section
+set_option backward.isDefEq.respectTransparency false
+open FirstOrder FirstOrder.Language CategoryTheory
+open SpecialTransformations.Milestone0 SpecialTransformations.Milestone0.LRV
+open SpecialTransformations.Section3 SpecialTransformations.Section3.GammaParameters
+open SpecialTransformations.Section4 SpecialTransformations.DefinableGeometry
+open SpecialTransformations.Section5 SpecialTransformations.Section7
+open IntegrationInACVF.Section6
+
+namespace IntegrationInACVF.Section7.HK
+variable {M : Type} [LRV.Structure M] [M ⊨ Axioms.ACVF]
+variable {B : Base (M := M)}
+
+theorem weighted_empty_volume_block_swap_iso
+    (hc : CanonicalStructure.IsCanonical (M := M)) (C : BaseContext M)
+    (U : GammaRVFiniteObject B 1) (hUC : U.codes ⊆ (C.base : Set M))
+    (δ : Fin (rvObjectArity U.object))
+    (hδ : ∀ u : rvObjectDomain U.object, (u.val δ).val ≠ iRVZero) :
+    ∃ e : RVVolumeIso
+      (gammaCoordinateDensityObject (e := 0) (k := 0) hc C (gammaSwapVolumeBlocks (n := 1) (e := 0) U) hUC δ hδ)
+      (gammaCoordinateDensityObject (e := 0) (k := 0) hc C U hUC δ hδ), e.GammaDefinable B := by
+  let V := gammaCoordinateDensityObject (e := 0) (k := 0) hc C (gammaSwapVolumeBlocks (n := 1) (e := 0) U) hUC δ hδ
+  let W := gammaCoordinateDensityObject (e := 0) (k := 0) hc C U hUC δ hδ
+  let f : Map V.underlying.obj.domain W.underlying.obj.domain := Map.id _
+  have hf : Function.Bijective f := Function.bijective_id
+  have hCoord : ∀ u, W.underlying.obj.value (f u) = V.underlying.obj.value u := by
+    intro u
+    funext i
+    apply Subtype.ext
+    change (gammaVolumeValue U.toGammaRVObject ⟨u.val,u.property⟩ i).val =
+      (gammaVolumeValue U.toGammaRVObject ⟨u.val,u.property⟩ ((@finAddFlip 0 1) i)).val
+    exact congrArg (fun j => (gammaVolumeValue U.toGammaRVObject ⟨u.val,u.property⟩ j).val)
+      (Subsingleton.elim _ _)
+  let e := RVVolumeIso.of_preserving_coordinates_full hc C
+    (rvFiniteIsoOfAmbient (rvIsoOfVolumePreservingBijection f hf hCoord)) hCoord (fun _ => rfl)
+  exact ⟨e,gamma_volume_iso_of_label_identity hc e
+    (gamma_coordinate_density_object_graphs (e := 0) (k := 0) hc C (gammaSwapVolumeBlocks (n := 1) (e := 0) U) hUC δ hδ) rfl (fun _ => rfl)⟩
+
+end IntegrationInACVF.Section7.HK

@@ -1,0 +1,268 @@
+import Integration7.DefinableNameMapDescent
+import Integration7.HKAEVolumeComponentHeadIntegrals
+import Integration7.HKGradedAEVolumeFunctions
+import Integration7.HKGradedAEVolumeHeadFubini
+import Integration7.HKGradedAEVolumeIntegralAddHoms
+import Integration7.HKGradedAEVolumeJacobians
+import Integration7.HKGradedAEVolumePrefixFubini
+import Integration7.HKGradedVolumeCoordinateFubini
+import Integration7.HKJacobianComponentRepresentatives
+import Integration7.HKPositiveVolumeClassScalarExtensions
+import Integration7.HKRawGradedChangeOfVariables
+import Integration7.HKSupportedGradedCoordinateFubini
+import Integration7.HKSupportedGradedVolumeFunctions
+import Integration7.HKSupportedZeroFunctionAddition
+import Integration7.HKSupportedZeroFunctionJacobians
+import Integration7.HKSupportedZeroJacobianAddition
+import Integration7.HKUnivSupportedVolumeEquivalences
+import Integration7.HKVolumeComponentSupports
+import Integration7.HKZeroDefinableDensityRescaling
+import Integration7.HKZeroFamilyJacobianIntegrals
+import Integration7.HKZeroFamilyJacobianPushforwards
+import Integration7.HKZeroJacobianAlmostEverywhere
+import Integration7.HKZeroJacobianCoproducts
+import Integration7.HKZeroJacobianRowComparison
+import Integration7.HKZeroJacobianRowIsomorphisms
+import Integration7.HKZeroVolumeParameterDescent
+set_option pp.universes true
+set_option pp.proofs false
+set_option pp.deepTerms true
+set_option pp.maxSteps 10000000
+set_option pp.notation true
+set_option pp.funBinderTypes true
+set_option pp.piBinderTypes true
+
+
+
+#check @IntegrationInACVF.Section7.eliminate_definable_names_finite_index
+#print axioms IntegrationInACVF.Section7.eliminate_definable_names_finite_index
+#check @IntegrationInACVF.Section7.mapDescendDefinableNames
+#print axioms IntegrationInACVF.Section7.mapDescendDefinableNames
+#check @IntegrationInACVF.Section7.HK.aeVolumeFunctionComponentHeadIntegral
+#print axioms IntegrationInACVF.Section7.HK.aeVolumeFunctionComponentHeadIntegral
+#check @IntegrationInACVF.Section7.HK.ae_volume_component_head_integral_zero
+#print axioms IntegrationInACVF.Section7.HK.ae_volume_component_head_integral_zero
+#check @IntegrationInACVF.Section7.HK.ae_volume_component_head_integral_positive
+#print axioms IntegrationInACVF.Section7.HK.ae_volume_component_head_integral_positive
+#check @IntegrationInACVF.Section7.HK.aeVolumeComponentHeadIntegralAddHom
+#print axioms IntegrationInACVF.Section7.HK.aeVolumeComponentHeadIntegralAddHom
+#check @IntegrationInACVF.Section7.HK.ae_volume_component_head_fubini_heq
+#print axioms IntegrationInACVF.Section7.HK.ae_volume_component_head_fubini_heq
+#check @IntegrationInACVF.Section7.HK.AEVolumeFunctionComponent
+#print axioms IntegrationInACVF.Section7.HK.AEVolumeFunctionComponent
+#check @IntegrationInACVF.Section7.HK.aeVolumeFunctionComponentAddCommMonoid
+#print axioms IntegrationInACVF.Section7.HK.aeVolumeFunctionComponentAddCommMonoid
+#check @IntegrationInACVF.Section7.HK.aeVolumeFunctionComponentWeightedZeroModule
+#print axioms IntegrationInACVF.Section7.HK.aeVolumeFunctionComponentWeightedZeroModule
+#check @IntegrationInACVF.Section7.HK.GradedAEVolumeFunction
+#print axioms IntegrationInACVF.Section7.HK.GradedAEVolumeFunction
+#check @IntegrationInACVF.Section7.HK.gradedAEVolumeHeadIntegralAddHom
+#print axioms IntegrationInACVF.Section7.HK.gradedAEVolumeHeadIntegralAddHom
+#check @IntegrationInACVF.Section7.HK.graded_ae_volume_head_integral_of
+#print axioms IntegrationInACVF.Section7.HK.graded_ae_volume_head_integral_of
+#check @IntegrationInACVF.Section7.HK.graded_ae_volume_head_fubini_of
+#print axioms IntegrationInACVF.Section7.HK.graded_ae_volume_head_fubini_of
+#check @IntegrationInACVF.Section7.HK.graded_ae_volume_head_fubini
+#print axioms IntegrationInACVF.Section7.HK.graded_ae_volume_head_fubini
+#check @IntegrationInACVF.Section7.HK.aeVolumeFunctionComponentIntegralAddHom
+#print axioms IntegrationInACVF.Section7.HK.aeVolumeFunctionComponentIntegralAddHom
+#check @IntegrationInACVF.Section7.HK.gradedAEVolumeIntegralAddHom
+#print axioms IntegrationInACVF.Section7.HK.gradedAEVolumeIntegralAddHom
+#check @IntegrationInACVF.Section7.HK.graded_ae_volume_integral_of
+#print axioms IntegrationInACVF.Section7.HK.graded_ae_volume_integral_of
+#check @IntegrationInACVF.Section7.HK.ae_volume_component_integral_zero
+#print axioms IntegrationInACVF.Section7.HK.ae_volume_component_integral_zero
+#check @IntegrationInACVF.Section7.HK.ae_volume_component_integral_positive_heq
+#print axioms IntegrationInACVF.Section7.HK.ae_volume_component_integral_positive_heq
+#check @IntegrationInACVF.Section7.HK.aeVolumeComponentJacobianAddHom
+#print axioms IntegrationInACVF.Section7.HK.aeVolumeComponentJacobianAddHom
+#check @IntegrationInACVF.Section7.HK.gradedAEVolumeJacobianAddHom
+#print axioms IntegrationInACVF.Section7.HK.gradedAEVolumeJacobianAddHom
+#check @IntegrationInACVF.Section7.HK.graded_ae_volume_jacobian_of
+#print axioms IntegrationInACVF.Section7.HK.graded_ae_volume_jacobian_of
+#check @IntegrationInACVF.Section7.HK.pure_vf_univ_permutation_bijective
+#print axioms IntegrationInACVF.Section7.HK.pure_vf_univ_permutation_bijective
+#check @IntegrationInACVF.Section7.HK.gradedAEVolumeCoordinatePermutationAddHom
+#print axioms IntegrationInACVF.Section7.HK.gradedAEVolumeCoordinatePermutationAddHom
+#check @IntegrationInACVF.Section7.HK.ae_volume_component_jacobian_integral
+#print axioms IntegrationInACVF.Section7.HK.ae_volume_component_jacobian_integral
+#check @IntegrationInACVF.Section7.HK.graded_ae_volume_jacobian_integral
+#print axioms IntegrationInACVF.Section7.HK.graded_ae_volume_jacobian_integral
+#check @IntegrationInACVF.Section7.HK.graded_ae_volume_coordinate_permutation_integral
+#print axioms IntegrationInACVF.Section7.HK.graded_ae_volume_coordinate_permutation_integral
+#check @IntegrationInACVF.Section7.HK.gradedAEVolumePrefixIntegralAddHom
+#print axioms IntegrationInACVF.Section7.HK.gradedAEVolumePrefixIntegralAddHom
+#check @IntegrationInACVF.Section7.HK.graded_ae_volume_prefix_integral_zero
+#print axioms IntegrationInACVF.Section7.HK.graded_ae_volume_prefix_integral_zero
+#check @IntegrationInACVF.Section7.HK.graded_ae_volume_prefix_integral_succ
+#print axioms IntegrationInACVF.Section7.HK.graded_ae_volume_prefix_integral_succ
+#check @IntegrationInACVF.Section7.HK.graded_ae_volume_prefix_fubini
+#print axioms IntegrationInACVF.Section7.HK.graded_ae_volume_prefix_fubini
+#check @IntegrationInACVF.Section7.HK.gradedAEVolumeBaseEquiv
+#print axioms IntegrationInACVF.Section7.HK.gradedAEVolumeBaseEquiv
+#check @IntegrationInACVF.Section7.HK.graded_ae_volume_integral_base_equiv
+#print axioms IntegrationInACVF.Section7.HK.graded_ae_volume_integral_base_equiv
+#check @IntegrationInACVF.Section7.HK.gradedAEVolumeCoordinateIntegralAddHom
+#print axioms IntegrationInACVF.Section7.HK.gradedAEVolumeCoordinateIntegralAddHom
+#check @IntegrationInACVF.Section7.HK.graded_coordinate_integral_eq_total
+#print axioms IntegrationInACVF.Section7.HK.graded_coordinate_integral_eq_total
+#check @IntegrationInACVF.Section7.HK.graded_volume_fubini
+#print axioms IntegrationInACVF.Section7.HK.graded_volume_fubini
+#check @IntegrationInACVF.Section7.HK.graded_nonempty_coordinate_integral
+#print axioms IntegrationInACVF.Section7.HK.graded_nonempty_coordinate_integral
+#check @IntegrationInACVF.Section7.HK.ae_zero_volume_component_jacobian_representative
+#print axioms IntegrationInACVF.Section7.HK.ae_zero_volume_component_jacobian_representative
+#check @IntegrationInACVF.Section7.HK.ae_positive_volume_component_jacobian_representative
+#print axioms IntegrationInACVF.Section7.HK.ae_positive_volume_component_jacobian_representative
+#check @IntegrationInACVF.Section7.HK.zero_volume_coefficient_extend_trans
+#print axioms IntegrationInACVF.Section7.HK.zero_volume_coefficient_extend_trans
+#check @IntegrationInACVF.Section7.HK.weighted_positive_volume_class_extend_smul
+#print axioms IntegrationInACVF.Section7.HK.weighted_positive_volume_class_extend_smul
+#check @IntegrationInACVF.Section7.HK.weightedPositiveVolumeClassExtendSemilinearMap
+#print axioms IntegrationInACVF.Section7.HK.weightedPositiveVolumeClassExtendSemilinearMap
+#check @IntegrationInACVF.Section7.HK.supported_volume_component_jacobian_integral
+#print axioms IntegrationInACVF.Section7.HK.supported_volume_component_jacobian_integral
+#check @IntegrationInACVF.Section7.HK.rawSupportedGradedIntegralAddHom
+#print axioms IntegrationInACVF.Section7.HK.rawSupportedGradedIntegralAddHom
+#check @IntegrationInACVF.Section7.HK.raw_supported_graded_integral_of
+#print axioms IntegrationInACVF.Section7.HK.raw_supported_graded_integral_of
+#check @IntegrationInACVF.Section7.HK.raw_graded_change_of_variables
+#print axioms IntegrationInACVF.Section7.HK.raw_graded_change_of_variables
+#check @IntegrationInACVF.Section7.HK.gradedVolumeSupport
+#print axioms IntegrationInACVF.Section7.HK.gradedVolumeSupport
+#check @IntegrationInACVF.Section7.HK.graded_volume_generator_has_support
+#print axioms IntegrationInACVF.Section7.HK.graded_volume_generator_has_support
+#check @IntegrationInACVF.Section7.HK.graded_volume_base_preserves_support
+#print axioms IntegrationInACVF.Section7.HK.graded_volume_base_preserves_support
+#check @IntegrationInACVF.Section7.HK.graded_volume_coordinate_permutation_preserves_support
+#print axioms IntegrationInACVF.Section7.HK.graded_volume_coordinate_permutation_preserves_support
+#check @IntegrationInACVF.Section7.HK.graded_volume_head_preserves_support
+#print axioms IntegrationInACVF.Section7.HK.graded_volume_head_preserves_support
+#check @IntegrationInACVF.Section7.HK.graded_volume_prefix_preserves_support
+#print axioms IntegrationInACVF.Section7.HK.graded_volume_prefix_preserves_support
+#check @IntegrationInACVF.Section7.HK.graded_volume_coordinate_preserves_support
+#print axioms IntegrationInACVF.Section7.HK.graded_volume_coordinate_preserves_support
+#check @IntegrationInACVF.Section7.HK.supportedGradedCoordinateIntegralAddHom
+#print axioms IntegrationInACVF.Section7.HK.supportedGradedCoordinateIntegralAddHom
+#check @IntegrationInACVF.Section7.HK.supported_graded_coordinate_total_fubini
+#print axioms IntegrationInACVF.Section7.HK.supported_graded_coordinate_total_fubini
+#check @IntegrationInACVF.Section7.HK.SupportedVolumeFunctionComponent
+#print axioms IntegrationInACVF.Section7.HK.SupportedVolumeFunctionComponent
+#check @IntegrationInACVF.Section7.HK.supportedVolumeFunctionComponentAddCommMonoid
+#print axioms IntegrationInACVF.Section7.HK.supportedVolumeFunctionComponentAddCommMonoid
+#check @IntegrationInACVF.Section7.HK.SupportedGradedVolumeFunction
+#print axioms IntegrationInACVF.Section7.HK.SupportedGradedVolumeFunction
+#check @IntegrationInACVF.Section7.HK.supportedVolumeComponentForgetAddHom
+#print axioms IntegrationInACVF.Section7.HK.supportedVolumeComponentForgetAddHom
+#check @IntegrationInACVF.Section7.HK.supportedGradedVolumeForgetAddHom
+#print axioms IntegrationInACVF.Section7.HK.supportedGradedVolumeForgetAddHom
+#check @IntegrationInACVF.Section7.HK.supported_graded_volume_forget_of
+#print axioms IntegrationInACVF.Section7.HK.supported_graded_volume_forget_of
+#check @IntegrationInACVF.Section7.HK.supportedVolumeComponentJacobianAddHom
+#print axioms IntegrationInACVF.Section7.HK.supportedVolumeComponentJacobianAddHom
+#check @IntegrationInACVF.Section7.HK.supportedGradedVolumeJacobianAddHom
+#print axioms IntegrationInACVF.Section7.HK.supportedGradedVolumeJacobianAddHom
+#check @IntegrationInACVF.Section7.HK.supported_graded_volume_jacobian_of
+#print axioms IntegrationInACVF.Section7.HK.supported_graded_volume_jacobian_of
+#check @IntegrationInACVF.Section7.HK.zero_family_coprod_supported
+#print axioms IntegrationInACVF.Section7.HK.zero_family_coprod_supported
+#check @IntegrationInACVF.Section7.HK.supportedZeroVolumeFunctionAdd
+#print axioms IntegrationInACVF.Section7.HK.supportedZeroVolumeFunctionAdd
+#check @IntegrationInACVF.Section7.HK.supportedZeroVolumeFunctionZero
+#print axioms IntegrationInACVF.Section7.HK.supportedZeroVolumeFunctionZero
+#check @IntegrationInACVF.Section7.HK.supported_zero_volume_function_forget_add
+#print axioms IntegrationInACVF.Section7.HK.supported_zero_volume_function_forget_add
+#check @IntegrationInACVF.Section7.HK.supported_zero_volume_function_forget_zero
+#print axioms IntegrationInACVF.Section7.HK.supported_zero_volume_function_forget_zero
+#check @IntegrationInACVF.Section7.HK.supportedZeroVolumeFunctionAddCommMonoid
+#print axioms IntegrationInACVF.Section7.HK.supportedZeroVolumeFunctionAddCommMonoid
+#check @IntegrationInACVF.Section7.HK.supportedZeroVolumeFunctionForgetAddHom
+#print axioms IntegrationInACVF.Section7.HK.supportedZeroVolumeFunctionForgetAddHom
+#check @IntegrationInACVF.Section7.HK.zero_rv_volume_class_of_empty
+#print axioms IntegrationInACVF.Section7.HK.zero_rv_volume_class_of_empty
+#check @IntegrationInACVF.Section7.HK.supported_zero_volume_jacobian_map_zero
+#print axioms IntegrationInACVF.Section7.HK.supported_zero_volume_jacobian_map_zero
+#check @IntegrationInACVF.Section7.HK.SupportedZeroVolumeFunctionPresentation
+#print axioms IntegrationInACVF.Section7.HK.SupportedZeroVolumeFunctionPresentation
+#check @IntegrationInACVF.Section7.HK.supportedZeroVolumeFunctionSetoid
+#print axioms IntegrationInACVF.Section7.HK.supportedZeroVolumeFunctionSetoid
+#check @IntegrationInACVF.Section7.HK.SupportedAEZeroVolumeFunction
+#print axioms IntegrationInACVF.Section7.HK.SupportedAEZeroVolumeFunction
+#check @IntegrationInACVF.Section7.HK.supportedZeroVolumeFunctionForget
+#print axioms IntegrationInACVF.Section7.HK.supportedZeroVolumeFunctionForget
+#check @IntegrationInACVF.Section7.HK.supported_zero_volume_function_forget_injective
+#print axioms IntegrationInACVF.Section7.HK.supported_zero_volume_function_forget_injective
+#check @IntegrationInACVF.Section7.HK.SupportedZeroVolumeFunctionPresentation.jacobianTransform
+#print axioms IntegrationInACVF.Section7.HK.SupportedZeroVolumeFunctionPresentation.jacobianTransform
+#check @IntegrationInACVF.Section7.HK.supportedZeroVolumeFunctionJacobian
+#print axioms IntegrationInACVF.Section7.HK.supportedZeroVolumeFunctionJacobian
+#check @IntegrationInACVF.Section7.HK.supported_zero_volume_function_jacobian_integral
+#print axioms IntegrationInACVF.Section7.HK.supported_zero_volume_function_jacobian_integral
+#check @IntegrationInACVF.Section7.HK.zero_jacobian_sum_row_class
+#print axioms IntegrationInACVF.Section7.HK.zero_jacobian_sum_row_class
+#check @IntegrationInACVF.Section7.HK.supported_zero_volume_jacobian_map_add
+#print axioms IntegrationInACVF.Section7.HK.supported_zero_volume_jacobian_map_add
+#check @IntegrationInACVF.Section7.HK.supportedZeroVolumeJacobianAddHom
+#print axioms IntegrationInACVF.Section7.HK.supportedZeroVolumeJacobianAddHom
+#check @IntegrationInACVF.Section7.HK.supported_volume_component_forget_injective
+#print axioms IntegrationInACVF.Section7.HK.supported_volume_component_forget_injective
+#check @IntegrationInACVF.Section7.HK.supported_graded_volume_forget_injective
+#print axioms IntegrationInACVF.Section7.HK.supported_graded_volume_forget_injective
+#check @IntegrationInACVF.Section7.HK.supportedZeroVolumeUnivLift
+#print axioms IntegrationInACVF.Section7.HK.supportedZeroVolumeUnivLift
+#check @IntegrationInACVF.Section7.HK.supported_zero_volume_univ_forget_lift
+#print axioms IntegrationInACVF.Section7.HK.supported_zero_volume_univ_forget_lift
+#check @IntegrationInACVF.Section7.HK.supported_volume_component_univ_forget_bijective
+#print axioms IntegrationInACVF.Section7.HK.supported_volume_component_univ_forget_bijective
+#check @IntegrationInACVF.Section7.HK.supportedVolumeComponentUnivEquiv
+#print axioms IntegrationInACVF.Section7.HK.supportedVolumeComponentUnivEquiv
+#check @IntegrationInACVF.Section7.HK.HasVolumeComponentSupport
+#print axioms IntegrationInACVF.Section7.HK.HasVolumeComponentSupport
+#check @IntegrationInACVF.Section7.HK.zero_head_integral_has_source
+#print axioms IntegrationInACVF.Section7.HK.zero_head_integral_has_source
+#check @IntegrationInACVF.Section7.HK.volume_component_coordinate_jacobian_preserves_support
+#print axioms IntegrationInACVF.Section7.HK.volume_component_coordinate_jacobian_preserves_support
+#check @IntegrationInACVF.Section7.HK.volume_component_head_preserves_support
+#print axioms IntegrationInACVF.Section7.HK.volume_component_head_preserves_support
+#check @IntegrationInACVF.Section7.HK.ZeroRVVolumeIso.extend
+#print axioms IntegrationInACVF.Section7.HK.ZeroRVVolumeIso.extend
+#check @IntegrationInACVF.Section7.HK.ZeroRVVolumeObject.rescaleDefinable
+#print axioms IntegrationInACVF.Section7.HK.ZeroRVVolumeObject.rescaleDefinable
+#check @IntegrationInACVF.Section7.HK.ZeroRVVolumeIso.rescaleDefinable
+#print axioms IntegrationInACVF.Section7.HK.ZeroRVVolumeIso.rescaleDefinable
+#check @IntegrationInACVF.Section7.HK.zeroFamilyJacobianVolumeBijection
+#print axioms IntegrationInACVF.Section7.HK.zeroFamilyJacobianVolumeBijection
+#check @IntegrationInACVF.Section7.HK.zero_family_jacobian_integral
+#print axioms IntegrationInACVF.Section7.HK.zero_family_jacobian_integral
+#check @IntegrationInACVF.Section7.HK.ZeroVFVolumeFamily.pushforwardBase
+#print axioms IntegrationInACVF.Section7.HK.ZeroVFVolumeFamily.pushforwardBase
+#check @IntegrationInACVF.Section7.HK.ZeroVFVolumeFamily.pushforwardBase_density
+#print axioms IntegrationInACVF.Section7.HK.ZeroVFVolumeFamily.pushforwardBase_density
+#check @IntegrationInACVF.Section7.HK.ZeroVFVolumeFamily.pushforwardBase_fibre
+#print axioms IntegrationInACVF.Section7.HK.ZeroVFVolumeFamily.pushforwardBase_fibre
+#check @IntegrationInACVF.Section7.HK.ZeroVFVolumeFamily.jacobianPushforward
+#print axioms IntegrationInACVF.Section7.HK.ZeroVFVolumeFamily.jacobianPushforward
+#check @IntegrationInACVF.Section7.HK.ZeroVFVolumeFamily.jacobianPushforward_density
+#print axioms IntegrationInACVF.Section7.HK.ZeroVFVolumeFamily.jacobianPushforward_density
+#check @IntegrationInACVF.Section7.HK.zero_family_jacobian_pushforward_preserves_volume
+#print axioms IntegrationInACVF.Section7.HK.zero_family_jacobian_pushforward_preserves_volume
+#check @IntegrationInACVF.Section7.HK.zero_jacobian_row_empty_outside
+#print axioms IntegrationInACVF.Section7.HK.zero_jacobian_row_empty_outside
+#check @IntegrationInACVF.Section7.HK.zero_jacobian_preserves_ae_equivalence
+#print axioms IntegrationInACVF.Section7.HK.zero_jacobian_preserves_ae_equivalence
+#check @IntegrationInACVF.Section7.HK.zero_base_coprod_left_value
+#print axioms IntegrationInACVF.Section7.HK.zero_base_coprod_left_value
+#check @IntegrationInACVF.Section7.HK.zero_base_coprod_right_value
+#print axioms IntegrationInACVF.Section7.HK.zero_base_coprod_right_value
+#check @IntegrationInACVF.Section7.HK.zero_jacobian_coprod_domain
+#print axioms IntegrationInACVF.Section7.HK.zero_jacobian_coprod_domain
+#check @IntegrationInACVF.Section7.HK.zero_jacobian_coprod_density
+#print axioms IntegrationInACVF.Section7.HK.zero_jacobian_coprod_density
+#check @IntegrationInACVF.Section7.HK.zero_jacobian_row_comparison
+#print axioms IntegrationInACVF.Section7.HK.zero_jacobian_row_comparison
+#check @IntegrationInACVF.Section7.HK.zeroJacobianRowIso
+#print axioms IntegrationInACVF.Section7.HK.zeroJacobianRowIso
+#check @IntegrationInACVF.Section7.HK.ZeroRVVolumeIso.descendDefinableNames
+#print axioms IntegrationInACVF.Section7.HK.ZeroRVVolumeIso.descendDefinableNames
+#check @IntegrationInACVF.Section7.HK.zero_volume_coefficient_extend_injective_definable
+#print axioms IntegrationInACVF.Section7.HK.zero_volume_coefficient_extend_injective_definable

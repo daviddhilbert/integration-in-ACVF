@@ -1,0 +1,174 @@
+import Integration7.HKAERVWeightedZeroActions
+import Integration7.HKAERVWeightedZeroModules
+import Integration7.HKAEZeroHeadFubini
+import Integration7.HKAEZeroHeadIntegralAdditivity
+import Integration7.HKAEZeroHeadIntegrals
+import Integration7.HKDensityLabelConstraints
+import Integration7.HKFiniteConstrainedUniformity
+import Integration7.HKFrozenZeroHeadIntegralAdditivity
+import Integration7.HKFrozenZeroHeadIntegralValues
+import Integration7.HKGenericFiniteConstrainedPreparation
+import Integration7.HKGenericWeightedUnaryRawComparison
+import Integration7.HKGenericWeightedUnarySelectedComparison
+import Integration7.HKIndexedEssentialRestrictions
+import Integration7.HKIndexedWeightedRowBijections
+import Integration7.HKIndexedWeightedVolumeComparisons
+import Integration7.HKPreparedDensityConstraints
+import Integration7.HKPreparedWeightedComparisons
+import Integration7.HKPureRVPointSortedIsomorphisms
+import Integration7.HKSelectedFamilyWeightedZeroProducts
+import Integration7.HKWeightedEmptyVolumeBlockSwaps
+import Integration7.HKWeightedEssentialUniformity
+import Integration7.HKWeightedFiniteRowWitnesses
+import Integration7.HKWeightedHeadComparisons
+import Integration7.HKWeightedHeadFibreWitnesses
+import Integration7.HKWeightedNativeUnaryComparisons
+import Integration7.HKWeightedPointIsomorphismCongruence
+import Integration7.HKWeightedUnaryComparisonFromPreparation
+import Integration7.HKZeroDensityGraphRowIsomorphisms
+import Integration7.HKZeroFamilyAEHeadComparisons
+import Integration7.HKZeroFamilyAEHeadGeometry
+import Integration7.HKZeroFamilyGenericRowIsomorphisms
+import Integration7.HKZeroFrozenCoproductBijections
+import Integration7.HKZeroHeadFibreIntegralIsomorphisms
+import Integration7.HKZeroVolumeHeadFibres
+set_option pp.universes true
+set_option pp.proofs false
+set_option pp.deepTerms true
+set_option pp.maxSteps 10000000
+set_option pp.notation true
+set_option pp.funBinderTypes true
+set_option pp.piBinderTypes true
+
+
+
+#check @IntegrationInACVF.Section7.HK.ae_weighted_zero_product_congr
+#print axioms IntegrationInACVF.Section7.HK.ae_weighted_zero_product_congr
+#check @IntegrationInACVF.Section7.HK.aeRVVolumeFunctionWeightedZeroProduct
+#print axioms IntegrationInACVF.Section7.HK.aeRVVolumeFunctionWeightedZeroProduct
+#check @IntegrationInACVF.Section7.HK.ae_rv_volume_function_weighted_zero_representative
+#print axioms IntegrationInACVF.Section7.HK.ae_rv_volume_function_weighted_zero_representative
+#check @IntegrationInACVF.Section7.HK.aeRVVolumeFunctionWeightedZeroSMul
+#print axioms IntegrationInACVF.Section7.HK.aeRVVolumeFunctionWeightedZeroSMul
+#check @IntegrationInACVF.Section7.HK.aeRVVolumeFunctionWeightedZeroModule
+#print axioms IntegrationInACVF.Section7.HK.aeRVVolumeFunctionWeightedZeroModule
+#check @IntegrationInACVF.Section7.HK.ae_zero_volume_function_appended_head_fubini
+#print axioms IntegrationInACVF.Section7.HK.ae_zero_volume_function_appended_head_fubini
+#check @IntegrationInACVF.Section7.HK.ae_zero_head_integral_zero
+#print axioms IntegrationInACVF.Section7.HK.ae_zero_head_integral_zero
+#check @IntegrationInACVF.Section7.HK.ae_zero_volume_head_integral_add
+#print axioms IntegrationInACVF.Section7.HK.ae_zero_volume_head_integral_add
+#check @IntegrationInACVF.Section7.HK.aeZeroVolumeHeadIntegralAddHom
+#print axioms IntegrationInACVF.Section7.HK.aeZeroVolumeHeadIntegralAddHom
+#check @IntegrationInACVF.Section7.HK.aeZeroVolumeFunctionHeadIntegral
+#print axioms IntegrationInACVF.Section7.HK.aeZeroVolumeFunctionHeadIntegral
+#check @IntegrationInACVF.Section7.HK.ae_zero_volume_function_head_integral_representative
+#print axioms IntegrationInACVF.Section7.HK.ae_zero_volume_function_head_integral_representative
+#check @IntegrationInACVF.Section7.HK.densityLabelConstraint
+#print axioms IntegrationInACVF.Section7.HK.densityLabelConstraint
+#check @IntegrationInACVF.Section7.HK.density_label_constraint_definable
+#print axioms IntegrationInACVF.Section7.HK.density_label_constraint_definable
+#check @IntegrationInACVF.Section7.HK.density_label_constraint_append
+#print axioms IntegrationInACVF.Section7.HK.density_label_constraint_append
+#check @IntegrationInACVF.Section7.HK.finite_constrained_row_chart_uniformity
+#print axioms IntegrationInACVF.Section7.HK.finite_constrained_row_chart_uniformity
+#check @IntegrationInACVF.Section7.HK.zero_family_frozen_head_integral_add
+#print axioms IntegrationInACVF.Section7.HK.zero_family_frozen_head_integral_add
+#check @IntegrationInACVF.Section7.HK.zero_head_integral_sum_row_class
+#print axioms IntegrationInACVF.Section7.HK.zero_head_integral_sum_row_class
+#check @IntegrationInACVF.Section7.HK.zeroFamilyFrozenHeadIntegral
+#print axioms IntegrationInACVF.Section7.HK.zeroFamilyFrozenHeadIntegral
+#check @IntegrationInACVF.Section7.HK.zero_head_integral_is_frozen_fibre_integral
+#print axioms IntegrationInACVF.Section7.HK.zero_head_integral_is_frozen_fibre_integral
+#check @IntegrationInACVF.Section7.HK.generic_finite_constrained_preparation
+#print axioms IntegrationInACVF.Section7.HK.generic_finite_constrained_preparation
+#check @IntegrationInACVF.Section7.HK.weighted_unary_raw_comparison_from_generic_geometry
+#print axioms IntegrationInACVF.Section7.HK.weighted_unary_raw_comparison_from_generic_geometry
+#check @IntegrationInACVF.Section7.HK.weighted_unary_comparison_from_generic_geometry
+#print axioms IntegrationInACVF.Section7.HK.weighted_unary_comparison_from_generic_geometry
+#check @IntegrationInACVF.Section7.HK.weighted_indexed_essential_restriction_iso
+#print axioms IntegrationInACVF.Section7.HK.weighted_indexed_essential_restriction_iso
+#check @IntegrationInACVF.Section7.HK.indexed_weighted_row_bijection
+#print axioms IntegrationInACVF.Section7.HK.indexed_weighted_row_bijection
+#check @IntegrationInACVF.Section7.HK.indexed_weighted_label_equiv_density
+#print axioms IntegrationInACVF.Section7.HK.indexed_weighted_label_equiv_density
+#check @IntegrationInACVF.Section7.HK.indexed_weighted_volume_comparison
+#print axioms IntegrationInACVF.Section7.HK.indexed_weighted_volume_comparison
+#check @IntegrationInACVF.Section7.HK.prepared_relation_density_eq
+#print axioms IntegrationInACVF.Section7.HK.prepared_relation_density_eq
+#check @IntegrationInACVF.Section7.HK.rv_relation_density_constraint
+#print axioms IntegrationInACVF.Section7.HK.rv_relation_density_constraint
+#check @IntegrationInACVF.Section7.HK.prepared_relation_density_constraint
+#print axioms IntegrationInACVF.Section7.HK.prepared_relation_density_constraint
+#check @IntegrationInACVF.Section7.HK.HasPreparedWeightedComparison
+#print axioms IntegrationInACVF.Section7.HK.HasPreparedWeightedComparison
+#check @IntegrationInACVF.Section7.HK.generic_weighted_comparison_preparation
+#print axioms IntegrationInACVF.Section7.HK.generic_weighted_comparison_preparation
+#check @IntegrationInACVF.Section7.HK.pureRVPointRawEquiv
+#print axioms IntegrationInACVF.Section7.HK.pureRVPointRawEquiv
+#check @IntegrationInACVF.Section7.HK.pureRVPointSortedIso
+#print axioms IntegrationInACVF.Section7.HK.pureRVPointSortedIso
+#check @IntegrationInACVF.Section7.HK.pure_rv_point_sorted_iso_value
+#print axioms IntegrationInACVF.Section7.HK.pure_rv_point_sorted_iso_value
+#check @IntegrationInACVF.Section7.HK.selectedFamilyWeightedZeroProduct
+#print axioms IntegrationInACVF.Section7.HK.selectedFamilyWeightedZeroProduct
+#check @IntegrationInACVF.Section7.HK.selectedFamilyWeightedZeroRowIso
+#print axioms IntegrationInACVF.Section7.HK.selectedFamilyWeightedZeroRowIso
+#check @IntegrationInACVF.Section7.HK.selected_family_weighted_zero_row_scalar
+#print axioms IntegrationInACVF.Section7.HK.selected_family_weighted_zero_row_scalar
+#check @IntegrationInACVF.Section7.HK.weighted_empty_volume_block_swap_iso
+#print axioms IntegrationInACVF.Section7.HK.weighted_empty_volume_block_swap_iso
+#check @IntegrationInACVF.Section7.HK.weighted_indexed_uniformity_on_essential_indices
+#print axioms IntegrationInACVF.Section7.HK.weighted_indexed_uniformity_on_essential_indices
+#check @IntegrationInACVF.Section7.HK.weighted_finite_row_formula_witness
+#print axioms IntegrationInACVF.Section7.HK.weighted_finite_row_formula_witness
+#check @IntegrationInACVF.Section7.HK.weighted_head_common_comparison_at_generic
+#print axioms IntegrationInACVF.Section7.HK.weighted_head_common_comparison_at_generic
+#check @IntegrationInACVF.Section7.HK.generic_head_weighted_row_iso
+#print axioms IntegrationInACVF.Section7.HK.generic_head_weighted_row_iso
+#check @IntegrationInACVF.Section7.HK.weighted_native_unary_raw_comparison
+#print axioms IntegrationInACVF.Section7.HK.weighted_native_unary_raw_comparison
+#check @IntegrationInACVF.Section7.HK.weighted_point_iso_congr_density
+#print axioms IntegrationInACVF.Section7.HK.weighted_point_iso_congr_density
+#check @IntegrationInACVF.Section7.HK.weighted_unary_comparison_from_preparation
+#print axioms IntegrationInACVF.Section7.HK.weighted_unary_comparison_from_preparation
+#check @IntegrationInACVF.Section7.HK.zeroDensityGraphGammaIso
+#print axioms IntegrationInACVF.Section7.HK.zeroDensityGraphGammaIso
+#check @IntegrationInACVF.Section7.HK.zeroDensityGraphRowGammaIso
+#print axioms IntegrationInACVF.Section7.HK.zeroDensityGraphRowGammaIso
+#check @IntegrationInACVF.Section7.HK.zero_density_graph_row_gamma_iso_density
+#print axioms IntegrationInACVF.Section7.HK.zero_density_graph_row_gamma_iso_density
+#check @IntegrationInACVF.Section7.HK.zero_density_graph_row_iso_of_class_eq
+#print axioms IntegrationInACVF.Section7.HK.zero_density_graph_row_iso_of_class_eq
+#check @IntegrationInACVF.Section7.HK.zero_family_head_integral_comparison_of_ae
+#print axioms IntegrationInACVF.Section7.HK.zero_family_head_integral_comparison_of_ae
+#check @IntegrationInACVF.Section7.HK.zero_family_head_geometry_of_ae
+#print axioms IntegrationInACVF.Section7.HK.zero_family_head_geometry_of_ae
+#check @IntegrationInACVF.Section7.HK.zero_family_ae_rows_eq_at_generic
+#print axioms IntegrationInACVF.Section7.HK.zero_family_ae_rows_eq_at_generic
+#check @IntegrationInACVF.Section7.HK.zero_family_ae_density_point_iso_at_generic
+#print axioms IntegrationInACVF.Section7.HK.zero_family_ae_density_point_iso_at_generic
+#check @IntegrationInACVF.Section7.HK.zeroFamilyFullCoprodBijection
+#print axioms IntegrationInACVF.Section7.HK.zeroFamilyFullCoprodBijection
+#check @IntegrationInACVF.Section7.HK.zero_frozen_head_coprod_carrier
+#print axioms IntegrationInACVF.Section7.HK.zero_frozen_head_coprod_carrier
+#check @IntegrationInACVF.Section7.HK.zeroFrozenHeadCoprodBijection
+#print axioms IntegrationInACVF.Section7.HK.zeroFrozenHeadCoprodBijection
+#check @IntegrationInACVF.Section7.HK.zero_head_fibre_volume_index
+#print axioms IntegrationInACVF.Section7.HK.zero_head_fibre_volume_index
+#check @IntegrationInACVF.Section7.HK.zero_head_fibre_density_index
+#print axioms IntegrationInACVF.Section7.HK.zero_head_fibre_density_index
+#check @IntegrationInACVF.Section7.HK.zeroHeadFibreVolumeObject
+#print axioms IntegrationInACVF.Section7.HK.zeroHeadFibreVolumeObject
+#check @IntegrationInACVF.Section7.HK.zeroHeadFibreIntegralVolumeIso
+#print axioms IntegrationInACVF.Section7.HK.zeroHeadFibreIntegralVolumeIso
+#check @IntegrationInACVF.Section7.HK.ZeroVFVolumeFamily.headFibre
+#print axioms IntegrationInACVF.Section7.HK.ZeroVFVolumeFamily.headFibre
+#check @IntegrationInACVF.Section7.HK.ZeroVFVolumeFamily.extendContext
+#print axioms IntegrationInACVF.Section7.HK.ZeroVFVolumeFamily.extendContext
+#check @IntegrationInACVF.Section7.HK.ZeroVFVolumeFamily.frozenHeadFamily
+#print axioms IntegrationInACVF.Section7.HK.ZeroVFVolumeFamily.frozenHeadFamily
+#check @IntegrationInACVF.Section7.HK.zero_head_fibre_density_contraction_source
+#print axioms IntegrationInACVF.Section7.HK.zero_head_fibre_density_contraction_source
+#check @IntegrationInACVF.Section7.HK.zeroHeadFibreStandardContraction
+#print axioms IntegrationInACVF.Section7.HK.zeroHeadFibreStandardContraction
