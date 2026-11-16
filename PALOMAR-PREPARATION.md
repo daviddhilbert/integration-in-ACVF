@@ -23,11 +23,24 @@ Solution imports the two actual proved modules and never imports the Challenge.
 
 Both selected module-format results compiled; their type and axiom output is
 retained in `verification/palomar-selected-types.txt`. Only propext,
-Classical.choice and Quot.sound occur. The local Comparator diagnostic passed
-and Lean's default kernel accepted the Solution. That diagnostic ran without
-its unavailable local sandbox and does not replace Palomar verification.
-After formatting only, the final Challenge compiled at 92,568 bytes and 992
-physical lines. The compact preparation receipt records hashes and scope.
+Classical.choice and Quot.sound occur. The corrected local Comparator diagnostic
+passed: statement comparison succeeded and Lean's default kernel accepted the
+Solution. This diagnostic ran without the local sandbox and does not replace
+Palomar's protected workflow. The Challenge is 94,453 bytes and 990 physical
+lines; the compact preparation receipt records its hash and exact scope.
+
+The first intake, at `cfb50be1e464063f3e0368672b79bdc3fba7d0d5`, passed
+[Palomar's mechanical verification](https://github.com/PalomarRegistry/PalomarSubmission/actions/runs/43949736094).
+Its later [registration-rendering job](https://github.com/PalomarRegistry/PalomarSubmission/actions/runs/43953160407)
+failed because 79 compared compiler-generated proof helpers had no source-level
+rendering anchor. The corrected configuration selects 37 explicitly named
+obligations: the same two headline results and their supporting proof statements.
+One tuple-coding surjectivity helper is now an explicit theorem with exactly its
+former generated statement; the tuple presentation refers to that theorem.
+Computational data, headline types, Solution proofs and dependency pins are
+unchanged. No definition holes or additional permitted axioms were introduced.
+Both the complete protected mechanical workflow and the trusted rendering
+preflight must pass at the corrected commit before a new intake.
 
 The candidate starts from released documentation commit
 2c29c5b848f9077274774125222bba563cdc11b4. Module headers and compiler-required
@@ -43,7 +56,7 @@ results; its preparation record explicitly said intake had not been sent.
 It is a packaging example, not evidence of this entry's verification.
 
 Palomar's current guidelines and llms.txt were read directly. The pinned full
-workflow, including protected comparison and NanoDa, must pass at the exact
-submission commit before intake. No authentication challenge, intake, private
-review or registration has been requested. Registration is a separate decision
-after the author has seen the actual private review.
+workflow uses the protected comparison and independent proof checker. A passing
+mechanical preflight alone does not certify rendering or registration, so the
+branch also checks the pinned trusted renderer before resubmission. Registration
+remains a separate decision after the author has seen the actual private review.

@@ -773,13 +773,11 @@ set_option backward.isDefEq.respectTransparency false
 universe u v w w' w'' w₁ w₂ w₃ variable {L : FirstOrder.Language.{u, v}} {M : Type w} [L.Structure M] variable {I : Type w'} {κ : Type w''}
 def tupleCodes (p : Presentation M I κ) (θ : Type w₁) : Set (θ × κ → M) :=
   {a | ∀ j, (fun c => a (j, c)) ∈ p.codes}
+theorem tuplePresentation._proof_3.{u_1,u_2,u_3,u_4} : ∀ {M : Type u_1} {I : Type u_4} {κ : Type u_2} (p : IntegrationInACVF.Section3.ImaginaryFamilies.Presentation.{u_1, u_4, u_2} M I κ) (θ : Type u_3), @Function.Surjective.{max (u_1 + 1) ((max u_2 u_3) + 1), (max u_4 u_3) + 1} (@Set.Elem.{max u_1 u_2 u_3} (Prod.{u_3, u_2} θ κ → M) (@IntegrationInACVF.Section3.ImaginaryParameters.tupleCodes.{u_1, u_4, u_2, u_3} M I κ p θ)) (θ → I) fun (q : @Set.Elem.{max u_1 u_2 u_3} (Prod.{u_3, u_2} θ κ → M) (@IntegrationInACVF.Section3.ImaginaryParameters.tupleCodes.{u_1, u_4, u_2, u_3} M I κ p θ)) (j : θ) => @IntegrationInACVF.Section3.ImaginaryFamilies.Presentation.decode.{u_1, u_4, u_2} M I κ p (@Subtype.mk.{max (u_1 + 1) (u_2 + 1)} (κ → M) (fun (x : κ → M) => @Membership.mem.{max u_1 u_2, max u_1 u_2} (κ → M) (Set.{max u_1 u_2} (κ → M)) (@Set.instMembership.{max u_1 u_2} (κ → M)) (@IntegrationInACVF.Section3.ImaginaryFamilies.Presentation.codes.{u_1, u_4, u_2} M I κ p) x) (fun (c : κ) => @Subtype.val.{max (max (u_1 + 1) (u_2 + 1)) (u_3 + 1)} (Prod.{u_3, u_2} θ κ → M) (fun (x : Prod.{u_3, u_2} θ κ → M) => @Membership.mem.{max u_1 u_2 u_3, max u_1 u_2 u_3} (Prod.{u_3, u_2} θ κ → M) (Set.{max u_1 u_2 u_3} (Prod.{u_3, u_2} θ κ → M)) (@Set.instMembership.{max u_1 u_2 u_3} (Prod.{u_3, u_2} θ κ → M)) (@IntegrationInACVF.Section3.ImaginaryParameters.tupleCodes.{u_1, u_4, u_2, u_3} M I κ p θ) x) q (@Prod.mk.{u_3, u_2} θ κ j c)) (@Subtype.property.{max (max (u_1 + 1) (u_2 + 1)) (u_3 + 1)} (Prod.{u_3, u_2} θ κ → M) (fun (x : Prod.{u_3, u_2} θ κ → M) => @Membership.mem.{max u_1 u_2 u_3, max u_1 u_2 u_3} (Prod.{u_3, u_2} θ κ → M) (Set.{max u_1 u_2 u_3} (Prod.{u_3, u_2} θ κ → M)) (@Set.instMembership.{max u_1 u_2 u_3} (Prod.{u_3, u_2} θ κ → M)) (@IntegrationInACVF.Section3.ImaginaryParameters.tupleCodes.{u_1, u_4, u_2, u_3} M I κ p θ) x) q j)) := by sorry
 noncomputable def tuplePresentation (p : Presentation M I κ) (θ : Type w₁) : Presentation M (θ → I) (θ × κ) where
   codes := tupleCodes p θ
   decode q j := p.decode ⟨(fun c => q.val (j, c)), q.property j⟩
-  onto := by
-    intro a
-    choose q hq using fun j => p.onto (a j)
-    exact ⟨⟨fun (j, c) => (q j).val c, fun j => (q j).property⟩, funext hq⟩
+  onto := IntegrationInACVF.Section3.ImaginaryParameters.tuplePresentation._proof_3 p θ
 /-- Full guarded preimage of a relation with a finite tuple of real outputs. -/ def vectorPullback (p : Presentation M I κ) {υ : Type w₂} (R : I → Set (υ → M)) : Set (κ ⊕ υ → M) :=
   {z | ∃ hz : z ∘ Sum.inl ∈ p.codes, z ∘ Sum.inr ∈ R (p.decode ⟨z ∘ Sum.inl, hz⟩)}
 def WithTuple (p : Presentation M I κ) (Q : Set M) {θ : Type w₁} {υ : Type w₂} (a : θ → I) (A : Set (υ → M)) : Prop :=
