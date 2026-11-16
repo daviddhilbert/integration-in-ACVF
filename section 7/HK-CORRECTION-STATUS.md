@@ -4,6 +4,11 @@
 See [COMPLETION.md](COMPLETION.md) for the result map and precise scope. The public
 corrected entrypoint is `Integration7.HKCorrectedSection7Results`.
 
+Proof commit `862aa448b431` is published and its
+[GitHub CI passed](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/43851204054).
+Fresh whole-project verification and all published-file comparisons passed on
+November 16 UTC; see the root integrity receipt and `blueprint/README.md`.
+
 The predecessor is `25852c85a31c67069b148bd31348128318303510`, including weighted-zero
 proof commit `d7d7419`. Lean, Mathlib and QE pins are unchanged. Corrected interfaces
 use `IntegrationInACVF.Section7.HK`; legacy interfaces retain their original scope.

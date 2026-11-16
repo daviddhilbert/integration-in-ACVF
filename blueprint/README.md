@@ -1,0 +1,61 @@
+# Integration in ACVF blueprint
+
+This is the mathematical blueprint for the accepted Sections 2–7 scopes of
+Yimu Yin's [paper](https://arxiv.org/abs/0809.0473v2). It follows the
+leanblueprint format used by the Special transformations and ACVF-QE projects.
+It is prepared for the author's Palomar submission; no submission has been made.
+
+The **71 selected nodes** link to **87 distinct Lean declarations**, with
+numbered results, proof outlines and a clickable dependency graph. The graph
+records selected mathematical dependencies rather than every Lean expression
+dependency. Every source link is pinned to the checked proof commit
+[`862aa448b431`](https://github.com/daviddhilbert/integration-in-ACVF/tree/862aa448b4314df673bccd928d1353af6650d7f1).
+[Its CI passed](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/43851204054).
+
+The scope notes are part of the blueprint. In particular, RV[k] has finite-to-one
+volume maps with arbitrary auxiliary RV arity; 5.5 uses explicit RV presentation
+charts; the closed Section 6 API discharges its earlier universal Section 5
+input; measured degree zero retains arbitrary nonzero definable RV forms in both
+RV and VF; and products multiply both forms. Section 7 uses the corrected HK
+API, including the actual principal kernel and unpadded raw ring identities.
+Lemma 7.5 has nonempty selected coordinates. Function interfaces have positive
+VF dimension and nonempty retained-coordinate projections, with a separate
+total integral. The standing hypotheses and earlier approved corrections are
+stated explicitly. No additional pure Gamma/RES integration target is claimed.
+
+`nodes.json` records the graph, statements and declaration anchors.
+`src/source-links.tsv` resolves every declaration to its source line.
+`proof-source-manifest.json` fingerprints all 3,720 section Lean files and the
+toolchain, dependency pins and verification programs. The fingerprint check is
+a documentation check, distinct from fresh Lean verification. The whole-project
+integrity receipt is [versioned separately](../verification/project-integrity-2026-11-16.json).
+
+Build from the repository root:
+
+```sh
+python3 -m venv .venv
+. .venv/bin/activate
+python -m pip install -r blueprint/requirements.txt
+python scripts/check_blueprint.py
+leanblueprint web
+python scripts/check_blueprint.py --rendered
+leanblueprint pdf
+```
+
+The renderer is pinned to leanblueprint 0.0.20. Web rendering requires Graphviz
+and its development headers. PDF rendering additionally needs LaTeX and latexmk.
+Open `blueprint/web/index.html`; `dependency-graph.svg` works from local files
+and links to the rendered statements. The printable document is
+`blueprint/print/print.pdf`. Both builds share `src/content.tex`.
+
+Run `python3 scripts/package_blueprint.py --output .scratch/palomar` after both
+builds to create the PDF, portable web archive, blueprint source archive,
+integrity receipt and SHA256 checksums. The release workflow checks passing CI
+for the pinned proof revision and exact equality of every protected proof input
+on `main` before publishing. Compiled Lean caches,
+raw audit dumps and generated web/PDF files are excluded from the Git repository.
+
+The graph and link-rendering scaffolding and checker are adapted from
+[Special transformations](https://github.com/daviddhilbert/special-transformations)
+and [ACVF-QE](https://github.com/daviddhilbert/ACVF-QE), copyright 2026 Yimu Yin,
+under the MIT license reproduced in `SCAFFOLDING-LICENSE.txt`.

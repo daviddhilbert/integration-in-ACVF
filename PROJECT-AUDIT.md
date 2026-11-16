@@ -1,4 +1,18 @@
-# Whole-project audit — November 15, 2026
+# Whole-project audit — November 16, 2026
+
+The fresh UTC integrity check passed the root build and foundation plus every
+Section 2–7 verifier. The six registries contain **12,597 audited exports**.
+All **4,209 published files** at proof commit `862aa448b431` match the cloud
+workspace; all **3,720 section Lean files** match that revision and contain
+no admissions or custom axiom declarations outside comments and strings.
+[Matching CI passed](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/43851204054).
+The compact [integrity receipt](verification/project-integrity-2026-11-16.json)
+retains counts, hashes and identities. The [blueprint](blueprint/README.md)
+and [release notes](docs/RELEASE-v1.0.0.md) record the submission package.
+
+The paragraphs below retain the earlier Los Angeles-dated development account;
+the current UTC integrity evidence above supersedes earlier publication-pending
+language. Source statements and accepted scope boundaries are unchanged.
 
 Dates use America/Los_Angeles. The active Section 7 mathematical targets and
 the accepted HK weighted measured-zero correction are complete in their

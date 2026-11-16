@@ -6,6 +6,14 @@ This is the sequel to [Special transformations](https://github.com/daviddhilbert
 pinned at `25852c85a31c67069b148bd31348128318303510`. The common ACVF-QE
 language, Lean 4.35.0 toolchain and pinned Mathlib revision are unchanged.
 
+The [mathematical blueprint](blueprint/README.md) covers Sections 2–7 with
+71 selected nodes, 87 linked Lean declarations and a clickable dependency graph.
+The [v1.0.0 release](https://github.com/daviddhilbert/integration-in-ACVF/releases/tag/v1.0.0)
+includes its PDF, portable web version and Palomar handoff package.
+The [whole-project integrity receipt](verification/project-integrity-2026-11-16.json)
+records the passing root build, all section verifiers and comparison of every
+published file with the cloud workspace.
+
 | Directory | Paper section |
 | --- | --- |
 | section 2 | Preliminaries and review |

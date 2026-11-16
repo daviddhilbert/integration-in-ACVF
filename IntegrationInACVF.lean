@@ -15,9 +15,9 @@ import Integration7.Library
 
 The predecessor supplies the common ACVF-QE language and the Section 3/4
 libraries used here. Its later sections are checked separately by CI.
-The sequel's Section 3 library develops Definition 3.1 and the finite-exception
-geometry used in Lemma 3.2. Its status distinguishes these checked components
-from the remaining connections to the ACVF imaginary expansion.
+Sections 2–7 supply the checked integration development in the accepted scopes.
+The blueprint records the numbered results, exact source links, standing
+hypotheses and approved corrections. See blueprint/README.md and PROJECT-AUDIT.md.
 -/
 
 /- Section 6 exports the RV[k] and graded RV[*] formalization, including
@@ -25,4 +25,5 @@ from the remaining connections to the ACVF imaginary expansion.
    generated-base entrypoints in IntegrationInACVF.Section7.CompletedSection6
    derive the needed finite-VF-parameter inputs from the completed Section 5
    theorem. Their standing model, saturation and parameter hypotheses remain
-   explicit. Section 7's status records its remaining raw volume obligations. -/
+   explicit. Integration7.HKCorrectedSection7Results exports the completed
+   weighted measured-zero class algebra and raw/normalized function results. -/
