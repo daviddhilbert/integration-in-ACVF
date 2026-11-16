@@ -165,3 +165,9 @@ CI uses `--use-lake-build` so Section 6 audits these Lake-validated artifacts
 instead of compiling the same library a second time in isolation. Every
 headline type and axiom report is still checked afresh, and per-section audit
 times are retained in `durations.json`. A cold cache still needs a full build.
+
+Additional proved Fubini prerequisites are available through `IntegrationGeneratedBase`.
+This separate default build target retains the existing paper entry points.
+[PROMOTED-FOUNDATIONS.json](PROMOTED-FOUNDATIONS.json) records the original
+proof sources, exact statements and axiom inventories. CI builds the added
+target and checks every promoted public type against its original baseline.

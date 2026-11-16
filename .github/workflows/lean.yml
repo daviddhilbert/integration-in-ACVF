@@ -149,6 +149,9 @@ jobs:
         if: ${{ !cancelled() && steps.build.outcome == 'success' }}
         run: lake env python3 scripts/verify_ci.py --use-lake-build
 
+      - name: Check promoted Fubini prerequisite types and axioms
+        run: python3 scripts/verify_promoted_foundations.py
+
       - name: Publish verification summary
         if: ${{ always() }}
         shell: bash
@@ -186,5 +189,6 @@ jobs:
             lean-toolchain
             lake-manifest.json
             .scratch/shared-foundation.json
+            .scratch/promoted-foundations/
             .scratch/ci-verified/
             .scratch/section*-verified/
