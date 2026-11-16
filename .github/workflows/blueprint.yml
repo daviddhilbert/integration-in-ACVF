@@ -20,6 +20,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    permissions:
+      contents: read
+      pages: read
+    outputs:
+      pages_enabled: ${{ steps.pages.outputs.enabled }}
     steps:
       - uses: actions/checkout@v5
         with:
@@ -39,8 +44,44 @@ jobs:
           python scripts/check_blueprint.py
           leanblueprint web
           python scripts/check_blueprint.py --rendered
+          python scripts/publish_blueprint_views.py
       - uses: actions/upload-artifact@v4
         with:
           name: integration-blueprint-web
           path: blueprint/web
           if-no-files-found: error
+      - name: Check GitHub Pages availability
+        id: pages
+        if: github.ref == 'refs/heads/main'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          if gh api "repos/$GH_REPO/pages" --jq '.build_type' > "$RUNNER_TEMP/pages-build-type" 2>/dev/null && test "$(cat "$RUNNER_TEMP/pages-build-type")" = 'workflow'; then
+            echo 'enabled=true' >> "$GITHUB_OUTPUT"
+          else
+            echo 'enabled=false' >> "$GITHUB_OUTPUT"
+            echo 'Public graph and statements are available in blueprint/; Pages deployment awaits repository setup.'
+          fi
+      - name: Configure GitHub Pages
+        if: steps.pages.outputs.enabled == 'true'
+        uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        if: steps.pages.outputs.enabled == 'true'
+        with:
+          path: blueprint/web
+
+  deploy:
+    if: github.ref == 'refs/heads/main' && needs.build.outputs.pages_enabled == 'true'
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/deploy-pages@v4
+        id: deployment

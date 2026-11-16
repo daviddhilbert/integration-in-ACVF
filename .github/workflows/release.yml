@@ -66,11 +66,14 @@ jobs:
       - name: Publish v1.0.0
         run: |
           if gh release view v1.0.0 >/dev/null 2>&1; then
-            test "$(gh api "repos/$GH_REPO/git/ref/tags/v1.0.0" --jq '.object.sha')" = "$RELEASE_COMMIT"
-            echo 'Matching release already exists.'
+            test "$(gh api "repos/$GH_REPO/git/ref/tags/v1.0.0" --jq '.object.sha')" = '7675d31332f20421c803ea16af84964ed74cd51f'
+            gh release edit v1.0.0 \
+              --title 'v1.0.0 - Integration in algebraically closed valued fields' \
+              --notes-file docs/RELEASE-v1.0.0.md
+            gh release upload v1.0.0 release-assets/* --clobber
             exit 0
           fi
           gh release create v1.0.0 release-assets/* \
             --target "$RELEASE_COMMIT" \
-            --title 'v1.0.0 — Integration in ACVF, Sections 2–7' \
+            --title 'v1.0.0 - Integration in algebraically closed valued fields' \
             --notes-file docs/RELEASE-v1.0.0.md
