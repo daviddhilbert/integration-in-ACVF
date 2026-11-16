@@ -1,6 +1,10 @@
-import Integration7.HKZeroCoefficientSemiring
-import Integration7.HKZeroVolumeFamilies
-import Integration7.VolumeIsoParameterExtension
+module
+
+public import Integration7.HKZeroCoefficientSemiring
+public import Integration7.HKZeroVolumeFamilies
+public import Integration7.VolumeIsoParameterExtension
+
+@[expose] public section
 
 /-! Weighted measured-zero coefficient classes extend along the actual
 parameter-base inclusion as a semiring homomorphism. Every operation is

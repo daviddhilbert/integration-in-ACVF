@@ -1,9 +1,13 @@
-import Integration7.GeneratedUnaryChainContractions
-import Integration7.GeneratedPullbackContractionComparison
-import IntegrationSection6.PullbackUnaryChainComparison
-import IntegrationSection6.PullbackContractionComparison
-import IntegrationSection6.UnaryChainContractions
-import IntegrationSection6.GammaUnaryChainUnivRealization
+module
+
+public import Integration7.GeneratedUnaryChainContractions
+public import Integration7.GeneratedPullbackContractionComparison
+public import IntegrationSection6.PullbackUnaryChainComparison
+public import IntegrationSection6.PullbackContractionComparison
+public import IntegrationSection6.UnaryChainContractions
+public import IntegrationSection6.GammaUnaryChainUnivRealization
+
+@[expose] public section
 
 /-! The generated-base specialization uses the proved ordinary selected
 contraction-order comparison. All actual objects and full Gamma graphs

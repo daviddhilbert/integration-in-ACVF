@@ -1,5 +1,9 @@
-import IntegrationSection6.GammaRelativeHeadComparison
-import IntegrationSection6.OrderedFibrewiseContractions
+module
+
+public import IntegrationSection6.GammaRelativeHeadComparison
+public import IntegrationSection6.OrderedFibrewiseContractions
+
+@[expose] public section
 
 /-! Corollary6.15 for actual ordered programs starting in the active head
 coordinate. The first comparison is unary; Lemma6.14 handles every remaining

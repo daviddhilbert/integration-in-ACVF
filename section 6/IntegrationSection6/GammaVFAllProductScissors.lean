@@ -1,5 +1,9 @@
-import IntegrationSection6.GammaVFAllScissorDomains
-import IntegrationSection6.GammaVFScissorDomains
+module
+
+public import IntegrationSection6.GammaVFAllScissorDomains
+public import IntegrationSection6.GammaVFScissorDomains
+
+@[expose] public section
 
 /-! Recover literal unions and intersections from the actual packed
 VF scissor relation in a common mixed arity. -/

@@ -1,6 +1,10 @@
-import Integration7.RealFiniteVolumePresentations
-import Integration7.TermClosureDefinability
-import IntegrationSection6.GammaFiniteObjectPromotion
+module
+
+public import Integration7.RealFiniteVolumePresentations
+public import Integration7.TermClosureDefinability
+public import IntegrationSection6.GammaFiniteObjectPromotion
+
+@[expose] public section
 
 /-! Promote an actual finite RV map from a term-generated context after
 naming its finite auxiliary parameter tuple. Only raw definability is

@@ -1,4 +1,8 @@
-import IntegrationSection6.BlowupPresentations
+module
+
+public import IntegrationSection6.BlowupPresentations
+
+@[expose] public section
 
 /-! The complementary coproduct chart has the actual right-tag formula. -/
 noncomputable section

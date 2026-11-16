@@ -1,8 +1,12 @@
-import Integration7.MixedRVFactorDomains
-import Integration7.NativeCoordinateDensityVolumeObjects
-import Integration7.SelectedVolumeFamilies
-import Integration7.VolumeFormScalarArithmetic
-import Integration7.VolumeFormProducts
+module
+
+public import Integration7.MixedRVFactorDomains
+public import Integration7.NativeCoordinateDensityVolumeObjects
+public import Integration7.SelectedVolumeFamilies
+public import Integration7.VolumeFormScalarArithmetic
+public import Integration7.VolumeFormProducts
+
+@[expose] public section
 
 /-! A positive constant coefficient times a genuinely finite-label VF
 family has a positive selected presentation without inserting a dummy

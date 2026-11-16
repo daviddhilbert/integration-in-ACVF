@@ -1,6 +1,10 @@
-import IntegrationSection6.GammaChainIndexedRealization
-import IntegrationSection6.GammaCommonBlowupSchemata
-import IntegrationSection6.FiniteGammaCommonBlowups
+module
+
+public import IntegrationSection6.GammaChainIndexedRealization
+public import IntegrationSection6.GammaCommonBlowupSchemata
+public import IntegrationSection6.FiniteGammaCommonBlowups
+
+@[expose] public section
 
 /-! Uniform finite common-blowup witnesses glue to actual original-Gamma
 common forward blowups over an RV[d] base, in RV[d+k]. -/

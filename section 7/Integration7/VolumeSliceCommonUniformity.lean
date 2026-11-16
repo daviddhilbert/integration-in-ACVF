@@ -1,6 +1,10 @@
-import Integration7.GammaVolumeSliceDensityAssembly
-import Integration7.RVIndexedVolumeWitnessUniformity
-import Integration7.GammaVolumeIsoSchemaContexts
+module
+
+public import Integration7.GammaVolumeSliceDensityAssembly
+public import Integration7.RVIndexedVolumeWitnessUniformity
+public import Integration7.GammaVolumeIsoSchemaContexts
+
+@[expose] public section
 
 /-! Common original-Gamma volume witnesses for every RV-prefix slice
 give common forward volume blowups of the original objects. All index and

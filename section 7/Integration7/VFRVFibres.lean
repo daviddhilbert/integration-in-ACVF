@@ -1,6 +1,10 @@
-import Integration7.VolumeForms
-import Integration7.RVCoordinateSelection
-import Section4.MapParameters
+module
+
+public import Integration7.VolumeForms
+public import Integration7.RVCoordinateSelection
+public import Section4.MapParameters
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 open FirstOrder FirstOrder.Language

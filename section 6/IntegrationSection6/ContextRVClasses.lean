@@ -1,6 +1,10 @@
-import IntegrationSection6.IntegrationContexts
-import IntegrationSection6.GlobalLiftClassEquality
-import IntegrationSection6.GammaResolutionProducts
+module
+
+public import IntegrationSection6.IntegrationContexts
+public import IntegrationSection6.GlobalLiftClassEquality
+public import IntegrationSection6.GammaResolutionProducts
+
+@[expose] public section
 
 /-! Addition and multiplication formulas for actual RV representatives
 in a context's coefficient semiring. -/

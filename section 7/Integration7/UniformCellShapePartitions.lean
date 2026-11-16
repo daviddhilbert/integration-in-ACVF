@@ -1,5 +1,9 @@
-import Integration7.UniformCellRVParadigmPartitions
-import Integration7.UniformNonrectangleCellAlternatives
+module
+
+public import Integration7.UniformCellRVParadigmPartitions
+public import Integration7.UniformNonrectangleCellAlternatives
+
+@[expose] public section
 
 /-! The actual uniform cell family splits over its retained RV labels
 into zero-paradigm, nonzero rectangular, and nonzero balanced parts.

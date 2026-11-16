@@ -1,7 +1,11 @@
-import Integration7.BasicVolumeRelationObjects
-import Integration7.VolumeDensityRescaling
-import Integration7.EssentialGammaWeight
-import Integration7.ZeroFactorVolumeObjects
+module
+
+public import Integration7.BasicVolumeRelationObjects
+public import Integration7.VolumeDensityRescaling
+public import Integration7.EssentialGammaWeight
+public import Integration7.ZeroFactorVolumeObjects
+
+@[expose] public section
 
 /-! The ordinary RV[0] convention discards all density data. A degree-one
 point with a nonunit absolute density therefore cannot be factored as an

@@ -1,6 +1,10 @@
-import Integration7.FixedRVVolumeCoordinates
-import Integration7.ConstantTailCoordinateVolumeIsomorphisms
-import Section4.RVIsoTools
+module
+
+public import Integration7.FixedRVVolumeCoordinates
+public import Integration7.ConstantTailCoordinateVolumeIsomorphisms
+public import Section4.RVIsoTools
+
+@[expose] public section
 
 /-! A coordinate-preserving unary RV bijection remains a volume
 isomorphism after adjoining a fixed tail coordinate. Degenerate unary

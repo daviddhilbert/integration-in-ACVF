@@ -1,5 +1,9 @@
-import Integration7.ZeroFactorVolumeSwap
-import Section4.RVProductUnits
+module
+
+public import Integration7.ZeroFactorVolumeSwap
+public import Section4.RVProductUnits
+
+@[expose] public section
 set_option backward.isDefEq.respectTransparency false
 open FirstOrder FirstOrder.Language CategoryTheory
 open SpecialTransformations.Milestone0 SpecialTransformations.Milestone0.LRV

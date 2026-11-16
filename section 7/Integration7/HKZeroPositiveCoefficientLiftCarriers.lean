@@ -1,7 +1,11 @@
-import Integration7.HKZeroFamilyPositiveCoefficients
-import Integration7.DefinableAppendedLiftCarriers
-import Integration7.MixedProductCoordinateFormulas
-import Integration7.PositiveVFVolumeProducts
+module
+
+public import Integration7.HKZeroFamilyPositiveCoefficients
+public import Integration7.DefinableAppendedLiftCarriers
+public import Integration7.MixedProductCoordinateFormulas
+public import Integration7.PositiveVFVolumeProducts
+
+@[expose] public section
 
 /-! Literal carrier comparison for the coefficient-first realization
 of a positive coefficient multiplying an ordinary family. -/

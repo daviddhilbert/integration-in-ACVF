@@ -1,5 +1,9 @@
-import Integration7.MixedVFBaseJacobianDensities
-import Integration7.VFAlmostEverywhereMapEquality
+module
+
+public import Integration7.MixedVFBaseJacobianDensities
+public import Integration7.VFAlmostEverywhereMapEquality
+
+@[expose] public section
 
 /-! The Jacobian of the actual mixed-family base map agrees almost
 everywhere with the pure base Jacobian pulled back to that family. -/

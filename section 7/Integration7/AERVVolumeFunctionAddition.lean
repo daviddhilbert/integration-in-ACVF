@@ -1,5 +1,9 @@
-import Integration7.SelectedVolumeFamilyAddition
-import Integration7.AERVVolumeFunctions
+module
+
+public import Integration7.SelectedVolumeFamilyAddition
+public import Integration7.AERVVolumeFunctions
+
+@[expose] public section
 
 /-! Addition and zero on positive homogeneous almost-everywhere
 functions are represented by the actual tagged family coproduct and the

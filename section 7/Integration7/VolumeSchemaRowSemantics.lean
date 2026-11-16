@@ -1,6 +1,10 @@
-import Integration7.TupleVolumeChartSemantics
-import Integration7.GammaVolumePresentationContexts
-import Integration7.VolumeGammaWeightTuples
+module
+
+public import Integration7.TupleVolumeChartSemantics
+public import Integration7.GammaVolumePresentationContexts
+public import Integration7.VolumeGammaWeightTuples
+
+@[expose] public section
 
 /-! Exact interpretation of coordinate and density schemata on actual
 finite volume objects. These graph equalities supply semantic bridges;

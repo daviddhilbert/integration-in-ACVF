@@ -1,4 +1,8 @@
-import IntegrationSection6.GammaParameterRecoding
+module
+
+public import IntegrationSection6.GammaParameterRecoding
+
+@[expose] public section
 
 /-! Raw formula rows are exactly their properly typed RV tuple rows.
 These bridges expose improper tuples as false using full Gamma properness. -/

@@ -1,6 +1,10 @@
-import Integration7.VFVolumeObjectLabelCuts
-import Integration7.SelectedSumTagPredicates
-import Integration7.FixedVFVolumeCoproducts
+module
+
+public import Integration7.VFVolumeObjectLabelCuts
+public import Integration7.SelectedSumTagPredicates
+public import Integration7.FixedVFVolumeCoproducts
+
+@[expose] public section
 
 /-! Complementary old-tag cuts of a VF volume coproduct are genuinely
 volume-bijective to its summands, preserving every VF coordinate. -/

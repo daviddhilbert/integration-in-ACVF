@@ -1,5 +1,9 @@
-import Integration7.SelectedJacobianRowIsomorphisms
-import Integration7.DefinableBaseMapValues
+module
+
+public import Integration7.SelectedJacobianRowIsomorphisms
+public import Integration7.DefinableBaseMapValues
+
+@[expose] public section
 
 /-! The actual Jacobian transform respects the original fibre common
 blowup relation. Inverse images and the Jacobian value are definable over

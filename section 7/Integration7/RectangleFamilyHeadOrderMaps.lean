@@ -1,4 +1,8 @@
-import Integration7.IndependentRectangleFamilyPreparations
+module
+
+public import Integration7.IndependentRectangleFamilyPreparations
+
+@[expose] public section
 
 /-! The two actual contraction targets of a shared-label rectangle
 family are definably bijective. The map exchanges the factor keys and

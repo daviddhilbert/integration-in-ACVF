@@ -1,6 +1,10 @@
-import Integration7.HKConstrainedBijectionRealization
-import Integration7.HKDensityLabelConstraints
-import Integration7.GammaFiniteRowIsomorphismWitnesses
+module
+
+public import Integration7.HKConstrainedBijectionRealization
+public import Integration7.HKDensityLabelConstraints
+public import Integration7.GammaFiniteRowIsomorphismWitnesses
+
+@[expose] public section
 
 /-! A uniform family of exact-density finite row charts yields one
 actual parameter-preserving bijection with the same density equation. -/

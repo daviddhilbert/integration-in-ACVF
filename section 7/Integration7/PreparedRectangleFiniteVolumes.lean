@@ -1,5 +1,9 @@
-import Integration7.PreparedRectangleVolumeConjugates
-import IntegrationSection6.GammaFiniteMixedBijections
+module
+
+public import Integration7.PreparedRectangleVolumeConjugates
+public import IntegrationSection6.GammaFiniteMixedBijections
+
+@[expose] public section
 
 /-! Finite volume fibres and literal coordinate densities for the
 actual prepared targets follow from their original Gamma bijections. -/

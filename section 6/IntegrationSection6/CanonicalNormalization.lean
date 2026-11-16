@@ -1,4 +1,8 @@
-import CanonicalStructure
+module
+
+public import CanonicalStructure
+
+@[expose] public section
 open FirstOrder FirstOrder.Language
 open SpecialTransformations.Milestone0 SpecialTransformations.Milestone0.LRV
 /-! Canonical totalization is idempotent. This lets later bridges retain

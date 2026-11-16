@@ -1,7 +1,11 @@
-import Integration7.GammaLinearOpenBallRadii
-import IntegrationSection5.UnaryBijectionPreparation
-import IntegrationSection5.ChainAlgebra
-import IntegrationSection5.UnaryPaperBallBridge
+module
+
+public import Integration7.GammaLinearOpenBallRadii
+public import IntegrationSection5.UnaryBijectionPreparation
+public import IntegrationSection5.ChainAlgebra
+public import IntegrationSection5.UnaryPaperBallBridge
+
+@[expose] public section
 
 /-! Mutually contractible prepared unary bijections match the actual
 inverse-special fibres. Those fibres are the balls whose radii are the

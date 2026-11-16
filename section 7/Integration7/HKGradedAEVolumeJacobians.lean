@@ -1,6 +1,10 @@
-import Integration7.HKUnivSupportedVolumeEquivalences
-import Integration7.HKRawGradedChangeOfVariables
-import Integration7.PureVFPermutationDimensions
+module
+
+public import Integration7.HKUnivSupportedVolumeEquivalences
+public import Integration7.HKRawGradedChangeOfVariables
+public import Integration7.PureVFPermutationDimensions
+
+@[expose] public section
 
 /-! Actual global VF Jacobian transforms act additively on every
 homogeneous AE component and preserve the complete graded integral.

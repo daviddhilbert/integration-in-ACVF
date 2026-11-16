@@ -1,6 +1,10 @@
-import Integration7.DefinableVolumeParameterDescent
-import Integration7.NamedMapValueDefinability
-import Integration7.VolumeBlowupRescaling
+module
+
+public import Integration7.DefinableVolumeParameterDescent
+public import Integration7.NamedMapValueDefinability
+public import Integration7.VolumeBlowupRescaling
+
+@[expose] public section
 
 /-! A nonzero density multiplier need only be definable over the base;
 its value need not already belong to the smaller term-generated base.

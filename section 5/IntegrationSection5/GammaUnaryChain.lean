@@ -1,6 +1,10 @@
-import IntegrationSection5.GammaMapPresentation
-import Section5.GammaLift
-import IntegrationSection5.UnaryFactorizations
+module
+
+public import IntegrationSection5.GammaMapPresentation
+public import Section5.GammaLift
+public import IntegrationSection5.UnaryFactorizations
+
+@[expose] public section
 
 /-! Finite chains of actual original-Gamma bijections, together with a
 realization theorem producing the existing definable UnaryChain over one

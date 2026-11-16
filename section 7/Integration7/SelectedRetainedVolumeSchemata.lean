@@ -1,5 +1,9 @@
-import Integration7.SelectedFamilyVolumePreparation
-import Integration7.SelectedDensityGraphRowMaps
+module
+
+public import Integration7.SelectedFamilyVolumePreparation
+public import Integration7.SelectedDensityGraphRowMaps
+
+@[expose] public section
 
 /-! A selected family whose density is already an old label has its
 own actual volume schema. Appending a density graph gives the same named

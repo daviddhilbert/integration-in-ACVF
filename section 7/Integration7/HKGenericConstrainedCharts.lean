@@ -1,5 +1,9 @@
-import Integration7.HKConstrainedBijectionCharts
-import Integration7.GenericGammaWitnessCovers
+module
+
+public import Integration7.HKConstrainedBijectionCharts
+public import Integration7.GenericGammaWitnessCovers
+
+@[expose] public section
 
 /-! A density-constrained chart available on every genuinely generic VF
 tuple glues to one original-base chart valid on all those tuples. -/

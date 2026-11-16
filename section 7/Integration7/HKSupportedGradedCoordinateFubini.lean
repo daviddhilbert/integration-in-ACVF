@@ -1,5 +1,9 @@
-import Integration7.HKGradedVolumeCoordinateFubini
-import Integration7.HKVolumeComponentSupports
+module
+
+public import Integration7.HKGradedVolumeCoordinateFubini
+public import Integration7.HKVolumeComponentSupports
+
+@[expose] public section
 
 /-! Coordinate integration restricts to the actual supported graded
 functions and lands on the literal projected support. -/

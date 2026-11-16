@@ -1,7 +1,11 @@
-import IntegrationSection3ACVF.GammaSpecialization
-import IntegrationSection3ACVF.AtomicPolynomialRoots
-import IntegrationSection3ACVF.GammaCosetGeometry
-import Section3.MixedRootFree
+module
+
+public import IntegrationSection3ACVF.GammaSpecialization
+public import IntegrationSection3ACVF.AtomicPolynomialRoots
+public import IntegrationSection3ACVF.GammaCosetGeometry
+public import Section3.MixedRootFree
+
+@[expose] public section
 
 /-! RV-profile constancy on balls inside a possibly undefinable complete
 type, over real/Gamma bases. The root-free argument reuses the pinned MIT

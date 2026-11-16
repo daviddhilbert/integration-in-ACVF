@@ -1,4 +1,8 @@
-import Integration7.GradedAEVolumeIntegralCoefficientCompatibility
+module
+
+public import Integration7.GradedAEVolumeIntegralCoefficientCompatibility
+
+@[expose] public section
 
 /-! Integration of the full actual graded AE function semimodule is
 linear over the full graded common-blowup coefficient semiring. -/

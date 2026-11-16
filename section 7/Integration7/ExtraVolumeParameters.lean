@@ -1,4 +1,8 @@
-import Integration7.GammaVolumeIsomorphismSchemata
+module
+
+public import Integration7.GammaVolumeIsomorphismSchemata
+
+@[expose] public section
 
 /-! Drop an auxiliary parameter block while retaining all geometric
 coordinates. Extra parameters will be allowed only inside the exceptional

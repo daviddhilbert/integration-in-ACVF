@@ -1,5 +1,9 @@
-import Integration7.AERVVolumeFunctionIntegrals
-import Integration7.VolumeCoordinateChartInverses
+module
+
+public import Integration7.AERVVolumeFunctionIntegrals
+public import Integration7.VolumeCoordinateChartInverses
+
+@[expose] public section
 
 /-! Almost-everywhere integration in coefficient-first appended order.
 This is the convention compatible with successive head integration; it

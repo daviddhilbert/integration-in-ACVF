@@ -1,4 +1,8 @@
-import IntegrationSection6.FiniteGammaCategoricalCoproducts
+module
+
+public import IntegrationSection6.FiniteGammaCategoricalCoproducts
+
+@[expose] public section
 
 /-! Empty objects and the initial object in the finite original-Gamma category. -/
 noncomputable section

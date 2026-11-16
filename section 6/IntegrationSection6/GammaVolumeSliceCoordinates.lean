@@ -1,6 +1,10 @@
-import IntegrationSection6.GammaSchemaNativeRows
-import IntegrationSection6.GammaParameterRecoding
-import IntegrationSection6.GammaRawElementaryRowCoordinates
+module
+
+public import IntegrationSection6.GammaSchemaNativeRows
+public import IntegrationSection6.GammaParameterRecoding
+public import IntegrationSection6.GammaRawElementaryRowCoordinates
+
+@[expose] public section
 
 /-! Coordinate programs for viewing an RV[e+k] object as a family of
 RV[k] objects indexed by the first e volume labels. -/

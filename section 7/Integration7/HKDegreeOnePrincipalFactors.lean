@@ -1,8 +1,12 @@
-import Integration7.HKDegreeOneVolumeFactors
-import Integration7.HKWeightedZeroBlowups
-import Integration7.HKRVProductBridges
-import Integration7.BasicVolumeRelation
-import Integration7.ElementaryBlowupIsomorphism
+module
+
+public import Integration7.HKDegreeOneVolumeFactors
+public import Integration7.HKWeightedZeroBlowups
+public import Integration7.HKRVProductBridges
+public import Integration7.BasicVolumeRelation
+public import Integration7.ElementaryBlowupIsomorphism
+
+@[expose] public section
 
 /-! Every elementary relation from a degree-one source factors through
 the same genuine weighted zero object and the unit-form point/cone pair.

@@ -1,7 +1,11 @@
-import Integration7.VFVolumeBijections
-import Section4.ProductBijections
-import Section4.ProductRearrangement
-import Section4.RVAppend
+module
+
+public import Integration7.VFVolumeBijections
+public import Section4.ProductBijections
+public import Section4.ProductRearrangement
+public import Section4.RVAppend
+
+@[expose] public section
 
 /-! The actual density graph A_omega used before taking standard
 contractions. It adds one RV label, preserves VF coordinates, and is

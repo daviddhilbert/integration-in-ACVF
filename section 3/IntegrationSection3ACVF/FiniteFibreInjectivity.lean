@@ -1,6 +1,10 @@
-import IntegrationSection3ACVF.RVUnaryConstancy
-import IntegrationSection3ACVF.RVDifferencePairs
-import Section3.Barycentre
+module
+
+public import IntegrationSection3ACVF.RVUnaryConstancy
+public import IntegrationSection3ACVF.RVDifferencePairs
+public import Section3.Barycentre
+
+@[expose] public section
 
 /-! Finite fibres become singletons when the RV of their mean-centred
 points is constant. The actual characteristic-zero barycentre theorem is

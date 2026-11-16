@@ -1,6 +1,10 @@
-import Integration7.OrdinaryVFVolumeFamilies
-import Integration7.SelectedVolumeFamilies
-import Integration7.SelectedVolumeRowContexts
+module
+
+public import Integration7.OrdinaryVFVolumeFamilies
+public import Integration7.SelectedVolumeFamilies
+public import Integration7.SelectedVolumeRowContexts
+
+@[expose] public section
 
 /-! An ordinary family has a genuine positive presentation on the
 density graph of its unit VF form. Its single selected coordinate and

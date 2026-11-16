@@ -1,4 +1,8 @@
-import IntegrationSection6.DefinableFunctionSemimodule
+module
+
+public import IntegrationSection6.DefinableFunctionSemimodule
+
+@[expose] public section
 
 /-! The transported semimodule operations are precisely pointwise
 addition and scalar multiplication by the varying coefficient maps. -/

@@ -1,6 +1,10 @@
-import Integration7.AppendedContractionVolumeObjects
-import Integration7.GeometricVolumeCommonOnObjects
-import Integration7.GammaVolumeBaseEquality
+module
+
+public import Integration7.AppendedContractionVolumeObjects
+public import Integration7.GeometricVolumeCommonOnObjects
+public import Integration7.GammaVolumeBaseEquality
+
+@[expose] public section
 
 /-! Positive selected Lemma 7.5 on the specified actual contraction
 objects. The full density-graph labels are retained, and all common

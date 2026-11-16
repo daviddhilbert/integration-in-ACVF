@@ -1,4 +1,8 @@
-import IntegrationSection3ACVF.ThinFamilyConservation
+module
+
+public import IntegrationSection3ACVF.ThinFamilyConservation
+
+@[expose] public section
 
 /-! The one-component form of 3.22, with the actual hole counts. -/
 

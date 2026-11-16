@@ -1,7 +1,11 @@
-import Integration7.FixedLabelContractionVolumeObjects
-import Integration7.TwoOrderProductCommonNames
-import Integration7.TwoOrderProductNormalizedGammaObjects
-import Integration7.TwoOrderProductProgramCertificates
+module
+
+public import Integration7.FixedLabelContractionVolumeObjects
+public import Integration7.TwoOrderProductCommonNames
+public import Integration7.TwoOrderProductNormalizedGammaObjects
+public import Integration7.TwoOrderProductProgramCertificates
+
+@[expose] public section
 
 /-! The retained-density normalized objects used by arbitrary-contraction
 comparison equal the actual normalized constant-density product objects. -/

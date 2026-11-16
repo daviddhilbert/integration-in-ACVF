@@ -1,5 +1,9 @@
-import Integration7.VolumeForms
-import Section4.RVCoordinates
+module
+
+public import Integration7.VolumeForms
+public import Section4.RVCoordinates
+
+@[expose] public section
 
 set_option backward.isDefEq.respectTransparency false
 

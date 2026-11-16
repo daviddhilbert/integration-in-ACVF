@@ -1,5 +1,9 @@
-import Integration7.VFAlmostEverywhereGenericValues
-import Integration7.DefinableMapPreimages
+module
+
+public import Integration7.VFAlmostEverywhereGenericValues
+public import Integration7.DefinableMapPreimages
+
+@[expose] public section
 
 /-! Agreement of actual definable maps at every generic full VF tuple
 descends to agreement outside one original-base definable VF-small set. -/

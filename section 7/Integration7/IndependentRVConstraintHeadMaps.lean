@@ -1,4 +1,8 @@
-import Integration7.RVLabelConstraintHeadProductImages
+module
+
+public import Integration7.RVLabelConstraintHeadProductImages
+
+@[expose] public section
 
 /-! For an independent trailing RV factor, the checked shared-label
 head construction is an actual bijection onto the full product. The

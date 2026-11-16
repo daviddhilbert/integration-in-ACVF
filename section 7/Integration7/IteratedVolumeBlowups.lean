@@ -1,7 +1,11 @@
-import Integration7.ElementaryBlowupConstruction
-import Integration7.RVVolumeComposition
-import Integration7.VolumeCoproductIsomorphism
-import Integration7.RVVolumeInverse
+module
+
+public import Integration7.ElementaryBlowupConstruction
+public import Integration7.RVVolumeComposition
+public import Integration7.VolumeCoproductIsomorphism
+public import Integration7.RVVolumeInverse
+
+@[expose] public section
 set_option backward.isDefEq.respectTransparency false
 open FirstOrder FirstOrder.Language CategoryTheory
 open SpecialTransformations.Milestone0 SpecialTransformations.Milestone0.LRV

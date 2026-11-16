@@ -1,5 +1,9 @@
-import Integration7.PositiveVolumeClassExtensions
-import Integration7.HKVolumeBlowupSemiring
+module
+
+public import Integration7.PositiveVolumeClassExtensions
+public import Integration7.HKVolumeBlowupSemiring
+
+@[expose] public section
 
 /-! Actual positive coefficient products commute with real parameter
 extension. The literal RV product chart has the same coordinates and

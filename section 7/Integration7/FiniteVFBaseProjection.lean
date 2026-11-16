@@ -1,5 +1,9 @@
-import IntegrationSection6.MixedCoordinatePointMaps
-import Integration7.FiniteFibreJacobianOneOperations
+module
+
+public import IntegrationSection6.MixedCoordinatePointMaps
+public import Integration7.FiniteFibreJacobianOneOperations
+
+@[expose] public section
 
 /-! A finite RV family projects definably and finite-to-one to its VF
 base. This supplies the actual projection used in prepared volume maps. -/

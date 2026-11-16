@@ -1,5 +1,9 @@
-import IntegrationSection5.UnaryProductHeadPreparation
-import IntegrationSection5.CellUnaryProjections
+module
+
+public import IntegrationSection5.UnaryProductHeadPreparation
+public import IntegrationSection5.CellUnaryProjections
+
+@[expose] public section
 
 /-! An actual unary special preparation of one factor gives the first
 stage of the product contraction, with an exact product target. -/

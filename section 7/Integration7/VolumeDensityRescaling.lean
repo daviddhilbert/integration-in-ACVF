@@ -1,5 +1,9 @@
-import Integration7.ScalarRVMaps
-import Integration7.GammaVolumeCriterion
+module
+
+public import Integration7.ScalarRVMaps
+public import Integration7.GammaVolumeCriterion
+
+@[expose] public section
 set_option backward.isDefEq.respectTransparency false
 open FirstOrder FirstOrder.Language CategoryTheory
 open SpecialTransformations.Milestone0 SpecialTransformations.Milestone0.LRV

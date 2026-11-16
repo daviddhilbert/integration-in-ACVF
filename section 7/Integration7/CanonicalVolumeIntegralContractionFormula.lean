@@ -1,4 +1,8 @@
-import Integration7.CanonicalVolumeFamilyIntegrals
+module
+
+public import Integration7.CanonicalVolumeFamilyIntegrals
+
+@[expose] public section
 
 /-! Compute a family integral using any actual specified standard
 contraction, with the selected VF block restored to its original order. -/

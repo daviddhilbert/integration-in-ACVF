@@ -1,8 +1,12 @@
-import Integration7.VFVolumeObjects
-import Integration7.RVVolumeObjects
-import Integration7.VolumeCoproductUnits
-import Section9.LiftLabelRepresentatives
-import Section4.GradedLifts
+module
+
+public import Integration7.VFVolumeObjects
+public import Integration7.RVVolumeObjects
+public import Integration7.VolumeCoproductUnits
+public import Section9.LiftLabelRepresentatives
+public import Section4.GradedLifts
+
+@[expose] public section
 
 /-! Actual volume lifts. The constructions and empty-domain statement
 are recovered from the original recorded module; scissors classes will

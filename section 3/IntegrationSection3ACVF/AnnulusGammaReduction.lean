@@ -1,6 +1,10 @@
-import IntegrationSection3ACVF.DefinableGammaMatching
-import IntegrationSection3ACVF.RadialAnnulusDomains
-import IntegrationSection3ACVF.RadialValuePullbacks
+module
+
+public import IntegrationSection3ACVF.DefinableGammaMatching
+public import IntegrationSection3ACVF.RadialAnnulusDomains
+public import IntegrationSection3ACVF.RadialValuePullbacks
+
+@[expose] public section
 
 /-! The corrected3.24 geometry reduces to an actual definable bijection
 from a closed Gamma interval to either a half-open interval or a closed ray.

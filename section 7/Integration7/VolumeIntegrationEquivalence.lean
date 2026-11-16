@@ -1,4 +1,8 @@
-import Integration7.AllDegreeVolumeLiftKernel
+module
+
+public import Integration7.AllDegreeVolumeLiftKernel
+
+@[expose] public section
 
 /-! The canonical homogeneous additive integration equivalence of
 Proposition 7.9, with ordinary degree zero and all positive degrees. -/

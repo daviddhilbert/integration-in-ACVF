@@ -1,5 +1,9 @@
-import IntegrationSection6.GammaHeadFibreCoordinates
-import IntegrationSection6.GammaRelativeRVFiniteness
+module
+
+public import IntegrationSection6.GammaHeadFibreCoordinates
+public import IntegrationSection6.GammaRelativeRVFiniteness
+
+@[expose] public section
 
 /-! A head preparation gives an actual original-Gamma unary lift map after
 freezing the other VF coordinates. Original RV labels remain a suffix. -/

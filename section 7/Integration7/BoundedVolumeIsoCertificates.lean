@@ -1,4 +1,8 @@
-import Integration7.FiniteRVMapBounds
+module
+
+public import Integration7.FiniteRVMapBounds
+
+@[expose] public section
 
 /-! The exceptional map in a volume-isomorphism certificate has a uniform
 finite fibre bound. The bound is derived, rather than added to the hypotheses. -/

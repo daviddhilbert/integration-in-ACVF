@@ -1,5 +1,9 @@
-import IntegrationSection6.GammaPreparedFamilyValues
-import IntegrationSection6.GammaSchemaRowAgreement
+module
+
+public import IntegrationSection6.GammaPreparedFamilyValues
+public import IntegrationSection6.GammaSchemaRowAgreement
+
+@[expose] public section
 
 /-! The actual prepared-family image consists exactly of prepared base
 points with their unchanged fibre RV labels. Exact row descent may then

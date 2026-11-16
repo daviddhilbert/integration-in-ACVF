@@ -1,5 +1,9 @@
-import IntegrationSection5.UnaryCellZeros
-import Section4.RVCategories
+module
+
+public import IntegrationSection5.UnaryCellZeros
+public import Section4.RVCategories
+
+@[expose] public section
 /-! The actual unary RV weight, with normalization of the single absorbing RV element made explicit. -/
 
 noncomputable section

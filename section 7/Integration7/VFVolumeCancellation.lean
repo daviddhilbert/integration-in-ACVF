@@ -1,5 +1,9 @@
-import Integration7.RawVFVolumeComposition
-import Section4.UnionMapLaws
+module
+
+public import Integration7.RawVFVolumeComposition
+public import Section4.UnionMapLaws
+
+@[expose] public section
 
 /-! Cancellation of a genuine volume bijection in a composite volume
 equation. Its inverse and the original definable maps are used literally. -/

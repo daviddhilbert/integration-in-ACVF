@@ -1,5 +1,9 @@
-import Section4.CoordinateMaps
-import Section4.Products
+module
+
+public import Section4.CoordinateMaps
+public import Section4.Products
+
+@[expose] public section
 
 /-! Actual definable images of pure VF coordinate projections, over the
 unchanged real parameter set. -/

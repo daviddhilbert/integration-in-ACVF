@@ -1,5 +1,9 @@
-import Integration7.SelectedRVVFTailLifts
-import Section4.VFAppend
+module
+
+public import Integration7.SelectedRVVFTailLifts
+public import Section4.VFAppend
+
+@[expose] public section
 
 /-! A map retaining selected RV labels acts on their VF realizations
 while fixing every added VF coordinate. -/

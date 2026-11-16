@@ -1,5 +1,9 @@
-import Integration7.GeometricVolumeDegreeTransports
-import Integration7.GammaSelectedVolumeSchemata
+module
+
+public import Integration7.GeometricVolumeDegreeTransports
+public import Integration7.GammaSelectedVolumeSchemata
+
+@[expose] public section
 
 /-! Reindex a full selected volume schema along its actual degree and
 selector equality, retaining every label and the original density. -/

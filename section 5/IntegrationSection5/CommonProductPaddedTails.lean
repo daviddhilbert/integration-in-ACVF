@@ -1,7 +1,11 @@
-import IntegrationSection5.CommonProductMatching
-import IntegrationSection5.CommonProductHeadSlices
-import IntegrationSection5.ProjectionPaddingOperations
-import IntegrationSection5.PaddedUnaryBranchExtension
+module
+
+public import IntegrationSection5.CommonProductMatching
+public import IntegrationSection5.CommonProductHeadSlices
+public import IntegrationSection5.ProjectionPaddingOperations
+public import IntegrationSection5.PaddedUnaryBranchExtension
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 open Classical FirstOrder FirstOrder.Language

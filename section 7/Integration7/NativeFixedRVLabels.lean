@@ -1,6 +1,10 @@
-import Integration7.RVLabelChainLifts
-import Integration7.GammaRVLabelFocusLifts
-import IntegrationSection6.GammaRawRVFormulas
+module
+
+public import Integration7.RVLabelChainLifts
+public import Integration7.GammaRVLabelFocusLifts
+public import IntegrationSection6.GammaRawRVFormulas
+
+@[expose] public section
 
 /-! Actual native graphs of fixed RV label tuples. They project
 bijectively onto the original domain and retain the original Gamma base

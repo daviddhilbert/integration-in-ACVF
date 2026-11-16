@@ -1,6 +1,10 @@
-import Integration7.VFAlmostEverywhere
-import IntegrationSection6.SmallVFFieldBases
-import Section9.MixedDifferentiationAE
+module
+
+public import Integration7.VFAlmostEverywhere
+public import IntegrationSection6.SmallVFFieldBases
+public import Section9.MixedDifferentiationAE
+
+@[expose] public section
 
 /-! Actual full definable volume-preserving bijections. These are
 concrete witnesses used inside the later almost-everywhere category;

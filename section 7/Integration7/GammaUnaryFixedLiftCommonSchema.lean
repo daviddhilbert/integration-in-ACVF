@@ -1,7 +1,11 @@
-import Integration7.GammaUnaryVolumeCommonSchema
-import Integration7.GammaVolumeSliceDensityAssembly
-import Integration7.FiniteVolumeParameterContexts
-import IntegrationSection6.GammaRVRealization
+module
+
+public import Integration7.GammaUnaryVolumeCommonSchema
+public import Integration7.GammaVolumeSliceDensityAssembly
+public import Integration7.FiniteVolumeParameterContexts
+public import IntegrationSection6.GammaRVRealization
+
+@[expose] public section
 
 /-! A VF-fixed, density-preserving original-Gamma isomorphism of unary
 lifts supplies a finite common-volume-blowup witness. Only finitely many

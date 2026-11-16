@@ -1,4 +1,8 @@
-import Integration7.HKConstrainedBijectionCharts
+module
+
+public import Integration7.HKConstrainedBijectionCharts
+
+@[expose] public section
 
 /-! Realizing constrained row charts gives an actual definable bijection
 over the base, preserving every parameter and the supplied graph relation. -/

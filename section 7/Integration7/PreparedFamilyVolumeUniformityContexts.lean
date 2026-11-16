@@ -1,9 +1,13 @@
-import Integration7.GammaPreparedVolumeGluing
-import Integration7.PreparedVolumeWitnessContexts
-import Integration7.GammaVFPreparedVolumeUniformity
-import Integration7.ZeroAuxVolumeWitnessCompactness
-import IntegrationSection6.GammaVFParameterBases
-import IntegrationSection6.GammaPreparedIndexPresentation
+module
+
+public import Integration7.GammaPreparedVolumeGluing
+public import Integration7.PreparedVolumeWitnessContexts
+public import Integration7.GammaVFPreparedVolumeUniformity
+public import Integration7.ZeroAuxVolumeWitnessCompactness
+public import IntegrationSection6.GammaVFParameterBases
+public import IntegrationSection6.GammaPreparedIndexPresentation
+
+@[expose] public section
 
 /-! Pointwise common volume blowups over named VF parameters give one
 preparation in a genuine small context and actual common blowups of the

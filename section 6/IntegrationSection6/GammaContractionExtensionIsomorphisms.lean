@@ -1,7 +1,11 @@
-import IntegrationSection6.ContractionExtensionIndices
-import IntegrationSection6.GammaContractionPresentationIsomorphisms
-import IntegrationSection6.GammaPermutedFibrePresentations
-import IntegrationSection6.EmptySelectedContractions
+module
+
+public import IntegrationSection6.ContractionExtensionIndices
+public import IntegrationSection6.GammaContractionPresentationIsomorphisms
+public import IntegrationSection6.GammaPermutedFibrePresentations
+public import IntegrationSection6.EmptySelectedContractions
+
+@[expose] public section
 
 /-! Internal real presentation extension preserves the actual finite
 contraction object up to a full original-Gamma RV isomorphism. -/

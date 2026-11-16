@@ -1,5 +1,9 @@
-import Integration7.HKSupportedZeroFunctionJacobians
-import Integration7.HKAEZeroFunctionAddition
+module
+
+public import Integration7.HKSupportedZeroFunctionJacobians
+public import Integration7.HKAEZeroFunctionAddition
+
+@[expose] public section
 
 /-! Weighted-zero functions supported on an actual definable VF domain
 have the pointwise additive structure of their injective AE forgetful map. -/

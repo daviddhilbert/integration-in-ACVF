@@ -1,5 +1,9 @@
-import Integration7.GammaVolumeRowAgreements
-import Integration7.VolumeSchemaCorrespondences
+module
+
+public import Integration7.GammaVolumeRowAgreements
+public import Integration7.VolumeSchemaCorrespondences
+
+@[expose] public section
 
 /-! Complete primitive row agreement preserves the derived volume
 correspondence, including its full raw rows and improper-tuple behavior. -/

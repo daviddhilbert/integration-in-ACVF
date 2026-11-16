@@ -1,5 +1,9 @@
-import Integration7.PositiveVolumeParameterExtension
-import Integration7.RVAlmostEverywhereParameters
+module
+
+public import Integration7.PositiveVolumeParameterExtension
+public import Integration7.RVAlmostEverywhereParameters
+
+@[expose] public section
 
 /-! The actual essential isomorphism and both volume equations persist
 under enlargement of the real parameter set. -/

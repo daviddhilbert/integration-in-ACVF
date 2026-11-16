@@ -1,6 +1,10 @@
-import Integration7.AERVVolumeCoordinatePushforwards
-import Integration7.VolumeFunctionIntegralCoordinateNormalization
-import Integration7.VolumeFunctionIntegralPermutationCovariance
+module
+
+public import Integration7.AERVVolumeCoordinatePushforwards
+public import Integration7.VolumeFunctionIntegralCoordinateNormalization
+public import Integration7.VolumeFunctionIntegralPermutationCovariance
+
+@[expose] public section
 
 /-! Return the iterated integral of a coordinate projection to the
 original global coordinate order. The map consists solely of arithmetic

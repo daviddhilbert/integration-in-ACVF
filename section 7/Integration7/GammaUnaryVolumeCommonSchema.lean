@@ -1,12 +1,16 @@
-import Integration7.GammaUnarySpecialVolumeSchemata
-import Integration7.GammaUnaryPullbackVolumeComparison
-import Integration7.VolumeSchemaRowExtension
-import Integration7.UnarySmallContextPreparation
-import Integration7.UnaryVolumeChainCorollary
-import Integration7.UnaryPullbackVolumeComparison
-import Integration7.SpecialVolumeConjugacy
-import Integration7.LiteralRVVolumeForms
-import Integration7.PositiveVolumeParameterExtension
+module
+
+public import Integration7.GammaUnarySpecialVolumeSchemata
+public import Integration7.GammaUnaryPullbackVolumeComparison
+public import Integration7.VolumeSchemaRowExtension
+public import Integration7.UnarySmallContextPreparation
+public import Integration7.UnaryVolumeChainCorollary
+public import Integration7.UnaryPullbackVolumeComparison
+public import Integration7.SpecialVolumeConjugacy
+public import Integration7.LiteralRVVolumeForms
+public import Integration7.PositiveVolumeParameterExtension
+
+@[expose] public section
 
 /-! The unary common-volume-blowup comparison has a finite formula
 witness over the original Gamma base. The preparation context is allowed

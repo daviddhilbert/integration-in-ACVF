@@ -1,5 +1,9 @@
-import Integration7.MatchingPreparedFamilyDomains
-import Integration7.UniformTranslatedRectangleFamilies
+module
+
+public import Integration7.MatchingPreparedFamilyDomains
+public import Integration7.UniformTranslatedRectangleFamilies
+
+@[expose] public section
 
 /-! The actual matching family carries the original vertical and
 horizontal centres. Its two translations are Gamma bijections with

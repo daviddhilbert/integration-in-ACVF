@@ -1,5 +1,9 @@
-import Integration7.SelectedVolumeFamilies
-import Integration7.OrderedPositiveVolumeContractions
+module
+
+public import Integration7.SelectedVolumeFamilies
+public import Integration7.OrderedPositiveVolumeContractions
+
+@[expose] public section
 
 /-! Actual positive selected-family contraction objects. Their volume
 tuple retains every contracted VF tag and every selected original label;

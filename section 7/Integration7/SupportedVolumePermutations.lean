@@ -1,6 +1,10 @@
-import Integration7.PureVFCoordinateImages
-import Integration7.SupportedVolumeFunctionJacobians
-import Integration7.AERVVolumePermutedFunctions
+module
+
+public import Integration7.PureVFCoordinateImages
+public import Integration7.SupportedVolumeFunctionJacobians
+public import Integration7.AERVVolumePermutedFunctions
+
+@[expose] public section
 
 /-! Coordinate permutations retain the exact image of the support
 on the actual AE family quotient. -/

@@ -1,6 +1,10 @@
-import IntegrationSection5.RelativeSpecialBoundary
-import IntegrationSection5.VerticalMeanMap
-import IntegrationSection5.HeadContractionGeometry
+module
+
+public import IntegrationSection5.RelativeSpecialBoundary
+public import IntegrationSection5.VerticalMeanMap
+public import IntegrationSection5.HeadContractionGeometry
+
+@[expose] public section
 
 /-! Genuine fibre-focus and coordinate-canonical steps with the precise
 boundaries needed for iteration. -/

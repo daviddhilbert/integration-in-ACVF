@@ -1,5 +1,9 @@
-import IntegrationSection4.VerticalPresentation
-import IntegrationSection4.ScalarPositionDecomposition
+module
+
+public import IntegrationSection4.VerticalPresentation
+public import IntegrationSection4.ScalarPositionDecomposition
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

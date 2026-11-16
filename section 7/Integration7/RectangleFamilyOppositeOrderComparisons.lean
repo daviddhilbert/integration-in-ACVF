@@ -1,6 +1,10 @@
-import Integration7.RectangleFamilyConstructedVolumeComparison
-import Integration7.RetainedDensitySameOrderContractions
-import Integration7.VolumeContextJoins
+module
+
+public import Integration7.RectangleFamilyConstructedVolumeComparison
+public import Integration7.RetainedDensitySameOrderContractions
+public import Integration7.VolumeContextJoins
+
+@[expose] public section
 
 /-! The whole shared-label rectangle case of Lemma7.7, for arbitrary
 specified opposite-order contractions and nonconstant retained density. -/

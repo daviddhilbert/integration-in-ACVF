@@ -1,9 +1,13 @@
-import Integration7.VolumeIntegrationEquivalence
-import Integration7.PositiveVolumeLiftSurjectivity
-import Integration7.UnaryChainVolumeContractions
-import Integration7.PullbackOriginalVolumeClasses
-import Integration7.SpecialRetainedVolumeChains
-import Integration7.CommonContextVolumeDescent
+module
+
+public import Integration7.VolumeIntegrationEquivalence
+public import Integration7.PositiveVolumeLiftSurjectivity
+public import Integration7.UnaryChainVolumeContractions
+public import Integration7.PullbackOriginalVolumeClasses
+public import Integration7.SpecialRetainedVolumeChains
+public import Integration7.CommonContextVolumeDescent
+
+@[expose] public section
 
 /-! Integration of an actual VF volume object can be computed by any
 specified standard contraction of its density graph, in any VF order. -/

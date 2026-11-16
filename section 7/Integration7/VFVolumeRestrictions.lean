@@ -1,5 +1,9 @@
-import Integration7.MixedJacobianRestriction
-import Integration7.VFCofullSubdomains
+module
+
+public import Integration7.MixedJacobianRestriction
+public import Integration7.VFCofullSubdomains
+
+@[expose] public section
 
 /-! Genuine restrictions of full volume-preserving bijections, to an
 actual target preimage or to the actual image of a source subdomain. -/

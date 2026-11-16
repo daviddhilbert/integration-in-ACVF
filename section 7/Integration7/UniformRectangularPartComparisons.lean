@@ -1,5 +1,9 @@
-import Integration7.NativeCellFamilyPartitionDomains
-import Integration7.RectangleFamilyAllOrderComparisons
+module
+
+public import Integration7.NativeCellFamilyPartitionDomains
+public import Integration7.RectangleFamilyAllOrderComparisons
+
+@[expose] public section
 
 /-! The actual rectangular piece of the constructed cell-family
 partition now has its comparison in every specified VF-two order. -/

@@ -1,5 +1,9 @@
-import IntegrationSection3ACVF.AdjoinGamma
-import Section3.GammaSupport
+module
+
+public import IntegrationSection3ACVF.AdjoinGamma
+public import Section3.GammaSupport
+
+@[expose] public section
 
 /-! Relating the predecessor's Gamma parameters to the sequel's combined
 presentation, with no ball names added to the base. -/

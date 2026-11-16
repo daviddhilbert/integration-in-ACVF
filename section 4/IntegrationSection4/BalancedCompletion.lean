@@ -1,4 +1,8 @@
-import IntegrationSection4.LinearRVClasses
+module
+
+public import IntegrationSection4.LinearRVClasses
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

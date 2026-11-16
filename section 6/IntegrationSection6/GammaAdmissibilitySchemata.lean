@@ -1,5 +1,9 @@
-import IntegrationSection6.SortedCoordinatePredicates
-import IntegrationSection6.GammaAdmissibilityFromSlices
+module
+
+public import IntegrationSection6.SortedCoordinatePredicates
+public import IntegrationSection6.GammaAdmissibilityFromSlices
+
+@[expose] public section
 
 /-! Admissibility witness schemata use the checked finite-slice criterion,
 with a fixed finite bound and a definable nonzero locus. Every valid row

@@ -1,7 +1,11 @@
-import Integration7.NativeUnaryRectangleVolumeObjects
-import Integration7.GammaEssentialVolumeGraphs
-import Integration7.GammaVolumeDensityRescaling
-import IntegrationSection6.GammaRawStandardContractions
+module
+
+public import Integration7.NativeUnaryRectangleVolumeObjects
+public import Integration7.GammaEssentialVolumeGraphs
+public import Integration7.GammaVolumeDensityRescaling
+public import IntegrationSection6.GammaRawStandardContractions
+
+@[expose] public section
 
 /-! The exact rectangle product volume isomorphism retains its full
 original-Gamma graph, at any common nonzero constant density. -/

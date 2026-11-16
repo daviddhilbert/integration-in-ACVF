@@ -1,7 +1,11 @@
-import Integration7.OrdinaryUnitFieldIntegralProducts
-import Integration7.OrdinaryUnitSelectedPointRows
-import Integration7.FrozenHeadAppendedIntegralIndependence
-import Integration7.FrozenOrdinaryHeadIntegralValues
+module
+
+public import Integration7.OrdinaryUnitFieldIntegralProducts
+public import Integration7.OrdinaryUnitSelectedPointRows
+public import Integration7.FrozenHeadAppendedIntegralIndependence
+public import Integration7.FrozenOrdinaryHeadIntegralValues
+
+@[expose] public section
 
 /-! Freezing an ordinary unit presentation commutes with its actual
 density graph. The point-coefficient family's frozen integral is

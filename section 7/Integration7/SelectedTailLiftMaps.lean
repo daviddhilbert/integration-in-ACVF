@@ -1,5 +1,9 @@
-import Integration7.SelectedRVVFTailLifts
-import Integration7.MixedDomainProductJacobians
+module
+
+public import Integration7.SelectedRVVFTailLifts
+public import Integration7.MixedDomainProductJacobians
+
+@[expose] public section
 
 /-! A label-preserving mixed map lifts while fixing the additional VF
 coordinates realizing the selected RV tuple. -/

@@ -1,5 +1,9 @@
-import IntegrationSection5.RVContractionGamma
-import IntegrationSection5.GammaSurjectiveRVComparison
+module
+
+public import IntegrationSection5.RVContractionGamma
+public import IntegrationSection5.GammaSurjectiveRVComparison
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option maxHeartbeats 2000000

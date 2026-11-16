@@ -1,7 +1,11 @@
-import IntegrationSection5.PulledFocusDefinability
-import IntegrationSection5.UnaryFocusImages
-import IntegrationSection5.UnaryCanonicalImages
-import IntegrationSection5.UnaryInverseGeometry
+module
+
+public import IntegrationSection5.PulledFocusDefinability
+public import IntegrationSection5.UnaryFocusImages
+public import IntegrationSection5.UnaryCanonicalImages
+public import IntegrationSection5.UnaryInverseGeometry
+
+@[expose] public section
 
 /-! The forward part of the matched-focus step in Lemma 5.2. -/
 

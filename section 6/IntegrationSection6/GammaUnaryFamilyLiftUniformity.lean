@@ -1,6 +1,10 @@
-import IntegrationSection6.GammaUnaryPresentedLiftComparison
-import IntegrationSection6.GammaVFPreparedUniformityWithoutField
-import IntegrationSection6.GammaSwappedCommonBlowups
+module
+
+public import IntegrationSection6.GammaUnaryPresentedLiftComparison
+public import IntegrationSection6.GammaVFPreparedUniformityWithoutField
+public import IntegrationSection6.GammaSwappedCommonBlowups
+
+@[expose] public section
 
 /-! The one-VF-parameter case of Lemma6.14 for full finite-volume family
 presentations and arbitrary unary standard contractions. Selected old RV

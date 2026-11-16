@@ -1,5 +1,9 @@
-import Integration7.Section5TwoOrderBaseReductions
-import IntegrationSection6.VFParameterCoefficientBases
+module
+
+public import Integration7.Section5TwoOrderBaseReductions
+public import IntegrationSection6.VFParameterCoefficientBases
+
+@[expose] public section
 
 /-! Section5.8 supplies the actual two-order input after adjoining any
 finite VF tuple to a generated base. Definable closure is named only

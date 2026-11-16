@@ -1,4 +1,8 @@
-import Integration7.PureVFCoordinateImageComposition
+module
+
+public import Integration7.PureVFCoordinateImageComposition
+
+@[expose] public section
 
 /-! The support of an iterated head contraction is the literal image
 under deletion of its initial VF coordinates. -/

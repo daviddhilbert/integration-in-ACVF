@@ -1,7 +1,11 @@
-import Integration7.SelectedFamilyVolumeSchemata
-import Integration7.SelectedDensityGraphRowMaps
-import Integration7.GammaVFPreparedVolumeUniformity
-import Integration7.VolumeBlowupEquivalence
+module
+
+public import Integration7.SelectedFamilyVolumeSchemata
+public import Integration7.SelectedDensityGraphRowMaps
+public import Integration7.GammaVFPreparedVolumeUniformity
+public import Integration7.VolumeBlowupEquivalence
+
+@[expose] public section
 
 /-! The fibrewise hypothesis of positive selected Lemma 7.5 supplies
 the exact inputs to simultaneous volume-witness preparation and gluing. -/

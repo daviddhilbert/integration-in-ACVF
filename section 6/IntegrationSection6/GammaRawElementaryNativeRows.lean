@@ -1,4 +1,8 @@
-import IntegrationSection6.GammaRawElementaryRows
+module
+
+public import IntegrationSection6.GammaRawElementaryRows
+
+@[expose] public section
 
 /-! Specializing the uniform elementary family gives the actual elementary
 blowup of the represented RV row, with its literal domain and volume graph. -/

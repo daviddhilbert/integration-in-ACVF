@@ -1,5 +1,9 @@
-import Integration7.AERVVolumeFunctionIntegrals
-import Integration7.HeadAppendVolumeCoordinates
+module
+
+public import Integration7.AERVVolumeFunctionIntegrals
+public import Integration7.HeadAppendVolumeCoordinates
+
+@[expose] public section
 
 /-! The actual family obtained by contracting one VF head. Its selected
 tuple consists of the old selected RV coordinates and the new head tag;

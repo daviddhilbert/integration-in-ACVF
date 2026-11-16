@@ -1,5 +1,9 @@
-import IntegrationSection6.FiniteGammaObjects
-import IntegrationSection5.RVContractionGamma
+module
+
+public import IntegrationSection6.FiniteGammaObjects
+public import IntegrationSection5.RVContractionGamma
+
+@[expose] public section
 
 /-! Mutually contractible VF-preserving actual bijections induce
 volume-preserving isomorphisms of finite RV-pullback objects in any arity. -/

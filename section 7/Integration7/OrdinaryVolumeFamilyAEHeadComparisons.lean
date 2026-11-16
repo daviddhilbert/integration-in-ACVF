@@ -1,5 +1,9 @@
-import Integration7.OrdinaryVolumeFamilyAEHeadGeometry
-import Integration7.VolumeFamilyFormulaWitnessDescent
+module
+
+public import Integration7.OrdinaryVolumeFamilyAEHeadGeometry
+public import Integration7.VolumeFamilyFormulaWitnessDescent
+
+@[expose] public section
 
 /-! Ordinary AE representatives and arbitrary choices of their
 first head preparation give the same positive-valued AE head function. -/

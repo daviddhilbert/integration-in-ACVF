@@ -1,6 +1,10 @@
-import Integration7.PreparedPieceVolumeChains
-import Integration7.PullbackUnaryChainVolumeComparison
-import Integration7.FinitePullbackVolumeGluing
+module
+
+public import Integration7.PreparedPieceVolumeChains
+public import Integration7.PullbackUnaryChainVolumeComparison
+public import Integration7.FinitePullbackVolumeGluing
+
+@[expose] public section
 
 /-! Glue the actual Section 5.6 factor chains after simultaneous special
 preparation of both finite partitions, retaining the original densities. -/

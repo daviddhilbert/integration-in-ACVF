@@ -1,4 +1,8 @@
-import Integration7.RVDensityRatioGraph
+module
+
+public import Integration7.RVDensityRatioGraph
+
+@[expose] public section
 
 /-! In a canonical model, an actual real definable sorted formula is
 an original-Gamma formula over the same real parameters. -/

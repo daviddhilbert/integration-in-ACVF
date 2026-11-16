@@ -1,6 +1,10 @@
-import Integration7.VolumeFamilyLiftCoproductBijections
-import Integration7.SelectedVolumeFamilyAddition
-import Integration7.FixedVFVolumeCoproductBijections
+module
+
+public import Integration7.VolumeFamilyLiftCoproductBijections
+public import Integration7.SelectedVolumeFamilyAddition
+public import Integration7.FixedVFVolumeCoproductBijections
+
+@[expose] public section
 
 /-! Selected-coordinate families and their arbitrary-map presentations
 have the same actual VF realization. Consequently, the selected tagged

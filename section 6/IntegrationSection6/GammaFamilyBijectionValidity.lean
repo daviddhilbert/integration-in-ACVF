@@ -1,4 +1,8 @@
-import IntegrationSection6.GammaFamilyMapValidity
+module
+
+public import IntegrationSection6.GammaFamilyMapValidity
+
+@[expose] public section
 
 /-! Bijective chart validity is first-order: a map schema with reverse
 fibre bound one has exactly the specified target image. -/

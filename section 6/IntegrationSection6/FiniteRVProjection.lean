@@ -1,4 +1,8 @@
-import IntegrationSection6.FiniteRVGeometry
+module
+
+public import IntegrationSection6.FiniteRVGeometry
+
+@[expose] public section
 
 /-! Remark6.2 as a morphism inside RV[k]. The actual definable projection
 restricts to the inherited finite-volume full subcategory. -/

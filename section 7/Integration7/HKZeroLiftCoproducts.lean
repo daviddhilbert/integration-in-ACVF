@@ -1,5 +1,9 @@
-import Integration7.HKZeroVFCoproductIsomorphisms
-import Integration7.HKVolumeCoproductIsomorphisms
+module
+
+public import Integration7.HKZeroVFCoproductIsomorphisms
+public import Integration7.HKVolumeCoproductIsomorphisms
+
+@[expose] public section
 
 /-! Weighted zero lifts preserve the concrete tagged coproduct and the
 literal density of either summand. -/

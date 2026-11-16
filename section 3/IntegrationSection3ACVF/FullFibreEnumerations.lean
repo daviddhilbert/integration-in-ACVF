@@ -1,5 +1,9 @@
-import IntegrationSection3ACVF.FullBaseDefinability
-import Section3.FibreEnumerations
+module
+
+public import IntegrationSection3ACVF.FullBaseDefinability
+public import Section3.FibreEnumerations
+
+@[expose] public section
 
 /-! Full interpreted-base version of the proved MIT
 Section3/FibreEnumerations enumeration formula at pinned revision

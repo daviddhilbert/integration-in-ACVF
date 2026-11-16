@@ -1,7 +1,11 @@
-import Integration7.AdmissibleHeadPointMaps
-import Integration7.EssentialFiniteBijections
-import Integration7.LowerDimensionRVVolumeIsomorphisms
-import Integration7.FiniteVolumeCertificateCriterion
+module
+
+public import Integration7.AdmissibleHeadPointMaps
+public import Integration7.EssentialFiniteBijections
+public import Integration7.LowerDimensionRVVolumeIsomorphisms
+public import Integration7.FiniteVolumeCertificateCriterion
+
+@[expose] public section
 
 /-! In positive remaining degree the admissible object is genuinely
 isomorphic, with both volume equations, to its head factor times the

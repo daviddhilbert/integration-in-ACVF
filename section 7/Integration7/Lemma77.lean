@@ -1,5 +1,9 @@
-import Integration7.FirstTwoStandardVolumeExchange
-import Integration7.VFStandardVolumeContractionObjects
+module
+
+public import Integration7.FirstTwoStandardVolumeExchange
+public import Integration7.VFStandardVolumeContractionObjects
+
+@[expose] public section
 
 /-! The explicit permutation formulation of Lemma7.7. Its native
 statement allows any original Gamma base and retained density. The

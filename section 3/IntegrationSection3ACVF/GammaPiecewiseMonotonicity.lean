@@ -1,8 +1,12 @@
-import IntegrationSection3ACVF.GammaLocalExtrema
-import IntegrationSection3ACVF.GammaGermSyntax
-import IntegrationSection3ACVF.OrderedFunctionGerms
-import IntegrationSection3ACVF.FiniteOrderIntervalPatterns
-import Mathlib.Order.Interval.Set.OrdConnected
+module
+
+public import IntegrationSection3ACVF.GammaLocalExtrema
+public import IntegrationSection3ACVF.GammaGermSyntax
+public import IntegrationSection3ACVF.OrderedFunctionGerms
+public import IntegrationSection3ACVF.FiniteOrderIntervalPatterns
+public import Mathlib.Order.Interval.Set.OrdConnected
+
+@[expose] public section
 
 /-! A finite cut set makes an actual definable injective Gamma function
 strictly monotone on each open interval in its domain that avoids the cuts.

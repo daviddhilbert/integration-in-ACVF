@@ -1,4 +1,8 @@
-import IntegrationSection6.VFCoordinateProjections
+module
+
+public import IntegrationSection6.VFCoordinateProjections
+
+@[expose] public section
 
 /-! Extend the original VF order while fixing every added tail coordinate. -/
 namespace IntegrationInACVF.Section7

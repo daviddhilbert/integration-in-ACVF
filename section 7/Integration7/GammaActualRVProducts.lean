@@ -1,6 +1,10 @@
-import Integration7.GammaRVMapRestrictions
-import Integration7.ElementaryBlowupConstruction
-import IntegrationSection6.GammaElementaryDomains
+module
+
+public import Integration7.GammaRVMapRestrictions
+public import Integration7.ElementaryBlowupConstruction
+public import IntegrationSection6.GammaElementaryDomains
+
+@[expose] public section
 
 /-! The actual packed RV product and blowup cone have their full Gamma
 domains. The cone comparison uses the canonical structure explicitly. -/

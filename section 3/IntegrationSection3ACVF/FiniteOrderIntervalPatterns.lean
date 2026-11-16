@@ -1,4 +1,8 @@
-import IntegrationSection3ACVF.FiniteOrderBounds
+module
+
+public import IntegrationSection3ACVF.FiniteOrderBounds
+
+@[expose] public section
 
 /-! Every two points of an endpoint-free open interval have the same
 pattern against the original finite endpoint set. -/

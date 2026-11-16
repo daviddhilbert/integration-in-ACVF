@@ -1,4 +1,8 @@
-import Integration7.VolumeFamilyChartValues
+module
+
+public import Integration7.VolumeFamilyChartValues
+
+@[expose] public section
 
 /-! Uniform definability of the actual certified Jacobian graphs, with
 arbitrary real parameter sorts. Finite unions of supports are definable. -/

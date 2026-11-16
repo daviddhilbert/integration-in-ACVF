@@ -1,4 +1,8 @@
-import IntegrationSection3ACVF.BallCosetAtomicity
+module
+
+public import IntegrationSection3ACVF.BallCosetAtomicity
+
+@[expose] public section
 
 /-!
 # Balls at radii named over the real base

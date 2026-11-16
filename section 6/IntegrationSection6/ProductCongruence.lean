@@ -1,7 +1,11 @@
-import IntegrationSection6.ProductGeometry
-import IntegrationSection6.ProductDistribution
-import IntegrationSection6.AdditiveCongruence
-import Section4.RVHomogeneousProducts
+module
+
+public import IntegrationSection6.ProductGeometry
+public import IntegrationSection6.ProductDistribution
+public import IntegrationSection6.AdditiveCongruence
+public import Section4.RVHomogeneousProducts
+
+@[expose] public section
 
 /-! Multiplicative compatibility of actual common blowups. -/
 

@@ -1,5 +1,9 @@
-import IntegrationSection6.GammaSchemaRowAgreement
-import IntegrationSection6.GammaFamilyBijectionValidity
+module
+
+public import IntegrationSection6.GammaSchemaRowAgreement
+public import IntegrationSection6.GammaFamilyBijectionValidity
+
+@[expose] public section
 
 /-! First-order map validity transports across literal rows, even when
 VF parameters are replaced by RV keys of a different arity. -/

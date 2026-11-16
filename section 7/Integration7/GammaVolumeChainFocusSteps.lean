@@ -1,6 +1,10 @@
-import Integration7.GammaPartialFocusVolumeSplits
-import Integration7.GammaCanonicalAdmissibilityRows
-import Integration7.GammaVolumeBlowupRowPromotion
+module
+
+public import Integration7.GammaPartialFocusVolumeSplits
+public import Integration7.GammaCanonicalAdmissibilityRows
+public import Integration7.GammaVolumeBlowupRowPromotion
+
+@[expose] public section
 
 /-! Zero-cost original-Gamma volume isomorphisms before a focus are
 absorbed into its source chart, preserving the number of blowups. -/

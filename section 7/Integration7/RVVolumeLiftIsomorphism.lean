@@ -1,9 +1,13 @@
-import Integration7.VolumeLiftDescent
-import Integration7.GammaAbsoluteValues
-import Integration7.ScalarRVAlgebra
-import IntegrationSection2.ConstructedGaussGraph
-import IntegrationSection6.SmallVFFieldBases
-import Section9.PrescribedVolumeLift
+module
+
+public import Integration7.VolumeLiftDescent
+public import Integration7.GammaAbsoluteValues
+public import Integration7.ScalarRVAlgebra
+public import IntegrationSection2.ConstructedGaussGraph
+public import IntegrationSection6.SmallVFFieldBases
+public import Section9.PrescribedVolumeLift
+
+@[expose] public section
 
 /-! The actual prescribed-Jacobian lift of a positive RV volume
 isomorphism. Generation of the original VF/Gamma base is explicit;

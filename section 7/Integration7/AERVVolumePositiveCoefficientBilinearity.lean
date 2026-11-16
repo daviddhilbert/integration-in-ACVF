@@ -1,6 +1,10 @@
-import Integration7.AERVVolumePositiveCoefficientProducts
-import Integration7.PositiveVolumeClassExtensions
-import Integration7.AERVVolumeFunctionAdditiveStructure
+module
+
+public import Integration7.AERVVolumePositiveCoefficientProducts
+public import Integration7.PositiveVolumeClassExtensions
+public import Integration7.AERVVolumeFunctionAdditiveStructure
+
+@[expose] public section
 
 /-! The actual positive-coefficient action is additive separately in
 the coefficient and function. These are equalities of AE functions, proved

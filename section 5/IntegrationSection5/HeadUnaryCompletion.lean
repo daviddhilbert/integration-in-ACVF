@@ -1,6 +1,10 @@
-import IntegrationSection5.HeadPreparationExtension
-import IntegrationSection5.UnarySpecialRelative
-import IntegrationSection5.OrderedContractionProgram
+module
+
+public import IntegrationSection5.HeadPreparationExtension
+public import IntegrationSection5.UnarySpecialRelative
+public import IntegrationSection5.OrderedContractionProgram
+
+@[expose] public section
 
 /-! An actual unary special preparation completes an actual first head
 stage. Carrier identifications reconcile their internal real presentations. -/

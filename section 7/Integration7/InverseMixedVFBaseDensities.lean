@@ -1,4 +1,8 @@
-import Integration7.MixedVFBaseDensityAgreement
+module
+
+public import Integration7.MixedVFBaseDensityAgreement
+
+@[expose] public section
 
 /-! The actual inverse family Jacobian agrees with the inverse pure-base
 Jacobian at generic source points and hence outside a definable small set. -/

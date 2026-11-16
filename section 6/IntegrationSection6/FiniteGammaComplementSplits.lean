@@ -1,6 +1,10 @@
-import IntegrationSection6.FiniteGammaPartitionCharts
-import IntegrationSection6.FiniteGammaFormulaIsos
-import IntegrationSection6.FiniteGammaCoproductMaps
+module
+
+public import IntegrationSection6.FiniteGammaPartitionCharts
+public import IntegrationSection6.FiniteGammaFormulaIsos
+public import IntegrationSection6.FiniteGammaCoproductMaps
+
+@[expose] public section
 
 /-! The difference and exterior charts for two Gamma-definable RV loci. -/
 noncomputable section

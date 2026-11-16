@@ -1,9 +1,13 @@
-import Integration7.CanonicalElementaryDensityIdentifications
-import Integration7.ActualVolumeCanonicalPresentations
-import Integration7.NormalizedActualVolumeGraphs
-import Integration7.RealVolumeGammaCertificates
-import Integration7.EssentialVolumeLiftIsomorphisms
-import Integration7.ElementaryBlowupComparisonTheorem
+module
+
+public import Integration7.CanonicalElementaryDensityIdentifications
+public import Integration7.ActualVolumeCanonicalPresentations
+public import Integration7.NormalizedActualVolumeGraphs
+public import Integration7.RealVolumeGammaCertificates
+public import Integration7.EssentialVolumeLiftIsomorphisms
+public import Integration7.ElementaryBlowupComparisonTheorem
+
+@[expose] public section
 
 /-! Every actual elementary volume blowup has a volume-isomorphic VF
 lift. The focus and its determinant-one map are constructed internally;

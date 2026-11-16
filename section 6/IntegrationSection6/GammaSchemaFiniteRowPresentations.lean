@@ -1,6 +1,10 @@
-import IntegrationSection6.GammaSchemaFiniteRows
-import IntegrationSection6.GammaRawCoproductSchemaBridge
-import IntegrationSection6.GammaRawElementarySchemaBridge
+module
+
+public import IntegrationSection6.GammaSchemaFiniteRows
+public import IntegrationSection6.GammaRawCoproductSchemaBridge
+public import IntegrationSection6.GammaRawElementarySchemaBridge
+
+@[expose] public section
 
 /-! Bound-independent finite rows have actual native finite graph
 presentations. Native coproducts and admissible elementary blowups preserve

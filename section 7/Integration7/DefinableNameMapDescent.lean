@@ -1,5 +1,9 @@
-import Integration7.TermClosureDefinability
-import Section4.MapParameters
+module
+
+public import Integration7.TermClosureDefinability
+public import Section4.MapParameters
+
+@[expose] public section
 
 /-! Maps descend across an extension consisting of already definable
 names. Their actual point functions and complete graphs are preserved. -/

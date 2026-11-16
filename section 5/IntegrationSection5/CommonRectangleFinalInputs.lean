@@ -1,5 +1,9 @@
-import IntegrationSection5.CommonRectangleInputs
-import IntegrationSection5.CommonProductFinalN
+module
+
+public import IntegrationSection5.CommonRectangleInputs
+public import IntegrationSection5.CommonProductFinalN
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option maxHeartbeats 2000000

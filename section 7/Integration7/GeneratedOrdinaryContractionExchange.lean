@@ -1,5 +1,9 @@
-import Integration7.CompletedVFParameterTwoOrderInputs
-import IntegrationSection6.CoordinateExchange
+module
+
+public import Integration7.CompletedVFParameterTwoOrderInputs
+public import IntegrationSection6.CoordinateExchange
+
+@[expose] public section
 
 /-! Ordinary first-two contraction exchange over the standing generated
 base follows from the completed Section5 theorem. This retains every

@@ -1,8 +1,12 @@
-import Integration7.ZeroFactorVFVolumeProducts
-import Integration7.VFCofullSubdomains
-import Integration7.OrdinaryFiniteCoproductIsomorphisms
-import Integration7.OrdinaryZeroLiftIsomorphisms
-import Integration7.VFVolumeIsomorphisms
+module
+
+public import Integration7.ZeroFactorVFVolumeProducts
+public import Integration7.VFCofullSubdomains
+public import Integration7.OrdinaryFiniteCoproductIsomorphisms
+public import Integration7.OrdinaryZeroLiftIsomorphisms
+public import Integration7.VFVolumeIsomorphisms
+
+@[expose] public section
 
 /-! Products with an ordinary RV[0] coefficient preserve actual
 almost-everywhere VF volume isomorphisms and ordinary coefficient isomorphisms. -/

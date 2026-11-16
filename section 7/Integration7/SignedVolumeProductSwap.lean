@@ -1,7 +1,11 @@
-import Integration7.VolumeCoordinatePermutation
-import Integration7.VolumeDegreeTransport
-import Integration7.VolumeProductPointwise
-import Integration7.PermutationSignParameters
+module
+
+public import Integration7.VolumeCoordinatePermutation
+public import Integration7.VolumeDegreeTransport
+public import Integration7.VolumeProductPointwise
+public import Integration7.PermutationSignParameters
+
+@[expose] public section
 set_option backward.isDefEq.respectTransparency false
 set_option maxHeartbeats 1200000
 open FirstOrder FirstOrder.Language CategoryTheory

@@ -1,4 +1,8 @@
-import IntegrationSection3ACVF.OpenRadiusLimits
+module
+
+public import IntegrationSection3ACVF.OpenRadiusLimits
+
+@[expose] public section
 
 /-! Restriction and uniqueness of actual Gamma-linearity coefficients.
 These are geometric inputs to closure of the least-radius locus. -/

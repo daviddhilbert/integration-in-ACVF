@@ -1,5 +1,9 @@
-import IntegrationSection5.FocusSection
-import Section5.TransformGeometry
+module
+
+public import IntegrationSection5.FocusSection
+public import Section5.TransformGeometry
+
+@[expose] public section
 
 /-! Pull a target focus back through a contractible unary bijection.
 The selected source locus is a union of actual RV cells. The section and

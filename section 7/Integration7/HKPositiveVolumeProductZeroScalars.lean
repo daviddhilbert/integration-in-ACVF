@@ -1,7 +1,11 @@
-import Integration7.AERVVolumePositiveCoefficientAssociativity
-import Integration7.ZeroCoefficientProductSymmetry
-import Integration7.HKZeroCoefficientScalarRows
-import Integration7.HKAERVWeightedZeroModules
+module
+
+public import Integration7.AERVVolumePositiveCoefficientAssociativity
+public import Integration7.ZeroCoefficientProductSymmetry
+public import Integration7.HKZeroCoefficientScalarRows
+public import Integration7.HKAERVWeightedZeroModules
+
+@[expose] public section
 
 /-! Weighted RV[0] coefficients are central in actual graded volume
 products. Only this degree-zero centrality is used for the two scalar

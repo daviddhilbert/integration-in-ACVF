@@ -1,7 +1,11 @@
-import Integration7.PositiveConstantFieldIntegralProducts
-import Integration7.SelectedHeadIntegralRowAddition
-import Integration7.PositiveVolumeClassProductExtensions
-import Integration7.AERVVolumePositiveCoefficientBilinearity
+module
+
+public import Integration7.PositiveConstantFieldIntegralProducts
+public import Integration7.SelectedHeadIntegralRowAddition
+public import Integration7.PositiveVolumeClassProductExtensions
+public import Integration7.AERVVolumePositiveCoefficientBilinearity
+
+@[expose] public section
 
 /-! Genuine frozen unary fibre integrals commute with positive constant
 coefficients. Definable parameter descent gives the actual head-row

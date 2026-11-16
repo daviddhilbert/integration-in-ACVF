@@ -1,6 +1,10 @@
-import Integration7.RectangleFamilyGammaOrderIsomorphisms
-import Integration7.GammaIsoCoordinateIdentities
-import Integration7.ContractionRetainedDensityLabels
+module
+
+public import Integration7.RectangleFamilyGammaOrderIsomorphisms
+public import Integration7.GammaIsoCoordinateIdentities
+public import Integration7.ContractionRetainedDensityLabels
+
+@[expose] public section
 
 /-! Normalizing the two actual rectangle contraction objects retains
 the full original-Gamma comparison and every original density label. -/

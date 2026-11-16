@@ -1,5 +1,9 @@
-import Integration7.FiniteVolumeParameterContexts
-import IntegrationSection6.GammaFieldBaseReduction
+module
+
+public import Integration7.FiniteVolumeParameterContexts
+public import IntegrationSection6.GammaFieldBaseReduction
+
+@[expose] public section
 
 /-! The generated VF coefficient field fits in a genuine small
 containing context under the context's uncountable saturation bound. -/

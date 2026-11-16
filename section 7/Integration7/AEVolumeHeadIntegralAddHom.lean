@@ -1,5 +1,9 @@
-import Integration7.AERVVolumeHeadIntegralAdditivity
-import Integration7.AEOrdinaryHeadIntegralAdditivity
+module
+
+public import Integration7.AERVVolumeHeadIntegralAdditivity
+public import Integration7.AEOrdinaryHeadIntegralAdditivity
+
+@[expose] public section
 
 /-! Every actual homogeneous head map, including ordinary degree zero,
 is an additive homomorphism with output degree raised by one. -/

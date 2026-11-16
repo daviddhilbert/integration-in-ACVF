@@ -1,8 +1,12 @@
-import Integration7.FiniteRawContractionVolumeRows
-import Integration7.RetainedDensityContractionObjects
-import Integration7.CommonContextVolumeEquivalences
-import Integration7.VolumeSchemaRowExtension
-import Integration7.GammaVolumeBaseEquality
+module
+
+public import Integration7.FiniteRawContractionVolumeRows
+public import Integration7.RetainedDensityContractionObjects
+public import Integration7.CommonContextVolumeEquivalences
+public import Integration7.VolumeSchemaRowExtension
+public import Integration7.GammaVolumeBaseEquality
+
+@[expose] public section
 
 /-! Recover the literal raw coordinate/density rows from a comparison of
 the specified normalized contraction volume objects. This reverses the

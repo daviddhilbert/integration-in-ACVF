@@ -1,4 +1,8 @@
-import Integration7.GammaVolumeRVValidity
+module
+
+public import Integration7.GammaVolumeRVValidity
+
+@[expose] public section
 
 /-! Exact coordinate identities for parameterized pairs of coordinate-
 and-density tuples. These connect the first-order formulas to actual points. -/

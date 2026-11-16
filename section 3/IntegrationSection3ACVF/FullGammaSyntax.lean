@@ -1,4 +1,8 @@
-import IntegrationSection3ACVF.FullBaseDefinability
+module
+
+public import IntegrationSection3ACVF.FullBaseDefinability
+
+@[expose] public section
 
 /-!
 # Gamma predicates over the combined interpreted base

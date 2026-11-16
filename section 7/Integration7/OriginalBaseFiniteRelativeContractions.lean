@@ -1,5 +1,9 @@
-import Integration7.OriginalBaseRelativeVolumeComparisons
-import Integration7.GeometricFiniteStandardVolumeComparisons
+module
+
+public import Integration7.OriginalBaseRelativeVolumeComparisons
+public import Integration7.GeometricFiniteStandardVolumeComparisons
+
+@[expose] public section
 /-! Compare specified normalized contraction volume objects over the original
 Gamma base, including real presentation contexts that preserve VF independence. -/
 noncomputable section

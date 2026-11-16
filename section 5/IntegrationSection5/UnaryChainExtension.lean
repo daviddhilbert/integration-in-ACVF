@@ -1,5 +1,9 @@
-import IntegrationSection5.GammaUnaryChain
-import Section5.ParameterExtension
+module
+
+public import IntegrationSection5.GammaUnaryChain
+public import Section5.ParameterExtension
+
+@[expose] public section
 
 /-! Changing an internal real presentation retains all actual factors and
 all original-Gamma graph certificates. -/

@@ -1,4 +1,8 @@
-import IntegrationSection6.ContractionProgramExtensions
+module
+
+public import IntegrationSection6.ContractionProgramExtensions
+
+@[expose] public section
 
 /-! Extending an internal presentation leaves every contraction-volume
 selector unchanged. -/

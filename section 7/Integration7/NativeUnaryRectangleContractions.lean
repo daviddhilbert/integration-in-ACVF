@@ -1,7 +1,11 @@
-import Integration7.NativeUnaryProductPreparations
-import Integration7.GammaNativeUnaryProductMaps
-import Integration7.NativeUnaryProductHeadGeometry
-import IntegrationSection6.StandardProgramPresentations
+module
+
+public import Integration7.NativeUnaryProductPreparations
+public import Integration7.GammaNativeUnaryProductMaps
+public import Integration7.NativeUnaryProductHeadGeometry
+public import IntegrationSection6.StandardProgramPresentations
+
+@[expose] public section
 
 /-! Two actual unary special chains give a genuine ordered standard
 contraction of their rectangle, carrying the entire first contraction

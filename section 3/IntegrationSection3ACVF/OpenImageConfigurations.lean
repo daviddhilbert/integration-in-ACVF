@@ -1,6 +1,10 @@
-import IntegrationSection3ACVF.BallKindPredicates
-import IntegrationSection3ACVF.BallEnlargementGeometry
-import IntegrationSection3.ImaginaryBaseImages
+module
+
+public import IntegrationSection3ACVF.BallKindPredicates
+public import IntegrationSection3ACVF.BallEnlargementGeometry
+public import IntegrationSection3.ImaginaryBaseImages
+
+@[expose] public section
 
 /-! First-order finite real witnesses for failures to send an open ball
 to an open ball. The original map is used only on its actual domain.

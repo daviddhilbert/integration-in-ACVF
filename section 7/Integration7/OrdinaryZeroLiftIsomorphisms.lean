@@ -1,5 +1,9 @@
-import Integration7.NondegenerateFiniteIso
-import Integration7.VFVolumeLifts
+module
+
+public import Integration7.NondegenerateFiniteIso
+public import Integration7.VFVolumeLifts
+
+@[expose] public section
 
 /-! Ordinary degree zero is retained: the lift-label projection is an
 actual definable bijection, so lift isomorphisms are exactly RV[0]

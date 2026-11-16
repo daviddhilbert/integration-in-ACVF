@@ -1,4 +1,8 @@
-import Integration7.NamedMapValueDefinability
+module
+
+public import Integration7.NamedMapValueDefinability
+
+@[expose] public section
 
 /-! Output coordinates of actual VF and RV maps are definable over any
 base over which all input coordinates are definable. -/

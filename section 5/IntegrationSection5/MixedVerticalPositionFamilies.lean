@@ -1,5 +1,9 @@
-import IntegrationSection4.VerticalCharts
-import IntegrationSection4.GammaScalarFamilies
+module
+
+public import IntegrationSection4.VerticalCharts
+public import IntegrationSection4.GammaScalarFamilies
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

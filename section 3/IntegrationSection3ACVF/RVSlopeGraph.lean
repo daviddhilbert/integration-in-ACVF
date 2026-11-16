@@ -1,4 +1,8 @@
-import IntegrationSection3ACVF.RVMapBijection
+module
+
+public import IntegrationSection3ACVF.RVMapBijection
+
+@[expose] public section
 
 /-! A definable slope relation in actual RV. Both source points and all
 original imaginary codes are quantified in its full graph. -/

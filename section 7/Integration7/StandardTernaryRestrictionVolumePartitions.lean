@@ -1,5 +1,9 @@
-import Integration7.StandardRestrictionVolumeIdentifications
-import Integration7.GammaVolumeThreePartPartitions
+module
+
+public import Integration7.StandardRestrictionVolumeIdentifications
+public import Integration7.GammaVolumeThreePartPartitions
+
+@[expose] public section
 
 /-! Three actual target restriction presentations partition the
 normalized volume object whenever their old-label predicates form a

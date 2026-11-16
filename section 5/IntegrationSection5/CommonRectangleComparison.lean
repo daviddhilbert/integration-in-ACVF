@@ -1,5 +1,9 @@
-import IntegrationSection5.CommonRectangleSwap
-import IntegrationSection5.CommonProductNComparison
+module
+
+public import IntegrationSection5.CommonRectangleSwap
+public import IntegrationSection5.CommonProductNComparison
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option maxHeartbeats 2000000

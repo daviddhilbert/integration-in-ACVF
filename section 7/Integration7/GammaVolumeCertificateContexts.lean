@@ -1,5 +1,9 @@
-import Integration7.GammaVolumeCertificateRealization
-import Integration7.FiniteVolumeParameterContexts
+module
+
+public import Integration7.GammaVolumeCertificateRealization
+public import Integration7.FiniteVolumeParameterContexts
+
+@[expose] public section
 
 /-! Existential exceptional-set data admit actual realizations in a small
 containing context. The original chart remains exact and is independent

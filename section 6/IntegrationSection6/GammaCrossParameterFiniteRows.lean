@@ -1,5 +1,9 @@
-import IntegrationSection6.GammaSchemaFiniteRows
-import IntegrationSection6.GammaSchemaRowAgreement
+module
+
+public import IntegrationSection6.GammaSchemaFiniteRows
+public import IntegrationSection6.GammaSchemaRowAgreement
+
+@[expose] public section
 
 /-! Actual finite row semantics depend only on the complete raw rows,
 including when the parameter block changes its arity or sort. -/

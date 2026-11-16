@@ -1,5 +1,9 @@
-import IntegrationSection5.GammaGraphRawBridge
-import Section3.GammaBaseFiniteImage
+module
+
+public import IntegrationSection5.GammaGraphRawBridge
+public import Section3.GammaBaseFiniteImage
+
+@[expose] public section
 
 /-! A definable unary map has finite VF output at every fixed VF input, even as its RV labels vary. The checked RV-to-VF finite-image theorem is applied over finite original-base support plus that input. -/
 

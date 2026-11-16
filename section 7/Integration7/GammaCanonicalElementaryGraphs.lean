@@ -1,6 +1,10 @@
-import Integration7.CanonicalGammaElementaryObjects
-import Integration7.CanonicalPackedElementaryCharts
-import Section4.RVProductAssociativity
+module
+
+public import Integration7.CanonicalGammaElementaryObjects
+public import Integration7.CanonicalPackedElementaryCharts
+public import Section4.RVProductAssociativity
+
+@[expose] public section
 
 /-! The actual canonical elementary object retains its coordinate and
 density graphs over the original Gamma base. -/

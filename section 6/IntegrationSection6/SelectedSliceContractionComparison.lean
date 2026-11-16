@@ -1,8 +1,12 @@
-import IntegrationSection6.RawSelectedSliceIsomorphisms
-import IntegrationSection6.GammaVolumeSliceIsomorphisms
-import IntegrationSection6.GammaExactVolumeSwap
-import IntegrationSection6.FiniteSelectedContractionSlices
-import IntegrationSection6.GammaSchemaFiniteRowPresentations
+module
+
+public import IntegrationSection6.RawSelectedSliceIsomorphisms
+public import IntegrationSection6.GammaVolumeSliceIsomorphisms
+public import IntegrationSection6.GammaExactVolumeSwap
+public import IntegrationSection6.FiniteSelectedContractionSlices
+public import IntegrationSection6.GammaSchemaFiniteRowPresentations
+
+@[expose] public section
 
 /-! Arbitrary actual presentations of selected contraction slices are
 isomorphic to ordinary finite contractions of the corresponding source

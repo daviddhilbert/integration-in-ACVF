@@ -1,4 +1,8 @@
-import Section4.RVWeightDimension
+module
+
+public import Section4.RVWeightDimension
+
+@[expose] public section
 
 /-! Every nondegenerate actual lifted RV fibre escapes any actual
 VF-small set. The proof constructs a full polydisc in the fixed label

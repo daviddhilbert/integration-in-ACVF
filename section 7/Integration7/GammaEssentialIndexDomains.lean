@@ -1,5 +1,9 @@
-import Integration7.GammaEssentialVolumeGraphs
-import IntegrationSection6.GammaGraphPresentationRestriction
+module
+
+public import Integration7.GammaEssentialVolumeGraphs
+public import IntegrationSection6.GammaGraphPresentationRestriction
+
+@[expose] public section
 
 /-! The actual original-Gamma subdomain of an index presentation where
 every base volume coordinate is nonzero, including base degree zero. -/

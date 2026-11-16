@@ -1,6 +1,10 @@
-import Integration7.UnaryContractionCommonVolumeSchemata
-import Integration7.ZeroPrefixVolumeSliceRows
-import Integration7.GammaVolumeSliceCommonUniformity
+module
+
+public import Integration7.UnaryContractionCommonVolumeSchemata
+public import Integration7.ZeroPrefixVolumeSliceRows
+public import Integration7.GammaVolumeSliceCommonUniformity
+
+@[expose] public section
 
 /-! The unary instance of Corollary 7.6, with actual common forward
 blowups of the chosen contraction objects. Both endpoint densities are

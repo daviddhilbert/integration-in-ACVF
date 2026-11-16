@@ -1,6 +1,10 @@
-import Integration7.RVVolumeObjects
-import Integration7.VolumeFormGluing
-import Section4.RVCoproduct
+module
+
+public import Integration7.RVVolumeObjects
+public import Integration7.VolumeFormGluing
+public import Section4.RVCoproduct
+
+@[expose] public section
 
 /-! Tagged coproducts retain the density on each summand. -/
 

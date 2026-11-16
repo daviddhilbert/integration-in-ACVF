@@ -1,6 +1,10 @@
-import Integration7.NormalizedPositiveJacobianIntegrals
-import Integration7.NormalizedVolumeCoordinateInvariance
-import Integration7.VolumeFunctionIntegralPermutationCovariance
+module
+
+public import Integration7.NormalizedPositiveJacobianIntegrals
+public import Integration7.NormalizedVolumeCoordinateInvariance
+public import Integration7.VolumeFunctionIntegralPermutationCovariance
+
+@[expose] public section
 
 /-! The actual normalized integral on a homogeneous function is its
 canonical geometric integral with homogeneous degree normalized. All

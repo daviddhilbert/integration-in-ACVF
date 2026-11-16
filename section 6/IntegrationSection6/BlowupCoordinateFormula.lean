@@ -1,4 +1,8 @@
-import IntegrationSection6.BlowupRelabeling
+module
+
+public import IntegrationSection6.BlowupRelabeling
+
+@[expose] public section
 
 /-! The relabeling in6.12 has the stated quotient coordinate, including
 the absorbing parameter at the centre. -/

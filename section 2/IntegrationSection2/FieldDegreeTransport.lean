@@ -1,4 +1,8 @@
-import Mathlib.LinearAlgebra.FiniteDimensional.Basic
+module
+
+public import Mathlib.LinearAlgebra.FiniteDimensional.Basic
+
+@[expose] public section
 
 /-! Field-degree transport under two actual field isomorphisms with
 compatible scalar multiplication. -/

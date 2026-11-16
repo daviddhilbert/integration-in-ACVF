@@ -1,6 +1,10 @@
-import IntegrationSection6.GammaFamilyValidity
-import Section3.GammaClosureLaws
-import Mathlib.Data.Set.Card
+module
+
+public import IntegrationSection6.GammaFamilyValidity
+public import Section3.GammaClosureLaws
+public import Mathlib.Data.Set.Card
+
+@[expose] public section
 
 /-! The finite cardinality bounds used in blowup witness schemata are
 first-order conditions on full original-Gamma tuple families. -/

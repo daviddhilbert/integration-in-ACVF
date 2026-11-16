@@ -1,8 +1,12 @@
-import Integration7.UnaryPullbackVolumeComparison
-import Integration7.GammaVolumeFullChartRestriction
-import Integration7.GammaCoordinateDensityGraphs
-import IntegrationSection6.FiniteGammaObjects
-import IntegrationSection5.UnaryRVCategory
+module
+
+public import Integration7.UnaryPullbackVolumeComparison
+public import Integration7.GammaVolumeFullChartRestriction
+public import Integration7.GammaCoordinateDensityGraphs
+public import IntegrationSection6.FiniteGammaObjects
+public import IntegrationSection5.UnaryRVCategory
+
+@[expose] public section
 
 /-! The mutually contractible unary volume comparison retains its
 full original-Gamma essential graph after actual lift descent. -/

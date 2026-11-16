@@ -1,4 +1,8 @@
-import Integration7.VFVolumeBijections
+module
+
+public import Integration7.VFVolumeBijections
+
+@[expose] public section
 
 /-! An injective definable relabelling that fixes all VF coordinates
 gives a genuine full VF volume image. Finite RV fibres and the original

@@ -1,5 +1,9 @@
-import Integration7.MatchingPreparedRVLabelCuts
-import Integration7.StandardTargetRestrictionPresentations
+module
+
+public import Integration7.MatchingPreparedRVLabelCuts
+public import Integration7.StandardTargetRestrictionPresentations
+
+@[expose] public section
 
 /-! Every specified contraction of the whole pair-key refinement has
 actual matching and different restrictions with unchanged target arity,

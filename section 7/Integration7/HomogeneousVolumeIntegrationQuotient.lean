@@ -1,4 +1,8 @@
-import Integration7.RawHomogeneousKernelRelations
+module
+
+public import Integration7.RawHomogeneousKernelRelations
+
+@[expose] public section
 
 /-! The actual integration quotient by the independently generated
 homogeneous geometric relation ideal. Identifying this ideal with the

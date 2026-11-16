@@ -1,5 +1,9 @@
-import IntegrationSection5.UnaryConjugationGeometry
-import Section5.RootConstruction
+module
+
+public import IntegrationSection5.UnaryConjugationGeometry
+public import Section5.RootConstruction
+
+@[expose] public section
 
 /-! Function and inverse identities for the matched unary-chain induction.
 The predecessor supplies chain append and alternation lemmas directly. -/

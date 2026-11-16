@@ -1,6 +1,10 @@
-import Integration7.UniformPreparedPairKeys
-import Integration7.GammaSpecialCommonNames
-import IntegrationSection5.QuotientBijection
+module
+
+public import Integration7.UniformPreparedPairKeys
+public import Integration7.GammaSpecialCommonNames
+public import IntegrationSection5.QuotientBijection
+
+@[expose] public section
 
 /-! Compatible positioning preparations can use the prescribed small
 common-name context itself. Re-presenting their actual Gamma chains

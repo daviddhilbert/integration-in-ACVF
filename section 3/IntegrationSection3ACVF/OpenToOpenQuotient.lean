@@ -1,4 +1,8 @@
-import IntegrationSection3ACVF.MaximalOpenClasses
+module
+
+public import IntegrationSection3ACVF.MaximalOpenClasses
+
+@[expose] public section
 
 /-! Open-to-open bijections preserve the equivalence relations whose
 fibres are the actual maximal open balls of their domains. -/

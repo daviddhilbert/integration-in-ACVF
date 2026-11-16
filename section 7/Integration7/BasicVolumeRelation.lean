@@ -1,7 +1,11 @@
-import Integration7.BasicVolumeRelationObjects
-import Integration7.VolumeBlowupEquivalence
-import Integration7.VolumeCoproductUnits
-import Section4.RVIsoTools
+module
+
+public import Integration7.BasicVolumeRelationObjects
+public import Integration7.VolumeBlowupEquivalence
+public import Integration7.VolumeCoproductUnits
+public import Section4.RVIsoTools
+
+@[expose] public section
 
 /-! The degree-one point and open RV cone satisfy the actual common
 volume blowup relation, using their concrete unit-density objects. -/

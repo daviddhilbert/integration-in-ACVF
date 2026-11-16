@@ -1,5 +1,9 @@
-import Integration7.RVParameterSpecialPreparations
-import IntegrationSection6.MixedCoordinatePointMaps
+module
+
+public import Integration7.RVParameterSpecialPreparations
+public import IntegrationSection6.MixedCoordinatePointMaps
+
+@[expose] public section
 
 /-! The head of a carried-parameter preparation projects to its original
 unary contraction and to its complete retained parameter tuple. -/

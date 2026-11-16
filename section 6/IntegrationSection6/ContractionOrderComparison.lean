@@ -1,5 +1,9 @@
-import IntegrationSection6.SelectedCoordinateExchange
-import IntegrationSection6.GammaGraphPresentationIsomorphisms
+module
+
+public import IntegrationSection6.SelectedCoordinateExchange
+public import IntegrationSection6.GammaGraphPresentationIsomorphisms
+
+@[expose] public section
 
 /-! The exact arbitrary-order comparison property and its checked
 same-order case. The separate input is the universally quantified

@@ -1,6 +1,10 @@
-import Integration7.OrdinaryFibreDensityBoundary
-import Integration7.RawVolumeDegreeComponents
-import Integration7.SemiringGroupificationAdditiveMaps
+module
+
+public import Integration7.OrdinaryFibreDensityBoundary
+public import Integration7.RawVolumeDegreeComponents
+public import Integration7.SemiringGroupificationAdditiveMaps
+
+@[expose] public section
 set_option pp.universes true
 set_option pp.proofs false
 set_option pp.deepTerms true

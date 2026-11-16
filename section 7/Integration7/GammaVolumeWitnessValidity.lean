@@ -1,4 +1,8 @@
-import Integration7.GammaVolumeWitnessRecoding
+module
+
+public import Integration7.GammaVolumeWitnessRecoding
+
+@[expose] public section
 
 /-! Primitive-row agreement transports validity of complete volume
 blowups, chains and common witnesses to the recoded parameter block. -/

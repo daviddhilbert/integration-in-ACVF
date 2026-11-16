@@ -1,5 +1,9 @@
-import Integration7.HKRVVolumeProducts
-import Integration7.ElementaryZeroVolumeProducts
+module
+
+public import Integration7.HKRVVolumeProducts
+public import Integration7.ElementaryZeroVolumeProducts
+
+@[expose] public section
 
 /-! Elementary volume blowups commute with a weighted zero factor.
 The scalar density is pulled back on both sides of the same chart. -/

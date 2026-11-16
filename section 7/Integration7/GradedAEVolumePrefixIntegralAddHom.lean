@@ -1,5 +1,9 @@
-import Integration7.GradedAEVolumeHeadIntegralAddHom
-import Integration7.GradedAEVolumePrefixFubini
+module
+
+public import Integration7.GradedAEVolumeHeadIntegralAddHom
+public import Integration7.GradedAEVolumePrefixFubini
+
+@[expose] public section
 
 /-! Every actual iterated prefix partial integral is additive on the
 full finite graded AE module, including ordinary degree-zero inputs. -/

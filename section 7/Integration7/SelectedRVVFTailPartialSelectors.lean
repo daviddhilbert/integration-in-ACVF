@@ -1,4 +1,8 @@
-import Integration7.SelectedRVVFTailPartialPrograms
+module
+
+public import Integration7.SelectedRVVFTailPartialPrograms
+
+@[expose] public section
 
 /-! The lifted specified program has exactly the original new-VF
 volume selectors and exactly the original retained-label selectors. -/

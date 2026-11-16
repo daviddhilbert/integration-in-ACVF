@@ -1,5 +1,9 @@
-import IntegrationSection6.DefinableFamilyCoefficients
-import IntegrationSection6.MixedVFFibreCompactness
+module
+
+public import IntegrationSection6.DefinableFamilyCoefficients
+public import IntegrationSection6.MixedVFFibreCompactness
+
+@[expose] public section
 
 /-! Representative independence in6.20 follows from the actual varying
 coefficient semirings and original-base fibre-bijection compactness. -/

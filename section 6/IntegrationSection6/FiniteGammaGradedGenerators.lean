@@ -1,6 +1,10 @@
-import IntegrationSection6.FiniteGammaGradedCongruence
-import IntegrationSection6.FiniteGammaGenerators
-import IntegrationSection6.GradedCongruenceLeast
+module
+
+public import IntegrationSection6.FiniteGammaGradedCongruence
+public import IntegrationSection6.FiniteGammaGenerators
+public import IntegrationSection6.GradedCongruenceLeast
+
+@[expose] public section
 
 /-! The genuine finite Gamma common-blowup congruence is the least graded
 semiring congruence containing actual elementary blowup replacements. -/

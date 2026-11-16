@@ -1,4 +1,8 @@
-import Section4.MixedProducts
+module
+
+public import Section4.MixedProducts
+
+@[expose] public section
 
 /-! The actual inverse Cartesian-product chart recovers the two
 literal VF and RV blocks. -/

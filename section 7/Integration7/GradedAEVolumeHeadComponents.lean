@@ -1,4 +1,8 @@
-import Integration7.GradedAEVolumeHeadIntegrals
+module
+
+public import Integration7.GradedAEVolumeHeadIntegrals
+
+@[expose] public section
 
 /-! The full graded head map has no degree-zero output, and its degree
 j+1 component is exactly the genuine head integral of input degree j. -/

@@ -1,6 +1,10 @@
-import IntegrationSection3ACVF.FullGammaControllers
-import IntegrationSection3ACVF.RealParameterTuples
-import Section3.GammaRVSeparation
+module
+
+public import IntegrationSection3ACVF.FullGammaControllers
+public import IntegrationSection3ACVF.RealParameterTuples
+public import Section3.GammaRVSeparation
+
+@[expose] public section
 
 /-! Every definable map from one actual nonzero RV value fibre to RV
 has finite value image. The full value-cut graph is built from its actual

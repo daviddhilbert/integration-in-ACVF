@@ -1,5 +1,9 @@
-import IntegrationSection6.GammaFormulaVFFamilies
-import IntegrationSection6.GammaPreparedDescent
+module
+
+public import IntegrationSection6.GammaFormulaVFFamilies
+public import IntegrationSection6.GammaPreparedDescent
+
+@[expose] public section
 
 /-! Primitive formulas descend along a genuine Gamma special bijection
 of the VF base to full Gamma formulas on its RV key space. -/

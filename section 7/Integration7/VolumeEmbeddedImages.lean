@@ -1,6 +1,10 @@
-import Integration7.EssentialVolumeCoproduct
-import Integration7.VolumeRelabeling
-import Integration7.NondegenerateFiniteIso
+module
+
+public import Integration7.EssentialVolumeCoproduct
+public import Integration7.VolumeRelabeling
+public import Integration7.NondegenerateFiniteIso
+
+@[expose] public section
 
 /-! Coordinate- and density-preserving essential embeddings identify an
 object with its actual definable image. -/

@@ -1,4 +1,8 @@
-import IntegrationSection6.GammaRawRVFormulas
+module
+
+public import IntegrationSection6.GammaRawRVFormulas
+
+@[expose] public section
 
 /-! Specialize a full tuple relation at its named parameter tuple, keeping
 its original-Gamma pure-RV graph. -/

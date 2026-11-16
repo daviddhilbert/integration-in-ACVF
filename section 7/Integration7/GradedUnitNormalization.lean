@@ -1,6 +1,10 @@
-import Mathlib.Algebra.DirectSum.Ring
-import Mathlib.Algebra.Ring.Subring.Basic
-import Mathlib.Algebra.Group.Commute.Units
+module
+
+public import Mathlib.Algebra.DirectSum.Ring
+public import Mathlib.Algebra.Ring.Subring.Basic
+public import Mathlib.Algebra.Group.Commute.Units
+
+@[expose] public section
 
 /-! Dehomogenization in a possibly noncommutative graded ring, when the
 denominator is a central unit in the target. -/

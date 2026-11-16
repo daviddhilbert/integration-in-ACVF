@@ -1,6 +1,10 @@
-import Integration7.FixedNativeRectangleContractions
-import Integration7.FixedLabelUnarySpecialPreparations
-import Integration7.UnaryPullbackCommonNamePreparations
+module
+
+public import Integration7.FixedNativeRectangleContractions
+public import Integration7.FixedLabelUnarySpecialPreparations
+public import Integration7.UnaryPullbackCommonNamePreparations
+
+@[expose] public section
 
 /-! Actual preparations for both orders of a rectangle, built in the
 same prescribed common-name context. The first stage carries every old

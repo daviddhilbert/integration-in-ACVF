@@ -1,4 +1,8 @@
-import IntegrationSection5.RVProjectionNormalization
+module
+
+public import IntegrationSection5.RVProjectionNormalization
+
+@[expose] public section
 
 /-! Exact kernels and exact volume equality construct an actual RV
 isomorphism through two definable surjections from a common source. -/

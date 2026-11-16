@@ -1,7 +1,11 @@
-import IntegrationSection6.HeadTailPermutations
-import IntegrationSection6.GammaHeadFibreParameters
-import IntegrationSection6.GammaPermutedFibrePresentations
-import IntegrationSection5.RelativeSpecialRestriction
+module
+
+public import IntegrationSection6.HeadTailPermutations
+public import IntegrationSection6.GammaHeadFibreParameters
+public import IntegrationSection6.GammaPermutedFibrePresentations
+public import IntegrationSection5.RelativeSpecialRestriction
+
+@[expose] public section
 
 /-! Reordering the frozen VF tail preserves the actual unary head fibre. -/
 noncomputable section

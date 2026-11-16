@@ -1,5 +1,9 @@
-import IntegrationSection3ACVF.GammaTailShift
-import IntegrationSection3ACVF.PaperBallInvariants
+module
+
+public import IntegrationSection3ACVF.GammaTailShift
+public import IntegrationSection3ACVF.PaperBallInvariants
+
+@[expose] public section
 
 /-! Lemma 3.16 on actual atomic open balls. The value-group operation
 is multiplicative in Lean, so subtraction of radii is the ratio beta/alpha.

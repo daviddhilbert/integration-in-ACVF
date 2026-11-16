@@ -1,5 +1,9 @@
-import IntegrationSection4.FiniteScalarFamilies
-import IntegrationSection3ACVF.SingleCoordinatePartition
+module
+
+public import IntegrationSection4.FiniteScalarFamilies
+public import IntegrationSection3ACVF.SingleCoordinatePartition
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

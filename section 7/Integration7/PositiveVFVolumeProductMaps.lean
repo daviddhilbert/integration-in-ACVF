@@ -1,6 +1,10 @@
-import Integration7.PositiveVFVolumeProducts
-import Section4.MapProduct
-import Section4.ProductBijections
+module
+
+public import Integration7.PositiveVFVolumeProducts
+public import Section4.MapProduct
+public import Section4.ProductBijections
+
+@[expose] public section
 
 /-! Actual product maps and their bijectivity on mixed VF volume domains.
 The Jacobian volume law is established separately. -/

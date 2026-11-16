@@ -1,6 +1,10 @@
-import IntegrationSection6.RVLabelHeadPreparations
-import IntegrationSection6.OrderedTargetEqualityTransport
-import IntegrationSection6.OrderedSelectedWeights
+module
+
+public import IntegrationSection6.RVLabelHeadPreparations
+public import IntegrationSection6.OrderedTargetEqualityTransport
+public import IntegrationSection6.OrderedSelectedWeights
+
+@[expose] public section
 
 /-! Actual ordered contractions restrict to fixed selected old RV labels.
 Every VF-volume and recursive selected-volume selector is preserved. This

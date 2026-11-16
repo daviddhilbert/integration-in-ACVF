@@ -1,6 +1,10 @@
-import IntegrationSection2.EmbeddedAlgebraicHenselian
-import IntegrationSection2.FieldDegreeTransport
-import IntegrationSection2.ValuedSubfieldRestriction
+module
+
+public import IntegrationSection2.EmbeddedAlgebraicHenselian
+public import IntegrationSection2.FieldDegreeTransport
+public import IntegrationSection2.ValuedSubfieldRestriction
+
+@[expose] public section
 
 /-! Every actual intermediate field of a finite embedded extension
 over the henselian base has its induced henselian valuation ring. -/

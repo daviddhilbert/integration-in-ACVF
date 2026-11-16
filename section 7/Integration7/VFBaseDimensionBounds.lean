@@ -1,5 +1,9 @@
-import Integration7.SelectedFamilyFullLifts
-import Integration7.ScalarRVAlgebra
+module
+
+public import Integration7.SelectedFamilyFullLifts
+public import Integration7.ScalarRVAlgebra
+
+@[expose] public section
 
 /-! RV labels add no VF dimension to a definable base locus. These
 bounds keep small exceptional base sets small after lifting RV families. -/

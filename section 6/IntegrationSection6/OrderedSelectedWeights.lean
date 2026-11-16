@@ -1,5 +1,9 @@
-import IntegrationSection6.OrderedSelectedVolume
-import IntegrationSection6.FiniteGammaWeightedIsos
+module
+
+public import IntegrationSection6.OrderedSelectedVolume
+public import IntegrationSection6.FiniteGammaWeightedIsos
+
+@[expose] public section
 
 /-! The recursive selected volume has exactly the weight of the ordinary
 contraction volume followed by the selected original labels. Thus the

@@ -1,5 +1,9 @@
-import Integration7.GradedVolumeProducts
-import Section4.RVProductAssociativity
+module
+
+public import Integration7.GradedVolumeProducts
+public import Section4.RVProductAssociativity
+
+@[expose] public section
 
 noncomputable section
 open FirstOrder FirstOrder.Language

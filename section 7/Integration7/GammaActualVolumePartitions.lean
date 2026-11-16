@@ -1,5 +1,9 @@
-import Integration7.GammaVolumeRestrictionIdentities
-import Integration7.VolumePartition
+module
+
+public import Integration7.GammaVolumeRestrictionIdentities
+public import Integration7.VolumePartition
+
+@[expose] public section
 
 /-! Complementary Gamma cuts partition arbitrary actual Gamma volume
 objects with a full original-Gamma volume chart. -/

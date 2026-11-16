@@ -1,6 +1,10 @@
-import IntegrationSection5.GammaTraceCore
-import IntegrationSection5.FibreFocusProjection
-import IntegrationSection5.UniformTraceExtension
+module
+
+public import IntegrationSection5.GammaTraceCore
+public import IntegrationSection5.FibreFocusProjection
+public import IntegrationSection5.UniformTraceExtension
+
+@[expose] public section
 
 noncomputable section
 set_option autoImplicit false

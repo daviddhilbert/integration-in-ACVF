@@ -1,5 +1,9 @@
-import Integration7.NativeRelativeTranslationVolumes
-import IntegrationSection5.CoordinateFibreMaps
+module
+
+public import Integration7.NativeRelativeTranslationVolumes
+public import IntegrationSection5.CoordinateFibreMaps
+
+@[expose] public section
 
 /-! A definable centre read from another VF coordinate and the retained
 RV labels is independent of the active coordinate of a translation. -/

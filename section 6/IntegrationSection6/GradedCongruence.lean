@@ -1,6 +1,10 @@
-import Mathlib.Algebra.DirectSum.Ring
-import Mathlib.RingTheory.Congruence.Basic
-import Mathlib.GroupTheory.Congruence.Basic
+module
+
+public import Mathlib.Algebra.DirectSum.Ring
+public import Mathlib.RingTheory.Congruence.Basic
+public import Mathlib.GroupTheory.Congruence.Basic
+
+@[expose] public section
 
 /-! Componentwise additive congruences compatible with heterogeneous products
 form a congruence on the actual graded direct sum. -/

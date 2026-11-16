@@ -1,7 +1,11 @@
-import Integration7.PolynomialTangentProjection
-import Section9.RVJacobianDerivations
-import Mathlib.Algebra.Polynomial.Derivation
-import Mathlib.Algebra.Polynomial.Roots
+module
+
+public import Integration7.PolynomialTangentProjection
+public import Section9.RVJacobianDerivations
+public import Mathlib.Algebra.Polynomial.Derivation
+public import Mathlib.Algebra.Polynomial.Roots
+
+@[expose] public section
 
 /-! A punctured affine coordinate line supplies its velocity tangent.
 The proof uses polynomial identities over an infinite field. -/

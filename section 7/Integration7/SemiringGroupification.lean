@@ -1,5 +1,9 @@
-import Mathlib.RingTheory.FreeRing
-import Mathlib.RingTheory.Congruence.Hom
+module
+
+public import Mathlib.RingTheory.FreeRing
+public import Mathlib.RingTheory.Congruence.Hom
+
+@[expose] public section
 
 /-! The universal ring obtained from a possibly noncommutative semiring.
 This reconstructs a missing prerequisite of the recovered Section 7 sources.

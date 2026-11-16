@@ -1,6 +1,10 @@
-import Integration7.VolumeCoproductAssociativity
-import Integration7.GradedVolumeProducts
-import Integration7.RVVolumeInverse
+module
+
+public import Integration7.VolumeCoproductAssociativity
+public import Integration7.GradedVolumeProducts
+public import Integration7.RVVolumeInverse
+
+@[expose] public section
 
 set_option backward.isDefEq.respectTransparency false
 noncomputable section

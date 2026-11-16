@@ -1,5 +1,9 @@
-import IntegrationSection5.CoordinateCanonicalFibre
-import Section5.Assembly
+module
+
+public import IntegrationSection5.CoordinateCanonicalFibre
+public import Section5.Assembly
+
+@[expose] public section
 
 /-! A saturated coordinate fibre gives exactly the natural one-coordinate
 lift of its contracted image. -/

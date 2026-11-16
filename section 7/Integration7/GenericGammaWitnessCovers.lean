@@ -1,6 +1,10 @@
-import IntegrationSection6.GammaWitnessUniformity
-import Section4.GenericPoints
-import Mathlib.Data.Finset.Sum
+module
+
+public import IntegrationSection6.GammaWitnessUniformity
+public import Section4.GenericPoints
+public import Mathlib.Data.Finset.Sum
+
+@[expose] public section
 
 /-! A Gamma-definable witness available at every generic VF tuple has a
 finite witness cover away from finitely many proper polynomial zero sets.

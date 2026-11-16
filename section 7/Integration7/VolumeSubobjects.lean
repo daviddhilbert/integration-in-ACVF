@@ -1,5 +1,9 @@
-import Integration7.VolumeIsomorphismRestriction
-import IntegrationSection6.Subobjects
+module
+
+public import Integration7.VolumeIsomorphismRestriction
+public import IntegrationSection6.Subobjects
+
+@[expose] public section
 
 /-! The actual image of an essential definable source subobject under a
 volume isomorphism, over the unchanged parameter base. -/

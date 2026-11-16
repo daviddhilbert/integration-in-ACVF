@@ -1,7 +1,11 @@
-import Integration7.OrdinaryDensityGraphRowIsomorphisms
-import Integration7.GammaOrdinaryHeadFibreWitnesses
-import Integration7.AEOrdinaryRVVolumeFunctions
-import Integration7.PureVFFormulaLoci
+module
+
+public import Integration7.OrdinaryDensityGraphRowIsomorphisms
+public import Integration7.GammaOrdinaryHeadFibreWitnesses
+public import Integration7.AEOrdinaryRVVolumeFunctions
+public import Integration7.PureVFFormulaLoci
+
+@[expose] public section
 
 /-! Ordinary AE equality gives genuine density-graph point isomorphisms
 at every generic full VF tuple, with arbitrary original Gamma parameters. -/

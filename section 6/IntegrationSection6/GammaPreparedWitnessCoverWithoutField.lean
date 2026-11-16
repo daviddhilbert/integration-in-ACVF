@@ -1,7 +1,11 @@
-import IntegrationSection6.GammaPreparedWitnessCover
-import IntegrationSection6.GammaWitnessVFCodesInBase
-import IntegrationSection6.GammaFieldBaseReduction
-import IntegrationSection6.GammaSpecialBaseReduction
+module
+
+public import IntegrationSection6.GammaPreparedWitnessCover
+public import IntegrationSection6.GammaWitnessVFCodesInBase
+public import IntegrationSection6.GammaFieldBaseReduction
+public import IntegrationSection6.GammaSpecialBaseReduction
+
+@[expose] public section
 
 /-! Prepare a finite witness cover over an arbitrary small real/Gamma
 base in an uncountably saturated model. The generated VF field is used

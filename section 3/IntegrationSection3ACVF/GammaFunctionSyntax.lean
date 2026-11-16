@@ -1,4 +1,8 @@
-import IntegrationSection3ACVF.FullGammaControllers
+module
+
+public import IntegrationSection3ACVF.FullGammaControllers
+
+@[expose] public section
 
 /-! Full original-base syntax for partial actual Gamma functions and
 their order comparisons. All formulas keep every proper representative. -/

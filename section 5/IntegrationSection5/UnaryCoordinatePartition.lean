@@ -1,5 +1,9 @@
-import IntegrationSection5.GammaGraphRawBridge
-import IntegrationSection3ACVF.CoordinatePartitions
+module
+
+public import IntegrationSection5.GammaGraphRawBridge
+public import IntegrationSection3ACVF.CoordinatePartitions
+
+@[expose] public section
 
 /-! Proposition3.21 supplies a finite coordinate-open partition over exactly
 the original real/Gamma base. There are no ball names in this application. -/

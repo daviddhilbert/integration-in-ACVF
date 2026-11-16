@@ -1,5 +1,9 @@
-import IntegrationSection6.RawFiniteContractions
-import IntegrationSection6.RawContractionDomain
+module
+
+public import IntegrationSection6.RawFiniteContractions
+public import IntegrationSection6.RawContractionDomain
+
+@[expose] public section
 
 /-! The checked finite contraction theorem on the literal final RV
 labels, before first-volume normalization. -/

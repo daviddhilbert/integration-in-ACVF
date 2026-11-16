@@ -1,7 +1,11 @@
-import Integration7.NativeUnaryRectangleVolumeCoordinates
-import Integration7.RVParameterRawHeadProducts
-import Integration7.CanonicalUnaryHeadProducts
-import Section4.RVIsoTools
+module
+
+public import Integration7.NativeUnaryRectangleVolumeCoordinates
+public import Integration7.RVParameterRawHeadProducts
+public import Integration7.CanonicalUnaryHeadProducts
+public import Section4.RVIsoTools
+
+@[expose] public section
 
 /-! The actual raw RV object of the constructed rectangle contraction
 is isomorphic to the product of the two prepared unary pullback objects.

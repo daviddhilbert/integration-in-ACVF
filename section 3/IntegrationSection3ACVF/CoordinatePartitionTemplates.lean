@@ -1,5 +1,9 @@
-import IntegrationSection3ACVF.PointwiseCoordinatePartitions
-import IntegrationSection3ACVF.UniformPartitionTemplates
+module
+
+public import IntegrationSection3ACVF.PointwiseCoordinatePartitions
+public import IntegrationSection3ACVF.UniformPartitionTemplates
+
+@[expose] public section
 
 /-! Uniform finite formula templates for a selected pair of actual VF
 coordinates in an otherwise mixed tuple bijection. Definable gluing into

@@ -1,8 +1,12 @@
-import Integration7.HKSection7Results
-import Integration7.HKGradedHeadIntegralLinearMaps
-import Integration7.HKGradedPrefixIntegralLinearMaps
-import Integration7.HKRawRingSupportedFunctionIntegrals
-import Integration7.HKNormalizedVolumeCommRing
+module
+
+public import Integration7.HKSection7Results
+public import Integration7.HKGradedHeadIntegralLinearMaps
+public import Integration7.HKGradedPrefixIntegralLinearMaps
+public import Integration7.HKRawRingSupportedFunctionIntegrals
+public import Integration7.HKNormalizedVolumeCommRing
+
+@[expose] public section
 
 /-! Corrected Section 7 public interfaces: the weighted class theorems,
 actual full-coefficient raw head, coordinate and supported Jacobian

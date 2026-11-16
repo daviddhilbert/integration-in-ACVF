@@ -1,5 +1,9 @@
-import Integration7.IndependentRectangleFamilyContractions
-import Integration7.RVLabelConstraintHeadCoordinates
+module
+
+public import Integration7.IndependentRectangleFamilyContractions
+public import Integration7.RVLabelConstraintHeadCoordinates
+
+@[expose] public section
 
 /-! Every original rectangle label is recovered from the complete
 first-factor key. These equalities do not require a constant density. -/

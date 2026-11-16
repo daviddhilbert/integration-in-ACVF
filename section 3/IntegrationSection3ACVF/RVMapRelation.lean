@@ -1,5 +1,9 @@
-import IntegrationSection3ACVF.RVPairConstancy
-import IntegrationSection3ACVF.RVPairPreservation
+module
+
+public import IntegrationSection3ACVF.RVPairConstancy
+public import IntegrationSection3ACVF.RVPairPreservation
+
+@[expose] public section
 
 /-! The common RV relation induced by an injective definable VF map on
 an atomic open ball is single-valued, uniformly over all base points.

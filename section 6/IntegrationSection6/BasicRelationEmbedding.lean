@@ -1,5 +1,9 @@
-import IntegrationSection6.GroupifiedCongruence
-import IntegrationSection6.CompletionLocalization
+module
+
+public import IntegrationSection6.GroupifiedCongruence
+public import IntegrationSection6.CompletionLocalization
+
+@[expose] public section
 
 /-! The algebraic conclusion of6.22 for the single positive relation
 [a]_1 = 1 + [b]_1. The geometric assertion that this generates Isp is separate. -/

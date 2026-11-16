@@ -1,6 +1,10 @@
-import IntegrationSection3ACVF.FullBaseDefinability
-import IntegrationSection3ACVF.OpenBallConstancy
-import IntegrationSection3.PairMapFibres
+module
+
+public import IntegrationSection3ACVF.FullBaseDefinability
+public import IntegrationSection3ACVF.OpenBallConstancy
+public import IntegrationSection3.PairMapFibres
+
+@[expose] public section
 
 /-! Full-base definability of the pair of RV difference values for a
 VF map. The normalized total term agrees with the original interpretation

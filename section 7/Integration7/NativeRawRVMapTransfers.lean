@@ -1,6 +1,10 @@
-import Integration7.RawRVProductTransfers
-import Integration7.CanonicalVolumePresentations
-import Integration7.GammaRVMapGraphOperations
+module
+
+public import Integration7.RawRVProductTransfers
+public import Integration7.CanonicalVolumePresentations
+public import Integration7.GammaRVMapGraphOperations
+
+@[expose] public section
 
 /-! Pure-RV native maps transfer to their actual raw label domains,
 retaining bijectivity, values, and the full original-Gamma graph. -/

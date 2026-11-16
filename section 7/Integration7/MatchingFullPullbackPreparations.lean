@@ -1,6 +1,10 @@
-import Integration7.MatchingProjectionCompleteness
-import Integration7.RectangleFamilyVolumePreparations
-import Integration7.SwappedRectangleProjectionDomains
+module
+
+public import Integration7.MatchingProjectionCompleteness
+public import Integration7.RectangleFamilyVolumePreparations
+public import Integration7.SwappedRectangleProjectionDomains
+
+@[expose] public section
 
 /-! Actual full VF-two RV-pullback preparations of the two matching
 translations, using the already chosen compatible unary preparations.

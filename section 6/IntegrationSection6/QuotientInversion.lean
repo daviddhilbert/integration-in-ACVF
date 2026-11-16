@@ -1,4 +1,8 @@
-import Mathlib.GroupTheory.Congruence.Basic
+module
+
+public import Mathlib.GroupTheory.Congruence.Basic
+
+@[expose] public section
 
 /-!
 # The additive quotient inversion used in Proposition 6.18

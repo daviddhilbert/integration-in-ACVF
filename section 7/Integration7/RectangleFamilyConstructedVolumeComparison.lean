@@ -1,6 +1,10 @@
-import Integration7.RectangleFamilyNormalizedOrderIsomorphisms
-import Integration7.RetainedDensityContractionObjects
-import Integration7.GammaCoordinateDensityEquivalences
+module
+
+public import Integration7.RectangleFamilyNormalizedOrderIsomorphisms
+public import Integration7.RetainedDensityContractionObjects
+public import Integration7.GammaCoordinateDensityEquivalences
+
+@[expose] public section
 
 /-! The constructed opposite-order contractions of a shared-label
 rectangle family compare in the actual volume category, including an

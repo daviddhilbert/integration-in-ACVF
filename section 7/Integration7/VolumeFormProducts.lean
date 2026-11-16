@@ -1,5 +1,9 @@
-import Integration7.ScalarRVAlgebra
-import Section4.MapProduct
+module
+
+public import Integration7.ScalarRVAlgebra
+public import Section4.MapProduct
+
+@[expose] public section
 
 noncomputable section
 open FirstOrder FirstOrder.Language

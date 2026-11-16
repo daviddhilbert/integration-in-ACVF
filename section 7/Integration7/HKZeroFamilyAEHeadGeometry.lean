@@ -1,5 +1,9 @@
-import Integration7.HKZeroFamilyGenericRowIsomorphisms
-import Integration7.HKWeightedHeadComparisons
+module
+
+public import Integration7.HKZeroFamilyGenericRowIsomorphisms
+public import Integration7.HKWeightedHeadComparisons
+
+@[expose] public section
 
 /-! AE equal weighted-zero families have Gamma-geometrically equal
 head integrals over generic retained VF tuples, retaining both densities. -/

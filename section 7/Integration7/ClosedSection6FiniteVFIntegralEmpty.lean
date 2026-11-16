@@ -1,11 +1,15 @@
-import Integration7.CompletedSection6Kernel
-import Integration7.ClosedSection6FiniteVFIntegralValues
-import Integration7.ClosedSection6GammaVFFiniteRestrictions
-import IntegrationSection6.FiniteVFIntegralEmpty
-import IntegrationSection6.FiniteGammaEmptyIsomorphisms
-import IntegrationSection6.FiniteVFIntegralValues
-import IntegrationSection6.GammaVFFiniteRestrictions
-import IntegrationSection6.GammaObjectPresentationIsomorphisms
+module
+
+public import Integration7.CompletedSection6Kernel
+public import Integration7.ClosedSection6FiniteVFIntegralValues
+public import Integration7.ClosedSection6GammaVFFiniteRestrictions
+public import IntegrationSection6.FiniteVFIntegralEmpty
+public import IntegrationSection6.FiniteGammaEmptyIsomorphisms
+public import IntegrationSection6.FiniteVFIntegralValues
+public import IntegrationSection6.GammaVFFiniteRestrictions
+public import IntegrationSection6.GammaObjectPresentationIsomorphisms
+
+@[expose] public section
 
 /-! Closed generated-base Section6 integration. The former universal
 Section5 input is replaced by the canonical-model certificate; its kernel

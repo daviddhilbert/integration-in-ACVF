@@ -1,6 +1,10 @@
-import Integration7.MixedJacobianDensityForms
-import Integration7.VolumeFormScalarArithmetic
-import Integration7.VFVolumeBijections
+module
+
+public import Integration7.MixedJacobianDensityForms
+public import Integration7.VolumeFormScalarArithmetic
+public import Integration7.VFVolumeBijections
+
+@[expose] public section
 
 /-! Any actual mixed definable bijection transports an arbitrary
 nonzero density. The Jacobian equation is proved almost everywhere. -/

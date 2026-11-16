@@ -1,6 +1,10 @@
-import IntegrationSection3ACVF.GammaTailIso
-import IntegrationSection3ACVF.GammaSlopeValueGraph
-import IntegrationSection3ACVF.GammaShiftConstancy
+module
+
+public import IntegrationSection3ACVF.GammaTailIso
+public import IntegrationSection3ACVF.GammaSlopeValueGraph
+public import IntegrationSection3ACVF.GammaShiftConstancy
+
+@[expose] public section
 
 /-! The actual Gamma tail isomorphism has finite shift range and
 finite controllers for every shift fibre. The proved order argument

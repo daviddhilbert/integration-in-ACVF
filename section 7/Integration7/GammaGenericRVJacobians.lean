@@ -1,6 +1,10 @@
-import Integration7.GammaTotalSupportedJacobianGraphs
-import Integration7.FiniteVolumeIsoMaps
-import Section9.GenericRVJacobian
+module
+
+public import Integration7.GammaTotalSupportedJacobianGraphs
+public import Integration7.FiniteVolumeIsoMaps
+public import Section9.GenericRVJacobian
+
+@[expose] public section
 
 /-! The checked GenericRVJacobian construction, with its original-Gamma
 full graph retained. The finite chart support has no model parameters.

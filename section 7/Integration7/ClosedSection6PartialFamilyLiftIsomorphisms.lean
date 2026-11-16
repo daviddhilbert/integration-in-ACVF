@@ -1,9 +1,13 @@
-import Integration7.CompletedSection6Kernel
-import Integration7.ClosedSection6DefinableFamilyLifts
-import IntegrationSection6.PartialFamilyLiftIsomorphisms
-import IntegrationSection6.PartialContractionFamilies
-import IntegrationSection6.ActiveFrozenShuffle
-import IntegrationSection6.DefinableFamilyLifts
+module
+
+public import Integration7.CompletedSection6Kernel
+public import Integration7.ClosedSection6DefinableFamilyLifts
+public import IntegrationSection6.PartialFamilyLiftIsomorphisms
+public import IntegrationSection6.PartialContractionFamilies
+public import IntegrationSection6.ActiveFrozenShuffle
+public import IntegrationSection6.DefinableFamilyLifts
+
+@[expose] public section
 
 /-! Closed generated-base Section6 integration. The former universal
 Section5 input is replaced by the canonical-model certificate; its kernel

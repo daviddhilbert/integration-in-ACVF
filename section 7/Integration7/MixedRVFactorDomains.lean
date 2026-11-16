@@ -1,4 +1,8 @@
-import Integration7.MixedRVMapGraphs
+module
+
+public import Integration7.MixedRVMapGraphs
+
+@[expose] public section
 
 /-! Cartesian products with a pure RV factor, packed without any new
 VF coordinates. The inverse recovers the old mixed point and the RV

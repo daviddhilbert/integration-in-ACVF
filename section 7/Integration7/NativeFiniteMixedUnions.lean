@@ -1,4 +1,8 @@
-import IntegrationSection5.HeadContractionGeometry
+module
+
+public import IntegrationSection5.HeadContractionGeometry
+
+@[expose] public section
 
 /-! Finite mixed unions over the actual real parameter base, without
 replacing that base by the whole model. -/

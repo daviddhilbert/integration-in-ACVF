@@ -1,4 +1,8 @@
-import Integration7.UniformPreparedPositionLabelMaps
+module
+
+public import Integration7.UniformPreparedPositionLabelMaps
+
+@[expose] public section
 
 /-! The actual induced raw RV positioning bijection satisfies the
 Gamma product equation with the original cell paradigms. All original

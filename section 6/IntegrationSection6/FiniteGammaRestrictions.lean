@@ -1,4 +1,8 @@
-import IntegrationSection6.FiniteGammaChartLaws
+module
+
+public import IntegrationSection6.FiniteGammaChartLaws
+
+@[expose] public section
 
 /-! Actual finite subobjects and complements retain original-Gamma graphs. -/
 noncomputable section

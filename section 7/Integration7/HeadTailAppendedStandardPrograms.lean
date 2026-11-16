@@ -1,5 +1,9 @@
-import Integration7.HeadTailPermutedPreparations
-import Integration7.HeadTailVolumeSelectors
+module
+
+public import Integration7.HeadTailPermutedPreparations
+public import Integration7.HeadTailVolumeSelectors
+
+@[expose] public section
 
 /-! Keep an actual chosen head preparation while prescribing any order
 for its remaining contraction program. -/

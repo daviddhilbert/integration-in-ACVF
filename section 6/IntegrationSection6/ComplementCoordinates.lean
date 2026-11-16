@@ -1,5 +1,9 @@
-import IntegrationSection6.PresentationCoordinates
-import IntegrationSection6.LiftComplement
+module
+
+public import IntegrationSection6.PresentationCoordinates
+public import IntegrationSection6.LiftComplement
+
+@[expose] public section
 
 /-! The unchanged complementary chart projects out the canonical RV keys. -/
 noncomputable section

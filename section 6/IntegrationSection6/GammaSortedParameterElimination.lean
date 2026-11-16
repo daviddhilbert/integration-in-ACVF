@@ -1,4 +1,8 @@
-import Section3.GammaClosureLaws
+module
+
+public import Section3.GammaClosureLaws
+
+@[expose] public section
 
 /-! Eliminate additional definable real names while retaining the original
 real/Gamma base and its full invariant formulas. -/

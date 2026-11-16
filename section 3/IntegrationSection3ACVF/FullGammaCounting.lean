@@ -1,5 +1,9 @@
-import IntegrationSection3ACVF.FullGammaSyntax
-import Section3.GammaCounting
+module
+
+public import IntegrationSection3ACVF.FullGammaSyntax
+public import Section3.GammaCounting
+
+@[expose] public section
 
 /-! Distinct witnesses on the actual Gamma quotient, retaining the full
 original interpreted parameter base and all proper code representatives. -/

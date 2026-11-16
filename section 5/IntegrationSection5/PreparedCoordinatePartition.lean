@@ -1,5 +1,9 @@
-import IntegrationSection5.UnaryCoordinateGeometry
-import IntegrationSection5.GammaMembershipPreparation
+module
+
+public import IntegrationSection5.UnaryCoordinateGeometry
+public import IntegrationSection5.GammaMembershipPreparation
+
+@[expose] public section
 
 /-! Actual special preparation of a finite coordinate-open partition.
 No source-cell purity or desired open-image conclusion is assumed. -/

@@ -1,5 +1,9 @@
-import IntegrationSection5.SharedRVUnaryHeadPreparation
-import IntegrationSection5.ProductContractionSource
+module
+
+public import IntegrationSection5.SharedRVUnaryHeadPreparation
+public import IntegrationSection5.ProductContractionSource
+
+@[expose] public section
 
 /-! The exact first contracted source of a product family with shared RV parameters. -/
 noncomputable section

@@ -1,5 +1,9 @@
-import Integration7.FixedVFLabelTags
-import Integration7.VolumeFormGluing
+module
+
+public import Integration7.FixedVFLabelTags
+public import Integration7.VolumeFormGluing
+
+@[expose] public section
 
 /-! Positive VF volume coproducts use disjoint RV labels and keep the
 VF degree fixed. Each summand retains its literal density. -/

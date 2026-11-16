@@ -1,5 +1,9 @@
-import Integration7.FixedVFLabelTags
-import Integration7.VFCofullSubdomains
+module
+
+public import Integration7.FixedVFLabelTags
+public import Integration7.VFCofullSubdomains
+
+@[expose] public section
 
 /-! RV tagging preserves cofullness, and unions of cofull summands are
 cofull in their union. All discarded sets retain smaller VF dimension. -/

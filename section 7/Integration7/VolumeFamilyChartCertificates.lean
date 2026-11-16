@@ -1,4 +1,8 @@
-import Integration7.VolumeFamilyNormalization
+module
+
+public import Integration7.VolumeFamilyNormalization
+
+@[expose] public section
 
 /-! Finite polynomial certificates for parameterized volume correspondences.
 These use the predecessor's actual residue chart tests and tangent theorem. -/

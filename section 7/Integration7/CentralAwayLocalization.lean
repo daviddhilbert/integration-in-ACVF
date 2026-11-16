@@ -1,6 +1,10 @@
-import Mathlib.RingTheory.OreLocalization.Ring
-import Mathlib.Algebra.Ring.Commute
-import Mathlib.Algebra.Group.Units.Hom
+module
+
+public import Mathlib.RingTheory.OreLocalization.Ring
+public import Mathlib.Algebra.Ring.Commute
+public import Mathlib.Algebra.Group.Units.Hom
+
+@[expose] public section
 
 /-! Localization at a central element in a possibly noncommutative ring,
 including its universal property. Zero divisors are permitted. -/

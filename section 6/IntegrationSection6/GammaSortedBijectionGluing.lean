@@ -1,5 +1,9 @@
-import IntegrationSection6.GammaFamilyBijectionValidity
-import IntegrationSection6.GammaWitnessUniformity
+module
+
+public import IntegrationSection6.GammaFamilyBijectionValidity
+public import IntegrationSection6.GammaWitnessUniformity
+
+@[expose] public section
 
 /-! Finite definable gluing of bijection charts over a sorted parameter
 base. This applies to mixed VF/RV fibres, with no finiteness of the base. -/

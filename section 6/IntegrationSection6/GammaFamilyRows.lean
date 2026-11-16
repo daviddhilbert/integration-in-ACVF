@@ -1,4 +1,8 @@
-import IntegrationSection6.GammaRVFamilyFormulas
+module
+
+public import IntegrationSection6.GammaRVFamilyFormulas
+
+@[expose] public section
 
 /-! Literal rows of the mixed-point family interface at an actual VF
 tuple. Raw schemas and typed rows have the same domains and volumes. -/

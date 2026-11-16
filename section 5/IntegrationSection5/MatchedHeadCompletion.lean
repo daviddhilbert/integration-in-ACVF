@@ -1,5 +1,9 @@
-import IntegrationSection5.MatchedUnaryPreparation
-import IntegrationSection5.GammaHeadUnaryCompletion
+module
+
+public import IntegrationSection5.MatchedUnaryPreparation
+public import IntegrationSection5.GammaHeadUnaryCompletion
+
+@[expose] public section
 
 /-! Assemble two original-base first stages and their matched actual unary
 tails over a single internal real presentation. -/

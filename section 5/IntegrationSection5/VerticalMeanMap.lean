@@ -1,5 +1,9 @@
-import IntegrationSection5.VerticalRootFibres
-import IntegrationSection5.FibreFocusAssembly
+module
+
+public import IntegrationSection5.VerticalRootFibres
+public import IntegrationSection5.FibreFocusAssembly
+
+@[expose] public section
 
 /-! Uniform definability of the vertical mean step, with genuine unary
 special foci on every coordinate fibre. -/

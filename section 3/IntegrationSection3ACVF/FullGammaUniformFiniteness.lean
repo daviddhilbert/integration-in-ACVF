@@ -1,5 +1,9 @@
-import IntegrationSection3ACVF.FullGammaCounting
-import IntegrationSection3ACVF.FiniteBaseTupleCovers
+module
+
+public import IntegrationSection3ACVF.FullGammaCounting
+public import IntegrationSection3ACVF.FiniteBaseTupleCovers
+
+@[expose] public section
 
 /-! Genuine uniform finiteness of actual Gamma rows. The first-order
 count is on distinct quotient values, not the infinite RV code fibres.

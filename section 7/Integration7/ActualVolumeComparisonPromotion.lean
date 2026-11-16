@@ -1,5 +1,9 @@
-import Integration7.TermContextGammaGraphs
-import Integration7.GammaVolumeRowComparisonPromotion
+module
+
+public import Integration7.TermContextGammaGraphs
+public import Integration7.GammaVolumeRowComparisonPromotion
+
+@[expose] public section
 
 /-! Every actual volume comparison over the original named term context
 promotes. Full chart definability follows by parameter descent. -/

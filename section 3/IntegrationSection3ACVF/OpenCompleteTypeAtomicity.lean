@@ -1,5 +1,9 @@
-import IntegrationSection3ACVF.SelfCentredBallProfiles
-import IntegrationSection3ACVF.SeparationFunctions
+module
+
+public import IntegrationSection3ACVF.SelfCentredBallProfiles
+public import IntegrationSection3ACVF.SeparationFunctions
+
+@[expose] public section
 
 /-! The unnamed-radius open-ball case of 3.4 over real/Gamma bases.
 The ambient complete-type set need not be definable. Old ball parameters

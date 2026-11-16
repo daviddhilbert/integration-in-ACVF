@@ -1,5 +1,9 @@
-import IntegrationSection6.GammaTuplePromotion
-import Section3.GammaProjection
+module
+
+public import IntegrationSection6.GammaTuplePromotion
+public import Section3.GammaProjection
+
+@[expose] public section
 
 /-! Project a finite tuple-valued family to a single output coordinate,
 retaining the original Gamma names and all sorted guards. -/

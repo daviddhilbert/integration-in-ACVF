@@ -1,5 +1,9 @@
-import IntegrationSection3ACVF.RVSlopeConstancy
-import Section3.GammaRVSeparation
+module
+
+public import IntegrationSection3ACVF.RVSlopeConstancy
+public import Section3.GammaRVSeparation
+
+@[expose] public section
 
 /-! Descent of the RV slope to actual Gamma and finite image under the
 genuine saturation and small-base hypotheses of the checked finite

@@ -1,5 +1,9 @@
-import IntegrationSection6.FiniteRVParameterExtension
-import IntegrationSection6.FiniteGammaIsoLaws
+module
+
+public import IntegrationSection6.FiniteRVParameterExtension
+public import IntegrationSection6.FiniteGammaIsoLaws
+
+@[expose] public section
 
 /-! Original-Gamma RV[k] data at a fixed internal real presentation.
 The parameter set S describes codes only; every domain and volume graph

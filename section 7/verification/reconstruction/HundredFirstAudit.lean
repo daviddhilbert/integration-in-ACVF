@@ -1,11 +1,15 @@
-import Integration7.DefinableBaseMapValues
-import Integration7.DefinableDensityRescaling
-import Integration7.DefinableVolumeParameterDescent
-import Integration7.NamedMapValueDefinability
-import Integration7.SelectedJacobianAlmostEverywhere
-import Integration7.SelectedJacobianRowComparison
-import Integration7.SelectedJacobianRowIsomorphisms
-import Integration7.SupportedVolumeFunctionJacobians
+module
+
+public import Integration7.DefinableBaseMapValues
+public import Integration7.DefinableDensityRescaling
+public import Integration7.DefinableVolumeParameterDescent
+public import Integration7.NamedMapValueDefinability
+public import Integration7.SelectedJacobianAlmostEverywhere
+public import Integration7.SelectedJacobianRowComparison
+public import Integration7.SelectedJacobianRowIsomorphisms
+public import Integration7.SupportedVolumeFunctionJacobians
+
+@[expose] public section
 
 set_option pp.universes true
 set_option pp.proofs false

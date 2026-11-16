@@ -1,5 +1,9 @@
-import IntegrationSection5.FixedVFProjectionPadding
-import IntegrationSection5.GammaSpecialRestriction
+module
+
+public import IntegrationSection5.FixedVFProjectionPadding
+public import IntegrationSection5.GammaSpecialRestriction
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 open Classical FirstOrder FirstOrder.Language

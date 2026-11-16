@@ -1,4 +1,8 @@
-import IntegrationSection5.UnaryOpenImages
+module
+
+public import IntegrationSection5.UnaryOpenImages
+
+@[expose] public section
 
 /-! On any fixed final RV label tuple, the inverse of an actual unary
 special bijection is a translation with fixed original RV labels. -/

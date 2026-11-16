@@ -1,7 +1,11 @@
-import IntegrationSection3ACVF.AtomicPolynomialRoots
-import IntegrationSection3ACVF.SeparationFunctions
-import IntegrationSection3.BivariateCoordinates
-import Section4.PolynomialZero
+module
+
+public import IntegrationSection3ACVF.AtomicPolynomialRoots
+public import IntegrationSection3ACVF.SeparationFunctions
+public import IntegrationSection3.BivariateCoordinates
+public import Section4.PolynomialZero
+
+@[expose] public section
 
 /-! A nonzero original-parameter-field polynomial cannot vanish between
 the two atomic geometries separated by corrected3.11. -/

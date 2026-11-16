@@ -1,5 +1,9 @@
-import IntegrationSection6.GammaCommonFiniteRowCompactness
-import IntegrationSection6.GammaIndexedFiniteWitnessGluing
+module
+
+public import IntegrationSection6.GammaCommonFiniteRowCompactness
+public import IntegrationSection6.GammaIndexedFiniteWitnessGluing
+
+@[expose] public section
 
 /-! Pointwise original-Gamma common blowups glue over a finite-volume RV
 index base. Genuine witness compactness and finite geometric partitioning

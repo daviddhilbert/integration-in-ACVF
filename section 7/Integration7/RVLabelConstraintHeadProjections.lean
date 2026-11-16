@@ -1,5 +1,9 @@
-import Integration7.RVLabelConstraintSpecialPreparations
-import IntegrationSection6.MixedCoordinatePointMaps
+module
+
+public import Integration7.RVLabelConstraintSpecialPreparations
+public import IntegrationSection6.MixedCoordinatePointMaps
+
+@[expose] public section
 
 /-! The head of a preparation with shared RV labels projects to the
 prepared unary head and to its complete carried parameter tuple. -/

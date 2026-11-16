@@ -1,5 +1,9 @@
-import Integration7.HKRVVolumeProducts
-import Integration7.VolumeDataRelabelingMaps
+module
+
+public import Integration7.HKRVVolumeProducts
+public import Integration7.VolumeDataRelabelingMaps
+
+@[expose] public section
 
 /-! Density-bearing relabeling in every degree, including exact degree zero. -/
 noncomputable section

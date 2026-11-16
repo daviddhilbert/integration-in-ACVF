@@ -1,7 +1,11 @@
-import Integration7.SupportedVolumePermutations
-import Integration7.SupportedVolumeHeadIntegrals
-import Integration7.NormalizedCoordinateImageGeometry
-import Integration7.SignedPositiveCoordinatePushforwards
+module
+
+public import Integration7.SupportedVolumePermutations
+public import Integration7.SupportedVolumeHeadIntegrals
+public import Integration7.NormalizedCoordinateImageGeometry
+public import Integration7.SignedPositiveCoordinatePushforwards
+
+@[expose] public section
 
 /-! Actual supported AE representatives survive raw coordinate
 integration and determinant rescaling. The target support is the literal

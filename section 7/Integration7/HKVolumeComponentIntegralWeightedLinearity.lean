@@ -1,6 +1,10 @@
-import Integration7.HKAppendedVolumeIntegralWeightedZeroLinearMaps
-import Integration7.HKAEZeroIntegralLinearMap
-import Integration7.HKGradedAEVolumeIntegralAddHoms
+module
+
+public import Integration7.HKAppendedVolumeIntegralWeightedZeroLinearMaps
+public import Integration7.HKAEZeroIntegralLinearMap
+public import Integration7.HKGradedAEVolumeIntegralAddHoms
+
+@[expose] public section
 
 /-! Every actual homogeneous integral is linear over weighted measured
 zero; arithmetic degree changes retain this same scalar action. -/

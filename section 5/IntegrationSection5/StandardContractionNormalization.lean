@@ -1,4 +1,8 @@
-import IntegrationSection5.RVProjectionNormalization
+module
+
+public import IntegrationSection5.RVProjectionNormalization
+
+@[expose] public section
 
 /-! The first-n presentation of a standard contraction, including the actual
 natural lift bijection and the RV-category isomorphism to the original

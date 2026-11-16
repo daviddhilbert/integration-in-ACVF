@@ -1,6 +1,10 @@
-import IntegrationSection5.StandardContractionLift
-import Section4.RVProduct
-import Section4.ProductBijections
+module
+
+public import IntegrationSection5.StandardContractionLift
+public import Section4.RVProduct
+public import Section4.ProductBijections
+
+@[expose] public section
 
 /-! A native pure-RV bijection to a Cartesian product transfers to the
 actual packed raw RV domains, preserving the literal label tuples. -/

@@ -1,4 +1,8 @@
-import IntegrationSection5.NaturalContractionMap
+module
+
+public import IntegrationSection5.NaturalContractionMap
+
+@[expose] public section
 
 /-! The natural map is a definable bijection onto exactly the lift specified
 by the ordered contraction's RV image and its volume coordinates. -/

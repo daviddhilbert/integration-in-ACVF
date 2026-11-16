@@ -1,4 +1,8 @@
-import IntegrationSection6.FiniteGammaScissorClasses
+module
+
+public import IntegrationSection6.FiniteGammaScissorClasses
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

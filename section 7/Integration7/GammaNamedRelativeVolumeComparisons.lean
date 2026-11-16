@@ -1,5 +1,9 @@
-import Integration7.GammaNamesGenericParameters
-import Integration7.OriginalBaseFiniteRelativeContractions
+module
+
+public import Integration7.GammaNamesGenericParameters
+public import Integration7.OriginalBaseFiniteRelativeContractions
+
+@[expose] public section
 /-! Realizing original Gamma names in a containing small context does not
 change the base of the resulting relative contraction comparison. -/
 noncomputable section

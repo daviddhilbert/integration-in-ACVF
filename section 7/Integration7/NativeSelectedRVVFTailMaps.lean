@@ -1,5 +1,9 @@
-import Integration7.NativeSelectedRVVFTailLifts
-import Integration7.SelectedRVVFTailMaps
+module
+
+public import Integration7.NativeSelectedRVVFTailLifts
+public import Integration7.SelectedRVVFTailMaps
+
+@[expose] public section
 
 /-! Native maps on selected-label VF realizations retain their actual
 original map, fix the added VF tuple, and preserve bijectivity. -/

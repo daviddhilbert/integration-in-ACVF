@@ -1,5 +1,9 @@
-import Integration7.RVVolumeMorphisms
-import Section4.RVCoordinates
+module
+
+public import Integration7.RVVolumeMorphisms
+public import Section4.RVCoordinates
+
+@[expose] public section
 
 /-! Exact raw-tuple formulas for actual RV domains and relations. These
 are ordinary real definability bridges and retain every RV coordinate. -/

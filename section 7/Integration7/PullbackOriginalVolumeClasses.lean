@@ -1,7 +1,11 @@
-import Integration7.RetainedDensityGraphContractionComparisons
-import Integration7.CanonicalPullbackVolumeClasses
-import Integration7.OriginalVolumeArbitraryContractionOrders
-import Integration7.GeneratedBaseStandardContractions
+module
+
+public import Integration7.RetainedDensityGraphContractionComparisons
+public import Integration7.CanonicalPullbackVolumeClasses
+public import Integration7.OriginalVolumeArbitraryContractionOrders
+public import Integration7.GeneratedBaseStandardContractions
+
+@[expose] public section
 
 /-! The coordinate-density RV object of an actual pullback agrees with
 every standard contraction of its original VF volume object. -/

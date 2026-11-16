@@ -1,5 +1,9 @@
-import Integration7.OrdinaryVolumeFamilyUniformBijections
-import Integration7.DensityGraphRelativeBijections
+module
+
+public import Integration7.OrdinaryVolumeFamilyUniformBijections
+public import Integration7.DensityGraphRelativeBijections
+
+@[expose] public section
 
 /-! The ordinary finite-fibre uniformity comparison retains its stronger
 coordinate conclusion: every VF coordinate is fixed by the actual map. -/

@@ -1,6 +1,10 @@
-import Integration7.RVJacobianAlmostEverywhereDescent
-import Integration7.RVVolumeLiftIsomorphism
-import Integration7.VolumeIsoParameterExtension
+module
+
+public import Integration7.RVJacobianAlmostEverywhereDescent
+public import Integration7.RVVolumeLiftIsomorphism
+public import Integration7.VolumeIsoParameterExtension
+
+@[expose] public section
 
 /-! A volume isomorphism over a containing context descends whenever
 its actual essential bijection is already defined over the original base. -/

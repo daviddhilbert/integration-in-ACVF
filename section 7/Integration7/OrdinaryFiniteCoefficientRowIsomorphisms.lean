@@ -1,5 +1,9 @@
-import Integration7.OrdinaryFiniteCoefficientRowMaps
-import Integration7.AEOrdinaryPositiveCoefficientProducts
+module
+
+public import Integration7.OrdinaryFiniteCoefficientRowMaps
+public import Integration7.AEOrdinaryPositiveCoefficientProducts
+
+@[expose] public section
 
 /-! Removing the ordinary unit graph preserves every actual coefficient
 coordinate and its density. The resulting full volume isomorphism compares

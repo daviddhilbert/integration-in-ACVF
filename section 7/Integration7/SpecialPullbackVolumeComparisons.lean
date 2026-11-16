@@ -1,5 +1,9 @@
-import Integration7.SpecialPullbackVolumeObjects
-import Integration7.PullbackUnaryChainVolumeComparison
+module
+
+public import Integration7.SpecialPullbackVolumeObjects
+public import Integration7.PullbackUnaryChainVolumeComparison
+
+@[expose] public section
 
 /-! Actual special preparation of a pullback preserves its volume
 blowup class, retaining the original nonconstant density label. -/

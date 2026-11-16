@@ -1,4 +1,8 @@
-import IntegrationSection3ACVF.OrdinaryCentreFibres
+module
+
+public import IntegrationSection3ACVF.OrdinaryCentreFibres
+
+@[expose] public section
 
 /-! Intrinsic ordinary-radius fibres, using every real chart code of an
 actual ball. Special whole-field and singleton charts are excluded from

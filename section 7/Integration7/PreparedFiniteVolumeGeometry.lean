@@ -1,8 +1,12 @@
-import Integration7.PreparedVolumeGeometryContexts
-import Integration7.VolumeGeometryVFCodesInBase
-import Integration7.VFFieldContainingVolumeContexts
-import IntegrationSection6.GammaSpecialBaseReduction
-import IntegrationSection6.GammaVFCodePreparation
+module
+
+public import Integration7.PreparedVolumeGeometryContexts
+public import Integration7.VolumeGeometryVFCodesInBase
+public import Integration7.VFFieldContainingVolumeContexts
+public import IntegrationSection6.GammaSpecialBaseReduction
+public import IntegrationSection6.GammaVFCodePreparation
+
+@[expose] public section
 
 /-! Prepare the geometry of finitely many common-volume certificates,
 without assuming that they cover every original VF parameter. -/

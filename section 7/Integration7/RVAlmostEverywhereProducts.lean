@@ -1,4 +1,8 @@
-import Integration7.RVProductDimension
+module
+
+public import Integration7.RVProductDimension
+
+@[expose] public section
 
 /-! Product exceptional sets are bounded by the factors' volume
 degrees, rather than by the number of auxiliary label coordinates. -/

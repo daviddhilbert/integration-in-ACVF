@@ -1,7 +1,11 @@
-import Integration7.GammaNativeUnaryProducts
-import Integration7.NativeUnaryProductMaps
-import IntegrationSection5.GammaGraphOperations
-import Section5.GammaLiftRelation
+module
+
+public import Integration7.GammaNativeUnaryProducts
+public import Integration7.NativeUnaryProductMaps
+public import IntegrationSection5.GammaGraphOperations
+public import Section5.GammaLiftRelation
+
+@[expose] public section
 
 /-! The action on a rectangular factor retains its complete graph over
 Gamma, even when neither factor nor its special map is real-definable

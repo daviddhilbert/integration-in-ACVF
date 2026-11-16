@@ -1,5 +1,9 @@
-import Integration7.MatchingFamilyTranslationMaps
-import Integration7.BalancedTranslationProductImages
+module
+
+public import Integration7.MatchingFamilyTranslationMaps
+public import Integration7.BalancedTranslationProductImages
+
+@[expose] public section
 
 /-! Complete vertical fibres of the actual matching refinement. The
 recorded keys remain frozen throughout the translated RV class. -/

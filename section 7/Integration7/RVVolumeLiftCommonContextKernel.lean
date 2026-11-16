@@ -1,6 +1,10 @@
-import Integration7.CoordinateRVVolumeLiftKernel
-import Integration7.RVVolumeDensityGraphs
-import Integration7.EssentialVolumeLiftIsomorphisms
+module
+
+public import Integration7.CoordinateRVVolumeLiftKernel
+public import Integration7.RVVolumeDensityGraphs
+public import Integration7.EssentialVolumeLiftIsomorphisms
+
+@[expose] public section
 
 /-! The actual lift kernel with arbitrary original RV densities.
 The proof returns common forward blowups with full original-Gamma

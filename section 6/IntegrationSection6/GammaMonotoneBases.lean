@@ -1,4 +1,8 @@
-import IntegrationSection6.FiniteGammaObjects
+module
+
+public import IntegrationSection6.FiniteGammaObjects
+
+@[expose] public section
 
 /-! Monotonicity of the mathematical Gamma base at a fixed internal code
 presentation that contains the larger real parameter base. -/

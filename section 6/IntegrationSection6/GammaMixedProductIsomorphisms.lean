@@ -1,6 +1,10 @@
-import IntegrationSection6.GammaMixedProducts
-import Section5.GammaLift
-import IntegrationSection5.CoordinateFibreMaps
+module
+
+public import IntegrationSection6.GammaMixedProducts
+public import Section5.GammaLift
+public import IntegrationSection5.CoordinateFibreMaps
+
+@[expose] public section
 
 /-! Definable insertion and projection of a VF prefix with a frozen tail. -/
 noncomputable section

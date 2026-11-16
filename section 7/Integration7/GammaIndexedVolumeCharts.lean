@@ -1,6 +1,10 @@
-import Integration7.GammaVolumePresentationGeometry
-import Integration7.GammaVolumeParameterGeometry
-import Integration7.IndexedVolumeChartTransfer
+module
+
+public import Integration7.GammaVolumePresentationGeometry
+public import Integration7.GammaVolumeParameterGeometry
+public import Integration7.IndexedVolumeChartTransfer
+
+@[expose] public section
 
 /-! Indexed volume comparisons retain their original-Gamma chart,
 independently of the auxiliary exception parameters used for realization. -/

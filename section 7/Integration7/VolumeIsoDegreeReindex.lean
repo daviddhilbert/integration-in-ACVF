@@ -1,4 +1,8 @@
-import Integration7.VolumeDegreeTransport
+module
+
+public import Integration7.VolumeDegreeTransport
+
+@[expose] public section
 
 noncomputable section
 open FirstOrder FirstOrder.Language

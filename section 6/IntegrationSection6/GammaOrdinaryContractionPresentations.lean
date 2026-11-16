@@ -1,6 +1,10 @@
-import IntegrationSection6.GammaContractionPresentationIsomorphisms
-import IntegrationSection6.ContractionExtensionIndices
-import IntegrationSection6.EmptySelectedContractions
+module
+
+public import IntegrationSection6.GammaContractionPresentationIsomorphisms
+public import IntegrationSection6.ContractionExtensionIndices
+public import IntegrationSection6.EmptySelectedContractions
+
+@[expose] public section
 
 /-! A recursive finite presentation with no selected old RV labels gives
 the ordinary RV[n] contraction object, retaining the actual Gamma graph. -/

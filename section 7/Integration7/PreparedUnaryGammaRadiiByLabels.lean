@@ -1,5 +1,9 @@
-import Integration7.PreparedUnaryGammaRadii
-import IntegrationSection5.UnaryRVCategory
+module
+
+public import Integration7.PreparedUnaryGammaRadii
+public import IntegrationSection5.UnaryRVCategory
+
+@[expose] public section
 
 /-! Prepared unary values obey the Gamma radius relation using linearity
 only on the one original RV-labelled fibre of the chosen prepared point.

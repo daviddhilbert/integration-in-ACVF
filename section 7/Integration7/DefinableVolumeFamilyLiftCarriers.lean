@@ -1,4 +1,8 @@
-import Integration7.DefinableVolumeFamilyFullLifts
+module
+
+public import Integration7.DefinableVolumeFamilyFullLifts
+
+@[expose] public section
 
 /-! Literal carriers and original densities for full family lifts.
 Membership realizes the definable volume tuple by the new VF tail and

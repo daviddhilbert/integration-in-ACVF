@@ -1,6 +1,10 @@
-import IntegrationSection4.UnaryPreparation
-import IntegrationSection3ACVF.FullBaseLogic
-import IntegrationSection3ACVF.UniformGammaBallSyntax
+module
+
+public import IntegrationSection4.UnaryPreparation
+public import IntegrationSection3ACVF.FullBaseLogic
+public import IntegrationSection3ACVF.UniformGammaBallSyntax
+
+@[expose] public section
 
 /-! The entire source/image radius relation, with both radii free.
 No radius function or choice of a least radius is used. -/

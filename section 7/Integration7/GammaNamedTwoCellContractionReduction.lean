@@ -1,6 +1,10 @@
-import Integration7.MixedCellGraphRefinements
-import Integration7.GammaDefinableNameContexts
-import Integration7.TwoCellContractionReduction
+module
+
+public import Integration7.MixedCellGraphRefinements
+public import Integration7.GammaDefinableNameContexts
+public import Integration7.TwoCellContractionReduction
+
+@[expose] public section
 
 /-! Reduction of arbitrary specified VF² standard contractions to
 specified contractions on one actual definable two-cell family. The

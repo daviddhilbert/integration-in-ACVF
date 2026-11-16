@@ -1,8 +1,12 @@
-import Integration7.FixedLabelContractionLiftGeometry
-import Integration7.FixedRVLabelDomainBijections
-import Integration7.FixedLabelProductHeadGeometry
-import Integration7.NativeVFPairImages
-import Section4.CoordinateMaps
+module
+
+public import Integration7.FixedLabelContractionLiftGeometry
+public import Integration7.FixedRVLabelDomainBijections
+public import Integration7.FixedLabelProductHeadGeometry
+public import Integration7.NativeVFPairImages
+public import Section4.CoordinateMaps
+
+@[expose] public section
 
 /-! A pure two-coordinate domain on which one VF coordinate determines
 the other has VF dimension at most one after adjoining fixed labels. -/

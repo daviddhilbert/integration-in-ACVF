@@ -1,6 +1,10 @@
-import IntegrationSection6.PartialFamilyParameterPreservation
-import IntegrationSection6.VFPrefixMaps
-import IntegrationSection6.MixedVFParameterDomains
+module
+
+public import IntegrationSection6.PartialFamilyParameterPreservation
+public import IntegrationSection6.VFPrefixMaps
+public import IntegrationSection6.MixedVFParameterDomains
+
+@[expose] public section
 
 /-! Insert a named VF parameter prefix and identify literal fibres with
 fixed-prefix subsets of the total space. -/

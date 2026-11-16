@@ -1,4 +1,8 @@
-import Integration7.SelectedStandardVolumeObjects
+module
+
+public import Integration7.SelectedStandardVolumeObjects
+
+@[expose] public section
 
 /-! The fixed coordinate permutation from selected-first appended
 contractions to VF-first selected contractions in the identity VF order. -/

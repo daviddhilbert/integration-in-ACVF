@@ -1,5 +1,9 @@
-import Integration7.MixedVerticalPullbackCells
-import IntegrationSection4.PositionRowDefinability
+module
+
+public import Integration7.MixedVerticalPullbackCells
+public import IntegrationSection4.PositionRowDefinability
+
+@[expose] public section
 
 /-! Positioning graphs for the mixed-label vertical presentation, using
 Section4's checked uniform scalar-position graph descent. -/

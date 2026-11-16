@@ -1,5 +1,9 @@
-import IntegrationSection3ACVF.CompleteTypeRVProfiles
-import IntegrationSection3ACVF.BallKindPredicates
+module
+
+public import IntegrationSection3ACVF.CompleteTypeRVProfiles
+public import IntegrationSection3ACVF.BallKindPredicates
+
+@[expose] public section
 
 /-! Real/Gamma RV-profile constancy on an ordinary closed ball inside
 a possibly undefinable complete type. Reuses the pinned checked

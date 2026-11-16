@@ -1,5 +1,9 @@
-import IntegrationSection5.UnaryFactorizations
-import Section5.TransformGeometry
+module
+
+public import IntegrationSection5.UnaryFactorizations
+public import Section5.TransformGeometry
+
+@[expose] public section
 
 /-! Actual definable one-coordinate subtraction updates and their inverses. -/
 noncomputable section

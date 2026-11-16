@@ -1,4 +1,8 @@
-import Integration7.MatchingRecordedKeyPreparations
+module
+
+public import Integration7.MatchingRecordedKeyPreparations
+
+@[expose] public section
 
 /-! The unchanged-coordinate projections contain whole inverse fibres
 of the chosen unary preparations. Their actual recorded-key lifts are

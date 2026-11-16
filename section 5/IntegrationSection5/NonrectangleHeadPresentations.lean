@@ -1,6 +1,10 @@
-import IntegrationSection5.MixedStripPresentation
-import IntegrationSection5.NonrectangleResidualValues
-import IntegrationSection5.NonrectangleVerticalResidual
+module
+
+public import IntegrationSection5.MixedStripPresentation
+public import IntegrationSection5.NonrectangleResidualValues
+public import IntegrationSection5.NonrectangleVerticalResidual
+
+@[expose] public section
 
 /-! The two whole-family first contractions have actual original-Gamma unary presentations joined by the selected positioning bijection. -/
 noncomputable section

@@ -1,6 +1,10 @@
-import Integration7.SelectedVolumeRowContexts
-import Integration7.VolumeRelabeling
-import Section4.RVIsoTools
+module
+
+public import Integration7.SelectedVolumeRowContexts
+public import Integration7.VolumeRelabeling
+public import Section4.RVIsoTools
+
+@[expose] public section
 
 /-! Appending the actual density is a definable bijection on each
 selected RV fibre. It preserves every selected coordinate and the form. -/

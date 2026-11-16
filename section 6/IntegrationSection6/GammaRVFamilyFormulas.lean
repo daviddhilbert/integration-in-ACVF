@@ -1,5 +1,9 @@
-import IntegrationSection6.GammaMixedTupleGraphs
-import IntegrationSection6.GammaFiniteObjectSchemata
+module
+
+public import IntegrationSection6.GammaMixedTupleGraphs
+public import IntegrationSection6.GammaFiniteObjectSchemata
+
+@[expose] public section
 
 /-! Uniform original-Gamma domain/volume formulas over a VF parameter
 block. Functionality and finite fibres are certified by the separate finite

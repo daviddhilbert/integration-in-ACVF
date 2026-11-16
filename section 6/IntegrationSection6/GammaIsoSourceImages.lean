@@ -1,4 +1,8 @@
-import IntegrationSection6.GammaIsoRestrictions
+module
+
+public import IntegrationSection6.GammaIsoRestrictions
+
+@[expose] public section
 
 /-! Restrict a Gamma isomorphism to a definable source and its actual
 image, with no extra definability assumption on that image. -/

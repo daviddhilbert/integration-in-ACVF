@@ -1,5 +1,9 @@
-import Integration7.SelectedRVVFTailStandardContractions
-import Integration7.SelectedRVVFTailFullVolumeCoordinates
+module
+
+public import Integration7.SelectedRVVFTailStandardContractions
+public import Integration7.SelectedRVVFTailFullVolumeCoordinates
+
+@[expose] public section
 
 /-! The extended standard contraction restores the original VF order.
 Its literal RV projection retains that block and the old selected block. -/

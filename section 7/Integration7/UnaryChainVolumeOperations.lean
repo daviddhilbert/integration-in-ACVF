@@ -1,6 +1,10 @@
-import Integration7.UnaryChainInverses
-import Integration7.UnaryChainVolumePreservation
-import Integration7.RawVFVolumeComposition
+module
+
+public import Integration7.UnaryChainInverses
+public import Integration7.UnaryChainVolumePreservation
+public import Integration7.RawVFVolumeComposition
+
+@[expose] public section
 
 /-! Inversion and composition of actual unary volume factorizations.
 The composite volume equation is proved before its intermediate

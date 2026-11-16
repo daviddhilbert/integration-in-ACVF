@@ -1,5 +1,9 @@
-import IntegrationSection5.RelativeSpecialExtension
-import IntegrationSection5.StandardContractionGammaNormalization
+module
+
+public import IntegrationSection5.RelativeSpecialExtension
+public import IntegrationSection5.StandardContractionGammaNormalization
+
+@[expose] public section
 
 /-! Actual head and standard contraction programs extend their internal
 real presentation while retaining the original mathematical Gamma base. -/

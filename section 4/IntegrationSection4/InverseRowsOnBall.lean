@@ -1,5 +1,9 @@
-import IntegrationSection4.InverseDifferencePreparation
-import IntegrationSection4.FamilyJointPreparation
+module
+
+public import IntegrationSection4.InverseDifferencePreparation
+public import IntegrationSection4.FamilyJointPreparation
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

@@ -1,6 +1,10 @@
-import Integration7.HKIndexedEssentialRestrictions
-import Integration7.HKIndexedWeightedVolumeComparisons
-import Integration7.IndexedVolumeFiniteWitnessGluing
+module
+
+public import Integration7.HKIndexedEssentialRestrictions
+public import Integration7.HKIndexedWeightedVolumeComparisons
+public import Integration7.IndexedVolumeFiniteWitnessGluing
+
+@[expose] public section
 
 /-! Exact-density finite-row witnesses on essential indices suffice for
 actual weighted total-volume isomorphisms on the original Gamma base. -/

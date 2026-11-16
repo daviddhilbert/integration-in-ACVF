@@ -1,5 +1,9 @@
-import IntegrationSection6.GammaFiniteWeightAssembly
-import IntegrationSection6.GammaIspPadding
+module
+
+public import IntegrationSection6.GammaFiniteWeightAssembly
+public import IntegrationSection6.GammaIspPadding
+
+@[expose] public section
 
 /-! The nonzero-coordinate filtered form of fixed-degree integration. -/
 noncomputable section

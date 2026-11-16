@@ -1,4 +1,8 @@
-import Integration7.GammaTupleRelationComposition
+module
+
+public import Integration7.GammaTupleRelationComposition
+
+@[expose] public section
 
 /-! Inversion of a relation formula swaps its label blocks and retains
 the complete shared parameter tuple. -/

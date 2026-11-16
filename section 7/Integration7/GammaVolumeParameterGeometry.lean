@@ -1,5 +1,9 @@
-import Integration7.GammaVolumeBlowupEquivalence
-import Integration7.BlowupParameterExtension
+module
+
+public import Integration7.GammaVolumeBlowupEquivalence
+public import Integration7.BlowupParameterExtension
+
+@[expose] public section
 
 /-! Enlarging the containing real context retains original-Gamma volume
 objects, charts, center algebraicity and complete geometric chains. -/

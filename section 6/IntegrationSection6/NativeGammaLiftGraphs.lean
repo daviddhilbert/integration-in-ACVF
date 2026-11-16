@@ -1,5 +1,9 @@
-import IntegrationSection6.NormalizedLiftDomains
-import Section7.GammaLiftEquivalence
+module
+
+public import IntegrationSection6.NormalizedLiftDomains
+public import Section7.GammaLiftEquivalence
+
+@[expose] public section
 
 /-! Full Gamma graphs of native VF lifting relations. This retains the
 sorted interpretation instead of imposing canonical totalization on the

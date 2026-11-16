@@ -1,7 +1,11 @@
-import Integration7.HKZeroJacobianRowComparison
-import Integration7.HKAEZeroVolumeFunctions
-import Integration7.DefinableMapPreimages
-import Integration7.PureVFPermutationDimensions
+module
+
+public import Integration7.HKZeroJacobianRowComparison
+public import Integration7.HKAEZeroVolumeFunctions
+public import Integration7.DefinableMapPreimages
+public import Integration7.PureVFPermutationDimensions
+
+@[expose] public section
 
 /-! The weighted-zero Jacobian transform preserves exact row equality almost everywhere.
 The exceptional target set is the definable image of the source

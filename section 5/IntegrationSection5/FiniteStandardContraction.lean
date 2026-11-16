@@ -1,6 +1,10 @@
-import IntegrationSection5.FiniteNumbered
-import IntegrationSection5.StandardSpecialPresentation
-import IntegrationSection5.StandardContractionGammaNormalization
+module
+
+public import IntegrationSection5.FiniteNumbered
+public import IntegrationSection5.StandardSpecialPresentation
+public import IntegrationSection5.StandardContractionGammaNormalization
+
+@[expose] public section
 
 noncomputable section
 set_option autoImplicit false

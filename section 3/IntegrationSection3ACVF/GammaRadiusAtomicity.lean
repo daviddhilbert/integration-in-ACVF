@@ -1,4 +1,8 @@
-import IntegrationSection3ACVF.NamedRadiusAtomicity
+module
+
+public import IntegrationSection3ACVF.NamedRadiusAtomicity
+
+@[expose] public section
 
 /-!
 # Definable Gamma radii
@@ -79,7 +83,7 @@ theorem radiusTail_definable_of_value (Q : Set M) (t : CanonicalRV.RVSort M)
   rw [he]
   exact definable_range hR
 
-private noncomputable def difference (x y : VFType (M := M)) : VFType (M := M) := x-y
+public noncomputable def difference (x y : VFType (M := M)) : VFType (M := M) := x-y
 
 /-- A ball written using the actual Gamma value, in the paper's order. -/
 def gammaBall (a : VFType (M := M)) (γ : Values.Gamma (M := M))

@@ -1,5 +1,9 @@
-import Integration7.IndependentRectangleFamilyPreparations
-import Integration7.RVClassProductContractionValues
+module
+
+public import Integration7.IndependentRectangleFamilyPreparations
+public import Integration7.RVClassProductContractionValues
+
+@[expose] public section
 
 /-! The independently prepared rectangle family has actual standard
 contractions in both orders and the expected two VF-volume selectors. -/

@@ -1,5 +1,9 @@
-import Integration7.IntegrationStandardContractionFormula
-import Integration7.RawStandardVolumeNormalization
+module
+
+public import Integration7.IntegrationStandardContractionFormula
+public import Integration7.RawStandardVolumeNormalization
+
+@[expose] public section
 
 /-! A retained literal density may be integrated by an actual native
 standard contraction without first replacing it by a second density graph. -/

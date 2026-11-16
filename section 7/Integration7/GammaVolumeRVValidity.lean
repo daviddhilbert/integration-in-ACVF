@@ -1,5 +1,9 @@
-import Integration7.WeightedJacobianFormulas
-import Integration7.GammaVolumeGammaValidity
+module
+
+public import Integration7.WeightedJacobianFormulas
+public import Integration7.GammaVolumeGammaValidity
+
+@[expose] public section
 
 /-! First-order supported RV-Jacobian validity off an explicitly coded
 exception on source coordinate-and-density labels. -/

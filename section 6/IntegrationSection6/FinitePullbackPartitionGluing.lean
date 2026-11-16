@@ -1,6 +1,10 @@
-import IntegrationSection6.FinitePullbackPartitionClasses
-import IntegrationSection6.GammaIspUniversalPresentation
-import IntegrationSection6.FiniteGammaAdditiveCongruence
+module
+
+public import IntegrationSection6.FinitePullbackPartitionClasses
+public import IntegrationSection6.GammaIspUniversalPresentation
+public import IntegrationSection6.FiniteGammaAdditiveCongruence
+
+@[expose] public section
 
 /-! Actual common blowups on the pieces of finite pullback partitions
 glue to a common blowup of the whole RV[k] objects. -/

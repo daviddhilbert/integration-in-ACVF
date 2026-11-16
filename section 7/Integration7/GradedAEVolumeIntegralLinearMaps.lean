@@ -1,6 +1,10 @@
-import Integration7.GradedAEVolumeFunctions
-import Integration7.AEOrdinaryVolumeIntegralLinearMap
-import Integration7.AppendedVolumeIntegralOrdinaryLinearMaps
+module
+
+public import Integration7.GradedAEVolumeFunctions
+public import Integration7.AEOrdinaryVolumeIntegralLinearMap
+public import Integration7.AppendedVolumeIntegralOrdinaryLinearMaps
+
+@[expose] public section
 
 /-! Integration of the full finite graded function space is additive
 and ordinary-linear, with the genuine coefficient-first homogeneous

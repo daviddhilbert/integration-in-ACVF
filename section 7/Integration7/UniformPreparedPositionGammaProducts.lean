@@ -1,5 +1,9 @@
-import Integration7.UniformPositionLabelFibreSlopes
-import IntegrationSection4.BalancedSlope
+module
+
+public import Integration7.UniformPositionLabelFibreSlopes
+public import IntegrationSection4.BalancedSlope
+
+@[expose] public section
 
 /-! The Gamma volume-product equation holds on the whole prepared
 mixed positioning family. The actual cell and both paradigms are

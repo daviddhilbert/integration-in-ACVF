@@ -1,5 +1,9 @@
-import IntegrationSection4.RelativeObstaclePreparation
-import Section5.GammaInvariantLogic
+module
+
+public import IntegrationSection4.RelativeObstaclePreparation
+public import Section5.GammaInvariantLogic
+
+@[expose] public section
 
 /-! Uniform preparation in one VF direction over the original Gamma base.
 The ambient vertical bijection is definable over the original real base;

@@ -1,9 +1,13 @@
-import Integration7.GeneratedPullbackUnaryChainComparison
-import IntegrationSection6.KernelPositiveDegree
-import IntegrationSection6.UnaryPartitionImageFactors
-import IntegrationSection6.PreparedPartitionBlowups
-import IntegrationSection6.PullbackUnaryChainComparison
-import IntegrationSection6.FinitePullbackPartitionGluing
+module
+
+public import Integration7.GeneratedPullbackUnaryChainComparison
+public import IntegrationSection6.KernelPositiveDegree
+public import IntegrationSection6.UnaryPartitionImageFactors
+public import IntegrationSection6.PreparedPartitionBlowups
+public import IntegrationSection6.PullbackUnaryChainComparison
+public import IntegrationSection6.FinitePullbackPartitionGluing
+
+@[expose] public section
 
 /-! The generated-base specialization uses the proved ordinary selected
 contraction-order comparison. All actual objects and full Gamma graphs

@@ -1,5 +1,9 @@
-import Section4.RVRestrictions
-import Section4.MapParameters
+module
+
+public import Section4.RVRestrictions
+public import Section4.MapParameters
+
+@[expose] public section
 
 /-! The literal locus where two definable maps disagree. -/
 noncomputable section

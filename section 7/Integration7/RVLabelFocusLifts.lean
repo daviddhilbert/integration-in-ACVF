@@ -1,5 +1,9 @@
-import IntegrationSection5.CoordinateFibreMaps
-import Section5.CoordinateLift
+module
+
+public import IntegrationSection5.CoordinateFibreMaps
+public import Section5.CoordinateLift
+
+@[expose] public section
 
 /-! Carrying additional RV labels through genuine focus transformations.
 The VF coordinates are retained exactly; the projected original labels

@@ -1,5 +1,9 @@
-import Integration7.PolynomialTangentImages
-import Integration7.PolynomialTangentCoordinatePairs
+module
+
+public import Integration7.PolynomialTangentImages
+public import Integration7.PolynomialTangentCoordinatePairs
+
+@[expose] public section
 
 /-! Tangents of a fixed-head fibre embed as vertical tangents of the
 full correspondence. The two heads are constants and have zero velocity. -/

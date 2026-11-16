@@ -1,9 +1,13 @@
-import IntegrationSection6.GammaBlowupSchemata
-import IntegrationSection6.GammaSchemaElementaryRepresentation
-import IntegrationSection6.GammaSchemaCoproductRepresentation
-import IntegrationSection6.GammaAdmissibilityPromotion
-import IntegrationSection6.GammaIsomorphismPromotion
-import IntegrationSection6.FiniteGammaBlowups
+module
+
+public import IntegrationSection6.GammaBlowupSchemata
+public import IntegrationSection6.GammaSchemaElementaryRepresentation
+public import IntegrationSection6.GammaSchemaCoproductRepresentation
+public import IntegrationSection6.GammaAdmissibilityPromotion
+public import IntegrationSection6.GammaIsomorphismPromotion
+public import IntegrationSection6.FiniteGammaBlowups
+
+@[expose] public section
 
 /-! Every actual finite original-Gamma blowup over a named sorted tuple
 has a finite formula witness whose genuine validity locus contains that

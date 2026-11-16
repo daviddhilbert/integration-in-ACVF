@@ -1,5 +1,9 @@
-import Section5.GammaLift
-import Section5.GammaInvariantLogic
+module
+
+public import Section5.GammaLift
+public import Section5.GammaInvariantLogic
+
+@[expose] public section
 
 /-! An injective real-definable coordinate map gives an original-Gamma
 isomorphism from a Gamma set onto its actual image. -/

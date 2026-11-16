@@ -1,7 +1,11 @@
-import IntegrationSection6.FocusLabelAlgebraicity
-import IntegrationSection6.FocusFibres
-import IntegrationSection6.ElementaryKeys
-import Section4.CanonicalLift
+module
+
+public import IntegrationSection6.FocusLabelAlgebraicity
+public import IntegrationSection6.FocusFibres
+public import IntegrationSection6.ElementaryKeys
+public import Section4.CanonicalLift
+
+@[expose] public section
 
 /-! Semantic canonical-lift presentations and the algebraicity consequence
 of a full nonzero focus, on the actual released VF/RV carriers. -/

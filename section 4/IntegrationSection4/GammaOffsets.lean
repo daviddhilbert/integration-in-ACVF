@@ -1,5 +1,9 @@
-import IntegrationSection4.TranslationOffsets
-import Section5.GammaInvariantLogic
+module
+
+public import IntegrationSection4.TranslationOffsets
+public import Section5.GammaInvariantLogic
+
+@[expose] public section
 
 /-! Original-Gamma-base graph descent for the actual offset in Lemma 4.1.
 The real presentation of a special bijection is internal; its invariant

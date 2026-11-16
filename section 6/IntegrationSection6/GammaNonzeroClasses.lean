@@ -1,6 +1,10 @@
-import IntegrationSection6.FiniteGammaGradedSemiring
-import IntegrationSection6.GammaWeightStrata
-import Mathlib.Algebra.DirectSum.Ring
+module
+
+public import IntegrationSection6.FiniteGammaGradedSemiring
+public import IntegrationSection6.GammaWeightStrata
+public import Mathlib.Algebra.DirectSum.Ring
+
+@[expose] public section
 
 /-! The graded semiring of actual original-Gamma RV[k] isomorphism
 classes. This follows the pinned RVHomogeneousProducts/RVGradedSemiring

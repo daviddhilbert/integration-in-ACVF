@@ -1,5 +1,9 @@
-import IntegrationSection6.FullFocusBlowup
-import IntegrationSection6.VolumePreservingLift
+module
+
+public import IntegrationSection6.FullFocusBlowup
+public import IntegrationSection6.VolumePreservingLift
+
+@[expose] public section
 
 /-! The RV-image isomorphism in6.9 preserves the full volume tuple.
 Its lift is the explicit VF-coordinate-preserving relabeling in6.12. -/

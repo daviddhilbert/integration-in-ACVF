@@ -1,6 +1,10 @@
-import IntegrationSection6.FiniteGammaGradedSemiring
-import IntegrationSection6.FiniteGammaProductCongruence
-import IntegrationSection6.GradedCongruence
+module
+
+public import IntegrationSection6.FiniteGammaGradedSemiring
+public import IntegrationSection6.FiniteGammaProductCongruence
+public import IntegrationSection6.GradedCongruence
+
+@[expose] public section
 
 /-! Lemma6.8 on actual original-Gamma finite-volume RV[k] classes,
 including the componentwise semiring congruence after grading. -/

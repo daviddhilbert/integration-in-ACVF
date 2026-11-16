@@ -1,4 +1,8 @@
-import IntegrationSection6.GammaParameterRecoding
+module
+
+public import IntegrationSection6.GammaParameterRecoding
+
+@[expose] public section
 
 /-! Explicit primitive-row agreement for a formula recoding. This records
 exactly the domain, volume and chart data needed to transport finite

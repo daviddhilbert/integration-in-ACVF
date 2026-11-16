@@ -1,6 +1,10 @@
-import Integration7.UnaryNaturalVolumeJacobians
-import Integration7.VolumeForms
-import IntegrationSection6.ContractionNaturalContractibility
+module
+
+public import Integration7.UnaryNaturalVolumeJacobians
+public import Integration7.VolumeForms
+public import IntegrationSection6.ContractionNaturalContractibility
+
+@[expose] public section
 
 /-! An arbitrary unary standard contraction is an actual
 volume-preserving bijection to its normalized lift with transported form.

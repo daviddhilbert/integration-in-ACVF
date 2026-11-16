@@ -12,6 +12,15 @@ variables, including the corrected weighted degree-zero coefficients.
 **[Open the dependency graph](https://github.com/daviddhilbert/integration-in-ACVF/blob/main/blueprint/dependency-graph.svg)** ·
 **[Release v1.0.0](https://github.com/daviddhilbert/integration-in-ACVF/releases/tag/v1.0.0)**
 
+This branch prepares a Palomar entry for two geometric results: Proposition
+3.19, finite open-to-open partitions of definable VF bijections, and Lemma 4.8,
+definable two-cell decomposition in VF². The exact selection is recorded in
+[formalization.yaml](formalization.yaml), with an independent
+[Challenge](PalomarPaperChallenge.lean) and the proved
+[Solution](PalomarPaperSolution.lean). Other results below describe the larger
+library. Palomar verification and intake are still in progress; the released
+project's integrity receipt does not certify this module-format branch.
+
 This is the sequel to [Special transformations](https://github.com/daviddhilbert/special-transformations).
 It reuses the common ACVF-QE language and pinned dependencies; exact versions
 and reproduction details are recorded below and in `lake-manifest.json`.

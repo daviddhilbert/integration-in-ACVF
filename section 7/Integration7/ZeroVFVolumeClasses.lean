@@ -1,6 +1,10 @@
-import Integration7.OrdinaryZeroLiftIsomorphisms
-import Integration7.OrdinaryFiniteLiftSurjectivity
-import Integration7.AllDegreeVolumeClasses
+module
+
+public import Integration7.OrdinaryZeroLiftIsomorphisms
+public import Integration7.OrdinaryFiniteLiftSurjectivity
+public import Integration7.AllDegreeVolumeClasses
+
+@[expose] public section
 
 /-! Actual ordinary VF[0] isomorphism classes. The ordinary RV[0]
 lift, with no density or positive-degree blowup, is a bijection of classes. -/

@@ -1,6 +1,10 @@
-import Integration7.GammaRVScalarMapGraphs
-import Integration7.NonzeroConeScaling
-import Section4.RVProductAssociativity
+module
+
+public import Integration7.GammaRVScalarMapGraphs
+public import Integration7.NonzeroConeScaling
+public import Section4.RVProductAssociativity
+
+@[expose] public section
 
 /-! Packing the actual cone fibre map into RV labels retains its full
 original-Gamma graph. Its source is the actual product domain, and its

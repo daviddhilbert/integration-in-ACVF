@@ -1,7 +1,11 @@
-import Integration7.HKNormalizedFunctionGenerators
-import Integration7.HKPositiveIntegralTransfers
-import Integration7.PositiveGradedCoordinatePushforwards
-import Integration7.PositiveGradedVolumeFubini
+module
+
+public import Integration7.HKNormalizedFunctionGenerators
+public import Integration7.HKPositiveIntegralTransfers
+public import Integration7.PositiveGradedCoordinatePushforwards
+public import Integration7.PositiveGradedVolumeFubini
+
+@[expose] public section
 
 /-! Actual signed coordinate integrals descend to the whole corrected
 normalized function module, and satisfy total Fubini. The descent uses

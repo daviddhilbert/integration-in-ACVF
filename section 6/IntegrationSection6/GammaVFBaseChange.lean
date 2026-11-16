@@ -1,4 +1,8 @@
-import IntegrationSection6.GammaVFAllBilinearProduct
+module
+
+public import IntegrationSection6.GammaVFAllBilinearProduct
+
+@[expose] public section
 
 /-! Base extension on the actual finite VF scissor monoids preserves
 addition, Cartesian product and the singleton. -/

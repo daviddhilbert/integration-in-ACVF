@@ -1,7 +1,11 @@
-import IntegrationSection5.RVPredicateFocus
-import IntegrationSection5.UnaryChainCoordinateLift
-import IntegrationSection5.RelativeLabelPreservation
-import IntegrationSection5.GammaUnaryCoordinateLift
+module
+
+public import IntegrationSection5.RVPredicateFocus
+public import IntegrationSection5.UnaryChainCoordinateLift
+public import IntegrationSection5.RelativeLabelPreservation
+public import IntegrationSection5.GammaUnaryCoordinateLift
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option allowUnsafeReducibility true in

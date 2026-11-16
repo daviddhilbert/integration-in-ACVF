@@ -1,6 +1,10 @@
-import Integration7.TermContextGammaGraphs
-import Integration7.GammaRVScalarMapGraphs
-import Integration7.VolumeDensityRescaling
+module
+
+public import Integration7.TermContextGammaGraphs
+public import Integration7.GammaRVScalarMapGraphs
+public import Integration7.VolumeDensityRescaling
+
+@[expose] public section
 
 /-! Term-definable RV constants and maps descend to the original base.
 The containing real context may be larger than the term closure. -/

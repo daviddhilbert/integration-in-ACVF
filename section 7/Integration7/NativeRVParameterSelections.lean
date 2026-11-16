@@ -1,5 +1,9 @@
-import Integration7.GammaRVParameterSelections
-import Integration7.GammaNativeCommonNames
+module
+
+public import Integration7.GammaRVParameterSelections
+public import Integration7.GammaNativeCommonNames
+
+@[expose] public section
 
 /-! Actual native definable domains for whole RV-parameter selections.
 They use the fixed common names, retain every old coordinate and density

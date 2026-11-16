@@ -1,4 +1,8 @@
-import IntegrationSection5.GammaPartialContraction
+module
+
+public import IntegrationSection5.GammaPartialContraction
+
+@[expose] public section
 
 /-! Literal endpoint equality transport for partial contraction
 programs retains their volume selectors and Gamma certificates. -/

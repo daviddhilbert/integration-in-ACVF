@@ -1,4 +1,8 @@
-import Integration7.RVParameterHeadProducts
+module
+
+public import Integration7.RVParameterHeadProducts
+
+@[expose] public section
 
 /-! A carried-parameter unary contraction is definably bijective to
 the product of the parameter domain and the original unary contraction.

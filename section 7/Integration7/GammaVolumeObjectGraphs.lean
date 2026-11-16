@@ -1,5 +1,9 @@
-import Integration7.GammaRVMapRestrictions
-import Integration7.GammaCanonicalElementaryGraphs
+module
+
+public import Integration7.GammaRVMapRestrictions
+public import Integration7.GammaCanonicalElementaryGraphs
+
+@[expose] public section
 
 /-! A property of the existing actual volume objects, recording full
 original-Gamma coordinate and density graphs. Restrictions retain both. -/

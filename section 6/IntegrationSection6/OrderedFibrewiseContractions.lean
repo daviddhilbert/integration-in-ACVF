@@ -1,6 +1,10 @@
-import IntegrationSection6.GammaHeadCommonUniformity
-import IntegrationSection6.OrderedSelectedVolume
-import IntegrationSection6.GammaSelectedRVPresentations
+module
+
+public import IntegrationSection6.GammaHeadCommonUniformity
+public import IntegrationSection6.OrderedSelectedVolume
+public import IntegrationSection6.GammaSelectedRVPresentations
+
+@[expose] public section
 
 /-! Lemma6.14 for any number of VF coordinates in the identity contraction
 order. Both programs are actual sequences of head preparations. The

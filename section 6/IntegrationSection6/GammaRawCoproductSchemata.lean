@@ -1,6 +1,10 @@
-import IntegrationSection6.GammaRawLabelImageRows
-import IntegrationSection6.GammaCoproductFamilies
-import IntegrationSection6.GammaGraphCoproducts
+module
+
+public import IntegrationSection6.GammaRawLabelImageRows
+public import IntegrationSection6.GammaCoproductFamilies
+public import IntegrationSection6.GammaGraphCoproducts
+
+@[expose] public section
 
 /-! Native tagged coproduct schemata with arbitrary sorted parameters.
 The tags act only on object labels, preserving the parameter tuple. -/

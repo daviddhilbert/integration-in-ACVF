@@ -1,5 +1,9 @@
-import IntegrationSection6.GammaWitnessVFCodes
-import IntegrationSection6.GammaFormulaBaseChange
+module
+
+public import IntegrationSection6.GammaWitnessVFCodes
+public import IntegrationSection6.GammaFormulaBaseChange
+
+@[expose] public section
 
 /-! Code the primitive rows of original-base witnesses in a larger
 coefficient field base. The predicate determined by the code still refers

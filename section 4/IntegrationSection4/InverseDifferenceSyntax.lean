@@ -1,5 +1,9 @@
-import IntegrationSection4.UnaryPreparation
-import IntegrationSection3ACVF.RVDifferencePairs
+module
+
+public import IntegrationSection4.UnaryPreparation
+public import IntegrationSection3ACVF.RVDifferencePairs
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

@@ -1,5 +1,9 @@
-import Integration7.VFVolumeObjects
-import Integration7.CanonicalFiniteRVObjects
+module
+
+public import Integration7.VFVolumeObjects
+public import Integration7.CanonicalFiniteRVObjects
+
+@[expose] public section
 
 /-! Transport the existing finite VF and RV categories along literal
 equality of their shared language structures. This only changes the

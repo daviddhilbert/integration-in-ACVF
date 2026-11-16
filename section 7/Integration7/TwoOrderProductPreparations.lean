@@ -1,4 +1,8 @@
-import Integration7.RVClassProductOriginalUnaryVolumeComparison
+module
+
+public import Integration7.RVClassProductOriginalUnaryVolumeComparison
+
+@[expose] public section
 
 /-! Actual preparations of the two translated product domains. The
 record stores special chains and pullback targets, rather than assuming

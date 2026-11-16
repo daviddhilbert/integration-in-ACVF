@@ -1,5 +1,9 @@
-import Integration7.GammaGenericRVJacobians
-import IntegrationSection6.GammaRVProductRelations
+module
+
+public import Integration7.GammaGenericRVJacobians
+public import IntegrationSection6.GammaRVProductRelations
+
+@[expose] public section
 
 /-! The full volume-pair map and correspondence retain the original
 Gamma base whenever both coordinate maps and the label isomorphism do. -/

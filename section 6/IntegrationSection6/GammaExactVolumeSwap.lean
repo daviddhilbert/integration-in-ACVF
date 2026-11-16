@@ -1,5 +1,9 @@
-import IntegrationSection6.GammaSwappedVolumes
-import IntegrationSection6.FiniteGammaIsoLaws
+module
+
+public import IntegrationSection6.GammaSwappedVolumes
+public import IntegrationSection6.FiniteGammaIsoLaws
+
+@[expose] public section
 
 /-! Exact volume-preserving maps remain exact after swapping volume blocks. -/
 noncomputable section

@@ -1,4 +1,8 @@
-import IntegrationSection6.GammaSortedTotalBijections
+module
+
+public import IntegrationSection6.GammaSortedTotalBijections
+
+@[expose] public section
 
 /-! Pointwise definable bijections over the actual parameter-extended bases
 uniformize to an original-base definable bijection of total spaces. Only

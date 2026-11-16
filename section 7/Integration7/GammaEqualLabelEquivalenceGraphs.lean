@@ -1,4 +1,8 @@
-import Integration7.GammaRVLabelIdentity
+module
+
+public import Integration7.GammaRVLabelIdentity
+
+@[expose] public section
 
 /-! Identity on full RV labels retains the original Gamma graph across
 different real presentations of the same label set. -/

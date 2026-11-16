@@ -1,7 +1,11 @@
-import Integration7.VolumeAlmostEverywhereImages
-import Integration7.RVJacobianRestriction
-import Integration7.GammaVolumeCriterion
-import Section9.GenericRVJacobian
+module
+
+public import Integration7.VolumeAlmostEverywhereImages
+public import Integration7.RVJacobianRestriction
+public import Integration7.GammaVolumeCriterion
+public import Section9.GenericRVJacobian
+
+@[expose] public section
 
 /-! Gluing actual volume isomorphisms over two definable embedded pieces.
 Generic Jacobian existence is obtained from the native finite-volume theorem;

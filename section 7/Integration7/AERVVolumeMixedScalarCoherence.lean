@@ -1,6 +1,10 @@
-import Integration7.PositiveVolumeProductOrdinaryScalars
-import Integration7.AERVVolumeOrdinaryCoefficientModules
-import Integration7.PositiveVolumeClassScalarExtensions
+module
+
+public import Integration7.PositiveVolumeProductOrdinaryScalars
+public import Integration7.AERVVolumeOrdinaryCoefficientModules
+public import Integration7.PositiveVolumeClassScalarExtensions
+
+@[expose] public section
 
 /-! Ordinary and positive coefficient actions agree with the actual
 graded product in both mixed cases. The proof is fibrewise and uses

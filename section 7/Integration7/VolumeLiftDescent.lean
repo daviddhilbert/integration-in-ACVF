@@ -1,5 +1,9 @@
-import Integration7.Section2VolumeBridge
-import IntegrationSection2.VolumeDescentTheorem
+module
+
+public import Integration7.Section2VolumeBridge
+public import IntegrationSection2.VolumeDescentTheorem
+
+@[expose] public section
 
 /-! A volume-preserving lift compatible with an actual essential label
 isomorphism descends to the two RV volume conditions. The graph-field

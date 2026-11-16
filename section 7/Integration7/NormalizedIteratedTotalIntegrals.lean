@@ -1,4 +1,8 @@
-import Integration7.NormalizedPrefixFubini
+module
+
+public import Integration7.NormalizedPrefixFubini
+
+@[expose] public section
 
 /-! The actual prefix-then-total integral is balanced and additive
 because of the proved geometric graded Fubini theorem. It therefore

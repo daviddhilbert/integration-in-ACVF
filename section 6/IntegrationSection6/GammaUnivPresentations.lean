@@ -1,4 +1,8 @@
-import IntegrationSection5.GammaMapPresentation
+module
+
+public import IntegrationSection5.GammaMapPresentation
+
+@[expose] public section
 
 /-! Full original-Gamma sets and graphs have real presentations over the
 whole model. This changes only an internal presentation; the mathematical

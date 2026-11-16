@@ -1,7 +1,11 @@
-import IntegrationSection6.IntegrationContexts
-import IntegrationSection6.VFParameterRowObjects
-import IntegrationSection6.VFParameterFibreIsomorphisms
-import IntegrationSection6.DefinableFamilyIntegration
+module
+
+public import IntegrationSection6.IntegrationContexts
+public import IntegrationSection6.VFParameterRowObjects
+public import IntegrationSection6.VFParameterFibreIsomorphisms
+public import IntegrationSection6.DefinableFamilyIntegration
+
+@[expose] public section
 
 /-! Integration of actual VF fibres in the varying coefficient semirings,
 and its compatibility with the previously defined RV family values. -/

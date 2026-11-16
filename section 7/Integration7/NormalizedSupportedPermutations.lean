@@ -1,6 +1,10 @@
-import Integration7.SupportedVolumePermutations
-import Integration7.NormalizedVolumePermutationOperators
-import Integration7.NormalizedVolumeSupports
+module
+
+public import Integration7.SupportedVolumePermutations
+public import Integration7.NormalizedVolumePermutationOperators
+public import Integration7.NormalizedVolumeSupports
+
+@[expose] public section
 
 /-! Coordinate permutations give genuine linear maps between normalized
 supported function modules and their actual coordinate images. -/

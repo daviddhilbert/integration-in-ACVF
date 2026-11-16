@@ -1,8 +1,12 @@
-import Integration7.NativeRectangleFamilyHeadGeometry
-import Integration7.NativeUnaryProductPreparations
-import IntegrationSection5.RestrictedHeadPreparation
-import IntegrationSection5.RelativeLabelPreservation
-import IntegrationSection6.RelativeSpecialSourceRestriction
+module
+
+public import Integration7.NativeRectangleFamilyHeadGeometry
+public import Integration7.NativeUnaryProductPreparations
+public import IntegrationSection5.RestrictedHeadPreparation
+public import IntegrationSection5.RelativeLabelPreservation
+public import IntegrationSection6.RelativeSpecialSourceRestriction
+
+@[expose] public section
 
 /-! A unary special preparation of the labelled head projection lifts
 to an actual relatively special head preparation of a rectangle family.

@@ -1,4 +1,8 @@
-import IntegrationSection6.GammaMixedSetPreimages
+module
+
+public import IntegrationSection6.GammaMixedSetPreimages
+
+@[expose] public section
 
 /-! Complementary predicates pull back to complementary source pieces,
 including isomorphisms between the actual restricted mixed sets. -/

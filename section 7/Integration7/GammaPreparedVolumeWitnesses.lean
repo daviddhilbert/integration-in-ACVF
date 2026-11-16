@@ -1,4 +1,8 @@
-import Integration7.GammaPreparedVolumeRows
+module
+
+public import Integration7.GammaPreparedVolumeRows
+
+@[expose] public section
 
 /-! Descent of primitive rows through every internal volume object,
 elementary blowup and comparison in a finite common witness. -/

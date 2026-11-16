@@ -1,5 +1,9 @@
-import IntegrationSection5.CellUnaryProjections
-import IntegrationSection5.GammaPullbackPreparationOver
+module
+
+public import IntegrationSection5.CellUnaryProjections
+public import IntegrationSection5.GammaPullbackPreparationOver
+
+@[expose] public section
 
 /-! Both actual unary cell projections are prepared over one internally
 constructed real base, retaining their original-Gamma special chains. -/

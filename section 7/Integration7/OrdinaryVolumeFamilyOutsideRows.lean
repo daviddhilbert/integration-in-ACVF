@@ -1,7 +1,11 @@
-import Integration7.OrdinaryVolumeFamilyRestrictions
-import Integration7.AEOrdinaryRVVolumeFunctions
-import Integration7.NondegenerateFiniteIso
-import Section4.EmptyMaps
+module
+
+public import Integration7.OrdinaryVolumeFamilyRestrictions
+public import Integration7.AEOrdinaryRVVolumeFunctions
+public import Integration7.NondegenerateFiniteIso
+public import Section4.EmptyMaps
+
+@[expose] public section
 
 /-! On ordinary rows, removing a base exception preserves every good
 fibre and makes every bad fibre literally empty. -/

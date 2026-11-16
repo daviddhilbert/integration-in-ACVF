@@ -1,5 +1,9 @@
-import Integration7.ActualVolumeCommonPromotion
-import IntegrationSection6.GammaWitnessUniformity
+module
+
+public import Integration7.ActualVolumeCommonPromotion
+public import IntegrationSection6.GammaWitnessUniformity
+
+@[expose] public section
 
 /-! Compactness for actual volume common-blowup witnesses. The geometric
 premise uses actual objects and common forward blowups over the original

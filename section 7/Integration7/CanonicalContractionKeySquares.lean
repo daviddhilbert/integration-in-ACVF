@@ -1,4 +1,8 @@
-import IntegrationSection6.CanonicalFiniteContractionIsomorphisms
+module
+
+public import IntegrationSection6.CanonicalFiniteContractionIsomorphisms
+
+@[expose] public section
 
 /-! Exact key, coordinate and old-label identities for the checked
 canonical contraction isomorphism of an RV pullback. These strengthen

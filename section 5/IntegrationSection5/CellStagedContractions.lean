@@ -1,6 +1,10 @@
-import IntegrationSection5.CellContractedBijection
-import IntegrationSection5.MatchedHeadRV
-import IntegrationSection4.CellRectangles
+module
+
+public import IntegrationSection5.CellContractedBijection
+public import IntegrationSection5.MatchedHeadRV
+public import IntegrationSection4.CellRectangles
+
+@[expose] public section
 
 /-! Constructed two-stage programs and actual RV[2] comparison for the
 balanced and bijective graph cases of Lemma 5.7. -/

@@ -1,6 +1,10 @@
-import IntegrationSection6.GammaElementaryFocus
-import IntegrationSection6.OriginalAdmissibleFocus
-import IntegrationSection6.VolumePreservingElementary
+module
+
+public import IntegrationSection6.GammaElementaryFocus
+public import IntegrationSection6.OriginalAdmissibleFocus
+public import IntegrationSection6.VolumePreservingElementary
+
+@[expose] public section
 
 /-! The actual original-Gamma full focus has the required elementary RV
 image, after dropping preparatory canonical labels. Only B.real is small. -/

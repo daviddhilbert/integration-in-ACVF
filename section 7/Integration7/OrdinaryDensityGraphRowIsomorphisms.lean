@@ -1,6 +1,10 @@
-import Integration7.OrdinaryVolumeFamilyRowIsomorphisms
-import Integration7.OrdinaryVolumeFamilyHeadIntegrals
-import IntegrationSection6.VFParameterFibreIsomorphisms
+module
+
+public import Integration7.OrdinaryVolumeFamilyRowIsomorphisms
+public import Integration7.OrdinaryVolumeFamilyHeadIntegrals
+public import IntegrationSection6.VFParameterFibreIsomorphisms
+
+@[expose] public section
 
 /-! Appending the unit density is an original-base Gamma chart on each
 ordinary fibre. Equality of ordinary row classes therefore compares the

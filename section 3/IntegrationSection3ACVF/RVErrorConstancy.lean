@@ -1,5 +1,9 @@
-import IntegrationSection3ACVF.RVErrorSyntax
-import IntegrationSection3ACVF.RVUnaryConstancy
+module
+
+public import IntegrationSection3ACVF.RVErrorSyntax
+public import IntegrationSection3ACVF.RVUnaryConstancy
+
+@[expose] public section
 
 /-! Actual RV of the affine error is constant on an atomic open ball. -/
 

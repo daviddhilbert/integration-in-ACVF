@@ -1,6 +1,10 @@
-import IntegrationSection6.GammaSelectedLabelFibrePresentations
-import IntegrationSection6.GammaPresentationBaseEquality
-import IntegrationSection5.VFPermutation
+module
+
+public import IntegrationSection6.GammaSelectedLabelFibrePresentations
+public import IntegrationSection6.GammaPresentationBaseEquality
+public import IntegrationSection5.VFPermutation
+
+@[expose] public section
 
 /-! Reindexing VF parameters by a permutation preserves the precise
 pointwise selected-volume hypothesis, including its named parameter base. -/

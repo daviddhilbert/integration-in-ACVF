@@ -1,5 +1,9 @@
-import IntegrationSection5.FocusSection
-import IntegrationSection5.GammaGraphOperations
+module
+
+public import IntegrationSection5.FocusSection
+public import IntegrationSection5.GammaGraphOperations
+
+@[expose] public section
 
 /-! The focus section has its complete graph over the original Gamma base. -/
 

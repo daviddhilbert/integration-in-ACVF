@@ -1,6 +1,10 @@
-import IntegrationSection5.CoordinateCanonicalFibre
-import Mathlib.Data.List.OfFn
-import Mathlib.Data.List.FinRange
+module
+
+public import IntegrationSection5.CoordinateCanonicalFibre
+public import Mathlib.Data.List.OfFn
+public import Mathlib.Data.List.FinRange
+
+@[expose] public section
 
 /-! Finite compositions retaining the actual relatively special factors. -/
 noncomputable section

@@ -1,10 +1,14 @@
-import Integration7.HKNativeZeroDensityObjects
-import Integration7.HKRVVolumeProducts
-import Integration7.NativeRVProductMapTransfers
-import Integration7.VolumeProductPointwise
-import Integration7.ZeroFactorVolumeObjects
-import Integration7.VolumeRelabeling
-import IntegrationSection6.FiniteBlowups
+module
+
+public import Integration7.HKNativeZeroDensityObjects
+public import Integration7.HKRVVolumeProducts
+public import Integration7.NativeRVProductMapTransfers
+public import Integration7.VolumeProductPointwise
+public import Integration7.ZeroFactorVolumeObjects
+public import Integration7.VolumeRelabeling
+public import IntegrationSection6.FiniteBlowups
+
+@[expose] public section
 
 /-! A genuine finite weighted factor and a positive prepared head give
 a full coordinate-density product chart. Both original forms survive. -/

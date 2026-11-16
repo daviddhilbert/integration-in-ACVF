@@ -1,4 +1,8 @@
-import IntegrationSection3ACVF.FullBaseAtomicity
+module
+
+public import IntegrationSection3ACVF.FullBaseAtomicity
+
+@[expose] public section
 
 /-! First-order closure operations over the combined interpreted base.
 These wrappers keep the original model separate from its normalization. -/

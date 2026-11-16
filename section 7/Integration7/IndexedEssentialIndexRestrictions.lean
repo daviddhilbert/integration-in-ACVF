@@ -1,7 +1,11 @@
-import Integration7.GammaEssentialVolumeRestrictions
-import Integration7.IndexedVolumeRestrictions
-import Integration7.GammaVolumeIndexedPresentations
-import Integration7.GammaVolumePresentationGeometry
+module
+
+public import Integration7.GammaEssentialVolumeRestrictions
+public import Integration7.IndexedVolumeRestrictions
+public import Integration7.GammaVolumeIndexedPresentations
+public import Integration7.GammaVolumePresentationGeometry
+
+@[expose] public section
 
 /-! An indexed volume object may discard every index with a zero base
 volume coordinate. Its complete essential domain and its actual density

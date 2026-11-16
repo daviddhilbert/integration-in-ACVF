@@ -1,5 +1,9 @@
-import IntegrationSection6.FiniteGammaBlowups
-import IntegrationSection6.FiniteGammaChartLaws
+module
+
+public import IntegrationSection6.FiniteGammaBlowups
+public import IntegrationSection6.FiniteGammaChartLaws
+
+@[expose] public section
 
 /-! Finite forward blowups with original-Gamma charts at every stage.
 Forgetting certificates gives the actual RV[k] relation, with every

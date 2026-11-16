@@ -1,5 +1,9 @@
-import IntegrationSection5.GammaPreparation
-import Section3.SmallFiniteParameters
+module
+
+public import IntegrationSection5.GammaPreparation
+public import Section3.SmallFiniteParameters
+
+@[expose] public section
 
 /-! A common real presentation is constructed internally from finite
 Gamma codes for the two domains and the complete graph. No code is named

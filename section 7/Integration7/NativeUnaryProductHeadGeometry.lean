@@ -1,5 +1,9 @@
-import Integration7.NativeUnaryProducts
-import Integration7.RVParameterSpecialPreparations
+module
+
+public import Integration7.NativeUnaryProducts
+public import Integration7.RVParameterSpecialPreparations
+
+@[expose] public section
 
 /-! The first contraction of a unary rectangle has exactly the entire
 first-factor RV domain as its parameter space for the second factor. -/

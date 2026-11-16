@@ -1,5 +1,9 @@
-import IntegrationSection6.LiftCarrierGeometry
-import IntegrationSection6.ElementaryPacking
+module
+
+public import IntegrationSection6.LiftCarrierGeometry
+public import IntegrationSection6.ElementaryPacking
+
+@[expose] public section
 
 /-! Exact equality of the canonical RV key image after a full-locus
 centripetal step and the elementary-blowup key domain. -/

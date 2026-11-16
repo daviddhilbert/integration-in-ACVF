@@ -1,7 +1,11 @@
-import Integration7.CompletedSection6Kernel
-import Integration7.ClosedSection6GammaIspPadding
-import IntegrationSection6.FiniteIntegrationPadding
-import IntegrationSection6.GammaIspPadding
+module
+
+public import Integration7.CompletedSection6Kernel
+public import Integration7.ClosedSection6GammaIspPadding
+public import IntegrationSection6.FiniteIntegrationPadding
+public import IntegrationSection6.GammaIspPadding
+
+@[expose] public section
 
 /-! Closed generated-base Section6 integration. The former universal
 Section5 input is replaced by the canonical-model certificate; its kernel

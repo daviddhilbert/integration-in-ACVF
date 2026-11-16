@@ -1,4 +1,8 @@
-import IntegrationSection4.GammaTupleGraphs
+module
+
+public import IntegrationSection4.GammaTupleGraphs
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

@@ -1,8 +1,12 @@
-import IntegrationSection5.CommonRectangleHead
-import IntegrationSection5.MixedUnaryPreparationSwap
-import IntegrationSection5.InactiveRectangleFamily
-import IntegrationSection5.MixedUnaryPreparationOver
-import IntegrationSection5.NonrectangleHeadRVClasses
+module
+
+public import IntegrationSection5.CommonRectangleHead
+public import IntegrationSection5.MixedUnaryPreparationSwap
+public import IntegrationSection5.InactiveRectangleFamily
+public import IntegrationSection5.MixedUnaryPreparationOver
+public import IntegrationSection5.NonrectangleHeadRVClasses
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option allowUnsafeReducibility true in

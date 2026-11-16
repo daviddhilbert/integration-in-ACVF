@@ -1,5 +1,9 @@
-import IntegrationSection5.UniformRelativeTrace
-import IntegrationSection5.FibreFocusProjection
+module
+
+public import IntegrationSection5.UniformRelativeTrace
+public import IntegrationSection5.FibreFocusProjection
+
+@[expose] public section
 
 noncomputable section
 set_option autoImplicit false

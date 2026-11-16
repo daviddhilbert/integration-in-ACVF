@@ -1,5 +1,9 @@
-import IntegrationSection6.FiniteGammaChartLaws
-import IntegrationSection6.FiniteGammaCoproducts
+module
+
+public import IntegrationSection6.FiniteGammaChartLaws
+public import IntegrationSection6.FiniteGammaCoproducts
+
+@[expose] public section
 
 /-! Maps and isomorphisms of finite coproducts, with original-Gamma graphs. -/
 noncomputable section

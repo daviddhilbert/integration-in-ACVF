@@ -1,7 +1,11 @@
-import Integration7.CanonicalGammaVolumeIsomorphisms
-import Integration7.CanonicalLiftVolumePresentations
-import Integration7.NormalizedElementaryGeometry
-import IntegrationSection6.FiniteGammaElementaryAt
+module
+
+public import Integration7.CanonicalGammaVolumeIsomorphisms
+public import Integration7.CanonicalLiftVolumePresentations
+public import Integration7.NormalizedElementaryGeometry
+public import IntegrationSection6.FiniteGammaElementaryAt
+
+@[expose] public section
 
 /-! Original-Gamma admissibility supplies the actual canonical volume
 blowup. Its underlying object is the canonical native elementary object. -/

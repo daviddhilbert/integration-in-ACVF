@@ -1,7 +1,11 @@
-import Integration7.UnaryPreparedVolumeSliceWitness
-import Integration7.ContractionRetainedDensityLabels
-import Integration7.PreparedIndexedRetainedLabels
-import Integration7.VolumeSliceCommonUniformity
+module
+
+public import Integration7.UnaryPreparedVolumeSliceWitness
+public import Integration7.ContractionRetainedDensityLabels
+public import Integration7.PreparedIndexedRetainedLabels
+public import Integration7.VolumeSliceCommonUniformity
+
+@[expose] public section
 /-! An arbitrary unary standard contraction is compared with its prepared
 indexed family by actual common volume blowups. All RV-prefix slices
 have constructed original-Gamma formula witnesses, then glue uniformly. -/

@@ -1,5 +1,9 @@
-import IntegrationSection4.GammaRVMapOperations
-import Section5.GammaLiftRelation
+module
+
+public import IntegrationSection4.GammaRVMapOperations
+public import Section5.GammaLiftRelation
+
+@[expose] public section
 
 /-! Original-Gamma selection and equality predicates for actual finite RV
 codes. These operations retain full graphs and do not choose representatives. -/

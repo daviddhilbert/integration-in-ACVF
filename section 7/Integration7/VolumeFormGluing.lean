@@ -1,5 +1,9 @@
-import Integration7.VolumeForms
-import Section4.UnionMapLaws
+module
+
+public import Integration7.VolumeForms
+public import Section4.UnionMapLaws
+
+@[expose] public section
 
 noncomputable section
 

@@ -1,4 +1,8 @@
-import Integration7.FibreTangentDeterminant
+module
+
+public import Integration7.FibreTangentDeterminant
+
+@[expose] public section
 
 /-! A defined full RV Jacobian of a correspondence fixing its head
 agrees with the defined Jacobian on any fixed-head fibre through it. -/

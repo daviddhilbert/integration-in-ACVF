@@ -1,5 +1,9 @@
-import IntegrationSection3ACVF.RadialClassMaps
-import IntegrationSection3ACVF.RealParameterTuples
+module
+
+public import IntegrationSection3ACVF.RadialClassMaps
+public import IntegrationSection3ACVF.RealParameterTuples
+
+@[expose] public section
 
 /-! The graph induced on translated RV classes is the actual existential
 image of the whole partial VF graph. Only the two hole-centre labels are

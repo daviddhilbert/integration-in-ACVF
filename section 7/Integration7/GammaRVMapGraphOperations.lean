@@ -1,6 +1,10 @@
-import Integration7.GammaRealRVMaps
-import IntegrationSection6.GammaRVProductRelations
-import Section4.RVAppend
+module
+
+public import Integration7.GammaRealRVMaps
+public import IntegrationSection6.GammaRVProductRelations
+public import Section4.RVAppend
+
+@[expose] public section
 
 /-! Full Gamma graphs of actual raw RV maps are closed under
 composition and pairing their output tuples on a common source. -/

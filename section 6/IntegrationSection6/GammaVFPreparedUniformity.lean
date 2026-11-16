@@ -1,7 +1,11 @@
-import IntegrationSection6.GammaPreparedWitnessGluing
-import IntegrationSection6.GammaPreparedIndexPresentation
-import IntegrationSection6.GammaVFParameterBases
-import IntegrationSection6.GammaCommonFiniteRowCompactness
+module
+
+public import IntegrationSection6.GammaPreparedWitnessGluing
+public import IntegrationSection6.GammaPreparedIndexPresentation
+public import IntegrationSection6.GammaVFParameterBases
+public import IntegrationSection6.GammaCommonFiniteRowCompactness
+
+@[expose] public section
 
 /-! Pointwise common blowups in a VF-parameter family have simultaneous
 preparation and an actual common blowup of the assembled RV[p+k] objects.

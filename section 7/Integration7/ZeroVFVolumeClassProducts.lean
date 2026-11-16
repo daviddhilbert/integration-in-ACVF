@@ -1,6 +1,10 @@
-import Integration7.OrdinaryFiniteProductIsomorphisms
-import Integration7.VolumeLiftProductDomains
-import Integration7.ZeroVolumeIntegration
+module
+
+public import Integration7.OrdinaryFiniteProductIsomorphisms
+public import Integration7.VolumeLiftProductDomains
+public import Integration7.ZeroVolumeIntegration
+
+@[expose] public section
 
 /-! Multiplication of ordinary VF[0] isomorphism classes is actual
 Cartesian product, and the ordinary degree-zero integration preserves it. -/

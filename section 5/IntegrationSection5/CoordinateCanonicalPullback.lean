@@ -1,4 +1,8 @@
-import IntegrationSection5.CoordinateCanonicalFibre
+module
+
+public import IntegrationSection5.CoordinateCanonicalFibre
+
+@[expose] public section
 
 /-! A one-coordinate canonical step preserves actual RV-pullbacks. -/
 noncomputable section

@@ -1,6 +1,10 @@
-import IntegrationSection3ACVF.FiniteBaseOpenImageCovers
-import IntegrationSection3ACVF.OpenToOpenPartitions
-import IntegrationSection3ACVF.RVInverse
+module
+
+public import IntegrationSection3ACVF.FiniteBaseOpenImageCovers
+public import IntegrationSection3ACVF.OpenToOpenPartitions
+public import IntegrationSection3ACVF.RVInverse
+
+@[expose] public section
 
 /-! Proposition3.19 over the full original interpreted base. All
 compactness code choices are internal; the resulting actual finite

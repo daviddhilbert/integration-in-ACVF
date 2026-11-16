@@ -1,7 +1,11 @@
-import IntegrationSection5.FiniteNumbered
-import IntegrationSection5.UnaryBijection
-import IntegrationSection5.GammaMapPresentation
-import IntegrationSection5.UnaryPartition
+module
+
+public import IntegrationSection5.FiniteNumbered
+public import IntegrationSection5.UnaryBijection
+public import IntegrationSection5.GammaMapPresentation
+public import IntegrationSection5.UnaryPartition
+
+@[expose] public section
 noncomputable section
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false

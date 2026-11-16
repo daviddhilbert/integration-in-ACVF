@@ -1,6 +1,10 @@
-import IntegrationSection3ACVF.FullFibreMeans
-import IntegrationSection3ACVF.FullBallCoset
-import IntegrationSection3.AtomicFiniteFibres
+module
+
+public import IntegrationSection3ACVF.FullFibreMeans
+public import IntegrationSection3ACVF.FullBallCoset
+public import IntegrationSection3.AtomicFiniteFibres
+
+@[expose] public section
 
 /-! Actual finite fibres have a mean graph over the unchanged interpreted
 base. Atomicity supplies the uniform finite bound; all enumerations remain

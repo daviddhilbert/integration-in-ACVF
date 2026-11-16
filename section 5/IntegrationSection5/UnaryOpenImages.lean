@@ -1,4 +1,8 @@
-import IntegrationSection5.UnaryTranslations
+module
+
+public import IntegrationSection5.UnaryTranslations
+
+@[expose] public section
 
 /-! Images of raw unary polydiscs under actual subtype maps. -/
 

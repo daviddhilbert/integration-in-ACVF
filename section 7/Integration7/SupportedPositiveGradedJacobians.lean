@@ -1,5 +1,9 @@
-import Integration7.SupportedPositiveGradedActions
-import Integration7.GradedSemiringActionLinearMaps
+module
+
+public import Integration7.SupportedPositiveGradedActions
+public import Integration7.GradedSemiringActionLinearMaps
+
+@[expose] public section
 
 /-! The actual homogeneous Jacobian transforms assemble into one
 linear map over the full graded coefficient semiring. -/

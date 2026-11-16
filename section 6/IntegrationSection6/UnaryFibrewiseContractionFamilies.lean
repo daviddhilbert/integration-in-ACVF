@@ -1,5 +1,9 @@
-import IntegrationSection6.UnaryFibrewiseContractionComparison
-import IntegrationSection6.FiniteSchemaContractions
+module
+
+public import IntegrationSection6.UnaryFibrewiseContractionComparison
+public import IntegrationSection6.FiniteSchemaContractions
+
+@[expose] public section
 
 /-! Unary Lemma6.14 for arbitrary finite family presentations. Both
 contraction objects, their finiteness and their complete Gamma certificates

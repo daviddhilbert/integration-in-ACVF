@@ -1,4 +1,8 @@
-import IntegrationSection6.ElementaryBlowup
+module
+
+public import IntegrationSection6.ElementaryBlowup
+
+@[expose] public section
 
 /-!
 # The actual fibre bijection underlying Lemmas 6.9 and 6.12

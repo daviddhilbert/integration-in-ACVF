@@ -1,5 +1,9 @@
-import Integration7.MixedJacobianRestriction
-import Integration7.VolumeFormGluing
+module
+
+public import Integration7.MixedJacobianRestriction
+public import Integration7.VolumeFormGluing
+
+@[expose] public section
 
 /-! Volume equations glue over disjoint definable domains. Differentiability
 of the glued map is supplied independently outside a smaller VF set. -/

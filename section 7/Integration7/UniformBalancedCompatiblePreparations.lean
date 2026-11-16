@@ -1,6 +1,10 @@
-import Integration7.UniformBalancedPositionPreparations
-import Integration7.UniformPreparedPositionGammaProducts
-import Integration7.SelectedBalancedParadigms
+module
+
+public import Integration7.UniformBalancedPositionPreparations
+public import Integration7.UniformPreparedPositionGammaProducts
+public import Integration7.SelectedBalancedParadigms
+
+@[expose] public section
 
 /-! Actual compatible preparations of the whole balanced positioning
 family in one containing context, together with the proved Gamma product

@@ -1,6 +1,10 @@
-import Integration7.HKZeroVolumeFamilies
-import Integration7.NativeVolumeMapRealization
-import Section5.GammaInvariantLogic
+module
+
+public import Integration7.HKZeroVolumeFamilies
+public import Integration7.NativeVolumeMapRealization
+public import Section5.GammaInvariantLogic
+
+@[expose] public section
 
 /-! Exact equality of the two supplied RV forms is a genuine original-base
 definable relation. Its complete Gamma graph uses the existing real-map

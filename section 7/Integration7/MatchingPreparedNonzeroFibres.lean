@@ -1,4 +1,8 @@
-import Integration7.MatchingTranslationNonzero
+module
+
+public import Integration7.MatchingTranslationNonzero
+
+@[expose] public section
 
 /-! Both coordinates of the actual full prepared matching targets
 are nonzero. The chosen unary preparations have open inverse cells;

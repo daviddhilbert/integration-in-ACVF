@@ -1,5 +1,9 @@
-import IntegrationSection5.RelativeSpecialRestriction
-import IntegrationSection5.GammaOrderedContraction
+module
+
+public import IntegrationSection5.RelativeSpecialRestriction
+public import IntegrationSection5.GammaOrderedContraction
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option allowUnsafeReducibility true in

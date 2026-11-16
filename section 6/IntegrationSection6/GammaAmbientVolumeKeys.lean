@@ -1,6 +1,10 @@
-import IntegrationSection6.FiniteGammaObjects
-import IntegrationSection6.GammaRVGlobalRestriction
-import Section5.GammaLiftRelation
+module
+
+public import IntegrationSection6.FiniteGammaObjects
+public import IntegrationSection6.GammaRVGlobalRestriction
+public import Section5.GammaLiftRelation
+
+@[expose] public section
 
 /-! Append real-definable label coordinates to an ambient Gamma volume
 graph before proving finiteness of the augmented volume fibres. -/

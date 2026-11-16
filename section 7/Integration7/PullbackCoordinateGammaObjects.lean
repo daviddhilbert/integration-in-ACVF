@@ -1,9 +1,13 @@
-import Integration7.PullbackCoordinateVolumeObjects
-import IntegrationSection6.FiniteGammaObjects
-import IntegrationSection5.QuotientBijection
-import IntegrationSection5.RVContractionGamma
-import Integration7.GammaCoordinateDensityGraphs
-import Integration7.GammaVolumeSliceAssemblyGeometry
+module
+
+public import Integration7.PullbackCoordinateVolumeObjects
+public import IntegrationSection6.FiniteGammaObjects
+public import IntegrationSection5.QuotientBijection
+public import IntegrationSection5.RVContractionGamma
+public import Integration7.GammaCoordinateDensityGraphs
+public import Integration7.GammaVolumeSliceAssemblyGeometry
+
+@[expose] public section
 
 /-! The actual coordinate-density volume object of a Gamma pullback
 with finite volume fibres has complete original-Gamma graphs. -/

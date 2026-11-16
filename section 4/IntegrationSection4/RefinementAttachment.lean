@@ -1,5 +1,9 @@
-import IntegrationSection4.RVLabelAttachment
-import IntegrationSection4.FamilyRefinementDomains
+module
+
+public import IntegrationSection4.RVLabelAttachment
+public import IntegrationSection4.FamilyRefinementDomains
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

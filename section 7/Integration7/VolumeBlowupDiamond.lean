@@ -1,7 +1,11 @@
-import Integration7.VolumeOverlapRefinement
-import Integration7.ElementaryBlowupPartitions
-import Integration7.VolumeBlowupTransport
-import Integration7.VolumeIsomorphismClasses
+module
+
+public import Integration7.VolumeOverlapRefinement
+public import Integration7.ElementaryBlowupPartitions
+public import Integration7.VolumeBlowupTransport
+public import Integration7.VolumeIsomorphismClasses
+
+@[expose] public section
 
 /-! Two actual volume blowups admit one further blowup on each branch,
 with volume-isomorphic endpoints. -/

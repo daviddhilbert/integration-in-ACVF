@@ -1,6 +1,10 @@
-import Section5.GeneralExistence
-import Section5.VerticalObstacles
-import Section3.GammaPresentation
+module
+
+public import Section5.GeneralExistence
+public import Section5.VerticalObstacles
+public import Section3.GammaPresentation
+
+@[expose] public section
 
 /-!
 Lemma 5.1 of arXiv:0809.0473v2, over a small real parameter base.

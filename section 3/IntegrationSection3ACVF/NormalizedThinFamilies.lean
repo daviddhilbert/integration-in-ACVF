@@ -1,5 +1,9 @@
-import IntegrationSection3ACVF.NormalizedThinGeometry
-import IntegrationSection3ACVF.FiniteFamilyMaximal
+module
+
+public import IntegrationSection3ACVF.NormalizedThinGeometry
+public import IntegrationSection3ACVF.FiniteFamilyMaximal
+
+@[expose] public section
 
 /-! Normalization of a finite thin family preserves its actual union,
 disjointness, number of components and total number of actual holes. -/

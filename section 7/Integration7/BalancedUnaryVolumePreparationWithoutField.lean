@@ -1,9 +1,13 @@
-import Integration7.BalancedUnaryVolumePreparation
-import Integration7.UnaryCompatiblePreparationWithoutField
-import Integration7.PreparedBalancedRVVolumeComparison
-import Integration7.GammaVolumeDensityRescaling
-import IntegrationSection6.GammaFiniteMixedBijections
-import Section5.GammaRestriction
+module
+
+public import Integration7.BalancedUnaryVolumePreparation
+public import Integration7.UnaryCompatiblePreparationWithoutField
+public import Integration7.PreparedBalancedRVVolumeComparison
+public import Integration7.GammaVolumeDensityRescaling
+public import IntegrationSection6.GammaFiniteMixedBijections
+public import Section5.GammaRestriction
+
+@[expose] public section
 
 /-! The balanced unary preparations and their actual Gamma volume
 comparison are constructed by Lemma5.2. Finite volume fibres are proved

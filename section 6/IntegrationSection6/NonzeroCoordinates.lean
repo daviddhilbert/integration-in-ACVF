@@ -1,4 +1,8 @@
-import Mathlib.Data.Fintype.EquivFin
+module
+
+public import Mathlib.Data.Fintype.EquivFin
+
+@[expose] public section
 
 /-! Enumerate exactly the nonzero coordinates, retaining any specified
 nonzero active coordinate. No algebraic or definability assertion is hidden here. -/

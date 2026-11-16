@@ -1,5 +1,9 @@
-import Integration7.StandardRestrictionVolumeIdentifications
-import Integration7.CommonContextVolumePartitions
+module
+
+public import Integration7.StandardRestrictionVolumeIdentifications
+public import Integration7.CommonContextVolumePartitions
+
+@[expose] public section
 
 /-! Complementary target restrictions of one actual standard
 contraction partition its normalized coordinate-density volume object.

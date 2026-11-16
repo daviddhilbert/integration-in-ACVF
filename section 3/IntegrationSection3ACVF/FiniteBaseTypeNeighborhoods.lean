@@ -1,9 +1,13 @@
-import IntegrationSection3ACVF.TypeNeighborhoodCompactness
-import IntegrationSection3ACVF.OpenImageConfigurations
-import IntegrationSection3ACVF.FullCompleteTypeOpenImages
-import IntegrationSection3ACVF.FiniteBaseRealPresentation
-import Section3.SmallFiniteParameters
-import Section3.NormalizationSaturation
+module
+
+public import IntegrationSection3ACVF.TypeNeighborhoodCompactness
+public import IntegrationSection3ACVF.OpenImageConfigurations
+public import IntegrationSection3ACVF.FullCompleteTypeOpenImages
+public import IntegrationSection3ACVF.FiniteBaseRealPresentation
+public import Section3.SmallFiniteParameters
+public import Section3.NormalizationSaturation
+
+@[expose] public section
 
 /-! Full interpreted-base type neighborhoods for3.19. A finite imaginary
 base is represented by common finite real codes only in compactness;

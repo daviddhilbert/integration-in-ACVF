@@ -1,5 +1,9 @@
-import IntegrationSection2.AlgebraicSubfieldHenselian
-import IntegrationSection2.EmbeddedValuationTransport
+module
+
+public import IntegrationSection2.AlgebraicSubfieldHenselian
+public import IntegrationSection2.EmbeddedValuationTransport
+
+@[expose] public section
 
 /-! Algebraic henselian ascent through an arbitrary actual embedding
 into the algebraically closed ambient valued field. -/

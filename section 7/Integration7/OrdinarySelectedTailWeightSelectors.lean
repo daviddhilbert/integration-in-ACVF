@@ -1,5 +1,9 @@
-import Integration7.SelectedRVVFTailStandardVolumeCoordinates
-import IntegrationSection6.OrderedSelectedWeights
+module
+
+public import Integration7.SelectedRVVFTailStandardVolumeCoordinates
+public import IntegrationSection6.OrderedSelectedWeights
+
+@[expose] public section
 
 /-! Exact ordinary RV weights of selected contraction coordinates.
 These identities retain zero coordinates and require no density form. -/

@@ -1,6 +1,10 @@
-import Integration7.LabelDensitySchemata
-import Integration7.UniformVolumeSchemaBounds
-import IntegrationSection6.GammaVolumeSliceSchemata
+module
+
+public import Integration7.LabelDensitySchemata
+public import Integration7.UniformVolumeSchemaBounds
+public import IntegrationSection6.GammaVolumeSliceSchemata
+
+@[expose] public section
 
 /-! RV volume slices retain the original object's density label. All
 slice rows have finite fibres, and compactness supplies one valid bound

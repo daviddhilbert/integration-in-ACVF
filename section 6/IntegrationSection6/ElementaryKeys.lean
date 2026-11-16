@@ -1,5 +1,9 @@
-import IntegrationSection6.ElementaryBlowup
-import Section4.RVIsoTools
+module
+
+public import IntegrationSection6.ElementaryBlowup
+public import Section4.RVIsoTools
+
+@[expose] public section
 
 /-! The canonical RV keys of an elementary blowup: new volume coordinates
 followed by all old domain labels. This is the definable isomorphism in6.9. -/

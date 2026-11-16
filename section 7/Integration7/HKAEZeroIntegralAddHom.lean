@@ -1,6 +1,10 @@
-import Integration7.HKAEZeroIntegrals
-import Integration7.HKAEZeroFunctionAddition
-import Integration7.PositiveVFVolumeAdditiveStructure
+module
+
+public import Integration7.HKAEZeroIntegrals
+public import Integration7.HKAEZeroFunctionAddition
+public import Integration7.PositiveVFVolumeAdditiveStructure
+
+@[expose] public section
 
 /-! Weighted-zero-valued integration is additive for the actual glued
 family forms and sends the genuinely empty family to zero. -/

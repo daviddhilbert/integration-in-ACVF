@@ -1,7 +1,11 @@
-import Integration7.ConstantCoordinateDensityObjects
-import Integration7.GammaCoordinateDensityGraphs
-import Integration7.GammaVolumeObjectGraphs
-import IntegrationSection5.StandardContractionGammaNormalization
+module
+
+public import Integration7.ConstantCoordinateDensityObjects
+public import Integration7.GammaCoordinateDensityGraphs
+public import Integration7.GammaVolumeObjectGraphs
+public import IntegrationSection5.StandardContractionGammaNormalization
+
+@[expose] public section
 
 /-! Complete original-Gamma domain, coordinate and retained-density
 graphs for the actual canonical normalized finite contraction object. -/

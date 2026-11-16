@@ -1,4 +1,8 @@
-import Section5.Core
+module
+
+public import Section5.Core
+
+@[expose] public section
 
 /-! A finite internal real base supports an actual definable set and full
 map graph simultaneously. This is a consequence of finite formulas and

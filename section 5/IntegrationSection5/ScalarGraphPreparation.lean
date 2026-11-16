@@ -1,6 +1,10 @@
-import IntegrationSection5.GammaPartialContraction
-import IntegrationSection5.PartialNaturalImage
-import IntegrationSection5.PartialNaturalCoordinates
+module
+
+public import IntegrationSection5.GammaPartialContraction
+public import IntegrationSection5.PartialNaturalImage
+public import IntegrationSection5.PartialNaturalCoordinates
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

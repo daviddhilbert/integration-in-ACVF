@@ -1,4 +1,8 @@
-import Integration7.ScalarExtensionPaddingEquivalences
+module
+
+public import Integration7.ScalarExtensionPaddingEquivalences
+
+@[expose] public section
 
 /-! Linear equivalences induce genuine equivalences on the balanced
 scalar extensions, with both directions computed on generators. -/

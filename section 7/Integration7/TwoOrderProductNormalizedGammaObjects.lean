@@ -1,5 +1,9 @@
-import Integration7.TwoOrderProductCoordinateDensities
-import Integration7.NormalizedContractionCoordinateGraphs
+module
+
+public import Integration7.TwoOrderProductCoordinateDensities
+public import Integration7.NormalizedContractionCoordinateGraphs
+
+@[expose] public section
 
 /-! The retained density labels give actual original-Gamma volume
 objects for both normalized product contractions. -/

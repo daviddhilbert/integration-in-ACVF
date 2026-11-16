@@ -1,5 +1,9 @@
-import Integration7.RVVolumeMorphisms
-import Integration7.RVNonzero
+module
+
+public import Integration7.RVVolumeMorphisms
+public import Integration7.RVNonzero
+
+@[expose] public section
 set_option backward.isDefEq.respectTransparency false
 open FirstOrder FirstOrder.Language CategoryTheory
 open SpecialTransformations.Milestone0 SpecialTransformations.Milestone0.LRV

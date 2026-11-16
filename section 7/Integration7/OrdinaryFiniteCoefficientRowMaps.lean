@@ -1,7 +1,11 @@
-import Integration7.FiniteVolumeCoefficientFamilies
-import Integration7.OrdinaryUnitSelectedVolumeFamilies
-import Integration7.OrdinaryFamilyPositiveCoefficientRows
-import Integration7.DefinableVolumeFamilySelectionRows
+module
+
+public import Integration7.FiniteVolumeCoefficientFamilies
+public import Integration7.OrdinaryUnitSelectedVolumeFamilies
+public import Integration7.OrdinaryFamilyPositiveCoefficientRows
+public import Integration7.DefinableVolumeFamilySelectionRows
+
+@[expose] public section
 
 /-! Drop only the genuine unit-density graph from an ordinary finite
 family multiplied by a positive coefficient. The projection is a full

@@ -1,6 +1,10 @@
-import Integration7.UniformCellRVParadigmPartitions
-import Integration7.UniformZeroParadigmDimension
-import Integration7.RetainedDensitySmallDimensionContractions
+module
+
+public import Integration7.UniformCellRVParadigmPartitions
+public import Integration7.UniformZeroParadigmDimension
+public import Integration7.RetainedDensitySmallDimensionContractions
+
+@[expose] public section
 
 /-! The actual zero-paradigm part of the entire cell family has VF
 dimension at most one. All specified contraction orders therefore have

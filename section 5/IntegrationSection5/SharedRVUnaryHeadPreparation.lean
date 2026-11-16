@@ -1,5 +1,9 @@
-import IntegrationSection5.SharedRVProductImage
-import IntegrationSection5.UnaryProductHeadPreparation
+module
+
+public import IntegrationSection5.SharedRVProductImage
+public import IntegrationSection5.UnaryProductHeadPreparation
+
+@[expose] public section
 
 /-! Uniform product-head preparation with shared RV coordinates. Exact lifted images construct head saturation, and all old-label projections are computed. -/
 noncomputable section

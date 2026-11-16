@@ -1,5 +1,9 @@
-import Integration7.FieldBaseAppendedIntegralIndependence
-import Integration7.FrozenHeadIntegralValues
+module
+
+public import Integration7.FieldBaseAppendedIntegralIndependence
+public import Integration7.FrozenHeadIntegralValues
+
+@[expose] public section
 
 /-! Genuine named-row common blowups determine the actual appended
 frozen fibre integral, over its proved definable-closure context. -/

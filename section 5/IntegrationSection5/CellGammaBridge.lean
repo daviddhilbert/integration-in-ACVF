@@ -1,6 +1,10 @@
-import IntegrationSection4.Cells
-import IntegrationSection4.GammaTupleGraphs
-import IntegrationSection5.GammaGraphOperations
+module
+
+public import IntegrationSection4.Cells
+public import IntegrationSection4.GammaTupleGraphs
+public import IntegrationSection5.GammaGraphOperations
+
+@[expose] public section
 
 /-! The actual native VF pair cells and positioning graphs, in the pinned
 mixed-point Gamma conventions used by standard contractions. -/

@@ -1,4 +1,8 @@
-import IntegrationSection6.RVCoordinateRatio
+module
+
+public import IntegrationSection6.RVCoordinateRatio
+
+@[expose] public section
 
 /-! The global RV-coordinate program for the length-one blowup diagram.
 It uses no named RV parameters or representatives of Gamma parameters. -/

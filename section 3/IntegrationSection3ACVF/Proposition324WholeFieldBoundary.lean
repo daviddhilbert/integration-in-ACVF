@@ -1,5 +1,9 @@
-import IntegrationSection3ACVF.CoordinatePartitions
-import IntegrationSection3ACVF.BallEnlargementGeometry
+module
+
+public import IntegrationSection3ACVF.CoordinatePartitions
+public import IntegrationSection3ACVF.BallEnlargementGeometry
+
+@[expose] public section
 
 /-! Independent boundary check for Proposition3.24. Definition2.2 calls
 VF clopen. If the closed parent is allowed to be VF, the same punctured

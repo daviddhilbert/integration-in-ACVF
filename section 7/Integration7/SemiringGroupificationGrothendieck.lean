@@ -1,5 +1,9 @@
-import Integration7.SemiringGroupificationDifferences
-import Section4.Imported.GrothendieckRing
+module
+
+public import Integration7.SemiringGroupificationDifferences
+public import Section4.Imported.GrothendieckRing
+
+@[expose] public section
 
 /-! The free-ring groupification agrees with additive Grothendieck
 completion for arbitrary semirings, including noncommutative ones.

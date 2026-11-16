@@ -1,7 +1,11 @@
-import IntegrationSection6.GammaSchemaIndexedPresentations
-import IntegrationSection6.GammaIndexedCoproductGraphs
-import IntegrationSection6.IndexedCoproductVolumes
-import IntegrationSection6.GammaGraphCoproductValues
+module
+
+public import IntegrationSection6.GammaSchemaIndexedPresentations
+public import IntegrationSection6.GammaIndexedCoproductGraphs
+public import IntegrationSection6.IndexedCoproductVolumes
+public import IntegrationSection6.GammaGraphCoproductValues
+
+@[expose] public section
 
 /-! Indexed assembly commutes with the actual native finite coproduct,
 by an original-Gamma isomorphism preserving the full volume tuple. -/

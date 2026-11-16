@@ -1,4 +1,8 @@
-import Integration7.MatchingFamilyOppositeContractions
+module
+
+public import Integration7.MatchingFamilyOppositeContractions
+
+@[expose] public section
 
 /-! All specified VF-two orders on the actual matching family have
 the full original-Gamma volume blowup comparison. The two same-order

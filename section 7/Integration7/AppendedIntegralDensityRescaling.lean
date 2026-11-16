@@ -1,7 +1,11 @@
-import Integration7.SelectedFamilyDensityRescaleIntegrals
-import Integration7.DensityRescalingCoordinateCompatibility
-import Integration7.SignedIntegralPermutationCovariance
-import Integration7.SelectedPermutationSigns
+module
+
+public import Integration7.SelectedFamilyDensityRescaleIntegrals
+public import Integration7.DensityRescalingCoordinateCompatibility
+public import Integration7.SignedIntegralPermutationCovariance
+public import Integration7.SelectedPermutationSigns
+
+@[expose] public section
 
 /-! Raw density-rescaling and signed order identities in the appended
 integral convention used by actual successive head operators. -/

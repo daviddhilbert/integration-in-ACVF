@@ -1,4 +1,8 @@
-import IntegrationSection5.FibreFocusPresentation
+module
+
+public import IntegrationSection5.FibreFocusPresentation
+
+@[expose] public section
 
 noncomputable section
 set_option autoImplicit false

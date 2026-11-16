@@ -1,6 +1,10 @@
-import Integration7.GammaRVLabelCuts
-import IntegrationSection5.RVProjectionNormalization
-import IntegrationSection5.StandardContractionLift
+module
+
+public import Integration7.GammaRVLabelCuts
+public import IntegrationSection5.RVProjectionNormalization
+public import IntegrationSection5.StandardContractionLift
+
+@[expose] public section
 
 /-! Normalizing a pure-RV target commutes with cutting its retained
 labels. The cut is read from the literal old-label suffix after the

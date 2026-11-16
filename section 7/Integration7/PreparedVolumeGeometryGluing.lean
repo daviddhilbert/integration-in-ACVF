@@ -1,5 +1,9 @@
-import Integration7.PreparedVolumeGeometryContexts
-import Integration7.IndexedVolumeFiniteWitnessGluing
+module
+
+public import Integration7.PreparedVolumeGeometryContexts
+public import Integration7.IndexedVolumeFiniteWitnessGluing
+
+@[expose] public section
 
 /-! Finite volume witnesses prepared over VF parameters assemble to
 actual common forward blowups over a finite-volume RV key base. -/

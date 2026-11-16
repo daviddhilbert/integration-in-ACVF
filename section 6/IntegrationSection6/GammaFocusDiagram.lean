@@ -1,6 +1,10 @@
-import IntegrationSection6.CanonicalFocusDiagram
-import IntegrationSection6.GammaRVGlobalRestriction
-import Section5.GammaLift
+module
+
+public import IntegrationSection6.CanonicalFocusDiagram
+public import IntegrationSection6.GammaRVGlobalRestriction
+public import Section5.GammaLift
+
+@[expose] public section
 
 /-! Both arrows of the length-one diagram have complete invariant graphs
 over the original real/Gamma base. Internal presentation codes are unbounded. -/

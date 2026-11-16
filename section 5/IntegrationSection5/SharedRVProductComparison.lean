@@ -1,5 +1,9 @@
-import IntegrationSection5.SharedRVProductProgram
-import IntegrationSection5.GammaProductCellComparison
+module
+
+public import IntegrationSection5.SharedRVProductProgram
+public import IntegrationSection5.GammaProductCellComparison
+
+@[expose] public section
 
 /-! Actual standard contractions in both orders for a shared-parameter product, with a full original-Gamma RV[2] comparison. -/
 noncomputable section

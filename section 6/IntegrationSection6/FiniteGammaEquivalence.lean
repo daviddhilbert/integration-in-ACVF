@@ -1,5 +1,9 @@
-import IntegrationSection6.FiniteGammaConfluence
-import IntegrationSection6.FiniteGammaParameterExtension
+module
+
+public import IntegrationSection6.FiniteGammaConfluence
+public import IntegrationSection6.FiniteGammaParameterExtension
+
+@[expose] public section
 
 /-! Definition6.7/6.8 as an actual equivalence relation on finite RV objects
 over the original Gamma base, including arbitrary internal presentations. -/

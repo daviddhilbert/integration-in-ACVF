@@ -1,4 +1,8 @@
-import IntegrationSection3ACVF.RVErrorComparison
+module
+
+public import IntegrationSection3ACVF.RVErrorComparison
+
+@[expose] public section
 
 /-! Distinct leading RV classes of the same value cannot cancel. -/
 

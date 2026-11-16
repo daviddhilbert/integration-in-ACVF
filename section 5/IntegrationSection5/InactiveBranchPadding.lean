@@ -1,5 +1,9 @@
-import IntegrationSection5.HeadProjectionPadding
-import IntegrationSection5.CompletedNonrectangleHead
+module
+
+public import IntegrationSection5.HeadProjectionPadding
+public import IntegrationSection5.CompletedNonrectangleHead
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 open Classical FirstOrder FirstOrder.Language

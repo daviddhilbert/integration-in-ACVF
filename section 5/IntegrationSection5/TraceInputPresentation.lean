@@ -1,4 +1,8 @@
-import IntegrationSection5.TraceFlags
+module
+
+public import IntegrationSection5.TraceFlags
+
+@[expose] public section
 
 noncomputable section
 set_option autoImplicit false

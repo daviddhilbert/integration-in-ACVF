@@ -1,5 +1,9 @@
-import Integration7.GammaFunctionRowValidity
-import IntegrationSection6.GammaFiniteObjectSchemata
+module
+
+public import Integration7.GammaFunctionRowValidity
+public import IntegrationSection6.GammaFiniteObjectSchemata
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 open Classical FirstOrder FirstOrder.Language

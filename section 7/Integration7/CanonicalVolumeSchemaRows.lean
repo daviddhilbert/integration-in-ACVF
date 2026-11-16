@@ -1,6 +1,10 @@
-import Integration7.VolumeSchemaRowSemantics
-import Integration7.GammaVolumeSchemaRealization
-import Integration7.EssentialFiniteVolumeSchemata
+module
+
+public import Integration7.VolumeSchemaRowSemantics
+public import Integration7.GammaVolumeSchemaRealization
+public import Integration7.EssentialFiniteVolumeSchemata
+
+@[expose] public section
 
 /-! A schema's canonical real presentation interprets its exact coordinate
 and density graphs in any containing base context. The essential domain is

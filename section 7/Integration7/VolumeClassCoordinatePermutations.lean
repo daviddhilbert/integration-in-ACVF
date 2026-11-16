@@ -1,6 +1,10 @@
-import Integration7.GammaPermutedVolumeObjects
-import Integration7.VolumeBlowupCoordinatePermutations
-import Integration7.VolumeBlowupClasses
+module
+
+public import Integration7.GammaPermutedVolumeObjects
+public import Integration7.VolumeBlowupCoordinatePermutations
+public import Integration7.VolumeBlowupClasses
+
+@[expose] public section
 
 /-! Unchanged-density coordinate reindexing acts on the common-blowup
 quotient. This is an equivalence of the quotient, and is not an assertion

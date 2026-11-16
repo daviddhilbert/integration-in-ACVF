@@ -1,5 +1,9 @@
-import IntegrationSection3ACVF.FiniteOrderCellPartition
-import Mathlib.Data.Finset.Union
+module
+
+public import IntegrationSection3ACVF.FiniteOrderCellPartition
+public import Mathlib.Data.Finset.Union
+
+@[expose] public section
 
 /-! A finite family of actual finite endpoint controllers has one
 common controller, containing any prescribed finite extra endpoints. -/

@@ -1,6 +1,10 @@
-import Integration7.SelectedRVVFTailProgramProjections
-import IntegrationSection5.OrderedContractionProgram
-import IntegrationSection6.MixedCoordinatePointMaps
+module
+
+public import Integration7.SelectedRVVFTailProgramProjections
+public import IntegrationSection5.OrderedContractionProgram
+public import IntegrationSection6.MixedCoordinatePointMaps
+
+@[expose] public section
 
 /-! A contractible full contraction of a selected-label VF tail gives
 a genuine bijection of its final RV labels with the original RV source.

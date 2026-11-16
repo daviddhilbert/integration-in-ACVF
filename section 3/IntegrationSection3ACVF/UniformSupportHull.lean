@@ -1,7 +1,11 @@
-import IntegrationSection3ACVF.SupportHullRadius
-import IntegrationSection3ACVF.NativeBallHulls
-import IntegrationSection3ACVF.FullGammaFamilyConstancy
-import IntegrationSection3.CoarseRelationFibres
+module
+
+public import IntegrationSection3ACVF.SupportHullRadius
+public import IntegrationSection3ACVF.NativeBallHulls
+public import IntegrationSection3ACVF.FullGammaFamilyConstancy
+public import IntegrationSection3.CoarseRelationFibres
+
+@[expose] public section
 
 /-! Actual ordinary hull radii of proper canonical inverse supports.
 Representatives are chosen only to prove existence; the graph used for

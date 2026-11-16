@@ -1,5 +1,9 @@
-import Integration7.RVLabelRectangularFibres
-import Integration7.UniformBalancedHorizontalCentres
+module
+
+public import Integration7.RVLabelRectangularFibres
+public import Integration7.UniformBalancedHorizontalCentres
+
+@[expose] public section
 
 /-! Literal geometry of a rectangle family with shared RV labels.
 Once a head value belongs to the labelled head projection, membership

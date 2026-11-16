@@ -1,5 +1,9 @@
-import IntegrationSection5.CellCentreGeometry
-import IntegrationSection5.VFPermutation
+module
+
+public import IntegrationSection5.CellCentreGeometry
+public import IntegrationSection5.VFPermutation
+
+@[expose] public section
 
 /-! Actual horizontal strips and swapped vertical strips of 2-cells. -/
 noncomputable section

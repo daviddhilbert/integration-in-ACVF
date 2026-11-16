@@ -1,13 +1,17 @@
-import Integration7.GradedComponentMapInjectivity
-import Integration7.GradedPointNormalization
-import Integration7.GradedPointPadding
-import Integration7.GradedShiftComponents
-import Integration7.NormalizedGlobalVolumeJacobians
-import Integration7.NormalizedPositiveDegreeFunctions
-import Integration7.NormalizedSupportedUnivEquivalence
-import Integration7.ScalarExtensionPaddingEquivalences
-import Integration7.SemimoduleScalarExtensionEquivalences
-import Integration7.SupportedUnivVolumeEquivalences
+module
+
+public import Integration7.GradedComponentMapInjectivity
+public import Integration7.GradedPointNormalization
+public import Integration7.GradedPointPadding
+public import Integration7.GradedShiftComponents
+public import Integration7.NormalizedGlobalVolumeJacobians
+public import Integration7.NormalizedPositiveDegreeFunctions
+public import Integration7.NormalizedSupportedUnivEquivalence
+public import Integration7.ScalarExtensionPaddingEquivalences
+public import Integration7.SemimoduleScalarExtensionEquivalences
+public import Integration7.SupportedUnivVolumeEquivalences
+
+@[expose] public section
 set_option pp.universes true
 set_option pp.proofs false
 set_option pp.deepTerms true

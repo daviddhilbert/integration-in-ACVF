@@ -1,5 +1,9 @@
-import IntegrationSection6.FiniteGammaObjects
-import IntegrationSection6.FiniteRVMorphisms
+module
+
+public import IntegrationSection6.FiniteGammaObjects
+public import IntegrationSection6.FiniteRVMorphisms
+
+@[expose] public section
 
 /-! At a fixed real code presentation, an RV[k] isomorphism together
 with its full original-Gamma graph is an original-Gamma finite isomorphism. -/

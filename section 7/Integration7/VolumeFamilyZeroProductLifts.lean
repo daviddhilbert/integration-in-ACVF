@@ -1,7 +1,11 @@
-import Integration7.SelectedVolumeFamilyZeroProducts
-import Integration7.SelectedFamilyFullLifts
-import Integration7.MixedRVFactorZeroLiftCharts
-import Integration7.ZeroFactorVFVolumeProducts
+module
+
+public import Integration7.SelectedVolumeFamilyZeroProducts
+public import Integration7.SelectedFamilyFullLifts
+public import Integration7.MixedRVFactorZeroLiftCharts
+public import Integration7.ZeroFactorVFVolumeProducts
+
+@[expose] public section
 
 /-! Realizing the selected tuple commutes with an ordinary RV[0]
 factor. The actual full volume bijection fixes every VF coordinate and

@@ -1,10 +1,14 @@
-import Integration7.CompletedSection6Kernel
-import Integration7.ClosedSection6IntegrationContexts
-import Integration7.ClosedSection6IntegrationLocalizationEmbedding
-import IntegrationSection6.IntegrationGradedColimit
-import IntegrationSection6.IntegrationContexts
-import IntegrationSection6.IntegrationLocalizationEmbedding
-import IntegrationSection6.CompletionGradedColimit
+module
+
+public import Integration7.CompletedSection6Kernel
+public import Integration7.ClosedSection6IntegrationContexts
+public import Integration7.ClosedSection6IntegrationLocalizationEmbedding
+public import IntegrationSection6.IntegrationGradedColimit
+public import IntegrationSection6.IntegrationContexts
+public import IntegrationSection6.IntegrationLocalizationEmbedding
+public import IntegrationSection6.CompletionGradedColimit
+
+@[expose] public section
 
 /-! Closed generated-base Section6 integration. The former universal
 Section5 input is replaced by the canonical-model certificate; its kernel

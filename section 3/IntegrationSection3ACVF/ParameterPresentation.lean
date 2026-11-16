@@ -1,4 +1,8 @@
-import IntegrationSection3ACVF.BallPresentation
+module
+
+public import IntegrationSection3ACVF.BallPresentation
+
+@[expose] public section
 
 /-!
 # Combined genuine Gamma and ball names

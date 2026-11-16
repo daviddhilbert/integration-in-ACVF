@@ -1,6 +1,10 @@
-import Integration7.IndexedEssentialIndexRestrictions
-import Integration7.GammaEssentialIndexDomains
-import Integration7.GammaRVIndexedVolumeUniformity
+module
+
+public import Integration7.IndexedEssentialIndexRestrictions
+public import Integration7.GammaEssentialIndexDomains
+public import Integration7.GammaRVIndexedVolumeUniformity
+
+@[expose] public section
 
 /-! Indexed common blowups require witnesses only where every base
 volume coordinate is nonzero. Zero-coordinate indices have no essential

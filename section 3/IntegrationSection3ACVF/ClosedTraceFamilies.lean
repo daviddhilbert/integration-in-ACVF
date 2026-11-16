@@ -1,6 +1,10 @@
-import IntegrationSection3ACVF.MaximalSubballFamilies
-import IntegrationSection3ACVF.FullRelationSupports
-import IntegrationSection3.QuotientCover
+module
+
+public import IntegrationSection3ACVF.MaximalSubballFamilies
+public import IntegrationSection3ACVF.FullRelationSupports
+public import IntegrationSection3.QuotientCover
+
+@[expose] public section
 
 /-! Finite/cofinite intersection traces after naming a source cut.
 No atomicity is asserted over the enlarged base. C-minimality gives the

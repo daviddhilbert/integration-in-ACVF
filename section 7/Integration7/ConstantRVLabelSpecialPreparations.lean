@@ -1,4 +1,8 @@
-import Integration7.UnarySpecialHeadPreparations
+module
+
+public import Integration7.UnarySpecialHeadPreparations
+
+@[expose] public section
 
 /-! A unary special preparation lifts to an arbitrary actual domain
 whose full RV tuple is fixed and whose VF projection is the original

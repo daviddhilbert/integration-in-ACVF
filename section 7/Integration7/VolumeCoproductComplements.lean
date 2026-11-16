@@ -1,6 +1,10 @@
-import Integration7.VolumeEmbeddedImages
-import Integration7.EssentialVolumeRestriction
-import Integration7.RVVolumeInverse
+module
+
+public import Integration7.VolumeEmbeddedImages
+public import Integration7.EssentialVolumeRestriction
+public import Integration7.RVVolumeInverse
+
+@[expose] public section
 
 /-! Removing the left essential summand leaves the right volume class,
 including any discarded degenerate labels in the ambient complement. -/

@@ -1,4 +1,8 @@
-import IntegrationSection5.VerticalMeanTrace
+module
+
+public import IntegrationSection5.VerticalMeanTrace
+
+@[expose] public section
 
 noncomputable section
 set_option autoImplicit false

@@ -1,8 +1,12 @@
-import Integration7.TermContextGammaGraphs
-import Integration7.VolumeSchemaRowSemantics
-import Integration7.ElementaryBlowupConstruction
-import IntegrationSection6.GammaAdmissibilityPromotion
-import IntegrationSection6.GammaSortedSchemaRows
+module
+
+public import Integration7.TermContextGammaGraphs
+public import Integration7.VolumeSchemaRowSemantics
+public import Integration7.ElementaryBlowupConstruction
+public import IntegrationSection6.GammaAdmissibilityPromotion
+public import IntegrationSection6.GammaSortedSchemaRows
+
+@[expose] public section
 
 /-! Actual last-coordinate admissibility descends from the original
 named term context, then supplies a finite first-order slice bound. -/

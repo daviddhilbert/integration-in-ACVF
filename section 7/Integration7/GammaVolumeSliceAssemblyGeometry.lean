@@ -1,7 +1,11 @@
-import Integration7.GammaVolumeSliceDensityAssembly
-import Integration7.GammaVolumePresentationGeometry
-import Integration7.GammaVolumeParameterGeometry
-import Integration7.GammaCoordinateDensityGraphs
+module
+
+public import Integration7.GammaVolumeSliceDensityAssembly
+public import Integration7.GammaVolumePresentationGeometry
+public import Integration7.GammaVolumeParameterGeometry
+public import Integration7.GammaCoordinateDensityGraphs
+
+@[expose] public section
 
 /-! Coordinate-density objects and slice reassembly retain their full
 original-Gamma geometry. The reassembly chart is the actual label projection. -/

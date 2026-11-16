@@ -1,9 +1,13 @@
-import IntegrationSection2.EmbeddedIntermediateHenselian
-import IntegrationSection2.EmbeddedResidueCharacteristic
-import IntegrationSection2.FiniteImmediateEmbedded
-import IntegrationSection2.PrimitiveResidueDegree
-import IntegrationSection2.ResidueGeneratedSurjectivity
-import IntegrationSection2.ImmediateApproximationFromResidues
+module
+
+public import IntegrationSection2.EmbeddedIntermediateHenselian
+public import IntegrationSection2.EmbeddedResidueCharacteristic
+public import IntegrationSection2.FiniteImmediateEmbedded
+public import IntegrationSection2.PrimitiveResidueDegree
+public import IntegrationSection2.ResidueGeneratedSurjectivity
+public import IntegrationSection2.ImmediateApproximationFromResidues
+
+@[expose] public section
 
 /-! The finite-extension degree equality needed by the Gauss graph
 construction, for extensions actually embedded in the algebraically

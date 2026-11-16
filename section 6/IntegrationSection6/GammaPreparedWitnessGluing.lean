@@ -1,6 +1,10 @@
-import IntegrationSection6.GammaPreparedWitnessCover
-import IntegrationSection6.GammaCrossParameterFiniteRows
-import IntegrationSection6.GammaIndexedFiniteWitnessGluing
+module
+
+public import IntegrationSection6.GammaPreparedWitnessCover
+public import IntegrationSection6.GammaCrossParameterFiniteRows
+public import IntegrationSection6.GammaIndexedFiniteWitnessGluing
+
+@[expose] public section
 
 /-! A prepared finite witness cover glues to an actual common blowup over
 any finite-volume RV presentation of the prepared key set. -/

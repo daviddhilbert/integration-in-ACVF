@@ -1,5 +1,9 @@
-import Integration7.HKZeroCoefficientExtensions
-import Integration7.OrdinaryVolumeFamilyScalarProducts
+module
+
+public import Integration7.HKZeroCoefficientExtensions
+public import Integration7.OrdinaryVolumeFamilyScalarProducts
+
+@[expose] public section
 
 /-! A weighted zero coefficient acts by an actual finite RV factor.
 The family product multiplies its two supplied RV forms. -/

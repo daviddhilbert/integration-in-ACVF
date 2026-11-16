@@ -1,5 +1,9 @@
-import Integration7.MixedVerticalPositionFamilies
-import IntegrationSection4.BalancedFibres
+module
+
+public import Integration7.MixedVerticalPositionFamilies
+public import IntegrationSection4.BalancedFibres
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

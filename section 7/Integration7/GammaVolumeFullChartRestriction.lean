@@ -1,4 +1,8 @@
-import Integration7.GammaEssentialVolumeGraphs
+module
+
+public import Integration7.GammaEssentialVolumeGraphs
+
+@[expose] public section
 
 /-! A full original-Gamma chart supplies the essential chart of any
 actual volume isomorphism agreeing with it on essential labels. -/

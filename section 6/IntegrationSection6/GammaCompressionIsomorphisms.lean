@@ -1,9 +1,13 @@
-import IntegrationSection6.GammaFiniteCompression
-import IntegrationSection6.FiniteGammaAmbientIsos
-import Section4.RVPaddingSplit
-import IntegrationSection6.GammaWeightStrata
-import Section4.RVFinitePadding
-import IntegrationSection6.FiniteGammaIsoLaws
+module
+
+public import IntegrationSection6.GammaFiniteCompression
+public import IntegrationSection6.FiniteGammaAmbientIsos
+public import Section4.RVPaddingSplit
+public import IntegrationSection6.GammaWeightStrata
+public import Section4.RVFinitePadding
+public import IntegrationSection6.FiniteGammaIsoLaws
+
+@[expose] public section
 
 /-! Original-Gamma RV[k] data at a fixed internal real presentation.
 The parameter set S describes codes only; every domain and volume graph

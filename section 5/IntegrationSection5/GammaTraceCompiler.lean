@@ -1,6 +1,10 @@
-import IntegrationSection5.GammaTraceFlags
-import IntegrationSection5.GammaCompilerFocus
-import Section5.ZeroNormalization
+module
+
+public import IntegrationSection5.GammaTraceFlags
+public import IntegrationSection5.GammaCompilerFocus
+public import Section5.ZeroNormalization
+
+@[expose] public section
 
 noncomputable section
 set_option autoImplicit false

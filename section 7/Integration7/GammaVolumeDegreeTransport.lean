@@ -1,5 +1,9 @@
-import Integration7.GammaVolumeDensityRescaling
-import Integration7.VolumeBlowupRightProducts
+module
+
+public import Integration7.GammaVolumeDensityRescaling
+public import Integration7.VolumeBlowupRightProducts
+
+@[expose] public section
 
 /-! Degree reindexing retains original-Gamma common blowup geometry. -/
 

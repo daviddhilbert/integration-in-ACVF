@@ -1,5 +1,9 @@
-import IntegrationSection6.GammaSchemaRowValues
-import IntegrationSection6.GammaSchemaRowEquality
+module
+
+public import IntegrationSection6.GammaSchemaRowValues
+public import IntegrationSection6.GammaSchemaRowEquality
+
+@[expose] public section
 
 /-! Bound-independent finite row semantics. Derived geometric families
 need not share a chosen cardinality bound; their actual functionality and

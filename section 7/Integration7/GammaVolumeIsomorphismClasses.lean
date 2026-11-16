@@ -1,5 +1,9 @@
-import Integration7.GammaVolumeCoproductCoherence
-import Integration7.GammaVolumeIsoGraphOperations
+module
+
+public import Integration7.GammaVolumeCoproductCoherence
+public import Integration7.GammaVolumeIsoGraphOperations
+
+@[expose] public section
 
 /-! Isomorphism classes of the existing actual Gamma volume objects.
 The relation requires a full original-Gamma volume chart. -/

@@ -1,5 +1,9 @@
-import Integration7.UniformVolumeData
-import Section9.SpecialJacobianGeneric
+module
+
+public import Integration7.UniformVolumeData
+public import Section9.SpecialJacobianGeneric
+
+@[expose] public section
 
 /-! A canonical model has the same raw RV domains and maps before and
 after normalization. These adapters retain points and parameter sets. -/

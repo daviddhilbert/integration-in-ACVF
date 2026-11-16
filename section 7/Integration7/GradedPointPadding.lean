@@ -1,5 +1,9 @@
-import Integration7.GradedShiftComponents
-import Integration7.GradedSemiringActionLinearMaps
+module
+
+public import Integration7.GradedShiftComponents
+public import Integration7.GradedSemiringActionLinearMaps
+
+@[expose] public section
 
 /-! A central coefficient of degree one pads every finite graded
 function into positive degrees. Its literal inclusion is multiplication

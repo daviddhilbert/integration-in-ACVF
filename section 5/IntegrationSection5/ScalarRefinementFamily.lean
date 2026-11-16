@@ -1,4 +1,8 @@
-import IntegrationSection5.MixedScalarRefinement
+module
+
+public import IntegrationSection5.MixedScalarRefinement
+
+@[expose] public section
 
 /-! One actual finite RV tuple simultaneously refines a finite family of
 scalar functions. Each scalar's constant/injective branch tag is retained. -/

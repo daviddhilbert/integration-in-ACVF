@@ -1,6 +1,10 @@
-import Integration7.SupportedPositiveGradedActions
-import Integration7.GradedSemiringActionLinearMaps
-import Integration7.GradedShiftLinearEmbeddings
+module
+
+public import Integration7.SupportedPositiveGradedActions
+public import Integration7.GradedSemiringActionLinearMaps
+public import Integration7.GradedShiftLinearEmbeddings
+
+@[expose] public section
 
 /-! The supported positive graded module maps linearly into the full
 graded AE module, retaining each actual positive homogeneous component. -/

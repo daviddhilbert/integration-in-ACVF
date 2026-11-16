@@ -1,6 +1,10 @@
-import Integration7.HKZeroVolumeFamilies
-import Integration7.InverseJacobianVolumeForms
-import Integration7.PositiveVolumeIntegrationEquivalence
+module
+
+public import Integration7.HKZeroVolumeFamilies
+public import Integration7.InverseJacobianVolumeForms
+public import Integration7.PositiveVolumeIntegrationEquivalence
+
+@[expose] public section
 
 /-! Change of variables for actual weighted zero-degree family
 presentations. The inverse-Jacobian form stays in zero coefficient degree.

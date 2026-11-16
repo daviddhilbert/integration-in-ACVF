@@ -1,7 +1,11 @@
-import Integration7.GammaVolumeElementaryFormulas
-import Integration7.NormalizedElementaryCoordinates
-import Integration7.VolumeSchemaDomainSemantics
-import IntegrationSection6.GammaRawElementaryRows
+module
+
+public import Integration7.GammaVolumeElementaryFormulas
+public import Integration7.NormalizedElementaryCoordinates
+public import Integration7.VolumeSchemaDomainSemantics
+public import IntegrationSection6.GammaRawElementaryRows
+
+@[expose] public section
 
 /-! The elementary volume formula interprets the actual elementary
 blowup object, with its coordinate program and pulled-back density. -/

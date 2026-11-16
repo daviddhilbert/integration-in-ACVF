@@ -1,5 +1,9 @@
-import Integration7.GenericCoordinateFibreDimension
-import Integration7.IndependentHeadCoordinateFields
+module
+
+public import Integration7.GenericCoordinateFibreDimension
+public import Integration7.IndependentHeadCoordinateFields
+
+@[expose] public section
 
 /-! Independence can be passed to a frozen coefficient field before
 and after the containing context is enlarged. All fields below are

@@ -1,4 +1,8 @@
-import IntegrationSection3ACVF.RVSlopeOrbits
+module
+
+public import IntegrationSection3ACVF.RVSlopeOrbits
+
+@[expose] public section
 
 /-! The RV slope is constant on each actual Gamma value fibre. Integer
 orbits make every nonempty coefficient fibre infinite; the checked

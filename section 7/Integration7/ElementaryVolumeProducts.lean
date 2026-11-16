@@ -1,6 +1,10 @@
-import Integration7.ElementaryBlowupConstruction
-import Integration7.VolumeProductPointwise
-import IntegrationSection6.ElementaryRightProduct
+module
+
+public import Integration7.ElementaryBlowupConstruction
+public import Integration7.VolumeProductPointwise
+public import IntegrationSection6.ElementaryRightProduct
+
+@[expose] public section
 
 /-! Multiplying an elementary volume blowup by a left factor retains
 the distinguished last coordinate. The chart and density are actual products. -/

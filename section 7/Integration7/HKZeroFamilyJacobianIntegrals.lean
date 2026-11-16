@@ -1,5 +1,9 @@
-import Integration7.HKZeroFamilyJacobianPushforwards
-import Integration7.HKAEZeroIntegrals
+module
+
+public import Integration7.HKZeroFamilyJacobianPushforwards
+public import Integration7.HKAEZeroIntegrals
+
+@[expose] public section
 
 /-! The actual weighted-zero VF realization gives change of variables
 with no added coefficient degree and no cancellation or localization. -/

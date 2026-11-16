@@ -1,5 +1,9 @@
-import IntegrationSection6.RVLabelSliceMaps
-import IntegrationSection6.GammaHeadFibreLiftMaps
+module
+
+public import IntegrationSection6.RVLabelSliceMaps
+public import IntegrationSection6.GammaHeadFibreLiftMaps
+
+@[expose] public section
 
 /-! Head preparations restrict to fixed old RV labels. The new head RV
 value is free, and the selected old labels remain a known suffix. -/

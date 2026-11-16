@@ -1,5 +1,9 @@
-import Integration7.AllDegreeVolumeIsoSemiring
-import Mathlib.Algebra.DirectSum.Ring
+module
+
+public import Integration7.AllDegreeVolumeIsoSemiring
+public import Mathlib.Algebra.DirectSum.Ring
+
+@[expose] public section
 
 /-! The graded semiring of actual common-blowup classes. Only
 associativity and distributivity are used; no commutativity is asserted. -/

@@ -1,4 +1,8 @@
-import Integration7.GammaVolumeIsoRecoding
+module
+
+public import Integration7.GammaVolumeIsoRecoding
+
+@[expose] public section
 
 /-! Finite volume blowup data recode over a new sorted parameter block.
 All exact chain lengths and the absence of extra parameters are retained. -/

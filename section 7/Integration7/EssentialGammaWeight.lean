@@ -1,6 +1,10 @@
-import Integration7.GammaAbsoluteValues
-import Integration7.FiniteVolumeIsoMaps
-import Integration7.EssentialVolumeCoproduct
+module
+
+public import Integration7.GammaAbsoluteValues
+public import Integration7.FiniteVolumeIsoMaps
+public import Integration7.EssentialVolumeCoproduct
+
+@[expose] public section
 
 /-! Pointwise absolute Gamma weight and its upper cuts. -/
 noncomputable section

@@ -1,4 +1,8 @@
-import IntegrationSection6.GammaSortedSchemaRows
+module
+
+public import IntegrationSection6.GammaSortedSchemaRows
+
+@[expose] public section
 
 /-! Relational images of labels in sorted RV families. The construction
 uses only original-base full Gamma formulas and real coordinate projections.

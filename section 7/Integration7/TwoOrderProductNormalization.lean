@@ -1,5 +1,9 @@
-import Integration7.TwoOrderProductPreparations
-import Integration7.SmallDimensionContractionNormalization
+module
+
+public import Integration7.TwoOrderProductPreparations
+public import Integration7.SmallDimensionContractionNormalization
+
+@[expose] public section
 
 /-! Actual normalized finite RV volume objects of the constructed two
 orders, and their original-Gamma normalization maps. The raw product

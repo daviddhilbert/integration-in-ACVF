@@ -1,4 +1,8 @@
-import IntegrationSection6.BlowupPresentations
+module
+
+public import IntegrationSection6.BlowupPresentations
+
+@[expose] public section
 
 /-! An elementary blowup is a general blowup at a whole-object locus. -/
 

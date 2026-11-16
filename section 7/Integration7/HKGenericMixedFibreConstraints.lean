@@ -1,6 +1,10 @@
-import Integration7.HKGenericConstrainedCharts
-import Integration7.HKMixedFibreConstraintRealization
-import Integration7.HKPureVFGammaLoci
+module
+
+public import Integration7.HKGenericConstrainedCharts
+public import Integration7.HKMixedFibreConstraintRealization
+public import Integration7.HKPureVFGammaLoci
+
+@[expose] public section
 
 /-! Exact mixed relations on generic weighted rows produce one actual
 original-base isomorphism on a definable locus containing all generic VF

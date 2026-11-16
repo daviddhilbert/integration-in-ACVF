@@ -1,6 +1,10 @@
-import Section4.RVCategories
-import Section4.RVCoordinates
-import Section3.SmallFiniteParameters
+module
+
+public import Section4.RVCategories
+public import Section4.RVCoordinates
+public import Section3.SmallFiniteParameters
+
+@[expose] public section
 
 /-!
 # Algebraic label fibres for elementary blowups

@@ -1,7 +1,11 @@
-import IntegrationSection6.SmallDefinableSingletons
-import Section3.GammaFullDescent
-import Section3.GammaGoodRelations
-import Section3.ParameterBridge
+module
+
+public import IntegrationSection6.SmallDefinableSingletons
+public import Section3.GammaFullDescent
+public import Section3.GammaGoodRelations
+public import Section3.ParameterBridge
+
+@[expose] public section
 
 /-! Definable closure of a small real/Gamma base remains small. The proof
 counts formulas over the original names, including one fixed representative

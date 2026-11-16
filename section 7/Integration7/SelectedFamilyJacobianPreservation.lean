@@ -1,5 +1,9 @@
-import Integration7.InverseMixedVFBaseDensities
-import Integration7.SelectedFamilyJacobianPushforwards
+module
+
+public import Integration7.InverseMixedVFBaseDensities
+public import Integration7.SelectedFamilyJacobianPushforwards
+
+@[expose] public section
 
 /-! The actual Jacobian-corrected family map preserves its mixed VF
 volume form. The inverse-density comparison is an established AE theorem. -/

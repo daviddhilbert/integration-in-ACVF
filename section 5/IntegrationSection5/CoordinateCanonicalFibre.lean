@@ -1,4 +1,8 @@
-import IntegrationSection5.CoordinateCanonical
+module
+
+public import IntegrationSection5.CoordinateCanonical
+
+@[expose] public section
 
 /-! Actual unary canonical special witnesses on the fibres. -/
 noncomputable section

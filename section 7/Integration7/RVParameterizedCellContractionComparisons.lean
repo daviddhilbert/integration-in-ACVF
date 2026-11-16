@@ -1,8 +1,12 @@
-import Integration7.GammaRVDefinableNameContexts
-import Integration7.NonbalancedCellContractionComparisons
-import Integration7.BalancedCellOppositeOrderComparisons
-import Integration7.NativeBalancedTranslationCommonNames
-import Integration7.DegenerateCellContractionComparisons
+module
+
+public import Integration7.GammaRVDefinableNameContexts
+public import Integration7.NonbalancedCellContractionComparisons
+public import Integration7.BalancedCellOppositeOrderComparisons
+public import Integration7.NativeBalancedTranslationCommonNames
+public import Integration7.DegenerateCellContractionComparisons
+
+@[expose] public section
 
 /-! All actual definable two-cells compare in opposite contraction
 orders. Their positioning and RV paradigms are obtained from the cell

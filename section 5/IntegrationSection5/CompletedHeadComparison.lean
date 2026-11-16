@@ -1,7 +1,11 @@
-import IntegrationSection5.CompletedNonrectangleHead
-import IntegrationSection5.InactiveBranchHeadIso
-import IntegrationSection5.RVSliceHeadImages
-import IntegrationSection5.NonrectangleHeadPresentations
+module
+
+public import IntegrationSection5.CompletedNonrectangleHead
+public import IntegrationSection5.InactiveBranchHeadIso
+public import IntegrationSection5.RVSliceHeadImages
+public import IntegrationSection5.NonrectangleHeadPresentations
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option allowUnsafeReducibility true in

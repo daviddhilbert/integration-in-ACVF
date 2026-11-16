@@ -1,5 +1,9 @@
-import IntegrationSection5.GammaTraceCompiler
-import IntegrationSection5.TraceInputPresentation
+module
+
+public import IntegrationSection5.GammaTraceCompiler
+public import IntegrationSection5.TraceInputPresentation
+
+@[expose] public section
 
 noncomputable section
 set_option autoImplicit false

@@ -1,5 +1,9 @@
-import Integration7.VFVolumeIsomorphisms
-import Integration7.VFVolumeRestrictions
+module
+
+public import Integration7.VFVolumeIsomorphisms
+public import Integration7.VFVolumeRestrictions
+
+@[expose] public section
 
 /-! Composition in the actual almost-everywhere volume category. The
 middle domains are intersected; the discarded sets are pulled back or

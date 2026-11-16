@@ -1,7 +1,11 @@
-import IntegrationSection5.NonrectangleCellGeometry
-import IntegrationSection5.CellStripNormalForms
-import IntegrationSection5.PositionedCellLabelInjection
-import IntegrationSection5.NativeCellProjections
+module
+
+public import IntegrationSection5.NonrectangleCellGeometry
+public import IntegrationSection5.CellStripNormalForms
+public import IntegrationSection5.PositionedCellLabelInjection
+public import IntegrationSection5.NativeCellProjections
+
+@[expose] public section
 
 /-! Horizontal and vertical RV-class closure for nonrectangle cells and uniform original-coordinate RV constancy over cell labels. -/
 noncomputable section

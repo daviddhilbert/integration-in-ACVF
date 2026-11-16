@@ -1,5 +1,9 @@
-import IntegrationSection3ACVF.MaximalSubballGeometry
-import IntegrationSection3.FiniteCofiniteClasses
+module
+
+public import IntegrationSection3ACVF.MaximalSubballGeometry
+public import IntegrationSection3.FiniteCofiniteClasses
+
+@[expose] public section
 
 /-! Definability and finite/cofinite traces for actual maximal open
 classes. The proof uses C-minimal finite support over the stated base. -/

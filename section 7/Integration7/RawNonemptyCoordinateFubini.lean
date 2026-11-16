@@ -1,4 +1,8 @@
-import Integration7.StrictGradedVolumeFubini
+module
+
+public import Integration7.StrictGradedVolumeFubini
+
+@[expose] public section
 
 /-! Raw Fubini on all finite graded functions for each nonempty coordinate
 set. The full coordinate set uses its original coordinate order and the

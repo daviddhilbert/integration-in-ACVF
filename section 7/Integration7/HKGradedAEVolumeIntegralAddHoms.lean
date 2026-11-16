@@ -1,6 +1,10 @@
-import Integration7.HKGradedAEVolumeFunctions
-import Integration7.HKAEZeroIntegralAddHom
-import Integration7.AppendedVolumeIntegralAddHom
+module
+
+public import Integration7.HKGradedAEVolumeFunctions
+public import Integration7.HKAEZeroIntegralAddHom
+public import Integration7.AppendedVolumeIntegralAddHom
+
+@[expose] public section
 
 /-! Genuine homogeneous integrals assemble additively in the actual
 weighted-zero graded coefficient semiring, retaining arithmetic degrees. -/

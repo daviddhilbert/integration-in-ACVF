@@ -1,4 +1,8 @@
-import IntegrationSection5.GammaGraphOperations
+module
+
+public import IntegrationSection5.GammaGraphOperations
+
+@[expose] public section
 
 /-! Explicit real definable VF-coordinate permutations, retaining every RV
 label and the original-Gamma full graphs. -/

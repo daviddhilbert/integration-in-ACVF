@@ -1,4 +1,8 @@
-import Integration7.HKSupportedZeroFunctionAddition
+module
+
+public import Integration7.HKSupportedZeroFunctionAddition
+
+@[expose] public section
 
 /-! A VF base bijection commutes with the actual RV-tagged coproduct.
 Both transformed summands retain the same inverse-Jacobian density factor. -/

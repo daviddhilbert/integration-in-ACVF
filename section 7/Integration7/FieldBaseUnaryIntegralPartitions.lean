@@ -1,7 +1,11 @@
-import Integration7.FieldBaseUnaryIntegralBijections
-import Integration7.VFVolumeObjectLabelCuts
-import Integration7.UnaryRawSelectedVolumeCharts
-import Integration7.SelectedStandardBinaryVolumePartitions
+module
+
+public import Integration7.FieldBaseUnaryIntegralBijections
+public import Integration7.VFVolumeObjectLabelCuts
+public import Integration7.UnaryRawSelectedVolumeCharts
+public import Integration7.SelectedStandardBinaryVolumePartitions
+
+@[expose] public section
 
 /-! Complementary old-label cuts are additive for genuine unary VF
 volume integration, including the zero-old-coordinate finite case. -/

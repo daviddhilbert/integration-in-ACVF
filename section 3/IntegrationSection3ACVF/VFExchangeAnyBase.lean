@@ -1,4 +1,8 @@
-import Section3.VFExchange
+module
+
+public import Section3.VFExchange
+
+@[expose] public section
 
 /-! Extends the pinned MIT Section3/VFExchange proof at revision
 9cc9760892092dd34cfad4a6dee655843c52f30c to arbitrary real parameter sets.

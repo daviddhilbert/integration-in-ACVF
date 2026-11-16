@@ -1,10 +1,14 @@
-import Integration7.GenericUnaryRawVolumeComparison
-import Integration7.GenericSelectedVolumeHeadWitnesses
-import Integration7.GammaUnaryRawVolumeComparison
-import Integration7.HeadFibreRawVolumeContexts
-import Integration7.HeadVolumeParameterContexts
-import Integration7.SelectedVolumeHeadPointwiseWitnesses
-import Integration7.MixedRetainedLabelVolumeForms
+module
+
+public import Integration7.GenericUnaryRawVolumeComparison
+public import Integration7.GenericSelectedVolumeHeadWitnesses
+public import Integration7.GammaUnaryRawVolumeComparison
+public import Integration7.HeadFibreRawVolumeContexts
+public import Integration7.HeadVolumeParameterContexts
+public import Integration7.SelectedVolumeHeadPointwiseWitnesses
+public import Integration7.MixedRetainedLabelVolumeForms
+
+@[expose] public section
 
 /-! The positive selected head-comparison induction only needs the
 original geometric hypothesis at generic full VF tuples. -/

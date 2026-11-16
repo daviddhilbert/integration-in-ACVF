@@ -1,5 +1,9 @@
-import Integration7.GammaVolumeCoproductCoherence
-import Integration7.VolumeRestrictionIdentifications
+module
+
+public import Integration7.GammaVolumeCoproductCoherence
+public import Integration7.VolumeRestrictionIdentifications
+
+@[expose] public section
 
 /-! Identity-on-label volume isomorphisms, including the existing nested
 and carrier-equality restriction maps, retain their original Gamma graphs. -/

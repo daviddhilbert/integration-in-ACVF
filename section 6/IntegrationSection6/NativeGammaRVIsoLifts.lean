@@ -1,5 +1,9 @@
-import IntegrationSection6.NativeBalancedCorrespondenceLifts
-import IntegrationSection6.NativeGammaLiftGraphs
+module
+
+public import IntegrationSection6.NativeBalancedCorrespondenceLifts
+public import IntegrationSection6.NativeGammaLiftGraphs
+
+@[expose] public section
 
 /-! Every actual Gamma RV isomorphism lifts over its original generated
 base, with no canonical-totalization hypothesis on the ambient model. -/

@@ -1,3 +1,7 @@
+module
+
+
+@[expose] public section
 /-!
 # Finite blowup iteration: the combinatorial part
 

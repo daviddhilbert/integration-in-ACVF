@@ -1,5 +1,9 @@
-import Integration7.VolumeFormScalarArithmetic
-import Integration7.VolumeDensityRescaling
+module
+
+public import Integration7.VolumeFormScalarArithmetic
+public import Integration7.VolumeDensityRescaling
+
+@[expose] public section
 
 /-! Multiplying the source and target forms by corresponding definable
 weights preserves the actual positive volume isomorphism. The multiplier

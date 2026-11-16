@@ -1,7 +1,11 @@
-import Integration7.FactoredHeadRetainedLabels
-import Integration7.HeadAppendVolumeCoordinates
-import Integration7.UnarySpecialHeadPreparations
-import Integration7.NativeVolumeDomains
+module
+
+public import Integration7.FactoredHeadRetainedLabels
+public import Integration7.HeadAppendVolumeCoordinates
+public import Integration7.UnarySpecialHeadPreparations
+public import Integration7.NativeVolumeDomains
+
+@[expose] public section
 
 /-! A factored unary head has the literal coefficient, old fibre, new
 head coordinate order, including any appended functional RV labels. -/

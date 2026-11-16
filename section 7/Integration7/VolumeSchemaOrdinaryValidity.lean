@@ -1,6 +1,10 @@
-import Integration7.CanonicalVolumeSchemaRows
-import Integration7.GammaVolumeIsomorphismSchemata
-import Integration7.FiniteVolumeIsoMaps
+module
+
+public import Integration7.CanonicalVolumeSchemaRows
+public import Integration7.GammaVolumeIsomorphismSchemata
+public import Integration7.FiniteVolumeIsoMaps
+
+@[expose] public section
 
 /-! An actual essential bijection gives ordinary schema validity on its
 exact chart. Nonzero coordinates give the weight clause automatically;

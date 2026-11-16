@@ -1,6 +1,10 @@
-import IntegrationSection6.PreparedMixedPartitions
-import IntegrationSection6.FiniteGammaChartedChains
-import IntegrationSection6.GammaIspUniversalPresentation
+module
+
+public import IntegrationSection6.PreparedMixedPartitions
+public import IntegrationSection6.FiniteGammaChartedChains
+public import IntegrationSection6.GammaIspUniversalPresentation
+
+@[expose] public section
 
 /-! Simultaneous special preparation of a lift partition gives an actual
 finite RV object Isp-equivalent to the original one, over its unchanged base. -/

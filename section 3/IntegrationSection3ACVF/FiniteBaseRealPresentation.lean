@@ -1,4 +1,8 @@
-import IntegrationSection3ACVF.FullBaseDefinability
+module
+
+public import IntegrationSection3ACVF.FullBaseDefinability
+
+@[expose] public section
 
 /-! A finite interpreted base has a common finite real presentation for
 all its definitions. The codes are used only inside compactness arguments;

@@ -1,4 +1,8 @@
-import Integration7.NormalizedPositiveJacobianIntegrals
+module
+
+public import Integration7.NormalizedPositiveJacobianIntegrals
+
+@[expose] public section
 
 /-! Normalization makes the point equal to one, so the ordinary
 degree-zero functions are represented by genuine positive functions.

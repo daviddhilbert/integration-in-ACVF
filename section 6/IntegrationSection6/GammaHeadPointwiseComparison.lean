@@ -1,5 +1,9 @@
-import IntegrationSection6.GammaHeadFibreParameters
-import IntegrationSection6.FiniteGammaEquivalence
+module
+
+public import IntegrationSection6.GammaHeadFibreParameters
+public import IntegrationSection6.FiniteGammaEquivalence
+
+@[expose] public section
 
 /-! The original pointwise hypothesis specializes to unary coordinate
 fibres over exactly the frozen VF parameter base. -/

@@ -1,4 +1,8 @@
-import IntegrationSection5.FiniteStandardContraction
+module
+
+public import IntegrationSection5.FiniteStandardContraction
+
+@[expose] public section
 
 noncomputable section
 set_option autoImplicit false

@@ -1,5 +1,9 @@
-import IntegrationSection6.CompletedSection5Refinements
-import IntegrationSection6.Section5TwoOrderInput
+module
+
+public import IntegrationSection6.CompletedSection5Refinements
+public import IntegrationSection6.Section5TwoOrderInput
+
+@[expose] public section
 
 /-! The actual Section 5.8 theorem fills the two-order interface on each
 base satisfying its standing hypotheses. The arbitrary-base universal

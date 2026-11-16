@@ -1,5 +1,9 @@
-import IntegrationSection3ACVF.SaturatedBallFamilies
-import IntegrationSection3ACVF.AdjoinBall
+module
+
+public import IntegrationSection3ACVF.SaturatedBallFamilies
+public import IntegrationSection3ACVF.AdjoinBall
+
+@[expose] public section
 
 /-! Applying Lemma 3.2 to the actual identity graph of a ball family. -/
 

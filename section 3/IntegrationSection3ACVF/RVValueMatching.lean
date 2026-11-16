@@ -1,7 +1,11 @@
-import IntegrationSection3ACVF.CofiniteRVRows
-import IntegrationSection3ACVF.FullRVClassRestriction
-import IntegrationSection3ACVF.RVInverse
-import IntegrationSection3.CofiniteClassMatching
+module
+
+public import IntegrationSection3ACVF.CofiniteRVRows
+public import IntegrationSection3ACVF.FullRVClassRestriction
+public import IntegrationSection3ACVF.RVInverse
+public import IntegrationSection3.CofiniteClassMatching
+
+@[expose] public section
 
 /-! A definable bijection between unions of entire actual nonzero RV
 value fibres induces a bijection of their Gamma indices. Dominant matches

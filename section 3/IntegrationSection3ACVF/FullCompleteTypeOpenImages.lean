@@ -1,5 +1,9 @@
-import IntegrationSection3ACVF.FullOpenCompleteTypeAtomicity
-import IntegrationSection3ACVF.OpenImages
+module
+
+public import IntegrationSection3ACVF.FullOpenCompleteTypeAtomicity
+public import IntegrationSection3ACVF.OpenImages
+
+@[expose] public section
 
 /-! Lemma3.15 with arbitrary old ball parameters and arbitrary open-ball
 radii in a possibly undefinable complete type. Genuine saturation and

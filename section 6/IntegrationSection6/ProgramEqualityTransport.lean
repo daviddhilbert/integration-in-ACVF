@@ -1,4 +1,8 @@
-import IntegrationSection6.OrderedSelectedVolume
+module
+
+public import IntegrationSection6.OrderedSelectedVolume
+
+@[expose] public section
 
 /-! Equality transport of the source of an actual ordered contraction
 preserves its volume selectors and original-Gamma certificate. -/

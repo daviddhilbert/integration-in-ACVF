@@ -1,6 +1,10 @@
-import Section3.ClosureConventions
-import Section4.SmallGeneratedBase
-import Mathlib.ModelTheory.Encoding
+module
+
+public import Section3.ClosureConventions
+public import Section4.SmallGeneratedBase
+public import Mathlib.ModelTheory.Encoding
+
+@[expose] public section
 
 /-! Closing a small real parameter set under definability preserves
 smallness below an uncountable cardinal. Singleton-defining formulas

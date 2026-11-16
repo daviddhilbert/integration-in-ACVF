@@ -1,6 +1,10 @@
-import IntegrationSection5.RelativeObstaclePreparation
-import IntegrationSection5.CoordinateCanonicalPullback
-import Section5.GammaInvariantLogic
+module
+
+public import IntegrationSection5.RelativeObstaclePreparation
+public import IntegrationSection5.CoordinateCanonicalPullback
+public import Section5.GammaInvariantLogic
+
+@[expose] public section
 
 /-! Uniform relative preparation of an original-Gamma relation. The map is
 constructed over the original real coefficient field, with no named Gamma

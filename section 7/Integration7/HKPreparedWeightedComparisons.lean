@@ -1,8 +1,12 @@
-import Integration7.HKGenericFiniteConstrainedPreparation
-import Integration7.HKPreparedDensityConstraints
-import Integration7.HKWeightedEssentialUniformity
-import IntegrationSection6.GammaPreparedIndexPresentation
-import IntegrationSection6.GammaPreparedIndexValues
+module
+
+public import Integration7.HKGenericFiniteConstrainedPreparation
+public import Integration7.HKPreparedDensityConstraints
+public import Integration7.HKWeightedEssentialUniformity
+public import IntegrationSection6.GammaPreparedIndexPresentation
+public import IntegrationSection6.GammaPreparedIndexValues
+
+@[expose] public section
 
 /-! Density-constrained generic finite-row isomorphisms construct a
 simultaneous preparation and an actual weighted original-Gamma comparison. -/

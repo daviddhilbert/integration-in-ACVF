@@ -1,4 +1,8 @@
-import Integration7.GradedSemiringActionShifts
+module
+
+public import Integration7.GradedSemiringActionShifts
+
+@[expose] public section
 
 /-! A faithful family of additive maps transports the graded action
 laws once the actual homogeneous operations commute with those maps. -/

@@ -1,4 +1,8 @@
-import Integration7.UniformMixedCellPresentations
+module
+
+public import Integration7.UniformMixedCellPresentations
+
+@[expose] public section
 
 /-! The actual position row on each parameter fibre, tied to the one
 global positioning map. This supplies compatible positions for the

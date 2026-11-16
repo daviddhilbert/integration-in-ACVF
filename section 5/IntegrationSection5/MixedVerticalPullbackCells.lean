@@ -1,5 +1,9 @@
-import IntegrationSection5.MixedVerticalPresentation
-import IntegrationSection4.ScalarPositionDecomposition
+module
+
+public import IntegrationSection5.MixedVerticalPresentation
+public import IntegrationSection4.ScalarPositionDecomposition
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

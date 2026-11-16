@@ -1,5 +1,9 @@
-import IntegrationSection5.FibreFocusImage
-import IntegrationSection5.RelativeFibreBijection
+module
+
+public import IntegrationSection5.FibreFocusImage
+public import IntegrationSection5.RelativeFibreBijection
+
+@[expose] public section
 
 /-! Assemble a definable map from actual unary fibre foci, retaining its
 actual image and full pointwise equality on each coordinate fibre. -/

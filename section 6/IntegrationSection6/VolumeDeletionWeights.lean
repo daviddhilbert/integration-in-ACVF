@@ -1,5 +1,9 @@
-import IntegrationSection6.ElementaryIsomorphism
-import Mathlib.Algebra.BigOperators.Fin
+module
+
+public import IntegrationSection6.ElementaryIsomorphism
+public import Mathlib.Algebra.BigOperators.Fin
+
+@[expose] public section
 
 noncomputable section
 open Classical FirstOrder FirstOrder.Language

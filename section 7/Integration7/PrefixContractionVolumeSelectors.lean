@@ -1,5 +1,9 @@
-import IntegrationSection6.VFPrefixStandardPresentations
-import IntegrationSection6.PartialContractionFiniteVolume
+module
+
+public import IntegrationSection6.VFPrefixStandardPresentations
+public import IntegrationSection6.PartialContractionFiniteVolume
+
+@[expose] public section
 
 /-! Freezing a partial program preserves its entire ordered VF-tag tuple
 and every old density label. -/

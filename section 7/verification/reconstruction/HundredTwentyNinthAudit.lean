@@ -1,9 +1,13 @@
-import Integration7.GradedIntegralDensityCorrection
-import Integration7.PositiveGradedCoordinatePushforwards
-import Integration7.PositiveGradedDensityRescaling
-import Integration7.PositiveGradedVolumeFubini
-import Integration7.PositiveGradedVolumeIntegration
-import Integration7.StrictGradedVolumeFubini
+module
+
+public import Integration7.GradedIntegralDensityCorrection
+public import Integration7.PositiveGradedCoordinatePushforwards
+public import Integration7.PositiveGradedDensityRescaling
+public import Integration7.PositiveGradedVolumeFubini
+public import Integration7.PositiveGradedVolumeIntegration
+public import Integration7.StrictGradedVolumeFubini
+
+@[expose] public section
 set_option pp.universes true
 set_option pp.proofs false
 set_option pp.deepTerms true

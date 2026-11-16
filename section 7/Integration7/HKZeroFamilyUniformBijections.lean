@@ -1,8 +1,12 @@
-import Integration7.HKZeroFamilyRowIsomorphisms
-import Integration7.HKMixedFibreConstraintRealization
-import Integration7.GammaMixedIsomorphismMaps
-import Integration7.VFVolumeBijections
-import Integration7.VFVolumeClasses
+module
+
+public import Integration7.HKZeroFamilyRowIsomorphisms
+public import Integration7.HKMixedFibreConstraintRealization
+public import Integration7.GammaMixedIsomorphismMaps
+public import Integration7.VFVolumeBijections
+public import Integration7.VFVolumeClasses
+
+@[expose] public section
 
 /-! Exact weighted row equality glues to an actual original-base volume
 bijection, with the RV density retained by the compactness constraint. -/

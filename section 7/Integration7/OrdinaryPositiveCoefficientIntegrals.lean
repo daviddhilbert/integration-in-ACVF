@@ -1,8 +1,12 @@
-import Integration7.OrdinaryPositiveCoefficientLiftBijections
-import Integration7.AEOrdinaryPositiveCoefficientProducts
-import Integration7.AEOrdinaryRVVolumeIntegrals
-import Integration7.PositiveVolumeIntegrationProducts
-import Integration7.AppendedVolumeFunctionIntegrals
+module
+
+public import Integration7.OrdinaryPositiveCoefficientLiftBijections
+public import Integration7.AEOrdinaryPositiveCoefficientProducts
+public import Integration7.AEOrdinaryRVVolumeIntegrals
+public import Integration7.PositiveVolumeIntegrationProducts
+public import Integration7.AppendedVolumeFunctionIntegrals
+
+@[expose] public section
 
 /-! Coefficient-first integration of a positive coefficient times an
 ordinary-valued family is the actual graded product of their integrals. -/

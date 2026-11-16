@@ -1,5 +1,9 @@
-import Integration7.HeadCoordinateFibreVolumeSelectors
-import IntegrationSection6.GammaHeadSelectedFiniteness
+module
+
+public import Integration7.HeadCoordinateFibreVolumeSelectors
+public import IntegrationSection6.GammaHeadSelectedFiniteness
+
+@[expose] public section
 
 /-! Retain the old selected coordinates first and append the new head RV
 tag. This order supports induction while keeping all density labels. -/

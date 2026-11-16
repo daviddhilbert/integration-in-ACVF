@@ -1,4 +1,8 @@
-import IntegrationSection3ACVF.AffineResidueSyntax
+module
+
+public import IntegrationSection3ACVF.AffineResidueSyntax
+
+@[expose] public section
 
 /-! The affine LRV graph has exactly the closed parent as its native VF
 domain and exactly the actual residue coordinate as output. -/

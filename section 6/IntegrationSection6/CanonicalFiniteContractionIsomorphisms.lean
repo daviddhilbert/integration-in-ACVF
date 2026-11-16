@@ -1,7 +1,11 @@
-import IntegrationSection6.CanonicalContractionPrograms
-import IntegrationSection6.ContractionNaturalContractibility
-import IntegrationSection6.GammaVFContractiblePullbackMaps
-import IntegrationSection6.FiniteGammaPresentationCharts
+module
+
+public import IntegrationSection6.CanonicalContractionPrograms
+public import IntegrationSection6.ContractionNaturalContractibility
+public import IntegrationSection6.GammaVFContractiblePullbackMaps
+public import IntegrationSection6.FiniteGammaPresentationCharts
+
+@[expose] public section
 
 /-! Canonical identity-head contractions of RV-pullbacks recover their
 actual RV objects by full Gamma RV isomorphisms. This does not assume a

@@ -1,5 +1,9 @@
-import IntegrationSection3ACVF.SingleBallCoordinates
-import IntegrationSection3ACVF.AffineResidueDomain
+module
+
+public import IntegrationSection3ACVF.SingleBallCoordinates
+public import IntegrationSection3ACVF.AffineResidueDomain
+
+@[expose] public section
 
 /-! Proved residue-coordinate data for one actual thin component,
 including its complete partial LRV graph. -/

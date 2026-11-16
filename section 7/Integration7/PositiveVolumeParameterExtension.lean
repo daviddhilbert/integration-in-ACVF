@@ -1,4 +1,8 @@
-import Integration7.VolumeParameterExtension
+module
+
+public import Integration7.VolumeParameterExtension
+
+@[expose] public section
 
 /-! Real parameter extension retains the actual positive volume object
 and its essential labels, without adding a generation hypothesis. -/

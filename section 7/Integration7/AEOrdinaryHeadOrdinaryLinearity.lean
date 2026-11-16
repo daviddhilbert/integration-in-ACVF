@@ -1,6 +1,10 @@
-import Integration7.FrozenOrdinaryScalarIntegrals
-import Integration7.AEOrdinaryHeadIntegralAdditivity
-import Integration7.AERVVolumeHeadOrdinaryLinearity
+module
+
+public import Integration7.FrozenOrdinaryScalarIntegrals
+public import Integration7.AEOrdinaryHeadIntegralAdditivity
+public import Integration7.AERVVolumeHeadOrdinaryLinearity
+
+@[expose] public section
 
 /-! The actual ordinary-input head integral is linear over ordinary
 RV[0] coefficients, through its genuine finite-factor fibre computation. -/

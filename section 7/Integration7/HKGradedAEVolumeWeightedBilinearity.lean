@@ -1,4 +1,8 @@
-import Integration7.HKGradedAEVolumeComponentActions
+module
+
+public import Integration7.HKGradedAEVolumeComponentActions
+
+@[expose] public section
 
 /-! Every homogeneous action is bilinear over ordinary RV[0],
 including the arithmetic degree identification in the zero coefficient case. -/

@@ -1,5 +1,9 @@
-import IntegrationSection6.OrderedSelectedVolume
-import IntegrationSection5.GammaPartialContraction
+module
+
+public import IntegrationSection6.OrderedSelectedVolume
+public import IntegrationSection5.GammaPartialContraction
+
+@[expose] public section
 
 /-! The selected-coordinate volume of a partial contraction retains every
 contracted head RV value and all originally selected labels. -/

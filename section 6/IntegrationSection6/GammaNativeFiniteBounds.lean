@@ -1,4 +1,8 @@
-import IntegrationSection6.GammaNativeRawObjects
+module
+
+public import IntegrationSection6.GammaNativeRawObjects
+
+@[expose] public section
 
 /-! Actual RV[k] volume graphs satisfy the functional laws and have a
 uniform finite bound over the original Gamma base. These laws supply

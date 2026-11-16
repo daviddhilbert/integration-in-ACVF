@@ -1,8 +1,12 @@
-import IntegrationSection6.GammaErasedCenter
-import IntegrationSection6.SortedParameterElimination
-import IntegrationSection6.ActualRVFibreDefinability
-import Section3.RVOperations
-import Section3.SmallFiniteParameters
+module
+
+public import IntegrationSection6.GammaErasedCenter
+public import IntegrationSection6.SortedParameterElimination
+public import IntegrationSection6.ActualRVFibreDefinability
+public import Section3.RVOperations
+public import Section3.SmallFiniteParameters
+
+@[expose] public section
 
 /-! Original-real-base admissibility forced by a genuine Gamma full focus.
 The scalar centre loses its RV and Gamma parameters before RV descent. -/

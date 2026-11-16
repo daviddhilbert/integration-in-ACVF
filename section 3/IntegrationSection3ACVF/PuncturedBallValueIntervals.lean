@@ -1,6 +1,10 @@
-import IntegrationSection3ACVF.AnnulusValueIntervals
-import IntegrationSection3ACVF.ClosedSelfCentredBallProfiles
-import IntegrationSection3ACVF.SelfCentredBallProfiles
+module
+
+public import IntegrationSection3ACVF.AnnulusValueIntervals
+public import IntegrationSection3ACVF.ClosedSelfCentredBallProfiles
+public import IntegrationSection3ACVF.SelfCentredBallProfiles
+
+@[expose] public section
 
 /-! Exact value images for actual single-hole punctured balls after
 translating a point of the hole to zero. The parent centre need not equal

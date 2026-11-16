@@ -1,6 +1,10 @@
-import Integration7.TypedVolumeDensityValidity
-import Integration7.NonzeroDensityFormulas
-import Section3.GammaBaseTools
+module
+
+public import Integration7.TypedVolumeDensityValidity
+public import Integration7.NonzeroDensityFormulas
+public import Section3.GammaBaseTools
+
+@[expose] public section
 
 /-! Adjoin a retained RV label as the density of any sorted family schema.
 The nonzero guard is part of the formula; valid rows require precisely that

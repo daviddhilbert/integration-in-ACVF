@@ -1,6 +1,10 @@
-import Integration7.RVLabelConstraintLiftTargets
-import Integration7.GammaRVLabelChainLifts
-import Integration7.UnarySpecialHeadPreparations
+module
+
+public import Integration7.RVLabelConstraintLiftTargets
+public import Integration7.GammaRVLabelChainLifts
+public import Integration7.UnarySpecialHeadPreparations
+
+@[expose] public section
 
 /-! A special preparation of a labelled unary domain lifts over an
 arbitrary RV constraint, retaining all shared and carried labels. This

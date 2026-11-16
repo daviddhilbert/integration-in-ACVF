@@ -1,5 +1,9 @@
-import IntegrationSection3ACVF.AtomicOpenToOpen
-import IntegrationSection3ACVF.ThinBallGeometry
+module
+
+public import IntegrationSection3ACVF.AtomicOpenToOpen
+public import IntegrationSection3ACVF.ThinBallGeometry
+
+@[expose] public section
 
 /-! Proposition 3.23 for all ordered pairs of distinct actual primitive
 shapes. The closed/thin-annulus case uses proved 3.22 and actual 0/1 hole

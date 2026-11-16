@@ -1,5 +1,9 @@
-import IntegrationSection6.NativeGammaLiftGluing
-import Section7.CorrespondenceLifting
+module
+
+public import IntegrationSection6.NativeGammaLiftGluing
+public import Section7.CorrespondenceLifting
+
+@[expose] public section
 
 /-! Native definability of the polynomial local lifts in the pinned
 CorrespondenceLifting proof. The mathematical local polynomial systems

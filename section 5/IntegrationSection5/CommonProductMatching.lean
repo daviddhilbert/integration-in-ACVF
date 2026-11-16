@@ -1,6 +1,10 @@
-import IntegrationSection5.CommonProductHeadPair
-import IntegrationSection5.CompletedHeadComparison
-import IntegrationSection5.NonrectangleRVComparison
+module
+
+public import IntegrationSection5.CommonProductHeadPair
+public import IntegrationSection5.CompletedHeadComparison
+public import IntegrationSection5.NonrectangleRVComparison
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 open Classical FirstOrder FirstOrder.Language

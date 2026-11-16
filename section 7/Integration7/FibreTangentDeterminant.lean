@@ -1,6 +1,10 @@
-import Integration7.PolynomialTangentFibres
-import Integration7.CoordinateRVJacobian
-import Integration7.ProductTangentDeterminant
+module
+
+public import Integration7.PolynomialTangentFibres
+public import Integration7.CoordinateRVJacobian
+public import Integration7.ProductTangentDeterminant
+
+@[expose] public section
 
 /-! With the head coordinates fixed by a correspondence, the full
 tangent determinant is its fixed-head fibre determinant. -/

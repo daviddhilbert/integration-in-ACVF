@@ -1,5 +1,9 @@
-import Integration7.HKZeroVolumeParameterDescent
-import Integration7.DefinableDensityRescaling
+module
+
+public import Integration7.HKZeroVolumeParameterDescent
+public import Integration7.DefinableDensityRescaling
+
+@[expose] public section
 
 /-! Exact weighted-zero isomorphisms retain their density equation after
 base extension or multiplication by a common definable nonzero scalar. -/

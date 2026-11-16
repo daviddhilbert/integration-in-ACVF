@@ -1,6 +1,10 @@
-import IntegrationSection6.GammaChainSchemata
-import IntegrationSection6.GammaBlowupRealization
-import IntegrationSection6.FiniteGammaIterations
+module
+
+public import IntegrationSection6.GammaChainSchemata
+public import IntegrationSection6.GammaBlowupRealization
+public import IntegrationSection6.FiniteGammaIterations
+
+@[expose] public section
 
 /-! Valid finite chain schemata reconstruct genuine native forward
 blowups of exactly their encoded length. Every intermediate row remains

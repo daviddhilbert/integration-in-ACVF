@@ -1,6 +1,10 @@
-import Integration7.VFVolumeIntegralPermutationCovariance
-import Integration7.VFVolumeDegreeReindexing
-import Integration7.VolumeFunctionIntegralCoordinateNormalization
+module
+
+public import Integration7.VFVolumeIntegralPermutationCovariance
+public import Integration7.VFVolumeDegreeReindexing
+public import Integration7.VolumeFunctionIntegralCoordinateNormalization
+
+@[expose] public section
 
 /-! The genuine coefficient-first VF realization of a selected volume
 family. It puts the selected RV realizations before the original VF base

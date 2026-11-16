@@ -1,5 +1,9 @@
-import Integration7.GammaVolumeCoproductDensities
-import IntegrationSection6.GammaRawCoproductSchemaBridge
+module
+
+public import Integration7.GammaVolumeCoproductDensities
+public import IntegrationSection6.GammaRawCoproductSchemaBridge
+
+@[expose] public section
 
 /-! Adjust finite coordinate-map metadata without changing any graph or
 density. Actual finite coproduct presentations supply a valid bound at

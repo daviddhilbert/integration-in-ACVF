@@ -1,6 +1,10 @@
-import Mathlib.Algebra.DirectSum.Ring
-import Mathlib.Algebra.Ring.Commute
-import Mathlib.Algebra.Group.Commute.Units
+module
+
+public import Mathlib.Algebra.DirectSum.Ring
+public import Mathlib.Algebra.Ring.Commute
+public import Mathlib.Algebra.Group.Commute.Units
+
+@[expose] public section
 
 /-! Homogeneous dehomogenization before groupification: additive monoid
 components already suffice when the central denominator is a unit in

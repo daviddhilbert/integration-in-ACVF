@@ -1,4 +1,8 @@
-import IntegrationSection6.GammaMixedRVExtensions
+module
+
+public import IntegrationSection6.GammaMixedRVExtensions
+
+@[expose] public section
 
 /-! Extend a pure-VF base isomorphism by an unchanged RV tuple, without
 introducing an artificial zero-length RV block in the source arity. -/

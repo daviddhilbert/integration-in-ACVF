@@ -1,5 +1,9 @@
-import Section4.RVTupleFibres
-import Section3.SortedBoolean
+module
+
+public import Section4.RVTupleFibres
+public import Section3.SortedBoolean
+
+@[expose] public section
 
 /-! RV tuple fibres are definable in the original sorted structure, even
 when its arbitrary off-sort totalization is not canonical. -/

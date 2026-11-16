@@ -1,5 +1,9 @@
-import IntegrationSection6.IntegrationContexts
-import IntegrationSection6.DefinableRVFunctions
+module
+
+public import IntegrationSection6.IntegrationContexts
+public import IntegrationSection6.DefinableRVFunctions
+
+@[expose] public section
 
 /-! Context notation for the actual quotient of definable families. -/
 noncomputable section

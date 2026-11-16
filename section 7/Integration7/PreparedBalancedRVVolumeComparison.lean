@@ -1,7 +1,11 @@
-import Integration7.PreparedUnaryRVValueProducts
-import Integration7.BalancedUnaryRVVolumeIsomorphisms
-import Integration7.GammaCoordinateDensityGraphs
-import Integration7.GradedVolumeProducts
+module
+
+public import Integration7.PreparedUnaryRVValueProducts
+public import Integration7.BalancedUnaryRVVolumeIsomorphisms
+public import Integration7.GammaCoordinateDensityGraphs
+public import Integration7.GradedVolumeProducts
+
+@[expose] public section
 
 /-! Actual original-Gamma volume isomorphisms between the two balanced
 product RV objects, constructed from the chosen unary preparations.

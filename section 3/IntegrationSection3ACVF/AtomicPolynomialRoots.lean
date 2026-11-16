@@ -1,6 +1,10 @@
-import IntegrationSection3ACVF.FullBaseDefinability
-import IntegrationSection3ACVF.FullBallCoset
-import IntegrationSection3.PolynomialSpecialization
+module
+
+public import IntegrationSection3ACVF.FullBaseDefinability
+public import IntegrationSection3ACVF.FullBallCoset
+public import IntegrationSection3.PolynomialSpecialization
+
+@[expose] public section
 
 /-! Finite-root avoidance for infinite complete types over the full
 interpreted base. Coefficients may lie in the real base's VF definable

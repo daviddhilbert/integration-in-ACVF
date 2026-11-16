@@ -1,9 +1,13 @@
-import Integration7.OrdinaryVolumeHeadFibres
-import Integration7.FieldBaseUnaryVolumeIntegrals
-import Integration7.OrdinaryVolumeFamilyHeadIntegrals
-import Integration7.HeadCoordinateFibreVolumeSelectors
-import Integration7.VolumeRelabeling
-import Section4.RVIsoTools
+module
+
+public import Integration7.OrdinaryVolumeHeadFibres
+public import Integration7.FieldBaseUnaryVolumeIntegrals
+public import Integration7.OrdinaryVolumeFamilyHeadIntegrals
+public import Integration7.HeadCoordinateFibreVolumeSelectors
+public import Integration7.VolumeRelabeling
+public import Section4.RVIsoTools
+
+@[expose] public section
 
 /-! The ordinary head-integral row is the raw unary contraction of its
 actual frozen unit-density VF realization, with full volume data. -/

@@ -1,5 +1,9 @@
-import Integration7.HKZeroFamilyScalarProducts
-import Integration7.HKAEZeroFunctionAddition
+module
+
+public import Integration7.HKZeroFamilyScalarProducts
+public import Integration7.HKAEZeroFunctionAddition
+
+@[expose] public section
 
 /-! Weighted zero coefficients act on the actual weighted-zero-valued AE quotient
 through their genuine finite-factor family representatives. -/

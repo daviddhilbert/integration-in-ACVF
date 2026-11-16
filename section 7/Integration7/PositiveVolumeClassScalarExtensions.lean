@@ -1,5 +1,9 @@
-import Integration7.PositiveVolumeClassExtensions
-import Integration7.OrdinaryVolumeCoefficientScalarRows
+module
+
+public import Integration7.PositiveVolumeClassExtensions
+public import Integration7.OrdinaryVolumeCoefficientScalarRows
+
+@[expose] public section
 
 /-! Positive volume-class extension is semilinear over the actual
 ordinary coefficient extension. This records compatibility of parameter

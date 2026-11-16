@@ -1,5 +1,9 @@
-import Integration7.SelectedSumTagPredicates
-import Integration7.SelectedSumRowCoverage
+module
+
+public import Integration7.SelectedSumTagPredicates
+public import Integration7.SelectedSumRowCoverage
+
+@[expose] public section
 
 /-! The two old-tag cuts of the actual selected sum recover its
 original summands by genuine coordinate- and density-preserving row bijections. -/

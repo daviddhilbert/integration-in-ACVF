@@ -1,6 +1,10 @@
-import Integration7.GammaActualRVProducts
-import Integration7.GammaVolumeObjectGraphs
-import IntegrationSection6.GammaElementaryStructure
+module
+
+public import Integration7.GammaActualRVProducts
+public import Integration7.GammaVolumeObjectGraphs
+public import IntegrationSection6.GammaElementaryStructure
+
+@[expose] public section
 
 /-! Any actual canonical elementary blowup of a Gamma volume object
 retains the full original-Gamma graphs. Only ordinary admissibility is

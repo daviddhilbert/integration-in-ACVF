@@ -1,4 +1,8 @@
-import IntegrationSection6.GammaIspPadding
+module
+
+public import IntegrationSection6.GammaIspPadding
+
+@[expose] public section
 
 /-! Injective transition maps on the actual integration quotients. -/
 noncomputable section

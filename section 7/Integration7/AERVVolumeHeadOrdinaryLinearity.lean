@@ -1,5 +1,9 @@
-import Integration7.FrozenHeadOrdinaryCoefficients
-import Integration7.AERVVolumeHeadIntegralAdditivity
+module
+
+public import Integration7.FrozenHeadOrdinaryCoefficients
+public import Integration7.AERVVolumeHeadIntegralAdditivity
+
+@[expose] public section
 
 /-! The genuine positive homogeneous AE head map is linear over the
 ordinary RV[0] coefficient semiring before point normalization. -/

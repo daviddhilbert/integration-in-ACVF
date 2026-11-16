@@ -1,4 +1,8 @@
-import Integration7.VolumeChainSchemaRealization
+module
+
+public import Integration7.VolumeChainSchemaRealization
+
+@[expose] public section
 
 /-! A valid common-volume-blowup formula witness gives actual common
 forward blowups, with both specified lengths and the volume comparison. -/

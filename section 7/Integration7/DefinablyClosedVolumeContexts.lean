@@ -1,6 +1,10 @@
-import Integration7.SmallDefinableClosures
-import Integration7.FiniteVolumeParameterContexts
-import Section3.FieldBase
+module
+
+public import Integration7.SmallDefinableClosures
+public import Integration7.FiniteVolumeParameterContexts
+public import Section3.FieldBase
+
+@[expose] public section
 
 /-! A small containing volume context closed under actual definability.
 Its VF part is a proved field, and every additional parameter is already

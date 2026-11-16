@@ -1,5 +1,9 @@
-import Integration7.FixedVFVolumeTagBijections
-import Integration7.VFVolumeUnionBijections
+module
+
+public import Integration7.FixedVFVolumeTagBijections
+public import Integration7.VFVolumeUnionBijections
+
+@[expose] public section
 
 /-! Full volume bijections are compatible with fixed-degree disjoint
 unions. The two summand maps are conjugated by their actual RV tags. -/

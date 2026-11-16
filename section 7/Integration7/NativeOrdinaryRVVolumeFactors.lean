@@ -1,5 +1,9 @@
-import Integration7.NativeCoordinateDensityVolumeObjects
-import Integration7.VolumeFormProducts
+module
+
+public import Integration7.NativeCoordinateDensityVolumeObjects
+public import Integration7.VolumeFormProducts
+
+@[expose] public section
 
 /-! A finite pure-RV label set is an actual ordinary RV[0] object.
 Its empty volume tuple carries no artificial density. -/

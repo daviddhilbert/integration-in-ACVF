@@ -1,5 +1,9 @@
-import Integration7.NativeOrdinaryRVVolumeFactors
-import Integration7.HKZeroRVVolumeIsomorphisms
+module
+
+public import Integration7.NativeOrdinaryRVVolumeFactors
+public import Integration7.HKZeroRVVolumeIsomorphisms
+
+@[expose] public section
 
 /-! A finite pure RV set with a nonzero retained label is a measured
 degree-zero object. Its density is not replaced by a unit form. -/

@@ -1,4 +1,8 @@
-import IntegrationSection6.LiftPresentations
+module
+
+public import IntegrationSection6.LiftPresentations
+
+@[expose] public section
 
 /-! Finite volume is exactly finiteness of the RV-label fibres of the
 actual lift. This uses the actual surjective RV map, including RV zero. -/

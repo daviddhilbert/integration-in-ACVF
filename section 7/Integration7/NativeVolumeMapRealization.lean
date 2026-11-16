@@ -1,4 +1,8 @@
-import Integration7.NativeVolumeDomains
+module
+
+public import Integration7.NativeVolumeDomains
+
+@[expose] public section
 
 /-! Actual raw mixed maps in the shared language become native Section 5
 maps without changing their point functions or real parameter base. -/

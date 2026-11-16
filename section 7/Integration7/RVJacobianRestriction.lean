@@ -1,4 +1,8 @@
-import Integration7.RVVolumeMorphisms
+module
+
+public import Integration7.RVVolumeMorphisms
+
+@[expose] public section
 
 /-! Defined Jacobians agree on nested correspondences. This compares two
 actual tangent graphs; it does not assert existence at singular points. -/

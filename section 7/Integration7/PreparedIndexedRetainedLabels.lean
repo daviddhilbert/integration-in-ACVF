@@ -1,5 +1,9 @@
-import Integration7.GammaSliceLiftChartValues
-import IntegrationSection6.GammaSchemaRowAgreement
+module
+
+public import Integration7.GammaSliceLiftChartValues
+public import IntegrationSection6.GammaSchemaRowAgreement
+
+@[expose] public section
 
 /-! Every prepared indexed label comes from an actual original family
 row. A nonzero original density label therefore stays nonzero before

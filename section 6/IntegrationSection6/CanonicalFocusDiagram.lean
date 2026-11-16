@@ -1,7 +1,11 @@
-import IntegrationSection6.CanonicalFocusCoordinates
-import IntegrationSection6.TypedRelabeling
-import IntegrationSection6.CanonicalFocusSpecial
-import IntegrationSection6.RVLabelMap
+module
+
+public import IntegrationSection6.CanonicalFocusCoordinates
+public import IntegrationSection6.TypedRelabeling
+public import IntegrationSection6.CanonicalFocusSpecial
+public import IntegrationSection6.RVLabelMap
+
+@[expose] public section
 
 /-! The actual length-one lift diagram: bijective arrows, identity VF
 coordinates, commuting label projection and the quotient-coordinate rule. -/

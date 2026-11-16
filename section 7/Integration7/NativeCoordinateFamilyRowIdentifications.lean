@@ -1,4 +1,8 @@
-import Integration7.NativeCoordinateVolumeFamilyRows
+module
+
+public import Integration7.NativeCoordinateVolumeFamilyRows
+
+@[expose] public section
 
 /-! A literal native coordinate-density family represents any actual
 family with the same carrier, selected tuple and retained density. -/

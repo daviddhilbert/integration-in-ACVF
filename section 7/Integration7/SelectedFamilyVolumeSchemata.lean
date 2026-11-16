@@ -1,9 +1,13 @@
-import Integration7.GammaSelectedVolumeSchemata
-import Integration7.SelectedVolumeRowContexts
-import Integration7.NativeVolumeDomains
-import Integration7.UniformVolumeSchemaBounds
-import Integration7.VolumeSchemaRowSemantics
-import IntegrationSection6.GammaVFParameterBases
+module
+
+public import Integration7.GammaSelectedVolumeSchemata
+public import Integration7.SelectedVolumeRowContexts
+public import Integration7.NativeVolumeDomains
+public import Integration7.UniformVolumeSchemaBounds
+public import Integration7.VolumeSchemaRowSemantics
+public import IntegrationSection6.GammaVFParameterBases
+
+@[expose] public section
 
 /-! The actual density graph of a selected VF volume family has a full
 coordinate-and-density schema. Its rows are the genuine named fibres. -/

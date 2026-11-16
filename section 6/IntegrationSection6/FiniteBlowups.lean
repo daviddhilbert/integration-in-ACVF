@@ -1,4 +1,8 @@
-import IntegrationSection6.Blowups
+module
+
+public import IntegrationSection6.Blowups
+
+@[expose] public section
 
 /-! The finite-volume restrictions in Remark 6.2 for general and iterated blowups. -/
 

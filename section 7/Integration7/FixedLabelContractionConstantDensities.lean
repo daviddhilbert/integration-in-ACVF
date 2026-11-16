@@ -1,5 +1,9 @@
-import Integration7.FixedLabelContractionVolumeObjects
-import Integration7.TwoOrderProductCoordinateDensities
+module
+
+public import Integration7.FixedLabelContractionVolumeObjects
+public import Integration7.TwoOrderProductCoordinateDensities
+
+@[expose] public section
 
 /-! For any actual standard contraction of a pure VF domain with fixed
 labels, the retained selected density is exactly the same constant on

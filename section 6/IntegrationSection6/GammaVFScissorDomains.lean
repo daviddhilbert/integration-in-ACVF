@@ -1,4 +1,8 @@
-import Section7.GammaScissors
+module
+
+public import Section7.GammaScissors
+
+@[expose] public section
 
 /-! Recover literal unions and intersections from the actual packed
 VF scissor relation in a common mixed arity. -/

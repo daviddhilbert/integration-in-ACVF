@@ -1,6 +1,10 @@
-import Integration7.UnitPointVolumeSwaps
-import Integration7.HKZeroCoefficientSymmetry
-import Integration7.HKVolumeBlowupSemiring
+module
+
+public import Integration7.UnitPointVolumeSwaps
+public import Integration7.HKZeroCoefficientSymmetry
+public import Integration7.HKVolumeBlowupSemiring
+
+@[expose] public section
 
 /-! The concrete degree-one point class is central in the actual full
 graded common-blowup semiring, including its weighted measured-zero part. -/

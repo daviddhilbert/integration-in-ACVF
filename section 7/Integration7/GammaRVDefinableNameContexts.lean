@@ -1,6 +1,10 @@
-import Integration7.SmallDefinableClosures
-import Integration7.GammaNamesGenericParameters
-import IntegrationSection4.RVLabelSlices
+module
+
+public import Integration7.SmallDefinableClosures
+public import Integration7.GammaNamesGenericParameters
+public import IntegrationSection4.RVLabelSlices
+
+@[expose] public section
 
 /-! A genuine small context closed under definitions over the original
 real/Gamma names and a finite RV parameter tuple. It contains the RV paradigms specified by a

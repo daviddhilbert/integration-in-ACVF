@@ -1,6 +1,10 @@
-import IntegrationSection6.GammaSortedTotalBijections
-import IntegrationSection6.GammaRawRVFormulas
-import Section5.GammaLift
+module
+
+public import IntegrationSection6.GammaSortedTotalBijections
+public import IntegrationSection6.GammaRawRVFormulas
+public import Section5.GammaLift
+
+@[expose] public section
 
 /-! Sorted-coordinate bijections return to the inherited mixed point
 language through explicit coordinate equivalences and full Gamma graphs. -/

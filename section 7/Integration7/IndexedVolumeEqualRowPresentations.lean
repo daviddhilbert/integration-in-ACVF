@@ -1,5 +1,9 @@
-import Integration7.IndexedVolumeFiniteRowPresentations
-import Integration7.GammaVolumeSchemaRowEquality
+module
+
+public import Integration7.IndexedVolumeFiniteRowPresentations
+public import Integration7.GammaVolumeSchemaRowEquality
+
+@[expose] public section
 
 /-! Equal complete rows transfer functional density and finite-map
 semantics, allowing indexed presentations without changing numeric bounds. -/

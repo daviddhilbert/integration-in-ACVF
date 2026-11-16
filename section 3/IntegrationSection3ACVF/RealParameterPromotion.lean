@@ -1,7 +1,11 @@
-import IntegrationSection3ACVF.RealParameterTuples
-import IntegrationSection3.ImaginaryTupleDefinability
-import IntegrationSection3.CodeSupportHull
-import Section3.GammaBaseTools
+module
+
+public import IntegrationSection3ACVF.RealParameterTuples
+public import IntegrationSection3.ImaginaryTupleDefinability
+public import IntegrationSection3.CodeSupportHull
+public import Section3.GammaBaseTools
+
+@[expose] public section
 
 /-! Promote finite named real labels into free variables over the full
 original interpreted base. Universal code hulls restore invariance at

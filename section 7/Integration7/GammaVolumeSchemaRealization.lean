@@ -1,5 +1,9 @@
-import Integration7.GammaVolumeGraphPresentations
-import Integration7.GammaVolumeSchemaDensityGraphs
+module
+
+public import Integration7.GammaVolumeGraphPresentations
+public import Integration7.GammaVolumeSchemaDensityGraphs
+
+@[expose] public section
 
 /-! Every valid volume-schema row gives an actual finite real volume
 presentation with its original-Gamma domain, coordinate and density graphs. -/

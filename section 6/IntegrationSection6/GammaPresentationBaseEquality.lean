@@ -1,5 +1,9 @@
-import IntegrationSection6.GammaFiniteGraphObjects
-import IntegrationSection6.FiniteGammaCommonBlowups
+module
+
+public import IntegrationSection6.GammaFiniteGraphObjects
+public import IntegrationSection6.FiniteGammaCommonBlowups
+
+@[expose] public section
 
 /-! Equality transport for graph presentations and the actual common-blowup
 relation, with no change to its geometric meaning. -/

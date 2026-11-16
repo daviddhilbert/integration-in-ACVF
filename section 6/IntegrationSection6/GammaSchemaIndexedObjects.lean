@@ -1,4 +1,8 @@
-import IntegrationSection6.GammaSchemaIndexedGraphs
+module
+
+public import IntegrationSection6.GammaSchemaIndexedGraphs
+
+@[expose] public section
 
 /-! Assemble all valid schema rows over an actual RV[d] base into an
 actual RV[d+k] object. Fibre finiteness uses both the index volume fibres

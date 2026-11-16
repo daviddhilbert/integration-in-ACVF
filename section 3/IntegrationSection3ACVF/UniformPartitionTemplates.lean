@@ -1,5 +1,9 @@
-import IntegrationSection3ACVF.PromotedPartitionTemplates
-import IntegrationSection3ACVF.FiniteBaseTupleCovers
+module
+
+public import IntegrationSection3ACVF.PromotedPartitionTemplates
+public import IntegrationSection3ACVF.FiniteBaseTupleCovers
+
+@[expose] public section
 
 /-! Pointwise valid original-base partition templates admit finitely many
 uniform choices. Saturation is genuine and is used only after a common

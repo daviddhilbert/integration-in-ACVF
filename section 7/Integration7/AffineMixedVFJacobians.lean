@@ -1,4 +1,8 @@
-import Integration7.VFVolumeBijections
+module
+
+public import Integration7.VFVolumeBijections
+
+@[expose] public section
 
 /-! Any defined mixed Jacobian of a map whose VF values are affine on
 the fixed-label fibre equals the determinant of that affine linear map. -/

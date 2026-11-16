@@ -1,5 +1,9 @@
-import Integration7.GammaVolumeGraphPresentations
-import IntegrationSection6.GammaNativeFiniteBounds
+module
+
+public import Integration7.GammaVolumeGraphPresentations
+public import IntegrationSection6.GammaNativeFiniteBounds
+
+@[expose] public section
 
 /-! A volume density itself is an original-Gamma RV-valued function.
 It need not have finite fibres. Its native raw graph retains exact

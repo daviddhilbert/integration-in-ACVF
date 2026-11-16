@@ -1,6 +1,10 @@
-import IntegrationSection6.IntegrationContexts
-import IntegrationSection6.IntegrationLocalizationEmbedding
-import IntegrationSection6.CompletionGradedColimit
+module
+
+public import IntegrationSection6.IntegrationContexts
+public import IntegrationSection6.IntegrationLocalizationEmbedding
+public import IntegrationSection6.CompletionGradedColimit
+
+@[expose] public section
 
 /-! The actual VF Grothendieck group satisfies the graded-colimit
 universal property in6.22, with the native nonzero RV components and the

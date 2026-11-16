@@ -1,6 +1,10 @@
-import Integration7.PermutedVolumeFamilyRows
-import Integration7.NativeCoordinateFamilyRowIdentifications
-import Integration7.NativeVolumeFamilyIntegralFormula
+module
+
+public import Integration7.PermutedVolumeFamilyRows
+public import Integration7.NativeCoordinateFamilyRowIdentifications
+public import Integration7.NativeVolumeFamilyIntegralFormula
+
+@[expose] public section
 
 /-! Reindexing a family and then appending its density represents the
 same named RV fibres as reindexing its original density graph. This

@@ -1,8 +1,12 @@
-import Integration7.HKZeroDefinableDensityRescaling
-import Integration7.HKZeroFamilyJacobianPushforwards
-import Integration7.SelectedVolumeRowContexts
-import Integration7.VolumeRelabeling
-import Section4.RVIsoTools
+module
+
+public import Integration7.HKZeroDefinableDensityRescaling
+public import Integration7.HKZeroFamilyJacobianPushforwards
+public import Integration7.SelectedVolumeRowContexts
+public import Integration7.VolumeRelabeling
+public import Section4.RVIsoTools
+
+@[expose] public section
 
 /-! On a fixed target fibre the actual weighted-zero family Jacobian transform is
 the original fibre with its density multiplied by the inverse base

@@ -1,6 +1,10 @@
-import Integration7.UnaryContractionVolumeMaps
-import Integration7.RawVFVolumeComposition
-import IntegrationSection5.MapInverseBijection
+module
+
+public import Integration7.UnaryContractionVolumeMaps
+public import Integration7.RawVFVolumeComposition
+public import IntegrationSection5.MapInverseBijection
+
+@[expose] public section
 
 /-! Conjugating a measure-preserving unary bijection by arbitrary chosen
 standard contractions. The forms on the two normalized lifts are the

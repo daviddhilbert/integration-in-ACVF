@@ -1,6 +1,10 @@
-import Integration7.VFVolumeLifts
-import Section4.MixedProducts
-import Section4.RVProductAssociativity
+module
+
+public import Integration7.VFVolumeLifts
+public import Section4.MixedProducts
+public import Section4.RVProductAssociativity
+
+@[expose] public section
 
 /-! The full ordinary lift of an RV Cartesian product is exactly the
 Cartesian product of the two lifts, including coordinate-zero labels. -/

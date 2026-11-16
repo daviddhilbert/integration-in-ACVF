@@ -1,4 +1,8 @@
-import Integration7.DefinableAppendedLiftCarriers
+module
+
+public import Integration7.DefinableAppendedLiftCarriers
+
+@[expose] public section
 
 /-! The selected and arbitrary-map presentations of a family have
 identical coefficient-first lift carriers and original densities. -/

@@ -1,8 +1,12 @@
-import Integration7.GammaChartedVolumeBlowups
-import Integration7.GammaCanonicalVolumeComparison
-import Integration7.GammaActualVolumePartitions
-import Integration7.GammaVolumeRestrictionIdentities
-import Integration7.ElementaryBlowupPartitions
+module
+
+public import Integration7.GammaChartedVolumeBlowups
+public import Integration7.GammaCanonicalVolumeComparison
+public import Integration7.GammaActualVolumePartitions
+public import Integration7.GammaVolumeRestrictionIdentities
+public import Integration7.ElementaryBlowupPartitions
+
+@[expose] public section
 
 /-! Full original-Gamma elementary charts admit Gamma canonicalization
 and Gamma partition isomorphisms, including complementary labels. -/

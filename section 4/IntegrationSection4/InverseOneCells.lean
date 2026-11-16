@@ -1,5 +1,9 @@
-import IntegrationSection4.InverseBodies
-import IntegrationSection4.Cells
+module
+
+public import IntegrationSection4.InverseBodies
+public import IntegrationSection4.Cells
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

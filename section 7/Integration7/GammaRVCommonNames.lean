@@ -1,6 +1,10 @@
-import Integration7.GammaNativeCommonNames
-import IntegrationSection6.GammaRVRealization
-import Integration7.VolumeSchemaUnderlyingIsomorphisms
+module
+
+public import Integration7.GammaNativeCommonNames
+public import IntegrationSection6.GammaRVRealization
+public import Integration7.VolumeSchemaUnderlyingIsomorphisms
+
+@[expose] public section
 
 /-! Fixed original-Gamma common names realize actual canonical raw RV
 relation graphs over any containing real presentation. -/

@@ -1,4 +1,8 @@
-import Integration7.NormalizedVolumeSupports
+module
+
+public import Integration7.NormalizedVolumeSupports
+
+@[expose] public section
 
 /-! The actual support projection is idempotent and has exactly the
 proved supported-function submodule as its image. -/

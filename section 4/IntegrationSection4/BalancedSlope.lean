@@ -1,5 +1,9 @@
-import IntegrationSection4.Cells
-import IntegrationSection4.InverseDifferenceGeometry
+module
+
+public import IntegrationSection4.Cells
+public import IntegrationSection4.InverseDifferenceGeometry
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

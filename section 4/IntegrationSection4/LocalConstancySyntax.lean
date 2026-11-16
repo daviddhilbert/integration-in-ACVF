@@ -1,7 +1,11 @@
-import IntegrationSection3ACVF.OpenImageConfigurations
-import IntegrationSection3ACVF.ParameterizedOpenImages
-import IntegrationSection3ACVF.FullBaseLogic
-import IntegrationSection4.RadiusPreparationGeometry
+module
+
+public import IntegrationSection3ACVF.OpenImageConfigurations
+public import IntegrationSection3ACVF.ParameterizedOpenImages
+public import IntegrationSection3ACVF.FullBaseLogic
+public import IntegrationSection4.RadiusPreparationGeometry
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

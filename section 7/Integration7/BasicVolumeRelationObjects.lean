@@ -1,8 +1,12 @@
-import Integration7.ElementaryBlowupConstruction
-import Integration7.GradedVolumeProducts
-import Integration7.TermClosureDefinability
-import Section3.VFDefinableClosure
-import IntegrationSection6.FiniteGammaBasicFactors
+module
+
+public import Integration7.ElementaryBlowupConstruction
+public import Integration7.GradedVolumeProducts
+public import Integration7.TermClosureDefinability
+public import Section3.VFDefinableClosure
+public import IntegrationSection6.FiniteGammaBasicFactors
+
+@[expose] public section
 
 /-! The actual degree-one point and open RV cone, with unit densities.
 The point is admissible over every base, with no named RV-unit premise. -/

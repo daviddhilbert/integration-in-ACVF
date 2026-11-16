@@ -1,6 +1,10 @@
-import IntegrationSection6.GammaRVRealization
-import IntegrationSection6.FiniteGammaEquivalence
-import IntegrationSection6.FiniteGammaUnaryComparison
+module
+
+public import IntegrationSection6.GammaRVRealization
+public import IntegrationSection6.FiniteGammaEquivalence
+public import IntegrationSection6.FiniteGammaUnaryComparison
+
+@[expose] public section
 
 /-! Original-Gamma finite isomorphisms have simultaneous real presentations.
 These finite representative choices stay internal: the actual isomorphism

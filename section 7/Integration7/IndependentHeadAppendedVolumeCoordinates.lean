@@ -1,6 +1,10 @@
-import Integration7.IndependentHeadVolumeProductCharts
-import Integration7.HeadAppendVolumeCoordinates
-import Integration7.UnarySpecialHeadPreparations
+module
+
+public import Integration7.IndependentHeadVolumeProductCharts
+public import Integration7.HeadAppendVolumeCoordinates
+public import Integration7.UnarySpecialHeadPreparations
+
+@[expose] public section
 
 /-! The independent product chart has exactly the appended order:
 coefficient coordinates, old fibre coordinates, then the new head tag.

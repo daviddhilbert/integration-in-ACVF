@@ -1,4 +1,8 @@
-import Integration7.HKZeroFamilyAEHeadComparisons
+module
+
+public import Integration7.HKZeroFamilyAEHeadComparisons
+
+@[expose] public section
 
 /-! First-head integration of weighted-zero AE functions is well-defined
 on the actual quotient. Any chosen head preparation gives its value. -/

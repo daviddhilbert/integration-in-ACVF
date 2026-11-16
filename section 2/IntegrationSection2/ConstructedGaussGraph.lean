@@ -1,6 +1,10 @@
-import IntegrationSection2.EmbeddedFiniteResidueDegree
-import IntegrationSection2.ResidueZeroCharacteristic
-import Section9.GaussGraphConstruction
+module
+
+public import IntegrationSection2.EmbeddedFiniteResidueDegree
+public import IntegrationSection2.ResidueZeroCharacteristic
+public import Section9.GaussGraphConstruction
+
+@[expose] public section
 
 /-! Construct the actual henselized Gauss graph without the predecessor's
 finite-extension reference input. The assembly is adapted from the pinned

@@ -1,7 +1,11 @@
-import Integration7.VolumeClassCoordinatePermutations
-import Integration7.VolumeCoordinatePermutation
-import Integration7.PermutationSignParameters
-import Integration7.DefinableVolumeClassRescaling
+module
+
+public import Integration7.VolumeClassCoordinatePermutations
+public import Integration7.VolumeCoordinatePermutation
+public import Integration7.PermutationSignParameters
+public import Integration7.DefinableVolumeClassRescaling
+
+@[expose] public section
 
 /-! The exact determinant-density correction for RV coordinate order.
 Signed coordinate reindexing gives an actual volume isomorphism before

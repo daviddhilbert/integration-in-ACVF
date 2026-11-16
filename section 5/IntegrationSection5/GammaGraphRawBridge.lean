@@ -1,6 +1,10 @@
-import IntegrationSection5.GammaPointRawBridge
-import IntegrationSection5.UnaryCoordinateGeometry
-import IntegrationSection3.FiniteTupleGraphs
+module
+
+public import IntegrationSection5.GammaPointRawBridge
+public import IntegrationSection5.UnaryCoordinateGeometry
+public import IntegrationSection3.FiniteTupleGraphs
+
+@[expose] public section
 
 /-! The complete graph of the actual unary mixed map, as a raw finite tuple
 graph for Proposition3.21. The chosen totalization is used only on its domain. -/

@@ -1,5 +1,9 @@
-import Integration7.VolumeLiftCoproductDomains
-import Integration7.VFVolumeIsomorphisms
+module
+
+public import Integration7.VolumeLiftCoproductDomains
+public import Integration7.VFVolumeIsomorphisms
+
+@[expose] public section
 
 /-! The full lift commutes with fixed-degree disjoint unions through
 the literal identity map on VF tuples and tagged RV labels. -/

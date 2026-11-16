@@ -1,7 +1,11 @@
-import IntegrationSection6.AlgebraicFibres
-import Section4.RVProduct
-import Section3.RVOperations
-import Section3.GammaCodeDefinability
+module
+
+public import IntegrationSection6.AlgebraicFibres
+public import Section4.RVProduct
+public import Section3.RVOperations
+public import Section3.GammaCodeDefinability
+
+@[expose] public section
 
 /-!
 # Elementary RV blowups

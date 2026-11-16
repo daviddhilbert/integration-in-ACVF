@@ -1,4 +1,8 @@
-import IntegrationSection4.FiniteScalarFamilies
+module
+
+public import IntegrationSection4.FiniteScalarFamilies
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

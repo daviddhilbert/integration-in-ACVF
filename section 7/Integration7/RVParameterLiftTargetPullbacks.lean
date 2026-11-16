@@ -1,4 +1,8 @@
-import Integration7.RVLabelChainLifts
+module
+
+public import Integration7.RVLabelChainLifts
+
+@[expose] public section
 
 /-! A special preparation of a pure VF domain lifts over an arbitrary
 RV parameter domain. The exact target is the old target with those carried

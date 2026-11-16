@@ -1,7 +1,11 @@
-import IntegrationSection6.GammaSchemaIndexedPresentations
-import IntegrationSection6.FiniteGammaEmptyIsomorphisms
-import IntegrationSection6.FiniteGammaCommonBlowups
-import IntegrationSection6.FiniteGammaUniversalCharts
+module
+
+public import IntegrationSection6.GammaSchemaIndexedPresentations
+public import IntegrationSection6.FiniteGammaEmptyIsomorphisms
+public import IntegrationSection6.FiniteGammaCommonBlowups
+public import IntegrationSection6.FiniteGammaUniversalCharts
+
+@[expose] public section
 
 /-! Indexed objects over an empty index domain are actually empty in the
 finite Gamma category, at arbitrary fibre label arities. -/

@@ -1,7 +1,11 @@
-import Integration7.FixedTailUnaryVolumeIsomorphisms
-import Integration7.FixedHeadEssentialVolumeIsomorphisms
-import Integration7.GammaVolumeLabelIdentities
-import Integration7.GradedVolumeProducts
+module
+
+public import Integration7.FixedTailUnaryVolumeIsomorphisms
+public import Integration7.FixedHeadEssentialVolumeIsomorphisms
+public import Integration7.GammaVolumeLabelIdentities
+public import Integration7.GradedVolumeProducts
+
+@[expose] public section
 
 /-! Essential restriction of the unary factor commutes with adjoining
 a nonzero fixed tail volume coordinate. The volume map keeps all labels. -/

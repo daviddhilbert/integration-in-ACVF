@@ -1,6 +1,10 @@
-import IntegrationSection6.GammaCommonBlowupSchemata
-import IntegrationSection6.GammaChainRealization
-import IntegrationSection6.FiniteGammaCommonBlowups
+module
+
+public import IntegrationSection6.GammaCommonBlowupSchemata
+public import IntegrationSection6.GammaChainRealization
+public import IntegrationSection6.FiniteGammaCommonBlowups
+
+@[expose] public section
 
 /-! Valid finite common-blowup schemata realize genuine original-Gamma
 common forward blowups in RV[k], at their exact encoded chain lengths. -/

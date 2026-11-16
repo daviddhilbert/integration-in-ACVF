@@ -1,6 +1,10 @@
-import IntegrationSection6.GammaMapRowTransport
-import IntegrationSection6.GammaAdmissibilitySchemata
-import IntegrationSection6.GammaIsomorphismSchemata
+module
+
+public import IntegrationSection6.GammaMapRowTransport
+public import IntegrationSection6.GammaAdmissibilitySchemata
+public import IntegrationSection6.GammaIsomorphismSchemata
+
+@[expose] public section
 
 /-! Validity of actual finite object, admissibility and weighted chart
 schemata depends on their literal rows and fixed numerical metadata.

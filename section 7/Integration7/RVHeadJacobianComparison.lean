@@ -1,6 +1,10 @@
-import Integration7.HeadTangentDeterminant
-import Integration7.RVVolumeMorphisms
-import Section9.ResidueSimpleEquations
+module
+
+public import Integration7.HeadTangentDeterminant
+public import Integration7.RVVolumeMorphisms
+public import Section9.ResidueSimpleEquations
+
+@[expose] public section
 
 /-! A defined full Jacobian is the head Jacobian times the last-coordinate
 ratio when the normalized correspondence has the actual free vertical line. -/

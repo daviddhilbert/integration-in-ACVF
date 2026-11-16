@@ -1,7 +1,11 @@
-import Integration7.GradedAEVolumeOrdinaryBilinearity
-import Integration7.GradedSemiringActions
-import Integration7.AEOrdinaryPositiveCoefficientAssociativity
-import Integration7.AERVVolumePositiveCoefficientAssociativity
+module
+
+public import Integration7.GradedAEVolumeOrdinaryBilinearity
+public import Integration7.GradedSemiringActions
+public import Integration7.AEOrdinaryPositiveCoefficientAssociativity
+public import Integration7.AERVVolumePositiveCoefficientAssociativity
+
+@[expose] public section
 
 /-! The genuine homogeneous coefficient actions satisfy the unit and
 all mixed associativity laws, and hence give the full graded semimodule. -/

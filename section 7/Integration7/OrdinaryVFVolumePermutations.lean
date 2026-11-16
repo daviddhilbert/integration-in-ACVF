@@ -1,7 +1,11 @@
-import Integration7.PermutedVolumeFamilies
-import Integration7.OrdinaryVFVolumeFamilies
-import Integration7.OrdinaryVolumeCoefficientExtensions
-import Section4.RVIsoTools
+module
+
+public import Integration7.PermutedVolumeFamilies
+public import Integration7.OrdinaryVFVolumeFamilies
+public import Integration7.OrdinaryVolumeCoefficientExtensions
+public import Section4.RVIsoTools
+
+@[expose] public section
 
 /-! Literal VF coordinate reindexing of ordinary RV[0]-valued families.
 The actual finite RV row is unchanged, in its transported parameter base. -/

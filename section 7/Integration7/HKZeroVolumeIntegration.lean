@@ -1,5 +1,9 @@
-import Integration7.HKZeroVolumeLiftSurjectivity
-import Integration7.PositiveVolumeIntegrationEquivalence
+module
+
+public import Integration7.HKZeroVolumeLiftSurjectivity
+public import Integration7.PositiveVolumeIntegrationEquivalence
+
+@[expose] public section
 
 /-! The corrected zero lift is a bijection of actual weighted classes.
 Together with the unchanged positive classification, this gives the

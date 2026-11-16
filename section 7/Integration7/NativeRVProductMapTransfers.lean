@@ -1,6 +1,10 @@
-import Integration7.RawRVProductTransfers
-import Integration7.CanonicalUnaryHeadProducts
-import Integration7.NativeVolumeDomains
+module
+
+public import Integration7.RawRVProductTransfers
+public import Integration7.CanonicalUnaryHeadProducts
+public import Integration7.NativeVolumeDomains
+
+@[expose] public section
 
 /-! A native pure-RV product map acts on the literal raw label domains
 used by coordinate-density volume objects, preserving its point values. -/

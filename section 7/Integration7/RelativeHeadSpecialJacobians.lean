@@ -1,5 +1,9 @@
-import Integration7.IndependentHeadCoordinateFields
-import Integration7.RelativeFibreTranslationVolumes
+module
+
+public import Integration7.IndependentHeadCoordinateFields
+public import Integration7.RelativeFibreTranslationVolumes
+
+@[expose] public section
 
 /-! A genuinely special preparation on every head fibre has full VF
 Jacobian one almost everywhere. The frozen coordinates are included in

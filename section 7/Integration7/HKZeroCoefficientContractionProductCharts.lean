@@ -1,8 +1,12 @@
-import Integration7.HKNativeZeroCoefficientPreparations
-import Integration7.UnaryPreparedHeadVolumeObjects
-import Integration7.FactoredHeadAppendedVolumeCoordinates
-import Integration7.HKFactoredHeadZeroProductCharts
-import Integration7.IndependentRVProductDensityHeadLabels
+module
+
+public import Integration7.HKNativeZeroCoefficientPreparations
+public import Integration7.UnaryPreparedHeadVolumeObjects
+public import Integration7.FactoredHeadAppendedVolumeCoordinates
+public import Integration7.HKFactoredHeadZeroProductCharts
+public import Integration7.IndependentRVProductDensityHeadLabels
+
+@[expose] public section
 
 /-! The specified contraction of an actual constant-coefficient family
 is volume-isomorphic to the coefficient times the prepared fibre head.

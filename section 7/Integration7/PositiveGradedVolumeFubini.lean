@@ -1,5 +1,9 @@
-import Integration7.PositiveGradedCoordinatePushforwards
-import Integration7.NonemptyVolumeCoordinateProjections
+module
+
+public import Integration7.PositiveGradedCoordinatePushforwards
+public import Integration7.NonemptyVolumeCoordinateProjections
+
+@[expose] public section
 
 /-! Raw Fubini for finite sums of positive homogeneous function values.
 Every nonempty retained coordinate set is included, and coefficients

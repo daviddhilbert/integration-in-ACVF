@@ -1,5 +1,9 @@
-import Integration7.FreeAuxiliaryMapPromotion
-import Integration7.GammaVolumeRowComparisonPromotion
+module
+
+public import Integration7.FreeAuxiliaryMapPromotion
+public import Integration7.GammaVolumeRowComparisonPromotion
+
+@[expose] public section
 
 /-! A volume isomorphism with its full original-Gamma chart promotes in
 any genuine small real context. Its finite exceptional map supplies its

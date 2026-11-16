@@ -1,4 +1,8 @@
-import Integration7.IndexedVolumeIsomorphisms
+module
+
+public import Integration7.IndexedVolumeIsomorphisms
+
+@[expose] public section
 
 /-! The joint original-Gamma chart becomes definable in a finite
 containing context, yielding an actual indexed volume isomorphism. -/

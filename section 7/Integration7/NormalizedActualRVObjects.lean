@@ -1,5 +1,9 @@
-import Integration7.CanonicalFiniteRVObjects
-import Integration7.GammaVolumeObjectGraphs
+module
+
+public import Integration7.CanonicalFiniteRVObjects
+public import Integration7.GammaVolumeObjectGraphs
+
+@[expose] public section
 
 /-! Actual raw RV objects admit normalized presentations with exactly
 the same label tuples and coordinate values. This is the inverse bridge

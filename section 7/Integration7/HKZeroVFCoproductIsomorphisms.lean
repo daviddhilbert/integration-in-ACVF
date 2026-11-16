@@ -1,4 +1,8 @@
-import Integration7.HKZeroVFCoproducts
+module
+
+public import Integration7.HKZeroVFCoproducts
+
+@[expose] public section
 
 /-! The actual tagged weighted zero VF coproduct respects exact-form
 isomorphisms, including different ambient mixed presentations. -/

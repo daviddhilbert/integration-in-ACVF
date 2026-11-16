@@ -1,5 +1,9 @@
-import IntegrationSection5.RelativeFibreBijection
-import IntegrationSection5.HeadContractionGeometry
+module
+
+public import IntegrationSection5.RelativeFibreBijection
+public import IntegrationSection5.HeadContractionGeometry
+
+@[expose] public section
 
 /-! An actual stage of the ordered contraction construction. This data
 structure includes the preparation and is not an existence assumption. -/

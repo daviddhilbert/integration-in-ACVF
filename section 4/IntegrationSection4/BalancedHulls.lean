@@ -1,4 +1,8 @@
-import IntegrationSection4.BalancedBallClasses
+module
+
+public import IntegrationSection4.BalancedBallClasses
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

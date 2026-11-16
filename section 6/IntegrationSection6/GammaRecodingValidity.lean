@@ -1,6 +1,10 @@
-import IntegrationSection6.GammaRecodingAgreements
-import IntegrationSection6.GammaSchemaValidityTransport
-import IntegrationSection6.GammaRowOperationAgreement
+module
+
+public import IntegrationSection6.GammaRecodingAgreements
+public import IntegrationSection6.GammaSchemaValidityTransport
+public import IntegrationSection6.GammaRowOperationAgreement
+
+@[expose] public section
 
 /-! Primitive formula-row agreement transports validity of entire finite
 blowup witnesses and exact-length chains to new sorted parameter tuples.

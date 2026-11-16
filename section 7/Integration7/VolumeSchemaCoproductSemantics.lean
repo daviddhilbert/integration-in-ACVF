@@ -1,5 +1,9 @@
-import Integration7.GammaVolumeCoproductFormulas
-import Integration7.NormalizedRVTags
+module
+
+public import Integration7.GammaVolumeCoproductFormulas
+public import Integration7.NormalizedRVTags
+
+@[expose] public section
 
 /-! The coproduct formula interprets the actual coproduct of volume
 objects, with literal tags, coordinate maps and densities. -/

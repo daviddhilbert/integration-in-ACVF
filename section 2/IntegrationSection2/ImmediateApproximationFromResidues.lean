@@ -1,4 +1,8 @@
-import Section9.GaussEvaluation
+module
+
+public import Section9.GaussEvaluation
+
+@[expose] public section
 
 /-! Agreement of actual value groups and surjectivity of the actual
 residue inclusion give immediate approximation, without a completeness,

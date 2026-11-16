@@ -1,5 +1,9 @@
-import Integration7.DefinableMapDisagreements
-import Integration7.SmallExtendedRVExceptions
+module
+
+public import Integration7.DefinableMapDisagreements
+public import Integration7.SmallExtendedRVExceptions
+
+@[expose] public section
 
 /-! Almost-everywhere equality of two original-base maps descends from
 a containing context, by parameter invariance of the disagreement locus. -/

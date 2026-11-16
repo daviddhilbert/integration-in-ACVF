@@ -1,8 +1,12 @@
-import Integration7.SwappedRVClassProductContractions
-import Integration7.ConstantTailCoordinateVolumeIsomorphisms
-import Integration7.GammaRVLabelIdentity
-import Integration7.GammaVolumeDensityRescaling
-import IntegrationSection6.GammaRawStandardContractions
+module
+
+public import Integration7.SwappedRVClassProductContractions
+public import Integration7.ConstantTailCoordinateVolumeIsomorphisms
+public import Integration7.GammaRVLabelIdentity
+public import Integration7.GammaVolumeDensityRescaling
+public import IntegrationSection6.GammaRawStandardContractions
+
+@[expose] public section
 
 /-! The exact raw RV object of a constructed opposite-order two-coordinate product
 contraction is volume-isomorphic to its unary product object, at every

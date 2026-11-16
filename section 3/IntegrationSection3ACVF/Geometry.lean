@@ -1,6 +1,10 @@
-import Section3.Library
-import Section4.Library
-import IntegrationSection3.Library
+module
+
+public import Section3.Library
+public import Section4.Library
+public import IntegrationSection3.Library
+
+@[expose] public section
 
 /-!
 # Actual ACVF inputs for the parametric atomicity argument

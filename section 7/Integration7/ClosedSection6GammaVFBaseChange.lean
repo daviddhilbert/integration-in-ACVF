@@ -1,7 +1,11 @@
-import Integration7.CompletedSection6Kernel
-import Integration7.ClosedSection6GammaVFAllBilinearProduct
-import IntegrationSection6.GammaVFBaseChange
-import IntegrationSection6.GammaVFAllBilinearProduct
+module
+
+public import Integration7.CompletedSection6Kernel
+public import Integration7.ClosedSection6GammaVFAllBilinearProduct
+public import IntegrationSection6.GammaVFBaseChange
+public import IntegrationSection6.GammaVFAllBilinearProduct
+
+@[expose] public section
 
 /-! Closed generated-base Section6 integration. The former universal
 Section5 input is replaced by the canonical-model certificate; its kernel

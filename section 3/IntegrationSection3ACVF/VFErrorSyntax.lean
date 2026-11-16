@@ -1,5 +1,9 @@
-import IntegrationSection3ACVF.RVErrorSyntax
-import IntegrationSection3ACVF.RealGraphOperations
+module
+
+public import IntegrationSection3ACVF.RVErrorSyntax
+public import IntegrationSection3ACVF.RealGraphOperations
+
+@[expose] public section
 
 /-! The actual VF affine error before applying RV. -/
 

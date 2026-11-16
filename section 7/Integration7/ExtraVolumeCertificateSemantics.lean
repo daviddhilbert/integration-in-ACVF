@@ -1,5 +1,9 @@
-import Integration7.GammaVolumeExistentialCertificates
-import Integration7.VolumeSchemaValiditySemantics
+module
+
+public import Integration7.GammaVolumeExistentialCertificates
+public import Integration7.VolumeSchemaValiditySemantics
+
+@[expose] public section
 
 /-! Soundness of auxiliary exceptional-set certificates. The resulting
 volume isomorphism has the fixed original chart; no choice of auxiliary

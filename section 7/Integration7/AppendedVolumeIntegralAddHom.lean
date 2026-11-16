@@ -1,6 +1,10 @@
-import Integration7.VolumeCoordinateAdditiveEquivalences
-import Integration7.VolumeFunctionIntegralCoordinateNormalization
-import Integration7.AERVVolumeFunctionIntegralAddHom
+module
+
+public import Integration7.VolumeCoordinateAdditiveEquivalences
+public import Integration7.VolumeFunctionIntegralCoordinateNormalization
+public import Integration7.AERVVolumeFunctionIntegralAddHom
+
+@[expose] public section
 
 /-! The actual coefficient-first integral is additive on the AE
 function quotient. Its explicit normalization is an additive equivalence,

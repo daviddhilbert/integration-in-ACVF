@@ -1,4 +1,8 @@
-import Integration7.VolumeAlmostEverywhere
+module
+
+public import Integration7.VolumeAlmostEverywhere
+
+@[expose] public section
 
 set_option backward.isDefEq.respectTransparency false
 noncomputable section

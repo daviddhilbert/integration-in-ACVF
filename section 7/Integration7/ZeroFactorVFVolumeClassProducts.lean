@@ -1,7 +1,11 @@
-import Integration7.ZeroFactorVolumeLiftProducts
-import Integration7.PositiveVolumeIntegrationEquivalence
-import Integration7.ZeroFactorProductBridges
-import Integration7.AllDegreeVolumeClasses
+module
+
+public import Integration7.ZeroFactorVolumeLiftProducts
+public import Integration7.PositiveVolumeIntegrationEquivalence
+public import Integration7.ZeroFactorProductBridges
+public import Integration7.AllDegreeVolumeClasses
+
+@[expose] public section
 
 /-! Ordinary degree-zero coefficients act by actual Cartesian product
 with their full VF lifts. Integration preserves this geometric action. -/

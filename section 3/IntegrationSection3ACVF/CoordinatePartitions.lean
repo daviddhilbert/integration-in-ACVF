@@ -1,5 +1,9 @@
-import IntegrationSection3ACVF.SingleCoordinatePartition
-import IntegrationSection3.SimultaneousPartitions
+module
+
+public import IntegrationSection3ACVF.SingleCoordinatePartition
+public import IntegrationSection3.SimultaneousPartitions
+
+@[expose] public section
 
 /-! Proposition3.21 for actual mixed finite tuple maps, in a formulation
 allowing arbitrary finite coordinate index types. The selected coordinates

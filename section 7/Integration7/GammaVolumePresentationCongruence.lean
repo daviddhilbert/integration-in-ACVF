@@ -1,6 +1,10 @@
-import Integration7.GammaVolumeSchemaRowEquality
-import Integration7.GammaVolumeGraphPresentations
-import IntegrationSection6.GammaGraphFormulaCongruence
+module
+
+public import Integration7.GammaVolumeSchemaRowEquality
+public import Integration7.GammaVolumeGraphPresentations
+public import IntegrationSection6.GammaGraphFormulaCongruence
+
+@[expose] public section
 
 /-! Replace equivalent domain, coordinate and density relations while
 retaining the actual native presentation and its original-Gamma graphs. -/

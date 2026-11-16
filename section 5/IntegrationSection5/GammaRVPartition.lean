@@ -1,5 +1,9 @@
-import IntegrationSection5.RVProjectionNormalization
-import IntegrationSection5.GammaRVUnion
+module
+
+public import IntegrationSection5.RVProjectionNormalization
+public import IntegrationSection5.GammaRVUnion
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option maxHeartbeats 2000000

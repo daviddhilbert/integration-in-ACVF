@@ -1,5 +1,9 @@
-import Section3.FieldBase
-import IntegrationSection6.GammaWitnessUniformity
+module
+
+public import Section3.FieldBase
+public import IntegrationSection6.GammaWitnessUniformity
+
+@[expose] public section
 
 /-! Naming RV parameters preserves the field condition on the VF part of
 an original real/Gamma base. This applies to every finite RV parameter

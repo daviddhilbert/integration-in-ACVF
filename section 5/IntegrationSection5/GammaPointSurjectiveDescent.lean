@@ -1,4 +1,8 @@
-import IntegrationSection5.GammaSurjectiveRVComparison
+module
+
+public import IntegrationSection5.GammaSurjectiveRVComparison
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 open Classical FirstOrder FirstOrder.Language

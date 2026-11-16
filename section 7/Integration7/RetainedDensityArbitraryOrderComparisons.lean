@@ -1,6 +1,10 @@
-import Integration7.SelectedArbitraryContractionOrders
-import Integration7.EmptySelectedVolumeCharts
-import Integration7.RawStandardVolumeNormalization
+module
+
+public import Integration7.SelectedArbitraryContractionOrders
+public import Integration7.EmptySelectedVolumeCharts
+public import Integration7.RawStandardVolumeNormalization
+
+@[expose] public section
 
 /-! All standard contraction orders of a finite-label VF domain give
 common forward volume blowups, with arbitrary retained nonzero density,

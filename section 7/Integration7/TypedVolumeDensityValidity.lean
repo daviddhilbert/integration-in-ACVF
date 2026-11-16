@@ -1,5 +1,9 @@
-import Integration7.GammaRVVolumeSchemata
-import IntegrationSection6.GammaSortedSchemaRows
+module
+
+public import Integration7.GammaRVVolumeSchemata
+public import IntegrationSection6.GammaSortedSchemaRows
+
+@[expose] public section
 
 /-! Exact typed density rows certify the full raw function-graph
 validity, including rows at improper tuples. -/

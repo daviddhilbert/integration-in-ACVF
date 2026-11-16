@@ -1,8 +1,12 @@
-import Integration7.RectangleFamilyHeadOrderCertificates
-import Integration7.IndependentRectangleFamilyContractions
-import Integration7.NativeRawRVMapTransfers
-import Integration7.RVLabelConstraintHeadCoordinates
-import Section4.RVIsoTools
+module
+
+public import Integration7.RectangleFamilyHeadOrderCertificates
+public import Integration7.IndependentRectangleFamilyContractions
+public import Integration7.NativeRawRVMapTransfers
+public import Integration7.RVLabelConstraintHeadCoordinates
+public import Section4.RVIsoTools
+
+@[expose] public section
 
 /-! The actual raw RV objects of the two rectangle-family contractions
 are isomorphic with both VF volume coordinates preserved literally. -/

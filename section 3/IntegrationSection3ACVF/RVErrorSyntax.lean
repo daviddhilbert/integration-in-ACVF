@@ -1,5 +1,9 @@
-import IntegrationSection3ACVF.FullBaseDefinability
-import Section3.RingSyntax
+module
+
+public import IntegrationSection3ACVF.FullBaseDefinability
+public import Section3.RingSyntax
+
+@[expose] public section
 
 /-! The actual affine affineError, represented by a normalized first-order term. -/
 

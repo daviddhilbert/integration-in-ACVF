@@ -1,4 +1,8 @@
-import IntegrationSection6.MixedVFParameterDomains
+module
+
+public import IntegrationSection6.MixedVFParameterDomains
+
+@[expose] public section
 
 /-! The sorted total-space construction is exactly the inherited mixed
 space, restricted to the stated VF parameter base. -/

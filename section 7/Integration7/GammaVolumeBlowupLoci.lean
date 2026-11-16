@@ -1,7 +1,11 @@
-import Integration7.GammaChartedVolumeBlowups
-import Integration7.GammaCoproductVolumeComplements
-import Integration7.GammaVolumeComplementImages
-import Integration7.VolumeBlowupLoci
+module
+
+public import Integration7.GammaChartedVolumeBlowups
+public import Integration7.GammaCoproductVolumeComplements
+public import Integration7.GammaVolumeComplementImages
+public import Integration7.VolumeBlowupLoci
+
+@[expose] public section
 
 /-! The actual locus, its comparison and its complement in a Gamma
 volume blowup retain the original Gamma base. -/

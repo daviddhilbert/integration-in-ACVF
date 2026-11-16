@@ -1,4 +1,8 @@
-import IntegrationSection6.GammaElementaryStructure
+module
+
+public import IntegrationSection6.GammaElementaryStructure
+
+@[expose] public section
 
 /-! Literal domain and volume-graph formulas for the actual elementary
 RV blowup. They use the checked old-volume/parameter program, including

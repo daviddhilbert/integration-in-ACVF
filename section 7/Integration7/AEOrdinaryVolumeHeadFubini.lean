@@ -1,6 +1,10 @@
-import Integration7.AEOrdinaryRVVolumeHeadIntegrals
-import Integration7.OrdinaryVolumeFamilyHeadFubini
-import Integration7.AppendedVolumeFunctionIntegrals
+module
+
+public import Integration7.AEOrdinaryRVVolumeHeadIntegrals
+public import Integration7.OrdinaryVolumeFamilyHeadFubini
+public import Integration7.AppendedVolumeFunctionIntegrals
+
+@[expose] public section
 
 /-! Ordinary-valued AE functions satisfy first-head Fubini on their actual
 quotient. The only heterogeneous equality is the arithmetic total degree. -/

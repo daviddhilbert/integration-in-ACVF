@@ -1,5 +1,9 @@
-import Integration7.MatchingFixedContextVolumeMaps
-import Integration7.GammaPreparedRectangleVolumeComparison
+module
+
+public import Integration7.MatchingFixedContextVolumeMaps
+public import Integration7.GammaPreparedRectangleVolumeComparison
+
+@[expose] public section
 
 /-! Actual full volume comparison of the prepared matching family.
 Both recorded-key preparations are constructed, every finiteness,

@@ -1,5 +1,9 @@
-import Integration7.UniformPreparedKeyFibres
-import Integration7.MatchedBalancedBallRestrictions
+module
+
+public import Integration7.UniformPreparedKeyFibres
+public import Integration7.MatchedBalancedBallRestrictions
+
+@[expose] public section
 
 /-! The matching-key part retains complete balanced fibres on the two
 actual inverse-special balls. Special preparations preserve its centred

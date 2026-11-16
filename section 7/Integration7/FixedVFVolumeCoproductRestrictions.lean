@@ -1,4 +1,8 @@
-import Integration7.FixedVFVolumeCoproductBijections
+module
+
+public import Integration7.FixedVFVolumeCoproductBijections
+
+@[expose] public section
 
 /-! Restricting each summand agrees, including its actual density,
 with restricting the disjoint union to the corresponding tagged locus. -/

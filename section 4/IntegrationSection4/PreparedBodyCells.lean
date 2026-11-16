@@ -1,8 +1,12 @@
-import IntegrationSection4.InverseRowsOnBall
-import IntegrationSection4.InverseOneCells
-import IntegrationSection4.TranslatedFamilySyntax
-import IntegrationSection4.CellsFromFibres
-import IntegrationSection4.ScalarPositioning
+module
+
+public import IntegrationSection4.InverseRowsOnBall
+public import IntegrationSection4.InverseOneCells
+public import IntegrationSection4.TranslatedFamilySyntax
+public import IntegrationSection4.CellsFromFibres
+public import IntegrationSection4.ScalarPositioning
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

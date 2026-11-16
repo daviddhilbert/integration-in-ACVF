@@ -1,4 +1,8 @@
-import Integration7.OrdinaryVolumeFamilyAEHeadComparisons
+module
+
+public import Integration7.OrdinaryVolumeFamilyAEHeadComparisons
+
+@[expose] public section
 
 /-! First-head integration of ordinary-valued AE functions is well-defined
 on the actual quotient. Any chosen head preparation gives its value. -/

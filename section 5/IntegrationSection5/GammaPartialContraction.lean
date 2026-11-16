@@ -1,5 +1,9 @@
-import IntegrationSection5.PartialNaturalMap
-import IntegrationSection5.NaturalContractionGamma
+module
+
+public import IntegrationSection5.PartialNaturalMap
+public import IntegrationSection5.NaturalContractionGamma
+
+@[expose] public section
 
 /-! Uniform partial contractions retain their original Gamma base and
 leave every complementary VF parameter fixed. -/

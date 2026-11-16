@@ -1,9 +1,13 @@
-import Integration7.GammaFiniteRowIsomorphismWitnesses
-import Integration7.VFFieldContainingVolumeContexts
-import IntegrationSection6.GammaWitnessVFCodesInBase
-import IntegrationSection6.GammaSpecialBaseReduction
-import IntegrationSection6.GammaVFCodePreparation
-import IntegrationSection6.GammaPreparedRowAgreements
+module
+
+public import Integration7.GammaFiniteRowIsomorphismWitnesses
+public import Integration7.VFFieldContainingVolumeContexts
+public import IntegrationSection6.GammaWitnessVFCodesInBase
+public import IntegrationSection6.GammaSpecialBaseReduction
+public import IntegrationSection6.GammaVFCodePreparation
+public import IntegrationSection6.GammaPreparedRowAgreements
+
+@[expose] public section
 
 /-! Simultaneously prepare actual finite-row endpoint formulas and a
 finite collection of isomorphism charts. The original Gamma formulas

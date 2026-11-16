@@ -1,4 +1,8 @@
-import Integration7.MixedVFBaseBijections
+module
+
+public import Integration7.MixedVFBaseBijections
+
+@[expose] public section
 
 /-! The unweighted pushforward of an actual selected family along a
 definable VF base bijection retains all RV coordinates and transports the

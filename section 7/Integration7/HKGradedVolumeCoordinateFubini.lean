@@ -1,7 +1,11 @@
-import Integration7.HKGradedAEVolumeJacobians
-import Integration7.HKGradedAEVolumePrefixFubini
-import Integration7.VolumeCoordinateProjectionOrders
-import Integration7.NonemptyVolumeCoordinateProjections
+module
+
+public import Integration7.HKGradedAEVolumeJacobians
+public import Integration7.HKGradedAEVolumePrefixFubini
+public import Integration7.VolumeCoordinateProjectionOrders
+public import Integration7.NonemptyVolumeCoordinateProjections
+
+@[expose] public section
 
 /-! Actual integration over any discarded coordinate set, with a
 nonempty retained base. A global Jacobian permutation places the discarded

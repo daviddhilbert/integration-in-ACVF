@@ -1,7 +1,11 @@
-import Integration7.HKAEZeroIntegralAddHom
-import Integration7.HKAEZeroModules
-import Integration7.HKZeroScalarRealizations
-import Integration7.HKZeroCoefficientScalarRows
+module
+
+public import Integration7.HKAEZeroIntegralAddHom
+public import Integration7.HKAEZeroModules
+public import Integration7.HKZeroScalarRealizations
+public import Integration7.HKZeroCoefficientScalarRows
+
+@[expose] public section
 
 /-! The genuine weighted-zero-valued AE integral preserves the actual
 weighted coefficient action and is a linear map over measured zero. -/

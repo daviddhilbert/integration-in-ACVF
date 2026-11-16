@@ -1,8 +1,12 @@
-import IntegrationSection6.GammaElementaryStructure
-import IntegrationSection6.GammaFiniteSlices
-import IntegrationSection6.GammaLiftVolumeRecovery
-import IntegrationSection6.ElementaryLiftIsomorphism
-import IntegrationSection6.FiniteBlowups
+module
+
+public import IntegrationSection6.GammaElementaryStructure
+public import IntegrationSection6.GammaFiniteSlices
+public import IntegrationSection6.GammaLiftVolumeRecovery
+public import IntegrationSection6.ElementaryLiftIsomorphism
+public import IntegrationSection6.FiniteBlowups
+
+@[expose] public section
 
 /-! Elementary blowups and their length-one diagrams live in RV[k].
 The original Gamma base is retained, and only B.real is small. -/

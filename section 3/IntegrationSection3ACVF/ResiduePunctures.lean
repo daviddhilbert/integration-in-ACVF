@@ -1,4 +1,8 @@
-import IntegrationSection3ACVF.ResidueBallClasses
+module
+
+public import IntegrationSection3ACVF.ResidueBallClasses
+
+@[expose] public section
 
 /-! Maximal open holes of one closed parent correspond bijectively to a
 finite set of actual residue coordinates. The complement is the actual

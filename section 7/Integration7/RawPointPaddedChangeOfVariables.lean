@@ -1,6 +1,10 @@
-import Integration7.RawSection7FunctionTheorems
-import Integration7.GradedPointPadding
-import Integration7.CentralVolumePointClasses
+module
+
+public import Integration7.RawSection7FunctionTheorems
+public import Integration7.GradedPointPadding
+public import Integration7.CentralVolumePointClasses
+
+@[expose] public section
 
 /-! Raw change of variables after actual point padding, valid for all
 ordinary and positive inputs. The point factor remains in the identity;

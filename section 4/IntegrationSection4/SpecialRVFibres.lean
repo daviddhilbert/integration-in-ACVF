@@ -1,5 +1,9 @@
-import IntegrationSection4.GammaRVMaps
-import IntegrationSection4.InverseOneCells
+module
+
+public import IntegrationSection4.GammaRVMaps
+public import IntegrationSection4.InverseOneCells
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

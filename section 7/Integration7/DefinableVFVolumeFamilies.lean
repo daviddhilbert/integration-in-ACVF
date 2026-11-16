@@ -1,5 +1,9 @@
-import Integration7.SelectedVolumeRowContexts
-import Integration7.RVCoordinateSelection
+module
+
+public import Integration7.SelectedVolumeRowContexts
+public import Integration7.RVCoordinateSelection
+
+@[expose] public section
 
 /-! Positive homogeneous volume families with an arbitrary definable
 RV volume map. The finite condition fixes both the VF base and the volume

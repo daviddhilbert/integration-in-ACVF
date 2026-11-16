@@ -1,4 +1,8 @@
-import IntegrationSection5.GammaCoordinateCanonical
+module
+
+public import IntegrationSection5.GammaCoordinateCanonical
+
+@[expose] public section
 
 /-! The actual projection recovering the source of a coordinate canonical map. -/
 noncomputable section

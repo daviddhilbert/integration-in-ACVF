@@ -1,6 +1,10 @@
-import Integration7.HKVolumeCoproducts
-import Integration7.HKRVProductIsomorphisms
-import Section4.RVProductUnits
+module
+
+public import Integration7.HKVolumeCoproducts
+public import Integration7.HKRVProductIsomorphisms
+public import Section4.RVProductUnits
+
+@[expose] public section
 
 /-! The neutral-form degree-zero singleton is the unit for the original
 product in every degree. Density-bearing data handles the zero case uniformly. -/

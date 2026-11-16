@@ -1,4 +1,8 @@
-import IntegrationSection6.GammaSortedParameterPreservation
+module
+
+public import IntegrationSection6.GammaSortedParameterPreservation
+
+@[expose] public section
 
 /-! Finite gluing and compactness retain a fixed definable graph constraint.
 The application is exact equality of the two density values. This extends

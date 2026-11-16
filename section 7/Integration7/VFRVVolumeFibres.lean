@@ -1,6 +1,10 @@
-import Integration7.VFRVFibres
-import Integration7.RVVolumeObjects
-import Integration7.RVCoordinateSelection
+module
+
+public import Integration7.VFRVFibres
+public import Integration7.RVVolumeObjects
+public import Integration7.RVCoordinateSelection
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 open FirstOrder FirstOrder.Language

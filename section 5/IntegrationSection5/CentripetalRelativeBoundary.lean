@@ -1,4 +1,8 @@
-import IntegrationSection5.FibreFocusBoundary
+module
+
+public import IntegrationSection5.FibreFocusBoundary
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

@@ -1,5 +1,9 @@
-import IntegrationSection6.CanonicalImageLift
-import IntegrationSection6.VolumePreservingLift
+module
+
+public import IntegrationSection6.CanonicalImageLift
+public import IntegrationSection6.VolumePreservingLift
+
+@[expose] public section
 
 /-! Lift relabelings in the actual special-bijection presentation. -/
 noncomputable section

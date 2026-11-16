@@ -1,6 +1,10 @@
-import IntegrationSection5.MixedPositionDefinability
-import IntegrationSection5.MixedFibreDefinability
-import IntegrationSection4.DefinableParadigms
+module
+
+public import IntegrationSection5.MixedPositionDefinability
+public import IntegrationSection5.MixedFibreDefinability
+public import IntegrationSection4.DefinableParadigms
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

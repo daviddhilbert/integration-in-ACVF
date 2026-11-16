@@ -1,4 +1,8 @@
-import Integration7.GammaVolumeParameterGeometry
+module
+
+public import Integration7.GammaVolumeParameterGeometry
+
+@[expose] public section
 
 /-! Equal mathematical real/Gamma bases carry the same actual volume
 objects and geometric common-blowup witnesses. -/

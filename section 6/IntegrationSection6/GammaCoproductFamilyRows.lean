@@ -1,5 +1,9 @@
-import IntegrationSection6.GammaCoproductFamilies
-import IntegrationSection6.GammaFamilyRows
+module
+
+public import IntegrationSection6.GammaCoproductFamilies
+public import IntegrationSection6.GammaFamilyRows
+
+@[expose] public section
 
 /-! Literal rows of the uniform tagged coproduct family. Its tags preserve
 the actual VF parameter tuple. -/

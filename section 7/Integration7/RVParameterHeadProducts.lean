@@ -1,4 +1,8 @@
-import Integration7.RVParameterHeadProjections
+module
+
+public import Integration7.RVParameterHeadProjections
+
+@[expose] public section
 
 /-! Actual definable maps from a carried-parameter contraction to its
 parameter factor and its prepared unary factor. -/

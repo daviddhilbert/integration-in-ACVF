@@ -1,5 +1,9 @@
-import Integration7.UniformMatchingBallGeometry
-import Integration7.PreparedDifferentRectangleFamilies
+module
+
+public import Integration7.UniformMatchingBallGeometry
+public import Integration7.PreparedDifferentRectangleFamilies
+
+@[expose] public section
 
 /-! The matching part with both prepared keys is an actual native
 family over the original common names. Its labelled rows have the proved

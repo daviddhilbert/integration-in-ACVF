@@ -1,6 +1,10 @@
-import IntegrationSection6.GammaPreparedSelectedSliceIsomorphisms
-import IntegrationSection6.FiniteSelectedContractionSlices
-import IntegrationSection6.GammaUnarySliceUniformityWithoutField
+module
+
+public import IntegrationSection6.GammaPreparedSelectedSliceIsomorphisms
+public import IntegrationSection6.FiniteSelectedContractionSlices
+public import IntegrationSection6.GammaUnarySliceUniformityWithoutField
+
+@[expose] public section
 
 /-! Compare an arbitrary unary standard contraction with a prepared
 indexed family object, using actual slice lift isomorphisms and unary

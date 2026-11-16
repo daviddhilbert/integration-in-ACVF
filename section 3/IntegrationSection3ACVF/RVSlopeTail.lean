@@ -1,6 +1,10 @@
-import IntegrationSection3ACVF.RVSlopeControllers
-import IntegrationSection3ACVF.FiniteControllerTails
-import IntegrationSection3ACVF.GammaTailMap
+module
+
+public import IntegrationSection3ACVF.RVSlopeControllers
+public import IntegrationSection3ACVF.FiniteControllerTails
+public import IntegrationSection3ACVF.GammaTailMap
+
+@[expose] public section
 
 /-! The actual RV coefficient is eventually constant on the source Gamma
 tail. This does not assert constancy down to the source-ball radius. -/

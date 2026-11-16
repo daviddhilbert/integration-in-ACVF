@@ -1,6 +1,10 @@
-import Mathlib.Algebra.DirectSum.Ring
-import Mathlib.RingTheory.Localization.Away.Basic
-import Mathlib.RingTheory.Ideal.Quotient.Operations
+module
+
+public import Mathlib.Algebra.DirectSum.Ring
+public import Mathlib.RingTheory.Localization.Away.Basic
+public import Mathlib.RingTheory.Ideal.Quotient.Operations
+
+@[expose] public section
 
 /-! Dehomogenization by a degree-one element, including injectivity after
 quotienting by j-1. No regularity assumption on j is required. -/

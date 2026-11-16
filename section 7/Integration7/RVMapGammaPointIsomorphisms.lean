@@ -1,6 +1,10 @@
-import Integration7.GammaTermClosureRVMaps
-import Integration7.FiniteVolumeIsoMaps
-import Section5.GammaLift
+module
+
+public import Integration7.GammaTermClosureRVMaps
+public import Integration7.FiniteVolumeIsoMaps
+public import Section5.GammaLift
+
+@[expose] public section
 
 /-! Actual bijective RV maps with full Gamma graphs give isomorphisms
 of their pure-RV point domains, without naming representatives. -/

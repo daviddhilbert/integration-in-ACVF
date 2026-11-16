@@ -1,6 +1,10 @@
-import IntegrationSection3ACVF.RVSlopeGraph
-import IntegrationSection3ACVF.RVInputFibre
-import IntegrationSection3ACVF.RVIntegerEquivariance
+module
+
+public import IntegrationSection3ACVF.RVSlopeGraph
+public import IntegrationSection3ACVF.RVInputFibre
+public import IntegrationSection3ACVF.RVIntegerEquivariance
+
+@[expose] public section
 
 /-! Existence and uniqueness of actual RV slope coefficients on the
 common difference relation of an injective map on an atomic open ball. -/

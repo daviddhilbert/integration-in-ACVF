@@ -1,7 +1,11 @@
-import IntegrationSection5.GammaCoordinateFibres
-import IntegrationSection5.HeadPreparation
-import IntegrationSection5.RelativeLabelPreservation
-import IntegrationSection6.GammaRealImages
+module
+
+public import IntegrationSection5.GammaCoordinateFibres
+public import IntegrationSection5.HeadPreparation
+public import IntegrationSection5.RelativeLabelPreservation
+public import IntegrationSection6.GammaRealImages
+
+@[expose] public section
 
 /-! Coordinate identities for freezing the complementary VF tuple during
 one head preparation. The named base contains exactly that tuple. -/

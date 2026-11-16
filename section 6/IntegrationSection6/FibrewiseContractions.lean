@@ -1,7 +1,11 @@
-import IntegrationSection6.OrderedFibrewiseContractions
-import IntegrationSection6.GammaPermutedFibrePresentations
-import IntegrationSection6.GammaContractionPresentationIsomorphisms
-import IntegrationSection6.SmallVFFieldBases
+module
+
+public import IntegrationSection6.OrderedFibrewiseContractions
+public import IntegrationSection6.GammaPermutedFibrePresentations
+public import IntegrationSection6.GammaContractionPresentationIsomorphisms
+public import IntegrationSection6.SmallVFFieldBases
+
+@[expose] public section
 
 /-! Lemma6.14 in RV[k], for arbitrary VF arity and any common coordinate
 order. Finiteness is required only after fixing the VF tuple and the selected

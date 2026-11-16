@@ -1,4 +1,8 @@
-import IntegrationSection3ACVF.FullRVValueFibres
+module
+
+public import IntegrationSection3ACVF.FullRVValueFibres
+
+@[expose] public section
 
 /-! Restrict an actual partial RV graph to an entire value fibre after
 adjoining just that Gamma name. Every old parameter is retained. -/

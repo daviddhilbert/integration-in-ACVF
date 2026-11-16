@@ -1,5 +1,9 @@
-import Integration7.SelectedVolumeFamilyLabelCuts
-import Section4.RVLabelCompression
+module
+
+public import Integration7.SelectedVolumeFamilyLabelCuts
+public import Section4.RVLabelCompression
+
+@[expose] public section
 
 /-! The definable zero tag distinguishes the two actual family
 coproduct summands; its complement is defined over the same real base. -/

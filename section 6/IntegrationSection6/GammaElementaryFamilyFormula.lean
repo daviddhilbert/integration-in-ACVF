@@ -1,6 +1,10 @@
-import IntegrationSection6.GammaElementaryFamilies
-import IntegrationSection6.GammaFamilyRows
-import IntegrationSection6.ElementaryGraphFormulas
+module
+
+public import IntegrationSection6.GammaElementaryFamilies
+public import IntegrationSection6.GammaFamilyRows
+public import IntegrationSection6.ElementaryGraphFormulas
+
+@[expose] public section
 
 /-! Literal typed-row formula for the uniform elementary family. -/
 noncomputable section

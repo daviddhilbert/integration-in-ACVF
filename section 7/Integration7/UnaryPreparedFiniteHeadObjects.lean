@@ -1,5 +1,9 @@
-import Integration7.UnaryPreparedHeadVolumeObjects
-import Integration7.UnaryUnitSelectedContractionCharts
+module
+
+public import Integration7.UnaryPreparedHeadVolumeObjects
+public import Integration7.UnaryUnitSelectedContractionCharts
+
+@[expose] public section
 
 /-! A finite-label unary source has a genuine degree-one prepared head
 object without old selected coordinates. Its full coordinate-density

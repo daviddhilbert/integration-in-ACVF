@@ -1,7 +1,11 @@
-import Integration7.OrdinaryCoefficientFieldIntegrals
-import Integration7.FrozenHeadIntegralAdditivity
-import Integration7.PositiveVolumeClassScalarExtensions
-import Integration7.DefinableVolumeParameterDescent
+module
+
+public import Integration7.OrdinaryCoefficientFieldIntegrals
+public import Integration7.FrozenHeadIntegralAdditivity
+public import Integration7.PositiveVolumeClassScalarExtensions
+public import Integration7.DefinableVolumeParameterDescent
+
+@[expose] public section
 
 /-! Finite ordinary coefficients commute with positive-family frozen
 integrals and actual original-context head rows before normalization. -/

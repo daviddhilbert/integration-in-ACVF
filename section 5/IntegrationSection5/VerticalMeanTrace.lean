@@ -1,5 +1,9 @@
-import IntegrationSection5.UniformRelativeTrace
-import IntegrationSection5.VerticalMeanFocusData
+module
+
+public import IntegrationSection5.UniformRelativeTrace
+public import IntegrationSection5.VerticalMeanFocusData
+
+@[expose] public section
 
 noncomputable section
 set_option autoImplicit false

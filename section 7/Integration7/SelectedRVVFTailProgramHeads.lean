@@ -1,5 +1,9 @@
-import Integration7.NativeVFArityComposition
-import Integration7.SelectedRVVFTailHeadGeometry
+module
+
+public import Integration7.NativeVFArityComposition
+public import Integration7.SelectedRVVFTailHeadGeometry
+
+@[expose] public section
 
 /-! Lifted heads in the exact d+n arity of partial contraction
 programs. The contracted target is the specified selected tail lift. -/

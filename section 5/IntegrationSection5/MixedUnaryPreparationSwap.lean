@@ -1,6 +1,10 @@
-import IntegrationSection5.MixedUnaryPreparations
-import IntegrationSection5.VFPermutation
-import IntegrationSection5.SharedRVProductComparison
+module
+
+public import IntegrationSection5.MixedUnaryPreparations
+public import IntegrationSection5.VFPermutation
+public import IntegrationSection5.SharedRVProductComparison
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option allowUnsafeReducibility true in

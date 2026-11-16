@@ -1,4 +1,8 @@
-import IntegrationSection5.PulledFocusGeometry
+module
+
+public import IntegrationSection5.PulledFocusGeometry
+
+@[expose] public section
 
 /-! Original-real-base definability of the constructed source focus.
 All graphs are complete graphs of actual maps. -/

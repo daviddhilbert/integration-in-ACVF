@@ -1,6 +1,10 @@
-import Integration7.PreparedPairContractionRestrictions
-import Integration7.StandardBinaryRestrictionVolumePartitions
-import Integration7.MatchingFamilyAllOrderComparisons
+module
+
+public import Integration7.PreparedPairContractionRestrictions
+public import Integration7.StandardBinaryRestrictionVolumePartitions
+public import Integration7.MatchingFamilyAllOrderComparisons
+
+@[expose] public section
 
 /-! Matching and different prepared-ball cases assemble into the
 whole balanced pair-key refinement. All specified contraction orders

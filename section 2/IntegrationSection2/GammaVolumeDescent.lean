@@ -1,8 +1,12 @@
-import IntegrationSection2.FibreVolumeEquations
-import IntegrationSection2.LiftFibreGeometry
-import IntegrationSection2.VolumeCharacteristic
-import Section4.ParameterInvariance
-import Section9.GammaPolydiscDescent
+module
+
+public import IntegrationSection2.FibreVolumeEquations
+public import IntegrationSection2.LiftFibreGeometry
+public import IntegrationSection2.VolumeCharacteristic
+public import Section4.ParameterInvariance
+public import Section9.GammaPolydiscDescent
+
+@[expose] public section
 
 /-! Pointwise Gamma-volume descent on every actual RV label fibre.
 The measure equation fixes one finite nonzero Jacobian value. The

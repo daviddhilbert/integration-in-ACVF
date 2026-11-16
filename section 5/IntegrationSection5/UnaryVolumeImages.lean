@@ -1,5 +1,9 @@
-import IntegrationSection5.RVContractionMaps
-import IntegrationSection5.UnaryVFFibreFinite
+module
+
+public import IntegrationSection5.RVContractionMaps
+public import IntegrationSection5.UnaryVFFibreFinite
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

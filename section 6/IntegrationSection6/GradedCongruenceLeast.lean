@@ -1,4 +1,8 @@
-import IntegrationSection6.GradedCongruence
+module
+
+public import IntegrationSection6.GradedCongruence
+
+@[expose] public section
 
 /-! A componentwise graded congruence is contained in any semiring
 congruence containing each homogeneous component relation. No cancellation

@@ -1,8 +1,12 @@
-import Integration7.GammaUnaryCommonFromLiftCharts
-import Integration7.GammaSelectedSliceContexts
-import Integration7.UnarySliceVFModels
-import Integration7.GammaLabelDensityCoordinateRows
-import IntegrationSection6.GammaRVParameterFieldBase
+module
+
+public import Integration7.GammaUnaryCommonFromLiftCharts
+public import Integration7.GammaSelectedSliceContexts
+public import Integration7.UnarySliceVFModels
+public import Integration7.GammaLabelDensityCoordinateRows
+public import IntegrationSection6.GammaRVParameterFieldBase
+
+@[expose] public section
 
 /-! A selected slice of an arbitrary unary standard contraction and the
 corresponding prepared family slice have a finite common-volume-blowup

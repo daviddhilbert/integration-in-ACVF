@@ -1,5 +1,9 @@
-import IntegrationSection5.PaddingProfileIso
-import IntegrationSection5.PaddedUnaryBranchLift
+module
+
+public import IntegrationSection5.PaddingProfileIso
+public import IntegrationSection5.PaddedUnaryBranchLift
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option allowUnsafeReducibility true in

@@ -1,4 +1,8 @@
-import Integration7.VolumeRelabeling
+module
+
+public import Integration7.VolumeRelabeling
+
+@[expose] public section
 
 set_option backward.isDefEq.respectTransparency false
 noncomputable section

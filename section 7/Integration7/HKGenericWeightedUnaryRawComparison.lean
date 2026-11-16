@@ -1,5 +1,9 @@
-import Integration7.HKGenericWeightedUnarySelectedComparison
-import Integration7.EmptySelectedUnaryVolumeCharts
+module
+
+public import Integration7.HKGenericWeightedUnarySelectedComparison
+public import Integration7.EmptySelectedUnaryVolumeCharts
+
+@[expose] public section
 
 /-! Generic density-constrained rows give common forward blowups of
 both specified raw unary contractions with arbitrary retained forms. -/

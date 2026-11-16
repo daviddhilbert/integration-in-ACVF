@@ -1,5 +1,9 @@
-import Integration7.SignedVolumeProductSwap
-import Integration7.ConstantCoordinateVolumeIsomorphisms
+module
+
+public import Integration7.SignedVolumeProductSwap
+public import Integration7.ConstantCoordinateVolumeIsomorphisms
+
+@[expose] public section
 
 /-! In smaller RV dimension the unsigned product swap is itself a
 volume isomorphism. Its full Gamma equation is still checked pointwise;

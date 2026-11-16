@@ -1,5 +1,9 @@
-import IntegrationSection6.VFParameterCoefficientBases
-import IntegrationSection5.NaturalContractionGamma
+module
+
+public import IntegrationSection6.VFParameterCoefficientBases
+public import IntegrationSection5.NaturalContractionGamma
+
+@[expose] public section
 
 /-! The paper's standing VF/Gamma generation supplies the actual VF
 field base needed by the checked all-order contraction producer. -/

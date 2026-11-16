@@ -1,4 +1,8 @@
-import IntegrationSection3ACVF.RVValueShellGeometry
+module
+
+public import IntegrationSection3ACVF.RVValueShellGeometry
+
+@[expose] public section
 
 /-! Strict error estimates and recovery of an affine RV difference. -/
 

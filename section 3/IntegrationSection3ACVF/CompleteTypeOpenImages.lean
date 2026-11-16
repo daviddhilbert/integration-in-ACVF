@@ -1,5 +1,9 @@
-import IntegrationSection3ACVF.OpenCompleteTypeAtomicity
-import IntegrationSection3ACVF.OpenImages
+module
+
+public import IntegrationSection3ACVF.OpenCompleteTypeAtomicity
+public import IntegrationSection3ACVF.OpenImages
+
+@[expose] public section
 
 /-! Lemma 3.15 over real/Gamma bases, for proper open balls of arbitrary
 radius in a possibly undefinable complete-type set. The full interpreted

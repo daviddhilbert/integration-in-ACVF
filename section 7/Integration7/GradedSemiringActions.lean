@@ -1,6 +1,10 @@
-import Mathlib.Algebra.DirectSum.Ring
-import Mathlib.Algebra.Group.Hom.End
-import Mathlib.Algebra.Module.Defs
+module
+
+public import Mathlib.Algebra.DirectSum.Ring
+public import Mathlib.Algebra.Group.Hom.End
+public import Mathlib.Algebra.Module.Defs
+
+@[expose] public section
 
 /-! Assemble a graded semiring action from genuine biadditive
 homogeneous actions and their unit and associativity proofs. -/

@@ -1,5 +1,9 @@
-import IntegrationSection4.ScalarBranchPreparation
-import IntegrationSection4.PositionRowTransport
+module
+
+public import IntegrationSection4.ScalarBranchPreparation
+public import IntegrationSection4.PositionRowTransport
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

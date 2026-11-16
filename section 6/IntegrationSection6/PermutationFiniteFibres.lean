@@ -1,4 +1,8 @@
-import IntegrationSection6.GammaPermutedFibrePresentations
+module
+
+public import IntegrationSection6.GammaPermutedFibrePresentations
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

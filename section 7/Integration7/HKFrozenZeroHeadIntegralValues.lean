@@ -1,5 +1,9 @@
-import Integration7.HKZeroHeadFibreIntegralIsomorphisms
-import Integration7.PositiveVolumeClassExtensions
+module
+
+public import Integration7.HKZeroHeadFibreIntegralIsomorphisms
+public import Integration7.PositiveVolumeClassExtensions
+
+@[expose] public section
 
 /-! The weighted degree-zero case of pointwise head-fibre integration.
 Its frozen VF family retains the actual density and is integrated by

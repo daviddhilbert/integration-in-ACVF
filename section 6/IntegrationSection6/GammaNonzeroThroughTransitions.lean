@@ -1,10 +1,14 @@
-import IntegrationSection6.GammaNonzeroThroughEmbeddings
-import IntegrationSection6.GammaPaddingClasses
-import IntegrationSection6.GammaNonzeroGradedSemiring
-import IntegrationSection6.GammaFiniteRestrictionIsomorphisms
-import IntegrationSection6.FiniteGammaLocusBlowups
-import IntegrationSection6.GammaWeightStrata
-import Mathlib.Algebra.DirectSum.Ring
+module
+
+public import IntegrationSection6.GammaNonzeroThroughEmbeddings
+public import IntegrationSection6.GammaPaddingClasses
+public import IntegrationSection6.GammaNonzeroGradedSemiring
+public import IntegrationSection6.GammaFiniteRestrictionIsomorphisms
+public import IntegrationSection6.FiniteGammaLocusBlowups
+public import IntegrationSection6.GammaWeightStrata
+public import Mathlib.Algebra.DirectSum.Ring
+
+@[expose] public section
 
 /-! The graded semiring of actual original-Gamma RV[k] isomorphism
 classes. This follows the pinned RVHomogeneousProducts/RVGradedSemiring

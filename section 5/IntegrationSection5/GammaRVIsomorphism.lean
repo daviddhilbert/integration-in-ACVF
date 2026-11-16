@@ -1,5 +1,9 @@
-import IntegrationSection5.GammaRVGraphs
-import Section4.RVReindexing
+module
+
+public import IntegrationSection5.GammaRVGraphs
+public import Section4.RVReindexing
+
+@[expose] public section
 
 /-! Actual RV-category isomorphisms equipped with full original-Gamma
 graphs in both directions. Certificates are preserved by composition. -/

@@ -1,6 +1,10 @@
-import IntegrationSection4.FullBaseMeans
-import IntegrationSection3ACVF.RVDifferencePairs
-import Section3.RawBarycentricCode
+module
+
+public import IntegrationSection4.FullBaseMeans
+public import IntegrationSection3ACVF.RVDifferencePairs
+public import Section3.RawBarycentricCode
+
+@[expose] public section
 
 /-! Intrinsic barycentric RV codes for finite VF families over the full
 original interpreted base. The combinatorial separation theorem is reused;

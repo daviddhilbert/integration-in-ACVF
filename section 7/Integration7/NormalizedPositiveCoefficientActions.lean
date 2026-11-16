@@ -1,4 +1,8 @@
-import Integration7.NormalizedPositiveFunctionGeneration
+module
+
+public import Integration7.NormalizedPositiveFunctionGeneration
+
+@[expose] public section
 
 /-! The actual positive coefficient action has the scalar-extension
 meaning on normalized positive function generators. -/

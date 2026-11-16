@@ -1,6 +1,10 @@
-import IntegrationSection6.MixedVFParameterDomains
-import IntegrationSection6.VFParameterCoefficientBases
-import IntegrationSection6.GammaVFAllFinitePresentation
+module
+
+public import IntegrationSection6.MixedVFParameterDomains
+public import IntegrationSection6.VFParameterCoefficientBases
+public import IntegrationSection6.GammaVFAllFinitePresentation
+
+@[expose] public section
 
 /-! Literal VF-family fibres retain their full definitions over dcl(B,x)
 and are actual objects of the finite VF scissor category. -/

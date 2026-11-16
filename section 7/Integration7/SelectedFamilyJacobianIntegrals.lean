@@ -1,5 +1,9 @@
-import Integration7.SelectedFamilyJacobianFullLifts
-import Integration7.VolumeFamilyRealizationIdentifications
+module
+
+public import Integration7.SelectedFamilyJacobianFullLifts
+public import Integration7.VolumeFamilyRealizationIdentifications
+
+@[expose] public section
 
 /-! Literal positive selected-family representatives satisfy change of
 variables through their actual full VF realizations. -/

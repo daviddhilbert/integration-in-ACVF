@@ -1,6 +1,10 @@
-import Integration7.NativeBalancedCellFamilies
-import Integration7.UniformZeroParadigmContractions
-import Integration7.NativeRectangleFamilyHeadGeometry
+module
+
+public import Integration7.NativeBalancedCellFamilies
+public import Integration7.UniformZeroParadigmContractions
+public import Integration7.NativeRectangleFamilyHeadGeometry
+
+@[expose] public section
 
 /-! Actual native domains realize the three-part cell-family partition.
 The selected balanced chart refines to exactly the balanced part of the

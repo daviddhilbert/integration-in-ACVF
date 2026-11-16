@@ -1,5 +1,9 @@
-import IntegrationSection5.ProductHeadKernels
-import IntegrationSection5.GammaPointSurjectiveDescent
+module
+
+public import IntegrationSection5.ProductHeadKernels
+public import IntegrationSection5.GammaPointSurjectiveDescent
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 open Classical FirstOrder FirstOrder.Language

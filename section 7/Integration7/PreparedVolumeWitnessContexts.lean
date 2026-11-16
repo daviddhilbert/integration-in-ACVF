@@ -1,8 +1,12 @@
-import Integration7.GammaPreparedVolumeWitnesses
-import Integration7.GammaVolumeWitnessVFCodesInBase
-import Integration7.VFFieldContainingVolumeContexts
-import IntegrationSection6.GammaSpecialBaseReduction
-import IntegrationSection6.GammaVFCodePreparation
+module
+
+public import Integration7.GammaPreparedVolumeWitnesses
+public import Integration7.GammaVolumeWitnessVFCodesInBase
+public import Integration7.VFFieldContainingVolumeContexts
+public import IntegrationSection6.GammaSpecialBaseReduction
+public import IntegrationSection6.GammaVFCodePreparation
+
+@[expose] public section
 
 /-! A finite cover of original-base volume witnesses is prepared in
 a genuine small containing context. The internal coefficient-field names

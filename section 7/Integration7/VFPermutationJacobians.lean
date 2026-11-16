@@ -1,4 +1,8 @@
-import Section9.VFJacobian
+module
+
+public import Section9.VFJacobian
+
+@[expose] public section
 
 /-! Simultaneously permuting the input and output VF coordinates leaves
 the actual partial Jacobian unchanged. -/

@@ -1,4 +1,8 @@
-import IntegrationSection3ACVF.FullGammaSyntax
+module
+
+public import IntegrationSection3ACVF.FullGammaSyntax
+
+@[expose] public section
 
 /-! Full invariant relations after adjoining an actual Gamma name. -/
 

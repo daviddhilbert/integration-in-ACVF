@@ -1,4 +1,8 @@
-import Integration7.HKDensityLabelConstraints
+module
+
+public import Integration7.HKDensityLabelConstraints
+
+@[expose] public section
 
 /-! Prepared RV descent changes only the base coordinates. Exact equality
 of retained density labels therefore survives even away from chosen rows. -/

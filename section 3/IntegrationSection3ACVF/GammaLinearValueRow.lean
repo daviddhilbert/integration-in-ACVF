@@ -1,4 +1,8 @@
-import IntegrationSection3ACVF.UniformGammaSlopeSyntax
+module
+
+public import IntegrationSection3ACVF.UniformGammaSlopeSyntax
+
+@[expose] public section
 
 /-! The exact actual equality of input/output difference values,
 with a free proper RV code for the Gamma-linearity coefficient. -/

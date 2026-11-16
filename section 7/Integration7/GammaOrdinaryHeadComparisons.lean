@@ -1,9 +1,13 @@
-import Integration7.GammaOrdinaryNativeUnaryComparisons
-import Integration7.GammaOrdinaryHeadFibreWitnesses
-import Integration7.HeadFiniteVolumeContexts
-import Integration7.HeadVolumeParameterContexts
-import Integration7.SelectedCoordinateDensityRows
-import Integration7.MixedRetainedLabelVolumeForms
+module
+
+public import Integration7.GammaOrdinaryNativeUnaryComparisons
+public import Integration7.GammaOrdinaryHeadFibreWitnesses
+public import Integration7.HeadFiniteVolumeContexts
+public import Integration7.HeadVolumeParameterContexts
+public import Integration7.SelectedCoordinateDensityRows
+public import Integration7.MixedRetainedLabelVolumeForms
+
+@[expose] public section
 
 /-! Generic ordinary finite-row isomorphisms compare both specified first
 head contractions, including actual original-Gamma volume blowup geometry. -/

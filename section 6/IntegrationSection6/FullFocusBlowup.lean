@@ -1,5 +1,9 @@
-import IntegrationSection6.FocusKeys
-import IntegrationSection6.Blowups
+module
+
+public import IntegrationSection6.FocusKeys
+public import IntegrationSection6.Blowups
+
+@[expose] public section
 
 /-! Lemma6.9 on the actual full canonical key image. Its definability is
 obtained from the proved image calculation, so the original raw RV

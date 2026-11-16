@@ -1,6 +1,10 @@
-import Integration7.RawPointPaddedChangeOfVariables
-import Integration7.ScalarExtensionLinearFunctionals
-import Integration7.CentralVolumePointRing
+module
+
+public import Integration7.RawPointPaddedChangeOfVariables
+public import Integration7.ScalarExtensionLinearFunctionals
+public import Integration7.CentralVolumePointRing
+
+@[expose] public section
 
 /-! The raw supported function modules with Grothendieck ring
 coefficients, before point normalization. Fubini includes all ordinary

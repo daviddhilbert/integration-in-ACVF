@@ -1,4 +1,8 @@
-import Section4.RVProductAssociativity
+module
+
+public import Section4.RVProductAssociativity
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

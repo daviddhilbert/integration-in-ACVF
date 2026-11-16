@@ -1,8 +1,12 @@
-import Integration7.RVClassProductRawObjectIsomorphisms
-import Integration7.ConstantHeadCoordinateVolumeIsomorphisms
-import Integration7.GammaRVLabelIdentity
-import Integration7.GammaVolumeDensityRescaling
-import IntegrationSection6.GammaRawStandardContractions
+module
+
+public import Integration7.RVClassProductRawObjectIsomorphisms
+public import Integration7.ConstantHeadCoordinateVolumeIsomorphisms
+public import Integration7.GammaRVLabelIdentity
+public import Integration7.GammaVolumeDensityRescaling
+public import IntegrationSection6.GammaRawStandardContractions
+
+@[expose] public section
 
 /-! The exact raw RV object of a constructed two-coordinate product
 contraction is volume-isomorphic to its unary product object, at every

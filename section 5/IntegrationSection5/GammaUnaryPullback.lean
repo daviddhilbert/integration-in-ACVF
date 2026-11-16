@@ -1,4 +1,8 @@
-import IntegrationSection5.GammaUnaryRestriction
+module
+
+public import IntegrationSection5.GammaUnaryRestriction
+
+@[expose] public section
 
 /-! Definable preimages and actual unary-chain restrictions to target pieces. -/
 noncomputable section

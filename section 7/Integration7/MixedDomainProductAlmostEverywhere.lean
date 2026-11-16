@@ -1,5 +1,9 @@
-import Integration7.PositiveVFVolumeProducts
-import Integration7.VFAlmostEverywhere
+module
+
+public import Integration7.PositiveVFVolumeProducts
+public import Integration7.VFAlmostEverywhere
+
+@[expose] public section
 
 /-! Raw mixed-domain products retain actual almost-everywhere predicates,
 without a finite-RV-fibre assumption on either factor.

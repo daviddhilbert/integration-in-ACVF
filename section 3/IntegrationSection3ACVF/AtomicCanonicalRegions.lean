@@ -1,6 +1,10 @@
-import IntegrationSection3ACVF.CanonicalHoles
-import IntegrationSection3ACVF.FullBallCoset
-import IntegrationSection3.AtomicRegions
+module
+
+public import IntegrationSection3ACVF.CanonicalHoles
+public import IntegrationSection3ACVF.FullBallCoset
+public import IntegrationSection3.AtomicRegions
+
+@[expose] public section
 
 /-! Uniform definable properties of the canonical positive regions of an
 atomic set. The parameter base stays fixed; only the entire family, rather

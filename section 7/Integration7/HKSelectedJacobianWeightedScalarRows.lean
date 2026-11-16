@@ -1,8 +1,12 @@
-import Integration7.HKDefinableRescalingWeightedProducts
-import Integration7.HKPositiveVolumeClassScalarExtensions
-import Integration7.HKSelectedFamilyWeightedZeroProducts
-import Integration7.SelectedJacobianRowComparison
-import Integration7.SelectedVolumeFamilyPositiveProducts
+module
+
+public import Integration7.HKDefinableRescalingWeightedProducts
+public import Integration7.HKPositiveVolumeClassScalarExtensions
+public import Integration7.HKSelectedFamilyWeightedZeroProducts
+public import Integration7.SelectedJacobianRowComparison
+public import Integration7.SelectedVolumeFamilyPositiveProducts
+
+@[expose] public section
 
 /-! The actual row Jacobian transform respects multiplication by a
 positive constant volume coefficient, over the original target base. -/

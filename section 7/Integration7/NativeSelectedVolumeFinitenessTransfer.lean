@@ -1,4 +1,8 @@
-import Integration7.NativeCoordinateDensityVolumeObjects
+module
+
+public import Integration7.NativeCoordinateDensityVolumeObjects
+
+@[expose] public section
 
 /-! Finite selected-volume fibres pass through an actual surjective
 pure RV map preserving the chosen tuple. -/

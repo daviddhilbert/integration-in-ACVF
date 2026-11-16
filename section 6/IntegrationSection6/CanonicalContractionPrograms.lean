@@ -1,5 +1,9 @@
-import IntegrationSection6.StandardProgramPresentations
-import IntegrationSection5.NaturalContractionGamma
+module
+
+public import IntegrationSection6.StandardProgramPresentations
+public import IntegrationSection5.NaturalContractionGamma
+
+@[expose] public section
 
 /-! RV-pullbacks have actual contraction programs with identity head
 preparations. Their natural maps fix VF and their RV maps are contractible. -/

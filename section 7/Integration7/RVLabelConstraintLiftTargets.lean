@@ -1,5 +1,9 @@
-import Integration7.RVParameterLiftTargetPullbacks
-import IntegrationSection5.RelativeLabelPreservation
+module
+
+public import Integration7.RVParameterLiftTargetPullbacks
+public import IntegrationSection5.RelativeLabelPreservation
+
+@[expose] public section
 
 /-! Exact targets of special-chain lifts with shared old RV labels.
 The only additional target condition is equality of the two retained

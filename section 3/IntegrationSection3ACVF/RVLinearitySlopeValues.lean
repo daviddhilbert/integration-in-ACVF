@@ -1,4 +1,8 @@
-import IntegrationSection3ACVF.GammaLinearity
+module
+
+public import IntegrationSection3ACVF.GammaLinearity
+
+@[expose] public section
 
 /-! Every actual RV slope has the value of the checked Gamma-linear
 coefficient, and any VF representative has that same value. -/

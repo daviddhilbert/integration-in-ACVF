@@ -1,5 +1,9 @@
-import Integration7.NativeRectangleFactorizations
-import IntegrationSection4.CellRectangles
+module
+
+public import Integration7.NativeRectangleFactorizations
+public import IntegrationSection4.CellRectangles
+
+@[expose] public section
 
 /-! The checked nonbalanced-cell rectangle theorem supplies the actual
 native product presentation, including its singleton first-projection

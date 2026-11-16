@@ -1,6 +1,10 @@
-import Integration7.AdditiveEquivalenceRingTransport
-import Integration7.BlowupVolumeHomogeneousProducts
-import Integration7.GradedVolumeKernelQuotientRing
+module
+
+public import Integration7.AdditiveEquivalenceRingTransport
+public import Integration7.BlowupVolumeHomogeneousProducts
+public import Integration7.GradedVolumeKernelQuotientRing
+
+@[expose] public section
 set_option pp.universes true
 set_option pp.proofs false
 set_option pp.deepTerms true

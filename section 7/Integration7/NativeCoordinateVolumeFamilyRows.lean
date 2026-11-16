@@ -1,6 +1,10 @@
-import Integration7.VolumeFamilyHeadIntegrals
-import Integration7.GeometricVolumeCommonOnObjects
-import Integration7.CommonContextVolumeDescent
+module
+
+public import Integration7.VolumeFamilyHeadIntegrals
+public import Integration7.GeometricVolumeCommonOnObjects
+public import Integration7.CommonContextVolumeDescent
+
+@[expose] public section
 
 /-! Full coordinate-and-density row semantics for literal native
 families. Original-Gamma geometric comparisons descend to their genuine

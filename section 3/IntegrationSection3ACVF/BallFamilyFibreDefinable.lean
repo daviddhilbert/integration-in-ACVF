@@ -1,4 +1,8 @@
-import IntegrationSection3ACVF.FullBallCoset
+module
+
+public import IntegrationSection3ACVF.FullBallCoset
+
+@[expose] public section
 
 /-! A same-base full ball-indexed relation has its fibre definable after
 adjoining precisely that actual ball name. No real code is named. -/

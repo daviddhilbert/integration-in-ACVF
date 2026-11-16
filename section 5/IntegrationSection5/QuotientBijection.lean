@@ -1,4 +1,8 @@
-import Section5.Core
+module
+
+public import Section5.Core
+
+@[expose] public section
 
 /-!
 The quotient step used at the end of Lemma 5.2. Contractibility of a

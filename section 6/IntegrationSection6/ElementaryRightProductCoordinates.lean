@@ -1,4 +1,8 @@
-import IntegrationSection6.ElementaryRightProduct
+module
+
+public import IntegrationSection6.ElementaryRightProduct
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

@@ -1,4 +1,8 @@
-import IntegrationSection5.RVUnaryProfiles
+module
+
+public import IntegrationSection5.RVUnaryProfiles
+
+@[expose] public section
 
 /-! An actual varying-profile RV[2] isomorphism criterion. Pointwise absorbing status and finite first-coordinate images are explicit obligations; this criterion alone is not the uniform comparison producer. -/
 noncomputable section

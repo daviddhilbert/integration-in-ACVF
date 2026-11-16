@@ -1,6 +1,10 @@
-import Integration7.GammaTermContextVolumeGeometry
-import Integration7.GammaGeometricCommonWitnesses
-import Integration7.SelectedFamilyVolumePreparation
+module
+
+public import Integration7.GammaTermContextVolumeGeometry
+public import Integration7.GammaGeometricCommonWitnesses
+public import Integration7.SelectedFamilyVolumePreparation
+
+@[expose] public section
 
 /-! The paper's ordinary named-fibre common-blowup hypothesis supplies
 original-Gamma geometric witnesses for the actual density-graph families. -/

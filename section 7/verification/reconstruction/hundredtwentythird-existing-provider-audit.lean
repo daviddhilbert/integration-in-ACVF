@@ -1,4 +1,8 @@
-import Integration7.ContractionParameterExtension
+module
+
+public import Integration7.ContractionParameterExtension
+
+@[expose] public section
 set_option pp.universes true
 set_option pp.proofs false
 set_option pp.deepTerms true

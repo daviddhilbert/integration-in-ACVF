@@ -1,6 +1,10 @@
-import Integration7.GammaCorrectedBlowupMaps
-import Integration7.GammaBlowupHeadJacobians
-import Integration7.ElementaryBlowupIsomorphism
+module
+
+public import Integration7.GammaCorrectedBlowupMaps
+public import Integration7.GammaBlowupHeadJacobians
+public import Integration7.ElementaryBlowupIsomorphism
+
+@[expose] public section
 
 /-! Elementary comparison can retain the original Gamma parameter base.
 The actual volume Jacobian proof uses the same corrected map, now with a

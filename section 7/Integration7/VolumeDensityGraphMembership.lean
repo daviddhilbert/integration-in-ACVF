@@ -1,4 +1,8 @@
-import Integration7.VolumeDensityGraphs
+module
+
+public import Integration7.VolumeDensityGraphs
+
+@[expose] public section
 
 /-! Membership in the actual density graph, expressed using its retained
 old labels and final density label. -/

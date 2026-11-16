@@ -1,9 +1,13 @@
-import Integration7.ZeroFactorVolumeMaps
-import Integration7.ZeroFactorVolumeSwap
-import Integration7.RVAlmostEverywhereProducts
-import Integration7.VolumeAlmostEverywhere
-import Integration7.GammaVolumeCriterion
-import Section9.GenericRVJacobian
+module
+
+public import Integration7.ZeroFactorVolumeMaps
+public import Integration7.ZeroFactorVolumeSwap
+public import Integration7.RVAlmostEverywhereProducts
+public import Integration7.VolumeAlmostEverywhere
+public import Integration7.GammaVolumeCriterion
+public import Section9.GenericRVJacobian
+
+@[expose] public section
 
 /-! Only the positive factor contributes a Jacobian. A generic Jacobian
 of the actual product is compared with it on their nested correspondences. -/

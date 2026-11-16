@@ -1,6 +1,10 @@
-import Integration7.HKAERVWeightedZeroModules
-import Integration7.HKAERVWeightedZeroIntegralScalars
-import Integration7.AERVVolumeFunctionIntegralAddHom
+module
+
+public import Integration7.HKAERVWeightedZeroModules
+public import Integration7.HKAERVWeightedZeroIntegralScalars
+public import Integration7.AERVVolumeFunctionIntegralAddHom
+
+@[expose] public section
 
 /-! The actual canonical integral is linear over the ordinary RV[0]
 coefficient semiring on every positive homogeneous function space. -/

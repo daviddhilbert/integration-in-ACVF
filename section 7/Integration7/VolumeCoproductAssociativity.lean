@@ -1,6 +1,10 @@
-import Integration7.ExplicitRVCoproductAssociativity
-import Integration7.VolumeCoproduct
-import Integration7.VolumeRelabeling
+module
+
+public import Integration7.ExplicitRVCoproductAssociativity
+public import Integration7.VolumeCoproduct
+public import Integration7.VolumeRelabeling
+
+@[expose] public section
 
 /-! The structural coproduct bijections preserve coordinates and densities. -/
 

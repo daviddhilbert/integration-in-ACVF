@@ -1,12 +1,16 @@
-import IntegrationSection3ACVF.PolynomialEscape
-import IntegrationSection3ACVF.OpenBallRVGeometry
-import IntegrationSection3ACVF.CompleteTypeRVProfiles
-import IntegrationSection3ACVF.ValuativeCentreGeometry
-import IntegrationSection4.EmptyInteriorFinite
-import IntegrationSection4.RelativeObstaclePreparation
-import IntegrationSection5.UnaryBallImages
-import IntegrationSection5.RelativeObstaclePreparation
-import IntegrationSection3ACVF.CanonicalBallSupport
+module
+
+public import IntegrationSection3ACVF.PolynomialEscape
+public import IntegrationSection3ACVF.OpenBallRVGeometry
+public import IntegrationSection3ACVF.CompleteTypeRVProfiles
+public import IntegrationSection3ACVF.ValuativeCentreGeometry
+public import IntegrationSection4.EmptyInteriorFinite
+public import IntegrationSection4.RelativeObstaclePreparation
+public import IntegrationSection5.UnaryBallImages
+public import IntegrationSection5.RelativeObstaclePreparation
+public import IntegrationSection3ACVF.CanonicalBallSupport
+
+@[expose] public section
 set_option pp.universes true
 set_option pp.proofs false
 set_option pp.deepTerms true

@@ -1,5 +1,9 @@
-import Integration7.UniformCellVerticalTranslations
-import Integration7.NativeZeroCoordinateLoci
+module
+
+public import Integration7.UniformCellVerticalTranslations
+public import Integration7.NativeZeroCoordinateLoci
+
+@[expose] public section
 
 /-! The actual uniform vertical paradigm is constant on each retained
 RV label. Its zero/nonzero split is original-Gamma definable, using the

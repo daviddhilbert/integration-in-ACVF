@@ -1,4 +1,8 @@
-import IntegrationSection2.PrimitiveResidueLift
+module
+
+public import IntegrationSection2.PrimitiveResidueLift
+
+@[expose] public section
 
 /-! If an intermediate subfield contains a lift of a primitive
 residue generator, its residue inclusion into the upper field is

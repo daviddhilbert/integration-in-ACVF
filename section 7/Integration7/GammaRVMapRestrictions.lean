@@ -1,5 +1,9 @@
-import Integration7.GammaRVMapInverseGraphs
-import Integration7.RVCoordinateSelection
+module
+
+public import Integration7.GammaRVMapInverseGraphs
+public import Integration7.RVCoordinateSelection
+
+@[expose] public section
 
 /-! Restricting or corestricting an actual raw RV map retains its full
 Gamma graph when the new source is Gamma-definable. -/

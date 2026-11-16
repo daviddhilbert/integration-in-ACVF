@@ -1,7 +1,11 @@
-import Integration7.HKGradedBlowupProjection
-import Integration7.SemiringGroupificationDifferences
+module
 
-import Mathlib.RingTheory.Ideal.Quotient.Operations
+public import Integration7.HKGradedBlowupProjection
+public import Integration7.SemiringGroupificationDifferences
+
+public import Mathlib.RingTheory.Ideal.Quotient.Operations
+
+@[expose] public section
 
 /-! The actual raw kernel ideal and its canonical integration quotient.
 The ideal is defined by the proved blowup projection. Identification of

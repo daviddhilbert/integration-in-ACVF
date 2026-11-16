@@ -1,5 +1,9 @@
-import Integration7.GammaUnitVolumeIsoRealization
-import Integration7.GammaVolumeSliceAssemblyGeometry
+module
+
+public import Integration7.GammaUnitVolumeIsoRealization
+public import Integration7.GammaVolumeSliceAssemblyGeometry
+
+@[expose] public section
 
 /-! A retained unit density and the literal unit form define the same
 actual volume object. The label identity is an original-Gamma chart. -/

@@ -1,4 +1,8 @@
-import IntegrationSection6.EmptySelectedContractions
+module
+
+public import IntegrationSection6.EmptySelectedContractions
+
+@[expose] public section
 
 /-! Explicit, authorized input from Corollary5.8 of this paper. The source
 has two VF coordinates. A VF-preserving refinement has particular actual

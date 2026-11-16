@@ -1,4 +1,8 @@
-import Integration7.VolumeCoordinateProjectionOrders
+module
+
+public import Integration7.VolumeCoordinateProjectionOrders
+
+@[expose] public section
 
 /-! Every nonempty coordinate subset gives a positive retained-arity
 projection, retaining exactly the subset's actual coordinate indices. -/

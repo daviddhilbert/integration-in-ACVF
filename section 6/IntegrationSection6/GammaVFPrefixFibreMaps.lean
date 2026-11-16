@@ -1,5 +1,9 @@
-import IntegrationSection6.GammaVFPrefixFibres
-import IntegrationSection6.VFPrefixFibreMaps
+module
+
+public import IntegrationSection6.GammaVFPrefixFibres
+public import IntegrationSection6.VFPrefixFibreMaps
+
+@[expose] public section
 
 /-! Complete original-Gamma graphs for maps and bijections of VF prefix
 fibres. Only the frozen complementary VF tuple becomes named. -/

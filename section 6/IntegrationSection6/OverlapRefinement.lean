@@ -1,4 +1,8 @@
-import IntegrationSection6.BlowupPresentations
+module
+
+public import IntegrationSection6.BlowupPresentations
+
+@[expose] public section
 
 /-! Definable overlap refinement of two actual blowup loci. -/
 

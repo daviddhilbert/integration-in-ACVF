@@ -1,4 +1,8 @@
-import IntegrationSection3ACVF.FullBallCoset
+module
+
+public import IntegrationSection3ACVF.FullBallCoset
+
+@[expose] public section
 
 /-! The finite coset-exception theorem with arbitrary genuine ball names.
 Specialization is used only to prove finiteness. The set-valued graph and

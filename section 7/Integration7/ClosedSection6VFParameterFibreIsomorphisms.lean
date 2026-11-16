@@ -1,7 +1,11 @@
-import Integration7.CompletedSection6Kernel
-import Integration7.ClosedSection6VFParameterInserts
-import IntegrationSection6.VFParameterFibreIsomorphisms
-import IntegrationSection6.VFParameterInserts
+module
+
+public import Integration7.CompletedSection6Kernel
+public import Integration7.ClosedSection6VFParameterInserts
+public import IntegrationSection6.VFParameterFibreIsomorphisms
+public import IntegrationSection6.VFParameterInserts
+
+@[expose] public section
 
 /-! Closed generated-base Section6 integration. The former universal
 Section5 input is replaced by the canonical-model certificate; its kernel

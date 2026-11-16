@@ -1,6 +1,10 @@
-import Section5.GammaLogic
-import Section3.GammaRealMap
-import Section3.GammaBaseVFAlgebraicity
+module
+
+public import Section5.GammaLogic
+public import Section3.GammaRealMap
+public import Section3.GammaBaseVFAlgebraicity
+
+@[expose] public section
 
 /-! A scalar function with a full original-Gamma graph is VF-algebraic
 over the real base and its VF inputs. Arbitrary RV and Gamma names do not

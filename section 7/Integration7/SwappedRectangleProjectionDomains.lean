@@ -1,5 +1,9 @@
-import Integration7.RectangleFamilySecondStagePreparations
-import IntegrationSection6.SpecialEqualityTransport
+module
+
+public import Integration7.RectangleFamilySecondStagePreparations
+public import IntegrationSection6.SpecialEqualityTransport
+
+@[expose] public section
 
 /-! Swapping the two VF coordinates exchanges the actual labelled
 unary projection domains, with no added names or chosen representatives. -/

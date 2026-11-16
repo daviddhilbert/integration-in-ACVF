@@ -1,5 +1,9 @@
-import IntegrationSection6.GammaUnaryFamilyLiftUniformity
-import IntegrationSection6.GammaSelectedLabelFibrePresentations
+module
+
+public import IntegrationSection6.GammaUnaryFamilyLiftUniformity
+public import IntegrationSection6.GammaSelectedLabelFibrePresentations
+
+@[expose] public section
 
 /-! Lemma6.14 for one VF coordinate, stated directly for the actual RV[k]
 fibres of mixed sets and arbitrary unary standard contractions. -/

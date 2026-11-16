@@ -1,6 +1,10 @@
-import IntegrationSection6.Kernel
-import IntegrationSection6.GammaIspUniversalPresentation
-import IntegrationSection6.FiniteGammaAdditiveCongruence
+module
+
+public import IntegrationSection6.Kernel
+public import IntegrationSection6.GammaIspUniversalPresentation
+public import IntegrationSection6.FiniteGammaAdditiveCongruence
+
+@[expose] public section
 
 /-! The actual fixed-degree target of integration: RV[k] isomorphism
 classes modulo the proved common-blowup congruence. The internal real

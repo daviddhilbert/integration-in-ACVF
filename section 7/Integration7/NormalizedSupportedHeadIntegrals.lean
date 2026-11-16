@@ -1,6 +1,10 @@
-import Integration7.SupportedVolumeHeadIntegrals
-import Integration7.NormalizedVolumeHeadOperators
-import Integration7.NormalizedVolumeSupports
+module
+
+public import Integration7.SupportedVolumeHeadIntegrals
+public import Integration7.NormalizedVolumeHeadOperators
+public import Integration7.NormalizedVolumeSupports
+
+@[expose] public section
 
 /-! Actual normalized head pushforward between the supported function
 modules of a domain and its VF projection. The target restriction is

@@ -1,5 +1,9 @@
-import IntegrationSection6.IndexedEquivalences
-import IntegrationSection6.GammaFiniteGraphIsomorphisms
+module
+
+public import IntegrationSection6.IndexedEquivalences
+public import IntegrationSection6.GammaFiniteGraphIsomorphisms
+
+@[expose] public section
 
 /-! Fibrewise charts with their full joint Gamma graph assemble to actual
 isomorphisms in RV[k]. Weight balance is preserved by appending the same

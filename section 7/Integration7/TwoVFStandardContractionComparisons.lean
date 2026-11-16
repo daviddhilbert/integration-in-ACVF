@@ -1,6 +1,10 @@
-import Integration7.UniformCellGraphFamilyComparison
-import Integration7.RVGraphRefinementContractionComparisons
-import Integration7.GeneratedBaseStandardContractions
+module
+
+public import Integration7.UniformCellGraphFamilyComparison
+public import Integration7.RVGraphRefinementContractionComparisons
+public import Integration7.GeneratedBaseStandardContractions
+
+@[expose] public section
 
 /-! The full VF-two case of Lemma7.7: arbitrary specified standard
 contractions in any two orders, with arbitrary retained nonzero density,

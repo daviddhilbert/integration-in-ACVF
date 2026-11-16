@@ -1,5 +1,9 @@
-import IntegrationSection6.GammaFiniteGraphObjects
-import IntegrationSection6.FiniteGammaIsomorphisms
+module
+
+public import IntegrationSection6.GammaFiniteGraphObjects
+public import IntegrationSection6.FiniteGammaIsomorphisms
+
+@[expose] public section
 
 /-! Two finite real presentations of the same full original-Gamma domain
 and volume relation are canonically isomorphic in RV[k]. -/

@@ -1,5 +1,9 @@
-import Integration7.UniformCellHeadFibres
-import Integration7.MixedCoordinateSmallVFDimension
+module
+
+public import Integration7.UniformCellHeadFibres
+public import Integration7.MixedCoordinateSmallVFDimension
+
+@[expose] public section
 
 /-! A whole cell family with zero vertical paradigm has VF dimension
 at most one, even when its carried RV-label set is infinite. -/

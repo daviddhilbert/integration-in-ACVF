@@ -1,7 +1,11 @@
-import Integration7.NativeVolumeDomains
-import IntegrationSection6.ActualRVFibreDefinability
-import Section4.FullDimension
-import Section9.MixedGenericDifferentiation
+module
+
+public import Integration7.NativeVolumeDomains
+public import IntegrationSection6.ActualRVFibreDefinability
+public import Section4.FullDimension
+public import Section9.MixedGenericDifferentiation
+
+@[expose] public section
 
 /-! Every realized RV polydisc with nonzero VF tags contains a VF tuple
 independent over any specified small original real base. RV names do not

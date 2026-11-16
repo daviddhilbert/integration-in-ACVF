@@ -1,4 +1,8 @@
-import Section5.Assembly
+module
+
+public import Section5.Assembly
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

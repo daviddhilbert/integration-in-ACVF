@@ -1,5 +1,9 @@
-import Integration7.GammaVolumeWitnessVFCodes
-import IntegrationSection6.GammaPreparedRowAgreements
+module
+
+public import Integration7.GammaVolumeWitnessVFCodes
+public import IntegrationSection6.GammaPreparedRowAgreements
+
+@[expose] public section
 
 /-! Prepared RV keys retain the complete coordinate and density rows
 and every supported-Jacobian comparison in a volume certificate. -/

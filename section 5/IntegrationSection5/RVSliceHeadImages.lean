@@ -1,5 +1,9 @@
-import IntegrationSection5.GammaSpecialRestriction
-import IntegrationSection5.RelativeLabelPreservation
+module
+
+public import IntegrationSection5.GammaSpecialRestriction
+public import IntegrationSection5.RelativeLabelPreservation
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option allowUnsafeReducibility true in

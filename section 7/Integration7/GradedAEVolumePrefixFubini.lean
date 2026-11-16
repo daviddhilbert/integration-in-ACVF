@@ -1,4 +1,8 @@
-import Integration7.GradedAEVolumeHeadFubini
+module
+
+public import Integration7.GradedAEVolumeHeadFubini
+
+@[expose] public section
 
 /-! Integrating any VF prefix leaves a genuine full finite graded AE
 function on the nonempty retained base and satisfies exact total Fubini. -/

@@ -1,5 +1,9 @@
-import Integration7.GammaSelectedRVVFTailMaps
-import IntegrationSection5.RelativeFibreMaps
+module
+
+public import Integration7.GammaSelectedRVVFTailMaps
+public import IntegrationSection5.RelativeFibreMaps
+
+@[expose] public section
 
 /-! An active-coordinate fibre of a selected VF realization is the
 original coordinate fibre cut by one fixed selected RV tuple. -/

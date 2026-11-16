@@ -1,6 +1,10 @@
-import Integration7.SelectedVolumeHeadFibres
-import Integration7.HeadCoordinateFibreContraction
-import Integration7.NativeVolumeDomains
+module
+
+public import Integration7.SelectedVolumeHeadFibres
+public import Integration7.HeadCoordinateFibreContraction
+public import Integration7.NativeVolumeDomains
+
+@[expose] public section
 
 /-! Taking the actual density graph commutes with freezing the VF tail.
 The equality retains both the old labels and the actual density value. -/

@@ -1,5 +1,9 @@
-import Mathlib.Data.Set.Card
-import Mathlib.SetTheory.Cardinal.Finite
+module
+
+public import Mathlib.Data.Set.Card
+public import Mathlib.SetTheory.Cardinal.Finite
+
+@[expose] public section
 
 /-! A finite tuple family is bounded by the product of its finite
 coordinate images. This reduces tuple-fibre compactness to scalar rows. -/

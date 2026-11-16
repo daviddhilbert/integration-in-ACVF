@@ -1,7 +1,11 @@
-import Integration7.HKZeroFamilyScalarProducts
-import Integration7.HKZeroFamilyHeadIntegrals
-import Integration7.VFVolumeBijections
-import Section4.UnionMapLaws
+module
+
+public import Integration7.HKZeroFamilyScalarProducts
+public import Integration7.HKZeroFamilyHeadIntegrals
+public import Integration7.VFVolumeBijections
+public import Section4.UnionMapLaws
+
+@[expose] public section
 
 /-! Exact finite-factor product bijections for weighted families. The
 VF tuple is fixed and the density from each factor is preserved. -/

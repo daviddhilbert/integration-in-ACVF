@@ -1,6 +1,10 @@
-import IntegrationSection6.GammaPreparedDescent
-import IntegrationSection6.FiniteLiftFibres
-import Section5.GammaFiniteFibres
+module
+
+public import IntegrationSection6.GammaPreparedDescent
+public import IntegrationSection6.FiniteLiftFibres
+public import Section5.GammaFiniteFibres
+
+@[expose] public section
 
 /-! Preparing a pure VF base produces an actual object of RV[n]. The RV
 key tuple is finite over its n volume labels, even though the key set may

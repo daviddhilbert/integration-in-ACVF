@@ -1,4 +1,8 @@
-import Integration7.MatchingVerticalFibreGeometry
+module
+
+public import Integration7.MatchingVerticalFibreGeometry
+
+@[expose] public section
 
 /-! Complete horizontal fibres of the actual matching refinement.
 The centre is the original positioning inverse, and lies in the matching

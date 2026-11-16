@@ -1,5 +1,9 @@
-import Integration7.GammaVolumeObjectPromotion
-import Integration7.CanonicalVolumeSchemaRows
+module
+
+public import Integration7.GammaVolumeObjectPromotion
+public import Integration7.CanonicalVolumeSchemaRows
+
+@[expose] public section
 
 /-! Promotion preserves the actual coordinate and density functions of
 the original presentation, in every containing canonical base context. -/

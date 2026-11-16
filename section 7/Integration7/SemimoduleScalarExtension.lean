@@ -1,4 +1,8 @@
-import Mathlib.Algebra.Module.Presentation.Basic
+module
+
+public import Mathlib.Algebra.Module.Presentation.Basic
+
+@[expose] public section
 
 /-! Scalar extension from a possibly noncommutative semiring to a ring.
 The target-module presentation uses the checked Mathlib Relations API.

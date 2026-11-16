@@ -1,6 +1,10 @@
-import Integration7.NormalizedVolumePrefixOperators
-import Integration7.NormalizedVolumePermutationOperators
-import Integration7.NormalizedPositiveCoordinateFubini
+module
+
+public import Integration7.NormalizedVolumePrefixOperators
+public import Integration7.NormalizedVolumePermutationOperators
+public import Integration7.NormalizedPositiveCoordinateFubini
+
+@[expose] public section
 
 /-! Every actual nonempty VF coordinate projection has an S-linear
 partial integral on the full normalized function module, with the

@@ -1,4 +1,8 @@
-import IntegrationSection6.MixedCoordinatePointMaps
+module
+
+public import IntegrationSection6.MixedCoordinatePointMaps
+
+@[expose] public section
 
 /-! Coordinate-block substitution and existential VF projection for
 original-Gamma predicates, without enlarging their parameter base. -/

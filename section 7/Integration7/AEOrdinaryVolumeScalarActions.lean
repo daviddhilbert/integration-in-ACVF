@@ -1,5 +1,9 @@
-import Integration7.OrdinaryVolumeFamilyScalarProducts
-import Integration7.AEOrdinaryVolumeFunctionAddition
+module
+
+public import Integration7.OrdinaryVolumeFamilyScalarProducts
+public import Integration7.AEOrdinaryVolumeFunctionAddition
+
+@[expose] public section
 
 /-! Ordinary coefficients act on the actual ordinary-valued AE quotient
 through their genuine finite-factor family representatives. -/

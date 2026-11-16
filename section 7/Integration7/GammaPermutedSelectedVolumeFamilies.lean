@@ -1,6 +1,10 @@
-import Integration7.GammaGeometricCommonRowTransport
-import Integration7.GammaSelectedVolumeSchemata
-import IntegrationSection6.GammaPermutedFibrePresentations
+module
+
+public import Integration7.GammaGeometricCommonRowTransport
+public import Integration7.GammaSelectedVolumeSchemata
+public import IntegrationSection6.GammaPermutedFibrePresentations
+
+@[expose] public section
 
 /-! The same VF-coordinate permutation on both families preserves the
 ordinary selected coordinates, density labels and exact geometric bases. -/

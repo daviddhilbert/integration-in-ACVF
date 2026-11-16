@@ -1,5 +1,9 @@
-import Integration7.NativeRelativeTranslations
-import IntegrationSection5.GammaGraphOperations
+module
+
+public import Integration7.NativeRelativeTranslations
+public import IntegrationSection5.GammaGraphOperations
+
+@[expose] public section
 
 /-! Actual relative translations and their images retain the original
 Gamma base whenever the complete centre graph does. -/

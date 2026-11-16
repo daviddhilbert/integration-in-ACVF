@@ -1,5 +1,9 @@
-import Integration7.AllDegreeVolumeClassCoherence
-import Integration7.ZeroFactorProductBridges
+module
+
+public import Integration7.AllDegreeVolumeClassCoherence
+public import Integration7.ZeroFactorProductBridges
+
+@[expose] public section
 
 /-! Moving an ordinary degree-zero coefficient past a positive factor
 introduces no VF coordinate permutation or sign. -/

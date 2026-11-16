@@ -1,6 +1,10 @@
-import IntegrationSection5.RVRecodeInjection
-import IntegrationSection5.GammaPermutationIso
-import IntegrationSection5.MixedCellDecomposition
+module
+
+public import IntegrationSection5.RVRecodeInjection
+public import IntegrationSection5.GammaPermutationIso
+public import IntegrationSection5.MixedCellDecomposition
+
+@[expose] public section
 
 /-! The actual VF-coordinate-preserving RV-label injection in Corollary5.8.
 Decomposition is applied to the swapped source so that the final cell

@@ -1,4 +1,8 @@
-import IntegrationSection6.GammaFamilyMapValidity
+module
+
+public import IntegrationSection6.GammaFamilyMapValidity
+
+@[expose] public section
 
 /-! First-order validity of an actual function graph on one parameter
 row: sorted parameters, a unique output at each domain point, and no

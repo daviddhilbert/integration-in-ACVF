@@ -1,6 +1,10 @@
-import Integration7.GradedVolumeProducts
-import Integration7.NondegenerateFiniteIso
-import Section4.RVProductMorphisms
+module
+
+public import Integration7.GradedVolumeProducts
+public import Integration7.NondegenerateFiniteIso
+public import Section4.RVProductMorphisms
+
+@[expose] public section
 
 /-! Actual essential product charts. A product label is essential
 exactly when both of its factor labels are essential. -/

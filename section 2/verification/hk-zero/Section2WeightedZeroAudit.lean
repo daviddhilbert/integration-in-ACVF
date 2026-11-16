@@ -1,4 +1,8 @@
-import IntegrationSection2.WeightedZeroVolumeDescent
+module
+
+public import IntegrationSection2.WeightedZeroVolumeDescent
+
+@[expose] public section
 set_option pp.universes true
 set_option pp.proofs false
 #check @IntegrationInACVF.Section2.WeightedZeroVolumeDescent.labelMap

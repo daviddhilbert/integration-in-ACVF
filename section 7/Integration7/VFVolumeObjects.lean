@@ -1,5 +1,9 @@
-import Integration7.VolumeForms
-import Section4.VFCategories
+module
+
+public import Integration7.VolumeForms
+public import Section4.VFCategories
+
+@[expose] public section
 
 /-! Positive-degree VF objects carry an actual mixed definable domain,
 finite RV fibres, and a nonzero definable RV density. Degree zero keeps

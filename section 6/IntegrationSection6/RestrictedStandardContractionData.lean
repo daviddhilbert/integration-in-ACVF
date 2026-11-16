@@ -1,4 +1,8 @@
-import IntegrationSection6.StandardRVLabelRestriction
+module
+
+public import IntegrationSection6.StandardRVLabelRestriction
+
+@[expose] public section
 
 /-! A fixed-target representation of the actual restricted contraction,
 so that no equality casts on its final RV arity are needed. -/

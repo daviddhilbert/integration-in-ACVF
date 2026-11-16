@@ -1,15 +1,19 @@
-import Integration7.OrdinaryPermutationIntegralCovariance
-import Integration7.RawElementaryKernelDifferences
-import Integration7.RawHomogeneousKernelRelations
-import Integration7.RawPositiveKernelPresentation
-import Integration7.RawVolumeKernelIdeal
-import Integration7.RescaledPointBlowupBounds
-import Integration7.SelectedPermutationSigns
-import Integration7.SemiringGroupificationGrothendieck
-import Integration7.SignedCoordinateVolumeClasses
-import Integration7.SignedIntegralPermutationCovariance
-import Integration7.SurjectiveGroupificationKernels
-import Integration7.VolumeBlowupUniversalProperty
+module
+
+public import Integration7.OrdinaryPermutationIntegralCovariance
+public import Integration7.RawElementaryKernelDifferences
+public import Integration7.RawHomogeneousKernelRelations
+public import Integration7.RawPositiveKernelPresentation
+public import Integration7.RawVolumeKernelIdeal
+public import Integration7.RescaledPointBlowupBounds
+public import Integration7.SelectedPermutationSigns
+public import Integration7.SemiringGroupificationGrothendieck
+public import Integration7.SignedCoordinateVolumeClasses
+public import Integration7.SignedIntegralPermutationCovariance
+public import Integration7.SurjectiveGroupificationKernels
+public import Integration7.VolumeBlowupUniversalProperty
+
+@[expose] public section
 set_option pp.universes true
 set_option pp.proofs false
 set_option pp.deepTerms true

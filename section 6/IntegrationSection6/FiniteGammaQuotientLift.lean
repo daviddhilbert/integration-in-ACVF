@@ -1,5 +1,9 @@
-import IntegrationSection6.FiniteGammaScissorComparison
-import IntegrationSection6.FiniteGammaAdditiveCongruence
+module
+
+public import IntegrationSection6.FiniteGammaScissorComparison
+public import IntegrationSection6.FiniteGammaAdditiveCongruence
+
+@[expose] public section
 
 /-! Actual additive lifting from the finite Gamma common-blowup quotient
 to the inherited finite VF scissor presentation. This constructs the

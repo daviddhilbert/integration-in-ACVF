@@ -1,7 +1,11 @@
-import Integration7.SelectedVFTailVolumeCharts
-import Integration7.SelectedVFTailFirstTwoOrders
-import Integration7.RawStandardVolumeNormalization
-import Integration7.Lemma77
+module
+
+public import Integration7.SelectedVFTailVolumeCharts
+public import Integration7.SelectedVFTailFirstTwoOrders
+public import Integration7.RawStandardVolumeNormalization
+public import Integration7.Lemma77
+
+@[expose] public section
 
 /-! First-two exchange with arbitrary retained selected RV coordinates.
 Realize those coordinates by VF tails, apply the completed Lemma 7.7,

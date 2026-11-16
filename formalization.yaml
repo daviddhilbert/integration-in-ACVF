@@ -1,0 +1,111 @@
+version: v0.4
+project:
+  name: Integration in algebraically closed valued fields
+  description: Two geometric preparation theorems for integration in algebraically closed
+    valued fields. Proposition 3.19 partitions an original-base definable VF bijection into
+    finitely many definable pieces on which it is open-to-open. Lemma 4.8 decomposes an original-Gamma-base
+    definable subset of VF squared into two-cell fibres of a definable map to a finite RV
+    power. The cell positioning graph and both paradigms are definable over the original base
+    together with the output RV tuple. Actual saturation, characteristic, parameter-base and
+    named-value hypotheses remain in the formal statements. The larger repository develops
+    Sections 2–7, including ordinary and measured integration; those additional results are
+    outside this Palomar selection.
+  authors:
+  - Yimu Yin
+  responsible_maintainers:
+  - Yimu Yin
+  license: MIT
+classification:
+  arxiv:
+  - math.LO
+  msc2020:
+  - 03C60
+  - 12J25
+  - 03B35
+sources:
+- title: Integration in algebraically closed valued fields
+  authors:
+  - Yimu Yin
+  id: arXiv:0809.0473v2
+  location: https://arxiv.org/abs/0809.0473v2
+  type: paper
+  relationship: adapts
+  note: This submission selects Proposition 3.19 and Lemma 4.8 from Sections 3–4. It does
+    not register the whole paper. Source-specific hypotheses and approved wording corrections
+    are documented in the larger repository.
+related_formalizations:
+- id: https://github.com/daviddhilbert/special-transformations
+  relationship: builds-on
+  note: The shared definable geometry, special transformations, finite-volume categories and
+    weighted-zero interfaces. The submission preparation ports visibility to Lean's module
+    system without changing the intended mathematical definitions or proof arguments. The
+    checked compatibility pin is 23157ace335d7c482add99be69d42c07b4ba1d30. Build evidence
+    is recorded in the preparation record.
+- id: https://github.com/daviddhilbert/ACVF-QE
+  relationship: builds-on
+  note: The corrected L_RV language, canonical structures, valuation and quantifier-elimination
+    foundation. The module-compatible published revision is 8f90dfd22de9f2c821382830eee326d1f0cf4990.
+status:
+  scope: 'Exactly two headline results are selected: IntegrationInACVF.Section3ACVF.FullOpenToOpenPartition.proposition_3_19
+    and IntegrationInACVF.Section4.lemma_4_8. The former retains the original real and imaginary
+    parameter base, small real base, genuine saturation, ACVF(0,0), a definable nontrivial
+    Gamma value, original-base definability and an actual VF bijection. The latter retains
+    its original VF/Gamma-generated base, small real base, saturation and ACVF(0,0), a named
+    nontrivial Gamma value and definability of the actual VF-squared set. It produces an actual
+    finite-arity Gamma RV map whose nonempty fibres have definable two-cell data. Other formalized
+    results, including the Section 7 measured kernel and function integration, are not claims
+    of this Comparator configuration.'
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms:
+  - propext
+  - Classical.choice
+  - Quot.sound
+automation:
+  methods:
+  - method: agent
+    models: []
+    framework: OpenAI Codex / ChatGPT
+    tool_setup: Author-directed formalization, Lean compilation, complete exported type and
+      axiom inspection, source recovery, and scripted publication.
+    prompting_notes: Preserve the original parameter bases, explicit hypotheses, accepted
+      statement corrections and the weighted measured-zero convention.
+  notes: Historical model identifiers, aggregate cost and wall time were not consistently
+    recorded. AI systems supplied substantial formalization and preparation work under the
+    author's mathematical direction. Human authorship and responsibility are distinct from
+    that AI contribution.
+fidelity:
+  divergences: The two selected statements retain their displayed original parameter bases
+    and standing model hypotheses. The shared one-sorted encoding has the named RV inverse
+    and a single absorbing RV element. Mathlib's multiplicative valuation order reverses the
+    paper's additive order. Broader accepted corrections and the author-adopted weighted measured-zero
+    convention concern other parts of the repository and are not additional selected claims
+    here. No novelty of the source mathematics or priority over earlier formalizations is
+    claimed.
+review:
+  status: self-assessed; no independent human expert review claimed
+  reviewers: []
+  notes: The released legacy-format library passed its root build and section verifiers at
+    proof revision 862aa448b4314df673bccd928d1353af6650d7f1; those checks do not certify this
+    module-format branch. The two selected actual module-format results compiled and their
+    complete displayed types and axiom lists were inspected. A local Comparator diagnostic
+    passed with Lean's default kernel accepting the Solution; that run was unsandboxed and
+    is not a protected Palomar verification. The final size-compliant Challenge was then formatted
+    and compiled. The exact-commit full pinned Palomar workflow, including NanoDa, must pass
+    before intake. Deliberate Challenge theorem holes are obligations, not unfinished Solution
+    proofs. No private Palomar review or registration has occurred.
+alignment:
+  namespace: IntegrationInACVF
+  statements:
+  - source: Yin, Proposition 3.19 — finite open-to-open partition
+    lean: IntegrationInACVF.Section3ACVF.FullOpenToOpenPartition.proposition_3_19
+    module: IntegrationSection3ACVF.FullOpenToOpenPartition
+    status: proved
+    note: An actual original-base definable VF bijection admits a finite disjoint covering
+      by nonempty original-base definable open-to-open pieces.
+  - source: Yin, Lemma 4.8 — definable two-cell decomposition
+    lean: IntegrationInACVF.Section4.lemma_4_8
+    module: IntegrationSection4.TwoCellDecomposition
+    status: proved
+    note: An actual finite-arity Gamma RV map has definable two-cell fibres over the original
+      Gamma base and its output RV tuple.

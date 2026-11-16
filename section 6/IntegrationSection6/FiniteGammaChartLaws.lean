@@ -1,4 +1,8 @@
-import IntegrationSection6.FiniteGammaWeightedIsos
+module
+
+public import IntegrationSection6.FiniteGammaWeightedIsos
+
+@[expose] public section
 
 /-! Isomorphism laws retain both real presentation maps and original-Gamma graphs. -/
 noncomputable section

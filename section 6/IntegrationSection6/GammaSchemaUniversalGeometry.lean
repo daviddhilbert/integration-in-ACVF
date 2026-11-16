@@ -1,5 +1,9 @@
-import IntegrationSection6.FiniteGammaUniversalCharts
-import IntegrationSection6.GammaBlowupSchemata
+module
+
+public import IntegrationSection6.FiniteGammaUniversalCharts
+public import IntegrationSection6.GammaBlowupSchemata
+
+@[expose] public section
 
 /-! Uniform schema presentations have their literal native geometry at a
 common internal code universe, with all original-base Gamma certificates. -/

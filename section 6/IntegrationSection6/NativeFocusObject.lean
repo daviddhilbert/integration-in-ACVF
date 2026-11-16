@@ -1,6 +1,10 @@
-import IntegrationSection6.CollapsedRVObjects
-import IntegrationSection6.NormalizedLifts
-import IntegrationSection6.FullFocusBlowup
+module
+
+public import IntegrationSection6.CollapsedRVObjects
+public import IntegrationSection6.NormalizedLifts
+public import IntegrationSection6.FullFocusBlowup
+
+@[expose] public section
 
 /-! The RV image object supplied by the released focus/canonical-map
 construction, with its second normalization collapsed without changing labels. -/

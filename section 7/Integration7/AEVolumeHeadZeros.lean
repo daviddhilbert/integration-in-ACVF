@@ -1,5 +1,9 @@
-import Integration7.AEVolumeComponentHeadIntegrals
-import Integration7.EmptyHeadIntegralFamilies
+module
+
+public import Integration7.AEVolumeComponentHeadIntegrals
+public import Integration7.EmptyHeadIntegralFamilies
+
+@[expose] public section
 
 /-! First-head integration sends zero to zero in every homogeneous degree. -/
 noncomputable section

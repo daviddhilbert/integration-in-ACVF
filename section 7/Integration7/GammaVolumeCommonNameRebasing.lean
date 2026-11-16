@@ -1,5 +1,9 @@
-import Integration7.GammaRVCommonNameRebasing
-import Integration7.GammaVolumeParameterGeometry
+module
+
+public import Integration7.GammaRVCommonNameRebasing
+public import Integration7.GammaVolumeParameterGeometry
+
+@[expose] public section
 
 /-! Rebase actual Gamma volume objects without changing any carrier,
 coordinate, density or finite-fibre condition. -/

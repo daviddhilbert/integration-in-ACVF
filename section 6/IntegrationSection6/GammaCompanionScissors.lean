@@ -1,5 +1,9 @@
-import IntegrationSection6.FiniteGammaRestrictions
-import Section7.GammaScissors
+module
+
+public import IntegrationSection6.FiniteGammaRestrictions
+public import Section7.GammaScissors
+
+@[expose] public section
 
 /-! Companion graphs retain literal volume information when comparing
 actual finite subobjects. This exposes the inherited scissor presentation

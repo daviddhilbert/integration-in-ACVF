@@ -1,7 +1,11 @@
-import Integration7.RVParameterHeadProductBijections
-import Integration7.RawRVProductTransfers
-import Integration7.CanonicalVolumePresentations
-import Integration7.GammaRVMapRestrictions
+module
+
+public import Integration7.RVParameterHeadProductBijections
+public import Integration7.RawRVProductTransfers
+public import Integration7.CanonicalVolumePresentations
+public import Integration7.GammaRVMapRestrictions
+
+@[expose] public section
 
 /-! The exact packed raw RV product bijection of a parameter-carrying
 unary preparation, with a complete original-Gamma graph. -/

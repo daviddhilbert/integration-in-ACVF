@@ -1,8 +1,12 @@
-import Integration7.GammaPreparedVolumeWitnesses
-import Integration7.GammaVolumeWitnessVFCodesInBase
-import IntegrationSection6.GammaFieldBaseReduction
-import IntegrationSection6.GammaSpecialBaseReduction
-import IntegrationSection6.GammaVFCodePreparation
+module
+
+public import Integration7.GammaPreparedVolumeWitnesses
+public import Integration7.GammaVolumeWitnessVFCodesInBase
+public import IntegrationSection6.GammaFieldBaseReduction
+public import IntegrationSection6.GammaSpecialBaseReduction
+public import IntegrationSection6.GammaVFCodePreparation
+
+@[expose] public section
 
 /-! Prepare volume witnesses over an arbitrary small real base.
 An internal generated coefficient field codes the unchanged formulas;

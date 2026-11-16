@@ -1,4 +1,8 @@
-import IntegrationSection6.GammaVFCoordinateIsomorphisms
+module
+
+public import IntegrationSection6.GammaVFCoordinateIsomorphisms
+
+@[expose] public section
 
 /-! Point values of coordinate isomorphisms survive carrier transports. -/
 noncomputable section

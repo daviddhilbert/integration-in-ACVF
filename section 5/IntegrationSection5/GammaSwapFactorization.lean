@@ -1,5 +1,9 @@
-import IntegrationSection5.VFSwapFactorization
-import IntegrationSection5.GammaUnaryRestriction
+module
+
+public import IntegrationSection5.VFSwapFactorization
+public import IntegrationSection5.GammaUnaryRestriction
+
+@[expose] public section
 
 /-! Restricting the actual three-update swap to any original-Gamma source. -/
 noncomputable section

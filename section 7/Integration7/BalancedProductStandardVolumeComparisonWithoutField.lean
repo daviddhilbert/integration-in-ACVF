@@ -1,6 +1,10 @@
-import Integration7.BalancedUnaryVolumePreparationWithoutField
-import Integration7.TwoOrderProductPreparations
-import Integration7.BalancedUnaryVolumePreparation
+module
+
+public import Integration7.BalancedUnaryVolumePreparationWithoutField
+public import Integration7.TwoOrderProductPreparations
+public import Integration7.BalancedUnaryVolumePreparation
+
+@[expose] public section
 
 /-! The two translated products of a balanced cell have constructed
 opposite-order standard contractions whose actual raw RV volume objects

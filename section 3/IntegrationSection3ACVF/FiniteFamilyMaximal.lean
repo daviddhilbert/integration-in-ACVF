@@ -1,4 +1,8 @@
-import IntegrationSection3ACVF.FiniteFamilyCoordinates
+module
+
+public import IntegrationSection3ACVF.FiniteFamilyCoordinates
+
+@[expose] public section
 
 /-! Finite-family coordinate fibres are actual intrinsic maximal open
 balls, and the finite scalar bookkeeping has the actual component and

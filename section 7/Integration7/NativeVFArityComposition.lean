@@ -1,4 +1,8 @@
-import Integration7.GammaSelectedRVVFTailHeadPreparations
+module
+
+public import Integration7.GammaSelectedRVVFTailHeadPreparations
+
+@[expose] public section
 
 /-! VF arity transports compose and commute with head images. The
 back map is a genuine definable bijection with literal coordinate values. -/

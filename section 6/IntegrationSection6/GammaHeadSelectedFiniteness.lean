@@ -1,6 +1,10 @@
-import IntegrationSection6.GammaHeadFibreLiftMaps
-import IntegrationSection6.GammaSelectedLabelFibrePresentations
-import IntegrationSection5.GammaOrderedContraction
+module
+
+public import IntegrationSection6.GammaHeadFibreLiftMaps
+public import IntegrationSection6.GammaSelectedLabelFibrePresentations
+public import IntegrationSection5.GammaOrderedContraction
+
+@[expose] public section
 
 /-! One head contraction preserves the exact selected-volume finiteness
 needed for RV[k]. The proof freezes only the complementary VF tuple and

@@ -1,5 +1,9 @@
-import Integration7.TwoOrderProductCommonNames
-import IntegrationSection5.StandardContractionNormalization
+module
+
+public import Integration7.TwoOrderProductCommonNames
+public import IntegrationSection5.StandardContractionNormalization
+
+@[expose] public section
 
 /-! Fixed-name presentations keep the actual final contraction domains
 and volume coordinate selectors in both VF orders. -/

@@ -1,5 +1,9 @@
-import Integration7.FixedVFVolumeCoproducts
-import Integration7.VFVolumeBijections
+module
+
+public import Integration7.FixedVFVolumeCoproducts
+public import Integration7.VFVolumeBijections
+
+@[expose] public section
 
 /-! Adding either disjoint RV tag is a full volume bijection and fixes
 every VF coordinate. The tagged forms are literal pullbacks. -/

@@ -1,6 +1,10 @@
-import Integration7.NativePreparedMixedPartitions
-import Integration7.GeneratedBaseStandardContractions
-import IntegrationSection6.PreparedPartitionImages
+module
+
+public import Integration7.NativePreparedMixedPartitions
+public import Integration7.GeneratedBaseStandardContractions
+public import IntegrationSection6.PreparedPartitionImages
+
+@[expose] public section
 
 /-! Simultaneous membership preparation and actual restricted special
 bijections construct the whole finite pullback partition over C.base. -/

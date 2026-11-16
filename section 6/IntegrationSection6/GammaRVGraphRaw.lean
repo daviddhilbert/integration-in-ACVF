@@ -1,4 +1,8 @@
-import IntegrationSection6.GammaNativeRawObjects
+module
+
+public import IntegrationSection6.GammaNativeRawObjects
+
+@[expose] public section
 
 /-! Flatten complete pure-RV Gamma relations without naming any additional
 original-base parameters. -/

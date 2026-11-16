@@ -1,5 +1,9 @@
-import IntegrationSection4.VerticalPullbackCells
-import IntegrationSection4.RVLabelSlices
+module
+
+public import IntegrationSection4.VerticalPullbackCells
+public import IntegrationSection4.RVLabelSlices
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

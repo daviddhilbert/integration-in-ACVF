@@ -1,5 +1,9 @@
-import Integration7.LocalizedBasicVolumeGeneration
-import Integration7.GradedVolumeBlowupProjection
+module
+
+public import Integration7.LocalizedBasicVolumeGeneration
+public import Integration7.GradedVolumeBlowupProjection
+
+@[expose] public section
 
 /-! A semiring map identifying the basic pair and making the point a
 unit descends uniquely through the actual geometric blowup quotient.

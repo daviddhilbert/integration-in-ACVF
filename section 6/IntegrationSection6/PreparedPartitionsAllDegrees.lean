@@ -1,4 +1,8 @@
-import IntegrationSection6.PreparedMixedPartitions
+module
+
+public import IntegrationSection6.PreparedMixedPartitions
+
+@[expose] public section
 
 /-! Simultaneous preparation also includes VF degree zero, where every
 subset is already an RV-pullback and the identity program suffices. -/

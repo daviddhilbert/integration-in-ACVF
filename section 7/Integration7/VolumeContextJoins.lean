@@ -1,4 +1,8 @@
-import Integration7.FiniteVolumeParameterContexts
+module
+
+public import Integration7.FiniteVolumeParameterContexts
+
+@[expose] public section
 
 /-! Two genuine small containing contexts admit a genuine common small
 containing context. Their model cardinal bounds may differ. -/

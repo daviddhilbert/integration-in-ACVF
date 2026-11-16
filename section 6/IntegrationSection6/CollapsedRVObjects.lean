@@ -1,5 +1,9 @@
-import IntegrationSection6.CanonicalNormalization
-import Section4.CanonicalLift
+module
+
+public import IntegrationSection6.CanonicalNormalization
+public import Section4.CanonicalLift
+
+@[expose] public section
 
 /-! An RV presentation over a twice-normalized model has the same actual
 labels, volume function and parameters over the once-normalized model. -/

@@ -1,5 +1,9 @@
-import IntegrationSection6.GammaCommonBlowupCompactness
-import IntegrationSection6.GammaSchemaFiniteRowPresentations
+module
+
+public import IntegrationSection6.GammaCommonBlowupCompactness
+public import IntegrationSection6.GammaSchemaFiniteRowPresentations
+
+@[expose] public section
 
 /-! Finite common-blowup witness covers need only actual finite row
 semantics at the endpoints. No common cardinality bound is imposed on

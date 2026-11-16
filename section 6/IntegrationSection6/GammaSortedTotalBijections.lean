@@ -1,4 +1,8 @@
-import IntegrationSection6.GammaSortedBijectionRealization
+module
+
+public import IntegrationSection6.GammaSortedBijectionRealization
+
+@[expose] public section
 
 /-! A uniform family of sorted bijections gives an actual original-base
 bijection of total sets, preserving every parameter coordinate. -/

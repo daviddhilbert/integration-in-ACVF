@@ -1,5 +1,9 @@
-import IntegrationSection6.GammaFamilyCoordinates
-import IntegrationSection6.FiniteGammaCoproducts
+module
+
+public import IntegrationSection6.GammaFamilyCoordinates
+public import IntegrationSection6.FiniteGammaCoproducts
+
+@[expose] public section
 
 /-! Uniform tagged coproduct formulas over the original Gamma base. The
 actual native RV tags preserve the VF parameter tuple. -/

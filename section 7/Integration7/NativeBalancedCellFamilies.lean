@@ -1,7 +1,11 @@
-import Integration7.UniformBalancedPartSelections
-import Integration7.NativeRVParameterSelections
-import Integration7.UniformCellVerticalContractions
-import Integration7.UniformBalancedHorizontalContractions
+module
+
+public import Integration7.UniformBalancedPartSelections
+public import Integration7.NativeRVParameterSelections
+public import Integration7.UniformCellVerticalContractions
+public import Integration7.UniformBalancedHorizontalContractions
+
+@[expose] public section
 
 /-! The balanced part of an arbitrary uniform cell chart has an actual
 native presentation and proved balanced rows. Both translated families

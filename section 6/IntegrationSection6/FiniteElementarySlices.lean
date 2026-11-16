@@ -1,4 +1,8 @@
-import IntegrationSection6.ElementaryBlowup
+module
+
+public import IntegrationSection6.ElementaryBlowup
+
+@[expose] public section
 
 /-! Finite volume of an elementary blowup needs only finite old-label
 slices. This separates the finite-category proof from the original-base

@@ -1,4 +1,8 @@
-import Integration7.GradedSemiringActions
+module
+
+public import Integration7.GradedSemiringActions
+
+@[expose] public section
 
 /-! A fixed shift of homogeneous function degrees retains the actual
 graded semiring action. Only arithmetic transports are introduced. -/

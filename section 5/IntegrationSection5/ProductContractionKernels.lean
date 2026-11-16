@@ -1,4 +1,8 @@
-import IntegrationSection5.LiftedUnaryProductGeometry
+module
+
+public import IntegrationSection5.LiftedUnaryProductGeometry
+
+@[expose] public section
 
 /-! Exact kernel identities for product contractions. The retained labels
 and the unary projection jointly determine every output RV label. -/

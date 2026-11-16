@@ -1,6 +1,10 @@
-import IntegrationSection4.GammaBaseDescent
-import Section5.GammaInvariantLogic
-import IntegrationSection3ACVF.GammaLinearBallRow
+module
+
+public import IntegrationSection4.GammaBaseDescent
+public import Section5.GammaInvariantLogic
+public import IntegrationSection3ACVF.GammaLinearBallRow
+
+@[expose] public section
 
 /-! Original-base unary membership tests and the full linear-radius/slope
 relation, in the predecessor's actual mixed-coordinate presentations. -/

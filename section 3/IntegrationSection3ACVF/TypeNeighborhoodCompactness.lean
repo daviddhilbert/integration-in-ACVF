@@ -1,4 +1,8 @@
-import IntegrationSection3ACVF.DefinableTupleCompactness
+module
+
+public import IntegrationSection3ACVF.DefinableTupleCompactness
+
+@[expose] public section
 
 /-! The first compactness step in3.19, for an arbitrary family of allowed
 unary parameter definitions. Bad configurations are finite real tuples;

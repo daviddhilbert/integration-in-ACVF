@@ -1,4 +1,8 @@
-import Integration7.HeadTailVolumeSelectors
+module
+
+public import Integration7.HeadTailVolumeSelectors
+
+@[expose] public section
 
 /-! Literal selectors when a prescribed ordered tail follows the chosen head. -/
 noncomputable section

@@ -1,5 +1,9 @@
-import IntegrationSection5.StandardContraction
-import IntegrationSection5.HeadPreparationExtension
+module
+
+public import IntegrationSection5.StandardContraction
+public import IntegrationSection5.HeadPreparationExtension
+
+@[expose] public section
 
 /-! Parameter enlargement preserves the actual head preparations and
 ordered/standard contraction programs. No new preparation is chosen. -/

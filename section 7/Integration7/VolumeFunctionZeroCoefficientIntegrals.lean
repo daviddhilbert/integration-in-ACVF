@@ -1,7 +1,11 @@
-import Integration7.VolumeFamilyZeroProductLifts
-import Integration7.AERVVolumeZeroCoefficientProducts
-import Integration7.AERVVolumeFunctionIntegrals
-import Integration7.ZeroFactorVFVolumeClassProducts
+module
+
+public import Integration7.VolumeFamilyZeroProductLifts
+public import Integration7.AERVVolumeZeroCoefficientProducts
+public import Integration7.AERVVolumeFunctionIntegrals
+public import Integration7.ZeroFactorVFVolumeClassProducts
+
+@[expose] public section
 
 /-! The canonical integral preserves multiplication by an ordinary
 RV[0] coefficient. This is the actual finite-factor product, compared

@@ -1,5 +1,9 @@
-import Integration7.NativeRelativeTranslations
-import Mathlib.Data.Fin.VecNotation
+module
+
+public import Integration7.NativeRelativeTranslations
+public import Mathlib.Data.Fin.VecNotation
+
+@[expose] public section
 
 /-! Exact VF-pair domains and images of actual native two-coordinate
 maps. This connects set-level cell equivalences to their native images. -/

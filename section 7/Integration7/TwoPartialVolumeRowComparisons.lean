@@ -1,6 +1,10 @@
-import Integration7.FrozenTwoVFContractionRows
-import Integration7.PrefixContractionVolumeSelectors
-import Integration7.HeadTailVolumeSelectors
+module
+
+public import Integration7.FrozenTwoVFContractionRows
+public import Integration7.PrefixContractionVolumeSelectors
+public import Integration7.HeadTailVolumeSelectors
+
+@[expose] public section
 
 /-! Two actual partial programs compare over a generic frozen VF tuple.
 The source relation is a literal permutation of their two active

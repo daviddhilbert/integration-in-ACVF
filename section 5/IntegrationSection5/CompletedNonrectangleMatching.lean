@@ -1,6 +1,10 @@
-import IntegrationSection5.CompletedHeadComparison
-import IntegrationSection5.GlobalCompletedHeads
-import IntegrationSection5.MatchedUnaryPreparation
+module
+
+public import IntegrationSection5.CompletedHeadComparison
+public import IntegrationSection5.GlobalCompletedHeads
+public import IntegrationSection5.MatchedUnaryPreparation
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 open Classical FirstOrder FirstOrder.Language

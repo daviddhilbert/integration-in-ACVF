@@ -1,5 +1,9 @@
-import IntegrationSection6.VFPrefixCoordinates
-import IntegrationSection5.CoordinateFibreMaps
+module
+
+public import IntegrationSection6.VFPrefixCoordinates
+public import IntegrationSection5.CoordinateFibreMaps
+
+@[expose] public section
 
 /-! Definable insertion and projection of a VF prefix with a frozen tail. -/
 noncomputable section

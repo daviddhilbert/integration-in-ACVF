@@ -1,6 +1,10 @@
-import Integration7.PositiveVolumeClassScalarExtensions
-import Integration7.AERVVolumeOrdinaryCoefficientModules
-import Integration7.AERVVolumePermutedFunctions
+module
+
+public import Integration7.PositiveVolumeClassScalarExtensions
+public import Integration7.AERVVolumeOrdinaryCoefficientModules
+public import Integration7.AERVVolumePermutedFunctions
+
+@[expose] public section
 
 /-! Reindexing VF coordinates is linear on positive AE functions over
 ordinary coefficients. The proof uses the actual permuted-row isomorphisms

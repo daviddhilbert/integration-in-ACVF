@@ -1,5 +1,9 @@
-import IntegrationSection3ACVF.AtomicFunctionInjectivity
-import IntegrationSection3ACVF.AtomicValueBoundRigidity
+module
+
+public import IntegrationSection3ACVF.AtomicFunctionInjectivity
+public import IntegrationSection3ACVF.AtomicValueBoundRigidity
+
+@[expose] public section
 
 /-! The radius contradiction for a real-parameter map on a larger domain.
 Injectivity of its atomic open-ball restriction is proved, not assumed. -/

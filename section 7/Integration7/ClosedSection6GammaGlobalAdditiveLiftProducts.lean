@@ -1,15 +1,19 @@
-import Integration7.CompletedSection6Kernel
-import Integration7.ClosedSection6GammaGlobalAdditiveLift
-import Integration7.ClosedSection6GammaVFAllBilinearProduct
-import Integration7.ClosedSection6GammaVFAllAdditivePresentation
-import IntegrationSection6.GammaGlobalAdditiveLiftProducts
-import IntegrationSection6.GammaGlobalAdditiveLift
-import IntegrationSection6.GammaVFAllBilinearProduct
-import IntegrationSection6.GammaLiftPadding
-import IntegrationSection6.FiniteGammaClassProducts
-import IntegrationSection6.GammaVFAllAdditivePresentation
-import IntegrationSection6.NativeFiniteQuotientLift
-import IntegrationSection6.GammaProductLifts
+module
+
+public import Integration7.CompletedSection6Kernel
+public import Integration7.ClosedSection6GammaGlobalAdditiveLift
+public import Integration7.ClosedSection6GammaVFAllBilinearProduct
+public import Integration7.ClosedSection6GammaVFAllAdditivePresentation
+public import IntegrationSection6.GammaGlobalAdditiveLiftProducts
+public import IntegrationSection6.GammaGlobalAdditiveLift
+public import IntegrationSection6.GammaVFAllBilinearProduct
+public import IntegrationSection6.GammaLiftPadding
+public import IntegrationSection6.FiniteGammaClassProducts
+public import IntegrationSection6.GammaVFAllAdditivePresentation
+public import IntegrationSection6.NativeFiniteQuotientLift
+public import IntegrationSection6.GammaProductLifts
+
+@[expose] public section
 
 /-! Closed generated-base Section6 integration. The former universal
 Section5 input is replaced by the canonical-model certificate; its kernel

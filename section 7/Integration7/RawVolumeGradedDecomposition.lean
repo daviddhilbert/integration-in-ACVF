@@ -1,4 +1,8 @@
-import Integration7.RawVolumeDegreeComponents
+module
+
+public import Integration7.RawVolumeDegreeComponents
+
+@[expose] public section
 
 /-! The actual raw ring is additively the direct sum of the completed
 geometric degree components. This constructs the grading decomposition

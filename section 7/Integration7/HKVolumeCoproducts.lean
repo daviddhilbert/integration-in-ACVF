@@ -1,5 +1,9 @@
-import Integration7.HKVolumeDataRelabeling
-import Integration7.AllDegreeVolumeCoproductData
+module
+
+public import Integration7.HKVolumeDataRelabeling
+public import Integration7.AllDegreeVolumeCoproductData
+
+@[expose] public section
 
 /-! Coproducts glue the actual form on each summand in every degree. -/
 noncomputable section

@@ -1,6 +1,10 @@
-import IntegrationSection5.GammaUnaryRestriction
-import IntegrationSection5.UnaryFactorizations
-import IntegrationSection5.GammaChainAlgebra
+module
+
+public import IntegrationSection5.GammaUnaryRestriction
+public import IntegrationSection5.UnaryFactorizations
+public import IntegrationSection5.GammaChainAlgebra
+
+@[expose] public section
 
 /-! Inverses and actual special-chain factorizations for Gamma unary
 chains. All maps retain their original parameter graphs. -/

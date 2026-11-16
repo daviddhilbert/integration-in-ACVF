@@ -1,15 +1,19 @@
-import Integration7.OrderedRelativeVolumeSchemaComparison
-import Integration7.PermutedVFVolumeForms
-import Integration7.GammaPermutedSelectedVolumeFamilies
-import Integration7.SelectedVolumeCoordinatePermutations
-import Integration7.HeadTailVolumeSelectors
-import Integration7.GlobalRelativeVolumeContractions
-import Integration7.OrderedAppendVolumeFiniteness
-import Integration7.SelectedVolumeDegreeTransport
-import Integration7.GenericRelativeHeadVolumeComparison
-import Integration7.GenericOrderedAppendVolumeContractions
-import Integration7.RelativeHeadVolumeComparison
-import Integration7.OrderedAppendVolumeContractions
+module
+
+public import Integration7.OrderedRelativeVolumeSchemaComparison
+public import Integration7.PermutedVFVolumeForms
+public import Integration7.GammaPermutedSelectedVolumeFamilies
+public import Integration7.SelectedVolumeCoordinatePermutations
+public import Integration7.HeadTailVolumeSelectors
+public import Integration7.GlobalRelativeVolumeContractions
+public import Integration7.OrderedAppendVolumeFiniteness
+public import Integration7.SelectedVolumeDegreeTransport
+public import Integration7.GenericRelativeHeadVolumeComparison
+public import Integration7.GenericOrderedAppendVolumeContractions
+public import Integration7.RelativeHeadVolumeComparison
+public import Integration7.OrderedAppendVolumeContractions
+
+@[expose] public section
 
 /-! Original global measure preservation is sufficient for comparison
 of any specified head-first ordered contractions. Exceptional frozen

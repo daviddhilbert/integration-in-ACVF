@@ -1,4 +1,8 @@
-import Integration7.GammaRVVolumeSchemata
+module
+
+public import Integration7.GammaRVVolumeSchemata
+
+@[expose] public section
 
 /-! Specialization retains the complete original-Gamma density graph,
 including proper-code invariance, over precisely the named parameter row. -/

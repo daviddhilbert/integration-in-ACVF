@@ -1,5 +1,9 @@
-import IntegrationSection5.RVProjectionNormalization
-import Section4.RVReindexing
+module
+
+public import IntegrationSection5.RVProjectionNormalization
+public import Section4.RVReindexing
+
+@[expose] public section
 
 /-! Source presentation identifications turn actual ordered programs into
 standard contractions. The volume order is retained by an explicit RV iso. -/

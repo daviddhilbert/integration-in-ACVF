@@ -1,4 +1,8 @@
-import Integration7.PartialOrderedContractionAppending
+module
+
+public import Integration7.PartialOrderedContractionAppending
+
+@[expose] public section
 
 /-! A full program obtained by appending a tail retains the original
 partial volume block, followed by the tail's own VF volume block. -/

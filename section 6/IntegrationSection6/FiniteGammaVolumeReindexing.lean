@@ -1,5 +1,9 @@
-import IntegrationSection6.FiniteGammaFormulaIsos
-import Section4.RVReindexing
+module
+
+public import IntegrationSection6.FiniteGammaFormulaIsos
+public import Section4.RVReindexing
+
+@[expose] public section
 
 /-! Finite volume-coordinate reindexing with original-Gamma graphs.
 The internal real code presentation remains arbitrary. -/

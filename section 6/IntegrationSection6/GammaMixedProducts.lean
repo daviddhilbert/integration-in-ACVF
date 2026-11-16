@@ -1,6 +1,10 @@
-import IntegrationSection6.GammaRVProductRelations
-import IntegrationSection6.MixedCoordinatePointMaps
-import IntegrationSection5.CoordinateFibreMaps
+module
+
+public import IntegrationSection6.GammaRVProductRelations
+public import IntegrationSection6.MixedCoordinatePointMaps
+public import IntegrationSection5.CoordinateFibreMaps
+
+@[expose] public section
 
 /-! Definable insertion and projection of a VF prefix with a frozen tail. -/
 noncomputable section

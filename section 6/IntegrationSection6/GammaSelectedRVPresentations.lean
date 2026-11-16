@@ -1,5 +1,9 @@
-import IntegrationSection6.GammaSelectedLabelFibrePresentations
-import IntegrationSection6.GammaPresentationBaseEquality
+module
+
+public import IntegrationSection6.GammaSelectedLabelFibrePresentations
+public import IntegrationSection6.GammaPresentationBaseEquality
+
+@[expose] public section
 
 /-! Actual pure-RV sets with a selected-coordinate volume have finite
 presentations over the unchanged mathematical base. -/

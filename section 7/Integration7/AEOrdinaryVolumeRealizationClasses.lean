@@ -1,5 +1,9 @@
-import Integration7.OrdinaryVolumeFamilyUniformBijections
-import Integration7.OrdinaryVolumeFamilyOutsideRows
+module
+
+public import Integration7.OrdinaryVolumeFamilyUniformBijections
+public import Integration7.OrdinaryVolumeFamilyOutsideRows
+
+@[expose] public section
 
 /-! The full unit-density VF realization of an ordinary RV[0]-valued
 function descends to its actual almost-everywhere quotient. -/

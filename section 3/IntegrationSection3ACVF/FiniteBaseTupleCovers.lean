@@ -1,6 +1,10 @@
-import IntegrationSection3ACVF.FiniteBaseRealPresentation
-import IntegrationSection3ACVF.RealOpenImageCovers
-import Section3.TupleCompactness
+module
+
+public import IntegrationSection3ACVF.FiniteBaseRealPresentation
+public import IntegrationSection3ACVF.RealOpenImageCovers
+public import Section3.TupleCompactness
+
+@[expose] public section
 
 /-! Genuine finite-subcover compactness for arbitrary finite tuple indices
 over a finite interpreted base. Auxiliary real codes are internal. -/

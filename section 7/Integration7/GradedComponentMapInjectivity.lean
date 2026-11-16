@@ -1,4 +1,8 @@
-import Integration7.GradedSemiringActionLinearMaps
+module
+
+public import Integration7.GradedSemiringActionLinearMaps
+
+@[expose] public section
 
 /-! A map of finite graded sums retains its component formula, so
 componentwise injectivity gives injectivity of the assembled additive map. -/

@@ -1,4 +1,8 @@
-import IntegrationSection6.GammaGraphCoproducts
+module
+
+public import IntegrationSection6.GammaGraphCoproducts
+
+@[expose] public section
 
 /-! Native coproduct volume values at either tagged label, independent of
 internal code unions and the choice of graph presentation. -/

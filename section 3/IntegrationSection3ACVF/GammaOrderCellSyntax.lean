@@ -1,5 +1,9 @@
-import IntegrationSection3ACVF.FiniteOrderCells
-import IntegrationSection3ACVF.GammaTupleParameters
+module
+
+public import IntegrationSection3ACVF.FiniteOrderCells
+public import IntegrationSection3ACVF.GammaTupleParameters
+
+@[expose] public section
 
 /-! Every finite-order code cell is definable after adjoining exactly
 its finitely many actual Gamma endpoints. -/

@@ -1,7 +1,11 @@
-import IntegrationSection6.GammaFieldBaseReduction
-import IntegrationSection6.GammaBlowupBaseReduction
-import IntegrationSection6.GammaReducedBaseExtensionIsomorphisms
-import IntegrationSection6.FiniteGammaIsoRealization
+module
+
+public import IntegrationSection6.GammaFieldBaseReduction
+public import IntegrationSection6.GammaBlowupBaseReduction
+public import IntegrationSection6.GammaReducedBaseExtensionIsomorphisms
+public import IntegrationSection6.FiniteGammaIsoRealization
+
+@[expose] public section
 
 /-! Unary lift comparison over a small arbitrary base in an uncountably
 saturated model. The generated VF field is named internally and then all

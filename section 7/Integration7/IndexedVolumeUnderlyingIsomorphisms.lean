@@ -1,7 +1,11 @@
-import Integration7.IndexedEssentialVolumeDomains
-import Integration7.GammaVolumeIndexedCharts
-import Integration7.NondegenerateFiniteIso
-import IntegrationSection6.GammaSchemaChartRows
+module
+
+public import Integration7.IndexedEssentialVolumeDomains
+public import Integration7.GammaVolumeIndexedCharts
+public import Integration7.NondegenerateFiniteIso
+public import IntegrationSection6.GammaSchemaChartRows
+
+@[expose] public section
 
 /-! Uniform valid charts assemble their actual underlying essential
 bijection. The density and Jacobian equations are established separately. -/

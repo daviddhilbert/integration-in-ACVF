@@ -1,7 +1,11 @@
-import Integration7.CanonicalContractionKeySquares
-import Integration7.GammaCoordinateDensityEquivalences
-import Integration7.RetainedDensityContractionObjects
-import Integration7.PullbackCoordinateVolumeObjects
+module
+
+public import Integration7.CanonicalContractionKeySquares
+public import Integration7.GammaCoordinateDensityEquivalences
+public import Integration7.RetainedDensityContractionObjects
+public import Integration7.PullbackCoordinateVolumeObjects
+
+@[expose] public section
 
 /-! The canonical finite contraction isomorphism preserves the full
 volume tuple and every retained density. It therefore compares the

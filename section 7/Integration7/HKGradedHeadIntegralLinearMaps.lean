@@ -1,5 +1,9 @@
-import Integration7.HKAEZeroHeadWeightedLinearity
-import Integration7.HKGradedHeadPositiveCoefficients
+module
+
+public import Integration7.HKAEZeroHeadWeightedLinearity
+public import Integration7.HKGradedHeadPositiveCoefficients
+
+@[expose] public section
 
 /-! The actual raw graded head integral is linear over the full corrected graded RV volume coefficient semiring. Every homogeneous scalar law is proved geometrically, including both weighted-zero input and coefficient degrees. -/
 noncomputable section

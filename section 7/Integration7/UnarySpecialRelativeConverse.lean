@@ -1,4 +1,8 @@
-import Integration7.UnaryRelativeSpecialRealization
+module
+
+public import Integration7.UnaryRelativeSpecialRealization
+
+@[expose] public section
 
 /-! A unary special bijection is relatively special in its unique VF
 coordinate. No choice of additional frozen parameters is required. -/

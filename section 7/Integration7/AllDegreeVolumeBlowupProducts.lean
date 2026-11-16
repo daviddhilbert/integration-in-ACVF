@@ -1,6 +1,10 @@
-import Integration7.AllDegreeVolumeProductIsomorphisms
-import Integration7.VolumeBlowupRightProducts
-import Integration7.ZeroFactorBlowupProducts
+module
+
+public import Integration7.AllDegreeVolumeProductIsomorphisms
+public import Integration7.VolumeBlowupRightProducts
+public import Integration7.ZeroFactorBlowupProducts
+
+@[expose] public section
 
 /-! Multiplicative congruence of the actual all-degree MuIsp relation.
 This includes ordinary RV[0]; the graded semiring assembly is separate. -/

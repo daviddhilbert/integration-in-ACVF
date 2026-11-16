@@ -1,5 +1,9 @@
-import IntegrationSection5.CommonProductPrograms
-import IntegrationSection5.JointUnaryKernel
+module
+
+public import IntegrationSection5.CommonProductPrograms
+public import IntegrationSection5.JointUnaryKernel
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option maxHeartbeats 2000000

@@ -1,5 +1,9 @@
-import IntegrationSection4.TranslatedRVGeometry
-import IntegrationSection3.FiniteClosedHull
+module
+
+public import IntegrationSection4.TranslatedRVGeometry
+public import IntegrationSection3.FiniteClosedHull
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

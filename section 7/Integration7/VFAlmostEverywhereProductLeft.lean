@@ -1,5 +1,9 @@
-import Integration7.VFVolumeProductRestrictions
-import Integration7.VFAlmostEverywhere
+module
+
+public import Integration7.VFVolumeProductRestrictions
+public import Integration7.VFAlmostEverywhere
+
+@[expose] public section
 
 /-! An almost-everywhere predicate on the first Cartesian factor
 remains so after adjoining any fixed finite tuple of auxiliary coordinates. -/

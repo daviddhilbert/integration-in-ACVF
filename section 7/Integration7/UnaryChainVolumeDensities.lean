@@ -1,7 +1,11 @@
-import Integration7.VFVolumeDensityTransport
-import Integration7.VFVolumeCancellation
-import Integration7.SpecialVolumeJacobians
-import IntegrationSection5.UnaryFactorizations
+module
+
+public import Integration7.VFVolumeDensityTransport
+public import Integration7.VFVolumeCancellation
+public import Integration7.SpecialVolumeJacobians
+public import IntegrationSection5.UnaryFactorizations
+
+@[expose] public section
 
 /-! A volume-preserving finite unary factorization carries actual
 nonzero definable densities on every intermediate domain. No factor is

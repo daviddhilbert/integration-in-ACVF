@@ -1,5 +1,9 @@
-import Integration7.GammaEssentialVolumeEmbeddings
-import Integration7.VolumeCoproductComplements
+module
+
+public import Integration7.GammaEssentialVolumeEmbeddings
+public import Integration7.VolumeCoproductComplements
+
+@[expose] public section
 
 /-! Removing the left essential tagged image leaves the right volume
 object with its full original-Gamma comparison chart. -/

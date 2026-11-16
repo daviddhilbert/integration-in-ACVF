@@ -1,7 +1,11 @@
-import Integration7.PartialFocusVolumeBlowups
-import Integration7.CanonicalVolumeFamilySteps
-import Integration7.VolumeBlowupTransport
-import IntegrationSection6.SpecialChainBlowup
+module
+
+public import Integration7.PartialFocusVolumeBlowups
+public import Integration7.CanonicalVolumeFamilySteps
+public import Integration7.VolumeBlowupTransport
+public import IntegrationSection6.SpecialChainBlowup
+
+@[expose] public section
 
 /-! Alternating unary special chains give actual finite chains of
 volume blowups. Canonical labels contribute isomorphisms, and every

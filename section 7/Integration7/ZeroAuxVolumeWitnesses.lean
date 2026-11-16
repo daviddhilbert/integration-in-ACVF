@@ -1,4 +1,8 @@
-import Integration7.GammaVolumeChainSchemata
+module
+
+public import Integration7.GammaVolumeChainSchemata
+
+@[expose] public section
 
 /-! Witnesses obtained over the named term context can retain their
 exception maps without adding another parameter block. This property is

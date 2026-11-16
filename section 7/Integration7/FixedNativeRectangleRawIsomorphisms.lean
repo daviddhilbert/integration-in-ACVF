@@ -1,6 +1,10 @@
-import Integration7.FixedNativeRectangleContractions
-import Integration7.NativeUnaryRectangleRawIsomorphisms
-import Section4.RVProductSymmetry
+module
+
+public import Integration7.FixedNativeRectangleContractions
+public import Integration7.NativeUnaryRectangleRawIsomorphisms
+public import Section4.RVProductSymmetry
+
+@[expose] public section
 
 /-! The two constructed standard contractions of the same fixed-label
 rectangle compare to unary products in the original VF coordinate order. -/

@@ -1,4 +1,8 @@
-import IntegrationSection5.Corollary58
+module
+
+public import IntegrationSection5.Corollary58
+
+@[expose] public section
 
 noncomputable section
 set_option autoImplicit false

@@ -1,4 +1,8 @@
-import IntegrationSection6.GammaRawStandardContractions
+module
+
+public import IntegrationSection6.GammaRawStandardContractions
+
+@[expose] public section
 
 /-! The raw contraction domain consists of exactly the actual final labels. -/
 noncomputable section

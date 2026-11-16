@@ -1,7 +1,11 @@
-import IntegrationSection6.GammaSortedSchemaRows
-import IntegrationSection6.GammaFamilyQuantifiers
-import IntegrationSection6.GammaGraphFormulaCongruence
-import IntegrationSection6.GammaGraphPresentationIsomorphisms
+module
+
+public import IntegrationSection6.GammaSortedSchemaRows
+public import IntegrationSection6.GammaFamilyQuantifiers
+public import IntegrationSection6.GammaGraphFormulaCongruence
+public import IntegrationSection6.GammaGraphPresentationIsomorphisms
+
+@[expose] public section
 
 /-! Equality of rows of two finite RV schemata is first order over the
 original base. This compares the actual global domain and volume formulas,

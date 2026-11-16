@@ -1,5 +1,9 @@
-import Integration7.VFAlmostEverywhere
-import Section9.MixedDifferentiationAE
+module
+
+public import Integration7.VFAlmostEverywhere
+public import Section9.MixedDifferentiationAE
+
+@[expose] public section
 
 /-! A definable VF-small exception contains no point whose full VF tuple
 is algebraically independent over the original real parameter field. -/

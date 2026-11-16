@@ -1,5 +1,9 @@
-import IntegrationSection6.ArbitraryContractionOrders
-import IntegrationSection6.GammaContractionExtensionIsomorphisms
+module
+
+public import IntegrationSection6.ArbitraryContractionOrders
+public import IntegrationSection6.GammaContractionExtensionIsomorphisms
+
+@[expose] public section
 
 /-! Arbitrary-order comparison for the actual normalized RV[n+k]
 contraction objects, in every internal real presentation. -/

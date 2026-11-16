@@ -1,5 +1,9 @@
-import IntegrationSection5.RelativeInverseSlices
-import IntegrationSection5.RVCellInfinite
+module
+
+public import IntegrationSection5.RelativeInverseSlices
+public import IntegrationSection5.RVCellInfinite
+
+@[expose] public section
 
 /-! Finite coordinate fibres are encoded by retained RV labels after actual
 relative preparation. No finite-choice or separation conclusion is assumed. -/

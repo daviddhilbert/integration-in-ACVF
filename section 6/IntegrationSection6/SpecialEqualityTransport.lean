@@ -1,4 +1,8 @@
-import IntegrationSection5.RelativeSpecialRestriction
+module
+
+public import IntegrationSection5.RelativeSpecialRestriction
+
+@[expose] public section
 
 /-! Retagging the endpoints of an actual special bijection by equal
 presented sets changes neither its point values nor its geometric chain. -/

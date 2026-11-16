@@ -1,5 +1,9 @@
-import IntegrationSection5.GammaGraphOperations
-import Section5.GammaLift
+module
+
+public import IntegrationSection5.GammaGraphOperations
+public import Section5.GammaLift
+
+@[expose] public section
 
 /-! Full original-base graphs for maps between the actual raw RV domains,
 including inverses and maps that keep every underlying RV coordinate. -/

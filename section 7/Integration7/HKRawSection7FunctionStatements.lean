@@ -1,6 +1,10 @@
-import Integration7.HKSupportedGradedCoordinateFubini
-import Integration7.HKRawGradedChangeOfVariables
-import Integration7.NonemptyVolumeCoordinateProjections
+module
+
+public import Integration7.HKSupportedGradedCoordinateFubini
+public import Integration7.HKRawGradedChangeOfVariables
+public import Integration7.NonemptyVolumeCoordinateProjections
+
+@[expose] public section
 
 /-! Corrected raw supported Fubini and unpadded change-of-variables
 identities. These are additive raw identities on every actual weighted

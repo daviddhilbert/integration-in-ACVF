@@ -1,6 +1,10 @@
-import Integration7.GenericCoordinateFibreDimension
-import IntegrationSection6.VFParameterFibreIsomorphisms
-import IntegrationSection6.GammaHeadFibreParameters
+module
+
+public import Integration7.GenericCoordinateFibreDimension
+public import IntegrationSection6.VFParameterFibreIsomorphisms
+public import IntegrationSection6.GammaHeadFibreParameters
+
+@[expose] public section
 
 /-! Ordinary point-row isomorphisms at generic full VF tuples remain
 actual original-Gamma isomorphisms after freezing a generic VF tail. -/

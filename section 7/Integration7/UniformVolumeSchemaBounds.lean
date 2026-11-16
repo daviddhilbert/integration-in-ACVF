@@ -1,6 +1,10 @@
-import Integration7.GammaVolumeSchemaBounds
-import IntegrationSection6.GammaSchemaFiniteRowPresentations
-import IntegrationSection6.GammaWitnessUniformity
+module
+
+public import Integration7.GammaVolumeSchemaBounds
+public import IntegrationSection6.GammaSchemaFiniteRowPresentations
+public import IntegrationSection6.GammaWitnessUniformity
+
+@[expose] public section
 
 /-! Genuine finite rows over a definable parameter set admit one
 uniform bound. Rebounding changes no coordinate or density formula. -/

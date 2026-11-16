@@ -1,8 +1,12 @@
-import Integration7.SelectedRetainedVolumeSchemata
-import Integration7.SelectedFamilyGeometricCommon
-import Integration7.FieldBaseVolumeFamilyIntegrals
-import Integration7.PositiveSelectedContractionObjects
-import Integration7.CommonContextVolumeDescent
+module
+
+public import Integration7.SelectedRetainedVolumeSchemata
+public import Integration7.SelectedFamilyGeometricCommon
+public import Integration7.FieldBaseVolumeFamilyIntegrals
+public import Integration7.PositiveSelectedContractionObjects
+public import Integration7.CommonContextVolumeDescent
+
+@[expose] public section
 
 /-! A literally retained density can be integrated before adjoining a
 second density graph. The actual appended contraction objects compare

@@ -1,4 +1,8 @@
-import IntegrationSection5.GammaProgramTrace
+module
+
+public import IntegrationSection5.GammaProgramTrace
+
+@[expose] public section
 
 noncomputable section
 set_option autoImplicit false

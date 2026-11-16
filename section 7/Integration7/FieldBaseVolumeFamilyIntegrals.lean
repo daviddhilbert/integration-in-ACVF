@@ -1,5 +1,9 @@
-import Integration7.CanonicalVolumeFamilyIntegrals
-import IntegrationSection5.NaturalContractionGamma
+module
+
+public import Integration7.CanonicalVolumeFamilyIntegrals
+public import IntegrationSection5.NaturalContractionGamma
+
+@[expose] public section
 
 /-! The contraction producer requires an actual VF field base.
 VF/Gamma generation is not needed for this choice or the checked

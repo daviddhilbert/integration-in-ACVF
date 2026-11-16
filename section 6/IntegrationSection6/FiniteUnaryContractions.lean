@@ -1,5 +1,9 @@
-import IntegrationSection6.FiniteStandardContractions
-import IntegrationSection6.FiniteGammaIsoRealization
+module
+
+public import IntegrationSection6.FiniteStandardContractions
+public import IntegrationSection6.FiniteGammaIsoRealization
+
+@[expose] public section
 
 /-! The one-VF-coordinate case of contraction invariance, entirely in RV[1].
 The higher-dimensional relative-fibre gluing is a separate6.14 obligation. -/

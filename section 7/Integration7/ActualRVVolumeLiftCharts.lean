@@ -1,5 +1,9 @@
-import Integration7.ActualRVVolumeLiftPresentations
-import Integration7.NativeRVGraphVolumeRefinements
+module
+
+public import Integration7.ActualRVVolumeLiftPresentations
+public import Integration7.NativeRVGraphVolumeRefinements
+
+@[expose] public section
 
 /-! Literal native lift charts are genuine full volume bijections and
 retain any literal RV density coordinate. -/

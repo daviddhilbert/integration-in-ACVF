@@ -1,5 +1,9 @@
-import IntegrationSection6.RelativeContractions
-import IntegrationSection6.FiniteGammaIsomorphisms
+module
+
+public import IntegrationSection6.RelativeContractions
+public import IntegrationSection6.FiniteGammaIsomorphisms
+
+@[expose] public section
 
 /-! Selecting no old RV labels recovers the ordinary finite contraction
 object. This gives the literal RV[n] form of Corollary6.15. -/

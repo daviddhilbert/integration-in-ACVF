@@ -1,6 +1,10 @@
-import Integration7.HKUpstreamRVZero
-import Integration7.HKZeroVolumeIntegration
-import Section4.VFDimensionRank
+module
+
+public import Integration7.HKUpstreamRVZero
+public import Integration7.HKZeroVolumeIntegration
+public import Section4.VFDimensionRank
+
+@[expose] public section
 
 /-! The predecessor uses its actual Gamma imaginary in the dimension bound;
 the sequel uses an RV-coded auxiliary space. The checked rank criterion

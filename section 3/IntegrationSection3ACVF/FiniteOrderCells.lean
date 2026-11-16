@@ -1,5 +1,9 @@
-import IntegrationSection3ACVF.FiniteOrderIntervalPatterns
-import Mathlib.Order.Interval.Set.OrdConnected
+module
+
+public import IntegrationSection3ACVF.FiniteOrderIntervalPatterns
+public import Mathlib.Order.Interval.Set.OrdConnected
+
+@[expose] public section
 
 /-! Nonpoint cells of a finite actual endpoint partition. Their finite
 index is the tuple of comparison signs against the endpoints. -/

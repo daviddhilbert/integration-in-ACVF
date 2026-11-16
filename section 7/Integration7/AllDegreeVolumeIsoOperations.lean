@@ -1,4 +1,8 @@
-import Integration7.AllDegreeVolumeClasses
+module
+
+public import Integration7.AllDegreeVolumeClasses
+
+@[expose] public section
 
 noncomputable section
 open FirstOrder FirstOrder.Language CategoryTheory

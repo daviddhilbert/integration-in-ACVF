@@ -1,5 +1,9 @@
-import Integration7.VolumeBlowupDiamond
-import IntegrationSection6.Iteration
+module
+
+public import Integration7.VolumeBlowupDiamond
+public import IntegrationSection6.Iteration
+
+@[expose] public section
 
 /-! The actual volume-blowup diamond supplies the hypothesis of the
 previously proved finite-grid argument. All step counts are retained. -/

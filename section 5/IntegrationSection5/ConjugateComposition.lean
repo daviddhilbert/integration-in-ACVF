@@ -1,4 +1,8 @@
-import IntegrationSection5.ChainAlgebra
+module
+
+public import IntegrationSection5.ChainAlgebra
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

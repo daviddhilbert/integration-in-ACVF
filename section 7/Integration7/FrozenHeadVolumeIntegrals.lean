@@ -1,7 +1,11 @@
-import Integration7.DefinablyClosedVolumeContexts
-import Integration7.FieldBaseVolumeFamilyIntegrals
-import Integration7.SelectedHeadFibreRows
-import Integration7.BlowupParameterExtension
+module
+
+public import Integration7.DefinablyClosedVolumeContexts
+public import Integration7.FieldBaseVolumeFamilyIntegrals
+public import Integration7.SelectedHeadFibreRows
+public import Integration7.BlowupParameterExtension
+
+@[expose] public section
 
 /-! Genuine unary fibre integrals in the definable closure of the
 original context and frozen VF tuple. No extra Gamma representative,

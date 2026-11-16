@@ -1,7 +1,11 @@
-import IntegrationSection6.GammaRelativeHeadFibres
-import IntegrationSection6.GammaHeadFibreSliceMaps
-import IntegrationSection6.GammaUnarySliceUniformityWithoutField
-import IntegrationSection6.GammaSwappedCommonBlowups
+module
+
+public import IntegrationSection6.GammaRelativeHeadFibres
+public import IntegrationSection6.GammaHeadFibreSliceMaps
+public import IntegrationSection6.GammaUnarySliceUniformityWithoutField
+public import IntegrationSection6.GammaSwappedCommonBlowups
+
+@[expose] public section
 
 /-! Relatively unary bijections compare the actual RV[1+k] head fibres of
 arbitrary head preparations. Only the frozen VF and selected RV tuples

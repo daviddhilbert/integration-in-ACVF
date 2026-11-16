@@ -1,4 +1,8 @@
-import Integration7.GammaVolumeSchemaRestrictions
+module
+
+public import Integration7.GammaVolumeSchemaRestrictions
+
+@[expose] public section
 
 /-! Composition of original-base RV relation formulas with a shared
 sorted parameter block. The intermediate labels remain quantified variables. -/

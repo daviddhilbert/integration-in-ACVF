@@ -1,5 +1,9 @@
-import IntegrationSection3ACVF.FullGammaControllers
-import IntegrationSection3ACVF.RVSlopeGamma
+module
+
+public import IntegrationSection3ACVF.FullGammaControllers
+public import IntegrationSection3ACVF.RVSlopeGamma
+
+@[expose] public section
 
 /-! Finite order controllers for each actual RV-coefficient row. -/
 

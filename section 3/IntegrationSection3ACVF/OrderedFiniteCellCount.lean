@@ -1,7 +1,11 @@
-import Mathlib.Order.Bounds.Basic
-import Mathlib.Order.Interval.Set.OrdConnected
-import Mathlib.Data.Set.Card
-import Mathlib.Data.Finset.Max
+module
+
+public import Mathlib.Order.Bounds.Basic
+public import Mathlib.Order.Interval.Set.OrdConnected
+public import Mathlib.Data.Set.Card
+public import Mathlib.Data.Finset.Max
+
+@[expose] public section
 
 /-! Count a finite disjoint decomposition into points and open order
 cells by sending each cell to its right endpoint. Actual least upper

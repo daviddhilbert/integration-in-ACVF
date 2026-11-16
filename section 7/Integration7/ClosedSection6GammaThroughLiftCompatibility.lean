@@ -1,9 +1,13 @@
-import Integration7.CompletedSection6Kernel
-import Integration7.ClosedSection6GammaNonzeroGlobalLift
-import IntegrationSection6.GammaThroughLiftCompatibility
-import IntegrationSection6.GammaNonzeroGlobalLift
-import IntegrationSection6.GammaNonzeroResolutions
-import IntegrationSection6.GammaLiftPadding
+module
+
+public import Integration7.CompletedSection6Kernel
+public import Integration7.ClosedSection6GammaNonzeroGlobalLift
+public import IntegrationSection6.GammaThroughLiftCompatibility
+public import IntegrationSection6.GammaNonzeroGlobalLift
+public import IntegrationSection6.GammaNonzeroResolutions
+public import IntegrationSection6.GammaLiftPadding
+
+@[expose] public section
 
 /-! Closed generated-base Section6 integration. The former universal
 Section5 input is replaced by the canonical-model certificate; its kernel

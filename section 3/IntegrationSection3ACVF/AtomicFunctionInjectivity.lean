@@ -1,6 +1,10 @@
-import IntegrationSection3ACVF.AtomicFunctionFibres
-import IntegrationSection3ACVF.AtomicFibreMeanGraph
-import IntegrationSection3ACVF.FiniteFibreInjectivity
+module
+
+public import IntegrationSection3ACVF.AtomicFunctionFibres
+public import IntegrationSection3ACVF.AtomicFibreMeanGraph
+public import IntegrationSection3ACVF.FiniteFibreInjectivity
+
+@[expose] public section
 
 /-! Constant-or-injective maps on atomic open balls, using the actual
 finite-fibre means and their unchanged-base defining graph. -/

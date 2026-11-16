@@ -1,5 +1,9 @@
-import IntegrationSection6.FiniteContractionLabels
-import IntegrationSection6.TypedRelabeling
+module
+
+public import IntegrationSection6.FiniteContractionLabels
+public import IntegrationSection6.TypedRelabeling
+
+@[expose] public section
 
 /-! A VF-preserving contraction with a contractible final RV map has a
 mutually contractible natural lift. Its inverse retains the original labels. -/

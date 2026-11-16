@@ -1,5 +1,9 @@
-import IntegrationSection3ACVF.FullBaseDefinability
-import IntegrationSection3.PuncturedDecomposition
+module
+
+public import IntegrationSection3ACVF.FullBaseDefinability
+public import IntegrationSection3.PuncturedDecomposition
+
+@[expose] public section
 
 /-! Actual punctured balls and finite disjoint decomposition in ACVF.
 The parent and holes are actual encoded-ball point sets. No chosen centre

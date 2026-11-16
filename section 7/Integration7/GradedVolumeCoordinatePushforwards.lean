@@ -1,7 +1,11 @@
-import Integration7.GradedVolumePermutationLinearMaps
-import Integration7.GradedPrefixIntegralLinearMaps
-import Integration7.GradedAEVolumePrefixComponents
-import Integration7.AERVVolumeCoordinatePushforwards
+module
+
+public import Integration7.GradedVolumePermutationLinearMaps
+public import Integration7.GradedPrefixIntegralLinearMaps
+public import Integration7.GradedAEVolumePrefixComponents
+public import Integration7.AERVVolumeCoordinatePushforwards
+
+@[expose] public section
 
 /-! Arbitrary nonempty coordinate projections act on the full raw graded
 function module by the actual coordinate split followed by head integration.

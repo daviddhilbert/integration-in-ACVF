@@ -1,5 +1,9 @@
-import Integration7.GammaFiniteRowIsomorphismWitnesses
-import IntegrationSection6.GammaSortedParameterPreservation
+module
+
+public import Integration7.GammaFiniteRowIsomorphismWitnesses
+public import IntegrationSection6.GammaSortedParameterPreservation
+
+@[expose] public section
 
 /-! Formula witnesses of finite-row isomorphisms uniformize to an
 actual original-Gamma bijection of total sets fixing every parameter. -/

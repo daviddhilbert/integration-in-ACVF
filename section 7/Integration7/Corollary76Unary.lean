@@ -1,7 +1,11 @@
-import Integration7.UnaryContractionGammaVolumeComparison
-import Integration7.VFStandardVolumeContractionObjects
-import Integration7.NativeVolumeMapRealization
-import Integration7.DensityGraphVolumeBijections
+module
+
+public import Integration7.UnaryContractionGammaVolumeComparison
+public import Integration7.VFStandardVolumeContractionObjects
+public import Integration7.NativeVolumeMapRealization
+public import Integration7.DensityGraphVolumeBijections
+
+@[expose] public section
 
 /-! Corollary 7.6 in VF dimension one, for arbitrary original volume
 forms and the specified actual density-graph contractions. -/

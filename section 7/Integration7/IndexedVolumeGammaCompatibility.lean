@@ -1,6 +1,10 @@
-import Integration7.IndexedVolumeUnderlyingIsomorphisms
-import Integration7.VolumeSchemaPointGammaWeights
-import Integration7.FixedHeadGammaJacobian
+module
+
+public import Integration7.IndexedVolumeUnderlyingIsomorphisms
+public import Integration7.VolumeSchemaPointGammaWeights
+public import Integration7.FixedHeadGammaJacobian
+
+@[expose] public section
 
 /-! Uniform Gamma validity gives the actual Gamma-volume equation of
 the joint indexed chart. The common base weight multiplies both sides. -/

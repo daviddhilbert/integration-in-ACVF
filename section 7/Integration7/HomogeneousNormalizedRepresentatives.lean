@@ -1,4 +1,8 @@
-import Mathlib.Algebra.DirectSum.Ring
+module
+
+public import Mathlib.Algebra.DirectSum.Ring
+
+@[expose] public section
 
 /-! A degree-one point mapping to one homogenizes every finite graded
 sum. The argument uses no commutativity of the graded semiring. -/

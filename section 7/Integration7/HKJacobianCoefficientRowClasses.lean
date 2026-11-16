@@ -1,7 +1,11 @@
-import Integration7.HKSelectedJacobianWeightedScalarRows
-import Integration7.HKZeroJacobianWeightedScalarRows
-import Integration7.HKZeroJacobianPositiveCoefficientRows
-import Integration7.HKSupportedCoefficientProducts
+module
+
+public import Integration7.HKSelectedJacobianWeightedScalarRows
+public import Integration7.HKZeroJacobianWeightedScalarRows
+public import Integration7.HKZeroJacobianPositiveCoefficientRows
+public import Integration7.HKSupportedCoefficientProducts
+
+@[expose] public section
 
 /-! Weighted Jacobian scalar identities hold on every target row,
 including the literal empty rows outside the target support. -/

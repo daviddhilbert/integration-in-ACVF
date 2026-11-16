@@ -1,8 +1,12 @@
-import Integration7.CompletedSection6Kernel
-import Integration7.ClosedSection6GlobalIntegrationCharacterization
-import IntegrationSection6.ParameterCoefficientSemirings
-import IntegrationSection6.VFParameterCoefficientBases
-import IntegrationSection6.GlobalIntegrationCharacterization
+module
+
+public import Integration7.CompletedSection6Kernel
+public import Integration7.ClosedSection6GlobalIntegrationCharacterization
+public import IntegrationSection6.ParameterCoefficientSemirings
+public import IntegrationSection6.VFParameterCoefficientBases
+public import IntegrationSection6.GlobalIntegrationCharacterization
+
+@[expose] public section
 
 /-! Closed generated-base Section6 integration. The former universal
 Section5 input is replaced by the canonical-model certificate; its kernel

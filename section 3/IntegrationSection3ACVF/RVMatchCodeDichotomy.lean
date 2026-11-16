@@ -1,4 +1,8 @@
-import IntegrationSection3ACVF.RVMatchCodeRelations
+module
+
+public import IntegrationSection3ACVF.RVMatchCodeRelations
+
+@[expose] public section
 
 /-! Every proper code-pair splits its entire source value fibre into a
 finite or cofinite matched row. Empty source value rows are handled

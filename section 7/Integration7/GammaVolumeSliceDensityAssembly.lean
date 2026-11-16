@@ -1,10 +1,14 @@
-import Integration7.GammaVolumeSliceDensitySchemata
-import Integration7.GammaVolumeIndexedPresentations
-import Integration7.GammaVolumePresentationContexts
-import Integration7.CoordinateDensityVolumeObjects
-import Integration7.RVCoordinateSelection
-import Integration7.CanonicalFiniteRVObjects
-import IntegrationSection6.GammaIdentityIndexPresentation
+module
+
+public import Integration7.GammaVolumeSliceDensitySchemata
+public import Integration7.GammaVolumeIndexedPresentations
+public import Integration7.GammaVolumePresentationContexts
+public import Integration7.CoordinateDensityVolumeObjects
+public import Integration7.RVCoordinateSelection
+public import Integration7.CanonicalFiniteRVObjects
+public import IntegrationSection6.GammaIdentityIndexPresentation
+
+@[expose] public section
 
 /-! Reassembling all RV volume slices recovers the actual original
 volume object. The label projection preserves the entire volume tuple

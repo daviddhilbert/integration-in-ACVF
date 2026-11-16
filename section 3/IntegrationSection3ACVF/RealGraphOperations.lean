@@ -1,4 +1,8 @@
-import IntegrationSection3ACVF.FullBaseDefinability
+module
+
+public import IntegrationSection3ACVF.FullBaseDefinability
+
+@[expose] public section
 
 /-! Real-base postcomposition of a map defined only on its given domain. -/
 

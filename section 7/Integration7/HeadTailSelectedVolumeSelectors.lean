@@ -1,7 +1,11 @@
-import Integration7.HeadVolumeOrderPermutations
-import Integration7.SelectedRVVFTailStandardVolumeCoordinates
-import Integration7.HeadTailAppendedVolumeSelectors
-import Integration7.StandardPrependHeadSelectors
+module
+
+public import Integration7.HeadVolumeOrderPermutations
+public import Integration7.SelectedRVVFTailStandardVolumeCoordinates
+public import Integration7.HeadTailAppendedVolumeSelectors
+public import Integration7.StandardPrependHeadSelectors
+
+@[expose] public section
 
 /-! A single common permutation restores the full selected volume tuple
 after contracting a head and then the remaining VF coordinates. -/

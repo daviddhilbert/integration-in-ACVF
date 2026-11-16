@@ -1,8 +1,12 @@
-import Integration7.HKFrozenZeroHeadIntegralAdditivity
-import Integration7.HKAEZeroHeadIntegrals
-import Integration7.EmptyHeadIntegralFamilies
-import Integration7.AERVVolumeFunctionAdditiveStructure
-import Integration7.HKAEZeroFunctionAddition
+module
+
+public import Integration7.HKFrozenZeroHeadIntegralAdditivity
+public import Integration7.HKAEZeroHeadIntegrals
+public import Integration7.EmptyHeadIntegralFamilies
+public import Integration7.AERVVolumeFunctionAdditiveStructure
+public import Integration7.HKAEZeroFunctionAddition
+
+@[expose] public section
 
 /-! The actual weighted degree-zero partial integral is additive on
 almost-everywhere classes and creates its genuine first volume coordinate. -/

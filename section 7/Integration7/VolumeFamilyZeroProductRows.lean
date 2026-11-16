@@ -1,7 +1,11 @@
-import Integration7.SelectedVolumeFamilyZeroProducts
-import Integration7.SelectedVolumeRowContexts
-import Integration7.VolumeBlowupClasses
-import Section4.RVProductRestrictions
+module
+
+public import Integration7.SelectedVolumeFamilyZeroProducts
+public import Integration7.SelectedVolumeRowContexts
+public import Integration7.VolumeBlowupClasses
+public import Section4.RVProductRestrictions
+
+@[expose] public section
 
 /-! Each fibre of the family product by an ordinary RV[0] coefficient
 is the actual RV product, with identical selected coordinates and density. -/

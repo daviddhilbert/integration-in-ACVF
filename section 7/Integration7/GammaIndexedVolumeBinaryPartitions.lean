@@ -1,13 +1,17 @@
-import Integration7.IndexedVolumeRestrictions
-import Integration7.GammaVolumePresentationGeometry
-import Integration7.GammaActualVolumePartitions
-import Integration7.GammaVolumeCoproductCharts
-import Integration7.VolumePartition
-import Integration7.IndexedVolumeBinaryPartitions
-import Integration7.VolumeCoproductIsomorphism
-import Integration7.RVVolumeComposition
-import IntegrationSection6.GammaGraphPresentationRestriction
-import IntegrationSection6.IndexedSetPartitions
+module
+
+public import Integration7.IndexedVolumeRestrictions
+public import Integration7.GammaVolumePresentationGeometry
+public import Integration7.GammaActualVolumePartitions
+public import Integration7.GammaVolumeCoproductCharts
+public import Integration7.VolumePartition
+public import Integration7.IndexedVolumeBinaryPartitions
+public import Integration7.VolumeCoproductIsomorphism
+public import Integration7.RVVolumeComposition
+public import IntegrationSection6.GammaGraphPresentationRestriction
+public import IntegrationSection6.IndexedSetPartitions
+
+@[expose] public section
 
 /-! Two definable index regions give the actual volume partition
 isomorphism, with the original index volume and fibre density on each part. -/

@@ -1,5 +1,9 @@
-import Integration7.RectangleFamilyHeadOrderMaps
-import Integration7.GammaCoordinateSquareGraphs
+module
+
+public import Integration7.RectangleFamilyHeadOrderMaps
+public import Integration7.GammaCoordinateSquareGraphs
+
+@[expose] public section
 
 /-! The rectangle target bijection has a full original-Gamma graph.
 Its coordinate square retains both entire prepared factor keys. -/

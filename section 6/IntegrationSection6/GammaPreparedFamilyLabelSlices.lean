@@ -1,5 +1,9 @@
-import IntegrationSection6.GammaPreparedFamilyValues
-import IntegrationSection6.GammaNamedIsoRestrictions
+module
+
+public import IntegrationSection6.GammaPreparedFamilyValues
+public import IntegrationSection6.GammaNamedIsoRestrictions
+
+@[expose] public section
 
 /-! The actual prepared-family bijection preserves every original RV
 label, so it restricts over precisely the selected named RV values. -/

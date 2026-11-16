@@ -1,5 +1,9 @@
-import IntegrationSection4.FullBaseFunctions
-import IntegrationSection3ACVF.FullFibreMeans
+module
+
+public import IntegrationSection4.FullBaseFunctions
+public import IntegrationSection3ACVF.FullFibreMeans
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

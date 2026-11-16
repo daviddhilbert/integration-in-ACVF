@@ -1,5 +1,9 @@
-import Integration7.NativeRelativeTranslations
-import Integration7.RelativeFibreTranslationVolumes
+module
+
+public import Integration7.NativeRelativeTranslations
+public import Integration7.RelativeFibreTranslationVolumes
+
+@[expose] public section
 
 /-! Actual native relative translations have Jacobian one almost
 everywhere, including when the centre depends on the fixed RV labels. -/

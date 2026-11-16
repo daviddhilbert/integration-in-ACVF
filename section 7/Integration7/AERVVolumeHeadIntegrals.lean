@@ -1,4 +1,8 @@
-import Integration7.AERVVolumeHeadIntegralComparison
+module
+
+public import Integration7.AERVVolumeHeadIntegralComparison
+
+@[expose] public section
 
 /-! Integration of one VF head on the actual almost-everywhere
 function quotient. Its representative formula holds for every head

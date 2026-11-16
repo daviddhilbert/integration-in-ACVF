@@ -1,5 +1,9 @@
-import IntegrationSection6.GammaPointSortedIsomorphisms
-import IntegrationSection6.GammaVFParameterBases
+module
+
+public import IntegrationSection6.GammaPointSortedIsomorphisms
+public import IntegrationSection6.GammaVFParameterBases
+
+@[expose] public section
 
 /-! Sorted parameter/fibre coordinates for actual mixed VF/RV families. -/
 noncomputable section

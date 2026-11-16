@@ -1,6 +1,10 @@
-import Integration7.HKVolumeCoproducts
-import Integration7.HKRVProductIsomorphisms
-import Section4.EmptyMaps
+module
+
+public import Integration7.HKVolumeCoproducts
+public import Integration7.HKRVProductIsomorphisms
+public import Section4.EmptyMaps
+
+@[expose] public section
 
 /-! The actual empty object absorbs the original product in every
 degree. All volume equations hold on its genuinely empty domain. -/

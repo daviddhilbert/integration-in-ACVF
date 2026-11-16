@@ -1,6 +1,10 @@
-import Integration7.NormalizedRVLabelCutCarriers
-import Integration7.StandardTargetRestrictionPresentations
-import IntegrationSection6.FiniteContractionLabels
+module
+
+public import Integration7.NormalizedRVLabelCutCarriers
+public import Integration7.StandardTargetRestrictionPresentations
+public import IntegrationSection6.FiniteContractionLabels
+
+@[expose] public section
 
 /-! An actual target restriction presentation identifies its normalized
 RV domain with the literal old-label cut of the original normalized

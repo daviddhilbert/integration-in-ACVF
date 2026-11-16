@@ -1,6 +1,10 @@
-import IntegrationSection6.GammaRVRealization
-import Section4.RVProductRestrictions
-import Section5.GammaLift
+module
+
+public import IntegrationSection6.GammaRVRealization
+public import Section4.RVProductRestrictions
+public import Section5.GammaLift
+
+@[expose] public section
 
 /-! Real RV sets and products of Gamma RV sets retain their full original
 Gamma definition. No field-generation hypothesis is involved. -/

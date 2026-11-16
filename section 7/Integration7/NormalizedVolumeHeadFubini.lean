@@ -1,5 +1,9 @@
-import Integration7.NormalizedVolumeHeadOperators
-import Integration7.GradedAEVolumeHeadFubini
+module
+
+public import Integration7.NormalizedVolumeHeadOperators
+public import Integration7.GradedAEVolumeHeadFubini
+
+@[expose] public section
 
 /-! Integrating the actual normalized head operator and then the
 remaining coordinates equals the total integral on every normalized

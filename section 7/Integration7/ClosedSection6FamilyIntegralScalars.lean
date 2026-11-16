@@ -1,11 +1,15 @@
-import Integration7.CompletedSection6Kernel
-import Integration7.ClosedSection6FamilyConstantProductLifts
-import Integration7.ClosedSection6GammaVFAllBilinearProduct
-import Integration7.ClosedSection6RVClassBaseChange
-import IntegrationSection6.FamilyIntegralScalars
-import IntegrationSection6.FamilyConstantProductLifts
-import IntegrationSection6.GammaVFAllBilinearProduct
-import IntegrationSection6.RVClassBaseChange
+module
+
+public import Integration7.CompletedSection6Kernel
+public import Integration7.ClosedSection6FamilyConstantProductLifts
+public import Integration7.ClosedSection6GammaVFAllBilinearProduct
+public import Integration7.ClosedSection6RVClassBaseChange
+public import IntegrationSection6.FamilyIntegralScalars
+public import IntegrationSection6.FamilyConstantProductLifts
+public import IntegrationSection6.GammaVFAllBilinearProduct
+public import IntegrationSection6.RVClassBaseChange
+
+@[expose] public section
 
 /-! Closed generated-base Section6 integration. The former universal
 Section5 input is replaced by the canonical-model certificate; its kernel

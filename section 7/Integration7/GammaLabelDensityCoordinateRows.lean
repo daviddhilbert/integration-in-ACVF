@@ -1,6 +1,10 @@
-import Integration7.GammaVolumeSliceDensityAssembly
-import Integration7.VolumeSchemaDomainSemantics
-import Integration7.VolumeChainSchemaRealization
+module
+
+public import Integration7.GammaVolumeSliceDensityAssembly
+public import Integration7.VolumeSchemaDomainSemantics
+public import Integration7.VolumeChainSchemaRealization
+
+@[expose] public section
 
 /-! A label-density schema row is realized by the actual retained-label
 volume form on every containing real presentation. -/

@@ -1,4 +1,8 @@
-import Integration7.CanonicalVolumeSchemaRows
+module
+
+public import Integration7.CanonicalVolumeSchemaRows
+
+@[expose] public section
 
 /-! A valid coordinate schema has exactly the domain of every actual
 object interpreting its coordinate graph, including zero-coordinate rows. -/

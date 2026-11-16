@@ -1,6 +1,10 @@
-import Integration7.BoundedVolumeIsoCertificates
-import Integration7.EssentialGammaWeight
-import Integration7.GammaVolumeCriterion
+module
+
+public import Integration7.BoundedVolumeIsoCertificates
+public import Integration7.EssentialGammaWeight
+public import Integration7.GammaVolumeCriterion
+
+@[expose] public section
 
 /-! Exact finite-certificate characterization of a volume isomorphism
 with its underlying essential chart fixed. Gamma weight is pointwise;

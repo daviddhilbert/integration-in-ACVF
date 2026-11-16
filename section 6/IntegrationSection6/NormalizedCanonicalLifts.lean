@@ -1,5 +1,9 @@
-import IntegrationSection6.CanonicalLiftKeys
-import IntegrationSection6.NormalizedLifts
+module
+
+public import IntegrationSection6.CanonicalLiftKeys
+public import IntegrationSection6.NormalizedLifts
+
+@[expose] public section
 
 /-! The canonical tagged lift has exactly the canonically labeled RV
 object, in the same released normalized presentation. -/

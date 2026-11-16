@@ -1,4 +1,8 @@
-import Integration7.UniformPreparedPositionRawGammaProducts
+module
+
+public import Integration7.UniformPreparedPositionRawGammaProducts
+
+@[expose] public section
 
 /-! The selected balanced part has actual compatible original-Gamma
 preparations and the complete Gamma product equation, with nonzero

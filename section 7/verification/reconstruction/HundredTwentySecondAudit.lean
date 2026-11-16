@@ -1,9 +1,13 @@
-import Integration7.AEOrdinaryVolumePermutations
-import Integration7.GradedVolumeCoordinatePushforwards
-import Integration7.GradedVolumePermutationLinearMaps
-import Integration7.NormalizedGradedPermutationAgreement
-import Integration7.OrdinaryPositivePermutationCompatibility
-import Integration7.OrdinaryVFVolumePermutations
+module
+
+public import Integration7.AEOrdinaryVolumePermutations
+public import Integration7.GradedVolumeCoordinatePushforwards
+public import Integration7.GradedVolumePermutationLinearMaps
+public import Integration7.NormalizedGradedPermutationAgreement
+public import Integration7.OrdinaryPositivePermutationCompatibility
+public import Integration7.OrdinaryVFVolumePermutations
+
+@[expose] public section
 set_option pp.universes true
 set_option pp.proofs false
 set_option pp.deepTerms true

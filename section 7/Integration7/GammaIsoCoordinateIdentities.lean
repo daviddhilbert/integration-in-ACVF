@@ -1,4 +1,8 @@
-import IntegrationSection6.FiniteGammaIsoLaws
+module
+
+public import IntegrationSection6.FiniteGammaIsoLaws
+
+@[expose] public section
 
 /-! Exact volume-tuple and density-label identities compose and invert
 on the actual original-Gamma finite RV equivalences. -/

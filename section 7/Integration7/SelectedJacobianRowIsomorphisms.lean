@@ -1,8 +1,12 @@
-import Integration7.DefinableDensityRescaling
-import Integration7.SelectedFamilyJacobianPushforwards
-import Integration7.SelectedVolumeRowContexts
-import Integration7.VolumeRelabeling
-import Section4.RVIsoTools
+module
+
+public import Integration7.DefinableDensityRescaling
+public import Integration7.SelectedFamilyJacobianPushforwards
+public import Integration7.SelectedVolumeRowContexts
+public import Integration7.VolumeRelabeling
+public import Section4.RVIsoTools
+
+@[expose] public section
 
 /-! On a fixed target fibre the actual family Jacobian transform is
 the original fibre with its density multiplied by the inverse base

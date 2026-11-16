@@ -1,6 +1,10 @@
-import Integration7.SelectedTailVolumePreservation
-import Integration7.SelectedFamilyJacobianPreservation
-import Integration7.SelectedFamilyFullLifts
+module
+
+public import Integration7.SelectedTailVolumePreservation
+public import Integration7.SelectedFamilyJacobianPreservation
+public import Integration7.SelectedFamilyFullLifts
+
+@[expose] public section
 
 /-! The family Jacobian transformation induces a genuine full volume
 bijection of its VF realizations, fixing all coefficient VF coordinates. -/

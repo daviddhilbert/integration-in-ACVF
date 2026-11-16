@@ -1,8 +1,12 @@
-import Integration7.OrdinaryVFVolumeFamilies
-import Integration7.SelectedVolumeFamilyZeroProducts
-import Integration7.VolumeFamilyZeroProductRows
-import Integration7.OrdinaryVolumeCoefficientExtensions
-import Integration7.OrdinaryVolumeCoefficientCommSemiring
+module
+
+public import Integration7.OrdinaryVFVolumeFamilies
+public import Integration7.SelectedVolumeFamilyZeroProducts
+public import Integration7.VolumeFamilyZeroProductRows
+public import Integration7.OrdinaryVolumeCoefficientExtensions
+public import Integration7.OrdinaryVolumeCoefficientCommSemiring
+
+@[expose] public section
 
 /-! An ordinary coefficient acts on an ordinary family by an actual
 finite RV factor, and every row computes the extended coefficient product. -/

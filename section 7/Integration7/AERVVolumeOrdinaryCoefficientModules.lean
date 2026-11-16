@@ -1,4 +1,8 @@
-import Integration7.OrdinaryVolumeCoefficientScalarRows
+module
+
+public import Integration7.OrdinaryVolumeCoefficientScalarRows
+
+@[expose] public section
 
 /-! Positive homogeneous AE volume functions form a semimodule over
 the ordinary RV[0] coefficient semiring. Scalar multiplication is the

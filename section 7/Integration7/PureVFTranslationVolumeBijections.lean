@@ -1,4 +1,8 @@
-import Integration7.NativeRelativeTranslationVolumes
+module
+
+public import Integration7.NativeRelativeTranslationVolumes
+
+@[expose] public section
 
 /-! Relative translations of pure VF domains are actual morphisms of
 the volume category for every original definable density transported by

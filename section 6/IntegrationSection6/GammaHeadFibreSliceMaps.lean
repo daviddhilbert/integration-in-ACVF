@@ -1,7 +1,11 @@
-import IntegrationSection6.GammaHeadSelectedFiniteness
-import IntegrationSection6.GammaSelectedFibreSliceCarriers
-import IntegrationSection6.GammaNamedIsoRestrictions
-import IntegrationSection6.FiniteGammaLiftGluing
+module
+
+public import IntegrationSection6.GammaHeadSelectedFiniteness
+public import IntegrationSection6.GammaSelectedFibreSliceCarriers
+public import IntegrationSection6.GammaNamedIsoRestrictions
+public import IntegrationSection6.FiniteGammaLiftGluing
+
+@[expose] public section
 
 /-! Selected-volume slices of a head-contracted RV fibre have actual
 unary lifts isomorphic to the original coordinate fibre with the selected

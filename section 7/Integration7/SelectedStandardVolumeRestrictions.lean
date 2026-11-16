@@ -1,6 +1,10 @@
-import Integration7.SelectedStandardVolumeObjects
-import Integration7.StandardTargetRestrictionPresentations
-import Integration7.VolumeRestrictionIdentifications
+module
+
+public import Integration7.SelectedStandardVolumeObjects
+public import Integration7.StandardTargetRestrictionPresentations
+public import Integration7.VolumeRestrictionIdentifications
+
+@[expose] public section
 
 /-! Restricting a standard contraction by old RV labels retains the
 literal selected volume coordinates and density. Only finiteness after

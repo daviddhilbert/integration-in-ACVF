@@ -1,5 +1,9 @@
-import IntegrationSection3ACVF.CanonicalSupportFamily
-import IntegrationSection3.RegionFormulas
+module
+
+public import IntegrationSection3ACVF.CanonicalSupportFamily
+public import IntegrationSection3.RegionFormulas
+
+@[expose] public section
 
 /-! Positive regions of the canonical ball support over the original base.
 The family, rather than a selected enumeration or individual component, is

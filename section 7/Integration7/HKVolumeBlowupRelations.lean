@@ -1,7 +1,11 @@
-import Integration7.HKVolumeIsoOperations
-import Integration7.HKWeightedZeroBlowupCongruence
-import Integration7.HKRVProductIsomorphisms
-import Integration7.VolumeBlowupRightProducts
+module
+
+public import Integration7.HKVolumeIsoOperations
+public import Integration7.HKWeightedZeroBlowupCongruence
+public import Integration7.HKRVProductIsomorphisms
+public import Integration7.VolumeBlowupRightProducts
+
+@[expose] public section
 
 /-! The corrected common-blowup relation has exact weighted isomorphism
 in degree zero, and the established common-blowup relation in positive degree. -/

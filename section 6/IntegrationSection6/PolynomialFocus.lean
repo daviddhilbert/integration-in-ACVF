@@ -1,4 +1,8 @@
-import Section7.CorrespondenceLifting
+module
+
+public import Section7.CorrespondenceLifting
+
+@[expose] public section
 
 /-! The local polynomial focus used in Lemma 6.12. A simple residue root
 in the active coordinate gives a unique section over every other field

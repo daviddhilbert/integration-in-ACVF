@@ -1,5 +1,9 @@
-import IntegrationSection6.GammaSortedSchemaRows
-import IntegrationSection6.GammaSchemaRowEquality
+module
+
+public import IntegrationSection6.GammaSortedSchemaRows
+public import IntegrationSection6.GammaSchemaRowEquality
+
+@[expose] public section
 
 /-! Exact raw/typed correspondence between a promoted schema row and an
 actual native finite Gamma RV object, allowing arbitrary internal codes. -/

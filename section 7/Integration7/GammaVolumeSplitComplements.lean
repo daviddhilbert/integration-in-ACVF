@@ -1,6 +1,10 @@
-import Integration7.GammaActualVolumePartitions
-import Integration7.VolumeComplementPartitions
-import Integration7.GammaVolumeCoproductCharts
+module
+
+public import Integration7.GammaActualVolumePartitions
+public import Integration7.VolumeComplementPartitions
+public import Integration7.GammaVolumeCoproductCharts
+
+@[expose] public section
 
 /-! The actual three-piece complementary splitting retains the full
 original-Gamma chart of every cut. -/

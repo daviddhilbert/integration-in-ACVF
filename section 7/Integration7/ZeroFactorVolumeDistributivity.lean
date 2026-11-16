@@ -1,7 +1,11 @@
-import Integration7.RVProductCoproductCharts
-import Integration7.ZeroFactorVolumeObjects
-import Integration7.VolumeCoproductAssociativity
-import Integration7.RVVolumeInverse
+module
+
+public import Integration7.RVProductCoproductCharts
+public import Integration7.ZeroFactorVolumeObjects
+public import Integration7.VolumeCoproductAssociativity
+public import Integration7.RVVolumeInverse
+
+@[expose] public section
 
 /-! Distribution of an ordinary RV[0] factor retains exactly the
 positive labels and the density on each summand. -/

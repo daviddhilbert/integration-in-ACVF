@@ -1,8 +1,12 @@
-import Integration7.PositiveVolumeIntegrationProducts
-import Integration7.ZeroFactorVFVolumeClassProducts
-import Integration7.ZeroVFVolumeClassProducts
-import Integration7.ZeroCoefficientProductSymmetry
-import Integration7.VolumeIntegrationEquivalence
+module
+
+public import Integration7.PositiveVolumeIntegrationProducts
+public import Integration7.ZeroFactorVFVolumeClassProducts
+public import Integration7.ZeroVFVolumeClassProducts
+public import Integration7.ZeroCoefficientProductSymmetry
+public import Integration7.VolumeIntegrationEquivalence
+
+@[expose] public section
 
 /-! Graded multiplication of actual VF volume classes. Its positive,
 ordinary-zero and mixed coefficient cases agree with the actual Cartesian

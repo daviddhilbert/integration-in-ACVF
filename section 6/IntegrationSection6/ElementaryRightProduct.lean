@@ -1,5 +1,9 @@
-import IntegrationSection6.ProductGeometry
-import IntegrationSection6.ElementaryKeys
+module
+
+public import IntegrationSection6.ProductGeometry
+public import IntegrationSection6.ElementaryKeys
+
+@[expose] public section
 
 /-! Elementary blowup in the second factor, using the checked cartesian
 associator on the actual three label blocks. -/

@@ -1,4 +1,8 @@
-import IntegrationSection6.FiniteGammaCoproductLifts
+module
+
+public import IntegrationSection6.FiniteGammaCoproductLifts
+
+@[expose] public section
 
 /-! Definable gluing of lift isomorphisms in the finite RV categories.
 Both tagged components retain their complete original-Gamma graphs. -/

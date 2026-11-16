@@ -1,5 +1,9 @@
-import IntegrationSection3ACVF.OrderedCellDecomposition
-import IntegrationSection3ACVF.FullGammaBounds
+module
+
+public import IntegrationSection3ACVF.OrderedCellDecomposition
+public import IntegrationSection3ACVF.FullGammaBounds
+
+@[expose] public section
 
 /-! Build actual finite cell-decomposition data from definable open
 order cells in an interval with a greatest point. Definable completeness

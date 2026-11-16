@@ -1,5 +1,9 @@
-import IntegrationSection6.GammaUnivPresentations
-import IntegrationSection5.GammaUnaryChain
+module
+
+public import IntegrationSection6.GammaUnivPresentations
+public import IntegrationSection5.GammaUnaryChain
+
+@[expose] public section
 
 /-! Realize Gamma unary chains directly over the common internal universe,
 without changing any domain, function, or mathematical parameter base. -/

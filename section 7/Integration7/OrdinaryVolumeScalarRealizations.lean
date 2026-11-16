@@ -1,6 +1,10 @@
-import Integration7.OrdinaryVolumeFamilyScalarProducts
-import Integration7.MixedRVFactorZeroLiftCharts
-import Integration7.ZeroFactorVFVolumeClassProducts
+module
+
+public import Integration7.OrdinaryVolumeFamilyScalarProducts
+public import Integration7.MixedRVFactorZeroLiftCharts
+public import Integration7.ZeroFactorVFVolumeClassProducts
+
+@[expose] public section
 
 /-! The actual VF realization of an ordinary finite-factor family is
 the Cartesian product with the coefficient's degree-zero VF lift. -/

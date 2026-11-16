@@ -1,5 +1,9 @@
-import Integration7.SemiringGroupificationAdditiveMaps
-import Integration7.RawPositiveKernelPresentation
+module
+
+public import Integration7.SemiringGroupificationAdditiveMaps
+public import Integration7.RawPositiveKernelPresentation
+
+@[expose] public section
 
 /-! Actual homogeneous additive components of the raw ring, and the
 zero degree of its geometric kernel. Ordinary degree-zero coefficients

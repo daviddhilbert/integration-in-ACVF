@@ -1,5 +1,9 @@
-import Integration7.PositiveGradedScalarBalance
-import Integration7.NormalizedPositiveHeadGenerators
+module
+
+public import Integration7.PositiveGradedScalarBalance
+public import Integration7.NormalizedPositiveHeadGenerators
+
+@[expose] public section
 
 /-! The actual positive head integral extends to an S-linear operator
 on the full normalized function module. Positive generators determine

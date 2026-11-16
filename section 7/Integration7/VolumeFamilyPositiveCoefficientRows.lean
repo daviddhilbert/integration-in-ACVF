@@ -1,7 +1,11 @@
-import Integration7.VolumeFamilyPositiveCoefficientProducts
-import Integration7.VolumeProductPointwise
-import Integration7.SignedVolumeProductSwap
-import Section4.RVProductRestrictions
+module
+
+public import Integration7.VolumeFamilyPositiveCoefficientProducts
+public import Integration7.VolumeProductPointwise
+public import Integration7.SignedVolumeProductSwap
+public import Section4.RVProductRestrictions
+
+@[expose] public section
 
 /-! Positive constant-family multiplication computes the genuine
 coefficient-first RV product on every fibre. The domain-label blocks are

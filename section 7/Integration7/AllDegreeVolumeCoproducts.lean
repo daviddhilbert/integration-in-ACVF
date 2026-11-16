@@ -1,4 +1,8 @@
-import Integration7.VolumeBlowupClasses
+module
+
+public import Integration7.VolumeBlowupClasses
+
+@[expose] public section
 
 /-! Uniform coproduct operations, including ordinary RV[0]. All
 structural maps below are actual definable isomorphisms. -/

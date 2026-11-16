@@ -1,5 +1,9 @@
-import IntegrationSection3ACVF.FullGammaControllers
-import IntegrationSection3ACVF.FiniteOrderBounds
+module
+
+public import IntegrationSection3ACVF.FullGammaControllers
+public import IntegrationSection3ACVF.FiniteOrderBounds
+
+@[expose] public section
 
 /-! Definable completeness and the finite/interval dichotomy on the
 actual Gamma quotient over the full original interpreted parameter base. -/

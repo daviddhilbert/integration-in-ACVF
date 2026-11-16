@@ -1,4 +1,8 @@
-import Integration7.VFVolumeRescalingClasses
+module
+
+public import Integration7.VFVolumeRescalingClasses
+
+@[expose] public section
 
 /-! The genuine positive-dimensional VF integral commutes with named
 nonzero density rescaling, before point normalization. -/

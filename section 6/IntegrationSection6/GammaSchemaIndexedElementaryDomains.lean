@@ -1,5 +1,9 @@
-import IntegrationSection6.GammaSchemaIndexedPresentations
-import IntegrationSection6.IndexedElementaryLabels
+module
+
+public import IntegrationSection6.GammaSchemaIndexedPresentations
+public import IntegrationSection6.IndexedElementaryLabels
+
+@[expose] public section
 
 /-! The indexed elementary domain is exactly the native elementary domain
 after reassociating the index, old labels and new parameter. -/

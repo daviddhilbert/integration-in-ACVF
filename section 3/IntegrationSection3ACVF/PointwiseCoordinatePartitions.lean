@@ -1,7 +1,11 @@
-import IntegrationSection3ACVF.CoordinateFibreSyntax
-import IntegrationSection3ACVF.CoordinateOpenToOpen
-import IntegrationSection3ACVF.RealParameterTuples
-import IntegrationSection3ACVF.FullOpenToOpenPartition
+module
+
+public import IntegrationSection3ACVF.CoordinateFibreSyntax
+public import IntegrationSection3ACVF.CoordinateOpenToOpen
+public import IntegrationSection3ACVF.RealParameterTuples
+public import IntegrationSection3ACVF.FullOpenToOpenPartition
+
+@[expose] public section
 
 /-! The pointwise finite partitions used in3.21,for actual mixed tuple
 maps. Context labels are finitely named real parameters. Uniformity in

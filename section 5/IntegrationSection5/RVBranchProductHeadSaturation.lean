@@ -1,6 +1,10 @@
-import IntegrationSection5.SharedRVUnaryHeadPreparation
-import IntegrationSection5.RelativeSpecialRestriction
-import IntegrationSection5.InactiveHeadSaturation
+module
+
+public import IntegrationSection5.SharedRVUnaryHeadPreparation
+public import IntegrationSection5.RelativeSpecialRestriction
+public import IntegrationSection5.InactiveHeadSaturation
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option allowUnsafeReducibility true in

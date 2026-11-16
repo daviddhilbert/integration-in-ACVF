@@ -1,5 +1,9 @@
-import IntegrationSection5.UnaryPaperBallBridge
-import ValuedFieldExtension
+module
+
+public import IntegrationSection5.UnaryPaperBallBridge
+public import ValuedFieldExtension
+
+@[expose] public section
 
 /-! A mutually contractible unary bijection between actual RV-pullbacks preserves zero and nonzero VF coordinates. A nonzero RV cell has at least two points by the nontrivial valuation axiom. -/
 

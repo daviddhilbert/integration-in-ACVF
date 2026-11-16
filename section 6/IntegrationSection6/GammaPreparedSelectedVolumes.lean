@@ -1,6 +1,10 @@
-import IntegrationSection6.GammaPreparedIndexValues
-import IntegrationSection6.GammaPreparedFamilyValues
-import IntegrationSection6.GammaSchemaIndexedPresentations
+module
+
+public import IntegrationSection6.GammaPreparedIndexValues
+public import IntegrationSection6.GammaPreparedFamilyValues
+public import IntegrationSection6.GammaSchemaIndexedPresentations
+
+@[expose] public section
 
 /-! Selected old RV volumes remain literal selected labels after prepared
 formula descent and indexed assembly. -/

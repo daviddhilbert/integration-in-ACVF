@@ -1,5 +1,9 @@
-import IntegrationSection5.HeadPreparation
-import IntegrationSection5.RelativeLabelPreservation
+module
+
+public import IntegrationSection5.HeadPreparation
+public import IntegrationSection5.RelativeLabelPreservation
+
+@[expose] public section
 
 /-! Successive actual coordinate preparations in the identity order. Each
 step drops the prepared head VF coordinate and retains its RV value. -/

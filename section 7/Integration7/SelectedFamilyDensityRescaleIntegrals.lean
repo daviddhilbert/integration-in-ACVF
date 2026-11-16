@@ -1,7 +1,11 @@
-import Integration7.SelectedVolumeDensityRescaling
-import Integration7.VolumeIntegrationDensityRescaling
-import Integration7.VolumeFamilyRealizationIdentifications
-import Integration7.AERVVolumeFunctionIntegrals
+module
+
+public import Integration7.SelectedVolumeDensityRescaling
+public import Integration7.VolumeIntegrationDensityRescaling
+public import Integration7.VolumeFamilyRealizationIdentifications
+public import Integration7.AERVVolumeFunctionIntegrals
+
+@[expose] public section
 
 /-! Raw family total integration commutes with a named nonzero density
 multiplier. Genuine full lifts supply the comparison; their different

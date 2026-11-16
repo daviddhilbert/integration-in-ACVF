@@ -1,5 +1,9 @@
-import Mathlib.Data.Fin.Tuple.Basic
-import Mathlib.Data.Set.Finite.Lattice
+module
+
+public import Mathlib.Data.Fin.Tuple.Basic
+public import Mathlib.Data.Set.Finite.Lattice
+
+@[expose] public section
 
 /-! Deleting a coordinate preserves finite fibres when the image has
 finite slices in that coordinate. This is the finite-category ingredient

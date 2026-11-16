@@ -1,5 +1,9 @@
-import IntegrationSection3ACVF.OrdinaryCentreFibres
-import IntegrationSection3ACVF.AtomicCanonicalRegions
+module
+
+public import IntegrationSection3ACVF.OrdinaryCentreFibres
+public import IntegrationSection3ACVF.AtomicCanonicalRegions
+
+@[expose] public section
 
 /-! Constancy of the valuative centre on the canonical positive regions
 of an atomic set. Finite ordinary values become individually definable

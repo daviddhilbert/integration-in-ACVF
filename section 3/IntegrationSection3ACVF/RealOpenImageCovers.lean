@@ -1,4 +1,8 @@
-import IntegrationSection3ACVF.RealTypeNeighborhoods
+module
+
+public import IntegrationSection3ACVF.RealTypeNeighborhoods
+
+@[expose] public section
 
 /-! The second compactness step in3.19 over a small real parameter base.
 The resulting finite cover and all its pieces use the original base. -/

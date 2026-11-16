@@ -1,5 +1,9 @@
-import IntegrationSection2.ResidueIndependentLifts
-import Section9.UnramifiedGenerator
+module
+
+public import IntegrationSection2.ResidueIndependentLifts
+public import Section9.UnramifiedGenerator
+
+@[expose] public section
 
 /-! A primitive residue generator lifts to a simple integral root
 without assuming equality of residue and field degrees.

@@ -1,4 +1,8 @@
-import Integration7.GammaHeadVolumeCommonComparison
+module
+
+public import Integration7.GammaHeadVolumeCommonComparison
+
+@[expose] public section
 
 /-! The positive selected-volume induction for actual ordered contraction
 programs. Original selected coordinates come first, followed by the VF

@@ -1,6 +1,10 @@
-import Integration7.GammaVolumeRVValidity
-import Integration7.EssentialGammaVolumeSchemata
-import IntegrationSection6.GammaIsomorphismSchemata
+module
+
+public import Integration7.GammaVolumeRVValidity
+public import Integration7.EssentialGammaVolumeSchemata
+public import IntegrationSection6.GammaIsomorphismSchemata
+
+@[expose] public section
 
 /-! Finite first-order volume-isomorphism witness data over the original
 real/Gamma base. Validity checks an actual essential bijection, both volume

@@ -1,5 +1,9 @@
-import IntegrationSection6.Blowups
-import IntegrationSection6.ElementaryRestrictions
+module
+
+public import IntegrationSection6.Blowups
+public import IntegrationSection6.ElementaryRestrictions
+
+@[expose] public section
 
 /-!
 # Coproduct presentations of actual blowups

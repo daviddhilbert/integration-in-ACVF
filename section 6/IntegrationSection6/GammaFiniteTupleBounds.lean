@@ -1,6 +1,10 @@
-import IntegrationSection6.GammaFiniteWitnessBounds
-import IntegrationSection6.GammaFamilyCoordinateProjection
-import IntegrationSection6.FiniteTupleProjectionBound
+module
+
+public import IntegrationSection6.GammaFiniteWitnessBounds
+public import IntegrationSection6.GammaFamilyCoordinateProjection
+public import IntegrationSection6.FiniteTupleProjectionBound
+
+@[expose] public section
 
 /-! Uniform finite bounds for full original-Gamma tuple-valued rows.
 The proof uses scalar compactness for each coordinate and the checked

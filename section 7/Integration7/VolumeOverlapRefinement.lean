@@ -1,6 +1,10 @@
-import Integration7.VolumeBlowupLoci
-import Integration7.VolumeComplementPartitions
-import Integration7.VolumeRestrictionIdentifications
+module
+
+public import Integration7.VolumeBlowupLoci
+public import Integration7.VolumeComplementPartitions
+public import Integration7.VolumeRestrictionIdentifications
+
+@[expose] public section
 
 /-! The intersection, the two differences and the exterior give an actual
 four-part refinement of two volume-blowup loci over their original base. -/

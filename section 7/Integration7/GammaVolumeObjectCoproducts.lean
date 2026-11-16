@@ -1,6 +1,10 @@
-import Integration7.GammaVolumeObjectGraphs
-import Integration7.GammaTaggedRVMapGraphs
-import Integration7.VolumeCoproduct
+module
+
+public import Integration7.GammaVolumeObjectGraphs
+public import Integration7.GammaTaggedRVMapGraphs
+public import Integration7.VolumeCoproduct
+
+@[expose] public section
 
 /-! Actual volume coproducts retain original-Gamma coordinates and
 densities, with no choice of a new presentation or parameter base. -/

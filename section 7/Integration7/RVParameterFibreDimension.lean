@@ -1,5 +1,9 @@
-import Integration7.RVParameterFibres
-import Integration7.RVFibreDimensionBound
+module
+
+public import Integration7.RVParameterFibres
+public import Integration7.RVFibreDimensionBound
+
+@[expose] public section
 
 /-! The base-plus-fibre RV dimension bound for literal parameter tuples.
 The fibre in the map's original ambient space injects into the tail fibre. -/

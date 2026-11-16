@@ -1,7 +1,11 @@
-import Integration7.GammaIndexedVolumeCharts
-import Integration7.IndexedVolumeRowEquality
-import Integration7.VolumeChainSchemaRealization
-import Integration7.RVVolumeInverse
+module
+
+public import Integration7.GammaIndexedVolumeCharts
+public import Integration7.IndexedVolumeRowEquality
+public import Integration7.VolumeChainSchemaRealization
+public import Integration7.RVVolumeInverse
+
+@[expose] public section
 
 /-! Indexed chart realization acts on arbitrary presentations of the
 same full coordinate-and-density rows after a finite parameter extension. -/

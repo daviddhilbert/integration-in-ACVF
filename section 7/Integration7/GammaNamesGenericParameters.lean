@@ -1,8 +1,12 @@
-import Integration7.GammaNamesVolumeContexts
-import Integration7.PreparedGenericRVCells
-import Section3.AlgebraicClosure
-import Section3.VFDefinableClosure
-import Mathlib.RingTheory.AlgebraicIndependent.AlgebraicClosure
+module
+
+public import Integration7.GammaNamesVolumeContexts
+public import Integration7.PreparedGenericRVCells
+public import Section3.AlgebraicClosure
+public import Section3.VFDefinableClosure
+public import Mathlib.RingTheory.AlgebraicIndependent.AlgebraicClosure
+
+@[expose] public section
 
 /-! Naming representatives of the original Gamma parameters and taking
 the real substructure closure preserves every original independent VF tuple.

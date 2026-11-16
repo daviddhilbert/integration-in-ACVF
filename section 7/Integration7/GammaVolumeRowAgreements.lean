@@ -1,8 +1,12 @@
-import Integration7.IndexedVolumeEqualRowPresentations
-import Integration7.GammaWeightedVolumeSchemata
-import Integration7.EssentialFiniteVolumeSchemata
-import IntegrationSection6.GammaRowOperationAgreement
-import IntegrationSection6.GammaSchemaValidityTransport
+module
+
+public import Integration7.IndexedVolumeEqualRowPresentations
+public import Integration7.GammaWeightedVolumeSchemata
+public import Integration7.EssentialFiniteVolumeSchemata
+public import IntegrationSection6.GammaRowOperationAgreement
+public import IntegrationSection6.GammaSchemaValidityTransport
+
+@[expose] public section
 
 /-! Literal coordinate-and-density row agreement across parameter
 sorts and arities. It preserves the geometric formula operations. -/

@@ -1,7 +1,11 @@
-import Integration7.AEOrdinaryPositiveCoefficientBilinearity
-import Integration7.AEOrdinaryVolumeModules
-import Integration7.AERVVolumeOrdinaryCoefficientModules
-import Integration7.PositiveVolumeClassScalarExtensions
+module
+
+public import Integration7.AEOrdinaryPositiveCoefficientBilinearity
+public import Integration7.AEOrdinaryVolumeModules
+public import Integration7.AERVVolumeOrdinaryCoefficientModules
+public import Integration7.PositiveVolumeClassScalarExtensions
+
+@[expose] public section
 
 /-! Multiplication from ordinary-valued AE functions to positive-valued
 AE functions is bilinear over the ordinary coefficient semiring. -/

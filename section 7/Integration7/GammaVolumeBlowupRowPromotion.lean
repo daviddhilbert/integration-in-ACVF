@@ -1,5 +1,9 @@
-import Integration7.ActualVolumeBlowupPromotion
-import Integration7.FreeGammaVolumeComparisonPromotion
+module
+
+public import Integration7.ActualVolumeBlowupPromotion
+public import Integration7.FreeGammaVolumeComparisonPromotion
+
+@[expose] public section
 
 /-! A canonical volume blowup with original-Gamma endpoint charts gives
 a formula witness in any containing context. Its admissibility is supplied

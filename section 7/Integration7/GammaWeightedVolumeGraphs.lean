@@ -1,4 +1,8 @@
-import Integration7.GammaRVVolumeSchemata
+module
+
+public import Integration7.GammaRVVolumeSchemata
+
+@[expose] public section
 
 /-! The combined coordinate-and-density graph over the original base.
 Its output is the old coordinate tuple followed by the density label. -/

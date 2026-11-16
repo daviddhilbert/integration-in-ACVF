@@ -1,7 +1,11 @@
-import Integration7.PointPrefixedVolumeObjects
-import Integration7.UnaryRawSelectedVolumeCharts
-import Integration7.SelectedFamilyStandardVolumeComparison
-import IntegrationSection6.StandardProgramPresentations
+module
+
+public import Integration7.PointPrefixedVolumeObjects
+public import Integration7.UnaryRawSelectedVolumeCharts
+public import Integration7.SelectedFamilyStandardVolumeComparison
+public import IntegrationSection6.StandardProgramPresentations
+
+@[expose] public section
 
 /-! Selecting a retained unit label before a unary contraction gives
 the degree-one point times its ordinary raw contraction object. -/

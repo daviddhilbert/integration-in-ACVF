@@ -1,6 +1,10 @@
-import IntegrationSection5.RVSliceHeadCompletion
-import IntegrationSection5.InactiveBranchHeadIso
-import IntegrationSection5.RVSliceHeadImages
+module
+
+public import IntegrationSection5.RVSliceHeadCompletion
+public import IntegrationSection5.InactiveBranchHeadIso
+public import IntegrationSection5.RVSliceHeadImages
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option allowUnsafeReducibility true in

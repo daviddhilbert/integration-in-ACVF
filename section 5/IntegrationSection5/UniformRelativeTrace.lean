@@ -1,4 +1,8 @@
-import IntegrationSection5.FibreFocusMaps
+module
+
+public import IntegrationSection5.FibreFocusMaps
+
+@[expose] public section
 
 noncomputable section
 set_option autoImplicit false

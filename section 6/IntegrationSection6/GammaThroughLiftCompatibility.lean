@@ -1,6 +1,10 @@
-import IntegrationSection6.GammaNonzeroGlobalLift
-import IntegrationSection6.GammaNonzeroResolutions
-import IntegrationSection6.GammaLiftPadding
+module
+
+public import IntegrationSection6.GammaNonzeroGlobalLift
+public import IntegrationSection6.GammaNonzeroResolutions
+public import IntegrationSection6.GammaLiftPadding
+
+@[expose] public section
 
 /-! Finite weight assembly and global semiring lifting commute. -/
 noncomputable section

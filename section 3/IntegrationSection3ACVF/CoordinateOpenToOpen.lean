@@ -1,5 +1,9 @@
-import IntegrationSection3.CoordinateFibres
-import IntegrationSection3ACVF.MaximalOpenClasses
+module
+
+public import IntegrationSection3.CoordinateFibres
+public import IntegrationSection3ACVF.MaximalOpenClasses
+
+@[expose] public section
 
 /-! Definition3.20 on actual coordinate fibres. Other coordinates retain
 their source/target index types,so both VF and RV labels are fixed. -/

@@ -1,5 +1,9 @@
-import Integration7.FrozenHeadIntegralPositiveCoefficients
-import Integration7.AERVVolumeHeadIntegralAdditivity
+module
+
+public import Integration7.FrozenHeadIntegralPositiveCoefficients
+public import Integration7.AERVVolumeHeadIntegralAdditivity
+
+@[expose] public section
 
 /-! The actual positive homogeneous head integral commutes with every
 positive RV coefficient on almost-everywhere function classes. -/

@@ -1,8 +1,12 @@
-import Integration7.IndexedVolumeFibreEmbeddings
-import Integration7.IndexedVolumeUnderlyingIsomorphisms
-import Integration7.FibreVolumeComparisons
-import Integration7.VolumeIsoParameterExtension
-import Integration7.VolumeSchemaPointGammaWeights
+module
+
+public import Integration7.IndexedVolumeFibreEmbeddings
+public import Integration7.IndexedVolumeUnderlyingIsomorphisms
+public import Integration7.FibreVolumeComparisons
+public import Integration7.VolumeIsoParameterExtension
+public import Integration7.VolumeSchemaPointGammaWeights
+
+@[expose] public section
 
 /-! An actual volume comparison on an indexed fibre embeds into the
 joint essential correspondence, also after extending the parameter base. -/

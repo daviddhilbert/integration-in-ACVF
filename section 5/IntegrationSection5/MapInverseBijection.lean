@@ -1,4 +1,8 @@
-import IntegrationSection5.ChainAlgebra
+module
+
+public import IntegrationSection5.ChainAlgebra
+
+@[expose] public section
 
 /-! The actual definable inverse is bijective, and its inverse is the original map. -/
 

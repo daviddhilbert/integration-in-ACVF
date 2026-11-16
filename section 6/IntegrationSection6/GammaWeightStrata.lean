@@ -1,9 +1,13 @@
-import IntegrationSection6.GammaRVRealMapGraphs
-import IntegrationSection6.FiniteGammaRestrictions
-import Section4.RVWeightRestriction
-import IntegrationSection6.FiniteCoordinateDeletion
-import IntegrationSection6.GammaFiniteSlices
-import IntegrationSection6.FiniteGammaObjects
+module
+
+public import IntegrationSection6.GammaRVRealMapGraphs
+public import IntegrationSection6.FiniteGammaRestrictions
+public import Section4.RVWeightRestriction
+public import IntegrationSection6.FiniteCoordinateDeletion
+public import IntegrationSection6.GammaFiniteSlices
+public import IntegrationSection6.FiniteGammaObjects
+
+@[expose] public section
 
 /-! Deleting an admissible volume coordinate keeps the actual object
 in RV[k-1]. Finiteness uses the original-base algebraic label slices,

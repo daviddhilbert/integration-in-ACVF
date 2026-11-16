@@ -1,8 +1,12 @@
-import Integration7.RetainedDensityContractionObjects
-import Integration7.LiteralVolumeLiftMaps
-import Integration7.VolumeLiftFullDimension
-import Integration7.EssentialEmptyVolumeIsomorphisms
-import Integration7.GammaVolumeBlowupEquivalence
+module
+
+public import Integration7.RetainedDensityContractionObjects
+public import Integration7.LiteralVolumeLiftMaps
+public import Integration7.VolumeLiftFullDimension
+public import Integration7.EssentialEmptyVolumeIsomorphisms
+public import Integration7.GammaVolumeBlowupEquivalence
+
+@[expose] public section
 
 /-! Actual specified contractions of any finite-label VF-small source
 have empty essential volume objects. The density may vary with the old

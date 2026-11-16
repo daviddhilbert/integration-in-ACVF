@@ -1,7 +1,11 @@
-import Integration7.GammaFixedRVLabelSpecialLifts
-import Integration7.UnarySpecialRelativeConverse
-import IntegrationSection5.HeadPreparation
-import IntegrationSection5.GammaOrderedContraction
+module
+
+public import Integration7.GammaFixedRVLabelSpecialLifts
+public import Integration7.UnarySpecialRelativeConverse
+public import IntegrationSection5.HeadPreparation
+public import IntegrationSection5.GammaOrderedContraction
+
+@[expose] public section
 
 /-! An actual unary special bijection with RV-pullback target is an
 actual head preparation. The fibre-special witnesses are transported

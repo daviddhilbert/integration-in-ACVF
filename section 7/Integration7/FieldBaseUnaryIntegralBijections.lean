@@ -1,5 +1,9 @@
-import Integration7.FieldBaseUnaryVolumeIntegrals
-import Integration7.NativeVolumeMapRealization
+module
+
+public import Integration7.FieldBaseUnaryVolumeIntegrals
+public import Integration7.NativeVolumeMapRealization
+
+@[expose] public section
 
 /-! The field-base unary integral respects genuine VF volume bijections.
 The proof compares the two actual density-graph contractions directly. -/

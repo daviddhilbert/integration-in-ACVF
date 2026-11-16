@@ -1,6 +1,10 @@
-import Section7.LiftingDefinability
-import Section3.CanonicalContext
-import IntegrationSection6.RootDomainNormalization
+module
+
+public import Section7.LiftingDefinability
+public import Section3.CanonicalContext
+public import IntegrationSection6.RootDomainNormalization
+
+@[expose] public section
 
 /-! Raw lift-domain predicates agree with their normalized presentations.
 The VF guards ensure that only properly sorted RV-map values are used. -/

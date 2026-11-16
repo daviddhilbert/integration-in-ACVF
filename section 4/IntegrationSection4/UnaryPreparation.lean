@@ -1,5 +1,9 @@
-import IntegrationSection4.GammaUnarySyntax
-import IntegrationSection4.FiniteRelationPreparation
+module
+
+public import IntegrationSection4.GammaUnarySyntax
+public import IntegrationSection4.FiniteRelationPreparation
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

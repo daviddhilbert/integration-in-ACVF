@@ -1,7 +1,11 @@
-import Integration7.IndexedVolumeElementaryLabels
-import Integration7.IndexedVolumeCoproductDensities
-import IntegrationSection6.GammaSchemaElementaryRowValues
-import IntegrationSection6.ElementaryCoordinates
+module
+
+public import Integration7.IndexedVolumeElementaryLabels
+public import Integration7.IndexedVolumeCoproductDensities
+public import IntegrationSection6.GammaSchemaElementaryRowValues
+public import IntegrationSection6.ElementaryCoordinates
+
+@[expose] public section
 
 /-! Elementary/index reassociation preserves the full blown-up volume
 tuple and the density pulled back from the old labels. -/

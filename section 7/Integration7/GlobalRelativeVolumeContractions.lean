@@ -1,7 +1,11 @@
-import Integration7.GenericRelativeHeadVolumeComparison
-import Integration7.GenericOrderedAppendVolumeContractions
-import Integration7.RelativeHeadVolumeComparison
-import Integration7.OrderedAppendVolumeContractions
+module
+
+public import Integration7.GenericRelativeHeadVolumeComparison
+public import Integration7.GenericOrderedAppendVolumeContractions
+public import Integration7.RelativeHeadVolumeComparison
+public import Integration7.OrderedAppendVolumeContractions
+
+@[expose] public section
 
 /-! Original global measure preservation is sufficient for comparison
 of any specified head-first ordered contractions. Exceptional frozen

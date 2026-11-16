@@ -1,5 +1,9 @@
-import Integration7.PullbackVolumeMapDescent
-import IntegrationSection5.UnaryRVCategory
+module
+
+public import Integration7.PullbackVolumeMapDescent
+public import IntegrationSection5.UnaryRVCategory
+
+@[expose] public section
 
 /-! The unary RV comparison for a mutually contractible actual volume
 bijection. Section5.3 constructs the compatible RV isomorphism; the checked

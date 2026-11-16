@@ -1,4 +1,8 @@
-import IntegrationSection3ACVF.RadialQuotientGraph
+module
+
+public import IntegrationSection3ACVF.RadialQuotientGraph
+
+@[expose] public section
 
 /-! A radial VF domain has the entire corresponding RV value fibres as
 its translated RV image. Zero is excluded exactly when infinity is absent

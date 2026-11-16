@@ -1,7 +1,11 @@
-import IntegrationSection4.BalancedFibres
-import IntegrationSection3ACVF.GammaLinearity
-import IntegrationSection3ACVF.MaximalOpenClasses
-import Section3.GammaParameters
+module
+
+public import IntegrationSection4.BalancedFibres
+public import IntegrationSection3ACVF.GammaLinearity
+public import IntegrationSection3ACVF.MaximalOpenClasses
+public import Section3.GammaParameters
+
+@[expose] public section
 
 /-! Definitions 4.5 and 4.7 on the existing VF/RV/Gamma carriers.
 Projection domains, positioning graphs and both balanced fibre identities

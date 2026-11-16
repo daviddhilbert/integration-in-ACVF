@@ -1,10 +1,14 @@
-import Integration7.GammaVolumeLabelIdentities
-import Integration7.GammaVolumeFullChartRestriction
-import Integration7.GammaCoordinateDensityGraphs
-import Integration7.CanonicalVolumeFamilySteps
-import Integration7.VolumePullbackPresentations
-import IntegrationSection6.FiniteGammaLiteralCharts
-import IntegrationSection6.FiniteGammaPartitionCharts
+module
+
+public import Integration7.GammaVolumeLabelIdentities
+public import Integration7.GammaVolumeFullChartRestriction
+public import Integration7.GammaCoordinateDensityGraphs
+public import Integration7.CanonicalVolumeFamilySteps
+public import Integration7.VolumePullbackPresentations
+public import IntegrationSection6.FiniteGammaLiteralCharts
+public import IntegrationSection6.FiniteGammaPartitionCharts
+
+@[expose] public section
 
 /-! The zero-cost steps in special volume chains retain their full
 original-Gamma charts: literal presentations, canonical keys and identity. -/

@@ -1,8 +1,12 @@
-import Integration7.SpecialVolumeJacobians
-import Integration7.RawVFVolumeComposition
-import Integration7.RawPullbackVolumeLifts
-import IntegrationSection5.RelativeLabelPreservation
-import IntegrationSection5.UnaryBijectionPreparation
+module
+
+public import Integration7.SpecialVolumeJacobians
+public import Integration7.RawVFVolumeComposition
+public import Integration7.RawPullbackVolumeLifts
+public import IntegrationSection5.RelativeLabelPreservation
+public import IntegrationSection5.UnaryBijectionPreparation
+
+@[expose] public section
 
 /-! Special preparations preserve the volume equation of the conjugated
 bijection. Retained density labels supply the endpoint form identities. -/

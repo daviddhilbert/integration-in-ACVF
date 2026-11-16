@@ -1,5 +1,9 @@
-import Integration7.VolumeDataRelabelingMaps
-import Integration7.VolumeProductPointwise
+module
+
+public import Integration7.VolumeDataRelabelingMaps
+public import Integration7.VolumeProductPointwise
+
+@[expose] public section
 
 /-! Uniform density-bearing product presentations. The toObject map
 retains ordinary RV[0], while pointwise density identities remain available

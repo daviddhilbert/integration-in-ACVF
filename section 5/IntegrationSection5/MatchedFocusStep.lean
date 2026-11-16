@@ -1,5 +1,9 @@
-import IntegrationSection5.ChainAlgebra
-import IntegrationSection5.MatchedFocusReverse
+module
+
+public import IntegrationSection5.ChainAlgebra
+public import IntegrationSection5.MatchedFocusReverse
+
+@[expose] public section
 
 /-! One complete matched-focus step, including the remaining target chain. -/
 

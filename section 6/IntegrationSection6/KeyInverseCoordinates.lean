@@ -1,5 +1,9 @@
-import IntegrationSection6.VolumePreservingElementary
-import IntegrationSection6.AdmissibleFocusRelabeling
+module
+
+public import IntegrationSection6.VolumePreservingElementary
+public import IntegrationSection6.AdmissibleFocusRelabeling
+
+@[expose] public section
 
 /-! Coordinate identities for inverses of the actual RV key isomorphisms. -/
 noncomputable section

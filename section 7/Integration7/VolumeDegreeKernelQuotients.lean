@@ -1,5 +1,9 @@
-import Integration7.GradedVolumeKernelComponents
-import Mathlib.GroupTheory.QuotientGroup.Basic
+module
+
+public import Integration7.GradedVolumeKernelComponents
+public import Mathlib.GroupTheory.QuotientGroup.Basic
+
+@[expose] public section
 
 /-! Each completed degree is quotiented by its actual kernel component.
 Their direct sum is the complete blowup ring as an additive group. The

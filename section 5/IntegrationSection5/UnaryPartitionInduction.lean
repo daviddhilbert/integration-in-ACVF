@@ -1,5 +1,9 @@
-import IntegrationSection5.UnaryCoordinateReduction
-import IntegrationSection5.GammaUnaryPartitionGlue
+module
+
+public import IntegrationSection5.UnaryCoordinateReduction
+public import IntegrationSection5.GammaUnaryPartitionGlue
+
+@[expose] public section
 
 /-! The finite-coordinate induction for Lemma5.6. Every refinement,
 partition and actual relatively unary factor is constructed internally. -/

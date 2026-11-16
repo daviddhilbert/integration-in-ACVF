@@ -1,5 +1,9 @@
-import Integration7.HKNormalizedVolumeUniversalProperty
-import Integration7.HKBasicVolumeDescent
+module
+
+public import Integration7.HKNormalizedVolumeUniversalProperty
+public import Integration7.HKBasicVolumeDescent
+
+@[expose] public section
 
 /-! The actual normalized ring is universal for the concrete geometric
 relations point = cone = 1. Every elementary relation, including degree one, descends by the proved

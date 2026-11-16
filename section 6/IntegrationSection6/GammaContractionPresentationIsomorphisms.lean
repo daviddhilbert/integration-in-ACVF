@@ -1,7 +1,11 @@
-import IntegrationSection6.ContractionPresentationLabels
-import IntegrationSection6.OrderedSelectedWeights
-import IntegrationSection6.FiniteSelectedContractions
-import IntegrationSection6.GammaDegreeTransport
+module
+
+public import IntegrationSection6.ContractionPresentationLabels
+public import IntegrationSection6.OrderedSelectedWeights
+public import IntegrationSection6.FiniteSelectedContractions
+public import IntegrationSection6.GammaDegreeTransport
+
+@[expose] public section
 
 /-! The recursive finite presentation of an actual standard contraction
 is isomorphic in RV[n+k] to its first-volume selected-label presentation.

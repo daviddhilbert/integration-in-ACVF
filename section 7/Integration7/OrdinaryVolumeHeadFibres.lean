@@ -1,8 +1,12 @@
-import Integration7.MixedHeadFibres
-import Integration7.OrdinaryVFVolumeFamilies
-import Integration7.FrozenHeadVolumeIntegrals
-import Integration7.HeadFibreDensityGraphs
-import Integration7.HeadFibreContractionSources
+module
+
+public import Integration7.MixedHeadFibres
+public import Integration7.OrdinaryVFVolumeFamilies
+public import Integration7.FrozenHeadVolumeIntegrals
+public import Integration7.HeadFibreDensityGraphs
+public import Integration7.HeadFibreContractionSources
+
+@[expose] public section
 
 /-! Ordinary degree-zero families have actual unary frozen fibres.
 Their VF realization retains the unit density, and its density graph

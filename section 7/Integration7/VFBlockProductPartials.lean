@@ -1,5 +1,9 @@
-import Integration7.VFBlockProductCoordinates
-import Section9.VFJacobian
+module
+
+public import Integration7.VFBlockProductCoordinates
+public import Section9.VFJacobian
+
+@[expose] public section
 
 /-! The four actual partial-derivative blocks of a Cartesian product. -/
 noncomputable section

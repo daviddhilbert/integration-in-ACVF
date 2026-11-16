@@ -1,8 +1,12 @@
-import IntegrationSection6.LocalRootEquations
-import IntegrationSection6.RootCoordinateExtension
-import IntegrationSection6.RootDomainNormalization
-import IntegrationSection6.ZeroCoordinateAlgebraicity
-import IntegrationSection6.NonzeroCoordinates
+module
+
+public import IntegrationSection6.LocalRootEquations
+public import IntegrationSection6.RootCoordinateExtension
+public import IntegrationSection6.RootDomainNormalization
+public import IntegrationSection6.ZeroCoordinateAlgebraicity
+public import IntegrationSection6.NonzeroCoordinates
+
+@[expose] public section
 
 /-! Pointwise focus equations for every admissible RV tuple, including
 zero unchanged coordinates, over the original generated parameter base. -/

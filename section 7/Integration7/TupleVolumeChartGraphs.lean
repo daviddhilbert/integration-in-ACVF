@@ -1,4 +1,8 @@
-import Integration7.VolumeFamilyChartGraphs
+module
+
+public import Integration7.VolumeFamilyChartGraphs
+
+@[expose] public section
 
 /-! Finite-tuple formulas for volume chart values. This repackages the
 parameterized chart graph without choosing Gamma representatives. -/

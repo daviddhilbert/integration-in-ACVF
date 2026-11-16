@@ -1,5 +1,9 @@
-import IntegrationSection5.GammaMapPresentation
-import IntegrationSection5.PulledFocusDefinability
+module
+
+public import IntegrationSection5.GammaMapPresentation
+public import IntegrationSection5.PulledFocusDefinability
+
+@[expose] public section
 
 /-! A genuine common real presentation of an actual Gamma-definable scalar
 function. Its RV representatives remain internal to the presentation. -/

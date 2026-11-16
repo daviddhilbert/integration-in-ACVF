@@ -1,5 +1,9 @@
-import Integration7.GammaAbsoluteValues
-import VFAlgClosed
+module
+
+public import Integration7.GammaAbsoluteValues
+public import VFAlgClosed
+
+@[expose] public section
 
 /-! Nonzero parameters in the actual blowup cone can have absolute value
 arbitrarily close to one from below. No parameters are added to a base. -/

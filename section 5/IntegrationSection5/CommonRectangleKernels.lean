@@ -1,5 +1,9 @@
-import IntegrationSection5.LiftedHeadRVKernels
-import IntegrationSection5.CommonRectangleRestrictions
+module
+
+public import IntegrationSection5.LiftedHeadRVKernels
+public import IntegrationSection5.CommonRectangleRestrictions
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option allowUnsafeReducibility true in

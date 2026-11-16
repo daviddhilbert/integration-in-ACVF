@@ -1,4 +1,8 @@
-import Integration7.SemiringGroupificationGrothendieck
+module
+
+public import Integration7.SemiringGroupificationGrothendieck
+
+@[expose] public section
 
 /-! Additive maps on a semiring extend through the actual universal
 ring groupification, without requiring a multiplicative target. -/

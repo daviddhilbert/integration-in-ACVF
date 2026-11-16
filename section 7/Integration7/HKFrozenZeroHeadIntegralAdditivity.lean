@@ -1,7 +1,11 @@
-import Integration7.FieldBaseUnaryIntegralAdditivity
-import Integration7.HKZeroFrozenCoproductBijections
-import Integration7.HKFrozenZeroHeadIntegralValues
-import Integration7.DefinableVolumeParameterDescent
+module
+
+public import Integration7.FieldBaseUnaryIntegralAdditivity
+public import Integration7.HKZeroFrozenCoproductBijections
+public import Integration7.HKFrozenZeroHeadIntegralValues
+public import Integration7.DefinableVolumeParameterDescent
+
+@[expose] public section
 
 /-! Weighted RV[0] head-fibre integration preserves sums. Its unary VF
 realizations have the actual original density, and equality descends to the

@@ -1,6 +1,10 @@
-import IntegrationSection6.FiniteBlowups
-import IntegrationSection6.GradedIsp
-import Section4.RVFiniteGradedSemiring
+module
+
+public import IntegrationSection6.FiniteBlowups
+public import IntegrationSection6.GradedIsp
+public import Section4.RVFiniteGradedSemiring
+
+@[expose] public section
 
 /-! Restrict the actual congruences to finite-volume scissors. Preservation
 of all blowup witnesses was proved in FiniteBlowups. -/

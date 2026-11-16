@@ -1,6 +1,10 @@
-import Integration7.MixedVFProductJacobians
-import Integration7.VFProductAlmostEverywhere
-import Integration7.VFVolumeBijections
+module
+
+public import Integration7.MixedVFProductJacobians
+public import Integration7.VFProductAlmostEverywhere
+public import Integration7.VFVolumeBijections
+
+@[expose] public section
 
 /-! Cartesian products of actual full VF volume bijections preserve
 the product volume, using the actual mixed Jacobian and small exceptions. -/

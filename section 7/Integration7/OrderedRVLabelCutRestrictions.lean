@@ -1,6 +1,10 @@
-import Integration7.RVLabelCutHeadPreparations
-import IntegrationSection6.OrderedTargetEqualityTransport
-import IntegrationSection6.OrderedSelectedWeights
+module
+
+public import Integration7.RVLabelCutHeadPreparations
+public import IntegrationSection6.OrderedTargetEqualityTransport
+public import IntegrationSection6.OrderedSelectedWeights
+
+@[expose] public section
 
 /-! Actual ordered contractions restrict to arbitrary original-Gamma
 predicates on selected old RV labels over the same small real base.

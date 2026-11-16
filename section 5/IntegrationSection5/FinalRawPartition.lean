@@ -1,5 +1,9 @@
-import IntegrationSection5.FinalBranchCuts
-import IntegrationSection5.GammaRVPartition
+module
+
+public import IntegrationSection5.FinalBranchCuts
+public import IntegrationSection5.GammaRVPartition
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option maxHeartbeats 2000000

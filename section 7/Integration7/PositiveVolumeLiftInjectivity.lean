@@ -1,5 +1,9 @@
-import Integration7.PositiveVolumeLiftKernel
-import Integration7.PositiveBlowupLiftClasses
+module
+
+public import Integration7.PositiveVolumeLiftKernel
+public import Integration7.PositiveBlowupLiftClasses
+
+@[expose] public section
 
 /-! Injectivity of the actual volume lift on the common-blowup quotient,
 as a consequence of the proved original-base Proposition 7.8. -/

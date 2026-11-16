@@ -1,10 +1,14 @@
-import Integration7.HKGlobalJacobianRepresentatives
-import Integration7.HKSelectedJacobianWeightedScalarRows
-import Integration7.HKZeroJacobianWeightedScalarRows
-import Integration7.HKZeroJacobianPositiveCoefficientRows
-import Integration7.HKAEZeroPositiveCoefficientProducts
-import Integration7.HKAERVWeightedZeroModules
-import Integration7.SupportedVolumeJacobianPositiveCoefficients
+module
+
+public import Integration7.HKGlobalJacobianRepresentatives
+public import Integration7.HKSelectedJacobianWeightedScalarRows
+public import Integration7.HKZeroJacobianWeightedScalarRows
+public import Integration7.HKZeroJacobianPositiveCoefficientRows
+public import Integration7.HKAEZeroPositiveCoefficientProducts
+public import Integration7.HKAERVWeightedZeroModules
+public import Integration7.SupportedVolumeJacobianPositiveCoefficients
+
+@[expose] public section
 
 /-! Every homogeneous coefficient commutes with the actual global
 Jacobian operator, including both measured-zero input and scalar degrees. -/

@@ -1,7 +1,11 @@
-import Integration7.CoordinateCoefficientContractionProductCharts
-import Integration7.SelectedRetainedContractionIntegrals
-import Integration7.FieldBaseUnarySpecialPreparations
-import Integration7.PositiveVolumeClassExtensions
+module
+
+public import Integration7.CoordinateCoefficientContractionProductCharts
+public import Integration7.SelectedRetainedContractionIntegrals
+public import Integration7.FieldBaseUnarySpecialPreparations
+public import Integration7.PositiveVolumeClassExtensions
+
+@[expose] public section
 
 /-! The actual chosen field-base appended integral commutes with a
 literal-coordinate positive constant coefficient when the fibre density

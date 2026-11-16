@@ -1,5 +1,9 @@
-import Integration7.ZeroAuxVolumeCommonPromotion
-import Integration7.VolumeCommonWitnessCompactness
+module
+
+public import Integration7.ZeroAuxVolumeCommonPromotion
+public import Integration7.VolumeCommonWitnessCompactness
+
+@[expose] public section
 
 /-! The finite witness cover may be chosen with every exception map
 already over its original named parameter block. -/

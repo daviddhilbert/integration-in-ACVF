@@ -1,7 +1,11 @@
-import Integration7.VolumeRelabeling
-import IntegrationSection6.CanonicalRVKeys
-import IntegrationSection6.FiniteBlowups
-import IntegrationSection6.KeyInverseCoordinates
+module
+
+public import Integration7.VolumeRelabeling
+public import IntegrationSection6.CanonicalRVKeys
+public import IntegrationSection6.FiniteBlowups
+public import IntegrationSection6.KeyInverseCoordinates
+
+@[expose] public section
 
 /-! Canonical RV labels retain the complete positive volume tuple and
 the old density. Their inverse is the actual old-label projection. -/

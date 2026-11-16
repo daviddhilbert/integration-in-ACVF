@@ -1,5 +1,9 @@
-import Integration7.HKRVVolumeProducts
-import Integration7.ZeroFactorVolumeIsomorphisms
+module
+
+public import Integration7.HKRVVolumeProducts
+public import Integration7.ZeroFactorVolumeIsomorphisms
+
+@[expose] public section
 
 /-! The weighted zero scalar action respects actual volume isomorphisms.
 The existing product charts are reused; the varying scalar weights agree

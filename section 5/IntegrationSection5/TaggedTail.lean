@@ -1,5 +1,9 @@
-import IntegrationSection5.GammaChainAlgebra
-import Section5.Centering
+module
+
+public import IntegrationSection5.GammaChainAlgebra
+public import Section5.Centering
+
+@[expose] public section
 
 /-! Finish an actual unary chain with a tagged target, preserving strict
 alternation. An existing final canonical step is reused. -/

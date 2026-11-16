@@ -1,7 +1,11 @@
-import IntegrationSection6.GammaSchemaIndexedCharts
-import IntegrationSection6.GammaSchemaIndexedEquality
-import IntegrationSection6.GammaSchemaIndexedPresentations
-import IntegrationSection6.FiniteGammaIsoComposition
+module
+
+public import IntegrationSection6.GammaSchemaIndexedCharts
+public import IntegrationSection6.GammaSchemaIndexedEquality
+public import IntegrationSection6.GammaSchemaIndexedPresentations
+public import IntegrationSection6.FiniteGammaIsoComposition
+
+@[expose] public section
 
 /-! A uniformly valid chart acts on arbitrary finite indexed presentations
 of equal source and target rows. All chart composition keeps the original

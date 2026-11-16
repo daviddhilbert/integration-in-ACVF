@@ -1,6 +1,10 @@
-import Integration7.VolumeCertificateContextRealization
-import Integration7.GammaVolumePresentationGeometry
-import Integration7.GammaVolumeParameterGeometry
+module
+
+public import Integration7.VolumeCertificateContextRealization
+public import Integration7.GammaVolumePresentationGeometry
+public import Integration7.GammaVolumeParameterGeometry
+
+@[expose] public section
 
 /-! A certificate realized on named rows retains its original Gamma
 chart. The auxiliary tuple used for the exceptional locus contributes no

@@ -1,4 +1,8 @@
-import IntegrationSection5.RVProjectionPadding
+module
+
+public import IntegrationSection5.RVProjectionPadding
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option allowUnsafeReducibility true in

@@ -1,5 +1,9 @@
-import Integration7.GammaFiniteFamilyContexts
-import IntegrationSection5.UnaryBijectionPreparation
+module
+
+public import Integration7.GammaFiniteFamilyContexts
+public import IntegrationSection5.UnaryBijectionPreparation
+
+@[expose] public section
 
 /-! The checked Section5.2 construction in a small containing context.
 The proof follows UnaryBijectionPreparation, replacing the finite partition's

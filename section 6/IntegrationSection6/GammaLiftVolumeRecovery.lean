@@ -1,4 +1,8 @@
-import IntegrationSection6.GammaLiftRecovery
+module
+
+public import IntegrationSection6.GammaLiftRecovery
+
+@[expose] public section
 
 /-! Recovering the full RV volume graph from a Gamma-definable literal
 lift uses only projection, RV and relational composition over the real base. -/

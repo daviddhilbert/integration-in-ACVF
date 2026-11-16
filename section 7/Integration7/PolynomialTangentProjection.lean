@@ -1,5 +1,9 @@
-import Integration7.RVJacobianRestriction
-import Mathlib.Algebra.MvPolynomial.Variables
+module
+
+public import Integration7.RVJacobianRestriction
+public import Mathlib.Algebra.MvPolynomial.Variables
+
+@[expose] public section
 
 /-! Tangent vectors project along coordinate injections. -/
 noncomputable section

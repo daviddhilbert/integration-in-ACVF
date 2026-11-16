@@ -1,4 +1,8 @@
-import IntegrationSection6.FiniteIntegrationMap
+module
+
+public import IntegrationSection6.FiniteIntegrationMap
+
+@[expose] public section
 
 /-! The actual additive integration equivalence, Proposition6.18. -/
 noncomputable section

@@ -1,5 +1,9 @@
-import IntegrationSection6.ElementaryRestrictions
-import IntegrationSection6.ElementaryPacking
+module
+
+public import IntegrationSection6.ElementaryRestrictions
+public import IntegrationSection6.ElementaryPacking
+
+@[expose] public section
 
 /-! Product geometry for the multiplicative compatibility in Lemma 6.8. -/
 

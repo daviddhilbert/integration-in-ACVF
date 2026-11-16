@@ -1,6 +1,10 @@
-import Integration7.RVVolumeObjects
-import Section9.RVJacobian
-import Section9.VolumeResidueCorrespondence
+module
+
+public import Integration7.RVVolumeObjects
+public import Section9.RVJacobian
+public import Section9.VolumeResidueCorrespondence
+
+@[expose] public section
 
 /-! The two volume equations on an essential finite-volume isomorphism.
 The RV equation holds outside a definable set of smaller RV dimension;

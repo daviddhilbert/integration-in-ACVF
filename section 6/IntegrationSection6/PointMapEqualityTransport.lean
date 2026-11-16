@@ -1,5 +1,9 @@
-import IntegrationSection5.RelativeSpecial
-import IntegrationSection5.GammaGraphOperations
+module
+
+public import IntegrationSection5.RelativeSpecial
+public import IntegrationSection5.GammaGraphOperations
+
+@[expose] public section
 
 /-! Equality transport of the target of an actual point map retains its
 values, relative specialness and complete original-Gamma graph. -/

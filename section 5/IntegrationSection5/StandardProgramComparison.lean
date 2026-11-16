@@ -1,5 +1,9 @@
-import IntegrationSection5.ProgramStandardPresentation
-import IntegrationSection5.SurjectiveRVComparison
+module
+
+public import IntegrationSection5.ProgramStandardPresentation
+public import IntegrationSection5.SurjectiveRVComparison
+
+@[expose] public section
 
 /-! Exact source, kernel and volume formulas for standard contractions
 built from ordered programs, retaining the given VF-coordinate order. -/

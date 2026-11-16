@@ -1,4 +1,8 @@
-import Integration7.GeometricFiniteStandardVolumeComparisons
+module
+
+public import Integration7.GeometricFiniteStandardVolumeComparisons
+
+@[expose] public section
 
 /-! The actual normalized contraction object for any finite-label
 positive VF domain with a retained nonzero density coordinate. -/

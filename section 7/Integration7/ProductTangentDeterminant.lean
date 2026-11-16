@@ -1,5 +1,9 @@
-import Integration7.PolynomialTangentCoordinatePairs
-import Mathlib.LinearAlgebra.Matrix.Determinant.Basic
+module
+
+public import Integration7.PolynomialTangentCoordinatePairs
+public import Mathlib.LinearAlgebra.Matrix.Determinant.Basic
+
+@[expose] public section
 
 /-! A full tangent graph that projects to two complementary tangent
 graphs has their block-diagonal determinant. -/

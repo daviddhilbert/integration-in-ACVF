@@ -1,4 +1,8 @@
-import IntegrationSection6.GammaFiniteElementary
+module
+
+public import IntegrationSection6.GammaFiniteElementary
+
+@[expose] public section
 
 /-! In RV[k], a Gamma-definable weight-preserving bijection has both
 finite volume-image conditions automatically. This keeps the full original

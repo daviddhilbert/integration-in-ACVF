@@ -1,5 +1,9 @@
-import Integration7.NativeRawRVMapTransfers
-import Integration7.NativeVolumeDomains
+module
+
+public import Integration7.NativeRawRVMapTransfers
+public import Integration7.NativeVolumeDomains
+
+@[expose] public section
 
 /-! Pure RV maps act on the literal label domains used by the volume
 objects, with their original Gamma graph and bijectivity preserved. -/

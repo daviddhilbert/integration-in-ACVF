@@ -1,14 +1,18 @@
-import Integration7.DefinablyClosedVolumeContexts
-import Integration7.FieldBaseVolumeFamilyIntegrals
-import Integration7.FrozenHeadIntegralValues
-import Integration7.FrozenHeadVolumeIntegrals
-import Integration7.HeadFibreContractionCoordinates
-import Integration7.HeadFibreContractionSources
-import Integration7.HeadFibreDensityGraphs
-import Integration7.HeadFibreIntegralIsomorphisms
-import Integration7.MixedHeadFibres
-import Integration7.SelectedHeadFibreRows
-import Integration7.SelectedVolumeHeadFibres
+module
+
+public import Integration7.DefinablyClosedVolumeContexts
+public import Integration7.FieldBaseVolumeFamilyIntegrals
+public import Integration7.FrozenHeadIntegralValues
+public import Integration7.FrozenHeadVolumeIntegrals
+public import Integration7.HeadFibreContractionCoordinates
+public import Integration7.HeadFibreContractionSources
+public import Integration7.HeadFibreDensityGraphs
+public import Integration7.HeadFibreIntegralIsomorphisms
+public import Integration7.MixedHeadFibres
+public import Integration7.SelectedHeadFibreRows
+public import Integration7.SelectedVolumeHeadFibres
+
+@[expose] public section
 set_option pp.universes true
 set_option pp.proofs false
 set_option pp.deepTerms true

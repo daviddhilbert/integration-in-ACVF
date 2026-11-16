@@ -1,5 +1,9 @@
-import IntegrationSection6.GammaSchemaPresentationEquality
-import IntegrationSection6.GammaIsomorphismRealization
+module
+
+public import IntegrationSection6.GammaSchemaPresentationEquality
+public import IntegrationSection6.GammaIsomorphismRealization
+
+@[expose] public section
 
 /-! A valid chart schema acts on any native presentations of equal source
 and target rows. Equality is a checked formula condition, not a new choice

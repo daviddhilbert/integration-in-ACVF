@@ -1,4 +1,8 @@
-import IntegrationSection6.GammaIndexedFiniteObjects
+module
+
+public import IntegrationSection6.GammaIndexedFiniteObjects
+
+@[expose] public section
 
 /-! The actual coordinate reassociation between an indexed elementary
 row and the elementary blowup of the indexed object. -/

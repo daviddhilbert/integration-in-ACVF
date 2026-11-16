@@ -1,4 +1,8 @@
-import IntegrationSection6.MixedCoordinatePointMaps
+module
+
+public import IntegrationSection6.MixedCoordinatePointMaps
+
+@[expose] public section
 
 /-! Split the old RV block of a mixed point into base labels and
 unchanged auxiliary labels, on arbitrary subsets of the base point space. -/

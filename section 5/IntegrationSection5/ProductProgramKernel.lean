@@ -1,4 +1,8 @@
-import IntegrationSection5.ProductContractionProgram
+module
+
+public import IntegrationSection5.ProductContractionProgram
+
+@[expose] public section
 
 /-! The full product contraction has precisely the joint kernel of the
 two prepared unary RV keys. -/

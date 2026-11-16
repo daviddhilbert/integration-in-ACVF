@@ -1,5 +1,9 @@
-import IntegrationSection6.IndexedCoproductEquivalences
-import IntegrationSection6.GammaIndexedTagGraphs
+module
+
+public import IntegrationSection6.IndexedCoproductEquivalences
+public import IntegrationSection6.GammaIndexedTagGraphs
+
+@[expose] public section
 
 /-! The coproduct/index interchange has its full original-Gamma graph,
 constructed from the two genuine RV tags and the joint source domains. -/

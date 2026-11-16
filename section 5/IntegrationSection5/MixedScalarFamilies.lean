@@ -1,6 +1,10 @@
-import IntegrationSection4.GammaRVMapOperations
-import IntegrationSection4.GammaScalarFamilies
-import IntegrationSection5.GammaGraphOperations
+module
+
+public import IntegrationSection4.GammaRVMapOperations
+public import IntegrationSection4.GammaScalarFamilies
+public import IntegrationSection5.GammaGraphOperations
+
+@[expose] public section
 
 /-! Uniform scalar families with complementary VF coordinates and old RV
 labels both retained as free parameters over the original Gamma base. -/

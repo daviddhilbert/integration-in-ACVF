@@ -1,5 +1,9 @@
-import Integration7.PackedEssentialBlowupCharts
-import Integration7.GammaEssentialCoordinateGraphs
+module
+
+public import Integration7.PackedEssentialBlowupCharts
+public import Integration7.GammaEssentialCoordinateGraphs
+
+@[expose] public section
 
 /-! The canonical elementary chart is the identity on packed labels.
 Its full original-Gamma graph therefore follows from that of its actual

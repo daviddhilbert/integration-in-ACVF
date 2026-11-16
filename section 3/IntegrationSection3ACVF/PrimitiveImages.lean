@@ -1,5 +1,9 @@
-import IntegrationSection3ACVF.PrimitiveDecomposition
-import IntegrationSection3ACVF.PuncturedImageComponents
+module
+
+public import IntegrationSection3ACVF.PrimitiveDecomposition
+public import IntegrationSection3ACVF.PuncturedImageComponents
+
+@[expose] public section
 
 /-! Lemma 3.8 with a genuine primitive component,
 partial-domain definable graph, and the unchanged interpreted base. -/

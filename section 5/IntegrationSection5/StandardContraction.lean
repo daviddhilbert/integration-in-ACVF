@@ -1,6 +1,10 @@
-import IntegrationSection5.GammaOrderedContraction
-import IntegrationSection5.StandardContractionLift
-import IntegrationSection5.VFPermutation
+module
+
+public import IntegrationSection5.GammaOrderedContraction
+public import IntegrationSection5.StandardContractionLift
+public import IntegrationSection5.VFPermutation
+
+@[expose] public section
 
 /-! Definition5.5: an actual sequence of relative preparations in a specified
 VF-coordinate order. The natural map restores the original VF ordering and

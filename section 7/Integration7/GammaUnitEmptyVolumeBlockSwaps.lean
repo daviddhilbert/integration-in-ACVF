@@ -1,6 +1,10 @@
-import Integration7.GammaUnitVolumeObjectGraphs
-import Integration7.GammaVolumePresentationGeometry
-import IntegrationSection6.GammaSwappedVolumes
+module
+
+public import Integration7.GammaUnitVolumeObjectGraphs
+public import Integration7.GammaVolumePresentationGeometry
+public import IntegrationSection6.GammaSwappedVolumes
+
+@[expose] public section
 
 /-! Swapping an empty old-volume block and the sole VF volume tag
 does not change a unit-density volume object or its original-Gamma chart. -/

@@ -1,8 +1,12 @@
-import Integration7.OrdinaryFamilyPositiveCoefficientRows
-import Integration7.DefinableVolumeFamilySelectionRows
-import Integration7.AEOrdinaryVolumeFunctionAddition
-import Integration7.AERVVolumeFunctionAdditiveStructure
-import Integration7.PositiveVolumeClassExtensions
+module
+
+public import Integration7.OrdinaryFamilyPositiveCoefficientRows
+public import Integration7.DefinableVolumeFamilySelectionRows
+public import Integration7.AEOrdinaryVolumeFunctionAddition
+public import Integration7.AERVVolumeFunctionAdditiveStructure
+public import Integration7.PositiveVolumeClassExtensions
+
+@[expose] public section
 
 /-! Positive coefficients multiply ordinary-valued AE functions into
 positive-valued AE functions. Both quotients are respected on actual rows. -/

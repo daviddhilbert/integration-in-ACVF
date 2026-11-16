@@ -1,4 +1,8 @@
-import IntegrationSection6.GammaIndexedFiniteObjects
+module
+
+public import IntegrationSection6.GammaIndexedFiniteObjects
+
+@[expose] public section
 
 /-! Explicit charts for RV-indexed assemblies. -/
 noncomputable section

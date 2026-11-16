@@ -1,4 +1,8 @@
-import IntegrationSection5.GammaChainAlgebra
+module
+
+public import IntegrationSection5.GammaChainAlgebra
+
+@[expose] public section
 
 /-! The matched finite-chain construction with full original Gamma graphs. -/
 

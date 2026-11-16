@@ -1,4 +1,8 @@
-import IntegrationSection5.FibreFocusGeometry
+module
+
+public import IntegrationSection5.FibreFocusGeometry
+
+@[expose] public section
 
 /-! Definability of an actual coordinate-fibre focus over the base obtained
 by naming precisely the other VF coordinates. -/

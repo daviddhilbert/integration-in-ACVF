@@ -1,4 +1,8 @@
-import IntegrationSection6.OriginalAdmissibleFocus
+module
+
+public import IntegrationSection6.OriginalAdmissibleFocus
+
+@[expose] public section
 
 /-! The original-model focus comparison preserves every volume coordinate.
 Its lift therefore gives the actual VF-identity relabeling without a bound

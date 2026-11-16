@@ -1,4 +1,8 @@
-import Integration7.HKPointIsomorphismCodes
+module
+
+public import Integration7.HKPointIsomorphismCodes
+
+@[expose] public section
 
 /-! Changing equal fibre carrier presentations retains the literal
 equation between the two density labels. -/

@@ -1,5 +1,9 @@
-import IntegrationSection3ACVF.ThinResidueCoordinates
-import IntegrationSection3.FiniteTaggedHoles
+module
+
+public import IntegrationSection3ACVF.ThinResidueCoordinates
+public import IntegrationSection3.FiniteTaggedHoles
+
+@[expose] public section
 
 /-! Actual coordinates for a finite disjoint family of thin components.
 The tag is an actual distinct residue-field element, and each fibre is

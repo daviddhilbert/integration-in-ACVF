@@ -1,6 +1,10 @@
-import IntegrationSection3ACVF.RealOpenImageCovers
-import IntegrationSection3ACVF.OpenToOpenPartitions
-import IntegrationSection3ACVF.RVInverse
+module
+
+public import IntegrationSection3ACVF.RealOpenImageCovers
+public import IntegrationSection3ACVF.OpenToOpenPartitions
+public import IntegrationSection3ACVF.RVInverse
+
+@[expose] public section
 
 /-! Proposition3.19 over a small real parameter base. Both compactness
 steps, the inverse and the final finite disjoint refinement are proved.

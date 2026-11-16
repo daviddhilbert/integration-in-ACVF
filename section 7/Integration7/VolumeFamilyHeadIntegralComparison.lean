@@ -1,6 +1,10 @@
-import Integration7.NativeCoordinateVolumeFamilyRows
-import Integration7.GammaHeadVolumeCommonComparison
-import Integration7.SelectedFamilyGeometricCommon
+module
+
+public import Integration7.NativeCoordinateVolumeFamilyRows
+public import Integration7.GammaHeadVolumeCommonComparison
+public import Integration7.SelectedFamilyGeometricCommon
+
+@[expose] public section
 
 /-! Genuine one-head fibre integration preserves the ordinary row
 common-blowup relation. All comparisons descend to the original finite

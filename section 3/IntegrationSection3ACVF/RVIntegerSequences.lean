@@ -1,6 +1,10 @@
-import IntegrationSection3ACVF.GammaCosetGeometry
-import IntegrationSection3.ValuationProgressions
-import Section3.DiscCentres
+module
+
+public import IntegrationSection3ACVF.GammaCosetGeometry
+public import IntegrationSection3.ValuationProgressions
+public import Section3.DiscCentres
+
+@[expose] public section
 
 /-! A sequence of equal nonzero RV increments has the RV of its integer
 multiple displacement. Residue characteristic zero is explicit. -/

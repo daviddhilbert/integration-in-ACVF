@@ -1,7 +1,11 @@
-import IntegrationSection6.FiniteGammaPartialCharts
-import IntegrationSection6.FiniteGammaLiteralCharts
-import IntegrationSection6.FiniteGammaChainTransport
-import IntegrationSection6.CanonicalPullbackPresentation
+module
+
+public import IntegrationSection6.FiniteGammaPartialCharts
+public import IntegrationSection6.FiniteGammaLiteralCharts
+public import IntegrationSection6.FiniteGammaChainTransport
+public import IntegrationSection6.CanonicalPullbackPresentation
+
+@[expose] public section
 
 /-! Corollary6.10 with full original-Gamma charts on every actual RV[k]
 blowup, rather than only Gamma certificates for the mixed special maps. -/

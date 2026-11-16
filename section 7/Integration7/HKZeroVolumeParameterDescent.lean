@@ -1,5 +1,9 @@
-import Integration7.DefinableNameMapDescent
-import Integration7.HKZeroCoefficientExtensions
+module
+
+public import Integration7.DefinableNameMapDescent
+public import Integration7.HKZeroCoefficientExtensions
+
+@[expose] public section
 
 /-! Definable parameter names do not identify new exact weighted-zero
 classes. The actual finite label bijection descends with its density equation. -/

@@ -1,4 +1,8 @@
-import Integration7.RVLabelConstraintHeadProjections
+module
+
+public import Integration7.RVLabelConstraintHeadProjections
+
+@[expose] public section
 
 /-! Literal coordinate identities for the head key of a shared-label
 special preparation. -/

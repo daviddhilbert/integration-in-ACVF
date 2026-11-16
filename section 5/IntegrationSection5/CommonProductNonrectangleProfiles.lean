@@ -1,5 +1,9 @@
-import IntegrationSection5.CommonProductPaddedTails
-import IntegrationSection5.PaddedBranchProfileIso
+module
+
+public import IntegrationSection5.CommonProductPaddedTails
+public import IntegrationSection5.PaddedBranchProfileIso
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 open Classical FirstOrder FirstOrder.Language

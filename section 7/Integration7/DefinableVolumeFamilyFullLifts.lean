@@ -1,6 +1,10 @@
-import Integration7.DefinableVolumeFamilySelections
-import Integration7.SelectedFamilyFullLifts
-import Integration7.VFVolumeBijections
+module
+
+public import Integration7.DefinableVolumeFamilySelections
+public import Integration7.SelectedFamilyFullLifts
+public import Integration7.VFVolumeBijections
+
+@[expose] public section
 
 /-! Full VF realizations of arbitrary definable positive volume maps.
 The selected presentation adds graph labels; the full lift below forgets

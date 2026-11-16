@@ -1,5 +1,9 @@
-import Integration7.OrdinaryUnaryPreparedVolumeComparisons
-import Integration7.GammaVolumeSliceCommonUniformity
+module
+
+public import Integration7.OrdinaryUnaryPreparedVolumeComparisons
+public import Integration7.GammaVolumeSliceCommonUniformity
+
+@[expose] public section
 
 /-! The first-volume unary comparison retains actual original-Gamma geometric
 common blowups, including all comparison charts and center algebraicity. -/

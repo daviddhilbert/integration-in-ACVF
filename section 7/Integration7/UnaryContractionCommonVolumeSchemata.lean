@@ -1,8 +1,12 @@
-import Integration7.UnaryVolumeContractionConjugacy
-import Integration7.GammaUnaryVolumeCommonSchemaWithoutField
-import Integration7.ContractionRetainedDensityLabels
-import IntegrationSection6.FiniteStandardContractions
-import Integration7.GammaVolumeSliceDensityAssembly
+module
+
+public import Integration7.UnaryVolumeContractionConjugacy
+public import Integration7.GammaUnaryVolumeCommonSchemaWithoutField
+public import Integration7.ContractionRetainedDensityLabels
+public import IntegrationSection6.FiniteStandardContractions
+public import Integration7.GammaVolumeSliceDensityAssembly
+
+@[expose] public section
 
 /-! Actual arbitrary unary contractions of measure-preservingly
 isomorphic mixed sets have common volume-blowup formula witnesses.

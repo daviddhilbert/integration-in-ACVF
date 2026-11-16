@@ -1,4 +1,8 @@
-import IntegrationSection3ACVF.GammaDifferenceRealization
+module
+
+public import IntegrationSection3ACVF.GammaDifferenceRealization
+
+@[expose] public section
 
 /-! The domain of the descended slope relation for an ordinary open
 ball is exactly the actual Gamma tail above its radius. -/

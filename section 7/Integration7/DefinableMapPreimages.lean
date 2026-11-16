@@ -1,4 +1,8 @@
-import Section4.Products
+module
+
+public import Section4.Products
+
+@[expose] public section
 
 noncomputable section
 open FirstOrder FirstOrder.Language

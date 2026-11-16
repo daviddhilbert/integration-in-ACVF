@@ -1,5 +1,9 @@
-import Integration7.HKZeroVolumeLifts
-import Section9.MixedJacobian
+module
+
+public import Integration7.HKZeroVolumeLifts
+public import Section9.MixedJacobian
+
+@[expose] public section
 
 /-! The nonvacuous weighted degree-zero descent needed by Corollary 2.34.
 The given lift's actual zero-arity Jacobian is one, and its supplied label

@@ -1,5 +1,9 @@
-import IntegrationSection6.GammaSchemaRowValues
-import IntegrationSection6.GammaAdmissibilitySchemata
+module
+
+public import IntegrationSection6.GammaSchemaRowValues
+public import IntegrationSection6.GammaAdmissibilitySchemata
+
+@[expose] public section
 
 /-! The tuple volume-image formula is exactly the image of the actual
 row volume value at every valid row. -/

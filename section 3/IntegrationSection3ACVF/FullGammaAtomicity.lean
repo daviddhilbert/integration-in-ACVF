@@ -1,6 +1,10 @@
-import IntegrationSection3ACVF.FullGammaPoint
-import IntegrationSection3ACVF.AdjoinGamma
-import IntegrationSection3ACVF.AdjoinBall
+module
+
+public import IntegrationSection3ACVF.FullGammaPoint
+public import IntegrationSection3ACVF.AdjoinGamma
+public import IntegrationSection3ACVF.AdjoinBall
+
+@[expose] public section
 
 /-! Lemma 3.3 with additional genuine ball names in the original base. -/
 

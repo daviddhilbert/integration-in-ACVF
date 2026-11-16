@@ -1,4 +1,8 @@
-import IntegrationSection2.VolumeDescentTheorem
+module
+
+public import IntegrationSection2.VolumeDescentTheorem
+
+@[expose] public section
 
 /-! The legacy all-degree interface retains the neutral-form specialization
 at zero and the full positive-degree forms. Under the author's corrected

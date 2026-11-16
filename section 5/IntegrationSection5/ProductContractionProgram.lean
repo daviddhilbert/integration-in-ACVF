@@ -1,7 +1,11 @@
-import IntegrationSection5.ProductContractionSource
-import IntegrationSection5.ProductContractionKernels
-import IntegrationSection5.UnaryCoordinateSourceMap
-import IntegrationSection5.GammaOrderedContraction
+module
+
+public import IntegrationSection5.ProductContractionSource
+public import IntegrationSection5.ProductContractionKernels
+public import IntegrationSection5.UnaryCoordinateSourceMap
+public import IntegrationSection5.GammaOrderedContraction
+
+@[expose] public section
 
 /-! An actual two-stage contraction of a product, constructed from actual
 unary special preparations of its two factors. -/

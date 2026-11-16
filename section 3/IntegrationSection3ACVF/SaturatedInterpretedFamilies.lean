@@ -1,5 +1,9 @@
-import IntegrationSection3.ImaginaryFamilies
-import Section4.NonalgebraicTypes
+module
+
+public import IntegrationSection3.ImaginaryFamilies
+public import Section4.NonalgebraicTypes
+
+@[expose] public section
 
 /-! An infinite definable family of nonempty disjoint interpreted sets
 has a nonalgebraic index over a small real base. Genuine saturation is

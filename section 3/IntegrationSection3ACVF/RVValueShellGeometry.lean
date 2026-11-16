@@ -1,6 +1,10 @@
-import IntegrationSection3ACVF.BetaSubballFamilies
-import IntegrationSection3ACVF.RVIntegerOrbits
-import IntegrationSection3ACVF.OpenBallRVGeometry
+module
+
+public import IntegrationSection3ACVF.BetaSubballFamilies
+public import IntegrationSection3ACVF.RVIntegerOrbits
+public import IntegrationSection3ACVF.OpenBallRVGeometry
+
+@[expose] public section
 
 /-! Actual nonzero RV fibres and infinite RV images of value shells. -/
 

@@ -1,4 +1,8 @@
-import Section9.RVScaleRatio
+module
+
+public import Section9.RVScaleRatio
+
+@[expose] public section
 
 /-! A parameter-free term for the actual RV tuple product, including the
 empty product. This supplies a finite formula for Gamma weight balance. -/

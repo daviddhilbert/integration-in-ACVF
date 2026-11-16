@@ -1,4 +1,8 @@
-import Integration7.NormalizedVolumeProductCommutativity
+module
+
+public import Integration7.NormalizedVolumeProductCommutativity
+
+@[expose] public section
 
 /-! Commutativity of the actual normalized coefficient ring, proved
 from geometric homogeneous product swaps and point stabilization.

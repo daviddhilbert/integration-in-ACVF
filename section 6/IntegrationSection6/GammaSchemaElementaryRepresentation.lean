@@ -1,5 +1,9 @@
-import IntegrationSection6.GammaSchemaNativeRows
-import IntegrationSection6.GammaRawElementarySchemaBridge
+module
+
+public import IntegrationSection6.GammaSchemaNativeRows
+public import IntegrationSection6.GammaRawElementarySchemaBridge
+
+@[expose] public section
 
 /-! The generic elementary schema represents the actual native elementary
 blowup of every represented admissible row, at arbitrary internal codes. -/

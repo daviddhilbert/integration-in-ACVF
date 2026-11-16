@@ -1,5 +1,9 @@
-import IntegrationSection5.ActiveUnaryProjection
-import IntegrationSection5.GammaGraphOperations
+module
+
+public import IntegrationSection5.ActiveUnaryProjection
+public import IntegrationSection5.GammaGraphOperations
+
+@[expose] public section
 
 /-! Actual source projections to a unary VF presentation, with their full
 original-base graphs and uniqueness at RV arity zero. -/

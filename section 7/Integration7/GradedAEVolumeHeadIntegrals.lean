@@ -1,4 +1,8 @@
-import Integration7.AEVolumeHeadZeros
+module
+
+public import Integration7.AEVolumeHeadZeros
+
+@[expose] public section
 
 /-! The full finite graded head integral sums the actual homogeneous
 head maps, with the coefficient degree raised by one. Zero components

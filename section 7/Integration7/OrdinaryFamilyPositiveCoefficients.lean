@@ -1,7 +1,11 @@
-import Integration7.OrdinaryVFVolumeFamilies
-import Integration7.DefinableVFVolumeFamilies
-import Integration7.MixedRVFactorDomains
-import Integration7.GradedVolumeProducts
+module
+
+public import Integration7.OrdinaryVFVolumeFamilies
+public import Integration7.DefinableVFVolumeFamilies
+public import Integration7.MixedRVFactorDomains
+public import Integration7.GradedVolumeProducts
+
+@[expose] public section
 
 /-! A positive coefficient times an ordinary-valued family retains
 only the coefficient's volume tuple and density, on the actual product. -/

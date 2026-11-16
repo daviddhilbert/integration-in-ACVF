@@ -1,6 +1,10 @@
-import Integration7.RectangleFamilyHeadImageCarriers
-import Integration7.RVLabelConstraintSpecialPreparations
-import Integration7.GammaRectangleFamilyHeadPreparations
+module
+
+public import Integration7.RectangleFamilyHeadImageCarriers
+public import Integration7.RVLabelConstraintSpecialPreparations
+public import Integration7.GammaRectangleFamilyHeadPreparations
+
+@[expose] public section
 
 /-! An independently chosen preparation of the original labelled tail
 lifts through the head contraction of the whole rectangle family. -/

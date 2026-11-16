@@ -1,5 +1,9 @@
-import Integration7.NonbalancedCellContractionComparisons
-import Integration7.GammaNamesGenericParameters
+module
+
+public import Integration7.NonbalancedCellContractionComparisons
+public import Integration7.GammaNamesGenericParameters
+
+@[expose] public section
 
 /-! The arbitrary specified nonbalanced-cell comparison in the common-name
 context of the original Gamma base, with preservation of VF independence

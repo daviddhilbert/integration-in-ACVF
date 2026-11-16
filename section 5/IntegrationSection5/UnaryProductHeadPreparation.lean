@@ -1,5 +1,9 @@
-import IntegrationSection5.LiftedUnaryProductGeometry
-import IntegrationSection5.HeadPreparation
+module
+
+public import IntegrationSection5.LiftedUnaryProductGeometry
+public import IntegrationSection5.HeadPreparation
+
+@[expose] public section
 
 /-! Product preparation constructs its saturated target from the exact
 image formula of the actual lifted unary special chain. -/

@@ -1,5 +1,9 @@
-import Integration7.HeadCoordinateFibrePreparation
-import IntegrationSection6.StandardProgramPresentations
+module
+
+public import Integration7.HeadCoordinateFibrePreparation
+public import IntegrationSection6.StandardProgramPresentations
+
+@[expose] public section
 
 /-! The frozen fibre of an actual head preparation gives a unary standard
 contraction. Its final RV labels are exactly the original head fibre. -/

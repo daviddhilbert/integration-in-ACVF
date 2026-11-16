@@ -1,6 +1,10 @@
-import IntegrationSection6.GammaFamilyRows
-import IntegrationSection6.GammaSchemaFiniteRows
-import IntegrationSection6.MixedCoordinatePointMaps
+module
+
+public import IntegrationSection6.GammaFamilyRows
+public import IntegrationSection6.GammaSchemaFiniteRows
+public import IntegrationSection6.MixedCoordinatePointMaps
+
+@[expose] public section
 
 /-! A mixed family with a finite coordinate-volume map gives an actual
 finite RV family schema, with no bound on the number of parameter values. -/

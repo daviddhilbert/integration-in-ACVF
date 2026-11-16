@@ -1,4 +1,8 @@
-import IntegrationSection5.RelativeFibreGeometry
+module
+
+public import IntegrationSection5.RelativeFibreGeometry
+
+@[expose] public section
 
 /-! Insert and project an active VF prefix while freezing a complementary
 VF tuple. The ambient arity n+p is chosen to commute with head deletion. -/

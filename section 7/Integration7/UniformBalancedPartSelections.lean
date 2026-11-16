@@ -1,6 +1,10 @@
-import Integration7.UniformCellShapePartitions
-import Integration7.UniformSelectedCellPresentations
-import Integration7.GammaRVPartImages
+module
+
+public import Integration7.UniformCellShapePartitions
+public import Integration7.UniformSelectedCellPresentations
+public import Integration7.GammaRVPartImages
+
+@[expose] public section
 
 /-! The balanced geometric part is an actual whole-parameter selection
 of the original uniform chart. Its selected presentation satisfies

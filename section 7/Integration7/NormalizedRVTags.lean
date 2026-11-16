@@ -1,5 +1,9 @@
-import Integration7.VolumeCoproduct
-import Section5.GammaLift
+module
+
+public import Integration7.VolumeCoproduct
+public import Section5.GammaLift
+
+@[expose] public section
 
 /-! Normalization preserves the literal RV zero/one tag tuples. -/
 

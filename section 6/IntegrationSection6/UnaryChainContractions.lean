@@ -1,6 +1,10 @@
-import IntegrationSection6.ArbitraryFiniteContractions
-import IntegrationSection6.GammaFiniteMixedBijections
-import IntegrationSection5.GammaUnaryChain
+module
+
+public import IntegrationSection6.ArbitraryFiniteContractions
+public import IntegrationSection6.GammaFiniteMixedBijections
+public import IntegrationSection5.GammaUnaryChain
+
+@[expose] public section
 
 /-! Finite relatively unary chains preserve actual contraction classes
 in all orders. Intermediate finite RV fibres are derived from the actual

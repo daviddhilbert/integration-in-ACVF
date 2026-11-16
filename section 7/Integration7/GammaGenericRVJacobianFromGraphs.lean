@@ -1,5 +1,9 @@
-import Integration7.GammaVolumePairGraphs
-import IntegrationSection6.GammaNativeRawObjects
+module
+
+public import Integration7.GammaVolumePairGraphs
+public import IntegrationSection6.GammaNativeRawObjects
+
+@[expose] public section
 
 /-! Original-Gamma coordinate and label graphs supply the raw
 correspondence certificate needed by the Gamma generic-Jacobian theorem. -/

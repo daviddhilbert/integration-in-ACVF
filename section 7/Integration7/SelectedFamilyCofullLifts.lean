@@ -1,7 +1,11 @@
-import Integration7.SelectedFamilyRestrictions
-import Integration7.EssentialVolumeLiftIsomorphisms
-import Integration7.VFVolumeComposition
-import Integration7.VFVolumeClasses
+module
+
+public import Integration7.SelectedFamilyRestrictions
+public import Integration7.EssentialVolumeLiftIsomorphisms
+public import Integration7.VFVolumeComposition
+public import Integration7.VFVolumeClasses
+
+@[expose] public section
 
 /-! Removing a definable VF-small base exception from an RV-valued
 family gives an actual cofull volume isomorphism of its full VF realization. -/

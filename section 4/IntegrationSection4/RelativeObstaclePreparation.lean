@@ -1,6 +1,10 @@
-import IntegrationSection4.RelativeSlices
-import Section5.VerticalObstacles
-import Section3.GammaValueLaws
+module
+
+public import IntegrationSection4.RelativeSlices
+public import Section5.VerticalObstacles
+public import Section3.GammaValueLaws
+
+@[expose] public section
 
 /-! Root-free vertical relation preparation. The zero-obstacle argument is
 adapted from Special transformations, Section5/Assembly.lean, revision

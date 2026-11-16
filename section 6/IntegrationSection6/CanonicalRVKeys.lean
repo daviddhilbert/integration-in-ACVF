@@ -1,4 +1,8 @@
-import IntegrationSection6.ElementaryKeys
+module
+
+public import IntegrationSection6.ElementaryKeys
+
+@[expose] public section
 
 /-! Canonical RV labeling retains the old domain tuple and appends its
 volume tuple. It is an actual volume-preserving RV isomorphism, without

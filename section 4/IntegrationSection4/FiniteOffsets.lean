@@ -1,4 +1,8 @@
-import IntegrationSection4.FiniteRVScalarImage
+module
+
+public import IntegrationSection4.FiniteRVScalarImage
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

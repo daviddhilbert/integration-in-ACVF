@@ -1,4 +1,8 @@
-import Integration7.SelectedRVVFTailProgramHeads
+module
+
+public import Integration7.SelectedRVVFTailProgramHeads
+
+@[expose] public section
 
 /-! Projection from the program-shaped VF realization retains all
 original RV labels. In the final RV-only source, equal labels determine

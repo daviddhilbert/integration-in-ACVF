@@ -1,5 +1,9 @@
-import Integration7.HKVolumeClassCoherence
-import Mathlib.Algebra.DirectSum.Ring
+module
+
+public import Integration7.HKVolumeClassCoherence
+public import Mathlib.Algebra.DirectSum.Ring
+
+@[expose] public section
 
 /-! The graded semiring of actual volume-isomorphism classes. Only
 associativity and distributivity are used; no commutativity is asserted. -/

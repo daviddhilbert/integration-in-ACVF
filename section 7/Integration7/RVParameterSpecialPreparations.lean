@@ -1,6 +1,10 @@
-import Integration7.RVParameterLiftTargetPullbacks
-import Integration7.GammaRVLabelChainLifts
-import Integration7.UnarySpecialHeadPreparations
+module
+
+public import Integration7.RVParameterLiftTargetPullbacks
+public import Integration7.GammaRVLabelChainLifts
+public import Integration7.UnarySpecialHeadPreparations
+
+@[expose] public section
 
 /-! Actual unary special preparations with an arbitrary carried RV
 parameter domain, rather than one globally constant parameter tuple. -/

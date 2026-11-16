@@ -1,8 +1,12 @@
-import Integration7.VolumeFamilyLiftDensityGraphs
-import Integration7.CanonicalVolumeFamilyIntegrals
-import Integration7.VolumeFamilyBaseExceptions
-import Integration7.ConstantCoordinateDensityObjects
-import Integration7.AllDegreeVFVolumeClassProducts
+module
+
+public import Integration7.VolumeFamilyLiftDensityGraphs
+public import Integration7.CanonicalVolumeFamilyIntegrals
+public import Integration7.VolumeFamilyBaseExceptions
+public import Integration7.ConstantCoordinateDensityObjects
+public import Integration7.AllDegreeVFVolumeClassProducts
+
+@[expose] public section
 
 /-! The canonical native realization and the literal full VF family
 lift agree, with the density graph and arithmetic degree identifications

@@ -1,5 +1,9 @@
-import IntegrationSection6.FiniteGammaEquivalence
-import Mathlib.GroupTheory.Congruence.Basic
+module
+
+public import IntegrationSection6.FiniteGammaEquivalence
+public import Mathlib.GroupTheory.Congruence.Basic
+
+@[expose] public section
 
 /-! Lemma6.8: additive compatibility of actual Gamma-certified common
 finite blowups, on actual RV[k] isomorphism classes at a presentation. -/

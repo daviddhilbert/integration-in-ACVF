@@ -1,6 +1,10 @@
-import Integration7.GammaVolumeObjectGraphs
-import Integration7.GammaVolumeIsoGraphOperations
-import Integration7.VolumeSubobjects
+module
+
+public import Integration7.GammaVolumeObjectGraphs
+public import Integration7.GammaVolumeIsoGraphOperations
+public import Integration7.VolumeSubobjects
+
+@[expose] public section
 
 /-! Images of Gamma essential subobjects and the actual restricted
 volume isomorphism retain the original Gamma base. -/

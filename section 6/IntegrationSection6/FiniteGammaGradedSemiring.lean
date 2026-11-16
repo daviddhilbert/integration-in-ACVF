@@ -1,5 +1,9 @@
-import IntegrationSection6.FiniteGammaClassProducts
-import Mathlib.Algebra.DirectSum.Ring
+module
+
+public import IntegrationSection6.FiniteGammaClassProducts
+public import Mathlib.Algebra.DirectSum.Ring
+
+@[expose] public section
 
 /-! The graded semiring of actual original-Gamma RV[k] isomorphism
 classes. This follows the pinned RVHomogeneousProducts/RVGradedSemiring

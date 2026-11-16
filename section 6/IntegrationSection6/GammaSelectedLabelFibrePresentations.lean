@@ -1,6 +1,10 @@
-import IntegrationSection6.GammaSelectedLabelFamilies
-import IntegrationSection6.GammaGraphFormulaCongruence
-import IntegrationSection6.GammaSchemaFiniteRowPresentations
+module
+
+public import IntegrationSection6.GammaSelectedLabelFamilies
+public import IntegrationSection6.GammaGraphFormulaCongruence
+public import IntegrationSection6.GammaSchemaFiniteRowPresentations
+
+@[expose] public section
 
 /-! Actual finite RV[k] fibre presentations with the selected-label volume,
 and their exact identification with the uniform family schema rows. -/

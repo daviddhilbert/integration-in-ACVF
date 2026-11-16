@@ -1,6 +1,10 @@
-import Integration7.CoordinateCoefficientFieldIntegralProducts
-import Integration7.ConstantCoefficientIntegralDensityGraphs
-import Integration7.RVCoordinateDensityPresentations
+module
+
+public import Integration7.CoordinateCoefficientFieldIntegralProducts
+public import Integration7.ConstantCoefficientIntegralDensityGraphs
+public import Integration7.RVCoordinateDensityPresentations
+
+@[expose] public section
 
 /-! The chosen unary field-base appended integral commutes with every
 positive constant RV coefficient and every positive selected family.

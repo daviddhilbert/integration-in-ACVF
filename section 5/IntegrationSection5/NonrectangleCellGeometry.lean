@@ -1,4 +1,8 @@
-import IntegrationSection5.CellStandardExistence
+module
+
+public import IntegrationSection5.CellStandardExistence
+
+@[expose] public section
 
 /-! Every nonrectangle cell has balanced or injective graph positioning, hence an actual positioning bijection. -/
 noncomputable section

@@ -1,5 +1,9 @@
-import IntegrationSection3ACVF.GammaPairedCellDecomposition
-import IntegrationSection3ACVF.GammaSubtypeFunctions
+module
+
+public import IntegrationSection3ACVF.GammaPairedCellDecomposition
+public import IntegrationSection3ACVF.GammaSubtypeFunctions
+
+@[expose] public section
 
 /-! Independent closed-to-half-open/closed-ray obstruction on the
 actual Gamma quotient. Finite paired point/open-cell decompositions prove

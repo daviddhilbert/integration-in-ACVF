@@ -1,6 +1,10 @@
-import Integration7.SelectedFamilyIntegralComparison
-import Integration7.GeneratedBaseStandardContractions
-import Integration7.VolumeBlowupClasses
+module
+
+public import Integration7.SelectedFamilyIntegralComparison
+public import Integration7.GeneratedBaseStandardContractions
+public import Integration7.VolumeBlowupClasses
+
+@[expose] public section
 
 /-! Actual positive homogeneous RV-family integral representatives.
 The choice of contraction is eliminated by the proved comparison theorem. -/

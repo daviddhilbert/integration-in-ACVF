@@ -1,5 +1,9 @@
-import Integration7.EssentialBlowupChart
-import Integration7.GammaRVMapInverseGraphs
+module
+
+public import Integration7.EssentialBlowupChart
+public import Integration7.GammaRVMapInverseGraphs
+
+@[expose] public section
 
 /-! Actual elementary charts can be packed into raw RV labels. The
 inverse is the same actual essential chart inverse after unpacking. -/

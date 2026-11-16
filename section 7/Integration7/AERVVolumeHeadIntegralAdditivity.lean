@@ -1,6 +1,10 @@
-import Integration7.SelectedHeadIntegralRowAddition
-import Integration7.AEVolumeHeadZeros
-import Integration7.AERVVolumeFunctionAdditiveStructure
+module
+
+public import Integration7.SelectedHeadIntegralRowAddition
+public import Integration7.AEVolumeHeadZeros
+public import Integration7.AERVVolumeFunctionAdditiveStructure
+
+@[expose] public section
 
 /-! The actual positive homogeneous partial integral is additive on
 almost-everywhere classes, with its existing geometric representative. -/

@@ -1,7 +1,11 @@
-import IntegrationSection5.NonrectangleHeadPresentations
-import IntegrationSection5.MatchedUnaryPreparation
-import IntegrationSection5.MatchedHeadCompletion
-import IntegrationSection5.GammaStandardProgramGraphs
+module
+
+public import IntegrationSection5.NonrectangleHeadPresentations
+public import IntegrationSection5.MatchedUnaryPreparation
+public import IntegrationSection5.MatchedHeadCompletion
+public import IntegrationSection5.GammaStandardProgramGraphs
+
+@[expose] public section
 
 /-! Apply Lemma5.2 once to the actual global head-source bijection, retaining its full commuting square, and construct both standard programs over one common real presentation. -/
 noncomputable section

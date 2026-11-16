@@ -1,5 +1,9 @@
-import Integration7.RVProductGammaBalance
-import Integration7.RVNonzero
+module
+
+public import Integration7.RVProductGammaBalance
+public import Integration7.RVNonzero
+
+@[expose] public section
 
 /-! A parameter-free formula for the nonzero density ratio, using the
 released multiplication and totalized inversion symbols. -/

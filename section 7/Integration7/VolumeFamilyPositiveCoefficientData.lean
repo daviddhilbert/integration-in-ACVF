@@ -1,6 +1,10 @@
-import Integration7.MixedRVFactorDomains
-import Integration7.DefinableVFVolumeFamilies
-import Integration7.GradedVolumeProducts
+module
+
+public import Integration7.MixedRVFactorDomains
+public import Integration7.DefinableVFVolumeFamilies
+public import Integration7.GradedVolumeProducts
+
+@[expose] public section
 
 /-! Actual family multiplication by a constant positive RV volume
 object. Old domain labels are kept first, while the volume tuple is

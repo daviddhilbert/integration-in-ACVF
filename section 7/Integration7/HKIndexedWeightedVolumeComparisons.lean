@@ -1,6 +1,10 @@
-import Integration7.HKIndexedWeightedRowBijections
-import Integration7.GammaIndexedOrdinaryUnitComparisons
-import Integration7.GammaCoordinateDensityEquivalences
+module
+
+public import Integration7.HKIndexedWeightedRowBijections
+public import Integration7.GammaIndexedOrdinaryUnitComparisons
+public import Integration7.GammaCoordinateDensityEquivalences
+
+@[expose] public section
 
 /-! Indexed finite-row comparison preserves arbitrary retained nonzero
 densities, giving actual volume isomorphisms over the original Gamma base. -/

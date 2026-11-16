@@ -1,5 +1,9 @@
-import Integration7.GammaRVMapRestrictions
-import Section4.RVTagging
+module
+
+public import Integration7.GammaRVMapRestrictions
+public import Section4.RVTagging
+
+@[expose] public section
 
 /-! The actual RV coproduct tag maps retain full Gamma graphs on their
 given source domains. -/

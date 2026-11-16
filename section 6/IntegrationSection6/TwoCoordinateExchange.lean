@@ -1,5 +1,9 @@
-import IntegrationSection6.Section5TwoOrderInput
-import IntegrationSection6.GammaContractionExtensionIsomorphisms
+module
+
+public import IntegrationSection6.Section5TwoOrderInput
+public import IntegrationSection6.GammaContractionExtensionIsomorphisms
+
+@[expose] public section
 
 /-! The two-VF-coordinate case of Lemma6.16, using exactly the authorized
 Section5.8 refinement and the proved Corollary6.15 for arbitrary contractions.

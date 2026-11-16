@@ -1,5 +1,9 @@
-import IntegrationSection5.MixedRVRefinement
-import IntegrationSection4.TaggedRVMaps
+module
+
+public import IntegrationSection5.MixedRVRefinement
+public import IntegrationSection4.TaggedRVMaps
+
+@[expose] public section
 
 /-! Uniform constant-or-injective scalar refinement over the original Gamma
 base, with arbitrary complementary VF coordinates kept free. -/

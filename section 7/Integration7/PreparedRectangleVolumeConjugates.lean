@@ -1,5 +1,9 @@
-import Integration7.RectangleFamilyVolumePreparations
-import IntegrationSection5.GammaGraphOperations
+module
+
+public import Integration7.RectangleFamilyVolumePreparations
+public import IntegrationSection5.GammaGraphOperations
+
+@[expose] public section
 
 /-! The actual conjugate between two prepared rectangle targets.
 Every map is specified: the two original bijections and the two

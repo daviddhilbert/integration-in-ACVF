@@ -1,5 +1,9 @@
-import Integration7.AllDegreeVolumeBlowupSemiring
-import Integration7.VolumeIsoParameterExtension
+module
+
+public import Integration7.AllDegreeVolumeBlowupSemiring
+public import Integration7.VolumeIsoParameterExtension
+
+@[expose] public section
 
 /-! Ordinary degree-zero coefficient classes extend along the actual
 parameter-base inclusion as a semiring homomorphism. Every operation is

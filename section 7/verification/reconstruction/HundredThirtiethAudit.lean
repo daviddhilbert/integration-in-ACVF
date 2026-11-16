@@ -1,9 +1,13 @@
-import Integration7.RawHomogeneousCoordinateSupports
-import Integration7.RawNonemptyCoordinateFubini
-import Integration7.RawPositiveCoordinateSupports
-import Integration7.RawPositiveSupportedFubini
-import Integration7.RawSupportedGradedCoordinateIntegrals
-import Integration7.RawSupportedNonemptyFubini
+module
+
+public import Integration7.RawHomogeneousCoordinateSupports
+public import Integration7.RawNonemptyCoordinateFubini
+public import Integration7.RawPositiveCoordinateSupports
+public import Integration7.RawPositiveSupportedFubini
+public import Integration7.RawSupportedGradedCoordinateIntegrals
+public import Integration7.RawSupportedNonemptyFubini
+
+@[expose] public section
 set_option pp.universes true
 set_option pp.proofs false
 set_option pp.deepTerms true

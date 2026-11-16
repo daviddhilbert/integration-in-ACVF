@@ -1,4 +1,8 @@
-import Integration7.HKVolumeCoproductIsomorphisms
+module
+
+public import Integration7.HKVolumeCoproductIsomorphisms
+
+@[expose] public section
 
 noncomputable section
 open FirstOrder FirstOrder.Language CategoryTheory

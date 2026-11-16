@@ -1,7 +1,11 @@
-import IntegrationSection6.FiniteGammaPartitionCharts
-import IntegrationSection6.FiniteGammaCoproductMaps
-import IntegrationSection6.FiniteGammaFormulaIsos
-import IntegrationSection6.PullbackPartitions
+module
+
+public import IntegrationSection6.FiniteGammaPartitionCharts
+public import IntegrationSection6.FiniteGammaCoproductMaps
+public import IntegrationSection6.FiniteGammaFormulaIsos
+public import IntegrationSection6.PullbackPartitions
+
+@[expose] public section
 
 /-! Gamma charts for the RV data of a genuine partition into pullbacks. -/
 noncomputable section

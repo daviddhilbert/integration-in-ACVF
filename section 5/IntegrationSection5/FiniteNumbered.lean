@@ -1,6 +1,10 @@
-import IntegrationSection5.FiniteRVComparison
-import IntegrationSection5.UnaryRVCategory
-import IntegrationSection5.GammaCellStandardExistence
+module
+
+public import IntegrationSection5.FiniteRVComparison
+public import IntegrationSection5.UnaryRVCategory
+public import IntegrationSection5.GammaCellStandardExistence
+
+@[expose] public section
 
 noncomputable section
 set_option autoImplicit false

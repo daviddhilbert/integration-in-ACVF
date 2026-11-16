@@ -1,5 +1,9 @@
-import Integration7.GammaSelectedRVVFTailMaps
-import IntegrationSection5.RelativeSpecial
+module
+
+public import Integration7.GammaSelectedRVVFTailMaps
+public import IntegrationSection5.RelativeSpecial
+
+@[expose] public section
 
 /-! Transport native mixed domains and their actual maps along a VF
 arity equality. Coordinate fibres and relative specialness are retained. -/

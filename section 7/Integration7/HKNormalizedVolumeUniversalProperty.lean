@@ -1,4 +1,8 @@
-import Integration7.HKNormalizedVolumeCoefficientRing
+module
+
+public import Integration7.HKNormalizedVolumeCoefficientRing
+
+@[expose] public section
 
 /-! The actual normalized coefficient ring has the universal property
 of setting the geometric degree-one point equal to one. -/

@@ -1,5 +1,9 @@
-import Integration7.DefinableVolumeClassRescaling
-import Integration7.PositiveVolumeClassScalarExtensions
+module
+
+public import Integration7.DefinableVolumeClassRescaling
+public import Integration7.PositiveVolumeClassScalarExtensions
+
+@[expose] public section
 
 /-! The ordinary RV[0] scalar action also commutes with a definable
 density multiplier; its finite factor carries no volume coordinate. -/

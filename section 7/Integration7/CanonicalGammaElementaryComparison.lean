@@ -1,5 +1,9 @@
-import Integration7.GammaElementaryBlowupIsomorphisms
-import Integration7.GammaCanonicalElementaryGraphs
+module
+
+public import Integration7.GammaElementaryBlowupIsomorphisms
+public import Integration7.GammaCanonicalElementaryGraphs
+
+@[expose] public section
 
 /-! The canonical elementary comparison retains the original Gamma
 graphs of coordinates, densities and the resulting volume isomorphism. -/

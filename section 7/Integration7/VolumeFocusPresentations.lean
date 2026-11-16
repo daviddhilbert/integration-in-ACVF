@@ -1,6 +1,10 @@
-import Integration7.VolumeFocusBlowups
-import Integration7.CanonicalFiniteRVObjects
-import IntegrationSection6.OriginalFocusObjects
+module
+
+public import Integration7.VolumeFocusBlowups
+public import Integration7.CanonicalFiniteRVObjects
+public import IntegrationSection6.OriginalFocusObjects
+
+@[expose] public section
 
 /-! The full-focus volume blowup has exactly the released canonical
 RV image domain, projected coordinates and retained old-label density. -/

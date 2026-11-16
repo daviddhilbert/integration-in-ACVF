@@ -1,5 +1,9 @@
-import IntegrationSection5.CellGammaBridge
-import IntegrationSection5.GammaActiveUnaryFocus
+module
+
+public import IntegrationSection5.CellGammaBridge
+public import IntegrationSection5.GammaActiveUnaryFocus
+
+@[expose] public section
 
 /-! The actual unary presentations of both native VF cell projections
 remain definable over the original Gamma base. -/

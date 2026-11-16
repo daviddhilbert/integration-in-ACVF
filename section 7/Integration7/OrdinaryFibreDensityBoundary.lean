@@ -1,6 +1,10 @@
-import Integration7.RescaledPointBlowupBounds
-import Integration7.OrdinaryVFVolumeFamilies
-import Integration7.PositiveVolumeIntegrationEquivalence
+module
+
+public import Integration7.RescaledPointBlowupBounds
+public import Integration7.OrdinaryVFVolumeFamilies
+public import Integration7.PositiveVolumeIntegrationEquivalence
+
+@[expose] public section
 
 /-! Forgetting the density on ordinary RV[0] rows cannot retain the
 integrals of arbitrary positive-dimensional VF volume realizations.

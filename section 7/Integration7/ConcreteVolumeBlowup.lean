@@ -1,6 +1,10 @@
-import Integration7.VolumePartition
-import Integration7.VolumeBlowupTransport
-import Integration7.ElementaryBlowupRestriction
+module
+
+public import Integration7.VolumePartition
+public import Integration7.VolumeBlowupTransport
+public import Integration7.ElementaryBlowupRestriction
+
+@[expose] public section
 set_option backward.isDefEq.respectTransparency false
 open FirstOrder FirstOrder.Language CategoryTheory
 open SpecialTransformations.Milestone0 SpecialTransformations.Milestone0.LRV

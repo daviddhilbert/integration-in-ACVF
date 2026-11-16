@@ -1,5 +1,9 @@
-import IntegrationSection4.GammaBaseBridge
-import Section4.Spaces
+module
+
+public import IntegrationSection4.GammaBaseBridge
+public import Section4.Spaces
+
+@[expose] public section
 
 /-! Descend full-base definability back to the unchanged Gamma-only base.
 Every parameter code is quantified over its full fibre; no chosen real

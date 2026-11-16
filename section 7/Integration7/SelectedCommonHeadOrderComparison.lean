@@ -1,7 +1,11 @@
-import Integration7.SelectedVolumeOrderIndependence
-import Integration7.AppendedHeadVolumeCharts
-import Integration7.StandardContractionOrderTransport
-import Integration7.GeneratedBaseStandardContractions
+module
+
+public import Integration7.SelectedVolumeOrderIndependence
+public import Integration7.AppendedHeadVolumeCharts
+public import Integration7.StandardContractionOrderTransport
+public import Integration7.GeneratedBaseStandardContractions
+
+@[expose] public section
 
 /-! The all-order induction step for two orders sharing their first
 coordinate. The selected head is retained and the smaller VF induction

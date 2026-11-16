@@ -1,6 +1,10 @@
-import Integration7.GammaVolumeRestrictionIdentities
-import Integration7.VolumeEmbeddedImages
-import Integration7.EssentialVolumeRestriction
+module
+
+public import Integration7.GammaVolumeRestrictionIdentities
+public import Integration7.VolumeEmbeddedImages
+public import Integration7.EssentialVolumeRestriction
+
+@[expose] public section
 
 /-! Actual essential embeddings, tagged images and restrictions
 containing the essential part retain their full original-Gamma charts. -/

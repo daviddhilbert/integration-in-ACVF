@@ -1,6 +1,10 @@
-import CanonicalCountable
-import Mathlib.ModelTheory.Encoding
-import Mathlib.ModelTheory.Definability
+module
+
+public import CanonicalCountable
+public import Mathlib.ModelTheory.Encoding
+public import Mathlib.ModelTheory.Definability
+
+@[expose] public section
 
 /-! Counting unique definable elements in the inherited countable language. -/
 noncomputable section

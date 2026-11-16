@@ -1,4 +1,8 @@
-import IntegrationSection5.GammaUnaryChain
+module
+
+public import IntegrationSection5.GammaUnaryChain
+
+@[expose] public section
 
 /-! Restriction and real certification of actual Gamma unary chains. -/
 noncomputable section

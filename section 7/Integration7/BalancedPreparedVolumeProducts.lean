@@ -1,5 +1,9 @@
-import Integration7.PreparedUnaryGammaRadii
-import Integration7.BalancedCellGammaProducts
+module
+
+public import Integration7.PreparedUnaryGammaRadii
+public import Integration7.BalancedCellGammaProducts
+
+@[expose] public section
 
 /-! Balanced positioning gives equality of the two Gamma volume
 products on the actual unary preparations used for the opposite orders.

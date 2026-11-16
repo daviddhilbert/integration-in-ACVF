@@ -1,5 +1,9 @@
-import Integration7.IndexedVolumeCoproductValues
-import Integration7.GammaVolumeRelabelRealization
+module
+
+public import Integration7.IndexedVolumeCoproductValues
+public import Integration7.GammaVolumeRelabelRealization
+
+@[expose] public section
 
 /-! Indexed assembly commutes with actual volume coproducts. The
 comparison retains all coordinates and the density, in a finite context. -/

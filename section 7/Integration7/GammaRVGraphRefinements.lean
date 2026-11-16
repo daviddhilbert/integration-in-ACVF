@@ -1,7 +1,11 @@
-import Integration7.GammaNativeCommonNames
-import Integration7.GammaRVLabelFocusLifts
-import IntegrationSection4.GammaRVMapOperations
-import IntegrationSection4.GammaOffsets
+module
+
+public import Integration7.GammaNativeCommonNames
+public import Integration7.GammaRVLabelFocusLifts
+public import IntegrationSection4.GammaRVMapOperations
+public import IntegrationSection4.GammaOffsets
+
+@[expose] public section
 
 /-! A Gamma RV map gives an actual VF-preserving graph refinement.
 Every old RV coordinate is retained literally, and the full graph stays

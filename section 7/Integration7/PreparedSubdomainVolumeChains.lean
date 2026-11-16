@@ -1,7 +1,11 @@
-import Integration7.NativeVolumeUnaryPartitions
-import Integration7.NativeCompletedPartitions
-import Integration7.NativePreparedMixedPartitions
-import Integration7.SpecialConjugateVolumeChains
+module
+
+public import Integration7.NativeVolumeUnaryPartitions
+public import Integration7.NativeCompletedPartitions
+public import Integration7.NativePreparedMixedPartitions
+public import Integration7.SpecialConjugateVolumeChains
+
+@[expose] public section
 
 /-! The genuine factor chains on a subdomain survive preparation of
 the ambient partition including its discarded complement. -/

@@ -1,5 +1,9 @@
-import IntegrationSection3ACVF.FiniteOrderCellPartition
-import IntegrationSection3ACVF.OrderedMonotonePreimages
+module
+
+public import IntegrationSection3ACVF.FiniteOrderCellPartition
+public import IntegrationSection3ACVF.OrderedMonotonePreimages
+
+@[expose] public section
 
 /-! A target order cell lies in exactly one monotone source piece once
 target cuts include images of source endpoints and control the images

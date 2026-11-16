@@ -1,8 +1,12 @@
-import Integration7.NativeRVLabelProducts
-import Integration7.PureRVLabelGraphMembership
-import Integration7.VolumeDensityGraphMembership
-import Integration7.IndependentRVGraphFactorizations
-import Integration7.ConstrainedUnarySources
+module
+
+public import Integration7.NativeRVLabelProducts
+public import Integration7.PureRVLabelGraphMembership
+public import Integration7.VolumeDensityGraphMembership
+public import Integration7.IndependentRVGraphFactorizations
+public import Integration7.ConstrainedUnarySources
+
+@[expose] public section
 
 /-! The density graph of an actual product with two retained densities
 is precisely the unary source constrained by the corresponding pure-RV

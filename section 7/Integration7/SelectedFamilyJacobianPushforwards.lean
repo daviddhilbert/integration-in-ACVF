@@ -1,5 +1,9 @@
-import Integration7.SelectedFamilyBasePushforwards
-import Integration7.VFBaseJacobianDensities
+module
+
+public import Integration7.SelectedFamilyBasePushforwards
+public import Integration7.VFBaseJacobianDensities
+
+@[expose] public section
 
 /-! The actual Jacobian transform of a positive selected family is its
 base pushforward multiplied by the inverse base-Jacobian density. -/

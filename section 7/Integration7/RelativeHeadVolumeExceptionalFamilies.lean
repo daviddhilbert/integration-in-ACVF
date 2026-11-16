@@ -1,4 +1,8 @@
-import Integration7.RelativeHeadVolumeComparison
+module
+
+public import Integration7.RelativeHeadVolumeComparison
+
+@[expose] public section
 
 /-! A single witnessed global exception controls all frozen head
 comparisons. Every fibre with a VF-small intersection with that exception

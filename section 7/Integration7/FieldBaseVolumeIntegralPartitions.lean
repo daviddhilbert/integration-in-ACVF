@@ -1,6 +1,10 @@
-import Integration7.FieldBaseVolumeFamilyIntegrals
-import Integration7.SelectedVolumeFamilyLabelCuts
-import Integration7.SelectedStandardBinaryVolumePartitions
+module
+
+public import Integration7.FieldBaseVolumeFamilyIntegrals
+public import Integration7.SelectedVolumeFamilyLabelCuts
+public import Integration7.SelectedStandardBinaryVolumePartitions
+
+@[expose] public section
 
 /-! Chosen field-base integrals respect complementary old-label cuts.
 One actual contraction is restricted to the two pieces, so no lift theorem

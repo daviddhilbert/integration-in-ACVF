@@ -1,5 +1,9 @@
-import IntegrationSection6.FiniteGammaScissorPartitions
-import IntegrationSection6.FiniteGammaLocusBlowups
+module
+
+public import IntegrationSection6.FiniteGammaScissorPartitions
+public import IntegrationSection6.FiniteGammaLocusBlowups
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

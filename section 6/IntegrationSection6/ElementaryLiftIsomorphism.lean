@@ -1,4 +1,8 @@
-import IntegrationSection6.ElementaryLiftDiagram
+module
+
+public import IntegrationSection6.ElementaryLiftDiagram
+
+@[expose] public section
 
 /-! The elementary case of6.13 on the actual released lifts, retaining
 the full original-Gamma isomorphism graph. -/

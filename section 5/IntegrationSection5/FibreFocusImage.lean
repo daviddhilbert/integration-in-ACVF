@@ -1,4 +1,8 @@
-import IntegrationSection5.FibreFocus
+module
+
+public import IntegrationSection5.FibreFocus
+
+@[expose] public section
 
 /-! The target of the restricted focus is the actual coordinate fibre of
 the global focus image. -/

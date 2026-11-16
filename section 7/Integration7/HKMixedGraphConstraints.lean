@@ -1,4 +1,8 @@
-import Integration7.HKConstrainedBijectionRealization
+module
+
+public import Integration7.HKConstrainedBijectionRealization
+
+@[expose] public section
 
 /-! Shared-VF-parameter coordinates for an actual mixed graph constraint.
 This specializes the sorted chart construction to the existing point language. -/

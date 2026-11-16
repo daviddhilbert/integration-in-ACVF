@@ -1,5 +1,9 @@
-import Integration7.PreparedIndexedRetainedLabels
-import Integration7.ContractionRetainedDensityLabels
+module
+
+public import Integration7.PreparedIndexedRetainedLabels
+public import Integration7.ContractionRetainedDensityLabels
+
+@[expose] public section
 
 /-! A literal retained unit label remains the literal unit after a
 specified contraction or an indexed prepared-family construction. -/

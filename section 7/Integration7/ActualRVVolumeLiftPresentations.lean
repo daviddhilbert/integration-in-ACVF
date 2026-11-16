@@ -1,7 +1,11 @@
-import Integration7.CanonicalActualRVIdentifications
-import Integration7.LiteralVolumeLiftMaps
-import Integration7.PullbackCoordinateVolumeObjects
-import IntegrationSection6.PresentationCoordinates
+module
+
+public import Integration7.CanonicalActualRVIdentifications
+public import Integration7.LiteralVolumeLiftMaps
+public import Integration7.PullbackCoordinateVolumeObjects
+public import IntegrationSection6.PresentationCoordinates
+
+@[expose] public section
 
 /-! A literal native lift of any actual RV volume object recovers that
 object from its canonical pullback keys, including a retained density. -/

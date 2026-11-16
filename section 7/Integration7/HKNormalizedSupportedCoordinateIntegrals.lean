@@ -1,5 +1,9 @@
-import Integration7.HKNormalizedVolumeSupports
-import Integration7.HKNormalizedCoordinateFubini
+module
+
+public import Integration7.HKNormalizedVolumeSupports
+public import Integration7.HKNormalizedCoordinateFubini
+
+@[expose] public section
 
 /-! Normalized coordinate integration lands on the literal projected
 support, including all actual weighted-zero supported generators. -/

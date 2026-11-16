@@ -1,4 +1,8 @@
-import IntegrationSection6.GammaGraphPresentationIsomorphisms
+module
+
+public import IntegrationSection6.GammaGraphPresentationIsomorphisms
+
+@[expose] public section
 
 /-! A presentation may use equivalent full domain/volume formulas without
 changing its native object or its original-Gamma certificates. -/

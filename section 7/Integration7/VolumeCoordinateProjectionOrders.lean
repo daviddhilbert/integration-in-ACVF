@@ -1,4 +1,8 @@
-import IntegrationSection6.VFCoordinateProjections
+module
+
+public import IntegrationSection6.VFCoordinateProjections
+
+@[expose] public section
 
 /-! Put the discarded VF coordinates first and the retained coordinates
 last, using the actual enumerations of a nonempty coordinate projection. -/

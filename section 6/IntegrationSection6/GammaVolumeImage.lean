@@ -1,6 +1,10 @@
-import IntegrationSection6.GammaAdmissibility
-import Section5.GammaLiftRelation
-import Section5.GammaInvariantLogic
+module
+
+public import IntegrationSection6.GammaAdmissibility
+public import Section5.GammaLiftRelation
+public import Section5.GammaInvariantLogic
+
+@[expose] public section
 
 /-! The actual RV volume image is definable over the original Gamma base.
 No representatives of Gamma names are added to its real parameter set. -/

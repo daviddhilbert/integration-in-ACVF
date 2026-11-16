@@ -1,4 +1,8 @@
-import IntegrationSection6.HeadTailPermutations
+module
+
+public import IntegrationSection6.HeadTailPermutations
+
+@[expose] public section
 
 /-! Put two distinct first coordinates in the first two positions. -/
 namespace IntegrationInACVF.Section6

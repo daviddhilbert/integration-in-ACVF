@@ -1,4 +1,8 @@
-import Section5.Core
+module
+
+public import Section5.Core
+
+@[expose] public section
 
 /-! The definable section of a focus: replace the active coordinate by its
 focus, retaining all labels. On an RV-pullback its value lies in the original

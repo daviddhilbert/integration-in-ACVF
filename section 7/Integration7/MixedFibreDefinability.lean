@@ -1,7 +1,11 @@
-import Integration7.MixedVerticalPullbackCells
-import IntegrationSection4.FibreDefinability
-import IntegrationSection4.GammaOffsets
-import IntegrationSection4.RVLabelSlices
+module
+
+public import Integration7.MixedVerticalPullbackCells
+public import IntegrationSection4.FibreDefinability
+public import IntegrationSection4.GammaOffsets
+public import IntegrationSection4.RVLabelSlices
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

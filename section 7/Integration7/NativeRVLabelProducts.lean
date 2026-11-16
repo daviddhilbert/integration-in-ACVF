@@ -1,6 +1,10 @@
-import Integration7.NativeVolumeMapRealization
-import Integration7.RVCoordinateSelection
-import Integration7.ScalarRVAlgebra
+module
+
+public import Integration7.NativeVolumeMapRealization
+public import Integration7.RVCoordinateSelection
+public import Integration7.ScalarRVAlgebra
+
+@[expose] public section
 
 /-! Multiplication of literal RV labels is an actual pure-RV native map
 over the original parameter set. -/

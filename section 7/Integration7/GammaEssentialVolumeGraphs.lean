@@ -1,8 +1,12 @@
-import Integration7.GammaVolumeIsoGraphOperations
-import Integration7.EssentialFiniteVolumeSchemata
-import Integration7.VolumeRelabeling
-import IntegrationSection6.GammaRawRVFormulas
-import Section5.GammaInvariantLogic
+module
+
+public import Integration7.GammaVolumeIsoGraphOperations
+public import Integration7.EssentialFiniteVolumeSchemata
+public import Integration7.VolumeRelabeling
+public import IntegrationSection6.GammaRawRVFormulas
+public import Section5.GammaInvariantLogic
+
+@[expose] public section
 
 /-! Essential labels and coordinate-preserving full volume isomorphisms
 retain their original-Gamma graphs. This makes the geometric relabelings

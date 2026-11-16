@@ -1,8 +1,12 @@
-import Integration7.GammaRVProductVolumes
-import Integration7.GammaEssentialVolumeGraphs
-import Integration7.GradedVolumeProducts
-import Section4.RVFiniteHomogeneousProducts
-import Section4.RVProductMorphisms
+module
+
+public import Integration7.GammaRVProductVolumes
+public import Integration7.GammaEssentialVolumeGraphs
+public import Integration7.GradedVolumeProducts
+public import Section4.RVFiniteHomogeneousProducts
+public import Section4.RVProductMorphisms
+
+@[expose] public section
 
 /-! Exact-coordinate finite unary RV isomorphisms induce a full
 constant-unit-density volume isomorphism of their actual products. -/

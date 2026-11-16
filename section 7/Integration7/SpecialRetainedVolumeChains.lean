@@ -1,7 +1,11 @@
-import Integration7.SpecialVolumeJacobians
-import Integration7.MixedRetainedLabelVolumeForms
-import Integration7.UnaryChainVolumeOperations
-import IntegrationSection5.RelativeLabelPreservation
+module
+
+public import Integration7.SpecialVolumeJacobians
+public import Integration7.MixedRetainedLabelVolumeForms
+public import Integration7.UnaryChainVolumeOperations
+public import IntegrationSection5.RelativeLabelPreservation
+
+@[expose] public section
 
 /-! Actual special preparations retain a nonzero density label and
 give genuine volume data on their relatively unary factor chains. -/

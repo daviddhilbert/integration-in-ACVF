@@ -1,9 +1,13 @@
-import Integration7.PositiveBlowupLiftClasses
-import Integration7.SpecialPullbackVolumeObjects
-import Integration7.RawPullbackVolumeLifts
-import Integration7.VolumeDensityGraphs
-import Integration7.NativeRVGraphVolumeRefinements
-import Section5.Surjectivity
+module
+
+public import Integration7.PositiveBlowupLiftClasses
+public import Integration7.SpecialPullbackVolumeObjects
+public import Integration7.RawPullbackVolumeLifts
+public import Integration7.VolumeDensityGraphs
+public import Integration7.NativeRVGraphVolumeRefinements
+public import Section5.Surjectivity
+
+@[expose] public section
 
 /-! Every actual positive VF volume object is the full volume lift of
 an actual finite RV volume object, up to a genuine full volume bijection.

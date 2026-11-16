@@ -1,5 +1,9 @@
-import Integration7.HKNormalizedPositiveOperators
-import Integration7.PositiveGradedVolumeIntegration
+module
+
+public import Integration7.HKNormalizedPositiveOperators
+public import Integration7.PositiveGradedVolumeIntegration
+
+@[expose] public section
 
 /-! Actual positive-degree integrals agree under the additive transfer
 of positive coefficient terms. Its zero-degree component is discarded;

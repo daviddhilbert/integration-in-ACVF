@@ -1,5 +1,9 @@
-import Integration7.ZeroAuxVolumeWitnesses
-import IntegrationSection6.GammaSchemaRowAgreement
+module
+
+public import Integration7.ZeroAuxVolumeWitnesses
+public import IntegrationSection6.GammaSchemaRowAgreement
+
+@[expose] public section
 
 /-! Remove or add an empty exception-parameter block without changing
 any raw domain, coordinate relation or bound. -/

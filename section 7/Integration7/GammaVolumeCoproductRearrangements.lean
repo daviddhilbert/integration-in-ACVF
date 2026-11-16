@@ -1,5 +1,9 @@
-import Integration7.GammaVolumeCoproductAssociativity
-import Integration7.GammaVolumeCoproductCharts
+module
+
+public import Integration7.GammaVolumeCoproductAssociativity
+public import Integration7.GammaVolumeCoproductCharts
+
+@[expose] public section
 
 /-! Explicit coproduct rearrangements with original-Gamma certificates.
 These supply concrete charts for the common-refinement square. -/

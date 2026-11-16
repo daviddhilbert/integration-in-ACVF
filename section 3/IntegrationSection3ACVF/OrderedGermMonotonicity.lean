@@ -1,4 +1,8 @@
-import IntegrationSection3ACVF.FiniteOrderBounds
+module
+
+public import IntegrationSection3ACVF.FiniteOrderBounds
+
+@[expose] public section
 
 /-! Local strict order signs propagate across an interval using a real
 finite endpoint controller for the prefixSet set. No ambient Dedekind

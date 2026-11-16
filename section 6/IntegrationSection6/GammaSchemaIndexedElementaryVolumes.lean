@@ -1,5 +1,9 @@
-import IntegrationSection6.GammaSchemaIndexedElementaryDomains
-import IntegrationSection6.GammaSchemaElementaryRowValues
+module
+
+public import IntegrationSection6.GammaSchemaIndexedElementaryDomains
+public import IntegrationSection6.GammaSchemaElementaryRowValues
+
+@[expose] public section
 
 /-! The native elementary volume of an indexed object keeps its index
 volume prefix and applies the actual elementary program to the fibre. -/

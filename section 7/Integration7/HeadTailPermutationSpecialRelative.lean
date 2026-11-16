@@ -1,6 +1,10 @@
-import Integration7.HeadTailPermutationFibreMaps
-import IntegrationSection5.RelativeFibreBijection
-import IntegrationSection6.SpecialEqualityTransport
+module
+
+public import Integration7.HeadTailPermutationFibreMaps
+public import IntegrationSection5.RelativeFibreBijection
+public import IntegrationSection6.SpecialEqualityTransport
+
+@[expose] public section
 
 /-! Reordering frozen VF coordinates preserves actual relative specialness. -/
 noncomputable section

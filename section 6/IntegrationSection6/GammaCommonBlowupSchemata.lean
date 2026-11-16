@@ -1,4 +1,8 @@
-import IntegrationSection6.GammaChainSchemata
+module
+
+public import IntegrationSection6.GammaChainSchemata
+
+@[expose] public section
 
 /-! Finite first-order witnesses for common forward blowups. Both chains,
 all intermediate RV[k] objects, and the final weighted comparison chart

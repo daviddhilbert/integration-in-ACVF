@@ -1,4 +1,8 @@
-import Section5.Core
+module
+
+public import Section5.Core
+
+@[expose] public section
 
 /-! Definition 5.4: preserve all VF coordinates except the indicated one.
 RV labels may change, as they do under canonical bijections. -/

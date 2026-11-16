@@ -1,4 +1,8 @@
-import IntegrationSection5.AllConstantAttachment
+module
+
+public import IntegrationSection5.AllConstantAttachment
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

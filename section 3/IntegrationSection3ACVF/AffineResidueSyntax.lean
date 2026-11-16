@@ -1,6 +1,10 @@
-import IntegrationSection3ACVF.ResidueReductionSyntax
-import IntegrationSection3ACVF.CanonicalModelEquality
-import IntegrationSection3ACVF.VFErrorSyntax
+module
+
+public import IntegrationSection3ACVF.ResidueReductionSyntax
+public import IntegrationSection3ACVF.CanonicalModelEquality
+public import IntegrationSection3ACVF.VFErrorSyntax
+
+@[expose] public section
 
 /-! The complete graph of affine residue coordinates is LRV-definable.
 VF division is eliminated by an existential field variable and a ring

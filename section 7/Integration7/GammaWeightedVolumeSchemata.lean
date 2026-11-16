@@ -1,4 +1,8 @@
-import Integration7.GammaWeightedVolumeGraphs
+module
+
+public import Integration7.GammaWeightedVolumeGraphs
+
+@[expose] public section
 
 /-! The auxiliary coordinate-and-density tuple is a finite schema with
 the original reverse-fibre bound. It is used to encode Gamma weight; the

@@ -1,5 +1,9 @@
-import Integration7.HKPositiveBasicGeneration
-import Integration7.HKDegreeOnePrincipalFactors
+module
+
+public import Integration7.HKPositiveBasicGeneration
+public import Integration7.HKDegreeOnePrincipalFactors
+
+@[expose] public section
 
 /-! A single point/cone relation forces every elementary relation, including
 degree one. The degree-one proof uses its genuine weighted zero factor. -/

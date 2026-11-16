@@ -1,5 +1,9 @@
-import Integration7.TwoOrderProductNormalization
-import Integration7.ConstantCoordinateDensityObjects
+module
+
+public import Integration7.TwoOrderProductNormalization
+public import Integration7.ConstantCoordinateDensityObjects
+
+@[expose] public section
 
 /-! A density contained in the fixed old label tuple becomes the exact
 retained coordinate density on both actual normalized product objects. -/

@@ -1,5 +1,9 @@
-import Integration7.HKNormalizedSupportedJacobians
-import Integration7.NonemptyVolumeCoordinateProjections
+module
+
+public import Integration7.HKNormalizedSupportedJacobians
+public import Integration7.NonemptyVolumeCoordinateProjections
+
+@[expose] public section
 
 /-! Corrected numbered normalized Fubini and change of variables on
 actual supported normalized functions, with weighted-zero values retained

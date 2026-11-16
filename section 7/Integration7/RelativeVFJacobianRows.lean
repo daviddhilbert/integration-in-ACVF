@@ -1,5 +1,9 @@
-import Section9.MixedJacobian
-import Mathlib.LinearAlgebra.Matrix.Determinant.Basic
+module
+
+public import Section9.MixedJacobian
+public import Mathlib.LinearAlgebra.Matrix.Determinant.Basic
+
+@[expose] public section
 
 /-! A map that fixes every VF coordinate except one has determinant
 equal to the active partial derivative. The assertion is local on the

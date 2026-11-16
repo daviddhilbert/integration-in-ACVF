@@ -1,5 +1,9 @@
-import IntegrationSection3ACVF.LocalGammaLinearity
-import Section3.SmallFiniteParameters
+module
+
+public import IntegrationSection3ACVF.LocalGammaLinearity
+public import Section3.SmallFiniteParameters
+
+@[expose] public section
 
 /-! Only finitely many real codes are named inside the proof. The original
 map may be defined over any genuine real/Gamma/ball base. -/

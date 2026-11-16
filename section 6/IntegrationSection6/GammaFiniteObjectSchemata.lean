@@ -1,6 +1,10 @@
-import IntegrationSection6.GammaFamilyMapValidity
-import IntegrationSection6.GammaRawRVFormulas
-import IntegrationSection6.GammaFiniteGraphObjects
+module
+
+public import IntegrationSection6.GammaFamilyMapValidity
+public import IntegrationSection6.GammaRawRVFormulas
+public import IntegrationSection6.GammaFiniteGraphObjects
+
+@[expose] public section
 
 /-! Finite RV-object schemata with genuine first-order validity loci.
 Every valid sorted parameter row reconstructs an actual RV[k] object over the

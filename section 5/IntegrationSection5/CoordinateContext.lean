@@ -1,5 +1,9 @@
-import IntegrationSection5.MixedScalarFamilies
-import IntegrationSection5.VFPermutation
+module
+
+public import IntegrationSection5.MixedScalarFamilies
+public import IntegrationSection5.VFPermutation
+
+@[expose] public section
 
 /-! Equality of precisely the VF coordinates complementary to one selected
 coordinate, together with all old RV labels. -/

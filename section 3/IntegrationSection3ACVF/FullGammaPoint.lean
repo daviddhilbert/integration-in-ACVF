@@ -1,4 +1,8 @@
-import IntegrationSection3ACVF.FullGammaSyntax
+module
+
+public import IntegrationSection3ACVF.FullGammaSyntax
+
+@[expose] public section
 
 /-!
 # An original-base definable Gamma point

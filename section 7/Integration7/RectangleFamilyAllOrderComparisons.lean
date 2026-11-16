@@ -1,4 +1,8 @@
-import Integration7.RectangleFamilyOppositeOrderComparisons
+module
+
+public import Integration7.RectangleFamilyOppositeOrderComparisons
+
+@[expose] public section
 
 /-! The rectangle-family comparison covers every pair of actual
 coordinate orders in VF dimension two. -/

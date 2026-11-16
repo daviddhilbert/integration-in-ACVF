@@ -1,5 +1,9 @@
-import Integration7.HKZeroVFVolumeObjects
-import Integration7.OrdinaryZeroLiftIsomorphisms
+module
+
+public import Integration7.HKZeroVFVolumeObjects
+public import Integration7.OrdinaryZeroLiftIsomorphisms
+
+@[expose] public section
 
 /-! The corrected zero lift preserves and reflects the exact RV form.
 The ordinary lift-label projection supplies the actual definable inverse. -/

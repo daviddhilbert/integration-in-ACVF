@@ -1,9 +1,13 @@
-import Integration7.CompletedSection6Kernel
-import Integration7.ClosedSection6DefinableFamilyLifts
-import IntegrationSection6.ProjectionFamilyInputs
-import IntegrationSection6.VFCoordinateProjections
-import IntegrationSection6.GammaCoordinateValues
-import IntegrationSection6.DefinableFamilyLifts
+module
+
+public import Integration7.CompletedSection6Kernel
+public import Integration7.ClosedSection6DefinableFamilyLifts
+public import IntegrationSection6.ProjectionFamilyInputs
+public import IntegrationSection6.VFCoordinateProjections
+public import IntegrationSection6.GammaCoordinateValues
+public import IntegrationSection6.DefinableFamilyLifts
+
+@[expose] public section
 
 /-! Closed generated-base Section6 integration. The former universal
 Section5 input is replaced by the canonical-model certificate; its kernel

@@ -1,5 +1,9 @@
-import IntegrationSection3ACVF.RealTypeNeighborhoods
-import IntegrationSection3ACVF.BallFamilyFibreDefinable
+module
+
+public import IntegrationSection3ACVF.RealTypeNeighborhoods
+public import IntegrationSection3ACVF.BallFamilyFibreDefinable
+
+@[expose] public section
 
 /-! Compactness for any real-base ball family whose members are atomic
 when contained in a complete type. The geometric premise is explicit here;

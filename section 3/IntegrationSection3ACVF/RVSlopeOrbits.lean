@@ -1,6 +1,10 @@
-import IntegrationSection3ACVF.RVSlopeFibres
-import IntegrationSection3ACVF.RVIntegerOrbits
-import IntegrationSection3ACVF.RVSlopeFiniteCofinite
+module
+
+public import IntegrationSection3ACVF.RVSlopeFibres
+public import IntegrationSection3ACVF.RVIntegerOrbits
+public import IntegrationSection3ACVF.RVSlopeFiniteCofinite
+
+@[expose] public section
 
 /-! Each nonempty fixed-coefficient slope fibre contains an infinite
 integer orbit inside one actual Gamma value fibre. -/

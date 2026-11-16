@@ -1,5 +1,9 @@
-import IntegrationSection5.CommonProductInactive
-import IntegrationSection5.RVSliceHeadImages
+module
+
+public import IntegrationSection5.CommonProductInactive
+public import IntegrationSection5.RVSliceHeadImages
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option allowUnsafeReducibility true in

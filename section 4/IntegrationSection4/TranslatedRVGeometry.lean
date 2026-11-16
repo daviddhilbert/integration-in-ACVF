@@ -1,6 +1,10 @@
-import IntegrationSection4.BalancedSlope
-import IntegrationSection4.LinearBallRadius
-import IntegrationSection3ACVF.RVInputFibre
+module
+
+public import IntegrationSection4.BalancedSlope
+public import IntegrationSection4.LinearBallRadius
+public import IntegrationSection3ACVF.RVInputFibre
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

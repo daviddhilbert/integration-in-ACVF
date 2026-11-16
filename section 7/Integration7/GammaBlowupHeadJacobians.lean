@@ -1,6 +1,10 @@
-import Integration7.GammaGenericRVJacobianFromGraphs
-import Integration7.GammaEssentialCoordinateGraphs
-import Integration7.BlowupHeadJacobianAlmostEverywhere
+module
+
+public import Integration7.GammaGenericRVJacobianFromGraphs
+public import Integration7.GammaEssentialCoordinateGraphs
+public import Integration7.BlowupHeadJacobianAlmostEverywhere
+
+@[expose] public section
 
 /-! The elementary-blowup head Jacobian can be chosen with its full
 original-Gamma graph. The empty head retains its actual determinant one. -/

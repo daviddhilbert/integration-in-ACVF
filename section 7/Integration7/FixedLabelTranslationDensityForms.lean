@@ -1,5 +1,9 @@
-import Integration7.FixedLabelTranslationVolumes
-import Integration7.MixedRetainedLabelVolumeForms
+module
+
+public import Integration7.FixedLabelTranslationVolumes
+public import Integration7.MixedRetainedLabelVolumeForms
+
+@[expose] public section
 
 /-! A selected fixed label supplies exactly the literal retained-coordinate
 density used in contraction comparisons, on both sides of a translation. -/

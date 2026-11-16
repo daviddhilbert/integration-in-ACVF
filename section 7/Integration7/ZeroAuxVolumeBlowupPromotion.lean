@@ -1,8 +1,12 @@
-import Integration7.ActualVolumeObjectPromotion
-import Integration7.ZeroAuxVolumeComparisonPromotion
-import Integration7.ActualVolumeAdmissibilityPromotion
-import Integration7.VolumeBlowupSchemaRealization
-import Integration7.ElementaryBlowupIsomorphism
+module
+
+public import Integration7.ActualVolumeObjectPromotion
+public import Integration7.ZeroAuxVolumeComparisonPromotion
+public import Integration7.ActualVolumeAdmissibilityPromotion
+public import Integration7.VolumeBlowupSchemaRealization
+public import Integration7.ElementaryBlowupIsomorphism
+
+@[expose] public section
 
 /-! Actual blowups over the named term context promote with no
 additional exception parameters in either splitting comparison. The

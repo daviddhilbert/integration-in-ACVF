@@ -1,6 +1,10 @@
-import Integration7.HKWeightedZeroDistributivity
-import Integration7.HKMixedVolumeIsomorphisms
-import Integration7.VolumeBlowupEquivalence
+module
+
+public import Integration7.HKWeightedZeroDistributivity
+public import Integration7.HKMixedVolumeIsomorphisms
+public import Integration7.VolumeBlowupEquivalence
+
+@[expose] public section
 
 /-! Full blowup chains commute with arbitrary weighted degree-zero factors. -/
 noncomputable section

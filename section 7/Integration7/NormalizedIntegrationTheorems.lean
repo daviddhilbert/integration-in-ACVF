@@ -1,6 +1,10 @@
-import Integration7.NormalizedSupportedCoordinateIntegrals
-import Integration7.NonemptyVolumeCoordinateProjections
-import Integration7.NormalizedVolumeDomainJacobians
+module
+
+public import Integration7.NormalizedSupportedCoordinateIntegrals
+public import Integration7.NonemptyVolumeCoordinateProjections
+public import Integration7.NormalizedVolumeDomainJacobians
+
+@[expose] public section
 
 /-! The numbered normalized Fubini and change-of-variables identities
 on genuine supported scalar extensions in positive VF dimension. These

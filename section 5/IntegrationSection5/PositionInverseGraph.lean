@@ -1,5 +1,9 @@
-import IntegrationSection5.CellTranslationGeometry
-import IntegrationSection5.CellGammaBridge
+module
+
+public import IntegrationSection5.CellTranslationGeometry
+public import IntegrationSection5.CellGammaBridge
+
+@[expose] public section
 
 /-! The actual inverse positioning function and its complete original-base
 graph, obtained by reversing the given bijection graph. -/

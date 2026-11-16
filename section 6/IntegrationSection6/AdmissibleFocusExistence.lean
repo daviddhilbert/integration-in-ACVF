@@ -1,6 +1,10 @@
-import IntegrationSection6.UniformRootEquations
-import IntegrationSection6.GammaRootFocus
-import Section5.GammaRestriction
+module
+
+public import IntegrationSection6.UniformRootEquations
+public import IntegrationSection6.GammaRootFocus
+public import Section5.GammaRestriction
+
+@[expose] public section
 
 /-! The focus-existence part of6.12, with original Gamma parameters,
 zero unchanged coordinates and a genuine special bijection of length one. -/

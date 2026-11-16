@@ -1,8 +1,12 @@
-import Integration7.GammaTermContextVolumeGeometry
-import Integration7.DefinableVolumeBaseReduction
-import Integration7.CommonContextVolumeDescent
-import Integration7.PositiveVolumeClassExtensions
-import Section3.VFDefinableClosure
+module
+
+public import Integration7.GammaTermContextVolumeGeometry
+public import Integration7.DefinableVolumeBaseReduction
+public import Integration7.CommonContextVolumeDescent
+public import Integration7.PositiveVolumeClassExtensions
+public import Section3.VFDefinableClosure
+
+@[expose] public section
 
 /-! Naming elements already definable over the original real context
 does not identify new positive volume classes. Actual common blowup

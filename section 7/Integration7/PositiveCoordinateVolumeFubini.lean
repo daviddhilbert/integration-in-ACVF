@@ -1,4 +1,8 @@
-import Integration7.CoordinateVolumeIntegralNormalizers
+module
+
+public import Integration7.CoordinateVolumeIntegralNormalizers
+
+@[expose] public section
 
 /-! Positive homogeneous coordinate Fubini with every RV coordinate
 identification explicit. The iterated total is computed by the actual

@@ -1,5 +1,9 @@
-import Integration7.GammaVolumeSliceDensityAssembly
-import Integration7.VolumeSchemaRowSemantics
+module
+
+public import Integration7.GammaVolumeSliceDensityAssembly
+public import Integration7.VolumeSchemaRowSemantics
+
+@[expose] public section
 
 /-! A zero-prefix slice is the whole unary volume object, with its full
 coordinate and density graphs. No volume coordinate is discarded. -/

@@ -1,4 +1,8 @@
-import IntegrationSection6.FiniteGammaAdditiveCongruence
+module
+
+public import IntegrationSection6.FiniteGammaAdditiveCongruence
+
+@[expose] public section
 
 /-! The original-Gamma finite common-blowup congruence is exactly the least
 additive congruence containing genuine elementary replacements. -/

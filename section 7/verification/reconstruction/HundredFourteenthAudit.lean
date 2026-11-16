@@ -1,13 +1,17 @@
-import Integration7.ConstrainedUnarySources
-import Integration7.FactoredHeadRetainedLabels
-import Integration7.FactoredHeadVolumeProductCharts
-import Integration7.FactoredRVConstraintHeadMaps
-import Integration7.IndependentRVGraphFactorizations
-import Integration7.NativeRVProductMapTransfers
-import Integration7.NativeRVProductVolumeCharts
-import Integration7.PureRVLabelGraphFactorizations
-import Integration7.SelectedRetainedContractionIntegrals
-import Integration7.SelectedRetainedVolumeSchemata
+module
+
+public import Integration7.ConstrainedUnarySources
+public import Integration7.FactoredHeadRetainedLabels
+public import Integration7.FactoredHeadVolumeProductCharts
+public import Integration7.FactoredRVConstraintHeadMaps
+public import Integration7.IndependentRVGraphFactorizations
+public import Integration7.NativeRVProductMapTransfers
+public import Integration7.NativeRVProductVolumeCharts
+public import Integration7.PureRVLabelGraphFactorizations
+public import Integration7.SelectedRetainedContractionIntegrals
+public import Integration7.SelectedRetainedVolumeSchemata
+
+@[expose] public section
 set_option pp.universes true
 set_option pp.proofs false
 set_option pp.deepTerms true

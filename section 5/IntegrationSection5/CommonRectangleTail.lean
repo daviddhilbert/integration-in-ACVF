@@ -1,6 +1,10 @@
-import IntegrationSection5.CommonRectangleFactor
-import IntegrationSection5.ComplementaryPaddedCompletion
-import IntegrationSection5.CommonProductPaddedTails
+module
+
+public import IntegrationSection5.CommonRectangleFactor
+public import IntegrationSection5.ComplementaryPaddedCompletion
+public import IntegrationSection5.CommonProductPaddedTails
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option allowUnsafeReducibility true in

@@ -1,6 +1,10 @@
-import Integration7.DefinableRescalingProducts
-import Integration7.SelectedJacobianRowComparison
-import Integration7.SelectedVolumeFamilyPositiveProducts
+module
+
+public import Integration7.DefinableRescalingProducts
+public import Integration7.SelectedJacobianRowComparison
+public import Integration7.SelectedVolumeFamilyPositiveProducts
+
+@[expose] public section
 
 /-! The actual row Jacobian transform respects multiplication by a
 positive constant volume coefficient, over the original target base. -/

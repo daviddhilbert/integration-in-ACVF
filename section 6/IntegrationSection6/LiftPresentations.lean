@@ -1,4 +1,8 @@
-import Section5.PullbackLift
+module
+
+public import Section5.PullbackLift
+
+@[expose] public section
 
 /-! The raw canonical lift in the predecessor's actual special-bijection space. -/
 

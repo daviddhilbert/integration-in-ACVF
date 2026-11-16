@@ -1,4 +1,8 @@
-import Integration7.GenericCertifiedVolumeCharts
+module
+
+public import Integration7.GenericCertifiedVolumeCharts
+
+@[expose] public section
 
 /-! A finite-support certificate for the RV volume equation. Its exception
 has an actual finite-fibre map to fewer RV coordinates. Every checked volume

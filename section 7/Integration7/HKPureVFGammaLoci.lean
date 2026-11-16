@@ -1,4 +1,8 @@
-import IntegrationSection6.GammaVFParameterBases
+module
+
+public import IntegrationSection6.GammaVFParameterBases
+
+@[expose] public section
 
 /-! A sorted pure VF locus is the same actual Gamma-definable point
 locus with its empty RV tuple; no new parameters are chosen. -/

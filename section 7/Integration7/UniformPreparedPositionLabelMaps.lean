@@ -1,5 +1,9 @@
-import Integration7.UniformBalancedCompatiblePreparations
-import IntegrationSection5.RelativeLabelPreservation
+module
+
+public import Integration7.UniformBalancedCompatiblePreparations
+public import IntegrationSection5.RelativeLabelPreservation
+
+@[expose] public section
 
 /-! The actual compatible positioning preparations preserve the
 entire old family label tuple on both VF and induced raw RV maps. -/

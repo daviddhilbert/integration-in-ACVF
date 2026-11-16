@@ -1,6 +1,10 @@
-import Integration7.OrdinaryVFVolumeFamilies
-import Integration7.AERVVolumeFunctions
-import Integration7.AllDegreeVolumeClasses
+module
+
+public import Integration7.OrdinaryVFVolumeFamilies
+public import Integration7.AERVVolumeFunctions
+public import Integration7.AllDegreeVolumeClasses
+
+@[expose] public section
 
 /-! The actual almost-everywhere function space with ordinary RV[0]
 values. Equality is ordinary RV isomorphism off one original-base

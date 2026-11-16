@@ -1,6 +1,10 @@
-import IntegrationSection6.GammaCommonBlowupSchemata
-import IntegrationSection6.GammaChainPromotion
-import IntegrationSection6.FiniteGammaCommonBlowups
+module
+
+public import IntegrationSection6.GammaCommonBlowupSchemata
+public import IntegrationSection6.GammaChainPromotion
+public import IntegrationSection6.FiniteGammaCommonBlowups
+
+@[expose] public section
 
 /-! Promote actual common forward blowups to finite formula witnesses.
 Arbitrary internal code presentations remain internal throughout. -/

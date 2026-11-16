@@ -1,6 +1,10 @@
-import Integration7.UniformCellRVParadigmPartitions
-import Integration7.UniformBalancedHorizontalContractions
-import Integration7.NativeRectangleFamilyStandardContractions
+module
+
+public import Integration7.UniformCellRVParadigmPartitions
+public import Integration7.UniformBalancedHorizontalContractions
+public import Integration7.NativeRectangleFamilyStandardContractions
+
+@[expose] public section
 
 /-! Both actual translations of a balanced family are rectangles over
 their retained RV labels. The horizontal paradigm is obtained from the

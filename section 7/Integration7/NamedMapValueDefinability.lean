@@ -1,6 +1,10 @@
-import Integration7.TermClosureDefinability
-import Section4.VFRealFibres
-import Section4.RVCoordinates
+module
+
+public import Integration7.TermClosureDefinability
+public import Section4.VFRealFibres
+public import Section4.RVCoordinates
+
+@[expose] public section
 
 /-! Definable maps send definable singleton inputs to definable singleton
 outputs. For the actual real VF and RV presentations, each output

@@ -1,7 +1,11 @@
-import IntegrationSection3ACVF.FullGammaAtomicity
-import IntegrationSection3ACVF.FullProfileCosets
-import IntegrationSection3ACVF.GammaCosetGeometry
-import IntegrationSection3ACVF.PaperBalls
+module
+
+public import IntegrationSection3ACVF.FullGammaAtomicity
+public import IntegrationSection3ACVF.FullProfileCosets
+public import IntegrationSection3ACVF.GammaCosetGeometry
+public import IntegrationSection3ACVF.PaperBalls
+
+@[expose] public section
 
 /-! Lemma 3.9 for proper open balls, with every finite RV output arity and
 an arbitrary original real/Gamma/ball base. -/

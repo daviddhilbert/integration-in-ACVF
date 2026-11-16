@@ -1,5 +1,9 @@
-import IntegrationSection4.FiniteScalarFamilies
-import IntegrationSection4.InverseDifferenceSyntax
+module
+
+public import IntegrationSection4.FiniteScalarFamilies
+public import IntegrationSection4.InverseDifferenceSyntax
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

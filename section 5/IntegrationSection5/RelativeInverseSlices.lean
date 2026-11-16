@@ -1,4 +1,8 @@
-import IntegrationSection5.RelativeInverseGeometry
+module
+
+public import IntegrationSection5.RelativeInverseGeometry
+
+@[expose] public section
 
 /-! Exact ordinary-ball inverse slices of actual head preparations.
 The ball calculation is adapted from the checked predecessor's

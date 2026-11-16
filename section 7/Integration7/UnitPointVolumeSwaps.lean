@@ -1,6 +1,10 @@
-import Integration7.LowerDimensionVolumeProductSwaps
-import Integration7.BasicVolumeRelationObjects
-import Integration7.RVProductDimension
+module
+
+public import Integration7.LowerDimensionVolumeProductSwaps
+public import Integration7.BasicVolumeRelationObjects
+public import Integration7.RVProductDimension
+
+@[expose] public section
 
 /-! The unit point contributes one volume degree and no RV dimension.
 Consequently its actual unsigned swap with any positive object preserves

@@ -1,8 +1,12 @@
-import IntegrationSection6.GammaSchemaIndexedChartTransfer
-import IntegrationSection6.GammaSchemaIndexedCoproductTransfer
-import IntegrationSection6.GammaSchemaIndexedElementaryIso
-import IntegrationSection6.GammaSchemaUniversalGeometry
-import IntegrationSection6.FiniteGammaCoproductMaps
+module
+
+public import IntegrationSection6.GammaSchemaIndexedChartTransfer
+public import IntegrationSection6.GammaSchemaIndexedCoproductTransfer
+public import IntegrationSection6.GammaSchemaIndexedElementaryIso
+public import IntegrationSection6.GammaSchemaUniversalGeometry
+public import IntegrationSection6.FiniteGammaCoproductMaps
+
+@[expose] public section
 
 /-! A single uniformly valid finite blowup witness glues over an actual
 RV[d] base to a native blowup in RV[d+k]. The index set may be infinite.

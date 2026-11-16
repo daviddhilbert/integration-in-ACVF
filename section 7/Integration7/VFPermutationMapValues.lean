@@ -1,4 +1,8 @@
-import IntegrationSection6.GammaPermutedUnaryMaps
+module
+
+public import IntegrationSection6.GammaPermutedUnaryMaps
+
+@[expose] public section
 
 /-! Literal inverse and conjugation values for the actual VF permutation maps. -/
 noncomputable section

@@ -1,7 +1,11 @@
-import IntegrationSection6.UnaryPartitionImageFactors
-import IntegrationSection6.PreparedPartitionBlowups
-import IntegrationSection6.PullbackUnaryChainComparison
-import IntegrationSection6.FinitePullbackPartitionGluing
+module
+
+public import IntegrationSection6.UnaryPartitionImageFactors
+public import IntegrationSection6.PreparedPartitionBlowups
+public import IntegrationSection6.PullbackUnaryChainComparison
+public import IntegrationSection6.FinitePullbackPartitionGluing
+
+@[expose] public section
 
 /-! The kernel direction of Lemma6.17 in every positive RV degree.
 The finite partition and unary factors come from checked Section5.6.

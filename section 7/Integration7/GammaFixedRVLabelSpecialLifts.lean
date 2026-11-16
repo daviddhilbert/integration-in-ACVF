@@ -1,6 +1,10 @@
-import Integration7.GammaRVLabelChainLifts
-import Integration7.NativeFixedRVLabels
-import Integration7.RVLabelLiftTargetPullbacks
+module
+
+public import Integration7.GammaRVLabelChainLifts
+public import Integration7.NativeFixedRVLabels
+public import Integration7.RVLabelLiftTargetPullbacks
+
+@[expose] public section
 
 /-! Fixed RV tuples can be carried through actual special bijections.
 The lifted target is an RV-pullback and its projection to the old target

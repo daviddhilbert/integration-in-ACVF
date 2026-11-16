@@ -1,7 +1,11 @@
-import Section4.MapParameters
-import Section4.Products
-import Section4.RealPresentations
-import Section3.RVOperations
+module
+
+public import Section4.MapParameters
+public import Section4.Products
+public import Section4.RealPresentations
+public import Section3.RVOperations
+
+@[expose] public section
 
 /-! Definable nonzero RV-valued densities, with their actual parameter base.
 This is a reconstruction of the form interface used by the recovered

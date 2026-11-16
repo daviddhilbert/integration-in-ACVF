@@ -1,5 +1,9 @@
-import Integration7.UniformBalancedPositionMaps
-import Integration7.PreparedUnaryGammaRadiiByLabels
+module
+
+public import Integration7.UniformBalancedPositionMaps
+public import Integration7.PreparedUnaryGammaRadiiByLabels
+
+@[expose] public section
 
 /-! The actual positioning map of a balanced family is Gamma-linear
 on each complete old RV-labelled fibre. Its slope may depend on that

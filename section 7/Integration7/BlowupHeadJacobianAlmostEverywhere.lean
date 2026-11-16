@@ -1,8 +1,12 @@
-import Integration7.RVProductDimension
-import Integration7.DefinableHeadCorrection
-import Integration7.EssentialBlowupChart
-import Section9.GenericRVJacobian
-import Section9.ZeroArityVolumeJacobian
+module
+
+public import Integration7.RVProductDimension
+public import Integration7.DefinableHeadCorrection
+public import Integration7.EssentialBlowupChart
+public import Section9.GenericRVJacobian
+public import Section9.ZeroArityVolumeJacobian
+
+@[expose] public section
 
 /-! Pulling the head exception through an actual blowup chart adds one
 coordinate. The zero-dimensional head has its pointwise empty determinant. -/

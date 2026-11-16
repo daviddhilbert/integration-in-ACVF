@@ -1,5 +1,9 @@
-import Integration7.NativeUnaryProductFibres
-import IntegrationSection6.SpecialEqualityTransport
+module
+
+public import Integration7.NativeUnaryProductFibres
+public import IntegrationSection6.SpecialEqualityTransport
+
+@[expose] public section
 
 /-! A unary special preparation acts as an actual relatively special
 preparation on a rectangle. Restriction also handles empty fibres. -/

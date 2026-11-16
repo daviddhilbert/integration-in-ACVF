@@ -1,5 +1,9 @@
-import IntegrationSection6.GammaGraphPresentationIsomorphisms
-import IntegrationSection6.FiniteGammaObjects
+module
+
+public import IntegrationSection6.GammaGraphPresentationIsomorphisms
+public import IntegrationSection6.FiniteGammaObjects
+
+@[expose] public section
 
 /-! Extend finite graph presentations to a common internal finite-code
 base. Original-Gamma domain and volume certificates are retained. -/

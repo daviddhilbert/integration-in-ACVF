@@ -1,5 +1,9 @@
-import Integration7.GammaVolumeBlowupCommonNameRebasing
-import Integration7.CommonContextVolumeEquivalences
+module
+
+public import Integration7.GammaVolumeBlowupCommonNameRebasing
+public import Integration7.CommonContextVolumeEquivalences
+
+@[expose] public section
 
 /-! Original-Gamma finite volume blowup witnesses descend to any
 original context containing their common names, with exact chain lengths. -/

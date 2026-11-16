@@ -1,6 +1,10 @@
-import Integration7.SelectedIntegralCoordinateOrder
-import Integration7.VolumeBlowupCoordinatePermutations
-import Integration7.VolumeBlowupRightProducts
+module
+
+public import Integration7.SelectedIntegralCoordinateOrder
+public import Integration7.VolumeBlowupCoordinatePermutations
+public import Integration7.VolumeBlowupRightProducts
+
+@[expose] public section
 
 /-! Literal RV charts compare the appended and original-coordinate
 presentations of the same selected integral. The common permutation and

@@ -1,6 +1,10 @@
-import IntegrationSection6.VFPrefixFibrePresentations
-import IntegrationSection6.StandardProgramPresentations
-import IntegrationSection6.GammaOrdinaryContractionPresentations
+module
+
+public import IntegrationSection6.VFPrefixFibrePresentations
+public import IntegrationSection6.StandardProgramPresentations
+public import IntegrationSection6.GammaOrdinaryContractionPresentations
+
+@[expose] public section
 
 /-! Finite RV fibre presentations of a partial contraction give actual
 standard-contraction presentations of the frozen VF prefix. -/

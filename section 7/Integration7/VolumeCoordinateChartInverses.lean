@@ -1,5 +1,9 @@
-import Integration7.SelectedIntegralCoordinateCharts
-import Integration7.FiniteVolumeIsoMaps
+module
+
+public import Integration7.SelectedIntegralCoordinateCharts
+public import Integration7.FiniteVolumeIsoMaps
+
+@[expose] public section
 
 /-! Inverse formulas for finite volume coordinate charts, with the
 common coordinate permutation and unchanged density kept explicit. -/

@@ -1,4 +1,8 @@
-import IntegrationSection6.FiniteGammaObjects
+module
+
+public import IntegrationSection6.FiniteGammaObjects
+
+@[expose] public section
 
 /-! Elementary blowups at a fixed real code presentation, with the
 original Gamma graphs and finite-volume lift isomorphism retained. -/

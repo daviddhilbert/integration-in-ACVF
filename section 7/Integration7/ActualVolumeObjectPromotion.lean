@@ -1,5 +1,9 @@
-import Integration7.TermContextGammaGraphs
-import Integration7.PromotedVolumeSchemaRows
+module
+
+public import Integration7.TermContextGammaGraphs
+public import Integration7.PromotedVolumeSchemaRows
+
+@[expose] public section
 
 /-! Actual volume objects over the term context of the original named
 parameters promote with their exact coordinate and density graphs. -/

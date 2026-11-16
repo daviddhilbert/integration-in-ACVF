@@ -1,5 +1,9 @@
-import IntegrationSection3ACVF.FiniteBaseTypeNeighborhoods
-import IntegrationSection3ACVF.RealOpenImageCovers
+module
+
+public import IntegrationSection3ACVF.FiniteBaseTypeNeighborhoods
+public import IntegrationSection3ACVF.RealOpenImageCovers
+
+@[expose] public section
 
 /-! Both compactness steps of3.19 over a finite interpreted base.
 Auxiliary common real codes occur only in the saturation argument;

@@ -1,4 +1,8 @@
-import IntegrationSection3ACVF.FiniteFamilyCoordinates
+module
+
+public import IntegrationSection3ACVF.FiniteFamilyCoordinates
+
+@[expose] public section
 
 /-! Complete LRV graph of finite-family tagged residue coordinates.
 Only a finite union of actual component graphs and scalar tag equations

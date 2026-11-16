@@ -1,4 +1,8 @@
-import IntegrationSection4.CellRectangles
+module
+
+public import IntegrationSection4.CellRectangles
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

@@ -1,7 +1,11 @@
-import Integration7.StandardVolumeContractionLiftMaps
-import Integration7.VolumeLiftFullDimension
-import Integration7.EssentialEmptyVolumeIsomorphisms
-import Integration7.GammaVolumeBlowupEquivalence
+module
+
+public import Integration7.StandardVolumeContractionLiftMaps
+public import Integration7.VolumeLiftFullDimension
+public import Integration7.EssentialEmptyVolumeIsomorphisms
+public import Integration7.GammaVolumeBlowupEquivalence
+
+@[expose] public section
 
 /-! Arbitrary actual standard contractions of VF-small volume objects
 have no essential labels, and hence compare by an actual Gamma volume

@@ -1,7 +1,11 @@
-import IntegrationSection3ACVF.FullGammaSyntax
-import IntegrationSection3ACVF.AdjoinBall
-import IntegrationSection3ACVF.BallCosetAtomicity
-import IntegrationSection3.ImaginaryBaseRanges
+module
+
+public import IntegrationSection3ACVF.FullGammaSyntax
+public import IntegrationSection3ACVF.AdjoinBall
+public import IntegrationSection3ACVF.BallCosetAtomicity
+public import IntegrationSection3.ImaginaryBaseRanges
+
+@[expose] public section
 
 /-! Additive ball cosets over a base with genuine Gamma and ball names. -/
 

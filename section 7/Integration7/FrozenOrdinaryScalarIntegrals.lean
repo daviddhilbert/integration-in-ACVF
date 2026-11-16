@@ -1,6 +1,10 @@
-import Integration7.OrdinaryFamilyFieldScalarIntegrals
-import Integration7.FrozenOrdinaryCoefficientProducts
-import Integration7.FrozenHeadOrdinaryCoefficients
+module
+
+public import Integration7.OrdinaryFamilyFieldScalarIntegrals
+public import Integration7.FrozenOrdinaryCoefficientProducts
+public import Integration7.FrozenHeadOrdinaryCoefficients
+
+@[expose] public section
 
 /-! The ordinary-input finite coefficient law holds on the genuine
 frozen unary fibres and descends to the original parameter context. -/

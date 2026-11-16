@@ -1,5 +1,9 @@
-import IntegrationSection5.CoordinateInjectivityPartition
-import IntegrationSection5.CoordinateContext
+module
+
+public import IntegrationSection5.CoordinateInjectivityPartition
+public import IntegrationSection5.CoordinateContext
+
+@[expose] public section
 
 /-! The uniform coordinate refinement at any selected source VF coordinate. -/
 noncomputable section

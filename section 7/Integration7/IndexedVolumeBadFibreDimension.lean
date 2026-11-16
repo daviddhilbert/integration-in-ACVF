@@ -1,5 +1,9 @@
-import Integration7.IndexedVolumeFibreRealization
-import Integration7.SmallExtendedRVExceptions
+module
+
+public import Integration7.IndexedVolumeFibreRealization
+public import Integration7.SmallExtendedRVExceptions
+
+@[expose] public section
 
 /-! The definable bad locus of a joint comparison has small parameter
 fibres. Each fibre is contained in its own small-context RV exception;

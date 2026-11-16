@@ -1,6 +1,10 @@
-import Integration7.ConstantRVLabelSpecialPreparations
-import Integration7.FixedLabelProductHeadGeometry
-import Integration7.ConstantLabelPreparedFiniteness
+module
+
+public import Integration7.ConstantRVLabelSpecialPreparations
+public import Integration7.FixedLabelProductHeadGeometry
+public import Integration7.ConstantLabelPreparedFiniteness
+
+@[expose] public section
 
 /-! Any actual unary special preparation can carry the original fixed
 RV labels. Its original and carried-label pullback targets have the

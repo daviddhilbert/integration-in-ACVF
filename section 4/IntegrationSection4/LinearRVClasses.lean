@@ -1,4 +1,8 @@
-import IntegrationSection4.TranslatedRVGeometry
+module
+
+public import IntegrationSection4.TranslatedRVGeometry
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

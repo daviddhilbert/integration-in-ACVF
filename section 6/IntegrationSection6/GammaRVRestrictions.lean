@@ -1,4 +1,8 @@
-import IntegrationSection6.GammaRVGlobalRestriction
+module
+
+public import IntegrationSection6.GammaRVGlobalRestriction
+
+@[expose] public section
 
 /-! Full Gamma graphs survive genuine RV source restrictions and images. -/
 noncomputable section

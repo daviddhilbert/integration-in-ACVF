@@ -1,6 +1,10 @@
-import Integration7.GammaRVLabelIdentity
-import Integration7.RVVolumeComposition
-import Integration7.RVVolumeInverse
+module
+
+public import Integration7.GammaRVLabelIdentity
+public import Integration7.RVVolumeComposition
+public import Integration7.RVVolumeInverse
+
+@[expose] public section
 
 /-! Actual volume isomorphisms that keep labels fixed inherit the
 original-Gamma chart of their essential source domain. -/

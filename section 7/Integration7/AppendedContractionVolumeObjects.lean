@@ -1,7 +1,11 @@
-import Integration7.OrderedAppendVolumeFiniteness
-import Integration7.PositiveSelectedLemma75
-import Integration7.GammaTermContextVolumeGeometry
-import Integration7.RVCoordinateSelection
+module
+
+public import Integration7.OrderedAppendVolumeFiniteness
+public import Integration7.PositiveSelectedLemma75
+public import Integration7.GammaTermContextVolumeGeometry
+public import Integration7.RVCoordinateSelection
+
+@[expose] public section
 
 /-! Actual volume objects on the complete RV labels of chosen standard
 contractions. Their volume tuple is the old selected coordinates followed

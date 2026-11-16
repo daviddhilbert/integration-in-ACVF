@@ -1,6 +1,10 @@
-import IntegrationSection6.ContractionExtensionValues
-import IntegrationSection6.OrderedSelectedVolume
-import IntegrationSection6.GammaDegreeTransport
+module
+
+public import IntegrationSection6.ContractionExtensionValues
+public import IntegrationSection6.OrderedSelectedVolume
+public import IntegrationSection6.GammaDegreeTransport
+
+@[expose] public section
 
 /-! Presentation extension preserves the recursively selected volume and
 transports finite RV isomorphisms across equal natural degrees. -/

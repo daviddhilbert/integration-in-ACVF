@@ -1,5 +1,9 @@
-import IntegrationSection6.GammaVFSelectedSourceFibres
-import IntegrationSection6.FiniteSelectedContractions
+module
+
+public import IntegrationSection6.GammaVFSelectedSourceFibres
+public import IntegrationSection6.FiniteSelectedContractions
+
+@[expose] public section
 
 /-! Actual finite selected-volume contractions of a mixed set presented
 by a finite VF-parameter family. Relative finiteness and the source Gamma

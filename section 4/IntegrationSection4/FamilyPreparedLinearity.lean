@@ -1,6 +1,10 @@
-import IntegrationSection4.GammaFamilySyntax
-import IntegrationSection4.PreparedLinearity
-import IntegrationSection3ACVF.RealParameterTuples
+module
+
+public import IntegrationSection4.GammaFamilySyntax
+public import IntegrationSection4.PreparedLinearity
+public import IntegrationSection3ACVF.RealParameterTuples
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

@@ -1,8 +1,12 @@
-import Integration7.ConstantLabelPreparedFiniteness
-import Integration7.FixedHeadUnaryVolumeIsomorphisms
-import Integration7.FixedTailUnaryVolumeIsomorphisms
-import Integration7.GammaCoordinateDensityGraphs
-import Integration7.GammaVolumeDensityRescaling
+module
+
+public import Integration7.ConstantLabelPreparedFiniteness
+public import Integration7.FixedHeadUnaryVolumeIsomorphisms
+public import Integration7.FixedTailUnaryVolumeIsomorphisms
+public import Integration7.GammaCoordinateDensityGraphs
+public import Integration7.GammaVolumeDensityRescaling
+
+@[expose] public section
 
 /-! The actual product volume comparison from a constant-label lifted
 unary preparation to its original unary target. Both finite-volume

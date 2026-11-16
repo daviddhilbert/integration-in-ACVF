@@ -1,6 +1,10 @@
-import Integration7.PullbackCoordinateVolumeObjects
-import Integration7.EssentialEmptyVolumeIsomorphisms
-import Integration7.CommonContextVolumeEquivalences
+module
+
+public import Integration7.PullbackCoordinateVolumeObjects
+public import Integration7.EssentialEmptyVolumeIsomorphisms
+public import Integration7.CommonContextVolumeEquivalences
+
+@[expose] public section
 
 /-! Empty mixed domains have empty essential pullback volume objects;
 these supply the base case of finite volume partition gluing. -/

@@ -1,4 +1,8 @@
-import IntegrationSection3ACVF.NormalizedBallParameters
+module
+
+public import IntegrationSection3ACVF.NormalizedBallParameters
+
+@[expose] public section
 
 /-! Normalize actual punctured-ball families without changing any parent,
 hole, body, component count or total hole count. Gamma quotients remain

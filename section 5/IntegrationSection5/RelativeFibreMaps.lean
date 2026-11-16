@@ -1,4 +1,8 @@
-import IntegrationSection5.CoordinateFibreMaps
+module
+
+public import IntegrationSection5.CoordinateFibreMaps
+
+@[expose] public section
 
 /-! Relatively unary maps induce actual definable maps of coordinate fibres. -/
 

@@ -1,7 +1,11 @@
-import Integration7.FiniteAuxiliaryMapPromotion
-import Integration7.PromotedVolumeSchemaRows
-import Integration7.GammaVolumeChartPromotion
-import Integration7.VolumeCertificateRowRecognition
+module
+
+public import Integration7.FiniteAuxiliaryMapPromotion
+public import Integration7.PromotedVolumeSchemaRows
+public import Integration7.GammaVolumeChartPromotion
+public import Integration7.VolumeCertificateRowRecognition
+
+@[expose] public section
 
 /-! Promote an actual original-Gamma volume comparison in a named
 term-generated context. Auxiliary parameters encode its finite exception

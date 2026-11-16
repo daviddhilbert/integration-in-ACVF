@@ -1,8 +1,12 @@
-import Integration7.GammaIndexedVolumeCommonRealization
-import Integration7.IndexedVolumeFiniteWitnessGluing
-import Integration7.GammaIndexedVolumeBinaryPartitions
-import Integration7.GammaIndexedVolumeEmpty
-import Integration7.GammaVolumeBlowupAddition
+module
+
+public import Integration7.GammaIndexedVolumeCommonRealization
+public import Integration7.IndexedVolumeFiniteWitnessGluing
+public import Integration7.GammaIndexedVolumeBinaryPartitions
+public import Integration7.GammaIndexedVolumeEmpty
+public import Integration7.GammaVolumeBlowupAddition
+
+@[expose] public section
 
 /-! A finite definable cover by common-forward-volume-blowup witnesses
 glues over any actual finite-volume RV index base. -/

@@ -1,5 +1,9 @@
-import IntegrationSection3ACVF.OpenBallSeparationGeometry
-import IntegrationSection3ACVF.OpenSubballImages
+module
+
+public import IntegrationSection3ACVF.OpenBallSeparationGeometry
+public import IntegrationSection3ACVF.OpenSubballImages
+
+@[expose] public section
 
 /-! An injective definable VF map on an atomic open ball preserves
 strict comparisons of valuations of differences from a fixed point. -/

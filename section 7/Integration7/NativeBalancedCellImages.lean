@@ -1,5 +1,9 @@
-import Integration7.NativeVFPairImages
-import Integration7.BalancedCellTranslationEquivalences
+module
+
+public import Integration7.NativeVFPairImages
+public import Integration7.BalancedCellTranslationEquivalences
+
+@[expose] public section
 
 /-! The actual native coordinate translations of a balanced two-cell
 have precisely the two product images from the paper's opposite orders. -/

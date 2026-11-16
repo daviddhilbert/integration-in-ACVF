@@ -1,6 +1,10 @@
-import Integration7.GammaIgnoredParameterRecoding
-import Integration7.ExtraVolumeRowTransport
-import Integration7.GammaVolumeIsoRecoding
+module
+
+public import Integration7.GammaIgnoredParameterRecoding
+public import Integration7.ExtraVolumeRowTransport
+public import Integration7.GammaVolumeIsoRecoding
+
+@[expose] public section
 
 /-! General volume certificates recode their geometric formulas while
 retaining the old parameter tuple existentially inside the exception map.

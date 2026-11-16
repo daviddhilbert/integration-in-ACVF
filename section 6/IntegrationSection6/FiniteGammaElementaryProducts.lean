@@ -1,7 +1,11 @@
-import IntegrationSection6.FiniteGammaProductAdmissibility
-import IntegrationSection6.FiniteGammaElementaryAt
-import IntegrationSection6.FiniteGammaFormulaIsos
-import IntegrationSection6.ElementaryProductCoordinates
+module
+
+public import IntegrationSection6.FiniteGammaProductAdmissibility
+public import IntegrationSection6.FiniteGammaElementaryAt
+public import IntegrationSection6.FiniteGammaFormulaIsos
+public import IntegrationSection6.ElementaryProductCoordinates
+
+@[expose] public section
 
 /-! The elementary-product comparison is a genuine finite Gamma RV
 isomorphism with an explicit global coordinate permutation. -/

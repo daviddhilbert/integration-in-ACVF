@@ -1,5 +1,9 @@
-import Integration7.NormalizedHomogeneousIntegralValues
-import Integration7.PositiveCoordinateVolumeFubini
+module
+
+public import Integration7.NormalizedHomogeneousIntegralValues
+public import Integration7.PositiveCoordinateVolumeFubini
+
+@[expose] public section
 
 /-! Fubini for every actual coordinate projection of a positive
 homogeneous function in the normalized ring. The coordinate normalizer

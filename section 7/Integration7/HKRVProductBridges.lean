@@ -1,5 +1,9 @@
-import Integration7.HKMixedVolumeIsomorphisms
-import Integration7.VolumeIsoDegreeReindex
+module
+
+public import Integration7.HKMixedVolumeIsomorphisms
+public import Integration7.VolumeIsoDegreeReindex
+
+@[expose] public section
 
 /-! The specialized weighted scalar products agree with the genuine
 all-degree Cartesian product, including their actual forms. -/

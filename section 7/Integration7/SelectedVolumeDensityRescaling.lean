@@ -1,6 +1,10 @@
-import Integration7.VFVolumeDensityRescaling
-import Integration7.DefinableVolumeClassRescaling
-import Integration7.AERVVolumeFunctions
+module
+
+public import Integration7.VFVolumeDensityRescaling
+public import Integration7.DefinableVolumeClassRescaling
+public import Integration7.AERVVolumeFunctions
+
+@[expose] public section
 
 /-! Named nonzero density multipliers on actual selected families and
 their AE quotient. The original domain, selected labels and all finite

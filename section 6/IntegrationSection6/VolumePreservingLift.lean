@@ -1,6 +1,10 @@
-import Section4.CanonicalLift
-import Section4.MapCorestrict
-import Section4.Products
+module
+
+public import Section4.CanonicalLift
+public import Section4.MapCorestrict
+public import Section4.Products
+
+@[expose] public section
 
 /-! A volume-preserving RV bijection lifts by retaining every VF
 coordinate. This is the explicit relabeling step in Lemma6.12. -/

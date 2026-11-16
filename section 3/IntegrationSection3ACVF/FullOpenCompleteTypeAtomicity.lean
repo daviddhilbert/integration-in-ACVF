@@ -1,5 +1,9 @@
-import IntegrationSection3ACVF.SplittingBallHitting
-import IntegrationSection3ACVF.FiniteHittingAtomicity
+module
+
+public import IntegrationSection3ACVF.SplittingBallHitting
+public import IntegrationSection3ACVF.FiniteHittingAtomicity
+
+@[expose] public section
 
 /-! The open-ball part of3.4 at arbitrary radii over the full original
 real/Gamma/ball base. Neither the ambient complete type nor the ball

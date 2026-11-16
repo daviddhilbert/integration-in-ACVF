@@ -1,6 +1,10 @@
-import Integration7.HKZeroVolumeHeadFibres
-import Integration7.HKZeroFamilyCoproducts
-import Integration7.VFVolumeBijections
+module
+
+public import Integration7.HKZeroVolumeHeadFibres
+public import Integration7.HKZeroFamilyCoproducts
+public import Integration7.VFVolumeBijections
+
+@[expose] public section
 
 /-! Actual frozen unit-density realizations preserve ordinary-family
 coproducts. Both identifications keep the VF tuple and the original densities. -/

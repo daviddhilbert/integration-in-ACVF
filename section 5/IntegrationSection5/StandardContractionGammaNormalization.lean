@@ -1,5 +1,9 @@
-import IntegrationSection5.StandardContractionNormalization
-import IntegrationSection5.NaturalContractionGamma
+module
+
+public import IntegrationSection5.StandardContractionNormalization
+public import IntegrationSection5.NaturalContractionGamma
+
+@[expose] public section
 
 /-! Original-Gamma certificates for the normalized first-coordinate RV
 object and the complete natural lift graph. -/

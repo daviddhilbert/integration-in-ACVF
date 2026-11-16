@@ -1,4 +1,8 @@
-import IntegrationSection6.GammaFiniteGraphIsomorphisms
+module
+
+public import IntegrationSection6.GammaFiniteGraphIsomorphisms
+
+@[expose] public section
 
 /-! The actual relational isomorphism factory realizes its given relation
 at every source point. This exposes its checked choice specification for

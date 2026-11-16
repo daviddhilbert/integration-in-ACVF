@@ -1,5 +1,9 @@
-import IntegrationSection6.GammaElementaryStructure
-import IntegrationSection6.ElementaryRightProduct
+module
+
+public import IntegrationSection6.GammaElementaryStructure
+public import IntegrationSection6.ElementaryRightProduct
+
+@[expose] public section
 
 /-! Values of the actual old-volume/parameter program, including the
 absorbing-zero case and an unchanged index-volume prefix. -/

@@ -1,7 +1,11 @@
-import Integration7.FiniteCoefficientSpecialPreparations
-import Integration7.UnaryPreparedFiniteHeadObjects
-import Integration7.FactoredHeadVolumeProductCharts
-import Integration7.IndependentRVProductDensityHeadLabels
+module
+
+public import Integration7.FiniteCoefficientSpecialPreparations
+public import Integration7.UnaryPreparedFiniteHeadObjects
+public import Integration7.FactoredHeadVolumeProductCharts
+public import Integration7.IndependentRVProductDensityHeadLabels
+
+@[expose] public section
 
 /-! The actual contraction of a coefficient times a finite-label unary
 family is volume-isomorphic to the coefficient times its degree-one raw

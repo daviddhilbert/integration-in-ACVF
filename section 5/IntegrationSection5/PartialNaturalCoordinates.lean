@@ -1,4 +1,8 @@
-import IntegrationSection5.PartialNaturalMap
+module
+
+public import IntegrationSection5.PartialNaturalMap
+
+@[expose] public section
 
 /-! Coordinate differences and injectivity on final vertical lines,
 including partial contractions with a frozen VF tuple. -/

@@ -1,4 +1,8 @@
-import IntegrationSection6.DefinableFamilyIntegration
+module
+
+public import IntegrationSection6.DefinableFamilyIntegration
+
+@[expose] public section
 
 /-! Definable RV-valued functions are genuine pointwise-equivalence
 classes, with parameter-dependent targets and a descended integral. -/

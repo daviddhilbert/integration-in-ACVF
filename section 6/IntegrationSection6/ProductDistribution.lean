@@ -1,4 +1,8 @@
-import IntegrationSection6.Subobjects
+module
+
+public import IntegrationSection6.Subobjects
+
+@[expose] public section
 
 /-!
 The first-factor counterpart of the predecessor's

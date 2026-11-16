@@ -1,6 +1,10 @@
-import Integration7.HKVolumeClassCoherence
-import Integration7.ZeroCoefficientProductSymmetry
-import Integration7.HKRVProductBridges
+module
+
+public import Integration7.HKVolumeClassCoherence
+public import Integration7.ZeroCoefficientProductSymmetry
+public import Integration7.HKRVProductBridges
+
+@[expose] public section
 
 /-! Moving an weighted measured-zero coefficient past a positive factor
 introduces no VF coordinate permutation or sign. -/

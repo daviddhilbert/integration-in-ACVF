@@ -1,5 +1,9 @@
-import Integration7.HKVolumeCoproducts
-import Integration7.VolumeCoproductIsomorphism
+module
+
+public import Integration7.HKVolumeCoproducts
+public import Integration7.VolumeCoproductIsomorphism
+
+@[expose] public section
 
 /-! The actual coproduct bijections preserve the full zero-degree form.
 Positive-degree isomorphisms reuse their established geometric proofs. -/

@@ -1,6 +1,10 @@
-import IntegrationSection3ACVF.CanonicalBallSupport
-import IntegrationSection3ACVF.BallCodeGeometry
-import IntegrationSection3.SupportFormulas
+module
+
+public import IntegrationSection3ACVF.CanonicalBallSupport
+public import IntegrationSection3ACVF.BallCodeGeometry
+public import IntegrationSection3.SupportFormulas
+
+@[expose] public section
 
 /-! Original-base definability of the canonical finite ball support.
 The formula quantifies every tuple of real codes of the requisite length;

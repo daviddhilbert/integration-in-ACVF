@@ -1,6 +1,10 @@
-import Integration7.GammaVolumeCertificateContexts
-import Integration7.GammaVolumeElementaryBounds
-import IntegrationSection6.GammaAdmissibilitySchemata
+module
+
+public import Integration7.GammaVolumeCertificateContexts
+public import Integration7.GammaVolumeElementaryBounds
+public import IntegrationSection6.GammaAdmissibilitySchemata
+
+@[expose] public section
 
 /-! Finite formula data for a volume blowup: an admissible center, a
 remainder, and actual volume-comparison chart certificates on the source

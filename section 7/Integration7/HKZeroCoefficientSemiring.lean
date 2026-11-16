@@ -1,5 +1,9 @@
-import Integration7.HKVolumeBlowupSemiring
-import Section4.RVProductSymmetry
+module
+
+public import Integration7.HKVolumeBlowupSemiring
+public import Section4.RVProductSymmetry
+
+@[expose] public section
 
 /-! The actual weighted degree-zero coefficient semiring is commutative:
 swapping the two finite factors exchanges, and therefore preserves, their

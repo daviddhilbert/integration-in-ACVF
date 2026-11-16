@@ -1,5 +1,9 @@
-import IntegrationSection6.GammaParameterRecoding
-import IntegrationSection6.GammaRecodingValidity
+module
+
+public import IntegrationSection6.GammaParameterRecoding
+public import IntegrationSection6.GammaRecodingValidity
+
+@[expose] public section
 
 /-! Prepending ignored parameters to finite RV formulas preserves their
 exact rows. This lets an old parameter tuple be kept in an existential

@@ -1,4 +1,8 @@
-import IntegrationSection6.FiniteGammaObjects
+module
+
+public import IntegrationSection6.FiniteGammaObjects
+
+@[expose] public section
 
 /-! Enlarge the mathematical definition base and the internal real code
 presentation separately. Existing full Gamma graphs extend monotonically;

@@ -1,5 +1,9 @@
-import Integration7.VFVolumeUnionMaps
-import Integration7.RawVFVolumeComposition
+module
+
+public import Integration7.VFVolumeUnionMaps
+public import Integration7.RawVFVolumeComposition
+
+@[expose] public section
 
 /-! Actual bijections glue over disjoint source and target domains,
 with the original volume forms on both pieces. -/

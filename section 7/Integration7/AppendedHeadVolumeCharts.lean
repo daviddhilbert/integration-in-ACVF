@@ -1,6 +1,10 @@
-import Integration7.HeadTailSelectedVolumeSelectors
-import Integration7.SelectedStandardVolumeObjects
-import Integration7.CommonContextVolumeReindexing
+module
+
+public import Integration7.HeadTailSelectedVolumeSelectors
+public import Integration7.SelectedStandardVolumeObjects
+public import Integration7.CommonContextVolumeReindexing
+
+@[expose] public section
 
 /-! Contracting the remaining VF coordinates after a fixed head gives
 the same actual volume object after one explicit common permutation. -/

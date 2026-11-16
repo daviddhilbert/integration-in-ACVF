@@ -1,10 +1,14 @@
-import Integration7.NativeRVGraphVolumeRefinements
-import Integration7.OriginalBaseFiniteRelativeContractions
-import Integration7.DensityGraphVolumeBijections
-import Integration7.NativeVolumeMapRealization
-import Integration7.CommonContextVolumeEquivalences
-import Integration7.VFStandardVolumeContractionObjects
-import Integration7.RetainedDensityContractionObjects
+module
+
+public import Integration7.NativeRVGraphVolumeRefinements
+public import Integration7.OriginalBaseFiniteRelativeContractions
+public import Integration7.DensityGraphVolumeBijections
+public import Integration7.NativeVolumeMapRealization
+public import Integration7.CommonContextVolumeEquivalences
+public import Integration7.VFStandardVolumeContractionObjects
+public import Integration7.RetainedDensityContractionObjects
+
+@[expose] public section
 
 /-! A literal retained density and the actual density-graph presentation
 give the same contraction volume class. The graph map is a genuine

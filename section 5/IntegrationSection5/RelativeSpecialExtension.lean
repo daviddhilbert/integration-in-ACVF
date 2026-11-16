@@ -1,5 +1,9 @@
-import IntegrationSection5.RelativeSpecialBoundary
-import Section5.ParameterExtension
+module
+
+public import IntegrationSection5.RelativeSpecialBoundary
+public import Section5.ParameterExtension
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option allowUnsafeReducibility true in

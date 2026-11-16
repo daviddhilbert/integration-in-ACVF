@@ -1,6 +1,10 @@
-import Integration7.GammaVolumeIndexedPresentations
-import Integration7.GammaVolumePresentationRowIsomorphisms
-import IntegrationSection6.GammaSchemaIndexedEquality
+module
+
+public import Integration7.GammaVolumeIndexedPresentations
+public import Integration7.GammaVolumePresentationRowIsomorphisms
+public import IntegrationSection6.GammaSchemaIndexedEquality
+
+@[expose] public section
 
 /-! Full equality of volume-schema rows gives the actual joint
 volume isomorphism, by identity on labels and equality of both graphs. -/

@@ -1,12 +1,16 @@
-import Integration7.CompletedSection6Kernel
-import Integration7.ClosedSection6DefinableFamilyRowObjects
-import Integration7.ClosedSection6IntegrationContexts
-import Integration7.ClosedSection6DefinableFamilyCoefficients
-import IntegrationSection6.FamilyRowRepresentation
-import IntegrationSection6.DefinableFamilyRowObjects
-import IntegrationSection6.GammaSchemaNativeRows
-import IntegrationSection6.IntegrationContexts
-import IntegrationSection6.DefinableFamilyCoefficients
+module
+
+public import Integration7.CompletedSection6Kernel
+public import Integration7.ClosedSection6DefinableFamilyRowObjects
+public import Integration7.ClosedSection6IntegrationContexts
+public import Integration7.ClosedSection6DefinableFamilyCoefficients
+public import IntegrationSection6.FamilyRowRepresentation
+public import IntegrationSection6.DefinableFamilyRowObjects
+public import IntegrationSection6.GammaSchemaNativeRows
+public import IntegrationSection6.IntegrationContexts
+public import IntegrationSection6.DefinableFamilyCoefficients
+
+@[expose] public section
 
 /-! Closed generated-base Section6 integration. The former universal
 Section5 input is replaced by the canonical-model certificate; its kernel

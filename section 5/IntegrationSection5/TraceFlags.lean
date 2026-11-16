@@ -1,4 +1,8 @@
-import IntegrationSection5.UniformRelativeTrace
+module
+
+public import IntegrationSection5.UniformRelativeTrace
+
+@[expose] public section
 
 noncomputable section
 set_option autoImplicit false

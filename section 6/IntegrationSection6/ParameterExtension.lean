@@ -1,5 +1,9 @@
-import IntegrationSection6.Blowups
-import Section4.MapParameters
+module
+
+public import IntegrationSection6.Blowups
+public import Section4.MapParameters
+
+@[expose] public section
 
 /-! The additional-real-parameter convention in Definition 6.7, preserving
 all actual locus data and the exact number of forward blowups. -/

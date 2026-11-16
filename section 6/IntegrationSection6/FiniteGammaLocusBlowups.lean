@@ -1,8 +1,12 @@
-import IntegrationSection6.FiniteGammaBlowups
-import IntegrationSection6.FiniteGammaSubobjects
-import IntegrationSection6.FiniteGammaCoproductMaps
-import IntegrationSection6.FiniteGammaPartitionCharts
-import IntegrationSection6.ComplementTagCoordinates
+module
+
+public import IntegrationSection6.FiniteGammaBlowups
+public import IntegrationSection6.FiniteGammaSubobjects
+public import IntegrationSection6.FiniteGammaCoproductMaps
+public import IntegrationSection6.FiniteGammaPartitionCharts
+public import IntegrationSection6.ComplementTagCoordinates
+
+@[expose] public section
 
 /-! Gamma split charts yield genuine Gamma-definable loci and complementary
 charts, with all objects still in RV[k]. -/

@@ -1,6 +1,10 @@
-import Integration7.VolumeCertificateRealizationOnRows
-import Integration7.VolumeSchemaRowExtension
-import Integration7.FiniteVolumeParameterContexts
+module
+
+public import Integration7.VolumeCertificateRealizationOnRows
+public import Integration7.VolumeSchemaRowExtension
+public import Integration7.FiniteVolumeParameterContexts
+
+@[expose] public section
 
 /-! A valid certificate compares any actual endpoint row interpretations
 after a finite internal base extension. Its chart is still exactly the

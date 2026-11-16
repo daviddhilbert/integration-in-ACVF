@@ -1,6 +1,10 @@
-import IntegrationSection6.GammaVFParameterBases
-import IntegrationSection6.MixedCoordinatePointMaps
-import IntegrationSection6.GammaRVFamilyFormulas
+module
+
+public import IntegrationSection6.GammaVFParameterBases
+public import IntegrationSection6.MixedCoordinatePointMaps
+public import IntegrationSection6.GammaRVFamilyFormulas
+
+@[expose] public section
 
 /-! The actual mixed source of a VF-parameter RV family retains its
 complete original-Gamma definition over a definable VF base. -/

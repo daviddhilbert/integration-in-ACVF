@@ -1,4 +1,8 @@
-import Section3.TupleCompactness
+module
+
+public import Section3.TupleCompactness
+
+@[expose] public section
 
 /-! Finite-tuple definable compactness from the predecessor's genuine
 saturation interface. The tuple arity is arbitrary; no geometric

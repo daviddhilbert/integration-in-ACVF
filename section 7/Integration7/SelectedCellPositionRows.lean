@@ -1,4 +1,8 @@
-import Integration7.MixedVerticalParameterSelections
+module
+
+public import Integration7.MixedVerticalParameterSelections
+
+@[expose] public section
 
 /-! The same actual position row survives selection of its entire
 RV-parameter fibre, including the scalar-family presentation used by

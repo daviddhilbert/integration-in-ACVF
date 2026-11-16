@@ -1,4 +1,8 @@
-import IntegrationSection5.NonrectangleResidualValues
+module
+
+public import IntegrationSection5.NonrectangleResidualValues
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 open Classical FirstOrder FirstOrder.Language

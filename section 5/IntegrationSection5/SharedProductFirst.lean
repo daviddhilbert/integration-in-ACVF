@@ -1,5 +1,9 @@
-import IntegrationSection5.SharedRVProductSource
-import IntegrationSection5.ProjectionPaddingProductRefinement
+module
+
+public import IntegrationSection5.SharedRVProductSource
+public import IntegrationSection5.ProjectionPaddingProductRefinement
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option allowUnsafeReducibility true in

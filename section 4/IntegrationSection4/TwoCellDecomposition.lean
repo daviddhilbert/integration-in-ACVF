@@ -1,6 +1,10 @@
-import IntegrationSection4.PositionRowDefinability
-import IntegrationSection4.FibreDefinability
-import IntegrationSection4.DefinableParadigms
+module
+
+public import IntegrationSection4.PositionRowDefinability
+public import IntegrationSection4.FibreDefinability
+public import IntegrationSection4.DefinableParadigms
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

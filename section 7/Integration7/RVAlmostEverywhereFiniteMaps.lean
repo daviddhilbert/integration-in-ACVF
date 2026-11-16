@@ -1,5 +1,9 @@
-import Integration7.VolumeAlmostEverywhere
-import Integration7.DefinableMapPreimages
+module
+
+public import Integration7.VolumeAlmostEverywhere
+public import Integration7.DefinableMapPreimages
+
+@[expose] public section
 
 /-! Pulling a small exceptional set back through a finite-fibre map. -/
 

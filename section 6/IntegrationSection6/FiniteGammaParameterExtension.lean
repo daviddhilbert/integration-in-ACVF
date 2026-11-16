@@ -1,5 +1,9 @@
-import IntegrationSection6.FiniteGammaCommonBlowups
-import IntegrationSection6.ParameterExtension
+module
+
+public import IntegrationSection6.FiniteGammaCommonBlowups
+public import IntegrationSection6.ParameterExtension
+
+@[expose] public section
 
 /-! Enlarging internal real presentations preserves every original-Gamma
 object and chart graph, and the exact finite number of blowups. -/

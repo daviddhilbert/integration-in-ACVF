@@ -1,6 +1,10 @@
-import Integration7.CanonicalVolumeLabels
-import Integration7.CanonicalFiniteRVObjects
-import IntegrationSection6.NormalizedCanonicalLifts
+module
+
+public import Integration7.CanonicalVolumeLabels
+public import Integration7.CanonicalFiniteRVObjects
+public import IntegrationSection6.NormalizedCanonicalLifts
+
+@[expose] public section
 
 /-! Canonical labeling in a literal lift family is a volume
 isomorphism, in the released normalized presentation used by chains. -/

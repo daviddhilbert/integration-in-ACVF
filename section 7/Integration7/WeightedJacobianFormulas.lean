@@ -1,6 +1,10 @@
-import Integration7.RVDensityRatioGraph
-import Integration7.GammaVolumeChartGraphs
-import Integration7.GammaVolumeSchemaRestrictions
+module
+
+public import Integration7.RVDensityRatioGraph
+public import Integration7.GammaVolumeChartGraphs
+public import Integration7.GammaVolumeSchemaRestrictions
+
+@[expose] public section
 
 /-! Pull back a supported coordinate-Jacobian graph to weighted label
 pairs, substituting the actual density ratio by its first-order graph. -/

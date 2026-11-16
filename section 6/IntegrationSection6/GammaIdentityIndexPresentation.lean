@@ -1,5 +1,9 @@
-import IntegrationSection6.GammaFiniteGraphObjects
-import IntegrationSection6.GammaPresentationTotalVolume
+module
+
+public import IntegrationSection6.GammaFiniteGraphObjects
+public import IntegrationSection6.GammaPresentationTotalVolume
+
+@[expose] public section
 
 /-! The entire RV[d] tuple space with identity volume is an actual finite
 index object, even though its underlying set is infinite. -/

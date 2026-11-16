@@ -1,6 +1,10 @@
-import IntegrationSection6.ElementaryIsomorphism
-import IntegrationSection6.Subobjects
-import IntegrationSection6.Iteration
+module
+
+public import IntegrationSection6.ElementaryIsomorphism
+public import IntegrationSection6.Subobjects
+public import IntegrationSection6.Iteration
+
+@[expose] public section
 
 /-!
 # General blowups and the common-blowup relation

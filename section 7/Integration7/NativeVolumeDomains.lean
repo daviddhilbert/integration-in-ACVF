@@ -1,5 +1,9 @@
-import Integration7.VFVolumeObjects
-import Section9.SpecialJacobianGeneric
+module
+
+public import Integration7.VFVolumeObjects
+public import Section9.SpecialJacobianGeneric
+
+@[expose] public section
 
 /-! Original-base conversion from actual raw mixed domains to the
 predecessor's Section 5 point presentations. Normalization changes no

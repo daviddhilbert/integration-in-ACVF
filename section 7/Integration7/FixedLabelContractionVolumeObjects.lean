@@ -1,5 +1,9 @@
-import Integration7.FixedLabelTranslationDensityForms
-import Integration7.GeometricFiniteStandardVolumeComparisons
+module
+
+public import Integration7.FixedLabelTranslationDensityForms
+public import Integration7.GeometricFiniteStandardVolumeComparisons
+
+@[expose] public section
 
 /-! Actual normalized finite contraction volume objects of a pure VF
 domain with fixed old labels and a selected retained nonzero density. -/

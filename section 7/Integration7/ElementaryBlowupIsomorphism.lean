@@ -1,5 +1,9 @@
-import Integration7.CorrectedBlowupJacobian
-import Integration7.BlowupHeadJacobianAlmostEverywhere
+module
+
+public import Integration7.CorrectedBlowupJacobian
+public import Integration7.BlowupHeadJacobianAlmostEverywhere
+
+@[expose] public section
 
 /-! Elementary blowups of isomorphic volume objects are isomorphic.
 The head and full Jacobians come from actual generic-existence theorems;

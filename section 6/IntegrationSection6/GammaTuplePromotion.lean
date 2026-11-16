@@ -1,4 +1,8 @@
-import Section3.GammaFullDescent
+module
+
+public import Section3.GammaFullDescent
+
+@[expose] public section
 
 /-! Tuple parameter promotion retains the original Gamma names and global
 representative invariance. This is the family version of the checked scalar

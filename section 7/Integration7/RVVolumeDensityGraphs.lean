@@ -1,5 +1,9 @@
-import Integration7.VolumeRelabeling
-import Section4.RVAppend
+module
+
+public import Integration7.VolumeRelabeling
+public import Section4.RVAppend
+
+@[expose] public section
 
 /-! Any actual positive RV volume object can retain its density as an
 extra label, through a genuine full-coordinate volume isomorphism. -/

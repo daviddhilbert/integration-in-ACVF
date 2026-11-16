@@ -1,6 +1,10 @@
-import IntegrationSection3ACVF.GammaLinearValueRow
-import IntegrationSection3ACVF.FullBaseLogic
-import IntegrationSection3ACVF.GammaLinearRestrictions
+module
+
+public import IntegrationSection3ACVF.GammaLinearValueRow
+public import IntegrationSection3ACVF.FullBaseLogic
+public import IntegrationSection3ACVF.GammaLinearRestrictions
+
+@[expose] public section
 
 /-! A full first-order relation for Gamma-linearity on a ball with
 free radius, coefficient and centre labels. Partial function graphs

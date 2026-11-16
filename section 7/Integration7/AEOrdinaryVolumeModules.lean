@@ -1,4 +1,8 @@
-import Integration7.AEOrdinaryVolumeScalarActions
+module
+
+public import Integration7.AEOrdinaryVolumeScalarActions
+
+@[expose] public section
 
 /-! Ordinary-valued AE functions form a semimodule over the actual
 ordinary RV[0] coefficient semiring, with every law checked fibrewise. -/

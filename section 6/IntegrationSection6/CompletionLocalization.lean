@@ -1,7 +1,11 @@
-import Section4.Imported.GrothendieckRing
-import Mathlib.Algebra.DirectSum.Ring
-import Mathlib.RingTheory.Localization.Away.Basic
-import Mathlib.RingTheory.Ideal.Quotient.Operations
+module
+
+public import Section4.Imported.GrothendieckRing
+public import Mathlib.Algebra.DirectSum.Ring
+public import Mathlib.RingTheory.Localization.Away.Basic
+public import Mathlib.RingTheory.Ideal.Quotient.Operations
+
+@[expose] public section
 
 /-! Dehomogenization of the group completion of a graded positive semiring.
 The degree-one denominator may itself be a difference of positive classes. -/

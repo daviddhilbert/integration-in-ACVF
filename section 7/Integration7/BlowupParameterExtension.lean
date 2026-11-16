@@ -1,5 +1,9 @@
-import Integration7.VolumeIsoParameterExtension
-import Integration7.IteratedVolumeBlowups
+module
+
+public import Integration7.VolumeIsoParameterExtension
+public import Integration7.IteratedVolumeBlowups
+
+@[expose] public section
 
 /-! Parameter enlargement preserves actual elementary charts and finite
 common forward blowups, including their exact lengths and densities. -/

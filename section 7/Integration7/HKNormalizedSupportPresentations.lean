@@ -1,4 +1,8 @@
-import Integration7.HKNormalizedVolumeSupports
+module
+
+public import Integration7.HKNormalizedVolumeSupports
+
+@[expose] public section
 
 /-! The positive-generator support definition is exactly the span of
 all actual corrected supported presentations, including degree zero.

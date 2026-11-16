@@ -1,5 +1,9 @@
-import IntegrationSection5.RelativeSpecial
-import IntegrationSection5.GammaCoordinateFibres
+module
+
+public import IntegrationSection5.RelativeSpecial
+public import IntegrationSection5.GammaCoordinateFibres
+
+@[expose] public section
 
 /-! A definable centre inside the actual source RV class produces the actual
 hull focus and its original-Gamma certificate. -/

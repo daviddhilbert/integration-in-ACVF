@@ -1,5 +1,9 @@
-import IntegrationSection6.ConstantRVFamilies
-import IntegrationSection6.RVClassBaseChange
+module
+
+public import IntegrationSection6.ConstantRVFamilies
+public import IntegrationSection6.RVClassBaseChange
+
+@[expose] public section
 
 /-! Constant families evaluate by the canonical extension of scalars to
 the coefficient semiring over dcl(B,x). -/

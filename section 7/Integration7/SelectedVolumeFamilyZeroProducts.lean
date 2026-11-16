@@ -1,6 +1,10 @@
-import Integration7.MixedRVFactorDomains
-import Integration7.SelectedVolumeFamilies
-import Integration7.ZeroFactorVolumeObjects
+module
+
+public import Integration7.MixedRVFactorDomains
+public import Integration7.SelectedVolumeFamilies
+public import Integration7.ZeroFactorVolumeObjects
+
+@[expose] public section
 
 /-! Ordinary degree-zero coefficients multiply a positive family by
 an actual finite RV factor. The selected volume coordinates and density

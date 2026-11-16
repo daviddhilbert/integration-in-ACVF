@@ -1,4 +1,8 @@
-import Integration7.HKWeightedVFZeroProducts
+module
+
+public import Integration7.HKWeightedVFZeroProducts
+
+@[expose] public section
 
 /-! Actual cofull VF volume isomorphisms remain so after Cartesian
 product with any exact-weight-preserving measured zero coefficient. -/

@@ -1,4 +1,8 @@
-import Integration7.TwoOrderProductPreparations
+module
+
+public import Integration7.TwoOrderProductPreparations
+
+@[expose] public section
 
 /-! The constructed opposite-order standard programs retain full
 original-Gamma certificates for every actual preparation stage. -/

@@ -1,4 +1,8 @@
-import IntegrationSection6.GammaBlowupSchemata
+module
+
+public import IntegrationSection6.GammaBlowupSchemata
+
+@[expose] public section
 
 /-! Finite formula witnesses for forward blowup chains, with their exact
 length and every intermediate RV[k] object retained. Validity is a genuine

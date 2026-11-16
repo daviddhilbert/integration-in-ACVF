@@ -1,4 +1,8 @@
-import IntegrationSection6.GammaFiniteObjectPromotion
+module
+
+public import IntegrationSection6.GammaFiniteObjectPromotion
+
+@[expose] public section
 
 /-! Promote a raw RV relation over a named tuple into a full original-base
 family in the left-associated coordinate layout used by witness schemata. -/

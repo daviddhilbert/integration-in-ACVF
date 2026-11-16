@@ -1,9 +1,13 @@
-import IntegrationSection6.GammaBasicAdmissibility
-import IntegrationSection6.FiniteGammaElementaryFactors
-import IntegrationSection6.FiniteGammaProductCoherence
-import IntegrationSection6.FiniteGammaProductUnit
-import IntegrationSection6.FiniteGammaProductIsos
-import IntegrationSection6.FiniteGammaGenerators
+module
+
+public import IntegrationSection6.GammaBasicAdmissibility
+public import IntegrationSection6.FiniteGammaElementaryFactors
+public import IntegrationSection6.FiniteGammaProductCoherence
+public import IntegrationSection6.FiniteGammaProductUnit
+public import IntegrationSection6.FiniteGammaProductIsos
+public import IntegrationSection6.FiniteGammaGenerators
+
+@[expose] public section
 
 /-! The basic degree-one elementary replacement is a genuine Gamma
 common-blowup relation. The positive parameter object includes zero. -/

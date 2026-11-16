@@ -1,4 +1,8 @@
-import IntegrationSection3ACVF.CoordinatePairGluing
+module
+
+public import IntegrationSection3ACVF.CoordinatePairGluing
+
+@[expose] public section
 
 /-! The full original-base finite coordinate partition for one pair.
 Only finite formula support is used internally; there is no cardinal or

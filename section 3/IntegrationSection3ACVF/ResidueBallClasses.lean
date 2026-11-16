@@ -1,4 +1,8 @@
-import IntegrationSection3ACVF.BallResidueChart
+module
+
+public import IntegrationSection3ACVF.BallResidueChart
+
+@[expose] public section
 
 /-! Each residue coordinate gives one actual ball imaginary, and every
 maximal open subball of the closed parent occurs exactly once. The choices

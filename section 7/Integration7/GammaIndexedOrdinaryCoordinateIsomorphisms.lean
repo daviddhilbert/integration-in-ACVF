@@ -1,6 +1,10 @@
-import Integration7.GammaIndexedOrdinaryRowBijections
-import IntegrationSection6.GammaIndexedIsomorphisms
-import IntegrationSection6.GammaSchemaIndexedPresentations
+module
+
+public import Integration7.GammaIndexedOrdinaryRowBijections
+public import IntegrationSection6.GammaIndexedIsomorphisms
+public import IntegrationSection6.GammaSchemaIndexedPresentations
+
+@[expose] public section
 
 /-! The actual indexed ordinary-row bijection preserves the whole base
 volume tuple. Empty fibre volume contributes no coordinates or weight. -/

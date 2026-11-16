@@ -1,4 +1,8 @@
-import IntegrationSection6.CompletedSection5TwoOrderInput
+module
+
+public import IntegrationSection6.CompletedSection5TwoOrderInput
+
+@[expose] public section
 set_option pp.explicit true
 set_option pp.universes true
 set_option pp.proofs false

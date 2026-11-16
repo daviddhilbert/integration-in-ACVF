@@ -1,6 +1,10 @@
-import Integration7.PureVFDimensionUnions
-import Section9.MixedDifferentiationAE
-import Section3.GammaBaseTools
+module
+
+public import Integration7.PureVFDimensionUnions
+public import Section9.MixedDifferentiationAE
+public import Section3.GammaBaseTools
+
+@[expose] public section
 
 /-! Sorted VF formula loci are actual pure VF definable sets. Their
 dimension is full exactly when they contain a tuple independent over the

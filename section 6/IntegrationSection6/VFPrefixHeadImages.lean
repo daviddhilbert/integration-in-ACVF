@@ -1,5 +1,9 @@
-import IntegrationSection6.VFPrefixMaps
-import IntegrationSection6.VFPrefixHeadCoordinates
+module
+
+public import IntegrationSection6.VFPrefixMaps
+public import IntegrationSection6.VFPrefixHeadCoordinates
+
+@[expose] public section
 
 /-! The actual head image commutes with freezing a complementary VF tuple. -/
 noncomputable section

@@ -1,5 +1,9 @@
-import Integration7.VolumeAlmostEverywhere
-import Section4.RVProduct
+module
+
+public import Integration7.VolumeAlmostEverywhere
+public import Section4.RVProduct
+
+@[expose] public section
 
 /-! Product dimension bounds from actual finite-to-one coordinate maps. -/
 set_option backward.isDefEq.respectTransparency false

@@ -1,5 +1,9 @@
-import Integration7.GammaCanonicalAdmissibilityRows
-import Integration7.ElementaryBlowupRestriction
+module
+
+public import Integration7.GammaCanonicalAdmissibilityRows
+public import Integration7.ElementaryBlowupRestriction
+
+@[expose] public section
 
 /-! Original-base algebraicity of an actual blowup center. The carrier
 and coordinate map remain those of the existing volume object. -/

@@ -1,5 +1,9 @@
-import Integration7.UniformVolumeData
-import Integration7.GradedVolumeProducts
+module
+
+public import Integration7.UniformVolumeData
+public import Integration7.GradedVolumeProducts
+
+@[expose] public section
 
 /-! The corrected all-degree presentation retains the actual form at zero.
 Positive objects are the existing checked objects. The HK namespace stages

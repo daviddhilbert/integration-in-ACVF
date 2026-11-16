@@ -1,4 +1,8 @@
-import Integration7.GammaVolumeComparisonPromotion
+module
+
+public import Integration7.GammaVolumeComparisonPromotion
+
+@[expose] public section
 
 /-! Promote a comparison while retaining given source and target volume
 schemata exactly. This is the interface needed by finite common-witness

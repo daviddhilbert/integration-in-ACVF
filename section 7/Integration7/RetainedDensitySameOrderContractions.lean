@@ -1,6 +1,10 @@
-import Integration7.RetainedDensityContractionObjects
-import Integration7.OriginalBaseRelativeVolumeComparisons
-import Integration7.MixedRetainedLabelVolumeForms
+module
+
+public import Integration7.RetainedDensityContractionObjects
+public import Integration7.OriginalBaseRelativeVolumeComparisons
+public import Integration7.MixedRetainedLabelVolumeForms
+
+@[expose] public section
 
 /-! Arbitrary specified same-order contractions compare over the
 original Gamma base with an arbitrary retained nonzero density. -/

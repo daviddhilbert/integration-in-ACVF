@@ -1,6 +1,10 @@
-import Integration7.PositiveGradedVolumeIntegration
-import Integration7.GradedVolumeCoordinatePushforwards
-import Integration7.SignedPositiveCoordinatePushforwards
+module
+
+public import Integration7.PositiveGradedVolumeIntegration
+public import Integration7.GradedVolumeCoordinatePushforwards
+public import Integration7.SignedPositiveCoordinatePushforwards
+
+@[expose] public section
 
 /-! The actual signed coordinate pushforward on finite positive graded
 functions is linear over every raw coefficient degree. Its determinant

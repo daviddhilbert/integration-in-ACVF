@@ -1,5 +1,9 @@
-import Integration7.GammaMixedCoordinatePredicates
-import Section5.RootConstruction
+module
+
+public import Integration7.GammaMixedCoordinatePredicates
+public import Section5.RootConstruction
+
+@[expose] public section
 
 /-! Zero-coordinate loci are definable without naming VF zero as a
 parameter. An actual real-definable erasure map exhibits the locus. -/

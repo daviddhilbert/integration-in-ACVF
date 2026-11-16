@@ -1,5 +1,9 @@
-import Integration7.ZeroVolumeIntegration
-import Integration7.OrdinaryZeroLiftCoproducts
+module
+
+public import Integration7.ZeroVolumeIntegration
+public import Integration7.OrdinaryZeroLiftCoproducts
+
+@[expose] public section
 
 /-! The transported degree-zero coefficient addition is exactly the
 actual ordinary VF coproduct, as required for Grothendieck semigroups. -/

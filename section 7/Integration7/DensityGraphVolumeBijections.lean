@@ -1,4 +1,8 @@
-import Integration7.VolumeDensityGraphs
+module
+
+public import Integration7.VolumeDensityGraphs
+
+@[expose] public section
 
 /-! Actual volume-preserving bijections between the density graphs of
 arbitrary volume objects. Both directions of the graph presentation are

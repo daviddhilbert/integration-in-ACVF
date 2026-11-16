@@ -1,4 +1,8 @@
-import IntegrationSection6.GammaFamilyQuantifiers
+module
+
+public import IntegrationSection6.GammaFamilyQuantifiers
+
+@[expose] public section
 
 /-! Swap two output blocks while fixing the parameter block. -/
 noncomputable section

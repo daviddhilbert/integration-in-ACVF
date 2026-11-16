@@ -1,4 +1,8 @@
-import Integration7.AllDegreeVFVolumeClasses
+module
+
+public import Integration7.AllDegreeVFVolumeClasses
+
+@[expose] public section
 
 /-! Proposition 7.8 including ordinary degree zero. -/
 noncomputable section

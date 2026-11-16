@@ -1,7 +1,11 @@
-import Integration7.GammaRVLabelCuts
-import IntegrationSection6.PointMapEqualityTransport
-import IntegrationSection6.RelativeSpecialSourceRestriction
-import IntegrationSection6.GammaSourceMapRestrictions
+module
+
+public import Integration7.GammaRVLabelCuts
+public import IntegrationSection6.PointMapEqualityTransport
+public import IntegrationSection6.RelativeSpecialSourceRestriction
+public import IntegrationSection6.GammaSourceMapRestrictions
+
+@[expose] public section
 
 /-! A label-preserving bijection restricts to an arbitrary old-label
 predicate, preserving its actual relative specialness and Gamma graph. -/

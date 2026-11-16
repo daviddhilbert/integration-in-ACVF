@@ -1,5 +1,9 @@
-import IntegrationSection5.NaturalContractionImage
-import Section5.PullbackLift
+module
+
+public import IntegrationSection5.NaturalContractionImage
+public import Section5.PullbackLift
+
+@[expose] public section
 
 /-! The actual pinned RV object and natural definable bijection to its lift
 for an ordered contraction program. The volume projection is explicit. -/

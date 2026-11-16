@@ -1,4 +1,8 @@
-import IntegrationSection6.GammaIsoRestrictions
+module
+
+public import IntegrationSection6.GammaIsoRestrictions
+
+@[expose] public section
 
 /-! Equality transport changes no underlying set or isomorphism. -/
 noncomputable section

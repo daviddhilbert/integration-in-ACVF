@@ -1,7 +1,11 @@
-import Integration7.EssentialGammaWeight
-import Integration7.RVAbsoluteConeApproximation
-import Integration7.CorrectedBlowupMap
-import Integration7.IteratedVolumeBlowups
+module
+
+public import Integration7.EssentialGammaWeight
+public import Integration7.RVAbsoluteConeApproximation
+public import Integration7.CorrectedBlowupMap
+public import Integration7.IteratedVolumeBlowups
+
+@[expose] public section
 
 /-! Actual finite volume blowups preserve the upper cuts of absolute
 Gamma weight. This is an invariant of common blowups, not groupification. -/

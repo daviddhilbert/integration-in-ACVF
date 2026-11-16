@@ -1,7 +1,11 @@
-import Integration7.PackedEssentialBlowupCharts
-import Integration7.GammaConeFibreMapGraphs
-import Integration7.GammaHeadCorrectionGraphs
-import Integration7.CorrectedBlowupMap
+module
+
+public import Integration7.PackedEssentialBlowupCharts
+public import Integration7.GammaConeFibreMapGraphs
+public import Integration7.GammaHeadCorrectionGraphs
+public import Integration7.CorrectedBlowupMap
+
+@[expose] public section
 
 /-! Full original-Gamma essential charts and a Gamma head Jacobian
 give the original-Gamma corrected elementary-blowup map. -/

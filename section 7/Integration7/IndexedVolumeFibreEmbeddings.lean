@@ -1,4 +1,8 @@
-import Integration7.IndexedEssentialVolumeDomains
+module
+
+public import Integration7.IndexedEssentialVolumeDomains
+
+@[expose] public section
 
 /-! Actual essential fibre labels insert into the joint essential object.
 Their volume gains the fixed base tuple and their density is unchanged. -/

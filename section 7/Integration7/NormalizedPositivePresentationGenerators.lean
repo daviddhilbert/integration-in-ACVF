@@ -1,5 +1,9 @@
-import Integration7.NormalizedPositiveDegreeFunctions
-import Integration7.NormalizedPositiveFunctionGeneration
+module
+
+public import Integration7.NormalizedPositiveDegreeFunctions
+public import Integration7.NormalizedPositiveFunctionGeneration
+
+@[expose] public section
 
 /-! The positive-presentation equivalence has the literal inverse
 formula on every positive homogeneous normalized generator. -/

@@ -1,6 +1,10 @@
-import IntegrationSection5.CanonicalProductClassSource
-import IntegrationSection5.ProductRVBranchHead
-import IntegrationSection5.GammaBranchBoundaryPrefix
+module
+
+public import IntegrationSection5.CanonicalProductClassSource
+public import IntegrationSection5.ProductRVBranchHead
+public import IntegrationSection5.GammaBranchBoundaryPrefix
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option allowUnsafeReducibility true in

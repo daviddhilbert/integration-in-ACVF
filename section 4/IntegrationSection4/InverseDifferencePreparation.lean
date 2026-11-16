@@ -1,6 +1,10 @@
-import IntegrationSection4.InverseDifferenceSyntax
-import IntegrationSection4.InverseDifferenceGeometry
-import IntegrationSection4.InverseBodies
+module
+
+public import IntegrationSection4.InverseDifferenceSyntax
+public import IntegrationSection4.InverseDifferenceGeometry
+public import IntegrationSection4.InverseBodies
+
+@[expose] public section
 
 /-! Lemma 4.4 over the original Gamma base, using actual partial inverses
 and translated RV fibres. -/

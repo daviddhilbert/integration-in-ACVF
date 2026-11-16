@@ -1,4 +1,8 @@
-import Mathlib.GroupTheory.Perm.Fin
+module
+
+public import Mathlib.GroupTheory.Perm.Fin
+
+@[expose] public section
 
 /-! Separate the common first coordinate of two contraction orders. -/
 namespace IntegrationInACVF.Section6

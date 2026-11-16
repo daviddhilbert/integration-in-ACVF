@@ -1,6 +1,10 @@
-import IntegrationSection3ACVF.TranslationSyntax
-import IntegrationSection3ACVF.VFErrorSyntax
-import IntegrationSection3ACVF.RVLeadingDifference
+module
+
+public import IntegrationSection3ACVF.TranslationSyntax
+public import IntegrationSection3ACVF.VFErrorSyntax
+public import IntegrationSection3ACVF.RVLeadingDifference
+
+@[expose] public section
 
 /-! Actual translated VF errors, their real-base partial graphs, and the
 strict-value versus pair-value estimates used in RV linearity. -/

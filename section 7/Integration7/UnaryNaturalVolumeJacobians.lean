@@ -1,7 +1,11 @@
-import Integration7.UnaryRelativeSpecialRealization
-import Integration7.MixedJacobianOneOperations
-import Integration7.SpecialVolumeJacobians
-import IntegrationSection5.StandardContraction
+module
+
+public import Integration7.UnaryRelativeSpecialRealization
+public import Integration7.MixedJacobianOneOperations
+public import Integration7.SpecialVolumeJacobians
+public import IntegrationSection5.StandardContraction
+
+@[expose] public section
 
 /-! The actual natural map of every unary standard contraction has
 VF Jacobian one almost everywhere. Its head is an actual special

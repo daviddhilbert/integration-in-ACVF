@@ -1,4 +1,8 @@
-import Integration7.GammaVolumeCoproductCoherence
+module
+
+public import Integration7.GammaVolumeCoproductCoherence
+
+@[expose] public section
 
 /-! The existing actual volume associator retains its full original
 Gamma graph. The three tagged branches are tracked explicitly. -/

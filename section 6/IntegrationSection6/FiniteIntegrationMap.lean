@@ -1,6 +1,10 @@
-import IntegrationSection6.FiniteVFIntegralScissors
-import IntegrationSection6.FiniteVFIntegralEmpty
-import IntegrationSection6.NativeFiniteQuotientLift
+module
+
+public import IntegrationSection6.FiniteVFIntegralScissors
+public import IntegrationSection6.FiniteVFIntegralEmpty
+public import IntegrationSection6.NativeFiniteQuotientLift
+
+@[expose] public section
 
 /-! Integration on the actual finite VF[k] scissor monoid, constructed by
 descent of the representative-independent values. -/

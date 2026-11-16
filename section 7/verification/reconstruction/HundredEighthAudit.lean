@@ -1,13 +1,17 @@
-import Integration7.GradedSemiringActionLifts
-import Integration7.GradedSemiringActionLinearMaps
-import Integration7.GradedSemiringActionShifts
-import Integration7.GradedShiftLinearEmbeddings
-import Integration7.NormalizedSupportedVolumeFunctions
-import Integration7.NormalizedSupportedVolumeIntegrals
-import Integration7.SemimoduleScalarExtensionMaps
-import Integration7.SupportedPositiveGradedActions
-import Integration7.SupportedPositiveGradedForget
-import Integration7.SupportedPositiveGradedJacobians
+module
+
+public import Integration7.GradedSemiringActionLifts
+public import Integration7.GradedSemiringActionLinearMaps
+public import Integration7.GradedSemiringActionShifts
+public import Integration7.GradedShiftLinearEmbeddings
+public import Integration7.NormalizedSupportedVolumeFunctions
+public import Integration7.NormalizedSupportedVolumeIntegrals
+public import Integration7.SemimoduleScalarExtensionMaps
+public import Integration7.SupportedPositiveGradedActions
+public import Integration7.SupportedPositiveGradedForget
+public import Integration7.SupportedPositiveGradedJacobians
+
+@[expose] public section
 set_option pp.universes true
 set_option pp.proofs false
 set_option pp.deepTerms true

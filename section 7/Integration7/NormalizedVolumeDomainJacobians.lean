@@ -1,5 +1,9 @@
-import Integration7.NormalizedVolumeSupports
-import Integration7.NormalizedSupportedVolumeIntegrals
+module
+
+public import Integration7.NormalizedVolumeSupports
+public import Integration7.NormalizedSupportedVolumeIntegrals
+
+@[expose] public section
 
 /-! Bijections between arbitrary definable VF subsets induce actual
 linear Jacobian operators on the full normalized function space. On

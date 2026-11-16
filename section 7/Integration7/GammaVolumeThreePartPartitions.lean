@@ -1,6 +1,10 @@
-import Integration7.GammaActualVolumePartitions
-import Integration7.VolumeObjectPartitions
-import Integration7.GammaVolumeBlowupAddition
+module
+
+public import Integration7.GammaActualVolumePartitions
+public import Integration7.VolumeObjectPartitions
+public import Integration7.GammaVolumeBlowupAddition
+
+@[expose] public section
 
 /-! Actual Gamma volume partition isomorphisms for two or three
 definable disjoint pieces. Coordinate and density preservation follow

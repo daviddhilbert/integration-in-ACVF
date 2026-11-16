@@ -1,5 +1,9 @@
-import IntegrationSection5.MatchedHeadCompletion
-import IntegrationSection5.UnaryHeadRVPresentation
+module
+
+public import IntegrationSection5.MatchedHeadCompletion
+public import IntegrationSection5.UnaryHeadRVPresentation
+
+@[expose] public section
 
 /-! Compare the genuine two-stage contraction objects. Constant first
 volume labels reduce the RV[2] obligations to the constructed RV[1] iso. -/

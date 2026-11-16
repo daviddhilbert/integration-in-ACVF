@@ -1,5 +1,9 @@
-import IntegrationSection6.FiniteSelectedContractionSlices
-import IntegrationSection6.GammaVolumeSliceUniformity
+module
+
+public import IntegrationSection6.FiniteSelectedContractionSlices
+public import IntegrationSection6.GammaVolumeSliceUniformity
+
+@[expose] public section
 
 /-! Unary contraction comparison with selected old RV volumes. The exact
 relative-finiteness assumption permits infinite total old RV fibres. -/

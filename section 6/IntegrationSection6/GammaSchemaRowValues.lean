@@ -1,4 +1,8 @@
-import IntegrationSection6.GammaSortedSchemaRows
+module
+
+public import IntegrationSection6.GammaSortedSchemaRows
+
+@[expose] public section
 
 /-! Actual typed volume values and finite fibres in every valid row of a
 finite RV schema. The total extension outside valid domain rows is used

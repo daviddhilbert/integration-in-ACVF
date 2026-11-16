@@ -1,5 +1,9 @@
-import IntegrationSection5.MixedVolumeImages
-import IntegrationSection5.GammaIsoCoordinates
+module
+
+public import IntegrationSection5.MixedVolumeImages
+public import IntegrationSection5.GammaIsoCoordinates
+
+@[expose] public section
 
 noncomputable section
 set_option autoImplicit false

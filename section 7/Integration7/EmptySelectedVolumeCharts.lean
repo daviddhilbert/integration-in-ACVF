@@ -1,5 +1,9 @@
-import Integration7.RawStandardVolumeObjects
-import Integration7.NativeCoordinateDensityVolumeIsomorphisms
+module
+
+public import Integration7.RawStandardVolumeObjects
+public import Integration7.NativeCoordinateDensityVolumeIsomorphisms
+
+@[expose] public section
 
 /-! With no old selected RV coordinates, the selected standard object
 is genuinely volume isomorphic to the full raw contraction object. -/

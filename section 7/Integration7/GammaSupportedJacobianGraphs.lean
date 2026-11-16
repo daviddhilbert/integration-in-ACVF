@@ -1,6 +1,10 @@
-import Integration7.GammaVolumeChartGraphs
-import IntegrationSection6.GammaRawRVFormulas
-import IntegrationSection6.FiniteGammaInitial
+module
+
+public import Integration7.GammaVolumeChartGraphs
+public import IntegrationSection6.GammaRawRVFormulas
+public import IntegrationSection6.FiniteGammaInitial
+
+@[expose] public section
 
 /-! Supported coordinate-Jacobian values are graphs over the same
 original Gamma base as their correspondence. Finite support choices add

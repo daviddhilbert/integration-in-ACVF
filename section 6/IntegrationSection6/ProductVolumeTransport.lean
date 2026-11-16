@@ -1,4 +1,8 @@
-import Section4.RVProductMorphisms
+module
+
+public import Section4.RVProductMorphisms
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

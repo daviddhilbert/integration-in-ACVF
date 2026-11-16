@@ -1,6 +1,10 @@
-import IntegrationSection6.GammaFamilyCoordinates
-import IntegrationSection6.MixedCoordinatePointMaps
-import IntegrationSection6.GammaSchemaFiniteRowPresentations
+module
+
+public import IntegrationSection6.GammaFamilyCoordinates
+public import IntegrationSection6.MixedCoordinatePointMaps
+public import IntegrationSection6.GammaSchemaFiniteRowPresentations
+
+@[expose] public section
 
 /-! Products of actual finite RV-family formulas preserve the shared VF
 parameter tuple and concatenate both payload and volume coordinates. -/

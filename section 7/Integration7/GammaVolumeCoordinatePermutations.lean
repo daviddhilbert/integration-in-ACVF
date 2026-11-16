@@ -1,5 +1,9 @@
-import Integration7.GammaVolumeDegreeTransport
-import Integration7.VolumeBlowupCoordinatePermutations
+module
+
+public import Integration7.GammaVolumeDegreeTransport
+public import Integration7.VolumeBlowupCoordinatePermutations
+
+@[expose] public section
 
 /-! Simultaneously permuting volume coordinates preserves original-Gamma
 common blowups. The common determinant sign is a term constant of the

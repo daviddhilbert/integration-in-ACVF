@@ -1,4 +1,8 @@
-import IntegrationSection6.ContextRVClasses
+module
+
+public import IntegrationSection6.ContextRVClasses
+
+@[expose] public section
 
 /-! Every coefficient class has one actual representative in RV[k] for
 some finite k, by finite-support assembly of its nonzero grading. -/

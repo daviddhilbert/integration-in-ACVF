@@ -1,5 +1,9 @@
-import Integration7.HKZeroFamilyUniformBijections
-import Integration7.HKZeroFamilyRestrictions
+module
+
+public import Integration7.HKZeroFamilyUniformBijections
+public import Integration7.HKZeroFamilyRestrictions
+
+@[expose] public section
 
 /-! The full weighted VF realization of a measured-zero-valued
 function descends to its actual almost-everywhere quotient. -/

@@ -1,6 +1,10 @@
-import Integration7.HKNormalizedPositiveDegreeFunctions
-import Integration7.NormalizedPositiveDegreeFunctions
-import Integration7.PointNormalizedGradedOperators
+module
+
+public import Integration7.HKNormalizedPositiveDegreeFunctions
+public import Integration7.NormalizedPositiveDegreeFunctions
+public import Integration7.PointNormalizedGradedOperators
+
+@[expose] public section
 
 /-! Actual operators on positive-degree functions descend to the
 corrected normalized module from their positive-coefficient laws. The

@@ -1,5 +1,9 @@
-import IntegrationSection6.GammaSchemaFiniteRowPresentations
-import IntegrationSection6.ElementaryValuePrograms
+module
+
+public import IntegrationSection6.GammaSchemaFiniteRowPresentations
+public import IntegrationSection6.ElementaryValuePrograms
+
+@[expose] public section
 
 /-! Actual elementary row values are the native blowup of the old volume
 value and the new parameter. No uniform cardinality bound is required. -/

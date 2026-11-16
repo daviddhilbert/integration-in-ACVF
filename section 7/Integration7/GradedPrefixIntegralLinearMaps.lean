@@ -1,4 +1,8 @@
-import Integration7.GradedHeadIntegralLinearMaps
+module
+
+public import Integration7.GradedHeadIntegralLinearMaps
+
+@[expose] public section
 
 /-! Successive raw head integrals give linear prefix integrals on the
 full finite graded module over the full graded coefficient semiring.

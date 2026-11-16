@@ -1,6 +1,10 @@
-import IntegrationSection6.GammaScalarClosure
-import IntegrationSection6.FocusCenterAlgebraicity
-import IntegrationSection6.GammaGlobalRestriction
+module
+
+public import IntegrationSection6.GammaScalarClosure
+public import IntegrationSection6.FocusCenterAlgebraicity
+public import IntegrationSection6.GammaGlobalRestriction
+
+@[expose] public section
 
 /-! Descend a genuine Gamma focus centre after erasing the active VF
 coordinate. The full invariant graph, and hence original-real-base scalar

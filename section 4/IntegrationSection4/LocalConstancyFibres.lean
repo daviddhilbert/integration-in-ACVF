@@ -1,8 +1,12 @@
-import IntegrationSection4.LocalConstancySyntax
-import IntegrationSection4.EmptyInteriorFinite
-import IntegrationSection3ACVF.FiniteFibresFromExchange
-import IntegrationSection3ACVF.RealParameterTuples
-import IntegrationSection3ACVF.SeparationFunctions
+module
+
+public import IntegrationSection4.LocalConstancySyntax
+public import IntegrationSection4.EmptyInteriorFinite
+public import IntegrationSection3ACVF.FiniteFibresFromExchange
+public import IntegrationSection3ACVF.RealParameterTuples
+public import IntegrationSection3ACVF.SeparationFunctions
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

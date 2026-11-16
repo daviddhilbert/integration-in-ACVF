@@ -1,6 +1,10 @@
-import Integration7.SelectedHeadIntegralSupports
-import Integration7.SupportedVolumeFunctionJacobians
-import Integration7.AERVVolumeHeadIntegrals
+module
+
+public import Integration7.SelectedHeadIntegralSupports
+public import Integration7.SupportedVolumeFunctionJacobians
+public import Integration7.AERVVolumeHeadIntegrals
+
+@[expose] public section
 
 /-! The actual head integral descends to supported AE families. Its
 forgetful image is the pre-existing geometric head integral. -/

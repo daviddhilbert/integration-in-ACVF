@@ -1,5 +1,9 @@
-import Integration7.OrdinaryFiniteCoproductIsomorphisms
-import Integration7.OrdinaryZeroLiftIsomorphisms
+module
+
+public import Integration7.OrdinaryFiniteCoproductIsomorphisms
+public import Integration7.OrdinaryZeroLiftIsomorphisms
+
+@[expose] public section
 
 /-! Ordinary degree-zero lifts commute with the actual tagged VF
 coproduct through identity on their literal mixed tuples. -/

@@ -1,5 +1,9 @@
-import Integration7.GammaFiniteMembershipVolumeContexts
-import Integration7.GammaNativePreparedMixedPartitions
+module
+
+public import Integration7.GammaFiniteMembershipVolumeContexts
+public import Integration7.GammaNativePreparedMixedPartitions
+
+@[expose] public section
 
 /-! Simultaneous pullback preparation of a finite definable partition
 in a genuine small containing context, with original-Gamma certificates

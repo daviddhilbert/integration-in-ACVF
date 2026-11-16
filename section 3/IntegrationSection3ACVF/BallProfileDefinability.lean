@@ -1,6 +1,10 @@
-import IntegrationSection3ACVF.FullBallCoset
-import IntegrationSection3.ImaginaryBaseRanges
-import IntegrationSection3.FiniteBallProfiles
+module
+
+public import IntegrationSection3ACVF.FullBallCoset
+public import IntegrationSection3.ImaginaryBaseRanges
+public import IntegrationSection3.FiniteBallProfiles
+
+@[expose] public section
 
 /-! Intrinsic membership profiles of a full-base definable ball family.
 No point of a finite hitting set is named in these definitions. -/

@@ -1,6 +1,10 @@
-import Mathlib.Data.Fin.Tuple.Basic
-import Mathlib.Algebra.Module.Pi
-import Mathlib.Tactic
+module
+
+public import Mathlib.Data.Fin.Tuple.Basic
+public import Mathlib.Algebra.Module.Pi
+public import Mathlib.Tactic
+
+@[expose] public section
 
 /-! Literal coordinate formulas for the block product and one-coordinate
 perturbations. These preserve the order of the two original VF blocks. -/

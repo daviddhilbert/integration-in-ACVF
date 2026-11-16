@@ -1,4 +1,8 @@
-import IntegrationSection6.GammaVolumeSliceSchemata
+module
+
+public import IntegrationSection6.GammaVolumeSliceSchemata
+
+@[expose] public section
 
 /-! Literal underlying labels and volumes of arbitrary actual presentations
 of a volume slice. No chosen presentation is assumed canonical. -/

@@ -1,4 +1,8 @@
-import Integration7.GammaVolumeCertificateRealization
+module
+
+public import Integration7.GammaVolumeCertificateRealization
+
+@[expose] public section
 
 /-! A valid volume-comparison certificate acts on any actual objects
 interpreting its rows. The exact original chart is reconstructed on those

@@ -1,5 +1,9 @@
-import IntegrationSection5.UnaryPartition
-import IntegrationSection6.GammaFiniteMixedUnions
+module
+
+public import IntegrationSection5.UnaryPartition
+public import IntegrationSection6.GammaFiniteMixedUnions
+
+@[expose] public section
 
 /-! The particular factors of Section5.6 have exactly the images of the
 partition pieces under the original isomorphism. -/

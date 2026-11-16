@@ -1,6 +1,10 @@
-import Integration7.VolumeIntegrationGroupification
-import Integration7.NormalizedBasicVolumeQuotient
-import Mathlib.RingTheory.Ideal.Quotient.Operations
+module
+
+public import Integration7.VolumeIntegrationGroupification
+public import Integration7.NormalizedBasicVolumeQuotient
+public import Mathlib.RingTheory.Ideal.Quotient.Operations
+
+@[expose] public section
 
 /-! The actual raw kernel ideal and its canonical integration quotient.
 The ideal is defined by the proved blowup projection. Identification of

@@ -1,5 +1,9 @@
-import Integration7.SelectedRVVFTailProgramSelectors
-import Integration7.PartialContractionEqualityTransport
+module
+
+public import Integration7.SelectedRVVFTailProgramSelectors
+public import Integration7.PartialContractionEqualityTransport
+
+@[expose] public section
 
 /-! Every specified ordered contraction lifts to an actual partial
 contraction of the selected-label VF realization. Only the added VF tail

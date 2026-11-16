@@ -1,5 +1,9 @@
-import Integration7.IndexedVolumeFibreComparisons
-import Integration7.VolumeCertificateSmallContextRealization
+module
+
+public import Integration7.IndexedVolumeFibreComparisons
+public import Integration7.VolumeCertificateSmallContextRealization
+
+@[expose] public section
 
 /-! Each original indexed chart has an actual fibre volume isomorphism
 in a containing context small at the original saturation cardinal.

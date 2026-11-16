@@ -1,4 +1,8 @@
-import IntegrationSection6.FiniteGammaTagging
+module
+
+public import IntegrationSection6.FiniteGammaTagging
+
+@[expose] public section
 
 /-! Actual coproducts in RV[k] over the original Gamma base, using the
 inherited tagged tuples. Domain and volume graphs keep the original names. -/

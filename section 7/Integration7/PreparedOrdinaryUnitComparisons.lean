@@ -1,7 +1,11 @@
-import Integration7.GenericFiniteIsomorphismPreparation
-import Integration7.GammaOrdinaryEssentialUniformity
-import IntegrationSection6.GammaPreparedIndexPresentation
-import IntegrationSection6.GammaPreparedIndexValues
+module
+
+public import Integration7.GenericFiniteIsomorphismPreparation
+public import Integration7.GammaOrdinaryEssentialUniformity
+public import IntegrationSection6.GammaPreparedIndexPresentation
+public import IntegrationSection6.GammaPreparedIndexValues
+
+@[expose] public section
 
 /-! Generic finite-row isomorphisms construct a genuine simultaneous
 ordinary preparation and original-Gamma unit-volume comparison. -/

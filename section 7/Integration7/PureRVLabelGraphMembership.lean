@@ -1,4 +1,8 @@
-import Integration7.PureRVLabelGraphFactorizations
+module
+
+public import Integration7.PureRVLabelGraphFactorizations
+
+@[expose] public section
 
 /-! Membership in a pure-RV label graph keeps both the original tuple
 and the actual value of the appended definable map explicit. -/

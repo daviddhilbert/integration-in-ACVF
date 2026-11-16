@@ -1,7 +1,11 @@
-import Integration7.OrdinaryCoefficientSpecialPreparations
-import Integration7.NativeOrdinaryRVProductVolumeCharts
-import Integration7.UnaryPreparedHeadVolumeObjects
-import Integration7.IndependentHeadRetainedLabels
+module
+
+public import Integration7.OrdinaryCoefficientSpecialPreparations
+public import Integration7.NativeOrdinaryRVProductVolumeCharts
+public import Integration7.UnaryPreparedHeadVolumeObjects
+public import Integration7.IndependentHeadRetainedLabels
+
+@[expose] public section
 
 /-! A degree-zero finite coefficient gives a genuine product chart for
 an original-label retained-density contraction. Its contribution is an

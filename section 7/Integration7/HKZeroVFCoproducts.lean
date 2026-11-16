@@ -1,6 +1,10 @@
-import Integration7.HKZeroVolumeIntegration
-import Integration7.OrdinaryZeroLiftCoproducts
-import Integration7.VolumeFormGluing
+module
+
+public import Integration7.HKZeroVolumeIntegration
+public import Integration7.OrdinaryZeroLiftCoproducts
+public import Integration7.VolumeFormGluing
+
+@[expose] public section
 
 /-! The concrete coproduct of arbitrary weighted zero VF presentations
 glues their actual forms on the two disjoint tagged images. -/

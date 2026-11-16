@@ -1,4 +1,8 @@
-import Integration7.PositiveVolumeIntegrationEquivalence
+module
+
+public import Integration7.PositiveVolumeIntegrationEquivalence
+
+@[expose] public section
 
 /-! Arithmetic reindexing of a positive VF volume degree changes no
 geometry. Its actual integration value is heterogeneously unchanged. -/

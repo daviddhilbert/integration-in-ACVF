@@ -1,4 +1,8 @@
-import IntegrationSection5.RelativeSpecialChain
+module
+
+public import IntegrationSection5.RelativeSpecialChain
+
+@[expose] public section
 
 /-! The actual canonical map, and hence every special bijection, is a finite
 composition of relatively special bijections. -/

@@ -1,7 +1,11 @@
-import IntegrationSection3ACVF.AtomicBallFamilyChoice
-import IntegrationSection3ACVF.BetaSubballFamilies
-import IntegrationSection3ACVF.NamedBallSetup
-import IntegrationSection3ACVF.GammaLinearity
+module
+
+public import IntegrationSection3ACVF.AtomicBallFamilyChoice
+public import IntegrationSection3ACVF.BetaSubballFamilies
+public import IntegrationSection3ACVF.NamedBallSetup
+public import IntegrationSection3ACVF.GammaLinearity
+
+@[expose] public section
 
 /-! A Gamma-linear ball at any strictly smaller ordinary radius.
 The ball is obtained from genuine saturation and Lemma 3.2. -/

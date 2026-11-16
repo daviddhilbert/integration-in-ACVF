@@ -1,5 +1,9 @@
-import Integration7.VolumeAlmostEverywhere
-import Section4.RVParameterInvariance
+module
+
+public import Integration7.VolumeAlmostEverywhere
+public import Section4.RVParameterInvariance
+
+@[expose] public section
 
 /-! Adding real parameters retains a witnessed exceptional locus of smaller
 RV dimension. No generation property of the enlarged base is asserted. -/

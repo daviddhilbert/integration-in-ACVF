@@ -1,4 +1,8 @@
-import IntegrationSection6.GammaSchemaIndexedCoproductIso
+module
+
+public import IntegrationSection6.GammaSchemaIndexedCoproductIso
+
+@[expose] public section
 
 /-! The native indexed-coproduct chart applies directly to any finite
 presentation of the uniform coproduct formula, before domain recoding. -/

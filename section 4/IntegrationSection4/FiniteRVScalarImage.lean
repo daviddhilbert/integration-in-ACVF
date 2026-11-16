@@ -1,5 +1,9 @@
-import IntegrationSection4.GammaOffsets
-import Section3.GammaBaseFiniteImage
+module
+
+public import IntegrationSection4.GammaOffsets
+public import Section3.GammaBaseFiniteImage
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

@@ -1,6 +1,10 @@
-import IntegrationSection6.GammaRawRVFormulas
-import IntegrationSection6.GammaFiniteTupleBounds
-import IntegrationSection6.FiniteGammaIsomorphisms
+module
+
+public import IntegrationSection6.GammaRawRVFormulas
+public import IntegrationSection6.GammaFiniteTupleBounds
+public import IntegrationSection6.FiniteGammaIsomorphisms
+
+@[expose] public section
 
 /-! Raw sorted domain and volume formulas of actual original-Gamma RV
 objects. These retain the full Gamma base and expose the fixed finite

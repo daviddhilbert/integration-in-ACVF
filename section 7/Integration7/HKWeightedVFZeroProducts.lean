@@ -1,5 +1,9 @@
-import Integration7.HKZeroVolumeLifts
-import Integration7.ZeroFactorVFVolumeIsomorphisms
+module
+
+public import Integration7.HKZeroVolumeLifts
+public import Integration7.ZeroFactorVFVolumeIsomorphisms
+
+@[expose] public section
 
 /-! Cartesian product with a measured zero lift retains both densities.
 Its product maps use determinant one on the empty VF block and exact

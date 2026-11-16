@@ -1,13 +1,17 @@
-import Integration7.AEOrdinaryPointHeadIntegrals
-import Integration7.FrozenHeadAppendedIntegralIndependence
-import Integration7.NormalizedOrdinaryHeadAgreement
-import Integration7.OrdinaryPointHeadIntegralRows
-import Integration7.OrdinaryUnitFieldIntegralProducts
-import Integration7.OrdinaryUnitFrozenIntegralProducts
-import Integration7.OrdinaryUnitSelectedPointRows
-import Integration7.OrdinaryUnitSelectedVolumeFamilies
-import Integration7.PointPrefixedVolumeObjects
-import Integration7.UnaryUnitSelectedContractionCharts
+module
+
+public import Integration7.AEOrdinaryPointHeadIntegrals
+public import Integration7.FrozenHeadAppendedIntegralIndependence
+public import Integration7.NormalizedOrdinaryHeadAgreement
+public import Integration7.OrdinaryPointHeadIntegralRows
+public import Integration7.OrdinaryUnitFieldIntegralProducts
+public import Integration7.OrdinaryUnitFrozenIntegralProducts
+public import Integration7.OrdinaryUnitSelectedPointRows
+public import Integration7.OrdinaryUnitSelectedVolumeFamilies
+public import Integration7.PointPrefixedVolumeObjects
+public import Integration7.UnaryUnitSelectedContractionCharts
+
+@[expose] public section
 set_option pp.universes true
 set_option pp.proofs false
 set_option pp.deepTerms true

@@ -1,5 +1,9 @@
-import Integration7.GammaIndexedOrdinaryCoordinateIsomorphisms
-import IntegrationSection6.FiniteGammaIsomorphisms
+module
+
+public import Integration7.GammaIndexedOrdinaryCoordinateIsomorphisms
+public import IntegrationSection6.FiniteGammaIsomorphisms
+
+@[expose] public section
 
 /-! A Gamma bijection of ordinary finite point domains is an actual
 finite RV[0] isomorphism. Its empty volume tuple has constant weight. -/

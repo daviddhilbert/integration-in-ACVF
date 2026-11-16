@@ -1,5 +1,9 @@
-import IntegrationSection6.GammaVolumeSliceEmbeddings
-import IntegrationSection6.FiniteGammaIsoLaws
+module
+
+public import IntegrationSection6.GammaVolumeSliceEmbeddings
+public import IntegrationSection6.FiniteGammaIsoLaws
+
+@[expose] public section
 
 /-! Exact volume-preserving original-Gamma RV isomorphisms restrict to
 isomorphisms of all volume slices, for arbitrary actual presentations. -/

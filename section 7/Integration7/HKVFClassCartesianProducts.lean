@@ -1,8 +1,12 @@
-import Integration7.PositiveVolumeIntegrationProducts
-import Integration7.HKWeightedVFZeroClassProducts
-import Integration7.HKZeroVFClassProducts
-import Integration7.HKZeroCoefficientSymmetry
-import Integration7.HKGradedClassIntegration
+module
+
+public import Integration7.PositiveVolumeIntegrationProducts
+public import Integration7.HKWeightedVFZeroClassProducts
+public import Integration7.HKZeroVFClassProducts
+public import Integration7.HKZeroCoefficientSymmetry
+public import Integration7.HKGradedClassIntegration
+
+@[expose] public section
 
 /-! Graded multiplication of actual VF volume classes. Its positive,
 weighted-zero and mixed coefficient cases agree with the actual Cartesian

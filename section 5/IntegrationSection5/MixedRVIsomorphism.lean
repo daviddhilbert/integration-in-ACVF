@@ -1,9 +1,13 @@
-import IntegrationSection5.MixedVolumeImages
-import IntegrationSection5.MapInverseBijection
-import Section4.LiftBijections
-import IntegrationSection5.SmallGammaPresentation
-import IntegrationSection5.GammaRVIsomorphism
-import IntegrationSection5.RVContractionGamma
+module
+
+public import IntegrationSection5.MixedVolumeImages
+public import IntegrationSection5.MapInverseBijection
+public import Section4.LiftBijections
+public import IntegrationSection5.SmallGammaPresentation
+public import IntegrationSection5.GammaRVIsomorphism
+public import IntegrationSection5.RVContractionGamma
+
+@[expose] public section
 /-! The RV-category isomorphism of an actual mutually contractible mixed
 bijection, in every VF arity. Weight comes from the pinned checked
 injective commuting-lift dimension theorem; finite Gamma support constructs

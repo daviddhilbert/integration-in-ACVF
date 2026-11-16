@@ -1,4 +1,8 @@
-import IntegrationSection4.RelativeRootReduction
+module
+
+public import IntegrationSection4.RelativeRootReduction
+
+@[expose] public section
 
 /-! Inverse vertical slices for actual relative bijections.
 The geometric argument generalizes the checked inverse-slice argument in

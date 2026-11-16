@@ -1,5 +1,9 @@
-import Integration7.GammaUnaryVolumeCommonSchemaWithoutField
-import Integration7.UnaryPreparedVolumeComparison
+module
+
+public import Integration7.GammaUnaryVolumeCommonSchemaWithoutField
+public import Integration7.UnaryPreparedVolumeComparison
+
+@[expose] public section
 
 /-! The moving unary lift-chart and prepared-family comparisons over
 arbitrary real/Gamma bases. The stronger small-context preparation

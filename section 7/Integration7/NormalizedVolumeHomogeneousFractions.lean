@@ -1,5 +1,9 @@
-import Integration7.NormalizedVolumeCoefficientRing
-import Integration7.HomogeneousNormalizedRepresentatives
+module
+
+public import Integration7.NormalizedVolumeCoefficientRing
+public import Integration7.HomogeneousNormalizedRepresentatives
+
+@[expose] public section
 
 /-! The actual normalized coefficient subring consists exactly of
 degree-zero fractions with a common homogeneous numerator degree.

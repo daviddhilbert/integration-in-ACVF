@@ -1,4 +1,8 @@
-import Integration7.MatchingHorizontalFibreGeometry
+module
+
+public import Integration7.MatchingHorizontalFibreGeometry
+
+@[expose] public section
 
 /-! Both actual matching-family translations are rectangles over all
 recorded labels. Their translated coordinate RV tags remain fixed even

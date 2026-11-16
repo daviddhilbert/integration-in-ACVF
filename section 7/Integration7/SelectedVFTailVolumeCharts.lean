@@ -1,5 +1,9 @@
-import Integration7.RawStandardVolumeObjects
-import Integration7.NativeCoordinateDensityVolumeIsomorphisms
+module
+
+public import Integration7.RawStandardVolumeObjects
+public import Integration7.NativeCoordinateDensityVolumeIsomorphisms
+
+@[expose] public section
 
 /-! The canonical tail completion and the original selected contraction
 are genuinely RV volume isomorphic, retaining the original density. -/

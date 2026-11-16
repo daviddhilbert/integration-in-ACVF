@@ -1,6 +1,10 @@
-import Integration7.AllDegreeVolumeData
-import Integration7.AllDegreeVolumeProductIsomorphisms
-import Section4.RVProductUnits
+module
+
+public import Integration7.AllDegreeVolumeData
+public import Integration7.AllDegreeVolumeProductIsomorphisms
+public import Section4.RVProductUnits
+
+@[expose] public section
 
 /-! The ordinary degree-zero singleton is the unit for the original
 product in every degree. Density-bearing data handles the zero case uniformly. -/

@@ -1,5 +1,9 @@
-import IntegrationSection3ACVF.ThinBallHoleConservation
-import IntegrationSection3ACVF.SeparationFunctions
+module
+
+public import IntegrationSection3ACVF.ThinBallHoleConservation
+public import IntegrationSection3ACVF.SeparationFunctions
+
+@[expose] public section
 
 /-! Actual closed components, thin annuli and infinitude of thin bodies. -/
 

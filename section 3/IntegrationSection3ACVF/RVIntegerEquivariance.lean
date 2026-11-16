@@ -1,5 +1,9 @@
-import IntegrationSection3ACVF.RVMapBijection
-import IntegrationSection3ACVF.RVIntegerSequences
+module
+
+public import IntegrationSection3ACVF.RVMapBijection
+public import IntegrationSection3ACVF.RVIntegerSequences
+
+@[expose] public section
 
 /-! Integer equivariance of the common RV difference relation. Neither
 centres nor lifts of radii are added to the original parameter base. -/

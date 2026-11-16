@@ -1,5 +1,9 @@
-import Integration7.VolumeIsomorphismGluing
-import Integration7.FibreRVJacobianComparison
+module
+
+public import Integration7.VolumeIsomorphismGluing
+public import Integration7.FibreRVJacobianComparison
+
+@[expose] public section
 
 /-! Actual comparisons on fibres of a correspondence with a fixed head.
 The fibre coordinates gain a common head; the density stays unchanged. -/

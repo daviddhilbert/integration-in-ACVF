@@ -1,5 +1,9 @@
-import Integration7.ZeroFactorVolumeIsomorphisms
-import Integration7.VolumeIsoDegreeReindex
+module
+
+public import Integration7.ZeroFactorVolumeIsomorphisms
+public import Integration7.VolumeIsoDegreeReindex
+
+@[expose] public section
 
 /-! The concrete zero-factor charts agree with the original all-degree
 product, including its unit density convention in ordinary RV[0]. -/

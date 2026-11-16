@@ -1,4 +1,8 @@
-import IntegrationSection6.FiniteGammaIsomorphisms
+module
+
+public import IntegrationSection6.FiniteGammaIsomorphisms
+
+@[expose] public section
 
 /-! Reconstruct actual RV[k] isomorphisms from full original-Gamma
 relations satisfying totality, uniqueness, bijectivity and weight balance. -/

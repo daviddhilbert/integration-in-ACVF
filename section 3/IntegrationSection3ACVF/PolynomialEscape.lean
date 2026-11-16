@@ -1,5 +1,9 @@
-import Section3.PolynomialRVConstant
-import Section3.ClosedBallRoots
+module
+
+public import Section3.PolynomialRVConstant
+public import Section3.ClosedBallRoots
+
+@[expose] public section
 
 /-! Finite-polynomial closed-ball escape, the geometric content
 used in the paper's Lemma 2.12 and later in 3.14. Reuses the pinned proved

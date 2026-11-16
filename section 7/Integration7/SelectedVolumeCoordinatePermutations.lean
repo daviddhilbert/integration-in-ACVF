@@ -1,5 +1,9 @@
-import Integration7.GammaPermutedVolumeSchemaRows
-import Integration7.GammaSelectedVolumeSchemata
+module
+
+public import Integration7.GammaPermutedVolumeSchemaRows
+public import Integration7.GammaSelectedVolumeSchemata
+
+@[expose] public section
 
 /-! A common coordinate permutation of selected volume rows retains
 their geometric comparison and unchanged full retained densities. -/

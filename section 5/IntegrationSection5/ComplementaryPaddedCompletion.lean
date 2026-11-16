@@ -1,7 +1,11 @@
-import IntegrationSection5.RVSliceMapImage
-import IntegrationSection5.PaddedExtensionInactive
-import IntegrationSection5.PaddedProductCompletion
-import IntegrationSection5.ProjectionPaddingOperations
+module
+
+public import IntegrationSection5.RVSliceMapImage
+public import IntegrationSection5.PaddedExtensionInactive
+public import IntegrationSection5.PaddedProductCompletion
+public import IntegrationSection5.ProjectionPaddingOperations
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option allowUnsafeReducibility true in

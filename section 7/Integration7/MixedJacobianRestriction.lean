@@ -1,4 +1,8 @@
-import Integration7.VFVolumeBijections
+module
+
+public import Integration7.VFVolumeBijections
+
+@[expose] public section
 
 /-! Two defined mixed Jacobians agree when one actual definable map
 is a restriction of the other. No definedness is asserted at boundary

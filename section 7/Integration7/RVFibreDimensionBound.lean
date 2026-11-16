@@ -1,5 +1,9 @@
-import Integration7.VolumeAlmostEverywhere
-import Section4.RVDimensionRank
+module
+
+public import Integration7.VolumeAlmostEverywhere
+public import Section4.RVDimensionRank
+
+@[expose] public section
 
 /-! The RV dimension of a definable family is bounded by the base
 dimension plus a common fibre bound. Coordinate bases and algebraic

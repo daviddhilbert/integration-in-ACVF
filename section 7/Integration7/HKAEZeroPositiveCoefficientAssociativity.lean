@@ -1,7 +1,11 @@
-import Integration7.HKAEZeroPositiveCoefficientProducts
-import Integration7.AERVVolumePositiveCoefficientBilinearity
-import Integration7.HKPositiveVolumeClassProductExtensions
-import Integration7.HKPositiveVolumeProductZeroScalars
+module
+
+public import Integration7.HKAEZeroPositiveCoefficientProducts
+public import Integration7.AERVVolumePositiveCoefficientBilinearity
+public import Integration7.HKPositiveVolumeClassProductExtensions
+public import Integration7.HKPositiveVolumeProductZeroScalars
+
+@[expose] public section
 
 /-! Positive coefficient multiplication associates when its innermost
 function is ordinary-valued, with the literal graded product degree. -/

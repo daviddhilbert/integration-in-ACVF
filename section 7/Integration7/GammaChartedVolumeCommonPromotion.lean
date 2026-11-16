@@ -1,6 +1,10 @@
-import Integration7.GammaChartedVolumeBlowupPromotion
-import Integration7.GammaVolumeBlowupEquivalence
-import Integration7.GammaVolumeChainSchemata
+module
+
+public import Integration7.GammaChartedVolumeBlowupPromotion
+public import Integration7.GammaVolumeBlowupEquivalence
+public import Integration7.GammaVolumeChainSchemata
+
+@[expose] public section
 
 /-! Original-Gamma finite geometric chains and common refinements have
 formula witnesses in any genuine containing context. These certificates

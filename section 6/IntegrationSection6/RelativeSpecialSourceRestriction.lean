@@ -1,4 +1,8 @@
-import IntegrationSection5.RelativeSpecialRestriction
+module
+
+public import IntegrationSection5.RelativeSpecialRestriction
+
+@[expose] public section
 
 /-! Restriction of an actual relatively special map to any definable
 source subset. The existing unary special-chain restriction is retained. -/

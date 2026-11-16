@@ -1,5 +1,9 @@
-import Integration7.FiniteAuxiliaryMapPromotion
-import Section3.SortedTuples
+module
+
+public import Integration7.FiniteAuxiliaryMapPromotion
+public import Section3.SortedTuples
+
+@[expose] public section
 
 /-! A finite RV exception map in any real context has a formula
 presentation after naming finitely many sorted auxiliary parameters.

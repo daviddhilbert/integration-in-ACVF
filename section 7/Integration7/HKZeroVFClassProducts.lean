@@ -1,5 +1,9 @@
-import Integration7.HKZeroVFProducts
-import Integration7.HKVolumeClassCoherence
+module
+
+public import Integration7.HKZeroVFProducts
+public import Integration7.HKVolumeClassCoherence
+
+@[expose] public section
 
 /-! Concrete Cartesian multiplication on weighted zero VF classes agrees
 with the corrected RV multiplication under the actual lift and integral. -/

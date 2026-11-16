@@ -1,7 +1,11 @@
-import Integration7.CanonicalVolumeLabels
-import Integration7.RVVolumeDensityGraphs
-import Integration7.NativeCoordinateDensityVolumeObjects
-import Section4.RVIsoTools
+module
+
+public import Integration7.CanonicalVolumeLabels
+public import Integration7.RVVolumeDensityGraphs
+public import Integration7.NativeCoordinateDensityVolumeObjects
+public import Section4.RVIsoTools
+
+@[expose] public section
 
 /-! Every actual positive RV coefficient admits an original-base native
 presentation with literal coordinate and density labels, through a full

@@ -1,5 +1,9 @@
-import IntegrationSection6.GammaVFCodePairing
-import IntegrationSection6.GammaPreparedFamilies
+module
+
+public import IntegrationSection6.GammaVFCodePairing
+public import IntegrationSection6.GammaPreparedFamilies
+
+@[expose] public section
 
 /-! Prepare a finite RV code once. Any predicate determined by that code
 then holds between inverse images of every pair with the same prepared key. -/

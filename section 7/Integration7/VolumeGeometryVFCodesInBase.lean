@@ -1,5 +1,9 @@
-import Integration7.FrozenVolumeWitnessRecoding
-import Integration7.GammaVolumeWitnessVFCodesInBase
+module
+
+public import Integration7.FrozenVolumeWitnessRecoding
+public import Integration7.GammaVolumeWitnessVFCodesInBase
+
+@[expose] public section
 
 /-! Finite VF row codes for the geometric part of arbitrary volume
 witnesses. Auxiliary exception parameters are retained separately and do

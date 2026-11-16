@@ -1,7 +1,11 @@
-import IntegrationSection2.ConcreteVolumeForms
-import IntegrationSection2.LiftFibreAvoidance
-import IntegrationSection2.VolumeCharacteristic
-import Section9.PaperLiftComparison
+module
+
+public import IntegrationSection2.ConcreteVolumeForms
+public import IntegrationSection2.LiftFibreAvoidance
+public import IntegrationSection2.VolumeCharacteristic
+public import Section9.PaperLiftComparison
+
+@[expose] public section
 
 /-! The generic RV part of volume descent, on the actual full-base
 finite-volume category. A fixed label fibre escapes the actual

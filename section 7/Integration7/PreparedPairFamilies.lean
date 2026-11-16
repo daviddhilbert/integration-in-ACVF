@@ -1,4 +1,8 @@
-import Integration7.MatchingPreparedFamilyDomains
+module
+
+public import Integration7.MatchingPreparedFamilyDomains
+
+@[expose] public section
 
 /-! The whole balanced graph with both compatible prepared keys.
 Its matching and different refinements are actual subsets, and membership

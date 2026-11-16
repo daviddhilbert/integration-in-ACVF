@@ -1,5 +1,9 @@
-import IntegrationSection3ACVF.FullBaseDefinability
-import Section3.GammaCounting
+module
+
+public import IntegrationSection3ACVF.FullBaseDefinability
+public import Section3.GammaCounting
+
+@[expose] public section
 
 /-! Finite distinct witnesses for actual full-base unary relation rows.
 The counting predicate keeps every context label free and every original

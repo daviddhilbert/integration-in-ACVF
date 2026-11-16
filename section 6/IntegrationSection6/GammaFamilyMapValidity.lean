@@ -1,4 +1,8 @@
-import IntegrationSection6.TupleBlockSwap
+module
+
+public import IntegrationSection6.TupleBlockSwap
+
+@[expose] public section
 
 /-! First-order validity of finite-volume map schemata. Totality, unique
 outputs, the exact source locus and a fixed finite bound on reverse fibres

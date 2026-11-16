@@ -1,5 +1,9 @@
-import Integration7.SelectedVolumeHeadRows
-import Integration7.SelectedVolumeSchemaUniformBounds
+module
+
+public import Integration7.SelectedVolumeHeadRows
+public import Integration7.SelectedVolumeSchemaUniformBounds
+
+@[expose] public section
 
 /-! The original fibrewise geometric hypothesis specializes to a unary
 head fibre over exactly the frozen VF base, and gives full formula

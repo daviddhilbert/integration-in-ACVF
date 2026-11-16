@@ -1,9 +1,13 @@
-import Integration7.PullbackCoordinateVolumeObjects
-import Integration7.VolumePartition
-import Integration7.VolumeCoproductIsomorphism
-import Integration7.RVVolumeComposition
-import Integration7.RVVolumeInverse
-import IntegrationSection6.PullbackPartitions
+module
+
+public import Integration7.PullbackCoordinateVolumeObjects
+public import Integration7.VolumePartition
+public import Integration7.VolumeCoproductIsomorphism
+public import Integration7.RVVolumeComposition
+public import Integration7.RVVolumeInverse
+public import IntegrationSection6.PullbackPartitions
+
+@[expose] public section
 
 /-! Disjoint pullback pieces partition the actual canonical volume
 object, preserving its retained density as well as every coordinate. -/

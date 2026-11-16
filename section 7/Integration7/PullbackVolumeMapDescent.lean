@@ -1,6 +1,10 @@
-import Integration7.RawPullbackVolumeLifts
-import Integration7.RawVFVolumeComposition
-import Integration7.FullLiftVolumeDescent
+module
+
+public import Integration7.RawPullbackVolumeLifts
+public import Integration7.RawVFVolumeComposition
+public import Integration7.FullLiftVolumeDescent
+
+@[expose] public section
 
 /-! A volume-preserving map of actual RV-pullbacks descends along its
 compatible RV key isomorphism. The full lift map is constructed by conjugating

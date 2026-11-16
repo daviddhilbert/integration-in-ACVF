@@ -1,5 +1,9 @@
-import Integration7.IndexedVolumeAdmissibility
-import Integration7.GammaVolumeAlgebraicCenters
+module
+
+public import Integration7.IndexedVolumeAdmissibility
+public import Integration7.GammaVolumeAlgebraicCenters
+
+@[expose] public section
 
 /-! The algebraicity of an indexed blowup center is over the original
 Gamma base. Finite base-volume fibres retain the index parameters

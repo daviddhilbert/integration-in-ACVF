@@ -1,7 +1,11 @@
-import Integration7.AEOrdinaryPositiveCoefficientProducts
-import Integration7.AERVVolumePositiveCoefficientBilinearity
-import Integration7.PositiveVolumeClassProductExtensions
-import Integration7.PositiveVolumeProductOrdinaryScalars
+module
+
+public import Integration7.AEOrdinaryPositiveCoefficientProducts
+public import Integration7.AERVVolumePositiveCoefficientBilinearity
+public import Integration7.PositiveVolumeClassProductExtensions
+public import Integration7.PositiveVolumeProductOrdinaryScalars
+
+@[expose] public section
 
 /-! Positive coefficient multiplication associates when its innermost
 function is ordinary-valued, with the literal graded product degree. -/

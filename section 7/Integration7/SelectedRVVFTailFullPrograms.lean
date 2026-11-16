@@ -1,7 +1,11 @@
-import Integration7.GammaSelectedRVVFTailPartialPrograms
-import Integration7.PartialOrderedContractionAppending
-import Integration7.SelectedRVVFTailPullbacks
-import IntegrationSection6.CanonicalContractionPrograms
+module
+
+public import Integration7.GammaSelectedRVVFTailPartialPrograms
+public import Integration7.PartialOrderedContractionAppending
+public import Integration7.SelectedRVVFTailPullbacks
+public import IntegrationSection6.CanonicalContractionPrograms
+
+@[expose] public section
 
 /-! Complete the lifted specified contraction by canonical identity
 heads on the added VF tail. Every actual head and its original-Gamma

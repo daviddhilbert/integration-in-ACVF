@@ -1,8 +1,12 @@
-import Integration7.SelectedRVVFTailSpecialRelative
-import Integration7.SelectedRVVFTailPullbackFibres
-import Integration7.NativeVFArityTransport
-import IntegrationSection5.RelativeLabelPreservation
-import IntegrationSection5.HeadPreparation
+module
+
+public import Integration7.SelectedRVVFTailSpecialRelative
+public import Integration7.SelectedRVVFTailPullbackFibres
+public import Integration7.NativeVFArityTransport
+public import IntegrationSection5.RelativeLabelPreservation
+public import IntegrationSection5.HeadPreparation
+
+@[expose] public section
 
 /-! A specified head preparation lifts to the VF realization of any
 selected old RV labels. Both specialness and head saturation are proved. -/

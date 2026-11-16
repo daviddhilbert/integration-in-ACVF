@@ -1,6 +1,10 @@
-import Integration7.PreparedRectangleFiniteVolumes
-import Integration7.LabelDeterminedPullbackGamma
-import Integration7.PreparedRectangleVolumeComparison
+module
+
+public import Integration7.PreparedRectangleFiniteVolumes
+public import Integration7.LabelDeterminedPullbackGamma
+public import Integration7.PreparedRectangleVolumeComparison
+
+@[expose] public section
 
 /-! Original-Gamma certificate for volume descent through the actual
 prepared rectangle conjugate. -/

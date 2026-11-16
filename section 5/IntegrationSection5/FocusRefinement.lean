@@ -1,4 +1,8 @@
-import IntegrationSection5.MatchedFocusContractibility
+module
+
+public import IntegrationSection5.MatchedFocusContractibility
+
+@[expose] public section
 
 /-! A focus refines a contractible map when its marked zero points have
 degenerate source RV cells. This is the reverse part of the focus argument. -/

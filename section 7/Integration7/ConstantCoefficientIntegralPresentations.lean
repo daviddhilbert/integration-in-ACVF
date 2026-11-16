@@ -1,6 +1,10 @@
-import Integration7.CoordinateSelectedCoefficientRows
-import Integration7.FieldBaseAppendedIntegralIndependence
-import Integration7.SelectedDensityGraphRowMaps
+module
+
+public import Integration7.CoordinateSelectedCoefficientRows
+public import Integration7.FieldBaseAppendedIntegralIndependence
+public import Integration7.SelectedDensityGraphRowMaps
+
+@[expose] public section
 
 /-! Genuine row volume isomorphisms identify the chosen appended
 integrals of density-graph and literal-label coefficient presentations. -/

@@ -1,5 +1,9 @@
-import IntegrationSection5.GammaTraceProjection
-import IntegrationSection5.UniformTraceExtension
+module
+
+public import IntegrationSection5.GammaTraceProjection
+public import IntegrationSection5.UniformTraceExtension
+
+@[expose] public section
 
 noncomputable section
 set_option autoImplicit false

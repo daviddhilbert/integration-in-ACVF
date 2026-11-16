@@ -1,5 +1,9 @@
-import Integration7.VolumeProductPointwise
-import Integration7.VolumeDegreeTransport
+module
+
+public import Integration7.VolumeProductPointwise
+public import Integration7.VolumeDegreeTransport
+
+@[expose] public section
 
 /-! Rebracketing changes no coordinate order. The actual product
 associator preserves both the coordinates and the multiplied density. -/

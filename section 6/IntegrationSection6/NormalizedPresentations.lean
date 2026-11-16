@@ -1,5 +1,9 @@
-import IntegrationSection6.CanonicalNormalization
-import Section5.PullbackLift
+module
+
+public import IntegrationSection6.CanonicalNormalization
+public import Section5.PullbackLift
+
+@[expose] public section
 
 /-! Transport actual mixed presentations through a second normalization.
 The carrier, graph and original parameter set are unchanged. -/

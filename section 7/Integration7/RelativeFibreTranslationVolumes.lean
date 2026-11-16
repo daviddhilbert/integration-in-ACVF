@@ -1,5 +1,9 @@
-import Integration7.AffineMixedVFJacobians
-import Integration7.RelativeMixedFibreJacobians
+module
+
+public import Integration7.AffineMixedVFJacobians
+public import Integration7.RelativeMixedFibreJacobians
+
+@[expose] public section
 
 /-! Actual relatively unary translations along frozen coordinate fibres
 have Jacobian one almost everywhere and preserve every transported density. -/

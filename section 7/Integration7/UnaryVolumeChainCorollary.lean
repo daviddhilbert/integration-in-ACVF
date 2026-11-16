@@ -1,4 +1,8 @@
-import Integration7.UnarySpecialVolumeChains
+module
+
+public import Integration7.UnarySpecialVolumeChains
+
+@[expose] public section
 
 /-! The unary volume version of Corollary 6.10: an actual special
 bijection produces forward volume blowups and the exact final comparison. -/

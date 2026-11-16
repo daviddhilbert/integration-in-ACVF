@@ -1,5 +1,9 @@
-import IntegrationSection6.GammaDefinableBaseReduction
-import Section5.GammaLift
+module
+
+public import IntegrationSection6.GammaDefinableBaseReduction
+public import Section5.GammaLift
+
+@[expose] public section
 
 /-! Descend full isomorphism graphs from dcl(B) to the original base B. -/
 noncomputable section

@@ -1,9 +1,13 @@
-import Integration7.CompletedSection6Kernel
-import Integration7.ClosedSection6ConstantRVFamilies
-import Integration7.ClosedSection6RVClassBaseChange
-import IntegrationSection6.ConstantFamilyCoefficients
-import IntegrationSection6.ConstantRVFamilies
-import IntegrationSection6.RVClassBaseChange
+module
+
+public import Integration7.CompletedSection6Kernel
+public import Integration7.ClosedSection6ConstantRVFamilies
+public import Integration7.ClosedSection6RVClassBaseChange
+public import IntegrationSection6.ConstantFamilyCoefficients
+public import IntegrationSection6.ConstantRVFamilies
+public import IntegrationSection6.RVClassBaseChange
+
+@[expose] public section
 
 /-! Closed generated-base Section6 integration. The former universal
 Section5 input is replaced by the canonical-model certificate; its kernel

@@ -1,6 +1,10 @@
-import IntegrationSection6.GammaRVRealSets
-import IntegrationSection6.ElementaryKeys
-import IntegrationSection6.GammaRVGlobalRestriction
+module
+
+public import IntegrationSection6.GammaRVRealSets
+public import IntegrationSection6.ElementaryKeys
+public import IntegrationSection6.GammaRVGlobalRestriction
+
+@[expose] public section
 
 /-! Coordinate projections of actual volume maps retain full original
 Gamma graphs. Finiteness of the projected volume is a separate obligation;

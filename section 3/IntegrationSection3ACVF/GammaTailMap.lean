@@ -1,5 +1,9 @@
-import IntegrationSection3ACVF.GammaSlopeOutput
-import IntegrationSection3ACVF.InjectiveBallOrder
+module
+
+public import IntegrationSection3ACVF.GammaSlopeOutput
+public import IntegrationSection3ACVF.InjectiveBallOrder
+
+@[expose] public section
 
 /-! The Gamma map on the source open tail, defined through the full
 slope relation and proved to preserve strict order and target radii. -/

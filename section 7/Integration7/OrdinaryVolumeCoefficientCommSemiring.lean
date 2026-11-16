@@ -1,6 +1,10 @@
-import Integration7.AllDegreeVolumeBlowupSemiring
-import Integration7.NondegenerateFiniteIso
-import Section4.RVProductSymmetry
+module
+
+public import Integration7.AllDegreeVolumeBlowupSemiring
+public import Integration7.NondegenerateFiniteIso
+public import Section4.RVProductSymmetry
+
+@[expose] public section
 
 /-! The ordinary degree-zero coefficient semiring is commutative,
 by the actual swap of the two finite RV factors. -/

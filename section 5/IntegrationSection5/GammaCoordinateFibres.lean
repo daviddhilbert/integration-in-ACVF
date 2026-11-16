@@ -1,7 +1,11 @@
-import IntegrationSection5.FibreFocus
-import IntegrationSection5.GammaGraphOperations
-import Section5.GammaLiftRelation
-import Section3.GammaSupport
+module
+
+public import IntegrationSection5.FibreFocus
+public import IntegrationSection5.GammaGraphOperations
+public import Section5.GammaLiftRelation
+public import Section3.GammaSupport
+
+@[expose] public section
 
 /-! Coordinate-fibre graphs retain precisely the original Gamma names.
 Only the fixed complementary VF coordinates are added as real parameters. -/

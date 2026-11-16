@@ -1,6 +1,10 @@
-import Integration7.NativeUnaryRectangleContractions
-import Integration7.RVParameterHeadProjections
-import Integration7.RVClassProductContractionValues
+module
+
+public import Integration7.NativeUnaryRectangleContractions
+public import Integration7.RVParameterHeadProjections
+public import Integration7.RVClassProductContractionValues
+
+@[expose] public section
 
 /-! The two actual volume coordinates of the rectangle program are the
 first parameter head and the prepared second unary head. -/

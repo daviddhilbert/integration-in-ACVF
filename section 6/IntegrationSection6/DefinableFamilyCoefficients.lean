@@ -1,5 +1,9 @@
-import IntegrationSection6.ParameterCoefficientClasses
-import IntegrationSection6.DefinableFamilyRowObjects
+module
+
+public import IntegrationSection6.ParameterCoefficientClasses
+public import IntegrationSection6.DefinableFamilyRowObjects
+
+@[expose] public section
 
 /-! Definable RV families take values in the actual varying coefficient
 semirings; equality is exactly a definable isomorphism of row lifts. -/

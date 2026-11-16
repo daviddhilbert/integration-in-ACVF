@@ -1,5 +1,9 @@
-import Mathlib.Algebra.Ring.InjSurj
-import Mathlib.Algebra.Ring.Equiv
+module
+
+public import Mathlib.Algebra.Ring.InjSurj
+public import Mathlib.Algebra.Ring.Equiv
+
+@[expose] public section
 
 /-! Ring transport through an additive equivalence retains the original
 addition, zero, negation and integer scalar multiplication. -/

@@ -1,5 +1,9 @@
-import IntegrationSection3ACVF.GammaExtremumSyntax
-import IntegrationSection3ACVF.FullGammaUniformFiniteness
+module
+
+public import IntegrationSection3ACVF.GammaExtremumSyntax
+public import IntegrationSection3ACVF.FullGammaUniformFiniteness
+
+@[expose] public section
 
 /-! Strict local extrema of actual definable Gamma functions are finite,
 including in non-Archimedean value groups. Genuine saturation supplies

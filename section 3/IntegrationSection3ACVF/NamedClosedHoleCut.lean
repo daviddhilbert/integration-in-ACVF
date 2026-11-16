@@ -1,10 +1,14 @@
-import IntegrationSection3ACVF.OrdinaryRadiusFibres
-import IntegrationSection3ACVF.CanonicalHoles
-import IntegrationSection3ACVF.FullBallCoset
-import IntegrationSection3ACVF.BallEnlargementGeometry
-import IntegrationSection3ACVF.OpenBallConstancy
-import IntegrationSection3.DefinableHoleRefinement
-import IntegrationSection3.BallInclusionFormulas
+module
+
+public import IntegrationSection3ACVF.OrdinaryRadiusFibres
+public import IntegrationSection3ACVF.CanonicalHoles
+public import IntegrationSection3ACVF.FullBallCoset
+public import IntegrationSection3ACVF.BallEnlargementGeometry
+public import IntegrationSection3ACVF.OpenBallConstancy
+public import IntegrationSection3.DefinableHoleRefinement
+public import IntegrationSection3.BallInclusionFormulas
+
+@[expose] public section
 
 /-! Intrinsic actual ACVF geometry. At a named ordinary radius, adjoining
 all proper closed supersets of old holes gives an intrinsic finite graph.

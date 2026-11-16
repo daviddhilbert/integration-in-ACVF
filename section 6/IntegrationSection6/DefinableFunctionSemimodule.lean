@@ -1,7 +1,11 @@
-import IntegrationSection6.DefinableFamilyOperations
-import IntegrationSection6.RVClassRepresentatives
-import Mathlib.Algebra.Module.Pi
-import Mathlib.Algebra.Module.TransferInstance
+module
+
+public import IntegrationSection6.DefinableFamilyOperations
+public import IntegrationSection6.RVClassRepresentatives
+public import Mathlib.Algebra.Module.Pi
+public import Mathlib.Algebra.Module.TransferInstance
+
+@[expose] public section
 
 /-! The actual definable functions form the submodule of all varying
 coefficient functions represented by finite Gamma RV families. Evaluation

@@ -1,4 +1,8 @@
-import Section4.Products
+module
+
+public import Section4.Products
+
+@[expose] public section
 
 /-! A map constant on the fibres of a definable map descends to its actual
 image. The entire descended graph remains over the original parameter set.

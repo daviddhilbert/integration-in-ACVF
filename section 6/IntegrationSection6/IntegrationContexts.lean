@@ -1,5 +1,9 @@
-import IntegrationSection6.ParameterCoefficientSemirings
-import IntegrationSection6.GammaVFBaseChange
+module
+
+public import IntegrationSection6.ParameterCoefficientSemirings
+public import IntegrationSection6.GammaVFBaseChange
+
+@[expose] public section
 
 /-! Package the standing model/base hypotheses, and the explicitly
 accepted Section5.8 input, for parameterized integration constructions. -/

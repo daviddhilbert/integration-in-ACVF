@@ -1,5 +1,9 @@
-import Integration7.PureRVLabelGraphFactorizations
-import Integration7.IndependentRVSpecialSources
+module
+
+public import Integration7.PureRVLabelGraphFactorizations
+public import Integration7.IndependentRVSpecialSources
+
+@[expose] public section
 
 /-! The independent coefficient constraint, with arbitrary functional
 RV labels appended, has an actual factorization into old source labels

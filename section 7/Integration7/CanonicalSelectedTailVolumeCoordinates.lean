@@ -1,6 +1,10 @@
-import Integration7.CanonicalSelectedTailRVProjection
-import IntegrationSection5.NaturalContractionMap
-import IntegrationSection6.GammaFamilyCoordinates
+module
+
+public import Integration7.CanonicalSelectedTailRVProjection
+public import IntegrationSection5.NaturalContractionMap
+public import IntegrationSection6.GammaFamilyCoordinates
+
+@[expose] public section
 
 /-! The canonical selected-tail label projection keeps its complete
 Gamma graph and identifies the tail's VF volume tuple literally with

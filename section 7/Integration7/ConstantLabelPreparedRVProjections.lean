@@ -1,7 +1,11 @@
-import Integration7.ConstantRVLabelSpecialPreparations
-import Integration7.CanonicalFiniteRVObjects
-import IntegrationSection5.UnaryRVIsomorphism
-import IntegrationSection5.RVContractionGamma
+module
+
+public import Integration7.ConstantRVLabelSpecialPreparations
+public import Integration7.CanonicalFiniteRVObjects
+public import IntegrationSection5.UnaryRVIsomorphism
+public import IntegrationSection5.RVContractionGamma
+
+@[expose] public section
 
 /-! The actual RV-key isomorphism of a constant-label lifted preparation.
 Its unary volume coordinate is preserved exactly, its carried labels

@@ -1,8 +1,12 @@
-import IntegrationSection2.GenericVolumeDescent
-import IntegrationSection2.GammaVolumeDescent
-import IntegrationSection2.VolumeBadLabels
-import IntegrationSection2.ConcreteVolumeMorphisms
-import Section9.GaussGraphConstruction
+module
+
+public import IntegrationSection2.GenericVolumeDescent
+public import IntegrationSection2.GammaVolumeDescent
+public import IntegrationSection2.VolumeBadLabels
+public import IntegrationSection2.ConcreteVolumeMorphisms
+public import Section9.GaussGraphConstruction
+
+@[expose] public section
 
 /-! Corollary 2.34 on the actual finite-volume categories. The
 generic RV and pointwise Gamma conditions are proved separately.

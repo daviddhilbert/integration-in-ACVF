@@ -1,6 +1,10 @@
-import Integration7.DefinableVFVolumeFamilies
-import Integration7.FixedVFLabelTags
-import Integration7.VolumeFormGluing
+module
+
+public import Integration7.DefinableVFVolumeFamilies
+public import Integration7.FixedVFLabelTags
+public import Integration7.VolumeFormGluing
+
+@[expose] public section
 
 /-! Definable tagged disjoint unions of volume families, with the VF
 tuple fixed and the coordinate/density maps glued literally on each

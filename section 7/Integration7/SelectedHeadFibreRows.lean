@@ -1,7 +1,11 @@
-import Integration7.SelectedVolumeHeadFibres
-import Integration7.SelectedVolumeRowContexts
-import Integration7.VolumeRelabeling
-import Section4.RVIsoTools
+module
+
+public import Integration7.SelectedVolumeHeadFibres
+public import Integration7.SelectedVolumeRowContexts
+public import Integration7.VolumeRelabeling
+public import Section4.RVIsoTools
+
+@[expose] public section
 
 /-! The row of the actual frozen unary family is the original row,
 with its same labels and density, in a proved containing context. -/

@@ -1,4 +1,8 @@
-import Integration7.RectangleFamilyPreparedGeometry
+module
+
+public import Integration7.RectangleFamilyPreparedGeometry
+
+@[expose] public section
 
 /-! Exact target membership for a prepared rectangle family. The two
 unary factors share their original labels, recovered from the suffix

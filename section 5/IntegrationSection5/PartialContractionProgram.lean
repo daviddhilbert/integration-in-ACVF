@@ -1,5 +1,9 @@
-import IntegrationSection5.HeadPreparation
-import IntegrationSection5.RelativeLabelPreservation
+module
+
+public import IntegrationSection5.HeadPreparation
+public import IntegrationSection5.RelativeLabelPreservation
+
+@[expose] public section
 
 /-! Actual ordered preparations with a frozen complementary VF tuple. Each
 step drops one active head; the program stops before the frozen coordinates. -/

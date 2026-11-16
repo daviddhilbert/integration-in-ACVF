@@ -1,6 +1,10 @@
-import IntegrationSection6.GammaPreparedSelectedSliceCarriers
-import IntegrationSection6.GammaPreparedFamilyKeyCharacterization
-import IntegrationSection6.GammaPreparedFamilyLabelSlices
+module
+
+public import IntegrationSection6.GammaPreparedSelectedSliceCarriers
+public import IntegrationSection6.GammaPreparedFamilyKeyCharacterization
+public import IntegrationSection6.GammaPreparedFamilyLabelSlices
+
+@[expose] public section
 
 /-! The lift of every selected-volume slice of a prepared indexed object
 is actually Gamma-isomorphic to the original mixed family with those old

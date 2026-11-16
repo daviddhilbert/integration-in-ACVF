@@ -1,4 +1,8 @@
-import Integration7.ExtraVolumeParameters
+module
+
+public import Integration7.ExtraVolumeParameters
+
+@[expose] public section
 
 /-! First-order RV validity with auxiliary parameters confined to the
 exception map. The objects, density graphs, chart and chart supports are

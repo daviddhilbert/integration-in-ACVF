@@ -1,4 +1,8 @@
-import Integration7.ExtraVolumeRVValidity
+module
+
+public import Integration7.ExtraVolumeRVValidity
+
+@[expose] public section
 
 /-! Auxiliary real parameters may witness only the small exceptional set
 and its finite map. Existentially quantifying them keeps the validity locus

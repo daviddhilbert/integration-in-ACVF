@@ -1,5 +1,9 @@
-import IntegrationSection3ACVF.AnnulusValueIntervals
-import IntegrationSection3ACVF.LinearRadiusThreshold
+module
+
+public import IntegrationSection3ACVF.AnnulusValueIntervals
+public import IntegrationSection3ACVF.LinearRadiusThreshold
+
+@[expose] public section
 
 /-! Ordinary open balls are unions of their strictly smaller concentric
 open balls, in the actual Gamma order, including pairs through the centre. -/

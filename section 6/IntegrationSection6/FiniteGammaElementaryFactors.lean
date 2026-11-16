@@ -1,10 +1,14 @@
-import IntegrationSection6.FiniteGammaVolumeDeletion
-import IntegrationSection6.FiniteGammaBasicFactors
-import IntegrationSection6.FiniteGammaProducts
-import IntegrationSection6.FiniteGammaFormulaIsos
-import IntegrationSection6.FiniteGammaElementaryAt
-import IntegrationSection6.SingletonProductCoordinates
-import IntegrationSection6.VolumeDeletionWeights
+module
+
+public import IntegrationSection6.FiniteGammaVolumeDeletion
+public import IntegrationSection6.FiniteGammaBasicFactors
+public import IntegrationSection6.FiniteGammaProducts
+public import IntegrationSection6.FiniteGammaFormulaIsos
+public import IntegrationSection6.FiniteGammaElementaryAt
+public import IntegrationSection6.SingletonProductCoordinates
+public import IntegrationSection6.VolumeDeletionWeights
+
+@[expose] public section
 
 /-! An admissible coordinate can be deleted without leaving RV[k-1].
 The original object and its elementary blowup then factor, up to genuine

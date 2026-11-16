@@ -1,4 +1,8 @@
-import Integration7.GammaTupleRelationInverse
+module
+
+public import Integration7.GammaTupleRelationInverse
+
+@[expose] public section
 
 /-! The volume correspondence is derived by composing the inverse source
 coordinate graph, the comparison chart and the target coordinate graph. -/

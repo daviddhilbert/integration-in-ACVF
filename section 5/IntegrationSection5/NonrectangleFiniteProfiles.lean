@@ -1,6 +1,10 @@
-import IntegrationSection5.NonrectangleInverseProfile
-import IntegrationSection5.NonrectangleTransverseWitness
-import IntegrationSection5.GammaFiniteCombinations
+module
+
+public import IntegrationSection5.NonrectangleInverseProfile
+public import IntegrationSection5.NonrectangleTransverseWitness
+public import IntegrationSection5.GammaFiniteCombinations
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 open Classical FirstOrder FirstOrder.Language

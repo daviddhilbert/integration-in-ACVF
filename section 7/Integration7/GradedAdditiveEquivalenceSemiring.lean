@@ -1,5 +1,9 @@
-import Mathlib.Algebra.DirectSum.Ring
-import Mathlib.Algebra.DirectSum.Module
+module
+
+public import Mathlib.Algebra.DirectSum.Ring
+public import Mathlib.Algebra.DirectSum.Module
+
+@[expose] public section
 
 /-! Transport a graded semiring along degreewise additive equivalences.
 The original additive operations of every graded component are retained. -/

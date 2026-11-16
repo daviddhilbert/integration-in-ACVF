@@ -1,5 +1,9 @@
-import IntegrationSection5.RelativeFibreBijection
-import Section5.VerticalConstruction
+module
+
+public import IntegrationSection5.RelativeFibreBijection
+public import Section5.VerticalConstruction
+
+@[expose] public section
 
 /-! Original RV labels are a fixed suffix throughout actual special maps.
 This gives a uniform label projection even when fibre witnesses vary. -/

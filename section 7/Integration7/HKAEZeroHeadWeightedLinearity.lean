@@ -1,7 +1,11 @@
-import Integration7.HKFrozenZeroWeightedScalarIntegrals
-import Integration7.HKAEZeroHeadIntegralAdditivity
-import Integration7.HKAEZeroModules
-import Integration7.HKAERVHeadWeightedZeroLinearity
+module
+
+public import Integration7.HKFrozenZeroWeightedScalarIntegrals
+public import Integration7.HKAEZeroHeadIntegralAdditivity
+public import Integration7.HKAEZeroModules
+public import Integration7.HKAERVHeadWeightedZeroLinearity
+
+@[expose] public section
 
 /-! The actual zero-valued AE head integral is linear over arbitrary weighted measured-zero coefficients, by its genuine finite-factor fibre computation. -/
 noncomputable section

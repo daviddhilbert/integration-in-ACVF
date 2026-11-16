@@ -1,6 +1,10 @@
-import IntegrationSection6.FiniteLiftFibres
-import IntegrationSection5.StandardContractionGammaNormalization
-import Section5.GammaFiniteFibres
+module
+
+public import IntegrationSection6.FiniteLiftFibres
+public import IntegrationSection5.StandardContractionGammaNormalization
+public import Section5.GammaFiniteFibres
+
+@[expose] public section
 
 /-! Standard contractions of finite RV-fibre sets are actual objects of
 RV[k], with their original-Gamma domain, volume and natural lift graphs. -/

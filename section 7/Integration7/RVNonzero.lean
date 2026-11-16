@@ -1,4 +1,8 @@
-import Integration7.VolumeForms
+module
+
+public import Integration7.VolumeForms
+
+@[expose] public section
 
 noncomputable section
 

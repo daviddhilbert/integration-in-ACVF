@@ -1,8 +1,12 @@
-import Integration7.UniformBalancedHorizontalTranslations
-import Integration7.UniformBalancedHorizontalFibres
-import Integration7.TranslatedRVCoordinateSaturation
-import Integration7.UnaryPullbackCommonNamePreparations
-import Integration7.UnarySpecialHeadPreparations
+module
+
+public import Integration7.UniformBalancedHorizontalTranslations
+public import Integration7.UniformBalancedHorizontalFibres
+public import Integration7.TranslatedRVCoordinateSaturation
+public import Integration7.UnaryPullbackCommonNamePreparations
+public import Integration7.UnarySpecialHeadPreparations
+
+@[expose] public section
 
 /-! The balanced family's actual horizontal translation is saturated
 after swapping VF coordinates and admits an original-Gamma standard

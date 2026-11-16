@@ -1,6 +1,10 @@
-import Integration7.ElementaryBlowupConstruction
-import Integration7.RVVolumeMorphisms
-import Integration7.NonzeroConeScaling
+module
+
+public import Integration7.ElementaryBlowupConstruction
+public import Integration7.RVVolumeMorphisms
+public import Integration7.NonzeroConeScaling
+
+@[expose] public section
 set_option backward.isDefEq.respectTransparency false
 open FirstOrder FirstOrder.Language
 open SpecialTransformations.Milestone0 SpecialTransformations.Milestone0.LRV

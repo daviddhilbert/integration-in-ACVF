@@ -1,5 +1,9 @@
-import IntegrationSection5.FiniteMixedRVFibres
-import IntegrationSection5.NaturalContractionGamma
+module
+
+public import IntegrationSection5.FiniteMixedRVFibres
+public import IntegrationSection5.NaturalContractionGamma
+
+@[expose] public section
 
 noncomputable section
 set_option autoImplicit false

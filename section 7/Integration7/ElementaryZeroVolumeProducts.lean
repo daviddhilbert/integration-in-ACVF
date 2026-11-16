@@ -1,7 +1,11 @@
-import Integration7.ElementaryVolumeProducts
-import Integration7.ZeroFactorVolumeObjects
-import Integration7.VolumeProductPointwise
-import IntegrationSection6.ElementaryRightProduct
+module
+
+public import Integration7.ElementaryVolumeProducts
+public import Integration7.ZeroFactorVolumeObjects
+public import Integration7.VolumeProductPointwise
+public import IntegrationSection6.ElementaryRightProduct
+
+@[expose] public section
 
 /-! Multiplying an elementary volume blowup by an ordinary RV[0] factor
 retains the distinguished coordinate and density on the positive factor. -/

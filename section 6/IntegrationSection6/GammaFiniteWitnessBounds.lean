@@ -1,5 +1,9 @@
-import IntegrationSection6.GammaWitnessUniformity
-import Section3.GammaRVSeparation
+module
+
+public import IntegrationSection6.GammaWitnessUniformity
+public import Section3.GammaRVSeparation
+
+@[expose] public section
 
 /-! Bounded finite scalar witnesses over the original real/Gamma base.
 Only the original names enter compactness; internal presentation codes

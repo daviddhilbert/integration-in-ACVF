@@ -1,4 +1,8 @@
-import CanonicalStructure
+module
+
+public import CanonicalStructure
+
+@[expose] public section
 
 /-! A canonical LRV interpretation is already equal to its totalization.
 This is equality of the whole language structure, not an identification

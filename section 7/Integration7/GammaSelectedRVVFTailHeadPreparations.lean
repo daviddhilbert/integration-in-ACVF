@@ -1,4 +1,8 @@
-import Integration7.SelectedRVVFTailHeadPreparations
+module
+
+public import Integration7.SelectedRVVFTailHeadPreparations
+
+@[expose] public section
 
 /-! Original-Gamma certificates for the actual lifted head preparation,
 including its entire graph and target. -/

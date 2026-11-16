@@ -1,7 +1,11 @@
-import Integration7.RawHomogeneousSupportAlgebra
-import Integration7.RawPositiveGradedChangeOfVariables
-import Integration7.RawSection7FunctionTheorems
-import Integration7.RawSupportedVolumeRange
+module
+
+public import Integration7.RawHomogeneousSupportAlgebra
+public import Integration7.RawPositiveGradedChangeOfVariables
+public import Integration7.RawSection7FunctionTheorems
+public import Integration7.RawSupportedVolumeRange
+
+@[expose] public section
 set_option pp.universes true
 set_option pp.proofs false
 set_option pp.deepTerms true

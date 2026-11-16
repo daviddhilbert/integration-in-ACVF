@@ -1,6 +1,10 @@
-import Integration7.RawStandardVolumeObjects
-import Integration7.VolumeRelabeling
-import Section4.RVIsoTools
+module
+
+public import Integration7.RawStandardVolumeObjects
+public import Integration7.VolumeRelabeling
+public import Section4.RVIsoTools
+
+@[expose] public section
 
 /-! With no old selected coordinates a unary selected object is the
 actual raw contraction object, including its retained density. -/

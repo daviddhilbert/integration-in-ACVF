@@ -1,5 +1,9 @@
-import IntegrationSection5.HeadPreparation
-import IntegrationSection5.RelativeSpecialExtension
+module
+
+public import IntegrationSection5.HeadPreparation
+public import IntegrationSection5.RelativeSpecialExtension
+
+@[expose] public section
 
 /-! Changing an internal real presentation preserves the actual preparation
 and its contracted carrier. No smallness of either presentation is used. -/

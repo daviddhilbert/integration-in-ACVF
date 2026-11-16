@@ -1,6 +1,10 @@
-import Integration7.CoordinateRVJacobian
-import Integration7.FiniteVolumeIsoMaps
-import Section9.GenericRVJacobian
+module
+
+public import Integration7.CoordinateRVJacobian
+public import Integration7.FiniteVolumeIsoMaps
+public import Section9.GenericRVJacobian
+
+@[expose] public section
 
 /-! Coordinate- and density-preserving bijections give genuine volume
 isomorphisms. The generic Jacobian is obtained from the pinned predecessor

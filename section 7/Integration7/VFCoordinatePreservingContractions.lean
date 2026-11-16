@@ -1,4 +1,8 @@
-import Integration7.Corollary76
+module
+
+public import Integration7.Corollary76
+
+@[expose] public section
 
 /-! Arbitrary same-order contractions compare, and the comparison is
 unchanged by an actual VF-coordinate-preserving relabeling of the source. -/

@@ -1,6 +1,10 @@
-import Integration7.HKNormalizedVolumeCommRing
-import Integration7.HKNormalizedVolumeCoordinateInvariance
-import Integration7.HKNormalizedVolumeProductCommutativity
+module
+
+public import Integration7.HKNormalizedVolumeCommRing
+public import Integration7.HKNormalizedVolumeCoordinateInvariance
+public import Integration7.HKNormalizedVolumeProductCommutativity
+
+@[expose] public section
 set_option pp.universes true
 set_option pp.proofs false
 set_option pp.deepTerms true

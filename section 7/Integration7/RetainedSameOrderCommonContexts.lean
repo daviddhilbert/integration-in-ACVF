@@ -1,6 +1,10 @@
-import Integration7.RetainedDensitySameOrderContractions
-import Integration7.CommonContextVolumeEquivalences
-import Integration7.PositiveSelectedLemma75
+module
+
+public import Integration7.RetainedDensitySameOrderContractions
+public import Integration7.CommonContextVolumeEquivalences
+public import Integration7.PositiveSelectedLemma75
+
+@[expose] public section
 
 /-! Same-order retained-density comparison as an explicit common-context
 relation, over the original real context. -/

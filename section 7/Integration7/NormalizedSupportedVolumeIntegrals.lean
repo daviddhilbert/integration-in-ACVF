@@ -1,4 +1,8 @@
-import Integration7.NormalizedSupportedVolumeFunctions
+module
+
+public import Integration7.NormalizedSupportedVolumeFunctions
+
+@[expose] public section
 
 /-! Change of variables holds on every element of the actual balanced
 normalized supported module, by linear extension of the proved geometric

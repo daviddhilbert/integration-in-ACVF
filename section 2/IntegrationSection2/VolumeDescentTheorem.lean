@@ -1,5 +1,9 @@
-import IntegrationSection2.VolumeLiftDescent
-import IntegrationSection2.ConstructedGaussGraph
+module
+
+public import IntegrationSection2.VolumeLiftDescent
+public import IntegrationSection2.ConstructedGaussGraph
+
+@[expose] public section
 
 /-! Corollary 2.34 with all predecessor graph/reference obligations
 supplied by checked proofs. In positive degree the main theorem uses

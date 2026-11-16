@@ -1,4 +1,8 @@
-import IntegrationSection3ACVF.Separation
+module
+
+public import IntegrationSection3ACVF.Separation
+
+@[expose] public section
 
 /-! Function consequences of corrected 3.11. Full partial-domain
 graphs are used in both directions. -/

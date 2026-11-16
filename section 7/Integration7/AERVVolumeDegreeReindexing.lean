@@ -1,4 +1,8 @@
-import Integration7.AERVVolumeFunctionAdditiveStructure
+module
+
+public import Integration7.AERVVolumeFunctionAdditiveStructure
+
+@[expose] public section
 
 /-! Arithmetic reindexing of the homogeneous coefficient degree changes
 no family or AE relation. A heterogeneous fibre equality gives equality

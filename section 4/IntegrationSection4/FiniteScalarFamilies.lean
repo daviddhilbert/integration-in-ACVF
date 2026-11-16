@@ -1,5 +1,9 @@
-import IntegrationSection4.FullBaseFiniteCodes
-import IntegrationSection4.FullBaseFiniteBounds
+module
+
+public import IntegrationSection4.FullBaseFiniteCodes
+public import IntegrationSection4.FullBaseFiniteBounds
+
+@[expose] public section
 
 /-! Uniform RV refinements of finite scalar fibres. Free parameters remain
 variables throughout; the exported graph uses the unchanged full base. -/

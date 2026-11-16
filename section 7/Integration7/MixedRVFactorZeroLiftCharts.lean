@@ -1,6 +1,10 @@
-import Integration7.MixedRVFactorDomains
-import Integration7.OrdinaryZeroLiftIsomorphisms
-import Section4.MixedProducts
+module
+
+public import Integration7.MixedRVFactorDomains
+public import Integration7.OrdinaryZeroLiftIsomorphisms
+public import Section4.MixedProducts
+
+@[expose] public section
 
 /-! A pure RV factor and its ordinary zero-dimensional VF lift have
 the same mixed product carrier. The coordinate formula for mixed unpacking

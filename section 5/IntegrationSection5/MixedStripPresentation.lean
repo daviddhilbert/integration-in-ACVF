@@ -1,7 +1,11 @@
-import IntegrationSection5.MixedStripPreparation
-import IntegrationSection5.MixedUnaryPreparations
-import IntegrationSection5.GammaRVGraphs
-import IntegrationSection5.GammaOrderedContraction
+module
+
+public import IntegrationSection5.MixedStripPreparation
+public import IntegrationSection5.MixedUnaryPreparations
+public import IntegrationSection5.GammaRVGraphs
+public import IntegrationSection5.GammaOrderedContraction
+
+@[expose] public section
 
 /-! The actual contracted unary source of a mixed strip is Gamma-isomorphic to its passive projection, retaining the full cell code. -/
 noncomputable section

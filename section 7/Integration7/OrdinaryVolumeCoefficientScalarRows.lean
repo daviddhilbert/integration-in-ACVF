@@ -1,6 +1,10 @@
-import Integration7.AERVVolumeZeroCoefficientProducts
-import Integration7.OrdinaryVolumeCoefficientExtensions
-import Integration7.ZeroCoefficientProductSymmetry
+module
+
+public import Integration7.AERVVolumeZeroCoefficientProducts
+public import Integration7.OrdinaryVolumeCoefficientExtensions
+public import Integration7.ZeroCoefficientProductSymmetry
+
+@[expose] public section
 
 /-! The finite-factor family action is the usual grade-zero scalar
 action on every actual RV fibre, after the genuine base-extension hom.

@@ -1,4 +1,8 @@
-import IntegrationSection3ACVF.OpenBallRVGeometry
+module
+
+public import IntegrationSection3ACVF.OpenBallRVGeometry
+
+@[expose] public section
 
 /-! Distances between two points of an open ball are strictly smaller
 than distances from an inside point to a point outside that ball. -/

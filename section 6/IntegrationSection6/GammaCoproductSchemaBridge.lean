@@ -1,7 +1,11 @@
-import IntegrationSection6.GammaCoproductFamilyRows
-import IntegrationSection6.GammaGraphCoproducts
-import IntegrationSection6.GammaGraphFormulaCongruence
-import IntegrationSection6.GammaFamilyRowRealization
+module
+
+public import IntegrationSection6.GammaCoproductFamilyRows
+public import IntegrationSection6.GammaGraphCoproducts
+public import IntegrationSection6.GammaGraphFormulaCongruence
+public import IntegrationSection6.GammaFamilyRowRealization
+
+@[expose] public section
 
 /-! The uniform coproduct family specializes to the actual finite native
 coproduct at a common internal code base. Its global formulas have a valid

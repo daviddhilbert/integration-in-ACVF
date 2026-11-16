@@ -1,7 +1,11 @@
-import Integration7.UniformCellVerticalTranslations
-import Integration7.UnaryPullbackCommonNamePreparations
-import Integration7.UnarySpecialHeadPreparations
-import IntegrationSection6.StandardProgramPresentations
+module
+
+public import Integration7.UniformCellVerticalTranslations
+public import Integration7.UnaryPullbackCommonNamePreparations
+public import Integration7.UnarySpecialHeadPreparations
+public import IntegrationSection6.StandardProgramPresentations
+
+@[expose] public section
 
 /-! The uniform vertical translation has an actual standard contraction:
 its complete vertical RV fibres contract by identity, and the remaining

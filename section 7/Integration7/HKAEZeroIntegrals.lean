@@ -1,5 +1,9 @@
-import Integration7.HKAEZeroRealizationClasses
-import Integration7.PositiveVolumeIntegrationEquivalence
+module
+
+public import Integration7.HKAEZeroRealizationClasses
+public import Integration7.PositiveVolumeIntegrationEquivalence
+
+@[expose] public section
 
 /-! Actual integration of weighted measured-zero-valued AE functions,
 using their actual weighted VF realization and the checked volume integral. -/

@@ -1,5 +1,9 @@
-import Integration7.RawSupportedVolumeRange
-import Integration7.RawPositiveGradedChangeOfVariables
+module
+
+public import Integration7.RawSupportedVolumeRange
+public import Integration7.RawPositiveGradedChangeOfVariables
+
+@[expose] public section
 
 /-! Numbered raw function theorems on the actual supported modules.
 Proposition 7.11 includes ordinary values; the positive-value version of

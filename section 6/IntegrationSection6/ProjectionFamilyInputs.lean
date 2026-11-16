@@ -1,6 +1,10 @@
-import IntegrationSection6.VFCoordinateProjections
-import IntegrationSection6.GammaCoordinateValues
-import IntegrationSection6.DefinableFamilyLifts
+module
+
+public import IntegrationSection6.VFCoordinateProjections
+public import IntegrationSection6.GammaCoordinateValues
+public import IntegrationSection6.DefinableFamilyLifts
+
+@[expose] public section
 
 /-! The actual total lift, reordered with any selected VF coordinates
 first, is a finite-fibre family over the literal coordinate projection. -/

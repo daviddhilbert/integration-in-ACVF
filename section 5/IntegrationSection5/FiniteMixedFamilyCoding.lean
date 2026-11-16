@@ -1,5 +1,9 @@
-import IntegrationSection5.MixedRVRefinement
-import IntegrationSection5.ScalarCoordinateRefinement
+module
+
+public import IntegrationSection5.MixedRVRefinement
+public import IntegrationSection5.ScalarCoordinateRefinement
+
+@[expose] public section
 
 /-! Uniform original-Gamma RV codes distinguish points of every finite
 active-VF fibre, with arbitrary complementary VF and RV parameters free. -/

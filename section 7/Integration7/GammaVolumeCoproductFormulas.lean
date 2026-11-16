@@ -1,6 +1,10 @@
-import Integration7.GammaVolumeSchemaRowEquality
-import Integration7.NonzeroDensityFormulas
-import IntegrationSection6.GammaRawCoproductSchemata
+module
+
+public import Integration7.GammaVolumeSchemaRowEquality
+public import Integration7.NonzeroDensityFormulas
+public import IntegrationSection6.GammaRawCoproductSchemata
+
+@[expose] public section
 
 /-! Tagged coproduct formula data for volume objects. The density is
 the original density on each summand; no tag changes a volume coordinate.

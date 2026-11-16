@@ -1,5 +1,9 @@
-import Integration7.FiniteCategoryStructureTransport
-import Section5.Surjectivity
+module
+
+public import Integration7.FiniteCategoryStructureTransport
+public import Section5.Surjectivity
+
+@[expose] public section
 
 /-! The predecessor's actual finite lift presentation transfers from
 normalization to the original canonical structure, over the same base. -/

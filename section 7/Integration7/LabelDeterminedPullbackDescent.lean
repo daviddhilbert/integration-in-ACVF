@@ -1,7 +1,11 @@
-import Integration7.PullbackVolumeMapDescent
-import IntegrationSection5.RVContractionGamma
-import Section4.FiniteMaps
-import Section4.RVIsoTools
+module
+
+public import Integration7.PullbackVolumeMapDescent
+public import IntegrationSection5.RVContractionGamma
+public import Section4.FiniteMaps
+public import Section4.RVIsoTools
+
+@[expose] public section
 
 /-! A label-preserving bijection of full RV pullbacks descends when
 the shared labels determine their RV fibres. The induced RV isomorphism

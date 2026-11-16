@@ -1,4 +1,8 @@
-import IntegrationSection5.NonrectangleVerticalPreparation
+module
+
+public import IntegrationSection5.NonrectangleVerticalPreparation
+
+@[expose] public section
 
 /-! The opposite-order transverse RV class is uniform over each old cell code, with one common global positioning function. -/
 noncomputable section

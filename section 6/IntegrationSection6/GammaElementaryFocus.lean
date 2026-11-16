@@ -1,6 +1,10 @@
-import IntegrationSection6.GammaVolumeImage
-import IntegrationSection6.NormalizedCanonicalLifts
-import IntegrationSection6.AdmissibleFocusExistence
+module
+
+public import IntegrationSection6.GammaVolumeImage
+public import IntegrationSection6.NormalizedCanonicalLifts
+public import IntegrationSection6.AdmissibleFocusExistence
+
+@[expose] public section
 
 /-! Focus existence for every actual original-Gamma admissible object.
 Preparatory canonical labeling supplies the required tag; only B.real,

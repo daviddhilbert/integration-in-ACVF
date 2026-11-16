@@ -1,4 +1,8 @@
-import IntegrationSection6.GammaHeadSelectedFiniteness
+module
+
+public import IntegrationSection6.GammaHeadSelectedFiniteness
+
+@[expose] public section
 
 /-! The actual selected volume retained by an ordered contraction. Its
 recursive order lists the contracted VF labels backwards, then the old

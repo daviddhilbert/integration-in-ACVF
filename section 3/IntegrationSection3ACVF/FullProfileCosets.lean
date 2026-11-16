@@ -1,5 +1,9 @@
-import IntegrationSection3ACVF.FullCosetExceptions
-import IntegrationSection3.ProfileAtomicity
+module
+
+public import IntegrationSection3ACVF.FullCosetExceptions
+public import IntegrationSection3.ProfileAtomicity
+
+@[expose] public section
 
 /-! Atomicity removes finite exceptional cosets when the atomic set meets
 infinitely many classes. The default VF point is definable zero; it is used

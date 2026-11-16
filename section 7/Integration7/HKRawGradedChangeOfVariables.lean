@@ -1,6 +1,10 @@
-import Integration7.HKSupportedGradedVolumeFunctions
-import Integration7.HKGradedAEVolumeIntegralAddHoms
-import Integration7.RawPositiveGradedChangeOfVariables
+module
+
+public import Integration7.HKSupportedGradedVolumeFunctions
+public import Integration7.HKGradedAEVolumeIntegralAddHoms
+public import Integration7.RawPositiveGradedChangeOfVariables
+
+@[expose] public section
 
 /-! Raw change of variables for every finite graded supported function,
 including actual weighted-zero values. No point padding is cancelled. -/

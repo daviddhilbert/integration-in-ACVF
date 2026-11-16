@@ -1,6 +1,10 @@
-import Integration7.CanonicalGammaVolumeIsomorphisms
-import Integration7.VolumeCoproduct
-import IntegrationSection6.FiniteGammaCoproducts
+module
+
+public import Integration7.CanonicalGammaVolumeIsomorphisms
+public import Integration7.VolumeCoproduct
+public import IntegrationSection6.FiniteGammaCoproducts
+
+@[expose] public section
 
 /-! Canonical transport of native tagged coproducts agrees with the
 actual finite-volume coproduct, including its full coordinate map. -/

@@ -1,7 +1,11 @@
-import IntegrationSection5.CellFirstPreparations
-import IntegrationSection5.StripContractionGeometry
-import IntegrationSection5.UnaryPresentationBijection
-import IntegrationSection5.MatchedUnaryPreparation
+module
+
+public import IntegrationSection5.CellFirstPreparations
+public import IntegrationSection5.StripContractionGeometry
+public import IntegrationSection5.UnaryPresentationBijection
+public import IntegrationSection5.MatchedUnaryPreparation
+
+@[expose] public section
 
 /-! The two actual first contractions of a balanced cell, or a graph cell
 with bijective positioning, are joined by the actual positioning bijection.

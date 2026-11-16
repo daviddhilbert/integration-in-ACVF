@@ -1,4 +1,8 @@
-import Integration7.RVAlmostEverywhereParameters
+module
+
+public import Integration7.RVAlmostEverywhereParameters
+
+@[expose] public section
 
 /-! A definable exceptional set has the same RV dimension after a
 small parameter extension. Smallness of the containing context is stated

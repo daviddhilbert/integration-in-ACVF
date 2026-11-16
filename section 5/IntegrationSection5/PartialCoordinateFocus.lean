@@ -1,6 +1,10 @@
-import IntegrationSection5.ActiveUnaryProjection
-import IntegrationSection5.GammaFocusSection
-import Section5.GammaLiftRelation
+module
+
+public import IntegrationSection5.ActiveUnaryProjection
+public import IntegrationSection5.GammaFocusSection
+public import Section5.GammaLiftRelation
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option allowUnsafeReducibility true in

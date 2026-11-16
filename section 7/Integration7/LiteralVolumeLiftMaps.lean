@@ -1,7 +1,11 @@
-import Integration7.CanonicalLiftVolumePresentations
-import Integration7.SpecialVolumeJacobians
-import Integration7.VFVolumeLifts
-import IntegrationSection6.CanonicalPullbackPresentation
+module
+
+public import Integration7.CanonicalLiftVolumePresentations
+public import Integration7.SpecialVolumeJacobians
+public import Integration7.VFVolumeLifts
+public import IntegrationSection6.CanonicalPullbackPresentation
+
+@[expose] public section
 
 /-! Literal Section6 lift presentations give actual raw mixed maps with
 identity coordinates. These are the bridge used with special preparations. -/

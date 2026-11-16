@@ -1,5 +1,9 @@
-import IntegrationSection6.GammaIspUniversalPresentation
-import IntegrationSection6.FiniteGammaIsoLaws
+module
+
+public import IntegrationSection6.GammaIspUniversalPresentation
+public import IntegrationSection6.FiniteGammaIsoLaws
+
+@[expose] public section
 
 /-! Extending only an internal real presentation gives an actual
 identity-label Gamma RV isomorphism. -/

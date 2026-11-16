@@ -1,4 +1,8 @@
-import IntegrationSection6.MixedVFFibreCompactness
+module
+
+public import IntegrationSection6.MixedVFFibreCompactness
+
+@[expose] public section
 
 /-! Point functions survive the existing point/sorted and carrier-equality
 adapters. These identities retain graph constraints during uniformization. -/

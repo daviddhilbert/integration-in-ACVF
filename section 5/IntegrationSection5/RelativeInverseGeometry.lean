@@ -1,6 +1,10 @@
-import IntegrationSection5.HeadPreparation
-import IntegrationSection5.RelativeLabelPreservation
-import IntegrationSection5.UnaryInverseGeometry
+module
+
+public import IntegrationSection5.HeadPreparation
+public import IntegrationSection5.RelativeLabelPreservation
+public import IntegrationSection5.UnaryInverseGeometry
+
+@[expose] public section
 
 /-! The inverse affine geometry of an actual relatively special map comes
 from its actual unary fibre special bijections. -/

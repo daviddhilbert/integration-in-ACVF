@@ -1,4 +1,8 @@
-import IntegrationSection5.UnaryBallImages
+module
+
+public import IntegrationSection5.UnaryBallImages
+
+@[expose] public section
 
 /-! Actual translations of unary polydiscs, with all RV labels retained. -/
 

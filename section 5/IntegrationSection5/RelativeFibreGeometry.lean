@@ -1,6 +1,10 @@
-import IntegrationSection5.RelativelyUnary
-import Section5.TransformGeometry
-import IntegrationSection3.CoordinateSlices
+module
+
+public import IntegrationSection5.RelativelyUnary
+public import Section5.TransformGeometry
+public import IntegrationSection3.CoordinateSlices
+
+@[expose] public section
 
 /-! Actual coordinate fibres. Only the other VF coordinates are named. -/
 

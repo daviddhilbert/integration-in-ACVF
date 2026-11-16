@@ -1,5 +1,9 @@
-import IntegrationSection6.FiniteGammaScissorRestrictions
-import IntegrationSection6.FiniteGammaInitial
+module
+
+public import IntegrationSection6.FiniteGammaScissorRestrictions
+public import IntegrationSection6.FiniteGammaInitial
+
+@[expose] public section
 
 /-! Actual generators of the inherited original-Gamma finite-volume
 Grothendieck presentation, with its actual isomorphism and empty relations. -/

@@ -1,5 +1,9 @@
-import Integration7.LowerDimensionRVVolumeIsomorphisms
-import Integration7.VolumeDensityRescaling
+module
+
+public import Integration7.LowerDimensionRVVolumeIsomorphisms
+public import Integration7.VolumeDensityRescaling
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 open FirstOrder FirstOrder.Language CategoryTheory

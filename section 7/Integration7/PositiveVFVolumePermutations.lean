@@ -1,5 +1,9 @@
-import Integration7.MixedVFPermutationDomains
-import Integration7.VolumeDensityGraphs
+module
+
+public import Integration7.MixedVFPermutationDomains
+public import Integration7.VolumeDensityGraphs
+
+@[expose] public section
 
 /-! VF coordinate permutations of positive volume objects transport
 their actual domains and densities. No claim that the coordinate map

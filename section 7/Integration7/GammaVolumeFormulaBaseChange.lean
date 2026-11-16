@@ -1,6 +1,10 @@
-import Integration7.GammaVolumeExistentialCertificates
-import Integration7.GammaVolumeIsomorphismSchemata
-import IntegrationSection6.GammaFormulaBaseChange
+module
+
+public import Integration7.GammaVolumeExistentialCertificates
+public import Integration7.GammaVolumeIsomorphismSchemata
+public import IntegrationSection6.GammaFormulaBaseChange
+
+@[expose] public section
 
 /-! Changing a definability base leaves all coordinate, density,
 Jacobian and exceptional-set formulas literally unchanged. -/

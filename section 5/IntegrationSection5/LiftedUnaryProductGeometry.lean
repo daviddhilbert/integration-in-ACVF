@@ -1,4 +1,8 @@
-import IntegrationSection5.GammaUnaryCoordinateLift
+module
+
+public import IntegrationSection5.GammaUnaryCoordinateLift
+
+@[expose] public section
 
 /-! Exact product images of a lifted unary preparation, including all
 retained passive RV labels. This supplies actual saturation, not a premise

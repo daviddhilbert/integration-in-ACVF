@@ -1,7 +1,11 @@
-import IntegrationSection6.FiniteGammaChartedChains
-import IntegrationSection6.FiniteGammaCommonBlowups
-import IntegrationSection5.UnaryBijectionPreparation
-import IntegrationSection5.UnaryRVCategory
+module
+
+public import IntegrationSection6.FiniteGammaChartedChains
+public import IntegrationSection6.FiniteGammaCommonBlowups
+public import IntegrationSection5.UnaryBijectionPreparation
+public import IntegrationSection5.UnaryRVCategory
+
+@[expose] public section
 
 /-! Corollary6.11 in the finite categories: actual common-blowup witnesses
 with every chart over the original Gamma base, from checked Section5.2/5.3. -/

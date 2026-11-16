@@ -1,5 +1,9 @@
-import IntegrationSection4.RefinementAttachment
-import IntegrationSection4.SpecialRVFibres
+module
+
+public import IntegrationSection4.RefinementAttachment
+public import IntegrationSection4.SpecialRVFibres
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

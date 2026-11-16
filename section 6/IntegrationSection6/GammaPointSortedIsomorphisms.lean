@@ -1,4 +1,8 @@
-import IntegrationSection6.GammaSortedPointIsomorphisms
+module
+
+public import IntegrationSection6.GammaSortedPointIsomorphisms
+
+@[expose] public section
 
 /-! Encode actual inherited Gamma point isomorphisms as sorted bijections,
 without choosing new parameters or enlarging the mathematical base. -/

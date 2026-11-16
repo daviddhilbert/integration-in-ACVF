@@ -1,6 +1,10 @@
-import IntegrationSection6.FiniteGammaFormulaIsos
-import IntegrationSection6.PresentationCoordinates
-import IntegrationSection6.LiftComplement
+module
+
+public import IntegrationSection6.FiniteGammaFormulaIsos
+public import IntegrationSection6.PresentationCoordinates
+public import IntegrationSection6.LiftComplement
+
+@[expose] public section
 
 /-! Literal lift presentations and unchanged complements have Gamma
 comparison charts, with finite volume inherited from the input object. -/

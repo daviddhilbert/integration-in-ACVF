@@ -1,4 +1,8 @@
-import Integration7.VFVolumeDegreeReindexing
+module
+
+public import Integration7.VFVolumeDegreeReindexing
+
+@[expose] public section
 
 /-! Literal VF coordinate formulas for an arithmetic degree cast. -/
 noncomputable section

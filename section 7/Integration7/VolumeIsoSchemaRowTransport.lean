@@ -1,5 +1,9 @@
-import Integration7.VolumeFormulaRowTransport
-import Integration7.GammaVolumeIsomorphismSchemata
+module
+
+public import Integration7.VolumeFormulaRowTransport
+public import Integration7.GammaVolumeIsomorphismSchemata
+
+@[expose] public section
 
 /-! Both volume clauses transport across exact primitive rows. The
 supported Jacobian graph and the exceptional set are preserved separately. -/

@@ -1,6 +1,10 @@
-import Integration7.VolumeFamilyFormulaWitnessDescent
-import Integration7.ChosenVolumeFamilyHeadIntegrals
-import Integration7.GenericHeadVolumeCommonComparison
+module
+
+public import Integration7.VolumeFamilyFormulaWitnessDescent
+public import Integration7.ChosenVolumeFamilyHeadIntegrals
+public import Integration7.GenericHeadVolumeCommonComparison
+
+@[expose] public section
 
 /-! Head fibre integration respects equality outside a definable
 VF-small set. Generic head comparison and a finite formula cover produce

@@ -1,5 +1,9 @@
-import IntegrationSection4.OneCellDecomposition
-import IntegrationSection4.TwoCellDecomposition
+module
+
+public import IntegrationSection4.OneCellDecomposition
+public import IntegrationSection4.TwoCellDecomposition
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

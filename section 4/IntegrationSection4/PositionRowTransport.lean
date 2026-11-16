@@ -1,5 +1,9 @@
-import IntegrationSection4.PositionRows
-import IntegrationSection4.TaggedRVMaps
+module
+
+public import IntegrationSection4.PositionRows
+public import IntegrationSection4.TaggedRVMaps
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

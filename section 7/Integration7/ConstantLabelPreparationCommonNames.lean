@@ -1,5 +1,9 @@
-import Integration7.GammaSpecialCommonNames
-import Integration7.ConstantRVLabelSpecialPreparations
+module
+
+public import Integration7.GammaSpecialCommonNames
+public import Integration7.ConstantRVLabelSpecialPreparations
+
+@[expose] public section
 
 /-! The actual fixed-label lift of a unary special preparation can be
 presented over common names, retaining its geometry and projection indices. -/

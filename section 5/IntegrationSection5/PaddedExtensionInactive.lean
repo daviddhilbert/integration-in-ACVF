@@ -1,5 +1,9 @@
-import IntegrationSection5.PaddedUnaryBranchExtension
-import IntegrationSection5.RelativeLabelPreservation
+module
+
+public import IntegrationSection5.PaddedUnaryBranchExtension
+public import IntegrationSection5.RelativeLabelPreservation
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 open Classical FirstOrder FirstOrder.Language

@@ -1,5 +1,9 @@
-import Integration7.MixedCellGraphRefinements
-import Integration7.NativeRVGraphVolumeRefinements
+module
+
+public import Integration7.MixedCellGraphRefinements
+public import Integration7.NativeRVGraphVolumeRefinements
+
+@[expose] public section
 
 /-! The actual refinement step in Lemma7.7: a positive VF²-volume object
 has a VF-preserving, relatively unary graph refinement into a definable

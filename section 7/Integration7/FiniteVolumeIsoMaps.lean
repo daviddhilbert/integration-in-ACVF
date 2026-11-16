@@ -1,4 +1,8 @@
-import Integration7.RVVolumeMorphisms
+module
+
+public import Integration7.RVVolumeMorphisms
+
+@[expose] public section
 
 noncomputable section
 

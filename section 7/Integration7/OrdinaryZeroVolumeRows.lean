@@ -1,6 +1,10 @@
-import Integration7.VFRVFibres
-import Integration7.RVCoordinateSelection
-import Integration7.GradedVolumeBlowups
+module
+
+public import Integration7.VFRVFibres
+public import Integration7.RVCoordinateSelection
+public import Integration7.GradedVolumeBlowups
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 open FirstOrder FirstOrder.Language CategoryTheory

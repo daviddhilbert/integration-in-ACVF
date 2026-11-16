@@ -1,6 +1,10 @@
-import IntegrationSection6.FiniteGammaQuotientLift
-import IntegrationSection6.NativeFiniteLiftInvariance
-import IntegrationSection6.FiniteGammaAdditiveCongruence
+module
+
+public import IntegrationSection6.FiniteGammaQuotientLift
+public import IntegrationSection6.NativeFiniteLiftInvariance
+public import IntegrationSection6.FiniteGammaAdditiveCongruence
+
+@[expose] public section
 
 /-! Native additive lifting from the finite Gamma common-blowup quotient
 to the inherited finite VF scissor presentation. This constructs the

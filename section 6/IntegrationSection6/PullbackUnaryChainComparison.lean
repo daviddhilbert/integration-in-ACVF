@@ -1,6 +1,10 @@
-import IntegrationSection6.PullbackContractionComparison
-import IntegrationSection6.UnaryChainContractions
-import IntegrationSection6.GammaUnaryChainUnivRealization
+module
+
+public import IntegrationSection6.PullbackContractionComparison
+public import IntegrationSection6.UnaryChainContractions
+public import IntegrationSection6.GammaUnaryChainUnivRealization
+
+@[expose] public section
 
 /-! Actual finite RV data of pullbacks are Isp-equivalent whenever the
 pullbacks are joined by a Gamma relatively unary chain. -/

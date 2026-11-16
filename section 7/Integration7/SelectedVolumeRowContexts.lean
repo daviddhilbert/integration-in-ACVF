@@ -1,6 +1,10 @@
-import Integration7.FiniteVolumeParameterContexts
-import Integration7.PositiveVolumeParameterExtension
-import Integration7.SelectedVolumeFamilies
+module
+
+public import Integration7.FiniteVolumeParameterContexts
+public import Integration7.PositiveVolumeParameterExtension
+public import Integration7.SelectedVolumeFamilies
+
+@[expose] public section
 
 /-! Actual positive fibre objects in their genuine finite-VF-parameter
 contexts. The selected coordinates and density are unchanged. -/

@@ -1,7 +1,11 @@
-import Integration7.HKZeroCoefficientContractionProductCharts
-import Integration7.SelectedRetainedContractionIntegrals
-import Integration7.FieldBaseUnarySpecialPreparations
-import Integration7.HKZeroCoefficientScalarRows
+module
+
+public import Integration7.HKZeroCoefficientContractionProductCharts
+public import Integration7.SelectedRetainedContractionIntegrals
+public import Integration7.FieldBaseUnarySpecialPreparations
+public import Integration7.HKZeroCoefficientScalarRows
+
+@[expose] public section
 
 /-! Finite weighted zero coefficients commute with the chosen unary
 field-base integral, with exact product densities before normalization. -/

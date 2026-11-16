@@ -1,5 +1,9 @@
-import IntegrationSection6.GammaRVGlobalRestriction
-import Section5.GammaLiftRelation
+module
+
+public import IntegrationSection6.GammaRVGlobalRestriction
+public import Section5.GammaLiftRelation
+
+@[expose] public section
 
 /-! A full original-Gamma graph times an unchanged RV tuple retains its
 full graph on a Gamma-definable source. -/

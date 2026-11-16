@@ -1,7 +1,11 @@
-import IntegrationSection5.GammaCoordinateCanonical
-import IntegrationSection5.CanonicalRVSliceGeometry
-import IntegrationSection5.HeadIsoRVKernel
-import IntegrationSection5.CanonicalUnaryBranchExtension
+module
+
+public import IntegrationSection5.GammaCoordinateCanonical
+public import IntegrationSection5.CanonicalRVSliceGeometry
+public import IntegrationSection5.HeadIsoRVKernel
+public import IntegrationSection5.CanonicalUnaryBranchExtension
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option allowUnsafeReducibility true in

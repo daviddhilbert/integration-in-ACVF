@@ -1,4 +1,8 @@
-import Integration7.DefinableVolumeFamilyCoproductData
+module
+
+public import Integration7.DefinableVolumeFamilyCoproductData
+
+@[expose] public section
 
 /-! The tagged disjoint union is an actual definable positive volume
 family. Fixing a VF tuple and a volume tuple leaves only finitely many

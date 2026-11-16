@@ -1,6 +1,10 @@
-import Integration7.LiteralElementaryFocusLiftVolumes
-import Integration7.CanonicalGammaElementaryObjects
-import IntegrationSection6.ElementaryLiftDiagram
+module
+
+public import Integration7.LiteralElementaryFocusLiftVolumes
+public import Integration7.CanonicalGammaElementaryObjects
+public import IntegrationSection6.ElementaryLiftDiagram
+
+@[expose] public section
 
 /-! The checked generated-base focus construction supplies the actual
 volume-preserving lift of a canonical elementary blowup. The RV density

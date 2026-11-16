@@ -1,5 +1,9 @@
-import Integration7.GammaNativeCommonNames
-import IntegrationSection5.GammaUnaryChain
+module
+
+public import Integration7.GammaNativeCommonNames
+public import IntegrationSection5.GammaUnaryChain
+
+@[expose] public section
 
 /-! Relatively unary Gamma factorizations are realized over any fixed
 real base containing the original common names. Their maps and Gamma

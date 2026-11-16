@@ -1,7 +1,11 @@
-import Integration7.HKGradedAEVolumeFunctions
-import Integration7.HKSupportedZeroJacobianAddition
-import Integration7.SupportedVolumeJacobianAddition
-import Integration7.GradedSemiringActionLinearMaps
+module
+
+public import Integration7.HKGradedAEVolumeFunctions
+public import Integration7.HKSupportedZeroJacobianAddition
+public import Integration7.SupportedVolumeJacobianAddition
+public import Integration7.GradedSemiringActionLinearMaps
+
+@[expose] public section
 
 /-! Supported finite graded functions retain the actual weighted-zero
 component. Their forgetful and Jacobian maps are assembled from the

@@ -1,5 +1,9 @@
-import IntegrationSection6.FiniteGammaProductAdmissibility
-import IntegrationSection6.GammaAdmissibility
+module
+
+public import IntegrationSection6.FiniteGammaProductAdmissibility
+public import IntegrationSection6.GammaAdmissibility
+
+@[expose] public section
 
 /-! Original-base admissibility survives an unrelated finite RV factor. -/
 noncomputable section

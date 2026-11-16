@@ -1,5 +1,9 @@
-import Integration7.RVLabelConstraintHeadProductImages
-import Section4.MapProduct
+module
+
+public import Integration7.RVLabelConstraintHeadProductImages
+public import Section4.MapProduct
+
+@[expose] public section
 
 /-! Extra functional RV labels can be retained through a unary head
 preparation. A genuine pure-RV factorization of its constraint supplies

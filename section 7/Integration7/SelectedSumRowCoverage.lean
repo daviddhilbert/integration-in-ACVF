@@ -1,4 +1,8 @@
-import Integration7.SelectedSumRowMaps
+module
+
+public import Integration7.SelectedSumRowMaps
+
+@[expose] public section
 
 /-! Every label of the actual selected sum comes from exactly one
 of its two original summands; the individual maps are injective. -/

@@ -1,4 +1,8 @@
-import IntegrationSection5.NonrectangleHorizontalPreparation
+module
+
+public import IntegrationSection5.NonrectangleHorizontalPreparation
+
+@[expose] public section
 
 /-! The horizontal transverse RV class is uniform over each existing cell code, even though its value varies between cells. -/
 noncomputable section

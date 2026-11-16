@@ -1,5 +1,9 @@
-import IntegrationSection6.FocusRootDomains
-import Section3.CanonicalParameters
+module
+
+public import IntegrationSection6.FocusRootDomains
+public import Section3.CanonicalParameters
+
+@[expose] public section
 
 /-! Whole-fibre root validity is unchanged by the released normalization:
 its field guards exclude every wrong-sort application. -/

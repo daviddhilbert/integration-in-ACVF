@@ -1,5 +1,9 @@
-import Integration7.OrdinaryUnaryComparisonFromUnitPreparation
-import Integration7.EmptySelectedContractionExtensionCharts
+module
+
+public import Integration7.OrdinaryUnaryComparisonFromUnitPreparation
+public import Integration7.EmptySelectedContractionExtensionCharts
+
+@[expose] public section
 
 /-! Generic ordinary row isomorphisms compare the specified unary
 selected contractions, with no old volume coordinates and original-Gamma geometry. -/

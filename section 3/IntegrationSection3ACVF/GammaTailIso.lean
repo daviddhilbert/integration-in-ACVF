@@ -1,4 +1,8 @@
-import IntegrationSection3ACVF.GammaTailMap
+module
+
+public import IntegrationSection3ACVF.GammaTailMap
+
+@[expose] public section
 
 /-! The valuation map induced by the definable injection is an order
 isomorphism between the source and image open Gamma tails. Surjectivity

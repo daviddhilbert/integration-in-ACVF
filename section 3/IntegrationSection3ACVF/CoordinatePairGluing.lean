@@ -1,5 +1,9 @@
-import IntegrationSection3ACVF.CoordinateCellGluing
-import IntegrationSection3ACVF.PartitionTemplateCases
+module
+
+public import IntegrationSection3ACVF.CoordinateCellGluing
+public import IntegrationSection3ACVF.PartitionTemplateCases
+
+@[expose] public section
 
 /-! Disjoint parameter cases and valid scalar templates glue to an actual
 finite disjoint original-base partition for one coordinate pair. -/

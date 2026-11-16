@@ -1,4 +1,8 @@
-import Integration7.ActualVolumeObjectPromotion
+module
+
+public import Integration7.ActualVolumeObjectPromotion
+
+@[expose] public section
 
 /-! Exact original-Gamma coordinate and density graphs suffice for object
 promotion in any genuine context. No naming assumption on the whole context

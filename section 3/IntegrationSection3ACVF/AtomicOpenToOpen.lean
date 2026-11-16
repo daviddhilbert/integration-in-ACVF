@@ -1,6 +1,10 @@
-import IntegrationSection3ACVF.OpenSubballImages
-import IntegrationSection3ACVF.RVInverse
-import IntegrationSection3ACVF.MaximalOpenClasses
+module
+
+public import IntegrationSection3ACVF.OpenSubballImages
+public import IntegrationSection3ACVF.RVInverse
+public import IntegrationSection3ACVF.MaximalOpenClasses
+
+@[expose] public section
 
 /-! Definable bijections between actual definable atomic VF sets have
 the open-to-open property, using checked arbitrary-radius open subball

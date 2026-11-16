@@ -1,7 +1,11 @@
-import Section4.MixedProducts
-import Section4.ProductBijections
-import Integration7.VFBlockProductJacobians
-import Section9.MixedJacobian
+module
+
+public import Section4.MixedProducts
+public import Section4.ProductBijections
+public import Integration7.VFBlockProductJacobians
+public import Section9.MixedJacobian
+
+@[expose] public section
 
 /-! Actual Cartesian product maps and fixed-label Jacobians in arbitrary
 VF arities, including products with a genuine degree-zero lift. -/

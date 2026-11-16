@@ -1,5 +1,9 @@
-import IntegrationSection4.FamilyLocalConstancy
-import IntegrationSection4.FiniteImageFamilies
+module
+
+public import IntegrationSection4.FamilyLocalConstancy
+public import IntegrationSection4.FiniteImageFamilies
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

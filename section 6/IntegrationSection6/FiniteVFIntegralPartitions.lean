@@ -1,6 +1,10 @@
-import IntegrationSection6.BinaryLiftPartitionValues
-import IntegrationSection6.GammaVFFiniteRestrictions
-import IntegrationSection6.GammaObjectPresentationIsomorphisms
+module
+
+public import IntegrationSection6.BinaryLiftPartitionValues
+public import IntegrationSection6.GammaVFFiniteRestrictions
+public import IntegrationSection6.GammaObjectPresentationIsomorphisms
+
+@[expose] public section
 
 /-! Integration values of actual VF[k] objects satisfy the definable
 binary partition law. The RV pieces and their class identity are constructed

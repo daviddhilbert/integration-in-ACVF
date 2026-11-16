@@ -1,5 +1,9 @@
-import Integration7.GammaRVParameterSelections
-import Integration7.MixedVerticalPullbackCells
+module
+
+public import Integration7.GammaRVParameterSelections
+public import Integration7.MixedVerticalPullbackCells
+
+@[expose] public section
 
 /-! Restrict an actual vertical chart to whole RV-parameter fibres.
 Its positioning graph, complete vertical RV fibres and inverse-RV

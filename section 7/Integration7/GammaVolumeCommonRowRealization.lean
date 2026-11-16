@@ -1,4 +1,8 @@
-import Integration7.GammaVolumeBlowupRowRealization
+module
+
+public import Integration7.GammaVolumeBlowupRowRealization
+
+@[expose] public section
 
 /-! Common formula witnesses realize as full original-Gamma geometric
 chains on specified named rows. Exact chain lengths and the final

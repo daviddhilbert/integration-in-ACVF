@@ -1,7 +1,11 @@
-import IntegrationSection5.RVSliceFocusExtension
-import IntegrationSection5.GammaCoordinateCanonical
-import IntegrationSection5.CentripetalRelativeBoundary
-import IntegrationSection5.CanonicalTranslationPreparation
+module
+
+public import IntegrationSection5.RVSliceFocusExtension
+public import IntegrationSection5.GammaCoordinateCanonical
+public import IntegrationSection5.CentripetalRelativeBoundary
+public import IntegrationSection5.CanonicalTranslationPreparation
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option allowUnsafeReducibility true in

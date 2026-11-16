@@ -1,4 +1,8 @@
-import IntegrationSection6.FiniteGammaIterations
+module
+
+public import IntegrationSection6.FiniteGammaIterations
+
+@[expose] public section
 
 /-! Changing the endpoints of a finite Gamma-certified forward chain. -/
 noncomputable section

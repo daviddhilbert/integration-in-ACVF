@@ -1,4 +1,8 @@
-import IntegrationSection3ACVF.ResiduePunctures
+module
+
+public import IntegrationSection3ACVF.ResiduePunctures
+
+@[expose] public section
 
 /-! Open balls contained in a finite union of thin punctured balls lie in
 one of the displayed maximal open classes. Inactive containing parents

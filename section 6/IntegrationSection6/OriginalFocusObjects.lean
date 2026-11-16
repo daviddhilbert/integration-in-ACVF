@@ -1,5 +1,9 @@
-import IntegrationSection6.NormalizedFocus
-import IntegrationSection6.NativeFocusBlowup
+module
+
+public import IntegrationSection6.NormalizedFocus
+public import IntegrationSection6.NativeFocusBlowup
+
+@[expose] public section
 
 /-! The original-model post-focus RV object agrees with the one used in
 the normalized blowup proof. This keeps the original Gamma graph context. -/

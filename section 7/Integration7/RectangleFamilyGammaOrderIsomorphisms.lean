@@ -1,5 +1,9 @@
-import Integration7.RectangleFamilyRawRetainedDensities
-import IntegrationSection6.RawFiniteContractions
+module
+
+public import Integration7.RectangleFamilyRawRetainedDensities
+public import IntegrationSection6.RawFiniteContractions
+
+@[expose] public section
 
 /-! The rectangle-family raw comparison is an actual isomorphism of
 the original-Gamma finite RV objects, with exact coordinate identities. -/

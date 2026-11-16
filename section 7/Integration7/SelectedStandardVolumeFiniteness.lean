@@ -1,9 +1,13 @@
-import Integration7.SelectedRVVFTailStandardVolumeCoordinates
-import Integration7.RawStandardVolumeFiniteness
-import Integration7.NativeSelectedVolumeFinitenessTransfer
-import Integration7.GammaSelectedRVVFTailPartialPrograms
-import Integration7.PositiveSelectedLemma75
-import Integration7.SelectedRVVFTailProgramCarriers
+module
+
+public import Integration7.SelectedRVVFTailStandardVolumeCoordinates
+public import Integration7.RawStandardVolumeFiniteness
+public import Integration7.NativeSelectedVolumeFinitenessTransfer
+public import Integration7.GammaSelectedRVVFTailPartialPrograms
+public import Integration7.PositiveSelectedLemma75
+public import Integration7.SelectedRVVFTailProgramCarriers
+
+@[expose] public section
 
 /-! Selected-volume finiteness for a standard contraction with its VF
 coordinates in the original order. The proof uses the actual VF-tail

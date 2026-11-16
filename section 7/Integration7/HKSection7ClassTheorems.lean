@@ -1,4 +1,8 @@
-import Integration7.HKVFClassSemiringGeometry
+module
+
+public import Integration7.HKVFClassSemiringGeometry
+
+@[expose] public section
 
 /-! Corrected numbered class and ring statements, with geometric products
 and coproducts checked and the actual principal kernel discharged. -/

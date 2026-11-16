@@ -1,6 +1,10 @@
-import Integration7.SelectedVolumeFamilies
-import Integration7.SelectedRVVFTailLifts
-import Section4.VFProducts
+module
+
+public import Integration7.SelectedVolumeFamilies
+public import Integration7.SelectedRVVFTailLifts
+public import Section4.VFProducts
+
+@[expose] public section
 
 /-! Genuine VF realizations of positive RV-valued families. The new VF
 tail realizes the selected RV volume tuple, retains the original density,

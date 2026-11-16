@@ -1,5 +1,9 @@
-import Integration7.SelectedPositiveCoefficientLiftBijections
-import Integration7.PositiveVolumeIntegrationProducts
+module
+
+public import Integration7.SelectedPositiveCoefficientLiftBijections
+public import Integration7.PositiveVolumeIntegrationProducts
+
+@[expose] public section
 
 /-! Coefficient-first integration preserves actual multiplication by
 a positive RV coefficient. The full VF realization is a genuine product;

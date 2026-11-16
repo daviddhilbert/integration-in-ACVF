@@ -1,4 +1,8 @@
-import IntegrationSection5.RelativeSpecial
+module
+
+public import IntegrationSection5.RelativeSpecial
+
+@[expose] public section
 
 /-! The canonical map for one chosen VF coordinate. Its fibre is exactly the
 pinned unary canonical map, including the order of the retained RV labels. -/

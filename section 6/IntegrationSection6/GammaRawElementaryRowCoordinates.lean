@@ -1,4 +1,8 @@
-import IntegrationSection6.GammaRawElementarySchemata
+module
+
+public import IntegrationSection6.GammaRawElementarySchemata
+
+@[expose] public section
 
 /-! Row identities for the native coordinate programs used in sorted
 families. The absorbing point is retained by the positive factor. -/

@@ -1,8 +1,12 @@
-import IntegrationSection6.LiftPresentations
-import Section5.RootConstruction
-import Section5.Assembly
-import Section4.MapAlgebraicity
-import Section3.CanonicalParameters
+module
+
+public import IntegrationSection6.LiftPresentations
+public import Section5.RootConstruction
+public import Section5.Assembly
+public import Section4.MapAlgebraicity
+public import Section3.CanonicalParameters
+
+@[expose] public section
 
 /-! The independence condition in a genuine focus removes the active VF
 coordinate from the algebraicity base of its centre's RV class. -/

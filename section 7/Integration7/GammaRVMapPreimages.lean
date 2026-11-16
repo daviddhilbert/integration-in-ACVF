@@ -1,5 +1,9 @@
-import Integration7.GammaRVMapRestrictions
-import Integration7.DefinableMapPreimages
+module
+
+public import Integration7.GammaRVMapRestrictions
+public import Integration7.DefinableMapPreimages
+
+@[expose] public section
 
 /-! Preimages under actual full Gamma raw RV maps retain their original
 Gamma definition, including the map's exact source domain. -/

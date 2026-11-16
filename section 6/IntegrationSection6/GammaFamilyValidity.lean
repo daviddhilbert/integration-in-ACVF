@@ -1,5 +1,9 @@
-import IntegrationSection6.GammaTuplePromotion
-import Section3.GammaProjection
+module
+
+public import IntegrationSection6.GammaTuplePromotion
+public import Section3.GammaProjection
+
+@[expose] public section
 
 /-! Validity loci for finite formula families are genuine original-Gamma
 sets. Universal row inclusion is the complement of a projected

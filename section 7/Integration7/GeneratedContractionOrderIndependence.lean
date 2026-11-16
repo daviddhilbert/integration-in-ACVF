@@ -1,5 +1,9 @@
-import Integration7.GeneratedSelectedContractionExchange
-import IntegrationSection6.ArbitraryContractionOrders
+module
+
+public import Integration7.GeneratedSelectedContractionExchange
+public import IntegrationSection6.ArbitraryContractionOrders
+
+@[expose] public section
 
 /-! Arbitrary ordinary contraction-order independence over the standing
 VF/Gamma-generated base. The selected-label exchange is proved by actual

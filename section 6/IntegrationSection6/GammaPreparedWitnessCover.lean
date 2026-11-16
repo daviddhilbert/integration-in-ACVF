@@ -1,7 +1,11 @@
-import IntegrationSection6.GammaPreparedWitnessAgreements
-import IntegrationSection6.GammaVFCodePreparation
-import IntegrationSection6.GammaWitnessVFCodes
-import IntegrationSection6.GammaRecodingValidity
+module
+
+public import IntegrationSection6.GammaPreparedWitnessAgreements
+public import IntegrationSection6.GammaVFCodePreparation
+public import IntegrationSection6.GammaWitnessVFCodes
+public import IntegrationSection6.GammaRecodingValidity
+
+@[expose] public section
 
 /-! A finite common-blowup witness cover over a pure VF base becomes a
 valid finite cover on prepared RV keys. Validity descends by exact primitive

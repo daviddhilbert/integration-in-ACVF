@@ -1,5 +1,9 @@
-import Integration7.RawPositiveSupportedFubini
-import Integration7.SupportedPositiveGradedJacobians
+module
+
+public import Integration7.RawPositiveSupportedFubini
+public import Integration7.SupportedPositiveGradedJacobians
+
+@[expose] public section
 
 /-! The actual Jacobian transform preserves the raw graded integral on
 supported positive function values. Ordinary coefficients remain part of

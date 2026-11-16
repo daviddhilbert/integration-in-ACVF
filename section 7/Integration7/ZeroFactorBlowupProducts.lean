@@ -1,7 +1,11 @@
-import Integration7.ElementaryZeroVolumeProducts
-import Integration7.ZeroFactorVolumeDistributivity
-import Integration7.ZeroFactorVolumeIsomorphisms
-import Integration7.VolumeBlowupEquivalence
+module
+
+public import Integration7.ElementaryZeroVolumeProducts
+public import Integration7.ZeroFactorVolumeDistributivity
+public import Integration7.ZeroFactorVolumeIsomorphisms
+public import Integration7.VolumeBlowupEquivalence
+
+@[expose] public section
 
 /-! Multiplicative compatibility with ordinary RV[0] factors uses
 their actual finite-volume maps, without adding or cancelling a point. -/

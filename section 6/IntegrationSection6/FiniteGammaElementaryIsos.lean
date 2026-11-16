@@ -1,7 +1,11 @@
-import IntegrationSection6.FiniteGammaElementaryAt
-import IntegrationSection6.FiniteGammaChartLaws
-import IntegrationSection6.ElementaryCoordinates
-import IntegrationSection6.GammaRVProductGraphs
+module
+
+public import IntegrationSection6.FiniteGammaElementaryAt
+public import IntegrationSection6.FiniteGammaChartLaws
+public import IntegrationSection6.ElementaryCoordinates
+public import IntegrationSection6.GammaRVProductGraphs
+
+@[expose] public section
 
 /-! Lemma6.3 over the original Gamma base, exclusively in RV[k].
 Finite volume supplies both morphism image conditions, so no bound on

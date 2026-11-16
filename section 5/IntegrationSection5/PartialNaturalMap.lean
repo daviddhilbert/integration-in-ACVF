@@ -1,5 +1,9 @@
-import IntegrationSection5.PartialContractionProgram
-import IntegrationSection5.NaturalContractionCoordinates
+module
+
+public import IntegrationSection5.PartialContractionProgram
+public import IntegrationSection5.NaturalContractionCoordinates
+
+@[expose] public section
 
 /-! The natural partial contraction map retains its frozen VF parameters. -/
 noncomputable section

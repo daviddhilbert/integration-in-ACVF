@@ -1,5 +1,9 @@
-import IntegrationSection5.CommonRectangleTail
-import IntegrationSection5.HeadPreparationExtension
+module
+
+public import IntegrationSection5.CommonRectangleTail
+public import IntegrationSection5.HeadPreparationExtension
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option allowUnsafeReducibility true in

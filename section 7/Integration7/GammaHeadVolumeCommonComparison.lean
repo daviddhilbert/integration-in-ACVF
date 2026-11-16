@@ -1,8 +1,12 @@
-import Integration7.GammaUnaryRawVolumeComparison
-import Integration7.HeadFibreRawVolumeContexts
-import Integration7.HeadVolumeParameterContexts
-import Integration7.SelectedVolumeHeadPointwiseWitnesses
-import Integration7.MixedRetainedLabelVolumeForms
+module
+
+public import Integration7.GammaUnaryRawVolumeComparison
+public import Integration7.HeadFibreRawVolumeContexts
+public import Integration7.HeadVolumeParameterContexts
+public import Integration7.SelectedVolumeHeadPointwiseWitnesses
+public import Integration7.MixedRetainedLabelVolumeForms
+
+@[expose] public section
 
 /-! Contracting one actual VF head on both sides preserves the original
 fibrewise Gamma common-volume-blowup hypothesis. -/

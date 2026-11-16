@@ -1,7 +1,11 @@
-import IntegrationSection5.GammaBranchBoundaryPrefix
-import IntegrationSection5.GammaSpecialRestriction
-import IntegrationSection5.CanonicalRVSliceGeometry
-import IntegrationSection5.SharedRVUnaryHeadPreparation
+module
+
+public import IntegrationSection5.GammaBranchBoundaryPrefix
+public import IntegrationSection5.GammaSpecialRestriction
+public import IntegrationSection5.CanonicalRVSliceGeometry
+public import IntegrationSection5.SharedRVUnaryHeadPreparation
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option allowUnsafeReducibility true in

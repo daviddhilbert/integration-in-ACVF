@@ -1,4 +1,8 @@
-import IntegrationSection5.GammaPreparation
+module
+
+public import IntegrationSection5.GammaPreparation
+
+@[expose] public section
 
 /-! A common real presentation is constructed internally from finite
 Gamma codes for the two domains and the complete graph. No code is named

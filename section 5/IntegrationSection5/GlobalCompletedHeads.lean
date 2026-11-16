@@ -1,7 +1,11 @@
-import IntegrationSection5.RVSliceHeadCompletion
-import IntegrationSection5.MixedUnaryPreparationOver
-import IntegrationSection5.TranslationExtension
-import IntegrationSection5.InactiveRectangleFamily
+module
+
+public import IntegrationSection5.RVSliceHeadCompletion
+public import IntegrationSection5.MixedUnaryPreparationOver
+public import IntegrationSection5.TranslationExtension
+public import IntegrationSection5.InactiveRectangleFamily
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option allowUnsafeReducibility true in

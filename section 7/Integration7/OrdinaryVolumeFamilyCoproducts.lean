@@ -1,8 +1,12 @@
-import Integration7.OrdinaryVFVolumeFamilies
-import Integration7.FixedVFVolumeCoproducts
-import Integration7.AllDegreeVolumeClasses
-import Integration7.NondegenerateFiniteIso
-import Integration7.OrdinaryVolumeCoefficientCommSemiring
+module
+
+public import Integration7.OrdinaryVFVolumeFamilies
+public import Integration7.FixedVFVolumeCoproducts
+public import Integration7.AllDegreeVolumeClasses
+public import Integration7.NondegenerateFiniteIso
+public import Integration7.OrdinaryVolumeCoefficientCommSemiring
+
+@[expose] public section
 
 /-! Ordinary degree-zero families are closed under actual disjoint
 RV-label coproducts, and their row classes add pointwise. -/

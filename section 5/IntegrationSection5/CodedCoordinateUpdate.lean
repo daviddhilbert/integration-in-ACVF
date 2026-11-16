@@ -1,5 +1,9 @@
-import IntegrationSection5.CodedHeadUpdate
-import IntegrationSection5.CoordinateContext
+module
+
+public import IntegrationSection5.CodedHeadUpdate
+public import IntegrationSection5.CoordinateContext
+
+@[expose] public section
 
 /-! Constructed relatively unary coding and replacement at any VF coordinate. -/
 noncomputable section

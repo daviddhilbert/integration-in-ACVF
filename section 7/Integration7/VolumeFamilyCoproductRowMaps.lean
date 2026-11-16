@@ -1,5 +1,9 @@
-import Integration7.DefinableVolumeFamilyCoproducts
-import Integration7.VolumeCoproduct
+module
+
+public import Integration7.DefinableVolumeFamilyCoproducts
+public import Integration7.VolumeCoproduct
+
+@[expose] public section
 
 /-! The tagged union of families restricts on every named VF fibre to
 the literal RV tagged union. Its two inclusions retain the original

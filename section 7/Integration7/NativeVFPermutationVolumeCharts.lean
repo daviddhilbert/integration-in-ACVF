@@ -1,6 +1,10 @@
-import Integration7.PositiveVFVolumePermutations
-import Integration7.NativeRVGraphVolumeRefinements
-import IntegrationSection6.PermutationFiniteFibres
+module
+
+public import Integration7.PositiveVFVolumePermutations
+public import Integration7.NativeRVGraphVolumeRefinements
+public import IntegrationSection6.PermutationFiniteFibres
+
+@[expose] public section
 
 /-! Raw and native VF-permuted domains are identical on points. Their
 transported volume forms therefore give an actual identity-coordinate

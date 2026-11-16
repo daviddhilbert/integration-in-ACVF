@@ -1,6 +1,10 @@
-import IntegrationSection6.DefinableFunctionOperations
-import IntegrationSection6.FamilyIntegralAddition
-import IntegrationSection6.FamilyIntegralScalars
+module
+
+public import IntegrationSection6.DefinableFunctionOperations
+public import IntegrationSection6.FamilyIntegralAddition
+public import IntegrationSection6.FamilyIntegralScalars
+
+@[expose] public section
 
 /-! The integral in Remark6.20 is a linear map on the actual semimodule
 of definable RV-valued functions, with varying coefficient fields. -/

@@ -1,7 +1,11 @@
-import IntegrationSection6.FiniteGammaClassProducts
-import IntegrationSection6.GammaVFFiniteToAll
-import IntegrationSection6.NativeFiniteQuotientLift
-import IntegrationSection6.GammaProductLifts
+module
+
+public import IntegrationSection6.FiniteGammaClassProducts
+public import IntegrationSection6.GammaVFFiniteToAll
+public import IntegrationSection6.NativeFiniteQuotientLift
+public import IntegrationSection6.GammaProductLifts
+
+@[expose] public section
 
 /-! Actual additive lifting into the global VF semiring and its product law. -/
 noncomputable section

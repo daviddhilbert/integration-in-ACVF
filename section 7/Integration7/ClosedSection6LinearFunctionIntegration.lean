@@ -1,11 +1,15 @@
-import Integration7.CompletedSection6Kernel
-import Integration7.ClosedSection6DefinableFunctionOperations
-import Integration7.ClosedSection6FamilyIntegralAddition
-import Integration7.ClosedSection6FamilyIntegralScalars
-import IntegrationSection6.LinearFunctionIntegration
-import IntegrationSection6.DefinableFunctionOperations
-import IntegrationSection6.FamilyIntegralAddition
-import IntegrationSection6.FamilyIntegralScalars
+module
+
+public import Integration7.CompletedSection6Kernel
+public import Integration7.ClosedSection6DefinableFunctionOperations
+public import Integration7.ClosedSection6FamilyIntegralAddition
+public import Integration7.ClosedSection6FamilyIntegralScalars
+public import IntegrationSection6.LinearFunctionIntegration
+public import IntegrationSection6.DefinableFunctionOperations
+public import IntegrationSection6.FamilyIntegralAddition
+public import IntegrationSection6.FamilyIntegralScalars
+
+@[expose] public section
 
 /-! Closed generated-base Section6 integration. The former universal
 Section5 input is replaced by the canonical-model certificate; its kernel

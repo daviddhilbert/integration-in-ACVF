@@ -1,4 +1,8 @@
-import Integration7.GradedAEVolumeHeadIntegrals
+module
+
+public import Integration7.GradedAEVolumeHeadIntegrals
+
+@[expose] public section
 
 /-! First-head Fubini for the full actual finite graded AE function
 space, including ordinary degree zero, in the coefficient-first convention. -/

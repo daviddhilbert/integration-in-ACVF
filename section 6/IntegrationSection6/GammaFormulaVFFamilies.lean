@@ -1,6 +1,10 @@
-import IntegrationSection6.GammaFormulaTypedRows
-import IntegrationSection6.GammaMixedTupleGraphs
-import IntegrationSection6.GammaRawElementaryRowCoordinates
+module
+
+public import IntegrationSection6.GammaFormulaTypedRows
+public import IntegrationSection6.GammaMixedTupleGraphs
+public import IntegrationSection6.GammaRawElementaryRowCoordinates
+
+@[expose] public section
 
 /-! Interpret primitive formulas as full RV families over pure VF parameters.
 The relation flattening only reassociates coordinates and retains properness. -/

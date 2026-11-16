@@ -1,5 +1,9 @@
-import IntegrationSection5.RVContractionMaps
-import IntegrationSection5.GammaGraphOperations
+module
+
+public import IntegrationSection5.RVContractionMaps
+public import IntegrationSection5.GammaGraphOperations
+
+@[expose] public section
 
 /-! The induced RV map keeps its complete invariant graph over the original
 Gamma base, even when its real presentation uses internal representatives. -/

@@ -1,4 +1,8 @@
-import IntegrationSection5.ProductContractionKernels
+module
+
+public import IntegrationSection5.ProductContractionKernels
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option maxHeartbeats 2000000

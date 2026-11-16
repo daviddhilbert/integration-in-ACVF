@@ -1,6 +1,10 @@
-import IntegrationSection6.GammaFiniteCompression
-import IntegrationSection6.GammaGlobalRestriction
-import Section4.LiftPadding
+module
+
+public import IntegrationSection6.GammaFiniteCompression
+public import IntegrationSection6.GammaGlobalRestriction
+public import Section4.LiftPadding
+
+@[expose] public section
 
 /-! A real-definable RV-label map extends to mixed points by identity
 on all VF coordinates, with its complete graph and the same real base. -/

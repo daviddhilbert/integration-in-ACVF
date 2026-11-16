@@ -1,5 +1,9 @@
-import IntegrationSection2.HenselianAlgebraicTower
-import Mathlib.RingTheory.Trace.Basic
+module
+
+public import IntegrationSection2.HenselianAlgebraicTower
+public import Mathlib.RingTheory.Trace.Basic
+
+@[expose] public section
 
 /-! The trace argument for finite immediate extensions need not assume
 that the extension is Galois. Each embedding into the algebraically

@@ -1,5 +1,9 @@
-import Integration7.RVLabelRectanglePartitions
-import IntegrationSection4.ParameterizedCells
+module
+
+public import Integration7.RVLabelRectanglePartitions
+public import IntegrationSection4.ParameterizedCells
+
+@[expose] public section
 
 /-! The definable RV-label partition has the claimed literal fibres:
 the rectangular part is a product of its two projections, and each part

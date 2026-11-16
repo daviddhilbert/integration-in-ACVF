@@ -1,5 +1,9 @@
-import IntegrationSection3ACVF.ResiduePunctures
-import IntegrationSection3ACVF.OpenToOpenQuotient
+module
+
+public import IntegrationSection3ACVF.ResiduePunctures
+public import IntegrationSection3ACVF.OpenToOpenQuotient
+
+@[expose] public section
 
 /-! Actual total residue-coordinate functions for one thin punctured ball,
 with surjectivity onto the cofinite line and exact entire-ball fibres. -/

@@ -1,4 +1,8 @@
-import IntegrationSection6.Subobjects
+module
+
+public import IntegrationSection6.Subobjects
+
+@[expose] public section
 
 /-! Coordinate formulas for the actual coproduct partition isomorphism. -/
 noncomputable section

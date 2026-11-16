@@ -1,6 +1,10 @@
-import Integration7.AEOrdinaryVolumePermutations
-import Integration7.AEOrdinaryRVVolumeIntegrals
-import Integration7.VFVolumeIntegralPermutationCovariance
+module
+
+public import Integration7.AEOrdinaryVolumePermutations
+public import Integration7.AEOrdinaryRVVolumeIntegrals
+public import Integration7.VFVolumeIntegralPermutationCovariance
+
+@[expose] public section
 
 /-! Ordinary-valued families have the same exact raw coordinate
 covariance as positive-valued families, through their actual unit-density

@@ -1,4 +1,8 @@
-import Integration7.NormalizedPrefixSupportPreservation
+module
+
+public import Integration7.NormalizedPrefixSupportPreservation
+
+@[expose] public section
 
 /-! Prefix integration on the supported normalized function spaces.
 The target is the literal projected support and forgetting support

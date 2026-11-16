@@ -1,5 +1,9 @@
-import Integration7.SemimoduleScalarExtension
-import Integration7.GradedSemiringActions
+module
+
+public import Integration7.SemimoduleScalarExtension
+public import Integration7.GradedSemiringActions
+
+@[expose] public section
 
 /-! When a degree-one point maps to one, scalar compatibility for every
 positive homogeneous coefficient implies compatibility for degree zero

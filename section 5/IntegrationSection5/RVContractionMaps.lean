@@ -1,5 +1,9 @@
-import IntegrationSection5.QuotientBijection
-import Section5.PullbackLift
+module
+
+public import IntegrationSection5.QuotientBijection
+public import Section5.PullbackLift
+
+@[expose] public section
 
 /-! Definable contraction maps between the actual RV objects of pullbacks, with quotient bijectivity and volume projection formulas. -/
 

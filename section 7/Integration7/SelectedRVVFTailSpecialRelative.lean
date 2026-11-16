@@ -1,6 +1,10 @@
-import Integration7.SelectedRVVFTailCoordinateFibres
-import IntegrationSection5.RelativeFibreBijection
-import IntegrationSection6.SpecialEqualityTransport
+module
+
+public import Integration7.SelectedRVVFTailCoordinateFibres
+public import IntegrationSection5.RelativeFibreBijection
+public import IntegrationSection6.SpecialEqualityTransport
+
+@[expose] public section
 
 /-! Relative specialness survives realization of retained RV labels
 by VF tails. Only the original unary fibre preparation is restricted;+the target is identified by its actual bijective fibre map. -/

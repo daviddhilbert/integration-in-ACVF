@@ -1,7 +1,11 @@
-import Integration7.PositiveVolumeLiftInjectivity
-import Integration7.PositiveVolumeLiftSurjectivity
-import Integration7.VolumeLiftCoproductBijections
-import Integration7.FixedVFVolumeCoproductIsomorphisms
+module
+
+public import Integration7.PositiveVolumeLiftInjectivity
+public import Integration7.PositiveVolumeLiftSurjectivity
+public import Integration7.VolumeLiftCoproductBijections
+public import Integration7.FixedVFVolumeCoproductIsomorphisms
+
+@[expose] public section
 
 /-! The canonical positive-degree additive integration equivalence is
 the inverse of the actual lift. Addition on VF classes is actual coproduct. -/

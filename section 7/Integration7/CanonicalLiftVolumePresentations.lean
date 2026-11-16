@@ -1,9 +1,13 @@
-import Integration7.CanonicalFiniteRVObjects
-import Integration7.ElementaryBlowupConstruction
-import IntegrationSection6.NormalizedLifts
-import IntegrationSection6.NormalizedFocus
-import IntegrationSection6.AdmissibleFocusRelabeling
-import Section3.CanonicalParameters
+module
+
+public import Integration7.CanonicalFiniteRVObjects
+public import Integration7.ElementaryBlowupConstruction
+public import IntegrationSection6.NormalizedLifts
+public import IntegrationSection6.NormalizedFocus
+public import IntegrationSection6.AdmissibleFocusRelabeling
+public import Section3.CanonicalParameters
+
+@[expose] public section
 
 /-! Literal lift presentations and admissibility transfer with the
 actual canonical RV objects, over precisely the same real parameter set. -/

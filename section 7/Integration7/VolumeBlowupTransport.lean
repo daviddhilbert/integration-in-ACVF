@@ -1,4 +1,8 @@
-import Integration7.IteratedVolumeBlowups
+module
+
+public import Integration7.IteratedVolumeBlowups
+
+@[expose] public section
 
 set_option backward.isDefEq.respectTransparency false
 noncomputable section

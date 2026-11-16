@@ -1,5 +1,9 @@
-import Integration7.RVClassProductContractionPrograms
-import Integration7.CanonicalFiniteRVObjects
+module
+
+public import Integration7.RVClassProductContractionPrograms
+public import Integration7.CanonicalFiniteRVObjects
+
+@[expose] public section
 
 /-! Exact volume selectors of the actual product contraction. Its
 first coordinate is the fixed class and its second is the prepared

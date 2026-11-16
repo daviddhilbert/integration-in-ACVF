@@ -1,4 +1,8 @@
-import Integration7.ExplicitRVCoproductIso
+module
+
+public import Integration7.ExplicitRVCoproductIso
+
+@[expose] public section
 
 set_option backward.isDefEq.respectTransparency false
 noncomputable section

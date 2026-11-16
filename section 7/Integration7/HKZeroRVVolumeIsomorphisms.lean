@@ -1,5 +1,9 @@
-import Integration7.HKRVVolumeObjects
-import Integration7.NondegenerateFiniteIso
+module
+
+public import Integration7.HKRVVolumeObjects
+public import Integration7.NondegenerateFiniteIso
+
+@[expose] public section
 
 /-! Exact RV-weight preservation at zero. No almost-everywhere predicate
 or vacuous zero-dimensional exception is used. -/

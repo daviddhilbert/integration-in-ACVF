@@ -1,4 +1,8 @@
-import IntegrationSection6.FiniteGammaChainTransport
+module
+
+public import IntegrationSection6.FiniteGammaChainTransport
+
+@[expose] public section
 
 /-! The common finite-blowup relation over the original Gamma base.
 A real presentation may be enlarged internally, while all object and

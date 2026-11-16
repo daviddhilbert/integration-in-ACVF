@@ -1,6 +1,10 @@
-import Integration7.BalancedProductStandardVolumeComparison
-import Integration7.NativeBalancedProductFibreDomains
-import Integration7.BalancedNativePositionBijections
+module
+
+public import Integration7.BalancedProductStandardVolumeComparison
+public import Integration7.NativeBalancedProductFibreDomains
+public import Integration7.BalancedNativePositionBijections
+
+@[expose] public section
 
 /-! A native balanced cell supplies the actual unary domains and
 positioning bijection needed for the constructed opposite-order product

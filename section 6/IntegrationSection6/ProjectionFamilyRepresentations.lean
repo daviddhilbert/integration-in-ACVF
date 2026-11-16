@@ -1,7 +1,11 @@
-import IntegrationSection6.ProjectionFamilyInputs
-import IntegrationSection6.RelativeFamilyRepresentations
-import IntegrationSection6.VFParameterRowIntegrals
-import IntegrationSection6.ContextDefinableFunctions
+module
+
+public import IntegrationSection6.ProjectionFamilyInputs
+public import IntegrationSection6.RelativeFamilyRepresentations
+public import IntegrationSection6.VFParameterRowIntegrals
+public import IntegrationSection6.ContextDefinableFunctions
+
+@[expose] public section
 
 /-! Coordinate fibre integration has a definable RV-family representative,
 and integrating that representative equals the original total integral. -/

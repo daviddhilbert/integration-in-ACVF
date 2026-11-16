@@ -1,5 +1,9 @@
-import Integration7.IndexedVolumeDensityLabels
-import Integration7.GammaVolumeSliceDensityAssembly
+module
+
+public import Integration7.IndexedVolumeDensityLabels
+public import Integration7.GammaVolumeSliceDensityAssembly
+
+@[expose] public section
 
 /-! An indexed presentation whose density is a retained label is
 volume isomorphic to the actual canonical coordinate-density object. -/

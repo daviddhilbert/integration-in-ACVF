@@ -1,5 +1,9 @@
-import Integration7.ZeroVFVolumeClasses
-import Mathlib.Algebra.Group.TransferInstance
+module
+
+public import Integration7.ZeroVFVolumeClasses
+public import Mathlib.Algebra.Group.TransferInstance
+
+@[expose] public section
 
 /-! The canonical degree-zero additive coefficient structure, with the
 ordinary lift as its inverse, retaining the actual VF[0] classes. -/

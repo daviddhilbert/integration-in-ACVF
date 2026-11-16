@@ -1,6 +1,10 @@
-import IntegrationSection3.CoordinateFibres
-import IntegrationSection3.FiniteTupleGraphs
-import IntegrationSection3ACVF.FullBaseDefinability
+module
+
+public import IntegrationSection3.CoordinateFibres
+public import IntegrationSection3.FiniteTupleGraphs
+public import IntegrationSection3ACVF.FullBaseDefinability
+
+@[expose] public section
 
 /-! The full graph of every scalar coordinate-fibre map is one uniform
 original-base definable relation,obtained by reindexing the actual tuple

@@ -1,4 +1,8 @@
-import IntegrationSection5.ProductHeadStage
+module
+
+public import IntegrationSection5.ProductHeadStage
+
+@[expose] public section
 
 /-! After contracting the prepared first factor, the remaining unary
 source is exactly the second factor with passive RV labels. -/

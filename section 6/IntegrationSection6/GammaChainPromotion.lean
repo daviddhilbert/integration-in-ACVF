@@ -1,6 +1,10 @@
-import IntegrationSection6.GammaChainSchemata
-import IntegrationSection6.GammaBlowupPromotion
-import IntegrationSection6.FiniteGammaIterations
+module
+
+public import IntegrationSection6.GammaChainSchemata
+public import IntegrationSection6.GammaBlowupPromotion
+public import IntegrationSection6.FiniteGammaIterations
+
+@[expose] public section
 
 /-! Actual finite forward Gamma blowup chains promote to finite formula
 witnesses of the same length, over arbitrary sorted parameter tuples.

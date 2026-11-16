@@ -1,4 +1,8 @@
-import Integration7.HKVolumeBlowupRelations
+module
+
+public import Integration7.HKVolumeBlowupRelations
+
+@[expose] public section
 
 /-! Actual isomorphism and common-blowup quotient classes in all degrees.
 Addition is coproduct and the graded product descends from the proved

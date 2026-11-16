@@ -1,5 +1,9 @@
-import Integration7.MixedVFPermutationDomains
-import Integration7.SelectedVolumeRowContexts
+module
+
+public import Integration7.MixedVFPermutationDomains
+public import Integration7.SelectedVolumeRowContexts
+
+@[expose] public section
 
 /-! VF reindexing of actual selected volume families. The original
 RV labels, selected tuple and density are transported by the definable

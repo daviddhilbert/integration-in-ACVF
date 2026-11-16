@@ -1,6 +1,10 @@
-import Integration7.GammaFiniteRowChartUniformity
-import Integration7.PureRVSortedIsomorphisms
-import Integration7.IndexedRVRawRowCodes
+module
+
+public import Integration7.GammaFiniteRowChartUniformity
+public import Integration7.PureRVSortedIsomorphisms
+public import Integration7.IndexedRVRawRowCodes
+
+@[expose] public section
 
 /-! Actual original-Gamma bijections of indexed ordinary finite rows.
 Every RV index label is fixed, including the future VF volume tag. -/

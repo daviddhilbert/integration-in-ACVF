@@ -1,6 +1,10 @@
-import IntegrationSection3ACVF.FullGammaSyntax
-import IntegrationSection3ACVF.AdjoinGamma
-import Section4.GammaOrderControllers
+module
+
+public import IntegrationSection3ACVF.FullGammaSyntax
+public import IntegrationSection3ACVF.AdjoinGamma
+public import Section4.GammaOrderControllers
+
+@[expose] public section
 
 /-! Finite order controllers for sets definable over the full original
 Gamma/ball base, by specializing finite imaginary support only inside the

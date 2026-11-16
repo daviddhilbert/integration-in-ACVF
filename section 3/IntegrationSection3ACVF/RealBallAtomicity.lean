@@ -1,5 +1,9 @@
-import IntegrationSection3ACVF.ClosedCompleteTypeAtomicity
-import IntegrationSection3ACVF.OpenCompleteTypeAtomicity
+module
+
+public import IntegrationSection3ACVF.ClosedCompleteTypeAtomicity
+public import IntegrationSection3ACVF.OpenCompleteTypeAtomicity
+
+@[expose] public section
 
 /-! Actual open/closed classification and real/Gamma atomicity for every
 released ball imaginary,including singleton and whole-field cases. -/

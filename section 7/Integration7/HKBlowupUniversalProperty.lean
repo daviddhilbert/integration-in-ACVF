@@ -1,4 +1,8 @@
-import Integration7.HKPositiveBasicGeneration
+module
+
+public import Integration7.HKPositiveBasicGeneration
+
+@[expose] public section
 
 /-! The universal property of the actual common-blowup semiring.
 A map descends exactly when it respects the genuine fixed-degree

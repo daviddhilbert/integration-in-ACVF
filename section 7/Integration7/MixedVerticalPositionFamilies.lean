@@ -1,5 +1,9 @@
-import IntegrationSection4.VerticalCharts
-import IntegrationSection4.GammaScalarFamilies
+module
+
+public import IntegrationSection4.VerticalCharts
+public import IntegrationSection4.GammaScalarFamilies
+
+@[expose] public section
 
 /-! The checked Section4 vertical-position construction with arbitrary carried RV labels.
 The source arity is retained throughout the actual inverse slices. -/

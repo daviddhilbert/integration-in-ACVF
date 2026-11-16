@@ -1,5 +1,9 @@
-import Integration7.GenericPermutationRVJacobian
-import Integration7.RVVolumeInverse
+module
+
+public import Integration7.GenericPermutationRVJacobian
+public import Integration7.RVVolumeInverse
+
+@[expose] public section
 set_option backward.isDefEq.respectTransparency false
 open FirstOrder FirstOrder.Language CategoryTheory
 open SpecialTransformations.Milestone0 SpecialTransformations.Milestone0.LRV

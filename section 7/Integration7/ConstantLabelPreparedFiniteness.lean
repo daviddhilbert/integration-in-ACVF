@@ -1,5 +1,9 @@
-import Integration7.ConstantLabelPreparedRVProjections
-import Integration7.BalancedUnaryVolumePreparation
+module
+
+public import Integration7.ConstantLabelPreparedRVProjections
+public import Integration7.BalancedUnaryVolumePreparation
+
+@[expose] public section
 
 /-! Constant carried labels give finite RV fibres of the actual source;
 Gamma special bijectivity then proves finite volume of the actual target

@@ -1,5 +1,9 @@
-import IntegrationSection6.FiniteGammaCategoricalCoproducts
-import Mathlib.Data.Sum.Basic
+module
+
+public import IntegrationSection6.FiniteGammaCategoricalCoproducts
+public import Mathlib.Data.Sum.Basic
+
+@[expose] public section
 
 /-! Gluing two finite Gamma morphisms into an isomorphism when their
 actual disjoint images cover the target and preserve weight. -/

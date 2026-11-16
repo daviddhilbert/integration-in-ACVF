@@ -1,5 +1,9 @@
-import IntegrationSection5.CoordinateCanonicalFibre
-import Section5.ParameterExtension
+module
+
+public import IntegrationSection5.CoordinateCanonicalFibre
+public import Section5.ParameterExtension
+
+@[expose] public section
 
 /-! Every actual unary special bijection is special relative to its sole
 VF coordinate, with the actual fibre witnesses and their parameter bases. -/

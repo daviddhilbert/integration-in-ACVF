@@ -1,5 +1,9 @@
-import IntegrationSection5.ScalarCoordinateRefinement
-import IntegrationSection5.FixedVFFiniteImage
+module
+
+public import IntegrationSection5.ScalarCoordinateRefinement
+public import IntegrationSection5.FixedVFFiniteImage
+
+@[expose] public section
 
 /-! For a bijection, a source-code fibre on which all target VF coordinates
 are constant has only finitely many possible active source VF values. -/

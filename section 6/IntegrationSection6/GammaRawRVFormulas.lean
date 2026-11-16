@@ -1,5 +1,9 @@
-import IntegrationSection6.GammaTupleCodes
-import Section5.GammaLiftRelation
+module
+
+public import IntegrationSection6.GammaTupleCodes
+public import Section5.GammaLiftRelation
+
+@[expose] public section
 
 /-! Convert original-Gamma formulas on raw sorted RV tuples into the
 actual pure-RV point domain and graph interfaces. -/

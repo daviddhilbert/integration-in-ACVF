@@ -1,5 +1,9 @@
-import Integration7.VFBlockProductPartials
-import Mathlib.LinearAlgebra.Matrix.Determinant.Basic
+module
+
+public import Integration7.VFBlockProductPartials
+public import Mathlib.LinearAlgebra.Matrix.Determinant.Basic
+
+@[expose] public section
 
 /-! The VF Jacobian of the actual ordered Cartesian product is the
 product of its two Jacobians, via the literal block diagonal matrix. -/

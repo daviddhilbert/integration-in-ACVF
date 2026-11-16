@@ -1,4 +1,8 @@
-import Section4.RVProductDistributivity
+module
+
+public import Section4.RVProductDistributivity
+
+@[expose] public section
 
 /-! Definable RV subobjects and complements used by blowup loci. -/
 

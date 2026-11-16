@@ -1,7 +1,11 @@
-import Integration7.PointwiseRVVolumeFunctions
-import Integration7.VFBaseDimensionBounds
-import Integration7.PureVFDimensionUnions
-import Section4.VFUnions
+module
+
+public import Integration7.PointwiseRVVolumeFunctions
+public import Integration7.VFBaseDimensionBounds
+public import Integration7.PureVFDimensionUnions
+public import Section4.VFUnions
+
+@[expose] public section
 
 /-! Positive homogeneous definable RV-volume functions modulo equality
 outside a definable VF-small base set. Pointwise equality maps onto this

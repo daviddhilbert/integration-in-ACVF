@@ -1,6 +1,10 @@
-import IntegrationSection6.GammaIndexedBinaryPartitions
-import IntegrationSection6.GammaIndexedEmpty
-import IntegrationSection6.GammaCommonIndexedRealization
+module
+
+public import IntegrationSection6.GammaIndexedBinaryPartitions
+public import IntegrationSection6.GammaIndexedEmpty
+public import IntegrationSection6.GammaCommonIndexedRealization
+
+@[expose] public section
 
 /-! A finite definable cover by common-blowup witnesses glues over any
 actual RV[d] base. Regions can be infinite; all source, target and

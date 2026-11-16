@@ -1,5 +1,9 @@
-import IntegrationSection6.AdditiveCongruence
-import IntegrationSection6.WholeBlowup
+module
+
+public import IntegrationSection6.AdditiveCongruence
+public import IntegrationSection6.WholeBlowup
+
+@[expose] public section
 
 /-! The common-forward-blowup congruence is the least additive congruence
 containing elementary replacements. Its definition remains the actual

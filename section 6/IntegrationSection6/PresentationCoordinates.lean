@@ -1,4 +1,8 @@
-import IntegrationSection6.LiftRVImage
+module
+
+public import IntegrationSection6.LiftRVImage
+
+@[expose] public section
 
 /-! Recovering old labels from the full key uses the literal tail projection. -/
 noncomputable section

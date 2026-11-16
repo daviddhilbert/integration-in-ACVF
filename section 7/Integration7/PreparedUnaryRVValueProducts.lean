@@ -1,5 +1,9 @@
-import Integration7.BalancedPreparedVolumeProducts
-import Integration7.CanonicalFiniteRVObjects
+module
+
+public import Integration7.BalancedPreparedVolumeProducts
+public import Integration7.CanonicalFiniteRVObjects
+
+@[expose] public section
 
 /-! The original balanced Gamma product descends to the actual definable
 RV-key isomorphism of the chosen unary preparations. -/

@@ -1,6 +1,10 @@
-import IntegrationSection3ACVF.RVDifferencePairs
-import IntegrationSection3ACVF.AnnulusValueIntervals
-import Section3.GammaCodeDefinability
+module
+
+public import IntegrationSection3ACVF.RVDifferencePairs
+public import IntegrationSection3ACVF.AnnulusValueIntervals
+public import Section3.GammaCodeDefinability
+
+@[expose] public section
 
 /-! Uniform original-base ball syntax with radius and centre free.
 Every proper RV representative of the radius is retained. -/

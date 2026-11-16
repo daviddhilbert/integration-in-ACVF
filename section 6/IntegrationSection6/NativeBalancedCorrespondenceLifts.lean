@@ -1,5 +1,9 @@
-import IntegrationSection6.NativePolynomialLifts
-import Section7.BalancedCorrespondence
+module
+
+public import IntegrationSection6.NativePolynomialLifts
+public import Section7.BalancedCorrespondence
+
+@[expose] public section
 
 /-! Balanced correspondence lifting with native definability retained,
 including zero coordinates. Adapted from the checked zero-deletion proof

@@ -1,6 +1,10 @@
-import Integration7.DensityGraphVolumeBijections
-import Integration7.NativeVolumeMapRealization
-import IntegrationSection5.RelativelyUnary
+module
+
+public import Integration7.DensityGraphVolumeBijections
+public import Integration7.NativeVolumeMapRealization
+public import IntegrationSection5.RelativelyUnary
+
+@[expose] public section
 
 /-! Passing to actual density graphs retains the original relatively
 unary VF-coordinate behavior. -/

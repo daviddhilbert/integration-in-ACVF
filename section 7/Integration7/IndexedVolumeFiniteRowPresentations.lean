@@ -1,7 +1,11 @@
-import Integration7.GammaVolumeIndexedPresentations
-import Integration7.GammaVolumeElementaryDensities
-import Integration7.GammaVolumeCoproductDensities
-import IntegrationSection6.GammaSchemaFiniteRowPresentations
+module
+
+public import Integration7.GammaVolumeIndexedPresentations
+public import Integration7.GammaVolumeElementaryDensities
+public import Integration7.GammaVolumeCoproductDensities
+public import IntegrationSection6.GammaSchemaFiniteRowPresentations
+
+@[expose] public section
 
 /-! Indexed volume presentations need finite row maps and functional
 density graphs. Their existence is independent of a chosen numeric bound

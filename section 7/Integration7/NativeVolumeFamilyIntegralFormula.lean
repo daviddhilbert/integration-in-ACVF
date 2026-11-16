@@ -1,6 +1,10 @@
-import Integration7.NativeCoordinateVolumeFamilyRows
-import Integration7.SelectedCoordinateVolumeRealizations
-import Integration7.VolumeFamilyRealizationIdentifications
+module
+
+public import Integration7.NativeCoordinateVolumeFamilyRows
+public import Integration7.SelectedCoordinateVolumeRealizations
+public import Integration7.VolumeFamilyRealizationIdentifications
+
+@[expose] public section
 
 /-! Literal coordinate-density families may be integrated by any
 specified standard contraction of their native source, without inserting

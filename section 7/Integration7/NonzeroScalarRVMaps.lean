@@ -1,5 +1,9 @@
-import Integration7.ScalarRVAlgebra
-import Section4.VFRealFibres
+module
+
+public import Integration7.ScalarRVAlgebra
+public import Section4.VFRealFibres
+
+@[expose] public section
 
 /-! Definable scalar reduction and replacement of the absorbing RV
 value by1. Nonzero scalar values are retained literally. -/

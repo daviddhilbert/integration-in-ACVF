@@ -1,4 +1,8 @@
-import IntegrationSection3ACVF.BallEnlargementGeometry
+module
+
+public import IntegrationSection3ACVF.BallEnlargementGeometry
+
+@[expose] public section
 
 /-! Infinitude of ordinary balls, using actual valuation density
 and the residue-characteristic-zero integer-translate construction. -/

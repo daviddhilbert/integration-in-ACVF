@@ -1,6 +1,10 @@
-import IntegrationSection5.RVSliceTranslation
-import IntegrationSection5.NonrectangleHorizontalPreparation
-import IntegrationSection5.NonrectangleVerticalPreparation
+module
+
+public import IntegrationSection5.RVSliceTranslation
+public import IntegrationSection5.NonrectangleHorizontalPreparation
+public import IntegrationSection5.NonrectangleVerticalPreparation
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 open Classical FirstOrder FirstOrder.Language

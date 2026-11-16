@@ -1,7 +1,11 @@
-import IntegrationSection6.GammaIsoRestrictions
-import IntegrationSection6.GammaNamedRVFibres
-import IntegrationSection6.GammaWitnessUniformity
-import Section5.GammaFiniteFibres
+module
+
+public import IntegrationSection6.GammaIsoRestrictions
+public import IntegrationSection6.GammaNamedRVFibres
+public import IntegrationSection6.GammaWitnessUniformity
+public import Section5.GammaFiniteFibres
+
+@[expose] public section
 
 /-! Finite RV fibres relative to selected old labels are preserved by
 Gamma isomorphisms preserving those labels. Only the named selected labels

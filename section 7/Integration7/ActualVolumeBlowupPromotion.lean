@@ -1,8 +1,12 @@
-import Integration7.ActualVolumeObjectPromotion
-import Integration7.ActualVolumeComparisonPromotion
-import Integration7.ActualVolumeAdmissibilityPromotion
-import Integration7.VolumeBlowupSchemaRealization
-import Integration7.ElementaryBlowupIsomorphism
+module
+
+public import Integration7.ActualVolumeObjectPromotion
+public import Integration7.ActualVolumeComparisonPromotion
+public import Integration7.ActualVolumeAdmissibilityPromotion
+public import Integration7.VolumeBlowupSchemaRealization
+public import Integration7.ElementaryBlowupIsomorphism
+
+@[expose] public section
 
 /-! Every actual volume blowup over the original named term context has
 a finite formula witness. Arbitrary elementary charts are compared with

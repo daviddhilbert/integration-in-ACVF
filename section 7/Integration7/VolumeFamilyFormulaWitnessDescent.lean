@@ -1,7 +1,11 @@
-import Integration7.NativeCoordinateVolumeFamilyRows
-import Integration7.GammaVolumeCommonRowRealization
-import Integration7.GenericGammaWitnessCovers
-import Integration7.PureVFFormulaLoci
+module
+
+public import Integration7.NativeCoordinateVolumeFamilyRows
+public import Integration7.GammaVolumeCommonRowRealization
+public import Integration7.GenericGammaWitnessCovers
+public import Integration7.PureVFFormulaLoci
+
+@[expose] public section
 
 /-! Generic formula witnesses give equality of the actual functions
 outside one original-base definable VF-small set. A finite witness cover

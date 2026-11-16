@@ -1,4 +1,8 @@
-import Integration7.UniformBalancedGammaLinearity
+module
+
+public import Integration7.UniformBalancedGammaLinearity
+
+@[expose] public section
 
 /-! Labelwise Gamma-linearity is transferred from the actual cell
 rows to the one global native positioning map. -/

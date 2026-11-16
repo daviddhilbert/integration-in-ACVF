@@ -1,5 +1,9 @@
-import Integration7.HKZeroRVVolumeIsomorphisms
-import Integration7.VFVolumeObjects
+module
+
+public import Integration7.HKZeroRVVolumeIsomorphisms
+public import Integration7.VFVolumeObjects
+
+@[expose] public section
 
 /-! The sequel's weighted zero VF presentation retains every ordinary
 zero-dimensional finite object, with its full definable RV-valued form.

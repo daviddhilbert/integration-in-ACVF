@@ -1,9 +1,13 @@
-import Integration7.DefinableMapPreimages
-import Section4.CoordinateMaps
-import Section4.RVRestrictions
-import Section4.MapCorestrict
-import Section4.CanonicalLift
-import Section4.VFRealFibres
+module
+
+public import Integration7.DefinableMapPreimages
+public import Section4.CoordinateMaps
+public import Section4.RVRestrictions
+public import Section4.MapCorestrict
+public import Section4.CanonicalLift
+public import Section4.VFRealFibres
+
+@[expose] public section
 
 /-! Selected old RV labels are realized by additional VF tail
 coordinates. This turns finiteness at fixed selected labels into actual

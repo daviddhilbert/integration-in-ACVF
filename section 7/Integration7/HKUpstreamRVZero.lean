@@ -1,5 +1,9 @@
-import Integration7.HKZeroRVVolumeIsomorphisms
-import Section10.WeightedZeroResults
+module
+
+public import Integration7.HKZeroRVVolumeIsomorphisms
+public import Section10.WeightedZeroResults
+
+@[expose] public section
 
 /-! Exact adapters from the sequel's retained proof presentations to the
 published weighted-zero category. Both directions retain the definable map

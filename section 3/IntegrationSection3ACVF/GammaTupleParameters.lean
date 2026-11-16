@@ -1,4 +1,8 @@
-import IntegrationSection3ACVF.AdjoinGamma
+module
+
+public import IntegrationSection3ACVF.AdjoinGamma
+
+@[expose] public section
 
 /-! Specialize actual Gamma tuples by adjoining exactly their quotient
 names. The original real base and every old imaginary name are retained. -/

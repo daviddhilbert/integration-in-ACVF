@@ -1,5 +1,9 @@
-import IntegrationSection5.GammaUnaryPartition
-import IntegrationSection5.UnaryChainExtension
+module
+
+public import IntegrationSection5.GammaUnaryPartition
+public import IntegrationSection5.UnaryChainExtension
+
+@[expose] public section
 
 /-! A single common internal real presentation for every actual factor of
 a finite original-Gamma partition. -/

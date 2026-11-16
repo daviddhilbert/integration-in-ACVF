@@ -1,5 +1,9 @@
-import Integration7.HKAEZeroVolumeFunctions
-import Integration7.OrdinaryVolumeFamilyOutsideRows
+module
+
+public import Integration7.HKAEZeroVolumeFunctions
+public import Integration7.OrdinaryVolumeFamilyOutsideRows
+
+@[expose] public section
 
 /-! Removing a base exception keeps the same form on every remaining
 point, and makes each removed row genuinely empty. -/

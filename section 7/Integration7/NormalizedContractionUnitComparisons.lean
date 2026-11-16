@@ -1,6 +1,10 @@
-import Integration7.FullContractionNormalizationVolumes
-import Integration7.RVVolumeInverse
-import Integration7.RVVolumeComposition
+module
+
+public import Integration7.FullContractionNormalizationVolumes
+public import Integration7.RVVolumeInverse
+public import Integration7.RVVolumeComposition
+
+@[expose] public section
 
 /-! An exact-coordinate original-Gamma comparison of an actual raw
 contraction with a finite RV object promotes to its normalized volume

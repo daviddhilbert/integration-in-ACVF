@@ -1,6 +1,10 @@
-import Integration7.OrdinaryUnitFrozenIntegralProducts
-import Integration7.PositiveVolumeClassProductExtensions
-import Integration7.DefinableVolumeParameterDescent
+module
+
+public import Integration7.OrdinaryUnitFrozenIntegralProducts
+public import Integration7.PositiveVolumeClassProductExtensions
+public import Integration7.DefinableVolumeParameterDescent
+
+@[expose] public section
 
 /-! Multiplying an ordinary-valued family by the degree-one point
 commutes with the actual head integral, on every original-context row. -/

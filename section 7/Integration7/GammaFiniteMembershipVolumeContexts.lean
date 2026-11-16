@@ -1,6 +1,10 @@
-import Integration7.VFFieldContainingVolumeContexts
-import IntegrationSection6.GammaFiniteMembershipPreparation
-import IntegrationSection6.GammaSpecialBaseReduction
+module
+
+public import Integration7.VFFieldContainingVolumeContexts
+public import IntegrationSection6.GammaFiniteMembershipPreparation
+public import IntegrationSection6.GammaSpecialBaseReduction
+
+@[expose] public section
 
 /-! Finite membership preparation over an arbitrary real/Gamma base.
 An internal small coefficient-field context supplies the construction;

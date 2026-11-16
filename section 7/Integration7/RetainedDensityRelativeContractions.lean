@@ -1,4 +1,8 @@
-import Integration7.RetainedDensitySameOrderContractions
+module
+
+public import Integration7.RetainedDensitySameOrderContractions
+
+@[expose] public section
 
 /-! Corollary7.6 for specified relatively unary Jacobian-one maps,
 with an arbitrary literal retained density on each side. -/

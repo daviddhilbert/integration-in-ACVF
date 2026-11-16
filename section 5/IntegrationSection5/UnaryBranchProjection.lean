@@ -1,5 +1,9 @@
-import IntegrationSection5.CanonicalUnaryBranchExtension
-import IntegrationSection5.GammaFiniteCoordinates
+module
+
+public import IntegrationSection5.CanonicalUnaryBranchExtension
+public import IntegrationSection5.GammaFiniteCoordinates
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option allowUnsafeReducibility true in

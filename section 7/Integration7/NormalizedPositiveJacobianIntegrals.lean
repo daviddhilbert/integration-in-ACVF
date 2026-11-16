@@ -1,5 +1,9 @@
-import Integration7.NormalizedVolumeFunctions
-import Integration7.SupportedVolumeFunctionJacobians
+module
+
+public import Integration7.NormalizedVolumeFunctions
+public import Integration7.SupportedVolumeFunctionJacobians
+
+@[expose] public section
 
 /-! The checked positive homogeneous Jacobian theorem passes to actual
 normalized function generators and finite linear combinations of them. -/

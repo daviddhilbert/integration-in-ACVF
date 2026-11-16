@@ -1,7 +1,11 @@
-import Integration7.UnaryChainCommonNameRealization
-import Integration7.UnaryChainVolumeDensities
-import Integration7.MixedJacobianRestriction
-import IntegrationSection5.UnaryPartition
+module
+
+public import Integration7.UnaryChainCommonNameRealization
+public import Integration7.UnaryChainVolumeDensities
+public import Integration7.MixedJacobianRestriction
+public import IntegrationSection5.UnaryPartition
+
+@[expose] public section
 
 /-! The actual Section5.6 factors on every partition piece carry
 volume densities over the same containing base. Their composites agree

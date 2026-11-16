@@ -1,7 +1,11 @@
-import Integration7.RVVolumeLiftIsomorphism
-import Integration7.VFVolumeBijections
-import Integration7.VFVolumeLifts
-import Integration7.EssentialVolumeRestriction
+module
+
+public import Integration7.RVVolumeLiftIsomorphism
+public import Integration7.VFVolumeBijections
+public import Integration7.VFVolumeLifts
+public import Integration7.EssentialVolumeRestriction
+
+@[expose] public section
 
 /-! The checked lift theorem yields full volume-preserving bijections
 between the actual essential lifts, without an extra graph assumption. -/

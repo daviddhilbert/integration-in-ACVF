@@ -1,4 +1,8 @@
-import IntegrationSection5.FibreFocusImage
+module
+
+public import IntegrationSection5.FibreFocusImage
+
+@[expose] public section
 
 /-! Definition 5.4 with actual fibrewise special bijections. -/
 noncomputable section

@@ -1,6 +1,10 @@
-import IntegrationSection4.FamilyLinearRows
-import IntegrationSection4.GammaTupleGraphs
-import IntegrationSection4.UnaryPreparation
+module
+
+public import IntegrationSection4.FamilyLinearRows
+public import IntegrationSection4.GammaTupleGraphs
+public import IntegrationSection4.UnaryPreparation
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

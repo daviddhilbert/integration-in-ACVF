@@ -1,7 +1,11 @@
-import IntegrationSection5.PositionedCellLabelInjection
-import IntegrationSection5.NativeCellProjections
-import IntegrationSection5.RVRectangleCases
-import IntegrationSection5.NonrectangleCellGeometry
+module
+
+public import IntegrationSection5.PositionedCellLabelInjection
+public import IntegrationSection5.NativeCellProjections
+public import IntegrationSection5.RVRectangleCases
+public import IntegrationSection5.NonrectangleCellGeometry
+
+@[expose] public section
 
 /-! The selected positioning functions form one actual original-Gamma bijection between the mixed projections of the nonrectangle branch, preserving its entire RV code. -/
 noncomputable section

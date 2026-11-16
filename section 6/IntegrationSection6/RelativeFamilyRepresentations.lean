@@ -1,6 +1,10 @@
-import IntegrationSection6.PartialFamilyParameterPreservation
-import IntegrationSection6.GammaMixedSetPresentations
-import Section5.GammaFiniteFibres
+module
+
+public import IntegrationSection6.PartialFamilyParameterPreservation
+public import IntegrationSection6.GammaMixedSetPresentations
+public import Section5.GammaFiniteFibres
+
+@[expose] public section
 
 /-! Every finite-RV-fibre mixed family has a uniform RV representative
 whose total lift is isomorphic over its unchanged VF parameter base. -/

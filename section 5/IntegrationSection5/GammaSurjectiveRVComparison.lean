@@ -1,5 +1,9 @@
-import IntegrationSection5.SurjectiveRVComparison
-import IntegrationSection5.GammaRVIsomorphism
+module
+
+public import IntegrationSection5.SurjectiveRVComparison
+public import IntegrationSection5.GammaRVIsomorphism
+
+@[expose] public section
 
 /-! The quotient comparison through a common source retains full
 original-Gamma graphs, without choosing a definable section. -/

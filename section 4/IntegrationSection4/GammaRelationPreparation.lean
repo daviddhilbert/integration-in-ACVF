@@ -1,4 +1,8 @@
-import Section5.GammaInvariantLogic
+module
+
+public import Section5.GammaInvariantLogic
+
+@[expose] public section
 
 /-! Prepare a relation uniformly in every free RV variable, over the original
 Gamma-named base. We reuse the predecessor's finite polynomial support and

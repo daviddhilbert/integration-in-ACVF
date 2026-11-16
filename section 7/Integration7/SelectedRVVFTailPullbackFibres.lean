@@ -1,5 +1,9 @@
-import Integration7.SelectedRVVFTailCoordinateFibres
-import IntegrationSection5.HeadContractionGeometry
+module
+
+public import Integration7.SelectedRVVFTailCoordinateFibres
+public import IntegrationSection5.HeadContractionGeometry
+
+@[expose] public section
 
 /-! Realizing fixed selected RV labels does not change the RV-pullback
 property of any active unary coordinate fibre. -/

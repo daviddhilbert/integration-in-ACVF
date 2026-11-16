@@ -1,4 +1,8 @@
-import IntegrationSection6.FiniteCoordinateDeletion
+module
+
+public import IntegrationSection6.FiniteCoordinateDeletion
+
+@[expose] public section
 
 /-! Finite fibres survive assembling families over a finite-fibre base. -/
 noncomputable section

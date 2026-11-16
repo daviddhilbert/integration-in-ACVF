@@ -1,4 +1,8 @@
-import IntegrationSection6.FiniteRVGeometry
+module
+
+public import IntegrationSection6.FiniteRVGeometry
+
+@[expose] public section
 
 /-! Isomorphism changes for chains entirely inside RV[k]. -/
 noncomputable section

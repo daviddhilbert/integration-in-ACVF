@@ -1,6 +1,10 @@
-import Integration7.NativeFixedRVLabels
-import Integration7.ProductCoordinateSaturation
-import Integration7.UnarySpecialHeadPreparations
+module
+
+public import Integration7.NativeFixedRVLabels
+public import Integration7.ProductCoordinateSaturation
+public import Integration7.UnarySpecialHeadPreparations
+
+@[expose] public section
 
 /-! Exact first contractions of products with an RV class, retaining
 every fixed old RV label. This identifies the actual remaining unary

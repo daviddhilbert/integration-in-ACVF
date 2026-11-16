@@ -1,9 +1,13 @@
-import IntegrationSection6.GammaSchemaIndexedRestrictionIso
-import IntegrationSection6.GammaGraphPresentationRestriction
-import IntegrationSection6.GammaUniversalSubsets
-import IntegrationSection6.IndexedSetPartitions
-import IntegrationSection6.FiniteGammaPartitionCharts
-import IntegrationSection6.FiniteGammaAdditiveCongruence
+module
+
+public import IntegrationSection6.GammaSchemaIndexedRestrictionIso
+public import IntegrationSection6.GammaGraphPresentationRestriction
+public import IntegrationSection6.GammaUniversalSubsets
+public import IntegrationSection6.IndexedSetPartitions
+public import IntegrationSection6.FiniteGammaPartitionCharts
+public import IntegrationSection6.FiniteGammaAdditiveCongruence
+
+@[expose] public section
 
 /-! Two Gamma-definable index regions glue actual common blowups. The
 base volume is preserved on each region, and both indexed objects split

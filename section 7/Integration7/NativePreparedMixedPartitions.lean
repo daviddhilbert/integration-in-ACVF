@@ -1,5 +1,9 @@
-import Integration7.NativeFiniteMixedUnions
-import IntegrationSection5.RelativeSpecialRestriction
+module
+
+public import Integration7.NativeFiniteMixedUnions
+public import IntegrationSection5.RelativeSpecialRestriction
+
+@[expose] public section
 
 /-! Finite partition preparation over the actual original real context.
 Each prepared piece has its own genuine special bijection from the

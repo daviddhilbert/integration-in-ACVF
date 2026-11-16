@@ -1,7 +1,11 @@
-import IntegrationSection3ACVF.GammaLinearRadiusClosure
-import IntegrationSection3ACVF.ParameterizedOpenImages
-import IntegrationSection3ACVF.LinearRadiusThreshold
-import IntegrationSection3ACVF.RealParameterTuples
+module
+
+public import IntegrationSection3ACVF.GammaLinearRadiusClosure
+public import IntegrationSection3ACVF.ParameterizedOpenImages
+public import IntegrationSection3ACVF.LinearRadiusThreshold
+public import IntegrationSection3ACVF.RealParameterTuples
+
+@[expose] public section
 
 /-! A uniform linear-radius relation on an ordinary ball forces linearity
 on that whole ball. Local linear balls come from the checked 3.17 geometry;

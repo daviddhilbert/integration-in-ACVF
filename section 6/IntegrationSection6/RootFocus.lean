@@ -1,4 +1,8 @@
-import IntegrationSection6.RootSelection
+module
+
+public import IntegrationSection6.RootSelection
+
+@[expose] public section
 
 /-! Construct a genuine inherited full-locus focus from the uniquely
 solvable, definable root set, retaining its full function graph. -/
@@ -52,7 +56,7 @@ variable (hR : @Set.Definable M S LRV (@CanonicalStructure.normalize M sM) (Fin 
 
 include hcover hR
 
-private def rootCenter (p : Point (M := M) n m) : VF (M := M) :=
+public def rootCenter (p : Point (M := M) n m) : VF (M := M) :=
   if hp : p ∈ carrier A then (rootSelectionMap A R j hcover hR ⟨p,hp⟩).val j else 0
 
 private theorem rootCenter_rv (p : Point (M := M) n m) (hp : p ∈ carrier A) :
@@ -60,7 +64,7 @@ private theorem rootCenter_rv (p : Point (M := M) n m) (hp : p ∈ carrier A) :
   simp only [rootCenter, dif_pos hp]
   exact (rootSelectionMap_spec A R j hcover hR ⟨p,hp⟩).2.2.1 j
 
-private theorem rootCenter_independent (htag : Tagged (carrier A) j k)
+public theorem rootCenter_independent (htag : Tagged (carrier A) j k)
     (p q : Point (M := M) n m) (hp : p ∈ carrier A) (hq : q ∈ carrier A)
     (he : erase j p = erase j q) :
     rootCenter A R j hcover hR p = rootCenter A R j hcover hR q := by

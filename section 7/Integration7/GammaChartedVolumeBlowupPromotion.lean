@@ -1,6 +1,10 @@
-import Integration7.GammaElementaryBlowupPartitions
-import Integration7.GammaVolumeBlowupRowPromotion
-import Integration7.GammaVolumeObjectGraphPromotion
+module
+
+public import Integration7.GammaElementaryBlowupPartitions
+public import Integration7.GammaVolumeBlowupRowPromotion
+public import Integration7.GammaVolumeObjectGraphPromotion
+
+@[expose] public section
 
 /-! Full original-Gamma geometric blowup data promote to a formula
 witness in any genuine containing context. Center algebraicity remains

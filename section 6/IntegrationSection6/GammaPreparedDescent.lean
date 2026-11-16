@@ -1,5 +1,9 @@
-import IntegrationSection6.GammaPreparedFamilies
-import Section5.GammaRestriction
+module
+
+public import IntegrationSection6.GammaPreparedFamilies
+public import Section5.GammaRestriction
+
+@[expose] public section
 
 /-! Full Gamma families that are constant on prepared RV-polydiscs descend
 to actual RV-key-indexed families. The descended graph retains the original

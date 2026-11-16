@@ -1,7 +1,11 @@
-import Integration7.FiniteContractionNormalizationVolumeIso
-import Integration7.EmptySelectedVolumeCharts
-import Integration7.GammaVolumeSliceAssemblyGeometry
-import IntegrationSection6.FiniteSelectedContractionSlices
+module
+
+public import Integration7.FiniteContractionNormalizationVolumeIso
+public import Integration7.EmptySelectedVolumeCharts
+public import Integration7.GammaVolumeSliceAssemblyGeometry
+public import IntegrationSection6.FiniteSelectedContractionSlices
+
+@[expose] public section
 
 /-! With no old selected volume, the selected unary object and the ordinary
 normalized finite contraction have identical labels, volume and density. -/

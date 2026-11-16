@@ -1,13 +1,17 @@
-import Integration7.CentralVolumePointClasses
-import Integration7.CentralVolumePointRing
-import Integration7.GradedSemiringUnitNormalization
-import Integration7.LowerDimensionVolumeProductSwaps
-import Integration7.NormalizedPositiveJacobianIntegrals
-import Integration7.NormalizedPrefixFubini
-import Integration7.NormalizedVolumeCoefficientRing
-import Integration7.NormalizedVolumeFunctions
-import Integration7.SemimoduleScalarExtension
-import Integration7.UnitPointVolumeSwaps
+module
+
+public import Integration7.CentralVolumePointClasses
+public import Integration7.CentralVolumePointRing
+public import Integration7.GradedSemiringUnitNormalization
+public import Integration7.LowerDimensionVolumeProductSwaps
+public import Integration7.NormalizedPositiveJacobianIntegrals
+public import Integration7.NormalizedPrefixFubini
+public import Integration7.NormalizedVolumeCoefficientRing
+public import Integration7.NormalizedVolumeFunctions
+public import Integration7.SemimoduleScalarExtension
+public import Integration7.UnitPointVolumeSwaps
+
+@[expose] public section
 set_option pp.universes true
 set_option pp.proofs false
 set_option pp.deepTerms true

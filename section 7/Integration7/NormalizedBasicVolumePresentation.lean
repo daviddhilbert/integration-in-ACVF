@@ -1,5 +1,9 @@
-import Integration7.NormalizedVolumeUniversalProperty
-import Integration7.LocalizedVolumeBlowupDescent
+module
+
+public import Integration7.NormalizedVolumeUniversalProperty
+public import Integration7.LocalizedVolumeBlowupDescent
+
+@[expose] public section
 
 /-! The actual normalized ring is universal for the concrete geometric
 relations point = cone = 1. Degree-one relations are handled by proved

@@ -1,7 +1,11 @@
-import Integration7.AdmissibleHeadVolumeFactors
-import Integration7.BasicVolumeRelationObjects
-import Integration7.GradedVolumeProducts
-import Section4.RVProduct
+module
+
+public import Integration7.AdmissibleHeadVolumeFactors
+public import Integration7.BasicVolumeRelationObjects
+public import Integration7.GradedVolumeProducts
+public import Section4.RVProduct
+
+@[expose] public section
 
 /-! The actual label bijection from an admissible object to its head
 factor times the degree-one point. Its full volume tuple is computed

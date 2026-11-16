@@ -1,5 +1,9 @@
-import IntegrationSection3ACVF.CanonicalRegions
-import IntegrationSection3.HoleFormulas
+module
+
+public import IntegrationSection3ACVF.CanonicalRegions
+public import IntegrationSection3.HoleFormulas
+
+@[expose] public section
 
 /-! The maximal-hole relation of the canonical support over its original
 combined base. Both the hole and parent are actual ball imaginaries, and

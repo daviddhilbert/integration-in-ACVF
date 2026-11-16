@@ -1,5 +1,9 @@
-import Integration7.NonemptyVolumeCoordinateProjections
-import Integration7.PositiveCoordinateVolumeFubini
+module
+
+public import Integration7.NonemptyVolumeCoordinateProjections
+public import Integration7.PositiveCoordinateVolumeFubini
+
+@[expose] public section
 
 /-! The nonempty-coordinate-subset formulation of positive homogeneous
 Fubini, with the specified global volume-coordinate identification. The

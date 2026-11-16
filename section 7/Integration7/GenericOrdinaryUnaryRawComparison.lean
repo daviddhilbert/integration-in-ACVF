@@ -1,5 +1,9 @@
-import Integration7.GenericOrdinaryUnarySelectedComparison
-import Integration7.EmptySelectedUnaryVolumeCharts
+module
+
+public import Integration7.GenericOrdinaryUnarySelectedComparison
+public import Integration7.EmptySelectedUnaryVolumeCharts
+
+@[expose] public section
 
 /-! Generic isomorphisms of ordinary rows give common forward blowups of
 both specified raw unary finite contractions, with original-Gamma geometry. -/

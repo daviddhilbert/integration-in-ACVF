@@ -1,6 +1,10 @@
-import IntegrationSection6.CanonicalRVKeys
-import IntegrationSection6.NormalizedFocus
-import IntegrationSection6.LiftCarrierGeometry
+module
+
+public import IntegrationSection6.CanonicalRVKeys
+public import IntegrationSection6.NormalizedFocus
+public import IntegrationSection6.LiftCarrierGeometry
+
+@[expose] public section
 
 /-! Preparatory canonical labeling gives the tag needed for a focus.
 The literal lift interface follows from the existing lift equations, with

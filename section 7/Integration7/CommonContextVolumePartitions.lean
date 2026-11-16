@@ -1,6 +1,10 @@
-import Integration7.CommonContextVolumeEquivalences
-import Integration7.GammaActualVolumePartitions
-import Integration7.GammaVolumeBlowupAddition
+module
+
+public import Integration7.CommonContextVolumeEquivalences
+public import Integration7.GammaActualVolumePartitions
+public import Integration7.GammaVolumeBlowupAddition
+
+@[expose] public section
 
 /-! Complementary Gamma restrictions assemble comparisons of actual
 volume objects. Both common witness contexts and the full partition

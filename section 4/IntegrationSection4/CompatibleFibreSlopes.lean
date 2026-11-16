@@ -1,5 +1,9 @@
-import IntegrationSection4.LinearBallRadius
-import IntegrationSection4.InverseBodies
+module
+
+public import IntegrationSection4.LinearBallRadius
+public import IntegrationSection4.InverseBodies
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

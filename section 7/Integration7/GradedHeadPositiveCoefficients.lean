@@ -1,8 +1,12 @@
-import Integration7.AEOrdinaryHeadPositiveCoefficients
-import Integration7.AERVVolumeHeadIntegralPositiveCoefficients
-import Integration7.GradedAEVolumeHeadIntegralAddHom
-import Integration7.GradedAEVolumeActionCoherence
-import Integration7.GradedAEVolumePrefixFubini
+module
+
+public import Integration7.AEOrdinaryHeadPositiveCoefficients
+public import Integration7.AERVVolumeHeadIntegralPositiveCoefficients
+public import Integration7.GradedAEVolumeHeadIntegralAddHom
+public import Integration7.GradedAEVolumeActionCoherence
+public import Integration7.GradedAEVolumePrefixFubini
+
+@[expose] public section
 
 /-! Every positive homogeneous coefficient commutes with the actual raw
 head and prefix integrals on the full finite graded function module,

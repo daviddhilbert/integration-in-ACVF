@@ -1,5 +1,9 @@
-import Integration7.NormalizedVolumeFunctions
-import Integration7.GradedAEVolumePrefixFubini
+module
+
+public import Integration7.NormalizedVolumeFunctions
+public import Integration7.GradedAEVolumePrefixFubini
+
+@[expose] public section
 
 /-! The actual iterated prefix integral has the same normalized total
 integral. This is a statement on the checked graded representatives;

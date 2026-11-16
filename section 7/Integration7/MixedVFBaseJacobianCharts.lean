@@ -1,5 +1,9 @@
-import Integration7.VFBaseJacobianDensities
-import Integration7.MixedJacobianRestriction
+module
+
+public import Integration7.VFBaseJacobianDensities
+public import Integration7.MixedJacobianRestriction
+
+@[expose] public section
 
 /-! Changing only a VF base has the same Jacobian with any fixed RV
 labels attached. The actual family restriction has that Jacobian whenever

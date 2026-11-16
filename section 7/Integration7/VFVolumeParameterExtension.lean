@@ -1,5 +1,9 @@
-import Integration7.VFVolumeBijections
-import Section4.ParameterInvariance
+module
+
+public import Integration7.VFVolumeBijections
+public import Section4.ParameterInvariance
+
+@[expose] public section
 
 /-! The actual VF-small exceptional set and volume equation persist
 when finitely or arbitrarily many real parameters are added. -/

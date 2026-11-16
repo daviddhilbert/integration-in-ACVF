@@ -1,6 +1,10 @@
-import Integration7.FiniteVolumeIsoCertificates
-import IntegrationSection6.GammaFiniteTupleBounds
-import Section9.SpecialJacobianGeneric
+module
+
+public import Integration7.FiniteVolumeIsoCertificates
+public import IntegrationSection6.GammaFiniteTupleBounds
+public import Section9.SpecialJacobianGeneric
+
+@[expose] public section
 
 /-! Actual finite-fibre RV maps have uniform finite bounds over a small
 real parameter set. Bounds follow from the checked tuple compactness theorem. -/

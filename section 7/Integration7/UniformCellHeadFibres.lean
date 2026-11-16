@@ -1,4 +1,8 @@
-import Integration7.UniformCellRefinementCentres
+module
+
+public import Integration7.UniformCellRefinementCentres
+
+@[expose] public section
 
 /-! Exact vertical fibres of the actual mixed cell graph refinement.
 Each is the translated RV class supplied by the global positioning map;

@@ -1,5 +1,9 @@
-import Integration7.HeadCorrection
-import Integration7.RVUnitNormalization
+module
+
+public import Integration7.HeadCorrection
+public import Integration7.RVUnitNormalization
+
+@[expose] public section
 
 /-! A definable correction on all essential labels. At the labels where
 the head Jacobian is defined it is the required algebraic correction.

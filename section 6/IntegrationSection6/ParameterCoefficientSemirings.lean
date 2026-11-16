@@ -1,5 +1,9 @@
-import IntegrationSection6.VFParameterCoefficientBases
-import IntegrationSection6.GlobalIntegrationCharacterization
+module
+
+public import IntegrationSection6.VFParameterCoefficientBases
+public import IntegrationSection6.GlobalIntegrationCharacterization
+
+@[expose] public section
 
 /-! The varying coefficient semirings in6.20 are the actual RV/Isp
 semirings over dcl(B,x), with the6.19 equivalence available in each fibre. -/

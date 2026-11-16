@@ -1,6 +1,10 @@
-import Integration7.DefinableVolumeBaseReduction
-import Integration7.GammaGeometricCommonRowTransport
-import Integration7.ContractionParameterExtension
+module
+
+public import Integration7.DefinableVolumeBaseReduction
+public import Integration7.GammaGeometricCommonRowTransport
+public import Integration7.ContractionParameterExtension
+
+@[expose] public section
 
 /-! Full geometric rows descend along a genuine elimination of definable
 parameter names. The actual volume objects and every forward blowup are

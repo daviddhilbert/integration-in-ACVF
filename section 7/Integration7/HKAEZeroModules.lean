@@ -1,4 +1,8 @@
-import Integration7.HKAEZeroScalarActions
+module
+
+public import Integration7.HKAEZeroScalarActions
+
+@[expose] public section
 
 /-! Weighted-zero-valued AE functions form a semimodule over the actual
 weighted zero coefficient semiring, with every law checked fibrewise. -/

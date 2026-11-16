@@ -1,6 +1,10 @@
-import Integration7.SpecialRetainedVolumeChains
-import Integration7.PullbackCoordinateGammaObjects
-import IntegrationSection6.GammaFiniteMixedBijections
+module
+
+public import Integration7.SpecialRetainedVolumeChains
+public import Integration7.PullbackCoordinateGammaObjects
+public import IntegrationSection6.GammaFiniteMixedBijections
+
+@[expose] public section
 
 /-! Finite RV volume data of an actual special-prepared pullback,
 with its literal transported density coordinate. -/

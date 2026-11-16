@@ -1,4 +1,8 @@
-import IntegrationSection6.GammaElementaryFocus
+module
+
+public import IntegrationSection6.GammaElementaryFocus
+
+@[expose] public section
 
 /-! A Gamma-definable literal lift recovers the complete Gamma domain
 and volume graphs of its actual RV input, without adding parameters. -/

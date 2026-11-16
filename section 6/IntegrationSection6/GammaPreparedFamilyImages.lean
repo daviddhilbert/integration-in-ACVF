@@ -1,7 +1,11 @@
-import IntegrationSection6.GammaPureVFBaseExtensions
-import IntegrationSection6.GammaIsoSourceImages
-import IntegrationSection6.GammaVFSchemaSources
-import IntegrationSection6.PreparedKeyExtensionMaps
+module
+
+public import IntegrationSection6.GammaPureVFBaseExtensions
+public import IntegrationSection6.GammaIsoSourceImages
+public import IntegrationSection6.GammaVFSchemaSources
+public import IntegrationSection6.PreparedKeyExtensionMaps
+
+@[expose] public section
 
 /-! Change the actual VF base of a mixed RV family by a Gamma isomorphism
 and then attach its full prepared key, preserving all fibre RV labels. -/

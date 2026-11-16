@@ -1,4 +1,8 @@
-import Integration7.GammaRVMapGraphOperations
+module
+
+public import Integration7.GammaRVMapGraphOperations
+
+@[expose] public section
 
 /-! Full original-Gamma map graphs retain their domain, image and
 bijective inverse, without enlarging the real parameter base. -/

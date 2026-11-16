@@ -1,5 +1,9 @@
-import IntegrationSection5.RVProjectionPadding
-import IntegrationSection5.GammaGraphOperations
+module
+
+public import IntegrationSection5.RVProjectionPadding
+public import IntegrationSection5.GammaGraphOperations
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 open Classical FirstOrder FirstOrder.Language

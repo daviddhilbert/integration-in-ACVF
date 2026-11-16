@@ -1,4 +1,8 @@
-import IntegrationSection6.Blowups
+module
+
+public import IntegrationSection6.Blowups
+
+@[expose] public section
 
 /-! Degree zero admits no elementary chart, so common blowups reduce to
 actual RV isomorphism, including the length-zero convention. -/

@@ -1,5 +1,9 @@
-import IntegrationSection6.GammaFiniteGraphObjects
-import IntegrationSection6.GammaNativeRawObjects
+module
+
+public import IntegrationSection6.GammaFiniteGraphObjects
+public import IntegrationSection6.GammaNativeRawObjects
+
+@[expose] public section
 
 /-! Every actual finite Gamma RV object admits a presentation adding only
 finitely many proper representatives. Its existing internal code set need

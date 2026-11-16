@@ -1,4 +1,8 @@
-import IntegrationSection6.GammaSchemaRowValues
+module
+
+public import IntegrationSection6.GammaSchemaRowValues
+
+@[expose] public section
 
 /-! Pure-RV parameter blocks give full original-Gamma joint domain and
 volume relations, with no parameter tuple named in the original base. -/

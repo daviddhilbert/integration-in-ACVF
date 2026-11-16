@@ -1,6 +1,10 @@
-import Integration7.AERVVolumePermutedFunctions
-import Integration7.AppendedVolumePrefixFubini
-import Integration7.VolumeCoordinateProjectionOrders
+module
+
+public import Integration7.AERVVolumePermutedFunctions
+public import Integration7.AppendedVolumePrefixFubini
+public import Integration7.VolumeCoordinateProjectionOrders
+
+@[expose] public section
 
 /-! Arbitrary nonempty coordinate projections have an actual
 almost-everywhere function pushforward, obtained by the specified VF

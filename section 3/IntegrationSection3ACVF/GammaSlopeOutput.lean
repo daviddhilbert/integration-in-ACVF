@@ -1,4 +1,8 @@
-import IntegrationSection3ACVF.GammaSlopeDomain
+module
+
+public import IntegrationSection3ACVF.GammaSlopeDomain
+
+@[expose] public section
 
 /-! The actual output valuation equals the input valuation multiplied
 by the Gamma value of its unique RV coefficient. -/

@@ -1,6 +1,10 @@
-import Integration7.RawPositiveCoordinateSupports
-import Integration7.PositiveGradedVolumeFubini
-import Integration7.SupportedPositiveGradedRestrictions
+module
+
+public import Integration7.RawPositiveCoordinateSupports
+public import Integration7.PositiveGradedVolumeFubini
+public import Integration7.SupportedPositiveGradedRestrictions
+
+@[expose] public section
 
 /-! Raw coordinate integration on the genuine supported positive graded
 submodules, with literal projected support and its Fubini identity. -/

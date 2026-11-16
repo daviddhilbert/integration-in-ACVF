@@ -1,7 +1,11 @@
-import IntegrationSection5.GammaScalarUpdate
-import IntegrationSection5.RVAttachment
-import IntegrationSection5.MixedScalarFamilies
-import IntegrationSection5.GammaUnaryChain
+module
+
+public import IntegrationSection5.GammaScalarUpdate
+public import IntegrationSection5.RVAttachment
+public import IntegrationSection5.MixedScalarFamilies
+public import IntegrationSection5.GammaUnaryChain
+
+@[expose] public section
 
 /-! RV attachment followed by an injective active-coordinate replacement. -/
 noncomputable section

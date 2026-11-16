@@ -1,9 +1,13 @@
-import Integration7.HKWeightedNativeUnaryComparisons
-import Integration7.HKWeightedHeadFibreWitnesses
-import Integration7.HeadFiniteVolumeContexts
-import Integration7.HeadVolumeParameterContexts
-import Integration7.SelectedCoordinateDensityRows
-import Integration7.MixedRetainedLabelVolumeForms
+module
+
+public import Integration7.HKWeightedNativeUnaryComparisons
+public import Integration7.HKWeightedHeadFibreWitnesses
+public import Integration7.HeadFiniteVolumeContexts
+public import Integration7.HeadVolumeParameterContexts
+public import Integration7.SelectedCoordinateDensityRows
+public import Integration7.MixedRetainedLabelVolumeForms
+
+@[expose] public section
 
 /-! Exact-density generic row isomorphisms compare specified first-head
 contractions through actual original-Gamma volume blowup geometry. -/

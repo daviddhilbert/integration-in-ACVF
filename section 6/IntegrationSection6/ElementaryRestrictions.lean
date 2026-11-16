@@ -1,5 +1,9 @@
-import IntegrationSection6.ElementaryIsomorphism
-import IntegrationSection6.Subobjects
+module
+
+public import IntegrationSection6.ElementaryIsomorphism
+public import IntegrationSection6.Subobjects
+
+@[expose] public section
 
 /-! Elementary blowups commute with definable partition into subobjects. -/
 

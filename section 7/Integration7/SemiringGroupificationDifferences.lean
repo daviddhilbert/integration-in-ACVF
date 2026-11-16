@@ -1,5 +1,9 @@
-import Integration7.SemiringGroupification
-import Mathlib.Tactic.NoncommRing
+module
+
+public import Integration7.SemiringGroupification
+public import Mathlib.Tactic.NoncommRing
+
+@[expose] public section
 noncomputable section
 namespace IntegrationInACVF.Section7
 universe u v

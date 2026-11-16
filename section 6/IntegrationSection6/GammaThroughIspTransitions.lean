@@ -1,6 +1,10 @@
-import IntegrationSection6.FiniteNonzeroIntegration
-import IntegrationSection6.GammaNonzeroThroughTransitions
-import IntegrationSection6.GammaIspPadding
+module
+
+public import IntegrationSection6.FiniteNonzeroIntegration
+public import IntegrationSection6.GammaNonzeroThroughTransitions
+public import IntegrationSection6.GammaIspPadding
+
+@[expose] public section
 
 /-! The nonzero-coordinate filtered form of fixed-degree integration. -/
 noncomputable section

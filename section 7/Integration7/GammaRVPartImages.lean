@@ -1,4 +1,8 @@
-import Integration7.GammaRVParameterSelections
+module
+
+public import Integration7.GammaRVParameterSelections
+
+@[expose] public section
 
 /-! A definable union of whole parameter fibres is selected by its
 actual RV image. This converts definable geometric cases into actual

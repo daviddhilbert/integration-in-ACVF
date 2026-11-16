@@ -1,4 +1,8 @@
-import Integration7.MixedVFProductCharts
+module
+
+public import Integration7.MixedVFProductCharts
+
+@[expose] public section
 
 /-! The actual mixed Jacobian of a Cartesian product map is the
 product of the original two mixed Jacobians, with the original VF order. -/

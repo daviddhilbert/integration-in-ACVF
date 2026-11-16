@@ -1,6 +1,10 @@
-import Integration7.GammaTermClosureRVMaps
-import Integration7.GammaVolumeBlowupAddition
-import Integration7.VolumeBlowupRescaling
+module
+
+public import Integration7.GammaTermClosureRVMaps
+public import Integration7.GammaVolumeBlowupAddition
+public import Integration7.VolumeBlowupRescaling
+
+@[expose] public section
 
 /-! Simultaneous density rescaling by an original-base term constant
 retains all original-Gamma geometric common-blowup data. -/

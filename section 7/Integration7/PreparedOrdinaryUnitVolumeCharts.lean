@@ -1,6 +1,10 @@
-import Integration7.ContractionRetainedUnitLabels
-import Integration7.GammaUnitCoordinateDensityCharts
-import Integration7.GammaUnitEmptyVolumeBlockSwaps
+module
+
+public import Integration7.ContractionRetainedUnitLabels
+public import Integration7.GammaUnitCoordinateDensityCharts
+public import Integration7.GammaUnitEmptyVolumeBlockSwaps
+
+@[expose] public section
 
 /-! The prepared ordinary indexed object with a retained unit label
 is exactly the literal unit-density object, including its Gamma chart. -/

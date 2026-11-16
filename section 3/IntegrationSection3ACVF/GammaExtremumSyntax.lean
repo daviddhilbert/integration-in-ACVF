@@ -1,5 +1,9 @@
-import IntegrationSection3ACVF.GammaFunctionSyntax
-import IntegrationSection3ACVF.OrderedLocalExtrema
+module
+
+public import IntegrationSection3ACVF.GammaFunctionSyntax
+public import IntegrationSection3ACVF.OrderedLocalExtrema
+
+@[expose] public section
 
 /-! Definability of strict local extrema on the actual Gamma input.
 The ordered output is arbitrary; reversing it also covers local maxima. -/

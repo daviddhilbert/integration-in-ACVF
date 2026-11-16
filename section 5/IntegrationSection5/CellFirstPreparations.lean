@@ -1,5 +1,9 @@
-import IntegrationSection5.PositionedStripPreparation
-import IntegrationSection5.CellStripNormalForms
+module
+
+public import IntegrationSection5.PositionedStripPreparation
+public import IntegrationSection5.CellStripNormalForms
+
+@[expose] public section
 
 /-! Constructed first stages in both coordinate orders for actual balanced
 cells and for zero-paradigm cells with bijective positioning. -/

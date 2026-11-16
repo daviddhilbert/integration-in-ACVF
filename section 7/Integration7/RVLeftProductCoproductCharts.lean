@@ -1,4 +1,8 @@
-import Integration7.RVProductCoproductCharts
+module
+
+public import Integration7.RVProductCoproductCharts
+
+@[expose] public section
 
 /-! Explicit left distributivity without exchanging volume coordinates. -/
 

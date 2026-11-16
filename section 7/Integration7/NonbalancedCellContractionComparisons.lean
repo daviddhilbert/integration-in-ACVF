@@ -1,8 +1,12 @@
-import Integration7.PresentedRectangleComparisons
-import Integration7.NonbalancedCellRectangleFactorizations
-import Integration7.FixedLabelContractionConstantDensities
-import Integration7.FixedLabelSameOrderComparisons
-import Integration7.VolumeContextJoins
+module
+
+public import Integration7.PresentedRectangleComparisons
+public import Integration7.NonbalancedCellRectangleFactorizations
+public import Integration7.FixedLabelContractionConstantDensities
+public import Integration7.FixedLabelSameOrderComparisons
+public import Integration7.VolumeContextJoins
+
+@[expose] public section
 
 /-! The nonbalanced two-dimensional cell case of Lemma7.7 for arbitrary
 specified opposite-order contractions, on the actual retained-density

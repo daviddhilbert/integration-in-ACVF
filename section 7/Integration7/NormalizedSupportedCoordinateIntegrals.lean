@@ -1,4 +1,8 @@
-import Integration7.NormalizedCoordinateSupportPreservation
+module
+
+public import Integration7.NormalizedCoordinateSupportPreservation
+
+@[expose] public section
 
 /-! Coordinate integration on the supported normalized function spaces.
 The target is the literal projected support and forgetting support

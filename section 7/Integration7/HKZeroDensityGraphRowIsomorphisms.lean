@@ -1,7 +1,11 @@
-import Integration7.HKZeroFamilyRowIsomorphisms
-import Integration7.HKZeroFamilyHeadIntegrals
-import Integration7.HKWeightedPointIsomorphismCongruence
-import IntegrationSection6.VFParameterFibreIsomorphisms
+module
+
+public import Integration7.HKZeroFamilyRowIsomorphisms
+public import Integration7.HKZeroFamilyHeadIntegrals
+public import Integration7.HKWeightedPointIsomorphismCongruence
+public import IntegrationSection6.VFParameterFibreIsomorphisms
+
+@[expose] public section
 
 /-! Exact weighted zero row isomorphisms lift to isomorphisms of their
 actual density graphs, preserving the appended density coordinate. -/

@@ -1,4 +1,8 @@
-import Integration7.VFVolumeBijections
+module
+
+public import Integration7.VFVolumeBijections
+
+@[expose] public section
 
 /-! Composition and inversion of the actual volume equation on arbitrary
 raw mixed domains, before imposing the finite-label object condition. -/

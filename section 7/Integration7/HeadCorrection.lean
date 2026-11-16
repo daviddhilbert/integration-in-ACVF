@@ -1,6 +1,10 @@
-import Integration7.BlowupHeadIsomorphism
-import Integration7.BlowupCorrection
-import Integration7.GammaAbsoluteValues
+module
+
+public import Integration7.BlowupHeadIsomorphism
+public import Integration7.BlowupCorrection
+public import Integration7.GammaAbsoluteValues
+
+@[expose] public section
 set_option backward.isDefEq.respectTransparency false
 open FirstOrder FirstOrder.Language CategoryTheory
 open SpecialTransformations.Milestone0 SpecialTransformations.Milestone0.LRV

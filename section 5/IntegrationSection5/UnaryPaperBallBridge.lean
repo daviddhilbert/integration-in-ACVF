@@ -1,5 +1,9 @@
-import IntegrationSection5.UnaryCellEquivalence
-import IntegrationSection3ACVF.PaperBalls
+module
+
+public import IntegrationSection5.UnaryCellEquivalence
+public import IntegrationSection3ACVF.PaperBalls
+
+@[expose] public section
 
 /-! Ordinary unary polydiscs and the sequel's paper-open ball convention.
 Within an RV cell the whole-field alternative is excluded explicitly. -/

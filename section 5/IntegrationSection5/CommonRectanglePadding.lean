@@ -1,6 +1,10 @@
-import IntegrationSection5.SharedProductFirst
-import IntegrationSection5.HeadProjectionFromFactor
-import IntegrationSection5.CommonRectangleKernels
+module
+
+public import IntegrationSection5.SharedProductFirst
+public import IntegrationSection5.HeadProjectionFromFactor
+public import IntegrationSection5.CommonRectangleKernels
+
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option allowUnsafeReducibility true in

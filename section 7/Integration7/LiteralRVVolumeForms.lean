@@ -1,6 +1,10 @@
-import Integration7.LiteralVolumeLiftMaps
-import Integration7.VFVolumeParameterExtension
-import IntegrationSection6.FiniteRVParameterExtension
+module
+
+public import Integration7.LiteralVolumeLiftMaps
+public import Integration7.VFVolumeParameterExtension
+public import IntegrationSection6.FiniteRVParameterExtension
+
+@[expose] public section
 
 /-! A source RV density on its literal VF presentation, retaining the
 density label and the exact form through a real parameter extension. -/

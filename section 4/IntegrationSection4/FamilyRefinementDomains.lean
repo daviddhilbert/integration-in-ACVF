@@ -1,4 +1,8 @@
-import IntegrationSection4.FamilyPositionRefinement
+module
+
+public import IntegrationSection4.FamilyPositionRefinement
+
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

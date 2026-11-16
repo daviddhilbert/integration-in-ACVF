@@ -1,6 +1,10 @@
-import IntegrationSection5.FixedVFFiniteImage
-import IntegrationSection5.ScalarCoordinateRefinement
-import IntegrationSection5.RVContractionMaps
+module
+
+public import IntegrationSection5.FixedVFFiniteImage
+public import IntegrationSection5.ScalarCoordinateRefinement
+public import IntegrationSection5.RVContractionMaps
+
+@[expose] public section
 
 /-! Finite output volumes for the actual contraction of a mixed map in
 arbitrary VF arity. The proof fixes one representative of the input RV

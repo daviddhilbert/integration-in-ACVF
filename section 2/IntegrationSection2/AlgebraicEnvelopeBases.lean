@@ -1,6 +1,10 @@
-import Mathlib.FieldTheory.AlgebraicClosure
-import Mathlib.FieldTheory.Galois.Basic
-import Mathlib.FieldTheory.Perfect
+module
+
+public import Mathlib.FieldTheory.AlgebraicClosure
+public import Mathlib.FieldTheory.Galois.Basic
+public import Mathlib.FieldTheory.Perfect
+
+@[expose] public section
 
 /-! Algebraic and Galois base transport inside an actual algebraic
 envelope. The new base is an actual comap subfield of that envelope. -/

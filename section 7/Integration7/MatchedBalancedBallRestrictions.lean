@@ -1,5 +1,9 @@
-import Integration7.PreparedBallRectangleGeometry
-import IntegrationSection4.TranslatedRVGeometry
+module
+
+public import Integration7.PreparedBallRectangleGeometry
+public import IntegrationSection4.TranslatedRVGeometry
+
+@[expose] public section
 
 /-! Restricting a balanced relation to a matching positioning ball
 retains its complete vertical and horizontal RV fibres whenever that
