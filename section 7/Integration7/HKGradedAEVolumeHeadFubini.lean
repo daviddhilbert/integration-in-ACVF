@@ -1,4 +1,10 @@
-import Integration7.HKAEVolumeComponentHeadIntegrals
+module
+
+public import Integration7.HKAEVolumeComponentHeadIntegrals
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual weighted-zero and positive homogeneous head maps assemble
 into an additive operator on all finite graded functions and satisfy Fubini. -/

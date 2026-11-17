@@ -1,6 +1,12 @@
-import IntegrationSection6.GammaSelectedLabelFibrePresentations
-import IntegrationSection6.GammaSwappedVolumes
-import IntegrationSection6.GammaVolumeSliceLiftCarriers
+module
+
+public import IntegrationSection6.GammaSelectedLabelFibrePresentations
+public import IntegrationSection6.GammaSwappedVolumes
+public import IntegrationSection6.GammaVolumeSliceLiftCarriers
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual selected-volume fibre presentations have literal slice lifts.
 Both blocks of selected old labels are retained, in the specified order. -/

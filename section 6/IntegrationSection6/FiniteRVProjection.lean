@@ -1,4 +1,10 @@
-import IntegrationSection6.FiniteRVGeometry
+module
+
+public import IntegrationSection6.FiniteRVGeometry
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Remark6.2 as a morphism inside RV[k]. The actual definable projection
 restricts to the inherited finite-volume full subcategory. -/

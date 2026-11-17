@@ -1,4 +1,10 @@
-import IntegrationSection3ACVF.FullBaseDefinability
+module
+
+public import IntegrationSection3ACVF.FullBaseDefinability
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Boolean closure of actual full-base relations, with all free labels retained. -/
 

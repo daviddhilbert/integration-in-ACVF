@@ -1,5 +1,11 @@
-import IntegrationSection6.FiniteSelectedContractionSlices
-import IntegrationSection6.GammaPreparedSelectedSliceIsomorphisms
+module
+
+public import IntegrationSection6.FiniteSelectedContractionSlices
+public import IntegrationSection6.GammaPreparedSelectedSliceIsomorphisms
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Point values of the selected-slice lift charts. Membership transports
 leave every underlying point unchanged; the contraction and prepared maps

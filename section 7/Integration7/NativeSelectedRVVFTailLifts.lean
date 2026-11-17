@@ -1,7 +1,13 @@
-import Integration7.SelectedRVVFTailLifts
-import Integration7.NativeVolumeDomains
-import Integration7.NativeVolumeMapRealization
-import Integration7.GammaMixedCoordinatePredicates
+module
+
+public import Integration7.SelectedRVVFTailLifts
+public import Integration7.NativeVolumeDomains
+public import Integration7.NativeVolumeMapRealization
+public import Integration7.GammaMixedCoordinatePredicates
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Native presentations of selected-label VF tail lifts retain the
 original Gamma base and require no additional real or Gamma names. -/

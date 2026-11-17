@@ -1,6 +1,12 @@
-import Integration7.TwoOrderProductCommonNameEssentialDomains
-import Integration7.TwoOrderProductNormalization
-import Integration7.GammaRVCommonNames
+module
+
+public import Integration7.TwoOrderProductCommonNameEssentialDomains
+public import Integration7.TwoOrderProductNormalization
+public import Integration7.GammaRVCommonNames
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The constructed normalized volume comparison descends to the fixed
 common-name presentation. The underlying point sets, coordinate selectors

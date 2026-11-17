@@ -1,12 +1,18 @@
-import Integration7.UnaryVolumeComparisonFromPreparation
-import Integration7.PreparedFamilyVolumeUniformityContexts
-import Integration7.SelectedContractionExtensionVolumeIso
-import Integration7.GammaVFPreparedVolumeUniformity
-import Integration7.PreparedVolumeDensityRows
-import Integration7.IndexedVolumeCoordinateDensityIso
-import Integration7.GammaUnaryVolumeBlockSwap
-import Integration7.BlowupParameterExtension
-import IntegrationSection6.GammaUnaryPreparedContractionComparison
+module
+
+public import Integration7.UnaryVolumeComparisonFromPreparation
+public import Integration7.PreparedFamilyVolumeUniformityContexts
+public import Integration7.SelectedContractionExtensionVolumeIso
+public import Integration7.GammaVFPreparedVolumeUniformity
+public import Integration7.PreparedVolumeDensityRows
+public import Integration7.IndexedVolumeCoordinateDensityIso
+public import Integration7.GammaUnaryVolumeBlockSwap
+public import Integration7.BlowupParameterExtension
+public import IntegrationSection6.GammaUnaryPreparedContractionComparison
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The unary positive selected-family comparison over an arbitrary
 real/Gamma base. A common preparation is constructed in a genuine small

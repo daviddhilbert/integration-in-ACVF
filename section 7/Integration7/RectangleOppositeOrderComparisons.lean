@@ -1,7 +1,13 @@
-import Integration7.TwoOrderRectangleVolumeComparisons
-import Integration7.FixedLabelContractionConstantDensities
-import Integration7.FixedLabelSameOrderComparisons
-import Integration7.VolumeContextJoins
+module
+
+public import Integration7.TwoOrderRectangleVolumeComparisons
+public import Integration7.FixedLabelContractionConstantDensities
+public import Integration7.FixedLabelSameOrderComparisons
+public import Integration7.VolumeContextJoins
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The rectangle case of Lemma7.7 for arbitrary specified contractions
 in opposite orders, on the actual retained-density normalized objects. -/

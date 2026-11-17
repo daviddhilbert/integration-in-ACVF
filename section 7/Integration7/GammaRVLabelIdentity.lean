@@ -1,7 +1,13 @@
-import Integration7.GammaEssentialVolumeGraphs
-import Section5.GammaInvariantLogic
-import IntegrationSection6.GammaRVGlobalRestriction
-import Section4.RVTagging
+module
+
+public import Integration7.GammaEssentialVolumeGraphs
+public import Section5.GammaInvariantLogic
+public import IntegrationSection6.GammaRVGlobalRestriction
+public import Section4.RVTagging
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Equality of proper RV label tuples is definable over every original
 Gamma base, including the empty tuple. -/

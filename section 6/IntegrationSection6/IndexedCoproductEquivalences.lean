@@ -1,6 +1,12 @@
-import IntegrationSection6.GammaGraphCoproducts
-import IntegrationSection6.IndexedEquivalences
-import Mathlib.Logic.Equiv.Sum
+module
+
+public import IntegrationSection6.GammaGraphCoproducts
+public import IntegrationSection6.IndexedEquivalences
+public import Mathlib.Logic.Equiv.Sum
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Explicit label equivalences for indexed tagged coproducts. Indexed
 sums distribute over the two native RV tags, with parameters retained in

@@ -1,5 +1,11 @@
-import IntegrationSection5.StandardContractionGammaNormalization
-import IntegrationSection6.GammaRVGlobalRestriction
+module
+
+public import IntegrationSection5.StandardContractionGammaNormalization
+public import IntegrationSection6.GammaRVGlobalRestriction
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Original-Gamma certificates for the unnormalized actual final RV
 labels of a standard contraction. Its volume selector is explicit. -/

@@ -1,4 +1,10 @@
-import Integration7.VolumeCoordinateProjectionOrders
+module
+
+public import Integration7.VolumeCoordinateProjectionOrders
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Every nonempty coordinate subset gives a positive retained-arity
 projection, retaining exactly the subset's actual coordinate indices. -/

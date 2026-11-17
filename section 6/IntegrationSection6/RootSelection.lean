@@ -1,6 +1,12 @@
-import IntegrationSection6.FocusRootDomains
-import Section5.PullbackLift
-import Section4.FunctionalRelations
+module
+
+public import IntegrationSection6.FocusRootDomains
+public import Section5.PullbackLift
+public import Section4.FunctionalRelations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A full-graph definable selector from a root set valid on whole RV fibres.
 This uses uniqueness, not definable choice for arbitrary finite fibres. -/

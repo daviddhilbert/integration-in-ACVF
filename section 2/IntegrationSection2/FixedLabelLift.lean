@@ -1,9 +1,15 @@
-import Section4.LiftFibres
-import Section4.MapCorestrict
-import Section4.RVWeightRestriction
-import Section9.LiftLabelRepresentatives
-import Section9.MixedJacobian
-import Section3.SmallFiniteParameters
+module
+
+public import Section4.LiftFibres
+public import Section4.MapCorestrict
+public import Section4.RVWeightRestriction
+public import Section9.LiftLabelRepresentatives
+public import Section9.MixedJacobian
+public import Section3.SmallFiniteParameters
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Restriction of an actual lifted bijection to any one RV label.
 Only the finitely many source and target label coordinates are named.

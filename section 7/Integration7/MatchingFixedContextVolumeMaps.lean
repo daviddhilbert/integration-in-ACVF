@@ -1,5 +1,11 @@
-import Integration7.PreparedRectangleVolumeConjugates
-import Integration7.MatchingPreparedNonzeroFibres
+module
+
+public import Integration7.PreparedRectangleVolumeConjugates
+public import Integration7.MatchingPreparedNonzeroFibres
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual two matching translations, presented in the original
 small context used by both full preparations. Re-presentation keeps

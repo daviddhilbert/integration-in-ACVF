@@ -1,6 +1,12 @@
-import IntegrationSection5.UnaryBijectionPreparation
-import IntegrationSection6.GammaFieldBaseReduction
-import IntegrationSection6.GammaSpecialBaseReduction
+module
+
+public import IntegrationSection5.UnaryBijectionPreparation
+public import IntegrationSection6.GammaFieldBaseReduction
+public import IntegrationSection6.GammaSpecialBaseReduction
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Compatible unary preparation over an arbitrary small original base
 in an uncountably saturated model. Generated VF field names are used

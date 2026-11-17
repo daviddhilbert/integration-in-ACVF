@@ -1,5 +1,11 @@
-import IntegrationSection5.CanonicalTranslationPreparation
-import IntegrationSection5.PositionedStripPreparation
+module
+
+public import IntegrationSection5.CanonicalTranslationPreparation
+public import IntegrationSection5.PositionedStripPreparation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Construct actual head preparations for mixed positioned strips, retaining the old head tag and every existing RV label. -/
 noncomputable section

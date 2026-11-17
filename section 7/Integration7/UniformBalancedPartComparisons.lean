@@ -1,6 +1,12 @@
-import Integration7.BalancedGraphFamilyAllOrderComparisons
-import Integration7.SelectedBalancedParadigms
-import Integration7.NativeCellFamilyPartitionDomains
+module
+
+public import Integration7.BalancedGraphFamilyAllOrderComparisons
+public import Integration7.SelectedBalancedParadigms
+public import Integration7.NativeCellFamilyPartitionDomains
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual balanced part of the original cell-family partition
 has the whole all-order volume comparison. Its balanced rows and

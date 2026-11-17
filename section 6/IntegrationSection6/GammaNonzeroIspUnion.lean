@@ -1,7 +1,13 @@
-import IntegrationSection6.GammaThroughIspTransitions
-import IntegrationSection6.GammaNonzeroQuotientLift
-import IntegrationSection6.GammaNonzeroThroughTransitions
-import IntegrationSection6.GammaIspPadding
+module
+
+public import IntegrationSection6.GammaThroughIspTransitions
+public import IntegrationSection6.GammaNonzeroQuotientLift
+public import IntegrationSection6.GammaNonzeroThroughTransitions
+public import IntegrationSection6.GammaIspPadding
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The nonzero-coordinate filtered form of fixed-degree integration. -/
 noncomputable section

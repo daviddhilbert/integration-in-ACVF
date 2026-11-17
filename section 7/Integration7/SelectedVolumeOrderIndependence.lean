@@ -1,5 +1,11 @@
-import Integration7.SelectedSameOrderStandardVolumeComparison
-import Integration7.SelectedFirstTwoStandardVolumeExchange
+module
+
+public import Integration7.SelectedSameOrderStandardVolumeComparison
+public import Integration7.SelectedFirstTwoStandardVolumeExchange
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The all-order comparison property on actual selected-volume objects.
 Only positive VF arities are needed; a contracted first head supplies

@@ -1,8 +1,14 @@
-import Integration7.HKAEZeroHeadFubini
-import Integration7.HKAEZeroHeadIntegralAdditivity
-import Integration7.AERVVolumeHeadIntegralAdditivity
-import Integration7.AppendedVolumeHeadFubini
-import Integration7.HKGradedAEVolumeIntegralAddHoms
+module
+
+public import Integration7.HKAEZeroHeadFubini
+public import Integration7.HKAEZeroHeadIntegralAdditivity
+public import Integration7.AERVVolumeHeadIntegralAdditivity
+public import Integration7.AppendedVolumeHeadFubini
+public import Integration7.HKGradedAEVolumeIntegralAddHoms
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! First-head integration raises every homogeneous coefficient degree
 by one, including weighted degree zero. Each component satisfies Fubini. -/

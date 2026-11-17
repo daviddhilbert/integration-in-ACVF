@@ -1,5 +1,11 @@
-import Integration7.ZeroVolumeIntegration
-import Integration7.PositiveVFVolumeAdditiveStructure
+module
+
+public import Integration7.ZeroVolumeIntegration
+public import Integration7.PositiveVFVolumeAdditiveStructure
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual VF volume isomorphism classes in all degrees, including the
 ordinary degree-zero category. Additive structures are supplied explicitly. -/

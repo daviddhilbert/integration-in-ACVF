@@ -1,5 +1,11 @@
-import Integration7.AEOrdinaryRVVolumeFunctions
-import Integration7.OrdinaryZeroVolumeFamilies
+module
+
+public import Integration7.AEOrdinaryRVVolumeFunctions
+public import Integration7.OrdinaryZeroVolumeFamilies
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual pointwise addition of ordinary RV[0]-valued functions
 descends through the union of the two VF-small exceptional sets. -/

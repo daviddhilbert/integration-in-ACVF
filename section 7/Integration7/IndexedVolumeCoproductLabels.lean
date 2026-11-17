@@ -1,8 +1,14 @@
-import Integration7.IndexedVolumeRowSemantics
-import Integration7.GammaVolumeCoproductFormulas
-import Integration7.NormalizedRVTags
-import Integration7.VolumeCoproduct
-import IntegrationSection6.GammaIndexedCoproductGraphs
+module
+
+public import Integration7.IndexedVolumeRowSemantics
+public import Integration7.GammaVolumeCoproductFormulas
+public import Integration7.NormalizedRVTags
+public import Integration7.VolumeCoproduct
+public import IntegrationSection6.GammaIndexedCoproductGraphs
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual indexed coproduct labels distribute the index tuple
 through the two tags. The complete graph remains original-Gamma definable. -/

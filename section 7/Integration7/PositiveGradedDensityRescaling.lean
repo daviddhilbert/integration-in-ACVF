@@ -1,7 +1,13 @@
-import Integration7.AERVVolumeDensityRescalingLinearity
-import Integration7.GradedAEVolumeActionCoherence
-import Integration7.GradedSemiringActionShifts
-import Integration7.GradedSemiringActionLinearMaps
+module
+
+public import Integration7.AERVVolumeDensityRescalingLinearity
+public import Integration7.GradedAEVolumeActionCoherence
+public import Integration7.GradedSemiringActionShifts
+public import Integration7.GradedSemiringActionLinearMaps
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Positive homogeneous AE functions assemble into their genuine raw
 module over every coefficient degree. Named density rescaling is linear

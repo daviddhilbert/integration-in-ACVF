@@ -1,5 +1,11 @@
-import Integration7.RVLabelCutMaps
-import IntegrationSection6.GammaHeadFibreLiftMaps
+module
+
+public import Integration7.RVLabelCutMaps
+public import IntegrationSection6.GammaHeadFibreLiftMaps
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual head preparations restrict to arbitrary original-Gamma
 old-label predicates. The head tag and all passive VF coordinates remain

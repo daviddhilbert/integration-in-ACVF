@@ -1,4 +1,10 @@
-import IntegrationSection6.GammaFiniteObjectSchemata
+module
+
+public import IntegrationSection6.GammaFiniteObjectSchemata
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Project volume graphs in an original-Gamma tuple family without
 changing its parameter base. -/

@@ -1,5 +1,11 @@
-import IntegrationSection6.CanonicalImageLift
-import IntegrationSection6.VolumePreservingLift
+module
+
+public import IntegrationSection6.CanonicalImageLift
+public import IntegrationSection6.VolumePreservingLift
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Lift relabelings in the actual special-bijection presentation. -/
 noncomputable section

@@ -1,6 +1,12 @@
-import Integration7.EssentialVolumeProducts
-import Integration7.PolynomialTangentCoordinatePairs
-import Section4.RVProductSymmetry
+module
+
+public import Integration7.EssentialVolumeProducts
+public import Integration7.PolynomialTangentCoordinatePairs
+public import Section4.RVProductSymmetry
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual product map of two positive volume isomorphisms, using
 the essential charts. Its volume equations are checked separately. -/

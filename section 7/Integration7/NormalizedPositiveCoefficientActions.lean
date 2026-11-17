@@ -1,4 +1,10 @@
-import Integration7.NormalizedPositiveFunctionGeneration
+module
+
+public import Integration7.NormalizedPositiveFunctionGeneration
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual positive coefficient action has the scalar-extension
 meaning on normalized positive function generators. -/

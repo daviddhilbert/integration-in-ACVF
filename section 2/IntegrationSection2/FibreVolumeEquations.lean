@@ -1,5 +1,11 @@
-import IntegrationSection2.ConcreteVolumeForms
-import IntegrationSection2.FixedLabelLift
+module
+
+public import IntegrationSection2.ConcreteVolumeForms
+public import IntegrationSection2.FixedLabelLift
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! On a fixed label fibre the two lifted forms are constant, so the
 measure equation fixes the actual RV class of the VF Jacobian. -/

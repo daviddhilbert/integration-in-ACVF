@@ -1,5 +1,11 @@
-import Integration7.HKConstrainedBijectionCharts
-import IntegrationSection6.GammaPreparedFormulaDescent
+module
+
+public import Integration7.HKConstrainedBijectionCharts
+public import IntegrationSection6.GammaPreparedFormulaDescent
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Exact retained-density equality is a sorted original-base constraint.
 Prepared RV recoding keeps it on every represented chart. -/

@@ -1,7 +1,13 @@
-import IntegrationSection6.RVLabelSlices
-import IntegrationSection6.PointMapEqualityTransport
-import IntegrationSection6.RelativeSpecialSourceRestriction
-import IntegrationSection6.GammaSourceMapRestrictions
+module
+
+public import IntegrationSection6.RVLabelSlices
+public import IntegrationSection6.PointMapEqualityTransport
+public import IntegrationSection6.RelativeSpecialSourceRestriction
+public import IntegrationSection6.GammaSourceMapRestrictions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual label-preserving bijections restrict to fixed RV-label slices,
 retaining relative specialness and the full original-Gamma graph. -/

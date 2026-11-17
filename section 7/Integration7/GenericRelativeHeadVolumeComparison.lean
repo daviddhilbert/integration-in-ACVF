@@ -1,5 +1,11 @@
-import Integration7.RelativeHeadVolumeExceptionalFamilies
-import Integration7.GenericCoordinateFibreDimension
+module
+
+public import Integration7.RelativeHeadVolumeExceptionalFamilies
+public import Integration7.GenericCoordinateFibreDimension
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Global measure preservation compares the chosen head contractions over
 every VF tuple independent over the original context. -/

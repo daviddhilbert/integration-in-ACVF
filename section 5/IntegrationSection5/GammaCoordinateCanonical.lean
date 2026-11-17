@@ -1,6 +1,12 @@
-import IntegrationSection5.CoordinateCanonicalFibre
-import IntegrationSection5.GammaGraphOperations
-import Section5.GammaLift
+module
+
+public import IntegrationSection5.CoordinateCanonicalFibre
+public import IntegrationSection5.GammaGraphOperations
+public import Section5.GammaLift
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Complete original-Gamma graphs for one-coordinate canonical maps. -/
 noncomputable section

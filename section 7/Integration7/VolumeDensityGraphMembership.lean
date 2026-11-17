@@ -1,4 +1,10 @@
-import Integration7.VolumeDensityGraphs
+module
+
+public import Integration7.VolumeDensityGraphs
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Membership in the actual density graph, expressed using its retained
 old labels and final density label. -/

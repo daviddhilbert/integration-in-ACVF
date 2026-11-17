@@ -1,4 +1,10 @@
-import Integration7.AERVVolumeFunctionAddition
+module
+
+public import Integration7.AERVVolumeFunctionAddition
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual pointwise addition of positive homogeneous definable
 volume functions gives an additive commutative monoid on the paper's

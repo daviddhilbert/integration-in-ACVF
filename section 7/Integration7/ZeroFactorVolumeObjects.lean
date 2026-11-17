@@ -1,6 +1,12 @@
-import Integration7.GradedVolumeProducts
-import Integration7.VolumeProductPointwise
-import Section4.RVReindexing
+module
+
+public import Integration7.GradedVolumeProducts
+public import Integration7.VolumeProductPointwise
+public import Section4.RVReindexing
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Products with ordinary RV[0] retain exactly the positive factor's
 coordinates and density. No density is assigned to a degree-zero object. -/

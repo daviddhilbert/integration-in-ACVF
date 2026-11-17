@@ -1,8 +1,14 @@
-import Integration7.VolumePartition
-import Integration7.VolumeRestrictionIdentifications
-import Integration7.VolumeCoproductIsomorphism
-import Integration7.RVVolumeComposition
-import Integration7.RVVolumeInverse
+module
+
+public import Integration7.VolumePartition
+public import Integration7.VolumeRestrictionIdentifications
+public import Integration7.VolumeCoproductIsomorphism
+public import Integration7.RVVolumeComposition
+public import Integration7.RVVolumeInverse
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Any two definable disjoint pieces covering an actual volume object
 give its coordinate- and density-preserving coproduct partition. -/

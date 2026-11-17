@@ -1,7 +1,13 @@
-import IntegrationSection5.CentripetalRelativeBoundary
-import IntegrationSection5.CoordinateCanonicalProjection
-import IntegrationSection5.HullTranslationFocus
-import IntegrationSection5.ScalarCentreMaps
+module
+
+public import IntegrationSection5.CentripetalRelativeBoundary
+public import IntegrationSection5.CoordinateCanonicalProjection
+public import IntegrationSection5.HullTranslationFocus
+public import IntegrationSection5.ScalarCentreMaps
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! An actual coordinate-canonical step followed by the constructed hull
 focus, with legal fibre-special alternation and complete original-Gamma graphs. -/

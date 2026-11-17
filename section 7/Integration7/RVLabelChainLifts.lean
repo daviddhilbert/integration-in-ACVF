@@ -1,4 +1,10 @@
-import Integration7.RVLabelFocusLifts
+module
+
+public import Integration7.RVLabelFocusLifts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual alternating special chains lift while carrying extra RV
 labels. The projected old labels together with the carried labels still

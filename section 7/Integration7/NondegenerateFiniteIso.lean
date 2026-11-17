@@ -1,4 +1,10 @@
-import Integration7.FiniteVolumeIsoMaps
+module
+
+public import Integration7.FiniteVolumeIsoMaps
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A definable bijection of nondegenerate finite-volume objects is an
 ordinary RV isomorphism. Volume compatibility remains a separate condition. -/

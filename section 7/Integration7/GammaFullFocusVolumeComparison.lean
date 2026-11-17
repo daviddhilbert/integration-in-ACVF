@@ -1,7 +1,13 @@
-import Integration7.CanonicalGammaElementaryObjects
-import Integration7.GammaVolumeFullChartRestriction
-import Integration7.PullbackCoordinateVolumeObjects
-import IntegrationSection6.FiniteGammaFocusCharts
+module
+
+public import Integration7.CanonicalGammaElementaryObjects
+public import Integration7.GammaVolumeFullChartRestriction
+public import Integration7.PullbackCoordinateVolumeObjects
+public import IntegrationSection6.FiniteGammaFocusCharts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! An original-Gamma full focus gives an actual volume isomorphism to
 the canonical elementary volume object, with unchanged old-label density. -/

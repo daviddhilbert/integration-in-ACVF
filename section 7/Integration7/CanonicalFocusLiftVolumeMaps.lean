@@ -1,8 +1,14 @@
-import Integration7.LiteralVolumeLiftMaps
-import Integration7.MixedJacobianOneOperations
-import Integration7.SpecialVolumeJacobians
-import IntegrationSection6.CanonicalFocusDiagram
-import IntegrationSection5.RelativeLabelPreservation
+module
+
+public import Integration7.LiteralVolumeLiftMaps
+public import Integration7.MixedJacobianOneOperations
+public import Integration7.SpecialVolumeJacobians
+public import IntegrationSection6.CanonicalFocusDiagram
+public import IntegrationSection5.RelativeLabelPreservation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual special-focus lift of an elementary blowup has Jacobian
 one and preserves every original RV label. Its density equation therefore

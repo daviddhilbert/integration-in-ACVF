@@ -1,5 +1,11 @@
-import IntegrationSection4.PreparedRefinementFibres
-import IntegrationSection4.PreparedBodyCells
+module
+
+public import IntegrationSection4.PreparedRefinementFibres
+public import IntegrationSection4.PreparedBodyCells
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

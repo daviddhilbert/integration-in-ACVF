@@ -1,6 +1,12 @@
-import IntegrationSection3ACVF.FullBaseAtomicity
-import IntegrationSection3.AffineHoleCosets
-import Section3.RingSyntax
+module
+
+public import IntegrationSection3ACVF.FullBaseAtomicity
+public import IntegrationSection3.AffineHoleCosets
+public import Section3.RingSyntax
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Natural affine arithmetic in the original VF, defined by LRV
 terms with no named integer, field point, or chosen ball representative. -/

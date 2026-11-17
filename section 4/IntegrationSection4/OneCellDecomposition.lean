@@ -1,7 +1,13 @@
-import IntegrationSection4.GammaOffsets
-import IntegrationSection4.SpecialRVFibres
-import IntegrationSection4.GammaDomainPreparation
-import IntegrationSection4.RVLabelSlices
+module
+
+public import IntegrationSection4.GammaOffsets
+public import IntegrationSection4.SpecialRVFibres
+public import IntegrationSection4.GammaDomainPreparation
+public import IntegrationSection4.RVLabelSlices
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

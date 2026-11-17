@@ -1,8 +1,14 @@
-import IntegrationSection6.FiniteGammaBlowups
-import IntegrationSection6.FiniteGammaFocusCharts
-import IntegrationSection6.FiniteGammaComplementCharts
-import IntegrationSection6.FiniteGammaPullbackPartitions
-import IntegrationSection6.FiniteGammaPartialFocus
+module
+
+public import IntegrationSection6.FiniteGammaBlowups
+public import IntegrationSection6.FiniteGammaFocusCharts
+public import IntegrationSection6.FiniteGammaComplementCharts
+public import IntegrationSection6.FiniteGammaPullbackPartitions
+public import IntegrationSection6.FiniteGammaPartialFocus
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A partial Gamma focus is one Gamma-certified genuine blowup in RV[k].
 Both partition charts and the active/complementary comparison graphs are

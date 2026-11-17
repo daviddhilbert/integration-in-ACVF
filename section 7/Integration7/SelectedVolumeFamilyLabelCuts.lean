@@ -1,6 +1,12 @@
-import Integration7.SelectedFamilyRestrictions
-import Integration7.GammaRVLabelCuts
-import Integration7.HeadFibreDensityGraphs
+module
+
+public import Integration7.SelectedFamilyRestrictions
+public import Integration7.GammaRVLabelCuts
+public import Integration7.HeadFibreDensityGraphs
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Old RV-label cuts of an actual selected family commute with its
 actual density graph. The original selected tuple and density are kept. -/

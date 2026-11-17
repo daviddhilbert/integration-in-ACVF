@@ -1,4 +1,10 @@
-import Integration7.FiniteVolumeParameterContexts
+module
+
+public import Integration7.FiniteVolumeParameterContexts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Two genuine small containing contexts admit a genuine common small
 containing context. Their model cardinal bounds may differ. -/

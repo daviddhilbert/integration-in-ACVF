@@ -1,8 +1,14 @@
-import Integration7.FiniteVolumeCoefficientFamilies
-import Integration7.HKZeroFamilyFiniteProductBijections
-import Integration7.HKZeroFamilyPositiveCoefficients
-import Integration7.OrdinaryFamilyPositiveCoefficientRows
-import Integration7.DefinableVolumeFamilySelectionRows
+module
+
+public import Integration7.FiniteVolumeCoefficientFamilies
+public import Integration7.HKZeroFamilyFiniteProductBijections
+public import Integration7.HKZeroFamilyPositiveCoefficients
+public import Integration7.OrdinaryFamilyPositiveCoefficientRows
+public import Integration7.DefinableVolumeFamilySelectionRows
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Deleting the functional density-graph label gives a genuine row bijection for a weighted-zero family times a positive coefficient. The original VF density determines the deleted label uniquely. -/
 noncomputable section

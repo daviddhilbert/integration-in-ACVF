@@ -1,5 +1,11 @@
-import IntegrationSection6.GammaSelectedRVPresentations
-import IntegrationSection5.StandardContractionNormalization
+module
+
+public import IntegrationSection6.GammaSelectedRVPresentations
+public import IntegrationSection5.StandardContractionNormalization
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Exact label bijections from a finite presentation of a contraction's
 final pure-RV set to its native domain and its first-volume normalization. -/

@@ -1,5 +1,11 @@
-import Integration7.RVTupleProductTerms
-import Integration7.GammaDefinableTransforms
+module
+
+public import Integration7.RVTupleProductTerms
+public import Integration7.GammaDefinableTransforms
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A genuine first-order formula for equality of Gamma products on
 nonzero RV tuples. It uses the native valuation preorder and the actual

@@ -1,8 +1,14 @@
-import IntegrationSection6.ParameterExtension
-import IntegrationSection6.NormalizedPresentations
-import IntegrationSection6.LiftCarrierGeometry
-import IntegrationSection6.FiniteRVGeometry
-import Section5.ParameterExtension
+module
+
+public import IntegrationSection6.ParameterExtension
+public import IntegrationSection6.NormalizedPresentations
+public import IntegrationSection6.LiftCarrierGeometry
+public import IntegrationSection6.FiniteRVGeometry
+public import Section5.ParameterExtension
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Extending an internal real presentation retains the actual RV[k]
 object and literal lift carrier. This introduces no new original-Gamma names. -/

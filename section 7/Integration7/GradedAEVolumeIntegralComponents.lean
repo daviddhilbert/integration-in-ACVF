@@ -1,5 +1,11 @@
-import Integration7.GradedAEVolumeIntegralLinearMaps
-import Integration7.GradedAEVolumeActionCoherence
+module
+
+public import Integration7.GradedAEVolumeIntegralLinearMaps
+public import Integration7.GradedAEVolumeActionCoherence
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The assembled homogeneous integrals retain the genuine ordinary
 integral and coefficient-first positive integrals, with arithmetic casts

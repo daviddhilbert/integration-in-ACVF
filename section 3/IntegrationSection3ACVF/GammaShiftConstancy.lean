@@ -1,5 +1,11 @@
-import IntegrationSection3ACVF.FiniteControllerLocal
-import IntegrationSection3.FiniteImageContinuity
+module
+
+public import IntegrationSection3ACVF.FiniteControllerLocal
+public import IntegrationSection3.FiniteImageContinuity
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! An order isomorphism of open Gamma tails with finite shift range
 has constant shift when its shift fibres have finite order controllers.

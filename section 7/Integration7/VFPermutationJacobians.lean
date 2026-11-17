@@ -1,4 +1,10 @@
-import Section9.VFJacobian
+module
+
+public import Section9.VFJacobian
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Simultaneously permuting the input and output VF coordinates leaves
 the actual partial Jacobian unchanged. -/

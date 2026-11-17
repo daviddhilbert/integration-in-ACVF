@@ -1,5 +1,11 @@
-import IntegrationSection6.GammaVFAllFinitePresentation
-import IntegrationSection6.GammaVFScissorDomains
+module
+
+public import IntegrationSection6.GammaVFAllFinitePresentation
+public import IntegrationSection6.GammaVFScissorDomains
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Recover literal unions and intersections from the actual packed
 VF scissor relation in a common mixed arity. -/

@@ -1,4 +1,10 @@
-import IntegrationSection3ACVF.FullBaseDefinability
+module
+
+public import IntegrationSection3ACVF.FullBaseDefinability
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Real-base postcomposition of a map defined only on its given domain. -/
 

@@ -1,6 +1,12 @@
-import Integration7.GammaEssentialVolumeGraphs
-import Integration7.GammaRealRVMaps
-import Integration7.BlowupHeadIsomorphism
+module
+
+public import Integration7.GammaEssentialVolumeGraphs
+public import Integration7.GammaRealRVMaps
+public import Integration7.BlowupHeadIsomorphism
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Restricting to essential labels and projecting away the final
 volume coordinate retain the original Gamma coordinate graphs. -/

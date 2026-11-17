@@ -1,5 +1,11 @@
-import IntegrationSection6.PreparedPartitionImages
-import IntegrationSection6.GammaFiniteMixedUnions
+module
+
+public import IntegrationSection6.PreparedPartitionImages
+public import IntegrationSection6.GammaFiniteMixedUnions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Simultaneously prepare every piece of a finite Gamma partition.
 Each prepared piece is an actual RV-pullback, and is joined to its original

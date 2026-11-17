@@ -1,5 +1,11 @@
-import IntegrationSection4.DefinableDescent
-import Section5.TransformGeometry
+module
+
+public import IntegrationSection4.DefinableDescent
+public import Section5.TransformGeometry
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Lemma 4.1, real-parameter version. We reuse the predecessor's actual
 special bijections and difference-preservation theorem. No RV representatives

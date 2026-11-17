@@ -1,6 +1,12 @@
-import IntegrationSection5.GammaFullBaseBridge
-import IntegrationSection5.GammaGraphOperations
-import Section5.VerticalConstruction
+module
+
+public import IntegrationSection5.GammaFullBaseBridge
+public import IntegrationSection5.GammaGraphOperations
+public import Section5.VerticalConstruction
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Full-base tuple predicates and the invariant Gamma certificates describe
 the same original mixed point sets. Only the finite coordinate indexing changes. -/

@@ -1,10 +1,16 @@
+module
+
 /-
 Extracted from https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%205/Completed18FiniteBases.lean
 Original declaration namespaces and notices are retained.
 -/
-import IntegrationSection6.GeneratedBase.CellBaseTransfer
-import IntegrationSection6.VFParameterCoefficientBases
-import TypedModelMap
+public import IntegrationSection6.GeneratedBase.CellBaseTransfer
+public import IntegrationSection6.VFParameterCoefficientBases
+public import TypedModelMap
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Each original-Gamma formula uses a finite VF base and finitely many
 RV parameters. Taking definable closure of just the VF and Gamma names

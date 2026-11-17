@@ -1,6 +1,12 @@
-import Integration7.OrdinaryHeadFactorBoundary
-import Integration7.BlowupGammaUpperBounds
-import Integration7.VolumeBlowupClasses
+module
+
+public import Integration7.OrdinaryHeadFactorBoundary
+public import Integration7.BlowupGammaUpperBounds
+public import Integration7.VolumeBlowupClasses
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Absolute densities of actual degree-one points remain distinguished
 by common blowups. This is a semiring-level boundary, not a claim about

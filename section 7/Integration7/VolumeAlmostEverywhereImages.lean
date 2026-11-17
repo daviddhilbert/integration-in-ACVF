@@ -1,4 +1,10 @@
-import Integration7.VolumeAlmostEverywhere
+module
+
+public import Integration7.VolumeAlmostEverywhere
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 set_option backward.isDefEq.respectTransparency false
 noncomputable section

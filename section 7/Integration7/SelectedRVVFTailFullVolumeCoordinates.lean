@@ -1,7 +1,13 @@
-import Integration7.SelectedRVVFTailFullPrograms
-import Integration7.SelectedRVVFTailPartialSelectors
-import Integration7.PartialOrderedVolumeSelectors
-import Integration7.CanonicalSelectedTailVolumeCoordinates
+module
+
+public import Integration7.SelectedRVVFTailFullPrograms
+public import Integration7.SelectedRVVFTailPartialSelectors
+public import Integration7.PartialOrderedVolumeSelectors
+public import Integration7.CanonicalSelectedTailVolumeCoordinates
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The completed lifted contraction has exactly the original VF
 volume coordinates followed by the selected old RV coordinates. Its

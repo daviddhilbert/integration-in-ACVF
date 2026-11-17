@@ -1,4 +1,10 @@
-import IntegrationSection6.GammaPreparedRowAgreements
+module
+
+public import IntegrationSection6.GammaPreparedRowAgreements
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Exact primitive-row descent extends through every internal object and
 chart of finite elementary blowups, chains and common-blowup witnesses. -/

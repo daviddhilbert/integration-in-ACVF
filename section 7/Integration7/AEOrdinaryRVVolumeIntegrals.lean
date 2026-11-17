@@ -1,5 +1,11 @@
-import Integration7.AEOrdinaryVolumeRealizationClasses
-import Integration7.PositiveVolumeIntegrationEquivalence
+module
+
+public import Integration7.AEOrdinaryVolumeRealizationClasses
+public import Integration7.PositiveVolumeIntegrationEquivalence
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual integration of ordinary degree-zero-valued AE functions,
 using their unit-density VF realization and the checked volume integral. -/

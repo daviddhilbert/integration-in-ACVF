@@ -1,4 +1,10 @@
-import IntegrationSection6.GammaRVProductGraphs
+module
+
+public import IntegrationSection6.GammaRVProductGraphs
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Cartesian products of full Gamma graphs use only real coordinate
 projections and retain the original named base. -/

@@ -1,4 +1,10 @@
-import IntegrationSection5.GammaUnaryPartition
+module
+
+public import IntegrationSection5.GammaUnaryPartition
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Finite gluing of proved unary factorizations on disjoint Gamma pieces. -/
 noncomputable section

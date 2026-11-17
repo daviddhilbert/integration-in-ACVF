@@ -1,4 +1,10 @@
-import Integration7.NativeFiniteMixedUnions
+module
+
+public import Integration7.NativeFiniteMixedUnions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A finite partition of a subdomain extends to its ambient domain by
 adjoining the actual definable complement as one additional piece. -/

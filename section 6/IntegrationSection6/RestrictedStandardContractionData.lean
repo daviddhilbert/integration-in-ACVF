@@ -1,4 +1,10 @@
-import IntegrationSection6.StandardRVLabelRestriction
+module
+
+public import IntegrationSection6.StandardRVLabelRestriction
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A fixed-target representation of the actual restricted contraction,
 so that no equality casts on its final RV arity are needed. -/

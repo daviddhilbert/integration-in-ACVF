@@ -1,8 +1,14 @@
-import Integration7.SelectedFamilyRestrictions
-import Integration7.DefinableMapPreimages
-import Integration7.SelectedVolumeRowContexts
-import Integration7.VolumeRelabeling
-import Integration7.IndexedVolumeEmpty
+module
+
+public import Integration7.SelectedFamilyRestrictions
+public import Integration7.DefinableMapPreimages
+public import Integration7.SelectedVolumeRowContexts
+public import Integration7.VolumeRelabeling
+public import Integration7.IndexedVolumeEmpty
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Restriction to a definable VF base set retains the actual row on
 that set and has the empty volume row outside it. -/

@@ -1,6 +1,12 @@
-import IntegrationSection6.VFPrefixSpecialRestriction
-import IntegrationSection6.VFPrefixHeadImages
-import IntegrationSection6.GammaVFPrefixFibreMaps
+module
+
+public import IntegrationSection6.VFPrefixSpecialRestriction
+public import IntegrationSection6.VFPrefixHeadImages
+public import IntegrationSection6.GammaVFPrefixFibreMaps
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual head preparations restrict to any active VF prefix after a
 complementary tuple is fixed. Their contracted sets are exactly the frozen

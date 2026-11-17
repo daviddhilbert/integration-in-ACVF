@@ -1,5 +1,11 @@
-import Integration7.VolumeSchemaRowSemantics
-import Integration7.PositiveVolumeParameterExtension
+module
+
+public import Integration7.VolumeSchemaRowSemantics
+public import Integration7.PositiveVolumeParameterExtension
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Enlarging only the real presentation base retains the exact schema
 row interpretation. Coordinate tuples, density values and labels persist. -/

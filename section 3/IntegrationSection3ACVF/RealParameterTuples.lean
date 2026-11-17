@@ -1,5 +1,11 @@
-import IntegrationSection3ACVF.FullBaseDefinability
-import Section3.SmallFiniteParameters
+module
+
+public import IntegrationSection3ACVF.FullBaseDefinability
+public import Section3.SmallFiniteParameters
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Finite real context labels may be named while retaining every old
 imaginary parameter. Actual full relation fibres and smallness are proved. -/

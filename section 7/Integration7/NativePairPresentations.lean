@@ -1,6 +1,12 @@
-import Integration7.NativeVFPairImages
-import Integration7.GammaNativeCommonNames
-import IntegrationSection4.Cells
+module
+
+public import Integration7.NativeVFPairImages
+public import Integration7.GammaNativeCommonNames
+public import IntegrationSection4.Cells
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A Gamma-definable VF pair relation has an actual native VF²
 presentation over fixed common names, with its coordinates in the same order. -/

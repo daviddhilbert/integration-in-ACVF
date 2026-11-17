@@ -1,6 +1,12 @@
-import Integration7.FixedHeadUnaryVolumeIsomorphisms
-import Integration7.GammaVolumeLabelIdentities
-import Integration7.GradedVolumeProducts
+module
+
+public import Integration7.FixedHeadUnaryVolumeIsomorphisms
+public import Integration7.GammaVolumeLabelIdentities
+public import Integration7.GradedVolumeProducts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Essential restriction of the unary factor commutes with adjoining
 a nonzero fixed head volume coordinate. The volume map keeps all labels. -/

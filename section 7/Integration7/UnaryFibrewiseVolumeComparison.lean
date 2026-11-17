@@ -1,10 +1,16 @@
-import Integration7.UnaryPreparedVolumeComparison
-import Integration7.GammaVFPreparedVolumeUniformity
-import Integration7.PreparedVolumeDensityRows
-import Integration7.IndexedVolumeCoordinateDensityIso
-import Integration7.GammaUnaryVolumeBlockSwap
-import Integration7.BlowupParameterExtension
-import IntegrationSection6.GammaUnaryPreparedContractionComparison
+module
+
+public import Integration7.UnaryPreparedVolumeComparison
+public import Integration7.GammaVFPreparedVolumeUniformity
+public import Integration7.PreparedVolumeDensityRows
+public import Integration7.IndexedVolumeCoordinateDensityIso
+public import Integration7.GammaUnaryVolumeBlockSwap
+public import Integration7.BlowupParameterExtension
+public import IntegrationSection6.GammaUnaryPreparedContractionComparison
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The unary positive selected-family comparison. Arbitrary standard
 contractions on both sides are connected through a single prepared

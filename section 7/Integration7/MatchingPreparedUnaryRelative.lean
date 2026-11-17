@@ -1,4 +1,10 @@
-import Integration7.MatchingFullPullbackPreparations
+module
+
+public import Integration7.MatchingFullPullbackPreparations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The full matching preparations each change just one VF coordinate.
 The permutations used to construct them restore the original VF order. -/

@@ -1,6 +1,12 @@
-import IntegrationSection6.MixedRVBlockEquivalences
-import IntegrationSection6.GammaRealImages
-import IntegrationSection6.GammaPreparedDescent
+module
+
+public import IntegrationSection6.MixedRVBlockEquivalences
+public import IntegrationSection6.GammaRealImages
+public import IntegrationSection6.GammaPreparedDescent
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual canonical key embedding, reassociated so the full prepared
 base key precedes the unchanged fibre RV labels. -/

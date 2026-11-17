@@ -1,5 +1,11 @@
-import Integration7.SelectedFamilyFullLifts
-import Integration7.VFVolumeBijections
+module
+
+public import Integration7.SelectedFamilyFullLifts
+public import Integration7.VFVolumeBijections
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Taking the density graph commutes with realizing the selected RV
 tuple by a full VF tail, through an actual VF-preserving volume bijection. -/

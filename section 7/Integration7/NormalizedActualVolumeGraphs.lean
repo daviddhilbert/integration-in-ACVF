@@ -1,6 +1,12 @@
-import Integration7.NormalizedActualRVObjects
-import Integration7.GammaVolumeAlgebraicCenters
-import IntegrationSection6.FiniteGammaObjects
+module
+
+public import Integration7.NormalizedActualRVObjects
+public import Integration7.GammaVolumeAlgebraicCenters
+public import IntegrationSection6.FiniteGammaObjects
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Original-Gamma coordinate graphs and algebraic centers carry over
 to the literal normalized presentation of an actual volume object. -/

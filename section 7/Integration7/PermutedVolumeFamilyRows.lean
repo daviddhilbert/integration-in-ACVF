@@ -1,6 +1,12 @@
-import Integration7.PermutedVolumeFamilies
-import Integration7.PointwiseRVVolumeFunctions
-import Integration7.BlowupParameterExtension
+module
+
+public import Integration7.PermutedVolumeFamilies
+public import Integration7.PointwiseRVVolumeFunctions
+public import Integration7.BlowupParameterExtension
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Reindexed VF families have the literal original RV fibre, with
 its unchanged density, in the same finitely generated VF context. -/

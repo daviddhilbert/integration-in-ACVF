@@ -1,5 +1,11 @@
-import IntegrationSection5.MixedRVRefinement
-import IntegrationSection4.RVLabelAttachment
+module
+
+public import IntegrationSection5.MixedRVRefinement
+public import IntegrationSection4.RVLabelAttachment
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Attaching an actual original-Gamma RV code is a definable bijection
 onto its image and fixes every VF coordinate and every old RV label. -/

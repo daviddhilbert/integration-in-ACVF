@@ -1,6 +1,12 @@
-import IntegrationSection3ACVF.AnnulusGammaReduction
-import IntegrationSection3ACVF.GammaIntervalObstruction
-import IntegrationSection3ACVF.PuncturedSingleHole
+module
+
+public import IntegrationSection3ACVF.AnnulusGammaReduction
+public import IntegrationSection3ACVF.GammaIntervalObstruction
+public import IntegrationSection3ACVF.PuncturedSingleHole
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Proposition3.24 with the author-approved ordinary closed-parent
 correction. The open target retains VF. Every actual quotient graph,

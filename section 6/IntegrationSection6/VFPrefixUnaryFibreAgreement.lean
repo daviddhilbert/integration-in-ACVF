@@ -1,4 +1,10 @@
-import IntegrationSection6.VFPrefixHeadFibres
+module
+
+public import IntegrationSection6.VFPrefixHeadFibres
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The unary map of a head fibre after prefix restriction is the same
 actual unary map obtained by fixing the full complementary VF tuple. -/

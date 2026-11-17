@@ -1,5 +1,11 @@
-import Section4.RVCoordinates
-import Section4.Products
+module
+
+public import Section4.RVCoordinates
+public import Section4.Products
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 open FirstOrder FirstOrder.Language

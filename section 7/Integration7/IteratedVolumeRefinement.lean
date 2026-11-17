@@ -1,5 +1,11 @@
-import Integration7.VolumeBlowupDiamond
-import IntegrationSection6.Iteration
+module
+
+public import Integration7.VolumeBlowupDiamond
+public import IntegrationSection6.Iteration
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual volume-blowup diamond supplies the hypothesis of the
 previously proved finite-grid argument. All step counts are retained. -/

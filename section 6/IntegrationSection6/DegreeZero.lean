@@ -1,4 +1,10 @@
-import IntegrationSection6.Blowups
+module
+
+public import IntegrationSection6.Blowups
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Degree zero admits no elementary chart, so common blowups reduce to
 actual RV isomorphism, including the length-zero convention. -/

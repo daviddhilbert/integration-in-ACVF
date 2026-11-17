@@ -1,6 +1,12 @@
-import Integration7.ContractionParameterExtension
-import Integration7.GammaEqualLabelEquivalenceGraphs
-import IntegrationSection6.RawFiniteContractions
+module
+
+public import Integration7.ContractionParameterExtension
+public import Integration7.GammaEqualLabelEquivalenceGraphs
+public import IntegrationSection6.RawFiniteContractions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Enlarging the containing real presentation base leaves every raw
 finite contraction label and its entire VF-tag tuple unchanged. -/

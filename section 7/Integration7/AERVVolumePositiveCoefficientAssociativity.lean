@@ -1,6 +1,12 @@
-import Integration7.AERVVolumePositiveCoefficientBilinearity
-import Integration7.PositiveVolumeClassProductExtensions
-import Integration7.AERVVolumeDegreeReindexing
+module
+
+public import Integration7.AERVVolumePositiveCoefficientBilinearity
+public import Integration7.PositiveVolumeClassProductExtensions
+public import Integration7.AERVVolumeDegreeReindexing
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Positive coefficient multiplication acts associatively on actual
 AE functions. Only arithmetic homogeneous-degree identifications enter

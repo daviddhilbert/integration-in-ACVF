@@ -1,4 +1,10 @@
-import Integration7.ScalarRVAlgebra
+module
+
+public import Integration7.ScalarRVAlgebra
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Pointwise multiplication and division of actual nonzero definable
 densities on one fixed domain. -/

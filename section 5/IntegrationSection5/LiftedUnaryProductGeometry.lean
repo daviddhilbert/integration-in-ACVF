@@ -1,4 +1,10 @@
-import IntegrationSection5.GammaUnaryCoordinateLift
+module
+
+public import IntegrationSection5.GammaUnaryCoordinateLift
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Exact product images of a lifted unary preparation, including all
 retained passive RV labels. This supplies actual saturation, not a premise

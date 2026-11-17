@@ -1,5 +1,11 @@
-import IntegrationSection6.RootSelection
-import Section4.RVLabelCompression
+module
+
+public import IntegrationSection6.RootSelection
+public import Section4.RVLabelCompression
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A root selector exists on a real-base definable ambient domain before
 restricting it to a possibly Gamma-definable source. -/

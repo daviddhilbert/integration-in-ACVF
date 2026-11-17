@@ -1,5 +1,11 @@
-import IntegrationSection5.ChainAlgebra
-import IntegrationSection5.MatchedFocusReverse
+module
+
+public import IntegrationSection5.ChainAlgebra
+public import IntegrationSection5.MatchedFocusReverse
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! One complete matched-focus step, including the remaining target chain. -/
 

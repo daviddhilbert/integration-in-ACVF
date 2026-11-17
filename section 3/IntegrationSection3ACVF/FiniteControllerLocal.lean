@@ -1,5 +1,11 @@
-import IntegrationSection3ACVF.GammaCosetGeometry
-import Section4.CanonicalOrderController
+module
+
+public import IntegrationSection3ACVF.GammaCosetGeometry
+public import Section4.CanonicalOrderController
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A locally constant subset above a Gamma threshold with a finite
 order controller is constant on that tail. Finite controllers exclude

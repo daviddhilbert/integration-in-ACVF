@@ -1,5 +1,11 @@
-import Integration7.FixedLabelSmallVFDimension
-import IntegrationSection4.Cells
+module
+
+public import Integration7.FixedLabelSmallVFDimension
+public import IntegrationSection4.Cells
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The zero-paradigm graph and singleton-projection cell cases of7.7:
 all specified standard contractions have empty essential domains and

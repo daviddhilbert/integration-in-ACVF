@@ -1,4 +1,10 @@
-import Integration7.SelectedFamilyStandardVolumeComparison
+module
+
+public import Integration7.SelectedFamilyStandardVolumeComparison
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Lemma 7.5 for nonempty selected E: arbitrary actual standard
 contractions in the same coordinate order preserve fibrewise common

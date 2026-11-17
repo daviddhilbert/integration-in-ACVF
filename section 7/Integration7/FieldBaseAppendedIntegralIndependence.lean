@@ -1,4 +1,10 @@
-import Integration7.FieldBaseAppendedIntegralAdditivity
+module
+
+public import Integration7.FieldBaseAppendedIntegralAdditivity
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The fixed additive coordinate normalization transports the actual
 field-base comparison to coefficient-first appended integrals. -/

@@ -1,8 +1,14 @@
-import Integration7.LowerDimensionRVVolumeIsomorphisms
-import Integration7.RVVolumeComposition
-import Integration7.RVVolumeInverse
-import Integration7.GammaRVMapGraphOperations
-import Integration7.GammaVolumeIsoGraphOperations
+module
+
+public import Integration7.LowerDimensionRVVolumeIsomorphisms
+public import Integration7.RVVolumeComposition
+public import Integration7.RVVolumeInverse
+public import Integration7.GammaRVMapGraphOperations
+public import Integration7.GammaVolumeIsoGraphOperations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Volume isomorphisms on smaller-dimensional RV domains compose and
 invert in the given real presentation. Their RV Jacobian conditions are

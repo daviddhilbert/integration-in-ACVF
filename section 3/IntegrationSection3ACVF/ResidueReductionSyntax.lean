@@ -1,4 +1,10 @@
-import IntegrationSection3ACVF.BallResidueChart
+module
+
+public import IntegrationSection3ACVF.BallResidueChart
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A full LRV graph for the actual valuation-ring residue map. Its
 quantifier-free formula uses the existing RV zero and preorder. -/

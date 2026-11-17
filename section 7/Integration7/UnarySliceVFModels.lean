@@ -1,6 +1,12 @@
-import Integration7.UnaryContractionVolumeMaps
-import Integration7.FiniteVFBaseProjection
-import Integration7.VFVolumeParameterExtension
+module
+
+public import Integration7.UnaryContractionVolumeMaps
+public import Integration7.FiniteVFBaseProjection
+public import Integration7.VFVolumeParameterExtension
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual Jacobian-one VF models for the two selected slice charts:
 the restricted contraction natural map and the prepared VF-base map. -/

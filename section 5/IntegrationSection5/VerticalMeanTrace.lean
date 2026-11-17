@@ -1,5 +1,11 @@
-import IntegrationSection5.UniformRelativeTrace
-import IntegrationSection5.VerticalMeanFocusData
+module
+
+public import IntegrationSection5.UniformRelativeTrace
+public import IntegrationSection5.VerticalMeanFocusData
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 noncomputable section
 set_option autoImplicit false

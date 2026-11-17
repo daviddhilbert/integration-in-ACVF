@@ -1,7 +1,13 @@
-import Integration7.FrozenOrdinaryCoefficientProducts
-import Integration7.AEOrdinaryRVVolumeHeadIntegrals
-import Integration7.AERVVolumeHeadIntegrals
-import Integration7.AERVVolumePositiveCoefficientBilinearity
+module
+
+public import Integration7.FrozenOrdinaryCoefficientProducts
+public import Integration7.AEOrdinaryRVVolumeHeadIntegrals
+public import Integration7.AERVVolumeHeadIntegrals
+public import Integration7.AERVVolumePositiveCoefficientBilinearity
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Every actual positive coefficient commutes with the ordinary-input AE
 head integral, through the constructed unit-family contraction chart. -/

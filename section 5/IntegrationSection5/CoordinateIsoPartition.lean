@@ -1,5 +1,11 @@
-import IntegrationSection5.CoordinatePartitionAt
-import IntegrationSection5.GammaUnaryChain
+module
+
+public import IntegrationSection5.CoordinatePartitionAt
+public import IntegrationSection5.GammaUnaryChain
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

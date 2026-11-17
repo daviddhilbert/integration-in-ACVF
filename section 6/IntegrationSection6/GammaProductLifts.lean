@@ -1,8 +1,14 @@
-import IntegrationSection6.GammaMixedProductIsomorphisms
-import IntegrationSection6.FiniteGammaProducts
-import IntegrationSection6.FiniteGammaLiftGluing
-import IntegrationSection6.GammaTaggedLifts
-import IntegrationSection6.GammaDisjointIsomorphisms
+module
+
+public import IntegrationSection6.GammaMixedProductIsomorphisms
+public import IntegrationSection6.FiniteGammaProducts
+public import IntegrationSection6.FiniteGammaLiftGluing
+public import IntegrationSection6.GammaTaggedLifts
+public import IntegrationSection6.GammaDisjointIsomorphisms
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The lift of the actual finite RV coproduct is the disjoint union of
 the corresponding tagged lifts. This is the gluing geometry for6.13. -/

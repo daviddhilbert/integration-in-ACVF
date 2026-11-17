@@ -1,7 +1,13 @@
-import Integration7.EssentialBlowupChart
-import Integration7.DefinableHeadCorrection
-import Integration7.NondegenerateFiniteIso
-import Integration7.GammaVolumeCriterion
+module
+
+public import Integration7.EssentialBlowupChart
+public import Integration7.DefinableHeadCorrection
+public import Integration7.NondegenerateFiniteIso
+public import Integration7.GammaVolumeCriterion
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 set_option backward.isDefEq.respectTransparency false
 open FirstOrder FirstOrder.Language CategoryTheory
 open SpecialTransformations.Milestone0 SpecialTransformations.Milestone0.LRV

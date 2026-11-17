@@ -1,7 +1,13 @@
-import IntegrationSection6.GammaIsomorphismPromotion
-import IntegrationSection6.GammaSchemaNativeRows
-import IntegrationSection6.GammaSchemaValidityTransport
-import IntegrationSection6.GammaParameterRecoding
+module
+
+public import IntegrationSection6.GammaIsomorphismPromotion
+public import IntegrationSection6.GammaSchemaNativeRows
+public import IntegrationSection6.GammaSchemaValidityTransport
+public import IntegrationSection6.GammaParameterRecoding
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A finite Gamma row isomorphism has a genuine formula witness with
 the specified endpoint schemata. Endpoint bounds stay those of the

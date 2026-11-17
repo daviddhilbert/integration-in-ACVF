@@ -1,5 +1,11 @@
-import Integration7.OrdinaryFinitePointIsomorphisms
-import Integration7.GammaFiniteRowIsomorphismWitnesses
+module
+
+public import Integration7.OrdinaryFinitePointIsomorphisms
+public import Integration7.GammaFiniteRowIsomorphismWitnesses
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! An actual Gamma isomorphism of ordinary finite point rows promotes
 to a finite formula witness with the specified endpoint schemata. -/

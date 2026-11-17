@@ -1,6 +1,12 @@
-import IntegrationSection6.GammaUnivPresentations
-import IntegrationSection6.GammaNamedRVFibres
-import IntegrationSection5.GammaOrderedContraction
+module
+
+public import IntegrationSection6.GammaUnivPresentations
+public import IntegrationSection6.GammaNamedRVFibres
+public import IntegrationSection5.GammaOrderedContraction
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual mixed-set slices fixing selected RV labels. Internal real
 presentations use the whole model; their Gamma base names only the fixed

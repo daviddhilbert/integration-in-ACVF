@@ -1,6 +1,12 @@
-import Integration7.EssentialVolumeRestriction
-import Integration7.IndexedVolumeEmpty
-import Integration7.GammaIndexedVolumeEmpty
+module
+
+public import Integration7.EssentialVolumeRestriction
+public import Integration7.IndexedVolumeEmpty
+public import Integration7.GammaIndexedVolumeEmpty
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Objects with empty essential domains have their actual empty volume
 isomorphism, even when the full label domains contain degenerate points. -/

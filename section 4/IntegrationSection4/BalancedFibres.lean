@@ -1,5 +1,11 @@
-import IntegrationSection4.TranslationOffsets
-import Section5.RootConstruction
+module
+
+public import IntegrationSection4.TranslationOffsets
+public import Section5.RootConstruction
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The two actual fibre identities in Definition 4.5 and their elementary
 consequences. Open-ball and Gamma-linearity conditions are added by the

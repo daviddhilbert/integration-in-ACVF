@@ -1,4 +1,10 @@
-import Section5.PullbackLift
+module
+
+public import Section5.PullbackLift
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The raw canonical lift in the predecessor's actual special-bijection space. -/
 

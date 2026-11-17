@@ -1,14 +1,20 @@
-import Integration7.GammaUnaryPreparedVolumeComparison
-import Integration7.PreparedGammaVolumeComparisons
-import Integration7.GammaIndexedVolumeCoordinateDensityIso
-import Integration7.GammaUnaryVolumeBlockSwapGeometry
-import Integration7.UnaryPreparedVolumeComparisonsWithoutField
-import Integration7.GammaVFPreparedVolumeUniformity
-import Integration7.PreparedVolumeDensityRows
-import Integration7.IndexedVolumeCoordinateDensityIso
-import Integration7.GammaUnaryVolumeBlockSwap
-import Integration7.BlowupParameterExtension
-import IntegrationSection6.GammaUnaryPreparedContractionComparison
+module
+
+public import Integration7.GammaUnaryPreparedVolumeComparison
+public import Integration7.PreparedGammaVolumeComparisons
+public import Integration7.GammaIndexedVolumeCoordinateDensityIso
+public import Integration7.GammaUnaryVolumeBlockSwapGeometry
+public import Integration7.UnaryPreparedVolumeComparisonsWithoutField
+public import Integration7.GammaVFPreparedVolumeUniformity
+public import Integration7.PreparedVolumeDensityRows
+public import Integration7.IndexedVolumeCoordinateDensityIso
+public import Integration7.GammaUnaryVolumeBlockSwap
+public import Integration7.BlowupParameterExtension
+public import IntegrationSection6.GammaUnaryPreparedContractionComparison
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! An actual simultaneous prepared volume comparison supplies the
 unary two-contraction comparison over any real/Gamma base. The input

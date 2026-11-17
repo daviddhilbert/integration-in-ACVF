@@ -1,5 +1,11 @@
-import Integration7.RectangleFamilyRawOrderIsomorphisms
-import Integration7.IndependentRectangleRetainedLabels
+module
+
+public import Integration7.RectangleFamilyRawOrderIsomorphisms
+public import Integration7.IndependentRectangleRetainedLabels
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The two-order rectangle isomorphism retains every original RV
 label, hence every nonconstant density carried by one of those labels. -/

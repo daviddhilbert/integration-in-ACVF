@@ -1,4 +1,10 @@
-import Section4.RVReindexing
+module
+
+public import Section4.RVReindexing
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Adjoining a constant RV volume coordinate preserves an actual unary
 RV isomorphism whenever the two constants have the same absorbing status.

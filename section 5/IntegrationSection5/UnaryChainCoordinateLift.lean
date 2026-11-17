@@ -1,5 +1,11 @@
-import IntegrationSection5.ActiveUnaryCanonical
-import IntegrationSection5.RelativeSpecialBoundary
+module
+
+public import IntegrationSection5.ActiveUnaryCanonical
+public import IntegrationSection5.RelativeSpecialBoundary
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Lift an actual alternating unary special chain at any selected VF
 coordinate. Passive VF coordinates and RV labels remain available. -/

@@ -1,6 +1,12 @@
-import Integration7.NormalizedContractionParameterExtension
-import Integration7.GammaVolumeSliceDensityAssembly
-import IntegrationSection6.FiniteSelectedContractionSlices
+module
+
+public import Integration7.NormalizedContractionParameterExtension
+public import Integration7.GammaVolumeSliceDensityAssembly
+public import IntegrationSection6.FiniteSelectedContractionSlices
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual selected contraction volume object is unchanged by
 parameter enlargement. The label identity preserves all volume

@@ -1,6 +1,12 @@
-import IntegrationSection4.VerticalPullbackCells
-import Integration7.MixedVerticalPresentation
-import IntegrationSection4.ScalarPositionDecomposition
+module
+
+public import IntegrationSection4.VerticalPullbackCells
+public import Integration7.MixedVerticalPresentation
+public import IntegrationSection4.ScalarPositionDecomposition
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

@@ -1,4 +1,10 @@
-import Section3.GammaClosureLaws
+module
+
+public import Section3.GammaClosureLaws
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Eliminate additional definable real names while retaining the original
 real/Gamma base and its full invariant formulas. -/

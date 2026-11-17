@@ -1,4 +1,10 @@
-import Integration7.CanonicalVolumeFamilyIntegrals
+module
+
+public import Integration7.CanonicalVolumeFamilyIntegrals
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Compute a family integral using any actual specified standard
 contraction, with the selected VF block restored to its original order. -/

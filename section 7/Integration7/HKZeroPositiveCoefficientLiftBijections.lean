@@ -1,5 +1,11 @@
-import Integration7.HKZeroFamilyPositiveCoefficients
-import Integration7.HKZeroPositiveCoefficientLiftMaps
+module
+
+public import Integration7.HKZeroFamilyPositiveCoefficients
+public import Integration7.HKZeroPositiveCoefficientLiftMaps
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The coefficient-first realization of a positive coefficient times
 weighted-zero values preserves the product of both actual forms. -/

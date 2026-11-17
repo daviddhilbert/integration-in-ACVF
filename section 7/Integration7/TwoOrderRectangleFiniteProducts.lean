@@ -1,8 +1,14 @@
-import Integration7.TwoOrderRectanglePreparations
-import Integration7.FixedNativeRectangleRawIsomorphisms
-import Integration7.UnitDensityRVProducts
-import Integration7.ConstantLabelPreparedVolumeComparisons
-import Integration7.FixedLabelUnarySpecialPreparations
+module
+
+public import Integration7.TwoOrderRectanglePreparations
+public import Integration7.FixedNativeRectangleRawIsomorphisms
+public import Integration7.UnitDensityRVProducts
+public import Integration7.ConstantLabelPreparedVolumeComparisons
+public import Integration7.FixedLabelUnarySpecialPreparations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual raw objects of both rectangle programs map to the same
 finite unary product, preserving each VF volume coordinate and Gamma. -/

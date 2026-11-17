@@ -1,6 +1,12 @@
-import Integration7.SelectedJacobianAlmostEverywhere
-import Integration7.SelectedFamilyJacobianIntegrals
-import Integration7.AERVVolumeFunctionIntegrals
+module
+
+public import Integration7.SelectedJacobianAlmostEverywhere
+public import Integration7.SelectedFamilyJacobianIntegrals
+public import Integration7.AERVVolumeFunctionIntegrals
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual positive homogeneous functions on a definable VF domain,
 presented by families supported there and identified almost everywhere.

@@ -1,5 +1,11 @@
-import Integration7.DefinableRescalingOrdinaryCoefficients
-import Integration7.SelectedJacobianRowComparison
+module
+
+public import Integration7.DefinableRescalingOrdinaryCoefficients
+public import Integration7.SelectedJacobianRowComparison
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Ordinary finite coefficients commute with the actual Jacobian
 row transform, after eliminating all added inverse-image names. -/

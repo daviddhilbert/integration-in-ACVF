@@ -1,7 +1,13 @@
-import Integration7.GammaOrdinaryHeadFibreWitnesses
-import Integration7.HKWeightedPointIsomorphismCongruence
-import IntegrationSection6.VFParameterFibreIsomorphisms
-import IntegrationSection6.GammaHeadFibreParameters
+module
+
+public import Integration7.GammaOrdinaryHeadFibreWitnesses
+public import Integration7.HKWeightedPointIsomorphismCongruence
+public import IntegrationSection6.VFParameterFibreIsomorphisms
+public import IntegrationSection6.GammaHeadFibreParameters
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Freezing a generic VF tail retains exact density equations in
 the resulting original-Gamma unary row isomorphisms. -/

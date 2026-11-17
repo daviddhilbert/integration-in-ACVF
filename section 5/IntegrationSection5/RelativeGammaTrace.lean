@@ -1,4 +1,10 @@
-import IntegrationSection5.RelativePreparationTrace
+module
+
+public import IntegrationSection5.RelativePreparationTrace
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 noncomputable section
 set_option autoImplicit false

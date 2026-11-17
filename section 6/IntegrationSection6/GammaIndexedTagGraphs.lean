@@ -1,5 +1,11 @@
-import IntegrationSection6.GammaRawCoproductSchemata
-import IntegrationSection6.GammaIndexedFiniteObjects
+module
+
+public import IntegrationSection6.GammaRawCoproductSchemata
+public import IntegrationSection6.GammaIndexedFiniteObjects
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Full original-Gamma graphs for the native tags inside an RV-indexed
 family. The index labels are preserved exactly. -/

@@ -1,5 +1,11 @@
-import IntegrationSection6.OriginalFocusCoordinates
-import IntegrationSection6.NormalizedCanonicalLifts
+module
+
+public import IntegrationSection6.OriginalFocusCoordinates
+public import IntegrationSection6.NormalizedCanonicalLifts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The elementary image of a canonical-full-focus-canonical chain and
 its global, real-definable RV coordinate formula. -/

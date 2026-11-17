@@ -1,5 +1,11 @@
-import IntegrationSection6.PartialSelectedVolume
-import IntegrationSection6.EmptySelectedContractions
+module
+
+public import IntegrationSection6.PartialSelectedVolume
+public import IntegrationSection6.EmptySelectedContractions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The ordinary active-coordinate volume of a partial contraction has
 finite fibres. The recursive selected tuple uses only those same labels. -/

@@ -1,7 +1,13 @@
-import Integration7.SelectedJacobianRowComparison
-import Integration7.AERVVolumeFunctions
-import Integration7.DefinableMapPreimages
-import Integration7.PureVFPermutationDimensions
+module
+
+public import Integration7.SelectedJacobianRowComparison
+public import Integration7.AERVVolumeFunctions
+public import Integration7.DefinableMapPreimages
+public import Integration7.PureVFPermutationDimensions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual Jacobian transform preserves equality almost everywhere.
 The exceptional target set is the definable image of the source

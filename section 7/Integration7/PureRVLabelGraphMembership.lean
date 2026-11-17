@@ -1,4 +1,10 @@
-import Integration7.PureRVLabelGraphFactorizations
+module
+
+public import Integration7.PureRVLabelGraphFactorizations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Membership in a pure-RV label graph keeps both the original tuple
 and the actual value of the appended definable map explicit. -/

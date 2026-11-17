@@ -1,5 +1,11 @@
-import IntegrationSection3ACVF.UniformPartitionTemplates
-import IntegrationSection3.DefinablePartitions
+module
+
+public import IntegrationSection3ACVF.UniformPartitionTemplates
+public import IntegrationSection3.DefinablePartitions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Finitely many uniform partition templates can be assigned on disjoint
 original-base definable parameter cases. Every case lies in the validity

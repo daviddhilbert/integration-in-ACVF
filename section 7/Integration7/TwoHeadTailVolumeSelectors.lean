@@ -1,5 +1,11 @@
-import Integration7.HeadTailVolumeSelectors
-import IntegrationSection6.VFPrefixSwaps
+module
+
+public import Integration7.HeadTailVolumeSelectors
+public import IntegrationSection6.VFPrefixSwaps
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The positive tuple consisting of the first two contracted VF tags
 and all subsequently appended tags is the full ordered volume tuple.

@@ -1,5 +1,11 @@
-import Integration7.RVLabelConstraintHeadProducts
-import IntegrationSection5.GammaGraphOperations
+module
+
+public import Integration7.RVLabelConstraintHeadProducts
+public import IntegrationSection5.GammaGraphOperations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A map uniquely determined by equality of two finite RV-coordinate
 selectors has its full graph over the original Gamma base. -/

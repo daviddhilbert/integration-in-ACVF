@@ -1,5 +1,11 @@
-import IntegrationSection5.PositionedStripPreparation
-import IntegrationSection5.GammaOrderedContraction
+module
+
+public import IntegrationSection5.PositionedStripPreparation
+public import IntegrationSection5.GammaOrderedContraction
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual first contraction of a strip is a unary presentation of its
 passive projection. Its two retained RV labels are computed explicitly. -/

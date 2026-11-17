@@ -1,5 +1,11 @@
-import Integration7.GammaVolumeFormulaBaseChange
-import Integration7.GammaVolumeWitnessValidity
+module
+
+public import Integration7.GammaVolumeFormulaBaseChange
+public import Integration7.GammaVolumeWitnessValidity
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Definable base changes preserve full volume blowup schemata,
 their exact chain lengths and validity, including auxiliary exceptions. -/

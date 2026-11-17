@@ -1,4 +1,10 @@
-import IntegrationSection5.RelativeSpecialRestriction
+module
+
+public import IntegrationSection5.RelativeSpecialRestriction
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Restriction of an actual relatively special map to any definable
 source subset. The existing unary special-chain restriction is retained. -/

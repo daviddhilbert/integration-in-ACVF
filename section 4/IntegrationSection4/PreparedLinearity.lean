@@ -1,7 +1,13 @@
-import IntegrationSection4.GammaUnarySyntax
-import IntegrationSection4.ConstantRowsLinearity
-import IntegrationSection4.InverseBodies
-import IntegrationSection4.FiniteRelationPreparation
+module
+
+public import IntegrationSection4.GammaUnarySyntax
+public import IntegrationSection4.ConstantRowsLinearity
+public import IntegrationSection4.InverseBodies
+public import IntegrationSection4.FiniteRelationPreparation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The geometric assembly in Lemma 4.2: a prepared radius/slope relation
 gives Gamma-linearity on every actual inverse RV-polydisc, including points. -/

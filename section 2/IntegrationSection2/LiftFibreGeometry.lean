@@ -1,5 +1,11 @@
-import Section4.LiftFibres
-import Section7.GammaPolynomial
+module
+
+public import Section4.LiftFibres
+public import Section7.GammaPolynomial
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A fixed actual RV label has exactly the expected VF polydisc.
 All tuple and leading-term comparisons use the released RV quotient. -/

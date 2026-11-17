@@ -1,4 +1,10 @@
-import Integration7.VolumeFamilyLiftCoproductCarriers
+module
+
+public import Integration7.VolumeFamilyLiftCoproductCarriers
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The literal coproduct carrier identification preserves VF tuples
 and the original density, so it is an actual full VF volume bijection. -/

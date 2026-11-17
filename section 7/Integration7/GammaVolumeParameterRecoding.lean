@@ -1,6 +1,12 @@
-import Integration7.GammaVolumeRowAgreements
-import Integration7.ZeroAuxVolumeWitnesses
-import IntegrationSection6.GammaRecodingAgreements
+module
+
+public import Integration7.GammaVolumeRowAgreements
+public import Integration7.ZeroAuxVolumeWitnesses
+public import IntegrationSection6.GammaRecodingAgreements
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Recode full coordinate-and-density formulas to a new parameter
 block. The density retains explicit nonvanishing on every formula row. -/

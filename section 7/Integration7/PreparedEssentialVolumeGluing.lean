@@ -1,6 +1,12 @@
-import Integration7.PreparedVolumeGeometryContexts
-import Integration7.GammaEssentialIndexedVolumeUniformity
-import IntegrationSection6.GammaPreparedIndexValues
+module
+
+public import Integration7.PreparedVolumeGeometryContexts
+public import Integration7.GammaEssentialIndexedVolumeUniformity
+public import IntegrationSection6.GammaPreparedIndexValues
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Finite volume witnesses prepared over VF parameters assemble to
 actual common forward blowups over a finite-volume RV key base. -/

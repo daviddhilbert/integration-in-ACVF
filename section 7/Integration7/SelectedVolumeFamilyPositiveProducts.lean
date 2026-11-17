@@ -1,6 +1,12 @@
-import Integration7.VolumeFamilyPositiveCoefficientRows
-import Integration7.SelectedVolumeFamilyAddition
-import Integration7.RVVolumeProducts
+module
+
+public import Integration7.VolumeFamilyPositiveCoefficientRows
+public import Integration7.SelectedVolumeFamilyAddition
+public import Integration7.RVVolumeProducts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Selected presentations of actual multiplication by a positive
 constant coefficient, with the coefficient-first RV product on each row. -/

@@ -1,6 +1,12 @@
-import Integration7.RVLabelChainLifts
-import Integration7.GammaRVLabelFocusLifts
-import Section5.GammaRestriction
+module
+
+public import Integration7.RVLabelChainLifts
+public import Integration7.GammaRVLabelFocusLifts
+public import Section5.GammaRestriction
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Carried-label special chains retain their complete original-Gamma
 certificates at every primitive, including intermediate target domains. -/

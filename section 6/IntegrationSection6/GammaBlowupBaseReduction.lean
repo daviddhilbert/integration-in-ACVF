@@ -1,5 +1,11 @@
-import IntegrationSection6.GammaDefinableBaseReduction
-import IntegrationSection6.FiniteGammaEquivalence
+module
+
+public import IntegrationSection6.GammaDefinableBaseReduction
+public import IntegrationSection6.FiniteGammaEquivalence
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Definable-name elimination preserves actual finite blowups, all
 internal charts, exact chain lengths and common-blowup witnesses. -/

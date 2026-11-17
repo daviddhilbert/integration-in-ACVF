@@ -1,5 +1,11 @@
-import IntegrationSection6.ParameterCoefficientSemirings
-import IntegrationSection6.GlobalLiftClassEquality
+module
+
+public import IntegrationSection6.ParameterCoefficientSemirings
+public import IntegrationSection6.GlobalLiftClassEquality
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual RV values in the parameter-dependent coefficient semirings. -/
 noncomputable section

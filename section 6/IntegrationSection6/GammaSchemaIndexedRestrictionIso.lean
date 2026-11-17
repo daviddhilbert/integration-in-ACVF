@@ -1,7 +1,13 @@
-import IntegrationSection6.GammaSchemaIndexedPresentations
-import IntegrationSection6.FiniteGammaUniversalCharts
-import IntegrationSection6.FiniteGammaRestrictions
-import IntegrationSection6.FiniteGammaFormulaIsos
+module
+
+public import IntegrationSection6.GammaSchemaIndexedPresentations
+public import IntegrationSection6.FiniteGammaUniversalCharts
+public import IntegrationSection6.FiniteGammaRestrictions
+public import IntegrationSection6.FiniteGammaFormulaIsos
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Restricting the index base agrees with restricting the actual indexed
 object. The label identity preserves the full volume tuple whenever the

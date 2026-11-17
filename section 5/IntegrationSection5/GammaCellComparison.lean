@@ -1,6 +1,12 @@
-import IntegrationSection5.GammaStandardProgramGraphs
-import IntegrationSection5.GammaMatchedHeadRV
-import IntegrationSection5.CellStandardPresentation
+module
+
+public import IntegrationSection5.GammaStandardProgramGraphs
+public import IntegrationSection5.GammaMatchedHeadRV
+public import IntegrationSection5.CellStandardPresentation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A complete original-base certificate for a cell comparison: actual
 standard programs and an actual RV[2] iso, with every full graph retained. -/

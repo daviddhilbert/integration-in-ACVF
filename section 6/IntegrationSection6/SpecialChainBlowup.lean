@@ -1,6 +1,12 @@
-import IntegrationSection6.PartialFocusBlowup
-import IntegrationSection6.CanonicalPullbackPresentation
-import IntegrationSection6.NormalizedCanonicalLifts
+module
+
+public import IntegrationSection6.PartialFocusBlowup
+public import IntegrationSection6.CanonicalPullbackPresentation
+public import IntegrationSection6.NormalizedCanonicalLifts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Corollary6.10 for actual alternating special-bijection chains. Each
 centripetal step replaces its genuine active locus; canonical steps have

@@ -1,7 +1,13 @@
-import Integration7.VolumeClassCoordinatePermutations
-import Integration7.SelectedVFTailPermutations
-import Integration7.SelectedStandardVolumeObjects
-import IntegrationSection6.StandardProgramPresentations
+module
+
+public import Integration7.VolumeClassCoordinatePermutations
+public import Integration7.SelectedVFTailPermutations
+public import Integration7.SelectedStandardVolumeObjects
+public import IntegrationSection6.StandardProgramPresentations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The same ordered program on a permuted source restores two VF
 coordinate conventions. Their selected tuples differ by precisely the

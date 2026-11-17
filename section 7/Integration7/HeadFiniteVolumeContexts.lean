@@ -1,8 +1,14 @@
-import Integration7.HeadFiniteRawVolumeEquivalence
-import Integration7.RawFiniteContractionParameterExtension
-import Integration7.GammaCoordinateDensityEquivalences
-import Integration7.SelectedCoordinateDensityRows
-import Integration7.HeadAppendVolumeCoordinates
+module
+
+public import Integration7.HeadFiniteRawVolumeEquivalence
+public import Integration7.RawFiniteContractionParameterExtension
+public import Integration7.GammaCoordinateDensityEquivalences
+public import Integration7.SelectedCoordinateDensityRows
+public import Integration7.HeadAppendVolumeCoordinates
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The first head RV[1] fibre and its actual raw unary contraction have
 an original-Gamma volume isomorphism preserving the retained density.

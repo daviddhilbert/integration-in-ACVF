@@ -1,4 +1,10 @@
-import Integration7.AllDegreeVFVolumeClasses
+module
+
+public import Integration7.AllDegreeVFVolumeClasses
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Proposition 7.8 including ordinary degree zero. -/
 noncomputable section

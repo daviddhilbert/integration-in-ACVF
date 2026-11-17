@@ -1,4 +1,10 @@
-import IntegrationSection5.ChainAlgebra
+module
+
+public import IntegrationSection5.ChainAlgebra
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual definable inverse is bijective, and its inverse is the original map. -/
 

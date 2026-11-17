@@ -1,4 +1,10 @@
-import Integration7.GammaVolumeChainSchemata
+module
+
+public import Integration7.GammaVolumeChainSchemata
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Witnesses obtained over the named term context can retain their
 exception maps without adding another parameter block. This property is

@@ -1,6 +1,12 @@
-import Integration7.GammaUnitVolumeObjectGraphs
-import IntegrationSection6.GammaSchemaIndexedPresentations
-import Integration7.GammaEssentialVolumeRestrictions
+module
+
+public import Integration7.GammaUnitVolumeObjectGraphs
+public import IntegrationSection6.GammaSchemaIndexedPresentations
+public import Integration7.GammaEssentialVolumeRestrictions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! An ordinary finite row adds no volume coordinates to its RV index
 base. In particular every essential label lies over a nonzero base index. -/

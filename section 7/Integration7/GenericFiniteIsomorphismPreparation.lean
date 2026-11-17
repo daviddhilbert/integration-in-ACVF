@@ -1,7 +1,13 @@
-import Integration7.PreparedFiniteIsomorphismGeometry
-import Integration7.GenericGammaWitnessCovers
-import Integration7.PreparedGenericRVCells
-import IntegrationSection6.GammaRecodingValidity
+module
+
+public import Integration7.PreparedFiniteIsomorphismGeometry
+public import Integration7.GenericGammaWitnessCovers
+public import Integration7.PreparedGenericRVCells
+public import IntegrationSection6.GammaRecodingValidity
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Isomorphisms of finite rows over generic VF tuples suffice on every
 essential prepared RV cell. One finite witness cover is prepared on the

@@ -1,5 +1,11 @@
-import Integration7.CanonicalActualRVIdentifications
-import Integration7.VolumeRelabeling
+module
+
+public import Integration7.CanonicalActualRVIdentifications
+public import Integration7.VolumeRelabeling
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! An actual volume object has a canonical normalized presentation
 whose identifying isomorphism fixes every label, coordinate and density. -/

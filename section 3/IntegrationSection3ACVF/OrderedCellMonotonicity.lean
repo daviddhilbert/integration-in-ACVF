@@ -1,4 +1,10 @@
-import Mathlib.Order.Interval.Set.OrdConnected
+module
+
+public import Mathlib.Order.Interval.Set.OrdConnected
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Local strict monotonicity on bounded open subintervals fixes a
 single orientation on an entire open order cell, including rays. -/

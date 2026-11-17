@@ -1,4 +1,10 @@
-import IntegrationSection3ACVF.Geometry
+module
+
+public import IntegrationSection3ACVF.Geometry
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-!
 # Adjoining genuine Gamma parameters over a real base

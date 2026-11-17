@@ -1,5 +1,11 @@
-import Integration7.HKZeroVolumeLifts
-import Integration7.OrdinaryFiniteLiftSurjectivity
+module
+
+public import Integration7.HKZeroVolumeLifts
+public import Integration7.OrdinaryFiniteLiftSurjectivity
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Every weighted zero VF object has a same-base weighted zero RV lift
 presentation. The form is transported through the actual ordinary

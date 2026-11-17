@@ -1,7 +1,13 @@
-import Integration7.PositiveVFVolumeProducts
-import Integration7.VFVolumeLifts
-import Integration7.MixedDomainProductJacobians
-import Integration7.VFAlmostEverywhereProductLeft
+module
+
+public import Integration7.PositiveVFVolumeProducts
+public import Integration7.VFVolumeLifts
+public import Integration7.MixedDomainProductJacobians
+public import Integration7.VFAlmostEverywhereProductLeft
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual Cartesian product with an ordinary degree-zero lift.
 No density is assigned to the zero factor; the positive density is retained. -/

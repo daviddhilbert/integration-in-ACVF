@@ -1,7 +1,13 @@
-import Integration7.GammaSelectedVolumeSchemata
-import Integration7.GammaVolumeSliceAssemblyGeometry
-import Integration7.GammaGeometricCommonRowTransport
-import IntegrationSection6.GammaSelectedLabelFibrePresentations
+module
+
+public import Integration7.GammaSelectedVolumeSchemata
+public import Integration7.GammaVolumeSliceAssemblyGeometry
+public import Integration7.GammaGeometricCommonRowTransport
+public import IntegrationSection6.GammaSelectedLabelFibrePresentations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! An arbitrary finite presentation of a selected fibre, equipped with
 its actual retained label density, realizes the full volume schema row. -/

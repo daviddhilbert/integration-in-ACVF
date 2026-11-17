@@ -1,4 +1,10 @@
-import IntegrationSection6.GammaFiniteSlices
+module
+
+public import IntegrationSection6.GammaFiniteSlices
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Finite coordinate slices imply admissibility over the original Gamma base.
 The active coordinate is isolated using only the other volume labels. -/

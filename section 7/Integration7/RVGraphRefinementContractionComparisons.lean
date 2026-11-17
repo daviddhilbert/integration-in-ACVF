@@ -1,7 +1,13 @@
-import Integration7.GammaRVGraphRefinementGeometry
-import Integration7.RetainedDensityContractionObjects
-import Integration7.MixedRetainedLabelVolumeForms
-import Integration7.OriginalBaseRelativeVolumeComparisons
+module
+
+public import Integration7.GammaRVGraphRefinementGeometry
+public import Integration7.RetainedDensityContractionObjects
+public import Integration7.MixedRetainedLabelVolumeForms
+public import Integration7.OriginalBaseRelativeVolumeComparisons
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Any two specified same-order contractions before and after an RV
 graph refinement have common forward Gamma volume blowups. The density

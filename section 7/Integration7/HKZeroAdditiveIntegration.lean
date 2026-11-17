@@ -1,6 +1,12 @@
-import Integration7.HKZeroVolumeIntegration
-import Integration7.HKVolumeClassCoherence
-import Mathlib.Algebra.Group.TransferInstance
+module
+
+public import Integration7.HKZeroVolumeIntegration
+public import Integration7.HKVolumeClassCoherence
+public import Mathlib.Algebra.Group.TransferInstance
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The weighted zero lift transports the actual coproduct addition on
 RV classes to zero VF classes. Agreement with concrete VF coproducts is

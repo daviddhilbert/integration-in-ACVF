@@ -1,4 +1,10 @@
-import Integration7.EssentialFiniteVolumeSchemata
+module
+
+public import Integration7.EssentialFiniteVolumeSchemata
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Essential restriction of a full volume schema retains its actual
 density graph and the original real/Gamma parameter base. -/

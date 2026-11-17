@@ -1,7 +1,13 @@
-import Integration7.HKZeroAdditiveIntegration
-import Integration7.HKPrincipalVolumeKernel
-import Integration7.GradedAdditiveEquivalenceSemiring
-import Integration7.PositiveVFVolumeAdditiveStructure
+module
+
+public import Integration7.HKZeroAdditiveIntegration
+public import Integration7.HKPrincipalVolumeKernel
+public import Integration7.GradedAdditiveEquivalenceSemiring
+public import Integration7.PositiveVFVolumeAdditiveStructure
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Additive and ring assembly of the corrected degreewise classification.
 Positive-degree additive structures are the existing actual coproduct

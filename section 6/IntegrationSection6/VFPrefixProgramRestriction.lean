@@ -1,6 +1,12 @@
-import IntegrationSection6.VFPrefixHeadPreparations
-import IntegrationSection6.ProgramEqualityTransport
-import IntegrationSection6.PartialSelectedVolume
+module
+
+public import IntegrationSection6.VFPrefixHeadPreparations
+public import IntegrationSection6.ProgramEqualityTransport
+public import IntegrationSection6.PartialSelectedVolume
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A partial contraction restricts to an actual ordered contraction after
 its frozen VF tuple is named. The recursive selected-volume projection is

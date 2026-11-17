@@ -1,5 +1,11 @@
-import Section4.RVFiniteScissors
-import Section4.RVIsoTools
+module
+
+public import Section4.RVFiniteScissors
+public import Section4.RVIsoTools
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Morphism construction in RV[k] only. Finite input volume fibres
 supply finite volume images for any definable map satisfying the weight

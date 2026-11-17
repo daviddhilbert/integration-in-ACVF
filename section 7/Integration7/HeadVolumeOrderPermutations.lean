@@ -1,5 +1,11 @@
-import Integration7.SelectedVFTailPermutations
-import IntegrationSection6.HeadTailPermutations
+module
+
+public import Integration7.SelectedVFTailPermutations
+public import IntegrationSection6.HeadTailPermutations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The common volume-coordinate permutation from a contracted tail's
 tuple (tail, head, old RV) to the original VF order and old RV tuple. -/

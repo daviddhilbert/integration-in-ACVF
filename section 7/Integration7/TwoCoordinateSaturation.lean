@@ -1,4 +1,10 @@
-import Integration7.TranslatedRVCoordinateSaturation
+module
+
+public import Integration7.TranslatedRVCoordinateSaturation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Independent saturation in the two VF coordinates is the full
 RV-pullback property, with every carried RV label fixed. -/

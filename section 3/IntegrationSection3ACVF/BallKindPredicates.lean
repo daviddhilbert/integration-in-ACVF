@@ -1,6 +1,12 @@
-import IntegrationSection3ACVF.BallKindGeometry
-import IntegrationSection3ACVF.FullBaseDefinability
-import IntegrationSection3.CodeEquality
+module
+
+public import IntegrationSection3ACVF.BallKindGeometry
+public import IntegrationSection3ACVF.FullBaseDefinability
+public import IntegrationSection3.CodeEquality
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Open/closed-kind tests on actual ball imaginaries, over the original
 combined base. The tests take images of all valid codes in the appropriate

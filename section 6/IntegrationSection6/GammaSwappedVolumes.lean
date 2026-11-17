@@ -1,6 +1,12 @@
-import IntegrationSection6.GammaVolumeProjections
-import IntegrationSection6.GammaNativeRawObjects
-import IntegrationSection6.GammaSelectedVolumeObjects
+module
+
+public import IntegrationSection6.GammaVolumeProjections
+public import IntegrationSection6.GammaNativeRawObjects
+public import IntegrationSection6.GammaSelectedVolumeObjects
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Swap the two blocks of an actual finite volume tuple. This also
 places selected old RV labels before the contracted VF volume labels. -/

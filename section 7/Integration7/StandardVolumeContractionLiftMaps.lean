@@ -1,5 +1,11 @@
-import Integration7.VFStandardVolumeContractionObjects
-import Integration7.LiteralVolumeLiftMaps
+module
+
+public import Integration7.VFStandardVolumeContractionObjects
+public import Integration7.LiteralVolumeLiftMaps
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The natural map of any specified standard contraction is an actual
 definable bijection from the original volume object's density graph to

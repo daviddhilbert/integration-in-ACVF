@@ -1,5 +1,11 @@
-import Integration7.GammaRVMapGraphOperations
-import Section4.RVProductMorphisms
+module
+
+public import Integration7.GammaRVMapGraphOperations
+public import Section4.RVProductMorphisms
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Cartesian products of actual raw RV maps retain their complete
 original-Gamma graphs. -/

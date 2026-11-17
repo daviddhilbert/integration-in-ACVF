@@ -1,4 +1,10 @@
-import Integration7.SelectedVolumeFamilyAddition
+module
+
+public import Integration7.SelectedVolumeFamilyAddition
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The two original families embed in their actual selected sum on
 each named VF row, retaining both coordinates and density. -/

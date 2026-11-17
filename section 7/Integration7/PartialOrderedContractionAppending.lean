@@ -1,5 +1,11 @@
-import IntegrationSection5.GammaPartialContraction
-import IntegrationSection5.GammaOrderedContraction
+module
+
+public import IntegrationSection5.GammaPartialContraction
+public import IntegrationSection5.GammaOrderedContraction
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Append a full ordered contraction to a partial contraction on its
 actual remaining VF coordinates, retaining the Gamma certificate. -/

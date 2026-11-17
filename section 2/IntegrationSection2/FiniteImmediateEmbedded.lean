@@ -1,6 +1,12 @@
-import IntegrationSection2.FiniteImmediateSubfield
-import IntegrationSection2.EmbeddedValuationTransport
-import IntegrationSection2.FieldDegreeTransport
+module
+
+public import IntegrationSection2.FiniteImmediateSubfield
+public import IntegrationSection2.EmbeddedValuationTransport
+public import IntegrationSection2.FieldDegreeTransport
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The finite immediate-extension theorem for any actual field
 embedding into the algebraically closed ambient field. This avoids

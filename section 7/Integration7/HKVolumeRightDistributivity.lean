@@ -1,5 +1,11 @@
-import Integration7.HKVolumeIsoOperations
-import Integration7.RVProductCoproductCharts
+module
+
+public import Integration7.HKVolumeIsoOperations
+public import Integration7.RVProductCoproductCharts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Right distributivity for the original product in every degree.
 The actual fold retains every volume coordinate and the density on its summand. -/

@@ -1,5 +1,11 @@
-import Section4.RVProductAssociativity
-import Section4.RVProductUnits
+module
+
+public import Section4.RVProductAssociativity
+public import Section4.RVProductUnits
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

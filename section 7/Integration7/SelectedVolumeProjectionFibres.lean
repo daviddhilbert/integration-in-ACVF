@@ -1,6 +1,12 @@
-import Integration7.SelectedVolumeRowContexts
-import Integration7.IndexedVolumeEmpty
-import Integration7.IteratedVolumeBlowups
+module
+
+public import Integration7.SelectedVolumeRowContexts
+public import Integration7.IndexedVolumeEmpty
+public import Integration7.IteratedVolumeBlowups
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Fibrewise common blowups need only be supplied on the common VF
 projection. All other fibres are genuinely empty and compare directly. -/

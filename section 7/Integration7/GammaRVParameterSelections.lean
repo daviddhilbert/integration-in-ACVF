@@ -1,4 +1,10 @@
-import IntegrationSection4.GammaRVMapOperations
+module
+
+public import IntegrationSection4.GammaRVMapOperations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Selecting whole fibres of a Gamma RV map preserves its actual
 graphs and its original parameter fibres. No real representatives of

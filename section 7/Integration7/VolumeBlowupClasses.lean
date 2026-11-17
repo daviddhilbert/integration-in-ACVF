@@ -1,5 +1,11 @@
-import Integration7.VolumeBlowupAddition
-import Integration7.VolumeIsomorphismClasses
+module
+
+public import Integration7.VolumeBlowupAddition
+public import Integration7.VolumeIsomorphismClasses
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The positive-degree common-blowup quotient as an actual additive
 commutative monoid, and the quotient homomorphism from isomorphism classes. -/

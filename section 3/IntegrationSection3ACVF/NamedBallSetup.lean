@@ -1,5 +1,11 @@
-import IntegrationSection3ACVF.FullGammaRadius
-import Section4.GammaNamedValue
+module
+
+public import IntegrationSection3ACVF.FullGammaRadius
+public import Section4.GammaNamedValue
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Defining an actual ball after finitely naming a centre and a radius code. -/
 

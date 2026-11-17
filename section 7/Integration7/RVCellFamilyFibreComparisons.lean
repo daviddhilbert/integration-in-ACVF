@@ -1,6 +1,12 @@
-import Integration7.NativeTwoCellFibrePresentations
-import Integration7.RVCellFibreNameCertificates
-import Integration7.RVParameterizedCellContractionComparisons
+module
+
+public import Integration7.NativeTwoCellFibrePresentations
+public import Integration7.RVCellFibreNameCertificates
+public import Integration7.RVParameterizedCellContractionComparisons
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The pointwise opposite-order comparison applies to every actual
 nonempty labelled fibre of a definable two-cell family. Its native cell

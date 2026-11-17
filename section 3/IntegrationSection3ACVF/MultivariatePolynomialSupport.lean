@@ -1,6 +1,12 @@
-import Section4.MultivariateSyntax
-import CanonicalRV
-import CanonicalStructure
+module
+
+public import Section4.MultivariateSyntax
+public import CanonicalRV
+public import CanonicalStructure
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-!
 Finite-arity extension of the pinned MIT project

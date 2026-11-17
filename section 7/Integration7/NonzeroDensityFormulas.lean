@@ -1,4 +1,10 @@
-import Integration7.EssentialFiniteVolumeSchemata
+module
+
+public import Integration7.EssentialFiniteVolumeSchemata
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Impose nonvanishing on a density formula at every parameter row,
 without changing a specified row that already has nonzero density. -/

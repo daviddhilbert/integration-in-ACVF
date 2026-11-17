@@ -1,7 +1,13 @@
-import IntegrationSection5.RelativeInverseSlices
-import IntegrationSection5.VerticalMeanReduction
-import Section5.VerticalObstacles
-import Section3.GammaValueLaws
+module
+
+public import IntegrationSection5.RelativeInverseSlices
+public import IntegrationSection5.VerticalMeanReduction
+public import Section5.VerticalObstacles
+public import Section3.GammaValueLaws
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Uniform one-coordinate preparation from genuine saturation and checked
 finite root obstacles. The root-free ball calculation is adapted from the

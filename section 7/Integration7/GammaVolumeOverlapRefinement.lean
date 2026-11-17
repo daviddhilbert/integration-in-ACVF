@@ -1,6 +1,12 @@
-import Integration7.GammaVolumeBlowupLoci
-import Integration7.GammaVolumeSplitComplements
-import Integration7.VolumeOverlapRefinement
+module
+
+public import Integration7.GammaVolumeBlowupLoci
+public import Integration7.GammaVolumeSplitComplements
+public import Integration7.VolumeOverlapRefinement
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual four-piece overlap refinement retains original-Gamma
 cuts, all volume charts and its exterior. The geometry is the existing

@@ -1,6 +1,12 @@
-import Integration7.VolumeBlowupLiftInvariance
-import Integration7.VFVolumeClasses
-import Integration7.VolumeBlowupClasses
+module
+
+public import Integration7.VolumeBlowupLiftInvariance
+public import Integration7.VFVolumeClasses
+public import Integration7.VolumeBlowupClasses
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The VF lift descends through the proved common-volume-blowup
 relation. Injectivity, the converse of Proposition 7.8, is not assumed. -/

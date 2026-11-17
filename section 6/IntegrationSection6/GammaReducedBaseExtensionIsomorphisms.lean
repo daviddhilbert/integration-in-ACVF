@@ -1,6 +1,12 @@
-import IntegrationSection6.GammaDefinableBaseReduction
-import IntegrationSection6.GammaFiniteBaseExtension
-import IntegrationSection6.FiniteGammaIsoLaws
+module
+
+public import IntegrationSection6.GammaDefinableBaseReduction
+public import IntegrationSection6.GammaFiniteBaseExtension
+public import IntegrationSection6.FiniteGammaIsoLaws
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Extending the code presentation and then eliminating definable base
 names gives the original finite object up to its actual identity-label

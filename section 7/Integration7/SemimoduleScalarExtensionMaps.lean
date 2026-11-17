@@ -1,4 +1,10 @@
-import Integration7.SemimoduleScalarExtension
+module
+
+public import Integration7.SemimoduleScalarExtension
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual semimodule maps extend to the balanced scalar extension.
 Their identity, composition and generator formulas hold without assuming

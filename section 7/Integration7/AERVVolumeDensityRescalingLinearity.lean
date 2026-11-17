@@ -1,8 +1,14 @@
-import Integration7.SelectedVolumeDensityRescaling
-import Integration7.AERVVolumeOrdinaryCoefficientModules
-import Integration7.AERVVolumePositiveCoefficientBilinearity
-import Integration7.DefinableRescalingOrdinaryCoefficients
-import Integration7.DefinableRescalingProducts
+module
+
+public import Integration7.SelectedVolumeDensityRescaling
+public import Integration7.AERVVolumeOrdinaryCoefficientModules
+public import Integration7.AERVVolumePositiveCoefficientBilinearity
+public import Integration7.DefinableRescalingOrdinaryCoefficients
+public import Integration7.DefinableRescalingProducts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual positive AE density rescaling is linear over ordinary
 coefficients and also commutes with every positive coefficient. -/

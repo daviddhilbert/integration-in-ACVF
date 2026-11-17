@@ -1,7 +1,13 @@
-import Integration7.BalancedTranslationCommonNameBlowup
-import Integration7.FixedLabelTranslationCommonBlowups
-import Integration7.TwoOrderProductContractionVolumeIdentifications
-import Integration7.VolumeContextJoins
+module
+
+public import Integration7.BalancedTranslationCommonNameBlowup
+public import Integration7.FixedLabelTranslationCommonBlowups
+public import Integration7.TwoOrderProductContractionVolumeIdentifications
+public import Integration7.VolumeContextJoins
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The balanced two-dimensional cell case of Lemma7.7 for arbitrary
 specified opposite-order contractions, with actual original-Gamma common

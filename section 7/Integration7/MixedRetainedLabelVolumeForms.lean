@@ -1,7 +1,13 @@
-import Integration7.RVCoordinateSelection
-import Integration7.VFVolumeObjects
-import Integration7.RVNonzero
-import Section4.CodeMaps
+module
+
+public import Integration7.RVCoordinateSelection
+public import Integration7.VFVolumeObjects
+public import Integration7.RVNonzero
+public import Section4.CodeMaps
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A retained nonzero RV coordinate is an actual definable density on
 any mixed VF/RV domain. -/

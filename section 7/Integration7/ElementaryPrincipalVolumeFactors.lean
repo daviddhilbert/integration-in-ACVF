@@ -1,8 +1,14 @@
-import Integration7.AdmissibleHeadPointIsomorphisms
-import Integration7.BasicVolumeRelation
-import Integration7.ElementaryBlowupIsomorphism
-import Integration7.ElementaryVolumeProducts
-import Integration7.RVVolumeProducts
+module
+
+public import Integration7.AdmissibleHeadPointIsomorphisms
+public import Integration7.BasicVolumeRelation
+public import Integration7.ElementaryBlowupIsomorphism
+public import Integration7.ElementaryVolumeProducts
+public import Integration7.RVVolumeProducts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The geometric factors of the principal blowup relation, when the
 remaining degree is positive. The cone factor follows by transporting

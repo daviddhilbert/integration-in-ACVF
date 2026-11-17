@@ -1,5 +1,11 @@
-import Integration7.UniformPreparedPositionLabelMaps
-import IntegrationSection5.RVCodePredicates
+module
+
+public import Integration7.UniformPreparedPositionLabelMaps
+public import IntegrationSection5.RVCodePredicates
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Record both actual prepared unary keys on the original cell graph.
 Equality with the prepared positioning key defines the matching part

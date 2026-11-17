@@ -1,7 +1,13 @@
-import Integration7.HKGenericWeightedUnaryRawComparison
-import Integration7.HKWeightedFiniteRowWitnesses
-import Integration7.HKWeightedPointIsomorphismCongruence
-import Integration7.SelectedLabelSchemaUniformBounds
+module
+
+public import Integration7.HKGenericWeightedUnaryRawComparison
+public import Integration7.HKWeightedFiniteRowWitnesses
+public import Integration7.HKWeightedPointIsomorphismCongruence
+public import Integration7.SelectedLabelSchemaUniformBounds
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Generic exact-density Gamma isomorphisms of native finite fibres
 compare arbitrary specified raw unary contractions. -/

@@ -1,5 +1,11 @@
-import Integration7.IndexedVolumeCoproductDensities
-import IntegrationSection6.IndexedCoproductVolumes
+module
+
+public import Integration7.IndexedVolumeCoproductDensities
+public import IntegrationSection6.IndexedCoproductVolumes
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The index/coproduct label equivalence preserves the entire appended
 coordinate tuple and the actual scalar density on both summands. -/

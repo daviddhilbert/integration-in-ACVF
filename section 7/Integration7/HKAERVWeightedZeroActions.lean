@@ -1,5 +1,11 @@
-import Integration7.HKSelectedFamilyWeightedZeroProducts
-import Integration7.AERVVolumeFunctionAdditiveStructure
+module
+
+public import Integration7.HKSelectedFamilyWeightedZeroProducts
+public import Integration7.AERVVolumeFunctionAdditiveStructure
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual weighted-zero finite-factor multiplication descends to the
 positive-valued AE quotient, on the same exceptional base set. -/

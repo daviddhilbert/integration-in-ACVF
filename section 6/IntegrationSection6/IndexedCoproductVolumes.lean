@@ -1,5 +1,11 @@
-import IntegrationSection6.IndexedCoproductEquivalences
-import IntegrationSection6.GammaSchemaCoproductRowValues
+module
+
+public import IntegrationSection6.IndexedCoproductEquivalences
+public import IntegrationSection6.GammaSchemaCoproductRowValues
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Indexed coproduct/index interchange preserves the actual appended
 volume on both canonical summands. -/

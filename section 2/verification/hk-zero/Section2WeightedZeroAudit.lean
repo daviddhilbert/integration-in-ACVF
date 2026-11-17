@@ -1,4 +1,10 @@
-import IntegrationSection2.WeightedZeroVolumeDescent
+module
+
+public import IntegrationSection2.WeightedZeroVolumeDescent
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 set_option pp.universes true
 set_option pp.proofs false
 #check @IntegrationInACVF.Section2.WeightedZeroVolumeDescent.labelMap

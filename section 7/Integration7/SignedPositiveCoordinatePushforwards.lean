@@ -1,5 +1,11 @@
-import Integration7.AppendedIntegralDensityRescaling
-import Integration7.CoordinateVolumeIntegralNormalizers
+module
+
+public import Integration7.AppendedIntegralDensityRescaling
+public import Integration7.CoordinateVolumeIntegralNormalizers
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Coordinate pushforward with the actual determinant-density factor
 of its VF split. The correction acts on the resulting family itself.

@@ -1,7 +1,13 @@
-import Integration7.GammaDensityObjects
-import Integration7.NonzeroDensityFormulas
-import Integration7.GammaRVVolumeSchemata
-import IntegrationSection6.GammaTupleRelationPromotion
+module
+
+public import Integration7.GammaDensityObjects
+public import Integration7.NonzeroDensityFormulas
+public import Integration7.GammaRVVolumeSchemata
+public import IntegrationSection6.GammaTupleRelationPromotion
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual original-Gamma coordinate-and-density presentations promote
 to uniform volume schemata. The density graph has no finite-fibre premise;

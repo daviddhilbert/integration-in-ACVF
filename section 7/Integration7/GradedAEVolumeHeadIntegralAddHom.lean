@@ -1,5 +1,11 @@
-import Integration7.AEVolumeHeadIntegralAddHom
-import Integration7.GradedAEVolumeHeadComponents
+module
+
+public import Integration7.AEVolumeHeadIntegralAddHom
+public import Integration7.GradedAEVolumeHeadComponents
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The existing finite graded head integral is additive on the entire
 function module; its actual homogeneous components determine equality. -/

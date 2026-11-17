@@ -1,5 +1,11 @@
-import Integration7.ConstantLabelPreparationCommonNames
-import Integration7.TwoOrderProductPreparations
+module
+
+public import Integration7.ConstantLabelPreparationCommonNames
+public import Integration7.TwoOrderProductPreparations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Present both constructed product preparations over a prescribed
 common-name set. No inclusion of their arbitrary old code set is required. -/

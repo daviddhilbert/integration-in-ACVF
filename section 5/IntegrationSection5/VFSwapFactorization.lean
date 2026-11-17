@@ -1,5 +1,11 @@
-import IntegrationSection5.VFDifferenceUpdates
-import IntegrationSection5.VFPermutation
+module
+
+public import IntegrationSection5.VFDifferenceUpdates
+public import IntegrationSection5.VFPermutation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! VF transpositions as three actual relatively-unary definable bijections. -/
 noncomputable section

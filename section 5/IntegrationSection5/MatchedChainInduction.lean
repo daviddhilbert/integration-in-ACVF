@@ -1,4 +1,10 @@
-import IntegrationSection5.MatchedFocusStep
+module
+
+public import IntegrationSection5.MatchedFocusStep
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Matching a complete prepared target chain in VF arity one.
 The open-to-open geometric input remains separate from its 3.21 producer. -/

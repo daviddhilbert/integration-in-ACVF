@@ -1,5 +1,11 @@
-import IntegrationSection4.RadiusPreparationGeometry
-import Section3.RootFreeConstancy
+module
+
+public import IntegrationSection4.RadiusPreparationGeometry
+public import Section3.RootFreeConstancy
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A definable unary VF set with no open ball is finite. The proof uses
 the predecessor's actual finite polynomial obstacle set. -/

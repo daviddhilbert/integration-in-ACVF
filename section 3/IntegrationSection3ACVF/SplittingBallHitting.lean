@@ -1,7 +1,13 @@
-import IntegrationSection3ACVF.RealSplittingBallAvoidance
-import IntegrationSection3ACVF.CanonicalBallSupport
-import IntegrationSection3.FiniteSupportHitting
-import Section3.SmallFiniteParameters
+module
+
+public import IntegrationSection3ACVF.RealSplittingBallAvoidance
+public import IntegrationSection3ACVF.CanonicalBallSupport
+public import IntegrationSection3.FiniteSupportHitting
+public import Section3.SmallFiniteParameters
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A full original-base definable family of split open balls has an
 arbitrary finite real hitting set. Imaginary codes are specialized only

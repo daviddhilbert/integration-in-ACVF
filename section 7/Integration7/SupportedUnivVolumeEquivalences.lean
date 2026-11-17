@@ -1,6 +1,12 @@
-import Integration7.SupportedPositiveGradedForget
-import Integration7.NormalizedPositiveDegreeFunctions
-import Integration7.GradedComponentMapInjectivity
+module
+
+public import Integration7.SupportedPositiveGradedForget
+public import Integration7.NormalizedPositiveDegreeFunctions
+public import Integration7.GradedComponentMapInjectivity
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! On the full VF domain, the supported positive presentation quotient
 is the original positive AE function quotient, with the same graded action. -/

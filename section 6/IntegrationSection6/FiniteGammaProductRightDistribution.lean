@@ -1,10 +1,16 @@
-import IntegrationSection6.FiniteGammaProductHoms
-import IntegrationSection6.FiniteGammaCoproductGluing
-import IntegrationSection6.PackedProductEquivalence
-import IntegrationSection6.ProductMapCoordinates
-import IntegrationSection6.ProductVolumeTransport
-import Mathlib.Logic.Equiv.Prod
-import Mathlib.Logic.Equiv.Sum
+module
+
+public import IntegrationSection6.FiniteGammaProductHoms
+public import IntegrationSection6.FiniteGammaCoproductGluing
+public import IntegrationSection6.PackedProductEquivalence
+public import IntegrationSection6.ProductMapCoordinates
+public import IntegrationSection6.ProductVolumeTransport
+public import Mathlib.Logic.Equiv.Prod
+public import Mathlib.Logic.Equiv.Sum
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Distribution uses the actual tagged coproduct and cartesian product.
 Both component maps have full original-Gamma graphs. -/

@@ -1,5 +1,11 @@
-import Integration7.ConstantCoordinateVolumeIsomorphisms
-import Integration7.GammaVolumeFullChartRestriction
+module
+
+public import Integration7.ConstantCoordinateVolumeIsomorphisms
+public import Integration7.GammaVolumeFullChartRestriction
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Exact coordinate-preserving RV isomorphisms with one constant
 coordinate satisfy the volume equations over any real presentation.

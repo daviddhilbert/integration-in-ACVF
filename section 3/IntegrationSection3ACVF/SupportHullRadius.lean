@@ -1,9 +1,15 @@
-import IntegrationSection3ACVF.FullRelationSupports
-import IntegrationSection3ACVF.OrdinaryRadiusFibres
-import IntegrationSection3ACVF.BallKindPredicates
-import IntegrationSection3ACVF.BallEnlargementGeometry
-import IntegrationSection3.CoverRadiusFormulas
-import IntegrationSection3.FiniteClosedHull
+module
+
+public import IntegrationSection3ACVF.FullRelationSupports
+public import IntegrationSection3ACVF.OrdinaryRadiusFibres
+public import IntegrationSection3ACVF.BallKindPredicates
+public import IntegrationSection3ACVF.BallEnlargementGeometry
+public import IntegrationSection3.CoverRadiusFormulas
+public import IntegrationSection3.FiniteClosedHull
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Intrinsic hull-radius graph for the canonical inverse supports
 in 3.11. Every containing ball, support ball and Gamma code is retained. -/

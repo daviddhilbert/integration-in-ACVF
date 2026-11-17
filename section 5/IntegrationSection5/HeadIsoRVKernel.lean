@@ -1,4 +1,10 @@
-import IntegrationSection5.HeadIsoCoordinates
+module
+
+public import IntegrationSection5.HeadIsoCoordinates
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option allowUnsafeReducibility true in

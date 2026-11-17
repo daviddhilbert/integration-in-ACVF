@@ -1,10 +1,16 @@
-import IntegrationSection6.GammaMixedPreimageComplements
-import IntegrationSection6.GammaBinaryMixedPartitions
-import IntegrationSection6.PreparedPartitionsAllDegrees
-import IntegrationSection6.PreparedPartitionBlowups
-import IntegrationSection6.GammaPullbackLiftIsomorphisms
-import IntegrationSection6.FiniteIntegrationTarget
-import IntegrationSection6.FinitePullbackPartitionClasses
+module
+
+public import IntegrationSection6.GammaMixedPreimageComplements
+public import IntegrationSection6.GammaBinaryMixedPartitions
+public import IntegrationSection6.PreparedPartitionsAllDegrees
+public import IntegrationSection6.PreparedPartitionBlowups
+public import IntegrationSection6.GammaPullbackLiftIsomorphisms
+public import IntegrationSection6.FiniteIntegrationTarget
+public import IntegrationSection6.FinitePullbackPartitionClasses
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A definable subset of a lifted object and its complement have actual
 finite RV representatives whose integration classes add to the original.

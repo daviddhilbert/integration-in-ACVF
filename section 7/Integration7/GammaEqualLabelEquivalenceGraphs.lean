@@ -1,4 +1,10 @@
-import Integration7.GammaRVLabelIdentity
+module
+
+public import Integration7.GammaRVLabelIdentity
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Identity on full RV labels retains the original Gamma graph across
 different real presentations of the same label set. -/

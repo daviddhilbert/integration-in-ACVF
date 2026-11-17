@@ -1,7 +1,13 @@
-import Integration7.IndexedVolumeCommonRealization
-import Integration7.IndexedVolumeBinaryPartitions
-import Integration7.IndexedVolumeEmpty
-import Integration7.VolumeBlowupAddition
+module
+
+public import Integration7.IndexedVolumeCommonRealization
+public import Integration7.IndexedVolumeBinaryPartitions
+public import Integration7.IndexedVolumeEmpty
+public import Integration7.VolumeBlowupAddition
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A finite definable cover by common-forward-volume-blowup witnesses
 glues over any actual finite-volume RV index base. -/

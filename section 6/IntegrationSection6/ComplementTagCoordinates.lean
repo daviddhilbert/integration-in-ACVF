@@ -1,4 +1,10 @@
-import IntegrationSection6.BlowupPresentations
+module
+
+public import IntegrationSection6.BlowupPresentations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The complementary coproduct chart has the actual right-tag formula. -/
 noncomputable section

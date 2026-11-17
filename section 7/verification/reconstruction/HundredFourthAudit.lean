@@ -1,11 +1,17 @@
-import Integration7.HomogeneousNormalizedRepresentatives
-import Integration7.LocalizedBasicVolumeGeneration
-import Integration7.LocalizedVolumeBlowupDescent
-import Integration7.NormalizedBasicVolumePresentation
-import Integration7.NormalizedBasicVolumeQuotient
-import Integration7.NormalizedPositiveFunctionGeneration
-import Integration7.NormalizedVolumeHomogeneousFractions
-import Integration7.NormalizedVolumeUniversalProperty
+module
+
+public import Integration7.HomogeneousNormalizedRepresentatives
+public import Integration7.LocalizedBasicVolumeGeneration
+public import Integration7.LocalizedVolumeBlowupDescent
+public import Integration7.NormalizedBasicVolumePresentation
+public import Integration7.NormalizedBasicVolumeQuotient
+public import Integration7.NormalizedPositiveFunctionGeneration
+public import Integration7.NormalizedVolumeHomogeneousFractions
+public import Integration7.NormalizedVolumeUniversalProperty
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 set_option pp.universes true
 set_option pp.proofs false
 set_option pp.deepTerms true

@@ -1,8 +1,14 @@
-import IntegrationSection6.GammaRVRealMapGraphs
-import Section4.MapCorestrict
-import Section4.FiniteMaps
-import IntegrationSection6.ElementaryKeys
-import IntegrationSection6.GammaRVGlobalRestriction
+module
+
+public import IntegrationSection6.GammaRVRealMapGraphs
+public import Section4.MapCorestrict
+public import Section4.FiniteMaps
+public import IntegrationSection6.ElementaryKeys
+public import IntegrationSection6.GammaRVGlobalRestriction
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Coordinate projections of actual volume maps retain full original
 Gamma graphs. Finiteness of the projected volume is a separate obligation;

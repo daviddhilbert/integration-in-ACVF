@@ -1,5 +1,11 @@
-import Integration7.GradedAEVolumePrefixFubini
-import Integration7.AppendedVolumePrefixFubini
+module
+
+public import Integration7.GradedAEVolumePrefixFubini
+public import Integration7.AppendedVolumePrefixFubini
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Every homogeneous component of iterated graded integration is the
 actual iterated head integral. Positive inputs retain the existing prefix

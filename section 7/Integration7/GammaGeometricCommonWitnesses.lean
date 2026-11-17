@@ -1,5 +1,11 @@
-import Integration7.GammaChartedVolumeCommonPromotion
-import Integration7.FormulaVolumeUniformityContexts
+module
+
+public import Integration7.GammaChartedVolumeCommonPromotion
+public import Integration7.FormulaVolumeUniformityContexts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Original-Gamma geometric witnesses can live in arbitrary containing
 contexts. Their formula promotion supplies the general preparation theorem

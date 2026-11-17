@@ -1,7 +1,13 @@
-import IntegrationSection6.ContractionOrderComparison
-import IntegrationSection6.GammaHeadPermutationUniformity
-import IntegrationSection6.StandardProgramPresentations
-import IntegrationSection5.NaturalContractionGamma
+module
+
+public import IntegrationSection6.ContractionOrderComparison
+public import IntegrationSection6.GammaHeadPermutationUniformity
+public import IntegrationSection6.StandardProgramPresentations
+public import IntegrationSection5.NaturalContractionGamma
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The induction step for two orders sharing their first coordinate.
 The induction hypothesis is used only on the smaller VF arity. -/

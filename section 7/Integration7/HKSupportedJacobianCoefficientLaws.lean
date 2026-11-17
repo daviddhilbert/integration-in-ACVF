@@ -1,6 +1,12 @@
-import Integration7.HKJacobianCoefficientRowClasses
-import Integration7.HKSupportedGradedActions
-import Integration7.SupportedVolumeJacobianPositiveCoefficients
+module
+
+public import Integration7.HKJacobianCoefficientRowClasses
+public import Integration7.HKSupportedGradedActions
+public import Integration7.SupportedVolumeJacobianPositiveCoefficients
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual supported Jacobian transforms commute with the genuine
 weighted coefficient operations on both zero and positive components. -/

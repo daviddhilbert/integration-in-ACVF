@@ -1,7 +1,13 @@
-import Integration7.GammaRVTagMaps
-import Integration7.GammaVolumeObjectCoproducts
-import Integration7.GammaVolumeFullChartRestriction
-import Integration7.VolumeCoproductAssociativity
+module
+
+public import Integration7.GammaRVTagMaps
+public import Integration7.GammaVolumeObjectCoproducts
+public import Integration7.GammaVolumeFullChartRestriction
+public import Integration7.VolumeCoproductAssociativity
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The existing volume identity and coproduct swap have full original
 Gamma graphs on actual Gamma volume objects. -/

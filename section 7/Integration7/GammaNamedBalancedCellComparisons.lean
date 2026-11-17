@@ -1,6 +1,12 @@
-import Integration7.BalancedCellOppositeOrderComparisons
-import Integration7.NativeBalancedTranslationCommonNames
-import Integration7.GammaNamesGenericParameters
+module
+
+public import Integration7.BalancedCellOppositeOrderComparisons
+public import Integration7.NativeBalancedTranslationCommonNames
+public import Integration7.GammaNamesGenericParameters
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The balanced cell case for arbitrary specified contractions over a
 common-name context of the original real/Gamma base. Translation centres

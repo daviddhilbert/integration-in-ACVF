@@ -1,4 +1,10 @@
-import Integration7.MixedJacobianOneOperations
+module
+
+public import Integration7.MixedJacobianOneOperations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A definable mixed bijection has nonzero VF Jacobian almost
 everywhere, by differentiating it and its actual definable inverse. -/

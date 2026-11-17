@@ -1,4 +1,10 @@
-import IntegrationSection5.GammaUnaryPullback
+module
+
+public import IntegrationSection5.GammaUnaryPullback
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Finite original-Gamma partitions with actual relatively-unary bijection
 chains agreeing with the given map on every piece. -/

@@ -1,6 +1,12 @@
-import Integration7.IndexedVolumeFiniteWitnessGluing
-import IntegrationSection6.GammaNativeRawObjects
-import IntegrationSection6.GammaWitnessUniformity
+module
+
+public import Integration7.IndexedVolumeFiniteWitnessGluing
+public import IntegrationSection6.GammaNativeRawObjects
+public import IntegrationSection6.GammaWitnessUniformity
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Pointwise original-Gamma formula witnesses yield common forward
 volume blowups of the whole indexed objects. A finite witness cover is

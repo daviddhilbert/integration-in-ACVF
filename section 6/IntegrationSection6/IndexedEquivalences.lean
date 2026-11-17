@@ -1,4 +1,10 @@
-import IntegrationSection6.GammaIndexedFiniteObjects
+module
+
+public import IntegrationSection6.GammaIndexedFiniteObjects
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Explicit charts for RV-indexed assemblies. -/
 noncomputable section

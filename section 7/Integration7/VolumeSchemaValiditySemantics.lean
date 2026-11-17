@@ -1,5 +1,11 @@
-import Integration7.VolumeSchemaRowSemantics
-import Integration7.WeightLabelVolumeCertificates
+module
+
+public import Integration7.VolumeSchemaRowSemantics
+public import Integration7.WeightLabelVolumeCertificates
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The first-order Gamma and RV validity clauses imply the actual two
 volume equations on an interpreted essential bijection. The finite

@@ -1,6 +1,12 @@
-import Integration7.GammaNativeCommonNames
-import Integration7.NativeVolumeDomains
-import Section5.GammaLift
+module
+
+public import Integration7.GammaNativeCommonNames
+public import Integration7.NativeVolumeDomains
+public import Section5.GammaLift
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A Gamma isomorphism over fixed available real names is an actual
 raw mixed definable bijection with exactly the same point function. -/

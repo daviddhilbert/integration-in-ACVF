@@ -1,5 +1,11 @@
-import Integration7.HKAEZeroIntegrals
-import Integration7.HKZeroFamilyChangeOfVariables
+module
+
+public import Integration7.HKAEZeroIntegrals
+public import Integration7.HKZeroFamilyChangeOfVariables
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Inverse-Jacobian change of variables for the actual weighted AE
 function integral. The transform remains in coefficient degree zero. -/

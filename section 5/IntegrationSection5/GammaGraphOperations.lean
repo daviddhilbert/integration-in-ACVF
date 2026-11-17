@@ -1,5 +1,11 @@
-import IntegrationSection5.GammaPreparation
-import Section3.GammaSupport
+module
+
+public import IntegrationSection5.GammaPreparation
+public import Section3.GammaSupport
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Intersection and source predicates for complete invariant Gamma graphs.
 All operations retain the full preimage of the original named values. -/

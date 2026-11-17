@@ -1,7 +1,13 @@
-import IntegrationSection6.PolynomialFocus
-import IntegrationSection6.FocusRootDomains
-import Section4.PolynomialZero
-import Section3.SortedBoolean
+module
+
+public import IntegrationSection6.PolynomialFocus
+public import IntegrationSection6.FocusRootDomains
+public import Section4.PolynomialZero
+public import Section3.SortedBoolean
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Convert the checked local Hensel section into a whole-fibre validity
 witness for an equation definable over the original VF/Gamma-generated base. -/

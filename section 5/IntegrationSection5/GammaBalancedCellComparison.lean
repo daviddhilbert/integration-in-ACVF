@@ -1,4 +1,10 @@
-import IntegrationSection5.GammaCellComparison
+module
+
+public import IntegrationSection5.GammaCellComparison
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Full original-Gamma cell comparison for the balanced and bijective
 graph cases, retaining the actual RV[2] maps in both directions. -/

@@ -1,4 +1,10 @@
-import IntegrationSection5.OrderedContractionProgram
+module
+
+public import IntegrationSection5.OrderedContractionProgram
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual definable natural lift map of an ordered contraction
 program, with all VF coordinates and retained RV labels explicit. -/

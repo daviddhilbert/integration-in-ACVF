@@ -1,5 +1,11 @@
-import Integration7.PreparedUnaryBallFibres
-import IntegrationSection5.UnaryRVCategory
+module
+
+public import Integration7.PreparedUnaryBallFibres
+public import IntegrationSection5.UnaryRVCategory
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual RV map induced by mutually contractible unary
 preparations scales values by the original Gamma-linearity coefficient.

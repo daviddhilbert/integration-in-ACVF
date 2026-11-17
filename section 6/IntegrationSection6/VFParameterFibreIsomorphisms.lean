@@ -1,4 +1,10 @@
-import IntegrationSection6.VFParameterInserts
+module
+
+public import IntegrationSection6.VFParameterInserts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A Gamma isomorphism preserving the retained VF coordinates restricts
 to a genuine isomorphism over the base enlarged by each parameter tuple. -/

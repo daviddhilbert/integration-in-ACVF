@@ -1,8 +1,14 @@
-import Integration7.HKAEZeroPositiveCoefficientBilinearity
-import Integration7.HKPositiveVolumeProductZeroScalars
-import Integration7.AEOrdinaryVolumeModules
-import Integration7.AERVVolumeOrdinaryCoefficientModules
-import Integration7.HKPositiveVolumeClassScalarExtensions
+module
+
+public import Integration7.HKAEZeroPositiveCoefficientBilinearity
+public import Integration7.HKPositiveVolumeProductZeroScalars
+public import Integration7.AEOrdinaryVolumeModules
+public import Integration7.AERVVolumeOrdinaryCoefficientModules
+public import Integration7.HKPositiveVolumeClassScalarExtensions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Multiplication from ordinary-valued AE functions to positive-valued
 AE functions is bilinear over the ordinary coefficient semiring. -/

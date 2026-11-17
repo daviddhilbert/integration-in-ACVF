@@ -1,4 +1,10 @@
-import IntegrationSection5.RelativeSpecial
+module
+
+public import IntegrationSection5.RelativeSpecial
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual fibrewise bijectivity is equivalent to global bijectivity for a
 map fixing the complementary VF coordinates. -/

@@ -1,6 +1,12 @@
-import Integration7.OrdinaryFamilyPositiveCoefficients
-import Integration7.VolumeFamilyPositiveCoefficientRows
-import Integration7.PositiveVolumeProductOrdinaryScalars
+module
+
+public import Integration7.OrdinaryFamilyPositiveCoefficients
+public import Integration7.VolumeFamilyPositiveCoefficientRows
+public import Integration7.PositiveVolumeProductOrdinaryScalars
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Positive-coefficient multiplication of an ordinary family computes
 the actual ordinary row scalar acting on the extended positive class. -/

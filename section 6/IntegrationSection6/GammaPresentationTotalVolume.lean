@@ -1,4 +1,10 @@
-import IntegrationSection6.GammaIndexedIsomorphisms
+module
+
+public import IntegrationSection6.GammaIndexedIsomorphisms
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A graph presentation's volume function, extended by zero outside its
 domain. Its restricted full Gamma graph and finite fibres are unchanged. -/

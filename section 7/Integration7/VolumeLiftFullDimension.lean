@@ -1,6 +1,12 @@
-import Integration7.VFVolumeLifts
-import Section4.FullDimension
-import Section4.RVWeightDimension
+module
+
+public import Integration7.VFVolumeLifts
+public import Section4.FullDimension
+public import Section4.RVWeightDimension
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A nonempty essential RV object lifts to full VF dimension. Thus an
 RV volume object with a VF-small lift has no essential labels. -/

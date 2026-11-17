@@ -1,5 +1,11 @@
-import IntegrationSection6.Kernel
-import IntegrationSection6.NativeFiniteLiftInvariance
+module
+
+public import IntegrationSection6.Kernel
+public import IntegrationSection6.NativeFiniteLiftInvariance
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Lemma6.17 for the actual finite categories in every degree, over the
 original generated base. No canonical-presentation hypothesis remains. -/

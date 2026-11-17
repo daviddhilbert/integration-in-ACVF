@@ -1,8 +1,14 @@
-import IntegrationSection6.GammaActiveFocus
-import IntegrationSection6.PartialFocusPartition
-import IntegrationSection6.LiftComplement
-import IntegrationSection6.BlowupPresentations
-import IntegrationSection6.FiniteRVGeometry
+module
+
+public import IntegrationSection6.GammaActiveFocus
+public import IntegrationSection6.PartialFocusPartition
+public import IntegrationSection6.LiftComplement
+public import IntegrationSection6.BlowupPresentations
+public import IntegrationSection6.FiniteRVGeometry
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A partial original-Gamma focus is an actual blowup inside RV[k].
 The active and complementary objects, and the result, all have finite volume.

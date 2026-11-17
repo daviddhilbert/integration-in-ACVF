@@ -1,7 +1,13 @@
-import IntegrationSection5.UnaryBijectionPreparation
-import IntegrationSection5.UnaryRVCategory
-import IntegrationSection5.UnarySpecialRelative
-import Section5.GammaLift
+module
+
+public import IntegrationSection5.UnaryBijectionPreparation
+public import IntegrationSection5.UnaryRVCategory
+public import IntegrationSection5.UnarySpecialRelative
+public import Section5.GammaLift
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Constructed matched unary special preparations, with an actual RV[1]
 isomorphism and its commuting square. The internal real base contains the

@@ -1,8 +1,14 @@
-import Integration7.RelativeMixedFibreJacobians
-import Integration7.MixedRetainedLabelVolumeForms
-import Integration7.NativeVolumeDomains
-import Integration7.VFAlmostEverywhere
-import Integration7.VFVolumeBijections
+module
+
+public import Integration7.RelativeMixedFibreJacobians
+public import Integration7.MixedRetainedLabelVolumeForms
+public import Integration7.NativeVolumeDomains
+public import Integration7.VFAlmostEverywhere
+public import Integration7.VFVolumeBijections
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Restricting the actual measure equation to a coordinate fibre whose
 intersection with the witnessed exception is VF-small. This keeps the

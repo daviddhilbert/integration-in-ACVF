@@ -1,4 +1,10 @@
-import IntegrationSection6.GammaGlobalRestriction
+module
+
+public import IntegrationSection6.GammaGlobalRestriction
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Real-definable simultaneous projections of VF and RV coordinate
 blocks, retaining their actual sorted point spaces. -/

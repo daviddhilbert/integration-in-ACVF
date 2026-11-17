@@ -1,5 +1,11 @@
-import IntegrationSection3ACVF.RVValueShellGeometry
-import IntegrationSection3ACVF.AtomicBallFamilyChoice
+module
+
+public import IntegrationSection3ACVF.RVValueShellGeometry
+public import IntegrationSection3ACVF.AtomicBallFamilyChoice
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Nonalgebraic actual RV-fibre balls in a fixed value shell. -/
 

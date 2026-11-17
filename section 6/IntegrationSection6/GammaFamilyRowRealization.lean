@@ -1,5 +1,11 @@
-import IntegrationSection6.GammaFamilyRawRows
-import IntegrationSection6.GammaTupleRelationSpecialization
+module
+
+public import IntegrationSection6.GammaFamilyRawRows
+public import IntegrationSection6.GammaTupleRelationSpecialization
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual finite rows of a uniform Gamma family have native finite
 presentations and a valid bounded schema using those same global formulas. -/

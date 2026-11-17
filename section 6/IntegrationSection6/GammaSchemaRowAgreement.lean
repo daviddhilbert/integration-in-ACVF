@@ -1,5 +1,11 @@
-import IntegrationSection6.GammaSortedSchemaRows
-import IntegrationSection6.GammaSchemaRowEquality
+module
+
+public import IntegrationSection6.GammaSortedSchemaRows
+public import IntegrationSection6.GammaSchemaRowEquality
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Literal row agreement across different parameter arities and sorts.
 This is the data relation used when VF parameter families descend to

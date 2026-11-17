@@ -1,5 +1,11 @@
-import IntegrationSection6.GammaVFFieldClosureBases
-import IntegrationSection6.GammaDefinableBaseReduction
+module
+
+public import IntegrationSection6.GammaVFFieldClosureBases
+public import IntegrationSection6.GammaDefinableBaseReduction
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Naming the generated VF parameter field is a definable extension,
 so every actual finite Gamma object and witness can descend afterwards. -/

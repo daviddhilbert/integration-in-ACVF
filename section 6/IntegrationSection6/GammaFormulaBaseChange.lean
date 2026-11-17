@@ -1,4 +1,10 @@
-import IntegrationSection6.GammaParameterRecoding
+module
+
+public import IntegrationSection6.GammaParameterRecoding
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Change the real/Gamma definition base of finite witness formulas
 without changing any carrier, coordinate, bound or exact chain length. -/

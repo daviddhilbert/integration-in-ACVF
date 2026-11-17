@@ -1,5 +1,11 @@
-import IntegrationSection3ACVF.OrdinaryRadiusFibres
-import IntegrationSection3ACVF.AtomicCanonicalRegions
+module
+
+public import IntegrationSection3ACVF.OrdinaryRadiusFibres
+public import IntegrationSection3ACVF.AtomicCanonicalRegions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Constancy of radius on the canonical positive regions of a complete
 type. Ordinary values use finite original-base Gamma images. The two

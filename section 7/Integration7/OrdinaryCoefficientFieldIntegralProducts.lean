@@ -1,7 +1,13 @@
-import Integration7.OrdinaryFiniteCoefficientRowIsomorphisms
-import Integration7.FiniteCoefficientUnaryFieldIntegrals
-import Integration7.FieldBaseAppendedIntegralIndependence
-import Integration7.RVCoordinateDensityPresentations
+module
+
+public import Integration7.OrdinaryFiniteCoefficientRowIsomorphisms
+public import Integration7.FiniteCoefficientUnaryFieldIntegrals
+public import Integration7.FieldBaseAppendedIntegralIndependence
+public import Integration7.RVCoordinateDensityPresentations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Every positive coefficient commutes with the actual unary integral
 of an ordinary-valued family before normalization. The finite product

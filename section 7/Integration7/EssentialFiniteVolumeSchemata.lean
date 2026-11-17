@@ -1,4 +1,10 @@
-import Integration7.GammaVolumeSchemaRestrictions
+module
+
+public import Integration7.GammaVolumeSchemaRestrictions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The essential part of a finite RV schema is an original-base formula.
 Its exact domain consists of labels with a nonzero volume tuple. -/

@@ -1,4 +1,10 @@
-import Integration7.RelativeVFJacobianRows
+module
+
+public import Integration7.RelativeVFJacobianRows
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The active partial derivative is exactly the unary Jacobian on a
 fixed complementary VF tuple. This is a pointwise chart assertion. -/

@@ -1,5 +1,11 @@
-import Integration7.GammaRVGraphRefinements
-import IntegrationSection5.RelativelyUnary
+module
+
+public import Integration7.GammaRVGraphRefinements
+public import IntegrationSection5.RelativelyUnary
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual geometry of an RV graph refinement: a bijection onto its
 image, unchanged VF coordinates, retained old labels, finite label fibres,

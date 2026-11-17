@@ -1,4 +1,10 @@
-import Integration7.HeadTailAppendedStandardPrograms
+module
+
+public import Integration7.HeadTailAppendedStandardPrograms
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The appended program restores the head and every tail coordinate
 to their original positions, and retains the original density label. -/

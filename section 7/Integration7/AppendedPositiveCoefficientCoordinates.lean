@@ -1,4 +1,10 @@
-import Integration7.AppendedFamilyLiftCoordinates
+module
+
+public import Integration7.AppendedFamilyLiftCoordinates
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Coordinate bookkeeping for the product of a positive coefficient
 lift and a coefficient-first family lift. The blocks are coefficient,

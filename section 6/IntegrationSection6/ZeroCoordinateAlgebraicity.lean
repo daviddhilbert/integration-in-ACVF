@@ -1,8 +1,14 @@
-import IntegrationSection6.AlgebraicFibres
-import IntegrationSection6.SortedParameterElimination
-import Section3.RVGammaAlgebraicity
-import Section3.SortedFunctionClosure
-import Section3.RVOperations
+module
+
+public import IntegrationSection6.AlgebraicFibres
+public import IntegrationSection6.SortedParameterElimination
+public import Section3.RVGammaAlgebraicity
+public import Section3.SortedFunctionClosure
+public import Section3.RVOperations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Zero RV coordinates add no algebraic parameters. This permits the
 local simple-root argument to run on the nonzero coordinate stratum. -/

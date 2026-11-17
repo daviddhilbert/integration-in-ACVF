@@ -1,5 +1,11 @@
-import IntegrationSection6.UnaryPresentedWithoutField
-import IntegrationSection6.GammaSelectedLabelFibrePresentations
+module
+
+public import IntegrationSection6.UnaryPresentedWithoutField
+public import IntegrationSection6.GammaSelectedLabelFibrePresentations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Lemma6.14 for one VF coordinate, stated directly for the actual RV[k]
 fibres of mixed sets and arbitrary unary standard contractions. -/

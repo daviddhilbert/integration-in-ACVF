@@ -1,5 +1,11 @@
-import IntegrationSection5.SharedRVProductSource
-import IntegrationSection5.ProductProgramVolume
+module
+
+public import IntegrationSection5.SharedRVProductSource
+public import IntegrationSection5.ProductProgramVolume
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual two-stage shared-parameter product programs, their full Gamma certificates, exact joint kernels and volume formulas. -/
 noncomputable section

@@ -1,6 +1,12 @@
-import Integration7.GammaMixedCoordinatePredicates
-import Integration7.NativeRVParameterSelections
-import IntegrationSection5.GammaOrderedContraction
+module
+
+public import Integration7.GammaMixedCoordinatePredicates
+public import Integration7.NativeRVParameterSelections
+public import IntegrationSection5.GammaOrderedContraction
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Restricting a native domain by an arbitrary original-Gamma set
 of selected old RV labels keeps its original small real presentation. -/

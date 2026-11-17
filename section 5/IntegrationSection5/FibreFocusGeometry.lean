@@ -1,4 +1,10 @@
-import IntegrationSection5.RelativeFibreMaps
+module
+
+public import IntegrationSection5.RelativeFibreMaps
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Restrict an actual focus to one VF-coordinate fibre. Intersecting with
 the fibre's RV hull retains the exact focus axioms for arbitrary sources. -/

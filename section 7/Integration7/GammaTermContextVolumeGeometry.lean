@@ -1,5 +1,11 @@
-import Integration7.GammaTermClosureRVMaps
-import Integration7.GammaVolumeParameterGeometry
+module
+
+public import Integration7.GammaTermClosureRVMaps
+public import Integration7.GammaVolumeParameterGeometry
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Ordinary volume geometry over exactly the term closure of the real
 base has full original-Gamma graphs and original-base algebraic centers. -/

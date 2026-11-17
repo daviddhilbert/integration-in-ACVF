@@ -1,5 +1,11 @@
-import Integration7.UnarySpecialHeadPreparations
-import IntegrationSection5.GammaPreparedBijection
+module
+
+public import Integration7.UnarySpecialHeadPreparations
+public import IntegrationSection5.GammaPreparedBijection
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual unary special preparations over a VF field base, with the
 original Gamma certificate and no additional parameter names. -/

@@ -1,4 +1,10 @@
-import Integration7.VolumeFamilyChartGraphs
+module
+
+public import Integration7.VolumeFamilyChartGraphs
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Finite-tuple formulas for volume chart values. This repackages the
 parameterized chart graph without choosing Gamma representatives. -/

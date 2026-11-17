@@ -1,5 +1,11 @@
-import Integration7.GammaVolumeRestrictionIdentities
-import Integration7.EssentialVolumeRestriction
+module
+
+public import Integration7.GammaVolumeRestrictionIdentities
+public import Integration7.EssentialVolumeRestriction
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The full domain of a Gamma volume object is Gamma-definable. A
 restriction containing every essential label compares by its actual

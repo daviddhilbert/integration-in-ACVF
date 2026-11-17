@@ -1,4 +1,10 @@
-import IntegrationSection5.GammaMapPresentation
+module
+
+public import IntegrationSection5.GammaMapPresentation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A common internal real presentation for a family of original-Gamma sets.
 The enlarged code set is not a new smallness or original-base hypothesis. -/

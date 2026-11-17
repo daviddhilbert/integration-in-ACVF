@@ -1,5 +1,11 @@
-import Integration7.CanonicalLiftVolumePresentations
-import IntegrationSection5.RelativeLabelPreservation
+module
+
+public import Integration7.CanonicalLiftVolumePresentations
+public import IntegrationSection5.RelativeLabelPreservation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! An old density label stays nonzero on literal lifts and after
 special bijections or focus steps, with no new parameter choices. -/

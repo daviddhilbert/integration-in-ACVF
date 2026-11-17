@@ -1,5 +1,11 @@
-import IntegrationSection5.UnaryRVIsomorphism
-import IntegrationSection5.RVContractionGamma
+module
+
+public import IntegrationSection5.UnaryRVIsomorphism
+public import IntegrationSection5.RVContractionGamma
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Lemma5.3 for the actual mutually contractible map furnished by Lemma5.2.
 The morphisms belong to the unchanged RV[1,·] category and keep their full

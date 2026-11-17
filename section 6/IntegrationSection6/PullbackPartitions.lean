@@ -1,6 +1,12 @@
-import IntegrationSection6.Subobjects
-import IntegrationSection6.LiftPresentations
-import Section4.RVAppend
+module
+
+public import IntegrationSection6.Subobjects
+public import IntegrationSection6.LiftPresentations
+public import Section4.RVAppend
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Canonical RV data preserves a disjoint partition into RV-pullbacks.
 The comparison is an actual volume-preserving definable RV isomorphism. -/

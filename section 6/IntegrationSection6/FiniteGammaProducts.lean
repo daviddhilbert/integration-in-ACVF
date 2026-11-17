@@ -1,7 +1,13 @@
-import IntegrationSection6.GammaRVProductRelations
-import IntegrationSection6.GammaRVRealSets
-import IntegrationSection6.FiniteGammaObjects
-import Section4.RVFiniteHomogeneousProducts
+module
+
+public import IntegrationSection6.GammaRVProductRelations
+public import IntegrationSection6.GammaRVRealSets
+public import IntegrationSection6.FiniteGammaObjects
+public import Section4.RVFiniteHomogeneousProducts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Products in the requested finite-volume categories retain full
 original-Gamma domain and volume graphs. -/

@@ -1,6 +1,12 @@
-import Integration7.VolumeBlowupProducts
-import Integration7.VolumeBlowupRescaling
-import Integration7.SignedVolumeProductSwap
+module
+
+public import Integration7.VolumeBlowupProducts
+public import Integration7.VolumeBlowupRescaling
+public import Integration7.SignedVolumeProductSwap
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Right multiplication uses the genuine signed block swap. Its sign
 is removed by rescaling both blowup chains by the same named constant. -/

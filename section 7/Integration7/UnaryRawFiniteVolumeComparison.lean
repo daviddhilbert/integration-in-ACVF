@@ -1,6 +1,12 @@
-import Integration7.UnaryContractionGammaVolumeComparison
-import Integration7.FiniteContractionNormalizationVolumeIso
-import Integration7.VolumeContextJoins
+module
+
+public import Integration7.UnaryContractionGammaVolumeComparison
+public import Integration7.FiniteContractionNormalizationVolumeIso
+public import Integration7.VolumeContextJoins
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Unary Corollary 7.6 on the raw final labels, in any prescribed
 containing context. Normalization charts preserve the complete volume

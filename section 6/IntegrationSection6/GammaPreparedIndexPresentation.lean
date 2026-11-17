@@ -1,6 +1,12 @@
-import IntegrationSection6.FiniteGammaPreparedBase
-import IntegrationSection6.GammaFinitePresentationExistence
-import IntegrationSection6.GammaGraphFormulaCongruence
+module
+
+public import IntegrationSection6.FiniteGammaPreparedBase
+public import IntegrationSection6.GammaFinitePresentationExistence
+public import IntegrationSection6.GammaGraphFormulaCongruence
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The full prepared key space has an actual finite-volume presentation
 in RV[p], with volume its first p labels. Its remaining key labels may

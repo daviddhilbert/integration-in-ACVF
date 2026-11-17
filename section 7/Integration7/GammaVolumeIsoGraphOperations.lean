@@ -1,6 +1,12 @@
-import Integration7.GammaVolumeBlowupRowPromotion
-import Integration7.FiniteVolumeIsoMaps
-import Section5.GammaInvariantLogic
+module
+
+public import Integration7.GammaVolumeBlowupRowPromotion
+public import Integration7.FiniteVolumeIsoMaps
+public import Section5.GammaInvariantLogic
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Original-Gamma charts of actual volume isomorphisms are closed
 under composition and inverse, with no parameter-base enlargement. -/

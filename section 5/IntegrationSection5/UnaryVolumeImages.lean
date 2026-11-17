@@ -1,5 +1,11 @@
-import IntegrationSection5.RVContractionMaps
-import IntegrationSection5.UnaryVFFibreFinite
+module
+
+public import IntegrationSection5.RVContractionMaps
+public import IntegrationSection5.UnaryVFFibreFinite
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

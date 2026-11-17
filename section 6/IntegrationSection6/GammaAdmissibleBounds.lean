@@ -1,5 +1,11 @@
-import IntegrationSection6.GammaAdmissibilitySchemata
-import IntegrationSection6.GammaNativeFiniteBounds
+module
+
+public import IntegrationSection6.GammaAdmissibilitySchemata
+public import IntegrationSection6.GammaNativeFiniteBounds
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Uniform finite coordinate-slice bounds for an actual Gamma admissible
 coordinate. Only the original real/Gamma names enter compactness. -/

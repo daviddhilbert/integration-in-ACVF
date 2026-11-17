@@ -1,5 +1,11 @@
-import Integration7.CentralVolumePointClasses
-import Integration7.VolumeIntegrationGroupification
+module
+
+public import Integration7.CentralVolumePointClasses
+public import Integration7.VolumeIntegrationGroupification
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual point remains central in the universal groupification
 of the geometric RV common-blowup quotient. -/

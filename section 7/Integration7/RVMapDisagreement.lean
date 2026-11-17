@@ -1,4 +1,10 @@
-import Integration7.RVVolumeLiftIsomorphism
+module
+
+public import Integration7.RVVolumeLiftIsomorphism
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The disagreement of two actual definable maps is definable. In
 particular the candidate RV Jacobian can be compared with the density

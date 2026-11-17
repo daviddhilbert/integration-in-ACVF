@@ -1,7 +1,13 @@
-import Integration7.AppendedCoefficientLiftProductBijections
-import Integration7.SelectedDefinableAppendedLiftBijections
-import Integration7.SelectedVolumeFamilyPositiveProducts
-import Integration7.VFVolumeProductBijections
+module
+
+public import Integration7.AppendedCoefficientLiftProductBijections
+public import Integration7.SelectedDefinableAppendedLiftBijections
+public import Integration7.SelectedVolumeFamilyPositiveProducts
+public import Integration7.VFVolumeProductBijections
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The selected positive coefficient action has the actual
 coefficient-first Cartesian VF realization, including the explicit

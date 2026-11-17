@@ -1,6 +1,12 @@
-import Integration7.VolumeAlmostEverywhereImages
-import Section4.RVFinitaryImages
-import Section4.EarlierRVInputs
+module
+
+public import Integration7.VolumeAlmostEverywhereImages
+public import Section4.RVFinitaryImages
+public import Section4.EarlierRVInputs
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Move an exceptional locus to a definable RV image. All points above
 a label outside that image satisfy the original assertion. This permits

@@ -1,5 +1,11 @@
-import Integration7.FieldBaseVolumeIntegralPartitions
-import Integration7.SelectedSumLabelCutRowIsomorphisms
+module
+
+public import Integration7.FieldBaseVolumeIntegralPartitions
+public import Integration7.SelectedSumLabelCutRowIsomorphisms
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Additivity of the actual chosen integral over an arbitrary VF field
 base. The old-tag partition of one contraction supplies both summands. -/

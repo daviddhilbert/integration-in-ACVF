@@ -1,4 +1,10 @@
-import IntegrationSection3ACVF.RVSlopeRigidity
+module
+
+public import IntegrationSection3ACVF.RVSlopeRigidity
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Lemma 3.18: actual RV-linearity on an atomic open ball. The proof
 uses finite-fibre means and Gamma-linearity of a translated error map;

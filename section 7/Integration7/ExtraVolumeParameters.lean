@@ -1,4 +1,10 @@
-import Integration7.GammaVolumeIsomorphismSchemata
+module
+
+public import Integration7.GammaVolumeIsomorphismSchemata
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Drop an auxiliary parameter block while retaining all geometric
 coordinates. Extra parameters will be allowed only inside the exceptional

@@ -1,7 +1,13 @@
-import Integration7.RawRVRelationFormulas
-import Integration7.CanonicalRawGammaFormulas
-import IntegrationSection6.GammaFiniteGraphObjects
-import IntegrationSection6.GammaRawRVFormulas
+module
+
+public import Integration7.RawRVRelationFormulas
+public import Integration7.CanonicalRawGammaFormulas
+public import IntegrationSection6.GammaFiniteGraphObjects
+public import IntegrationSection6.GammaRawRVFormulas
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! An actual finite RV map whose complete raw formulas descend to a
 specified real base has a full Gamma presentation over precisely that

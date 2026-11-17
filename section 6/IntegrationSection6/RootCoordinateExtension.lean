@@ -1,4 +1,10 @@
-import IntegrationSection6.FocusRootDomains
+module
+
+public import IntegrationSection6.FocusRootDomains
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Extend a focus equation in selected coordinates to the full tuple.
 Other coordinates, including absorbing zero classes, remain unchanged. -/

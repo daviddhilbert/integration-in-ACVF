@@ -1,7 +1,13 @@
-import Integration7.HeadAppendVolumeCoordinates
-import Integration7.GammaEqualLabelEquivalenceGraphs
-import Integration7.UnarySelectedNormalizationVolumeIso
-import IntegrationSection6.RawContractionDomain
+module
+
+public import Integration7.HeadAppendVolumeCoordinates
+public import Integration7.GammaEqualLabelEquivalenceGraphs
+public import Integration7.UnarySelectedNormalizationVolumeIso
+public import IntegrationSection6.RawContractionDomain
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The unnormalized unary contraction of a frozen head fibre is the
 actual head-contracted RV fibre, retaining old selected coordinates first. -/

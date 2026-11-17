@@ -1,4 +1,10 @@
-import Mathlib.Data.Fintype.EquivFin
+module
+
+public import Mathlib.Data.Fintype.EquivFin
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Enumerate exactly the nonzero coordinates, retaining any specified
 nonzero active coordinate. No algebraic or definability assertion is hidden here. -/

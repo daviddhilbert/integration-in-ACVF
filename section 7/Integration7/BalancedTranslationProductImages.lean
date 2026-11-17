@@ -1,5 +1,11 @@
-import Integration7.MatchedBalancedBallRestrictions
-import IntegrationSection4.BalancedBallClasses
+module
+
+public import Integration7.MatchedBalancedBallRestrictions
+public import IntegrationSection4.BalancedBallClasses
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Exact product images of the two balanced translations. These
 formulas use complete balanced fibres, so they apply to the matching

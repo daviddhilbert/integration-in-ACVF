@@ -1,9 +1,15 @@
+module
+
 /-
 Extracted from https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%205/Completed18CellBaseTransfer.lean
 Original declaration namespaces and notices are retained.
 -/
-import IntegrationSection5.FiniteRVComparison
-import Section3.GammaClosureLaws
+public import IntegrationSection5.FiniteRVComparison
+public import Section3.GammaClosureLaws
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Prepared cells and their complete positioning graphs descend along
 definable parameter inclusions, including all RV-label coefficient bases. -/

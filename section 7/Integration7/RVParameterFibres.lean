@@ -1,5 +1,11 @@
-import Integration7.VolumeForms
-import Integration7.RVCoordinateSelection
+module
+
+public import Integration7.VolumeForms
+public import Integration7.RVCoordinateSelection
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Specialization at an actual RV parameter tuple retains the original
 fibre labels and pulls back the density along literal tuple insertion. -/

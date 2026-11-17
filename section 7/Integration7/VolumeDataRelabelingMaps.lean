@@ -1,5 +1,11 @@
-import Integration7.UniformVolumeData
-import Integration7.VolumeRelabeling
+module
+
+public import Integration7.UniformVolumeData
+public import Integration7.VolumeRelabeling
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 set_option backward.isDefEq.respectTransparency false
 open FirstOrder FirstOrder.Language CategoryTheory
 open SpecialTransformations.Milestone0 SpecialTransformations.Milestone0.LRV

@@ -1,4 +1,10 @@
-import Section9.VolumeChartCertificates
+module
+
+public import Section9.VolumeChartCertificates
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Normalizing RV correspondences jointly in an arbitrary real parameter
 tuple and the RV scales. The parameters remain free formula variables. -/

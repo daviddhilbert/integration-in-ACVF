@@ -1,5 +1,11 @@
-import Integration7.EssentialGammaWeight
-import Integration7.RVProductGammaBalance
+module
+
+public import Integration7.EssentialGammaWeight
+public import Integration7.RVProductGammaBalance
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Encode Gamma weight by the actual coordinate tuple followed by its
 nonzero density. Equality of these products is equality in Gamma, with no

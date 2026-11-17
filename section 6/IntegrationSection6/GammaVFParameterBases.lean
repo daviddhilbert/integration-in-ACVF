@@ -1,4 +1,10 @@
-import IntegrationSection6.GammaPreparedRowAgreements
+module
+
+public import IntegrationSection6.GammaPreparedRowAgreements
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual VF parameter set in raw sorted coordinates keeps its
 complete original Gamma certificate. -/

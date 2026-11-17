@@ -1,7 +1,13 @@
-import IntegrationSection6.SelectedSliceContractionComparison
-import IntegrationSection6.CoordinateExchange
-import IntegrationSection6.GammaVolumeSliceUniformity
-import IntegrationSection6.GammaSwappedCommonBlowups
+module
+
+public import IntegrationSection6.SelectedSliceContractionComparison
+public import IntegrationSection6.CoordinateExchange
+public import IntegrationSection6.GammaVolumeSliceUniformity
+public import IntegrationSection6.GammaSwappedCommonBlowups
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Lemma6.16 with selected original RV volume coordinates. Only fixing
 VF together with these selected labels must give finite fibres. -/

@@ -1,7 +1,13 @@
-import Integration7.OrdinaryVFVolumePermutations
-import Integration7.PureVFPermutationDimensions
-import Integration7.AEOrdinaryVolumeModules
-import Integration7.PositiveVolumeClassScalarExtensions
+module
+
+public import Integration7.OrdinaryVFVolumePermutations
+public import Integration7.PureVFPermutationDimensions
+public import Integration7.AEOrdinaryVolumeModules
+public import Integration7.PositiveVolumeClassScalarExtensions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! VF coordinate permutations on ordinary-valued almost-everywhere
 functions, including their actual ordinary coefficient action. -/

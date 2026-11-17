@@ -1,6 +1,12 @@
-import Integration7.EssentialZeroProducts
-import Integration7.RVJacobianRestriction
-import Section4.ProductBijections
+module
+
+public import Integration7.EssentialZeroProducts
+public import Integration7.RVJacobianRestriction
+public import Section4.ProductBijections
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Products of actual positive volume isomorphisms with ordinary
 degree-zero RV isomorphisms. The latter carry no density or Jacobian premise. -/

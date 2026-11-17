@@ -1,4 +1,10 @@
-import Integration7.MixedVFPermutationDomains
+module
+
+public import Integration7.MixedVFPermutationDomains
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual definable VF coordinate permutations preserve the dimension
 of pure VF exceptional sets over the original real parameter base. -/

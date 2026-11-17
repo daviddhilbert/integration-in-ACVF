@@ -1,6 +1,12 @@
-import Integration7.UniformCellRefinementCentres
-import Integration7.GammaScalarMapDescent
-import IntegrationSection6.MixedCoordinatePointMaps
+module
+
+public import Integration7.UniformCellRefinementCentres
+public import Integration7.GammaScalarMapDescent
+public import IntegrationSection6.MixedCoordinatePointMaps
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The uniform cell centre descends to an actual mixed unary map of
 the other VF coordinate and all refinement labels, over the original

@@ -1,5 +1,11 @@
-import Integration7.MixedBijectiveJacobianNonzero
-import Section9.MixedDerivativeFormula
+module
+
+public import Integration7.MixedBijectiveJacobianNonzero
+public import Section9.MixedDerivativeFormula
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Full mixed differentiability holds away from a definable set of
 smaller VF dimension, over the original real parameter base. -/

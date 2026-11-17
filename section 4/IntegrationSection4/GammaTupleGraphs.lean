@@ -1,5 +1,11 @@
-import IntegrationSection4.GammaBaseDescent
-import Section5.GammaInvariantLogic
+module
+
+public import IntegrationSection4.GammaBaseDescent
+public import Section5.GammaInvariantLogic
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

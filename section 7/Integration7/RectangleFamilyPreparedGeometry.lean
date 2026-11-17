@@ -1,5 +1,11 @@
-import Integration7.NativeRectangleFamilyStandardContractions
-import IntegrationSection5.RelativeLabelPreservation
+module
+
+public import Integration7.NativeRectangleFamilyStandardContractions
+public import IntegrationSection5.RelativeLabelPreservation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A rectangle-family preparation acts only on the labelled head
 projection. Its target remains a rectangle family, including all shared

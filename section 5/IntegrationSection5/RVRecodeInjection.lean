@@ -1,6 +1,12 @@
-import IntegrationSection5.RVAttachment
-import IntegrationSection5.MixedFibreDefinability
-import IntegrationSection5.VFPermutation
+module
+
+public import IntegrationSection5.RVAttachment
+public import IntegrationSection5.MixedFibreDefinability
+public import IntegrationSection5.VFPermutation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! RV recoding preserves the full VF tuple. If the code determines the
 old RV tuple, the recoding is an actual original-base definable injection. -/

@@ -1,4 +1,10 @@
-import Integration7.NormalizedSupportedVolumeFunctions
+module
+
+public import Integration7.NormalizedSupportedVolumeFunctions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Change of variables holds on every element of the actual balanced
 normalized supported module, by linear extension of the proved geometric

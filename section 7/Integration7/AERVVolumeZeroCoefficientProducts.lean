@@ -1,8 +1,14 @@
-import Integration7.VolumeFamilyZeroProductRows
-import Integration7.AERVVolumeFunctionAdditiveStructure
-import Integration7.ZeroFactorBlowupProducts
-import Integration7.VolumeIsoParameterExtension
-import Integration7.AllDegreeVolumeClasses
+module
+
+public import Integration7.VolumeFamilyZeroProductRows
+public import Integration7.AERVVolumeFunctionAdditiveStructure
+public import Integration7.ZeroFactorBlowupProducts
+public import Integration7.VolumeIsoParameterExtension
+public import Integration7.AllDegreeVolumeClasses
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Ordinary RV[0] isomorphism classes act by genuine finite-factor
 products on the AE volume-function quotient. The original exceptional

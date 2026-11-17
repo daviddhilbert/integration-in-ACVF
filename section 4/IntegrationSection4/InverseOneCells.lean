@@ -1,5 +1,11 @@
-import IntegrationSection4.InverseBodies
-import IntegrationSection4.Cells
+module
+
+public import IntegrationSection4.InverseBodies
+public import IntegrationSection4.Cells
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

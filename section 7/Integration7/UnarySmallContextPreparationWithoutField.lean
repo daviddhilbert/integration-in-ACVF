@@ -1,6 +1,12 @@
-import Integration7.UnarySmallContextPreparation
-import Integration7.VFFieldContainingVolumeContexts
-import IntegrationSection6.GammaSpecialBaseReduction
+module
+
+public import Integration7.UnarySmallContextPreparation
+public import Integration7.VFFieldContainingVolumeContexts
+public import IntegrationSection6.GammaSpecialBaseReduction
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Unary preparation over an arbitrary real/Gamma base. An internal
 coefficient field is contained in a small context; definable-name

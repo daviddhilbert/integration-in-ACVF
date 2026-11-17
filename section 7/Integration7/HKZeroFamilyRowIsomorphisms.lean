@@ -1,8 +1,14 @@
-import Integration7.HKAEZeroVolumeFunctions
-import Integration7.HKDensityEqualityGraphs
-import Integration7.RVMapGammaPointIsomorphisms
-import IntegrationSection6.MixedVFParameterDomains
-import IntegrationSection6.GammaSortedParameterPreservation
+module
+
+public import Integration7.HKAEZeroVolumeFunctions
+public import Integration7.HKDensityEqualityGraphs
+public import Integration7.RVMapGammaPointIsomorphisms
+public import IntegrationSection6.MixedVFParameterDomains
+public import IntegrationSection6.GammaSortedParameterPreservation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Equality of weighted zero row classes supplies an actual row
 isomorphism preserving the original RV form, over the named VF tuple. -/

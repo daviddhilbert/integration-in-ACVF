@@ -1,5 +1,11 @@
-import IntegrationSection6.GammaSchemaIndexedElementaryVolumes
-import IntegrationSection6.GammaSchemaIndexedAdmissibility
+module
+
+public import IntegrationSection6.GammaSchemaIndexedElementaryVolumes
+public import IntegrationSection6.GammaSchemaIndexedAdmissibility
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Indexed assembly commutes with a native elementary blowup. Every
 object lies in the finite-volume category, and the chart keeps its complete

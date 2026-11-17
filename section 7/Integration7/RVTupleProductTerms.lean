@@ -1,4 +1,10 @@
-import Section9.RVScaleRatio
+module
+
+public import Section9.RVScaleRatio
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A parameter-free term for the actual RV tuple product, including the
 empty product. This supplies a finite formula for Gamma weight balance. -/

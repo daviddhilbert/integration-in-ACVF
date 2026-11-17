@@ -1,7 +1,13 @@
-import Integration7.UniformCellPositionRows
-import Integration7.RVLabelRectangularFibres
-import Integration7.MixedCellGraphRefinements
-import IntegrationSection4.CellRectangles
+module
+
+public import Integration7.UniformCellPositionRows
+public import Integration7.RVLabelRectangularFibres
+public import Integration7.MixedCellGraphRefinements
+public import IntegrationSection4.CellRectangles
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Nonrectangular nonzero-paradigm fibres of the uniform cell chart
 are balanced for that chart's actual local position. The rectangle

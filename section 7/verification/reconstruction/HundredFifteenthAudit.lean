@@ -1,13 +1,19 @@
-import Integration7.ConstantCoefficientIntegralPresentations
-import Integration7.CoordinateSelectedCoefficientFamilies
-import Integration7.CoordinateSelectedCoefficientRows
-import Integration7.FieldBaseAppendedIntegralIndependence
-import Integration7.IndependentRVProductDensityGraphs
-import Integration7.NativeCoordinateCoefficientPreparations
-import Integration7.NativeRVLabelProducts
-import Integration7.PureRVLabelGraphMembership
-import Integration7.RVCoordinateDensityPresentations
-import Integration7.VolumeDensityGraphMembership
+module
+
+public import Integration7.ConstantCoefficientIntegralPresentations
+public import Integration7.CoordinateSelectedCoefficientFamilies
+public import Integration7.CoordinateSelectedCoefficientRows
+public import Integration7.FieldBaseAppendedIntegralIndependence
+public import Integration7.IndependentRVProductDensityGraphs
+public import Integration7.NativeCoordinateCoefficientPreparations
+public import Integration7.NativeRVLabelProducts
+public import Integration7.PureRVLabelGraphMembership
+public import Integration7.RVCoordinateDensityPresentations
+public import Integration7.VolumeDensityGraphMembership
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 set_option pp.universes true
 set_option pp.proofs false
 set_option pp.deepTerms true

@@ -1,4 +1,10 @@
-import Integration7.RVLabelConstraintHeadProjections
+module
+
+public import Integration7.RVLabelConstraintHeadProjections
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Literal coordinate identities for the head key of a shared-label
 special preparation. -/

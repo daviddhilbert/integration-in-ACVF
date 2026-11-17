@@ -1,5 +1,11 @@
-import Integration7.VolumeCoordinateAdditiveEquivalences
-import Integration7.HKZeroCoefficientScalarRows
+module
+
+public import Integration7.VolumeCoordinateAdditiveEquivalences
+public import Integration7.HKZeroCoefficientScalarRows
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Explicit volume-coordinate and arithmetic identifications are
 linear over ordinary RV[0] coefficients, which change no volume order. -/

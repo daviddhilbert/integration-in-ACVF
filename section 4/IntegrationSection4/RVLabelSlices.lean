@@ -1,5 +1,11 @@
-import IntegrationSection4.GammaGraphOperations
-import IntegrationSection3ACVF.RealParameterTuples
+module
+
+public import IntegrationSection4.GammaGraphOperations
+public import IntegrationSection3ACVF.RealParameterTuples
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

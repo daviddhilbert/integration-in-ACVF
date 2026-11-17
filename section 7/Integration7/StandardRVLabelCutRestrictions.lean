@@ -1,5 +1,11 @@
-import Integration7.OrderedRVLabelCutRestrictions
-import IntegrationSection6.StandardProgramPresentations
+module
+
+public import Integration7.OrderedRVLabelCutRestrictions
+public import IntegrationSection6.StandardProgramPresentations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Standard contractions restrict to arbitrary original-Gamma label
 predicates in the same small presentation, retaining the exact target

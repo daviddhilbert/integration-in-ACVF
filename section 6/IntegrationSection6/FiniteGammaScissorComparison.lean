@@ -1,5 +1,11 @@
-import IntegrationSection6.FiniteGammaScissorCoproducts
-import IntegrationSection6.FiniteGammaIsoClasses
+module
+
+public import IntegrationSection6.FiniteGammaScissorCoproducts
+public import IntegrationSection6.FiniteGammaIsoClasses
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! An additive comparison from actual Gamma RV[k] isomorphism classes
 to the inherited finite-volume Gamma scissor presentation. -/

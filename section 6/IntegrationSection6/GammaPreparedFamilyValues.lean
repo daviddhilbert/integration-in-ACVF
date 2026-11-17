@@ -1,4 +1,10 @@
-import IntegrationSection6.GammaPreparedFamilyImages
+module
+
+public import IntegrationSection6.GammaPreparedFamilyImages
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The prepared-family bijection changes the VF base and attaches its
 key while preserving every original fibre RV label literally. -/

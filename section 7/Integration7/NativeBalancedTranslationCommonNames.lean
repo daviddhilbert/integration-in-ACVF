@@ -1,7 +1,13 @@
-import Integration7.NativeBalancedTranslations
-import Integration7.BalancedInversePositionGraphs
-import Integration7.GammaNamesVolumeContexts
-import Integration7.NativeRelativeTranslationVolumes
+module
+
+public import Integration7.NativeBalancedTranslations
+public import Integration7.BalancedInversePositionGraphs
+public import Integration7.GammaNamesVolumeContexts
+public import Integration7.NativeRelativeTranslationVolumes
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual definable balanced-cell translations, with original-base centre
 graphs and Jacobian-one certificates. A containing small context realizes

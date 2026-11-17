@@ -1,7 +1,13 @@
-import Integration7.NativeUnaryProducts
-import Integration7.NativeVFPairImages
-import IntegrationSection6.GammaGlobalRestriction
-import IntegrationSection5.GammaPreparation
+module
+
+public import Integration7.NativeUnaryProducts
+public import Integration7.NativeVFPairImages
+public import IntegrationSection6.GammaGlobalRestriction
+public import IntegrationSection5.GammaPreparation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! An actual native VF rectangle factors as the product of its two
 actual unary projection images, retaining their original-Gamma domains. -/

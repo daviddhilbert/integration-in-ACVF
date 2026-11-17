@@ -1,5 +1,11 @@
-import Integration7.PositiveCoefficientAppendedIntegrals
-import Integration7.AERVVolumePositiveCoefficientProducts
+module
+
+public import Integration7.PositiveCoefficientAppendedIntegrals
+public import Integration7.AERVVolumePositiveCoefficientProducts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Positive-coefficient compatibility of the actual appended integral
 on the existing almost-everywhere volume-function quotient. -/

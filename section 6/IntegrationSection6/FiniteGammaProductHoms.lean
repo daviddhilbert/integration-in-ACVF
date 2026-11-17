@@ -1,6 +1,12 @@
-import IntegrationSection6.FiniteGammaProducts
-import IntegrationSection6.ProductMapCoordinates
-import IntegrationSection6.FiniteGammaCategory
+module
+
+public import IntegrationSection6.FiniteGammaProducts
+public import IntegrationSection6.ProductMapCoordinates
+public import IntegrationSection6.FiniteGammaCategory
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Cartesian products of actual Gamma-certified finite morphisms. -/
 noncomputable section

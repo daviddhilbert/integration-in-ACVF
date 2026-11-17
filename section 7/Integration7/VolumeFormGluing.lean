@@ -1,5 +1,11 @@
-import Integration7.VolumeForms
-import Section4.UnionMapLaws
+module
+
+public import Integration7.VolumeForms
+public import Section4.UnionMapLaws
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 noncomputable section
 

@@ -1,6 +1,12 @@
-import Integration7.NormalizedVolumeDomainJacobians
-import Integration7.NormalizedVolumeSupportProjections
-import Integration7.NormalizedPositiveFunctionGeneration
+module
+
+public import Integration7.NormalizedVolumeDomainJacobians
+public import Integration7.NormalizedVolumeSupportProjections
+public import Integration7.NormalizedPositiveFunctionGeneration
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The normalized domain Jacobian is determined on genuine positive
 geometric generators and depends only on the actual source restriction. -/

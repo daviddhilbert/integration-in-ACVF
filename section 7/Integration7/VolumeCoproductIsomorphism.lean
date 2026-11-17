@@ -1,6 +1,12 @@
-import Integration7.CoproductEssentialComparison
-import Integration7.ExplicitRVCoproductIso
-import Integration7.VolumeIsomorphismGluing
+module
+
+public import Integration7.CoproductEssentialComparison
+public import Integration7.ExplicitRVCoproductIso
+public import Integration7.VolumeIsomorphismGluing
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 set_option backward.isDefEq.respectTransparency false
 open FirstOrder FirstOrder.Language CategoryTheory
 open SpecialTransformations.Milestone0 SpecialTransformations.Milestone0.LRV

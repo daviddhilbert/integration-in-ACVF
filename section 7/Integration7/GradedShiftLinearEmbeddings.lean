@@ -1,5 +1,11 @@
-import Integration7.GradedSemiringActionShifts
-import Mathlib.Algebra.Module.LinearMap.Defs
+module
+
+public import Integration7.GradedSemiringActionShifts
+public import Mathlib.Algebra.Module.LinearMap.Defs
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A shifted direct sum embeds in the original finite graded module
 by retaining its literal components in the shifted degrees. -/

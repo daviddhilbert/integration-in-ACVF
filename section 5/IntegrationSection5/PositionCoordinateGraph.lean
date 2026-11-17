@@ -1,4 +1,10 @@
-import IntegrationSection5.CellGammaBridge
+module
+
+public import IntegrationSection5.CellGammaBridge
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Uniformly insert an actual positioning graph at any selected VF
 coordinate while retaining all complementary VF coordinates and RV labels. -/

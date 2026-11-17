@@ -1,6 +1,12 @@
-import Integration7.GammaNativeCommonNames
-import IntegrationSection4.DefinableDescent
-import Section5.GammaInvariantLogic
+module
+
+public import Integration7.GammaNativeCommonNames
+public import IntegrationSection4.DefinableDescent
+public import Section5.GammaInvariantLogic
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Full original-Gamma graphs descend through actual definable maps
 when the scalar map is constant on fibres. Representative choices remain

@@ -1,6 +1,12 @@
-import Integration7.ElementaryBlowupConstruction
-import Integration7.RVCoordinateSelection
-import Integration7.NondegenerateFiniteIso
+module
+
+public import Integration7.ElementaryBlowupConstruction
+public import Integration7.RVCoordinateSelection
+public import Integration7.NondegenerateFiniteIso
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Admissibility makes the unchanged head coordinates a finite-volume
 map. This uses actual algebraic label fibres and the original finite

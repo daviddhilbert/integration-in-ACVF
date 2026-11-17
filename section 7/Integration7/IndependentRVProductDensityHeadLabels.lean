@@ -1,5 +1,11 @@
-import Integration7.IndependentRVProductDensityGraphs
-import Integration7.FactoredHeadRetainedLabels
+module
+
+public import Integration7.IndependentRVProductDensityGraphs
+public import Integration7.FactoredHeadRetainedLabels
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual product-density graph relation survives on a prepared
 head. Both its functional density label and its original suffix have

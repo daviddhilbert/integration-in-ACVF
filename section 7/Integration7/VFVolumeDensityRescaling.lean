@@ -1,5 +1,11 @@
-import Integration7.VolumeDensityRescaling
-import Integration7.VFVolumeIsomorphisms
+module
+
+public import Integration7.VolumeDensityRescaling
+public import Integration7.VFVolumeIsomorphisms
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Named nonzero density rescaling on genuine VF volume objects and
 almost-everywhere volume isomorphisms, retaining their actual maps. -/

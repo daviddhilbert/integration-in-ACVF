@@ -1,4 +1,10 @@
-import IntegrationSection6.FiniteGammaUniversalCharts
+module
+
+public import IntegrationSection6.FiniteGammaUniversalCharts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Common blowups can always be represented over the common internal
 universe, with their original Gamma certificates unchanged. -/

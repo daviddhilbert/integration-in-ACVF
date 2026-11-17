@@ -1,5 +1,11 @@
-import Integration7.FiniteVFBaseProjection
-import Integration7.SpecialVolumeJacobians
+module
+
+public import Integration7.FiniteVFBaseProjection
+public import Integration7.SpecialVolumeJacobians
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Preparing the VF base of a finite RV family has Jacobian one.
 The actual family projection is finite-to-one, so the checked special

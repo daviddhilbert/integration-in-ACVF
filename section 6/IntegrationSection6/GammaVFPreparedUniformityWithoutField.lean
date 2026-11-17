@@ -1,5 +1,11 @@
-import IntegrationSection6.GammaPreparedWitnessCoverWithoutField
-import IntegrationSection6.GammaVFPreparedUniformity
+module
+
+public import IntegrationSection6.GammaPreparedWitnessCoverWithoutField
+public import IntegrationSection6.GammaVFPreparedUniformity
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! VF-parameter common-blowup uniformity over an arbitrary small base
 under uncountable saturation. The coefficient field is internal; every

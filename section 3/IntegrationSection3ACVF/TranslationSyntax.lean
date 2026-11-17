@@ -1,5 +1,11 @@
-import IntegrationSection3ACVF.RealGraphOperations
-import IntegrationSection3ACVF.GammaCosetGeometry
+module
+
+public import IntegrationSection3ACVF.RealGraphOperations
+public import IntegrationSection3ACVF.GammaCosetGeometry
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Translation of a partial-domain VF map through an actual named point. -/
 

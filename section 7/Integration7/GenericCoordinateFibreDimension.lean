@@ -1,7 +1,13 @@
-import Integration7.HeadFibreRawVolumePresentation
-import Integration7.NativeVolumeDomains
-import Section8.GenericOutputBall
-import Section9.MixedDifferentiationAE
+module
+
+public import Integration7.HeadFibreRawVolumePresentation
+public import Integration7.NativeVolumeDomains
+public import Section8.GenericOutputBall
+public import Section9.MixedDifferentiationAE
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A VF-small set has a VF-small unary coordinate fibre over every
 independent complementary VF tuple. The field argument uses actual

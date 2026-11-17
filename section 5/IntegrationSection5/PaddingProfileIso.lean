@@ -1,7 +1,13 @@
-import IntegrationSection5.RVProjectionPadding
-import IntegrationSection5.FixedVFRVIso
-import IntegrationSection5.HeadProjectionPadding
-import IntegrationSection5.RVProjectionNormalization
+module
+
+public import IntegrationSection5.RVProjectionPadding
+public import IntegrationSection5.FixedVFRVIso
+public import IntegrationSection5.HeadProjectionPadding
+public import IntegrationSection5.RVProjectionNormalization
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option allowUnsafeReducibility true in

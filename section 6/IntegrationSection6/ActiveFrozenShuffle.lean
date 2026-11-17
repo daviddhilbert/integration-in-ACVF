@@ -1,5 +1,11 @@
-import IntegrationSection5.PartialNaturalMap
-import IntegrationSection6.GammaVFCoordinateIsomorphisms
+module
+
+public import IntegrationSection5.PartialNaturalMap
+public import IntegrationSection6.GammaVFCoordinateIsomorphisms
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Reorder frozen-first family coordinates into the active-first order
 of the checked Section5 partial contraction programs. -/

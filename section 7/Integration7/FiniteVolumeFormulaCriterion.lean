@@ -1,5 +1,11 @@
-import Integration7.FiniteVolumeCertificateCriterion
-import Integration7.VolumeGammaWeightTuples
+module
+
+public import Integration7.FiniteVolumeCertificateCriterion
+public import Integration7.VolumeGammaWeightTuples
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The pointwise Gamma clause of a finite certificate is the explicit
 first-order product-balance formula. The underlying chart remains fixed. -/

@@ -1,6 +1,12 @@
-import IntegrationSection3ACVF.PaperBalls
-import IntegrationSection3ACVF.BallCodeGeometry
-import IntegrationSection3ACVF.GammaCosetGeometry
+module
+
+public import IntegrationSection3ACVF.PaperBalls
+public import IntegrationSection3ACVF.BallCodeGeometry
+public import IntegrationSection3ACVF.GammaCosetGeometry
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The sequel's open/closed predicates on the existing real ball charts.
 Singletons are closed and VF is clopen. All radii are values of actual VF

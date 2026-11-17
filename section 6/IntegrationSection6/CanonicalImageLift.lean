@@ -1,4 +1,10 @@
-import IntegrationSection6.LiftPresentations
+module
+
+public import IntegrationSection6.LiftPresentations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The canonical image of an RV-pullback is literally its actual lift
 presentation, with identity on every VF and RV coordinate. -/

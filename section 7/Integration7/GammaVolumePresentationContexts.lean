@@ -1,6 +1,12 @@
-import Integration7.GammaVolumeCanonicalObjects
-import Integration7.VolumeParameterExtension
-import Integration7.VolumeDataRelabelingMaps
+module
+
+public import Integration7.GammaVolumeCanonicalObjects
+public import Integration7.VolumeParameterExtension
+public import Integration7.VolumeDataRelabelingMaps
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Internal code presentations may be placed in a containing genuine
 base context. No generation claim is made about the code set itself. -/

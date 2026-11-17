@@ -1,5 +1,11 @@
-import IntegrationSection4.ScalarBranchPreparation
-import IntegrationSection4.PositionRowTransport
+module
+
+public import IntegrationSection4.ScalarBranchPreparation
+public import IntegrationSection4.PositionRowTransport
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

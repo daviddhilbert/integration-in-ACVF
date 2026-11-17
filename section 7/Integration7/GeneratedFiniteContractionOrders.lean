@@ -1,6 +1,12 @@
-import Integration7.GeneratedContractionOrderIndependence
-import IntegrationSection6.ArbitraryFiniteContractions
-import IntegrationSection6.GammaContractionExtensionIsomorphisms
+module
+
+public import Integration7.GeneratedContractionOrderIndependence
+public import IntegrationSection6.ArbitraryFiniteContractions
+public import IntegrationSection6.GammaContractionExtensionIsomorphisms
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual finite selected contraction objects are independent of every
 VF order over a generated base. The full ordinary RV objects and their

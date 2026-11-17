@@ -1,7 +1,13 @@
-import Integration7.AppendedVolumeFunctionIntegrals
-import Integration7.VolumeClassCoordinatePermutations
-import Integration7.VolumeClassDegreeReindexing
-import Integration7.SelectedIntegralNormalizationIsomorphisms
+module
+
+public import Integration7.AppendedVolumeFunctionIntegrals
+public import Integration7.VolumeClassCoordinatePermutations
+public import Integration7.VolumeClassDegreeReindexing
+public import Integration7.SelectedIntegralNormalizationIsomorphisms
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The exact coordinate identification between coefficient-first
 and VF-first family integrals. Normalization consists only of the fixed

@@ -1,4 +1,10 @@
-import IntegrationSection4.BalancedSlope
+module
+
+public import IntegrationSection4.BalancedSlope
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Remark 4.6 gives exactly the equality of the two products of Gamma
 volume coordinates in the balanced two-cell comparison. -/

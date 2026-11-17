@@ -1,6 +1,12 @@
-import IntegrationSection5.RVProjectionNormalization
-import IntegrationSection5.RVUnaryProfiles
-import IntegrationSection5.RVContractionMaps
+module
+
+public import IntegrationSection5.RVProjectionNormalization
+public import IntegrationSection5.RVUnaryProfiles
+public import IntegrationSection5.RVContractionMaps
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The RV domain after contracting the final unary head is exactly the
 actual key domain of its prepared unary target. -/

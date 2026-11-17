@@ -1,7 +1,13 @@
-import IntegrationSection5.RVProductBranchCompletion
-import IntegrationSection5.MixedUnaryPreparationOver
-import IntegrationSection5.TranslationExtension
-import IntegrationSection5.InactiveRectangleFamily
+module
+
+public import IntegrationSection5.RVProductBranchCompletion
+public import IntegrationSection5.MixedUnaryPreparationOver
+public import IntegrationSection5.TranslationExtension
+public import IntegrationSection5.InactiveRectangleFamily
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option allowUnsafeReducibility true in

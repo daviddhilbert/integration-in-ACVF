@@ -1,5 +1,11 @@
-import Integration7.VolumeBlowupEquivalence
-import Integration7.VolumeCoproductAssociativity
+module
+
+public import Integration7.VolumeBlowupEquivalence
+public import Integration7.VolumeCoproductAssociativity
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Compatibility of the actual common-blowup relation with definable
 coproducts. The blown locus stays fixed and the added summand is included

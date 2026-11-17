@@ -1,6 +1,12 @@
-import Integration7.ElementaryVolumeLiftInvariance
-import Integration7.FixedVFVolumeCoproductIsomorphisms
-import Integration7.VolumeLiftCoproductBijections
+module
+
+public import Integration7.ElementaryVolumeLiftInvariance
+public import Integration7.FixedVFVolumeCoproductIsomorphisms
+public import Integration7.VolumeLiftCoproductBijections
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Elementary blowups on arbitrary definable loci, their finite
 iterations and common forward volume blowups have isomorphic VF lifts. -/

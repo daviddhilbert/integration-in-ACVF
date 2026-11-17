@@ -1,4 +1,10 @@
-import Integration7.HKZeroVFCoproducts
+module
+
+public import Integration7.HKZeroVFCoproducts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual tagged weighted zero VF coproduct respects exact-form
 isomorphisms, including different ambient mixed presentations. -/

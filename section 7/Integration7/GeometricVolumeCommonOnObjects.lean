@@ -1,7 +1,13 @@
-import Integration7.EqualVolumeSchemaRowGeometry
-import Integration7.GammaGeometricCommonWitnesses
-import Integration7.VolumeContextJoins
-import Integration7.VolumeSchemaRowExtension
+module
+
+public import Integration7.EqualVolumeSchemaRowGeometry
+public import Integration7.GammaGeometricCommonWitnesses
+public import Integration7.VolumeContextJoins
+public import Integration7.VolumeSchemaRowExtension
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Geometric schema comparison gives actual common chains for any
 specified objects realizing the full rows. Containing contexts are joined

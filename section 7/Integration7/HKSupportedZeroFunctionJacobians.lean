@@ -1,6 +1,12 @@
-import Integration7.HKZeroJacobianAlmostEverywhere
-import Integration7.HKZeroFamilyJacobianIntegrals
-import Integration7.HKAEZeroIntegrals
+module
+
+public import Integration7.HKZeroJacobianAlmostEverywhere
+public import Integration7.HKZeroFamilyJacobianIntegrals
+public import Integration7.HKAEZeroIntegrals
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual weighted-zero-valued functions on a definable VF domain,
 presented by families supported there and identified almost everywhere.

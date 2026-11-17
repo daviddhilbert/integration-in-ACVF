@@ -1,7 +1,13 @@
-import Integration7.VolumePartition
-import Integration7.VolumeRestrictionIdentifications
-import Integration7.VolumeCoproductIsomorphism
-import Integration7.RVVolumeInverse
+module
+
+public import Integration7.VolumePartition
+public import Integration7.VolumeRestrictionIdentifications
+public import Integration7.VolumeCoproductIsomorphism
+public import Integration7.RVVolumeInverse
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 set_option backward.isDefEq.respectTransparency false
 noncomputable section

@@ -1,6 +1,12 @@
-import Integration7.NormalizedPositiveCoefficientActions
-import Integration7.NormalizedPositiveDegreeFunctions
-import Integration7.AERVVolumeHeadIntegralPositiveCoefficients
+module
+
+public import Integration7.NormalizedPositiveCoefficientActions
+public import Integration7.NormalizedPositiveDegreeFunctions
+public import Integration7.AERVVolumeHeadIntegralPositiveCoefficients
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! An actual additive head integral on positive graded generators,
 with normalized compatibility for every positive homogeneous scalar. -/

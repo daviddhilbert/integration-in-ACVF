@@ -1,4 +1,10 @@
-import IntegrationSection6.OverlapRefinement
+module
+
+public import IntegrationSection6.OverlapRefinement
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-!
 # Lemma 6.5 and the equivalence part of Lemma 6.8

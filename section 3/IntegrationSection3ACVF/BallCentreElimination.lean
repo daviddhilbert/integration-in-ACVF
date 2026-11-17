@@ -1,6 +1,12 @@
-import IntegrationSection3ACVF.FullBallCoset
-import IntegrationSection3ACVF.GammaCosetGeometry
-import IntegrationSection3.FibreEqualityFormulas
+module
+
+public import IntegrationSection3ACVF.FullBallCoset
+public import IntegrationSection3ACVF.GammaCosetGeometry
+public import IntegrationSection3.FibreEqualityFormulas
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Elimination of one named coset-ball in favour of every one of
 its real centres. The subgroup stays over the original base, and all ball

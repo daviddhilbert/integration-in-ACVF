@@ -1,5 +1,11 @@
-import Integration7.SpecialPullbackVolumeObjects
-import Integration7.UnaryChainVolumeOperations
+module
+
+public import Integration7.SpecialPullbackVolumeObjects
+public import Integration7.UnaryChainVolumeOperations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Conjugate a genuine volume factor chain by special bijections,
 with any pointwise compatible source and target volume forms. -/

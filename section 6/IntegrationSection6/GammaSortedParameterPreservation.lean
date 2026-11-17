@@ -1,6 +1,12 @@
-import IntegrationSection6.GammaFibreBijectionCompactness
-import IntegrationSection6.GammaSortedPointIsomorphisms
-import IntegrationSection6.GammaCoordinateValues
+module
+
+public import IntegrationSection6.GammaFibreBijectionCompactness
+public import IntegrationSection6.GammaSortedPointIsomorphisms
+public import IntegrationSection6.GammaCoordinateValues
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The compactness construction is a bijection over its parameter base,
 and the explicit point-coordinate conversion preserves that information. -/

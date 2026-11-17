@@ -1,6 +1,12 @@
-import Integration7.GammaVolumeRelabelGeometry
-import Integration7.GammaEqualLabelEquivalenceGraphs
-import Integration7.VolumeSchemaRowSemantics
+module
+
+public import Integration7.GammaVolumeRelabelGeometry
+public import Integration7.GammaEqualLabelEquivalenceGraphs
+public import Integration7.VolumeSchemaRowSemantics
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Full coordinate and density rows identify the actual volume objects,
 including arbitrary label arities. Their identity on labels has an

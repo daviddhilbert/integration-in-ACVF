@@ -1,6 +1,12 @@
-import IntegrationSection6.LiftLabelPartitions
-import IntegrationSection6.LiftRVImage
-import IntegrationSection6.Subobjects
+module
+
+public import IntegrationSection6.LiftLabelPartitions
+public import IntegrationSection6.LiftRVImage
+public import IntegrationSection6.Subobjects
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The unchanged member of a lift partition recovers exactly the RV
 complement of the active old-label locus, with an actual definable isomorphism. -/

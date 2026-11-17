@@ -1,5 +1,11 @@
-import Integration7.RawPositiveCoordinateSupports
-import Integration7.StrictGradedVolumeFubini
+module
+
+public import Integration7.RawPositiveCoordinateSupports
+public import Integration7.StrictGradedVolumeFubini
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Ordinary supported representatives acquire their first volume
 coordinate through the actual head contraction. Together with positive

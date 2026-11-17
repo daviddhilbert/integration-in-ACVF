@@ -1,5 +1,11 @@
-import Integration7.GenericHeadVolumeCommonComparison
-import Integration7.OrderedAppendVolumeContractions
+module
+
+public import Integration7.GenericHeadVolumeCommonComparison
+public import Integration7.OrderedAppendVolumeContractions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Positive selected contraction induction from geometric common
 volume blowups at generic original VF parameters only. -/

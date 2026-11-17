@@ -1,4 +1,10 @@
-import IntegrationSection6.GammaFamilyCoordinates
+module
+
+public import IntegrationSection6.GammaFamilyCoordinates
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Elementary blowup formulas uniformly in the VF parameter block. The
 actual positive RV factor and actual volume multiplication program are

@@ -1,4 +1,10 @@
-import Integration7.UnaryPreparedVolumeComparisonsWithoutField
+module
+
+public import Integration7.UnaryPreparedVolumeComparisonsWithoutField
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The first-volume-coordinate case of unary prepared comparison.
 There are no old selected coordinates. The actual slice lift charts have

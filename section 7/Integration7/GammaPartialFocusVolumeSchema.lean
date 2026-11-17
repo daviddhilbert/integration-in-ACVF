@@ -1,6 +1,12 @@
-import Integration7.GammaPartialFocusVolumeSplits
-import Integration7.GammaCanonicalAdmissibilityRows
-import Integration7.GammaVolumeBlowupRowPromotion
+module
+
+public import Integration7.GammaPartialFocusVolumeSplits
+public import Integration7.GammaCanonicalAdmissibilityRows
+public import Integration7.GammaVolumeBlowupRowPromotion
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Every actual partial focus with a retained density label supplies
 a finite original-Gamma volume blowup formula witness. Internal real

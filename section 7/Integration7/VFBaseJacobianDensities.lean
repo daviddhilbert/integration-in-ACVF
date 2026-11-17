@@ -1,6 +1,12 @@
-import Integration7.MixedVFBaseBijections
-import Integration7.InverseJacobianVolumeForms
-import Integration7.RVCoordinateSelection
+module
+
+public import Integration7.MixedVFBaseBijections
+public import Integration7.InverseJacobianVolumeForms
+public import Integration7.RVCoordinateSelection
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A pure VF base map has a literal mixed presentation with an empty
 RV tuple. Its inverse-Jacobian density pulls back to the actual pure VF

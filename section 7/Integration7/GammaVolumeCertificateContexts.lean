@@ -1,5 +1,11 @@
-import Integration7.GammaVolumeCertificateRealization
-import Integration7.FiniteVolumeParameterContexts
+module
+
+public import Integration7.GammaVolumeCertificateRealization
+public import Integration7.FiniteVolumeParameterContexts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Existential exceptional-set data admit actual realizations in a small
 containing context. The original chart remains exact and is independent

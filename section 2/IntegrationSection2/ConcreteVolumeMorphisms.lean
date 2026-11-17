@@ -1,6 +1,12 @@
-import IntegrationSection2.ConcreteVolumeForms
-import Section9.RVFiniteEssential
-import Section9.VolumeResidueCorrespondence
+module
+
+public import IntegrationSection2.ConcreteVolumeForms
+public import Section9.RVFiniteEssential
+public import Section9.VolumeResidueCorrespondence
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The two actual volume conditions for an essential RV isomorphism.
 In degree zero the category is RV[0] and no volume equation is imposed.

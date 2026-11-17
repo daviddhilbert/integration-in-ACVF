@@ -1,4 +1,10 @@
-import IntegrationSection3ACVF.FullBaseAtomicity
+module
+
+public import IntegrationSection3ACVF.FullBaseAtomicity
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Restrict a full family on the combined imaginary sort to its ball chart. -/
 

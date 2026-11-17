@@ -1,7 +1,13 @@
-import IntegrationSection6.GammaFamilyRows
-import IntegrationSection6.MixedCoordinatePointMaps
-import IntegrationSection6.GammaVFSchemaSources
-import IntegrationSection6.GammaSchemaFiniteRows
+module
+
+public import IntegrationSection6.GammaFamilyRows
+public import IntegrationSection6.MixedCoordinatePointMaps
+public import IntegrationSection6.GammaVFSchemaSources
+public import IntegrationSection6.GammaSchemaFiniteRows
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual RV fibres of a mixed set with volume given by selected
 old labels form full original-Gamma finite family schemata. -/

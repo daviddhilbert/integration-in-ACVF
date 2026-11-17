@@ -1,4 +1,10 @@
-import Integration7.GradedShiftLinearEmbeddings
+module
+
+public import Integration7.GradedShiftLinearEmbeddings
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The literal coefficient at a shifted index recovers each source
 component, giving injectivity of the actual shift inclusion. -/

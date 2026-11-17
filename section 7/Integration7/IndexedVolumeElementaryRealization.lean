@@ -1,6 +1,12 @@
-import Integration7.IndexedVolumeElementaryValues
-import Integration7.IndexedVolumeFiniteRowPresentations
-import Integration7.GammaVolumeRelabelRealization
+module
+
+public import Integration7.IndexedVolumeElementaryValues
+public import Integration7.IndexedVolumeFiniteRowPresentations
+public import Integration7.GammaVolumeRelabelRealization
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Indexed assembly commutes with an actual elementary volume blowup,
 retaining its pulled-back density and original-Gamma label graph. -/

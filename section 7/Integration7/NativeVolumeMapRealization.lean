@@ -1,4 +1,10 @@
-import Integration7.NativeVolumeDomains
+module
+
+public import Integration7.NativeVolumeDomains
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual raw mixed maps in the shared language become native Section 5
 maps without changing their point functions or real parameter base. -/

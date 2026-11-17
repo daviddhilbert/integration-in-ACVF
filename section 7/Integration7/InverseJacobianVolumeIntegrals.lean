@@ -1,5 +1,11 @@
-import Integration7.InverseJacobianVolumeForms
-import Integration7.PositiveVolumeIntegrationEquivalence
+module
+
+public import Integration7.InverseJacobianVolumeForms
+public import Integration7.PositiveVolumeIntegrationEquivalence
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual positive VF volume objects satisfy change of variables with
 the inverse-Jacobian density, via a genuine volume-preserving bijection. -/

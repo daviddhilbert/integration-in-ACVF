@@ -1,5 +1,11 @@
-import IntegrationSection3ACVF.AffineHoleGeometry
-import IntegrationSection3ACVF.NamedClosedHoleCut
+module
+
+public import IntegrationSection3ACVF.AffineHoleGeometry
+public import IntegrationSection3ACVF.NamedClosedHoleCut
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The finite affine graph rules out two maximal open holes in a
 canonical positive region. All choices occur in the geometry proof; the

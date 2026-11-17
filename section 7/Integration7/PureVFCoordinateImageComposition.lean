@@ -1,4 +1,10 @@
-import Integration7.PureVFCoordinateImages
+module
+
+public import Integration7.PureVFCoordinateImages
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Coordinate images compose as the actual tuple projections do. -/
 noncomputable section

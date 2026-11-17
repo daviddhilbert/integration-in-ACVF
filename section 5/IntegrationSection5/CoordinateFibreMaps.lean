@@ -1,5 +1,11 @@
-import IntegrationSection5.RelativeFibreGeometry
-import Section5.ParameterExtension
+module
+
+public import IntegrationSection5.RelativeFibreGeometry
+public import Section5.ParameterExtension
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Definable insertion and projection maps for actual one-coordinate
 fibres, over the original real base augmented by the other VF coordinates. -/

@@ -1,6 +1,12 @@
-import Integration7.PositiveGradedDensityRescaling
-import Integration7.GradedAEVolumeIntegralLinearity
-import Integration7.GradedShiftComponents
+module
+
+public import Integration7.PositiveGradedDensityRescaling
+public import Integration7.GradedAEVolumeIntegralLinearity
+public import Integration7.GradedShiftComponents
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The positive raw graded module embeds in the full module, and its
 integral is the restriction of the already checked full linear integral.

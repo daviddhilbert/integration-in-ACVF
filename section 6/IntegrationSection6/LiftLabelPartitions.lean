@@ -1,4 +1,10 @@
-import IntegrationSection6.LiftLoci
+module
+
+public import IntegrationSection6.LiftLoci
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Old-label images of an RV-pullback partition of a literal lift form
 a genuine disjoint definable partition of its input RV domain. -/

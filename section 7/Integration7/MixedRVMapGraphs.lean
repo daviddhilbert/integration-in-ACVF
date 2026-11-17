@@ -1,4 +1,10 @@
-import Integration7.VolumeDensityGraphs
+module
+
+public import Integration7.VolumeDensityGraphs
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Retain the graph of an arbitrary definable RV tuple on a mixed
 domain. The VF tuple and all old RV labels are retained literally, and

@@ -1,6 +1,12 @@
-import Integration7.HKPositiveVolumeProductZeroScalars
-import Integration7.AERVVolumeOrdinaryCoefficientModules
-import Integration7.HKPositiveVolumeClassScalarExtensions
+module
+
+public import Integration7.HKPositiveVolumeProductZeroScalars
+public import Integration7.AERVVolumeOrdinaryCoefficientModules
+public import Integration7.HKPositiveVolumeClassScalarExtensions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Ordinary and positive coefficient actions agree with the actual
 graded product in both mixed cases. The proof is fibrewise and uses

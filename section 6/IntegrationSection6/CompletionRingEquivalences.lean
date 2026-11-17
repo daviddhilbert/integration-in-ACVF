@@ -1,5 +1,11 @@
-import Mathlib.Algebra.Ring.Equiv
-import Section4.Imported.GrothendieckRing
+module
+
+public import Mathlib.Algebra.Ring.Equiv
+public import Section4.Imported.GrothendieckRing
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The canonical extension of a semiring equivalence to Grothendieck rings. -/
 noncomputable section

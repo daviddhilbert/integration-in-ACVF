@@ -1,5 +1,11 @@
-import Integration7.HKMixedFibreConstraintPromotion
-import IntegrationSection6.GammaMixedParameterUniformity
+module
+
+public import Integration7.HKMixedFibreConstraintPromotion
+public import IntegrationSection6.GammaMixedParameterUniformity
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Realization of the constrained compactness chart preserves the actual
 point relation, as well as every VF parameter. -/

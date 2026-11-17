@@ -1,4 +1,10 @@
-import Integration7.RVLabelConstraintHeadProjections
+module
+
+public import Integration7.RVLabelConstraintHeadProjections
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual definable factor maps for a preparation with shared RV labels.
 Their joint image will retain the equality of the overlapping labels. -/

@@ -1,6 +1,12 @@
-import IntegrationSection6.Confluence
-import Section4.RVPositiveIsoComparison
-import Mathlib.GroupTheory.Congruence.Basic
+module
+
+public import IntegrationSection6.Confluence
+public import Section4.RVPositiveIsoComparison
+public import Mathlib.GroupTheory.Congruence.Basic
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The additive congruence assertion of Lemma 6.8 on the actual RV quotient. -/
 

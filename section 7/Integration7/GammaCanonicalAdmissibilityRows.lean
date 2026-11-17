@@ -1,5 +1,11 @@
-import Integration7.GammaCoordinateDensityGraphs
-import Integration7.ActualVolumeAdmissibilityPromotion
+module
+
+public import Integration7.GammaCoordinateDensityGraphs
+public import Integration7.ActualVolumeAdmissibilityPromotion
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Original-Gamma admissibility of a native object transfers to any
 schema presentation of its canonical volume object. Enlarged real contexts

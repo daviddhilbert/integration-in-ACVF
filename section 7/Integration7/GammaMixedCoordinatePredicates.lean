@@ -1,4 +1,10 @@
-import IntegrationSection6.MixedCoordinatePointMaps
+module
+
+public import IntegrationSection6.MixedCoordinatePointMaps
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Coordinate-block substitution and existential VF projection for
 original-Gamma predicates, without enlarging their parameter base. -/

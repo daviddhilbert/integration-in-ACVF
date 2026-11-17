@@ -1,5 +1,11 @@
-import IntegrationSection5.ProductHeadKernels
-import IntegrationSection5.HeadIsoRVKernel
+module
+
+public import IntegrationSection5.ProductHeadKernels
+public import IntegrationSection5.HeadIsoRVKernel
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 open Classical FirstOrder FirstOrder.Language

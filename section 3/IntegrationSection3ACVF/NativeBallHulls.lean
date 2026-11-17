@@ -1,5 +1,11 @@
-import IntegrationSection3ACVF.BallEnlargementGeometry
-import IntegrationSection3.FiniteClosedHull
+module
+
+public import IntegrationSection3ACVF.BallEnlargementGeometry
+public import IntegrationSection3.FiniteClosedHull
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Native-valued-field existence of intrinsic closed hulls for
 finite actual supports properly inside an open source ball. -/

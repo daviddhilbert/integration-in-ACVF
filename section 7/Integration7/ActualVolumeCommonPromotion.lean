@@ -1,5 +1,11 @@
-import Integration7.ActualVolumeBlowupPromotion
-import Integration7.GammaVolumeChainSchemata
+module
+
+public import Integration7.ActualVolumeBlowupPromotion
+public import Integration7.GammaVolumeChainSchemata
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual finite chains and common forward volume blowups over the
 original named term context promote to genuine finite formula witnesses. -/

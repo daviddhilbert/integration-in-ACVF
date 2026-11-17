@@ -1,5 +1,11 @@
-import Integration7.SmallDefinableClosures
-import Integration7.GammaNamesGenericParameters
+module
+
+public import Integration7.SmallDefinableClosures
+public import Integration7.GammaNamesGenericParameters
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A genuine small context closed under all definitions over the
 original real/Gamma names. It contains the RV paradigms specified by a

@@ -1,6 +1,12 @@
-import IntegrationSection6.GammaRVFiniteFamilyCodes
-import IntegrationSection6.GammaGlobalRestriction
-import Section5.GammaContraction
+module
+
+public import IntegrationSection6.GammaRVFiniteFamilyCodes
+public import IntegrationSection6.GammaGlobalRestriction
+public import Section5.GammaContraction
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Simultaneously prepare finitely many full Gamma RV families over a
 VF base. A checked finite RV code and Gamma map preparation make every

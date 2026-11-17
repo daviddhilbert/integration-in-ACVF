@@ -1,4 +1,10 @@
-import Integration7.MixedJacobianRestriction
+module
+
+public import Integration7.MixedJacobianRestriction
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! An actual almost-everywhere volume isomorphism consists of a full
 volume-preserving bijection between definable subdomains with VF-small

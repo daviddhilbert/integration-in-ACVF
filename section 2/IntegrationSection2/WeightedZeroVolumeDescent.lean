@@ -1,5 +1,11 @@
-import Section10.WeightedZero
-import Section4.RVWeightRestriction
+module
+
+public import Section10.WeightedZero
+public import Section4.RVWeightRestriction
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Corollary 2.34 in the corrected measured degree zero. The supplied
 ordinary label isomorphism is kept, and the actual determinant-one equation

@@ -1,7 +1,13 @@
-import Integration7.FixedLabelContractionVolumeObjects
-import Integration7.LiteralVolumeLiftMaps
-import Integration7.VolumeLiftFullDimension
-import Integration7.EssentialEmptyVolumeIsomorphisms
+module
+
+public import Integration7.FixedLabelContractionVolumeObjects
+public import Integration7.LiteralVolumeLiftMaps
+public import Integration7.VolumeLiftFullDimension
+public import Integration7.EssentialEmptyVolumeIsomorphisms
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual normalized contraction lifts of fixed-label mixed domains have
 their original VF dimension. VF-small domains therefore have no essential

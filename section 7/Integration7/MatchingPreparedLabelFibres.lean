@@ -1,5 +1,11 @@
-import Integration7.MatchingFullPullbackPreparations
-import Integration7.RectanglePreparedLabelFibres
+module
+
+public import Integration7.MatchingFullPullbackPreparations
+public import Integration7.RectanglePreparedLabelFibres
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! All RV fibres of the two actual full prepared matching targets
 are determined by the original carried family labels. The canonical

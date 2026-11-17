@@ -1,5 +1,11 @@
-import IntegrationSection6.GammaRawCoproductSchemata
-import IntegrationSection6.GammaSchemaPresentationEquality
+module
+
+public import IntegrationSection6.GammaRawCoproductSchemata
+public import IntegrationSection6.GammaSchemaPresentationEquality
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Arbitrary sorted coproduct rows have their actual native finite
 coproduct presentations. Genuine uniform volume bounds make these same

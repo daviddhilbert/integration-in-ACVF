@@ -1,5 +1,11 @@
-import Integration7.OrderedAppendVolumeIndices
-import IntegrationSection6.StandardProgramPresentations
+module
+
+public import Integration7.OrderedAppendVolumeIndices
+public import IntegrationSection6.StandardProgramPresentations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The first head tag followed by all remaining tags is precisely the
 full ordered program's VF volume selector, with the recursive degree cast. -/

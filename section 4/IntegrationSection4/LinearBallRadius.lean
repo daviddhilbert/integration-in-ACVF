@@ -1,5 +1,11 @@
-import IntegrationSection3ACVF.GammaLinearRestrictions
-import IntegrationSection4.RadiusPreparationGeometry
+module
+
+public import IntegrationSection3ACVF.GammaLinearRestrictions
+public import IntegrationSection4.RadiusPreparationGeometry
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

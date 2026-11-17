@@ -1,6 +1,12 @@
-import Integration7.PreparedPairFamilyAllOrderComparisons
-import Integration7.RVGraphRefinementContractionComparisons
-import Integration7.GeneratedBaseStandardContractions
+module
+
+public import Integration7.PreparedPairFamilyAllOrderComparisons
+public import Integration7.RVGraphRefinementContractionComparisons
+public import Integration7.GeneratedBaseStandardContractions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The whole balanced graph-family case of Lemma7.7. Both prepared
 keys are introduced by an actual RV graph refinement; its matching and

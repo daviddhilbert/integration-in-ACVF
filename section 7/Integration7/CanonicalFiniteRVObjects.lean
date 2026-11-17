@@ -1,6 +1,12 @@
-import Integration7.CanonicalVolumePresentations
-import Integration7.FiniteVolumeIsoMaps
-import IntegrationSection6.FiniteBlowups
+module
+
+public import Integration7.CanonicalVolumePresentations
+public import Integration7.FiniteVolumeIsoMaps
+public import IntegrationSection6.FiniteBlowups
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Transport actual finite RV objects and their isomorphisms from the
 released normalized presentation to the canonical original structure. -/

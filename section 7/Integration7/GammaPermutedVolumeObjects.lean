@@ -1,5 +1,11 @@
-import Integration7.GammaVolumeCoordinatePermutations
-import Integration7.GammaRVScalarMapGraphs
+module
+
+public import Integration7.GammaVolumeCoordinatePermutations
+public import Integration7.GammaRVScalarMapGraphs
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Simultaneous coordinate permutations of actual volume objects keep
 the density and original-Gamma common forward-blowup geometry. -/

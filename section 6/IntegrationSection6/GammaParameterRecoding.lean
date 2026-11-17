@@ -1,5 +1,11 @@
-import IntegrationSection6.GammaCommonBlowupSchemata
-import IntegrationSection6.GammaSchemaRowAgreement
+module
+
+public import IntegrationSection6.GammaCommonBlowupSchemata
+public import IntegrationSection6.GammaSchemaRowAgreement
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Recode domain and relation formulas into a new sorted parameter block.
 Finite-object metadata, admissible coordinates and exact witness lengths

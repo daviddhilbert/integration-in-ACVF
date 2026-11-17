@@ -1,4 +1,10 @@
-import IntegrationSection5.FibreFocusImage
+module
+
+public import IntegrationSection5.FibreFocusImage
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Definition 5.4 with actual fibrewise special bijections. -/
 noncomputable section

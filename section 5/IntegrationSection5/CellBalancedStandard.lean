@@ -1,4 +1,10 @@
-import IntegrationSection5.CellStandardPresentation
+module
+
+public import IntegrationSection5.CellStandardPresentation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Lemma 5.7 for balanced cells and zero-paradigm graph cells with
 injective positioning, using actual standard contractions in both orders. -/

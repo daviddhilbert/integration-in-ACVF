@@ -1,6 +1,12 @@
-import Integration7.AppendedFamilyLiftCoordinates
-import Integration7.VFVolumePreservingLabelImages
-import Integration7.DefinableVolumeFamilySelections
+module
+
+public import Integration7.AppendedFamilyLiftCoordinates
+public import Integration7.VFVolumePreservingLabelImages
+public import Integration7.DefinableVolumeFamilySelections
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Coefficient-first realizations for arbitrary definable volume maps.
 Redundant selected-presentation graph labels are forgotten by an actual

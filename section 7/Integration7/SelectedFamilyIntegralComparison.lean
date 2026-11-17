@@ -1,5 +1,11 @@
-import Integration7.Lemma75
-import Integration7.CommonContextVolumeDescent
+module
+
+public import Integration7.Lemma75
+public import Integration7.CommonContextVolumeDescent
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Fibrewise common volume blowups give equality of the actual
 integral contraction objects over the original real parameter base. -/

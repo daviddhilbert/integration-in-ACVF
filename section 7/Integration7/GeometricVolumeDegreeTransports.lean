@@ -1,4 +1,10 @@
-import Integration7.GammaGeometricCommonRowTransport
+module
+
+public import Integration7.GammaGeometricCommonRowTransport
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Transport the degree of a geometric schema comparison together with
 its full volume rows. Density and label tuples remain part of the rows. -/

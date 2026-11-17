@@ -1,5 +1,11 @@
-import Integration7.NativeUnaryProducts
-import IntegrationSection6.GammaGlobalRestriction
+module
+
+public import Integration7.NativeUnaryProducts
+public import IntegrationSection6.GammaGlobalRestriction
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Native unary products and their two actual factor projections have
 complete original-Gamma set and graph certificates. -/

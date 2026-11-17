@@ -1,5 +1,11 @@
-import IntegrationSection6.PartialFamilyLiftIsomorphisms
-import IntegrationSection6.GammaCoordinateValues
+module
+
+public import IntegrationSection6.PartialFamilyLiftIsomorphisms
+public import IntegrationSection6.GammaCoordinateValues
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The relative representative isomorphism preserves every frozen VF
 parameter, so its restriction is an actual isomorphism on each fibre. -/

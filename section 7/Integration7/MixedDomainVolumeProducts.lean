@@ -1,7 +1,13 @@
-import Integration7.MixedDomainProductAlmostEverywhere
-import Integration7.MixedDomainProductJacobians
-import Integration7.VolumeFormProducts
-import Integration7.VFVolumeBijections
+module
+
+public import Integration7.MixedDomainProductAlmostEverywhere
+public import Integration7.MixedDomainProductJacobians
+public import Integration7.VolumeFormProducts
+public import Integration7.VFVolumeBijections
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Product volume preservation for raw mixed domains. Neither factor is
 required to have finite RV fibres; finiteness can be imposed after restriction. -/

@@ -1,7 +1,13 @@
-import Integration7.IndependentRVConstraintHeadMaps
-import Integration7.GammaRVLabelCuts
-import Integration7.MixedRVFactorDomains
-import Integration7.NativeVolumeDomains
+module
+
+public import Integration7.IndependentRVConstraintHeadMaps
+public import Integration7.GammaRVLabelCuts
+public import Integration7.MixedRVFactorDomains
+public import Integration7.NativeVolumeDomains
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual original-base product sources and RV constraints for carrying
 an independent coefficient through a unary special preparation. -/

@@ -1,4 +1,10 @@
-import Integration7.GradedIntegralDensityCorrection
+module
+
+public import Integration7.GradedIntegralDensityCorrection
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A coordinate projection discarding at least one VF coordinate sends
 every raw function component, including ordinary degree zero, to positive

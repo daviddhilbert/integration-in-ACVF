@@ -1,6 +1,12 @@
-import IntegrationSection6.GammaMixedParameterUniformity
-import IntegrationSection6.IntegrationContexts
-import IntegrationSection6.DefinableFamilyIntegration
+module
+
+public import IntegrationSection6.GammaMixedParameterUniformity
+public import IntegrationSection6.IntegrationContexts
+public import IntegrationSection6.DefinableFamilyIntegration
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Changing an RV-valued representative gives an actual isomorphism of
 total lifts over the entire original VF parameter tuple. -/

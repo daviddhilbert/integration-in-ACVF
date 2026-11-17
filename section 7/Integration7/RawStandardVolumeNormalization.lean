@@ -1,6 +1,12 @@
-import Integration7.RawStandardVolumeObjects
-import Integration7.RetainedDensityContractionObjects
-import Integration7.CommonContextVolumeEquivalences
+module
+
+public import Integration7.RawStandardVolumeObjects
+public import Integration7.RetainedDensityContractionObjects
+public import Integration7.CommonContextVolumeEquivalences
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The literal raw contraction volume object and the normalized object
 in Lemma 7.7 are related by a genuine original-Gamma volume isomorphism. -/

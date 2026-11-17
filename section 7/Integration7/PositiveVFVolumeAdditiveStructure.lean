@@ -1,4 +1,10 @@
-import Integration7.PositiveVolumeIntegrationEquivalence
+module
+
+public import Integration7.PositiveVolumeIntegrationEquivalence
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The coproduct addition and actual empty VF object form the additive
 commutative monoid identified by positive-degree integration. -/

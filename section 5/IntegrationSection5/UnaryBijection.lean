@@ -1,4 +1,10 @@
-import IntegrationSection5.UnaryBijectionPreparation
+module
+
+public import IntegrationSection5.UnaryBijectionPreparation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Set-level Lemma5.2. Internal real presentations change neither the
 original sets nor their bijection. All final chains have full invariant

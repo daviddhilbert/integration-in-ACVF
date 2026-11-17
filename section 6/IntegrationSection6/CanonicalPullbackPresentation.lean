@@ -1,5 +1,11 @@
-import IntegrationSection6.CanonicalImageLift
-import IntegrationSection6.NormalizedLifts
+module
+
+public import IntegrationSection6.CanonicalImageLift
+public import IntegrationSection6.NormalizedLifts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Canonicalization of any actual RV-pullback is its literal lift
 presentation, with its original canonical RV image object. -/

@@ -1,4 +1,10 @@
-import Integration7.AllDegreeVolumeClasses
+module
+
+public import Integration7.AllDegreeVolumeClasses
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 noncomputable section
 open FirstOrder FirstOrder.Language CategoryTheory

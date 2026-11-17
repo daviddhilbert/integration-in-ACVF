@@ -1,6 +1,12 @@
-import Integration7.HKAEZeroHeadIntegrals
-import Integration7.HKZeroFamilyHeadFubini
-import Integration7.AppendedVolumeFunctionIntegrals
+module
+
+public import Integration7.HKAEZeroHeadIntegrals
+public import Integration7.HKZeroFamilyHeadFubini
+public import Integration7.AppendedVolumeFunctionIntegrals
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Weighted-zero-valued AE functions satisfy first-head Fubini on their actual
 quotient. The only heterogeneous equality is the arithmetic total degree. -/

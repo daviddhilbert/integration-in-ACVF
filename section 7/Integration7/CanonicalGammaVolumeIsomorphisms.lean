@@ -1,6 +1,12 @@
-import Integration7.GammaCoordinateDensityGraphs
-import Integration7.GammaEssentialVolumeGraphs
-import IntegrationSection6.FiniteGammaWeightedIsos
+module
+
+public import Integration7.GammaCoordinateDensityGraphs
+public import Integration7.GammaEssentialVolumeGraphs
+public import IntegrationSection6.FiniteGammaWeightedIsos
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A native original-Gamma finite isomorphism preserving the actual
 volume coordinates and density gives an actual volume isomorphism with

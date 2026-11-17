@@ -1,9 +1,15 @@
+module
+
 /-
 Extracted from https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%205/Completed18NativeBaseTransfer.lean
 Original declaration namespaces and notices are retained.
 -/
-import IntegrationSection6.GeneratedBase.CellBaseTransfer
-import IntegrationSection6.FiniteGammaObjects
+public import IntegrationSection6.GeneratedBase.CellBaseTransfer
+public import IntegrationSection6.FiniteGammaObjects
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual finite RV presentations and their isomorphisms descend from
 definable parameter extensions. Their domains and volume maps are unchanged. -/

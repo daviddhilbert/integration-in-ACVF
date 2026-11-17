@@ -1,4 +1,10 @@
-import IntegrationSection6.ElementaryBlowup
+module
+
+public import IntegrationSection6.ElementaryBlowup
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-!
 # The actual fibre bijection underlying Lemmas 6.9 and 6.12

@@ -1,5 +1,11 @@
-import Integration7.SelectedRVVFTailProgramHeads
-import Section5.UnaryMaps
+module
+
+public import Integration7.SelectedRVVFTailProgramHeads
+public import Section5.UnaryMaps
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Selected-label VF realizations of RV-pullbacks are RV-pullbacks.
 In particular the remaining VF tail after the lifted original program

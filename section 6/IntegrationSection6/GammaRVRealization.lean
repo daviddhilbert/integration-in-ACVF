@@ -1,5 +1,11 @@
-import IntegrationSection6.GammaRVRestrictions
-import Section4.RVCoordinates
+module
+
+public import IntegrationSection6.GammaRVRestrictions
+public import Section4.RVCoordinates
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Full original-Gamma RV relations have real presentations after naming
 only the finite representative tuple appearing in that relation. The full

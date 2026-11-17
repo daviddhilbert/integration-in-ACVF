@@ -1,5 +1,11 @@
-import Integration7.SelectedJacobianRowComparison
-import Integration7.DefinableVolumeClassRescaling
+module
+
+public import Integration7.SelectedJacobianRowComparison
+public import Integration7.DefinableVolumeClassRescaling
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The Jacobian row operation preserves actual sums of positive
 volume classes. Extra inverse-image names are eliminated by definability. -/

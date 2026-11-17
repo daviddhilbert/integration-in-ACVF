@@ -1,5 +1,11 @@
-import Integration7.VFAlmostEverywhere
-import Integration7.DefinableMapPreimages
+module
+
+public import Integration7.VFAlmostEverywhere
+public import Integration7.DefinableMapPreimages
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Definable subdomains with VF-small complements, and their actual
 preimages and images under definable bijections. -/

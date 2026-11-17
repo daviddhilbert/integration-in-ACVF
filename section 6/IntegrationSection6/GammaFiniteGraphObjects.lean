@@ -1,7 +1,13 @@
-import IntegrationSection6.GammaRVSetRealization
-import IntegrationSection6.GammaRVRestrictions
-import Section5.GammaFiniteFibres
-import Section3.SmallFiniteParameters
+module
+
+public import IntegrationSection6.GammaRVSetRealization
+public import IntegrationSection6.GammaRVRestrictions
+public import Section5.GammaFiniteFibres
+public import Section3.SmallFiniteParameters
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Reconstruct actual finite Gamma RV objects from full domain/volume
 relations and their functional/finite-fibre laws. The real presentation

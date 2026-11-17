@@ -1,7 +1,13 @@
-import IntegrationSection6.GammaFiniteObjectSchemata
-import IntegrationSection6.GammaFamilyBijectionValidity
-import IntegrationSection6.GammaWeightValidity
-import IntegrationSection6.GammaTupleRelationSpecialization
+module
+
+public import IntegrationSection6.GammaFiniteObjectSchemata
+public import IntegrationSection6.GammaFamilyBijectionValidity
+public import IntegrationSection6.GammaWeightValidity
+public import IntegrationSection6.GammaTupleRelationSpecialization
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Finite RV-isomorphism schemata carry actual source/target object
 schemata, a full chart formula, and first-order bijectivity/weight validity. -/

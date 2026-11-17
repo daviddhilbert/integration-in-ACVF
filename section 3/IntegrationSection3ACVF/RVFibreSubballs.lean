@@ -1,5 +1,11 @@
-import IntegrationSection3ACVF.OpenBallRVGeometry
-import IntegrationSection3ACVF.BallEnlargementGeometry
+module
+
+public import IntegrationSection3ACVF.OpenBallRVGeometry
+public import IntegrationSection3ACVF.BallEnlargementGeometry
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A nonzero RV difference class is an actual open subball of any ball
 containing its centre and the omitted point. No radius is named in a base. -/

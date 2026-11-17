@@ -1,6 +1,12 @@
-import IntegrationSection4.FamilyPreparedLinearity
-import IntegrationSection4.FamilyOpenPartition
-import IntegrationSection3ACVF.AdjoinGamma
+module
+
+public import IntegrationSection4.FamilyPreparedLinearity
+public import IntegrationSection4.FamilyOpenPartition
+public import IntegrationSection3ACVF.AdjoinGamma
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

@@ -1,4 +1,10 @@
-import Integration7.UniformBalancedHorizontalCentres
+module
+
+public import Integration7.UniformBalancedHorizontalCentres
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Evaluation of the actual horizontal inverse centre on the graph
 refinement, using the global mixed positioning bijection. -/

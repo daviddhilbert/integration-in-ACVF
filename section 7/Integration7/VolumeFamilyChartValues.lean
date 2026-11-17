@@ -1,4 +1,10 @@
-import Integration7.VolumeFamilyChartCodes
+module
+
+public import Integration7.VolumeFamilyChartCodes
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The uniform first-order formula represents the actual residue-Jacobian
 chart values. Parameters remain free; no Jacobian condition is assumed. -/

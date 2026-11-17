@@ -1,6 +1,12 @@
-import IntegrationSection4.FullBaseFiniteCodes
-import IntegrationSection4.FullBaseFiniteBounds
-import IntegrationSection4.GammaTupleGraphs
+module
+
+public import IntegrationSection4.FullBaseFiniteCodes
+public import IntegrationSection4.FullBaseFiniteBounds
+public import IntegrationSection4.GammaTupleGraphs
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

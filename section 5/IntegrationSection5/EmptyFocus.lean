@@ -1,5 +1,11 @@
-import IntegrationSection5.GammaRVPredicateChain
-import IntegrationSection5.GammaIsoCoordinates
+module
+
+public import IntegrationSection5.GammaRVPredicateChain
+public import IntegrationSection5.GammaIsoCoordinates
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option allowUnsafeReducibility true in

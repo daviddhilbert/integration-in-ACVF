@@ -1,5 +1,11 @@
-import IntegrationSection6.GammaDegreeTransport
-import IntegrationSection6.GammaSwappedVolumes
+module
+
+public import IntegrationSection6.GammaDegreeTransport
+public import IntegrationSection6.GammaSwappedVolumes
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Swapping two blocks of volume coordinates preserves the common-blowup
 relation, using the actual weight-preserving identity-label isomorphism. -/

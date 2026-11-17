@@ -1,6 +1,12 @@
-import Integration7.RVVolumeLiftCommonContextKernel
-import Integration7.CommonContextVolumeDescent
-import Integration7.VolumeBlowupLiftInvariance
+module
+
+public import Integration7.RVVolumeLiftCommonContextKernel
+public import Integration7.CommonContextVolumeDescent
+public import Integration7.VolumeBlowupLiftInvariance
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Proposition 7.8 in every positive degree on the original volume
 objects and original real base. Common forward volume blowups are

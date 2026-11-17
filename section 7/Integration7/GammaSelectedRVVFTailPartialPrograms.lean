@@ -1,5 +1,11 @@
-import Integration7.SelectedRVVFTailPartialPrograms
-import IntegrationSection5.GammaOrderedContraction
+module
+
+public import Integration7.SelectedRVVFTailPartialPrograms
+public import IntegrationSection5.GammaOrderedContraction
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Lifted partial contractions retain the entire original-Gamma
 certificate at every head and on the final selected-label domain. -/

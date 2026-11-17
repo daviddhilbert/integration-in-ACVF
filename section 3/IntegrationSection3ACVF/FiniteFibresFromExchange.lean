@@ -1,8 +1,14 @@
-import IntegrationSection3ACVF.VFExchangeAnyBase
-import IntegrationSection3ACVF.FullBaseDefinability
-import Section3.AlgebraicFinite
-import Section3.NormalizationSaturation
-import Section3.SmallFiniteParameters
+module
+
+public import IntegrationSection3ACVF.VFExchangeAnyBase
+public import IntegrationSection3ACVF.FullBaseDefinability
+public import Section3.AlgebraicFinite
+public import Section3.NormalizationSaturation
+public import Section3.SmallFiniteParameters
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Finite fibres of a real-parameter definable function above a
 nonalgebraic value. Imaginary parameters may restrict the source set;

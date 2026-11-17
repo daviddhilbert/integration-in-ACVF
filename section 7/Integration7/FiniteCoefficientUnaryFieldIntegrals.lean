@@ -1,7 +1,13 @@
-import Integration7.FiniteCoefficientContractionProductCharts
-import Integration7.SelectedRetainedContractionIntegrals
-import Integration7.FieldBaseUnarySpecialPreparations
-import Integration7.FieldBaseUnaryVolumeIntegrals
+module
+
+public import Integration7.FiniteCoefficientContractionProductCharts
+public import Integration7.SelectedRetainedContractionIntegrals
+public import Integration7.FieldBaseUnarySpecialPreparations
+public import Integration7.FieldBaseUnaryVolumeIntegrals
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A positive coefficient times a finite-label unary volume object
 has its actual degree-preserving product integral before normalization.

@@ -1,6 +1,12 @@
-import IntegrationSection3ACVF.PaperBallInvariants
-import IntegrationSection3ACVF.FullGammaRadius
-import IntegrationSection3.ValuationEnlargement
+module
+
+public import IntegrationSection3ACVF.PaperBallInvariants
+public import IntegrationSection3ACVF.FullGammaRadius
+public import IntegrationSection3.ValuationEnlargement
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual-ball geometry for nonmaximal-hole enlargement.
 The valuation lemmas it uses have passed the generic core audit. -/

@@ -1,6 +1,12 @@
-import IntegrationSection6.PartialContractionFamilies
-import IntegrationSection6.ActiveFrozenShuffle
-import IntegrationSection6.DefinableFamilyLifts
+module
+
+public import IntegrationSection6.PartialContractionFamilies
+public import IntegrationSection6.ActiveFrozenShuffle
+public import IntegrationSection6.DefinableFamilyLifts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The relative partial-contraction representative lifts to the original
 mixed family by an actual original-base Gamma isomorphism. -/

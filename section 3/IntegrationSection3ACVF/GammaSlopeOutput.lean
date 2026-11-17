@@ -1,4 +1,10 @@
-import IntegrationSection3ACVF.GammaSlopeDomain
+module
+
+public import IntegrationSection3ACVF.GammaSlopeDomain
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual output valuation equals the input valuation multiplied
 by the Gamma value of its unique RV coefficient. -/

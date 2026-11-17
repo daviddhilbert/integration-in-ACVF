@@ -1,5 +1,11 @@
-import IntegrationSection4.RelativeBijection
-import Section5.RootConstruction
+module
+
+public import IntegrationSection4.RelativeBijection
+public import Section5.RootConstruction
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A definable vertical mean step, fixing every complementary VF
 coordinate. The root locus need only be saturated in the head coordinate;

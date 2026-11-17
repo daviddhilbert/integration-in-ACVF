@@ -1,4 +1,10 @@
-import Integration7.MatchingHorizontalFibreGeometry
+module
+
+public import Integration7.MatchingHorizontalFibreGeometry
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Both actual matching-family translations are rectangles over all
 recorded labels. Their translated coordinate RV tags remain fixed even

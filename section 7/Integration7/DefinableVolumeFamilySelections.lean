@@ -1,5 +1,11 @@
-import Integration7.DefinableVFVolumeFamilies
-import Integration7.MixedRVMapGraphs
+module
+
+public import Integration7.DefinableVFVolumeFamilies
+public import Integration7.MixedRVMapGraphs
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Every definable positive volume family has a genuine selected-label
 presentation, by retaining its volume tuple as new RV labels. The old

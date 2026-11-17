@@ -1,9 +1,15 @@
-import IntegrationSection6.GammaNonzeroResolutions
-import IntegrationSection6.GammaLiftPadding
-import IntegrationSection6.FiniteGammaClassProducts
-import IntegrationSection6.GammaVFAllAdditivePresentation
-import IntegrationSection6.NativeFiniteQuotientLift
-import IntegrationSection6.GammaProductLifts
+module
+
+public import IntegrationSection6.GammaNonzeroResolutions
+public import IntegrationSection6.GammaLiftPadding
+public import IntegrationSection6.FiniteGammaClassProducts
+public import IntegrationSection6.GammaVFAllAdditivePresentation
+public import IntegrationSection6.NativeFiniteQuotientLift
+public import IntegrationSection6.GammaProductLifts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual additive lifting into the global VF semiring and its product law. -/
 noncomputable section

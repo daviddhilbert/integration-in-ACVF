@@ -1,4 +1,10 @@
-import IntegrationSection6.GammaFiniteGraphIsomorphisms
+module
+
+public import IntegrationSection6.GammaFiniteGraphIsomorphisms
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Composition and inversion of actual finite Gamma RV isomorphisms,
 retaining full original-base graphs and inherited finite volume images. -/

@@ -1,5 +1,11 @@
-import Integration7.PolynomialTangentProjection
-import Integration7.RVVolumeMorphisms
+module
+
+public import Integration7.PolynomialTangentProjection
+public import Integration7.RVVolumeMorphisms
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Projection of normalized tangent correspondences along any actual
 coordinate injection, acting in the same way on source and target. -/

@@ -1,4 +1,10 @@
-import IntegrationSection3ACVF.GammaFunctionSyntax
+module
+
+public import IntegrationSection3ACVF.GammaFunctionSyntax
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual images and partial preimages of Gamma sets over the original
 interpreted base. No definability of a total graph off its domain. -/

@@ -1,5 +1,11 @@
-import IntegrationSection6.GammaFamilyRows
-import IntegrationSection6.GammaNativeFiniteBounds
+module
+
+public import IntegrationSection6.GammaFamilyRows
+public import IntegrationSection6.GammaNativeFiniteBounds
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Raw parameter rows are exactly the typed family rows, including all
 proper-sort restrictions. Their actual graph presentations retain the

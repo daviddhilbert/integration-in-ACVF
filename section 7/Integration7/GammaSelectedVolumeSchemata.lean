@@ -1,6 +1,12 @@
-import Integration7.TypedVolumeDensityValidity
-import Integration7.NonzeroDensityFormulas
-import IntegrationSection6.GammaSelectedLabelFamilies
+module
+
+public import Integration7.TypedVolumeDensityValidity
+public import Integration7.NonzeroDensityFormulas
+public import IntegrationSection6.GammaSelectedLabelFamilies
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Selected coordinate maps and an actual retained nonzero density
 label form full original-Gamma volume schemata over VF parameters. -/

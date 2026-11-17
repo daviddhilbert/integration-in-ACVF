@@ -1,5 +1,11 @@
-import Integration7.NativeVFProjectionDomains
-import Integration7.FixedLabelsVFPermutations
+module
+
+public import Integration7.NativeVFProjectionDomains
+public import Integration7.FixedLabelsVFPermutations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Exact native fibre descriptions of the two product images of a
 balanced cell, using the cell's actual unary projection domains. -/

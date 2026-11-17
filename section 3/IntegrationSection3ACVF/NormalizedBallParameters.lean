@@ -1,4 +1,10 @@
-import IntegrationSection3ACVF.MaximalOpenClasses
+module
+
+public import IntegrationSection3ACVF.MaximalOpenClasses
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Normalization preserves entire same-radius ball families. Gamma
 quotients are kept distinct; the bridge uses a common nonzero RV code

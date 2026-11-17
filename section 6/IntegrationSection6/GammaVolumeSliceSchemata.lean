@@ -1,5 +1,11 @@
-import IntegrationSection6.GammaVolumeSliceCoordinates
-import IntegrationSection6.GammaRelationalObjectSchemata
+module
+
+public import IntegrationSection6.GammaVolumeSliceCoordinates
+public import IntegrationSection6.GammaRelationalObjectSchemata
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Every RV[e+k] object is canonically a full Gamma family of RV[k]
 volume slices over RV[e]. All rows have finite fibres, with no chosen

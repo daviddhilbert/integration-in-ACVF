@@ -1,8 +1,14 @@
-import IntegrationSection6.GeneratedBase.CellBaseTransfer
-import IntegrationSection6.GeneratedBase.CellRestrictions
-import IntegrationSection6.GeneratedBase.CoherentCells
-import IntegrationSection6.GeneratedBase.FiniteBases
-import IntegrationSection6.GeneratedBase.NativeBaseTransfer
-import IntegrationSection6.GeneratedBase.NativeContractionComparison
-import IntegrationSection6.GeneratedBase.ProgramBaseTransfer
-import IntegrationSection6.GeneratedBase.RVParameterInsertion
+module
+
+public import IntegrationSection6.GeneratedBase.CellBaseTransfer
+public import IntegrationSection6.GeneratedBase.CellRestrictions
+public import IntegrationSection6.GeneratedBase.CoherentCells
+public import IntegrationSection6.GeneratedBase.FiniteBases
+public import IntegrationSection6.GeneratedBase.NativeBaseTransfer
+public import IntegrationSection6.GeneratedBase.NativeContractionComparison
+public import IntegrationSection6.GeneratedBase.ProgramBaseTransfer
+public import IntegrationSection6.GeneratedBase.RVParameterInsertion
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section

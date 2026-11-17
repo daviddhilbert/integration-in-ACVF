@@ -1,4 +1,10 @@
-import IntegrationSection5.PartialNaturalMap
+module
+
+public import IntegrationSection5.PartialNaturalMap
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The natural map is a definable bijection onto exactly the lift specified
 by the ordered contraction's RV image and its volume coordinates. -/

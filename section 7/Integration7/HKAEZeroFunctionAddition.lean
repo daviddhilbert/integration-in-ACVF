@@ -1,4 +1,10 @@
-import Integration7.HKZeroFamilyCoproducts
+module
+
+public import Integration7.HKZeroFamilyCoproducts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual weighted zero-valued function addition descends to the AE
 quotient and gives its additive commutative monoid structure. -/

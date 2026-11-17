@@ -1,4 +1,10 @@
-import IntegrationSection5.FullStandardComparison
+module
+
+public import IntegrationSection5.FullStandardComparison
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option maxHeartbeats 2000000

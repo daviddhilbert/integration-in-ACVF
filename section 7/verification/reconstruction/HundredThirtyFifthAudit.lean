@@ -1,16 +1,22 @@
-import Integration7.HKCorrectionLibrary
-import Integration7.HKDegreeOnePrincipalFactors
-import Integration7.HKDegreeOneVolumeFactors
-import Integration7.HKMixedVolumeIsomorphisms
-import Integration7.HKRVProductBridges
-import Integration7.HKRVProductIsomorphisms
-import Integration7.HKRVVolumeObjects
-import Integration7.HKRVVolumeProducts
-import Integration7.HKVolumeFormTransport
-import Integration7.HKWeightedZeroBlowups
-import Integration7.HKZeroFamilyChangeOfVariables
-import Integration7.HKZeroRVVolumeIsomorphisms
-import Integration7.HKZeroVolumeFamilies
+module
+
+public import Integration7.HKCorrectionLibrary
+public import Integration7.HKDegreeOnePrincipalFactors
+public import Integration7.HKDegreeOneVolumeFactors
+public import Integration7.HKMixedVolumeIsomorphisms
+public import Integration7.HKRVProductBridges
+public import Integration7.HKRVProductIsomorphisms
+public import Integration7.HKRVVolumeObjects
+public import Integration7.HKRVVolumeProducts
+public import Integration7.HKVolumeFormTransport
+public import Integration7.HKWeightedZeroBlowups
+public import Integration7.HKZeroFamilyChangeOfVariables
+public import Integration7.HKZeroRVVolumeIsomorphisms
+public import Integration7.HKZeroVolumeFamilies
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 set_option pp.universes true
 set_option pp.proofs false
 set_option pp.deepTerms true

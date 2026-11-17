@@ -1,4 +1,10 @@
-import IntegrationSection6.GammaPermutedUnaryMaps
+module
+
+public import IntegrationSection6.GammaPermutedUnaryMaps
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! VF permutations preserve full RV pullbacks. A permutation followed
 by its inverse gives an actual definable bijection fixing every point

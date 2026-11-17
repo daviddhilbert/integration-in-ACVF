@@ -1,7 +1,13 @@
-import IntegrationSection6.FiniteGammaElementaryRightProducts
-import IntegrationSection6.FiniteGammaProductRightDistribution
-import IntegrationSection6.FiniteGammaProductIsos
-import IntegrationSection6.FiniteGammaProductBlowups
+module
+
+public import IntegrationSection6.FiniteGammaElementaryRightProducts
+public import IntegrationSection6.FiniteGammaProductRightDistribution
+public import IntegrationSection6.FiniteGammaProductIsos
+public import IntegrationSection6.FiniteGammaProductBlowups
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! An actual Gamma-certified finite blowup remains such a blowup after
 multiplication by an unrelated finite RV object. No small internal code

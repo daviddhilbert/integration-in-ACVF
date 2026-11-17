@@ -1,6 +1,12 @@
-import Integration7.OrdinaryCoefficientContractionProductCharts
-import Integration7.UnaryPreparedFiniteHeadObjects
-import Integration7.OrdinaryVolumeFamilyScalarProducts
+module
+
+public import Integration7.OrdinaryCoefficientContractionProductCharts
+public import Integration7.UnaryPreparedFiniteHeadObjects
+public import Integration7.OrdinaryVolumeFamilyScalarProducts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The same finite-coefficient preparation compares raw unary
 contractions with no old selected coordinates. The volume remains degree

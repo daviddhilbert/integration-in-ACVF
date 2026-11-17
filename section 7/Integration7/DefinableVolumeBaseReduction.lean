@@ -1,5 +1,11 @@
-import Integration7.GammaVolumeParameterGeometry
-import IntegrationSection6.GammaClosureIsomorphisms
+module
+
+public import Integration7.GammaVolumeParameterGeometry
+public import IntegrationSection6.GammaClosureIsomorphisms
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Eliminating definable parameter names preserves the actual volume
 objects, elementary charts, algebraic centers and common forward chains.

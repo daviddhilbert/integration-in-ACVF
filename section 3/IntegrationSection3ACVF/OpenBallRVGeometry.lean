@@ -1,6 +1,12 @@
-import IntegrationSection3ACVF.PaperBalls
-import IntegrationSection3ACVF.GammaCosetGeometry
-import Section3.BallTranslation
+module
+
+public import IntegrationSection3ACVF.PaperBalls
+public import IntegrationSection3ACVF.GammaCosetGeometry
+public import Section3.BallTranslation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! RV differences are constant on an actual open ball missing the
 subtracted point. The sequel's singleton convention is retained. -/

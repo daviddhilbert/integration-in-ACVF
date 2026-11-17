@@ -1,6 +1,12 @@
-import IntegrationSection4.Cells
-import IntegrationSection4.GammaBaseDescent
-import IntegrationSection3ACVF.RVDifferencePairs
+module
+
+public import IntegrationSection4.Cells
+public import IntegrationSection4.GammaBaseDescent
+public import IntegrationSection3ACVF.RVDifferencePairs
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

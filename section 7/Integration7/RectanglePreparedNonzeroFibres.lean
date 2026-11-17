@@ -1,5 +1,11 @@
-import Integration7.RectanglePreparedLabelFibres
-import IntegrationSection3ACVF.SeparationFunctions
+module
+
+public import Integration7.RectanglePreparedLabelFibres
+public import IntegrationSection3ACVF.SeparationFunctions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Nonzero VF coordinates in actual prepared rectangle targets.
 An open inverse-special cell cannot come from a zero prepared head.

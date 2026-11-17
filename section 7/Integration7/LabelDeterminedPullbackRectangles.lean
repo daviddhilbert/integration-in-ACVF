@@ -1,4 +1,10 @@
-import Integration7.MatchingPreparedLabelFibres
+module
+
+public import Integration7.MatchingPreparedLabelFibres
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A full VF-two pullback whose shared labels determine RV fibres
 is a rectangle over each full RV label tuple. This permits the proved

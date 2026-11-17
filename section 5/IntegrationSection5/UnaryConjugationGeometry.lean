@@ -1,4 +1,10 @@
-import IntegrationSection5.UnaryCellEquivalence
+module
+
+public import IntegrationSection5.UnaryCellEquivalence
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Two fixed RV cells retain the open-to-open geometry after actual
 special bijections on the two sides. -/

@@ -1,5 +1,11 @@
-import Integration7.SelectedStandardVolumeObjects
-import Integration7.FiniteContractionNormalizationVolumeIso
+module
+
+public import Integration7.SelectedStandardVolumeObjects
+public import Integration7.FiniteContractionNormalizationVolumeIso
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual positive volume objects on the complete unnormalized labels
 of an arbitrary finite-label standard contraction. -/

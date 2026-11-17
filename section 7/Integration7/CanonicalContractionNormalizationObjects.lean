@@ -1,6 +1,12 @@
-import Integration7.CanonicalFiniteRVObjects
-import IntegrationSection5.StandardContractionNormalization
-import Integration7.GradedVolumeProducts
+module
+
+public import Integration7.CanonicalFiniteRVObjects
+public import IntegrationSection5.StandardContractionNormalization
+public import Integration7.GradedVolumeProducts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual canonical normalized finite contraction object, with
 finiteness transported through the checked normalization isomorphism.

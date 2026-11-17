@@ -1,5 +1,11 @@
-import Integration7.SupportedPositiveGradedRestrictions
-import Integration7.NormalizedSupportedVolumeFunctions
+module
+
+public import Integration7.SupportedPositiveGradedRestrictions
+public import Integration7.NormalizedSupportedVolumeFunctions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Restriction to an arbitrary definable VF subset is a genuine
 normalized linear map. It splits the actual supported-module inclusion,

@@ -1,7 +1,13 @@
-import Integration7.RVVolumeObjects
-import Integration7.RVNonzero
-import IntegrationSection6.ElementaryBlowup
-import Section4.RVProductSymmetry
+module
+
+public import Integration7.RVVolumeObjects
+public import Integration7.RVNonzero
+public import IntegrationSection6.ElementaryBlowup
+public import Section4.RVProductSymmetry
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Definition 7.1 in concrete last-coordinate charts. The underlying
 admissibility and finite-volume construction are reused from Section 6;

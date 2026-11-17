@@ -1,8 +1,14 @@
-import Integration7.CoordinateDensityVolumeObjects
-import Integration7.GradedVolumeProducts
-import Integration7.VolumeDensityRescaling
-import Integration7.ContractionRetainedLabelValues
-import Integration7.SmallDimensionContractionNormalization
+module
+
+public import Integration7.CoordinateDensityVolumeObjects
+public import Integration7.GradedVolumeProducts
+public import Integration7.VolumeDensityRescaling
+public import Integration7.ContractionRetainedLabelValues
+public import Integration7.SmallDimensionContractionNormalization
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A retained constant density label gives exactly the constant-density
 volume object. These identities apply to the actual raw and normalized

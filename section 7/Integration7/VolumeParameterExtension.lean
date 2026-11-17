@@ -1,5 +1,11 @@
-import Integration7.UniformVolumeData
-import IntegrationSection6.FiniteRVParameterExtension
+module
+
+public import Integration7.UniformVolumeData
+public import IntegrationSection6.FiniteRVParameterExtension
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Extending the real parameter set retains the actual finite-volume
 object, its density and its points. It asserts no generation of the new base. -/

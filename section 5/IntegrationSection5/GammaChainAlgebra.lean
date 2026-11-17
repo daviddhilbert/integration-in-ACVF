@@ -1,5 +1,11 @@
-import IntegrationSection5.GammaPulledFocus
-import IntegrationSection5.MatchedFocusStep
+module
+
+public import IntegrationSection5.GammaPulledFocus
+public import IntegrationSection5.MatchedFocusStep
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Invariant graph certificates for matched special-chain operations. -/
 

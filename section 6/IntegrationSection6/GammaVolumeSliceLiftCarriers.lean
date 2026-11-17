@@ -1,5 +1,11 @@
-import IntegrationSection6.GammaVolumeSliceSchemata
-import IntegrationSection6.GammaFiniteGraphObjects
+module
+
+public import IntegrationSection6.GammaVolumeSliceSchemata
+public import IntegrationSection6.GammaFiniteGraphObjects
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual lift of a finite volume-slice presentation has the same
 old RV labels and the unsliced VF volume, with the selected volume fixed. -/

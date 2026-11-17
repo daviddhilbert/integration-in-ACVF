@@ -1,5 +1,11 @@
-import Integration7.PermutationRVJacobian
-import Section9.GenericRVJacobian
+module
+
+public import Integration7.PermutationRVJacobian
+public import Section9.GenericRVJacobian
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 set_option backward.isDefEq.respectTransparency false
 noncomputable section

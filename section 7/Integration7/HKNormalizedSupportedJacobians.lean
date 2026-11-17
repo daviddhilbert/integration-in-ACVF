@@ -1,6 +1,12 @@
-import Integration7.HKNormalizedRestrictedJacobians
-import Integration7.HKNormalizedSupportedCoordinateIntegrals
-import Integration7.RawPositiveGradedChangeOfVariables
+module
+
+public import Integration7.HKNormalizedRestrictedJacobians
+public import Integration7.HKNormalizedSupportedCoordinateIntegrals
+public import Integration7.RawPositiveGradedChangeOfVariables
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The genuine normalized Jacobian operator maps source support into
 target support and preserves the integral, including weighted-zero

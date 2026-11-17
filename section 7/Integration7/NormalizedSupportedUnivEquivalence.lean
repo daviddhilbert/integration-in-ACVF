@@ -1,6 +1,12 @@
-import Integration7.SupportedUnivVolumeEquivalences
-import Integration7.SemimoduleScalarExtensionEquivalences
-import Integration7.NormalizedSupportedVolumeFunctions
+module
+
+public import Integration7.SupportedUnivVolumeEquivalences
+public import Integration7.SemimoduleScalarExtensionEquivalences
+public import Integration7.NormalizedSupportedVolumeFunctions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The normalized supported module on the full VF domain is exactly
 the existing normalized function module, including ordinary RV[0]. -/

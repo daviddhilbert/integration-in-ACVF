@@ -1,4 +1,10 @@
-import IntegrationSection3ACVF.RVValueShellGeometry
+module
+
+public import IntegrationSection3ACVF.RVValueShellGeometry
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Strict error estimates and recovery of an affine RV difference. -/
 

@@ -1,6 +1,12 @@
-import Integration7.RVVolumeMorphisms
-import IntegrationSection6.GammaRVGraphRaw
-import IntegrationSection6.GammaTupleRelationPromotion
+module
+
+public import Integration7.RVVolumeMorphisms
+public import IntegrationSection6.GammaRVGraphRaw
+public import IntegrationSection6.GammaTupleRelationPromotion
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Promote an actual essential chart with its explicit full original-
 Gamma graph. Definability over a containing real context alone is not

@@ -1,5 +1,11 @@
-import Integration7.HeadTailPermutationFibres
-import Integration7.HeadImageCoordinateWitnesses
+module
+
+public import Integration7.HeadTailPermutationFibres
+public import Integration7.HeadImageCoordinateWitnesses
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Taking the head contraction image commutes literally with a
 permutation of the retained VF tail. -/

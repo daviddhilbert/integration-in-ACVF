@@ -1,6 +1,12 @@
-import Section5.GammaInvariantLogic
-import Section5.GammaContraction
-import Section3.GammaPresentation
+module
+
+public import Section5.GammaInvariantLogic
+public import Section5.GammaContraction
+public import Section3.GammaPresentation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Lemma 5.1 over an original real/Gamma base, with an explicit common
 real presentation. Every transformation retains full invariant graphs

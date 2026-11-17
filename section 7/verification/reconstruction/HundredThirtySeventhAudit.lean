@@ -1,28 +1,34 @@
-import Integration7.HKBasicGeneration
-import Integration7.HKBlowupUniversalProperty
-import Integration7.HKGradedBlowupProjection
-import Integration7.HKPositiveBasicGeneration
-import Integration7.HKPrincipalVolumeKernel
-import Integration7.HKRawVolumeKernelIdeal
-import Integration7.HKUpstreamRVZero
-import Integration7.HKUpstreamVFZero
-import Integration7.HKVolumeBlowupRelations
-import Integration7.HKVolumeBlowupSemiring
-import Integration7.HKVolumeClassCoherence
-import Integration7.HKVolumeClasses
-import Integration7.HKVolumeCoproductIsomorphisms
-import Integration7.HKVolumeCoproducts
-import Integration7.HKVolumeDataRelabeling
-import Integration7.HKVolumeIsoOperations
-import Integration7.HKVolumeIsoSemiring
-import Integration7.HKVolumeLeftDistributivity
-import Integration7.HKVolumeProductAssociativity
-import Integration7.HKVolumeProductUnits
-import Integration7.HKVolumeProductZeros
-import Integration7.HKVolumeRightDistributivity
-import Integration7.HKWeightedZeroBlowupCongruence
-import Integration7.HKWeightedZeroDistributivity
-import Integration7.HKZeroAdditiveIntegration
+module
+
+public import Integration7.HKBasicGeneration
+public import Integration7.HKBlowupUniversalProperty
+public import Integration7.HKGradedBlowupProjection
+public import Integration7.HKPositiveBasicGeneration
+public import Integration7.HKPrincipalVolumeKernel
+public import Integration7.HKRawVolumeKernelIdeal
+public import Integration7.HKUpstreamRVZero
+public import Integration7.HKUpstreamVFZero
+public import Integration7.HKVolumeBlowupRelations
+public import Integration7.HKVolumeBlowupSemiring
+public import Integration7.HKVolumeClassCoherence
+public import Integration7.HKVolumeClasses
+public import Integration7.HKVolumeCoproductIsomorphisms
+public import Integration7.HKVolumeCoproducts
+public import Integration7.HKVolumeDataRelabeling
+public import Integration7.HKVolumeIsoOperations
+public import Integration7.HKVolumeIsoSemiring
+public import Integration7.HKVolumeLeftDistributivity
+public import Integration7.HKVolumeProductAssociativity
+public import Integration7.HKVolumeProductUnits
+public import Integration7.HKVolumeProductZeros
+public import Integration7.HKVolumeRightDistributivity
+public import Integration7.HKWeightedZeroBlowupCongruence
+public import Integration7.HKWeightedZeroDistributivity
+public import Integration7.HKZeroAdditiveIntegration
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 set_option pp.universes true
 set_option pp.proofs false
 set_option pp.deepTerms true

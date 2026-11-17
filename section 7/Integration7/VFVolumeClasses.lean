@@ -1,7 +1,13 @@
-import Integration7.EssentialVolumeLiftIsomorphisms
-import Integration7.VolumeIsomorphismClasses
-import Integration7.GradedVolumeProducts
-import Section4.EmptyMaps
+module
+
+public import Integration7.EssentialVolumeLiftIsomorphisms
+public import Integration7.VolumeIsomorphismClasses
+public import Integration7.GradedVolumeProducts
+public import Section4.EmptyMaps
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual positive VF volume-isomorphism classes. Smaller-dimensional
 objects vanish, and the canonical lift descends from RV isomorphism

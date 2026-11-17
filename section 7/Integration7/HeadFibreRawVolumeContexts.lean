@@ -1,7 +1,13 @@
-import Integration7.HeadFibreRawVolumeEquivalence
-import Integration7.RawSelectedContractionParameterExtension
-import Integration7.GammaCoordinateDensityEquivalences
-import Integration7.SelectedCoordinateDensityRows
+module
+
+public import Integration7.HeadFibreRawVolumeEquivalence
+public import Integration7.RawSelectedContractionParameterExtension
+public import Integration7.GammaCoordinateDensityEquivalences
+public import Integration7.SelectedCoordinateDensityRows
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Realize the actual head fibre as the raw selected unary contraction
 in any containing context, preserving full volume and density data. -/

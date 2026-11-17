@@ -1,10 +1,16 @@
-import Integration7.CompletedSection6Kernel
-import Integration7.ClosedSection6IntegrationContexts
-import Integration7.ClosedSection6GlobalLiftClassEquality
-import IntegrationSection6.ContextRVClasses
-import IntegrationSection6.IntegrationContexts
-import IntegrationSection6.GlobalLiftClassEquality
-import IntegrationSection6.GammaResolutionProducts
+module
+
+public import Integration7.CompletedSection6Kernel
+public import Integration7.ClosedSection6IntegrationContexts
+public import Integration7.ClosedSection6GlobalLiftClassEquality
+public import IntegrationSection6.ContextRVClasses
+public import IntegrationSection6.IntegrationContexts
+public import IntegrationSection6.GlobalLiftClassEquality
+public import IntegrationSection6.GammaResolutionProducts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Closed generated-base Section6 integration. The former universal
 Section5 input is replaced by the canonical-model certificate; its kernel

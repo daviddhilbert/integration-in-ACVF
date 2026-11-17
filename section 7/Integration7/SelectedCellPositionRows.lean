@@ -1,4 +1,10 @@
-import Integration7.MixedVerticalParameterSelections
+module
+
+public import Integration7.MixedVerticalParameterSelections
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The same actual position row survives selection of its entire
 RV-parameter fibre, including the scalar-family presentation used by

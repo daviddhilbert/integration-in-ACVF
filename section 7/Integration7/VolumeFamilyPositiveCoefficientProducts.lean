@@ -1,4 +1,10 @@
-import Integration7.VolumeFamilyPositiveCoefficientData
+module
+
+public import Integration7.VolumeFamilyPositiveCoefficientData
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Finiteness of the genuine positive-coefficient product holds after
 fixing the VF base and the full coefficient-first volume tuple. -/

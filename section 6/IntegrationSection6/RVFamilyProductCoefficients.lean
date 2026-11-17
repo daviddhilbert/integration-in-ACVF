@@ -1,7 +1,13 @@
-import IntegrationSection6.RVFamilyProducts
-import IntegrationSection6.FamilyRowRepresentation
-import IntegrationSection6.ContextRVClasses
-import IntegrationSection6.GammaProductLifts
+module
+
+public import IntegrationSection6.RVFamilyProducts
+public import IntegrationSection6.FamilyRowRepresentation
+public import IntegrationSection6.ContextRVClasses
+public import IntegrationSection6.GammaProductLifts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Product families have exactly the product of the two coefficient
 classes in the actual parameter-dependent semiring. -/

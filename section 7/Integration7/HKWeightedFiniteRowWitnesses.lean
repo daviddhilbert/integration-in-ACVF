@@ -1,7 +1,13 @@
-import Integration7.HKPureRVPointSortedIsomorphisms
-import Integration7.HKPointIsomorphismCodes
-import Integration7.HKDensityLabelConstraints
-import Integration7.GammaFiniteRowIsomorphismWitnesses
+module
+
+public import Integration7.HKPureRVPointSortedIsomorphisms
+public import Integration7.HKPointIsomorphismCodes
+public import Integration7.HKDensityLabelConstraints
+public import Integration7.GammaFiniteRowIsomorphismWitnesses
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! An exact-density isomorphism of finite zero-volume rows promotes to
 a globally density-constrained formula on the original parameter base. -/

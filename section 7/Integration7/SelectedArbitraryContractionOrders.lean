@@ -1,5 +1,11 @@
-import Integration7.SelectedCommonHeadOrderComparison
-import IntegrationSection6.ContractionOrderBridge
+module
+
+public import Integration7.SelectedCommonHeadOrderComparison
+public import IntegrationSection6.ContractionOrderBridge
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Arbitrary-order independence with all selected RV volume coordinates
 and arbitrary retained density. The induction uses the proved selected

@@ -1,4 +1,10 @@
-import IntegrationSection6.PartialFocusLocus
+module
+
+public import IntegrationSection6.PartialFocusLocus
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The active old-label image of a partial focus is an actual admissible
 RV subobject. This is the local elementary piece for the general chain proof. -/

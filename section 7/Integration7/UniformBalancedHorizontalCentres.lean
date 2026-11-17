@@ -1,6 +1,12 @@
-import Integration7.UniformBalancedPositionMaps
-import IntegrationSection5.ScalarCoordinateRefinement
-import IntegrationSection5.NaturalContractionMap
+module
+
+public import Integration7.UniformBalancedPositionMaps
+public import IntegrationSection5.ScalarCoordinateRefinement
+public import IntegrationSection5.NaturalContractionMap
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! An actual inverse mixed positioning map supplies the horizontal
 centre of a balanced family. It preserves the full original-Gamma graph

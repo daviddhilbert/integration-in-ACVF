@@ -1,6 +1,12 @@
-import Integration7.AEOrdinaryVolumeModules
-import Integration7.AERVVolumeOrdinaryCoefficientModules
-import Mathlib.Algebra.DirectSum.Module
+module
+
+public import Integration7.AEOrdinaryVolumeModules
+public import Integration7.AERVVolumeOrdinaryCoefficientModules
+public import Mathlib.Algebra.DirectSum.Module
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The full finitely graded AE function space includes ordinary
 degree zero and every positive homogeneous coefficient degree. -/

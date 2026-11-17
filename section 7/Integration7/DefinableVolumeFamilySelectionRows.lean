@@ -1,5 +1,11 @@
-import Integration7.DefinableVolumeFamilySelections
-import Integration7.VolumeRelabeling
+module
+
+public import Integration7.DefinableVolumeFamilySelections
+public import Integration7.VolumeRelabeling
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Retaining the volume tuple gives a genuine volume isomorphism on
 every actual named RV row. No coordinate or density equation is assumed. -/

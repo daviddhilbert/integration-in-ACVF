@@ -1,7 +1,13 @@
-import Integration7.CanonicalGammaCoproducts
-import Integration7.GammaVolumeFullChartRestriction
-import Integration7.VolumePartition
-import IntegrationSection6.FiniteGammaPartitionCharts
+module
+
+public import Integration7.CanonicalGammaCoproducts
+public import Integration7.GammaVolumeFullChartRestriction
+public import Integration7.VolumePartition
+public import IntegrationSection6.FiniteGammaPartitionCharts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual volume coproduct partition has its full original-Gamma
 chart whenever the cut does. The density and all coordinate equations

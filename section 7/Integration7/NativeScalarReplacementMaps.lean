@@ -1,5 +1,11 @@
-import Integration7.NativeRelativeTranslations
-import IntegrationSection5.GammaScalarUpdate
+module
+
+public import Integration7.NativeRelativeTranslations
+public import IntegrationSection5.GammaScalarUpdate
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Replace one VF coordinate by an actual scalar map while retaining
 every RV label. The complete graph retains the scalar map's original

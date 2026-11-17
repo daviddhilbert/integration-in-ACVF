@@ -1,5 +1,11 @@
-import Integration7.RVLabelConstraintSpecialPreparations
-import Integration7.GammaRVLabelCuts
+module
+
+public import Integration7.RVLabelConstraintSpecialPreparations
+public import Integration7.GammaRVLabelCuts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual unary sources with any pure-RV label constraint. This
 includes coefficient products with functional density and selection

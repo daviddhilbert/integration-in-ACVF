@@ -1,5 +1,11 @@
-import Integration7.VolumeFamilyHeadIntegralComparison
-import IntegrationSection5.GammaHeadPreparation
+module
+
+public import Integration7.VolumeFamilyHeadIntegralComparison
+public import IntegrationSection5.GammaHeadPreparation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A genuine generated-base head preparation supplies a chosen
 representative of the head fibre integral. Its quotient value is

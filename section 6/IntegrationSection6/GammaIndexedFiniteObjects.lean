@@ -1,5 +1,11 @@
-import IntegrationSection6.FiniteIndexedFibres
-import IntegrationSection6.GammaFiniteGraphObjects
+module
+
+public import IntegrationSection6.FiniteIndexedFibres
+public import IntegrationSection6.GammaFiniteGraphObjects
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Assemble RV-indexed finite-volume objects using their actual joint
 Gamma domain and volume graphs. The index labels remain underlying labels;

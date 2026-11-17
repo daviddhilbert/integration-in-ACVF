@@ -1,5 +1,11 @@
-import Integration7.GammaVolumeIsoSchemaRealization
-import Integration7.FiniteVolumeParameterContexts
+module
+
+public import Integration7.GammaVolumeIsoSchemaRealization
+public import Integration7.FiniteVolumeParameterContexts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Every valid volume-isomorphism schema row has a small containing
 real context and an actual volume isomorphism realizing the original

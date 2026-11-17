@@ -1,10 +1,16 @@
-import Integration7.VolumePartialFocusImages
-import Integration7.VolumePullbackPresentations
-import Integration7.VolumePullbackPartitions
-import Integration7.VolumeObjectPartitions
-import Integration7.IteratedVolumeBlowups
-import IntegrationSection6.LiftLabelPartitions
-import IntegrationSection6.PartialFocusPartition
+module
+
+public import Integration7.VolumePartialFocusImages
+public import Integration7.VolumePullbackPresentations
+public import Integration7.VolumePullbackPartitions
+public import Integration7.VolumeObjectPartitions
+public import Integration7.IteratedVolumeBlowups
+public import IntegrationSection6.LiftLabelPartitions
+public import IntegrationSection6.PartialFocusPartition
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! An arbitrary last-coordinate focus gives one actual volume blowup:
 blow up its active old-label locus and keep the complementary labels. -/

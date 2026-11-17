@@ -1,5 +1,11 @@
-import Integration7.VFVolumeBijections
-import Integration7.VFAlmostEverywhere
+module
+
+public import Integration7.VFVolumeBijections
+public import Integration7.VFAlmostEverywhere
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The mixed VF Jacobian is unchanged by altering only the output RV
 labels. Generic charts for the new labels are constructed by the checked

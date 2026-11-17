@@ -1,5 +1,11 @@
-import Integration7.CanonicalGammaElementaryLiftVolumes
-import Integration7.VolumeRelabeling
+module
+
+public import Integration7.CanonicalGammaElementaryLiftVolumes
+public import Integration7.VolumeRelabeling
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The literal density used by the focus lift is the density of the
 actual canonical elementary volume object. The identifying RV map is

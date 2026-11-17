@@ -1,5 +1,11 @@
-import IntegrationSection5.SharedRVProductComparison
-import IntegrationSection5.MixedUnaryPreparations
+module
+
+public import IntegrationSection5.SharedRVProductComparison
+public import IntegrationSection5.MixedUnaryPreparations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Uniform standard contraction comparison for every original-Gamma family whose RV fibres are rectangles, including empty or singleton factors. -/
 noncomputable section

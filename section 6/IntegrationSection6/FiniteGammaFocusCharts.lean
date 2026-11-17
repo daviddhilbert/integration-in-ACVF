@@ -1,7 +1,13 @@
-import IntegrationSection6.GammaRVKeyGraphs
-import IntegrationSection6.FiniteGammaAmbientIsos
-import IntegrationSection6.FiniteGammaElementaryAt
-import IntegrationSection6.OriginalFocusCoordinates
+module
+
+public import IntegrationSection6.GammaRVKeyGraphs
+public import IntegrationSection6.FiniteGammaAmbientIsos
+public import IntegrationSection6.FiniteGammaElementaryAt
+public import IntegrationSection6.OriginalFocusCoordinates
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Full-focus comparisons in RV[k] retain the original-Gamma graph.
 The graph is the inverse of the injective elementary key graph; no

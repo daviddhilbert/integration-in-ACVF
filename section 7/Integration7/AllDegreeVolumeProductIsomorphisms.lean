@@ -1,6 +1,12 @@
-import Integration7.ZeroFactorProductBridges
-import Integration7.RVVolumeProducts
-import Section4.RVProductMorphisms
+module
+
+public import Integration7.ZeroFactorProductBridges
+public import Integration7.RVVolumeProducts
+public import Section4.RVProductMorphisms
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! One product-isomorphism operation for every pair of actual volume
 degrees. Degree zero retains ordinary RV isomorphisms. -/

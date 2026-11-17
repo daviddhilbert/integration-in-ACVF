@@ -1,9 +1,15 @@
-import Integration7.VolumeLiftDescent
-import Integration7.VFVolumeLifts
-import Integration7.MixedJacobianRestriction
-import Integration7.FiniteVolumeIsoMaps
-import Integration7.EssentialVolumeRestriction
-import Section7.LiftedIsomorphism
+module
+
+public import Integration7.VolumeLiftDescent
+public import Integration7.VFVolumeLifts
+public import Integration7.MixedJacobianRestriction
+public import Integration7.FiniteVolumeIsoMaps
+public import Integration7.EssentialVolumeRestriction
+public import Section7.LiftedIsomorphism
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A full lift compatible with a full RV isomorphism descends to the
 volume category. Restriction to essential labels and its Jacobian are proved

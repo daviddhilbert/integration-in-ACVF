@@ -1,5 +1,11 @@
-import Integration7.VolumeRelabeling
-import Integration7.RVCoordinateSelection
+module
+
+public import Integration7.VolumeRelabeling
+public import Integration7.RVCoordinateSelection
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A retained nonzero RV label is an actual density. Full coordinate
 and density-label identities give genuine volume-category isomorphisms. -/

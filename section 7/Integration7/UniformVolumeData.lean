@@ -1,4 +1,10 @@
-import Integration7.RVVolumeMorphisms
+module
+
+public import Integration7.RVVolumeMorphisms
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Uniform density-bearing presentations. The degree-zero object forgets
 the density, in accordance with ordinary RV[0]. -/

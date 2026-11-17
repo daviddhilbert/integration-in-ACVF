@@ -1,5 +1,11 @@
-import Integration7.WeightedSchemaRowFibres
-import Integration7.ExtraVolumeCertificateSemantics
+module
+
+public import Integration7.WeightedSchemaRowFibres
+public import Integration7.ExtraVolumeCertificateSemantics
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual finite chart certificates imply the first-order RV clause.
 The exception row is interpreted exactly on weighted labels; auxiliary

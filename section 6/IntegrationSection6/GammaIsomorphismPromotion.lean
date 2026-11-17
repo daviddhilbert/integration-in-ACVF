@@ -1,6 +1,12 @@
-import IntegrationSection6.GammaIsomorphismRealization
-import IntegrationSection6.GammaNativeRawIsomorphisms
-import IntegrationSection6.GammaTupleRelationPromotion
+module
+
+public import IntegrationSection6.GammaIsomorphismRealization
+public import IntegrationSection6.GammaNativeRawIsomorphisms
+public import IntegrationSection6.GammaTupleRelationPromotion
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Every actual finite Gamma RV isomorphism over a named sorted tuple
 promotes to an isomorphism schema with a genuine definable validity locus

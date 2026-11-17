@@ -1,9 +1,15 @@
-import Integration7.OrdinaryCoefficientContractionProductCharts
-import Integration7.SelectedRetainedContractionIntegrals
-import Integration7.FieldBaseUnarySpecialPreparations
-import Integration7.ConstantCoefficientIntegralPresentations
-import Integration7.PositiveVolumeProductOrdinaryScalars
-import Integration7.OrdinaryVolumeCoefficientScalarRows
+module
+
+public import Integration7.OrdinaryCoefficientContractionProductCharts
+public import Integration7.SelectedRetainedContractionIntegrals
+public import Integration7.FieldBaseUnarySpecialPreparations
+public import Integration7.ConstantCoefficientIntegralPresentations
+public import Integration7.PositiveVolumeProductOrdinaryScalars
+public import Integration7.OrdinaryVolumeCoefficientScalarRows
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The chosen field-base integral commutes with actual ordinary RV[0]
 coefficients on every positive selected family, before normalization.

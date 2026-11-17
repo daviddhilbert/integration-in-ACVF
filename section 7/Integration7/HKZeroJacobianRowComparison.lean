@@ -1,5 +1,11 @@
-import Integration7.HKZeroJacobianRowIsomorphisms
-import Integration7.DefinableBaseMapValues
+module
+
+public import Integration7.HKZeroJacobianRowIsomorphisms
+public import Integration7.DefinableBaseMapValues
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual Jacobian transform respects the exact weighted-zero fibre
 isomorphism relation. Inverse images and the Jacobian value are definable over

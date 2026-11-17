@@ -1,7 +1,13 @@
-import Integration7.OrdinaryUnitSelectedVolumeFamilies
-import Integration7.UnaryUnitSelectedContractionCharts
-import Integration7.SelectedRetainedContractionIntegrals
-import Integration7.FieldBaseUnaryVolumeIntegrals
+module
+
+public import Integration7.OrdinaryUnitSelectedVolumeFamilies
+public import Integration7.UnaryUnitSelectedContractionCharts
+public import Integration7.SelectedRetainedContractionIntegrals
+public import Integration7.FieldBaseUnaryVolumeIntegrals
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The chosen positive unit presentation of an ordinary unary family
 integrates to the point times its actual ordinary unary VF integral. -/

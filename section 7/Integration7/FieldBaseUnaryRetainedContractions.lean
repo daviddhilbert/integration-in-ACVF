@@ -1,5 +1,11 @@
-import Integration7.FieldBaseUnaryIntegralBijections
-import Integration7.NativeRVGraphVolumeRefinements
+module
+
+public import Integration7.FieldBaseUnaryIntegralBijections
+public import Integration7.NativeRVGraphVolumeRefinements
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A unary source with a literal retained density can be integrated
 using its actual original-label contraction. Passing through its density

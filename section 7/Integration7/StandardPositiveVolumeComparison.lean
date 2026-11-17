@@ -1,5 +1,11 @@
-import Integration7.OrderedAppendVolumeContractions
-import Integration7.GammaPermutedSelectedVolumeFamilies
+module
+
+public import Integration7.OrderedAppendVolumeContractions
+public import Integration7.GammaPermutedSelectedVolumeFamilies
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Positive selected-volume comparison for arbitrary chosen standard
 contractions with the same VF-coordinate order. The contracted tags are

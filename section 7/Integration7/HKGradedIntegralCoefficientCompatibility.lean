@@ -1,7 +1,13 @@
-import Integration7.HKVolumeComponentIntegralWeightedLinearity
-import Integration7.HKGradedAEVolumeActionCoherence
-import Integration7.HKZeroPositiveCoefficientIntegrals
-import Integration7.AERVPositiveCoefficientAppendedIntegrals
+module
+
+public import Integration7.HKVolumeComponentIntegralWeightedLinearity
+public import Integration7.HKGradedAEVolumeActionCoherence
+public import Integration7.HKZeroPositiveCoefficientIntegrals
+public import Integration7.AERVPositiveCoefficientAppendedIntegrals
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! In every homogeneous degree, including ordinary values and ordinary
 coefficients, integration preserves the actual graded coefficient action. -/

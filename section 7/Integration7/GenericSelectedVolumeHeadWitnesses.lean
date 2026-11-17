@@ -1,6 +1,12 @@
-import Integration7.GenericCoordinateFibreDimension
-import Integration7.SelectedVolumeHeadRows
-import Integration7.SelectedVolumeSchemaUniformBounds
+module
+
+public import Integration7.GenericCoordinateFibreDimension
+public import Integration7.SelectedVolumeHeadRows
+public import Integration7.SelectedVolumeSchemaUniformBounds
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A generic full VF tuple yields generic frozen-head volume witnesses
 over the actual generated frozen parameter field. -/

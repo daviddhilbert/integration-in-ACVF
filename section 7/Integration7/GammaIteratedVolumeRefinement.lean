@@ -1,6 +1,12 @@
-import Integration7.GammaIteratedVolumeBlowups
-import Integration7.GammaVolumeBlowupDiamond
-import IntegrationSection6.Iteration
+module
+
+public import Integration7.GammaIteratedVolumeBlowups
+public import Integration7.GammaVolumeBlowupDiamond
+public import IntegrationSection6.Iteration
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The checked finite-grid argument applies to original-Gamma volume
 classes. Realization retains the exact two chain lengths and all charts. -/

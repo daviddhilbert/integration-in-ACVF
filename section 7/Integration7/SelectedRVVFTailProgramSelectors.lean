@@ -1,5 +1,11 @@
-import Integration7.SelectedRVVFTailProgramHeads
-import IntegrationSection5.OrderedContractionProgram
+module
+
+public import Integration7.SelectedRVVFTailProgramHeads
+public import IntegrationSection5.OrderedContractionProgram
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Retained selected labels shift through a head step by the same
 literal suffix selector as in the original ordered program. -/

@@ -1,5 +1,11 @@
-import IntegrationSection5.GammaTraceCore
-import IntegrationSection5.EmptyFocus
+module
+
+public import IntegrationSection5.GammaTraceCore
+public import IntegrationSection5.EmptyFocus
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 noncomputable section
 set_option autoImplicit false

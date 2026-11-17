@@ -1,6 +1,12 @@
-import IntegrationSection6.PointwiseRootEquations
-import Section3.GammaSpecialization
-import Section3.NormalizationSaturation
+module
+
+public import IntegrationSection6.PointwiseRootEquations
+public import Section3.GammaSpecialization
+public import Section3.NormalizationSaturation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A single original-real-base root equation works on the whole
 Gamma-definable admissible label image. Temporary Gamma representatives

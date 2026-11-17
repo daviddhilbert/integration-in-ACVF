@@ -1,6 +1,12 @@
-import IntegrationSection6.GammaBlowupIndexedRealization
-import IntegrationSection6.GammaChainSchemata
-import IntegrationSection6.FiniteGammaIterations
+module
+
+public import IntegrationSection6.GammaBlowupIndexedRealization
+public import IntegrationSection6.GammaChainSchemata
+public import IntegrationSection6.FiniteGammaIterations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A uniformly valid finite chain glues over an actual RV[d] base to a
 native RV[d+k] forward chain of exactly the same length. -/

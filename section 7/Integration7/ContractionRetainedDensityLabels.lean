@@ -1,5 +1,11 @@
-import Integration7.UnaryContractionVolumeMaps
-import IntegrationSection6.FiniteSelectedContractions
+module
+
+public import Integration7.UnaryContractionVolumeMaps
+public import IntegrationSection6.FiniteSelectedContractions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Every normalized RV contraction label has a source representative.
 Consequently a retained nonzero density stays nonzero on the entire RV

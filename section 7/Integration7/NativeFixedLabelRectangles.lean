@@ -1,6 +1,12 @@
-import Integration7.NativeUnaryProducts
-import Integration7.FixedLabelProductHeadGeometry
-import IntegrationSection6.StandardProgramPresentations
+module
+
+public import Integration7.NativeUnaryProducts
+public import Integration7.FixedLabelProductHeadGeometry
+public import IntegrationSection6.StandardProgramPresentations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The native Cartesian rectangle agrees with its fixed-label first
 factor presentation, and exchanging its two VF coordinates exchanges

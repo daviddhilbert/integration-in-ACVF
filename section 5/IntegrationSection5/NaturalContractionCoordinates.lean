@@ -1,5 +1,11 @@
-import IntegrationSection5.NaturalContractionMap
-import IntegrationSection5.RelativeInverseGeometry
+module
+
+public import IntegrationSection5.NaturalContractionMap
+public import IntegrationSection5.RelativeInverseGeometry
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The coordinate-injectivity observation following Definition5.5.
 Actual unary fibre specials give an exact difference identity on every

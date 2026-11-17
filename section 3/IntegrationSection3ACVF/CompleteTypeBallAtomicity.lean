@@ -1,5 +1,11 @@
-import IntegrationSection3ACVF.SplittingBallFamilyHitting
-import IntegrationSection3ACVF.FiniteHittingAtomicity
+module
+
+public import IntegrationSection3ACVF.SplittingBallFamilyHitting
+public import IntegrationSection3ACVF.FiniteHittingAtomicity
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Full Lemma3.4 for every actual open or closed ball,including
 unnamed radii,singletons andVF,over the full original interpreted base.

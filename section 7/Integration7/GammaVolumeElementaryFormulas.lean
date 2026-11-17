@@ -1,5 +1,11 @@
-import Integration7.GammaVolumeSchemaBounds
-import IntegrationSection6.GammaRawElementarySchemata
+module
+
+public import Integration7.GammaVolumeSchemaBounds
+public import IntegrationSection6.GammaRawElementarySchemata
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Elementary blowup volume formulas use the native last-coordinate
 blowup and pull the density back from its original label. -/

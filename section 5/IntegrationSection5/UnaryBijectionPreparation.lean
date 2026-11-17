@@ -1,6 +1,12 @@
-import IntegrationSection5.UnaryBijectionFromPartition
-import IntegrationSection5.UnaryCoordinatePartition
-import IntegrationSection5.FiniteGammaPresentation
+module
+
+public import IntegrationSection5.UnaryBijectionFromPartition
+public import IntegrationSection5.UnaryCoordinatePartition
+public import IntegrationSection5.FiniteGammaPresentation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Lemma5.2: compatible preparation of an arbitrary unary definable
 bijection over the original real/Gamma base. The partition, membership

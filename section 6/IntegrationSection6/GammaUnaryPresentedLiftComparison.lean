@@ -1,5 +1,11 @@
-import IntegrationSection6.GammaUnarySliceUniformityWithoutField
-import IntegrationSection6.GammaPreparedSelectedSliceIsomorphisms
+module
+
+public import IntegrationSection6.GammaUnarySliceUniformityWithoutField
+public import IntegrationSection6.GammaPreparedSelectedSliceIsomorphisms
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The unary preparation comparison only needs the actual selected-slice
 lift representation. This form applies to a head preparation inside a

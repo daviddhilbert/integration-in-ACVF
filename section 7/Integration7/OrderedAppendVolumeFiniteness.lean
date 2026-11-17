@@ -1,5 +1,11 @@
-import Integration7.OrderedAppendVolumeContractions
-import Integration7.OrderedAppendVolumeIndices
+module
+
+public import Integration7.OrderedAppendVolumeContractions
+public import Integration7.OrderedAppendVolumeIndices
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual finiteness and density nonvanishing for the complete appended
 coordinate tuple of any chosen contraction program. -/

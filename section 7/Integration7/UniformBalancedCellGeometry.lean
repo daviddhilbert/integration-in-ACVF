@@ -1,4 +1,10 @@
-import Integration7.UniformCellPositionRows
+module
+
+public import Integration7.UniformCellPositionRows
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Uniform consequences of the balanced-row case. The one global
 centre is injective in the other VF coordinate on each refinement label,

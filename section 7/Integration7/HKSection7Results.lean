@@ -1,7 +1,13 @@
-import Integration7.HKSection7ClassTheorems
-import Integration7.HKRawSection7FunctionStatements
-import Integration7.HKNormalizedSection7Theorems
-import Integration7.HKNormalizedSupportPresentations
+module
+
+public import Integration7.HKSection7ClassTheorems
+public import Integration7.HKRawSection7FunctionStatements
+public import Integration7.HKNormalizedSection7Theorems
+public import Integration7.HKNormalizedSupportPresentations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Public corrected Section 7 class, raw additive function, and
 normalized supported integration interfaces. The accepted nonempty

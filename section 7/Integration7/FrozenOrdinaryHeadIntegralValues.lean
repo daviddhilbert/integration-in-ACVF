@@ -1,5 +1,11 @@
-import Integration7.OrdinaryHeadFibreIntegralIsomorphisms
-import Integration7.PositiveVolumeClassExtensions
+module
+
+public import Integration7.OrdinaryHeadFibreIntegralIsomorphisms
+public import Integration7.PositiveVolumeClassExtensions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The ordinary degree-zero case of pointwise head-fibre integration.
 Its frozen VF family has the actual unit density and is integrated by

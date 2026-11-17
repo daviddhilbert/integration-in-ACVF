@@ -1,5 +1,11 @@
-import IntegrationSection6.FiniteGammaAmbientIsos
-import IntegrationSection6.GammaRVGlobalRestriction
+module
+
+public import IntegrationSection6.FiniteGammaAmbientIsos
+public import IntegrationSection6.GammaRVGlobalRestriction
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Full original-Gamma graphs for ambient isomorphisms following an
 explicit globally real-definable RV coordinate program. -/

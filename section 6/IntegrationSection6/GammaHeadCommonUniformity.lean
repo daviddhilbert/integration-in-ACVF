@@ -1,7 +1,13 @@
-import IntegrationSection6.GammaHeadPointwiseComparison
-import IntegrationSection6.GammaHeadFibreSliceMaps
-import IntegrationSection6.GammaUnaryActualLiftUniformity
-import IntegrationSection6.GammaSwappedCommonBlowups
+module
+
+public import IntegrationSection6.GammaHeadPointwiseComparison
+public import IntegrationSection6.GammaHeadFibreSliceMaps
+public import IntegrationSection6.GammaUnaryActualLiftUniformity
+public import IntegrationSection6.GammaSwappedCommonBlowups
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A single head preparation on each side preserves fibrewise Isp, with
 its new RV head coordinate added to the selected volume. This is the

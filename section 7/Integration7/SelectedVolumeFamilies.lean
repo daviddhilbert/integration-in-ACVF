@@ -1,5 +1,11 @@
-import Integration7.VFRVVolumeFibres
-import Integration7.VolumeDensityGraphs
+module
+
+public import Integration7.VFRVVolumeFibres
+public import Integration7.VolumeDensityGraphs
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual positive selected RV families over a VF base. Only fibres
 with the selected labels fixed are required to be finite. Adding the

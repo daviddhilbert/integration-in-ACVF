@@ -1,4 +1,10 @@
-import IntegrationSection6.FiniteGammaIsoRealization
+module
+
+public import IntegrationSection6.FiniteGammaIsoRealization
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Transport actual finite objects and common blowups across an equality
 of their natural-number degrees. This changes no mathematical data. -/

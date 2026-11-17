@@ -1,6 +1,12 @@
-import Integration7.SelectedVFTailPermutations
-import Integration7.SelectedRVVFTailProgramCarriers
-import IntegrationSection6.GammaPermutedFibrePresentations
+module
+
+public import Integration7.SelectedVFTailPermutations
+public import Integration7.SelectedRVVFTailProgramCarriers
+public import IntegrationSection6.GammaPermutedFibrePresentations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! VF tail realization commutes with each prescribed VF permutation. -/
 set_option backward.isDefEq.respectTransparency false

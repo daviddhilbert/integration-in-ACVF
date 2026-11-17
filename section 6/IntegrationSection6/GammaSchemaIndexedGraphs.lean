@@ -1,7 +1,13 @@
-import IntegrationSection6.GammaPureRVSchemaGraphs
-import IntegrationSection6.GammaSchemaFiniteRows
-import IntegrationSection6.GammaPresentationTotalVolume
-import IntegrationSection6.GammaFamilyCoordinates
+module
+
+public import IntegrationSection6.GammaPureRVSchemaGraphs
+public import IntegrationSection6.GammaSchemaFiniteRows
+public import IntegrationSection6.GammaPresentationTotalVolume
+public import IntegrationSection6.GammaFamilyCoordinates
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual joint domain and volume graphs for a finite RV schema over an
 RV[k] index object. The index volume is appended to the fibre volume. -/

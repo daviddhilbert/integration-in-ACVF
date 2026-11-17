@@ -1,8 +1,14 @@
-import Integration7.HeadCoordinateFibreVolumeSelectors
-import Integration7.HeadFibreRawVolumePresentation
-import Integration7.GammaEqualLabelEquivalenceGraphs
-import IntegrationSection6.RawFiniteContractions
-import IntegrationSection6.RawContractionDomain
+module
+
+public import Integration7.HeadCoordinateFibreVolumeSelectors
+public import Integration7.HeadFibreRawVolumePresentation
+public import Integration7.GammaEqualLabelEquivalenceGraphs
+public import IntegrationSection6.RawFiniteContractions
+public import IntegrationSection6.RawContractionDomain
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A first head contraction with no old selected coordinates is the
 raw finite unary contraction of its actual frozen fibre. The full label

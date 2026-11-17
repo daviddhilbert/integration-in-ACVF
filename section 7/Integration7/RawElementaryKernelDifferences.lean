@@ -1,5 +1,11 @@
-import Integration7.RawVolumeKernelIdeal
-import Integration7.PositiveElementaryBasicGeneration
+module
+
+public import Integration7.RawVolumeKernelIdeal
+public import Integration7.PositiveElementaryBasicGeneration
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual point-minus-cone relation lies in the raw kernel.
 Every elementary source of degree at least two is a left multiple of

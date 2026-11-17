@@ -1,5 +1,11 @@
-import IntegrationSection3ACVF.AffineHoleGeometry
-import IntegrationSection3ACVF.PuncturedGeometry
+module
+
+public import IntegrationSection3ACVF.AffineHoleGeometry
+public import IntegrationSection3ACVF.PuncturedGeometry
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual geometry of maximal open classes of a closed ordinary
 parent with finitely many maximal open holes. No residue-field structure

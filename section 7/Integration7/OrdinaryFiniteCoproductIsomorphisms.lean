@@ -1,6 +1,12 @@
-import Integration7.OrdinaryFiniteLiftSurjectivity
-import Section4.VFAllIsomorphismClasses
-import Section4.VFCoproductBounds
+module
+
+public import Integration7.OrdinaryFiniteLiftSurjectivity
+public import Section4.VFAllIsomorphismClasses
+public import Section4.VFCoproductBounds
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Genuine ordinary finite VF coproducts respect isomorphisms. -/
 noncomputable section

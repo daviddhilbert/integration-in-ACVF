@@ -1,7 +1,13 @@
-import IntegrationSection6.PartialFocusPartition
-import IntegrationSection6.PartialFocusAdmissibility
-import IntegrationSection6.LiftComplement
-import IntegrationSection6.BlowupPresentations
+module
+
+public import IntegrationSection6.PartialFocusPartition
+public import IntegrationSection6.PartialFocusAdmissibility
+public import IntegrationSection6.LiftComplement
+public import IntegrationSection6.BlowupPresentations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A partial centripetal transformation is one genuine blowup: replace
 the admissible active old-label locus and retain its RV complement. -/

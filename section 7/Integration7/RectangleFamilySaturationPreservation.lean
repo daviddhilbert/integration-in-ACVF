@@ -1,5 +1,11 @@
-import Integration7.RectangleFamilyPreparedGeometry
-import Integration7.TwoCoordinateSaturation
+module
+
+public import Integration7.RectangleFamilyPreparedGeometry
+public import Integration7.TwoCoordinateSaturation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Preparing the labelled head of a rectangle family preserves
 saturation of its other VF coordinate. Thus the second preparation

@@ -1,5 +1,11 @@
-import Integration7.SelectedStandardVolumeObjects
-import IntegrationSection6.HeadTailPermutations
+module
+
+public import Integration7.SelectedStandardVolumeObjects
+public import IntegrationSection6.HeadTailPermutations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Changing only the proof of a contraction order keeps its final
 domain, restored volume tuple and retained density unchanged. -/

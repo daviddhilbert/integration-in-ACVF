@@ -1,5 +1,11 @@
-import IntegrationSection6.FiniteStandardContractions
-import IntegrationSection6.FiniteVolumeAugmentation
+module
+
+public import IntegrationSection6.FiniteStandardContractions
+public import IntegrationSection6.FiniteVolumeAugmentation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The E union I_n volume in6.14 is represented literally: retain the
 n contraction volumes and append the chosen original RV coordinates. -/

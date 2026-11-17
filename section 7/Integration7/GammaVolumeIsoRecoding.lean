@@ -1,7 +1,13 @@
-import Integration7.GammaVolumeParameterRecoding
-import Integration7.VolumeIsoSchemaRowTransport
-import Integration7.ZeroAuxVolumeCertificateSemantics
-import IntegrationSection6.GammaRecodingValidity
+module
+
+public import Integration7.GammaVolumeParameterRecoding
+public import Integration7.VolumeIsoSchemaRowTransport
+public import Integration7.ZeroAuxVolumeCertificateSemantics
+public import IntegrationSection6.GammaRecodingValidity
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Exact primitive rows transport complete volume-isomorphism
 certificates, including the supported RV clause and finite exception map. -/

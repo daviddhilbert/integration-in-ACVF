@@ -1,4 +1,10 @@
-import IntegrationSection3ACVF.CoordinatePartitionTemplates
+module
+
+public import IntegrationSection3ACVF.CoordinatePartitionTemplates
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Glue one scalar cell over one context case using the full partial
 map graph. No definability of the total map outside its domain is used. -/

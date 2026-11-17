@@ -1,8 +1,14 @@
-import IntegrationSection3ACVF.UniformSupportHull
-import IntegrationSection3ACVF.ClosedTraceFamilies
-import IntegrationSection3ACVF.InfiniteOrdinaryBalls
-import IntegrationSection3.RelationProjections
-import IntegrationSection3.UniformHullSeparation
+module
+
+public import IntegrationSection3ACVF.UniformSupportHull
+public import IntegrationSection3ACVF.ClosedTraceFamilies
+public import IntegrationSection3ACVF.InfiniteOrdinaryBalls
+public import IntegrationSection3.RelationProjections
+public import IntegrationSection3.UniformHullSeparation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Geometric separation for corrected 3.11, in ordinary ball
 presentations. The target may have any finite family of maximal open holes.

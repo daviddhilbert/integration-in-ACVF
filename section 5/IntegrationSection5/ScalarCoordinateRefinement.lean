@@ -1,4 +1,10 @@
-import IntegrationSection5.ScalarRefinementFamily
+module
+
+public import IntegrationSection5.ScalarRefinementFamily
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! One original-Gamma RV refinement simultaneously makes each output VF
 coordinate constant or injective in the active source coordinate. -/

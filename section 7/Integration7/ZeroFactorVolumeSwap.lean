@@ -1,5 +1,11 @@
-import Integration7.ZeroFactorVolumeObjects
-import Integration7.SignedVolumeProductSwap
+module
+
+public import Integration7.ZeroFactorVolumeObjects
+public import Integration7.SignedVolumeProductSwap
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Swapping an ordinary degree-zero factor retains the positive
 coordinates in their original order, and therefore preserves the density. -/

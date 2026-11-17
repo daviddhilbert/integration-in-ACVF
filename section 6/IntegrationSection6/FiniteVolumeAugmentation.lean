@@ -1,4 +1,10 @@
-import IntegrationSection6.GammaRVKeyGraphs
+module
+
+public import IntegrationSection6.GammaRVKeyGraphs
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Appending selected RV labels to the volume keeps the object in the
 finite category. This supports the E ∪ I_n projection in6.14. -/

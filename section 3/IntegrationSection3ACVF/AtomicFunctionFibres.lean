@@ -1,5 +1,11 @@
-import IntegrationSection3ACVF.FiniteFibresFromExchange
-import IntegrationSection3ACVF.OpenImages
+module
+
+public import IntegrationSection3ACVF.FiniteFibresFromExchange
+public import IntegrationSection3ACVF.OpenImages
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A real-parameter definable VF function, restricted to an atomic open
 ball, is constant or has finite fibres. The atomic base may contain actual

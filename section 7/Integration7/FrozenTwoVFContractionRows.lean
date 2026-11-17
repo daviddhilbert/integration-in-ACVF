@@ -1,7 +1,13 @@
-import Integration7.FrozenGeneratedVolumeContexts
-import Integration7.DefinableVolumeRowReduction
-import Integration7.GeometricRowsFromContractionVolumes
-import Integration7.TwoVFStandardContractionComparisons
+module
+
+public import Integration7.FrozenGeneratedVolumeContexts
+public import Integration7.DefinableVolumeRowReduction
+public import Integration7.GeometricRowsFromContractionVolumes
+public import Integration7.TwoVFStandardContractionComparisons
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The full VF-two theorem applies to actual frozen programs. The
 generated closure and its additional Gamma names are eliminated again,

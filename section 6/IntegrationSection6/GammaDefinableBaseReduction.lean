@@ -1,6 +1,12 @@
-import IntegrationSection6.GammaSortedParameterElimination
-import IntegrationSection6.GammaFormulaBaseChange
-import IntegrationSection6.FiniteGammaObjects
+module
+
+public import IntegrationSection6.GammaSortedParameterElimination
+public import IntegrationSection6.GammaFormulaBaseChange
+public import IntegrationSection6.FiniteGammaObjects
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Eliminate definable names from the mathematical Gamma base while
 retaining the same actual native finite objects and internal code sets. -/

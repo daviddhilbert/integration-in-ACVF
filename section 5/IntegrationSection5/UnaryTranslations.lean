@@ -1,4 +1,10 @@
-import IntegrationSection5.UnaryBallImages
+module
+
+public import IntegrationSection5.UnaryBallImages
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual translations of unary polydiscs, with all RV labels retained. -/
 

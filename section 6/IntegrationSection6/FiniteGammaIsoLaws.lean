@@ -1,5 +1,11 @@
-import IntegrationSection6.FiniteGammaIsomorphisms
-import IntegrationSection6.GammaRVGlobalRestriction
+module
+
+public import IntegrationSection6.FiniteGammaIsomorphisms
+public import IntegrationSection6.GammaRVGlobalRestriction
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Isomorphism laws in the original-Gamma finite RV categories, retaining
 the full label graphs. Finite volume-image fields are derived from RV[k]. -/

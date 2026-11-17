@@ -1,5 +1,11 @@
-import Integration7.SelectedVolumeBaseRestrictions
-import Integration7.SupportedVolumeFunctionAddition
+module
+
+public import Integration7.SelectedVolumeBaseRestrictions
+public import Integration7.SupportedVolumeFunctionAddition
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Restricting actual representatives to a definable VF set descends
 to AE functions and retracts the supported presentation quotient. -/

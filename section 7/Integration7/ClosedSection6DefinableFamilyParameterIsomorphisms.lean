@@ -1,11 +1,17 @@
-import Integration7.CompletedSection6Kernel
-import Integration7.ClosedSection6GammaMixedParameterUniformity
-import Integration7.ClosedSection6IntegrationContexts
-import Integration7.ClosedSection6DefinableFamilyIntegration
-import IntegrationSection6.DefinableFamilyParameterIsomorphisms
-import IntegrationSection6.GammaMixedParameterUniformity
-import IntegrationSection6.IntegrationContexts
-import IntegrationSection6.DefinableFamilyIntegration
+module
+
+public import Integration7.CompletedSection6Kernel
+public import Integration7.ClosedSection6GammaMixedParameterUniformity
+public import Integration7.ClosedSection6IntegrationContexts
+public import Integration7.ClosedSection6DefinableFamilyIntegration
+public import IntegrationSection6.DefinableFamilyParameterIsomorphisms
+public import IntegrationSection6.GammaMixedParameterUniformity
+public import IntegrationSection6.IntegrationContexts
+public import IntegrationSection6.DefinableFamilyIntegration
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Closed generated-base Section6 integration. The former universal
 Section5 input is replaced by the canonical-model certificate; its kernel

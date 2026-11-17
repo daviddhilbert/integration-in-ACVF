@@ -1,6 +1,12 @@
-import Integration7.CoordinateSelectedCoefficientFamilies
-import Integration7.IndependentRVProductDensityGraphs
-import Integration7.NativeCoordinateDensityVolumeObjects
+module
+
+public import Integration7.CoordinateSelectedCoefficientFamilies
+public import Integration7.IndependentRVProductDensityGraphs
+public import Integration7.NativeCoordinateDensityVolumeObjects
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Literal-coordinate coefficients admit actual constrained unary
 special preparations on the density graph of their genuine family

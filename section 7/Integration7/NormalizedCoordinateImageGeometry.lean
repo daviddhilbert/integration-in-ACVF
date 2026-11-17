@@ -1,5 +1,11 @@
-import Integration7.PureVFPrefixImages
-import Integration7.VolumeCoordinateProjectionOrders
+module
+
+public import Integration7.PureVFPrefixImages
+public import Integration7.VolumeCoordinateProjectionOrders
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The image used by permutation followed by a prefix integral is
 exactly the image of the requested VF coordinate projection. -/

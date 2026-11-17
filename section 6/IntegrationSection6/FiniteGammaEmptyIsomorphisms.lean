@@ -1,6 +1,12 @@
-import IntegrationSection6.FiniteGammaIsoClasses
-import IntegrationSection6.FiniteGammaAmbientIsos
-import Section4.RVEmptyIso
+module
+
+public import IntegrationSection6.FiniteGammaIsoClasses
+public import IntegrationSection6.FiniteGammaAmbientIsos
+public import Section4.RVEmptyIso
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

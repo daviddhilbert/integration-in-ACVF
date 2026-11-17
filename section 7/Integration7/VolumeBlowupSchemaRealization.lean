@@ -1,9 +1,15 @@
-import Integration7.GammaVolumeBlowupSchemata
-import Integration7.GammaVolumeAdmissibilityContexts
-import Integration7.VolumeCertificateContextRealization
-import Integration7.VolumeSchemaCoproductSemantics
-import Integration7.VolumeSchemaElementarySemantics
-import Integration7.VolumeExtensionCoherence
+module
+
+public import Integration7.GammaVolumeBlowupSchemata
+public import Integration7.GammaVolumeAdmissibilityContexts
+public import Integration7.VolumeCertificateContextRealization
+public import Integration7.VolumeSchemaCoproductSemantics
+public import Integration7.VolumeSchemaElementarySemantics
+public import Integration7.VolumeExtensionCoherence
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A valid finite formula witness realizes an actual volume blowup of
 any interpreted endpoints, after a finite internal parameter extension. -/

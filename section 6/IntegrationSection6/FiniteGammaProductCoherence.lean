@@ -1,6 +1,12 @@
-import IntegrationSection6.FiniteGammaProducts
-import IntegrationSection6.FiniteGammaVolumeReindexing
-import IntegrationSection6.ProductStructuralCoordinates
+module
+
+public import IntegrationSection6.FiniteGammaProducts
+public import IntegrationSection6.FiniteGammaVolumeReindexing
+public import IntegrationSection6.ProductStructuralCoordinates
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

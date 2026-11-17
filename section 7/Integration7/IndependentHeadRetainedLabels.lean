@@ -1,4 +1,10 @@
-import Integration7.IndependentRVConstraintHeadMaps
+module
+
+public import Integration7.IndependentRVConstraintHeadMaps
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The independent head product retains the literal original labels.
 The carried tuple agrees with the old suffix, and the prepared unary

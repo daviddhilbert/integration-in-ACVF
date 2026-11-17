@@ -1,4 +1,10 @@
-import IntegrationSection5.ActiveUnaryProjection
+module
+
+public import IntegrationSection5.ActiveUnaryProjection
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The selected-coordinate canonical map commutes exactly with unary
 projection, with every new and old RV label in its specified position. -/

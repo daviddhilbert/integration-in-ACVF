@@ -1,4 +1,10 @@
-import IntegrationSection5.RelativelyUnary
+module
+
+public import IntegrationSection5.RelativelyUnary
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Finite compositions of actual definable relatively unary bijections.
 This records Definition 5.4's factorization claim for special bijections.

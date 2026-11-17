@@ -1,14 +1,20 @@
-import Integration7.GammaVolumeLabelIdentities
-import Integration7.GammaVolumeCoproductCharts
-import Integration7.GammaVolumeComplementPartitions
-import Integration7.VolumePullbackPartitions
-import Integration7.PullbackCoordinateVolumeObjects
-import Integration7.VolumePartition
-import Integration7.VolumeCoproductIsomorphism
-import Integration7.RVVolumeComposition
-import Integration7.RVVolumeInverse
-import IntegrationSection6.PullbackPartitions
-import IntegrationSection6.FiniteGammaPullbackPartitions
+module
+
+public import Integration7.GammaVolumeLabelIdentities
+public import Integration7.GammaVolumeCoproductCharts
+public import Integration7.GammaVolumeComplementPartitions
+public import Integration7.VolumePullbackPartitions
+public import Integration7.PullbackCoordinateVolumeObjects
+public import Integration7.VolumePartition
+public import Integration7.VolumeCoproductIsomorphism
+public import Integration7.RVVolumeComposition
+public import Integration7.RVVolumeInverse
+public import IntegrationSection6.PullbackPartitions
+public import IntegrationSection6.FiniteGammaPullbackPartitions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Pullback partitions preserve the full original-Gamma chart of
 the actual volume comparison, including their unchanged density. -/

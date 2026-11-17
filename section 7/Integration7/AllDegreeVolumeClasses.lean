@@ -1,5 +1,11 @@
-import Integration7.AllDegreeVolumeCoproducts
-import Integration7.AllDegreeVolumeBlowupProducts
+module
+
+public import Integration7.AllDegreeVolumeCoproducts
+public import Integration7.AllDegreeVolumeBlowupProducts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual isomorphism and common-blowup quotient classes in all degrees.
 Addition is coproduct and the graded product descends from the proved

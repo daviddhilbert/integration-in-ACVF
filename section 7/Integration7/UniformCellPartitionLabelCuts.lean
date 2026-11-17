@@ -1,5 +1,11 @@
-import Integration7.GammaRVLabelCuts
-import Integration7.NativeCellFamilyPartitionDomains
+module
+
+public import Integration7.GammaRVLabelCuts
+public import Integration7.NativeCellFamilyPartitionDomains
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! All three actual cell-family pieces are cuts by original RV
 labels, so their specified contractions can be restricted without

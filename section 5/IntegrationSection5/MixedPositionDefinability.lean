@@ -1,5 +1,11 @@
-import IntegrationSection5.MixedVerticalPullbackCells
-import IntegrationSection4.PositionRowDefinability
+module
+
+public import IntegrationSection5.MixedVerticalPullbackCells
+public import IntegrationSection4.PositionRowDefinability
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 

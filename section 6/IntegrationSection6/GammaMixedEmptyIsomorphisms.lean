@@ -1,6 +1,12 @@
-import Section4.EmptyMaps
-import Section5.GammaLift
-import Section5.GammaInvariantLogic
+module
+
+public import Section4.EmptyMaps
+public import Section5.GammaLift
+public import Section5.GammaInvariantLogic
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Restrict an actual Gamma isomorphism to compatible definable subsets,
 without requiring a real presentation of the subsets. -/

@@ -1,6 +1,12 @@
-import Integration7.HKSupportedJacobianCoefficientLaws
-import Integration7.HKGradedCoordinateIntegralLinearMaps
-import Integration7.HKSupportedGradedCoordinateFubini
+module
+
+public import Integration7.HKSupportedJacobianCoefficientLaws
+public import Integration7.HKGradedCoordinateIntegralLinearMaps
+public import Integration7.HKSupportedGradedCoordinateFubini
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Full corrected raw supported function integration. The support
 submodule is exactly the faithful image of actual supported graded

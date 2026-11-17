@@ -1,5 +1,11 @@
-import Integration7.SelectedIntegralCoordinateCharts
-import Integration7.GammaPermutedVolumeObjects
+module
+
+public import Integration7.SelectedIntegralCoordinateCharts
+public import Integration7.GammaPermutedVolumeObjects
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Once the appended volume tuple is explicitly reindexed, the
 canonical contraction object has literally identical coordinates and

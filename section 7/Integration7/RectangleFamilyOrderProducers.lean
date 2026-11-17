@@ -1,4 +1,10 @@
-import Integration7.RectangleFamilyAllOrderComparisons
+module
+
+public import Integration7.RectangleFamilyAllOrderComparisons
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual Gamma contraction programs of a shared-label rectangle
 family in any specified VF-two order. -/

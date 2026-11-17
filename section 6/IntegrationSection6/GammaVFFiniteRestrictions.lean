@@ -1,4 +1,10 @@
-import IntegrationSection6.FiniteVFIntegralValues
+module
+
+public import IntegrationSection6.FiniteVFIntegralValues
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Definable restrictions in the actual finite VF[k] category.
 Dimension is inherited through the checked pointwise rank criterion. -/

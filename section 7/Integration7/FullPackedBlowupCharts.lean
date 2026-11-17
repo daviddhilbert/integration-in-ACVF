@@ -1,7 +1,13 @@
-import Integration7.GammaElementaryVolumeGraphs
-import Integration7.GammaRVMapPreimages
-import Integration7.GammaRVScalarMapGraphs
-import Integration7.ElementaryBlowupRestriction
+module
+
+public import Integration7.GammaElementaryVolumeGraphs
+public import Integration7.GammaRVMapPreimages
+public import Integration7.GammaRVScalarMapGraphs
+public import Integration7.ElementaryBlowupRestriction
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Full packed elementary charts track all labels, including degenerate
 ones. Gamma full charts restrict to Gamma essential charts and cuts. -/

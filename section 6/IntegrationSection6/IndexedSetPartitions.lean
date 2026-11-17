@@ -1,4 +1,10 @@
-import IntegrationSection6.GammaIndexedFiniteObjects
+module
+
+public import IntegrationSection6.GammaIndexedFiniteObjects
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Set identities for restrictions of indexed domains. -/
 namespace IntegrationInACVF.Section6

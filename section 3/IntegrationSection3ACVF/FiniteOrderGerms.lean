@@ -1,4 +1,10 @@
-import IntegrationSection3ACVF.FiniteOrderBounds
+module
+
+public import IntegrationSection3ACVF.FiniteOrderBounds
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! One-sided constant germs from a genuine finite order controller.
 The centre itself may be one of the finitely many endpoints. -/

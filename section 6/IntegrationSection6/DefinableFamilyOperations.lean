@@ -1,6 +1,12 @@
-import IntegrationSection6.ContextDefinableFunctions
-import IntegrationSection6.RVFamilyPadding
-import IntegrationSection6.RVFamilyAdditionCoefficients
+module
+
+public import IntegrationSection6.ContextDefinableFunctions
+public import IntegrationSection6.RVFamilyPadding
+public import IntegrationSection6.RVFamilyAdditionCoefficients
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual finite RV representatives for zero, sums and multiplication
 by a constant coefficient class. Different degrees are first padded. -/

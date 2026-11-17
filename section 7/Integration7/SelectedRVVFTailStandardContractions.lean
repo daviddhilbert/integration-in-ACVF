@@ -1,6 +1,12 @@
-import Integration7.SelectedVFTailPermutationDomains
-import Integration7.SelectedRVVFTailFullPrograms
-import IntegrationSection6.StandardProgramPresentations
+module
+
+public import Integration7.SelectedVFTailPermutationDomains
+public import Integration7.SelectedRVVFTailFullPrograms
+public import IntegrationSection6.StandardProgramPresentations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Completing a specified standard contraction after VF tail realization
 produces an actual standard contraction in the extended original order. -/

@@ -1,5 +1,11 @@
-import Integration7.RetainedDensityArbitraryOrderComparisons
-import Integration7.VFStandardVolumeContractionObjects
+module
+
+public import Integration7.RetainedDensityArbitraryOrderComparisons
+public import Integration7.VFStandardVolumeContractionObjects
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Arbitrary-order independence for the standard contraction objects
 of actual positive VF volume objects with their original forms. -/

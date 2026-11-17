@@ -1,6 +1,12 @@
-import Integration7.CanonicalFiniteRVObjects
-import Integration7.ElementaryBlowupConstruction
-import IntegrationSection6.ElementaryCoordinates
+module
+
+public import Integration7.CanonicalFiniteRVObjects
+public import Integration7.ElementaryBlowupConstruction
+public import IntegrationSection6.ElementaryCoordinates
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Canonical transport commutes with the elementary domain and coordinate
 formulas. Normalized multiplication is compared on proper RV codes. -/

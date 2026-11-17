@@ -1,5 +1,11 @@
-import Integration7.VolumeIsoSchemaRowTransport
-import Integration7.ExtraVolumeRVValidity
+module
+
+public import Integration7.VolumeIsoSchemaRowTransport
+public import Integration7.ExtraVolumeRVValidity
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Auxiliary exceptional-set parameters can change independently of the
 geometric parameter block, provided the actual exceptional row is retained. -/

@@ -1,6 +1,12 @@
-import IntegrationSection6.GammaIsomorphismRealization
-import IntegrationSection6.GammaRelationalIsoSpecification
-import IntegrationSection6.GammaIndexedIsomorphisms
+module
+
+public import IntegrationSection6.GammaIsomorphismRealization
+public import IntegrationSection6.GammaRelationalIsoSpecification
+public import IntegrationSection6.GammaIndexedIsomorphisms
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Valid chart rows give actual original-Gamma isomorphisms of RV[k]
 objects, including both inherited finite volume-image conditions. -/

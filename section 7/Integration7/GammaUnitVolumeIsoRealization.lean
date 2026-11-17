@@ -1,7 +1,13 @@
-import Integration7.CanonicalGammaVolumeIsomorphisms
-import Integration7.FiniteVolumeParameterContexts
-import Integration7.GradedVolumeProducts
-import IntegrationSection6.FiniteGammaIsoRealization
+module
+
+public import Integration7.CanonicalGammaVolumeIsomorphisms
+public import Integration7.FiniteVolumeParameterContexts
+public import Integration7.GradedVolumeProducts
+public import IntegrationSection6.FiniteGammaIsoRealization
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A full coordinate-preserving finite Gamma isomorphism is an actual
 unit-density RV volume isomorphism in a small containing context. Its

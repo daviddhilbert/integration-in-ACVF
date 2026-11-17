@@ -1,6 +1,12 @@
-import IntegrationSection3ACVF.RVMatchCodeDichotomy
-import IntegrationSection3ACVF.FiniteBaseRealPresentation
-import Section3.RVFibreGeometry
+module
+
+public import IntegrationSection3ACVF.RVMatchCodeDichotomy
+public import IntegrationSection3ACVF.FiniteBaseRealPresentation
+public import Section3.RVFibreGeometry
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Genuine uniform bounds for the finite sides of all value-code match
 rows. Original imaginary support is finite only internally; all actual

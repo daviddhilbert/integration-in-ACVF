@@ -1,5 +1,11 @@
-import Integration7.VolumeCoproduct
-import Integration7.RVVolumeMorphisms
+module
+
+public import Integration7.VolumeCoproduct
+public import Integration7.RVVolumeMorphisms
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 set_option backward.isDefEq.respectTransparency false
 open FirstOrder FirstOrder.Language CategoryTheory
 open SpecialTransformations.Milestone0 SpecialTransformations.Milestone0.LRV

@@ -1,6 +1,12 @@
-import Integration7.PreparedOrdinaryUnitComparisons
-import Integration7.PreparedOrdinaryUnitVolumeCharts
-import Integration7.GammaOrdinaryUnaryPreparedVolumeComparison
+module
+
+public import Integration7.PreparedOrdinaryUnitComparisons
+public import Integration7.PreparedOrdinaryUnitVolumeCharts
+public import Integration7.GammaOrdinaryUnaryPreparedVolumeComparison
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A constructed ordinary preparation compares two specified unary
 contractions with retained unit density, keeping original-Gamma geometry. -/

@@ -1,5 +1,11 @@
-import Integration7.VFPermutationMapValues
-import IntegrationSection6.HeadTailFibreGeometry
+module
+
+public import Integration7.VFPermutationMapValues
+public import IntegrationSection6.HeadTailFibreGeometry
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Reordering the frozen tail preserves the actual unary head fibre,
 including its available real parameter base. -/

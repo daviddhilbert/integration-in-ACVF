@@ -1,4 +1,10 @@
-import IntegrationSection6.GammaIsoRestrictions
+module
+
+public import IntegrationSection6.GammaIsoRestrictions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Definable inverse images and restricted isomorphisms in different
 mixed arities. This permits a VF[k] dimensional presentation before

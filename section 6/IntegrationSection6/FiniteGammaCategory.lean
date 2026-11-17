@@ -1,4 +1,10 @@
-import IntegrationSection6.FiniteGammaChartLaws
+module
+
+public import IntegrationSection6.FiniteGammaChartLaws
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The category of finite RV objects at a real presentation with every
 object and morphism certified over the original Gamma base. -/

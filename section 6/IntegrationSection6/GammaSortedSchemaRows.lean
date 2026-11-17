@@ -1,5 +1,11 @@
-import IntegrationSection6.GammaFiniteObjectPromotion
-import IntegrationSection6.GammaTupleRelationSpecialization
+module
+
+public import IntegrationSection6.GammaFiniteObjectPromotion
+public import IntegrationSection6.GammaTupleRelationSpecialization
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Raw and typed rows for arbitrary sorted parameter tuples. Rebounding
 keeps the global formulas, and actual finite row presentations supply a

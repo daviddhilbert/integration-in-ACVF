@@ -1,5 +1,11 @@
-import Integration7.RVClassProductRawVolumeObjects
-import Integration7.ConstantLabelPreparedFiniteness
+module
+
+public import Integration7.RVClassProductRawVolumeObjects
+public import Integration7.ConstantLabelPreparedFiniteness
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A supplied actual unary special preparation constructs an actual
 two-coordinate product standard contraction and its original-Gamma

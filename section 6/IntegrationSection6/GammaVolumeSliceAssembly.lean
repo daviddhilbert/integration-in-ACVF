@@ -1,6 +1,12 @@
-import IntegrationSection6.GammaVolumeSliceSchemata
-import IntegrationSection6.GammaIdentityIndexPresentation
-import IntegrationSection6.GammaSchemaIndexedPresentations
+module
+
+public import IntegrationSection6.GammaVolumeSliceSchemata
+public import IntegrationSection6.GammaIdentityIndexPresentation
+public import IntegrationSection6.GammaSchemaIndexedPresentations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Reassembling all volume slices over the identity RV[e] index recovers
 the original RV[e+k] object by a full Gamma isomorphism. -/

@@ -1,4 +1,10 @@
-import Integration7.ElementaryBlowupIsomorphism
+module
+
+public import Integration7.ElementaryBlowupIsomorphism
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Lemma 7.2 of arXiv:0809.0473v2. The numbered statement was compared
 with Section 7 of the paper; positive degree is written k+1 since there

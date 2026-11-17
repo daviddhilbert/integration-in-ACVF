@@ -1,5 +1,11 @@
-import IntegrationSection6.IntegrationContexts
-import IntegrationSection6.DefinableRVFunctions
+module
+
+public import IntegrationSection6.IntegrationContexts
+public import IntegrationSection6.DefinableRVFunctions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Context notation for the actual quotient of definable families. -/
 noncomputable section

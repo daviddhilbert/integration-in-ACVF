@@ -1,4 +1,10 @@
-import Section3.AlgebraicTransitivity
+module
+
+public import Section3.AlgebraicTransitivity
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Parameter elimination uses the finitely many sorted names in the
 witness formula; arbitrary unused elements of a raw base need no sort. -/

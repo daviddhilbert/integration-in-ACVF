@@ -1,5 +1,11 @@
-import Integration7.VolumeBlowupClasses
-import Integration7.VolumeBlowupRightProducts
+module
+
+public import Integration7.VolumeBlowupClasses
+public import Integration7.VolumeBlowupRightProducts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Arithmetic degree reindexing on the actual common-blowup classes.
 It changes no mathematical object: its value is heterogeneously equal

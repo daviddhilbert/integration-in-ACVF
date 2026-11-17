@@ -1,5 +1,11 @@
-import Integration7.NativeUnaryProducts
-import IntegrationSection5.HeadPreparation
+module
+
+public import Integration7.NativeUnaryProducts
+public import IntegrationSection5.HeadPreparation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual unary maps act on the first factor of a native VF rectangle.
 The other VF coordinate stays fixed, and pullback first factors give

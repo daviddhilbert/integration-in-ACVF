@@ -1,7 +1,13 @@
-import Integration7.SelectedStandardVolumeFiniteness
-import Integration7.AppendedContractionVolumeObjects
-import Integration7.OrderedAppendVolumeIndices
-import Integration7.NativeCoordinateDensityVolumeObjects
+module
+
+public import Integration7.SelectedStandardVolumeFiniteness
+public import Integration7.AppendedContractionVolumeObjects
+public import Integration7.OrderedAppendVolumeIndices
+public import Integration7.NativeCoordinateDensityVolumeObjects
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Selected standard-contraction volume objects whose VF block is in
 the original coordinate order, followed by the selected old RV block. -/

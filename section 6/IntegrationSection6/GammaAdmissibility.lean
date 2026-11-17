@@ -1,7 +1,13 @@
-import IntegrationSection6.AlgebraicFibres
-import Section7.GammaVolumeCorrespondence
-import Section3.RVGammaAlgebraicity
-import Section3.SmallFiniteParameters
+module
+
+public import IntegrationSection6.AlgebraicFibres
+public import Section7.GammaVolumeCorrespondence
+public import Section3.RVGammaAlgebraicity
+public import Section3.SmallFiniteParameters
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Admissibility over the original real/Gamma base, with a bridge to the
 actual normalized RV object. The internal code set need not be small. -/

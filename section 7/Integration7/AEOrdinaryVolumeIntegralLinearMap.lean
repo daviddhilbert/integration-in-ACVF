@@ -1,7 +1,13 @@
-import Integration7.AEOrdinaryVolumeIntegralAddHom
-import Integration7.AEOrdinaryVolumeModules
-import Integration7.OrdinaryVolumeScalarRealizations
-import Integration7.OrdinaryVolumeCoefficientScalarRows
+module
+
+public import Integration7.AEOrdinaryVolumeIntegralAddHom
+public import Integration7.AEOrdinaryVolumeModules
+public import Integration7.OrdinaryVolumeScalarRealizations
+public import Integration7.OrdinaryVolumeCoefficientScalarRows
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The genuine ordinary-valued AE integral preserves the actual
 ordinary coefficient action and is a linear map over RV[0]. -/

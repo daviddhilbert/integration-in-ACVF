@@ -1,4 +1,10 @@
-import Mathlib.GroupTheory.Congruence.Basic
+module
+
+public import Mathlib.GroupTheory.Congruence.Basic
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-!
 # The additive quotient inversion used in Proposition 6.18

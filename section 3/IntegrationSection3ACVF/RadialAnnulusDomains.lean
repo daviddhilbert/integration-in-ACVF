@@ -1,5 +1,11 @@
-import IntegrationSection3ACVF.RadialRVImages
-import IntegrationSection3ACVF.PuncturedBallValueIntervals
+module
+
+public import IntegrationSection3ACVF.RadialRVImages
+public import IntegrationSection3ACVF.PuncturedBallValueIntervals
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual single-hole annuli are exactly radial value domains. This
 pointwise identification complements the already checked exact value images

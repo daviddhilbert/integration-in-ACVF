@@ -1,4 +1,10 @@
-import Mathlib.LinearAlgebra.FiniteDimensional.Basic
+module
+
+public import Mathlib.LinearAlgebra.FiniteDimensional.Basic
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Field-degree transport under two actual field isomorphisms with
 compatible scalar multiplication. -/

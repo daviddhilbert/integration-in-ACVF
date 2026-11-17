@@ -1,7 +1,13 @@
-import Integration7.PreparedSubdomainVolumeGluing
-import Integration7.SpecialPullbackVolumeComparisons
-import Integration7.NativeVolumeMapRealization
-import Integration7.VFVolumeIsomorphisms
+module
+
+public import Integration7.PreparedSubdomainVolumeGluing
+public import Integration7.SpecialPullbackVolumeComparisons
+public import Integration7.NativeVolumeMapRealization
+public import Integration7.VFVolumeIsomorphisms
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The common-blowup kernel for an actual almost-everywhere VF volume
 isomorphism between RV-pullbacks, including the discarded complements. -/

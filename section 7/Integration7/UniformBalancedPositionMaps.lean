@@ -1,6 +1,12 @@
-import Integration7.UniformBalancedCellGeometry
-import Integration7.UniformCellTailPositions
-import Integration7.NativeScalarReplacementMaps
+module
+
+public import Integration7.UniformBalancedCellGeometry
+public import Integration7.UniformCellTailPositions
+public import Integration7.NativeScalarReplacementMaps
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The mixed unary positioning map of a balanced cell family is an
 actual original-Gamma bijection onto its image, retaining all RV labels.

@@ -1,7 +1,13 @@
-import Integration7.UnaryRawFiniteVolumeComparison
-import Integration7.RawStandardVolumeObjects
-import Integration7.CommonContextVolumeDescent
-import IntegrationSection5.NaturalContractionGamma
+module
+
+public import Integration7.UnaryRawFiniteVolumeComparison
+public import Integration7.RawStandardVolumeObjects
+public import Integration7.CommonContextVolumeDescent
+public import IntegrationSection5.NaturalContractionGamma
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual unary volume integration over a VF field base. The raw
 contraction value is independent of the contraction, by the checked

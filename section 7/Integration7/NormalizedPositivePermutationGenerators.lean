@@ -1,7 +1,13 @@
-import Integration7.NormalizedPositivePresentationGenerators
-import Integration7.NormalizedPositiveCoefficientActions
-import Integration7.AERVVolumePermutationLinearMaps
-import Integration7.PositiveVolumeClassProductExtensions
+module
+
+public import Integration7.NormalizedPositivePresentationGenerators
+public import Integration7.NormalizedPositiveCoefficientActions
+public import Integration7.AERVVolumePermutationLinearMaps
+public import Integration7.PositiveVolumeClassProductExtensions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual VF coordinate permutations commute with positive coefficients
 and give additive maps on positive normalized generators. -/

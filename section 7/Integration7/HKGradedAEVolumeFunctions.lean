@@ -1,6 +1,12 @@
-import Integration7.HKAEZeroModules
-import Integration7.HKAERVWeightedZeroModules
-import Mathlib.Algebra.DirectSum.Module
+module
+
+public import Integration7.HKAEZeroModules
+public import Integration7.HKAERVWeightedZeroModules
+public import Mathlib.Algebra.DirectSum.Module
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The full finitely graded AE function space includes weighted
 degree zero and every positive homogeneous coefficient degree. -/

@@ -1,5 +1,11 @@
-import IntegrationSection6.GammaRawElementaryCoordinates
-import IntegrationSection6.GammaSortedSchemaRows
+module
+
+public import IntegrationSection6.GammaRawElementaryCoordinates
+public import IntegrationSection6.GammaSortedSchemaRows
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Elementary formulas for finite RV schemata with any sorted parameter
 block. The volume formula uses the actual native blowup program. Bounds

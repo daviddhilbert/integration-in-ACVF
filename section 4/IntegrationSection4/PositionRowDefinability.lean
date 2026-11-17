@@ -1,6 +1,12 @@
-import IntegrationSection4.UniformPositionGraphs
-import IntegrationSection4.RVLabelSlices
-import IntegrationSection4.VerticalPullbackCells
+module
+
+public import IntegrationSection4.UniformPositionGraphs
+public import IntegrationSection4.RVLabelSlices
+public import IntegrationSection4.VerticalPullbackCells
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

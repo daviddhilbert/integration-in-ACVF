@@ -1,6 +1,12 @@
-import Integration7.UniformPreparedKeyFibres
-import Integration7.NativeRectangleFamilyStandardContractions
-import Integration7.RectangleFamilyAllOrderComparisons
+module
+
+public import Integration7.UniformPreparedKeyFibres
+public import Integration7.NativeRectangleFamilyStandardContractions
+public import Integration7.RectangleFamilyAllOrderComparisons
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The different-ball part is an actual original-Gamma rectangle
 family after recording the two prepared keys. Its specified contractions

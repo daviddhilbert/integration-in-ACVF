@@ -1,10 +1,16 @@
-import IntegrationSection3ACVF.TranslatedErrorGeometry
-import IntegrationSection3ACVF.RealAtomicValueBoundRigidity
-import IntegrationSection3ACVF.RVSlopePairFormula
-import IntegrationSection3ACVF.RVLinearitySlopeValues
-import IntegrationSection3ACVF.RVValueBallFamilies
-import IntegrationSection3ACVF.NamedBallSetup
-import Section3.SmallFiniteParameters
+module
+
+public import IntegrationSection3ACVF.TranslatedErrorGeometry
+public import IntegrationSection3ACVF.RealAtomicValueBoundRigidity
+public import IntegrationSection3ACVF.RVSlopePairFormula
+public import IntegrationSection3ACVF.RVLinearitySlopeValues
+public import IntegrationSection3ACVF.RVValueBallFamilies
+public import IntegrationSection3ACVF.NamedBallSetup
+public import Section3.SmallFiniteParameters
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Different actual RV coefficients would give a real-definable error
 map on a newly chosen atomic RV fibre. Its strict value bound contradicts

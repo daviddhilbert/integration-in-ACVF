@@ -1,4 +1,10 @@
-import IntegrationSection6.RootSelection
+module
+
+public import IntegrationSection6.RootSelection
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Construct a genuine inherited full-locus focus from the uniquely
 solvable, definable root set, retaining its full function graph. -/

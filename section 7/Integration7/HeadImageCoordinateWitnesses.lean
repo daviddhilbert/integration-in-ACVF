@@ -1,4 +1,10 @@
-import IntegrationSection5.HeadContractionGeometry
+module
+
+public import IntegrationSection5.HeadContractionGeometry
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Literal membership in a head contraction image, using a witness
 for the removed VF coordinate and the retained old RV labels. -/

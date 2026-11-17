@@ -1,5 +1,11 @@
-import Integration7.RectangleOppositeOrderComparisons
-import Integration7.GammaNamesGenericParameters
+module
+
+public import Integration7.RectangleOppositeOrderComparisons
+public import Integration7.GammaNamesGenericParameters
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The arbitrary specified rectangle comparison in the common-name
 context of the original Gamma base, with preservation of VF independence

@@ -1,6 +1,12 @@
-import Integration7.FiniteRawContractionVolumeRows
-import Integration7.GeometricVolumeCommonOnObjects
-import Integration7.GammaVolumeBaseEquality
+module
+
+public import Integration7.FiniteRawContractionVolumeRows
+public import Integration7.GeometricVolumeCommonOnObjects
+public import Integration7.GammaVolumeBaseEquality
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Recover the specified normalized finite contraction objects from a
 geometric comparison of their actual complete raw coordinate/density rows. -/

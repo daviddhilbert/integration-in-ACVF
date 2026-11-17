@@ -1,8 +1,14 @@
-import Integration7.MixedHeadFibres
-import Integration7.HKZeroVolumeFamilies
-import Integration7.FrozenHeadVolumeIntegrals
-import Integration7.HeadFibreDensityGraphs
-import Integration7.HeadFibreContractionSources
+module
+
+public import Integration7.MixedHeadFibres
+public import Integration7.HKZeroVolumeFamilies
+public import Integration7.FrozenHeadVolumeIntegrals
+public import Integration7.HeadFibreDensityGraphs
+public import Integration7.HeadFibreContractionSources
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Weighted-zero families have actual frozen unary fibres, with their
 original form pulled back along the literal VF insertion map. -/

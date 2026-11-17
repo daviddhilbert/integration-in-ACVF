@@ -1,5 +1,11 @@
-import Integration7.GammaRVLabelIdentity
-import Integration7.VolumeCoproductIsomorphism
+module
+
+public import Integration7.GammaRVLabelIdentity
+public import Integration7.VolumeCoproductIsomorphism
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Original-Gamma charts of actual volume isomorphisms are closed
 under coproducts. No Gamma presentation of an entire ambient object is needed. -/

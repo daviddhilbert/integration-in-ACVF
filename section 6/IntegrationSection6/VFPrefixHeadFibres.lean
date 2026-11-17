@@ -1,6 +1,12 @@
-import IntegrationSection6.VFPrefixFibreMaps
-import IntegrationSection6.VFPrefixHeadCoordinates
-import IntegrationSection5.RelativeSpecialRestriction
+module
+
+public import IntegrationSection6.VFPrefixFibreMaps
+public import IntegrationSection6.VFPrefixHeadCoordinates
+public import IntegrationSection5.RelativeSpecialRestriction
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Exact head-coordinate fibres and parameter inclusion after freezing a
 VF tail. These identify the actual unary special witnesses on both sides. -/

@@ -1,4 +1,10 @@
-import Integration7.HKGradedAEVolumeJacobians
+module
+
+public import Integration7.HKGradedAEVolumeJacobians
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The global Jacobian maps retain their literal family formulas.
 The whole-space presentation equivalence introduces no new choices of

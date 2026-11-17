@@ -1,5 +1,11 @@
-import IntegrationSection3ACVF.RVSlopeGraph
-import Section3.RVFibreGeometry
+module
+
+public import IntegrationSection3ACVF.RVSlopeGraph
+public import Section3.RVFibreGeometry
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Every fixed RV slope coefficient cuts each actual nonzero value
 fibre into a finite or cofinite set. Finite imaginary-code specialization

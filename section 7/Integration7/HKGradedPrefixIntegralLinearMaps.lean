@@ -1,5 +1,11 @@
-import Integration7.HKGradedHeadIntegralLinearMaps
-import Integration7.HKGradedAEVolumeIntegralLinearity
+module
+
+public import Integration7.HKGradedHeadIntegralLinearMaps
+public import Integration7.HKGradedAEVolumeIntegralLinearity
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Successive raw head integrals give linear prefix integrals on the
 full finite graded module over the full graded coefficient semiring.

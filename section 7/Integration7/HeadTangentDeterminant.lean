@@ -1,4 +1,10 @@
-import Integration7.PolynomialTangentLines
+module
+
+public import Integration7.PolynomialTangentLines
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The tangent determinant of a correspondence with a free last
 coordinate equals the determinant of its head correspondence. -/

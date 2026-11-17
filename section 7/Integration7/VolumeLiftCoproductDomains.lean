@@ -1,5 +1,11 @@
-import Integration7.FixedVFVolumeCoproducts
-import Integration7.VFVolumeLifts
+module
+
+public import Integration7.FixedVFVolumeCoproducts
+public import Integration7.VFVolumeLifts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Lifting an RV coproduct gives exactly the two tagged VF lifts,
 including every original RV label and the coordinate-zero fibres. -/

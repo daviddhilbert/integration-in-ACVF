@@ -1,7 +1,13 @@
-import Integration7.CanonicalVolumeSchemaRows
-import Integration7.NondegenerateFiniteIso
-import IntegrationSection6.GammaFamilyBijectionValidity
-import Section4.FunctionalRelations
+module
+
+public import Integration7.CanonicalVolumeSchemaRows
+public import Integration7.NondegenerateFiniteIso
+public import IntegrationSection6.GammaFamilyBijectionValidity
+public import Section4.FunctionalRelations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Valid essential chart rows construct their actual definable bijection.
 Only the coordinate graph interpretation and ordinary chart validity enter

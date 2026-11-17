@@ -1,5 +1,11 @@
-import Integration7.CorrectedBlowupMap
-import Integration7.RVHeadJacobianComparison
+module
+
+public import Integration7.CorrectedBlowupMap
+public import Integration7.RVHeadJacobianComparison
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The corrected blowup correspondence projects to the original head
 correspondence and contains the actual punctured residue vertical lines. -/

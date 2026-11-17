@@ -1,6 +1,12 @@
-import Integration7.SupportedPositiveVolumeCoefficients
-import Integration7.SelectedJacobianRowProducts
-import Integration7.SupportedVolumeJacobianAddition
+module
+
+public import Integration7.SupportedPositiveVolumeCoefficients
+public import Integration7.SelectedJacobianRowProducts
+public import Integration7.SupportedVolumeJacobianAddition
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The supported positive Jacobian transform commutes with actual
 multiplication by every positive common-blowup coefficient. -/

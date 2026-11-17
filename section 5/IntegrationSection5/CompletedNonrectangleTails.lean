@@ -1,6 +1,12 @@
-import IntegrationSection5.CompletedNonrectangleMatching
-import IntegrationSection5.CanonicalUnaryBranchExtension
-import IntegrationSection5.UnarySpecialRelative
+module
+
+public import IntegrationSection5.CompletedNonrectangleMatching
+public import IntegrationSection5.CanonicalUnaryBranchExtension
+public import IntegrationSection5.UnarySpecialRelative
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option allowUnsafeReducibility true in

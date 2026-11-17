@@ -1,5 +1,11 @@
-import IntegrationSection6.PartialFocusLocus
-import IntegrationSection6.PullbackPartitions
+module
+
+public import IntegrationSection6.PartialFocusLocus
+public import IntegrationSection6.PullbackPartitions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Exact disjoint image partition of a partial centripetal step into its
 nonzero active image and its unchanged complementary pullback. -/

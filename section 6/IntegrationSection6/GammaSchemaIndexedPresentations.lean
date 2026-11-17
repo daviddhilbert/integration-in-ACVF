@@ -1,5 +1,11 @@
-import IntegrationSection6.GammaSchemaIndexedObjects
-import IntegrationSection6.GammaSchemaFiniteRowPresentations
+module
+
+public import IntegrationSection6.GammaSchemaIndexedObjects
+public import IntegrationSection6.GammaSchemaFiniteRowPresentations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Named types for genuine finite indexed presentations and their native
 fibre coproducts. Numerical bounds are not part of these types. -/

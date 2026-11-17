@@ -1,5 +1,11 @@
-import Integration7.RVVolumeComposition
-import Integration7.GammaVolumeCriterion
+module
+
+public import Integration7.RVVolumeComposition
+public import Integration7.GammaVolumeCriterion
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 set_option backward.isDefEq.respectTransparency false
 noncomputable section

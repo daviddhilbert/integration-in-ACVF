@@ -1,8 +1,14 @@
-import Integration7.VolumeProductMaps
-import Integration7.RVProductJacobianComparison
-import Integration7.RVAlmostEverywhereProducts
-import Integration7.GammaVolumeCriterion
-import Section9.GenericRVJacobian
+module
+
+public import Integration7.VolumeProductMaps
+public import Integration7.RVProductJacobianComparison
+public import Integration7.RVAlmostEverywhereProducts
+public import Integration7.GammaVolumeCriterion
+public import Section9.GenericRVJacobian
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Genuine products of positive RV volume isomorphisms. The full
 and factor Jacobians are obtained generically and compared through

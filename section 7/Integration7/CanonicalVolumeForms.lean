@@ -1,5 +1,11 @@
-import Integration7.CanonicalVolumePresentations
-import Integration7.RVNonzero
+module
+
+public import Integration7.CanonicalVolumePresentations
+public import Integration7.RVNonzero
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Normalization transport of a density preserves its actual pointwise
 value. In a canonical model no new parameters or points are introduced. -/

@@ -1,8 +1,14 @@
-import Integration7.VolumeSchemaUnderlyingIsomorphisms
-import Integration7.FiniteVolumeParameterContexts
-import Integration7.VolumeIsoParameterExtension
-import Integration7.GammaVolumeParameterGeometry
-import Integration7.GammaVolumeFullChartRestriction
+module
+
+public import Integration7.VolumeSchemaUnderlyingIsomorphisms
+public import Integration7.FiniteVolumeParameterContexts
+public import Integration7.VolumeIsoParameterExtension
+public import Integration7.GammaVolumeParameterGeometry
+public import Integration7.GammaVolumeFullChartRestriction
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A full original-Gamma graph of a coordinate- and density-preserving
 label equivalence gives an actual volume isomorphism in a finite

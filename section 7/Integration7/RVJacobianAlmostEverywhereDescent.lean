@@ -1,5 +1,11 @@
-import Integration7.RVMapEqualityDescent
-import Section9.GenericRVJacobian
+module
+
+public import Integration7.RVMapEqualityDescent
+public import Section9.GenericRVJacobian
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! An RV Jacobian equation whose map and prescribed value are defined
 over the original base descends from a containing context. Compare with

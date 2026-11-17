@@ -1,6 +1,12 @@
-import Integration7.HKZeroRVVolumeIsomorphisms
-import Integration7.HKVolumeFormTransport
-import Integration7.ZeroFactorVolumeObjects
+module
+
+public import Integration7.HKZeroRVVolumeIsomorphisms
+public import Integration7.HKVolumeFormTransport
+public import Integration7.ZeroFactorVolumeObjects
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual products for the corrected all-degree objects. Densities from
 both factors survive, including products of two zero-degree objects. -/

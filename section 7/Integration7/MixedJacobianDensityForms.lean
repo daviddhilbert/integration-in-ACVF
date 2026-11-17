@@ -1,6 +1,12 @@
-import Integration7.NonzeroScalarRVMaps
-import Integration7.MixedDifferentiabilityAlmostEverywhere
-import Section9.MixedJacobianValue
+module
+
+public import Integration7.NonzeroScalarRVMaps
+public import Integration7.MixedDifferentiabilityAlmostEverywhere
+public import Section9.MixedJacobianValue
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A genuine definable density representing the VF Jacobian of a
 bijection almost everywhere. Its exceptional zero values are replaced by1. -/

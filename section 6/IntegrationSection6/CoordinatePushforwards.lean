@@ -1,4 +1,10 @@
-import IntegrationSection6.ProjectionRepresentativeIndependence
+module
+
+public import IntegrationSection6.ProjectionRepresentativeIndependence
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Coordinate pushforward on the actual quotient of definable functions,
 with its pointwise fibre formula and the Fubini identity. -/

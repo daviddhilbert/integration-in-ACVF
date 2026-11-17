@@ -1,4 +1,10 @@
-import IntegrationSection3ACVF.Separation
+module
+
+public import IntegrationSection3ACVF.Separation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Function consequences of corrected 3.11. Full partial-domain
 graphs are used in both directions. -/

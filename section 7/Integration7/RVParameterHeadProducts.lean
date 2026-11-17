@@ -1,4 +1,10 @@
-import Integration7.RVParameterHeadProjections
+module
+
+public import Integration7.RVParameterHeadProjections
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual definable maps from a carried-parameter contraction to its
 parameter factor and its prepared unary factor. -/

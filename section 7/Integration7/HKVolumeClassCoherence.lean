@@ -1,9 +1,15 @@
-import Integration7.HKVolumeClasses
-import Integration7.HKVolumeProductAssociativity
-import Integration7.HKVolumeProductUnits
-import Integration7.HKVolumeProductZeros
-import Integration7.HKVolumeLeftDistributivity
-import Integration7.HKVolumeRightDistributivity
+module
+
+public import Integration7.HKVolumeClasses
+public import Integration7.HKVolumeProductAssociativity
+public import Integration7.HKVolumeProductUnits
+public import Integration7.HKVolumeProductZeros
+public import Integration7.HKVolumeLeftDistributivity
+public import Integration7.HKVolumeRightDistributivity
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 noncomputable section
 open FirstOrder FirstOrder.Language

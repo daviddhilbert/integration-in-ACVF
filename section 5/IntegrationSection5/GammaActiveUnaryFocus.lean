@@ -1,5 +1,11 @@
-import IntegrationSection5.ActiveUnaryProjection
-import IntegrationSection5.GammaGraphOperations
+module
+
+public import IntegrationSection5.ActiveUnaryProjection
+public import IntegrationSection5.GammaGraphOperations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The selected-coordinate lift retains the complete original-Gamma
 locus and centre graphs, including all free passive coordinates. -/

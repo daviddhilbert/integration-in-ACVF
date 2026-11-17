@@ -1,5 +1,11 @@
-import IntegrationSection6.GammaSchemaIndexedObjects
-import IntegrationSection6.GammaSchemaPresentationEquality
+module
+
+public import IntegrationSection6.GammaSchemaIndexedObjects
+public import IntegrationSection6.GammaSchemaPresentationEquality
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Equal formula rows give the actual label-identity isomorphism after
 indexed assembly, even when the two schemata carry different bounds. -/

@@ -1,6 +1,12 @@
-import Integration7.HKUpstreamRVZero
-import Integration7.HKZeroVolumeDescent
-import IntegrationSection2.WeightedZeroVolumeDescent
+module
+
+public import Integration7.HKUpstreamRVZero
+public import Integration7.HKZeroVolumeDescent
+public import IntegrationSection2.WeightedZeroVolumeDescent
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The Section 7 zero-degree descent consumes Section 2's corrected
 result in the actual published upstream category. The label map stays

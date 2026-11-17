@@ -1,8 +1,14 @@
-import Integration7.GeneratedFiniteContractionOrders
-import IntegrationSection6.UnaryChainContractions
-import IntegrationSection6.ArbitraryFiniteContractions
-import IntegrationSection6.GammaFiniteMixedBijections
-import IntegrationSection5.GammaUnaryChain
+module
+
+public import Integration7.GeneratedFiniteContractionOrders
+public import IntegrationSection6.UnaryChainContractions
+public import IntegrationSection6.ArbitraryFiniteContractions
+public import IntegrationSection6.GammaFiniteMixedBijections
+public import IntegrationSection5.GammaUnaryChain
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The generated-base specialization uses the proved ordinary selected
 contraction-order comparison. All actual objects and full Gamma graphs

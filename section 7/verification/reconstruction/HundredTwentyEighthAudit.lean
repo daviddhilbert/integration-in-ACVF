@@ -1,7 +1,13 @@
-import Integration7.AERVVolumeDensityRescalingLinearity
-import Integration7.AppendedIntegralDensityRescaling
-import Integration7.DensityRescalingCoordinateCompatibility
-import Integration7.SignedPositiveCoordinatePushforwards
+module
+
+public import Integration7.AERVVolumeDensityRescalingLinearity
+public import Integration7.AppendedIntegralDensityRescaling
+public import Integration7.DensityRescalingCoordinateCompatibility
+public import Integration7.SignedPositiveCoordinatePushforwards
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 set_option pp.universes true
 set_option pp.proofs false
 set_option pp.deepTerms true

@@ -1,6 +1,12 @@
-import Integration7.IndexedVolumeEmpty
-import Integration7.GammaVolumeObjectGraphs
-import IntegrationSection6.FiniteGammaInitial
+module
+
+public import Integration7.IndexedVolumeEmpty
+public import Integration7.GammaVolumeObjectGraphs
+public import IntegrationSection6.FiniteGammaInitial
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Empty indexed objects have their actual empty volume chart over
 the original Gamma base, even when the label arities differ. -/

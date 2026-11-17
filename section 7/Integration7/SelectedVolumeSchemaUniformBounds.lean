@@ -1,6 +1,12 @@
-import Integration7.GammaSelectedVolumeSchemata
-import Integration7.UniformVolumeSchemaBounds
-import IntegrationSection6.GammaVFParameterBases
+module
+
+public import Integration7.GammaSelectedVolumeSchemata
+public import Integration7.UniformVolumeSchemaBounds
+public import IntegrationSection6.GammaVFParameterBases
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A selected coordinate projection with finite fibres and a retained
 nonzero density has a single finite valid formula bound over all VF rows. -/

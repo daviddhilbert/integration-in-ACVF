@@ -1,11 +1,17 @@
-import Integration7.CompletedSection6Kernel
-import Integration7.ClosedSection6DefinableFamilyOperations
-import Integration7.ClosedSection6RVClassRepresentatives
-import IntegrationSection6.DefinableFunctionSemimodule
-import IntegrationSection6.DefinableFamilyOperations
-import IntegrationSection6.RVClassRepresentatives
-import Mathlib.Algebra.Module.Pi
-import Mathlib.Algebra.Module.TransferInstance
+module
+
+public import Integration7.CompletedSection6Kernel
+public import Integration7.ClosedSection6DefinableFamilyOperations
+public import Integration7.ClosedSection6RVClassRepresentatives
+public import IntegrationSection6.DefinableFunctionSemimodule
+public import IntegrationSection6.DefinableFamilyOperations
+public import IntegrationSection6.RVClassRepresentatives
+public import Mathlib.Algebra.Module.Pi
+public import Mathlib.Algebra.Module.TransferInstance
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Closed generated-base Section6 integration. The former universal
 Section5 input is replaced by the canonical-model certificate; its kernel

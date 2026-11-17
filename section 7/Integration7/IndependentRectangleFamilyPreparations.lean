@@ -1,5 +1,11 @@
-import Integration7.SwappedRectangleProjectionDomains
-import Integration7.RVLabelConstraintHeadProductImages
+module
+
+public import Integration7.SwappedRectangleProjectionDomains
+public import Integration7.RVLabelConstraintHeadProductImages
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Both rectangle orders use the same two independently chosen
 labelled unary preparations. Only their carried-label lifts differ. -/

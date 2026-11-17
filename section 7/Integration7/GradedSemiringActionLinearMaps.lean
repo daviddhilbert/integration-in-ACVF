@@ -1,5 +1,11 @@
-import Integration7.GradedSemiringActions
-import Mathlib.Algebra.Module.LinearMap.Defs
+module
+
+public import Integration7.GradedSemiringActions
+public import Mathlib.Algebra.Module.LinearMap.Defs
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Homogeneous additive maps commuting with actual graded actions
 assemble into a linear map on finite direct sums. -/

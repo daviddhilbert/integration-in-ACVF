@@ -1,4 +1,10 @@
-import Integration7.HKVolumeBlowupSemiring
+module
+
+public import Integration7.HKVolumeBlowupSemiring
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual graded quotient projection is a surjective semiring
 homomorphism, assembled from the fixed-degree additive projections. -/

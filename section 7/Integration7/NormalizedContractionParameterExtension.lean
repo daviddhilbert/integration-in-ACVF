@@ -1,5 +1,11 @@
-import Integration7.ContractionParameterExtension
-import Integration7.ContractionRetainedDensityLabels
+module
+
+public import Integration7.ContractionParameterExtension
+public import Integration7.ContractionRetainedDensityLabels
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Enlarging parameters changes neither the normalized contraction
 labels nor their actual carrier. Every chosen contraction coordinate is

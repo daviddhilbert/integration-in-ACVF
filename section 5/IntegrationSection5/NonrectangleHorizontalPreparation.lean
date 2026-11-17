@@ -1,7 +1,13 @@
-import IntegrationSection5.NonrectanglePositionIso
-import IntegrationSection5.NonrectangleStripGeometry
-import IntegrationSection5.GammaProjectedScalar
-import IntegrationSection5.MixedStripPreparation
+module
+
+public import IntegrationSection5.NonrectanglePositionIso
+public import IntegrationSection5.NonrectangleStripGeometry
+public import IntegrationSection5.GammaProjectedScalar
+public import IntegrationSection5.MixedStripPreparation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual first-coordinate preparation of the entire nonrectangle family. The globally selected inverse positioning map constructs the centre; cell geometry proves saturation with every old RV label retained. -/
 noncomputable section

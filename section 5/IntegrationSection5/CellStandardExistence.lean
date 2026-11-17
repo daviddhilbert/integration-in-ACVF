@@ -1,5 +1,11 @@
-import IntegrationSection5.CellBalancedStandard
-import IntegrationSection5.CellRectangleStandard
+module
+
+public import IntegrationSection5.CellBalancedStandard
+public import IntegrationSection5.CellRectangleStandard
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Lemma 5.7: actual standard contractions in both coordinate orders and
 an actual pinned RV[2] isomorphism for every definable 2-cell. -/

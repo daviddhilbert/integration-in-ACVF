@@ -1,5 +1,11 @@
-import Integration7.HKZeroLiftCoproducts
-import Integration7.HKZeroAdditiveIntegration
+module
+
+public import Integration7.HKZeroLiftCoproducts
+public import Integration7.HKZeroAdditiveIntegration
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The transported additive structure on weighted zero VF classes is
 the actual tagged coproduct with the two original RV forms. -/

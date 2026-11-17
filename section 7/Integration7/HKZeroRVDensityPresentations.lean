@@ -1,5 +1,11 @@
-import Integration7.HKNativeZeroDensityObjects
-import Integration7.RVVolumeDensityGraphs
+module
+
+public import Integration7.HKNativeZeroDensityObjects
+public import Integration7.RVVolumeDensityGraphs
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Every weighted finite zero object has an exact original-base
 presentation with its supplied density retained as the last label. -/

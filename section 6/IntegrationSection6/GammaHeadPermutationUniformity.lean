@@ -1,7 +1,13 @@
-import IntegrationSection6.GammaPermutedHeadSliceMaps
-import IntegrationSection6.HeadTailFibreGeometry
-import IntegrationSection6.GammaUnarySliceUniformityWithoutField
-import IntegrationSection6.GammaSwappedCommonBlowups
+module
+
+public import IntegrationSection6.GammaPermutedHeadSliceMaps
+public import IntegrationSection6.HeadTailFibreGeometry
+public import IntegrationSection6.GammaUnarySliceUniformityWithoutField
+public import IntegrationSection6.GammaSwappedCommonBlowups
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! After a common first coordinate, reordering the frozen tail changes
 head-contracted selected-volume fibres only by Isp. This uses the unary

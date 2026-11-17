@@ -1,6 +1,12 @@
-import Integration7.IndependentHeadVolumeProductCharts
-import Integration7.AllDegreeVolumeClasses
-import Integration7.VolumeBlowupClasses
+module
+
+public import Integration7.IndependentHeadVolumeProductCharts
+public import Integration7.AllDegreeVolumeClasses
+public import Integration7.VolumeBlowupClasses
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual independent head product chart gives finite selected
 fibres and the exact common-blowup product class. All densities and

@@ -1,5 +1,11 @@
-import Integration7.VolumeFamilyChartCertificates
-import Section9.VolumeChartOutput
+module
+
+public import Integration7.VolumeFamilyChartCertificates
+public import Section9.VolumeChartOutput
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! First-order chart-value formulas with the original parameter tuple
 left free. The polynomial support is fixed; scales and coefficients are

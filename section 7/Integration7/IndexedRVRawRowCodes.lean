@@ -1,6 +1,12 @@
-import IntegrationSection6.GammaSchemaNativeRows
-import IntegrationSection6.GammaSchemaIndexedObjects
-import IntegrationSection6.GammaSortedParameterPreservation
+module
+
+public import IntegrationSection6.GammaSchemaNativeRows
+public import IntegrationSection6.GammaSchemaIndexedObjects
+public import IntegrationSection6.GammaSortedParameterPreservation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The sorted total-row code is the literal indexed RV carrier.
 Transporting equal carrier presentations preserves every RV index label. -/

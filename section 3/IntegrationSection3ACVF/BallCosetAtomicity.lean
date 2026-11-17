@@ -1,4 +1,10 @@
-import IntegrationSection3ACVF.BallPresentation
+module
+
+public import IntegrationSection3ACVF.BallPresentation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-!
 # Ball cosets inside a complete type

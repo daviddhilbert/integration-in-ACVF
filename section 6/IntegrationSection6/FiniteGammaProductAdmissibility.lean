@@ -1,5 +1,11 @@
-import IntegrationSection6.FiniteGammaProducts
-import IntegrationSection6.GammaAdmissibility
+module
+
+public import IntegrationSection6.FiniteGammaProducts
+public import IntegrationSection6.GammaAdmissibility
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Original-base admissibility survives an unrelated finite RV factor. -/
 noncomputable section

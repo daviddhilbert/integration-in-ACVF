@@ -1,5 +1,11 @@
-import Integration7.NativeRelativeTranslations
-import IntegrationSection4.DefinableParadigms
+module
+
+public import Integration7.NativeRelativeTranslations
+public import IntegrationSection4.DefinableParadigms
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual native centre maps from definable positioning graphs. The
 sorted graph is transported through the released native point codes. -/

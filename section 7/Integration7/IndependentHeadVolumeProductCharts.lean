@@ -1,9 +1,15 @@
-import Integration7.IndependentHeadNativeProductMaps
-import Integration7.IndependentHeadRetainedLabels
-import Integration7.NativeCoordinateDensityVolumeObjects
-import Integration7.VolumeProductPointwise
-import Integration7.VolumeRelabeling
-import IntegrationSection6.FiniteBlowups
+module
+
+public import Integration7.IndependentHeadNativeProductMaps
+public import Integration7.IndependentHeadRetainedLabels
+public import Integration7.NativeCoordinateDensityVolumeObjects
+public import Integration7.VolumeProductPointwise
+public import Integration7.VolumeRelabeling
+public import IntegrationSection6.FiniteBlowups
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! An independent head preparation has an actual finite volume product
 chart. The source has the literal concatenated coordinate selector and

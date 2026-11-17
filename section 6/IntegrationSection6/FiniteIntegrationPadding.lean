@@ -1,4 +1,10 @@
-import IntegrationSection6.GammaIspPadding
+module
+
+public import IntegrationSection6.GammaIspPadding
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Injective transition maps on the actual integration quotients. -/
 noncomputable section

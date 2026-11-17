@@ -1,4 +1,10 @@
-import IntegrationSection6.ElementaryKeys
+module
+
+public import IntegrationSection6.ElementaryKeys
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Variable-coordinate division in the corrected named-inversion language.
 This extends the coordinate-code construction of pinned RVNamedDivision

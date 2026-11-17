@@ -1,5 +1,11 @@
-import Integration7.FactoredRVConstraintHeadMaps
-import Section5.Assembly
+module
+
+public import Integration7.FactoredRVConstraintHeadMaps
+public import Section5.Assembly
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A pure RV graph extension has a genuine inverse to its old-label
 projection. The additional labels are retained in the actual domain. -/

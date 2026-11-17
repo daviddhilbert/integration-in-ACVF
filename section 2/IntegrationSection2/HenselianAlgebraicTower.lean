@@ -1,4 +1,10 @@
-import IntegrationSection2.HenselianFixedField
+module
+
+public import IntegrationSection2.HenselianFixedField
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Henselianity ascends to intermediate algebraic fields inside an
 algebraically closed Galois envelope, in residue characteristic zero.

@@ -1,5 +1,11 @@
-import IntegrationSection3ACVF.RealTypeNeighborhoods
-import IntegrationSection3ACVF.BallFamilyFibreDefinable
+module
+
+public import IntegrationSection3ACVF.RealTypeNeighborhoods
+public import IntegrationSection3ACVF.BallFamilyFibreDefinable
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Genuine compactness gives a finite real-base definable cover ofVF
 such that no member of a splitting-open-ball family lies in one piece.

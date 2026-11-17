@@ -1,7 +1,13 @@
-import Integration7.GammaRVMapGraphOperations
-import Integration7.ScalarRVAlgebra
-import Integration7.RVUnitNormalization
-import Integration7.RVCoordinateSelection
+module
+
+public import Integration7.GammaRVMapGraphOperations
+public import Integration7.ScalarRVAlgebra
+public import Integration7.RVUnitNormalization
+public import Integration7.RVCoordinateSelection
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Scalar RV arithmetic and unit normalization preserve the full
 original-Gamma graph of their inputs. -/

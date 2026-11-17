@@ -1,4 +1,10 @@
-import IntegrationSection3ACVF.FullBaseDefinability
+module
+
+public import IntegrationSection3ACVF.FullBaseDefinability
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Full original-base graph operations on parameterized unary relations.
 The labels stay free variables and may include source and target contexts. -/

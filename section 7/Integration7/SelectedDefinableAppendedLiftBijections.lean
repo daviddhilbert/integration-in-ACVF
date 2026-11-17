@@ -1,4 +1,10 @@
-import Integration7.DefinableAppendedLiftCarriers
+module
+
+public import Integration7.DefinableAppendedLiftCarriers
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The selected and arbitrary-map presentations of a family have
 identical coefficient-first lift carriers and original densities. -/

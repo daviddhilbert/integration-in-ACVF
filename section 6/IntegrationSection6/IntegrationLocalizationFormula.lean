@@ -1,4 +1,10 @@
-import IntegrationSection6.IntegrationLocalizationEmbedding
+module
+
+public import IntegrationSection6.IntegrationLocalizationEmbedding
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The normalization formula for the integration embedding. -/
 noncomputable section

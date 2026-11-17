@@ -1,7 +1,13 @@
-import IntegrationSection6.GammaFocusAdmissibility
-import IntegrationSection6.GammaLiftVolumeRecovery
-import IntegrationSection6.PartialFocusLocus
-import IntegrationSection6.NormalizedLifts
+module
+
+public import IntegrationSection6.GammaFocusAdmissibility
+public import IntegrationSection6.GammaLiftVolumeRecovery
+public import IntegrationSection6.PartialFocusLocus
+public import IntegrationSection6.NormalizedLifts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Active focus loci retain their full original-Gamma RV-object graphs.
 Their underlying literal lift is identified without enlarging the base. -/

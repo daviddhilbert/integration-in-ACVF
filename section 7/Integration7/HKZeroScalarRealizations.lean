@@ -1,6 +1,12 @@
-import Integration7.HKZeroFamilyScalarProducts
-import Integration7.HKWeightedVFZeroClassProducts
-import Integration7.MixedRVFactorZeroLiftCharts
+module
+
+public import Integration7.HKZeroFamilyScalarProducts
+public import Integration7.HKWeightedVFZeroClassProducts
+public import Integration7.MixedRVFactorZeroLiftCharts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The weighted scalar family realizes the actual Cartesian product
 with the coefficient's full weighted zero lift. -/

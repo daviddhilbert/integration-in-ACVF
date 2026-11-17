@@ -1,7 +1,13 @@
-import Integration7.GammaVolumeIsomorphismSchemata
-import Integration7.VolumeSchemaUnderlyingIsomorphisms
-import Integration7.VolumeSchemaValiditySemantics
-import Integration7.GammaFinitePresentationContexts
+module
+
+public import Integration7.GammaVolumeIsomorphismSchemata
+public import Integration7.VolumeSchemaUnderlyingIsomorphisms
+public import Integration7.VolumeSchemaValiditySemantics
+public import Integration7.GammaFinitePresentationContexts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Valid volume-isomorphism rows realize actual essential volume
 isomorphisms in a containing real context. The comparison realizes its

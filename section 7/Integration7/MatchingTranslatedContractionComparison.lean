@@ -1,5 +1,11 @@
-import Integration7.MatchingContractionPreparedVolumes
-import Integration7.MatchingPreparedVolumeComparison
+module
+
+public import Integration7.MatchingContractionPreparedVolumes
+public import Integration7.MatchingPreparedVolumeComparison
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The two actual translated matching families have the full common
 forward Gamma volume-blowup comparison for arbitrary specified orders.

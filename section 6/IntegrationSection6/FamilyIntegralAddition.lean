@@ -1,5 +1,11 @@
-import IntegrationSection6.FamilyCoproductLifts
-import IntegrationSection6.DefinableFamilyOperations
+module
+
+public import IntegrationSection6.FamilyCoproductLifts
+public import IntegrationSection6.DefinableFamilyOperations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Integration preserves actual coproduct addition of total family
 lifts, including sums whose representatives initially have different degrees. -/

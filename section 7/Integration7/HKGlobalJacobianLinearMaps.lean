@@ -1,5 +1,11 @@
-import Integration7.HKGlobalJacobianCoefficientLaws
-import Integration7.HKGradedAEVolumeActionCoherence
+module
+
+public import Integration7.HKGlobalJacobianCoefficientLaws
+public import Integration7.HKGradedAEVolumeActionCoherence
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The genuine all-degree global Jacobian operator is linear over
 the full corrected coefficient semiring. -/

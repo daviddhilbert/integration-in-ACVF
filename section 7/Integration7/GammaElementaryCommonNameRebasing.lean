@@ -1,5 +1,11 @@
-import Integration7.GammaBlowupCommonNameAdmissibility
-import Integration7.FullPackedBlowupCharts
+module
+
+public import Integration7.GammaBlowupCommonNameAdmissibility
+public import Integration7.FullPackedBlowupCharts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Rebase the full elementary chart, including degenerate labels, and
 its original-Gamma algebraic center over the actual common-name base. -/

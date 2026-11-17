@@ -1,5 +1,11 @@
-import Integration7.OrdinaryFiniteCoproductIsomorphisms
-import Section4.VFProducts
+module
+
+public import Integration7.OrdinaryFiniteCoproductIsomorphisms
+public import Section4.VFProducts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual ordinary finite VF Cartesian products preserve category
 isomorphisms, without changing their ambient VF coordinate tuples. -/

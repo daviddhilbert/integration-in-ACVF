@@ -1,6 +1,12 @@
-import Integration7.HKSelectedFamilyWeightedZeroProducts
-import Integration7.HKNativeZeroDensityObjects
-import Integration7.IndependentRVProductDensityGraphs
+module
+
+public import Integration7.HKSelectedFamilyWeightedZeroProducts
+public import Integration7.HKNativeZeroDensityObjects
+public import Integration7.IndependentRVProductDensityGraphs
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A finite weighted coefficient is retained through a special
 preparation of the actual product-density graph. -/

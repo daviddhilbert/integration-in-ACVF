@@ -1,4 +1,10 @@
-import IntegrationSection6.Subobjects
+module
+
+public import IntegrationSection6.Subobjects
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Coordinate formulas for the actual coproduct partition isomorphism. -/
 noncomputable section

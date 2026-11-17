@@ -1,7 +1,13 @@
-import Integration7.SelectedTailLiftMaps
-import Integration7.MixedDomainVolumeProducts
-import Integration7.MixedJacobianRestriction
-import Integration7.GradedVolumeProducts
+module
+
+public import Integration7.SelectedTailLiftMaps
+public import Integration7.MixedDomainVolumeProducts
+public import Integration7.MixedJacobianRestriction
+public import Integration7.GradedVolumeProducts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Realizing selected RV coordinates by fixed VF tails preserves the
 volume equation of an actual label-preserving mixed map. -/

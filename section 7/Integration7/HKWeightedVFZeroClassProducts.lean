@@ -1,7 +1,13 @@
-import Integration7.HKWeightedZeroLiftProducts
-import Integration7.PositiveVolumeIntegrationEquivalence
-import Integration7.ZeroFactorProductBridges
-import Integration7.HKVolumeClassCoherence
+module
+
+public import Integration7.HKWeightedZeroLiftProducts
+public import Integration7.PositiveVolumeIntegrationEquivalence
+public import Integration7.ZeroFactorProductBridges
+public import Integration7.HKVolumeClassCoherence
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Weighted measured-zero coefficients act by actual Cartesian product
 with their full VF lifts. Integration preserves this geometric action. -/

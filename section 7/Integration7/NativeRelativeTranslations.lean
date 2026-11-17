@@ -1,6 +1,12 @@
-import Integration7.NativeVolumeDomains
-import IntegrationSection5.RelativelyUnary
-import Section4.Products
+module
+
+public import Integration7.NativeVolumeDomains
+public import IntegrationSection5.RelativelyUnary
+public import Section4.Products
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! An actual definable centre map independent of the active coordinate
 gives an injective relatively unary translation onto its actual image. -/

@@ -1,8 +1,14 @@
-import IntegrationSection6.FiniteSelectedContractionSlices
-import Integration7.GammaCoordinateDensityEquivalences
-import Integration7.ContractionRetainedDensityLabels
-import IntegrationSection6.RawSelectedContractions
-import IntegrationSection6.GammaSwappedVolumes
+module
+
+public import IntegrationSection6.FiniteSelectedContractionSlices
+public import Integration7.GammaCoordinateDensityEquivalences
+public import Integration7.ContractionRetainedDensityLabels
+public import IntegrationSection6.RawSelectedContractions
+public import IntegrationSection6.GammaSwappedVolumes
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! First-volume normalization of a unary contraction preserves the
 actual selected volume tuple and retained density, with its Gamma graph. -/

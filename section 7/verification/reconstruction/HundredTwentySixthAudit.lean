@@ -1,8 +1,14 @@
-import Integration7.BlowupVolumeGradedDecomposition
-import Integration7.GradedVolumeKernelComponents
-import Integration7.HomogeneousVolumeIntegrationQuotient
-import Integration7.RawVolumeGradedDecomposition
-import Integration7.VolumeDegreeKernelQuotients
+module
+
+public import Integration7.BlowupVolumeGradedDecomposition
+public import Integration7.GradedVolumeKernelComponents
+public import Integration7.HomogeneousVolumeIntegrationQuotient
+public import Integration7.RawVolumeGradedDecomposition
+public import Integration7.VolumeDegreeKernelQuotients
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 set_option pp.universes true
 set_option pp.proofs false
 set_option pp.deepTerms true

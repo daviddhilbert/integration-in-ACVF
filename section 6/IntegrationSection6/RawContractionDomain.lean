@@ -1,4 +1,10 @@
-import IntegrationSection6.GammaRawStandardContractions
+module
+
+public import IntegrationSection6.GammaRawStandardContractions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The raw contraction domain consists of exactly the actual final labels. -/
 noncomputable section

@@ -1,6 +1,12 @@
-import Integration7.VFVolumeObjects
-import Section4.RVTagging
-import Section4.RVCoproduct
+module
+
+public import Integration7.VFVolumeObjects
+public import Section4.RVTagging
+public import Section4.RVCoproduct
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Disjoint RV labels tag mixed domains without adding VF coordinates.
 The actual maps fix VF tuples and preserve finiteness of RV fibres. -/

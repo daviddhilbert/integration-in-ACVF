@@ -1,6 +1,12 @@
-import Integration7.VolumeGammaWeightMaps
-import Integration7.FiniteImageVolumeExceptions
-import Integration7.FiniteVolumeCertificateCriterion
+module
+
+public import Integration7.VolumeGammaWeightMaps
+public import Integration7.FiniteImageVolumeExceptions
+public import Integration7.FiniteVolumeCertificateCriterion
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Finite volume certificates whose exception lives on coordinate-and-
 density labels. Their existence follows by imaging the original exception;

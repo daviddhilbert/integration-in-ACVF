@@ -1,5 +1,11 @@
-import IntegrationSection5.GammaChainAlgebra
-import Section5.Assembly
+module
+
+public import IntegrationSection5.GammaChainAlgebra
+public import Section5.Assembly
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Finite original-base membership predicates can be prepared simultaneously
 by actual special chains. Membership uses only the existing RV zero and one. -/

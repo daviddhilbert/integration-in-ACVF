@@ -1,4 +1,10 @@
-import IntegrationSection3ACVF.RadialRVImages
+module
+
+public import IntegrationSection3ACVF.RadialRVImages
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The entire translated RV image of a radial VF domain is the full
 Gamma pullback, with every proper code representative. Concrete closed,

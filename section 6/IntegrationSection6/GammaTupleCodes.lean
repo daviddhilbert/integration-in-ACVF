@@ -1,5 +1,11 @@
-import IntegrationSection6.GammaTupleSpecialization
-import Section5.GammaGraphs
+module
+
+public import IntegrationSection6.GammaTupleSpecialization
+public import Section5.GammaGraphs
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Public tuple-code bridges for original-Gamma families. The elementary
 injectivity argument follows the checked private bridge in the pinned

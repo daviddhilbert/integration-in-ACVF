@@ -1,5 +1,11 @@
-import Integration7.RVParameterFibres
-import Integration7.RVVolumeObjects
+module
+
+public import Integration7.RVParameterFibres
+public import Integration7.RVVolumeObjects
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A finite joint volume map gives a finite tail-volume map on each
 fixed parameter fibre whenever its head volume is fixed on that fibre. -/

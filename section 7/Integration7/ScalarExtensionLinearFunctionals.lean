@@ -1,4 +1,10 @@
-import Integration7.SemimoduleScalarExtensionMaps
+module
+
+public import Integration7.SemimoduleScalarExtensionMaps
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Linear functionals extend through the actual balanced scalar
 extension, naturally with respect to genuine semimodule maps. -/

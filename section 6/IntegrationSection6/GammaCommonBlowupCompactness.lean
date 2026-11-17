@@ -1,6 +1,12 @@
-import IntegrationSection6.GammaCommonBlowupPromotion
-import IntegrationSection6.GammaCommonBlowupRealization
-import IntegrationSection6.GammaWitnessUniformity
+module
+
+public import IntegrationSection6.GammaCommonBlowupPromotion
+public import IntegrationSection6.GammaCommonBlowupRealization
+public import IntegrationSection6.GammaWitnessUniformity
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Genuine finite-witness compactness for actual common blowups. The
 witness loci are built from the checked object, admissibility and weighted

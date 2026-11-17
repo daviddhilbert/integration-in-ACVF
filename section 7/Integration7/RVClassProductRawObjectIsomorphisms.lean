@@ -1,7 +1,13 @@
-import Integration7.RVClassProductContractionValues
-import Integration7.FixedRVVolumeCoordinates
-import Section4.RVIsoTools
-import IntegrationSection5.StandardContractionNormalization
+module
+
+public import Integration7.RVClassProductContractionValues
+public import Integration7.FixedRVVolumeCoordinates
+public import Section4.RVIsoTools
+public import IntegrationSection5.StandardContractionNormalization
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The RV object of the actual product standard contraction is
 isomorphic to the prepared unary object with the fixed class adjoined.

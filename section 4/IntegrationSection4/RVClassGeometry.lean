@@ -1,5 +1,11 @@
-import IntegrationSection4.TranslatedRVGeometry
-import IntegrationSection3.FiniteClosedHull
+module
+
+public import IntegrationSection4.TranslatedRVGeometry
+public import IntegrationSection3.FiniteClosedHull
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

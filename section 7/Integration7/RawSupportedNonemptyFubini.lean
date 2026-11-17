@@ -1,4 +1,10 @@
-import Integration7.RawSupportedGradedCoordinateIntegrals
+module
+
+public import Integration7.RawSupportedGradedCoordinateIntegrals
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Supported raw Fubini for every nonempty coordinate subset. The full
 set retains its original order, so the identity case introduces neither

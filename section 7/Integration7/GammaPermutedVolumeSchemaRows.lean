@@ -1,5 +1,11 @@
-import Integration7.GammaPermutedVolumeObjects
-import Integration7.GammaGeometricCommonWitnesses
+module
+
+public import Integration7.GammaPermutedVolumeObjects
+public import Integration7.GammaGeometricCommonWitnesses
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Geometric common schema witnesses transport through a simultaneous
 permutation of their full volume tuples, with unchanged density rows. -/

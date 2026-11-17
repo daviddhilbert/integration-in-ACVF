@@ -1,5 +1,11 @@
-import IntegrationSection3ACVF.FullGammaRadius
-import IntegrationSection3.InfiniteCosets
+module
+
+public import IntegrationSection3ACVF.FullGammaRadius
+public import IntegrationSection3.InfiniteCosets
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Genuine ball geometry for the infinite-class input to Lemma 3.9. -/
 

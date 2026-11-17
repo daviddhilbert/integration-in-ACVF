@@ -1,5 +1,11 @@
-import Integration7.UnarySpecialHeadPreparations
-import Integration7.AppendedHeadIntegralPrograms
+module
+
+public import Integration7.UnarySpecialHeadPreparations
+public import Integration7.AppendedHeadIntegralPrograms
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A genuine unary special preparation supplies an identity-order
 standard contraction with exactly its head coordinates and old density. -/

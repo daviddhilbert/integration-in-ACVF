@@ -1,5 +1,11 @@
-import Section4.RVRestrictions
-import Section4.MapParameters
+module
+
+public import Section4.RVRestrictions
+public import Section4.MapParameters
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The literal locus where two definable maps disagree. -/
 noncomputable section

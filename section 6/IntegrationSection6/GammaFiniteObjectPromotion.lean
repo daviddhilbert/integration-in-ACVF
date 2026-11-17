@@ -1,5 +1,11 @@
-import IntegrationSection6.GammaFiniteObjectSchemata
-import IntegrationSection6.GammaNativeFiniteBounds
+module
+
+public import IntegrationSection6.GammaFiniteObjectSchemata
+public import IntegrationSection6.GammaNativeFiniteBounds
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Promote an actual RV[k] object over a named sorted parameter to a finite
 object schema over the original Gamma base, with a definable validity

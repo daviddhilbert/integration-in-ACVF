@@ -1,4 +1,10 @@
-import IntegrationSection3ACVF.RVSlopeOrbits
+module
+
+public import IntegrationSection3ACVF.RVSlopeOrbits
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The RV slope is constant on each actual Gamma value fibre. Integer
 orbits make every nonempty coefficient fibre infinite; the checked

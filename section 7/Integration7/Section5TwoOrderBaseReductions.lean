@@ -1,5 +1,11 @@
-import IntegrationSection6.CompletedSection5TwoOrderInput
-import IntegrationSection6.GammaClosureIsomorphisms
+module
+
+public import IntegrationSection6.CompletedSection5TwoOrderInput
+public import IntegrationSection6.GammaClosureIsomorphisms
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual Section5 two-order refinement descends through definable
 parameter naming. The internal contractions and their finite RV objects

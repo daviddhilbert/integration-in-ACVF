@@ -1,4 +1,10 @@
-import IntegrationSection5.CoordinateCanonical
+module
+
+public import IntegrationSection5.CoordinateCanonical
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual unary canonical special witnesses on the fibres. -/
 noncomputable section

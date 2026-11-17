@@ -1,5 +1,11 @@
-import Integration7.HKBasicGeneration
-import Integration7.HKBlowupUniversalProperty
+module
+
+public import Integration7.HKBasicGeneration
+public import Integration7.HKBlowupUniversalProperty
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The single basic relation suffices to descend from actual graded
 isomorphism classes to common-blowup classes, including weighted degree

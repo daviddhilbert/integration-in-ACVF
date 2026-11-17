@@ -1,6 +1,12 @@
-import Integration7.HKGlobalJacobianLinearMaps
-import Integration7.HKGradedPrefixIntegralLinearMaps
-import Integration7.HKGradedVolumeCoordinateFubini
+module
+
+public import Integration7.HKGlobalJacobianLinearMaps
+public import Integration7.HKGradedPrefixIntegralLinearMaps
+public import Integration7.HKGradedVolumeCoordinateFubini
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Raw arbitrary-coordinate integration is linear over every corrected
 coefficient degree. Its underlying map is the actual signed geometric

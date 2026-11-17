@@ -1,5 +1,11 @@
-import IntegrationSection6.OriginalFocusObjects
-import IntegrationSection6.AdmissibleFocusRelabeling
+module
+
+public import IntegrationSection6.OriginalFocusObjects
+public import IntegrationSection6.AdmissibleFocusRelabeling
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The original-model focus yields an actual elementary blowup over its
 released RV presentation. Admissibility is supplied by Definition6.1;

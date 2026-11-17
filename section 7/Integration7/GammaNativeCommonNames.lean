@@ -1,5 +1,11 @@
-import Section5.GammaInvariantLogic
-import Section3.GammaFullDescent
+module
+
+public import Section5.GammaInvariantLogic
+public import Section3.GammaFullDescent
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Realize native Gamma sets and complete graphs over the fixed common
 real names of their original base. This exposes the fixed-name version of

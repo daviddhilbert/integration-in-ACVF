@@ -1,4 +1,10 @@
-import Mathlib.Order.Interval.Set.OrdConnected
+module
+
+public import Mathlib.Order.Interval.Set.OrdConnected
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Pull an open order cell back through a strictly monotone piece of
 an actual injection. No continuity or unproved interval invariant. -/

@@ -1,5 +1,11 @@
-import IntegrationSection5.RVBranchProductHeadSaturation
-import IntegrationSection5.GammaRVPredicateChain
+module
+
+public import IntegrationSection5.RVBranchProductHeadSaturation
+public import IntegrationSection5.GammaRVPredicateChain
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 open Classical FirstOrder FirstOrder.Language

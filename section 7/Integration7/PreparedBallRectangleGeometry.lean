@@ -1,9 +1,15 @@
-import Integration7.PreparedUnaryBallFibres
-import IntegrationSection4.InverseOneCells
-import IntegrationSection4.BalancedFibres
-import IntegrationSection3ACVF.OpenBallRVGeometry
-import Section3.RVOperations
-import Integration7.RVLabelRectangularFibres
+module
+
+public import Integration7.PreparedUnaryBallFibres
+public import IntegrationSection4.InverseOneCells
+public import IntegrationSection4.BalancedFibres
+public import IntegrationSection3ACVF.OpenBallRVGeometry
+public import Section3.RVOperations
+public import Integration7.RVLabelRectangularFibres
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Different inverse-special balls give rectangle pieces of a balanced
 relation. These statements concern the actual inverse fibres, including

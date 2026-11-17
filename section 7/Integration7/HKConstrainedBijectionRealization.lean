@@ -1,4 +1,10 @@
-import Integration7.HKConstrainedBijectionCharts
+module
+
+public import Integration7.HKConstrainedBijectionCharts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Realizing constrained row charts gives an actual definable bijection
 over the base, preserving every parameter and the supplied graph relation. -/

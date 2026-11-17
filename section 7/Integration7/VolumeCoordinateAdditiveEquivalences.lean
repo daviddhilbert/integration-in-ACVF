@@ -1,5 +1,11 @@
-import Integration7.VolumeClassCoordinatePermutations
-import Integration7.VolumeClassDegreeReindexing
+module
+
+public import Integration7.VolumeClassCoordinatePermutations
+public import Integration7.VolumeClassDegreeReindexing
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The explicit volume-coordinate and arithmetic degree
 identifications preserve actual coproduct addition. -/

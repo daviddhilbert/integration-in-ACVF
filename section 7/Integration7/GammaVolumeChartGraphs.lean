@@ -1,5 +1,11 @@
-import Integration7.GammaDefinableTransforms
-import Integration7.TupleVolumeChartGraphs
+module
+
+public import Integration7.GammaDefinableTransforms
+public import Integration7.TupleVolumeChartGraphs
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Uniform certified Jacobian graphs over the original real/Gamma base.
 No representative is added to that base in the conclusion. -/

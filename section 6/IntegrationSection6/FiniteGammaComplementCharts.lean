@@ -1,6 +1,12 @@
-import IntegrationSection6.FiniteGammaPresentationCharts
-import IntegrationSection6.FiniteGammaRestrictions
-import IntegrationSection6.ComplementCoordinates
+module
+
+public import IntegrationSection6.FiniteGammaPresentationCharts
+public import IntegrationSection6.FiniteGammaRestrictions
+public import IntegrationSection6.ComplementCoordinates
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Original-Gamma charts for the unchanged complementary lift piece. -/
 noncomputable section

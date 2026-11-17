@@ -1,8 +1,14 @@
-import Integration7.HKZeroPositiveCoefficientLiftBijections
-import Integration7.HKAEZeroPositiveCoefficientProducts
-import Integration7.HKAEZeroIntegrals
-import Integration7.PositiveVolumeIntegrationProducts
-import Integration7.AppendedVolumeFunctionIntegrals
+module
+
+public import Integration7.HKZeroPositiveCoefficientLiftBijections
+public import Integration7.HKAEZeroPositiveCoefficientProducts
+public import Integration7.HKAEZeroIntegrals
+public import Integration7.PositiveVolumeIntegrationProducts
+public import Integration7.AppendedVolumeFunctionIntegrals
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Coefficient-first integration of a positive coefficient times an
 ordinary-valued family is the actual graded product of their integrals. -/

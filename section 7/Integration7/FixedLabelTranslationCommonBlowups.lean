@@ -1,7 +1,13 @@
-import Integration7.FixedLabelContractionVolumeObjects
-import Integration7.FixedLabelTranslationContractionComparisons
-import Integration7.GammaRelativeTranslations
-import Integration7.OriginalBaseRelativeVolumeComparisons
+module
+
+public import Integration7.FixedLabelContractionVolumeObjects
+public import Integration7.FixedLabelTranslationContractionComparisons
+public import Integration7.GammaRelativeTranslations
+public import Integration7.OriginalBaseRelativeVolumeComparisons
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Corollary7.6 compares arbitrary specified contractions before and
 following an actual translation, with every old label and the literal

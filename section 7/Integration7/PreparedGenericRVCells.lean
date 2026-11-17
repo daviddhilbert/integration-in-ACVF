@@ -1,5 +1,11 @@
-import Integration7.GenericRVPolydiscs
-import IntegrationSection6.GammaPreparedIndexPresentation
+module
+
+public import Integration7.GenericRVPolydiscs
+public import IntegrationSection6.GammaPreparedIndexPresentation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A prepared cell with nonzero VF tags contains an inverse image
 generic over the preparation's real base, and hence over any smaller

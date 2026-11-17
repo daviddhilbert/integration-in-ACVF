@@ -1,5 +1,11 @@
-import IntegrationSection6.GammaPreparedIndexPresentation
-import IntegrationSection6.GammaPresentationTotalVolume
+module
+
+public import IntegrationSection6.GammaPreparedIndexPresentation
+public import IntegrationSection6.GammaPresentationTotalVolume
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Exact prepared-index volumes and recovery of the saturated VF base
 from its full RV key set. -/

@@ -1,4 +1,10 @@
-import Integration7.CoordinateSelectedCoefficientFamilies
+module
+
+public import Integration7.CoordinateSelectedCoefficientFamilies
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Literal-label coefficient families represent the same genuine row
 products as the general selected multiplication construction. -/

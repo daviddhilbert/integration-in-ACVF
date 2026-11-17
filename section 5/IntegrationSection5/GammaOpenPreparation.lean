@@ -1,6 +1,12 @@
-import IntegrationSection5.GammaMembershipPreparation
-import IntegrationSection5.UnaryCoordinateGeometry
-import IntegrationSection5.TaggedTail
+module
+
+public import IntegrationSection5.GammaMembershipPreparation
+public import IntegrationSection5.UnaryCoordinateGeometry
+public import IntegrationSection5.TaggedTail
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Preparing a coordinate-open partition while keeping a given bijection
 contractible and the source chain ready for the finite matching construction. -/

@@ -1,7 +1,13 @@
-import Integration7.UniformCellHeadFibres
-import Integration7.TranslatedRVHeadSaturation
-import Integration7.GammaRelativeTranslations
-import Integration7.NativeRelativeTranslationVolumes
+module
+
+public import Integration7.UniformCellHeadFibres
+public import Integration7.TranslatedRVHeadSaturation
+public import Integration7.GammaRelativeTranslations
+public import Integration7.NativeRelativeTranslationVolumes
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual uniform vertical translations of the whole cell refinement.
 They have original-Gamma graphs, are bijections onto head-saturated

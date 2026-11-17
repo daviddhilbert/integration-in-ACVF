@@ -1,7 +1,13 @@
-import Integration7.ElementaryVolumeProducts
-import Integration7.VolumeProductDistributivity
-import Integration7.RVVolumeProducts
-import Integration7.VolumeBlowupEquivalence
+module
+
+public import Integration7.ElementaryVolumeProducts
+public import Integration7.VolumeProductDistributivity
+public import Integration7.RVVolumeProducts
+public import Integration7.VolumeBlowupEquivalence
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Left multiplication preserves genuine positive common blowups.
 The distinguished coordinate remains last throughout each actual chain. -/

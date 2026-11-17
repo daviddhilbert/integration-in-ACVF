@@ -1,5 +1,11 @@
-import IntegrationSection5.RVRecodeInjection
-import IntegrationSection5.GammaScalarUpdate
+module
+
+public import IntegrationSection5.RVRecodeInjection
+public import IntegrationSection5.GammaScalarUpdate
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Transport a scalar function through an actual RV recoding, retaining its full original-base graph. -/
 noncomputable section

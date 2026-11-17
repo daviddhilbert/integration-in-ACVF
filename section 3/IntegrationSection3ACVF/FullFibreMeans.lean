@@ -1,5 +1,11 @@
-import IntegrationSection3ACVF.FullFibreEnumerations
-import Section3.FiniteFibreMeans
+module
+
+public import IntegrationSection3ACVF.FullFibreEnumerations
+public import Section3.FiniteFibreMeans
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Definability of actual finite-fibre means over a full interpreted base.
 The enumeration and mean equation are first-order formulas; no centre or

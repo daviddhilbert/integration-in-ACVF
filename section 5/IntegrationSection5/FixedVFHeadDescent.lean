@@ -1,6 +1,12 @@
-import IntegrationSection5.GammaOrderedContraction
-import IntegrationSection5.RelativeLabelPreservation
-import IntegrationSection5.GammaUnaryChain
+module
+
+public import IntegrationSection5.GammaOrderedContraction
+public import IntegrationSection5.RelativeLabelPreservation
+public import IntegrationSection5.GammaUnaryChain
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option allowUnsafeReducibility true in

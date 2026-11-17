@@ -1,5 +1,11 @@
-import Mathlib.RingTheory.Valuation.Extension
-import Mathlib.RingTheory.LocalRing.ResidueField.Basic
+module
+
+public import Mathlib.RingTheory.Valuation.Extension
+public import Mathlib.RingTheory.LocalRing.ResidueField.Basic
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Residue characteristic zero passes to an embedded valued subfield
 through the actual injective residue homomorphism. -/

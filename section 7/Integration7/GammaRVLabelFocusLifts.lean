@@ -1,6 +1,12 @@
-import Integration7.RVLabelFocusLifts
-import IntegrationSection6.MixedCoordinatePointMaps
-import IntegrationSection5.GammaGraphOperations
+module
+
+public import Integration7.RVLabelFocusLifts
+public import IntegrationSection6.MixedCoordinatePointMaps
+public import IntegrationSection5.GammaGraphOperations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The carried-label focus construction keeps complete graphs over
 the original Gamma base; extra real presentation names are not promoted. -/

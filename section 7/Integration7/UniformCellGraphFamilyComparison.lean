@@ -1,7 +1,13 @@
-import Integration7.UniformCellShapePartitionArrays
-import Integration7.StandardTernaryRestrictionVolumePartitions
-import Integration7.UniformBalancedPartComparisons
-import Integration7.UniformRectangularPartComparisons
+module
+
+public import Integration7.UniformCellShapePartitionArrays
+public import Integration7.StandardTernaryRestrictionVolumePartitions
+public import Integration7.UniformBalancedPartComparisons
+public import Integration7.UniformRectangularPartComparisons
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! All three actual cell-family cases assemble for arbitrary specified
 VF-two contraction orders. The normalized volume objects partition by

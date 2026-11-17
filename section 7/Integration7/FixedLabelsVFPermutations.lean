@@ -1,5 +1,11 @@
-import Integration7.NativeFixedRVLabels
-import IntegrationSection6.StandardProgramPresentations
+module
+
+public import Integration7.NativeFixedRVLabels
+public import IntegrationSection6.StandardProgramPresentations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Adjoining fixed RV labels commutes with actual VF coordinate
 permutations, retaining the exact native definable domains. -/

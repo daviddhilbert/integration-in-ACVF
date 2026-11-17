@@ -1,7 +1,13 @@
-import Integration7.HKNativeZeroCoefficientFieldIntegrals
-import Integration7.HKZeroRVNativeDensityPresentations
-import Integration7.FieldBaseAppendedIntegralIndependence
-import Integration7.ConstantCoefficientIntegralPresentations
+module
+
+public import Integration7.HKNativeZeroCoefficientFieldIntegrals
+public import Integration7.HKZeroRVNativeDensityPresentations
+public import Integration7.FieldBaseAppendedIntegralIndependence
+public import Integration7.ConstantCoefficientIntegralPresentations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The chosen field-base integral commutes with every actual weighted
 zero coefficient, not only coordinate-density representatives. Exact

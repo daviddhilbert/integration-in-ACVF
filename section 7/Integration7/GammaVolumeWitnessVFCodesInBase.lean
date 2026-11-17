@@ -1,6 +1,12 @@
-import Integration7.GammaVolumeWitnessVFCodes
-import Integration7.GammaVolumeFormulaBaseChange
-import IntegrationSection6.GammaWitnessVFCodesInBase
+module
+
+public import Integration7.GammaVolumeWitnessVFCodes
+public import Integration7.GammaVolumeFormulaBaseChange
+public import IntegrationSection6.GammaWitnessVFCodesInBase
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Code unchanged volume-witness rows using an internal coefficient
 field. The predicates still refer to the original witness and base. -/

@@ -1,4 +1,10 @@
-import IntegrationSection5.UnaryInverseGeometry
+module
+
+public import IntegrationSection5.UnaryInverseGeometry
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual open-to-open geometry restricted to two fixed RV cells.
 The conditions are geometric statements about all subsets, not a

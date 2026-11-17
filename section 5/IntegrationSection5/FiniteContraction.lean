@@ -1,5 +1,11 @@
-import IntegrationSection5.FiniteMixedRVFibres
-import IntegrationSection5.NaturalContractionGamma
+module
+
+public import IntegrationSection5.FiniteMixedRVFibres
+public import IntegrationSection5.NaturalContractionGamma
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 noncomputable section
 set_option autoImplicit false

@@ -1,4 +1,10 @@
-import IntegrationSection6.GammaSortedSchemaRows
+module
+
+public import IntegrationSection6.GammaSortedSchemaRows
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual typed volume values and finite fibres in every valid row of a
 finite RV schema. The total extension outside valid domain rows is used

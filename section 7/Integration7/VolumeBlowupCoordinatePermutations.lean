@@ -1,6 +1,12 @@
-import Integration7.VolumeBlowupRescaling
-import Integration7.VolumeCoordinatePermutation
-import Integration7.PermutationSignParameters
+module
+
+public import Integration7.VolumeBlowupRescaling
+public import Integration7.VolumeCoordinatePermutation
+public import Integration7.PermutationSignParameters
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Applying the same permutation of volume coordinates to both
 objects preserves common blowups with unchanged density. The two signed

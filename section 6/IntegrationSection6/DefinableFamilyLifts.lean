@@ -1,8 +1,14 @@
-import IntegrationSection6.GammaFormulaVFFamilies
-import IntegrationSection6.GammaSchemaFiniteRows
-import IntegrationSection6.GammaGlobalRestriction
-import IntegrationSection6.MixedCoordinatePointMaps
-import IntegrationSection6.GammaVFAllFinitePresentation
+module
+
+public import IntegrationSection6.GammaFormulaVFFamilies
+public import IntegrationSection6.GammaSchemaFiniteRows
+public import IntegrationSection6.GammaGlobalRestriction
+public import IntegrationSection6.MixedCoordinatePointMaps
+public import IntegrationSection6.GammaVFAllFinitePresentation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The literal total lift of a finite RV[k] family over a VF base.
 The parameter coordinates are kept, and the new VF block lifts the row's

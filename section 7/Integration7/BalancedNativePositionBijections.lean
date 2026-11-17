@@ -1,5 +1,11 @@
-import Integration7.NativeVFProjectionDomains
-import Integration7.BalancedCellTranslationEquivalences
+module
+
+public import Integration7.NativeVFProjectionDomains
+public import Integration7.BalancedCellTranslationEquivalences
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The positioning function of a balanced cell is an actual definable
 bijection between its two native unary projection domains. Its complete

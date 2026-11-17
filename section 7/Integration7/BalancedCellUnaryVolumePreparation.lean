@@ -1,5 +1,11 @@
-import Integration7.BalancedNativePositionBijections
-import Integration7.BalancedUnaryVolumePreparation
+module
+
+public import Integration7.BalancedNativePositionBijections
+public import Integration7.BalancedUnaryVolumePreparation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A balanced native two-cell supplies its actual unary positioning
 bijection, both compatible special preparations, and the original-Gamma

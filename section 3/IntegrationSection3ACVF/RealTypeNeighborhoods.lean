@@ -1,7 +1,13 @@
-import IntegrationSection3ACVF.TypeNeighborhoodCompactness
-import IntegrationSection3ACVF.OpenImageConfigurations
-import IntegrationSection3ACVF.CompleteTypeOpenImages
-import Section3.NormalizationSaturation
+module
+
+public import IntegrationSection3ACVF.TypeNeighborhoodCompactness
+public import IntegrationSection3ACVF.OpenImageConfigurations
+public import IntegrationSection3ACVF.CompleteTypeOpenImages
+public import Section3.NormalizationSaturation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The first compactness step of3.19 over an actual small real base.
 The neighborhood is defined over that same base. This does not assert

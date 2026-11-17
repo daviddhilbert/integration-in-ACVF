@@ -1,5 +1,11 @@
-import IntegrationSection6.PullbackPartitions
-import IntegrationSection6.FiniteGammaObjects
+module
+
+public import IntegrationSection6.PullbackPartitions
+public import IntegrationSection6.FiniteGammaObjects
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual RV data of a mixed subset inherit finite volume fibres from
 the RV data of its ambient set. Both RV arities are unchanged. -/

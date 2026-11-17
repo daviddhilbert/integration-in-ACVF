@@ -1,4 +1,10 @@
-import IntegrationSection5.UnaryOpenImages
+module
+
+public import IntegrationSection5.UnaryOpenImages
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! On any fixed final RV label tuple, the inverse of an actual unary
 special bijection is a translation with fixed original RV labels. -/

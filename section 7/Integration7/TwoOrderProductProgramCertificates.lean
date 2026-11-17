@@ -1,4 +1,10 @@
-import Integration7.TwoOrderProductPreparations
+module
+
+public import Integration7.TwoOrderProductPreparations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The constructed opposite-order standard programs retain full
 original-Gamma certificates for every actual preparation stage. -/

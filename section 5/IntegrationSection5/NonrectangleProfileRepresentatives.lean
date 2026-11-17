@@ -1,5 +1,11 @@
-import IntegrationSection5.NonrectangleProfiles
-import IntegrationSection5.GammaFiniteCoordinates
+module
+
+public import IntegrationSection5.NonrectangleProfiles
+public import IntegrationSection5.GammaFiniteCoordinates
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 open Classical FirstOrder FirstOrder.Language

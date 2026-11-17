@@ -1,10 +1,16 @@
+module
+
 /-
 Extracted from https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%205/Completed18NativeContractionComparison.lean
 Original declaration namespaces and notices are retained.
 -/
-import IntegrationSection5.FiniteNormalization
-import IntegrationSection6.FiniteGammaAmbientIsos
-import IntegrationSection6.FiniteStandardContractions
+public import IntegrationSection5.FiniteNormalization
+public import IntegrationSection6.FiniteGammaAmbientIsos
+public import IntegrationSection6.FiniteStandardContractions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The completed Section 5 actual RV-category isomorphism gives exactly
 the normalized finite RV isomorphism consumed by Section 6. -/

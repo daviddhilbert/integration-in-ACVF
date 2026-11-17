@@ -1,4 +1,10 @@
-import Integration7.GammaVolumeIndexedPresentations
+module
+
+public import Integration7.GammaVolumeIndexedPresentations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! An indexed volume presentation with row density equal to an old
 label retains exactly that label after its RV index prefix is appended. -/

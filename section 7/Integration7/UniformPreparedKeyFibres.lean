@@ -1,4 +1,10 @@
-import Integration7.UniformPreparedBallRows
+module
+
+public import Integration7.UniformPreparedBallRows
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Exact fibres of the two prepared-key labels on the original graph.
 Each fibre is the original row restricted to its two inverse-special

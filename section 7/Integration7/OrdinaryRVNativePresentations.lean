@@ -1,6 +1,12 @@
-import Integration7.NativeOrdinaryRVVolumeFactors
-import Integration7.AllDegreeVolumeClasses
-import Section4.RVIsoTools
+module
+
+public import Integration7.NativeOrdinaryRVVolumeFactors
+public import Integration7.AllDegreeVolumeClasses
+public import Section4.RVIsoTools
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The literal native presentation of an ordinary RV[0] coefficient
 has the same actual finite object and the same ordinary class. -/

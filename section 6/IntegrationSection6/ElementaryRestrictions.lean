@@ -1,5 +1,11 @@
-import IntegrationSection6.ElementaryIsomorphism
-import IntegrationSection6.Subobjects
+module
+
+public import IntegrationSection6.ElementaryIsomorphism
+public import IntegrationSection6.Subobjects
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Elementary blowups commute with definable partition into subobjects. -/
 

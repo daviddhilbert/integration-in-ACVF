@@ -1,8 +1,14 @@
-import IntegrationSection3ACVF.GammaPairFormula
-import IntegrationSection3ACVF.BallCentreElimination
-import IntegrationSection3ACVF.PolynomialSeparation
-import IntegrationSection3ACVF.PolynomialEscape
-import IntegrationSection3ACVF.PrimitiveImages
+module
+
+public import IntegrationSection3ACVF.GammaPairFormula
+public import IntegrationSection3ACVF.BallCentreElimination
+public import IntegrationSection3ACVF.PolynomialSeparation
+public import IntegrationSection3ACVF.PolynomialEscape
+public import IntegrationSection3ACVF.PrimitiveImages
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Closed-image obstruction from one named source ball. The original
 base contains Gamma names only; a chosen field centre never enters it. -/

@@ -1,5 +1,11 @@
-import Integration7.VolumeFamilyHeadIntegrals
-import IntegrationSection6.StandardProgramPresentations
+module
+
+public import Integration7.VolumeFamilyHeadIntegrals
+public import IntegrationSection6.StandardProgramPresentations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A specified head preparation followed by a specified identity-order
 tail contraction gives a genuine identity-order contraction of the whole

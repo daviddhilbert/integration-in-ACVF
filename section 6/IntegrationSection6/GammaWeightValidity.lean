@@ -1,5 +1,11 @@
-import IntegrationSection6.RawWeightDefinability
-import IntegrationSection6.GammaFamilyValidity
+module
+
+public import IntegrationSection6.RawWeightDefinability
+public import IntegrationSection6.GammaFamilyValidity
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! First-order weight validity of a chart and its two volume graphs.
 The parameter block is fixed and all four RV blocks are quantified with

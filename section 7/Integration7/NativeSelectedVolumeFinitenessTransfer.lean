@@ -1,4 +1,10 @@
-import Integration7.NativeCoordinateDensityVolumeObjects
+module
+
+public import Integration7.NativeCoordinateDensityVolumeObjects
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Finite selected-volume fibres pass through an actual surjective
 pure RV map preserving the chosen tuple. -/

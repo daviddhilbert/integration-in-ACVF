@@ -1,4 +1,10 @@
-import Integration7.VolumeForms
+module
+
+public import Integration7.VolumeForms
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 noncomputable section
 

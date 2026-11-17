@@ -1,4 +1,10 @@
-import IntegrationSection5.GammaChainAlgebra
+module
+
+public import IntegrationSection5.GammaChainAlgebra
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The matched finite-chain construction with full original Gamma graphs. -/
 

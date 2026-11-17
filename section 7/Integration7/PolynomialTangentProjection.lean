@@ -1,5 +1,11 @@
-import Integration7.RVJacobianRestriction
-import Mathlib.Algebra.MvPolynomial.Variables
+module
+
+public import Integration7.RVJacobianRestriction
+public import Mathlib.Algebra.MvPolynomial.Variables
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Tangent vectors project along coordinate injections. -/
 noncomputable section

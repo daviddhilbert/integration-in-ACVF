@@ -1,5 +1,11 @@
-import IntegrationSection6.FiniteGammaBasicFactors
-import IntegrationSection6.GammaAdmissibility
+module
+
+public import IntegrationSection6.FiniteGammaBasicFactors
+public import IntegrationSection6.GammaAdmissibility
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The global RV unit is algebraic over every original Gamma base.
 The singleton degree-one factor is therefore genuinely admissible. -/

@@ -1,6 +1,12 @@
-import Integration7.NormalizedSupportedHeadIntegrals
-import Integration7.NormalizedVolumeHeadFubini
-import Integration7.NormalizedSupportedVolumeIntegrals
+module
+
+public import Integration7.NormalizedSupportedHeadIntegrals
+public import Integration7.NormalizedVolumeHeadFubini
+public import Integration7.NormalizedSupportedVolumeIntegrals
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Head integration carries every supported normalized function to
 its actual projected support and preserves the supported total integral. -/

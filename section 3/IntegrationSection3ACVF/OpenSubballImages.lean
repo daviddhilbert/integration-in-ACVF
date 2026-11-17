@@ -1,5 +1,11 @@
-import IntegrationSection3ACVF.OpenImages
-import IntegrationSection3ACVF.FullGammaRadius
+module
+
+public import IntegrationSection3ACVF.OpenImages
+public import IntegrationSection3ACVF.FullGammaRadius
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Open images of arbitrary-radius subballs of a definable atomic set.
 The ambient-set definability is essential for this use of3.3; this theorem

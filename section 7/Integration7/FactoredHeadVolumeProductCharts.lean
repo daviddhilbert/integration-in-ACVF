@@ -1,5 +1,11 @@
-import Integration7.NativeRVProductVolumeCharts
-import Integration7.FactoredHeadRetainedLabels
+module
+
+public import Integration7.NativeRVProductVolumeCharts
+public import Integration7.FactoredHeadRetainedLabels
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Functional RV graph labels are compatible with the actual full
 volume product chart of a unary head. The coefficient and fibre densities

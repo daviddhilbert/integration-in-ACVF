@@ -1,5 +1,11 @@
-import Integration7.SupportedVolumeFunctionAddition
-import Integration7.SelectedJacobianRowAddition
+module
+
+public import Integration7.SupportedVolumeFunctionAddition
+public import Integration7.SelectedJacobianRowAddition
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual Jacobian transform is additive on supported positive
 homogeneous AE functions, including its empty-family value. -/

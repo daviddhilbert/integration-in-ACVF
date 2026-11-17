@@ -1,5 +1,11 @@
-import IntegrationSection3ACVF.RVMatchCodeRelations
-import IntegrationSection3ACVF.RVValueMatching
+module
+
+public import IntegrationSection3ACVF.RVMatchCodeRelations
+public import IntegrationSection3ACVF.RVValueMatching
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Uniform code rows agree exactly with actual dominant value rows and
 with the already proved semantic Gamma matching. Every proper label code

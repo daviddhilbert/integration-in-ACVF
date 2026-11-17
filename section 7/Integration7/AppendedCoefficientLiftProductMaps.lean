@@ -1,5 +1,11 @@
-import Integration7.AppendedPositiveCoefficientLiftCarriers
-import Section4.RVProductSymmetry
+module
+
+public import Integration7.AppendedPositiveCoefficientLiftCarriers
+public import Section4.RVProductSymmetry
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The Cartesian coefficient-lift product maps bijectively to the
 family-product realization by swapping only its two RV label blocks.

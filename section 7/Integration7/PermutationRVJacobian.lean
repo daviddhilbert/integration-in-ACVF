@@ -1,4 +1,10 @@
-import Integration7.CoordinateRVJacobian
+module
+
+public import Integration7.CoordinateRVJacobian
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual RV determinant of a coordinate permutation, including
 its sign. The result concerns defined Jacobians; generic existence is

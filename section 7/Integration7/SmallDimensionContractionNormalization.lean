@@ -1,9 +1,15 @@
-import Integration7.CanonicalContractionNormalizationObjects
-import Integration7.LowerDimensionRVVolumeIsomorphisms
-import Integration7.ConstantCoordinateVolumeIsomorphisms
-import Integration7.GammaVolumeFullChartRestriction
-import Integration7.GammaRVMapGraphOperations
-import IntegrationSection6.GammaRawStandardContractions
+module
+
+public import Integration7.CanonicalContractionNormalizationObjects
+public import Integration7.LowerDimensionRVVolumeIsomorphisms
+public import Integration7.ConstantCoordinateVolumeIsomorphisms
+public import Integration7.GammaVolumeFullChartRestriction
+public import Integration7.GammaRVMapGraphOperations
+public import IntegrationSection6.GammaRawStandardContractions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual contraction normalization preserves volume on an RV domain
 of smaller dimension, in the same real presentation. Its complete

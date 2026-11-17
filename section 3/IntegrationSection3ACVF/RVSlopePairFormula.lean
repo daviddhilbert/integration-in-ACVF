@@ -1,5 +1,11 @@
-import IntegrationSection3ACVF.GammaSlopeDomain
-import IntegrationSection3ACVF.GammaSlopeOutput
+module
+
+public import IntegrationSection3ACVF.GammaSlopeDomain
+public import IntegrationSection3ACVF.GammaSlopeOutput
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual pair formulas for an RV coefficient and for a different
 coefficient. All output differences are the original VF differences. -/

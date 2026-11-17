@@ -1,7 +1,13 @@
-import Integration7.OrdinaryUnitSelectedVolumeFamilies
-import Integration7.OrdinaryVolumeFamilyScalarProducts
-import Integration7.VFVolumeBijections
-import Section4.UnionMapLaws
+module
+
+public import Integration7.OrdinaryUnitSelectedVolumeFamilies
+public import Integration7.OrdinaryVolumeFamilyScalarProducts
+public import Integration7.VFVolumeBijections
+public import Section4.UnionMapLaws
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Removing an ordinary family's unit-density graph remains an
 actual VF-volume bijection after multiplication by any finite RV[0]

@@ -1,7 +1,13 @@
-import Integration7.CompletedSection6Kernel
-import Integration7.ClosedSection6ContextRVClasses
-import IntegrationSection6.RVClassRepresentatives
-import IntegrationSection6.ContextRVClasses
+module
+
+public import Integration7.CompletedSection6Kernel
+public import Integration7.ClosedSection6ContextRVClasses
+public import IntegrationSection6.RVClassRepresentatives
+public import IntegrationSection6.ContextRVClasses
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Closed generated-base Section6 integration. The former universal
 Section5 input is replaced by the canonical-model certificate; its kernel

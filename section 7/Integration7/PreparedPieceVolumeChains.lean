@@ -1,6 +1,12 @@
-import Integration7.NativeVolumeUnaryPartitions
-import Integration7.NativePreparedPartitionExistence
-import Integration7.SpecialPullbackVolumeObjects
+module
+
+public import Integration7.NativeVolumeUnaryPartitions
+public import Integration7.NativePreparedPartitionExistence
+public import Integration7.SpecialPullbackVolumeObjects
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Conjugate each actual Section 5.6 volume factor chain by the
 genuine special preparations of its source and target pieces. -/

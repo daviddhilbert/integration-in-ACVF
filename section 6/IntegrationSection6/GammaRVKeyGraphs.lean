@@ -1,6 +1,12 @@
-import IntegrationSection6.FiniteGammaObjects
-import IntegrationSection6.GammaRVGlobalRestriction
-import Section5.GammaLiftRelation
+module
+
+public import IntegrationSection6.FiniteGammaObjects
+public import IntegrationSection6.GammaRVGlobalRestriction
+public import Section5.GammaLiftRelation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Combining a Gamma volume graph with globally definable label coordinates
 retains the full graph of the packed RV key. -/

@@ -1,4 +1,10 @@
-import IntegrationSection3ACVF.ParameterizedOpenToOpen
+module
+
+public import IntegrationSection3ACVF.ParameterizedOpenToOpen
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A finite tuple of formulas is a partition template. Its validity is
 an original-base definable condition on the free context labels. Empty

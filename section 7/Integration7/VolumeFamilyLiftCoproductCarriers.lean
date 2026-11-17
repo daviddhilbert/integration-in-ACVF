@@ -1,6 +1,12 @@
-import Integration7.DefinableVolumeFamilyLiftCarriers
-import Integration7.DefinableVolumeFamilyCoproducts
-import Integration7.FixedVFVolumeCoproducts
+module
+
+public import Integration7.DefinableVolumeFamilyLiftCarriers
+public import Integration7.DefinableVolumeFamilyCoproducts
+public import Integration7.FixedVFVolumeCoproducts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Full family realization commutes with tagged coproducts on the
 literal carrier: the VF tail realizes the same volume tuple on each

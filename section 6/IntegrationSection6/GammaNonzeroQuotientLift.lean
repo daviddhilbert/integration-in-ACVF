@@ -1,5 +1,11 @@
-import IntegrationSection6.GammaThroughLiftCompatibility
-import IntegrationSection6.FiniteNonzeroIntegration
+module
+
+public import IntegrationSection6.GammaThroughLiftCompatibility
+public import IntegrationSection6.FiniteNonzeroIntegration
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual semiring lifting descends through finite-stage Isp generators. -/
 noncomputable section

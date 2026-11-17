@@ -1,7 +1,13 @@
-import Integration7.CanonicalFiniteRVObjects
-import Integration7.RVNonzero
-import Integration7.CoordinateDensityVolumeObjects
-import IntegrationSection6.OriginalFocusObjects
+module
+
+public import Integration7.CanonicalFiniteRVObjects
+public import Integration7.RVNonzero
+public import Integration7.CoordinateDensityVolumeObjects
+public import IntegrationSection6.OriginalFocusObjects
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The canonical key object of an actual RV pullback carries any
 retained nonzero density label, with its original value unchanged. -/

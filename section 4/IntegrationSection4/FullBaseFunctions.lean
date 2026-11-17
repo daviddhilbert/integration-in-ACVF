@@ -1,4 +1,10 @@
-import IntegrationSection3ACVF.FullBaseLogic
+module
+
+public import IntegrationSection3ACVF.FullBaseLogic
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Graph composition for functions definable over the full interpreted
 parameter base. All intermediate values are quantified, not named. -/

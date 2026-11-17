@@ -1,5 +1,11 @@
-import Integration7.NormalizedVolumeDomainJacobians
-import Integration7.NormalizedPositiveFunctionGeneration
+module
+
+public import Integration7.NormalizedVolumeDomainJacobians
+public import Integration7.NormalizedPositiveFunctionGeneration
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Ordinary RV[0] families retain their geometric support under
 actual point padding, so the full normalized domain formula includes

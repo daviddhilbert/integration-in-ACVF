@@ -1,5 +1,11 @@
-import Integration7.MatchingPreparedLabelFibres
-import Integration7.RectanglePreparedNonzeroFibres
+module
+
+public import Integration7.MatchingPreparedLabelFibres
+public import Integration7.RectanglePreparedNonzeroFibres
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual matching prepared keys and translated offsets are
 nonzero. This follows from the proved open inverse cells and the two

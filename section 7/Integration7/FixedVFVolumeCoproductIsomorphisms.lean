@@ -1,6 +1,12 @@
-import Integration7.FixedVFVolumeCoproductRestrictions
-import Integration7.FixedVFTagCofullDomains
-import Integration7.VFVolumeIsomorphisms
+module
+
+public import Integration7.FixedVFVolumeCoproductRestrictions
+public import Integration7.FixedVFTagCofullDomains
+public import Integration7.VFVolumeIsomorphisms
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Almost-everywhere volume isomorphisms are compatible with disjoint
 unions in their original VF degree. -/

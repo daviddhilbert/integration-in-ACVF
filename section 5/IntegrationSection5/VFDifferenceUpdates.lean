@@ -1,5 +1,11 @@
-import IntegrationSection5.UnaryFactorizations
-import Section5.TransformGeometry
+module
+
+public import IntegrationSection5.UnaryFactorizations
+public import Section5.TransformGeometry
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual definable one-coordinate subtraction updates and their inverses. -/
 noncomputable section

@@ -1,7 +1,13 @@
-import IntegrationSection3ACVF.RVDifferencePairs
-import IntegrationSection3ACVF.RVInverse
-import IntegrationSection3ACVF.RVFibreSubballs
-import IntegrationSection4.RadiusPreparationGeometry
+module
+
+public import IntegrationSection3ACVF.RVDifferencePairs
+public import IntegrationSection3ACVF.RVInverse
+public import IntegrationSection3ACVF.RVFibreSubballs
+public import IntegrationSection4.RadiusPreparationGeometry
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

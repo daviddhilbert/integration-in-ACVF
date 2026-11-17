@@ -1,9 +1,15 @@
-import Integration7.HKZeroVolumeIntegration
-import Integration7.OrdinaryFiniteProductIsomorphisms
-import Integration7.ZeroVFVolumeClassProducts
-import Integration7.VolumeFormProducts
-import Integration7.HKVolumeDataRelabeling
-import Integration7.MixedDomainProductJacobians
+module
+
+public import Integration7.HKZeroVolumeIntegration
+public import Integration7.OrdinaryFiniteProductIsomorphisms
+public import Integration7.ZeroVFVolumeClassProducts
+public import Integration7.VolumeFormProducts
+public import Integration7.HKVolumeDataRelabeling
+public import Integration7.MixedDomainProductJacobians
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Concrete Cartesian product of arbitrary weighted zero VF objects.
 Both full mixed presentations and both RV forms are retained. -/

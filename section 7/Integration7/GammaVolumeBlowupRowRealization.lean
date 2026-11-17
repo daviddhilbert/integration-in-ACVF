@@ -1,7 +1,13 @@
-import Integration7.GammaVolumeCertificateRowRealization
-import Integration7.VolumeBlowupSchemaRealization
-import Integration7.VolumeChainSchemaRealization
-import Integration7.GammaCanonicalElementaryGraphs
+module
+
+public import Integration7.GammaVolumeCertificateRowRealization
+public import Integration7.VolumeBlowupSchemaRealization
+public import Integration7.VolumeChainSchemaRealization
+public import Integration7.GammaCanonicalElementaryGraphs
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A valid blowup formula realizes on arbitrary Gamma endpoint rows
 with its center algebraic over the original named Gamma base. -/

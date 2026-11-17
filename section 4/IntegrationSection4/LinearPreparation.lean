@@ -1,6 +1,12 @@
-import IntegrationSection4.PreparedLinearity
-import IntegrationSection3ACVF.FullOpenToOpenPartition
-import IntegrationSection3ACVF.AdjoinGamma
+module
+
+public import IntegrationSection4.PreparedLinearity
+public import IntegrationSection3ACVF.FullOpenToOpenPartition
+public import IntegrationSection3ACVF.AdjoinGamma
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Lemma 4.2. Prepare the full radius/slope relation and the finite
 open-to-open partition simultaneously over the original Gamma base.

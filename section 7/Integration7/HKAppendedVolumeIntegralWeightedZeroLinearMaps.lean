@@ -1,6 +1,12 @@
-import Integration7.HKVolumeCoordinateWeightedZeroLinearEquivalences
-import Integration7.AppendedVolumeIntegralAddHom
-import Integration7.HKAERVWeightedZeroLinearIntegrals
+module
+
+public import Integration7.HKVolumeCoordinateWeightedZeroLinearEquivalences
+public import Integration7.AppendedVolumeIntegralAddHom
+public import Integration7.HKAERVWeightedZeroLinearIntegrals
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The coefficient-first AE integral is linear over ordinary RV[0]
 coefficients, using the explicit ordinary-linear coordinate normalization. -/

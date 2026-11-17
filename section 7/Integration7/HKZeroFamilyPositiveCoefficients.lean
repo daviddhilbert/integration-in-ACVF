@@ -1,7 +1,13 @@
-import Integration7.HKZeroVolumeFamilies
-import Integration7.OrdinaryFamilyPositiveCoefficientRows
-import Integration7.HKZeroCoefficientScalarRows
-import Integration7.DefinableVolumeFamilySelectionRows
+module
+
+public import Integration7.HKZeroVolumeFamilies
+public import Integration7.OrdinaryFamilyPositiveCoefficientRows
+public import Integration7.HKZeroCoefficientScalarRows
+public import Integration7.DefinableVolumeFamilySelectionRows
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A positive coefficient multiplies a weighted-zero-valued family on
 the literal finite-factor product. Both input forms survive. -/

@@ -1,5 +1,11 @@
-import IntegrationSection5.GammaFocusSection
-import Section5.GammaLift
+module
+
+public import IntegrationSection5.GammaFocusSection
+public import Section5.GammaLift
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual scalar replacement maps with full original-Gamma graphs. -/
 noncomputable section

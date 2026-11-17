@@ -1,5 +1,11 @@
-import Integration7.DefinableVolumeClassRescaling
-import Integration7.VolumeFunctionIntegralCoordinateNormalization
+module
+
+public import Integration7.DefinableVolumeClassRescaling
+public import Integration7.VolumeFunctionIntegralCoordinateNormalization
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Raw density rescaling commutes with the genuine coordinate and
 degree identifications between appended and canonical integral values. -/

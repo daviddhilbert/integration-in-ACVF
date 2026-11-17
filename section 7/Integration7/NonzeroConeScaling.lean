@@ -1,5 +1,11 @@
-import Integration7.ElementaryBlowupConstruction
-import Integration7.ScalarRVMaps
+module
+
+public import Integration7.ElementaryBlowupConstruction
+public import Integration7.ScalarRVMaps
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The nonzero part of the actual blowup cone. -/
 

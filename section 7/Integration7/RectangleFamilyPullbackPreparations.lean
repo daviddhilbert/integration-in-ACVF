@@ -1,5 +1,11 @@
-import Integration7.RectangleFamilySaturationPreservation
-import Integration7.GammaRectangleFamilyHeadPreparations
+module
+
+public import Integration7.RectangleFamilySaturationPreservation
+public import Integration7.GammaRectangleFamilyHeadPreparations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Two actual labelled unary preparations turn an entire rectangle
 family into an RV pullback. Saturation from the first coordinate is

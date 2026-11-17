@@ -1,6 +1,12 @@
-import IntegrationSection5.StandardContraction
-import IntegrationSection6.ProgramEqualityTransport
-import IntegrationSection6.GammaPermutedFibrePresentations
+module
+
+public import IntegrationSection5.StandardContraction
+public import IntegrationSection6.ProgramEqualityTransport
+public import IntegrationSection6.GammaPermutedFibrePresentations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! An actual ordered program on an equal permutation presentation gives
 an actual standard contraction, with unchanged selected volume. -/

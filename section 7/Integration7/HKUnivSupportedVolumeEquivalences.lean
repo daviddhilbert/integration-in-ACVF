@@ -1,6 +1,12 @@
-import Integration7.HKSupportedGradedVolumeFunctions
-import Integration7.SupportedUnivVolumeEquivalences
-import Integration7.GradedComponentMapInjectivity
+module
+
+public import Integration7.HKSupportedGradedVolumeFunctions
+public import Integration7.SupportedUnivVolumeEquivalences
+public import Integration7.GradedComponentMapInjectivity
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Supporting functions on the whole VF space changes no AE classes,
 including weighted degree zero. -/

@@ -1,4 +1,10 @@
-import IntegrationSection6.GammaNativeRawObjects
+module
+
+public import IntegrationSection6.GammaNativeRawObjects
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Flatten complete pure-RV Gamma relations without naming any additional
 original-base parameters. -/

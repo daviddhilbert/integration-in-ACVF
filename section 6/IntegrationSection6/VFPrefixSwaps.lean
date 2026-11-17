@@ -1,5 +1,11 @@
-import IntegrationSection6.VFPrefixFibrePresentations
-import IntegrationSection6.GammaPermutedFibrePresentations
+module
+
+public import IntegrationSection6.VFPrefixFibrePresentations
+public import IntegrationSection6.GammaPermutedFibrePresentations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Swapping the first two VF coordinates commutes with freezing every
 remaining coordinate. These are literal coordinate and parameter identities. -/

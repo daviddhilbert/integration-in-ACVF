@@ -1,5 +1,11 @@
-import IntegrationSection3ACVF.FiniteFamilySyntax
-import Section4.RVCoordinates
+module
+
+public import IntegrationSection3ACVF.FiniteFamilySyntax
+public import Section4.RVCoordinates
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The full graph induced on finite residue-coordinate families is the
 actual existential image of the original VF graph, and is RV-definable. -/

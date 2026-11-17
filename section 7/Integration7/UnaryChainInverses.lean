@@ -1,4 +1,10 @@
-import IntegrationSection5.UnaryFactorizations
+module
+
+public import IntegrationSection5.UnaryFactorizations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual inverse unary chains, retaining the original real parameter base. -/
 noncomputable section

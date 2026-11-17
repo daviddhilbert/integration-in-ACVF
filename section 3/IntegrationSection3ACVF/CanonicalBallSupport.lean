@@ -1,5 +1,11 @@
-import IntegrationSection3ACVF.GammaCosetGeometry
-import IntegrationSection3.MinimalBallSupport
+module
+
+public import IntegrationSection3ACVF.GammaCosetGeometry
+public import IntegrationSection3.MinimalBallSupport
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Canonical finite supports in the actual ACVF ball family.
 Reuses the pinned ACVF-QE proof of Johnson's Lemma 2.3.7 rather than

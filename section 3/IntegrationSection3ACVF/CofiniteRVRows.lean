@@ -1,6 +1,12 @@
-import IntegrationSection3ACVF.FullRVValueFibres
-import IntegrationSection3ACVF.RVFunctionValueCuts
-import IntegrationSection3.CofiniteFunctionFibres
+module
+
+public import IntegrationSection3ACVF.FullRVValueFibres
+public import IntegrationSection3ACVF.RVFunctionValueCuts
+public import IntegrationSection3.CofiniteFunctionFibres
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A definable map on one entire actual RV value fibre has one dominant
 output value. Injectivity makes the corresponding image cofinite in that

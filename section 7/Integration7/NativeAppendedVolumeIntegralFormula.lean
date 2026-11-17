@@ -1,5 +1,11 @@
-import Integration7.NativeVolumeFamilyIntegralFormula
-import Integration7.SelectedIntegralCoordinateEquivalence
+module
+
+public import Integration7.NativeVolumeFamilyIntegralFormula
+public import Integration7.SelectedIntegralCoordinateEquivalence
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Compute the coefficient-first integral of a literal density family
 using a specified identity-order native contraction, without adding a

@@ -1,5 +1,11 @@
-import Integration7.FiniteVolumeCoefficientFamilies
-import Integration7.IndependentRVProductDensityGraphs
+module
+
+public import Integration7.FiniteVolumeCoefficientFamilies
+public import Integration7.IndependentRVProductDensityGraphs
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Finite-label coefficient products admit actual constrained special
 preparations with the original labels retained, without a dummy selected

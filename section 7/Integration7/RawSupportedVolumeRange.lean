@@ -1,6 +1,12 @@
-import Integration7.RawHomogeneousSupportAlgebra
-import Integration7.GradedSemiringActionLifts
-import Integration7.GradedComponentMapInjectivity
+module
+
+public import Integration7.RawHomogeneousSupportAlgebra
+public import Integration7.GradedSemiringActionLifts
+public import Integration7.GradedComponentMapInjectivity
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The supported raw span is exactly the componentwise support space.
 Actual supported components form a faithful graded module, giving both

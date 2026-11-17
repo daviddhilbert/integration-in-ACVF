@@ -1,6 +1,12 @@
-import Integration7.TwoCellContractionReduction
-import Integration7.GeneratedBaseStandardContractions
-import Integration7.VolumeContextJoins
+module
+
+public import Integration7.TwoCellContractionReduction
+public import Integration7.GeneratedBaseStandardContractions
+public import Integration7.VolumeContextJoins
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Two specified contractions in arbitrary orders reduce simultaneously
 to actual contractions of the same cell family. Both comparison chains

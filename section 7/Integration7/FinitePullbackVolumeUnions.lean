@@ -1,9 +1,15 @@
-import Integration7.NativeFiniteMixedUnions
-import Integration7.PullbackCoordinateGammaObjects
-import Integration7.GammaVolumePullbackPartitions
-import Integration7.CommonContextVolumePartitions
-import Integration7.GammaTermContextVolumeGeometry
-import IntegrationSection6.FinitePullbackSubsets
+module
+
+public import Integration7.NativeFiniteMixedUnions
+public import Integration7.PullbackCoordinateGammaObjects
+public import Integration7.GammaVolumePullbackPartitions
+public import Integration7.CommonContextVolumePartitions
+public import Integration7.GammaTermContextVolumeGeometry
+public import IntegrationSection6.FinitePullbackSubsets
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual volume objects of finite pullback unions and their binary
 partition isomorphisms, all over the original real context. -/

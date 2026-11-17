@@ -1,6 +1,12 @@
-import IntegrationSection6.RootFocus
-import IntegrationSection6.GlobalRootSelection
-import Section5.GammaInvariantLogic
+module
+
+public import IntegrationSection6.RootFocus
+public import IntegrationSection6.GlobalRootSelection
+public import Section5.GammaInvariantLogic
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The constructed focus retains its original Gamma graph certificate.
 Use the real-base selector on its whole validity domain, then restrict its

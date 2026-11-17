@@ -1,5 +1,11 @@
-import Integration7.HeadFibreRawVolumePresentation
-import Integration7.FiniteVolumeParameterContexts
+module
+
+public import Integration7.HeadFibreRawVolumePresentation
+public import Integration7.FiniteVolumeParameterContexts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A head fibre has a genuine small containing context naming exactly
 the frozen VF tuple in addition to the previous containing context. -/

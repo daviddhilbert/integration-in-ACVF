@@ -1,5 +1,11 @@
-import IntegrationSection6.GammaRVGraphRaw
-import IntegrationSection6.GammaNativeFiniteBounds
+module
+
+public import IntegrationSection6.GammaRVGraphRaw
+public import IntegrationSection6.GammaNativeFiniteBounds
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Raw full-graph laws for actual Gamma RV isomorphisms. Reverse fibres
 have cardinality at most one, and the two actual volume graphs satisfy

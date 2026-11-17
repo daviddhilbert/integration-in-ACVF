@@ -1,5 +1,11 @@
-import Integration7.ZeroAuxVolumeBlowupPromotion
-import Integration7.GammaVolumeChainSchemata
+module
+
+public import Integration7.ZeroAuxVolumeBlowupPromotion
+public import Integration7.GammaVolumeChainSchemata
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual finite chains and common forward blowups over the named
 term context promote with every exception parameter block empty. This

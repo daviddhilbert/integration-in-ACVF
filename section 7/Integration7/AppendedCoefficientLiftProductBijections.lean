@@ -1,5 +1,11 @@
-import Integration7.AppendedCoefficientLiftProductMaps
-import Integration7.MixedProductCoordinateFormulas
+module
+
+public import Integration7.AppendedCoefficientLiftProductMaps
+public import Integration7.MixedProductCoordinateFormulas
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The coefficient-first product chart fixes the VF coordinates and
 preserves the product of the original coefficient and family densities.

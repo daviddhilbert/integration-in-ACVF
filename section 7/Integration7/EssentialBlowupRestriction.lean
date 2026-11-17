@@ -1,6 +1,12 @@
-import Integration7.EssentialVolumeRestriction
-import Integration7.ElementaryBlowupRestriction
-import Integration7.EssentialBlowupChart
+module
+
+public import Integration7.EssentialVolumeRestriction
+public import Integration7.ElementaryBlowupRestriction
+public import Integration7.EssentialBlowupChart
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 set_option backward.isDefEq.respectTransparency false
 noncomputable section

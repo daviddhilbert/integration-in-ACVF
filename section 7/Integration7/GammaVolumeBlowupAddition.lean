@@ -1,7 +1,13 @@
-import Integration7.GammaVolumeParameterGeometry
-import Integration7.GammaVolumeCoproductAssociativity
-import Integration7.GammaVolumeCoproductCharts
-import Integration7.VolumeBlowupAddition
+module
+
+public import Integration7.GammaVolumeParameterGeometry
+public import Integration7.GammaVolumeCoproductAssociativity
+public import Integration7.GammaVolumeCoproductCharts
+public import Integration7.VolumeBlowupAddition
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Original-Gamma common blowups are compatible with actual volume
 coproducts. The added summand belongs to the complement of every center. -/

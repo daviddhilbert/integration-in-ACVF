@@ -1,5 +1,11 @@
-import IntegrationSection5.UniformRelativeTrace
-import Section5.GammaRestriction
+module
+
+public import IntegrationSection5.UniformRelativeTrace
+public import Section5.GammaRestriction
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 noncomputable section
 set_option autoImplicit false

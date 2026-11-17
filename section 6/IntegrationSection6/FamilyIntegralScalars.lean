@@ -1,6 +1,12 @@
-import IntegrationSection6.FamilyConstantProductLifts
-import IntegrationSection6.GammaVFAllBilinearProduct
-import IntegrationSection6.RVClassBaseChange
+module
+
+public import IntegrationSection6.FamilyConstantProductLifts
+public import IntegrationSection6.GammaVFAllBilinearProduct
+public import IntegrationSection6.RVClassBaseChange
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Integration of a family multiplied by a constant RV class is the
 product of their actual integration classes. Empty families integrate to zero. -/

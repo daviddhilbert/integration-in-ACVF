@@ -1,5 +1,11 @@
-import IntegrationSection4.VerticalMeanStep
-import Section5.Assembly
+module
+
+public import IntegrationSection4.VerticalMeanStep
+public import Section5.Assembly
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

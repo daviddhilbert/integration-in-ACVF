@@ -1,4 +1,10 @@
-import IntegrationSection6.LiftRVImage
+module
+
+public import IntegrationSection6.LiftRVImage
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Recovering old labels from the full key uses the literal tail projection. -/
 noncomputable section

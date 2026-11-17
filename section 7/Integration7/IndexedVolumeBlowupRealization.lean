@@ -1,8 +1,14 @@
-import Integration7.IndexedVolumeChartTransfer
-import Integration7.IndexedVolumeCoproductRealization
-import Integration7.IndexedVolumeElementaryRealization
-import Integration7.IndexedVolumeEqualRowPresentations
-import Integration7.VolumeExtensionCoherence
+module
+
+public import Integration7.IndexedVolumeChartTransfer
+public import Integration7.IndexedVolumeCoproductRealization
+public import Integration7.IndexedVolumeElementaryRealization
+public import Integration7.IndexedVolumeEqualRowPresentations
+public import Integration7.VolumeExtensionCoherence
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A uniformly valid volume-blowup witness assembles to a genuine
 forward volume blowup over an arbitrary finite-volume RV index base. -/

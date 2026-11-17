@@ -1,5 +1,11 @@
-import Integration7.RawVolumeGradedDecomposition
-import Integration7.BlowupVolumeGradedDecomposition
+module
+
+public import Integration7.RawVolumeGradedDecomposition
+public import Integration7.BlowupVolumeGradedDecomposition
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual groupified blowup projection respects the complete
 additive grading. Kernel membership is exactly componentwise kernel

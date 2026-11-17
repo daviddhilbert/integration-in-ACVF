@@ -1,4 +1,10 @@
-import IntegrationSection3ACVF.BallEnlargementGeometry
+module
+
+public import IntegrationSection3ACVF.BallEnlargementGeometry
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Exact value intervals of actual concentric punctured balls. The
 closed parent gives a closed interval, the ordinary open parent a half-open

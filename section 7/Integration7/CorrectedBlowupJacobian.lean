@@ -1,4 +1,10 @@
-import Integration7.CorrectedBlowupCorrespondence
+module
+
+public import Integration7.CorrectedBlowupCorrespondence
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Identification of a defined corrected Jacobian with the density ratio.
 Generic existence and the dimension of the head exception are handled

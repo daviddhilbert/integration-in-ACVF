@@ -1,5 +1,11 @@
-import Integration7.GammaVolumeWitnessValidity
-import IntegrationSection6.GammaWitnessVFCodes
+module
+
+public import Integration7.GammaVolumeWitnessValidity
+public import IntegrationSection6.GammaWitnessVFCodes
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A finite RV code determines the complete primitive formulas of a
 volume witness, including its density and exceptional-set rows. -/

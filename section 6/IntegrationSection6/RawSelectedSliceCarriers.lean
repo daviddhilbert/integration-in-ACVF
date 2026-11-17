@@ -1,7 +1,13 @@
-import IntegrationSection6.RawSelectedContractions
-import IntegrationSection6.GammaSwappedVolumes
-import IntegrationSection6.GammaVolumeSliceEmbeddings
-import IntegrationSection6.RawContractionDomain
+module
+
+public import IntegrationSection6.RawSelectedContractions
+public import IntegrationSection6.GammaSwappedVolumes
+public import IntegrationSection6.GammaVolumeSliceEmbeddings
+public import IntegrationSection6.RawContractionDomain
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A slice of the raw selected contraction has precisely the final
 contraction labels with the selected original labels fixed. -/

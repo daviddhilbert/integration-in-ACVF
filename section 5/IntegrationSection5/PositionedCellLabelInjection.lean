@@ -1,6 +1,12 @@
-import IntegrationSection5.RVKeyedFunctions
-import IntegrationSection5.CellLabelInjection
-import IntegrationSection5.MixedUnaryPreparations
+module
+
+public import IntegrationSection5.RVKeyedFunctions
+public import IntegrationSection5.CellLabelInjection
+public import IntegrationSection5.MixedUnaryPreparations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! One global original-Gamma positioning function for the constructed RV-labelled cell family. Its restrictions agree with all selected cell positions. -/
 noncomputable section

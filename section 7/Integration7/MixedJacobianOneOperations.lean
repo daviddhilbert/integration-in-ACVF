@@ -1,4 +1,10 @@
-import Integration7.MixedJacobianVFComparison
+module
+
+public import Integration7.MixedJacobianVFComparison
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Jacobian-one maps are closed under injective composition and
 bijective inverse on actual raw mixed domains. -/

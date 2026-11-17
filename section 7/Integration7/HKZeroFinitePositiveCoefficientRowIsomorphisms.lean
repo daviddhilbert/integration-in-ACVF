@@ -1,5 +1,11 @@
-import Integration7.HKZeroFinitePositiveCoefficientRowMaps
-import Integration7.HKAEZeroPositiveCoefficientProducts
+module
+
+public import Integration7.HKZeroFinitePositiveCoefficientRowMaps
+public import Integration7.HKAEZeroPositiveCoefficientProducts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Deleting the functional density graph preserves all coefficient coordinates and both density factors. The resulting full volume isomorphism compares the finite-label presentation with the actual AE product. -/
 noncomputable section

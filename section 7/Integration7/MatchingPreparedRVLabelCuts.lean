@@ -1,5 +1,11 @@
-import Integration7.PreparedPairFamilies
-import Integration7.GammaRVLabelCuts
+module
+
+public import Integration7.PreparedPairFamilies
+public import Integration7.GammaRVLabelCuts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Matching and different prepared families are complementary cuts
 by the actual RV labels of one whole pair-key refinement. -/

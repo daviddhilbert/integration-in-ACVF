@@ -1,5 +1,11 @@
-import IntegrationSection5.GammaFocusSection
-import IntegrationSection5.PulledFocusDefinability
+module
+
+public import IntegrationSection5.GammaFocusSection
+public import IntegrationSection5.PulledFocusDefinability
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Full original-Gamma-base certificates for the constructed source focus. -/
 

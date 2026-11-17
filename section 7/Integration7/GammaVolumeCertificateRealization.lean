@@ -1,5 +1,11 @@
-import Integration7.ExtraVolumeCertificateSemantics
-import Integration7.GammaVolumeIsoSchemaRealization
+module
+
+public import Integration7.ExtraVolumeCertificateSemantics
+public import Integration7.GammaVolumeIsoSchemaRealization
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Realize an existential exception certificate after choosing its
 auxiliary tuple internally. The essential bijection is reconstructed from

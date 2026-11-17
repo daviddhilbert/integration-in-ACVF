@@ -1,4 +1,10 @@
-import IntegrationSection3ACVF.FullBaseDefinability
+module
+
+public import IntegrationSection3ACVF.FullBaseDefinability
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-!
 # Gamma predicates over the combined interpreted base

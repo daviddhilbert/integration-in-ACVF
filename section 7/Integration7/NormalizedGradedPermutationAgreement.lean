@@ -1,6 +1,12 @@
-import Integration7.GradedVolumeCoordinatePushforwards
-import Integration7.NormalizedOrdinaryHeadAgreement
-import Integration7.NormalizedVolumeCoordinateOperators
+module
+
+public import Integration7.GradedVolumeCoordinatePushforwards
+public import Integration7.NormalizedOrdinaryHeadAgreement
+public import Integration7.NormalizedVolumeCoordinateOperators
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Normalization of the actual full raw coordinate operators agrees
 with the independently constructed normalized linear operators. -/

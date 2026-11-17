@@ -1,6 +1,12 @@
-import IntegrationSection5.Preparation
-import IntegrationSection5.GammaPreparation
-import IntegrationSection5.GammaMapPresentation
-import IntegrationSection5.QuotientBijection
-import IntegrationSection5.RelativelyUnary
-import IntegrationSection5.GeometryLibrary
+module
+
+public import IntegrationSection5.Preparation
+public import IntegrationSection5.GammaPreparation
+public import IntegrationSection5.GammaMapPresentation
+public import IntegrationSection5.QuotientBijection
+public import IntegrationSection5.RelativelyUnary
+public import IntegrationSection5.GeometryLibrary
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section

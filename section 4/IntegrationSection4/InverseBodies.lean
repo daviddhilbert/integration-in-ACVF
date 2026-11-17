@@ -1,6 +1,12 @@
-import IntegrationSection4.TranslationOffsets
-import IntegrationSection3ACVF.GammaCosetGeometry
-import Section5.RootConstruction
+module
+
+public import IntegrationSection4.TranslationOffsets
+public import IntegrationSection3ACVF.GammaCosetGeometry
+public import Section5.RootConstruction
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual VF images of unary inverse RV-polydiscs, with the zero fibre
 separated from ordinary open balls. -/

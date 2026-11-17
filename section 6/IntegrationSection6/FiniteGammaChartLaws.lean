@@ -1,4 +1,10 @@
-import IntegrationSection6.FiniteGammaWeightedIsos
+module
+
+public import IntegrationSection6.FiniteGammaWeightedIsos
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Isomorphism laws retain both real presentation maps and original-Gamma graphs. -/
 noncomputable section

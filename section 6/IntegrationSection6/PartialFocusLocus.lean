@@ -1,7 +1,13 @@
-import IntegrationSection6.LiftLoci
-import Section5.ZeroNormalization
-import IntegrationSection6.OriginalAdmissibleFocus
-import Section3.NormalizationSaturation
+module
+
+public import IntegrationSection6.LiftLoci
+public import Section5.ZeroNormalization
+public import IntegrationSection6.OriginalAdmissibleFocus
+public import Section3.NormalizationSaturation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The genuine RV-pullback active locus of a partial focus, with the
 zero locus removed without changing the transformation. Its label image

@@ -1,5 +1,11 @@
-import IntegrationSection6.CommonHeadOrderComparison
-import IntegrationSection6.ContractionOrderBridge
+module
+
+public import IntegrationSection6.CommonHeadOrderComparison
+public import IntegrationSection6.ContractionOrderBridge
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Arbitrary contraction-order independence in RV[k], including selected
 old RV volume labels. The only unfinished input is Section5.8. No Section6

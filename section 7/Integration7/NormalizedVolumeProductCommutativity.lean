@@ -1,5 +1,11 @@
-import Integration7.NormalizedVolumeCoordinateInvariance
-import Integration7.ZeroCoefficientProductSymmetry
+module
+
+public import Integration7.NormalizedVolumeCoordinateInvariance
+public import Integration7.ZeroCoefficientProductSymmetry
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! All homogeneous raw RV volume classes commute after normalization.
 Positive products are compared by their exact unsigned swap chart;

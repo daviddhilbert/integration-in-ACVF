@@ -1,5 +1,11 @@
-import Integration7.NativeRelativeTranslations
-import IntegrationSection4.BalancedFibres
+module
+
+public import Integration7.NativeRelativeTranslations
+public import IntegrationSection4.BalancedFibres
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Translating complete vertical RV fibres by their actual centres
 makes the image head-saturated, uniformly in all VF and RV parameters. -/

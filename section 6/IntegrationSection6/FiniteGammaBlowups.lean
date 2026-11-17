@@ -1,8 +1,14 @@
-import IntegrationSection6.FiniteGammaWeightedIsos
-import IntegrationSection6.FiniteGammaElementaryAt
-import IntegrationSection6.FiniteGammaLiftGluing
-import IntegrationSection6.BlowupPresentations
-import Section7.GammaLiftEquivalence
+module
+
+public import IntegrationSection6.FiniteGammaWeightedIsos
+public import IntegrationSection6.FiniteGammaElementaryAt
+public import IntegrationSection6.FiniteGammaLiftGluing
+public import IntegrationSection6.BlowupPresentations
+public import Section7.GammaLiftEquivalence
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Gamma-certified blowups in RV[k], retaining actual split charts.
 The real presentation supports the maps, while every chart graph remains

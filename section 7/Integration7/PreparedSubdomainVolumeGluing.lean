@@ -1,6 +1,12 @@
-import Integration7.PreparedSubdomainVolumeChains
-import Integration7.PreparedVolumePartitionGluing
-import Integration7.SmallPullbackVolumeObjects
+module
+
+public import Integration7.PreparedSubdomainVolumeChains
+public import Integration7.PreparedVolumePartitionGluing
+public import Integration7.SmallPullbackVolumeObjects
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Glue the prepared factors on a cofull subdomain. The two discarded
 complements need no bijection: both have empty essential volume objects. -/

@@ -1,6 +1,12 @@
-import Integration7.VolumeDensityRescaling
-import Integration7.VolumeBlowupEquivalence
-import Section4.RVReindexing
+module
+
+public import Integration7.VolumeDensityRescaling
+public import Integration7.VolumeBlowupEquivalence
+public import Section4.RVReindexing
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 set_option backward.isDefEq.respectTransparency false
 open FirstOrder FirstOrder.Language CategoryTheory
 open SpecialTransformations.Milestone0 SpecialTransformations.Milestone0.LRV

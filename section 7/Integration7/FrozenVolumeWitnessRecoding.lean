@@ -1,5 +1,11 @@
-import Integration7.FrozenVolumeCertificateRecoding
-import Integration7.GammaVolumeWitnessValidity
+module
+
+public import Integration7.FrozenVolumeCertificateRecoding
+public import Integration7.GammaVolumeWitnessValidity
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! General common-witness recoding. Old parameter tuples remain inside
 existential exception certificates; full geometric rows and exact chain

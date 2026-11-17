@@ -1,7 +1,13 @@
-import Section3.RVGammaAlgebraicity
-import Section3.AlgebraicFinite
-import Section3.GammaSpecialization
-import Section3.SmallFiniteParameters
+module
+
+public import Section3.RVGammaAlgebraicity
+public import Section3.AlgebraicFinite
+public import Section3.GammaSpecialization
+public import Section3.SmallFiniteParameters
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Finiteness over the original real/Gamma base. There is no smallness
 assumption on a possibly large internal real presentation code set. -/

@@ -1,6 +1,12 @@
-import Integration7.HeadFibreContractionSources
-import Integration7.OrderedAppendVolumeIndices
-import Integration7.HeadCoordinateFibreVolumeSelectors
+module
+
+public import Integration7.HeadFibreContractionSources
+public import Integration7.OrderedAppendVolumeIndices
+public import Integration7.HeadCoordinateFibreVolumeSelectors
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The inherited actual fibre contraction has exactly the head
 integral's label domain, selected tuple and retained density coordinate. -/

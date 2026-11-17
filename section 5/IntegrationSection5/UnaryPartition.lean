@@ -1,5 +1,11 @@
-import IntegrationSection5.UnaryPartitionInduction
-import IntegrationSection5.UnaryPartitionRealization
+module
+
+public import IntegrationSection5.UnaryPartitionInduction
+public import IntegrationSection5.UnaryPartitionRealization
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Lemma5.6: the finite definable partition and actual relatively unary
 factorizations, retaining original-Gamma graphs and a common real presentation. -/

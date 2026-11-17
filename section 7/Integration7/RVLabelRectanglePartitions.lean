@@ -1,4 +1,10 @@
-import Integration7.GammaMixedCoordinatePredicates
+module
+
+public import Integration7.GammaMixedCoordinatePredicates
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Rectangular versus nonrectangular VF fibres form an actual
 original-Gamma partition determined only by the retained RV labels.

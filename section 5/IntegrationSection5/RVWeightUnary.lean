@@ -1,5 +1,11 @@
-import IntegrationSection5.UnaryCellZeros
-import Section4.RVCategories
+module
+
+public import IntegrationSection5.UnaryCellZeros
+public import Section4.RVCategories
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 /-! The actual unary RV weight, with normalization of the single absorbing RV element made explicit. -/
 
 noncomputable section

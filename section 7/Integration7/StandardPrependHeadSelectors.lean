@@ -1,4 +1,10 @@
-import Integration7.HeadTailVolumeSelectors
+module
+
+public import Integration7.HeadTailVolumeSelectors
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Literal selectors when a prescribed ordered tail follows the chosen head. -/
 noncomputable section

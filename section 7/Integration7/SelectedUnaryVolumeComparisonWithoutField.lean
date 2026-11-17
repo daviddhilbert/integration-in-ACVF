@@ -1,5 +1,11 @@
-import Integration7.UnaryFibrewiseVolumeComparisonWithoutField
-import Integration7.SelectedFamilyVolumePreparation
+module
+
+public import Integration7.UnaryFibrewiseVolumeComparisonWithoutField
+public import Integration7.SelectedFamilyVolumePreparation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The one-VF-coordinate instance of positive selected Lemma 7.5
 for actual volume families and arbitrary standard contractions of their

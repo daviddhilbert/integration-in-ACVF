@@ -1,4 +1,10 @@
-import Integration7.GammaVolumeParameterGeometry
+module
+
+public import Integration7.GammaVolumeParameterGeometry
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Equal mathematical real/Gamma bases carry the same actual volume
 objects and geometric common-blowup witnesses. -/

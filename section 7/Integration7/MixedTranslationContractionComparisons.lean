@@ -1,9 +1,15 @@
-import Integration7.GammaRelativeTranslations
-import Integration7.NativeRelativeTranslationVolumes
-import Integration7.RetainedDensityContractionObjects
-import Integration7.MixedRetainedLabelVolumeForms
-import Integration7.OriginalBaseRelativeVolumeComparisons
-import IntegrationSection6.GammaFiniteMixedBijections
+module
+
+public import Integration7.GammaRelativeTranslations
+public import Integration7.NativeRelativeTranslationVolumes
+public import Integration7.RetainedDensityContractionObjects
+public import Integration7.MixedRetainedLabelVolumeForms
+public import Integration7.OriginalBaseRelativeVolumeComparisons
+public import IntegrationSection6.GammaFiniteMixedBijections
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Relative translations of arbitrary finite-label mixed domains
 preserve their specified active-first contraction class. Finite target

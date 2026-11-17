@@ -1,4 +1,10 @@
-import Integration7.GeometricFiniteStandardVolumeComparisons
+module
+
+public import Integration7.GeometricFiniteStandardVolumeComparisons
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual normalized contraction object for any finite-label
 positive VF domain with a retained nonzero density coordinate. -/

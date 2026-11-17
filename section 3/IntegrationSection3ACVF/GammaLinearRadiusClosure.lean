@@ -1,4 +1,10 @@
-import IntegrationSection3ACVF.GammaLinearRestrictions
+module
+
+public import IntegrationSection3ACVF.GammaLinearRestrictions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Closedness from above of the actual linear-radius locus.
 Overlapping concentric balls force every ordinary coefficient to agree;

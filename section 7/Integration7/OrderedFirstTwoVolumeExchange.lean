@@ -1,8 +1,14 @@
-import Integration7.TwoPartialVolumeRowComparisons
-import Integration7.TwoHeadTailVolumeSelectors
-import Integration7.GenericOrderedAppendVolumeContractions
-import Integration7.OrderedAppendVolumeFiniteness
-import Integration7.SelectedVolumeDegreeTransport
+module
+
+public import Integration7.TwoPartialVolumeRowComparisons
+public import Integration7.TwoHeadTailVolumeSelectors
+public import Integration7.GenericOrderedAppendVolumeContractions
+public import Integration7.OrderedAppendVolumeFiniteness
+public import Integration7.SelectedVolumeDegreeTransport
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Higher-dimensional first-two-coordinate exchange for actual ordered
 programs. The two retained VF tags give the positive selected degree

@@ -1,5 +1,11 @@
-import Integration7.GammaNativeCommonNames
-import Section5.GammaGraphs
+module
+
+public import Integration7.GammaNativeCommonNames
+public import Section5.GammaGraphs
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual Gamma special chains admit fixed-name real presentations.
 Each focus has exactly its original geometry; only definability proofs change. -/

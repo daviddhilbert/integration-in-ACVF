@@ -1,6 +1,12 @@
-import Section5.GammaLift
-import Section5.GammaInvariantLogic
-import Mathlib.Logic.Equiv.Set
+module
+
+public import Section5.GammaLift
+public import Section5.GammaInvariantLogic
+public import Mathlib.Logic.Equiv.Set
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Definable gluing of two original-Gamma isomorphisms along disjoint
 mixed subsets. The complete graph is their union. -/

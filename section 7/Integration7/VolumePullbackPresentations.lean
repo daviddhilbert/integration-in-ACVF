@@ -1,6 +1,12 @@
-import Integration7.PullbackCoordinateVolumeObjects
-import Integration7.RetainedVolumeLabels
-import IntegrationSection6.PresentationCoordinates
+module
+
+public import Integration7.PullbackCoordinateVolumeObjects
+public import Integration7.RetainedVolumeLabels
+public import IntegrationSection6.PresentationCoordinates
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A literal lift recovers its original actual volume object from
 canonical RV keys. Both the full volume tuple and density are preserved. -/

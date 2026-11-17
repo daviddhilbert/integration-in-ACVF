@@ -1,5 +1,11 @@
-import Integration7.HKWeightedUnaryComparisonFromPreparation
-import Integration7.EmptySelectedContractionExtensionCharts
+module
+
+public import Integration7.HKWeightedUnaryComparisonFromPreparation
+public import Integration7.EmptySelectedContractionExtensionCharts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Generic exact-density row isomorphisms compare specified unary
 selected contractions with no old volume coordinates. -/

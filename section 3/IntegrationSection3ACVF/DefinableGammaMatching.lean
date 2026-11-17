@@ -1,6 +1,12 @@
-import IntegrationSection3ACVF.RVMatchUniformBound
-import IntegrationSection3ACVF.RVMatchRowSemantics
-import IntegrationSection3ACVF.FullBaseCounting
+module
+
+public import IntegrationSection3ACVF.RVMatchUniformBound
+public import IntegrationSection3ACVF.RVMatchRowSemantics
+public import IntegrationSection3ACVF.FullBaseCounting
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual Gamma matching bijection has a full first-order graph over
 the original interpreted base. Genuine uniform finite-side bounds turn

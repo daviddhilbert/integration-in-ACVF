@@ -1,6 +1,12 @@
-import Integration7.AEOrdinaryVolumeHeadFubini
-import Integration7.AppendedVolumeHeadFubini
-import Integration7.GradedAEVolumeIntegralComponents
+module
+
+public import Integration7.AEOrdinaryVolumeHeadFubini
+public import Integration7.AppendedVolumeHeadFubini
+public import Integration7.GradedAEVolumeIntegralComponents
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! First-head integration raises every homogeneous coefficient degree
 by one, including ordinary degree zero. Each component satisfies Fubini. -/

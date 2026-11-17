@@ -1,7 +1,13 @@
-import Integration7.TermClosureDefinability
-import Integration7.RealFiniteVolumePresentations
-import Section3.VFDefinableClosure
-import IntegrationSection6.AlgebraicFibres
+module
+
+public import Integration7.TermClosureDefinability
+public import Integration7.RealFiniteVolumePresentations
+public import Section3.VFDefinableClosure
+public import IntegrationSection6.AlgebraicFibres
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Real definitions over a named term context descend to its actual
 generators. This applies to full graph relations and algebraicity. -/

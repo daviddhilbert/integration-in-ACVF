@@ -1,4 +1,10 @@
-import IntegrationSection5.GammaMembershipPreparation
+module
+
+public import IntegrationSection5.GammaMembershipPreparation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Generalize the checked Section5 GammaMembershipPreparation proofs from
 one VF coordinate to arbitrary VF arity. The same membership maps, boundary

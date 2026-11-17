@@ -1,6 +1,12 @@
-import IntegrationSection6.NormalizedLiftDomains
-import Section3.GammaProjection
-import Section3.NormalizationSaturation
+module
+
+public import IntegrationSection6.NormalizedLiftDomains
+public import Section3.GammaProjection
+public import Section3.NormalizationSaturation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Glue native definable local VF lifts over the original real base.
 Finite Gamma representatives remain internal and only original names plus

@@ -1,5 +1,11 @@
-import Integration7.HKZeroCoefficientSemiring
-import Integration7.HKZeroCoefficientSymmetry
+module
+
+public import Integration7.HKZeroCoefficientSemiring
+public import Integration7.HKZeroCoefficientSymmetry
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual weighted grade-zero scalar action is right Cartesian
 multiplication after moving the zero factor, without a VF permutation. -/

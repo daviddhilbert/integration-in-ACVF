@@ -1,5 +1,11 @@
-import Integration7.FiniteVolumeParameterContexts
-import Section3.DefinableConstants
+module
+
+public import Integration7.FiniteVolumeParameterContexts
+public import Section3.DefinableConstants
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A term-generated substructure adds no definable sets over its
 generators. This is raw first-order parameter elimination and needs no

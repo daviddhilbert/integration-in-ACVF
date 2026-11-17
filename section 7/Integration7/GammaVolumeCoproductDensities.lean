@@ -1,5 +1,11 @@
-import Integration7.GammaVolumeCoproductFormulas
-import Integration7.GammaFunctionalRowRecognition
+module
+
+public import Integration7.GammaVolumeCoproductFormulas
+public import Integration7.GammaFunctionalRowRecognition
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The tagged coproduct density is a genuine function on its exact
 domain. Existing RV zero/one tags give injectivity and disjointness. -/

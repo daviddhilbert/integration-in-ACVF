@@ -1,4 +1,10 @@
-import IntegrationSection3ACVF.Geometry
+module
+
+public import IntegrationSection3ACVF.Geometry
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-!
 # A full real-code presentation of the existing ball imaginary

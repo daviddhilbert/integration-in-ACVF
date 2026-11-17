@@ -1,5 +1,11 @@
-import Integration7.UniformPreparedPairKeys
-import Integration7.PreparedBallRectangleGeometry
+module
+
+public import Integration7.UniformPreparedPairKeys
+public import Integration7.PreparedBallRectangleGeometry
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The prepared inverse balls sit in the actual original balanced
 rows. Their positioning images are the matching target inverse balls;

@@ -1,7 +1,13 @@
-import Integration7.VolumeFocusPresentations
-import Integration7.CanonicalLiftVolumePresentations
-import Integration7.EssentialVolumeRestriction
-import IntegrationSection6.PartialFocusAdmissibility
+module
+
+public import Integration7.VolumeFocusPresentations
+public import Integration7.CanonicalLiftVolumePresentations
+public import Integration7.EssentialVolumeRestriction
+public import IntegrationSection6.PartialFocusAdmissibility
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The active part of an arbitrary focus is an admissible actual
 volume subobject. No admissibility of its inactive part is required. -/

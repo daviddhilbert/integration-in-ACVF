@@ -1,4 +1,10 @@
-import IntegrationSection5.ProductHeadStage
+module
+
+public import IntegrationSection5.ProductHeadStage
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! After contracting the prepared first factor, the remaining unary
 source is exactly the second factor with passive RV labels. -/

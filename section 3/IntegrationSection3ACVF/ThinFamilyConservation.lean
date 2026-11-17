@@ -1,6 +1,12 @@
-import IntegrationSection3ACVF.ThinComponentConservation
-import IntegrationSection3ACVF.NormalizedThinFamilies
-import IntegrationSection3ACVF.NormalizedNontrivialValue
+module
+
+public import IntegrationSection3ACVF.ThinComponentConservation
+public import IntegrationSection3ACVF.NormalizedThinFamilies
+public import IntegrationSection3ACVF.NormalizedNontrivialValue
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Lemma 3.22 over the full original real/Gamma/ball parameter base.
 The actual finite families, VF graph and open-to-open property are the

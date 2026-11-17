@@ -1,8 +1,14 @@
-import IntegrationSection6.FocusCenterAlgebraicity
-import IntegrationSection6.SortedParameterElimination
-import IntegrationSection6.ActualRVFibreDefinability
-import Section3.RVOperations
-import Section3.SmallFiniteParameters
+module
+
+public import IntegrationSection6.FocusCenterAlgebraicity
+public import IntegrationSection6.SortedParameterElimination
+public import IntegrationSection6.ActualRVFibreDefinability
+public import Section3.RVOperations
+public import Section3.SmallFiniteParameters
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Algebraicity of the active RV coordinate of an RV-pullback carrying
 a full-locus focus. The active VF representative is absent from the base. -/

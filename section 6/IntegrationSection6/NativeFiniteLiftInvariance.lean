@@ -1,5 +1,11 @@
-import IntegrationSection6.NativeGammaRVIsoLifts
-import IntegrationSection6.FiniteGammaCommonBlowups
+module
+
+public import IntegrationSection6.NativeGammaRVIsoLifts
+public import IntegrationSection6.FiniteGammaCommonBlowups
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Corollary6.13 and common-blowup lift invariance in the actual RV[k]
 categories, with the presentation hypothesis removed. The genuine

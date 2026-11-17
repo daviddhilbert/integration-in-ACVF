@@ -1,6 +1,12 @@
-import IntegrationSection5.UnaryChainCoordinateLift
-import IntegrationSection5.GammaActiveUnaryFocus
-import IntegrationSection5.RelativeLabelPreservation
+module
+
+public import IntegrationSection5.UnaryChainCoordinateLift
+public import IntegrationSection5.GammaActiveUnaryFocus
+public import IntegrationSection5.RelativeLabelPreservation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Constructed coordinate lifts of actual unary chains, with their full
 original-Gamma graphs and no extra parameter-base smallness hypothesis. -/

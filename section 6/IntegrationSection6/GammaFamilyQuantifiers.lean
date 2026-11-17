@@ -1,4 +1,10 @@
-import IntegrationSection6.GammaFamilyCardinality
+module
+
+public import IntegrationSection6.GammaFamilyCardinality
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Existential and unique-output validity for full Gamma tuple families.
 These quantify actual tuples and retain the sorted guards. -/

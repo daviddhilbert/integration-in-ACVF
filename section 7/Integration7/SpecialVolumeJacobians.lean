@@ -1,5 +1,11 @@
-import Integration7.VFVolumeBijections
-import Section9.SpecialJacobianAE
+module
+
+public import Integration7.VFVolumeBijections
+public import Section9.SpecialJacobianAE
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual special bijections, in both directions, preserve any retained
 density. The exceptional sets come from the checked determinant-one theorem. -/

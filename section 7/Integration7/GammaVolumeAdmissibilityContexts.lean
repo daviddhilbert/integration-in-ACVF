@@ -1,6 +1,12 @@
-import Integration7.GammaVolumePresentationContexts
-import Integration7.ElementaryBlowupConstruction
-import IntegrationSection6.GammaAdmissibility
+module
+
+public import Integration7.GammaVolumePresentationContexts
+public import Integration7.ElementaryBlowupConstruction
+public import IntegrationSection6.GammaAdmissibility
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Original-Gamma admissibility gives admissibility of the actual
 volume object in any containing small real context. -/

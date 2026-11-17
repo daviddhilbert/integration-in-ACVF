@@ -1,5 +1,11 @@
-import Integration7.VFVolumeProductIsomorphisms
-import Integration7.VFVolumeClasses
+module
+
+public import Integration7.VFVolumeProductIsomorphisms
+public import Integration7.VFVolumeClasses
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Cartesian multiplication on the actual positive VF volume
 isomorphism quotients, defined by multiplying representatives. -/

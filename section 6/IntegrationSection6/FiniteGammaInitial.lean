@@ -1,4 +1,10 @@
-import IntegrationSection6.FiniteGammaCategoricalCoproducts
+module
+
+public import IntegrationSection6.FiniteGammaCategoricalCoproducts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Empty objects and the initial object in the finite original-Gamma category. -/
 noncomputable section

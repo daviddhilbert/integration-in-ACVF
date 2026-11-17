@@ -1,6 +1,12 @@
-import IntegrationSection6.CoordinateRVFamilies
-import IntegrationSection6.PartialContractionFiniteVolume
-import IntegrationSection5.PartialNaturalImage
+module
+
+public import IntegrationSection6.CoordinateRVFamilies
+public import IntegrationSection6.PartialContractionFiniteVolume
+public import IntegrationSection5.PartialNaturalImage
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Partial contractions provide uniform RV[n] representatives over all
 frozen VF tuples, with their actual finite volume maps. -/

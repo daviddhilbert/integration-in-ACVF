@@ -1,7 +1,13 @@
-import Integration7.OrdinaryHeadIntegralVolumeCharts
-import Integration7.NativeAppendedVolumeIntegralFormula
-import Integration7.IntegrationCoordinateDensityFormula
-import Integration7.AEOrdinaryRVVolumeIntegrals
+module
+
+public import Integration7.OrdinaryHeadIntegralVolumeCharts
+public import Integration7.NativeAppendedVolumeIntegralFormula
+public import Integration7.IntegrationCoordinateDensityFormula
+public import Integration7.AEOrdinaryRVVolumeIntegrals
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Integrating the actual first-head family of an ordinary-valued
 presentation and then its remaining VF coordinates gives its genuine

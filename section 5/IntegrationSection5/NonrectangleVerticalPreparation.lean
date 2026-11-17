@@ -1,4 +1,10 @@
-import IntegrationSection5.NonrectangleHorizontalPreparation
+module
+
+public import IntegrationSection5.NonrectangleHorizontalPreparation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual opposite-order first preparation of the nonrectangle family, using the same global positioning bijection and retaining every original RV label. -/
 noncomputable section

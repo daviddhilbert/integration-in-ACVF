@@ -1,6 +1,12 @@
-import IntegrationSection5.FiniteHeadPreparation
-import IntegrationSection5.GammaHeadPreparation
-import Section5.GammaLiftRelation
+module
+
+public import IntegrationSection5.FiniteHeadPreparation
+public import IntegrationSection5.GammaHeadPreparation
+public import Section5.GammaLiftRelation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A uniform original-Gamma RV code separates every finite head fibre.
 Only smallness of the original real base is used, irrespective of the

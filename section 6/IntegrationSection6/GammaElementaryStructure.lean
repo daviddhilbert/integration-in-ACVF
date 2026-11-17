@@ -1,5 +1,11 @@
-import IntegrationSection6.GammaElementaryDomains
-import IntegrationSection6.GammaRVProductGraphs
+module
+
+public import IntegrationSection6.GammaElementaryDomains
+public import IntegrationSection6.GammaRVProductGraphs
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Complete Gamma graphs for elementary blowups directly from the actual
 RV product and multiplication. Field generation is needed only to lift

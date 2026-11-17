@@ -1,5 +1,11 @@
-import Integration7.GammaVolumeSubobjects
-import Integration7.VolumeComplementImages
+module
+
+public import Integration7.GammaVolumeSubobjects
+public import Integration7.VolumeComplementImages
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual isomorphism on complementary volume pieces retains its
 original-Gamma graph. Both degeneracy and the exact image cut are retained. -/

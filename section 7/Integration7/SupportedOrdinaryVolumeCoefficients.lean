@@ -1,6 +1,12 @@
-import Integration7.SupportedVolumeJacobianAddition
-import Integration7.SelectedJacobianRowOrdinaryCoefficients
-import Integration7.AERVVolumeOrdinaryCoefficientModules
+module
+
+public import Integration7.SupportedVolumeJacobianAddition
+public import Integration7.SelectedJacobianRowOrdinaryCoefficients
+public import Integration7.AERVVolumeOrdinaryCoefficientModules
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Supported positive functions form a module over ordinary RV[0]
 coefficients, and their actual Jacobian transform is linear over this ring. -/

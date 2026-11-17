@@ -1,6 +1,12 @@
-import Integration7.GammaVolumeObjectGraphs
-import Integration7.GammaVolumePresentationContexts
-import Integration7.GammaVolumeRestrictionIdentities
+module
+
+public import Integration7.GammaVolumeObjectGraphs
+public import Integration7.GammaVolumePresentationContexts
+public import Integration7.GammaVolumeRestrictionIdentities
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A full Gamma volume presentation in any containing context has
 its original coordinate and density graphs in the actual volume category.

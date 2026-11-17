@@ -1,6 +1,12 @@
-import Integration7.PositiveVolumeClassExtensions
-import Integration7.HKZeroCoefficientScalarRows
-import Integration7.HKZeroCoefficientExtensions
+module
+
+public import Integration7.PositiveVolumeClassExtensions
+public import Integration7.HKZeroCoefficientScalarRows
+public import Integration7.HKZeroCoefficientExtensions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Positive volume-class extension is semilinear over the actual
 weighted coefficient extension. This records compatibility of parameter

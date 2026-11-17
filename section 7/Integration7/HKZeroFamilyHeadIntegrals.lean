@@ -1,8 +1,14 @@
-import Integration7.HKZeroVolumeFamilies
-import Integration7.VolumeDensityGraphs
-import Integration7.VolumeFamilyHeadIntegrals
-import Integration7.EmptySelectedVolumeCharts
-import IntegrationSection5.GammaHeadPreparation
+module
+
+public import Integration7.HKZeroVolumeFamilies
+public import Integration7.VolumeDensityGraphs
+public import Integration7.VolumeFamilyHeadIntegrals
+public import Integration7.EmptySelectedVolumeCharts
+public import IntegrationSection5.GammaHeadPreparation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Contracting one VF coordinate of a weighted finite-label family
 creates its first volume coordinate. The density is the retained nonzero density

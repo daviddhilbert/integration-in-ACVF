@@ -1,4 +1,10 @@
-import Integration7.GammaVolumeBlowupSchemata
+module
+
+public import Integration7.GammaVolumeBlowupSchemata
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Finite formula witnesses for volume blowup chains and common forward
 blowups. The zero-length case records a volume isomorphism. -/

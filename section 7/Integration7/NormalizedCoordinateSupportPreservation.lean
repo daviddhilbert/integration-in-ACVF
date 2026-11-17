@@ -1,7 +1,13 @@
-import Integration7.NormalizedCoordinateImageGeometry
-import Integration7.NormalizedSupportedPermutations
-import Integration7.NormalizedPrefixSupportPreservation
-import Integration7.NormalizedVolumeCoordinateOperators
+module
+
+public import Integration7.NormalizedCoordinateImageGeometry
+public import Integration7.NormalizedSupportedPermutations
+public import Integration7.NormalizedPrefixSupportPreservation
+public import Integration7.NormalizedVolumeCoordinateOperators
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Every nonempty VF coordinate pushforward preserves the actual
 image of a supported normalized function, through the literal cast,

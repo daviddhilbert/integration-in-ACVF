@@ -1,6 +1,12 @@
-import Integration7.OrdinaryPositivePermutationCompatibility
-import Integration7.GradedAEVolumeActionCoherence
-import Integration7.GradedSemiringActionLinearMaps
+module
+
+public import Integration7.OrdinaryPositivePermutationCompatibility
+public import Integration7.GradedAEVolumeActionCoherence
+public import Integration7.GradedSemiringActionLinearMaps
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The genuine VF coordinate permutation on every raw graded AE
 component is linear over the full graded RV volume coefficient semiring. -/

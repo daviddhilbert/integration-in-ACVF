@@ -1,5 +1,11 @@
-import Integration7.GammaFiniteFamilyContexts
-import IntegrationSection6.GammaNamedRVFibres
+module
+
+public import Integration7.GammaFiniteFamilyContexts
+public import IntegrationSection6.GammaNamedRVFibres
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Selected RV-label slices have actual presentations inside genuine
 small contexts. Internal real codes are finite; the Gamma base names only

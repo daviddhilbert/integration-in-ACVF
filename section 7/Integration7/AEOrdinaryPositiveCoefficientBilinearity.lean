@@ -1,4 +1,10 @@
-import Integration7.AEOrdinaryPositiveCoefficientProducts
+module
+
+public import Integration7.AEOrdinaryPositiveCoefficientProducts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Positive multiplication of ordinary-valued AE functions is additive
 in each argument, as verified by the actual row scalar formula. -/

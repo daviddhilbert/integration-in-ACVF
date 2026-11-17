@@ -1,5 +1,11 @@
-import Integration7.FieldBaseAppendedIntegralAdditivity
-import Integration7.FrozenHeadIntegralValues
+module
+
+public import Integration7.FieldBaseAppendedIntegralAdditivity
+public import Integration7.FrozenHeadIntegralValues
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Freezing a VF tuple respects the actual family sum on every row,
 and hence its genuine unary field-base fibre integral is additive. -/

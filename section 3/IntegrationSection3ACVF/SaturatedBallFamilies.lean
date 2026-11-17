@@ -1,6 +1,12 @@
-import IntegrationSection3ACVF.SaturatedInterpretedFamilies
-import IntegrationSection3ACVF.FullBaseDefinability
-import Section3.NormalizationSaturation
+module
+
+public import IntegrationSection3ACVF.SaturatedInterpretedFamilies
+public import IntegrationSection3ACVF.FullBaseDefinability
+public import Section3.NormalizationSaturation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Nonalgebraic actual ball names in an infinite disjoint family over
 a small real base. Normalized saturation is proved by the pinned reduct

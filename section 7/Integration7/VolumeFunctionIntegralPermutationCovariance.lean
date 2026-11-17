@@ -1,7 +1,13 @@
-import Integration7.PermutedDensityGraphFamilyIntegrals
-import Integration7.CanonicalVolumeIntegralContractionFormula
-import Integration7.PermutedNativeContractionVolumeCharts
-import Integration7.AERVVolumePermutedFunctions
+module
+
+public import Integration7.PermutedDensityGraphFamilyIntegrals
+public import Integration7.CanonicalVolumeIntegralContractionFormula
+public import Integration7.PermutedNativeContractionVolumeCharts
+public import Integration7.AERVVolumePermutedFunctions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The canonical family integral is covariant under VF coordinate
 reindexing: exactly the corresponding VF block of its RV coordinates is

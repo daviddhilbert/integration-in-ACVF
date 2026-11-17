@@ -1,4 +1,10 @@
-import IntegrationSection6.ElementaryLiftDiagram
+module
+
+public import IntegrationSection6.ElementaryLiftDiagram
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The elementary case of6.13 on the actual released lifts, retaining
 the full original-Gamma isomorphism graph. -/

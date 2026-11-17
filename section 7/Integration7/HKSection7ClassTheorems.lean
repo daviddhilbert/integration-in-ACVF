@@ -1,4 +1,10 @@
-import Integration7.HKVFClassSemiringGeometry
+module
+
+public import Integration7.HKVFClassSemiringGeometry
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Corrected numbered class and ring statements, with geometric products
 and coproducts checked and the actual principal kernel discharged. -/

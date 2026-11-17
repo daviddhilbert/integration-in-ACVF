@@ -1,6 +1,12 @@
-import Integration7.HKWeightedVFZeroIsomorphisms
-import Integration7.HKRVProductBridges
-import Integration7.ZeroFactorVolumeLiftProducts
+module
+
+public import Integration7.HKWeightedVFZeroIsomorphisms
+public import Integration7.HKRVProductBridges
+public import Integration7.ZeroFactorVolumeLiftProducts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The lift preserves the actual product with a weighted zero factor.
 Its literal mixed-domain identity retains the product of both RV forms. -/

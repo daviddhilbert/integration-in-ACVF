@@ -1,5 +1,11 @@
-import Integration7.PolynomialTangentProjection
-import Section9.RVJacobianDerivations
+module
+
+public import Integration7.PolynomialTangentProjection
+public import Section9.RVJacobianDerivations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Polynomial maps carry the tangent vectors defined by vanishing
 polynomials to their differential images. -/

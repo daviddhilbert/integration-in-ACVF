@@ -1,4 +1,10 @@
-import Integration7.GammaVolumeCommonNameRebasing
+module
+
+public import Integration7.GammaVolumeCommonNameRebasing
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Original-Gamma algebraicity of the blowup center becomes genuine
 original-real-base algebraicity once the common names are contained there. -/

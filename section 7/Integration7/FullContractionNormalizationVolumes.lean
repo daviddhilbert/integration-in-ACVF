@@ -1,6 +1,12 @@
-import Integration7.SmallDimensionContractionNormalization
-import Integration7.GammaEssentialVolumeGraphs
-import Integration7.GammaVolumeDensityRescaling
+module
+
+public import Integration7.SmallDimensionContractionNormalization
+public import Integration7.GammaEssentialVolumeGraphs
+public import Integration7.GammaVolumeDensityRescaling
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual raw-to-normalized contraction is a full volume
 isomorphism in a genuine context, without an RV dimension restriction. -/

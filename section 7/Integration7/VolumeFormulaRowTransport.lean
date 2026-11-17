@@ -1,5 +1,11 @@
-import Integration7.VolumeCorrespondenceRowAgreements
-import Integration7.TupleVolumeChartSemantics
+module
+
+public import Integration7.VolumeCorrespondenceRowAgreements
+public import Integration7.TupleVolumeChartSemantics
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The supported Jacobian formulas depend only on the actual
 correspondence row. Parameter recoding preserves their full raw semantics. -/

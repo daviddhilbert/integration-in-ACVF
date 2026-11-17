@@ -1,6 +1,12 @@
-import Integration7.HKRVProductIsomorphisms
-import Integration7.HKDegreeOnePrincipalFactors
-import Integration7.HKZeroFamilyChangeOfVariables
+module
+
+public import Integration7.HKRVProductIsomorphisms
+public import Integration7.HKDegreeOnePrincipalFactors
+public import Integration7.HKZeroFamilyChangeOfVariables
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Checked correction work under the weighted measured-zero convention.
 The HK namespace retains the existing positive geometric objects and adds

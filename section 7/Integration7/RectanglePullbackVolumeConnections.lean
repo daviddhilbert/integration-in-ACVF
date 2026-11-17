@@ -1,7 +1,13 @@
-import Integration7.RectangleFamilyOrderProducers
-import Integration7.RetainedDensityRelativeContractions
-import Integration7.CanonicalPullbackVolumeClasses
-import Integration7.CommonContextVolumeEquivalences
+module
+
+public import Integration7.RectangleFamilyOrderProducers
+public import Integration7.RetainedDensityRelativeContractions
+public import Integration7.CanonicalPullbackVolumeClasses
+public import Integration7.CommonContextVolumeEquivalences
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A specified contraction of a rectangle family compares to the
 actual key volume object of a rectangular pullback through a relatively

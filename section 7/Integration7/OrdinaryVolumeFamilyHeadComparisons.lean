@@ -1,5 +1,11 @@
-import Integration7.OrdinaryVolumeFamilyHeadGeometry
-import Integration7.VolumeFamilyFormulaWitnessDescent
+module
+
+public import Integration7.OrdinaryVolumeFamilyHeadGeometry
+public import Integration7.VolumeFamilyFormulaWitnessDescent
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Ordinary pointwise representatives and arbitrary choices of their
 first head preparation give the same positive-valued AE head function. -/

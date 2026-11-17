@@ -1,5 +1,11 @@
-import IntegrationSection6.GammaGlobalLiftClasses
-import IntegrationSection6.GammaNonzeroGradedSemiring
+module
+
+public import IntegrationSection6.GammaGlobalLiftClasses
+public import IntegrationSection6.GammaNonzeroGradedSemiring
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Canonical semiring lifting from actual nonzero graded RV classes
 to the actual finite VF semiring. -/

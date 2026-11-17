@@ -1,5 +1,11 @@
-import Integration7.FiniteVolumeParameterContexts
-import Section3.GammaFullDescent
+module
+
+public import Integration7.FiniteVolumeParameterContexts
+public import Section3.GammaFullDescent
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! All original real and Gamma names fit in a genuine containing small
 context. Actual maps may be realized there while retaining the original

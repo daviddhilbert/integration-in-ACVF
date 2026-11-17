@@ -1,5 +1,11 @@
-import Integration7.IndexedVolumeBlowupRealization
-import Integration7.GammaVolumeChainSchemata
+module
+
+public import Integration7.IndexedVolumeBlowupRealization
+public import Integration7.GammaVolumeChainSchemata
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Uniform finite volume chains and common forward blowups assemble
 over an actual finite-volume RV base, retaining their exact lengths. -/

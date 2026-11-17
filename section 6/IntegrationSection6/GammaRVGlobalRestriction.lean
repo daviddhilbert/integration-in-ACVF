@@ -1,4 +1,10 @@
-import IntegrationSection6.GammaGlobalRestriction
+module
+
+public import IntegrationSection6.GammaGlobalRestriction
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Original-Gamma graphs of explicit maps between RV domains. -/
 noncomputable section

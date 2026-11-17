@@ -1,4 +1,10 @@
-import IntegrationSection3ACVF.NamedRadiusAtomicity
+module
+
+public import IntegrationSection3ACVF.NamedRadiusAtomicity
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-!
 # Definable Gamma radii

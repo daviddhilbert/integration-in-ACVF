@@ -1,7 +1,13 @@
-import IntegrationSection2.ValuedSubfieldRestriction
-import IntegrationSection2.AlgebraicEnvelopeBases
-import IntegrationSection2.HenselianAlgebraicTower
-import Section9.GaussExtension
+module
+
+public import IntegrationSection2.ValuedSubfieldRestriction
+public import IntegrationSection2.AlgebraicEnvelopeBases
+public import IntegrationSection2.HenselianAlgebraicTower
+public import Section9.GaussExtension
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Algebraic extensions of henselian subfields inside the actual
 algebraically closed valued ambient field are henselian in residue

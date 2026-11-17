@@ -1,13 +1,19 @@
-import Integration7.CompletedSection6Kernel
-import Integration7.ClosedSection6GammaVFAllAdditivePresentation
-import Integration7.ClosedSection6GammaVFAllProductScissors
-import IntegrationSection6.GammaVFAllBilinearProduct
-import IntegrationSection6.GammaVFAllAdditivePresentation
-import IntegrationSection6.GammaVFAllProductScissors
-import IntegrationSection6.GammaMixedProductIsomorphisms
-import IntegrationSection6.GammaMixedEmptyIsomorphisms
-import Section5.GammaSurjectivity
-import Section7.GammaScissors
+module
+
+public import Integration7.CompletedSection6Kernel
+public import Integration7.ClosedSection6GammaVFAllAdditivePresentation
+public import Integration7.ClosedSection6GammaVFAllProductScissors
+public import IntegrationSection6.GammaVFAllBilinearProduct
+public import IntegrationSection6.GammaVFAllAdditivePresentation
+public import IntegrationSection6.GammaVFAllProductScissors
+public import IntegrationSection6.GammaMixedProductIsomorphisms
+public import IntegrationSection6.GammaMixedEmptyIsomorphisms
+public import Section5.GammaSurjectivity
+public import Section7.GammaScissors
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Closed generated-base Section6 integration. The former universal
 Section5 input is replaced by the canonical-model certificate; its kernel

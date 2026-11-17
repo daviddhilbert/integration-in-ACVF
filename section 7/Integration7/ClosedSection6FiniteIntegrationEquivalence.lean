@@ -1,7 +1,13 @@
-import Integration7.CompletedSection6Kernel
-import Integration7.ClosedSection6FiniteIntegrationMap
-import IntegrationSection6.FiniteIntegrationEquivalence
-import IntegrationSection6.FiniteIntegrationMap
+module
+
+public import Integration7.CompletedSection6Kernel
+public import Integration7.ClosedSection6FiniteIntegrationMap
+public import IntegrationSection6.FiniteIntegrationEquivalence
+public import IntegrationSection6.FiniteIntegrationMap
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Closed generated-base Section6 integration. The former universal
 Section5 input is replaced by the canonical-model certificate; its kernel

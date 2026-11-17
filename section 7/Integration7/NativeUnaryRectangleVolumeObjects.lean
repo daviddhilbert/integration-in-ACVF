@@ -1,6 +1,12 @@
-import Integration7.NativeUnaryRectangleRawIsomorphisms
-import Integration7.SmallDimensionContractionNormalization
-import Integration7.VolumeRelabeling
+module
+
+public import Integration7.NativeUnaryRectangleRawIsomorphisms
+public import Integration7.SmallDimensionContractionNormalization
+public import Integration7.VolumeRelabeling
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The constructed rectangle output has actual finite volume whenever
 the two unary preparations do. Its product comparison is a full volume

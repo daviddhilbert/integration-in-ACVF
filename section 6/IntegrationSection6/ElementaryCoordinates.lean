@@ -1,5 +1,11 @@
-import IntegrationSection6.ElementaryIsomorphism
-import IntegrationSection6.KeyInverseCoordinates
+module
+
+public import IntegrationSection6.ElementaryIsomorphism
+public import IntegrationSection6.KeyInverseCoordinates
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Old labels and the auxiliary RV parameter are literal coordinate projections. -/
 noncomputable section

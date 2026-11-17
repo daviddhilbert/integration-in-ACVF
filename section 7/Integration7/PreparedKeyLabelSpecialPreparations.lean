@@ -1,5 +1,11 @@
-import Integration7.GammaRVLabelChainLifts
-import Integration7.UniformPreparedPairKeys
+module
+
+public import Integration7.GammaRVLabelChainLifts
+public import Integration7.UniformPreparedPairKeys
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Lift a special preparation while carrying a recorded copy of its
 entire prepared key. The carried labels determine all RV fibres of the

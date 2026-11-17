@@ -1,5 +1,11 @@
-import Integration7.CommonContextVolumeEquivalences
-import Integration7.GammaPermutedVolumeObjects
+module
+
+public import Integration7.CommonContextVolumeEquivalences
+public import Integration7.GammaPermutedVolumeObjects
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A common degree cast or coordinate permutation can be made before
 or after passing to the containing comparison context. -/

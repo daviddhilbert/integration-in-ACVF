@@ -1,6 +1,12 @@
-import Integration7.GammaRVMapGraphOperations
-import Integration7.GammaRVLabelIdentity
-import Section4.RVCoproduct
+module
+
+public import Integration7.GammaRVMapGraphOperations
+public import Integration7.GammaRVLabelIdentity
+public import Section4.RVCoproduct
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A map out of the actual RV tagged coproduct has its full Gamma graph
 when its two prescribed branch maps do. -/

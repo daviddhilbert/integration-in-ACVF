@@ -1,7 +1,13 @@
-import Integration7.RelativeVolumeArbitraryContractions
-import Integration7.NativeRVGraphVolumeRefinements
-import Integration7.UnaryChainVolumeDensities
-import IntegrationSection6.GammaFiniteMixedBijections
+module
+
+public import Integration7.RelativeVolumeArbitraryContractions
+public import Integration7.NativeRVGraphVolumeRefinements
+public import Integration7.UnaryChainVolumeDensities
+public import IntegrationSection6.GammaFiniteMixedBijections
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual unary factor chains preserve standard contraction volume
 classes. Every intermediate density and finite-label proof is constructed

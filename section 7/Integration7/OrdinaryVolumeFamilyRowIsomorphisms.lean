@@ -1,7 +1,13 @@
-import Integration7.OrdinaryVFVolumeFamilies
-import Integration7.RVMapGammaPointIsomorphisms
-import IntegrationSection6.MixedVFParameterDomains
-import Integration7.AllDegreeVolumeClasses
+module
+
+public import Integration7.OrdinaryVFVolumeFamilies
+public import Integration7.RVMapGammaPointIsomorphisms
+public import IntegrationSection6.MixedVFParameterDomains
+public import Integration7.AllDegreeVolumeClasses
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Equality of ordinary RV[0] row classes gives actual Gamma row
 isomorphisms over the original base and the named VF tuple. -/

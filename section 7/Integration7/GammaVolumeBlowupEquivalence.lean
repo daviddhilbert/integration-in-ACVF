@@ -1,4 +1,10 @@
-import Integration7.GammaIteratedVolumeRefinement
+module
+
+public import Integration7.GammaIteratedVolumeRefinement
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual common volume blowups with full original-Gamma geometric
 data form an equivalence relation. This is a geometric statement; it

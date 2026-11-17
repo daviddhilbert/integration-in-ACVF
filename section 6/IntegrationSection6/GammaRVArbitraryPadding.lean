@@ -1,5 +1,11 @@
-import IntegrationSection6.GammaLiftPadding
-import IntegrationSection6.GammaNonzeroResolutions
+module
+
+public import IntegrationSection6.GammaLiftPadding
+public import IntegrationSection6.GammaNonzeroResolutions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Zero-volume padding through any finite number of degrees preserves
 both the literal lifted object up to Gamma isomorphism and its nonzero

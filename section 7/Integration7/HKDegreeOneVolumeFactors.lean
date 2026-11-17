@@ -1,5 +1,11 @@
-import Integration7.HKRVVolumeProducts
-import Integration7.AdmissibleHeadPointIsomorphisms
+module
+
+public import Integration7.HKRVVolumeProducts
+public import Integration7.AdmissibleHeadPointIsomorphisms
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The missing degree-one head factor is a genuine weighted zero object.
 Dropping the last coordinate retains its contribution in the form. -/

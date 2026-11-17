@@ -1,5 +1,11 @@
-import Integration7.FiniteVolumeParameterContexts
-import IntegrationSection5.FiniteGammaPresentation
+module
+
+public import Integration7.FiniteVolumeParameterContexts
+public import IntegrationSection5.FiniteGammaPresentation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A finite family of original-Gamma sets has a presentation in a genuine
 small containing context. The original Gamma base is retained. This refines

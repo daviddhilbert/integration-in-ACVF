@@ -1,6 +1,12 @@
-import Integration7.OriginalVolumeArbitraryContractionOrders
-import Integration7.Corollary76
-import Integration7.GeneratedBaseStandardContractions
+module
+
+public import Integration7.OriginalVolumeArbitraryContractionOrders
+public import Integration7.Corollary76
+public import Integration7.GeneratedBaseStandardContractions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A genuine relatively unary volume bijection compares specified
 contractions in any two orders. Move both orders to its active coordinate,

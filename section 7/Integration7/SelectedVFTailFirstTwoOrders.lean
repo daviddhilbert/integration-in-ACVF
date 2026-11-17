@@ -1,4 +1,10 @@
-import Integration7.SelectedVFTailPermutations
+module
+
+public import Integration7.SelectedVFTailPermutations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Extending the VF order fixes the added tail and retains exactly
 the first-two exchange hypotheses of Lemma 7.7. -/

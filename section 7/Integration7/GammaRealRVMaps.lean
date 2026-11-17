@@ -1,5 +1,11 @@
-import Integration7.CanonicalVolumePresentations
-import IntegrationSection6.GammaRVGlobalRestriction
+module
+
+public import Integration7.CanonicalVolumePresentations
+public import IntegrationSection6.GammaRVGlobalRestriction
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! An explicit global real RV formula, restricted to an original-Gamma
 domain, has its full graph over that same Gamma base. Canonical raw maps

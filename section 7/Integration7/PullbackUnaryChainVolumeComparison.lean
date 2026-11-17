@@ -1,5 +1,11 @@
-import Integration7.PullbackOriginalVolumeClasses
-import Integration7.UnaryChainVolumeContractions
+module
+
+public import Integration7.PullbackOriginalVolumeClasses
+public import Integration7.UnaryChainVolumeContractions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual pullback RV volume objects compare whenever their VF domains
 are joined by a genuine volume-preserving unary factor chain. -/

@@ -1,5 +1,11 @@
-import Section3.GammaBaseTools
-import Section9.SpecialJacobianGeneric
+module
+
+public import Section3.GammaBaseTools
+public import Section9.SpecialJacobianGeneric
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A uniform first-order operation on sets descends to the original
 imaginary Gamma parameters. Its real formula keeps the representative code

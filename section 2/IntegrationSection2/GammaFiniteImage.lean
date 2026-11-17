@@ -1,5 +1,11 @@
-import Section3.Library
-import Section4.Library
+module
+
+public import Section3.Library
+public import Section4.Library
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-!
 # Corollary 2.15: finite image of a Gamma-to-RV function

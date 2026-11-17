@@ -1,6 +1,12 @@
-import IntegrationSection6.GammaFormulaVFFamilies
-import IntegrationSection6.GammaVFCodePairing
-import IntegrationSection6.GammaRecodingAgreements
+module
+
+public import IntegrationSection6.GammaFormulaVFFamilies
+public import IntegrationSection6.GammaVFCodePairing
+public import IntegrationSection6.GammaRecodingAgreements
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Finite RV codes determine every raw domain, volume and isomorphism
 chart row, including the falsity of rows on improper RV tuples. -/

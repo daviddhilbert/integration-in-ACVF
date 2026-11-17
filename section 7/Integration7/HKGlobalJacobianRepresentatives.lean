@@ -1,4 +1,10 @@
-import Integration7.HKGradedAEVolumeJacobians
+module
+
+public import Integration7.HKGradedAEVolumeJacobians
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The global Jacobian operator is the actual family transform on
 both zero and positive representatives. The inverse whole-space support

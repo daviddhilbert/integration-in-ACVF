@@ -1,6 +1,12 @@
-import Integration7.VolumeCoproduct
-import Integration7.VolumeRelabeling
-import IntegrationSection6.PartitionCoordinates
+module
+
+public import Integration7.VolumeCoproduct
+public import Integration7.VolumeRelabeling
+public import IntegrationSection6.PartitionCoordinates
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Definable complementary pieces partition a volume object through an
 actual coordinate- and density-preserving bijection. -/

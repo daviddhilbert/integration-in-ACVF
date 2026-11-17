@@ -1,6 +1,12 @@
-import Integration7.ElementaryPrincipalVolumeFactors
-import Integration7.AllDegreeVolumeIsoSemiring
-import Integration7.GradedVolumeBlowupProjection
+module
+
+public import Integration7.ElementaryPrincipalVolumeFactors
+public import Integration7.AllDegreeVolumeIsoSemiring
+public import Integration7.GradedVolumeBlowupProjection
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! In every degree at least two, the actual elementary relation is
 forced by the single concrete degree-one point/cone relation. This is

@@ -1,6 +1,12 @@
-import Integration7.OrdinaryVolumeFamilyCoproducts
-import Integration7.VFVolumeBijections
-import Integration7.PositiveVolumeIntegrationEquivalence
+module
+
+public import Integration7.OrdinaryVolumeFamilyCoproducts
+public import Integration7.VFVolumeBijections
+public import Integration7.PositiveVolumeIntegrationEquivalence
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The full VF realization of an ordinary family coproduct is the
 actual VF coproduct, with its unit form verified on both summands. -/

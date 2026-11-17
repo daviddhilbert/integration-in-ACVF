@@ -1,8 +1,14 @@
-import Integration7.AppendedPositiveCoefficientCoordinates
-import Integration7.DefinableAppendedLiftCarriers
-import Integration7.VolumeFamilyPositiveCoefficientProducts
-import Integration7.PositiveVFVolumeProducts
-import Integration7.VFVolumeLifts
+module
+
+public import Integration7.AppendedPositiveCoefficientCoordinates
+public import Integration7.DefinableAppendedLiftCarriers
+public import Integration7.VolumeFamilyPositiveCoefficientProducts
+public import Integration7.PositiveVFVolumeProducts
+public import Integration7.VFVolumeLifts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The coefficient-first realization of a positive constant-family
 product has exactly the Cartesian coefficient-lift carrier. Only the

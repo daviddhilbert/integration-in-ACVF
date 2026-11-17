@@ -1,6 +1,12 @@
-import IntegrationSection6.GammaPermutedFibrePresentations
-import IntegrationSection5.GammaGraphOperations
-import IntegrationSection5.RelativelyUnary
+module
+
+public import IntegrationSection6.GammaPermutedFibrePresentations
+public import IntegrationSection5.GammaGraphOperations
+public import IntegrationSection5.RelativelyUnary
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Conjugating a relatively unary map by a VF permutation moves its active
 coordinate to the head and preserves every selected old RV label. -/

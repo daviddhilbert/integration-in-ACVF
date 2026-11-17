@@ -1,5 +1,11 @@
-import IntegrationSection5.RelativeSpecialRestriction
-import IntegrationSection5.HeadPreparation
+module
+
+public import IntegrationSection5.RelativeSpecialRestriction
+public import IntegrationSection5.HeadPreparation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Inverse membership constancy restricts an ambient preparation to an
 actual source set with head-saturated image. -/

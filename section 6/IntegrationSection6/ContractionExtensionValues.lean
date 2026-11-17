@@ -1,4 +1,10 @@
-import IntegrationSection6.ContractionProgramExtensions
+module
+
+public import IntegrationSection6.ContractionProgramExtensions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Extending an internal presentation leaves every contraction-volume
 selector unchanged. -/

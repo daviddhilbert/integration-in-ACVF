@@ -1,5 +1,11 @@
-import IntegrationSection6.VFPrefixMaps
-import IntegrationSection5.GammaCoordinateFibres
+module
+
+public import IntegrationSection6.VFPrefixMaps
+public import IntegrationSection5.GammaCoordinateFibres
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Freezing a complementary VF tuple adds exactly its names to the
 mathematical Gamma base, independently of internal real code sets. -/

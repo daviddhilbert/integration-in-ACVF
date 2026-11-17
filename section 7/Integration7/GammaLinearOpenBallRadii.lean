@@ -1,4 +1,10 @@
-import IntegrationSection3ACVF.GammaDifferenceRealization
+module
+
+public import IntegrationSection3ACVF.GammaDifferenceRealization
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A bijection between two genuine open balls that multiplies all
 difference values by one Gamma factor multiplies their radii by that factor.

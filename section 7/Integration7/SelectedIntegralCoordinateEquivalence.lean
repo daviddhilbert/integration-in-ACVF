@@ -1,4 +1,10 @@
-import Integration7.VolumeCoordinateChartInverses
+module
+
+public import Integration7.VolumeCoordinateChartInverses
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Reverse the common coordinate-order conversion on two specified
 integral contraction objects. The unchanged densities are compared on

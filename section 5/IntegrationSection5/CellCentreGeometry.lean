@@ -1,4 +1,10 @@
-import IntegrationSection5.PositionInverseGraph
+module
+
+public import IntegrationSection5.PositionInverseGraph
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Positioning values and inverse positioning values lie in the correct
 actual RV classes for the cell translation foci. -/

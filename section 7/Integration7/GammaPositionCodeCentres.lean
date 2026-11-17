@@ -1,6 +1,12 @@
-import Integration7.NativePositionCodeCentres
-import IntegrationSection6.GammaRawRVFormulas
-import IntegrationSection5.GammaGraphOperations
+module
+
+public import Integration7.NativePositionCodeCentres
+public import IntegrationSection6.GammaRawRVFormulas
+public import IntegrationSection5.GammaGraphOperations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Positioning graphs give actual centre graphs over the unchanged
 original real/Gamma base, even when the native presentation uses more names. -/

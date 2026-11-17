@@ -1,6 +1,12 @@
-import IntegrationSection6.FiniteGammaLiftGluing
-import Section5.GammaInvariantLogic
-import Section7.GammaScissors
+module
+
+public import IntegrationSection6.FiniteGammaLiftGluing
+public import Section5.GammaInvariantLogic
+public import Section7.GammaScissors
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Mixed original-Gamma sets have real presentations over an internal
 code universe; only the finitely many representatives in their formulas

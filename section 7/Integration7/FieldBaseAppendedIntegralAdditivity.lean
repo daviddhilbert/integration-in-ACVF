@@ -1,5 +1,11 @@
-import Integration7.FieldBaseVolumeIntegralAdditivity
-import Integration7.AppendedVolumeIntegralAddHom
+module
+
+public import Integration7.FieldBaseVolumeIntegralAdditivity
+public import Integration7.AppendedVolumeIntegralAddHom
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The fixed, additive coordinate normalization transports field-base
 additivity to the actual coefficient-first integral used on head fibres. -/

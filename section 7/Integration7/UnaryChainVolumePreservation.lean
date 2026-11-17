@@ -1,6 +1,12 @@
-import Integration7.UnaryChainVolumeDensities
-import Integration7.NativeRVGraphVolumeRefinements
-import IntegrationSection6.GammaFiniteMixedBijections
+module
+
+public import Integration7.UnaryChainVolumeDensities
+public import Integration7.NativeRVGraphVolumeRefinements
+public import IntegrationSection6.GammaFiniteMixedBijections
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual densities on every unary factor imply volume preservation
 of the composite. Intermediate finite-label domains follow from the

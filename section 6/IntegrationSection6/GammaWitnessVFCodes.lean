@@ -1,4 +1,10 @@
-import IntegrationSection6.GammaPrimitiveVFCodes
+module
+
+public import IntegrationSection6.GammaPrimitiveVFCodes
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! An entire finite common-blowup witness has one finite RV code over
 the original real parameter base. All internal chart formulas are included. -/

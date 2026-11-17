@@ -1,5 +1,11 @@
-import IntegrationSection6.GammaDefinableBaseReduction
-import Section5.GammaRestriction
+module
+
+public import IntegrationSection6.GammaDefinableBaseReduction
+public import Section5.GammaRestriction
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Definable-name elimination preserves the full Gamma source, focus,
 scalar and graph certificates of actual special chains. -/

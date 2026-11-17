@@ -1,4 +1,10 @@
-import Integration7.UniformCellPartitionContractionRestrictions
+module
+
+public import Integration7.UniformCellPartitionContractionRestrictions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The three actual cell-family pieces and their RV-label predicates
 as one finite family. The predicates are a disjoint cover, and every

@@ -1,8 +1,14 @@
-import Integration7.UnaryRawFiniteVolumeComparison
-import Integration7.HeadFiniteVolumeContexts
-import Integration7.HeadVolumeParameterContexts
-import Integration7.RelativeVolumeFibreExceptions
-import IntegrationSection6.GammaRelativeHeadFibres
+module
+
+public import Integration7.UnaryRawFiniteVolumeComparison
+public import Integration7.HeadFiniteVolumeContexts
+public import Integration7.HeadVolumeParameterContexts
+public import Integration7.RelativeVolumeFibreExceptions
+public import IntegrationSection6.GammaRelativeHeadFibres
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The first head comparison in Corollary 7.6 on an actual frozen
 fibre with its measure equation. Its sole selected volume coordinate is

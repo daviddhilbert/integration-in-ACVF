@@ -1,4 +1,10 @@
-import Integration7.MatchingPreparedProjectionKeys
+module
+
+public import Integration7.MatchingPreparedProjectionKeys
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual Gamma special-chain lifts on the two unchanged labelled
 unary projections of the matching translations. Each records the full

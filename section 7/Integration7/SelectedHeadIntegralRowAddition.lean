@@ -1,5 +1,11 @@
-import Integration7.FrozenHeadIntegralAdditivity
-import Integration7.DefinableVolumeParameterDescent
+module
+
+public import Integration7.FrozenHeadIntegralAdditivity
+public import Integration7.DefinableVolumeParameterDescent
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The head-integral row of a sum is the sum of its actual two rows.
 Equality descends from the definable closure of the frozen parameter base. -/

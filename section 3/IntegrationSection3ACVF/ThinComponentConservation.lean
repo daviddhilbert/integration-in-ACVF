@@ -1,7 +1,13 @@
-import IntegrationSection3ACVF.RVQuotientGraph
-import IntegrationSection3ACVF.FiniteFamilyMaximal
-import IntegrationSection3ACVF.ResidueTaggedConservation
-import IntegrationSection3.SurjectiveQuotientMap
+module
+
+public import IntegrationSection3ACVF.RVQuotientGraph
+public import IntegrationSection3ACVF.FiniteFamilyMaximal
+public import IntegrationSection3ACVF.ResidueTaggedConservation
+public import IntegrationSection3.SurjectiveQuotientMap
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Component and hole conservation for finite actual thin families in
 a canonical model. The full original partial VF graph is the definability

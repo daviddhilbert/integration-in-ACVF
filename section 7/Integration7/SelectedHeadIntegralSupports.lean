@@ -1,5 +1,11 @@
-import Integration7.PureVFCoordinateImages
-import Integration7.VolumeFamilyHeadIntegrals
+module
+
+public import Integration7.PureVFCoordinateImages
+public import Integration7.VolumeFamilyHeadIntegrals
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A contracted head family is supported on the actual projection
 of the source support. Every target point has an original source point

@@ -1,6 +1,12 @@
-import Integration7.SelectedStandardVolumeRestrictions
-import Integration7.VolumePartition
-import Integration7.VolumeCoproductIsomorphism
+module
+
+public import Integration7.SelectedStandardVolumeRestrictions
+public import Integration7.VolumePartition
+public import Integration7.VolumeCoproductIsomorphism
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Complementary old-label cuts partition the actual selected-volume
 object of one standard contraction. Finiteness is required only after the

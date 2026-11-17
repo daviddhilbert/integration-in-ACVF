@@ -1,5 +1,11 @@
-import IntegrationSection3ACVF.UniformGammaBallSyntax
-import IntegrationSection3ACVF.RVSlopeGraph
+module
+
+public import IntegrationSection3ACVF.UniformGammaBallSyntax
+public import IntegrationSection3ACVF.RVSlopeGraph
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Equality of actual GammaTop values, including zero differences,
 and multiplication by every proper RV code of a Gamma coefficient. -/

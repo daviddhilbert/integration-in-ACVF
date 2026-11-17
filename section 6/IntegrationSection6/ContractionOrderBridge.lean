@@ -1,4 +1,10 @@
-import IntegrationSection6.HeadTailPermutations
+module
+
+public import IntegrationSection6.HeadTailPermutations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Put two distinct first coordinates in the first two positions. -/
 namespace IntegrationInACVF.Section6

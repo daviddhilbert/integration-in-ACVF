@@ -1,6 +1,12 @@
-import Integration7.VolumeComplementImages
-import Integration7.VolumeCoproductComplements
-import Integration7.IteratedVolumeBlowups
+module
+
+public import Integration7.VolumeComplementImages
+public import Integration7.VolumeCoproductComplements
+public import Integration7.IteratedVolumeBlowups
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Every coproduct presentation of a blowup has a genuine definable
 source locus, a chart on that locus, and the corresponding complement. -/

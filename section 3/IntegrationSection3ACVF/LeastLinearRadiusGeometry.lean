@@ -1,5 +1,11 @@
-import IntegrationSection3ACVF.GammaLinearRadiusClosure
-import IntegrationSection3ACVF.FullGammaBounds
+module
+
+public import IntegrationSection3ACVF.GammaLinearRadiusClosure
+public import IntegrationSection3ACVF.FullGammaBounds
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Existence of a least actual linear radius once the ordinary-radius
 locus has its full first-order definition and a lower bound. The empty

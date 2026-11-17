@@ -1,4 +1,10 @@
-import IntegrationSection6.EmptySelectedContractions
+module
+
+public import IntegrationSection6.EmptySelectedContractions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Explicit, authorized input from Corollary5.8 of this paper. The source
 has two VF coordinates. A VF-preserving refinement has particular actual

@@ -1,6 +1,12 @@
-import Integration7.PointwiseRVVolumeFunctions
-import Integration7.SelectedIntegralCoordinateCharts
-import Integration7.SelectedCoordinateVolumeRealizations
+module
+
+public import Integration7.PointwiseRVVolumeFunctions
+public import Integration7.SelectedIntegralCoordinateCharts
+public import Integration7.SelectedCoordinateVolumeRealizations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The VF-first integral of a positive homogeneous RV-volume family.
 Its pointwise representative independence follows from the actual7.5

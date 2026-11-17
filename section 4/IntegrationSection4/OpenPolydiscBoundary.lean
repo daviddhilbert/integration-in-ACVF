@@ -1,7 +1,13 @@
-import IntegrationSection4.CellsFromFibres
-import IntegrationSection4.DefinableParadigms
-import IntegrationSection3ACVF.SeparationFunctions
-import Section5.Assembly
+module
+
+public import IntegrationSection4.CellsFromFibres
+public import IntegrationSection4.DefinableParadigms
+public import IntegrationSection3ACVF.SeparationFunctions
+public import Section5.Assembly
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

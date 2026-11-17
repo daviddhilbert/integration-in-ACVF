@@ -1,4 +1,10 @@
-import Integration7.VolumeFamilyRealizationIdentifications
+module
+
+public import Integration7.VolumeFamilyRealizationIdentifications
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Positive homogeneous function integration descends to the actual
 almost-everywhere quotient, using genuine cofull full-lift realizations. -/

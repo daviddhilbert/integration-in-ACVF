@@ -1,4 +1,10 @@
-import Integration7.ConstantCoefficientIntegralPresentations
+module
+
+public import Integration7.ConstantCoefficientIntegralPresentations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Replacing a family by its actual density graph also preserves the
 chosen integral after multiplication by a constant positive coefficient. -/

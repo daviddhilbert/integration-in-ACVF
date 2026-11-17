@@ -1,5 +1,11 @@
-import IntegrationSection6.GammaPreparedFormulaDescent
-import IntegrationSection6.GammaPrimitiveVFCodes
+module
+
+public import IntegrationSection6.GammaPreparedFormulaDescent
+public import IntegrationSection6.GammaPrimitiveVFCodes
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Constancy on prepared polydiscs gives exact primitive-row agreement
 between a VF representative and the descended RV-key formulas. -/

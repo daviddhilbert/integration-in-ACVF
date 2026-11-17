@@ -1,6 +1,12 @@
-import Integration7.HKZeroDefinableDensityRescaling
-import Integration7.HKNativeZeroCoefficientFieldIntegrals
-import Integration7.DefinableVolumeClassRescaling
+module
+
+public import Integration7.HKZeroDefinableDensityRescaling
+public import Integration7.HKNativeZeroCoefficientFieldIntegrals
+public import Integration7.DefinableVolumeClassRescaling
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Definable Jacobian density multipliers commute with genuine
 weighted products in all zero/positive combinations. -/

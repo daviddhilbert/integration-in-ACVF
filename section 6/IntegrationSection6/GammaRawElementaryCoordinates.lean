@@ -1,6 +1,12 @@
-import IntegrationSection6.GammaElementaryFamilies
-import IntegrationSection6.GammaRVGraphRaw
-import IntegrationSection6.FiniteGammaBasicFactors
+module
+
+public import IntegrationSection6.GammaElementaryFamilies
+public import IntegrationSection6.GammaRVGraphRaw
+public import IntegrationSection6.FiniteGammaBasicFactors
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Literal coordinate programs for elementary blowups of sorted raw
 families. Parameters retain their original sorts and their coordinates. -/

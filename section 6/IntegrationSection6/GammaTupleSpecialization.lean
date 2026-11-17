@@ -1,5 +1,11 @@
-import IntegrationSection6.GammaTuplePromotion
-import Section3.GammaRealMap
+module
+
+public import IntegrationSection6.GammaTuplePromotion
+public import Section3.GammaRealMap
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Specialize a promoted tuple family at its actual named real tuple.
 All original Gamma names and full proper-code invariance are retained. -/

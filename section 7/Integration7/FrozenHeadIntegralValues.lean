@@ -1,7 +1,13 @@
-import Integration7.FrozenHeadVolumeIntegrals
-import Integration7.HeadFibreIntegralIsomorphisms
-import Integration7.ChosenVolumeFamilyHeadIntegrals
-import Integration7.PositiveVolumeClassExtensions
+module
+
+public import Integration7.FrozenHeadVolumeIntegrals
+public import Integration7.HeadFibreIntegralIsomorphisms
+public import Integration7.ChosenVolumeFamilyHeadIntegrals
+public import Integration7.PositiveVolumeClassExtensions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Pointwise fibre semantics: the actual head-integral row equals the
 actual unary frozen-family integral in its proved definable-closure

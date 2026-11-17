@@ -1,6 +1,12 @@
-import Integration7.AERVVolumeHeadIntegrals
-import Integration7.AERVVolumeFunctionAddition
-import Integration7.IndexedVolumeEmpty
+module
+
+public import Integration7.AERVVolumeHeadIntegrals
+public import Integration7.AERVVolumeFunctionAddition
+public import Integration7.IndexedVolumeEmpty
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A head preparation of an empty source has empty contracted domain.
 Every empty selected family represents the zero AE function. -/

@@ -1,7 +1,13 @@
-import Integration7.ContractionParameterExtension
-import Integration7.GammaEqualLabelEquivalenceGraphs
-import IntegrationSection6.RawSelectedContractions
-import IntegrationSection6.GammaSwappedVolumes
+module
+
+public import Integration7.ContractionParameterExtension
+public import Integration7.GammaEqualLabelEquivalenceGraphs
+public import IntegrationSection6.RawSelectedContractions
+public import IntegrationSection6.GammaSwappedVolumes
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Parameter enlargement leaves raw selected contraction labels and
 all selected volume coordinates unchanged. -/

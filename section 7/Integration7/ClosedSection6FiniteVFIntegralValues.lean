@@ -1,8 +1,14 @@
-import Integration7.CompletedSection6Kernel
-import IntegrationSection6.FiniteVFIntegralValues
-import IntegrationSection6.FiniteIntegrationTarget
-import Section5.GammaSurjectivity
-import Section7.GammaScissors
+module
+
+public import Integration7.CompletedSection6Kernel
+public import IntegrationSection6.FiniteVFIntegralValues
+public import IntegrationSection6.FiniteIntegrationTarget
+public import Section5.GammaSurjectivity
+public import Section7.GammaScissors
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Closed generated-base Section6 integration. The former universal
 Section5 input is replaced by the canonical-model certificate; its kernel

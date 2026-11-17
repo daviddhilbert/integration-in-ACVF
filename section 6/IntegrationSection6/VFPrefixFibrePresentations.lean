@@ -1,6 +1,12 @@
-import IntegrationSection6.VFPrefixProgramRestriction
-import IntegrationSection6.GammaSelectedLabelFibrePresentations
-import IntegrationSection6.GammaSelectedRVPresentations
+module
+
+public import IntegrationSection6.VFPrefixProgramRestriction
+public import IntegrationSection6.GammaSelectedLabelFibrePresentations
+public import IntegrationSection6.GammaSelectedRVPresentations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual RV fibres of a partial contraction are the finite presentations
 of the frozen-prefix ordered contraction, with the same labels and volume. -/

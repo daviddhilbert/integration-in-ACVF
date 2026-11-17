@@ -1,4 +1,10 @@
-import Integration7.GammaRVVolumeSchemata
+module
+
+public import Integration7.GammaRVVolumeSchemata
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Restricting a finite RV schema by an original-base condition on its
 volume tuple. The same finite bound works, with an exact projected domain. -/

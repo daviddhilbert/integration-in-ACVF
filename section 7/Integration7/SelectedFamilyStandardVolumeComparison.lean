@@ -1,7 +1,13 @@
-import Integration7.StandardPositiveVolumeComparison
-import Integration7.OrderedAppendVolumeIndices
-import Integration7.SelectedFamilyGeometricCommon
-import Integration7.OrderedAppendVolumeContractions
+module
+
+public import Integration7.StandardPositiveVolumeComparison
+public import Integration7.OrderedAppendVolumeIndices
+public import Integration7.SelectedFamilyGeometricCommon
+public import Integration7.OrderedAppendVolumeContractions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Positive selected Lemma 7.5 for the actual density-graph families and
 arbitrary ordered contraction programs, starting from the ordinary common

@@ -1,5 +1,11 @@
-import Integration7.IndexedVolumeCoproductLabels
-import Integration7.IndexedVolumeGammaCompatibility
+module
+
+public import Integration7.IndexedVolumeCoproductLabels
+public import Integration7.IndexedVolumeGammaCompatibility
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The density graph survives coproduct/index interchange on each
 canonical summand. These are graph identities, with no Jacobian premise. -/

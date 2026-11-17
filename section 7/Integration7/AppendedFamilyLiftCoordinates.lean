@@ -1,5 +1,11 @@
-import Integration7.AppendedFamilyFullLifts
-import Integration7.VFVolumeReindexingCoordinates
+module
+
+public import Integration7.AppendedFamilyFullLifts
+public import Integration7.VFVolumeReindexingCoordinates
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Literal coordinates of the coefficient-first full family lift.
 The front VF block realizes the selected RV tuple, and the remaining VF

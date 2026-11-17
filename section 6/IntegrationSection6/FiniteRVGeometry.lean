@@ -1,6 +1,12 @@
-import IntegrationSection6.FiniteCongruence
-import IntegrationSection6.SpecialChainBlowup
-import Section4.RVFiniteScissors
+module
+
+public import IntegrationSection6.FiniteCongruence
+public import IntegrationSection6.SpecialChainBlowup
+public import Section4.RVFiniteScissors
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Public Section6 geometry is only RV[k], the inherited finite-volume
 full subcategory. Every object of an iterated blowup is bundled in RV[k].

@@ -1,6 +1,12 @@
-import Integration7.HeadTailPermutationSpecialRelative
-import Integration7.HeadTailPermutationHeadImages
-import IntegrationSection5.HeadPreparation
+module
+
+public import Integration7.HeadTailPermutationSpecialRelative
+public import Integration7.HeadTailPermutationHeadImages
+public import IntegrationSection5.HeadPreparation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A prescribed head preparation can be retained while reordering only
 its frozen VF tail. This constructs a genuine special preparation. -/

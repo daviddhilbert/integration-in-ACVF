@@ -1,6 +1,12 @@
-import Integration7.GammaIndexedOrdinaryCoordinateIsomorphisms
-import Integration7.GammaUnitVolumeIsoRealization
-import IntegrationSection6.FiniteGammaIsomorphisms
+module
+
+public import Integration7.GammaIndexedOrdinaryCoordinateIsomorphisms
+public import Integration7.GammaUnitVolumeIsoRealization
+public import IntegrationSection6.FiniteGammaIsomorphisms
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Indexed ordinary row isomorphisms give genuine unit-density volume
 isomorphisms. All index coordinates and original-Gamma graphs are kept. -/

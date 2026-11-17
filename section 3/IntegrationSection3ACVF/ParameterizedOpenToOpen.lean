@@ -1,5 +1,11 @@
-import IntegrationSection3ACVF.ParameterizedOpenImages
-import IntegrationSection3ACVF.MaximalOpenClasses
+module
+
+public import IntegrationSection3ACVF.ParameterizedOpenImages
+public import IntegrationSection3ACVF.MaximalOpenClasses
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A first-order uniform open-to-open test on each cell. The backward
 test uses the swapped restricted graph, so no arbitrary total inverse or

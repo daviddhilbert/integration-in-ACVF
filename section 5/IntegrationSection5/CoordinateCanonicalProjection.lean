@@ -1,4 +1,10 @@
-import IntegrationSection5.GammaCoordinateCanonical
+module
+
+public import IntegrationSection5.GammaCoordinateCanonical
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual projection recovering the source of a coordinate canonical map. -/
 noncomputable section

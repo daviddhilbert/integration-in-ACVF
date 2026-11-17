@@ -1,6 +1,12 @@
-import IntegrationSection5.RelativeGammaTrace
-import IntegrationSection5.GammaTraceExtension
-import IntegrationSection5.GammaTraceRestriction
+module
+
+public import IntegrationSection5.RelativeGammaTrace
+public import IntegrationSection5.GammaTraceExtension
+public import IntegrationSection5.GammaTraceRestriction
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 noncomputable section
 set_option autoImplicit false

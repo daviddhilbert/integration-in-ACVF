@@ -1,5 +1,11 @@
-import IntegrationSection3ACVF.OpenSubballImages
-import IntegrationSection3ACVF.RVFibreSubballs
+module
+
+public import IntegrationSection3ACVF.OpenSubballImages
+public import IntegrationSection3ACVF.RVFibreSubballs
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Injective definable VF maps on a definable atomic ball respect RV
 classes of differences at each fixed base point. Arbitrary original

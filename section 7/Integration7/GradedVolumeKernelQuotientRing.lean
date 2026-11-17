@@ -1,7 +1,13 @@
-import Integration7.VolumeDegreeKernelQuotients
-import Integration7.BlowupVolumeHomogeneousProducts
-import Integration7.AdditiveEquivalenceRingTransport
-import Integration7.RawVolumeKernelIdeal
+module
+
+public import Integration7.VolumeDegreeKernelQuotients
+public import Integration7.BlowupVolumeHomogeneousProducts
+public import Integration7.AdditiveEquivalenceRingTransport
+public import Integration7.RawVolumeKernelIdeal
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual degree-k kernel quotients form a graded ring. The
 multiplication is transported through the independently proved additive

@@ -1,5 +1,11 @@
-import Integration7.OrdinarySelectedPresentationMaps
-import Integration7.OrdinarySelectedTailWeightSelectors
+module
+
+public import Integration7.OrdinarySelectedPresentationMaps
+public import Integration7.OrdinarySelectedTailWeightSelectors
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The VF-tail realization gives a genuine ordinary RV isomorphism
 from a completed lifted contraction to the original selected contraction.

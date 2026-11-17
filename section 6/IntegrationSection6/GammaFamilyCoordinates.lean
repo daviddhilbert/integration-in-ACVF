@@ -1,6 +1,12 @@
-import IntegrationSection6.GammaRVFamilyFormulas
-import IntegrationSection6.RVLabelMap
-import IntegrationSection6.GammaElementaryStructure
+module
+
+public import IntegrationSection6.GammaRVFamilyFormulas
+public import IntegrationSection6.RVLabelMap
+public import IntegrationSection6.GammaElementaryStructure
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Global real coordinate maps for Gamma RV families, keeping the VF
 parameter block fixed. -/

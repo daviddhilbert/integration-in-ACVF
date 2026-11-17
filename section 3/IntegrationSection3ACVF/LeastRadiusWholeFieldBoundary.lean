@@ -1,4 +1,10 @@
-import IntegrationSection3ACVF.LinearRadiusThreshold
+module
+
+public import IntegrationSection3ACVF.LinearRadiusThreshold
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Independent boundary check for existence of a least linear radius.
 The numbered3.17 exclusion takes a given least-radius function; this

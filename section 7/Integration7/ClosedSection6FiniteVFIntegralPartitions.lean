@@ -1,9 +1,15 @@
-import Integration7.CompletedSection6Kernel
-import Integration7.ClosedSection6GammaVFFiniteRestrictions
-import IntegrationSection6.FiniteVFIntegralPartitions
-import IntegrationSection6.BinaryLiftPartitionValues
-import IntegrationSection6.GammaVFFiniteRestrictions
-import IntegrationSection6.GammaObjectPresentationIsomorphisms
+module
+
+public import Integration7.CompletedSection6Kernel
+public import Integration7.ClosedSection6GammaVFFiniteRestrictions
+public import IntegrationSection6.FiniteVFIntegralPartitions
+public import IntegrationSection6.BinaryLiftPartitionValues
+public import IntegrationSection6.GammaVFFiniteRestrictions
+public import IntegrationSection6.GammaObjectPresentationIsomorphisms
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Closed generated-base Section6 integration. The former universal
 Section5 input is replaced by the canonical-model certificate; its kernel

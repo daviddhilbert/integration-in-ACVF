@@ -1,5 +1,11 @@
-import IntegrationSection6.GammaSchemaNativeRows
-import IntegrationSection6.GammaRawCoproductSchemaBridge
+module
+
+public import IntegrationSection6.GammaSchemaNativeRows
+public import IntegrationSection6.GammaRawCoproductSchemaBridge
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Coproduct formulas represent the actual native finite coproduct of
 represented rows, including every domain and volume-graph equation. -/

@@ -1,6 +1,12 @@
-import IntegrationSection3ACVF.BallKindPredicates
-import IntegrationSection3ACVF.CanonicalBallSupport
-import IntegrationSection3.ValuationRadius
+module
+
+public import IntegrationSection3ACVF.BallKindPredicates
+public import IntegrationSection3ACVF.CanonicalBallSupport
+public import IntegrationSection3.ValuationRadius
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Uniqueness of ordinary Gamma radii and separation of open and closed
 balls. The valuation-density input is supplied by the existing ACVF-QE

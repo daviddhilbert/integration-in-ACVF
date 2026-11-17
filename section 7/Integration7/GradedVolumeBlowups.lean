@@ -1,4 +1,10 @@
-import Integration7.IteratedVolumeBlowups
+module
+
+public import Integration7.IteratedVolumeBlowups
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 set_option backward.isDefEq.respectTransparency false
 open FirstOrder FirstOrder.Language CategoryTheory
 open SpecialTransformations.Milestone0 SpecialTransformations.Milestone0.LRV

@@ -1,4 +1,10 @@
-import IntegrationSection6.GammaPresentationTotalVolume
+module
+
+public import IntegrationSection6.GammaPresentationTotalVolume
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Restrict an actual finite graph presentation to an original-Gamma
 subdomain. The new internal code set still adds only finitely many names;

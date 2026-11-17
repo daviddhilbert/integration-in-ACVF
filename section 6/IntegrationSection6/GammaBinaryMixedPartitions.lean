@@ -1,4 +1,10 @@
-import IntegrationSection6.GammaFiniteMixedUnions
+module
+
+public import IntegrationSection6.GammaFiniteMixedUnions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual binary partition by a Gamma predicate and its complement. -/
 noncomputable section

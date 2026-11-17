@@ -1,7 +1,13 @@
-import IntegrationSection6.FiniteGammaInitial
-import Mathlib.CategoryTheory.Monoidal.OfHasFiniteProducts
-import Mathlib.CategoryTheory.Monoidal.Skeleton
-import Mathlib.Algebra.Group.TypeTags.Basic
+module
+
+public import IntegrationSection6.FiniteGammaInitial
+public import Mathlib.CategoryTheory.Monoidal.OfHasFiniteProducts
+public import Mathlib.CategoryTheory.Monoidal.Skeleton
+public import Mathlib.Algebra.Group.TypeTags.Basic
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual original-Gamma RV[k] isomorphism classes, with coproduct addition. -/
 noncomputable section

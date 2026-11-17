@@ -1,6 +1,12 @@
-import Integration7.UnarySpecialRelativeConverse
-import IntegrationSection6.GammaHeadFibreParameters
-import IntegrationSection6.CanonicalContractionPrograms
+module
+
+public import Integration7.UnarySpecialRelativeConverse
+public import IntegrationSection6.GammaHeadFibreParameters
+public import IntegrationSection6.CanonicalContractionPrograms
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A genuine head preparation restricts to a genuine unary head
 preparation after exactly its complementary VF tuple is named. -/

@@ -1,6 +1,12 @@
-import Integration7.VolumeFormProducts
-import Integration7.RVVolumeObjects
-import Section4.RVFiniteHomogeneousProducts
+module
+
+public import Integration7.VolumeFormProducts
+public import Integration7.RVVolumeObjects
+public import Section4.RVFiniteHomogeneousProducts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 set_option backward.isDefEq.respectTransparency false
 open FirstOrder FirstOrder.Language
 open SpecialTransformations.Milestone0 SpecialTransformations.Milestone0.LRV

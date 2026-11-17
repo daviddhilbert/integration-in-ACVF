@@ -1,5 +1,11 @@
-import Integration7.GammaFunctionRowValidity
-import Section4.RVCoordinates
+module
+
+public import Integration7.GammaFunctionRowValidity
+public import Section4.RVCoordinates
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Recognize first-order function validity from typed RV functionality
 and exact support. Proper-sort guards decode every raw witness. -/

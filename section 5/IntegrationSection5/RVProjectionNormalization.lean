@@ -1,5 +1,11 @@
-import IntegrationSection5.StandardContraction
-import Section4.RVIsoTools
+module
+
+public import IntegrationSection5.StandardContraction
+public import Section4.RVIsoTools
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Explicitly present an RV volume projection as the first coordinates.
 The duplicated volume tuple is retained together with every old label;

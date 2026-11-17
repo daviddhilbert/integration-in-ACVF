@@ -1,5 +1,11 @@
-import Integration7.PositiveSelectedContractionObjects
-import Integration7.SelectedVolumeProjectionFibres
+module
+
+public import Integration7.PositiveSelectedContractionObjects
+public import Integration7.SelectedVolumeProjectionFibres
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Lemma 7.5 with the accepted nonempty selected-coordinate hypothesis.
 The fibrewise assumption is required only on the common VF projection.

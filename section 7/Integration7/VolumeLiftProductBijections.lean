@@ -1,7 +1,13 @@
-import Integration7.VolumeLiftProductDomains
-import Integration7.PositiveVFVolumeProducts
-import Integration7.GradedVolumeProducts
-import Integration7.VFVolumeIsomorphisms
+module
+
+public import Integration7.VolumeLiftProductDomains
+public import Integration7.PositiveVFVolumeProducts
+public import Integration7.GradedVolumeProducts
+public import Integration7.VFVolumeIsomorphisms
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual Cartesian product of full volume lifts is volume
 bijective to the lift of the actual RV product, with the original forms. -/

@@ -1,6 +1,12 @@
-import IntegrationSection3ACVF.OpenImageConfigurations
-import IntegrationSection3ACVF.UnaryRelationFamilies
-import IntegrationSection3ACVF.FullBaseLogic
+module
+
+public import IntegrationSection3ACVF.OpenImageConfigurations
+public import IntegrationSection3ACVF.UnaryRelationFamilies
+public import IntegrationSection3ACVF.FullBaseLogic
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Open-image tests for uniform unary graphs. Every context label is a
 free variable. Quantification is over actual four-coordinate ball codes. -/

@@ -1,5 +1,11 @@
-import Integration7.VFRVFibres
-import Integration7.FiniteVolumeParameterContexts
+module
+
+public import Integration7.VFRVFibres
+public import Integration7.FiniteVolumeParameterContexts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual unary head fibres of raw mixed definable sets, with the
 literal frozen VF parameters and the original nonzero density. -/

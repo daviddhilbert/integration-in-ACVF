@@ -1,7 +1,13 @@
-import IntegrationSection6.GammaVolumeImage
-import IntegrationSection6.GammaAlgebraicFiniteness
-import IntegrationSection6.FiniteElementarySlices
-import Section3.GammaRealRestriction
+module
+
+public import IntegrationSection6.GammaVolumeImage
+public import IntegrationSection6.GammaAlgebraicFiniteness
+public import IntegrationSection6.FiniteElementarySlices
+public import Section3.GammaRealRestriction
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Finite old-label slices over the original Gamma base. Only the real
 base and the finitely many fixed labels enter the saturation bound. -/

@@ -1,7 +1,13 @@
-import Integration7.AERVVolumeHeadIntegrals
-import Integration7.AppendedVolumeFunctionIntegrals
-import Integration7.NativeAppendedVolumeIntegralFormula
-import Integration7.AppendedHeadIntegralPrograms
+module
+
+public import Integration7.AERVVolumeHeadIntegrals
+public import Integration7.AppendedVolumeFunctionIntegrals
+public import Integration7.NativeAppendedVolumeIntegralFormula
+public import Integration7.AppendedHeadIntegralPrograms
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Successive integration of one VF head and the remaining VF base
 equals total integration in the coefficient-first appended convention.

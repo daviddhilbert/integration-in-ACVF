@@ -1,6 +1,12 @@
-import Integration7.NativeCoordinateDensityVolumeObjects
-import Integration7.NativeRawVolumeLabelMaps
-import Section4.RVIsoTools
+module
+
+public import Integration7.NativeCoordinateDensityVolumeObjects
+public import Integration7.NativeRawVolumeLabelMaps
+public import Section4.RVIsoTools
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Native bijections preserving the selected tuple and density produce
 actual RV volume isomorphisms, with a proved generic RV Jacobian. -/

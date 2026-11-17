@@ -1,4 +1,10 @@
-import Integration7.SelectedVolumeFamilyPositiveProducts
+module
+
+public import Integration7.SelectedVolumeFamilyPositiveProducts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A constant coefficient whose volume tuple is already given by literal
 labels needs no further selection graph in the product family. Finiteness

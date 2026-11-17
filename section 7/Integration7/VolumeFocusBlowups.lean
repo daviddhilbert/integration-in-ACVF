@@ -1,6 +1,12 @@
-import Integration7.ElementaryBlowupConstruction
-import IntegrationSection6.FiniteBlowups
-import IntegrationSection6.KeyInverseCoordinates
+module
+
+public import Integration7.ElementaryBlowupConstruction
+public import IntegrationSection6.FiniteBlowups
+public import IntegrationSection6.KeyInverseCoordinates
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A full admissible focus gives an actual elementary volume blowup.
 Its form is the unchanged density pulled back along the old-label map. -/

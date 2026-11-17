@@ -1,5 +1,11 @@
-import Integration7.HKZeroVolumeFamilies
-import Integration7.SelectedFamilyJacobianPreservation
+module
+
+public import Integration7.HKZeroVolumeFamilies
+public import Integration7.SelectedFamilyJacobianPreservation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Weighted-zero functions push forward along a VF base bijection.
 Only the original RV density is multiplied by the inverse base Jacobian. -/

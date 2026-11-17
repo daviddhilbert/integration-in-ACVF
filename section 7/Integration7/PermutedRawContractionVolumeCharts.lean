@@ -1,6 +1,12 @@
-import Integration7.PermutedNativeContractionVolumeCharts
-import Integration7.RawStandardVolumeObjects
-import IntegrationSection6.PermutationFiniteFibres
+module
+
+public import Integration7.PermutedNativeContractionVolumeCharts
+public import Integration7.RawStandardVolumeObjects
+public import IntegrationSection6.PermutationFiniteFibres
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A raw finite-label contraction on a permuted source has exactly
 the corresponding permutation of its original VF volume tuple. The

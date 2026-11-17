@@ -1,4 +1,10 @@
-import IntegrationSection6.LiftPresentations
+module
+
+public import IntegrationSection6.LiftPresentations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A real-definable RV-label map extends to mixed points by identity
 on all VF coordinates, with its complete graph and the same real base. -/

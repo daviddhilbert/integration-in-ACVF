@@ -1,5 +1,11 @@
-import Integration7.GenericFiniteIsomorphismPreparation
-import Integration7.HKConstrainedBijectionCharts
+module
+
+public import Integration7.GenericFiniteIsomorphismPreparation
+public import Integration7.HKConstrainedBijectionCharts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Generic finite-row charts can be prepared while retaining a global
 graph constraint. The same finite family is used on every essential cell. -/

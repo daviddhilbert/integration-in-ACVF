@@ -1,6 +1,12 @@
-import IntegrationSection3ACVF.AnnulusValueIntervals
-import IntegrationSection3ACVF.RVValueShellGeometry
-import IntegrationSection3ACVF.MaximalOpenClasses
+module
+
+public import IntegrationSection3ACVF.AnnulusValueIntervals
+public import IntegrationSection3ACVF.RVValueShellGeometry
+public import IntegrationSection3ACVF.MaximalOpenClasses
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The maximal open balls in a radial VF set avoiding its centre are
 exactly the translated nonzero RV fibres. This applies to actual punctured

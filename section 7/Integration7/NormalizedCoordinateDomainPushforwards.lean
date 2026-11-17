@@ -1,4 +1,10 @@
-import Integration7.NormalizedSupportedCoordinateIntegrals
+module
+
+public import Integration7.NormalizedSupportedCoordinateIntegrals
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Partial integration on an arbitrary definable VF domain is a
 linear operator on the full normalized function module. It agrees with

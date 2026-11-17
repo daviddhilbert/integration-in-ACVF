@@ -1,5 +1,11 @@
-import IntegrationSection5.CanonicalHeadGeometry
-import IntegrationSection5.SharedRVProductImage
+module
+
+public import IntegrationSection5.CanonicalHeadGeometry
+public import IntegrationSection5.SharedRVProductImage
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option allowUnsafeReducibility true in

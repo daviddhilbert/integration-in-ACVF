@@ -1,6 +1,12 @@
-import Integration7.HKRVVolumeProducts
-import Integration7.OrdinaryVFVolumeFamilies
-import Integration7.DefinableVFVolumeFamilies
+module
+
+public import Integration7.HKRVVolumeProducts
+public import Integration7.OrdinaryVFVolumeFamilies
+public import Integration7.DefinableVFVolumeFamilies
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Zero-degree coefficient families retain an arbitrary definable density.
 Rows and their original-context extensions keep that same density, and

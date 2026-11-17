@@ -1,4 +1,10 @@
-import Integration7.UniformBalancedGammaLinearity
+module
+
+public import Integration7.UniformBalancedGammaLinearity
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Labelwise Gamma-linearity is transferred from the actual cell
 rows to the one global native positioning map. -/

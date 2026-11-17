@@ -1,4 +1,10 @@
-import IntegrationSection6.GammaIsoRestrictions
+module
+
+public import IntegrationSection6.GammaIsoRestrictions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Equality transport changes no underlying set or isomorphism. -/
 noncomputable section

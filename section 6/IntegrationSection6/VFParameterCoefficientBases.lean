@@ -1,8 +1,14 @@
-import IntegrationSection6.SmallGammaDefinableClosure
-import Section3.GeneratedBaseLifting
-import Section3.GammaDefinableClosureField
-import Section3.FieldBase
-import Section5.GammaLift
+module
+
+public import IntegrationSection6.SmallGammaDefinableClosure
+public import Section3.GeneratedBaseLifting
+public import Section3.GammaDefinableClosureField
+public import Section3.FieldBase
+public import Section5.GammaLift
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual dcl(B,x) coefficient bases in6.20: generation, the field
 convention and smallness follow from the original standing hypotheses. -/

@@ -1,7 +1,13 @@
-import Integration7.SelectedVolumeFamilyPositiveProducts
-import Integration7.AERVVolumeFunctions
-import Integration7.VolumeBlowupRightProducts
-import Integration7.BlowupParameterExtension
+module
+
+public import Integration7.SelectedVolumeFamilyPositiveProducts
+public import Integration7.AERVVolumeFunctions
+public import Integration7.VolumeBlowupRightProducts
+public import Integration7.BlowupParameterExtension
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual multiplication by positive common-blowup coefficient classes
 descends to the existing AE function quotient. Both coefficient and row

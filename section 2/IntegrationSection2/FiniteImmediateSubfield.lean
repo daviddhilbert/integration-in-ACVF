@@ -1,7 +1,13 @@
-import IntegrationSection2.HenselianImmediateEmbeddings
-import IntegrationSection2.ValuedSubfieldRestriction
-import IntegrationSection2.AlgebraicEnvelopeBases
-import Section9.GaussExtension
+module
+
+public import IntegrationSection2.HenselianImmediateEmbeddings
+public import IntegrationSection2.ValuedSubfieldRestriction
+public import IntegrationSection2.AlgebraicEnvelopeBases
+public import Section9.GaussExtension
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! No finite immediate extension of a henselian subfield inside
 the actual algebraically closed valued ambient field survives in

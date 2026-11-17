@@ -1,9 +1,15 @@
-import IntegrationSection6.DefinableFamilyLifts
-import IntegrationSection6.GammaRawCoproductSchemata
-import IntegrationSection6.GammaTaggedLifts
-import IntegrationSection6.GammaVFAllAdditivePresentation
-import IntegrationSection6.GammaVFAllScissorDomains
-import IntegrationSection6.GammaMixedEmptyIsomorphisms
+module
+
+public import IntegrationSection6.DefinableFamilyLifts
+public import IntegrationSection6.GammaRawCoproductSchemata
+public import IntegrationSection6.GammaTaggedLifts
+public import IntegrationSection6.GammaVFAllAdditivePresentation
+public import IntegrationSection6.GammaVFAllScissorDomains
+public import IntegrationSection6.GammaMixedEmptyIsomorphisms
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A family coproduct has the literal disjoint union of tagged total
 lifts. The resulting additive identity holds in the actual VF scissors. -/

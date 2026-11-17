@@ -1,5 +1,11 @@
-import IntegrationSection5.CellStagedContractions
-import IntegrationSection5.ProgramStandardPresentation
+module
+
+public import IntegrationSection5.CellStagedContractions
+public import IntegrationSection5.ProgramStandardPresentation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The two cell programs become standard contractions in the stated
 coordinate orders, with the actual volume-coordinate change explicit. -/

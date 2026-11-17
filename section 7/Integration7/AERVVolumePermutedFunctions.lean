@@ -1,6 +1,12 @@
-import Integration7.PermutedVolumeFamilyRows
-import Integration7.PureVFPermutationDimensions
-import Integration7.AERVVolumeFunctions
+module
+
+public import Integration7.PermutedVolumeFamilyRows
+public import Integration7.PureVFPermutationDimensions
+public import Integration7.AERVVolumeFunctions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Arbitrary VF coordinate permutations act on the actual
 almost-everywhere function quotient. Exceptional sets are carried by

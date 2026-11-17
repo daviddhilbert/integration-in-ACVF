@@ -1,7 +1,13 @@
-import Integration7.GradedAEVolumeFunctions
-import Integration7.AEOrdinaryPositiveCoefficientLinearMaps
-import Integration7.AERVVolumePositiveCoefficientOrdinaryBilinearMaps
-import Mathlib.Algebra.Module.End
+module
+
+public import Integration7.GradedAEVolumeFunctions
+public import Integration7.AEOrdinaryPositiveCoefficientLinearMaps
+public import Integration7.AERVVolumePositiveCoefficientOrdinaryBilinearMaps
+public import Mathlib.Algebra.Module.End
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! All four homogeneous coefficient actions, including ordinary degree
 zero, on the actual graded AE function components. -/

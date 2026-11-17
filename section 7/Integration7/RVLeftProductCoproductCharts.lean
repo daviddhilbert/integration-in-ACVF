@@ -1,4 +1,10 @@
-import Integration7.RVProductCoproductCharts
+module
+
+public import Integration7.RVProductCoproductCharts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Explicit left distributivity without exchanging volume coordinates. -/
 

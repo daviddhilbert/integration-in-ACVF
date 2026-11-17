@@ -1,6 +1,12 @@
-import Integration7.FixedLabelProductHeadGeometry
-import Integration7.ConstantRVLabelSpecialPreparations
-import IntegrationSection6.StandardProgramPresentations
+module
+
+public import Integration7.FixedLabelProductHeadGeometry
+public import Integration7.ConstantRVLabelSpecialPreparations
+public import IntegrationSection6.StandardProgramPresentations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual two-coordinate standard contraction programs of RV-class
 products, with the supplied unary preparation in the second stage and

@@ -1,6 +1,12 @@
-import Integration7.GammaUnitVolumeIsoRealization
-import Integration7.GammaRVScalarMapGraphs
-import Integration7.GammaVolumeObjectGraphs
+module
+
+public import Integration7.GammaUnitVolumeIsoRealization
+public import Integration7.GammaRVScalarMapGraphs
+public import Integration7.GammaVolumeObjectGraphs
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Literal unit-density objects retain their full original-Gamma
 coordinate and density graphs in any containing real context. -/

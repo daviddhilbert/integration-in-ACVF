@@ -1,5 +1,11 @@
-import Section5.GammaInvariantLogic
-import IntegrationSection6.RVLabelMap
+module
+
+public import Section5.GammaInvariantLogic
+public import IntegrationSection6.RVLabelMap
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Restricting a real-definable coordinate program to an original-Gamma
 source retains its complete invariant graph, without naming that source. -/

@@ -1,6 +1,12 @@
-import Integration7.RawSupportedNonemptyFubini
-import Integration7.SupportedPositiveGradedActions
-import Integration7.NormalizedOrdinaryVolumeSupports
+module
+
+public import Integration7.RawSupportedNonemptyFubini
+public import Integration7.SupportedPositiveGradedActions
+public import Integration7.NormalizedOrdinaryVolumeSupports
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The literal supported homogeneous families are closed under zero,
 addition and every actual coefficient action. Thus their coefficient

@@ -1,6 +1,12 @@
-import Integration7.AllDegreeVolumeCoproductData
-import Integration7.AllDegreeVolumeIsoOperations
-import Integration7.RVLeftProductCoproductCharts
+module
+
+public import Integration7.AllDegreeVolumeCoproductData
+public import Integration7.AllDegreeVolumeIsoOperations
+public import Integration7.RVLeftProductCoproductCharts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Left distributivity for the original product in every degree. The
 direct fold preserves the volume coordinate order and the density. -/

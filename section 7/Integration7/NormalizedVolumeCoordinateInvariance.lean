@@ -1,7 +1,13 @@
-import Integration7.StabilizedVolumeCoordinateIsomorphisms
-import Integration7.NormalizedBasicVolumePresentation
-import Integration7.VolumeClassCoordinatePermutations
-import Mathlib.Logic.Equiv.Fin.Basic
+module
+
+public import Integration7.StabilizedVolumeCoordinateIsomorphisms
+public import Integration7.NormalizedBasicVolumePresentation
+public import Integration7.VolumeClassCoordinatePermutations
+public import Mathlib.Logic.Equiv.Fin.Basic
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Every unsigned volume-coordinate permutation becomes invisible in
 the actual normalized coefficient ring. The proof first gives a full

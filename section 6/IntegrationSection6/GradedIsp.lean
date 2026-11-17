@@ -1,6 +1,12 @@
-import IntegrationSection6.ProductCongruence
-import IntegrationSection6.GradedCongruence
-import Section4.RVGradedSemiring
+module
+
+public import IntegrationSection6.ProductCongruence
+public import IntegrationSection6.GradedCongruence
+public import Section4.RVGradedSemiring
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Lemma 6.8 on the actual graded positive RV scissors. -/
 

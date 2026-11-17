@@ -1,7 +1,13 @@
-import IntegrationSection3.CofiniteDefinableBijection
-import Section4.ResidueNormalization
-import Section4.MapParameters
-import VFAlgClosed
+module
+
+public import IntegrationSection3.CofiniteDefinableBijection
+public import Section4.ResidueNormalization
+public import Section4.MapParameters
+public import VFAlgClosed
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Transfer of actual RV graph definability to the native residue field,
 and finite-complement conservation there. The canonical-structure premise

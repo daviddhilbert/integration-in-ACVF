@@ -1,6 +1,12 @@
-import Integration7.CanonicalVolumePresentations
-import IntegrationSection6.GammaFiniteGraphObjects
-import IntegrationSection6.FiniteRVParameterExtension
+module
+
+public import Integration7.CanonicalVolumePresentations
+public import IntegrationSection6.GammaFiniteGraphObjects
+public import IntegrationSection6.FiniteRVParameterExtension
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Finite original-Gamma graph presentations retain their actual finite
 map and dimension bound in a containing canonical real base. -/

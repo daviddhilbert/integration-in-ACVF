@@ -1,5 +1,11 @@
-import IntegrationSection5.CoordinateInjectivityRefinement
-import IntegrationSection5.ScalarTagPartition
+module
+
+public import IntegrationSection5.CoordinateInjectivityRefinement
+public import IntegrationSection5.ScalarTagPartition
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Constructed finite Gamma-definable pieces with an injective target
 coordinate on every fixed-context, fixed-code source-head fibre. -/

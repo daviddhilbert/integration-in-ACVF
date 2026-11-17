@@ -1,5 +1,11 @@
-import Integration7.HeadCoordinateFibreContraction
-import IntegrationSection6.GammaHeadSelectedFiniteness
+module
+
+public import Integration7.HeadCoordinateFibreContraction
+public import IntegrationSection6.GammaHeadSelectedFiniteness
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The restricted unary program keeps the same head RV tag and the
 same suffix of old labels as the original head preparation. -/

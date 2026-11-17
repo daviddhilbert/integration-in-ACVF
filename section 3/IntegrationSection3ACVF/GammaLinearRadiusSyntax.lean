@@ -1,6 +1,12 @@
-import IntegrationSection3ACVF.GammaLinearBallRow
-import IntegrationSection3ACVF.RealParameterTuples
-import IntegrationSection3ACVF.GammaLinearRadiusClosure
+module
+
+public import IntegrationSection3ACVF.GammaLinearBallRow
+public import IntegrationSection3ACVF.RealParameterTuples
+public import IntegrationSection3ACVF.GammaLinearRadiusClosure
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual linear-radius locus is definable over the original
 interpreted base plus exactly the real centre. No choice or radius

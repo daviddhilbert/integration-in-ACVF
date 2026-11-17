@@ -1,6 +1,12 @@
-import IntegrationSection6.NormalizedFocus
-import IntegrationSection6.LiftCarrierGeometry
-import Section4.MapCorestrict
+module
+
+public import IntegrationSection6.NormalizedFocus
+public import IntegrationSection6.LiftCarrierGeometry
+public import Section4.MapCorestrict
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! An RV-pullback sublocus of a literal lift is exactly the lift of its
 old-label image. The parameter base and actual raw RV presentation are retained. -/

@@ -1,6 +1,12 @@
-import IntegrationSection3ACVF.GammaPairedCellSetup
-import IntegrationSection3ACVF.GammaCellDecomposition
-import IntegrationSection3ACVF.OrderedPairedCellGeometry
+module
+
+public import IntegrationSection3ACVF.GammaPairedCellSetup
+public import IntegrationSection3ACVF.GammaCellDecomposition
+public import IntegrationSection3ACVF.OrderedPairedCellGeometry
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual paired finite point/open-cell decompositions for a definable
 Gamma bijection from a closed interval. Every cell, right endpoint and

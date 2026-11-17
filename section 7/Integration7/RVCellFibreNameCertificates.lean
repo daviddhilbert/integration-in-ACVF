@@ -1,5 +1,11 @@
-import Integration7.GammaRVDefinableNameContexts
-import IntegrationSection6.GammaNamedRVFibres
+module
+
+public import Integration7.GammaRVDefinableNameContexts
+public import IntegrationSection6.GammaNamedRVFibres
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual name certificates for the original Gamma base augmented by
 one finite RV tuple. No VF representatives of those RV values are added. -/

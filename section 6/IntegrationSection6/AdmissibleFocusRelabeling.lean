@@ -1,4 +1,10 @@
-import IntegrationSection6.BlowupCoordinateFormula
+module
+
+public import IntegrationSection6.BlowupCoordinateFormula
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The relabeling part of6.12 needs no bound on the presentation code set:
 admissibility is already an input to an elementary blowup. This matters

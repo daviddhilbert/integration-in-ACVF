@@ -1,5 +1,11 @@
-import Integration7.SelectedRVVFTailHeadPreparations
-import Integration7.HeadImageCoordinateWitnesses
+module
+
+public import Integration7.SelectedRVVFTailHeadPreparations
+public import Integration7.HeadImageCoordinateWitnesses
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Taking a head image commutes with realization of selected RV
 labels by a VF tail. The old selector shifts past the new RV head tag. -/

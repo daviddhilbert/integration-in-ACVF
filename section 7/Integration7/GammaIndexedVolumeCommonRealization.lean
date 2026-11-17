@@ -1,5 +1,11 @@
-import Integration7.GammaIndexedVolumeBlowups
-import Integration7.GammaVolumeBlowupEquivalence
+module
+
+public import Integration7.GammaIndexedVolumeBlowups
+public import Integration7.GammaVolumeBlowupEquivalence
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Uniform finite formula chains realize as actual original-Gamma
 geometric chains. Auxiliary exception witnesses affect no geometric chart,

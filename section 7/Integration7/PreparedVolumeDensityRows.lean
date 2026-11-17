@@ -1,6 +1,12 @@
-import Integration7.GammaVolumeRowAgreements
-import IntegrationSection6.GammaPreparedRowAgreements
-import IntegrationSection6.GammaPreparedIndexPresentation
+module
+
+public import Integration7.GammaVolumeRowAgreements
+public import IntegrationSection6.GammaPreparedRowAgreements
+public import IntegrationSection6.GammaPreparedIndexPresentation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Prepared row agreement retains an original density coordinate.
 The equation holds on every prepared RV index, using its actual preimage. -/

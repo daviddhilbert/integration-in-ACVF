@@ -1,6 +1,12 @@
-import Section3.ModelContext
-import VFField
-import Section4.SmallGeneratedBase
+module
+
+public import Section3.ModelContext
+public import VFField
+public import Section4.SmallGeneratedBase
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Genuine small substructure contexts for finitely many named parameters.
 These inherit the ambient model hypotheses, without asserting VF-field or

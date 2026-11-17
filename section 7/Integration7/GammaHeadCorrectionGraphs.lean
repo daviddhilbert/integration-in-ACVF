@@ -1,6 +1,12 @@
-import Integration7.GammaRVScalarMapGraphs
-import Integration7.GammaEssentialCoordinateGraphs
-import Integration7.DefinableHeadCorrection
+module
+
+public import Integration7.GammaRVScalarMapGraphs
+public import Integration7.GammaEssentialCoordinateGraphs
+public import Integration7.DefinableHeadCorrection
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual Jacobian correction, including its unit fallback, has
 its full graph over the original Gamma base. -/

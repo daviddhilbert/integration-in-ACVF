@@ -1,9 +1,15 @@
-import Integration7.ElementaryBlowupIsomorphism
-import Integration7.ElementaryBlowupRestriction
-import Integration7.VolumePartition
-import Integration7.VolumeRestrictionIdentifications
-import Integration7.VolumeCoproductIsomorphism
-import Integration7.RVVolumeComposition
+module
+
+public import Integration7.ElementaryBlowupIsomorphism
+public import Integration7.ElementaryBlowupRestriction
+public import Integration7.VolumePartition
+public import Integration7.VolumeRestrictionIdentifications
+public import Integration7.VolumeCoproductIsomorphism
+public import Integration7.RVVolumeComposition
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! An actual elementary blowup splits over a definable source partition. -/
 

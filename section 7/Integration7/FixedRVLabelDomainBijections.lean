@@ -1,5 +1,11 @@
-import Integration7.GammaFixedRVLabelSpecialLifts
-import IntegrationSection5.GammaGraphOperations
+module
+
+public import Integration7.GammaFixedRVLabelSpecialLifts
+public import IntegrationSection5.GammaGraphOperations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Adjoining a fixed RV tuple is a genuine definable bijection onto its
 image. Arbitrary actual bijections lift with all fixed labels retained. -/

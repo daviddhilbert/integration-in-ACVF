@@ -1,4 +1,10 @@
-import IntegrationSection3ACVF.FullGammaControllers
+module
+
+public import IntegrationSection3ACVF.FullGammaControllers
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Full original-base syntax for partial actual Gamma functions and
 their order comparisons. All formulas keep every proper representative. -/

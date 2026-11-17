@@ -1,11 +1,17 @@
-import Integration7.InverseMixedVFBaseDensities
-import Integration7.MixedDomainProductAlmostEverywhere
-import Integration7.MixedDomainVolumeProducts
-import Integration7.SelectedFamilyJacobianFullLifts
-import Integration7.SelectedFamilyJacobianIntegrals
-import Integration7.SelectedFamilyJacobianPreservation
-import Integration7.SelectedTailLiftMaps
-import Integration7.SelectedTailVolumePreservation
+module
+
+public import Integration7.InverseMixedVFBaseDensities
+public import Integration7.MixedDomainProductAlmostEverywhere
+public import Integration7.MixedDomainVolumeProducts
+public import Integration7.SelectedFamilyJacobianFullLifts
+public import Integration7.SelectedFamilyJacobianIntegrals
+public import Integration7.SelectedFamilyJacobianPreservation
+public import Integration7.SelectedTailLiftMaps
+public import Integration7.SelectedTailVolumePreservation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 set_option pp.universes true
 set_option pp.proofs false

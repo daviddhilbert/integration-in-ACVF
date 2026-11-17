@@ -1,8 +1,14 @@
-import Integration7.OrdinaryVolumeFamilyRowIsomorphisms
-import Integration7.GammaMixedIsomorphismMaps
-import Integration7.VFVolumeBijections
-import Integration7.VFVolumeClasses
-import IntegrationSection6.GammaMixedParameterUniformity
+module
+
+public import Integration7.OrdinaryVolumeFamilyRowIsomorphisms
+public import Integration7.GammaMixedIsomorphismMaps
+public import Integration7.VFVolumeBijections
+public import Integration7.VFVolumeClasses
+public import IntegrationSection6.GammaMixedParameterUniformity
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Ordinary pointwise-equal RV[0] families have a genuine original-base
 definable bijection preserving every VF coordinate and the unit density. -/

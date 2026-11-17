@@ -1,6 +1,12 @@
-import Integration7.HKZeroVolumeFamilies
-import Integration7.HKVolumeClasses
-import Integration7.PureVFDimensionUnions
+module
+
+public import Integration7.HKZeroVolumeFamilies
+public import Integration7.HKVolumeClasses
+public import Integration7.PureVFDimensionUnions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Weighted measured-zero valued functions modulo equality outside one
 same-base VF-small exceptional set. Each good row retains its exact RV

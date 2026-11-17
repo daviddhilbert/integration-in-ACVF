@@ -1,5 +1,11 @@
-import IntegrationSection6.GammaLabelSliceValidity
-import Section4.RVLabelCompression
+module
+
+public import IntegrationSection6.GammaLabelSliceValidity
+public import Section4.RVLabelCompression
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Real sorted coordinate conditions used in admissibility validity.
 Normalization preserves the single absorbing RV zero. -/

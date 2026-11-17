@@ -1,4 +1,10 @@
-import IntegrationSection3ACVF.LinearSubballSpecialization
+module
+
+public import IntegrationSection3ACVF.LinearSubballSpecialization
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Corollary 3.17 with the paper's least-radius predicate. Infinity
 means the singleton at the centre; VF has its separate bottom radius. -/

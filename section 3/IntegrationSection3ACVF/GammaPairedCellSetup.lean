@@ -1,7 +1,13 @@
-import IntegrationSection3ACVF.GammaPiecewiseMonotonicity
-import IntegrationSection3ACVF.GammaOrderCellSyntax
-import IntegrationSection3ACVF.GammaFunctionSets
-import IntegrationSection3ACVF.FiniteOrderCommonControls
+module
+
+public import IntegrationSection3ACVF.GammaPiecewiseMonotonicity
+public import IntegrationSection3ACVF.GammaOrderCellSyntax
+public import IntegrationSection3ACVF.GammaFunctionSets
+public import IntegrationSection3ACVF.FiniteOrderCommonControls
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Source and target endpoint sets for a definable Gamma bijection.
 Source cells are monotone; every target cell has constant membership in

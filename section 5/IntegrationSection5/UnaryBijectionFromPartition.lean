@@ -1,6 +1,12 @@
-import IntegrationSection5.GammaOpenPreparation
-import IntegrationSection5.GammaPreparedBijection
-import IntegrationSection5.ConjugateComposition
+module
+
+public import IntegrationSection5.GammaOpenPreparation
+public import IntegrationSection5.GammaPreparedBijection
+public import IntegrationSection5.ConjugateComposition
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Assembly of unary bijection preparation from a finite coordinate-open
 partition. Every special chain is constructed and keeps its original-base graphs. -/

@@ -1,14 +1,20 @@
-import IntegrationSection6.GlobalIntegrationProducts
-import IntegrationSection6.GammaGlobalAdditiveLiftProducts
-import IntegrationSection6.GlobalQuotientAdditiveLift
-import IntegrationSection6.FiniteVFIntegralScissors
-import IntegrationSection6.GammaVFAllAdditivePresentation
-import IntegrationSection6.GammaVFAllFinitePresentation
-import IntegrationSection6.FiniteIntegrationPadding
-import IntegrationSection6.GammaNonzeroResolutions
-import IntegrationSection6.GammaNonzeroQuotientLift
-import IntegrationSection6.GammaNonzeroThroughTransitions
-import IntegrationSection6.GammaIspPadding
+module
+
+public import IntegrationSection6.GlobalIntegrationProducts
+public import IntegrationSection6.GammaGlobalAdditiveLiftProducts
+public import IntegrationSection6.GlobalQuotientAdditiveLift
+public import IntegrationSection6.FiniteVFIntegralScissors
+public import IntegrationSection6.GammaVFAllAdditivePresentation
+public import IntegrationSection6.GammaVFAllFinitePresentation
+public import IntegrationSection6.FiniteIntegrationPadding
+public import IntegrationSection6.GammaNonzeroResolutions
+public import IntegrationSection6.GammaNonzeroQuotientLift
+public import IntegrationSection6.GammaNonzeroThroughTransitions
+public import IntegrationSection6.GammaIspPadding
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The nonzero-coordinate filtered form of fixed-degree integration. -/
 noncomputable section

@@ -1,6 +1,12 @@
-import IntegrationSection6.MixedRVBlockEquivalences
-import Section5.GammaLift
-import Section5.GammaLiftRelation
+module
+
+public import IntegrationSection6.MixedRVBlockEquivalences
+public import Section5.GammaLift
+public import Section5.GammaLiftRelation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Extend a full Gamma isomorphism by unchanged auxiliary RV labels.
 This is an actual mixed-point bijection with its complete Gamma graph. -/

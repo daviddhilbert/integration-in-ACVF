@@ -1,7 +1,13 @@
-import Integration7.AERVVolumeRestrictionCoefficients
-import Integration7.SupportedPositiveGradedActions
-import Integration7.GradedSemiringActionLinearMaps
-import Integration7.NormalizedPositiveDegreeFunctions
+module
+
+public import Integration7.AERVVolumeRestrictionCoefficients
+public import Integration7.SupportedPositiveGradedActions
+public import Integration7.GradedSemiringActionLinearMaps
+public import Integration7.NormalizedPositiveDegreeFunctions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The positive graded supported module is an actual retract of the
 full positive graded AE module, linearly over every coefficient degree. -/

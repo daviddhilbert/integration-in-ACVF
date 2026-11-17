@@ -1,6 +1,12 @@
-import IntegrationSection5.HeadUnaryCompletion
-import IntegrationSection5.GammaOrderedContraction
-import Section5.GammaGraphs
+module
+
+public import IntegrationSection5.HeadUnaryCompletion
+public import IntegrationSection5.GammaOrderedContraction
+public import Section5.GammaGraphs
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Complete original-Gamma certification of the constructed two-stage
 program, across its internal presentation identifications. -/

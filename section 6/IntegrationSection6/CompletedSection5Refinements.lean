@@ -1,6 +1,12 @@
-import IntegrationSection5.FiniteRVComparison
-import IntegrationSection6.CompletedSection5Comparisons
-import IntegrationSection6.GammaContractionExtensionIsomorphisms
+module
+
+public import IntegrationSection5.FiniteRVComparison
+public import IntegrationSection6.CompletedSection5Comparisons
+public import IntegrationSection6.GammaContractionExtensionIsomorphisms
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The published finite Section 5.8 producer supplies the actual
 VF-fixed refinement and the normalized opposite-order comparison over its

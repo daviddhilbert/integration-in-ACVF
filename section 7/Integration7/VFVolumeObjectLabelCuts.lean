@@ -1,4 +1,10 @@
-import Integration7.SelectedVolumeFamilyLabelCuts
+module
+
+public import Integration7.SelectedVolumeFamilyLabelCuts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Retained-label cuts of finite-label VF volume objects commute with
 their actual density graphs. These include genuine unary RV[0] fibres. -/

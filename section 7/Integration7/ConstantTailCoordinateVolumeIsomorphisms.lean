@@ -1,4 +1,10 @@
-import Integration7.ConstantHeadCoordinateVolumeIsomorphisms
+module
+
+public import Integration7.ConstantHeadCoordinateVolumeIsomorphisms
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The constant-tail counterpart of the checked constant-head volume
 criterion, retaining the actual ordinary and volume isomorphisms. -/

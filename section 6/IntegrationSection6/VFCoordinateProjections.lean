@@ -1,6 +1,12 @@
-import IntegrationSection6.GammaVFCoordinateIsomorphisms
-import Mathlib.Logic.Equiv.Set
-import Mathlib.Logic.Equiv.Fin.Basic
+module
+
+public import IntegrationSection6.GammaVFCoordinateIsomorphisms
+public import Mathlib.Logic.Equiv.Set
+public import Mathlib.Logic.Equiv.Fin.Basic
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Arbitrary coordinate projections, including every subset of the VF
 coordinates, with explicit retained/complementary enumerations. -/

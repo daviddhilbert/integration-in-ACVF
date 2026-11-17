@@ -1,5 +1,11 @@
-import IntegrationSection5.GammaRectangleFamilyComparison
-import IntegrationSection5.CellLabelInjection
+module
+
+public import IntegrationSection5.GammaRectangleFamilyComparison
+public import IntegrationSection5.CellLabelInjection
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! An actual original-Gamma definable partition by whether an RV fibre is a rectangle. A four-VF witness detects failure, uniformly in every old RV label. -/
 noncomputable section

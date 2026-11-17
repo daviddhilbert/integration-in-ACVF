@@ -1,4 +1,10 @@
-import Integration7.UniformBalancedHorizontalCentreValues
+module
+
+public import Integration7.UniformBalancedHorizontalCentreValues
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The mixed positioning image is exactly the full labelled head
 projection of the balanced family, including every refinement parameter. -/

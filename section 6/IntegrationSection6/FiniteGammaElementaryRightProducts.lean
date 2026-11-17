@@ -1,7 +1,13 @@
-import IntegrationSection6.FiniteGammaLeftProductAdmissibility
-import IntegrationSection6.FiniteGammaElementaryAt
-import IntegrationSection6.FiniteGammaFormulaIsos
-import IntegrationSection6.ElementaryRightProductCoordinates
+module
+
+public import IntegrationSection6.FiniteGammaLeftProductAdmissibility
+public import IntegrationSection6.FiniteGammaElementaryAt
+public import IntegrationSection6.FiniteGammaFormulaIsos
+public import IntegrationSection6.ElementaryRightProductCoordinates
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

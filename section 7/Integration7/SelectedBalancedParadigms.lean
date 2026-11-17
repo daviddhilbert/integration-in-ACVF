@@ -1,4 +1,10 @@
-import Integration7.NativeBalancedCellFamilies
+module
+
+public import Integration7.NativeBalancedCellFamilies
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Nondegeneracy of the selected balanced chart follows from the
 actual three-part partition, with no additional paradigm assumption. -/

@@ -1,6 +1,12 @@
-import Integration7.IndexedEssentialVolumeDomains
-import Integration7.VolumeDataRelabelingMaps
-import Integration7.AllDegreeVolumeProductZeros
+module
+
+public import Integration7.IndexedEssentialVolumeDomains
+public import Integration7.VolumeDataRelabelingMaps
+public import Integration7.AllDegreeVolumeProductZeros
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Empty index families have the actual empty volume comparison,
 including when their label arities differ. The positive degree is retained. -/

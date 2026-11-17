@@ -1,7 +1,13 @@
-import Integration7.PreparedVolumeGeometryGammaGluing
-import Integration7.GammaVFPreparedVolumeUniformity
-import IntegrationSection6.GammaVFParameterBases
-import IntegrationSection6.GammaPreparedIndexPresentation
+module
+
+public import Integration7.PreparedVolumeGeometryGammaGluing
+public import Integration7.GammaVFPreparedVolumeUniformity
+public import IntegrationSection6.GammaVFParameterBases
+public import IntegrationSection6.GammaPreparedIndexPresentation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Pointwise common volume blowups over named VF parameters give one
 preparation and actual common blowups of the assembled positive objects. -/

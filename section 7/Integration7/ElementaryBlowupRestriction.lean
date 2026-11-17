@@ -1,5 +1,11 @@
-import Integration7.ElementaryBlowupConstruction
-import Integration7.DefinableMapPreimages
+module
+
+public import Integration7.ElementaryBlowupConstruction
+public import Integration7.DefinableMapPreimages
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Restrict a concrete elementary blowup to the preimage of an actual
 definable source locus. Both the chart and density restrict. -/

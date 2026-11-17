@@ -1,5 +1,11 @@
-import IntegrationSection3ACVF.AffineHoleGeometry
-import IntegrationSection4.RadiusBoundary
+module
+
+public import IntegrationSection3ACVF.AffineHoleGeometry
+public import IntegrationSection4.RadiusBoundary
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

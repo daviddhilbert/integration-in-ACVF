@@ -1,5 +1,11 @@
-import IntegrationSection6.GammaVFSchemaSources
-import IntegrationSection6.GammaSchemaFiniteRows
+module
+
+public import IntegrationSection6.GammaVFSchemaSources
+public import IntegrationSection6.GammaSchemaFiniteRows
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Exact finite RV fibres of the mixed source when the family volume
 is the chosen tuple of old RV labels. -/

@@ -1,5 +1,11 @@
-import Integration7.HKMixedGraphConstraints
-import IntegrationSection6.MixedVFParameterDomains
+module
+
+public import Integration7.HKMixedGraphConstraints
+public import IntegrationSection6.MixedVFParameterDomains
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Point graph constraints in the exact sorted layout used by the
 existing VF-parameter compactness proof, including its empty VF fibres. -/

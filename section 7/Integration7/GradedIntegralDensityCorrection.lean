@@ -1,4 +1,10 @@
-import Integration7.PositiveGradedVolumeFubini
+module
+
+public import Integration7.PositiveGradedVolumeFubini
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Density correction on graded integral values is additive. It is
 only applied to positive total degrees; this construction does not

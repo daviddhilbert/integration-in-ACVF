@@ -1,4 +1,10 @@
-import Integration7.FactoredRVConstraintHeadMaps
+module
+
+public import Integration7.FactoredRVConstraintHeadMaps
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Literal suffix identities for a unary preparation carrying arbitrary
 functional RV labels, without any independence assumption on those labels. -/

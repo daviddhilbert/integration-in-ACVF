@@ -1,8 +1,14 @@
-import IntegrationSection6.FiniteVFIntegralValues
-import IntegrationSection6.GammaMixedProducts
-import Section4.PositivePresentation
-import Section5.GammaSurjectivity
-import Section7.GammaScissors
+module
+
+public import IntegrationSection6.FiniteVFIntegralValues
+public import IntegrationSection6.GammaMixedProducts
+public import Section4.PositivePresentation
+public import Section5.GammaSurjectivity
+public import Section7.GammaScissors
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The representative-independent integration value of an actual VF[k]
 object with finite RV fibres. Representatives come from the checked5.7

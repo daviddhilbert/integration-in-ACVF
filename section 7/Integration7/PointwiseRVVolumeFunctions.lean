@@ -1,4 +1,10 @@
-import Integration7.SelectedFamilyIntegral
+module
+
+public import Integration7.SelectedFamilyIntegral
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Positive homogeneous definable RV-volume functions modulo actual
 pointwise common-blowup equality, with their descended integral. This is

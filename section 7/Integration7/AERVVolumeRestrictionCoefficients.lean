@@ -1,6 +1,12 @@
-import Integration7.AERVVolumeRestrictionAdditivity
-import Integration7.SupportedOrdinaryVolumeCoefficients
-import Integration7.SupportedPositiveVolumeCoefficients
+module
+
+public import Integration7.AERVVolumeRestrictionAdditivity
+public import Integration7.SupportedOrdinaryVolumeCoefficients
+public import Integration7.SupportedPositiveVolumeCoefficients
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Restriction commutes with every actual homogeneous coefficient
 action, including ordinary RV[0]. -/

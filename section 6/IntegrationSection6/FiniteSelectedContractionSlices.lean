@@ -1,7 +1,13 @@
-import IntegrationSection6.FiniteSelectedContractions
-import IntegrationSection6.GammaSwappedVolumes
-import IntegrationSection6.GammaNamedIsoRestrictions
-import IntegrationSection6.GammaSelectedLiftSlices
+module
+
+public import IntegrationSection6.FiniteSelectedContractions
+public import IntegrationSection6.GammaSwappedVolumes
+public import IntegrationSection6.GammaNamedIsoRestrictions
+public import IntegrationSection6.GammaSelectedLiftSlices
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Selected-volume slices of actual standard contractions have lifts
 isomorphic to the original set with the selected old RV labels fixed. -/

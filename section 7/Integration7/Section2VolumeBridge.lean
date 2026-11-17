@@ -1,7 +1,13 @@
-import Integration7.RVVolumeMorphisms
-import Integration7.RVNonzero
-import IntegrationSection2.ConcreteVolumeMorphisms
-import Section9.FiniteVolumeDimension
+module
+
+public import Integration7.RVVolumeMorphisms
+public import Integration7.RVNonzero
+public import IntegrationSection2.ConcreteVolumeMorphisms
+public import Section9.FiniteVolumeDimension
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The reconstructed volume objects and the checked Section 2 objects
 use the same densities and Jacobians. The only changes of presentation are

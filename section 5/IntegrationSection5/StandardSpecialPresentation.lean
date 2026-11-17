@@ -1,5 +1,11 @@
-import IntegrationSection5.GammaTracePresentation
-import IntegrationSection5.GammaStandardTrace
+module
+
+public import IntegrationSection5.GammaTracePresentation
+public import IntegrationSection5.GammaStandardTrace
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 noncomputable section
 set_option autoImplicit false

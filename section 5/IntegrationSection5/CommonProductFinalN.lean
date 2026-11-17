@@ -1,6 +1,12 @@
-import IntegrationSection5.CommonProductPrograms
-import IntegrationSection5.PaddedProductInactive
-import IntegrationSection5.CommonProductNComparison
+module
+
+public import IntegrationSection5.CommonProductPrograms
+public import IntegrationSection5.PaddedProductInactive
+public import IntegrationSection5.CommonProductNComparison
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option allowUnsafeReducibility true in

@@ -1,4 +1,10 @@
-import IntegrationSection5.FibreFocusBoundary
+module
+
+public import IntegrationSection5.FibreFocusBoundary
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The one-coordinate canonical mean step strictly reduces the number of
 nonzero roots in each retained-label fibre. -/

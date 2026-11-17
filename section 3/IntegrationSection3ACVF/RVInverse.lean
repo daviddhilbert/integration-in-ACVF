@@ -1,5 +1,11 @@
-import IntegrationSection3ACVF.OpenImages
-import IntegrationSection3.PartialInverse
+module
+
+public import IntegrationSection3ACVF.OpenImages
+public import IntegrationSection3.PartialInverse
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Definable partial inverses over the full original base, and the
 atomic open image of an injective map on an atomic open ball. -/

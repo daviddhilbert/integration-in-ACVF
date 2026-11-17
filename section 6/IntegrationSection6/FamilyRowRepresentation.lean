@@ -1,7 +1,13 @@
-import IntegrationSection6.DefinableFamilyRowObjects
-import IntegrationSection6.GammaSchemaNativeRows
-import IntegrationSection6.IntegrationContexts
-import IntegrationSection6.DefinableFamilyCoefficients
+module
+
+public import IntegrationSection6.DefinableFamilyRowObjects
+public import IntegrationSection6.GammaSchemaNativeRows
+public import IntegrationSection6.IntegrationContexts
+public import IntegrationSection6.DefinableFamilyCoefficients
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Exact row presentations identify coefficients with the integration
 classes of any native RV object representing that row. -/

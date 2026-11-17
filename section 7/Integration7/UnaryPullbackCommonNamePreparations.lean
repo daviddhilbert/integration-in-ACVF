@@ -1,7 +1,13 @@
-import Integration7.UnaryCompatiblePreparationWithoutField
-import Integration7.GammaSpecialCommonNames
-import IntegrationSection5.GammaGraphOperations
-import Section3.ModelContext
+module
+
+public import Integration7.UnaryCompatiblePreparationWithoutField
+public import Integration7.GammaSpecialCommonNames
+public import IntegrationSection5.GammaGraphOperations
+public import Section3.ModelContext
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Genuine unary pullback preparation in a prescribed small common-name
 context. Generated field names and arbitrary internal code sets are

@@ -1,5 +1,11 @@
-import IntegrationSection6.RVFamilyProductCoefficients
-import IntegrationSection6.ConstantFamilyCoefficients
+module
+
+public import IntegrationSection6.RVFamilyProductCoefficients
+public import IntegrationSection6.ConstantFamilyCoefficients
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Zero-volume padding raises the finite RV degree while leaving the
 represented coefficient unchanged. No bound on the whole domain is used. -/

@@ -1,5 +1,11 @@
-import Integration7.GammaVolumeElementaryDensities
-import IntegrationSection6.GammaRawElementarySchemaBridge
+module
+
+public import Integration7.GammaVolumeElementaryDensities
+public import IntegrationSection6.GammaRawElementarySchemaBridge
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Original-Gamma admissibility supplies a finite elementary coordinate
 map. Its valid bound combines with the proved density pullback to give

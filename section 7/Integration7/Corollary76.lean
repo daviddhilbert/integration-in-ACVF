@@ -1,12 +1,18 @@
-import Integration7.StandardRelativeVolumeSchemaComparison
-import Integration7.OrderedRelativeVolumeSchemaComparison
-import Integration7.GeometricFiniteStandardVolumeComparisons
-import Integration7.DensityGraphRelativeBijections
-import IntegrationSection6.StandardProgramPresentations
-import Integration7.UnaryContractionGammaVolumeComparison
-import Integration7.VFStandardVolumeContractionObjects
-import Integration7.NativeVolumeMapRealization
-import Integration7.DensityGraphVolumeBijections
+module
+
+public import Integration7.StandardRelativeVolumeSchemaComparison
+public import Integration7.OrderedRelativeVolumeSchemaComparison
+public import Integration7.GeometricFiniteStandardVolumeComparisons
+public import Integration7.DensityGraphRelativeBijections
+public import IntegrationSection6.StandardProgramPresentations
+public import Integration7.UnaryContractionGammaVolumeComparison
+public import Integration7.VFStandardVolumeContractionObjects
+public import Integration7.NativeVolumeMapRealization
+public import Integration7.DensityGraphVolumeBijections
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Corollary 7.6 for arbitrary original volume forms in every positive
 VF dimension and any specified common contraction order beginning with

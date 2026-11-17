@@ -1,6 +1,12 @@
-import IntegrationSection6.GammaHeadFibreCoordinates
-import IntegrationSection6.GammaPresentationBaseEquality
-import IntegrationSection6.GammaSelectedLabelFibrePresentations
+module
+
+public import IntegrationSection6.GammaHeadFibreCoordinates
+public import IntegrationSection6.GammaPresentationBaseEquality
+public import IntegrationSection6.GammaSelectedLabelFibrePresentations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Exact parameter and selected-volume rows after freezing the VF tail. -/
 noncomputable section

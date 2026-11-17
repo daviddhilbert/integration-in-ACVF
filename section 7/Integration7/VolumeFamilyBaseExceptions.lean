@@ -1,6 +1,12 @@
-import Integration7.AERVVolumeFunctions
-import Integration7.SelectedFamilyCofullLifts
-import Section4.RVIsoTools
+module
+
+public import Integration7.AERVVolumeFunctions
+public import Integration7.SelectedFamilyCofullLifts
+public import Section4.RVIsoTools
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Removing a genuine definable exceptional base set leaves the same
 almost-everywhere RV-volume function and the same full VF volume class. -/

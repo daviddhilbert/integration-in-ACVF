@@ -1,7 +1,13 @@
-import Integration7.OrdinaryVolumeFamilyHeadIntegrals
-import Integration7.AppendedHeadIntegralPrograms
-import Integration7.HeadTailVolumeSelectors
-import Integration7.VolumeClassDegreeReindexing
+module
+
+public import Integration7.OrdinaryVolumeFamilyHeadIntegrals
+public import Integration7.AppendedHeadIntegralPrograms
+public import Integration7.HeadTailVolumeSelectors
+public import Integration7.VolumeClassDegreeReindexing
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The first head tag followed by the tail contraction tags is the
 full VF volume tuple. This chart has no old selected coordinates and

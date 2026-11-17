@@ -1,4 +1,10 @@
-import Integration7.GammaVolumeCoproductCoherence
+module
+
+public import Integration7.GammaVolumeCoproductCoherence
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The existing actual volume associator retains its full original
 Gamma graph. The three tagged branches are tracked explicitly. -/

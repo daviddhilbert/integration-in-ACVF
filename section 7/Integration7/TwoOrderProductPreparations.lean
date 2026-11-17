@@ -1,4 +1,10 @@
-import Integration7.RVClassProductOriginalUnaryVolumeComparison
+module
+
+public import Integration7.RVClassProductOriginalUnaryVolumeComparison
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual preparations of the two translated product domains. The
 record stores special chains and pullback targets, rather than assuming

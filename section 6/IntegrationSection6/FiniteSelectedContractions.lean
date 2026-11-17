@@ -1,6 +1,12 @@
-import IntegrationSection6.GammaSelectedVolumeObjects
-import IntegrationSection6.GammaRelativeRVFiniteness
-import IntegrationSection6.FiniteContractionLabels
+module
+
+public import IntegrationSection6.GammaSelectedVolumeObjects
+public import IntegrationSection6.GammaRelativeRVFiniteness
+public import IntegrationSection6.FiniteContractionLabels
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The E union I_n contraction object under the exact selected-label
 finiteness hypothesis: fixing VF and the selected original RV labels has

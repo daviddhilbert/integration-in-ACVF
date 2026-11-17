@@ -1,6 +1,12 @@
-import IntegrationSection5.CellUnaryPreparations
-import IntegrationSection5.ProductStandardComparison
-import IntegrationSection4.CellRectangles
+module
+
+public import IntegrationSection5.CellUnaryPreparations
+public import IntegrationSection5.ProductStandardComparison
+public import IntegrationSection4.CellRectangles
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual standard contractions and RV[2] comparison for every rectangular
 cell, including singleton factors and degenerate graph rectangles. -/

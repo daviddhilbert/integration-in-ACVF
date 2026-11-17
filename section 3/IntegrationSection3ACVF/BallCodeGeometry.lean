@@ -1,4 +1,10 @@
-import IntegrationSection3ACVF.BallPresentation
+module
+
+public import IntegrationSection3ACVF.BallPresentation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The two directions between actual ball imaginaries and the unchanged
 encoded ball point sets. The raw chart argument reuses the pinned

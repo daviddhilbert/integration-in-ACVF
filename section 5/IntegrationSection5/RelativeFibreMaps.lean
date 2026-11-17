@@ -1,4 +1,10 @@
-import IntegrationSection5.CoordinateFibreMaps
+module
+
+public import IntegrationSection5.CoordinateFibreMaps
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Relatively unary maps induce actual definable maps of coordinate fibres. -/
 

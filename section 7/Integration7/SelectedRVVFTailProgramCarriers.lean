@@ -1,4 +1,10 @@
-import Integration7.SelectedRVVFTailProgramHeads
+module
+
+public import Integration7.SelectedRVVFTailProgramHeads
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Literal membership and finite RV fibres for the program-arity lift. -/
 set_option backward.isDefEq.respectTransparency false

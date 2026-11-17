@@ -1,7 +1,13 @@
-import Integration7.IndependentRVConstraintHeadMaps
-import Integration7.RawRVProductTransfers
-import Integration7.CanonicalVolumePresentations
-import Integration7.GammaRVMapRestrictions
+module
+
+public import Integration7.IndependentRVConstraintHeadMaps
+public import Integration7.RawRVProductTransfers
+public import Integration7.CanonicalVolumePresentations
+public import Integration7.GammaRVMapRestrictions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The independent RV-factor head bijection on actual raw labels,
 with its exact two coordinate blocks and original Gamma certificate. -/

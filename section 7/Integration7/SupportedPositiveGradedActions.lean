@@ -1,7 +1,13 @@
-import Integration7.SupportedOrdinaryVolumeCoefficients
-import Integration7.SupportedVolumeJacobianPositiveCoefficients
-import Integration7.GradedAEVolumeActionCoherence
-import Integration7.GradedSemiringActionLifts
+module
+
+public import Integration7.SupportedOrdinaryVolumeCoefficients
+public import Integration7.SupportedVolumeJacobianPositiveCoefficients
+public import Integration7.GradedAEVolumeActionCoherence
+public import Integration7.GradedSemiringActionLifts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Supported positive homogeneous functions assemble into a genuine
 module over the full graded coefficient semiring. The action laws are

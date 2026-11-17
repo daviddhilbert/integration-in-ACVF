@@ -1,5 +1,11 @@
-import IntegrationSection6.CompletionLocalization
-import Mathlib.GroupTheory.QuotientGroup.Defs
+module
+
+public import IntegrationSection6.CompletionLocalization
+public import Mathlib.GroupTheory.QuotientGroup.Defs
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The additive colimit in6.22. Additive maps out of a group completion
 are specified on its positive monoid, so the component cocones below are

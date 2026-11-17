@@ -1,4 +1,10 @@
-import IntegrationSection6.ElementaryRightProduct
+module
+
+public import IntegrationSection6.ElementaryRightProduct
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

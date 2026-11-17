@@ -1,4 +1,10 @@
-import IntegrationSection4.GammaRelationPreparation
+module
+
+public import IntegrationSection4.GammaRelationPreparation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Finite simultaneous original-base relation preparation. Every new
 special-bijection chain is a genuine alternating refinement, and its inverse

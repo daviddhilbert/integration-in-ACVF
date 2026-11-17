@@ -1,5 +1,11 @@
-import IntegrationSection5.GammaMatchedChain
-import IntegrationSection5.QuotientBijection
+module
+
+public import IntegrationSection5.GammaMatchedChain
+public import IntegrationSection5.QuotientBijection
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Prepared unary bijections: actual inverse preparation and matching over
 an original Gamma base, followed by the unique definable RV-key bijection.

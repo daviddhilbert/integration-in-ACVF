@@ -1,5 +1,11 @@
-import Integration7.HKZeroFamilyAEHeadGeometry
-import Integration7.VolumeFamilyFormulaWitnessDescent
+module
+
+public import Integration7.HKZeroFamilyAEHeadGeometry
+public import Integration7.VolumeFamilyFormulaWitnessDescent
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Weighted-zero AE representatives and arbitrary choices of their
 first head preparation give the same positive-valued AE head function. -/

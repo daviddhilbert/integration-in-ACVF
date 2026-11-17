@@ -1,6 +1,12 @@
-import Integration7.PositiveVFVolumeProductMaps
-import Integration7.VFBlockProductJacobians
-import Section9.MixedJacobian
+module
+
+public import Integration7.PositiveVFVolumeProductMaps
+public import Integration7.VFBlockProductJacobians
+public import Section9.MixedJacobian
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual fixed-label VF charts on Cartesian product maps, with one
 common radius controlling the two original coordinate blocks. -/

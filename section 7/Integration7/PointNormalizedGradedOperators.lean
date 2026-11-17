@@ -1,5 +1,11 @@
-import Integration7.PointNormalizedAdditiveOperators
-import Mathlib.Algebra.DirectSum.Ring
+module
+
+public import Integration7.PointNormalizedAdditiveOperators
+public import Mathlib.Algebra.DirectSum.Ring
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Positive homogeneous coefficient compatibility suffices for descent
 when a degree-one point is normalized to one. Its products with every

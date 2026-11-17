@@ -1,6 +1,12 @@
-import IntegrationSection4.RadiusRelationSyntax
-import IntegrationSection4.RadiusPreparationGeometry
-import IntegrationSection4.InverseBodies
+module
+
+public import IntegrationSection4.RadiusRelationSyntax
+public import IntegrationSection4.RadiusPreparationGeometry
+public import IntegrationSection4.InverseBodies
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Corrected Lemma 4.3: the set of source radii has at most one element.
 The preparation works simultaneously for every ordinary target radius. -/

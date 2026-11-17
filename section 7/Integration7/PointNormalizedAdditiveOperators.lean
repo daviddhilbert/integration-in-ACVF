@@ -1,4 +1,10 @@
-import Integration7.SemimoduleScalarExtensionMaps
+module
+
+public import Integration7.SemimoduleScalarExtensionMaps
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Additive operators descend after point normalization when they
 commute with the point and its multiples. No injectivity of point

@@ -1,5 +1,11 @@
-import Integration7.NativeRelativeTranslations
-import IntegrationSection5.GammaGraphOperations
+module
+
+public import Integration7.NativeRelativeTranslations
+public import IntegrationSection5.GammaGraphOperations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual relative translations and their images retain the original
 Gamma base whenever the complete centre graph does. -/

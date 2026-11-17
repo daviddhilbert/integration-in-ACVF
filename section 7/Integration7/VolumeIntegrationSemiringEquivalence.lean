@@ -1,6 +1,12 @@
-import Integration7.AllDegreeVFVolumeClassProducts
-import Integration7.GradedAdditiveEquivalenceSemiring
-import Integration7.AllDegreeVolumeBlowupSemiring
+module
+
+public import Integration7.AllDegreeVFVolumeClassProducts
+public import Integration7.GradedAdditiveEquivalenceSemiring
+public import Integration7.AllDegreeVolumeBlowupSemiring
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Proposition7.10: the graded integration semiring equivalence.
 Multiplication on generators is the actual positive Cartesian product,

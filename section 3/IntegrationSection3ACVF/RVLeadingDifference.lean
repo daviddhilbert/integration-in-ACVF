@@ -1,4 +1,10 @@
-import IntegrationSection3ACVF.RVErrorComparison
+module
+
+public import IntegrationSection3ACVF.RVErrorComparison
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Distinct leading RV classes of the same value cannot cancel. -/
 

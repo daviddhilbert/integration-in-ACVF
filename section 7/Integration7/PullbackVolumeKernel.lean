@@ -1,5 +1,11 @@
-import Integration7.PreparedVolumePartitionGluing
-import Integration7.SpecialPullbackVolumeComparisons
+module
+
+public import Integration7.PreparedVolumePartitionGluing
+public import Integration7.SpecialPullbackVolumeComparisons
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The volume lift kernel for actual RV-pullbacks and a full
 volume-preserving bijection, proved by the genuine Section 5.6 partition. -/

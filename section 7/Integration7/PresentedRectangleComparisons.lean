@@ -1,7 +1,13 @@
-import Integration7.RectangleOppositeOrderComparisons
-import Integration7.FixedLabelContractionConstantDensities
-import Integration7.FixedLabelSameOrderComparisons
-import Integration7.VolumeContextJoins
+module
+
+public import Integration7.RectangleOppositeOrderComparisons
+public import Integration7.FixedLabelContractionConstantDensities
+public import Integration7.FixedLabelSameOrderComparisons
+public import Integration7.VolumeContextJoins
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The rectangle comparison applies to any equal actual native presentation,
 retaining the supplied contractions and their selected density objects. -/

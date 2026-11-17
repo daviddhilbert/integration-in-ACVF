@@ -1,4 +1,10 @@
-import IntegrationSection3ACVF.ParameterPresentation
+module
+
+public import IntegrationSection3ACVF.ParameterPresentation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Parametric ball atomicity with genuine Gamma and ball names in the base. -/
 

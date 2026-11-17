@@ -1,7 +1,13 @@
-import Integration7.HKWeightedZeroCoefficientFieldIntegrals
-import Integration7.FrozenHeadIntegralAdditivity
-import Integration7.HKPositiveVolumeClassScalarExtensions
-import Integration7.DefinableVolumeParameterDescent
+module
+
+public import Integration7.HKWeightedZeroCoefficientFieldIntegrals
+public import Integration7.FrozenHeadIntegralAdditivity
+public import Integration7.HKPositiveVolumeClassScalarExtensions
+public import Integration7.DefinableVolumeParameterDescent
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Finite weighted coefficients commute with positive-family frozen integrals and actual original-context head rows before normalization. -/
 noncomputable section

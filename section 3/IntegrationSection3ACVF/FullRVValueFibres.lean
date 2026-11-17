@@ -1,5 +1,11 @@
-import IntegrationSection3ACVF.FullGammaControllers
-import Section3.GammaRVSeparation
+module
+
+public import IntegrationSection3ACVF.FullGammaControllers
+public import Section3.GammaRVSeparation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual raw RV value fibres: exact quotient membership, disjointness,
 infinitude and finite/cofinite traces over the full original base. -/

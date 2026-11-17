@@ -1,5 +1,11 @@
-import Integration7.ElementaryBlowupConstruction
-import IntegrationSection6.GammaElementaryStructure
+module
+
+public import Integration7.ElementaryBlowupConstruction
+public import IntegrationSection6.GammaElementaryStructure
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Normalization preserves the actual cone predicate and elementary
 coordinate program on typed RV tuples, including the absorbing zero. -/

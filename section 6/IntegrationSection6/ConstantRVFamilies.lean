@@ -1,7 +1,13 @@
-import IntegrationSection6.GammaFamilyCoordinates
-import IntegrationSection6.MixedCoordinatePointMaps
-import IntegrationSection6.DefinableFamilyRowObjects
-import IntegrationSection6.FamilyRowRepresentation
+module
+
+public import IntegrationSection6.GammaFamilyCoordinates
+public import IntegrationSection6.MixedCoordinatePointMaps
+public import IntegrationSection6.DefinableFamilyRowObjects
+public import IntegrationSection6.FamilyRowRepresentation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A finite RV object defines a constant family over every VF parameter
 space. The original Gamma graphs, rather than its internal codes, control

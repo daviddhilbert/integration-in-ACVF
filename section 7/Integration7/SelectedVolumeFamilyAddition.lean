@@ -1,6 +1,12 @@
-import Integration7.VolumeFamilyCoproductRowIsomorphisms
-import Integration7.DefinableVolumeFamilySelectionRows
-import Integration7.IndexedVolumeEmpty
+module
+
+public import Integration7.VolumeFamilyCoproductRowIsomorphisms
+public import Integration7.DefinableVolumeFamilySelectionRows
+public import Integration7.IndexedVolumeEmpty
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual selected-family representatives of zero and fibrewise
 addition. Tagged disjoint unions are converted back to selected labels

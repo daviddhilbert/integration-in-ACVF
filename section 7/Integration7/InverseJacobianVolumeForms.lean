@@ -1,4 +1,10 @@
-import Integration7.VFVolumeDensityTransport
+module
+
+public import Integration7.VFVolumeDensityTransport
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The paper's inverse-Jacobian density is an actual nonzero definable
 form. The definable Jacobian is set to one on its exceptional zero locus;

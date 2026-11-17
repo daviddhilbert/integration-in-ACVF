@@ -1,4 +1,10 @@
-import IntegrationSection5.UnaryCellZeros
+module
+
+public import IntegrationSection5.UnaryCellZeros
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Infinitude of each nonzero actual RV class. Powers of a nonzero
 strictly small element give an explicit injective sequence in the class. -/

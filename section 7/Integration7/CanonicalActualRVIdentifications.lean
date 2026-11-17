@@ -1,5 +1,11 @@
-import Integration7.NormalizedActualRVObjects
-import Integration7.NormalizedElementaryGeometry
+module
+
+public import Integration7.NormalizedActualRVObjects
+public import Integration7.NormalizedElementaryGeometry
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Canonical transport of the literal normalized presentation returns
 the original actual object, including its complete coordinate map. -/

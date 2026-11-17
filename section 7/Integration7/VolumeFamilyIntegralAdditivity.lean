@@ -1,6 +1,12 @@
-import Integration7.SelectedDefinableFamilyLiftBijections
-import Integration7.VolumeFamilyRealizationIdentifications
-import Integration7.PositiveVFVolumeAdditiveStructure
+module
+
+public import Integration7.SelectedDefinableFamilyLiftBijections
+public import Integration7.VolumeFamilyRealizationIdentifications
+public import Integration7.PositiveVFVolumeAdditiveStructure
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Integration of the actual tagged family sum is additive. The proof
 uses its full VF volume bijection to the coproduct, followed by the checked

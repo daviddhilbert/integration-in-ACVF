@@ -1,5 +1,11 @@
-import Section9.GaussEvaluation
-import Mathlib.LinearAlgebra.FiniteDimensional.Basic
+module
+
+public import Section9.GaussEvaluation
+public import Mathlib.LinearAlgebra.FiniteDimensional.Basic
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Residue-independent integral families lift to field-linearly
 independent families. Hence the residue degree of a finite valued

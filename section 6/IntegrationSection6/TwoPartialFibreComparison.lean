@@ -1,5 +1,11 @@
-import IntegrationSection6.VFPrefixStandardPresentations
-import IntegrationSection6.TwoCoordinateExchange
+module
+
+public import IntegrationSection6.VFPrefixStandardPresentations
+public import IntegrationSection6.TwoCoordinateExchange
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Two partial contractions in opposite orders compare fibrewise after
 freezing every remaining VF coordinate. Their actual restricted programs

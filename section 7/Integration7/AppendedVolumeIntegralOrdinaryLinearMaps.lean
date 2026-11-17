@@ -1,6 +1,12 @@
-import Integration7.VolumeCoordinateOrdinaryLinearEquivalences
-import Integration7.AppendedVolumeIntegralAddHom
-import Integration7.AERVVolumeOrdinaryLinearIntegrals
+module
+
+public import Integration7.VolumeCoordinateOrdinaryLinearEquivalences
+public import Integration7.AppendedVolumeIntegralAddHom
+public import Integration7.AERVVolumeOrdinaryLinearIntegrals
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The coefficient-first AE integral is linear over ordinary RV[0]
 coefficients, using the explicit ordinary-linear coordinate normalization. -/

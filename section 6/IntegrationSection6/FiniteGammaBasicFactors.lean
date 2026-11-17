@@ -1,7 +1,13 @@
-import IntegrationSection6.GammaElementaryDomains
-import IntegrationSection6.GammaRVGlobalRestriction
-import IntegrationSection6.FiniteGammaObjects
-import Section3.RVOperations
+module
+
+public import IntegrationSection6.GammaElementaryDomains
+public import IntegrationSection6.GammaRVGlobalRestriction
+public import IntegrationSection6.FiniteGammaObjects
+public import Section3.RVOperations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The degree-one singleton and positive-parameter objects, in the
 actual finite-volume category and over the original Gamma base. The

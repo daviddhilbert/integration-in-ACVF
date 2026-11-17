@@ -1,5 +1,11 @@
-import IntegrationSection3ACVF.PrimitiveImages
-import IntegrationSection3ACVF.SeparationFunctions
+module
+
+public import IntegrationSection3ACVF.PrimitiveImages
+public import IntegrationSection3ACVF.SeparationFunctions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Lemma 3.13, connecting primitive image classification with the
 actual separation theorem. Its classification and separation prerequisites are proved in the imported modules. -/

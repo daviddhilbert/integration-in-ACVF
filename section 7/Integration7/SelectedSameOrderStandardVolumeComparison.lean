@@ -1,6 +1,12 @@
-import Integration7.SelectedVFTailVolumeCharts
-import Integration7.RawStandardVolumeNormalization
-import Integration7.RetainedSameOrderCommonContexts
+module
+
+public import Integration7.SelectedVFTailVolumeCharts
+public import Integration7.RawStandardVolumeNormalization
+public import Integration7.RetainedSameOrderCommonContexts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Any two specified contractions in the same order compare with all
 selected old RV coordinates and the retained density. This follows by

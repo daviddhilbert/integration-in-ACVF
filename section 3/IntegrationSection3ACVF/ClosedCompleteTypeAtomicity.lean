@@ -1,5 +1,11 @@
-import IntegrationSection3ACVF.ClosedSelfCentredBallProfiles
-import IntegrationSection3ACVF.SeparationFunctions
+module
+
+public import IntegrationSection3ACVF.ClosedSelfCentredBallProfiles
+public import IntegrationSection3ACVF.SeparationFunctions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Unnamed closed-ball radii over real/Gamma bases. The ambient
 complete-type set need not be definable. Old ball parameters are removed

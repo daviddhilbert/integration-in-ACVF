@@ -1,5 +1,11 @@
-import IntegrationSection6.FiniteGammaWeightedIsos
-import Section4.RVLabelCompression
+module
+
+public import IntegrationSection6.FiniteGammaWeightedIsos
+public import Section4.RVLabelCompression
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! RV weight balance is a real definable condition on the complete
 volume tuples, including absorbing zero. This supplies the numerical

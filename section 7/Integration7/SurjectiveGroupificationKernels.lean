@@ -1,5 +1,11 @@
-import Integration7.SemiringGroupificationGrothendieck
-import Mathlib.RingTheory.Ideal.Quotient.Operations
+module
+
+public import Integration7.SemiringGroupificationGrothendieck
+public import Mathlib.RingTheory.Ideal.Quotient.Operations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A surjective semiring map has an exact positive-pair description of
 its groupified kernel. The auxiliary additive stabilization is lifted

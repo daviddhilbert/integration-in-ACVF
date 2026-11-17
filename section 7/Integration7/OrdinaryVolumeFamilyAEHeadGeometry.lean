@@ -1,5 +1,11 @@
-import Integration7.OrdinaryFamilyGenericRowIsomorphisms
-import Integration7.GammaOrdinaryHeadComparisons
+module
+
+public import Integration7.OrdinaryFamilyGenericRowIsomorphisms
+public import Integration7.GammaOrdinaryHeadComparisons
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! AE equal ordinary families have Gamma-geometrically equal
 head integrals over generic retained VF tuples, on the original base. -/

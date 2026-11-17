@@ -1,5 +1,11 @@
-import IntegrationSection6.CanonicalFiniteContractionIsomorphisms
-import IntegrationSection6.ArbitraryFiniteContractions
+module
+
+public import IntegrationSection6.CanonicalFiniteContractionIsomorphisms
+public import IntegrationSection6.ArbitraryFiniteContractions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Every finite standard contraction of an RV-pullback has the same Isp
 class as its actual RV data. Canonical identity-head contractions supply

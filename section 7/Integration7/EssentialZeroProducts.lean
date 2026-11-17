@@ -1,5 +1,11 @@
-import Integration7.ZeroFactorVolumeObjects
-import Integration7.NondegenerateFiniteIso
+module
+
+public import Integration7.ZeroFactorVolumeObjects
+public import Integration7.NondegenerateFiniteIso
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Essential charts for a positive object times an ordinary RV[0]
 object. Only the positive factor has essential coordinates. -/

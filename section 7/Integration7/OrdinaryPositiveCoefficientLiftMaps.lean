@@ -1,5 +1,11 @@
-import Integration7.OrdinaryPositiveCoefficientLiftCarriers
-import Section4.RVProductSymmetry
+module
+
+public import Integration7.OrdinaryPositiveCoefficientLiftCarriers
+public import Section4.RVProductSymmetry
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The coefficient-first Cartesian realization maps to the ordinary
 family product by swapping only the RV domain-label blocks. -/

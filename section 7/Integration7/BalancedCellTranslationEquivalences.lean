@@ -1,5 +1,11 @@
-import IntegrationSection4.BalancedBallClasses
-import Mathlib.Logic.Equiv.Set
+module
+
+public import IntegrationSection4.BalancedBallClasses
+public import Mathlib.Logic.Equiv.Set
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The two actual translation bijections of a balanced two-cell onto
 the product domains used in the two opposite contraction orders. -/

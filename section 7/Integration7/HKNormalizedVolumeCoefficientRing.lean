@@ -1,6 +1,12 @@
-import Integration7.HKCentralVolumePointRing
-import Integration7.CentralAwayLocalization
-import Integration7.GradedSemiringUnitNormalization
+module
+
+public import Integration7.HKCentralVolumePointRing
+public import Integration7.CentralAwayLocalization
+public import Integration7.GradedSemiringUnitNormalization
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual normalized RV coefficients: localize the proved geometric
 quotient ring at its central point and normalize each homogeneous term.

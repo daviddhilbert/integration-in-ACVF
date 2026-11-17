@@ -1,8 +1,14 @@
-import Integration7.VolumeFocusActiveLoci
-import Integration7.PullbackCoordinateVolumeObjects
-import Integration7.RetainedVolumeLabels
-import IntegrationSection6.PartialFocusBlowup
-import IntegrationSection6.FiniteBlowups
+module
+
+public import Integration7.VolumeFocusActiveLoci
+public import Integration7.PullbackCoordinateVolumeObjects
+public import Integration7.RetainedVolumeLabels
+public import IntegrationSection6.PartialFocusBlowup
+public import IntegrationSection6.FiniteBlowups
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The full image of a partial focus has finite RV volume and the
 same retained density label. Both assertions come from the actual step. -/

@@ -1,5 +1,11 @@
-import Section5.TransformGeometry
-import Section3.DiscCentres
+module
+
+public import Section5.TransformGeometry
+public import Section3.DiscCentres
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The local geometric step in Lemma 5.2: an open ball missing zero
 has one RV class. A centred map with open RV-cell images therefore

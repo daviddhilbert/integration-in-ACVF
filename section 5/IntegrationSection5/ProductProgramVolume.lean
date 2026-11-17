@@ -1,5 +1,11 @@
-import IntegrationSection5.ProductProgramKernel
-import IntegrationSection5.StandardContractionLift
+module
+
+public import IntegrationSection5.ProductProgramKernel
+public import IntegrationSection5.StandardContractionLift
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The two volume coordinates are exactly the prepared VF values of the
 two factors, in their original order. -/

@@ -1,5 +1,11 @@
-import IntegrationSection6.GammaAdmissibleBounds
-import IntegrationSection6.GammaFiniteObjectPromotion
+module
+
+public import IntegrationSection6.GammaAdmissibleBounds
+public import IntegrationSection6.GammaFiniteObjectPromotion
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual Gamma admissibility over a named sorted tuple promotes to a genuine
 first-order admissibility schema over the original Gamma base. -/

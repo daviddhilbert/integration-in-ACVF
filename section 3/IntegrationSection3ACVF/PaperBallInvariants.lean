@@ -1,5 +1,11 @@
-import IntegrationSection3ACVF.BallRadiusGeometry
-import IntegrationSection3ACVF.ValuativeCentreGeometry
+module
+
+public import IntegrationSection3ACVF.BallRadiusGeometry
+public import IntegrationSection3ACVF.ValuativeCentreGeometry
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual radius and valuative-centre predicates are single-valued
 on balls, including the singleton and whole-field radius conventions. -/

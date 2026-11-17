@@ -1,6 +1,12 @@
-import Integration7.GammaElementaryCommonNameRebasing
-import Integration7.GammaVolumeCommonNameIsomorphisms
-import Integration7.GammaVolumeBlowupAddition
+module
+
+public import Integration7.GammaElementaryCommonNameRebasing
+public import Integration7.GammaVolumeCommonNameIsomorphisms
+public import Integration7.GammaVolumeBlowupAddition
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Rebase every actual locus, remainder, elementary chart and volume
 isomorphism of an original-Gamma volume blowup to the original real base. -/

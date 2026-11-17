@@ -1,5 +1,11 @@
-import IntegrationSection5.FocusSection
-import IntegrationSection5.UnaryOpenImages
+module
+
+public import IntegrationSection5.FocusSection
+public import IntegrationSection5.UnaryOpenImages
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A unary focus is one fixed translation on each original RV cell. -/
 

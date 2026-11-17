@@ -1,6 +1,12 @@
-import Integration7.UnitDensityRVProducts
-import Integration7.ConstantLabelPreparedVolumeComparisons
-import Integration7.FixedLabelUnarySpecialPreparations
+module
+
+public import Integration7.UnitDensityRVProducts
+public import Integration7.ConstantLabelPreparedVolumeComparisons
+public import Integration7.FixedLabelUnarySpecialPreparations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Deleting the carried constant labels in either factor of a full
 RV product preserves the exact two-coordinate volume and original Gamma.

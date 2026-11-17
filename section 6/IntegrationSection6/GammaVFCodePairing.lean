@@ -1,4 +1,10 @@
-import IntegrationSection6.GammaRVFiniteFamilyCodes
+module
+
+public import IntegrationSection6.GammaRVFiniteFamilyCodes
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Finite RV codes for predicates on pairs of VF parameter tuples.
 Conjunction is implemented by the actual definable pairing map. -/

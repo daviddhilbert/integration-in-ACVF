@@ -1,5 +1,11 @@
-import Integration7.WeightedPairCoordinates
-import Section4.RVCoordinates
+module
+
+public import Integration7.WeightedPairCoordinates
+public import Section4.RVCoordinates
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! On actual RV coordinate-and-density pairs, the first-order formula
 substitutes precisely the source density divided by the target density. -/

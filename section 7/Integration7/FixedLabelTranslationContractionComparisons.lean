@@ -1,6 +1,12 @@
-import Integration7.FixedLabelTranslationDensityForms
-import Integration7.GammaRelativeTranslations
-import Integration7.OriginalBaseRelativeVolumeComparisons
+module
+
+public import Integration7.FixedLabelTranslationDensityForms
+public import Integration7.GammaRelativeTranslations
+public import Integration7.OriginalBaseRelativeVolumeComparisons
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Corollary7.6 compares arbitrary specified contractions before and
 following an actual translation, with every old label and the literal

@@ -1,6 +1,12 @@
-import Integration7.RVVolumeMorphisms
-import Section4.EarlierRVInputs
-import Section9.FiniteVolumeDimension
+module
+
+public import Integration7.RVVolumeMorphisms
+public import Section4.EarlierRVInputs
+public import Section9.FiniteVolumeDimension
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 set_option backward.isDefEq.respectTransparency false
 noncomputable section

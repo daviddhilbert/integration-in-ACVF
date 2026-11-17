@@ -1,5 +1,11 @@
-import Mathlib.RingTheory.Valuation.ValuationSubring
-import Mathlib.RingTheory.LocalRing.ResidueField.Basic
+module
+
+public import Mathlib.RingTheory.Valuation.ValuationSubring
+public import Mathlib.RingTheory.LocalRing.ResidueField.Basic
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Residue characteristic zero implies field characteristic zero,
 using only the actual valuation subring and residue homomorphism. -/

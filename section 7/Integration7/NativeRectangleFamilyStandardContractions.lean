@@ -1,6 +1,12 @@
-import Integration7.GammaRectangleFamilyHeadPreparations
-import Integration7.UnarySpecialHeadPreparations
-import IntegrationSection6.StandardProgramPresentations
+module
+
+public import Integration7.GammaRectangleFamilyHeadPreparations
+public import Integration7.UnarySpecialHeadPreparations
+public import IntegrationSection6.StandardProgramPresentations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual original-Gamma standard contractions of a shared-label
 rectangle family in both VF coordinate orders. The head preparations

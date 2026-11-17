@@ -1,6 +1,12 @@
-import Integration7.OrdinaryUnitSelectedVolumeFamilies
-import Integration7.AEOrdinaryPositiveCoefficientProducts
-import Integration7.BasicVolumeRelationObjects
+module
+
+public import Integration7.OrdinaryUnitSelectedVolumeFamilies
+public import Integration7.AEOrdinaryPositiveCoefficientProducts
+public import Integration7.BasicVolumeRelationObjects
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The ordinary family's unit selected presentation is the actual
 positive point-coefficient product on every named row. The graph carriers,

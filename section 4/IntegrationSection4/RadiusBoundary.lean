@@ -1,8 +1,14 @@
-import IntegrationSection3ACVF.BallEnlargementGeometry
-import IntegrationSection3ACVF.RealParameterTuples
-import IntegrationSection3ACVF.ParameterizedOpenImages
-import IntegrationSection3ACVF.MaximalOpenClasses
-import IntegrationSection3ACVF.AdjoinGamma
+module
+
+public import IntegrationSection3ACVF.BallEnlargementGeometry
+public import IntegrationSection3ACVF.RealParameterTuples
+public import IntegrationSection3ACVF.ParameterizedOpenImages
+public import IntegrationSection3ACVF.MaximalOpenClasses
+public import IntegrationSection3ACVF.AdjoinGamma
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A boundary check for the literal singleton claim in Lemma 4.3.
 This uses actual ball point sets and the sequel's actual radius predicate.

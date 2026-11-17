@@ -1,5 +1,11 @@
-import IntegrationSection6.MixedVFParameterTotals
-import IntegrationSection6.GammaFibreBijectionCompactness
+module
+
+public import IntegrationSection6.MixedVFParameterTotals
+public import IntegrationSection6.GammaFibreBijectionCompactness
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Pointwise Gamma isomorphisms of mixed fibres uniformize to an actual
 Gamma isomorphism of their total spaces over a definable VF base. -/

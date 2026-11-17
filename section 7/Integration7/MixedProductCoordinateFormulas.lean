@@ -1,4 +1,10 @@
-import Section4.MixedProducts
+module
+
+public import Section4.MixedProducts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual inverse Cartesian-product chart recovers the two
 literal VF and RV blocks. -/

@@ -1,5 +1,11 @@
-import Integration7.SupportedVolumeFunctionJacobians
-import Integration7.AERVVolumeFunctionAdditiveStructure
+module
+
+public import Integration7.SupportedVolumeFunctionJacobians
+public import Integration7.AERVVolumeFunctionAdditiveStructure
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Functions supported on a specified definable domain have the
 actual pointwise additive structure inherited through their injective

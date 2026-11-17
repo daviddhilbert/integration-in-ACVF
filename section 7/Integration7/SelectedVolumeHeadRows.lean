@@ -1,6 +1,12 @@
-import Integration7.GammaSelectedVolumeSchemata
-import Integration7.GammaGeometricCommonRowTransport
-import IntegrationSection6.GammaHeadFibreParameters
+module
+
+public import Integration7.GammaSelectedVolumeSchemata
+public import Integration7.GammaGeometricCommonRowTransport
+public import IntegrationSection6.GammaHeadFibreParameters
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Freezing the VF tail retains literally the selected coordinate and
 density rows and exactly the same mathematical parameter base. -/

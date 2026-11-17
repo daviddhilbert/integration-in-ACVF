@@ -1,6 +1,12 @@
-import Integration7.VFPermutationJacobians
-import Integration7.NativeVolumeDomains
-import IntegrationSection6.GammaPermutedUnaryMaps
+module
+
+public import Integration7.VFPermutationJacobians
+public import Integration7.NativeVolumeDomains
+public import IntegrationSection6.GammaPermutedUnaryMaps
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The native simultaneous VF permutation transports an actual fixed-label
 mixed Jacobian chart with the same determinant. -/

@@ -1,6 +1,12 @@
-import IntegrationSection6.RawSelectedSliceCarriers
-import IntegrationSection6.RestrictedStandardContractionData
-import IntegrationSection6.RawFiniteContractions
+module
+
+public import IntegrationSection6.RawSelectedSliceCarriers
+public import IntegrationSection6.RestrictedStandardContractionData
+public import IntegrationSection6.RawFiniteContractions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A raw volume slice is actually isomorphic to the finite contraction
 of the corresponding RV-label slice of the original mixed set. -/

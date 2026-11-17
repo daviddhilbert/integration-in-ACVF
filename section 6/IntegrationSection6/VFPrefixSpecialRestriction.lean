@@ -1,5 +1,11 @@
-import IntegrationSection6.VFPrefixUnaryFibreAgreement
-import IntegrationSection6.SpecialEqualityTransport
+module
+
+public import IntegrationSection6.VFPrefixUnaryFibreAgreement
+public import IntegrationSection6.SpecialEqualityTransport
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Restricting a relatively special head preparation to a frozen VF tail
 retains actual unary special chains. Only internal presentations are

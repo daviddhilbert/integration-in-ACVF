@@ -1,5 +1,11 @@
-import Integration7.IndexedVolumeCoproductDensities
-import Integration7.VolumeDataRelabelingMaps
+module
+
+public import Integration7.IndexedVolumeCoproductDensities
+public import Integration7.VolumeDataRelabelingMaps
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Restricting the index base gives the actual restriction of the
 joint volume object. The label identity preserves coordinates and density. -/

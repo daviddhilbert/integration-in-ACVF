@@ -1,5 +1,11 @@
-import IntegrationSection5.RelativeFibreBijection
-import Section5.VerticalConstruction
+module
+
+public import IntegrationSection5.RelativeFibreBijection
+public import Section5.VerticalConstruction
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A vertical root family restricts to the pinned genuine unary root
 family on each coordinate fibre. -/

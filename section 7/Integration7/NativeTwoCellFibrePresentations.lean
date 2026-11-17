@@ -1,5 +1,11 @@
-import Integration7.NativePairPresentations
-import IntegrationSection4.ParameterizedCells
+module
+
+public import Integration7.NativePairPresentations
+public import IntegrationSection4.ParameterizedCells
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Every nonempty RV-labelled fibre of an actual definable two-cell
 family has a genuine native VF² presentation over that label base. -/

@@ -1,6 +1,12 @@
-import IntegrationSection6.RVLabelMap
-import IntegrationSection6.GammaRealImages
-import Section4.RVTagging
+module
+
+public import IntegrationSection6.RVLabelMap
+public import IntegrationSection6.GammaRealImages
+public import Section4.RVTagging
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Tagged mixed sets and their original-Gamma isomorphisms. The tags
 are exactly those used in the inherited finite RV coproduct. -/

@@ -1,4 +1,10 @@
-import IntegrationSection5.ProductContractionProgram
+module
+
+public import IntegrationSection5.ProductContractionProgram
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The full product contraction has precisely the joint kernel of the
 two prepared unary RV keys. -/

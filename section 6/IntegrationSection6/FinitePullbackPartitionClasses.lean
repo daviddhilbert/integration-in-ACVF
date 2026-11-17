@@ -1,8 +1,14 @@
-import IntegrationSection6.FinitePullbackSubsets
-import IntegrationSection6.GammaFiniteMixedUnions
-import IntegrationSection6.FiniteGammaPullbackPartitions
-import IntegrationSection6.FiniteGammaEmptyIsomorphisms
-import IntegrationSection5.RelativeSpecialRestriction
+module
+
+public import IntegrationSection6.FinitePullbackSubsets
+public import IntegrationSection6.GammaFiniteMixedUnions
+public import IntegrationSection6.FiniteGammaPullbackPartitions
+public import IntegrationSection6.FiniteGammaEmptyIsomorphisms
+public import IntegrationSection5.RelativeSpecialRestriction
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A finite partition of an actual RV-pullback gives its sum of actual
 RV[k] isomorphism classes. All labels and volumes are the native ones. -/

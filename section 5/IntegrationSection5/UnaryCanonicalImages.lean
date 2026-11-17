@@ -1,4 +1,10 @@
-import IntegrationSection5.UnaryOpenImages
+module
+
+public import IntegrationSection5.UnaryOpenImages
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Canonical tagging preserves RV classes and open images on one RV cell. -/
 

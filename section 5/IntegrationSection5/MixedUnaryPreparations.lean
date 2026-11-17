@@ -1,5 +1,11 @@
-import IntegrationSection5.ActiveUnaryProjection
-import IntegrationSection5.CellUnaryPreparations
+module
+
+public import IntegrationSection5.ActiveUnaryProjection
+public import IntegrationSection5.CellUnaryPreparations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Prepare both mixed unary projections over one internally constructed real presentation, retaining full original-Gamma special chains. -/
 noncomputable section

@@ -1,4 +1,10 @@
-import Section7.LiftingDefinability
+module
+
+public import Section7.LiftingDefinability
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Definable domains on which a field equation uniquely selects a focus.
 The validity predicate quantifies over the whole RV fibre. -/

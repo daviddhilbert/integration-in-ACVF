@@ -1,7 +1,13 @@
-import IntegrationSection6.FiniteGammaCoproductGluing
-import IntegrationSection6.FiniteGammaElementaryAt
-import IntegrationSection6.FiniteGammaRestrictions
-import IntegrationSection6.ElementarySubobjectCoordinates
+module
+
+public import IntegrationSection6.FiniteGammaCoproductGluing
+public import IntegrationSection6.FiniteGammaElementaryAt
+public import IntegrationSection6.FiniteGammaRestrictions
+public import IntegrationSection6.ElementarySubobjectCoordinates
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Elementary blowups distribute over actual Gamma-definable partitions
 in RV[k], without imposing a cardinal bound on internal real codes. -/

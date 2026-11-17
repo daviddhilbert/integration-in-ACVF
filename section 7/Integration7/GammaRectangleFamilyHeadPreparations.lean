@@ -1,6 +1,12 @@
-import Integration7.NativeRectangleFamilyHeadPreparations
-import Integration7.GammaNativeUnaryProductMaps
-import Integration7.UnaryPullbackCommonNamePreparations
+module
+
+public import Integration7.NativeRectangleFamilyHeadPreparations
+public import Integration7.GammaNativeUnaryProductMaps
+public import Integration7.UnaryPullbackCommonNamePreparations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The rectangle-family head preparation has its complete original-
 Gamma graph, with actual unary preparations over the fixed common names. -/

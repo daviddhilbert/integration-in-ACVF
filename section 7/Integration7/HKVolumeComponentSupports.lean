@@ -1,6 +1,12 @@
-import Integration7.HKJacobianComponentRepresentatives
-import Integration7.HKAEVolumeComponentHeadIntegrals
-import Integration7.RawHomogeneousCoordinateSupports
+module
+
+public import Integration7.HKJacobianComponentRepresentatives
+public import Integration7.HKAEVolumeComponentHeadIntegrals
+public import Integration7.RawHomogeneousCoordinateSupports
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Genuine homogeneous supports survive coordinate Jacobians and
 one-coordinate integration. The zero component uses its supplied form. -/

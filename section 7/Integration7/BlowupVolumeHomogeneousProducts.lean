@@ -1,4 +1,10 @@
-import Integration7.BlowupVolumeGradedDecomposition
+module
+
+public import Integration7.BlowupVolumeGradedDecomposition
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The completed geometric degree pieces retain their actual product:
 degree n times degree m is in degree n+m, and the unit has degree zero. -/

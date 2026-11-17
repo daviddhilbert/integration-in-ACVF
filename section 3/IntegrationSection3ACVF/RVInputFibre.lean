@@ -1,4 +1,10 @@
-import IntegrationSection3ACVF.RVDifferencePairs
+module
+
+public import IntegrationSection3ACVF.RVDifferencePairs
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Every RV class with the value of a difference of two points of an
 open ball is realized as a difference at any of its base points. -/

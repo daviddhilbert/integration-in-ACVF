@@ -1,5 +1,11 @@
-import IntegrationSection3ACVF.GammaLinearRadiusSyntax
-import IntegrationSection3ACVF.LeastLinearRadiusGeometry
+module
+
+public import IntegrationSection3ACVF.GammaLinearRadiusSyntax
+public import IntegrationSection3ACVF.LeastLinearRadiusGeometry
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Least actual linear-radius existence for ordinary open source balls.
 The VF boundary is handled separately: its identity has no least

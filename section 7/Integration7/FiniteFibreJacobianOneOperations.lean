@@ -1,4 +1,10 @@
-import Integration7.MixedJacobianOneOperations
+module
+
+public import Integration7.MixedJacobianOneOperations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A finite RV family can be pulled across a Jacobian-one VF map.
 Finite-fibre pullback keeps the same-base VF-small exceptional set small. -/

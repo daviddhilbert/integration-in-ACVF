@@ -1,7 +1,13 @@
-import IntegrationSection3ACVF.FiniteOrderCells
-import IntegrationSection3ACVF.OrderedCellMonotonicity
-import Mathlib.Data.Fintype.Pi
-import Mathlib.Data.Fintype.Prod
+module
+
+public import IntegrationSection3ACVF.FiniteOrderCells
+public import IntegrationSection3ACVF.OrderedCellMonotonicity
+public import Mathlib.Data.Fintype.Pi
+public import Mathlib.Data.Fintype.Prod
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Finite nonempty open-cell indices and coverage of a controlled set.
 This is a genuine finite endpoint partition, with no chosen sample points. -/

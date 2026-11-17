@@ -1,7 +1,13 @@
-import Integration7.NativeVolumeDomains
-import Integration7.RVCoordinateSelection
-import Integration7.RVVolumeObjects
-import IntegrationSection6.OrderedSelectedVolume
+module
+
+public import Integration7.NativeVolumeDomains
+public import Integration7.RVCoordinateSelection
+public import Integration7.RVVolumeObjects
+public import IntegrationSection6.OrderedSelectedVolume
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Positive selected-volume objects of actual ordered contractions.
 Selected fibre finiteness is proved by the checked Section 6 theorem.

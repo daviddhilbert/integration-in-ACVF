@@ -1,5 +1,11 @@
-import Integration7.SelectedVFTailPermutations
-import Integration7.PermutationRVJacobian
+module
+
+public import Integration7.SelectedVFTailPermutations
+public import Integration7.PermutationRVJacobian
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Adding selected coordinates fixed by a VF order does not alter
 its determinant sign. All finite casts are actual conjugations. -/

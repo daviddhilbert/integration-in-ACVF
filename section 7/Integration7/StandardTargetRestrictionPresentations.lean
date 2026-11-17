@@ -1,4 +1,10 @@
-import Integration7.StandardRVLabelCutRestrictions
+module
+
+public import Integration7.StandardRVLabelCutRestrictions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A restricted standard contraction can retain its original target
 arity literally, including when the source piece has a different native

@@ -1,4 +1,10 @@
-import IntegrationSection6.GammaSchemaUniversalGeometry
+module
+
+public import IntegrationSection6.GammaSchemaUniversalGeometry
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Every valid blowup schema row realizes an actual geometric finite
 blowup at a common internal code presentation. No definability of the

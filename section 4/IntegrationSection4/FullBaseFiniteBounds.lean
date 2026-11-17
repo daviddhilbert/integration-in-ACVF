@@ -1,7 +1,13 @@
-import IntegrationSection3ACVF.FullFibreMeans
-import Section4.UniformFinite
-import Section3.NormalizationSaturation
-import Section3.SmallFiniteParameters
+module
+
+public import IntegrationSection3ACVF.FullFibreMeans
+public import Section4.UniformFinite
+public import Section3.NormalizationSaturation
+public import Section3.SmallFiniteParameters
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

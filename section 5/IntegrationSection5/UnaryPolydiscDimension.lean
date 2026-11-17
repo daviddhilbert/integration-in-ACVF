@@ -1,7 +1,13 @@
-import IntegrationSection5.FiniteMapSupport
-import IntegrationSection5.StandardContractionLift
-import Section4.RVWeightDimension
-import Section4.ModelGeometry
+module
+
+public import IntegrationSection5.FiniteMapSupport
+public import IntegrationSection5.StandardContractionLift
+public import Section4.RVWeightDimension
+public import Section4.ModelGeometry
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A definable injection into one VF coordinate excludes two independent
 nonzero RV directions. Finite formula support supplies the small internal

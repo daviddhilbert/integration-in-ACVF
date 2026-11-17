@@ -1,4 +1,10 @@
-import Integration7.SelectedCoordinateVolumeRealizations
+module
+
+public import Integration7.SelectedCoordinateVolumeRealizations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A selected RV family supported on a smaller-dimensional VF domain
 has zero integral. The proof uses its genuine full VF realization and

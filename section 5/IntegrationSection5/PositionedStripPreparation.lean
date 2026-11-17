@@ -1,6 +1,12 @@
-import IntegrationSection5.CellHeadSaturation
-import IntegrationSection5.PositionCoordinateGraph
-import IntegrationSection5.HeadPreparation
+module
+
+public import IntegrationSection5.CellHeadSaturation
+public import IntegrationSection5.PositionCoordinateGraph
+public import IntegrationSection5.HeadPreparation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Constructed actual head preparation of a positioned strip, including
 its source tag, focus, full Gamma graphs and RV-saturated target. -/

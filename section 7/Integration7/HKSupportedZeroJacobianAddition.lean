@@ -1,4 +1,10 @@
-import Integration7.HKZeroJacobianCoproducts
+module
+
+public import Integration7.HKZeroJacobianCoproducts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual weighted-zero Jacobian transform is additive on supported
 AE functions. This uses literal coproduct graphs and both original forms. -/

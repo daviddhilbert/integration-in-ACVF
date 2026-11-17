@@ -1,6 +1,12 @@
-import IntegrationSection3ACVF.CompleteTypeRVProfiles
-import IntegrationSection3ACVF.FullBaseDefinability
-import IntegrationSection3ACVF.BallEnlargementGeometry
+module
+
+public import IntegrationSection3ACVF.CompleteTypeRVProfiles
+public import IntegrationSection3ACVF.FullBaseDefinability
+public import IntegrationSection3ACVF.BallEnlargementGeometry
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Replace the centre of a named open ball by the point being tested.
 The radius stays an RV variable, so one VF variable remains in the profile.

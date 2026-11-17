@@ -1,4 +1,10 @@
-import Section9.HenselianRingTransport
+module
+
+public import Section9.HenselianRingTransport
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Restricting the ambient field while retaining the entire base
 subfield leaves its actual valuation ring unchanged up to an explicit

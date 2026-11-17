@@ -1,9 +1,15 @@
-import IntegrationSection3ACVF.CanonicalRegions
-import IntegrationSection3ACVF.FullBallCoset
-import IntegrationSection3ACVF.PuncturedGeometry
-import IntegrationSection3.AtomicPuncturedPartition
-import IntegrationSection3.ImaginaryBaseImages
-import IntegrationSection3.PuncturedSupport
+module
+
+public import IntegrationSection3ACVF.CanonicalRegions
+public import IntegrationSection3ACVF.FullBallCoset
+public import IntegrationSection3ACVF.PuncturedGeometry
+public import IntegrationSection3.AtomicPuncturedPartition
+public import IntegrationSection3.ImaginaryBaseImages
+public import IntegrationSection3.PuncturedSupport
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual ACVF bridge for Lemma 3.8's image
 component argument. The finite core argument is checked separately. -/

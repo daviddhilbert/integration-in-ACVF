@@ -1,5 +1,11 @@
-import IntegrationSection5.GammaHeadPreparation
-import IntegrationSection5.OrderedContractionProgram
+module
+
+public import IntegrationSection5.GammaHeadPreparation
+public import IntegrationSection5.OrderedContractionProgram
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Existence of the actual sequence of relatively special preparations in
 the identity VF order, retaining original-Gamma sets and complete graphs. -/

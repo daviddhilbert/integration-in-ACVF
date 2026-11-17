@@ -1,5 +1,11 @@
-import IntegrationSection3ACVF.OrderedFiniteCellCount
-import Mathlib.Tactic
+module
+
+public import IntegrationSection3ACVF.OrderedFiniteCellCount
+public import Mathlib.Tactic
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The elementary one-dimensional cell count: a closed interval has
 one more point cell than open cell, whereas an interval with no least

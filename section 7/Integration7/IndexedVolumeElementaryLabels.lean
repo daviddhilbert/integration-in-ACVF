@@ -1,9 +1,15 @@
-import Integration7.IndexedVolumeAdmissibility
-import Integration7.IndexedEssentialVolumeDomains
-import Integration7.GammaVolumeElementaryFormulas
-import Integration7.NormalizedElementaryCoordinates
-import IntegrationSection6.IndexedElementaryLabels
-import Integration7.GammaVolumeIndexedCharts
+module
+
+public import Integration7.IndexedVolumeAdmissibility
+public import Integration7.IndexedEssentialVolumeDomains
+public import Integration7.GammaVolumeElementaryFormulas
+public import Integration7.NormalizedElementaryCoordinates
+public import IntegrationSection6.IndexedElementaryLabels
+public import Integration7.GammaVolumeIndexedCharts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Reassociation of an index, old labels and blowup parameter gives
 the actual elementary domain, with its full original-Gamma graph. -/

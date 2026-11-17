@@ -1,7 +1,13 @@
-import IntegrationSection6.CanonicalRVKeys
-import IntegrationSection6.ElementaryIsomorphism
-import IntegrationSection6.Subobjects
-import IntegrationSection6.VolumePreservingLift
+module
+
+public import IntegrationSection6.CanonicalRVKeys
+public import IntegrationSection6.ElementaryIsomorphism
+public import IntegrationSection6.Subobjects
+public import IntegrationSection6.VolumePreservingLift
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Transport of elementary constructions along a volume-preserving RV
 bijection uses no smallness or saturation hypothesis. -/

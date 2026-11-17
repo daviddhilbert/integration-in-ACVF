@@ -1,5 +1,11 @@
-import Integration7.FixedRVVolumeCoordinates
-import Integration7.GammaVolumeFullChartRestriction
+module
+
+public import Integration7.FixedRVVolumeCoordinates
+public import Integration7.GammaVolumeFullChartRestriction
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The genuine two-coordinate volume isomorphism from the balanced
 unary RV comparison. Its source and target retain their actual unary

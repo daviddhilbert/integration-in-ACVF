@@ -1,9 +1,15 @@
-import Integration7.PreparedFiniteVolumeGeometry
-import Integration7.PreparedEssentialVolumeGluing
-import Integration7.PreparedGenericRVCells
-import Integration7.GenericGammaWitnessCovers
-import Integration7.PreparedGammaVolumeComparisons
-import IntegrationSection6.GammaVFParameterBases
+module
+
+public import Integration7.PreparedFiniteVolumeGeometry
+public import Integration7.PreparedEssentialVolumeGluing
+public import Integration7.PreparedGenericRVCells
+public import Integration7.GenericGammaWitnessCovers
+public import Integration7.PreparedGammaVolumeComparisons
+public import IntegrationSection6.GammaVFParameterBases
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 /-! Generic VF witnesses suffice for actual Gamma common blowups of the
 whole prepared indexed objects. Every essential prepared base cell has a
 generic inverse image; zero-coordinate base cells have no essential labels. -/

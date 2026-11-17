@@ -1,5 +1,11 @@
-import IntegrationSection6.GammaVolumeImageFamilies
-import Section3.GammaRealRestriction
+module
+
+public import IntegrationSection6.GammaVolumeImageFamilies
+public import Section3.GammaRealRestriction
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Fixed finite bounds on coordinate slices of volume-image families
 have original-Gamma definable validity loci. -/

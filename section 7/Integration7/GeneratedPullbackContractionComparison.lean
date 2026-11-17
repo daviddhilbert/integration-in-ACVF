@@ -1,7 +1,13 @@
-import Integration7.GeneratedFiniteContractionOrders
-import IntegrationSection6.PullbackContractionComparison
-import IntegrationSection6.CanonicalFiniteContractionIsomorphisms
-import IntegrationSection6.ArbitraryFiniteContractions
+module
+
+public import Integration7.GeneratedFiniteContractionOrders
+public import IntegrationSection6.PullbackContractionComparison
+public import IntegrationSection6.CanonicalFiniteContractionIsomorphisms
+public import IntegrationSection6.ArbitraryFiniteContractions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The generated-base specialization uses the proved ordinary selected
 contraction-order comparison. All actual objects and full Gamma graphs

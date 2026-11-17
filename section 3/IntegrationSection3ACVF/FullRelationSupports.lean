@@ -1,8 +1,14 @@
-import IntegrationSection3ACVF.CanonicalRegions
-import IntegrationSection3ACVF.FullBallCoset
-import IntegrationSection3.FibreSupportFormulas
-import IntegrationSection3.RelationalPreimages
-import IntegrationSection3.ProperInverseSupports
+module
+
+public import IntegrationSection3ACVF.CanonicalRegions
+public import IntegrationSection3ACVF.FullBallCoset
+public import IntegrationSection3.FibreSupportFormulas
+public import IntegrationSection3.RelationalPreimages
+public import IntegrationSection3.ProperInverseSupports
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! ACVF bridge for the inverse-image support invariants in 3.11.
 The joint support graph retains every real code of both ball names. -/

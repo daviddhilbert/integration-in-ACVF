@@ -1,9 +1,15 @@
-import Integration7.BasicVolumeRelationObjects
-import Integration7.VolumeProductPointwise
-import Integration7.VolumeRelabeling
-import Integration7.RVVolumeInverse
-import IntegrationSection6.FiniteBlowups
-import Section4.RVIsoTools
+module
+
+public import Integration7.BasicVolumeRelationObjects
+public import Integration7.VolumeProductPointwise
+public import Integration7.VolumeRelabeling
+public import Integration7.RVVolumeInverse
+public import IntegrationSection6.FiniteBlowups
+public import Section4.RVIsoTools
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Adjoining the literal volume coordinate one is the genuine product
 with the degree-one point. The label domain and density are unchanged. -/

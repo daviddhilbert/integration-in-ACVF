@@ -1,7 +1,13 @@
-import IntegrationSection3ACVF.FiniteOrderBounds
-import Section3.GammaCounting
-import Mathlib.Algebra.Order.Group.Unbundled.Basic
-import Mathlib.Data.Set.Card
+module
+
+public import IntegrationSection3ACVF.FiniteOrderBounds
+public import Section3.GammaCounting
+public import Mathlib.Algebra.Order.Group.Unbundled.Basic
+public import Mathlib.Data.Set.Card
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Strict local extrema on a possibly non-Archimedean ordered group.
 The proof uses genuine uniform finite row bounds supplied separately;

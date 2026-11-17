@@ -1,8 +1,14 @@
-import Integration7.RectangleFamilyPullbackPreparations
-import Integration7.RelativeHeadSpecialJacobians
-import Integration7.PermutedPullbackGeometry
-import Integration7.PermutationJacobianOneTransport
-import Integration7.MixedJacobianOneOperations
+module
+
+public import Integration7.RectangleFamilyPullbackPreparations
+public import Integration7.RelativeHeadSpecialJacobians
+public import Integration7.PermutedPullbackGeometry
+public import Integration7.PermutationJacobianOneTransport
+public import Integration7.MixedJacobianOneOperations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Restoring the original VF order after the two rectangle-family
 preparations gives an actual Jacobian-one bijection to a full RV

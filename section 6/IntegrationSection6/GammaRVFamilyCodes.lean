@@ -1,6 +1,12 @@
-import Section5.GammaPolynomialSupport
-import Section5.PolynomialPreparation
-import Section5.GammaLiftRelation
+module
+
+public import Section5.GammaPolynomialSupport
+public import Section5.PolynomialPreparation
+public import Section5.GammaLiftRelation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Finite RV codes for a Gamma-definable family of RV sets indexed by
 VF tuples. Checked polynomial support supplies finitely many leading terms

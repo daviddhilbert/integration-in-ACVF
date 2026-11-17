@@ -1,4 +1,10 @@
-import IntegrationSection6.AdmissibleFocusExistence
+module
+
+public import IntegrationSection6.AdmissibleFocusExistence
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A canonical-focus-canonical chain has exactly one centripetal step,
 with full original-Gamma certificates on every primitive. -/

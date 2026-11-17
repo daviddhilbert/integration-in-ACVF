@@ -1,5 +1,11 @@
-import Integration7.VolumeIntegrationSemiringEquivalence
-import Integration7.SemiringGroupificationDifferences
+module
+
+public import Integration7.VolumeIntegrationSemiringEquivalence
+public import Integration7.SemiringGroupificationDifferences
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The proved integration semiring equivalence induces the canonical
 ring equivalence on universal groupifications. Identification of the RV

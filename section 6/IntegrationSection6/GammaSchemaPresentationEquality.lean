@@ -1,4 +1,10 @@
-import IntegrationSection6.GammaSchemaRowEquality
+module
+
+public import IntegrationSection6.GammaSchemaRowEquality
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Equality of schema rows induces the actual label-identity isomorphism
 between their arbitrary native finite presentations. -/

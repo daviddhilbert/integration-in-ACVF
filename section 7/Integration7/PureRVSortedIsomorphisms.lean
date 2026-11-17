@@ -1,5 +1,11 @@
-import IntegrationSection6.GammaSortedParameterPreservation
-import IntegrationSection6.GammaRVGraphRaw
+module
+
+public import IntegrationSection6.GammaSortedParameterPreservation
+public import IntegrationSection6.GammaRVGraphRaw
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual sorted-tuple isomorphisms on pure RV domains return to the
 inherited point language without changing a label or a parameter. -/

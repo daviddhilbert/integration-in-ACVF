@@ -1,5 +1,11 @@
-import Integration7.FiniteVolumeIsoMaps
-import Section4.RVCoproduct
+module
+
+public import Integration7.FiniteVolumeIsoMaps
+public import Section4.RVCoproduct
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 set_option backward.isDefEq.respectTransparency false
 noncomputable section

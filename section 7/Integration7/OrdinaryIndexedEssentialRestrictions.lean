@@ -1,5 +1,11 @@
-import Integration7.OrdinaryIndexedUnitVolumeObjects
-import Integration7.GammaEssentialIndexDomains
+module
+
+public import Integration7.OrdinaryIndexedUnitVolumeObjects
+public import Integration7.GammaEssentialIndexDomains
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Ordinary indexed unit-density objects may discard zero base-volume
 indices by an actual original-Gamma volume isomorphism. -/

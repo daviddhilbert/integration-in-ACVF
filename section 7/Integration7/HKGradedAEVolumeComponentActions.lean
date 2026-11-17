@@ -1,7 +1,13 @@
-import Integration7.HKGradedAEVolumeFunctions
-import Integration7.HKAEZeroPositiveCoefficientLinearMaps
-import Integration7.HKAERVPositiveCoefficientWeightedBilinearity
-import Mathlib.Algebra.Module.End
+module
+
+public import Integration7.HKGradedAEVolumeFunctions
+public import Integration7.HKAEZeroPositiveCoefficientLinearMaps
+public import Integration7.HKAERVPositiveCoefficientWeightedBilinearity
+public import Mathlib.Algebra.Module.End
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! All four homogeneous coefficient actions, including ordinary degree
 zero, on the actual graded AE function components. -/

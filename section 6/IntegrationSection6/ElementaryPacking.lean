@@ -1,5 +1,11 @@
-import IntegrationSection6.ElementaryBlowup
-import Section4.RVProductAssociativity
+module
+
+public import IntegrationSection6.ElementaryBlowup
+public import Section4.RVProductAssociativity
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Projection and parameter of the actual packed elementary domain. -/
 

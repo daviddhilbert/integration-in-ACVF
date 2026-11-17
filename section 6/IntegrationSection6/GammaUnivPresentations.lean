@@ -1,4 +1,10 @@
-import IntegrationSection5.GammaMapPresentation
+module
+
+public import IntegrationSection5.GammaMapPresentation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Full original-Gamma sets and graphs have real presentations over the
 whole model. This changes only an internal presentation; the mathematical

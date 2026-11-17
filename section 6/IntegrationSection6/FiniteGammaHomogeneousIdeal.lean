@@ -1,5 +1,11 @@
-import IntegrationSection6.FiniteGammaBasicGenerators
-import IntegrationSection6.GroupifiedCongruence
+module
+
+public import IntegrationSection6.FiniteGammaBasicGenerators
+public import IntegrationSection6.GroupifiedCongruence
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual principal ideal in the group completion of the graded sum of
 full finite RV[k] classes. The positive factor includes zero in degree one.

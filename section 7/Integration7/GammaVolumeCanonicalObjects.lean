@@ -1,5 +1,11 @@
-import Integration7.GammaVolumeGraphPresentations
-import Integration7.CanonicalVolumeForms
+module
+
+public import Integration7.GammaVolumeGraphPresentations
+public import Integration7.CanonicalVolumeForms
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Convert a full original-Gamma presentation into the actual canonical
 volume category. Original graph certificates and finite-extra base are retained. -/

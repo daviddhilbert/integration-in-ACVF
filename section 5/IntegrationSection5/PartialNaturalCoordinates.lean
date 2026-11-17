@@ -1,4 +1,10 @@
-import IntegrationSection5.PartialNaturalMap
+module
+
+public import IntegrationSection5.PartialNaturalMap
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Coordinate differences and injectivity on final vertical lines,
 including partial contractions with a frozen VF tuple. -/

@@ -1,5 +1,11 @@
-import Integration7.VolumeSchemaOrdinaryValidity
-import Integration7.ExtraVolumeRVRecognition
+module
+
+public import Integration7.VolumeSchemaOrdinaryValidity
+public import Integration7.ExtraVolumeRVRecognition
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Recognize a complete finite certificate from actual volume geometry.
 Ordinary chart validity and both volume clauses are proved from the

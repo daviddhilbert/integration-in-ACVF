@@ -1,8 +1,14 @@
-import Integration7.OrdinaryHeadIntegralVolumeCharts
-import Integration7.NativeAppendedVolumeIntegralFormula
-import Integration7.IntegrationCoordinateDensityFormula
-import Integration7.HKAEZeroIntegrals
-import Integration7.HKZeroFamilyHeadIntegrals
+module
+
+public import Integration7.OrdinaryHeadIntegralVolumeCharts
+public import Integration7.NativeAppendedVolumeIntegralFormula
+public import Integration7.IntegrationCoordinateDensityFormula
+public import Integration7.HKAEZeroIntegrals
+public import Integration7.HKZeroFamilyHeadIntegrals
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Integrating the actual first-head family of an weighted-zero-valued
 presentation and then its remaining VF coordinates gives its genuine

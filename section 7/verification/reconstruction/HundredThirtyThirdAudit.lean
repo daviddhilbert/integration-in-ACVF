@@ -1,6 +1,12 @@
-import Integration7.RawPointPaddedChangeOfVariables
-import Integration7.RawRingSupportedFunctionIntegrals
-import Integration7.ScalarExtensionLinearFunctionals
+module
+
+public import Integration7.RawPointPaddedChangeOfVariables
+public import Integration7.RawRingSupportedFunctionIntegrals
+public import Integration7.ScalarExtensionLinearFunctionals
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 set_option pp.universes true
 set_option pp.proofs false
 set_option pp.deepTerms true

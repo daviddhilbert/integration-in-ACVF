@@ -1,4 +1,10 @@
-import IntegrationSection3ACVF.ThinFamilyConservation
+module
+
+public import IntegrationSection3ACVF.ThinFamilyConservation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The one-component form of 3.22, with the actual hole counts. -/
 

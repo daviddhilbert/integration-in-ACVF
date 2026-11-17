@@ -1,6 +1,12 @@
-import Integration7.AERVVolumePositiveCoefficientAssociativity
-import Integration7.ZeroCoefficientProductSymmetry
-import Integration7.OrdinaryVolumeCoefficientScalarRows
+module
+
+public import Integration7.AERVVolumePositiveCoefficientAssociativity
+public import Integration7.ZeroCoefficientProductSymmetry
+public import Integration7.OrdinaryVolumeCoefficientScalarRows
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Ordinary RV[0] coefficients are central in actual graded volume
 products. Only this degree-zero centrality is used for the two scalar

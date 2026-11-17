@@ -1,5 +1,11 @@
-import Integration7.GammaVolumeChainSchemata
-import IntegrationSection6.GammaWitnessUniformity
+module
+
+public import Integration7.GammaVolumeChainSchemata
+public import IntegrationSection6.GammaWitnessUniformity
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A pointwise cover by valid common-witness formulas has a finite
 subcover with uniformly bounded chain lengths, with arbitrary auxiliary

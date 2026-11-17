@@ -1,8 +1,14 @@
-import IntegrationSection5.NonrectangleFiniteProfiles
-import IntegrationSection5.VariableUnaryProfiles
-import IntegrationSection5.GammaRVPresentations
-import IntegrationSection5.GammaCellComparison
-import IntegrationSection5.GammaRectangleFamilyComparison
+module
+
+public import IntegrationSection5.NonrectangleFiniteProfiles
+public import IntegrationSection5.VariableUnaryProfiles
+public import IntegrationSection5.GammaRVPresentations
+public import IntegrationSection5.GammaCellComparison
+public import IntegrationSection5.GammaRectangleFamilyComparison
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 open Classical FirstOrder FirstOrder.Language

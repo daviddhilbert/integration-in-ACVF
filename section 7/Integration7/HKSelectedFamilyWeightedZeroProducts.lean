@@ -1,6 +1,12 @@
-import Integration7.HKZeroFamilyScalarProducts
-import Integration7.HKZeroCoefficientScalarRows
-import Integration7.VolumeFamilyZeroProductRows
+module
+
+public import Integration7.HKZeroFamilyScalarProducts
+public import Integration7.HKZeroCoefficientScalarRows
+public import Integration7.VolumeFamilyZeroProductRows
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Weighted zero coefficients act on positive families by a finite RV
 factor, multiplying both forms and retaining all selected coordinates. -/

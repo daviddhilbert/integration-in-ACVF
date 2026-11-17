@@ -1,5 +1,11 @@
-import Integration7.NondegenerateFiniteIso
-import Section4.MapCorestrict
+module
+
+public import Integration7.NondegenerateFiniteIso
+public import Section4.MapCorestrict
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A full definable label bijection preserving the essential loci
 restricts to an actual finite-category essential isomorphism. -/

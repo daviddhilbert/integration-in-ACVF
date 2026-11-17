@@ -1,7 +1,13 @@
-import Integration7.UniformCellVerticalContractions
-import Integration7.UniformBalancedHorizontalContractions
-import Integration7.MixedTranslationContractionComparisons
-import Integration7.RVGraphRefinementContractionComparisons
+module
+
+public import Integration7.UniformCellVerticalContractions
+public import Integration7.UniformBalancedHorizontalContractions
+public import Integration7.MixedTranslationContractionComparisons
+public import Integration7.RVGraphRefinementContractionComparisons
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Specified contractions of the actual cell family reduce to
 constructed contractions of its two uniform translations. The comparison

@@ -1,8 +1,14 @@
-import Integration7.FullPackedBlowupCharts
-import Integration7.GammaVolumeCoproductCoherence
-import Integration7.GammaVolumeCoproductCharts
-import Integration7.IteratedVolumeBlowups
-import Integration7.GammaVolumeAlgebraicCenters
+module
+
+public import Integration7.FullPackedBlowupCharts
+public import Integration7.GammaVolumeCoproductCoherence
+public import Integration7.GammaVolumeCoproductCharts
+public import Integration7.IteratedVolumeBlowups
+public import Integration7.GammaVolumeAlgebraicCenters
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Original-Gamma certificates for the existing actual volume blowup.
 The full elementary chart is retained, including degenerate labels. -/

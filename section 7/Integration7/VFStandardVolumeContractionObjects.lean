@@ -1,7 +1,13 @@
-import Integration7.PositiveSelectedLemma75
-import Integration7.ContractionRetainedDensityLabels
-import Integration7.GammaVolumeSliceAssemblyGeometry
-import IntegrationSection6.FiniteStandardContractions
+module
+
+public import Integration7.PositiveSelectedLemma75
+public import Integration7.ContractionRetainedDensityLabels
+public import Integration7.GammaVolumeSliceAssemblyGeometry
+public import IntegrationSection6.FiniteStandardContractions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Standard contraction objects of arbitrary positive VF volume
 objects. The density graph retains the density as an old RV coordinate;

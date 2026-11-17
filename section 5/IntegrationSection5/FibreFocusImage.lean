@@ -1,4 +1,10 @@
-import IntegrationSection5.FibreFocus
+module
+
+public import IntegrationSection5.FibreFocus
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The target of the restricted focus is the actual coordinate fibre of
 the global focus image. -/

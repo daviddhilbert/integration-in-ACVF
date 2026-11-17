@@ -1,6 +1,12 @@
-import IntegrationSection6.GammaPreparedSelectedVolumes
-import IntegrationSection6.GammaVolumeSliceLiftCarriers
-import IntegrationSection6.GammaSwappedVolumes
+module
+
+public import IntegrationSection6.GammaPreparedSelectedVolumes
+public import IntegrationSection6.GammaVolumeSliceLiftCarriers
+public import IntegrationSection6.GammaSwappedVolumes
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Exact lifted carriers of selected-volume slices of a prepared indexed
 presentation. Both the base key and the original selected labels remain

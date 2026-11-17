@@ -1,6 +1,12 @@
-import Integration7.GammaVolumeLiftChartRealization
-import Integration7.GammaUnaryVolumeCommonSchema
-import Integration7.RawVFVolumeComposition
+module
+
+public import Integration7.GammaVolumeLiftChartRealization
+public import Integration7.GammaUnaryVolumeCommonSchema
+public import Integration7.RawVFVolumeComposition
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Two retained-density lift charts from the same mixed source give
 a finite original-Gamma common-volume-blowup witness. The VF components

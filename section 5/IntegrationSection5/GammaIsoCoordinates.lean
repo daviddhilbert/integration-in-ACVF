@@ -1,5 +1,11 @@
-import IntegrationSection5.GammaScalarUpdate
-import IntegrationSection5.ScalarCoordinateRefinement
+module
+
+public import IntegrationSection5.GammaScalarUpdate
+public import IntegrationSection5.ScalarCoordinateRefinement
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

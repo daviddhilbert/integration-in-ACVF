@@ -1,6 +1,12 @@
-import Integration7.VFVolumeProductRestrictions
-import Integration7.VFProductAlmostEverywhere
-import Integration7.VFCofullSubdomains
+module
+
+public import Integration7.VFVolumeProductRestrictions
+public import Integration7.VFProductAlmostEverywhere
+public import Integration7.VFCofullSubdomains
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The genuine product of two cofull definable subdomains is cofull. -/
 noncomputable section

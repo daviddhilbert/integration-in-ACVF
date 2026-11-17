@@ -1,5 +1,11 @@
-import IntegrationSection3ACVF.PaperBalls
-import IntegrationSection3ACVF.CanonicalBallSupport
+module
+
+public import IntegrationSection3ACVF.PaperBalls
+public import IntegrationSection3ACVF.CanonicalBallSupport
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Existence and uniqueness of the valuative centre on actual ball point
 sets. The constant-value step reuses the pinned predecessor's proved disc

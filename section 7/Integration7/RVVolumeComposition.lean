@@ -1,7 +1,13 @@
-import Integration7.VolumeRelabeling
-import Integration7.VolumeAlmostEverywhere
-import Integration7.GammaVolumeCriterion
-import Section9.GenericRVJacobianChain
+module
+
+public import Integration7.VolumeRelabeling
+public import Integration7.VolumeAlmostEverywhere
+public import Integration7.GammaVolumeCriterion
+public import Section9.GenericRVJacobianChain
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 set_option backward.isDefEq.respectTransparency false
 noncomputable section

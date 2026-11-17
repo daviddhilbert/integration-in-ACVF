@@ -1,4 +1,10 @@
-import Integration7.RVLabelChainLifts
+module
+
+public import Integration7.RVLabelChainLifts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Exact target geometry of carried-label special lifts. A surjective
 source projection with constant extra labels yields precisely the

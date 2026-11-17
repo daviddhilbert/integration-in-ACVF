@@ -1,5 +1,11 @@
-import IntegrationSection4.FamilyLocalConstancy
-import IntegrationSection4.FiniteImageFamilies
+module
+
+public import IntegrationSection4.FamilyLocalConstancy
+public import IntegrationSection4.FiniteImageFamilies
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

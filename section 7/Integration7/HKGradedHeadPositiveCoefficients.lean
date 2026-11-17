@@ -1,8 +1,14 @@
-import Integration7.HKAEZeroHeadPositiveCoefficients
-import Integration7.AERVVolumeHeadIntegralPositiveCoefficients
-import Integration7.HKGradedAEVolumeHeadFubini
-import Integration7.HKGradedAEVolumeActionCoherence
-import Integration7.HKGradedAEVolumePrefixFubini
+module
+
+public import Integration7.HKAEZeroHeadPositiveCoefficients
+public import Integration7.AERVVolumeHeadIntegralPositiveCoefficients
+public import Integration7.HKGradedAEVolumeHeadFubini
+public import Integration7.HKGradedAEVolumeActionCoherence
+public import Integration7.HKGradedAEVolumePrefixFubini
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Every positive homogeneous coefficient commutes with the actual raw head and prefix integrals on the corrected finite graded function module, including its weighted-zero input component. -/
 noncomputable section

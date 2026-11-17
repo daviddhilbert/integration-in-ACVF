@@ -1,5 +1,11 @@
-import Integration7.GradedPointPadding
-import Integration7.ScalarExtensionPaddingEquivalences
+module
+
+public import Integration7.GradedPointPadding
+public import Integration7.ScalarExtensionPaddingEquivalences
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! When the central point coefficient becomes one, positive shifted
 functions and full finite graded functions have isomorphic scalar extensions. -/

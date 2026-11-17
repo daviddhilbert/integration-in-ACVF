@@ -1,5 +1,11 @@
-import IntegrationSection6.GammaHeadFibreParameters
-import IntegrationSection6.GammaNamedIsoRestrictions
+module
+
+public import IntegrationSection6.GammaHeadFibreParameters
+public import IntegrationSection6.GammaNamedIsoRestrictions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A relatively unary bijection restricts to a complete original-Gamma
 bijection of the frozen coordinate fibres, retaining selected old labels. -/

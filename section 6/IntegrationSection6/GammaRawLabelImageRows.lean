@@ -1,5 +1,11 @@
-import IntegrationSection6.GammaRawLabelImages
-import IntegrationSection6.GammaRawElementaryRowCoordinates
+module
+
+public import IntegrationSection6.GammaRawLabelImages
+public import IntegrationSection6.GammaRawElementaryRowCoordinates
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Exact typed rows of relational label images. All existential raw
 witnesses are decoded using the explicit proper-sort guards. -/

@@ -1,5 +1,11 @@
-import Section6.HenselianInvariance
-import Mathlib.RingTheory.Trace.Basic
+module
+
+public import Section6.HenselianInvariance
+public import Mathlib.RingTheory.Trace.Basic
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! An independently proved part of the remaining finite-extension
 input: a finite Galois immediate extension of a henselian valued

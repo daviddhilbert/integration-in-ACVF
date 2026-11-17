@@ -1,6 +1,12 @@
-import IntegrationSection6.LiftLoci
-import IntegrationSection6.CanonicalRVKeys
-import IntegrationSection6.KeyInverseCoordinates
+module
+
+public import IntegrationSection6.LiftLoci
+public import IntegrationSection6.CanonicalRVKeys
+public import IntegrationSection6.KeyInverseCoordinates
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Canonical RV data of an actual literal lift recovers its input RV
 object, up to the explicit volume-preserving canonical label isomorphism. -/

@@ -1,6 +1,12 @@
-import Integration7.DefinableDensityRescaling
-import Integration7.VolumeBlowupClasses
-import Integration7.IndexedVolumeEmpty
+module
+
+public import Integration7.DefinableDensityRescaling
+public import Integration7.VolumeBlowupClasses
+public import Integration7.IndexedVolumeEmpty
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A definable nonzero density multiplier acts additively on actual
 common-blowup classes; the coproduct comparison preserves every coordinate. -/

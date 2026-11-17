@@ -1,5 +1,11 @@
-import Integration7.VolumeLiftBijections
-import Integration7.VFVolumeComposition
+module
+
+public import Integration7.VolumeLiftBijections
+public import Integration7.VFVolumeComposition
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Passing from essential lifts to the full original lifts discards
 only the actual coordinate-zero set of smaller VF dimension. -/

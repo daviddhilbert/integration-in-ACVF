@@ -1,2 +1,8 @@
+module
+
 /- Compatibility import. The implementation is owned by hilbert-mathlib. -/
-import HilbertMathlib.Foundation.Grading.SemimoduleScalarExtension
+public import HilbertMathlib.Foundation.Grading.SemimoduleScalarExtension
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section

@@ -1,5 +1,11 @@
-import IntegrationSection6.GammaUnaryChainOperations
-import IntegrationSection6.GammaFiniteMembershipPreparation
+module
+
+public import IntegrationSection6.GammaUnaryChainOperations
+public import IntegrationSection6.GammaFiniteMembershipPreparation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A prepared membership predicate makes the actual image of a source
 piece an RV-pullback. Its Gamma isomorphism may use an equal-function

@@ -1,5 +1,11 @@
-import IntegrationSection6.FiniteGammaIsoRealization
-import IntegrationSection6.GammaGraphCoproducts
+module
+
+public import IntegrationSection6.FiniteGammaIsoRealization
+public import IntegrationSection6.GammaGraphCoproducts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A common internal code universe for finite Gamma geometry. Full
 domain, volume and chart graphs remain over the original base; the

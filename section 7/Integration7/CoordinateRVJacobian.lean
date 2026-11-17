@@ -1,4 +1,10 @@
-import Integration7.RVVolumeMorphisms
+module
+
+public import Integration7.RVVolumeMorphisms
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A defined RV Jacobian of a diagonal volume correspondence is one.
 The generic existence theorem is used separately, so no smoothness of an

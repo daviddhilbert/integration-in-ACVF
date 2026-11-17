@@ -1,6 +1,12 @@
-import Integration7.OrdinaryVolumeFamilyCoproducts
-import Section4.EmptyMaps
-import Integration7.VFVolumeClasses
+module
+
+public import Integration7.OrdinaryVolumeFamilyCoproducts
+public import Section4.EmptyMaps
+public import Integration7.VFVolumeClasses
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The literal empty family represents the zero ordinary RV-valued
 function and the empty positive VF volume object. -/

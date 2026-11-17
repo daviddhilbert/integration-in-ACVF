@@ -1,4 +1,10 @@
-import IntegrationSection6.MixedVFFibreCompactness
+module
+
+public import IntegrationSection6.MixedVFFibreCompactness
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Point functions survive the existing point/sorted and carrier-equality
 adapters. These identities retain graph constraints during uniformization. -/

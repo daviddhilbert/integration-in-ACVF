@@ -1,8 +1,14 @@
+module
+
 /-
 Extracted from https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%205/Completed18CoherentCells.lean
 Original declaration namespaces and notices are retained.
 -/
-import IntegrationSection5.FiniteRVComparison
+public import IntegrationSection5.FiniteRVComparison
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The completed [18] cell producer retains its existing proof that the new RV labels determine every old RV coordinate. -/
 noncomputable section

@@ -1,4 +1,10 @@
-import Integration7.HKNormalizedVolumeSupports
+module
+
+public import Integration7.HKNormalizedVolumeSupports
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The positive-generator support definition is exactly the span of
 all actual corrected supported presentations, including degree zero.

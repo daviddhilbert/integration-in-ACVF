@@ -1,4 +1,10 @@
-import Section7.GammaScissors
+module
+
+public import Section7.GammaScissors
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Recover literal unions and intersections from the actual packed
 VF scissor relation in a common mixed arity. -/

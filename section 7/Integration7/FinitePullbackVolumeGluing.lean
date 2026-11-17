@@ -1,6 +1,12 @@
-import Integration7.FinitePullbackVolumeUnions
-import Integration7.EmptyPullbackVolumeObjects
-import IntegrationSection5.RelativeSpecialRestriction
+module
+
+public import Integration7.FinitePullbackVolumeUnions
+public import Integration7.EmptyPullbackVolumeObjects
+public import IntegrationSection5.RelativeSpecialRestriction
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Common forward volume blowups of finite pullback partition pieces
 assemble into common forward volume blowups of the whole objects. -/

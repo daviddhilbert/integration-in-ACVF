@@ -1,5 +1,11 @@
-import IntegrationSection4.DefinableDescent
-import Section5.VerticalConstruction
+module
+
+public import IntegrationSection4.DefinableDescent
+public import Section5.VerticalConstruction
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Definable vertical coordinate changes with the complementary VF
 coordinates fixed. These are actual maps and bijections; no preparation

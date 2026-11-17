@@ -1,7 +1,13 @@
-import Integration7.OrdinaryZeroVolumeRows
-import Integration7.SelectedVolumeRowContexts
-import Integration7.VFVolumeObjects
-import Integration7.GradedVolumeProducts
+module
+
+public import Integration7.OrdinaryZeroVolumeRows
+public import Integration7.SelectedVolumeRowContexts
+public import Integration7.VFVolumeObjects
+public import Integration7.GradedVolumeProducts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Genuine ordinary degree-zero-valued families: each VF fibre has
 finitely many RV labels, no volume coordinates, and no assigned density.

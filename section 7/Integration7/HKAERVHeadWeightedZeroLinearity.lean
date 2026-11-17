@@ -1,6 +1,12 @@
-import Integration7.HKFrozenHeadWeightedZeroCoefficients
-import Integration7.HKAERVWeightedZeroModules
-import Integration7.AERVVolumeHeadIntegralAdditivity
+module
+
+public import Integration7.HKFrozenHeadWeightedZeroCoefficients
+public import Integration7.HKAERVWeightedZeroModules
+public import Integration7.AERVVolumeHeadIntegralAdditivity
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The genuine positive-valued AE head map is linear over the full weighted measured-zero coefficient semiring before normalization. -/
 noncomputable section

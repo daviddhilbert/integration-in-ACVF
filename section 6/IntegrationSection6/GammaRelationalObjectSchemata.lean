@@ -1,5 +1,11 @@
-import IntegrationSection6.GammaParameterRecoding
-import IntegrationSection6.GammaSchemaFiniteRows
+module
+
+public import IntegrationSection6.GammaParameterRecoding
+public import IntegrationSection6.GammaSchemaFiniteRows
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A full sorted relation has a canonical object schema whose domain is
 its exact projection. Functionality and finite fibres remain explicit row

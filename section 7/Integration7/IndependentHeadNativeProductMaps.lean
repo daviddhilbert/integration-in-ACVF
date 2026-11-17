@@ -1,6 +1,12 @@
-import Integration7.IndependentRVRawHeadProducts
-import Integration7.CanonicalUnaryHeadProducts
-import Integration7.NativeVolumeDomains
+module
+
+public import Integration7.IndependentRVRawHeadProducts
+public import Integration7.CanonicalUnaryHeadProducts
+public import Integration7.NativeVolumeDomains
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The checked independent head bijection acts on the literal native
 RV label domains used by the actual coordinate-density volume objects. -/

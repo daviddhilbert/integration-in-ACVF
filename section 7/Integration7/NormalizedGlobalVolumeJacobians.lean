@@ -1,6 +1,12 @@
-import Integration7.NormalizedSupportedUnivEquivalence
-import Integration7.NormalizedSupportedVolumeIntegrals
-import Integration7.NormalizedPositiveFunctionGeneration
+module
+
+public import Integration7.NormalizedSupportedUnivEquivalence
+public import Integration7.NormalizedSupportedVolumeIntegrals
+public import Integration7.NormalizedPositiveFunctionGeneration
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Global definable VF bijections act linearly on the existing full
 normalized function module, including ordinary degree zero. The operator

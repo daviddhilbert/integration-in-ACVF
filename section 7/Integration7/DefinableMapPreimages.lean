@@ -1,4 +1,10 @@
-import Section4.Products
+module
+
+public import Section4.Products
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 noncomputable section
 open FirstOrder FirstOrder.Language

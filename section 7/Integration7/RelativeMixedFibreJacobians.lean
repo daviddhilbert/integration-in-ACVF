@@ -1,6 +1,12 @@
-import Integration7.ActiveVFCoordinateSlices
-import IntegrationSection5.RelativeFibreMaps
-import Section9.SpecialJacobianGeneric
+module
+
+public import Integration7.ActiveVFCoordinateSlices
+public import IntegrationSection5.RelativeFibreMaps
+public import Section9.SpecialJacobianGeneric
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A defined mixed VF Jacobian of a relatively unary map restricts to
 the identical unary Jacobian on its actual coordinate fibre. The full

@@ -1,4 +1,10 @@
-import IntegrationSection5.AllConstantAttachment
+module
+
+public import IntegrationSection5.AllConstantAttachment
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A finite original-Gamma partition choosing the first nonconstant scalar
 branch, with a separate all-constant piece. -/

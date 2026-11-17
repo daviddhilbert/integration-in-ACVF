@@ -1,5 +1,11 @@
-import Integration7.LiteralVolumeLiftMaps
-import Integration7.PullbackCoordinateVolumeObjects
+module
+
+public import Integration7.LiteralVolumeLiftMaps
+public import Integration7.PullbackCoordinateVolumeObjects
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! An actual RV-pullback is volume-isomorphic to the VF lift of its
 canonical key object. Canonicalization keeps every VF coordinate and puts

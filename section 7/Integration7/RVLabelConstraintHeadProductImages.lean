@@ -1,4 +1,10 @@
-import Integration7.RVLabelConstraintHeadProducts
+module
+
+public import Integration7.RVLabelConstraintHeadProducts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The joint head/parameter map is injective and its image consists
 exactly of pairs agreeing on their shared original RV labels. -/

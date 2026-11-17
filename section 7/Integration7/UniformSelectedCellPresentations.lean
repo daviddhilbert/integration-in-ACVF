@@ -1,6 +1,12 @@
-import Integration7.SelectedCellPositionRows
-import Integration7.UniformNonrectangleCellAlternatives
-import Integration7.UniformBalancedCellGeometry
+module
+
+public import Integration7.SelectedCellPositionRows
+public import Integration7.UniformNonrectangleCellAlternatives
+public import Integration7.UniformBalancedCellGeometry
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Selecting whole refinement-parameter fibres gives an actual uniform
 cell presentation with the same centre, paradigm and complete parameter

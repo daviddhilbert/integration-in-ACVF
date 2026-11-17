@@ -1,4 +1,10 @@
-import IntegrationSection6.FiniteSelectedContractions
+module
+
+public import IntegrationSection6.FiniteSelectedContractions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! First-volume normalization preserves the entire selected volume tuple
 of a standard contraction, including the old labels, literally. -/

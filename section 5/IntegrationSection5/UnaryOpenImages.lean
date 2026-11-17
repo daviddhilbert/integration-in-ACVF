@@ -1,4 +1,10 @@
-import IntegrationSection5.UnaryTranslations
+module
+
+public import IntegrationSection5.UnaryTranslations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Images of raw unary polydiscs under actual subtype maps. -/
 

@@ -1,4 +1,10 @@
-import Integration7.NormalizedVolumeCoefficientRing
+module
+
+public import Integration7.NormalizedVolumeCoefficientRing
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual normalized coefficient ring has the universal property
 of setting the geometric degree-one point equal to one. -/

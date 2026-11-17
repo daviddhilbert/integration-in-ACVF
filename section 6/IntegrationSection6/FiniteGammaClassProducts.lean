@@ -1,10 +1,16 @@
-import IntegrationSection6.FiniteGammaProductCoherence
-import IntegrationSection6.FiniteGammaProductUnit
-import IntegrationSection6.FiniteGammaProductIsos
-import IntegrationSection6.FiniteGammaProductDistribution
-import IntegrationSection6.FiniteGammaProductRightDistribution
-import IntegrationSection6.FiniteGammaScissorComparison
-import IntegrationSection6.FiniteGammaEmptyIsomorphisms
+module
+
+public import IntegrationSection6.FiniteGammaProductCoherence
+public import IntegrationSection6.FiniteGammaProductUnit
+public import IntegrationSection6.FiniteGammaProductIsos
+public import IntegrationSection6.FiniteGammaProductDistribution
+public import IntegrationSection6.FiniteGammaProductRightDistribution
+public import IntegrationSection6.FiniteGammaScissorComparison
+public import IntegrationSection6.FiniteGammaEmptyIsomorphisms
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Graded multiplication on actual Gamma RV[k] isomorphism classes.
 The construction follows the pinned Section4.RVHomogeneousProducts pattern;

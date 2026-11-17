@@ -1,4 +1,10 @@
-import IntegrationSection6.FiniteGammaIterations
+module
+
+public import IntegrationSection6.FiniteGammaIterations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Changing the endpoints of a finite Gamma-certified forward chain. -/
 noncomputable section

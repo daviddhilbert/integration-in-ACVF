@@ -1,5 +1,11 @@
-import Integration7.GammaVolumeRelabelGeometry
-import Integration7.GammaVolumeSliceAssemblyGeometry
+module
+
+public import Integration7.GammaVolumeRelabelGeometry
+public import Integration7.GammaVolumeSliceAssemblyGeometry
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! An original-Gamma label equivalence preserving the entire volume tuple
 and a retained density realizes a genuine Gamma volume isomorphism. -/

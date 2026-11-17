@@ -1,5 +1,11 @@
-import Integration7.BalancedCellTranslationEquivalences
-import Integration7.GammaPositionCodeCentres
+module
+
+public import Integration7.BalancedCellTranslationEquivalences
+public import Integration7.GammaPositionCodeCentres
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The inverse balanced positioning function has its graph over the
 same original parameter base; its totalization outside the image is unused. -/

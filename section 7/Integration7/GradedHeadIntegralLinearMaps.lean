@@ -1,5 +1,11 @@
-import Integration7.AEOrdinaryHeadOrdinaryLinearity
-import Integration7.GradedHeadPositiveCoefficients
+module
+
+public import Integration7.AEOrdinaryHeadOrdinaryLinearity
+public import Integration7.GradedHeadPositiveCoefficients
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual raw graded head integral is linear over the full graded
 RV volume coefficient semiring, including both ordinary coefficient and

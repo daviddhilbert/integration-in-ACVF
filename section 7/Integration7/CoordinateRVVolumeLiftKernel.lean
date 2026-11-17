@@ -1,8 +1,14 @@
-import Integration7.PullbackVolumeAEKernel
-import Integration7.ActualRVVolumeLiftCharts
-import Integration7.VFVolumeComposition
-import Integration7.RealVolumeGammaCertificates
-import Integration7.GammaTermContextVolumeGeometry
+module
+
+public import Integration7.PullbackVolumeAEKernel
+public import Integration7.ActualRVVolumeLiftCharts
+public import Integration7.VFVolumeComposition
+public import Integration7.RealVolumeGammaCertificates
+public import Integration7.GammaTermContextVolumeGeometry
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The lift kernel on the original RV volume objects when their
 densities are literal retained coordinates. All witness geometry retains

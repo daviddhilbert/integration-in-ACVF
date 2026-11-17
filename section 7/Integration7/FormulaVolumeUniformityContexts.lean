@@ -1,9 +1,15 @@
-import Integration7.PreparedVolumeGeometryGluing
-import Integration7.PreparedVolumeGeometryContexts
-import Integration7.GammaVFPreparedVolumeUniformity
-import Integration7.VolumeFormulaWitnessCovers
-import IntegrationSection6.GammaVFParameterBases
-import IntegrationSection6.GammaPreparedIndexPresentation
+module
+
+public import Integration7.PreparedVolumeGeometryGluing
+public import Integration7.PreparedVolumeGeometryContexts
+public import Integration7.GammaVFPreparedVolumeUniformity
+public import Integration7.VolumeFormulaWitnessCovers
+public import IntegrationSection6.GammaVFParameterBases
+public import IntegrationSection6.GammaPreparedIndexPresentation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Pointwise valid common-witness formulas with arbitrary auxiliary exception
 parameters give one

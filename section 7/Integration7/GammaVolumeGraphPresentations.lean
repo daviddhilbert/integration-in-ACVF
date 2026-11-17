@@ -1,6 +1,12 @@
-import Integration7.RVNonzero
-import Integration7.UniformVolumeData
-import IntegrationSection6.GammaGraphPresentationExtension
+module
+
+public import Integration7.RVNonzero
+public import Integration7.UniformVolumeData
+public import IntegrationSection6.GammaGraphPresentationExtension
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Real presentations of full original-Gamma volume graphs. The finite
 representative codes belong only to the internal real presentation; no

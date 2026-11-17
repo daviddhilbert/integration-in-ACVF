@@ -1,5 +1,11 @@
-import Integration7.GammaVolumeIsomorphismClasses
-import Integration7.GammaChartedVolumeBlowups
+module
+
+public import Integration7.GammaVolumeIsomorphismClasses
+public import Integration7.GammaChartedVolumeBlowups
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Finite chains of the actual volume blowups, retaining full original
 Gamma data at every step. Forgetting this data gives the existing chain. -/

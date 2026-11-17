@@ -1,5 +1,11 @@
-import Integration7.RelativeHeadVolumeComparison
-import Integration7.OrderedAppendVolumeContractions
+module
+
+public import Integration7.RelativeHeadVolumeComparison
+public import Integration7.OrderedAppendVolumeContractions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A relatively unary comparison whose actual frozen fibres preserve
 volume extends through every remaining chosen contraction. The first

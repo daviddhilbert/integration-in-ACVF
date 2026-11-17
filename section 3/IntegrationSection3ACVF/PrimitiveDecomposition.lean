@@ -1,6 +1,12 @@
-import IntegrationSection3ACVF.AffineHoleCut
-import IntegrationSection3ACVF.UniformRadius
-import IntegrationSection3ACVF.UniformValuativeCentre
+module
+
+public import IntegrationSection3ACVF.AffineHoleCut
+public import IntegrationSection3ACVF.UniformRadius
+public import IntegrationSection3ACVF.UniformValuativeCentre
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Lemma 3.6. Canonical components retain the original
 base; no component is individually assumed definable over that base. -/

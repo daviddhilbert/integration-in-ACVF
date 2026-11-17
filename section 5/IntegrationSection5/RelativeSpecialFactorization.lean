@@ -1,4 +1,10 @@
-import IntegrationSection5.RelativeSpecialChain
+module
+
+public import IntegrationSection5.RelativeSpecialChain
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual canonical map, and hence every special bijection, is a finite
 composition of relatively special bijections. -/

@@ -1,6 +1,12 @@
-import Integration7.UnarySpecialStandardContractions
-import Integration7.NativeCoordinateDensityVolumeObjects
-import Section4.RVIsoTools
+module
+
+public import Integration7.UnarySpecialStandardContractions
+public import Integration7.NativeCoordinateDensityVolumeObjects
+public import Section4.RVIsoTools
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual appended standard contraction of a unary special
 preparation is volume-isomorphic to the literal coordinate-density

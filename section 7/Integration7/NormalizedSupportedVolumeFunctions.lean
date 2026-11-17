@@ -1,7 +1,13 @@
-import Integration7.SupportedPositiveGradedForget
-import Integration7.SupportedPositiveGradedJacobians
-import Integration7.SemimoduleScalarExtensionMaps
-import Integration7.NormalizedPositiveJacobianIntegrals
+module
+
+public import Integration7.SupportedPositiveGradedForget
+public import Integration7.SupportedPositiveGradedJacobians
+public import Integration7.SemimoduleScalarExtensionMaps
+public import Integration7.NormalizedPositiveJacobianIntegrals
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual positive supported graded module has a balanced
 normalized scalar extension. Its Jacobian map is genuinely linear over

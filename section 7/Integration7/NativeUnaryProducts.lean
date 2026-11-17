@@ -1,5 +1,11 @@
-import IntegrationSection5.CoordinateFibreMaps
-import IntegrationSection6.MixedCoordinatePointMaps
+module
+
+public import IntegrationSection5.CoordinateFibreMaps
+public import IntegrationSection6.MixedCoordinatePointMaps
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Products of an actual unary mixed domain with a pure unary VF domain,
 in the native two-coordinate point language. Labels belong to the first

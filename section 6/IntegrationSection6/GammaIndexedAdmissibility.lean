@@ -1,5 +1,11 @@
-import IntegrationSection6.GammaIndexedFiniteObjects
-import IntegrationSection6.GammaAdmissibilityFromSlices
+module
+
+public import IntegrationSection6.GammaIndexedFiniteObjects
+public import IntegrationSection6.GammaAdmissibilityFromSlices
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! An admissible fibre coordinate remains admissible after gluing over
 an RV[k] base: fixing the other global labels leaves only finitely many

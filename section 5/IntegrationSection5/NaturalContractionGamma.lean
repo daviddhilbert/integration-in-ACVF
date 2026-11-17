@@ -1,5 +1,11 @@
-import IntegrationSection5.StandardContraction
-import Section5.GammaLiftRelation
+module
+
+public import IntegrationSection5.StandardContraction
+public import Section5.GammaLiftRelation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Full original-Gamma graphs of the natural contraction bijections.
 The proof retains the stage certificates and reconstructs a mixed tuple

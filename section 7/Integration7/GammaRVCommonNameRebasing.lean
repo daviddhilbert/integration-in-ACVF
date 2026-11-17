@@ -1,5 +1,11 @@
-import Integration7.GammaRVCommonNames
-import Integration7.GammaVolumeObjectGraphs
+module
+
+public import Integration7.GammaRVCommonNames
+public import Integration7.GammaVolumeObjectGraphs
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Reinterpret literal RV carriers and functions over any real base
 containing the common names of their original Gamma graphs. -/

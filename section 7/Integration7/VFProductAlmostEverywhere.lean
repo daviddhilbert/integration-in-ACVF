@@ -1,5 +1,11 @@
-import Integration7.PositiveVFVolumeProducts
-import Integration7.VFAlmostEverywhere
+module
+
+public import Integration7.PositiveVFVolumeProducts
+public import Integration7.VFAlmostEverywhere
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Cartesian products retain actual almost-everywhere predicates.
 The exceptional locus is the union of the two genuine product exceptions. -/

@@ -1,5 +1,11 @@
-import Integration7.PermutedRawContractionVolumeCharts
-import Integration7.IntegrationCoordinateDensityFormula
+module
+
+public import Integration7.PermutedRawContractionVolumeCharts
+public import Integration7.IntegrationCoordinateDensityFormula
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual coordinate-density VF objects have the expected covariance
 under a VF coordinate permutation: their integral's RV volume tuple is

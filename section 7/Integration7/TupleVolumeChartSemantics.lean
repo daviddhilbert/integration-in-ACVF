@@ -1,4 +1,10 @@
-import Integration7.WeightedJacobianSemantics
+module
+
+public import Integration7.WeightedJacobianSemantics
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The tuple chart formula has the actual residue-Jacobian chart semantics
 on typed RV inputs. No representatives or additional parameters are used. -/

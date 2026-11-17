@@ -1,5 +1,11 @@
-import Integration7.TwoOrderRectangleFiniteProducts
-import Integration7.NormalizedContractionUnitComparisons
+module
+
+public import Integration7.TwoOrderRectangleFiniteProducts
+public import Integration7.NormalizedContractionUnitComparisons
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The two actual normalized rectangle contractions have a full
 original-Gamma volume isomorphism at every retained constant density.

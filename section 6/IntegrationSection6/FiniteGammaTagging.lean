@@ -1,5 +1,11 @@
-import IntegrationSection6.FiniteGammaObjects
-import IntegrationSection6.GammaRVGlobalRestriction
+module
+
+public import IntegrationSection6.FiniteGammaObjects
+public import IntegrationSection6.GammaRVGlobalRestriction
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual two RV tags have full original-Gamma graphs. They add only
 the existing named RV zero and one, with finite tuple padding. -/

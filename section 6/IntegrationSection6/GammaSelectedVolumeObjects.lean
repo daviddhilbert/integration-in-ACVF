@@ -1,5 +1,11 @@
-import IntegrationSection6.GammaAmbientVolumeKeys
-import IntegrationSection6.FiniteLiftFibres
+module
+
+public import IntegrationSection6.GammaAmbientVolumeKeys
+public import IntegrationSection6.FiniteLiftFibres
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Appending selected old RV labels to a volume gives an RV[n+e] object
 under exactly relative finite-lift-fibre finiteness. The unaugmented object

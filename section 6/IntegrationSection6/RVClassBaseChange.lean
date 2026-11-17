@@ -1,6 +1,12 @@
-import IntegrationSection6.ContextRVClasses
-import IntegrationSection6.GammaGradedResolution
-import IntegrationSection6.GammaGlobalAdditiveLift
+module
+
+public import IntegrationSection6.ContextRVClasses
+public import IntegrationSection6.GammaGradedResolution
+public import IntegrationSection6.GammaGlobalAdditiveLift
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Extending the original base gives the canonical scalar homomorphism
 on actual finite RV representatives. -/

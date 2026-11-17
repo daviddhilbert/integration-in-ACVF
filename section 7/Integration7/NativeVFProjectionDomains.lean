@@ -1,8 +1,14 @@
-import Integration7.NativeVFPairImages
-import IntegrationSection5.CoordinateFibreMaps
-import IntegrationSection6.MixedCoordinatePointMaps
-import IntegrationSection5.GammaGraphOperations
-import Integration7.GammaPositionCodeCentres
+module
+
+public import Integration7.NativeVFPairImages
+public import IntegrationSection5.CoordinateFibreMaps
+public import IntegrationSection6.MixedCoordinatePointMaps
+public import IntegrationSection5.GammaGraphOperations
+public import Integration7.GammaPositionCodeCentres
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual unary VF projection domains of a native two-coordinate set,
 with their precise pair projections and original-Gamma certificates. -/

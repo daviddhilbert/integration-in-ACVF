@@ -1,13 +1,19 @@
-import Integration7.CompletedSection6Kernel
-import Integration7.ClosedSection6GammaNonzeroIspUnion
-import Integration7.ClosedSection6GammaNonzeroQuotientLift
-import Integration7.ClosedSection6GammaIspPadding
-import IntegrationSection6.GlobalIntegrationTarget
-import IntegrationSection6.GammaNonzeroIspUnion
-import IntegrationSection6.GammaNonzeroResolutions
-import IntegrationSection6.GammaNonzeroQuotientLift
-import IntegrationSection6.GammaNonzeroThroughTransitions
-import IntegrationSection6.GammaIspPadding
+module
+
+public import Integration7.CompletedSection6Kernel
+public import Integration7.ClosedSection6GammaNonzeroIspUnion
+public import Integration7.ClosedSection6GammaNonzeroQuotientLift
+public import Integration7.ClosedSection6GammaIspPadding
+public import IntegrationSection6.GlobalIntegrationTarget
+public import IntegrationSection6.GammaNonzeroIspUnion
+public import IntegrationSection6.GammaNonzeroResolutions
+public import IntegrationSection6.GammaNonzeroQuotientLift
+public import IntegrationSection6.GammaNonzeroThroughTransitions
+public import IntegrationSection6.GammaIspPadding
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Closed generated-base Section6 integration. The former universal
 Section5 input is replaced by the canonical-model certificate; its kernel

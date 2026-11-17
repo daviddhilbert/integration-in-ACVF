@@ -1,7 +1,13 @@
-import Integration7.PositiveElementaryBasicGeneration
-import Integration7.ElementaryVolumeProducts
-import Integration7.IteratedVolumeBlowups
-import Mathlib.Algebra.Group.Units.Basic
+module
+
+public import Integration7.PositiveElementaryBasicGeneration
+public import Integration7.ElementaryVolumeProducts
+public import Integration7.IteratedVolumeBlowups
+public import Mathlib.Algebra.Group.Units.Basic
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! After the point becomes a unit, the basic point/cone relation
 forces every actual elementary and common-blowup relation, including

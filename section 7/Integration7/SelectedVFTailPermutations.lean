@@ -1,4 +1,10 @@
-import IntegrationSection6.VFCoordinateProjections
+module
+
+public import IntegrationSection6.VFCoordinateProjections
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Extend the original VF order while fixing every added tail coordinate. -/
 namespace IntegrationInACVF.Section7

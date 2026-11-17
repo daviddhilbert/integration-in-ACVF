@@ -1,6 +1,12 @@
-import IntegrationSection6.GammaRawStandardContractions
-import IntegrationSection6.FiniteStandardContractions
-import IntegrationSection6.FiniteGammaIsoLaws
+module
+
+public import IntegrationSection6.GammaRawStandardContractions
+public import IntegrationSection6.FiniteStandardContractions
+public import IntegrationSection6.FiniteGammaIsoLaws
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Finite-volume certificates and exact volume-preserving normalization
 for the raw final labels of ordinary standard contractions. -/

@@ -1,6 +1,12 @@
-import IntegrationSection6.GammaLiftPadding
-import IntegrationSection6.GammaPaddingClasses
-import IntegrationSection6.FiniteIntegrationEquivalence
+module
+
+public import IntegrationSection6.GammaLiftPadding
+public import IntegrationSection6.GammaPaddingClasses
+public import IntegrationSection6.FiniteIntegrationEquivalence
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Padding preserves and reflects the actual common-blowup congruence. -/
 noncomputable section

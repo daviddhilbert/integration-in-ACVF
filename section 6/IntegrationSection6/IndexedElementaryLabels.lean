@@ -1,4 +1,10 @@
-import IntegrationSection6.GammaIndexedFiniteObjects
+module
+
+public import IntegrationSection6.GammaIndexedFiniteObjects
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual coordinate reassociation between an indexed elementary
 row and the elementary blowup of the indexed object. -/

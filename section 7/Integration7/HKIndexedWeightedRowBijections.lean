@@ -1,6 +1,12 @@
-import Integration7.HKFiniteConstrainedUniformity
-import Integration7.PureRVSortedIsomorphisms
-import Integration7.IndexedRVRawRowCodes
+module
+
+public import Integration7.HKFiniteConstrainedUniformity
+public import Integration7.PureRVSortedIsomorphisms
+public import Integration7.IndexedRVRawRowCodes
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Indexed weighted-zero row bijections preserve every base-volume
 coordinate and the actual retained density label. -/

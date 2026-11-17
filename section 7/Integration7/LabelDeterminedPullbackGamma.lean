@@ -1,5 +1,11 @@
-import Integration7.LabelDeterminedPullbackDescent
-import Integration7.GammaUnaryPullbackVolumeComparison
+module
+
+public import Integration7.LabelDeterminedPullbackDescent
+public import Integration7.GammaUnaryPullbackVolumeComparison
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The full original-Gamma graph of the actual label-determined
 volume descent. Its RV map is induced by the same specified VF map. -/

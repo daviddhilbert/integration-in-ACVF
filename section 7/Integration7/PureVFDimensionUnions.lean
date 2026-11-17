@@ -1,5 +1,11 @@
-import Integration7.VFBaseDimensionBounds
-import Section4.VFUnions
+module
+
+public import Integration7.VFBaseDimensionBounds
+public import Section4.VFUnions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Finite unions of definable pure VF exceptional sets have the
 maximum VF dimension, via their actual constant-RV graph presentations. -/

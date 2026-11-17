@@ -1,7 +1,13 @@
-import IntegrationSection6.CanonicalPullbackPresentation
-import Section5.GammaInvariantLogic
-import Section5.GammaLift
-import IntegrationSection6.ElementaryLiftIsomorphism
+module
+
+public import IntegrationSection6.CanonicalPullbackPresentation
+public import Section5.GammaInvariantLogic
+public import Section5.GammaLift
+public import IntegrationSection6.ElementaryLiftIsomorphism
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! An actual RV-pullback is isomorphic to the lift of its canonical RV
 data, with the full original-Gamma graph of the canonical bijection. -/

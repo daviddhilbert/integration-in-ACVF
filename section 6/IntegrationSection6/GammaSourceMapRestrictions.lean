@@ -1,5 +1,11 @@
-import IntegrationSection5.RelativeSpecialRestriction
-import IntegrationSection5.GammaGraphOperations
+module
+
+public import IntegrationSection5.RelativeSpecialRestriction
+public import IntegrationSection5.GammaGraphOperations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Complete original-Gamma graphs for actual source restrictions, with
 codomain the literal point image. -/

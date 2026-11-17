@@ -1,5 +1,11 @@
-import IntegrationSection6.ElementaryRestrictions
-import IntegrationSection6.ElementaryCoordinates
+module
+
+public import IntegrationSection6.ElementaryRestrictions
+public import IntegrationSection6.ElementaryCoordinates
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Elementary blowup restrictions keep literal tuple labels and partition
 the actual elementary domain into two disjoint images. -/

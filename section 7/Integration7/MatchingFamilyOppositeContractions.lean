@@ -1,4 +1,10 @@
-import Integration7.MatchingTranslatedContractionComparison
+module
+
+public import Integration7.MatchingTranslatedContractionComparison
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Opposite specified contractions of the actual matching family
 compare by their two relatively unary translations and the completed

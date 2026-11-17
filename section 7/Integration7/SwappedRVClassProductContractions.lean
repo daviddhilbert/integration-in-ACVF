@@ -1,5 +1,11 @@
-import Integration7.FixedLabelsVFPermutations
-import Integration7.RVClassProductRawObjectIsomorphisms
+module
+
+public import Integration7.FixedLabelsVFPermutations
+public import Integration7.RVClassProductRawObjectIsomorphisms
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual standard contraction in the opposite two-coordinate
 order. Its RV volume tuple restores the original coordinate order, so

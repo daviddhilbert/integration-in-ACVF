@@ -1,5 +1,11 @@
-import Integration7.FieldBaseUnaryIntegralPartitions
-import Integration7.VFCoproductLabelCutBijections
+module
+
+public import Integration7.FieldBaseUnaryIntegralPartitions
+public import Integration7.VFCoproductLabelCutBijections
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual unary field-base volume integration preserves coproducts,
 including the zero-old-coordinate finite-label case. -/

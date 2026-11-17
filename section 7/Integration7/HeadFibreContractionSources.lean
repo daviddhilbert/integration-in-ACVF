@@ -1,7 +1,13 @@
-import Integration7.HeadFibreDensityGraphs
-import Integration7.HeadFibreRawVolumePresentation
-import Integration7.ContractionParameterExtension
-import IntegrationSection6.ProgramEqualityTransport
+module
+
+public import Integration7.HeadFibreDensityGraphs
+public import Integration7.HeadFibreRawVolumePresentation
+public import Integration7.ContractionParameterExtension
+public import IntegrationSection6.ProgramEqualityTransport
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The inherited unary head contraction is an actual contraction of
 the density graph of the frozen family. Equality transport retains its

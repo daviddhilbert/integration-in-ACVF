@@ -1,6 +1,12 @@
-import IntegrationSection5.CommonProductHeadPair
-import IntegrationSection5.HeadProjectionPadding
-import IntegrationSection5.GammaSpecialRestriction
+module
+
+public import IntegrationSection5.CommonProductHeadPair
+public import IntegrationSection5.HeadProjectionPadding
+public import IntegrationSection5.GammaSpecialRestriction
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option allowUnsafeReducibility true in

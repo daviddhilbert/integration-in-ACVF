@@ -1,4 +1,10 @@
-import IntegrationSection6.FiniteRVGeometry
+module
+
+public import IntegrationSection6.FiniteRVGeometry
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Isomorphism changes for chains entirely inside RV[k]. -/
 noncomputable section

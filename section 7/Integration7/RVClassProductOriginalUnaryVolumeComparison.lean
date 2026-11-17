@@ -1,9 +1,15 @@
-import Integration7.RVClassProductRawVolumeObjects
-import Integration7.SwappedRVClassProductRawVolumeObjects
-import Integration7.ConstantLabelPreparedVolumeComparisons
-import Integration7.FixedHeadEssentialVolumeIsomorphisms
-import Integration7.FixedTailEssentialVolumeIsomorphisms
-import Integration7.SmallDimensionVolumeIsoOperations
+module
+
+public import Integration7.RVClassProductRawVolumeObjects
+public import Integration7.SwappedRVClassProductRawVolumeObjects
+public import Integration7.ConstantLabelPreparedVolumeComparisons
+public import Integration7.FixedHeadEssentialVolumeIsomorphisms
+public import Integration7.FixedTailEssentialVolumeIsomorphisms
+public import Integration7.SmallDimensionVolumeIsoOperations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The raw RV volume object of the constructed product standard
 contraction is compared all the way to the original unary preparation,

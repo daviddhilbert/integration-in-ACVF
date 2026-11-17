@@ -1,5 +1,11 @@
-import Integration7.PureVFFormulaLoci
-import Section4.CoordinateMaps
+module
+
+public import Integration7.PureVFFormulaLoci
+public import Section4.CoordinateMaps
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Literal VF coordinate permutations on raw mixed domains, together
 with their definable inverse and unchanged RV labels. -/

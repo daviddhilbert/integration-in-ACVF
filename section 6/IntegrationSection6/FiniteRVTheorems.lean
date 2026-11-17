@@ -1,4 +1,10 @@
-import IntegrationSection6.FiniteRVGeometry
+module
+
+public import IntegrationSection6.FiniteRVGeometry
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Numbered blowup and congruence statements for RV[k] only. All output
 objects, common refinements and isomorphisms belong to the finite category. -/

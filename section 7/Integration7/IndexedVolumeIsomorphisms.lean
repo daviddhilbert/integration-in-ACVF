@@ -1,8 +1,14 @@
-import Integration7.IndexedVolumeBadFibreDimension
-import Integration7.IndexedVolumeGammaCompatibility
-import Integration7.RVMapDisagreement
-import Integration7.RVParameterFibreDimension
-import Integration7.FiniteVolumeCertificateCriterion
+module
+
+public import Integration7.IndexedVolumeBadFibreDimension
+public import Integration7.IndexedVolumeGammaCompatibility
+public import Integration7.RVMapDisagreement
+public import Integration7.RVParameterFibreDimension
+public import Integration7.FiniteVolumeCertificateCriterion
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Uniform valid original-Gamma volume charts yield the actual joint
 volume isomorphism. Local exceptional parameters are handled by dimension

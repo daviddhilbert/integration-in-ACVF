@@ -1,4 +1,10 @@
-import Integration7.ProductTangentDeterminant
+module
+
+public import Integration7.ProductTangentDeterminant
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A defined RV Jacobian of a product correspondence is the product
 of its two defined factor Jacobians. Generic existence is kept separate. -/

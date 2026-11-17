@@ -1,6 +1,12 @@
-import Section6.HenselianInvariance
-import Section7.ValuationHenselian
-import Mathlib.FieldTheory.Galois.Infinite
+module
+
+public import Section6.HenselianInvariance
+public import Section7.ValuationHenselian
+public import Mathlib.FieldTheory.Galois.Infinite
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Hensel root descent through the fixed field of valuation-preserving
 automorphisms. This proves the henselianity part inside an algebraic

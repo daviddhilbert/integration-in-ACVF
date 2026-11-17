@@ -1,5 +1,11 @@
-import IntegrationSection4.RelativeGammaPreparation
-import IntegrationSection4.DefinableDescent
+module
+
+public import IntegrationSection4.RelativeGammaPreparation
+public import IntegrationSection4.DefinableDescent
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Uniform positioning functions obtained by descending the inverse
 vertical displacement. Every centre is an actual VF value and every

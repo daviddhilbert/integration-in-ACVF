@@ -1,5 +1,11 @@
-import IntegrationSection5.GammaRVIsomorphism
-import IntegrationSection5.UnaryHeadRVPresentation
+module
+
+public import IntegrationSection5.GammaRVIsomorphism
+public import IntegrationSection5.UnaryHeadRVPresentation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Explicit RV-domain presentation and constant-profile isomorphisms
 retain their full original-Gamma graphs in both directions. -/

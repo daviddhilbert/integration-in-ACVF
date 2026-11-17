@@ -1,6 +1,12 @@
-import Integration7.GenericOrdinaryUnaryRawComparison
-import Integration7.GammaOrdinaryPointFormulaWitnesses
-import Integration7.SelectedLabelSchemaUniformBounds
+module
+
+public import Integration7.GenericOrdinaryUnaryRawComparison
+public import Integration7.GammaOrdinaryPointFormulaWitnesses
+public import Integration7.SelectedLabelSchemaUniformBounds
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual generic Gamma isomorphisms of finite ordinary native fibres
 compare arbitrary specified raw unary contractions with retained unit density. -/

@@ -1,7 +1,13 @@
-import Integration7.GammaUnaryFixedLiftCommonSchema
-import Integration7.GammaLabelDensityCoordinateRows
-import Integration7.VolumeSliceCommonUniformity
-import IntegrationSection6.GammaRVParameterFieldBase
+module
+
+public import Integration7.GammaUnaryFixedLiftCommonSchema
+public import Integration7.GammaLabelDensityCoordinateRows
+public import Integration7.VolumeSliceCommonUniformity
+public import IntegrationSection6.GammaRVParameterFieldBase
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! VF-fixed, density-preserving comparisons of all unary RV-prefix
 slices glue to common forward volume blowups of the original objects. -/

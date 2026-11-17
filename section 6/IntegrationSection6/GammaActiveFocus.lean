@@ -1,6 +1,12 @@
-import IntegrationSection6.GammaFocusLoci
-import IntegrationSection6.PartialFocusAdmissibility
-import IntegrationSection6.GammaFiniteElementary
+module
+
+public import IntegrationSection6.GammaFocusLoci
+public import IntegrationSection6.PartialFocusAdmissibility
+public import IntegrationSection6.GammaFiniteElementary
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The active locus of a partial Gamma focus is a Gamma-definable
 admissible RV subobject, with finite volume whenever the source is in RV[k]. -/

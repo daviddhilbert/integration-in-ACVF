@@ -1,5 +1,11 @@
-import Integration7.SupportedVolumeFunctionAddition
-import Integration7.AERVVolumePositiveCoefficientBilinearity
+module
+
+public import Integration7.SupportedVolumeFunctionAddition
+public import Integration7.AERVVolumePositiveCoefficientBilinearity
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual positive coefficient multiplication retains support and
 descends to the supported AE quotient, with the original fibre product. -/

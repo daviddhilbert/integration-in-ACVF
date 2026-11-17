@@ -1,5 +1,11 @@
-import Integration7.UniformBalancedPositionMaps
-import Integration7.UnarySmallContextPreparationWithoutField
+module
+
+public import Integration7.UniformBalancedPositionMaps
+public import Integration7.UnarySmallContextPreparationWithoutField
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Compatible special preparation of the actual mixed positioning
 bijection of a balanced family. The checked unary construction acts on

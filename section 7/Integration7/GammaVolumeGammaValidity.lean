@@ -1,6 +1,12 @@
-import Integration7.GammaWeightedVolumeSchemata
-import Integration7.VolumeSchemaCorrespondences
-import Integration7.RVProductGammaBalance
+module
+
+public import Integration7.GammaWeightedVolumeSchemata
+public import Integration7.VolumeSchemaCorrespondences
+public import Integration7.RVProductGammaBalance
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! First-order Gamma-weight validity for an actual comparison-chart
 formula. Its correspondence is derived from the source and target graphs. -/

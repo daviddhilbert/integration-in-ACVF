@@ -1,6 +1,12 @@
-import IntegrationSection5.SurjectiveHeadFactorKernels
-import IntegrationSection5.HeadProjectionPadding
-import IntegrationSection5.GammaOrderedContraction
+module
+
+public import IntegrationSection5.SurjectiveHeadFactorKernels
+public import IntegrationSection5.HeadProjectionPadding
+public import IntegrationSection5.GammaOrderedContraction
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option allowUnsafeReducibility true in

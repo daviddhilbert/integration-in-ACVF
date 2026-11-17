@@ -1,5 +1,11 @@
-import Integration7.RawPullbackVolumeLifts
-import Integration7.VolumeLiftFullDimension
+module
+
+public import Integration7.RawPullbackVolumeLifts
+public import Integration7.VolumeLiftFullDimension
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A VF-small actual pullback has no essential volume labels. -/
 noncomputable section

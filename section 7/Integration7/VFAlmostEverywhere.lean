@@ -1,8 +1,14 @@
-import Integration7.VFVolumeObjects
-import Section4.VFUnions
-import Section4.FiniteMaps
-import Section4.MapCorestrict
-import Section4.RVRestrictions
+module
+
+public import Integration7.VFVolumeObjects
+public import Section4.VFUnions
+public import Section4.FiniteMaps
+public import Section4.MapCorestrict
+public import Section4.RVRestrictions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Almost-everywhere predicates on actual mixed VF/RV domains. The
 exception is definable over the original base and has smaller VF dimension. -/

@@ -1,5 +1,11 @@
-import Integration7.GammaVolumeElementaryFormulas
-import Integration7.GammaFunctionalRowRecognition
+module
+
+public import Integration7.GammaVolumeElementaryFormulas
+public import Integration7.GammaFunctionalRowRecognition
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Pulling a density back along the elementary label projection gives
 a unique nonzero density on the exact elementary source domain. -/

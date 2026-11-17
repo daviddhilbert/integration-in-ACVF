@@ -1,5 +1,11 @@
-import IntegrationSection6.FiniteGammaLocusBlowups
-import IntegrationSection6.FiniteGammaComplementSplits
+module
+
+public import IntegrationSection6.FiniteGammaLocusBlowups
+public import IntegrationSection6.FiniteGammaComplementSplits
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual four-piece overlap refinement, with original-Gamma charts
 and finite volume on every subobject. -/

@@ -1,7 +1,13 @@
-import Integration7.FrozenGenericCoefficientFields
-import Integration7.SmallDefinableClosures
-import IntegrationSection6.VFParameterCoefficientBases
-import Integration7.GammaNamesGenericParameters
+module
+
+public import Integration7.FrozenGenericCoefficientFields
+public import Integration7.SmallDefinableClosures
+public import IntegrationSection6.VFParameterCoefficientBases
+public import Integration7.GammaNamesGenericParameters
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Small containing contexts for the generated closure of a frozen
 real/Gamma base. Only RV representatives are added to the frozen context

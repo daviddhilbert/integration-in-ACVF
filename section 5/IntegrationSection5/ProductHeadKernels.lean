@@ -1,5 +1,11 @@
-import IntegrationSection5.ProductRVBranchHead
-import IntegrationSection5.ProductContractionKernels
+module
+
+public import IntegrationSection5.ProductRVBranchHead
+public import IntegrationSection5.ProductContractionKernels
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 open Classical FirstOrder FirstOrder.Language

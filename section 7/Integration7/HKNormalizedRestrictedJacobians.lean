@@ -1,7 +1,13 @@
-import Integration7.HKNormalizedVolumeSupports
-import Integration7.HKNormalizedPositiveOperators
-import Integration7.SupportedPositiveGradedRestrictions
-import Integration7.SupportedPositiveGradedJacobians
+module
+
+public import Integration7.HKNormalizedVolumeSupports
+public import Integration7.HKNormalizedPositiveOperators
+public import Integration7.SupportedPositiveGradedRestrictions
+public import Integration7.SupportedPositiveGradedJacobians
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Restrict to an actual source domain, apply its genuine Jacobian
 transform, then extend by zero. The positive-degree operator descends

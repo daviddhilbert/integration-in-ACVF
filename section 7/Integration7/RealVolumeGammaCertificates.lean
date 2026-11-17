@@ -1,6 +1,12 @@
-import Integration7.TermContextGammaGraphs
-import Integration7.GammaVolumeAlgebraicCenters
-import Integration7.GammaVolumeObjectGraphs
+module
+
+public import Integration7.TermContextGammaGraphs
+public import Integration7.GammaVolumeAlgebraicCenters
+public import Integration7.GammaVolumeObjectGraphs
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual real-definable volume objects and admissible centers have
 their full Gamma certificates over that same real base. -/

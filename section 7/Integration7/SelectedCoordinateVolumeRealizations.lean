@@ -1,6 +1,12 @@
-import Integration7.IntegrationCoordinateDensityFormula
-import Integration7.SelectedVFTailVolumeCharts
-import Integration7.SelectedFamilyFullLifts
+module
+
+public import Integration7.IntegrationCoordinateDensityFormula
+public import Integration7.SelectedVFTailVolumeCharts
+public import Integration7.SelectedFamilyFullLifts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! An actual full VF realization of a retained-density RV family and
 its integral computed by any specified selected standard contraction. -/

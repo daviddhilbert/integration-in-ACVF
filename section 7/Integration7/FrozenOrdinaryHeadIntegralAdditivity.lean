@@ -1,7 +1,13 @@
-import Integration7.FieldBaseUnaryIntegralAdditivity
-import Integration7.OrdinaryFrozenCoproductBijections
-import Integration7.FrozenOrdinaryHeadIntegralValues
-import Integration7.DefinableVolumeParameterDescent
+module
+
+public import Integration7.FieldBaseUnaryIntegralAdditivity
+public import Integration7.OrdinaryFrozenCoproductBijections
+public import Integration7.FrozenOrdinaryHeadIntegralValues
+public import Integration7.DefinableVolumeParameterDescent
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Ordinary RV[0] head-fibre integration preserves sums. Its unary VF
 realizations have the actual unit density, and equality descends to the

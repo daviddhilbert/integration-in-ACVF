@@ -1,3 +1,8 @@
+module
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 /-!
 # Finite blowup iteration: the combinatorial part
 

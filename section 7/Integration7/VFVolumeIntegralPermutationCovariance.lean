@@ -1,6 +1,12 @@
-import Integration7.NativeVFIntegralPermutationCovariance
-import Integration7.NativeVFPermutationVolumeCharts
-import Integration7.GeneratedBaseStandardContractions
+module
+
+public import Integration7.NativeVFIntegralPermutationCovariance
+public import Integration7.NativeVFPermutationVolumeCharts
+public import Integration7.GeneratedBaseStandardContractions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! VF coordinate covariance of the actual positive integration
 equivalence for arbitrary volume forms. A density graph supplies a literal

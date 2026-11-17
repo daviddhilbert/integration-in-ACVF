@@ -1,6 +1,12 @@
-import Integration7.AEOrdinaryPointHeadIntegrals
-import Integration7.NormalizedVolumePrefixOperators
-import Integration7.GradedAEVolumeHeadIntegralAddHom
+module
+
+public import Integration7.AEOrdinaryPointHeadIntegrals
+public import Integration7.NormalizedVolumePrefixOperators
+public import Integration7.GradedAEVolumeHeadIntegralAddHom
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The normalized linear head operator agrees with the independently
 constructed ordinary-input head map. It consequently agrees with the

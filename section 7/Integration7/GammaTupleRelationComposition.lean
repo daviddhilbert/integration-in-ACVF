@@ -1,4 +1,10 @@
-import Integration7.GammaVolumeSchemaRestrictions
+module
+
+public import Integration7.GammaVolumeSchemaRestrictions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Composition of original-base RV relation formulas with a shared
 sorted parameter block. The intermediate labels remain quantified variables. -/

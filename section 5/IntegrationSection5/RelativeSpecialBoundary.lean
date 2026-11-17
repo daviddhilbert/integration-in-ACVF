@@ -1,6 +1,12 @@
-import IntegrationSection5.CoordinateCanonicalFibre
-import IntegrationSection5.FibreFocusAssembly
-import Section5.Centering
+module
+
+public import IntegrationSection5.CoordinateCanonicalFibre
+public import IntegrationSection5.FibreFocusAssembly
+public import Section5.Centering
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Fibrewise special composition with explicit alternation boundaries. -/
 noncomputable section

@@ -1,7 +1,13 @@
-import IntegrationSection3ACVF.BallProfileDefinability
-import IntegrationSection3ACVF.CanonicalBallSupport
-import IntegrationSection3ACVF.BallCodeGeometry
-import IntegrationSection3.TerminalBallCover
+module
+
+public import IntegrationSection3ACVF.BallProfileDefinability
+public import IntegrationSection3ACVF.CanonicalBallSupport
+public import IntegrationSection3ACVF.BallCodeGeometry
+public import IntegrationSection3.TerminalBallCover
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A ball in a definable family with an arbitrary finite hitting set
 is atomic over its own name when it lies in one original-base complete

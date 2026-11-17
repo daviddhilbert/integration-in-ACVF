@@ -1,4 +1,10 @@
-import IntegrationSection3ACVF.BallCosetAtomicity
+module
+
+public import IntegrationSection3ACVF.BallCosetAtomicity
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-!
 # Balls at radii named over the real base

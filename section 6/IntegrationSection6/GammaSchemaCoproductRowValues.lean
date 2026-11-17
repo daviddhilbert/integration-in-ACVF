@@ -1,4 +1,10 @@
-import IntegrationSection6.GammaSchemaFiniteRowPresentations
+module
+
+public import IntegrationSection6.GammaSchemaFiniteRowPresentations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual row volume of a coproduct agrees with the volume on each
 native tagged summand, without any choice of a common finite bound. -/

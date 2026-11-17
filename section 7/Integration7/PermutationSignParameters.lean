@@ -1,5 +1,11 @@
-import Integration7.PermutationRVJacobian
-import Section4.ResidueParameterField
+module
+
+public import Integration7.PermutationRVJacobian
+public import Section4.ResidueParameterField
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The genuine determinant sign is already named by every substructure. -/
 

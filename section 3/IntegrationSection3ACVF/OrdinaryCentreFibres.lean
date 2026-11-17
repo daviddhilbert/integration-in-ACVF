@@ -1,6 +1,12 @@
-import IntegrationSection3ACVF.PaperBallInvariants
-import IntegrationSection3ACVF.FullGammaRadius
-import IntegrationSection3ACVF.FullGammaPoint
+module
+
+public import IntegrationSection3ACVF.PaperBallInvariants
+public import IntegrationSection3ACVF.FullGammaRadius
+public import IntegrationSection3ACVF.FullGammaPoint
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Full ordinary-Gamma fibres of the valuative-centre predicate.
 Uses the pinned SameScalar formula and normalization theorem on all RV

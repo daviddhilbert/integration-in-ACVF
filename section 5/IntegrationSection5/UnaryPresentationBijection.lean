@@ -1,5 +1,11 @@
-import IntegrationSection5.PositionCoordinateGraph
-import Section5.GammaLift
+module
+
+public import IntegrationSection5.PositionCoordinateGraph
+public import Section5.GammaLift
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A positioning bijection induces an actual original-base bijection
 between arbitrary unary presentations with bijective VF projections. -/

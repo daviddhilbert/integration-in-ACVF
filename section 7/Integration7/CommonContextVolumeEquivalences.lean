@@ -1,5 +1,11 @@
-import Integration7.VolumeContextJoins
-import Integration7.GammaVolumeParameterGeometry
+module
+
+public import Integration7.VolumeContextJoins
+public import Integration7.GammaVolumeParameterGeometry
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Common forward Gamma volume blowups in a genuine containing
 context compose by joining the two witness contexts. -/

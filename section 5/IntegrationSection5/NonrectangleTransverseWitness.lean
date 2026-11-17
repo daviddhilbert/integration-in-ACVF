@@ -1,5 +1,11 @@
-import IntegrationSection5.NonrectangleHeadZero
-import IntegrationSection5.NonrectangleTransverseGeometry
+module
+
+public import IntegrationSection5.NonrectangleHeadZero
+public import IntegrationSection5.NonrectangleTransverseGeometry
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 open Classical FirstOrder FirstOrder.Language

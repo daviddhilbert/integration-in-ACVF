@@ -1,9 +1,15 @@
-import IntegrationSection6.GammaVolumeSliceUniformity
-import IntegrationSection6.GammaUnaryFieldReduction
-import IntegrationSection6.GammaVolumeSliceAssembly
-import IntegrationSection6.GammaRVIndexedUniformity
-import IntegrationSection6.GammaRVParameterFieldBase
-import IntegrationSection6.FiniteGammaIsoRealization
+module
+
+public import IntegrationSection6.GammaVolumeSliceUniformity
+public import IntegrationSection6.GammaUnaryFieldReduction
+public import IntegrationSection6.GammaVolumeSliceAssembly
+public import IntegrationSection6.GammaRVIndexedUniformity
+public import IntegrationSection6.GammaRVParameterFieldBase
+public import IntegrationSection6.FiniteGammaIsoRealization
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Common blowups of all volume slices glue to a common blowup of the
 original RV[e+k] objects. In the unary case it suffices to compare the

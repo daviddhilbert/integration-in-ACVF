@@ -1,5 +1,11 @@
-import IntegrationSection6.FiniteGammaCategory
-import IntegrationSection6.FiniteGammaCoproducts
+module
+
+public import IntegrationSection6.FiniteGammaCategory
+public import IntegrationSection6.FiniteGammaCoproducts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual categorical coproducts with full original-Gamma morphism graphs. -/
 noncomputable section

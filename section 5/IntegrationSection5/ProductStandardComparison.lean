@@ -1,6 +1,12 @@
-import IntegrationSection5.ProductProgramVolume
-import IntegrationSection5.StandardProgramComparison
-import IntegrationSection5.CellStandardPresentation
+module
+
+public import IntegrationSection5.ProductProgramVolume
+public import IntegrationSection5.StandardProgramComparison
+public import IntegrationSection5.CellStandardPresentation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The two actual product programs induce the same quotient and the same
 volume tuple after restoring the original coordinate order. -/

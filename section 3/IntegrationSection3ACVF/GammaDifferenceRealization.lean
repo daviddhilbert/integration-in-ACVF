@@ -1,4 +1,10 @@
-import IntegrationSection3ACVF.RVSlopeGamma
+module
+
+public import IntegrationSection3ACVF.RVSlopeGamma
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual Gamma values of nonzero differences in an ordinary open
 ball are precisely the open tail above its radius. -/

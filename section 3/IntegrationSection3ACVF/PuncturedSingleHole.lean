@@ -1,4 +1,10 @@
-import IntegrationSection3ACVF.RadialAnnulusDomains
+module
+
+public import IntegrationSection3ACVF.RadialAnnulusDomains
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Every single proper paper-open hole is ordinary, and its removal
 leaves a nonempty actual body. Ordinary closed sources have ordered

@@ -1,4 +1,10 @@
-import Integration7.ContractionRetainedDensityLabels
+module
+
+public import Integration7.ContractionRetainedDensityLabels
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A fixed old RV label has that exact value on every label of the
 actual raw and normalized contraction objects. Source representatives

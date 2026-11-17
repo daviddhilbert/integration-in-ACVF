@@ -1,4 +1,10 @@
-import IntegrationSection5.RelativeSpecialRestriction
+module
+
+public import IntegrationSection5.RelativeSpecialRestriction
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Retagging the endpoints of an actual special bijection by equal
 presented sets changes neither its point values nor its geometric chain. -/

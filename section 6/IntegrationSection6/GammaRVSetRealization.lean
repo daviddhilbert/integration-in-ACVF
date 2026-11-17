@@ -1,4 +1,10 @@
-import IntegrationSection6.GammaRVRealization
+module
+
+public import IntegrationSection6.GammaRVRealization
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A full Gamma RV set has a real presentation after naming only the
 finite representative tuple used in its invariant formula. -/

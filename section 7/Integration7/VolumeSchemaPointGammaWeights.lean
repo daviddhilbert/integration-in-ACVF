@@ -1,4 +1,10 @@
-import Integration7.VolumeSchemaValiditySemantics
+module
+
+public import Integration7.VolumeSchemaValiditySemantics
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The first-order Gamma clause gives the actual density-weighted
 absolute product equality at each pair in the certificate chart. -/

@@ -1,4 +1,10 @@
-import IntegrationSection5.UnaryCellEquivalence
+module
+
+public import IntegrationSection5.UnaryCellEquivalence
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A prepared inverse has open RV-cell images, derived from the actual
 two-cell open-to-open geometry and inverse-special affine geometry. -/

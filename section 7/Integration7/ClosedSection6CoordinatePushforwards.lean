@@ -1,7 +1,13 @@
-import Integration7.CompletedSection6Kernel
-import Integration7.ClosedSection6ProjectionRepresentativeIndependence
-import IntegrationSection6.CoordinatePushforwards
-import IntegrationSection6.ProjectionRepresentativeIndependence
+module
+
+public import Integration7.CompletedSection6Kernel
+public import Integration7.ClosedSection6ProjectionRepresentativeIndependence
+public import IntegrationSection6.CoordinatePushforwards
+public import IntegrationSection6.ProjectionRepresentativeIndependence
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Closed generated-base Section6 integration. The former universal
 Section5 input is replaced by the canonical-model certificate; its kernel

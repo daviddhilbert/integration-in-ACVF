@@ -1,8 +1,14 @@
-import Integration7.SelectedFamilyDensityRescaleIntegrals
-import Integration7.SelectedVolumeDensityRescaling
-import Integration7.VFVolumeDensityRescaling
-import Integration7.VFVolumeRescalingClasses
-import Integration7.VolumeIntegrationDensityRescaling
+module
+
+public import Integration7.SelectedFamilyDensityRescaleIntegrals
+public import Integration7.SelectedVolumeDensityRescaling
+public import Integration7.VFVolumeDensityRescaling
+public import Integration7.VFVolumeRescalingClasses
+public import Integration7.VolumeIntegrationDensityRescaling
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 set_option pp.universes true
 set_option pp.proofs false
 set_option pp.deepTerms true

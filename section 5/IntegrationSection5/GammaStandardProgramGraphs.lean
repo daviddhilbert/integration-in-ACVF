@@ -1,5 +1,11 @@
-import IntegrationSection5.StandardProgramComparison
-import IntegrationSection5.GammaSurjectiveRVComparison
+module
+
+public import IntegrationSection5.StandardProgramComparison
+public import IntegrationSection5.GammaSurjectiveRVComparison
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Full original-Gamma graphs for standard programs and their actual raw
 RV contractions; internal real source casts do not add named parameters. -/

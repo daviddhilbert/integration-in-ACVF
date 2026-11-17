@@ -1,5 +1,11 @@
-import IntegrationSection5.CellGammaBridge
-import IntegrationSection5.GammaActiveUnaryFocus
+module
+
+public import IntegrationSection5.CellGammaBridge
+public import IntegrationSection5.GammaActiveUnaryFocus
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual unary presentations of both native VF cell projections
 remain definable over the original Gamma base. -/

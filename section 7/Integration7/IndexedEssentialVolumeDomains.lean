@@ -1,5 +1,11 @@
-import Integration7.IndexedVolumeRowSemantics
-import Integration7.EssentialFiniteVolumeSchemata
+module
+
+public import Integration7.IndexedVolumeRowSemantics
+public import Integration7.EssentialFiniteVolumeSchemata
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Essential labels of the joint object are exactly an index with
 nonzero base volume and an essential label of the corresponding fibre. -/

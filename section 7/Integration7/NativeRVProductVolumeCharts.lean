@@ -1,8 +1,14 @@
-import Integration7.NativeRVProductMapTransfers
-import Integration7.NativeCoordinateDensityVolumeObjects
-import Integration7.VolumeProductPointwise
-import Integration7.VolumeRelabeling
-import IntegrationSection6.FiniteBlowups
+module
+
+public import Integration7.NativeRVProductMapTransfers
+public import Integration7.NativeCoordinateDensityVolumeObjects
+public import Integration7.VolumeProductPointwise
+public import Integration7.VolumeRelabeling
+public import IntegrationSection6.FiniteBlowups
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A genuine native product bijection with literal label projections
 constructs a finite coordinate-density volume chart on its original

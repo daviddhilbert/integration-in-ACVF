@@ -1,7 +1,13 @@
-import IntegrationSection6.GammaVolumeSliceLiftCarriers
-import IntegrationSection6.GammaSwappedVolumes
-import IntegrationSection6.GammaNamedRVFibres
-import IntegrationSection6.FiniteGammaLiftGluing
+module
+
+public import IntegrationSection6.GammaVolumeSliceLiftCarriers
+public import IntegrationSection6.GammaSwappedVolumes
+public import IntegrationSection6.GammaNamedRVFibres
+public import IntegrationSection6.FiniteGammaLiftGluing
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A selected-volume slice has exactly the original lift with those old
 RV labels fixed. The label-identity comparison keeps the full Gamma graph

@@ -1,5 +1,11 @@
-import IntegrationSection5.FinalRawPartition
-import IntegrationSection5.FinalNProgramProfiles
+module
+
+public import IntegrationSection5.FinalRawPartition
+public import IntegrationSection5.FinalNProgramProfiles
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option maxHeartbeats 2000000

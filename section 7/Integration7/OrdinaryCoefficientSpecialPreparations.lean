@@ -1,6 +1,12 @@
-import Integration7.OrdinaryRVNativePresentations
-import Integration7.IndependentRVSpecialSources
-import Integration7.SelectedVolumeFamilyZeroProducts
+module
+
+public import Integration7.OrdinaryRVNativePresentations
+public import Integration7.IndependentRVSpecialSources
+public import Integration7.SelectedVolumeFamilyZeroProducts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! An ordinary finite coefficient can be retained through a specified
 unary special preparation on the original family product, without a

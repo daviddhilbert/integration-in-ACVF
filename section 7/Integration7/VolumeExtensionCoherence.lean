@@ -1,4 +1,10 @@
-import Integration7.BlowupParameterExtension
+module
+
+public import Integration7.BlowupParameterExtension
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Literal coherence of the geometric constructions under parameter
 extension. Proof witnesses change; labels, maps and densities do not. -/

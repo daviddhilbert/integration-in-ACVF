@@ -1,5 +1,11 @@
-import Integration7.UniformBalancedHorizontalCentreValues
-import IntegrationSection4.BalancedBallClasses
+module
+
+public import Integration7.UniformBalancedHorizontalCentreValues
+public import IntegrationSection4.BalancedBallClasses
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Exact horizontal fibres of the entire balanced-row graph family.
 All original and refinement RV labels remain frozen in this identity. -/

@@ -1,5 +1,11 @@
-import IntegrationSection3ACVF.AtomicFunctionFibres
-import IntegrationSection3ACVF.GammaLinearity
+module
+
+public import IntegrationSection3ACVF.AtomicFunctionFibres
+public import IntegrationSection3ACVF.GammaLinearity
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! An atomic open-ball injection cannot have every output above its
 radius-scaled value bound while realizing that same scale on one pair. -/

@@ -1,5 +1,11 @@
-import IntegrationSection6.ProjectionFamilyRepresentations
-import IntegrationSection6.DefinableFamilyParameterIsomorphisms
+module
+
+public import IntegrationSection6.ProjectionFamilyRepresentations
+public import IntegrationSection6.DefinableFamilyParameterIsomorphisms
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Projection fibre integrals depend only on the represented function. -/
 noncomputable section

@@ -1,6 +1,12 @@
-import IntegrationSection3.AffineResidueChart
-import IntegrationSection3ACVF.MaximalSubballGeometry
-import Section4.ResidueScaledFunctions
+module
+
+public import IntegrationSection3.AffineResidueChart
+public import IntegrationSection3ACVF.MaximalSubballGeometry
+public import Section4.ResidueScaledFunctions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Native residue coordinates on the actual closed Gamma balls. The
 coordinate fibres are their actual maximal open subballs, with no chosen

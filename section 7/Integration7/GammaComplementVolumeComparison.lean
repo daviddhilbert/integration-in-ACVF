@@ -1,7 +1,13 @@
-import Integration7.CanonicalGammaVolumeIsomorphisms
-import Integration7.VolumePullbackPresentations
-import Integration7.EssentialVolumeRestriction
-import IntegrationSection6.FiniteGammaComplementCharts
+module
+
+public import Integration7.CanonicalGammaVolumeIsomorphisms
+public import Integration7.VolumePullbackPresentations
+public import Integration7.EssentialVolumeRestriction
+public import IntegrationSection6.FiniteGammaComplementCharts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The unchanged complement comparison preserves the full coordinate
 tuple and the retained density, over the original Gamma base. -/

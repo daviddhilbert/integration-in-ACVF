@@ -1,5 +1,11 @@
-import IntegrationSection6.GammaSortedRelationPromotion
-import IntegrationSection6.GammaSortedBijectionGluing
+module
+
+public import IntegrationSection6.GammaSortedRelationPromotion
+public import IntegrationSection6.GammaSortedBijectionGluing
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! An actual definable bijection over a named parameter tuple promotes
 to a valid original-base chart near that tuple. -/

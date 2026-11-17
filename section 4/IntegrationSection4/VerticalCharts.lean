@@ -1,4 +1,10 @@
-import IntegrationSection4.VerticalOffsets
+module
+
+public import IntegrationSection4.VerticalOffsets
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The uniform vertical chart used in Lemma 4.8. The source is arbitrary
 original-base definable; the ambient coordinate change and positioning map

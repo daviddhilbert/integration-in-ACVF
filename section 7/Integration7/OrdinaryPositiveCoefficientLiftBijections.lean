@@ -1,5 +1,11 @@
-import Integration7.OrdinaryPositiveCoefficientLiftMaps
-import Integration7.VFVolumeBijections
+module
+
+public import Integration7.OrdinaryPositiveCoefficientLiftMaps
+public import Integration7.VFVolumeBijections
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The coefficient-first ordinary-family product chart preserves
 the actual positive coefficient density and every VF coordinate. -/

@@ -1,7 +1,13 @@
-import IntegrationSection6.FiniteGammaSpecialChains
-import IntegrationSection6.FiniteRVParameterExtension
-import IntegrationSection5.UnaryBijectionPreparation
-import IntegrationSection5.UnaryRVCategory
+module
+
+public import IntegrationSection6.FiniteGammaSpecialChains
+public import IntegrationSection6.FiniteRVParameterExtension
+public import IntegrationSection5.UnaryBijectionPreparation
+public import IntegrationSection5.UnaryRVCategory
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The common finite-blowup witnesses underlying6.11, from the actual
 Section5 unary preparation and RV isomorphism. The common real presentation

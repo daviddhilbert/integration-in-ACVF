@@ -1,7 +1,13 @@
-import IntegrationSection3ACVF.FullGammaAtomicity
-import IntegrationSection3ACVF.FullGammaRadius
-import IntegrationSection3ACVF.PaperBallInvariants
-import IntegrationSection3.ClassCoverage
+module
+
+public import IntegrationSection3ACVF.FullGammaAtomicity
+public import IntegrationSection3ACVF.FullGammaRadius
+public import IntegrationSection3ACVF.PaperBallInvariants
+public import IntegrationSection3.ClassCoverage
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Corollary 3.7 from Gamma-atomicity and definable coset coverage.
 No primitive decomposition theorem is assumed. Adjoining the radius is

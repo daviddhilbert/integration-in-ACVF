@@ -1,6 +1,12 @@
-import Integration7.GradedAEVolumeIntegralComponents
-import Integration7.OrdinaryPositiveCoefficientIntegrals
-import Integration7.AERVPositiveCoefficientAppendedIntegrals
+module
+
+public import Integration7.GradedAEVolumeIntegralComponents
+public import Integration7.OrdinaryPositiveCoefficientIntegrals
+public import Integration7.AERVPositiveCoefficientAppendedIntegrals
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! In every homogeneous degree, including ordinary values and ordinary
 coefficients, integration preserves the actual graded coefficient action. -/

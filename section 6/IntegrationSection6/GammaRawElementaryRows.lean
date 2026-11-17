@@ -1,5 +1,11 @@
-import IntegrationSection6.GammaRawElementaryRowCoordinates
-import IntegrationSection6.ElementaryGraphFormulas
+module
+
+public import IntegrationSection6.GammaRawElementaryRowCoordinates
+public import IntegrationSection6.ElementaryGraphFormulas
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Every proper sorted row of the raw elementary formulas is the native
 elementary construction on that row. This is uniform in VF, RV, and mixed

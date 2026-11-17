@@ -1,5 +1,11 @@
-import Integration7.NativeVolumeDomains
-import Section4.CoordinateMaps
+module
+
+public import Integration7.NativeVolumeDomains
+public import Section4.CoordinateMaps
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A mixed two-VF domain has dimension at most one when one VF
 coordinate together with the carried RV labels determines the other. -/

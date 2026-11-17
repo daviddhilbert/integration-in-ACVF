@@ -1,5 +1,11 @@
-import IntegrationSection5.MixedUnaryPreparations
-import IntegrationSection5.CellLabelInjection
+module
+
+public import IntegrationSection5.MixedUnaryPreparations
+public import IntegrationSection5.CellLabelInjection
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Native-order cell fibres and the actual mixed unary projections. -/
 noncomputable section

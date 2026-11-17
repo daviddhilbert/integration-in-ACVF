@@ -1,7 +1,13 @@
-import IntegrationSection5.CoordinateIsoPartition
-import IntegrationSection5.GammaIsoCoordinates
-import IntegrationSection5.CodedCoordinateUpdate
-import IntegrationSection5.GammaSwapFactorization
+module
+
+public import IntegrationSection5.CoordinateIsoPartition
+public import IntegrationSection5.GammaIsoCoordinates
+public import IntegrationSection5.CodedCoordinateUpdate
+public import IntegrationSection5.GammaSwapFactorization
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A constructed unary-chain prefix makes one additional target coordinate
 fixed. The remaining bijection has a strictly smaller active coordinate set. -/

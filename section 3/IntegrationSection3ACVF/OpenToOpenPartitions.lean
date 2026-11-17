@@ -1,5 +1,11 @@
-import IntegrationSection3ACVF.MaximalOpenClasses
-import IntegrationSection3.DefinablePartitions
+module
+
+public import IntegrationSection3ACVF.MaximalOpenClasses
+public import IntegrationSection3.DefinablePartitions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The finite Boolean refinement of an actual open-to-open cover,
 retaining the original interpreted parameter base and all actual sets. -/

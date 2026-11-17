@@ -1,5 +1,11 @@
-import IntegrationSection6.NativeFocusObject
-import Section3.NormalizationSaturation
+module
+
+public import IntegrationSection6.NativeFocusObject
+public import Section3.NormalizationSaturation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Lemma6.9 for the released post-focus RV object, rather than a newly
 chosen presentation. All local instances below are the explicit normalized

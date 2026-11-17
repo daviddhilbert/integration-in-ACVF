@@ -1,6 +1,12 @@
-import IntegrationSection6.GammaSortedParameterElimination
-import Section3.GammaDefinableClosureField
-import Mathlib.SetTheory.Cardinal.Subfield
+module
+
+public import IntegrationSection6.GammaSortedParameterElimination
+public import Section3.GammaDefinableClosureField
+public import Mathlib.SetTheory.Cardinal.Subfield
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Name the generated VF parameter field internally. Its names are
 definable over the unchanged original Gamma base and can be eliminated.

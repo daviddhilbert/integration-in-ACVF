@@ -1,4 +1,10 @@
-import Integration7.AERVVolumeBaseRestrictions
+module
+
+public import Integration7.AERVVolumeBaseRestrictions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Base restriction is the actual additive map to supported AE
 functions. Its two fibre values are the unchanged row and zero. -/

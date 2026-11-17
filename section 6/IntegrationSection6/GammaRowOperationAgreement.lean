@@ -1,6 +1,12 @@
-import IntegrationSection6.GammaSchemaRowAgreement
-import IntegrationSection6.GammaRawElementaryRows
-import IntegrationSection6.GammaRawCoproductSchemata
+module
+
+public import IntegrationSection6.GammaSchemaRowAgreement
+public import IntegrationSection6.GammaRawElementaryRows
+public import IntegrationSection6.GammaRawCoproductSchemata
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Literal row agreement commutes with the actual elementary and
 coproduct formula constructions, across different parameter sorts/arities. -/

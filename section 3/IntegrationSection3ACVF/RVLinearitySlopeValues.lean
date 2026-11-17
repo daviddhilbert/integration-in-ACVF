@@ -1,4 +1,10 @@
-import IntegrationSection3ACVF.GammaLinearity
+module
+
+public import IntegrationSection3ACVF.GammaLinearity
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Every actual RV slope has the value of the checked Gamma-linear
 coefficient, and any VF representative has that same value. -/

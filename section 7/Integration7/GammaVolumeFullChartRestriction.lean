@@ -1,4 +1,10 @@
-import Integration7.GammaEssentialVolumeGraphs
+module
+
+public import Integration7.GammaEssentialVolumeGraphs
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A full original-Gamma chart supplies the essential chart of any
 actual volume isomorphism agreeing with it on essential labels. -/

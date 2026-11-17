@@ -1,7 +1,13 @@
-import Integration7.NativeFixedLabelRectangles
-import Integration7.NativeUnaryRectangleContractions
-import Integration7.NativeUnaryRectangleVolumeCoordinates
-import Integration7.FixedLabelsVFPermutations
+module
+
+public import Integration7.NativeFixedLabelRectangles
+public import Integration7.NativeUnaryRectangleContractions
+public import Integration7.NativeUnaryRectangleVolumeCoordinates
+public import Integration7.FixedLabelsVFPermutations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The constructed rectangle programs give standard contractions of
 the same original fixed-label domain in both coordinate orders. -/

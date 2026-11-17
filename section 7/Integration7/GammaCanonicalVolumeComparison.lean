@@ -1,5 +1,11 @@
-import Integration7.GammaElementaryVolumeGraphs
-import Integration7.GammaElementaryBlowupIsomorphisms
+module
+
+public import Integration7.GammaElementaryVolumeGraphs
+public import Integration7.GammaElementaryBlowupIsomorphisms
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Canonical elementary comparison retains the original Gamma base
 for arbitrary actual Gamma volume objects and ordinary admissible centers. -/

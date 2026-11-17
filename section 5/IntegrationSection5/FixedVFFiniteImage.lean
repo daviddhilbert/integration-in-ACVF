@@ -1,6 +1,12 @@
-import IntegrationSection4.FiniteRVScalarImage
-import Section5.GammaLiftRelation
-import Section3.GammaSupport
+module
+
+public import IntegrationSection4.FiniteRVScalarImage
+public import Section5.GammaLiftRelation
+public import Section3.GammaSupport
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A scalar definable function has finite VF image when every input VF
 coordinate is fixed and only its RV labels vary. Fixed VF values are

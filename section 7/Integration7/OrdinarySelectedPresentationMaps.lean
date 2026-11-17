@@ -1,6 +1,12 @@
-import IntegrationSection6.GammaSelectedRVPresentations
-import IntegrationSection6.FiniteGammaIsomorphisms
-import IntegrationSection6.GammaDegreeTransport
+module
+
+public import IntegrationSection6.GammaSelectedRVPresentations
+public import IntegrationSection6.FiniteGammaIsomorphisms
+public import IntegrationSection6.GammaDegreeTransport
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Genuine native pure-RV bijections induce isomorphisms of their finite
 selected-volume presentations. All labels, including absorbing labels,

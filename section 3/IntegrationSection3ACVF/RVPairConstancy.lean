@@ -1,4 +1,10 @@
-import IntegrationSection3ACVF.RVDifferencePairs
+module
+
+public import IntegrationSection3ACVF.RVDifferencePairs
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The RV graph of differences under a definable map on an atomic
 open ball is independent of its chosen source point, by Lemma 3.9. -/

@@ -1,4 +1,10 @@
-import IntegrationSection6.FiniteGammaSpecialChains
+module
+
+public import IntegrationSection6.FiniteGammaSpecialChains
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual original-Gamma special-bijection correspondence on RV[k].
 The output and every intermediate RV object are finite-volume. -/

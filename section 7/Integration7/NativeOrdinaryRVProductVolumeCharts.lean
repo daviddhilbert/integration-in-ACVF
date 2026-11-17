@@ -1,9 +1,15 @@
-import Integration7.NativeOrdinaryRVVolumeFactors
-import Integration7.NativeRVProductMapTransfers
-import Integration7.VolumeProductPointwise
-import Integration7.ZeroFactorVolumeObjects
-import Integration7.VolumeRelabeling
-import IntegrationSection6.FiniteBlowups
+module
+
+public import Integration7.NativeOrdinaryRVVolumeFactors
+public import Integration7.NativeRVProductMapTransfers
+public import Integration7.VolumeProductPointwise
+public import Integration7.ZeroFactorVolumeObjects
+public import Integration7.VolumeRelabeling
+public import IntegrationSection6.FiniteBlowups
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A genuine native product bijection with a finite ordinary factor
 constructs a full volume chart without adding any volume coordinate or

@@ -1,6 +1,12 @@
-import IntegrationSection6.FamilyRowRepresentation
-import IntegrationSection6.GammaSchemaCoproductRepresentation
-import IntegrationSection6.ContextRVClasses
+module
+
+public import IntegrationSection6.FamilyRowRepresentation
+public import IntegrationSection6.GammaSchemaCoproductRepresentation
+public import IntegrationSection6.ContextRVClasses
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Tagged coproducts represent pointwise sums in the varying coefficient
 semirings, using the actual finite RV coproduct. -/

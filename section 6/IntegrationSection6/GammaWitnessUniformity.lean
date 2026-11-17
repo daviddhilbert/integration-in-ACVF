@@ -1,6 +1,12 @@
-import Section3.GammaFullDescent
-import Section3.TupleCompactness
-import Mathlib.Data.Finset.Lattice.Fold
+module
+
+public import Section3.GammaFullDescent
+public import Section3.TupleCompactness
+public import Mathlib.Data.Finset.Lattice.Fold
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Genuine compactness for original-Gamma definable witness loci.
 Only the original real and Gamma names are bounded, never all proper

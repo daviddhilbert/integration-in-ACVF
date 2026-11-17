@@ -1,4 +1,10 @@
-import IntegrationSection6.GammaUnivPresentations
+module
+
+public import IntegrationSection6.GammaUnivPresentations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Finite unions of actual mixed Gamma sets, on a common internal
 presentation. The original real/Gamma base is unchanged. -/

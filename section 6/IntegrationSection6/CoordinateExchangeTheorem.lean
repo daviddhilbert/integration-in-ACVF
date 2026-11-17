@@ -1,4 +1,10 @@
-import IntegrationSection6.CoordinateExchange
+module
+
+public import IntegrationSection6.CoordinateExchange
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Lemma6.16 with the paper's explicit permutation conditions and standing
 coefficient-field base. All objects are in the finite categories RV[k]. -/

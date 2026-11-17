@@ -1,4 +1,10 @@
-import IntegrationSection6.BlowupPresentations
+module
+
+public import IntegrationSection6.BlowupPresentations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Definable overlap refinement of two actual blowup loci. -/
 

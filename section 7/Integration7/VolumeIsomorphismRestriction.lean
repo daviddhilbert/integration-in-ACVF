@@ -1,7 +1,13 @@
-import Integration7.VolumeAlmostEverywhere
-import Integration7.RVJacobianRestriction
-import Integration7.GammaVolumeCriterion
-import Section9.GenericRVJacobian
+module
+
+public import Integration7.VolumeAlmostEverywhere
+public import Integration7.RVJacobianRestriction
+public import Integration7.GammaVolumeCriterion
+public import Section9.GenericRVJacobian
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Restriction along an actual definable injection. Generic existence on
 the smaller correspondence and tangent inclusion identify its Jacobian. -/

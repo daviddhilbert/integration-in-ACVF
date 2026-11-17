@@ -1,7 +1,13 @@
-import IntegrationSection6.GammaObjectPresentationIsomorphisms
-import IntegrationSection6.GammaVFContractiblePullbackMaps
-import IntegrationSection6.FiniteGammaPresentationCharts
-import IntegrationSection6.GammaUnivPresentations
+module
+
+public import IntegrationSection6.GammaObjectPresentationIsomorphisms
+public import IntegrationSection6.GammaVFContractiblePullbackMaps
+public import IntegrationSection6.FiniteGammaPresentationCharts
+public import IntegrationSection6.GammaUnivPresentations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! In degree zero, an isomorphism of the lifts already induces an actual
 Gamma RV[0] isomorphism. No blowup or saturation argument is needed. -/

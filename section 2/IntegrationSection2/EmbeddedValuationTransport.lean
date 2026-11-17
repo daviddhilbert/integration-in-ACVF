@@ -1,5 +1,11 @@
-import Section9.HenselianRingTransport
-import Mathlib.Algebra.Field.Subfield.Basic
+module
+
+public import Section9.HenselianRingTransport
+public import Mathlib.Algebra.Field.Subfield.Basic
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual valuation ring of an embedded field is isomorphic to
 the valuation ring of its field image. No algebraic extension theorem

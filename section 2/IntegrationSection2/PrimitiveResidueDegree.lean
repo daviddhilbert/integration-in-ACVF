@@ -1,5 +1,11 @@
-import IntegrationSection2.PrimitiveResidueLift
-import Mathlib.FieldTheory.IntermediateField.Adjoin.Basic
+module
+
+public import IntegrationSection2.PrimitiveResidueLift
+public import Mathlib.FieldTheory.IntermediateField.Adjoin.Basic
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A monic lift of a primitive residue polynomial has exactly the
 residue degree as the degree of the subextension it generates. This

@@ -1,6 +1,12 @@
-import Integration7.ZeroFactorVFVolumeIsomorphisms
-import Integration7.VolumeLiftProductDomains
-import Integration7.ZeroFactorVolumeObjects
+module
+
+public import Integration7.ZeroFactorVFVolumeIsomorphisms
+public import Integration7.VolumeLiftProductDomains
+public import Integration7.ZeroFactorVolumeObjects
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Cartesian multiplication by an ordinary degree-zero lift agrees
 with the actual RV coefficient product, with unchanged positive density. -/

@@ -1,5 +1,11 @@
-import IntegrationSection5.MatchedHeadRV
-import IntegrationSection5.GammaRVPresentations
+module
+
+public import IntegrationSection5.MatchedHeadRV
+public import IntegrationSection5.GammaRVPresentations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The RV[2] comparison from matched unary tails retains full
 original-Gamma graphs, including the two constant volume coordinates. -/

@@ -1,5 +1,11 @@
-import IntegrationSection3ACVF.ResidueFieldConservation
-import IntegrationSection3.TaggedCofiniteConservation
+module
+
+public import IntegrationSection3ACVF.ResidueFieldConservation
+public import IntegrationSection3.TaggedCofiniteConservation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Conservation for actual residue-field affine lines whose full graph
 is given as an actual RV-definable set. Native ball-quotient interpretation

@@ -1,8 +1,14 @@
-import Integration7.HKFrozenZeroPositiveCoefficientProducts
-import Integration7.HKAEZeroHeadIntegrals
-import Integration7.HKAEZeroPositiveCoefficientProducts
-import Integration7.AERVVolumeHeadIntegrals
-import Integration7.AERVVolumePositiveCoefficientBilinearity
+module
+
+public import Integration7.HKFrozenZeroPositiveCoefficientProducts
+public import Integration7.HKAEZeroHeadIntegrals
+public import Integration7.HKAEZeroPositiveCoefficientProducts
+public import Integration7.AERVVolumeHeadIntegrals
+public import Integration7.AERVVolumePositiveCoefficientBilinearity
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Every actual positive coefficient commutes with the weighted-zero-input AE head integral through the constructed density-preserving contraction chart. -/
 noncomputable section

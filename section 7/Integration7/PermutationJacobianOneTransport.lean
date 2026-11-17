@@ -1,5 +1,11 @@
-import Integration7.PermutedMixedVolumeJacobians
-import Integration7.VFAlmostEverywhere
+module
+
+public import Integration7.PermutedMixedVolumeJacobians
+public import Integration7.VFAlmostEverywhere
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual full mixed Jacobian-one condition is invariant under
 simultaneous permutation of the source and target VF coordinates. -/

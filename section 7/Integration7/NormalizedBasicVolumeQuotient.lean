@@ -1,5 +1,11 @@
-import Integration7.NormalizedBasicVolumePresentation
-import Mathlib.Algebra.RingQuot
+module
+
+public import Integration7.NormalizedBasicVolumePresentation
+public import Mathlib.Algebra.RingQuot
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! An explicit two-relation ring presentation of the actual normalized
 coefficient ring. This is the point = cone = 1 presentation after

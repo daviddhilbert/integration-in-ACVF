@@ -1,5 +1,11 @@
-import IntegrationSection5.GammaRVIsomorphism
-import Section4.RVUnionCoproduct
+module
+
+public import IntegrationSection5.GammaRVIsomorphism
+public import Section4.RVUnionCoproduct
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 open Classical FirstOrder FirstOrder.Language CategoryTheory

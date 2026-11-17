@@ -1,7 +1,13 @@
-import Section3.MeanInBalls
-import Section3.FieldBase
-import Section3.GammaParameters
-import Mathlib.Algebra.CharZero.Infinite
+module
+
+public import Section3.MeanInBalls
+public import Section3.FieldBase
+public import Section3.GammaParameters
+public import Mathlib.Algebra.CharZero.Infinite
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A characteristic-zero VF field parameter base is infinite. Smallness
 of such a base forces the saturation cardinal strictly above aleph0. -/

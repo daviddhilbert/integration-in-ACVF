@@ -1,7 +1,13 @@
-import Integration7.ElementaryBlowupConstruction
-import Integration7.VolumeFormScalarArithmetic
-import Integration7.RVCoordinateSelection
-import IntegrationSection6.AlgebraicFibres
+module
+
+public import Integration7.ElementaryBlowupConstruction
+public import Integration7.VolumeFormScalarArithmetic
+public import Integration7.RVCoordinateSelection
+public import IntegrationSection6.AlgebraicFibres
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! An admissible last volume coordinate may be dropped while retaining
 finite volume fibres. In positive remaining degree its contribution moves

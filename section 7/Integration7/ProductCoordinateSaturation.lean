@@ -1,7 +1,13 @@
-import Integration7.NativeVFPairImages
-import IntegrationSection5.HeadPreparation
-import IntegrationSection6.GammaPermutedFibrePresentations
-import IntegrationSection5.NaturalContractionGamma
+module
+
+public import Integration7.NativeVFPairImages
+public import IntegrationSection5.HeadPreparation
+public import IntegrationSection6.GammaPermutedFibrePresentations
+public import IntegrationSection5.NaturalContractionGamma
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Products with a full RV class admit the actual identity preparation
 in that coordinate. These are the first contractions of the translated

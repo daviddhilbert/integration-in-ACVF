@@ -1,5 +1,11 @@
-import IntegrationSection6.GammaRVFamilyCodes
-import IntegrationSection6.RVFamilyCodePairing
+module
+
+public import IntegrationSection6.GammaRVFamilyCodes
+public import IntegrationSection6.RVFamilyCodePairing
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! One real-base RV code controls finitely many full Gamma RV families
 at once, even when their RV arities differ. -/

@@ -1,6 +1,12 @@
-import Integration7.HKRVProductBridges
-import Integration7.RVVolumeProducts
-import Section4.RVProductMorphisms
+module
+
+public import Integration7.HKRVProductBridges
+public import Integration7.RVVolumeProducts
+public import Section4.RVProductMorphisms
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Products respect measured isomorphisms in every pair of degrees.
 The zero-zero case preserves both weights exactly, and the mixed cases

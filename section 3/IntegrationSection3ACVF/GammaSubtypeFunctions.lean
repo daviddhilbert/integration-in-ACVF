@@ -1,5 +1,11 @@
-import IntegrationSection3ACVF.DefinableGammaMatching
-import IntegrationSection3ACVF.GammaFunctionSyntax
+module
+
+public import IntegrationSection3ACVF.DefinableGammaMatching
+public import IntegrationSection3ACVF.GammaFunctionSyntax
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A bijection between actual Gamma subtypes supplies an ordinary
 partial function with exactly the same full definable graph. -/

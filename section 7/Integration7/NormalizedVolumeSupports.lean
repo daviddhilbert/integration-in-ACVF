@@ -1,5 +1,11 @@
-import Integration7.NormalizedVolumeBaseRestrictions
-import Mathlib.LinearAlgebra.Isomorphisms
+module
+
+public import Integration7.NormalizedVolumeBaseRestrictions
+public import Mathlib.LinearAlgebra.Isomorphisms
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Normalized supported functions identify with an actual submodule
 of the full function space. Membership is equivalent to being fixed by

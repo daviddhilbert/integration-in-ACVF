@@ -1,7 +1,13 @@
-import Integration7.PositiveVFVolumeClassProducts
-import Integration7.VolumeLiftProductBijections
-import Integration7.PositiveVolumeIntegrationEquivalence
-import Integration7.AllDegreeVolumeClasses
+module
+
+public import Integration7.PositiveVFVolumeClassProducts
+public import Integration7.VolumeLiftProductBijections
+public import Integration7.PositiveVolumeIntegrationEquivalence
+public import Integration7.AllDegreeVolumeClasses
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Positive-degree integration preserves the actual Cartesian product,
 using the geometric full-lift product bijection. -/

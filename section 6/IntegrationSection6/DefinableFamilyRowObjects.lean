@@ -1,7 +1,13 @@
-import IntegrationSection6.DefinableFamilyLifts
-import IntegrationSection6.GammaSchemaFiniteRowPresentations
-import IntegrationSection6.VFParameterCoefficientBases
-import IntegrationSection6.GammaClosureIsomorphisms
+module
+
+public import IntegrationSection6.DefinableFamilyLifts
+public import IntegrationSection6.GammaSchemaFiniteRowPresentations
+public import IntegrationSection6.VFParameterCoefficientBases
+public import IntegrationSection6.GammaClosureIsomorphisms
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Each finite family row is an actual RV[k] object over dcl(B,x).
 Its lift is exactly the fibre used by the literal total family lift. -/

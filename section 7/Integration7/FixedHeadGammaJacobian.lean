@@ -1,4 +1,10 @@
-import Integration7.GammaVolumeCriterion
+module
+
+public import Integration7.GammaVolumeCriterion
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Appending identical nonzero base coordinates preserves the Gamma
 Jacobian. This is equality in Gamma, with its actual multiplication. -/

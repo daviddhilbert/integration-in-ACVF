@@ -1,5 +1,11 @@
-import IntegrationSection6.GammaRawRVFormulas
-import Section3.GammaClosureLaws
+module
+
+public import IntegrationSection6.GammaRawRVFormulas
+public import Section3.GammaClosureLaws
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Fixing any chosen old RV labels is definable over precisely those
 named RV values and the original Gamma base. -/

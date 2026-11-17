@@ -1,5 +1,11 @@
-import IntegrationSection6.GammaSchemaChartRows
-import IntegrationSection6.GammaSchemaIndexedObjects
+module
+
+public import IntegrationSection6.GammaSchemaChartRows
+public import IntegrationSection6.GammaSchemaIndexedObjects
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Weighted chart schemata glue over a finite-volume RV base. The joint
 chart preserves the actual index tuple; its complete graph is over the

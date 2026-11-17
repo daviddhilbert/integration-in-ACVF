@@ -1,6 +1,12 @@
-import IntegrationSection6.GammaHeadFibreSliceMaps
-import IntegrationSection6.GammaPermutedFibrePresentations
-import IntegrationSection6.GammaIsoBaseEquality
+module
+
+public import IntegrationSection6.GammaHeadFibreSliceMaps
+public import IntegrationSection6.GammaPermutedFibrePresentations
+public import IntegrationSection6.GammaIsoBaseEquality
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A frozen-tail permutation changes neither the head-fibre lift nor its
 selected old RV labels. Only the order of already named VF parameters changes. -/

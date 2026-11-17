@@ -1,7 +1,13 @@
-import Integration7.FixedRVLabelDomainBijections
-import Integration7.NativeRelativeTranslationVolumes
-import Integration7.FixedLabelProductHeadGeometry
-import Integration7.TwoOrderProductCoordinateDensities
+module
+
+public import Integration7.FixedRVLabelDomainBijections
+public import Integration7.NativeRelativeTranslationVolumes
+public import Integration7.FixedLabelProductHeadGeometry
+public import Integration7.TwoOrderProductCoordinateDensities
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual translations of pure VF domains carry fixed old RV labels
 and still have Jacobian one almost everywhere on the resulting mixed domain. -/

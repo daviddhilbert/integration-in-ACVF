@@ -1,5 +1,11 @@
-import Integration7.DefinableMapDisagreements
-import Integration7.SmallExtendedRVExceptions
+module
+
+public import Integration7.DefinableMapDisagreements
+public import Integration7.SmallExtendedRVExceptions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Almost-everywhere equality of two original-base maps descends from
 a containing context, by parameter invariance of the disagreement locus. -/

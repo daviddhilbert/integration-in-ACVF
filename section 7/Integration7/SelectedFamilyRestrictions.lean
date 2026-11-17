@@ -1,5 +1,11 @@
-import Integration7.VFBaseDimensionBounds
-import Integration7.VFCofullSubdomains
+module
+
+public import Integration7.VFBaseDimensionBounds
+public import Integration7.VFCofullSubdomains
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Restrictions of actual RV-valued families and the cofull VF
 realizations of restrictions whose discarded base domain is VF-small. -/

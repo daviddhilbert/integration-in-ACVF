@@ -1,5 +1,11 @@
-import IntegrationSection3ACVF.GammaCosetGeometry
-import Section3.AdditiveRadial
+module
+
+public import IntegrationSection3ACVF.GammaCosetGeometry
+public import Section3.AdditiveRadial
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Nonzero natural scalars give an infinite orbit inside one actual
 RV value fibre in residue characteristic zero. -/

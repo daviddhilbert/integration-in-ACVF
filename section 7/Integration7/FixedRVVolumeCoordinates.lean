@@ -1,6 +1,12 @@
-import Integration7.VolumeDensityRescaling
-import Integration7.ConstantCoordinateVolumeIsomorphisms
-import Section4.RVAppend
+module
+
+public import Integration7.VolumeDensityRescaling
+public import Integration7.ConstantCoordinateVolumeIsomorphisms
+public import Section4.RVAppend
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Adjoining a fixed RV volume coordinate leaves the actual label
 domain unchanged and preserves finite volume fibres. The fixed tag is a

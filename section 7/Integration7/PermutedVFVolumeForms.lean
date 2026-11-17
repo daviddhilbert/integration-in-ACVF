@@ -1,5 +1,11 @@
-import Integration7.PermutedMixedVolumeJacobians
-import Integration7.VFVolumeBijections
+module
+
+public import Integration7.PermutedMixedVolumeJacobians
+public import Integration7.VFVolumeBijections
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Simultaneous VF-coordinate permutation preserves the original volume
 equation. The same Jacobian determinant is retained, with the forms

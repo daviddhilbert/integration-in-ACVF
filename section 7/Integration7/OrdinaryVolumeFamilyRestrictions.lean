@@ -1,8 +1,14 @@
-import Integration7.OrdinaryVFVolumeFamilies
-import Integration7.VFBaseDimensionBounds
-import Integration7.DefinableMapPreimages
-import Integration7.VFVolumeComposition
-import Integration7.VFVolumeClasses
+module
+
+public import Integration7.OrdinaryVFVolumeFamilies
+public import Integration7.VFBaseDimensionBounds
+public import Integration7.DefinableMapPreimages
+public import Integration7.VFVolumeComposition
+public import Integration7.VFVolumeClasses
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Removing a VF-small base exception from an ordinary family does
 not change its actual unit-density VF volume class. -/

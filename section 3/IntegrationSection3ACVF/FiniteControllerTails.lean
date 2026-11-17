@@ -1,4 +1,10 @@
-import IntegrationSection3ACVF.FullGammaControllers
+module
+
+public import IntegrationSection3ACVF.FullGammaControllers
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A finite-range relation with controlled value-group rows has a tail
 contained in one row. No completeness or Archimedean assumption is used. -/

@@ -1,4 +1,10 @@
-import Integration7.RelativeHeadVolumeComparison
+module
+
+public import Integration7.RelativeHeadVolumeComparison
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A single witnessed global exception controls all frozen head
 comparisons. Every fibre with a VF-small intersection with that exception

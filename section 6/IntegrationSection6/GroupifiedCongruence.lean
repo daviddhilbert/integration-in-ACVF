@@ -1,7 +1,13 @@
-import Section4.Imported.GrothendieckRing
-import Mathlib.RingTheory.Congruence.Hom
-import Mathlib.RingTheory.Congruence.Basic
-import Mathlib.RingTheory.Ideal.Quotient.Operations
+module
+
+public import Section4.Imported.GrothendieckRing
+public import Mathlib.RingTheory.Congruence.Hom
+public import Mathlib.RingTheory.Congruence.Basic
+public import Mathlib.RingTheory.Ideal.Quotient.Operations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The ideal determined by a positive semiring congruence after
 Grothendieck completion, with its exact kernel and quotient comparison. -/

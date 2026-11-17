@@ -1,4 +1,10 @@
-import Integration7.VolumeSchemaValiditySemantics
+module
+
+public import Integration7.VolumeSchemaValiditySemantics
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Exact weighted correspondence fibres of an actual essential chart.
 Functionality of the source and target volume schemata determines every

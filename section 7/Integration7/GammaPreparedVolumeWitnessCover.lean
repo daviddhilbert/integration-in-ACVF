@@ -1,5 +1,11 @@
-import Integration7.GammaPreparedVolumeWitnesses
-import IntegrationSection6.GammaVFCodePreparation
+module
+
+public import Integration7.GammaPreparedVolumeWitnesses
+public import IntegrationSection6.GammaVFCodePreparation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A finite cover by genuine volume witnesses over VF parameters
 descends to valid witnesses on prepared RV keys. -/

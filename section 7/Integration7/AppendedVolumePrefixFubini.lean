@@ -1,4 +1,10 @@
-import Integration7.AppendedVolumeHeadFubini
+module
+
+public import Integration7.AppendedVolumeHeadFubini
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Iterated integration of an arbitrary VF prefix, leaving a nonempty
 VF base, on the actual almost-everywhere function quotient. The resulting

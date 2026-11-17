@@ -1,4 +1,10 @@
-import Integration7.NormalizedVolumeSupports
+module
+
+public import Integration7.NormalizedVolumeSupports
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual support projection is idempotent and has exactly the
 proved supported-function submodule as its image. -/

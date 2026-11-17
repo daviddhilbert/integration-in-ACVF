@@ -1,6 +1,12 @@
-import IntegrationSection5.RVProductBranchCompletion
-import IntegrationSection5.FixedVFHeadDescent
-import IntegrationSection5.GammaSpecialRestriction
+module
+
+public import IntegrationSection5.RVProductBranchCompletion
+public import IntegrationSection5.FixedVFHeadDescent
+public import IntegrationSection5.GammaSpecialRestriction
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option allowUnsafeReducibility true in

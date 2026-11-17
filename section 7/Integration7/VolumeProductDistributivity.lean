@@ -1,7 +1,13 @@
-import Integration7.RVProductCoproductCharts
-import Integration7.VolumeProductPointwise
-import Integration7.VolumeCoproductAssociativity
-import Integration7.RVVolumeInverse
+module
+
+public import Integration7.RVProductCoproductCharts
+public import Integration7.VolumeProductPointwise
+public import Integration7.VolumeCoproductAssociativity
+public import Integration7.RVVolumeInverse
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual distributivity preserves each coordinate and density. No
 coordinate block is exchanged in this right-distributivity chart. -/

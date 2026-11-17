@@ -1,7 +1,13 @@
-import IntegrationSection5.UnaryPaperBallBridge
-import IntegrationSection5.UnaryConjugationGeometry
-import IntegrationSection3ACVF.CoordinateOpenToOpen
-import Section5.VerticalConstruction
+module
+
+public import IntegrationSection5.UnaryPaperBallBridge
+public import IntegrationSection5.UnaryConjugationGeometry
+public import IntegrationSection3ACVF.CoordinateOpenToOpen
+public import Section5.VerticalConstruction
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

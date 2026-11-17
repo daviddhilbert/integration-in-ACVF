@@ -1,6 +1,12 @@
-import Integration7.VolumeDensityRescaling
-import Integration7.VolumeBlowupEquivalence
-import Integration7.VolumeCoproductAssociativity
+module
+
+public import Integration7.VolumeDensityRescaling
+public import Integration7.VolumeBlowupEquivalence
+public import Integration7.VolumeCoproductAssociativity
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Multiplying all densities by the same named nonzero constant
 preserves actual elementary blowups and their common-refinement relation. -/

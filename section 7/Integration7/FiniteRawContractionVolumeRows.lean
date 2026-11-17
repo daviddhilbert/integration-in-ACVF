@@ -1,6 +1,12 @@
-import Integration7.FiniteContractionNormalizationVolumeIso
-import Integration7.GammaSelectedVolumeSchemata
-import IntegrationSection6.RawContractionDomain
+module
+
+public import Integration7.FiniteContractionNormalizationVolumeIso
+public import Integration7.GammaSelectedVolumeSchemata
+public import IntegrationSection6.RawContractionDomain
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual raw finite contraction volume object realizes the full
 coordinate and retained-density schema of the specified final RV labels. -/

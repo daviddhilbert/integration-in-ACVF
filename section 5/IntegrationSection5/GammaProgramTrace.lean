@@ -1,6 +1,12 @@
-import IntegrationSection5.GammaHeadCertifiedTrace
-import IntegrationSection5.GammaTraceLift
-import IntegrationSection5.GammaProgramTraceHelper
+module
+
+public import IntegrationSection5.GammaHeadCertifiedTrace
+public import IntegrationSection5.GammaTraceLift
+public import IntegrationSection5.GammaProgramTraceHelper
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 noncomputable section
 set_option autoImplicit false

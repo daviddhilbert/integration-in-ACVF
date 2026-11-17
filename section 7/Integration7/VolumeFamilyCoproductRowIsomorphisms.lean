@@ -1,5 +1,11 @@
-import Integration7.VolumeFamilyCoproductRowMaps
-import Integration7.VolumeBlowupClasses
+module
+
+public import Integration7.VolumeFamilyCoproductRowMaps
+public import Integration7.VolumeBlowupClasses
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Family disjoint union computes the genuine addition of RV volume
 classes on every VF fibre, with the original coordinate maps and forms. -/

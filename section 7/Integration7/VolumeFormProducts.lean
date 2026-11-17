@@ -1,5 +1,11 @@
-import Integration7.ScalarRVAlgebra
-import Section4.MapProduct
+module
+
+public import Integration7.ScalarRVAlgebra
+public import Section4.MapProduct
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 noncomputable section
 open FirstOrder FirstOrder.Language

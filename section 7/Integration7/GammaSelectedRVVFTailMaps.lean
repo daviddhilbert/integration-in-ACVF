@@ -1,6 +1,12 @@
-import Integration7.NativeSelectedRVVFTailMaps
-import Section5.GammaLiftRelation
-import IntegrationSection5.RelativelyUnary
+module
+
+public import Integration7.NativeSelectedRVVFTailMaps
+public import Section5.GammaLiftRelation
+public import IntegrationSection5.RelativelyUnary
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Selected VF tail maps retain their full original-Gamma graphs and
 relative unary coordinate. The added VF tuple is fixed pointwise. -/

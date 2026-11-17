@@ -1,5 +1,11 @@
-import Integration7.HKVolumeCoproducts
-import Integration7.HKRVProductIsomorphisms
+module
+
+public import Integration7.HKVolumeCoproducts
+public import Integration7.HKRVProductIsomorphisms
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Reassociation for the original product in every volume degree.
 The density proof is multiplication associativity, including weighted measured RV[0]. -/

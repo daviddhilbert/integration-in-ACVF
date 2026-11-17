@@ -1,7 +1,13 @@
-import IntegrationSection6.FiniteGammaPartialFocus
-import IntegrationSection6.FiniteRVChainTransport
-import IntegrationSection6.CanonicalPullbackPresentation
-import IntegrationSection6.NormalizedCanonicalLifts
+module
+
+public import IntegrationSection6.FiniteGammaPartialFocus
+public import IntegrationSection6.FiniteRVChainTransport
+public import IntegrationSection6.CanonicalPullbackPresentation
+public import IntegrationSection6.NormalizedCanonicalLifts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Corollary6.10 over the original Gamma base, entirely in RV[k].
 No internal code set is bounded by the saturation cardinal. -/

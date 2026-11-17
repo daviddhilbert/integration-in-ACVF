@@ -1,7 +1,13 @@
-import IntegrationSection6.FiniteGammaPresentationCharts
-import IntegrationSection6.GammaLiftVolumeRecovery
-import IntegrationSection6.GammaFocusLoci
-import IntegrationSection6.NormalizedCanonicalLifts
+module
+
+public import IntegrationSection6.FiniteGammaPresentationCharts
+public import IntegrationSection6.GammaLiftVolumeRecovery
+public import IntegrationSection6.GammaFocusLoci
+public import IntegrationSection6.NormalizedCanonicalLifts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Gamma finite objects recovered from literal lifts and canonical labels. -/
 noncomputable section

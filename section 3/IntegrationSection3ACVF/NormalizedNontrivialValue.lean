@@ -1,4 +1,10 @@
-import IntegrationSection3ACVF.NormalizedBallParameters
+module
+
+public import IntegrationSection3ACVF.NormalizedBallParameters
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A genuinely nontrivial original Gamma value supplies one in the
 normalized model, via the same RV code and the actual strict preorder. -/

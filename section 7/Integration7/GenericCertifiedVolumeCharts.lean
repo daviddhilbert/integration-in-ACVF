@@ -1,6 +1,12 @@
-import Integration7.RVAlmostEverywhereFiniteMaps
-import Integration7.FiniteVolumeIsoMaps
-import Section9.GenericRVJacobian
+module
+
+public import Integration7.RVAlmostEverywhereFiniteMaps
+public import Integration7.FiniteVolumeIsoMaps
+public import Section9.GenericRVJacobian
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual finite chart supports cover a volume correspondence generically.
 The small exceptional locus follows from the native full-dimension argument;

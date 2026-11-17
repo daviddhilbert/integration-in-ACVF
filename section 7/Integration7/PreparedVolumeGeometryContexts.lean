@@ -1,8 +1,14 @@
-import Integration7.PreparedVolumeGeometryAgreements
-import Integration7.VolumeGeometryVFCodesInBase
-import Integration7.VFFieldContainingVolumeContexts
-import IntegrationSection6.GammaSpecialBaseReduction
-import IntegrationSection6.GammaVFCodePreparation
+module
+
+public import Integration7.PreparedVolumeGeometryAgreements
+public import Integration7.VolumeGeometryVFCodesInBase
+public import Integration7.VFFieldContainingVolumeContexts
+public import IntegrationSection6.GammaSpecialBaseReduction
+public import IntegrationSection6.GammaVFCodePreparation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A finite cover of original-base volume witnesses is prepared in
 a genuine small containing context. The internal coefficient-field names

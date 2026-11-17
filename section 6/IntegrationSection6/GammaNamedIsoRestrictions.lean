@@ -1,5 +1,11 @@
-import IntegrationSection6.GammaIsoRestrictions
-import IntegrationSection6.GammaNamedRVFibres
+module
+
+public import IntegrationSection6.GammaIsoRestrictions
+public import IntegrationSection6.GammaNamedRVFibres
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! An isomorphism preserving chosen old RV labels restricts over their
 precisely named values, keeping its complete original-Gamma graph. -/

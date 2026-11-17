@@ -1,4 +1,10 @@
-import Integration7.RectangleFamilyPreparedTargetCarriers
+module
+
+public import Integration7.RectangleFamilyPreparedTargetCarriers
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! After contracting the prepared head, the remaining unary domain
 is the original labelled tail constrained by the entire head RV key. -/

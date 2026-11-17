@@ -1,6 +1,12 @@
-import Integration7.GammaVolumeGraphPresentations
-import Integration7.GammaVolumeSchemaDensityGraphs
-import IntegrationSection6.GammaSchemaIndexedPresentations
+module
+
+public import Integration7.GammaVolumeGraphPresentations
+public import Integration7.GammaVolumeSchemaDensityGraphs
+public import IntegrationSection6.GammaSchemaIndexedPresentations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A volume schema over an RV index family has a full joint volume
 presentation. The base's finite volume is appended to the fibre volume;

@@ -1,4 +1,10 @@
-import Section4.RVProductDistributivity
+module
+
+public import Section4.RVProductDistributivity
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The explicit distributivity chart, in the direction that removes
 the coproduct tag after taking its product. All arities, including zero, work. -/

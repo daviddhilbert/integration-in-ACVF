@@ -1,5 +1,11 @@
-import Integration7.PreparedKeyLabelSpecialPreparations
-import Integration7.RectangleFamilyPreparedTargetCarriers
+module
+
+public import Integration7.PreparedKeyLabelSpecialPreparations
+public import Integration7.RectangleFamilyPreparedTargetCarriers
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A prepared rectangle retains RV-fibre determination by its old
 family labels when the other VF coordinate already has a fixed RV tag.

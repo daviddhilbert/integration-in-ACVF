@@ -1,6 +1,12 @@
-import IntegrationSection5.RelativeSpecial
-import IntegrationSection5.RelativeSpecialRestriction
-import Section5.ParameterExtension
+module
+
+public import IntegrationSection5.RelativeSpecial
+public import IntegrationSection5.RelativeSpecialRestriction
+public import Section5.ParameterExtension
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! In VF arity one, a relatively special map is an actual special
 bijection over the original real base: there are no frozen VF parameters. -/

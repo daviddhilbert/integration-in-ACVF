@@ -1,5 +1,11 @@
-import Integration7.NondegenerateFiniteIso
-import Integration7.VolumeRelabeling
+module
+
+public import Integration7.NondegenerateFiniteIso
+public import Integration7.VolumeRelabeling
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Restricting to a definable set containing every essential label does
 not change the volume-isomorphism class. -/

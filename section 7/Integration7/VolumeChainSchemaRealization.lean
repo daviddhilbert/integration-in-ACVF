@@ -1,5 +1,11 @@
-import Integration7.GammaVolumeChainSchemata
-import Integration7.VolumeBlowupSchemaRealization
+module
+
+public import Integration7.GammaVolumeChainSchemata
+public import Integration7.VolumeBlowupSchemaRealization
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Valid formula chains realize exactly their encoded number of actual
 blowups, followed by a volume isomorphism of the endpoint. -/

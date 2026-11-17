@@ -1,6 +1,12 @@
-import Integration7.GammaVolumeSliceAssemblyGeometry
-import Integration7.GammaVolumePresentationGeometry
-import IntegrationSection6.GammaSwappedVolumes
+module
+
+public import Integration7.GammaVolumeSliceAssemblyGeometry
+public import Integration7.GammaVolumePresentationGeometry
+public import IntegrationSection6.GammaSwappedVolumes
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Swapping an empty old-volume block and the sole VF tag retains
 the arbitrary coordinate density and the original-Gamma chart. -/

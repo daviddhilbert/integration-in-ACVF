@@ -1,5 +1,11 @@
-import IntegrationSection6.TranslatedFibres
-import Section5.Core
+module
+
+public import IntegrationSection6.TranslatedFibres
+public import Section5.Core
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual focus maps on one RV fibre are subtraction by one constant
 centre. This identifies their whole image, including the centre itself. -/

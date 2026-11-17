@@ -1,8 +1,14 @@
-import IntegrationSection6.OrderedRelativeContractions
-import IntegrationSection6.GammaPermutedUnaryMaps
-import IntegrationSection6.GammaPermutedFibrePresentations
-import IntegrationSection6.GammaContractionPresentationIsomorphisms
-import IntegrationSection6.SmallVFFieldBases
+module
+
+public import IntegrationSection6.OrderedRelativeContractions
+public import IntegrationSection6.GammaPermutedUnaryMaps
+public import IntegrationSection6.GammaPermutedFibrePresentations
+public import IntegrationSection6.GammaContractionPresentationIsomorphisms
+public import IntegrationSection6.SmallVFFieldBases
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Corollary6.15 in the finite categories: a relatively unary bijection
 preserves common-blowup classes of arbitrary standard contractions that

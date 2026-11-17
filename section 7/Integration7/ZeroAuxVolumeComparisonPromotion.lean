@@ -1,5 +1,11 @@
-import Integration7.ActualVolumeComparisonPromotion
-import Integration7.ZeroAuxVolumeWitnesses
+module
+
+public import Integration7.ActualVolumeComparisonPromotion
+public import Integration7.ZeroAuxVolumeWitnesses
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Promotion over the original named term context needs no additional
 exception-parameter block. The stronger conclusion records this fact. -/

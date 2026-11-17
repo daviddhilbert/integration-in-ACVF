@@ -1,4 +1,10 @@
-import Integration7.OrderedAppendVolumeContractions
+module
+
+public import Integration7.OrderedAppendVolumeContractions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The recursive selected tuple is exactly the original selected labels
 followed by every contracted VF tag in the program's order. -/

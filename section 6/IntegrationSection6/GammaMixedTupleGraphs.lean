@@ -1,4 +1,10 @@
-import IntegrationSection6.GammaRVGraphRaw
+module
+
+public import IntegrationSection6.GammaRVGraphRaw
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Full Gamma graphs with a mixed VF/RV source and a pure-RV target,
 in the raw tuple layout of finite family schemata. -/

@@ -1,5 +1,11 @@
-import IntegrationSection5.GammaPreparation
-import Section5.GammaLift
+module
+
+public import IntegrationSection5.GammaPreparation
+public import Section5.GammaLift
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual special pullback preparation with any requested internal real
 parameters retained in its presentation. Only the original base is small. -/

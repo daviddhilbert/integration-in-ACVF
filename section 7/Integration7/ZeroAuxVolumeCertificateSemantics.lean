@@ -1,5 +1,11 @@
-import Integration7.VolumeEmptyParameterBlocks
-import Integration7.GammaVolumeIsomorphismSchemata
+module
+
+public import Integration7.VolumeEmptyParameterBlocks
+public import Integration7.GammaVolumeIsomorphismSchemata
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! An empty auxiliary block gives exactly the ordinary supported
 exception certificate. Adding or removing it preserves complete validity. -/

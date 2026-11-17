@@ -1,5 +1,11 @@
-import IntegrationSection4.GammaRVMapOperations
-import Section5.GammaLiftRelation
+module
+
+public import IntegrationSection4.GammaRVMapOperations
+public import Section5.GammaLiftRelation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

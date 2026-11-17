@@ -1,4 +1,10 @@
-import IntegrationSection5.CommonRectangleJoint
+module
+
+public import IntegrationSection5.CommonRectangleJoint
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 set_option maxHeartbeats 2000000

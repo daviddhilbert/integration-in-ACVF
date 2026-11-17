@@ -1,5 +1,11 @@
-import Integration7.HKVFClassCartesianProducts
-import Integration7.HKZeroVFCoproductClasses
+module
+
+public import Integration7.HKVFClassCartesianProducts
+public import Integration7.HKZeroVFCoproductClasses
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Geometric identification of the transported VF graded operations.
 The product cases are actual Cartesian constructions, and measured zero

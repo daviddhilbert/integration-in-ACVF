@@ -1,4 +1,10 @@
-import Integration7.HKAERVWeightedZeroActions
+module
+
+public import Integration7.HKAERVWeightedZeroActions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Positive homogeneous AE volume functions form a semimodule over
 the weighted RV[0] coefficient semiring. Scalar multiplication is the

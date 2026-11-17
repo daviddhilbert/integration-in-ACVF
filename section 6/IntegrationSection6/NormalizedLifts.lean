@@ -1,5 +1,11 @@
-import IntegrationSection6.NormalizedPresentations
-import IntegrationSection6.LiftCarrierGeometry
+module
+
+public import IntegrationSection6.NormalizedPresentations
+public import IntegrationSection6.LiftCarrierGeometry
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual canonical lift has the literal lift-carrier presentation
 required by the full-focus blowup theorem, in the normalized ambient model. -/

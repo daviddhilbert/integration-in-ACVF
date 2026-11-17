@@ -1,6 +1,12 @@
-import Integration7.NativePreparedMixedPartitions
-import IntegrationSection6.PreparedPartitionImages
-import Section5.GammaRestriction
+module
+
+public import Integration7.NativePreparedMixedPartitions
+public import IntegrationSection6.PreparedPartitionImages
+public import Section5.GammaRestriction
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual simultaneous pullback partitions retain original-Gamma
 certificates on the global special bijection and every restricted chain. -/

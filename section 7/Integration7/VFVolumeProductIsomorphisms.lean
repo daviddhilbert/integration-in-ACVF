@@ -1,6 +1,12 @@
-import Integration7.VFProductCofullDomains
-import Integration7.VFVolumeProductBijections
-import Integration7.VFVolumeIsomorphisms
+module
+
+public import Integration7.VFProductCofullDomains
+public import Integration7.VFVolumeProductBijections
+public import Integration7.VFVolumeIsomorphisms
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual almost-everywhere VF volume isomorphisms respect the genuine
 Cartesian product, retaining both original product densities. -/

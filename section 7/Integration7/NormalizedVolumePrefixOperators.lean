@@ -1,6 +1,12 @@
-import Integration7.NormalizedVolumeHeadFubini
-import Integration7.GradedAEVolumePrefixFubini
-import Integration7.AppendedVolumePrefixFubini
+module
+
+public import Integration7.NormalizedVolumeHeadFubini
+public import Integration7.GradedAEVolumePrefixFubini
+public import Integration7.AppendedVolumePrefixFubini
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Iterating the actual normalized linear head operator gives a
 normalized linear partial integral for every VF prefix, with its

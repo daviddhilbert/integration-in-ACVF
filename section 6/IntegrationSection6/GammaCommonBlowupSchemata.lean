@@ -1,4 +1,10 @@
-import IntegrationSection6.GammaChainSchemata
+module
+
+public import IntegrationSection6.GammaChainSchemata
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Finite first-order witnesses for common forward blowups. Both chains,
 all intermediate RV[k] objects, and the final weighted comparison chart

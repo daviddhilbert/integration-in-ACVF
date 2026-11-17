@@ -1,5 +1,11 @@
-import Integration7.UnaryPartitionVolumeDensities
-import Integration7.NativeFiniteMixedUnions
+module
+
+public import Integration7.UnaryPartitionVolumeDensities
+public import Integration7.NativeFiniteMixedUnions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Section 5.6 as a finite partition by actual real-definable domains
 and actual unary chains carrying the restricted original volume forms. -/

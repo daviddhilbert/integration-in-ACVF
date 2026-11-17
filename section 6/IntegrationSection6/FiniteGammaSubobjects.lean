@@ -1,6 +1,12 @@
-import IntegrationSection6.FiniteGammaRestrictions
-import IntegrationSection6.FiniteGammaAmbientIsos
-import IntegrationSection6.GammaRVRestrictions
+module
+
+public import IntegrationSection6.FiniteGammaRestrictions
+public import IntegrationSection6.FiniteGammaAmbientIsos
+public import IntegrationSection6.GammaRVRestrictions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Images of Gamma-definable finite RV subobjects and their actual charts. -/
 noncomputable section

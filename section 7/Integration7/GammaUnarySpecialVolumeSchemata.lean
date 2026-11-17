@@ -1,7 +1,13 @@
-import Integration7.GammaVolumeLiteralCharts
-import Integration7.GammaVolumeChainFocusSteps
-import Integration7.GammaVolumeChainSchemata
-import IntegrationSection6.FiniteGammaChartedChains
+module
+
+public import Integration7.GammaVolumeLiteralCharts
+public import Integration7.GammaVolumeChainFocusSteps
+public import Integration7.GammaVolumeChainSchemata
+public import IntegrationSection6.FiniteGammaChartedChains
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Alternating unary special chains admit finite volume blowup formula
 witnesses over their original Gamma base. Canonical steps are absorbed

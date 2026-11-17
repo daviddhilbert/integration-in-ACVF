@@ -1,7 +1,13 @@
-import Integration7.NativeVolumeDomains
-import Integration7.GammaRVGraphRefinementGeometry
-import Integration7.VFVolumeBijections
-import Integration7.MixedRetainedLabelVolumeForms
+module
+
+public import Integration7.NativeVolumeDomains
+public import Integration7.GammaRVGraphRefinementGeometry
+public import Integration7.VFVolumeBijections
+public import Integration7.MixedRetainedLabelVolumeForms
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Graph refinement is an actual VF-volume bijection for every
 transported density. A retained coordinate density stays the same literal

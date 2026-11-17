@@ -1,9 +1,15 @@
-import Integration7.HKZeroFamilyPositiveFieldIntegralProducts
-import Integration7.FrozenHeadIntegralAdditivity
-import Integration7.HKFrozenZeroHeadIntegralValues
-import Integration7.HKPositiveVolumeClassScalarExtensions
-import Integration7.HKPositiveVolumeClassProductExtensions
-import Integration7.DefinableVolumeParameterDescent
+module
+
+public import Integration7.HKZeroFamilyPositiveFieldIntegralProducts
+public import Integration7.FrozenHeadIntegralAdditivity
+public import Integration7.HKFrozenZeroHeadIntegralValues
+public import Integration7.HKPositiveVolumeClassScalarExtensions
+public import Integration7.HKPositiveVolumeClassProductExtensions
+public import Integration7.DefinableVolumeParameterDescent
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Positive coefficient products commute with genuine weighted-zero frozen fibre integration. The head-row identity descends to the original parameter context. -/
 noncomputable section

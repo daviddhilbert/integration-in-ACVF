@@ -1,6 +1,12 @@
-import Integration7.SignedCoordinateVolumeClasses
-import Integration7.OrdinaryPermutationIntegralCovariance
-import Integration7.VolumeFunctionIntegralPermutationCovariance
+module
+
+public import Integration7.SignedCoordinateVolumeClasses
+public import Integration7.OrdinaryPermutationIntegralCovariance
+public import Integration7.VolumeFunctionIntegralPermutationCovariance
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The exact raw determinant correction restores total integrals
 under VF order changes for both ordinary and positive family inputs.

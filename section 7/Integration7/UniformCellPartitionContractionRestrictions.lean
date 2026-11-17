@@ -1,5 +1,11 @@
-import Integration7.StandardTargetRestrictionPresentations
-import Integration7.UniformCellPartitionLabelCuts
+module
+
+public import Integration7.StandardTargetRestrictionPresentations
+public import Integration7.UniformCellPartitionLabelCuts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Each actual specified contraction of the entire graph family has
 constructed restrictions to all three actual partition pieces, with

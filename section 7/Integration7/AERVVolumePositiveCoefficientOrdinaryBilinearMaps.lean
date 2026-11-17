@@ -1,5 +1,11 @@
-import Integration7.AERVVolumeMixedScalarCoherence
-import Integration7.OrdinaryVolumeCoefficientCommSemiring
+module
+
+public import Integration7.AERVVolumeMixedScalarCoherence
+public import Integration7.OrdinaryVolumeCoefficientCommSemiring
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Positive coefficient multiplication is an actual bilinear map
 over the ordinary RV[0] coefficient semiring on positive AE functions. -/

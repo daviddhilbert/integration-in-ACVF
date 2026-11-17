@@ -1,6 +1,12 @@
-import Integration7.CanonicalFiniteRVObjects
-import Integration7.RVClassProductContractionValues
-import Section4.RVProductRestrictions
+module
+
+public import Integration7.CanonicalFiniteRVObjects
+public import Integration7.RVClassProductContractionValues
+public import Section4.RVProductRestrictions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The packed native unary head domains are exactly the product domain
 of the actual canonical unary pullback objects. -/

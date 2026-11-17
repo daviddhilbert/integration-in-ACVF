@@ -1,6 +1,12 @@
-import Integration7.NativeRelativeTranslations
-import IntegrationSection4.BalancedFibres
-import IntegrationSection6.StandardProgramPresentations
+module
+
+public import Integration7.NativeRelativeTranslations
+public import IntegrationSection4.BalancedFibres
+public import IntegrationSection6.StandardProgramPresentations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Complete translated RV fibres become saturated in their active
 coordinate. Swapping the two VF coordinates converts horizontal

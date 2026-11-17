@@ -1,5 +1,11 @@
-import Integration7.MixedVFBaseJacobianCharts
-import Integration7.VFAlmostEverywhereGenericValues
+module
+
+public import Integration7.MixedVFBaseJacobianCharts
+public import Integration7.VFAlmostEverywhereGenericValues
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! At every generic mixed-family point, the actual family Jacobian
 density is exactly the density of its pure VF base map. -/

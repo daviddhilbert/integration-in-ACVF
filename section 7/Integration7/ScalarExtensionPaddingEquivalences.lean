@@ -1,4 +1,10 @@
-import Integration7.SemimoduleScalarExtensionMaps
+module
+
+public import Integration7.SemimoduleScalarExtensionMaps
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Two maps whose composites multiply by a scalar become inverse
 after a scalar extension sending that scalar to one. -/

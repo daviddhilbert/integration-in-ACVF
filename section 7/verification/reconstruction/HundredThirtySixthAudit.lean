@@ -1,8 +1,14 @@
-import Integration7.HKZeroVFVolumeObjects
-import Integration7.HKZeroVolumeDescent
-import Integration7.HKZeroVolumeIntegration
-import Integration7.HKZeroVolumeLiftSurjectivity
-import Integration7.HKZeroVolumeLifts
+module
+
+public import Integration7.HKZeroVFVolumeObjects
+public import Integration7.HKZeroVolumeDescent
+public import Integration7.HKZeroVolumeIntegration
+public import Integration7.HKZeroVolumeLiftSurjectivity
+public import Integration7.HKZeroVolumeLifts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 set_option pp.universes true
 set_option pp.proofs false
 set_option pp.deepTerms true

@@ -1,6 +1,12 @@
-import IntegrationSection5.HullTranslationFocus
-import IntegrationSection5.ScalarRealPresentation
-import Section5.GammaLift
+module
+
+public import IntegrationSection5.HullTranslationFocus
+public import IntegrationSection5.ScalarRealPresentation
+public import Section5.GammaLift
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Construct an actual special translation, with complete original-Gamma
 certificates, from the source tag and a centre in its actual RV class. -/

@@ -1,5 +1,11 @@
-import Integration7.GammaVolumePresentationCongruence
-import Integration7.GammaVolumePresentationContexts
+module
+
+public import Integration7.GammaVolumePresentationCongruence
+public import Integration7.GammaVolumePresentationContexts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Equal full coordinate/density rows induce actual volume isomorphisms
 by the identity on labels, even when the presentation formulas differ. -/

@@ -1,9 +1,15 @@
-import Integration7.MatchingFixedContextVolumeMaps
-import Integration7.MatchingPreparedUnaryRelative
-import Integration7.LabelDeterminedPullbackRectangles
-import Integration7.RectanglePullbackVolumeConnections
-import Integration7.PreparedRectangleFiniteVolumes
-import Integration7.MixedTranslationContractionComparisons
+module
+
+public import Integration7.MatchingFixedContextVolumeMaps
+public import Integration7.MatchingPreparedUnaryRelative
+public import Integration7.LabelDeterminedPullbackRectangles
+public import Integration7.RectanglePullbackVolumeConnections
+public import Integration7.PreparedRectangleFiniteVolumes
+public import Integration7.MixedTranslationContractionComparisons
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Each actual translated matching-family contraction compares to
 its constructed prepared pullback volume object, in every specified

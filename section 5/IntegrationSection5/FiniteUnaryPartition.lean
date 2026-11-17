@@ -1,5 +1,11 @@
-import IntegrationSection5.FiniteMixedRVFibres
-import IntegrationSection5.UnaryPartition
+module
+
+public import IntegrationSection5.FiniteMixedRVFibres
+public import IntegrationSection5.UnaryPartition
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 noncomputable section
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false

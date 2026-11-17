@@ -1,7 +1,13 @@
-import Integration7.GammaVolumeSliceAssemblyGeometry
-import Integration7.NormalizedContractionParameterExtension
-import Integration7.GammaVolumeSliceDensityAssembly
-import IntegrationSection6.FiniteSelectedContractionSlices
+module
+
+public import Integration7.GammaVolumeSliceAssemblyGeometry
+public import Integration7.NormalizedContractionParameterExtension
+public import Integration7.GammaVolumeSliceDensityAssembly
+public import IntegrationSection6.FiniteSelectedContractionSlices
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Parameter enlargement preserves an actual finite contraction with no
 old selected volume, including its retained density and original-Gamma chart. -/

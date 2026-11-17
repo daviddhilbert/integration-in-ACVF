@@ -1,5 +1,11 @@
-import IntegrationSection3ACVF.FullGammaAtomicity
-import IntegrationSection3ACVF.AtomicCanonicalRegions
+module
+
+public import IntegrationSection3ACVF.FullGammaAtomicity
+public import IntegrationSection3ACVF.AtomicCanonicalRegions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A definable actual-Gamma invariant is constant on a disjoint
 definable family inside an atomic VF set. The family may be infinite. -/

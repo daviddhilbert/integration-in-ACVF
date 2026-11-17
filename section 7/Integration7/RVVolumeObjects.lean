@@ -1,5 +1,11 @@
-import Integration7.VolumeForms
-import Section9.RVFiniteEssential
+module
+
+public import Integration7.VolumeForms
+public import Section9.RVFiniteEssential
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Finite-volume RV objects with an actual nonzero definable density.
 Degree zero retains the ordinary RV[0] convention. -/

@@ -1,4 +1,10 @@
-import IntegrationSection3ACVF.OpenBallConstancy
+module
+
+public import IntegrationSection3ACVF.OpenBallConstancy
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The unary RV-valued consequence of Lemma 3.9 for a partial-domain graph. -/
 

@@ -1,5 +1,11 @@
-import Integration7.PreparedRectangleFiniteVolumes
-import Integration7.LabelDeterminedPullbackDescent
+module
+
+public import Integration7.PreparedRectangleFiniteVolumes
+public import Integration7.LabelDeterminedPullbackDescent
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Full RV volume descent for the actual conjugate of two specified
 rectangle preparations, with arbitrary retained coordinate density.

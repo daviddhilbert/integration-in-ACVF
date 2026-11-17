@@ -1,4 +1,10 @@
-import IntegrationSection6.TwoPartialFibreComparison
+module
+
+public import IntegrationSection6.TwoPartialFibreComparison
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Higher-arity first-two-coordinate exchange for actual ordered programs.
 The source fibre identity is a literal coordinate permutation, and the

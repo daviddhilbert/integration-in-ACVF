@@ -1,5 +1,11 @@
-import IntegrationSection5.RVSliceHeadImages
-import IntegrationSection5.HeadPreparation
+module
+
+public import IntegrationSection5.RVSliceHeadImages
+public import IntegrationSection5.HeadPreparation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 open Classical FirstOrder FirstOrder.Language

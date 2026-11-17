@@ -1,5 +1,11 @@
-import IntegrationSection6.NormalizedPresentations
-import Section5.RootConstruction
+module
+
+public import IntegrationSection6.NormalizedPresentations
+public import Section5.RootConstruction
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A genuine original-model focus is transported to its normalized
 presentation. Its locus, centre values and original parameter base are retained. -/

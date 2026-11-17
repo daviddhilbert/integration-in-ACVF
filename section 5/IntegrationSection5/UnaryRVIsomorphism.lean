@@ -1,6 +1,12 @@
-import IntegrationSection5.UnaryVolumeImages
-import IntegrationSection5.RVWeightUnary
-import IntegrationSection5.MapInverseBijection
+module
+
+public import IntegrationSection5.UnaryVolumeImages
+public import IntegrationSection5.RVWeightUnary
+public import IntegrationSection5.MapInverseBijection
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual RV[1,·] morphisms induced by a mutually contractible unary
 bijection. Both the weight and the finite-volume-image fields are proved. -/

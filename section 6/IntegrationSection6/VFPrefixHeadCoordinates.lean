@@ -1,5 +1,11 @@
-import IntegrationSection6.VFPrefixCoordinates
-import IntegrationSection5.HeadPreparation
+module
+
+public import IntegrationSection6.VFPrefixCoordinates
+public import IntegrationSection5.HeadPreparation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Prefix freezing commutes with head-coordinate fibres and deletion. -/
 noncomputable section

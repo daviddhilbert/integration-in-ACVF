@@ -1,4 +1,10 @@
-import Integration7.HKZeroRVDensityPresentations
+module
+
+public import Integration7.HKZeroRVDensityPresentations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Native finite presentations of arbitrary weighted zero coefficients.
 The exact density graph is used; no positive point is introduced. -/

@@ -1,6 +1,12 @@
-import Integration7.HKSupportedCoefficientProducts
-import Integration7.HKUnivSupportedVolumeEquivalences
-import Integration7.GradedSemiringActionLifts
+module
+
+public import Integration7.HKSupportedCoefficientProducts
+public import Integration7.HKUnivSupportedVolumeEquivalences
+public import Integration7.GradedSemiringActionLifts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Literal supported functions carry the full corrected graded
 coefficient action. The laws are transported through the faithful

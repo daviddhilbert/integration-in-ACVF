@@ -1,5 +1,11 @@
-import IntegrationSection4.PositionRows
-import IntegrationSection4.GammaDomainPreparation
+module
+
+public import IntegrationSection4.PositionRows
+public import IntegrationSection4.GammaDomainPreparation
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

@@ -1,4 +1,10 @@
-import Integration7.FixedLabelTranslationCommonBlowups
+module
+
+public import Integration7.FixedLabelTranslationCommonBlowups
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Corollary7.6 with the actual identity map compares any two specified
 same-order contractions of a fixed-label domain, preserving its literal

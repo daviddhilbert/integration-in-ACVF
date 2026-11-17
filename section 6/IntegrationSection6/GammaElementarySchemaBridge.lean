@@ -1,6 +1,12 @@
-import IntegrationSection6.GammaElementaryFamilyRows
-import IntegrationSection6.GammaAdmissibilitySchemata
-import IntegrationSection6.GammaFiniteElementary
+module
+
+public import IntegrationSection6.GammaElementaryFamilyRows
+public import IntegrationSection6.GammaAdmissibilitySchemata
+public import IntegrationSection6.GammaFiniteElementary
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The uniform elementary family has valid finite schema rows whenever
 the represented center row is admissible. The actual native elementary

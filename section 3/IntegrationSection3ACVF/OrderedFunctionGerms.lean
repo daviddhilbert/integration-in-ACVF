@@ -1,6 +1,12 @@
-import IntegrationSection3ACVF.FiniteOrderGerms
-import IntegrationSection3ACVF.OrderedGermMonotonicity
-import IntegrationSection3ACVF.OrderedLocalExtrema
+module
+
+public import IntegrationSection3ACVF.FiniteOrderGerms
+public import IntegrationSection3ACVF.OrderedGermMonotonicity
+public import IntegrationSection3ACVF.OrderedLocalExtrema
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Injective functions have two strict one-sided signs at interior
 points whenever their comparison cuts have actual finite controllers.

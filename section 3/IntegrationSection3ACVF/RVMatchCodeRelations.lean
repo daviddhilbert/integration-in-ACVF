@@ -1,5 +1,11 @@
-import IntegrationSection3ACVF.CofiniteRVRows
-import IntegrationSection3ACVF.RealParameterTuples
+module
+
+public import IntegrationSection3ACVF.CofiniteRVRows
+public import IntegrationSection3ACVF.RealParameterTuples
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Uniform real-code relations for the Gamma matching. Both value labels
 remain free variables and every proper representative is retained. -/

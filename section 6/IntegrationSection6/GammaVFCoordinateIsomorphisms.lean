@@ -1,5 +1,11 @@
-import IntegrationSection6.GammaRealImages
-import IntegrationSection6.MixedCoordinatePointMaps
+module
+
+public import IntegrationSection6.GammaRealImages
+public import IntegrationSection6.MixedCoordinatePointMaps
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual Gamma isomorphisms for bijective reindexing of VF coordinates,
 with every RV label unchanged. -/

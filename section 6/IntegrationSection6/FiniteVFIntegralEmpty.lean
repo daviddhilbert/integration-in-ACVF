@@ -1,7 +1,13 @@
-import IntegrationSection6.FiniteGammaEmptyIsomorphisms
-import IntegrationSection6.FiniteVFIntegralValues
-import IntegrationSection6.GammaVFFiniteRestrictions
-import IntegrationSection6.GammaObjectPresentationIsomorphisms
+module
+
+public import IntegrationSection6.FiniteGammaEmptyIsomorphisms
+public import IntegrationSection6.FiniteVFIntegralValues
+public import IntegrationSection6.GammaVFFiniteRestrictions
+public import IntegrationSection6.GammaObjectPresentationIsomorphisms
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Integration values of actual VF[k] objects satisfy the definable
 binary partition law. The RV pieces and their class identity are constructed

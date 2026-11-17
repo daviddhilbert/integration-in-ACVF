@@ -1,9 +1,15 @@
-import Integration7.HKZeroFiniteCoefficientContractionCharts
-import Integration7.HKNativeZeroCoefficientFieldIntegrals
-import Integration7.HKZeroRVNativeDensityPresentations
-import Integration7.HKZeroFamilyFiniteProductBijections
-import Integration7.FieldBaseUnaryRetainedContractions
-import Integration7.FieldBaseUnarySpecialPreparations
+module
+
+public import Integration7.HKZeroFiniteCoefficientContractionCharts
+public import Integration7.HKNativeZeroCoefficientFieldIntegrals
+public import Integration7.HKZeroRVNativeDensityPresentations
+public import Integration7.HKZeroFamilyFiniteProductBijections
+public import Integration7.FieldBaseUnaryRetainedContractions
+public import Integration7.FieldBaseUnarySpecialPreparations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Weighted finite factors commute with actual unary field-base
 integration on zero-valued families. The result retains both forms

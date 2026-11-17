@@ -1,5 +1,11 @@
-import Integration7.SemiringGroupificationAdditiveMaps
-import Integration7.VolumeIntegrationGroupification
+module
+
+public import Integration7.SemiringGroupificationAdditiveMaps
+public import Integration7.VolumeIntegrationGroupification
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual common-blowup ring is additively the direct sum of the completed
 geometric degree components. This constructs the grading decomposition

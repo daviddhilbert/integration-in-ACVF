@@ -1,5 +1,11 @@
-import IntegrationSection6.ProductGeometry
-import IntegrationSection6.ElementaryKeys
+module
+
+public import IntegrationSection6.ProductGeometry
+public import IntegrationSection6.ElementaryKeys
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Elementary blowup in the second factor, using the checked cartesian
 associator on the actual three label blocks. -/

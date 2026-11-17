@@ -1,5 +1,11 @@
-import IntegrationSection5.UnaryFocusImages
-import IntegrationSection5.PulledFocusGeometry
+module
+
+public import IntegrationSection5.UnaryFocusImages
+public import IntegrationSection5.PulledFocusGeometry
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Unary special bijections preserve a zero VF coordinate. In particular,
 a point hit by a focus remains zero in every later special transformation. -/

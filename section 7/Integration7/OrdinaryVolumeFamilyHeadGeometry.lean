@@ -1,6 +1,12 @@
-import Integration7.OrdinaryVolumeFamilyCoordinateBijections
-import Integration7.OrdinaryVolumeFamilyHeadIntegrals
-import Integration7.GenericRelativeHeadVolumeComparison
+module
+
+public import Integration7.OrdinaryVolumeFamilyCoordinateBijections
+public import Integration7.OrdinaryVolumeFamilyHeadIntegrals
+public import Integration7.GenericRelativeHeadVolumeComparison
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Pointwise equal ordinary families have Gamma-geometrically equal
 head integrals over generic retained VF tuples, on the original base. -/

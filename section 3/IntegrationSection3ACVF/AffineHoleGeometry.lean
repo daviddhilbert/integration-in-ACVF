@@ -1,10 +1,16 @@
-import IntegrationSection3ACVF.BallEnlargementGeometry
-import IntegrationSection3ACVF.AffineArithmetic
-import IntegrationSection3ACVF.OrdinaryRadiusFibres
-import IntegrationSection3ACVF.CanonicalHoles
-import IntegrationSection3.AffineHoleClosure
-import IntegrationSection3.AffineHoleFormulas
-import IntegrationSection3.DefinableHoleRefinement
+module
+
+public import IntegrationSection3ACVF.BallEnlargementGeometry
+public import IntegrationSection3ACVF.AffineArithmetic
+public import IntegrationSection3ACVF.OrdinaryRadiusFibres
+public import IntegrationSection3ACVF.CanonicalHoles
+public import IntegrationSection3.AffineHoleClosure
+public import IntegrationSection3.AffineHoleFormulas
+public import IntegrationSection3.DefinableHoleRefinement
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Geometry for the intrinsic finite affine-hole graph. Choices in
 these finiteness proofs do not enter the graph or the parameter base. -/

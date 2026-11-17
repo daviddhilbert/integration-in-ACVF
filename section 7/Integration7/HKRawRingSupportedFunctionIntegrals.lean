@@ -1,6 +1,12 @@
-import Integration7.HKRawSupportedFunctionLinearIntegrals
-import Integration7.HKRawVolumeKernelIdeal
-import Integration7.ScalarExtensionLinearFunctionals
+module
+
+public import Integration7.HKRawSupportedFunctionLinearIntegrals
+public import Integration7.HKRawVolumeKernelIdeal
+public import Integration7.ScalarExtensionLinearFunctionals
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Balanced scalar extension gives the unnormalized supported function
 modules over the corrected Grothendieck coefficient ring. Actual

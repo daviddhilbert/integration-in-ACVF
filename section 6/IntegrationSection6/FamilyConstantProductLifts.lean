@@ -1,6 +1,12 @@
-import IntegrationSection6.DefinableFamilyOperations
-import IntegrationSection6.GammaMixedProductIsomorphisms
-import IntegrationSection6.GammaVFCoordinateIsomorphisms
+module
+
+public import IntegrationSection6.DefinableFamilyOperations
+public import IntegrationSection6.GammaMixedProductIsomorphisms
+public import IntegrationSection6.GammaVFCoordinateIsomorphisms
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Multiplication by a constant RV representative corresponds to the
 literal Cartesian product of its lift and the total family lift. -/

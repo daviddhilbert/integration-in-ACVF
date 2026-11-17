@@ -1,6 +1,12 @@
-import Integration7.GammaRVVolumeSchemata
-import Integration7.VolumeSchemaRowSemantics
-import IntegrationSection6.GammaSchemaRowEquality
+module
+
+public import Integration7.GammaRVVolumeSchemata
+public import Integration7.VolumeSchemaRowSemantics
+public import IntegrationSection6.GammaSchemaRowEquality
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Exact row equality for coordinate-and-density schemata. The density
 template reuses native relation-formula operations only; no finite-fibre

@@ -1,4 +1,10 @@
-import IntegrationSection4.BalancedBallClasses
+module
+
+public import IntegrationSection4.BalancedBallClasses
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Exact vertical and horizontal translation normal forms for actual 2-cells.
 These are geometric images on the unchanged VF and RV carriers. -/

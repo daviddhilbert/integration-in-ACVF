@@ -1,5 +1,11 @@
-import Integration7.ScalarRVAlgebra
-import Section3.GammaCodeDefinability
+module
+
+public import Integration7.ScalarRVAlgebra
+public import Section3.GammaCodeDefinability
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A definable total unit-valued replacement of an RV scalar. It keeps
 the scalar when its absolute value is one and uses one otherwise. -/

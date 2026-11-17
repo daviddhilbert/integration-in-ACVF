@@ -1,7 +1,13 @@
-import IntegrationSection6.FiniteGammaRestrictions
-import IntegrationSection6.FiniteGammaCoproducts
-import IntegrationSection6.FiniteGammaAmbientIsos
-import IntegrationSection6.PartitionCoordinates
+module
+
+public import IntegrationSection6.FiniteGammaRestrictions
+public import IntegrationSection6.FiniteGammaCoproducts
+public import IntegrationSection6.FiniteGammaAmbientIsos
+public import IntegrationSection6.PartitionCoordinates
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A Gamma-definable RV locus and its complement give an actual RV[k]
 partition isomorphism whose entire graph remains over the original base. -/

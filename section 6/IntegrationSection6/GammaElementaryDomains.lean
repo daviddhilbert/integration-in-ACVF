@@ -1,5 +1,11 @@
-import IntegrationSection6.GammaRVRealSets
-import IntegrationSection6.ElementaryCoordinates
+module
+
+public import IntegrationSection6.GammaRVRealSets
+public import IntegrationSection6.ElementaryCoordinates
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The elementary domain is Gamma-definable directly from its actual
 product construction, over an arbitrary original real/Gamma base. -/

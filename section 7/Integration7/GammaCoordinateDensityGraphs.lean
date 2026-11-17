@@ -1,9 +1,15 @@
-import Integration7.GammaVolumeObjectGraphPromotion
-import Integration7.CoordinateDensityVolumeObjects
-import Integration7.CanonicalFiniteRVObjects
-import IntegrationSection6.FiniteGammaObjects
-import IntegrationSection6.MixedCoordinatePointMaps
-import Section5.GammaInvariantLogic
+module
+
+public import Integration7.GammaVolumeObjectGraphPromotion
+public import Integration7.CoordinateDensityVolumeObjects
+public import Integration7.CanonicalFiniteRVObjects
+public import IntegrationSection6.FiniteGammaObjects
+public import IntegrationSection6.MixedCoordinatePointMaps
+public import Section5.GammaInvariantLogic
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A retained coordinate density has its full original-Gamma graph
 whenever its domain does. Canonical native Gamma objects retain the exact

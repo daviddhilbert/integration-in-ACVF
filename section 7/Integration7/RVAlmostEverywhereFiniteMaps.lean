@@ -1,5 +1,11 @@
-import Integration7.VolumeAlmostEverywhere
-import Integration7.DefinableMapPreimages
+module
+
+public import Integration7.VolumeAlmostEverywhere
+public import Integration7.DefinableMapPreimages
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Pulling a small exceptional set back through a finite-fibre map. -/
 

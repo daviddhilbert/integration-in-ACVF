@@ -1,5 +1,11 @@
-import Integration7.AllDegreeVolumeData
-import Integration7.AllDegreeVolumeCoproducts
+module
+
+public import Integration7.AllDegreeVolumeData
+public import Integration7.AllDegreeVolumeCoproducts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual coproducts of density-bearing data, before the ordinary
 degree-zero object forgets its auxiliary density. -/

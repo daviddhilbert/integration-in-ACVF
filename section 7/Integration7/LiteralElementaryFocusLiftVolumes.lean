@@ -1,5 +1,11 @@
-import Integration7.CanonicalFocusLiftVolumeMaps
-import Integration7.RawVFVolumeComposition
+module
+
+public import Integration7.CanonicalFocusLiftVolumeMaps
+public import Integration7.RawVFVolumeComposition
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A full elementary focus gives an actual volume-preserving bijection
 between the released RV lifts, with an arbitrary original RV density.

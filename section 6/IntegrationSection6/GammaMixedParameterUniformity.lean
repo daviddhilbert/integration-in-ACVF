@@ -1,6 +1,12 @@
-import IntegrationSection6.GammaSortedParameterPreservation
-import IntegrationSection6.MixedVFFibreCompactness
-import IntegrationSection6.VFParameterFibreIsomorphisms
+module
+
+public import IntegrationSection6.GammaSortedParameterPreservation
+public import IntegrationSection6.MixedVFFibreCompactness
+public import IntegrationSection6.VFParameterFibreIsomorphisms
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Fibrewise compactness can preserve all VF parameters, as required
 for changing representatives before a projection pushforward. -/

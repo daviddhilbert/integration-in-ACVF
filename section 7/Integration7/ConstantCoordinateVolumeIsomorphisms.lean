@@ -1,6 +1,12 @@
-import Integration7.LowerDimensionRVVolumeIsomorphisms
-import Integration7.RVCoordinateSelection
-import Integration7.NondegenerateFiniteIso
+module
+
+public import Integration7.LowerDimensionRVVolumeIsomorphisms
+public import Integration7.RVCoordinateSelection
+public import Integration7.NondegenerateFiniteIso
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A finite RV[2] object with one constant volume coordinate has RV
 dimension at most one. Consequently equal densities and equal products

@@ -1,6 +1,12 @@
-import Integration7.SelectedVolumeFamilies
-import Section4.ProductBijections
-import Section4.DefinableCategory
+module
+
+public import Integration7.SelectedVolumeFamilies
+public import Section4.ProductBijections
+public import Section4.DefinableCategory
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A definable VF base bijection acts on a mixed family by changing
 only its VF tuple. Its actual image retains the finite selected RV fibres. -/

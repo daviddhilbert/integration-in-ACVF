@@ -1,8 +1,14 @@
-import Integration7.GammaFullFocusVolumeComparison
-import Integration7.GammaComplementVolumeComparison
-import Integration7.GammaVolumePullbackPartitions
-import Integration7.VolumePartialFocusImages
-import IntegrationSection6.FiniteGammaPartialCharts
+module
+
+public import Integration7.GammaFullFocusVolumeComparison
+public import Integration7.GammaComplementVolumeComparison
+public import Integration7.GammaVolumePullbackPartitions
+public import Integration7.VolumePartialFocusImages
+public import IntegrationSection6.FiniteGammaPartialCharts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A partial last-coordinate focus has genuine volume blowup split
 charts over the original Gamma base, with its inactive labels unchanged. -/

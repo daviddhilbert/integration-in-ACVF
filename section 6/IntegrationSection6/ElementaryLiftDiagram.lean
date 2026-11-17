@@ -1,5 +1,11 @@
-import IntegrationSection6.GammaFocusDiagram
-import IntegrationSection6.GammaElementaryFocus
+module
+
+public import IntegrationSection6.GammaFocusDiagram
+public import IntegrationSection6.GammaElementaryFocus
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Lemma6.12 over the original VF/Gamma-generated base. The construction
 retains the full focus, special length one, both bijective arrows and their

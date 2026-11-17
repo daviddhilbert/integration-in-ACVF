@@ -1,6 +1,12 @@
-import Integration7.UniformMixedCellPresentations
-import Integration7.NativeRVGraphVolumeRefinements
-import Integration7.NativeRelativeTranslations
+module
+
+public import Integration7.UniformMixedCellPresentations
+public import Integration7.NativeRVGraphVolumeRefinements
+public import Integration7.NativeRelativeTranslations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The global cell positioning function is an actual original-Gamma
 centre on the graph refinement. It is constant when the other VF

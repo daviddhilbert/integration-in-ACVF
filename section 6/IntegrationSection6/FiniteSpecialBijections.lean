@@ -1,4 +1,10 @@
-import IntegrationSection6.FiniteRVTheorems
+module
+
+public import IntegrationSection6.FiniteRVTheorems
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Corollary6.10 restated on RV[k]: the special image and every
 intermediate blowup are objects of the finite-volume full category. -/

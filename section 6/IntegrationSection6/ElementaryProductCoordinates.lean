@@ -1,4 +1,10 @@
-import IntegrationSection6.ProductGeometry
+module
+
+public import IntegrationSection6.ProductGeometry
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Literal rearrangement of (U,R,s) into (U,s,R). -/
 noncomputable section

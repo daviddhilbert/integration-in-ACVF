@@ -1,6 +1,12 @@
-import Integration7.HKPreparedWeightedComparisons
-import Integration7.HKWeightedEmptyVolumeBlockSwaps
-import Integration7.GammaOrdinaryUnaryPreparedVolumeComparison
+module
+
+public import Integration7.HKPreparedWeightedComparisons
+public import Integration7.HKWeightedEmptyVolumeBlockSwaps
+public import Integration7.GammaOrdinaryUnaryPreparedVolumeComparison
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A constructed weighted preparation compares specified unary
 contractions with arbitrary density, retaining original-Gamma geometry. -/

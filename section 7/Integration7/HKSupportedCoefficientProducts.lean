@@ -1,7 +1,13 @@
-import Integration7.HKSupportedGradedVolumeFunctions
-import Integration7.HKGradedAEVolumeActionCoherence
-import Integration7.NormalizedOrdinaryVolumeSupports
-import Integration7.SupportedPositiveVolumeCoefficients
+module
+
+public import Integration7.HKSupportedGradedVolumeFunctions
+public import Integration7.HKGradedAEVolumeActionCoherence
+public import Integration7.NormalizedOrdinaryVolumeSupports
+public import Integration7.SupportedPositiveVolumeCoefficients
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! All genuine weighted coefficient products retain literal VF
 support. Their supported quotients forget to the actual AE products. -/

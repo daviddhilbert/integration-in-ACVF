@@ -1,7 +1,13 @@
-import Integration7.GeneratedOrdinaryContractionExchange
-import Integration7.OrdinarySelectedTailContractionCharts
-import Integration7.SelectedVFTailFirstTwoOrders
-import IntegrationSection6.GammaOrdinaryContractionPresentations
+module
+
+public import Integration7.GeneratedOrdinaryContractionExchange
+public import Integration7.OrdinarySelectedTailContractionCharts
+public import Integration7.SelectedVFTailFirstTwoOrders
+public import IntegrationSection6.GammaOrdinaryContractionPresentations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! First-two contraction exchange with arbitrary retained RV labels
 over the standing generated base. Realize the labels by VF tails, use

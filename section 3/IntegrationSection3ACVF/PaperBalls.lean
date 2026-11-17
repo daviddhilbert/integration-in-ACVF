@@ -1,5 +1,11 @@
-import IntegrationSection3ACVF.GammaRadiusAtomicity
-import IntegrationSection3ACVF.PuncturedGeometry
+module
+
+public import IntegrationSection3ACVF.GammaRadiusAtomicity
+public import IntegrationSection3ACVF.PuncturedGeometry
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-!
 # The sequel's ball and primitive-type predicates

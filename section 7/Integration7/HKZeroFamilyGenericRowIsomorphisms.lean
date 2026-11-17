@@ -1,7 +1,13 @@
-import Integration7.HKZeroDensityGraphRowIsomorphisms
-import Integration7.GammaOrdinaryHeadFibreWitnesses
-import Integration7.HKAEZeroVolumeFunctions
-import Integration7.PureVFFormulaLoci
+module
+
+public import Integration7.HKZeroDensityGraphRowIsomorphisms
+public import Integration7.GammaOrdinaryHeadFibreWitnesses
+public import Integration7.HKAEZeroVolumeFunctions
+public import Integration7.PureVFFormulaLoci
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! AE equality of weighted-zero functions gives exact-density point
 isomorphisms at every generic full VF tuple on the original Gamma base. -/

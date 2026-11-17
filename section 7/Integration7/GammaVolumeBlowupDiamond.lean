@@ -1,6 +1,12 @@
-import Integration7.GammaVolumeOverlapRefinement
-import Integration7.GammaElementaryBlowupPartitions
-import Integration7.GammaVolumeCoproductRearrangements
+module
+
+public import Integration7.GammaVolumeOverlapRefinement
+public import Integration7.GammaElementaryBlowupPartitions
+public import Integration7.GammaVolumeCoproductRearrangements
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual volume-blowup square retains original-Gamma data on both
 new steps and their endpoint isomorphism. No quotient-class permutation

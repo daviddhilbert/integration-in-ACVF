@@ -1,5 +1,11 @@
-import IntegrationSection5.RelativeSpecialExtension
-import Section5.UnarySets
+module
+
+public import IntegrationSection5.RelativeSpecialExtension
+public import Section5.UnarySets
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Restriction of actual fibre-special chains, retaining their end kind.
 The primitive restriction is the pinned focus/canonical construction. -/

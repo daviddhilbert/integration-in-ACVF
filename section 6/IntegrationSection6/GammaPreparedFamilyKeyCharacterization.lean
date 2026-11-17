@@ -1,6 +1,12 @@
-import IntegrationSection6.GammaPreparedFamilyNormalForm
-import IntegrationSection6.GammaPreparedIndexValues
-import IntegrationSection6.GammaIndexedFiniteObjects
+module
+
+public import IntegrationSection6.GammaPreparedFamilyNormalForm
+public import IntegrationSection6.GammaPreparedIndexValues
+public import IntegrationSection6.GammaIndexedFiniteObjects
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A prepared mixed-family image is exactly the indexed RV domain with
 its VF leading terms fixed by the first key coordinates. -/

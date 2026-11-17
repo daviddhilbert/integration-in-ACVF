@@ -1,5 +1,11 @@
-import Integration7.MixedHeadFibres
-import Integration7.SelectedVolumeFamilies
+module
+
+public import Integration7.MixedHeadFibres
+public import Integration7.SelectedVolumeFamilies
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Freezing the retained VF tuple gives an actual unary selected
 volume family in its genuine finite-parameter context. No VF field or

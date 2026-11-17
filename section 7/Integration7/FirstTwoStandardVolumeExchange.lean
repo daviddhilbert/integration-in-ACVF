@@ -1,9 +1,15 @@
-import Integration7.OrderedFirstTwoVolumeExchange
-import Integration7.GeometricFiniteStandardVolumeComparisons
-import Integration7.RetainedDensityContractionObjects
-import Integration7.SelectedVolumeCoordinatePermutations
-import Integration7.GammaPermutedSelectedVolumeFamilies
-import IntegrationSection6.PermutationFiniteFibres
+module
+
+public import Integration7.OrderedFirstTwoVolumeExchange
+public import Integration7.GeometricFiniteStandardVolumeComparisons
+public import Integration7.RetainedDensityContractionObjects
+public import Integration7.SelectedVolumeCoordinatePermutations
+public import Integration7.GammaPermutedSelectedVolumeFamilies
+public import IntegrationSection6.PermutationFiniteFibres
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Lemma7.7 in every VF arity: exchanging the first two coordinates of
 the specified contraction order gives common forward original-Gamma

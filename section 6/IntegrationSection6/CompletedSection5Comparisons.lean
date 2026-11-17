@@ -1,7 +1,13 @@
-import IntegrationSection5.FiniteNormalization
-import IntegrationSection6.FiniteStandardContractions
-import IntegrationSection6.FiniteGammaIsomorphisms
-import IntegrationSection6.FiniteGammaWeightedIsos
+module
+
+public import IntegrationSection5.FiniteNormalization
+public import IntegrationSection6.FiniteStandardContractions
+public import IntegrationSection6.FiniteGammaIsomorphisms
+public import IntegrationSection6.FiniteGammaWeightedIsos
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Convert the completed Section 5 category isomorphisms to the actual
 original-Gamma finite-object interface consumed by Section 6. -/

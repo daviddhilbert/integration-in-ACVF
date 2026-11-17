@@ -1,5 +1,11 @@
-import IntegrationSection3ACVF.AdjoinGamma
-import Section3.GammaBaseTools
+module
+
+public import IntegrationSection3ACVF.AdjoinGamma
+public import Section3.GammaBaseTools
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Identify the predecessor's actual Gamma-named base with the Gamma-only
 instance of the sequel's combined interpreted base. No real representative

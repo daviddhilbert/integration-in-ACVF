@@ -1,4 +1,10 @@
-import IntegrationSection6.FiniteGammaWeightedIsos
+module
+
+public import IntegrationSection6.FiniteGammaWeightedIsos
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! An actual ambient isomorphism between finite objects, together with
 its original-Gamma graph, gives an isomorphism in RV[k] with that graph. -/

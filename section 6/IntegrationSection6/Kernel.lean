@@ -1,5 +1,11 @@
-import IntegrationSection6.KernelPositiveDegree
-import IntegrationSection6.KernelDegreeZero
+module
+
+public import IntegrationSection6.KernelPositiveDegree
+public import IntegrationSection6.KernelDegreeZero
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Lemma6.17's kernel implication in every finite RV degree. The full
 biconditional here retains the previously explicit canonical-presentation

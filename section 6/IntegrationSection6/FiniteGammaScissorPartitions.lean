@@ -1,4 +1,10 @@
-import IntegrationSection6.FiniteGammaScissorClasses
+module
+
+public import IntegrationSection6.FiniteGammaScissorClasses
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 noncomputable section
 set_option backward.isDefEq.respectTransparency false

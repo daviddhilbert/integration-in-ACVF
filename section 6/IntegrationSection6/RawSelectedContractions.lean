@@ -1,6 +1,12 @@
-import IntegrationSection6.GammaRawStandardContractions
-import IntegrationSection6.RawSelectedNormalizationValues
-import IntegrationSection6.FiniteGammaIsoLaws
+module
+
+public import IntegrationSection6.GammaRawStandardContractions
+public import IntegrationSection6.RawSelectedNormalizationValues
+public import IntegrationSection6.FiniteGammaIsoLaws
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual finite contraction objects before first-volume normalization.
 The full volume tuple, including selected original labels, is preserved. -/

@@ -1,6 +1,12 @@
-import Integration7.OrdinaryIndexedEssentialRestrictions
-import Integration7.GammaIndexedOrdinaryUnitComparisons
-import Integration7.IndexedVolumeFiniteWitnessGluing
+module
+
+public import Integration7.OrdinaryIndexedEssentialRestrictions
+public import Integration7.GammaIndexedOrdinaryUnitComparisons
+public import Integration7.IndexedVolumeFiniteWitnessGluing
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Ordinary finite-row chart witnesses are needed only at nonzero
 base-volume indices. Their actual unit-density total objects are then

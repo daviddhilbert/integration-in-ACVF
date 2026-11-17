@@ -1,4 +1,10 @@
-import IntegrationSection6.BlowupRelabeling
+module
+
+public import IntegrationSection6.BlowupRelabeling
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The relabeling in6.12 has the stated quotient coordinate, including
 the absorbing parameter at the centre. -/

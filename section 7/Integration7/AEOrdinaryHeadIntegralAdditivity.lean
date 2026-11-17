@@ -1,7 +1,13 @@
-import Integration7.FrozenOrdinaryHeadIntegralAdditivity
-import Integration7.AEVolumeHeadZeros
-import Integration7.AERVVolumeFunctionAdditiveStructure
-import Integration7.AEOrdinaryVolumeFunctionAddition
+module
+
+public import Integration7.FrozenOrdinaryHeadIntegralAdditivity
+public import Integration7.AEVolumeHeadZeros
+public import Integration7.AERVVolumeFunctionAdditiveStructure
+public import Integration7.AEOrdinaryVolumeFunctionAddition
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual ordinary degree-zero partial integral is additive on
 almost-everywhere classes and creates its genuine first volume coordinate. -/

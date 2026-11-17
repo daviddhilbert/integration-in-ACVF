@@ -1,6 +1,12 @@
-import Integration7.UniformBalancedHorizontalCentres
-import Integration7.GammaRelativeTranslations
-import Integration7.NativeRelativeTranslationVolumes
+module
+
+public import Integration7.UniformBalancedHorizontalCentres
+public import Integration7.GammaRelativeTranslations
+public import Integration7.NativeRelativeTranslationVolumes
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The horizontal translation of the entire balanced-row family is
 an actual original-Gamma bijection with VF Jacobian one almost everywhere,

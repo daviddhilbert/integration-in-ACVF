@@ -1,4 +1,10 @@
-import IntegrationSection3ACVF.AdjoinGamma
+module
+
+public import IntegrationSection3ACVF.AdjoinGamma
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Specializing a finite Gamma-only parameter support uses RV representatives
 and only the original VF constants0/1. No new VF coefficient is named. -/

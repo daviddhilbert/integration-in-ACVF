@@ -1,5 +1,11 @@
-import IntegrationSection6.GammaGraphPresentationExtension
-import IntegrationSection6.FiniteGammaCoproducts
+module
+
+public import IntegrationSection6.GammaGraphPresentationExtension
+public import IntegrationSection6.FiniteGammaCoproducts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual finite coproducts of graph presentations at their common
 internal code union, with literal tagged domain and volume formulas. -/

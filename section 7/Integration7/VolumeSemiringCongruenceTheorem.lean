@@ -1,4 +1,10 @@
-import Integration7.GradedVolumeBlowupProjection
+module
+
+public import Integration7.GradedVolumeBlowupProjection
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Lemma 7.4: common forward blowups define a congruence in every
 degree, compatible with actual coproduct addition and the graded product. -/

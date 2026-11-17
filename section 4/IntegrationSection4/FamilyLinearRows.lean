@@ -1,5 +1,11 @@
-import IntegrationSection4.FiniteScalarFamilies
-import IntegrationSection3ACVF.GammaLinearBallRow
+module
+
+public import IntegrationSection4.FiniteScalarFamilies
+public import IntegrationSection3ACVF.GammaLinearBallRow
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The complete radius/slope relation with free family parameters.
 This is the checked GammaLinearBallRow construction with the context

@@ -1,4 +1,10 @@
-import Integration7.GammaVolumeIsoRecoding
+module
+
+public import Integration7.GammaVolumeIsoRecoding
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Finite volume blowup data recode over a new sorted parameter block.
 All exact chain lengths and the absence of extra parameters are retained. -/

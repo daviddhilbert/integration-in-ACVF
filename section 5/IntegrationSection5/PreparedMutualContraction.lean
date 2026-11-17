@@ -1,5 +1,11 @@
-import IntegrationSection5.MatchedChainInduction
-import IntegrationSection5.QuotientBijection
+module
+
+public import IntegrationSection5.MatchedChainInduction
+public import IntegrationSection5.QuotientBijection
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The geometric matching construction yields an actual definable bijection
 of RV keys. Preparation and the open-to-open partition are separate inputs. -/

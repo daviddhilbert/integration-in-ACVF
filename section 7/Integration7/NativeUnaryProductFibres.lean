@@ -1,4 +1,10 @@
-import Integration7.NativeUnaryProductMaps
+module
+
+public import Integration7.NativeUnaryProductMaps
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Coordinate fibres of actual unary products, and the exact fibre map
 of the first-factor action, including empty frozen-coordinate fibres. -/

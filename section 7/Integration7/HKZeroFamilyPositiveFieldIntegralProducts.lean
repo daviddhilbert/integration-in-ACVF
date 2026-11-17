@@ -1,7 +1,13 @@
-import Integration7.HKZeroFinitePositiveCoefficientRowIsomorphisms
-import Integration7.FiniteCoefficientUnaryFieldIntegrals
-import Integration7.FieldBaseAppendedIntegralIndependence
-import Integration7.RVCoordinateDensityPresentations
+module
+
+public import Integration7.HKZeroFinitePositiveCoefficientRowIsomorphisms
+public import Integration7.FiniteCoefficientUnaryFieldIntegrals
+public import Integration7.FieldBaseAppendedIntegralIndependence
+public import Integration7.RVCoordinateDensityPresentations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Every positive coefficient commutes with the actual unary field-base integral of a weighted-zero-valued family. Both densities survive the genuine product chart and row comparisons. -/
 noncomputable section

@@ -1,6 +1,12 @@
-import IntegrationSection5.FocusRefinement
-import IntegrationSection5.PreparedInverseGeometry
-import IntegrationSection5.UnarySpecialZeros
+module
+
+public import IntegrationSection5.FocusRefinement
+public import IntegrationSection5.PreparedInverseGeometry
+public import IntegrationSection5.UnarySpecialZeros
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Marked target focuses give the zero-point condition required by the
 reverse contractibility refinement. No such condition is assumed of the

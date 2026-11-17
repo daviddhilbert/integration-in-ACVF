@@ -1,12 +1,18 @@
-import Integration7.AdmissibleHeadPointIsomorphisms
-import Integration7.AdmissibleHeadPointMaps
-import Integration7.AdmissibleHeadVolumeFactors
-import Integration7.BasicVolumeRelation
-import Integration7.BasicVolumeRelationObjects
-import Integration7.ElementaryPrincipalVolumeFactors
-import Integration7.EssentialFiniteBijections
-import Integration7.OrdinaryHeadFactorBoundary
-import Integration7.PositiveElementaryBasicGeneration
+module
+
+public import Integration7.AdmissibleHeadPointIsomorphisms
+public import Integration7.AdmissibleHeadPointMaps
+public import Integration7.AdmissibleHeadVolumeFactors
+public import Integration7.BasicVolumeRelation
+public import Integration7.BasicVolumeRelationObjects
+public import Integration7.ElementaryPrincipalVolumeFactors
+public import Integration7.EssentialFiniteBijections
+public import Integration7.OrdinaryHeadFactorBoundary
+public import Integration7.PositiveElementaryBasicGeneration
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 set_option pp.universes true
 set_option pp.proofs false

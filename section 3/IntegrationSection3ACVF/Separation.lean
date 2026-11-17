@@ -1,5 +1,11 @@
-import IntegrationSection3ACVF.OrdinarySeparation
-import IntegrationSection3ACVF.OpenBallConstancy
+module
+
+public import IntegrationSection3ACVF.OrdinarySeparation
+public import IntegrationSection3ACVF.OpenBallConstancy
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Packaging of corrected Lemma 3.11 in the sequel's ball
 conventions. Nonemptiness of the relation is the author-approved correction.

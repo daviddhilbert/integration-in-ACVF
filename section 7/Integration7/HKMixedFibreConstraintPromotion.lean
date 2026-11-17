@@ -1,5 +1,11 @@
-import Integration7.HKMixedFibreConstraintRows
-import Integration7.HKPointIsomorphismCodes
+module
+
+public import Integration7.HKMixedFibreConstraintRows
+public import Integration7.HKPointIsomorphismCodes
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Pointwise isomorphisms satisfying an actual mixed graph relation
 uniformize to one original-base chart inside that same relation. -/

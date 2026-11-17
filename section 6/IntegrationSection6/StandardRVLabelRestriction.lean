@@ -1,5 +1,11 @@
-import IntegrationSection6.OrderedRVLabelRestriction
-import IntegrationSection6.StandardProgramPresentations
+module
+
+public import IntegrationSection6.OrderedRVLabelRestriction
+public import IntegrationSection6.StandardProgramPresentations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Restricting a standard contraction by selected original RV labels
 retains its coordinate order and its entire VF-volume selector. -/

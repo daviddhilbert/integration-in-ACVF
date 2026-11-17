@@ -1,6 +1,12 @@
-import Integration7.MixedTwoCellDecomposition
-import Integration7.GammaRVGraphRefinementGeometry
-import IntegrationSection4.ParameterizedCells
+module
+
+public import Integration7.MixedTwoCellDecomposition
+public import Integration7.GammaRVGraphRefinementGeometry
+public import IntegrationSection4.ParameterizedCells
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The mixed-label cell decomposition gives an actual graph refinement
 whose nonempty RV-labelled fibres are definable two-cells. The graph map

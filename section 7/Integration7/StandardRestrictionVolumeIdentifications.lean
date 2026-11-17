@@ -1,6 +1,12 @@
-import Integration7.StandardRestrictionNormalizedCarriers
-import Integration7.RetainedDensityContractionObjects
-import Integration7.GammaVolumeRestrictionIdentities
+module
+
+public import Integration7.StandardRestrictionNormalizedCarriers
+public import Integration7.RetainedDensityContractionObjects
+public import Integration7.GammaVolumeRestrictionIdentities
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! An actual restricted contraction's normalized volume object is
 the literal restriction of the original normalized volume object to

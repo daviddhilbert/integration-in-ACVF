@@ -1,6 +1,12 @@
-import Integration7.UniformVolumeSchemaBounds
-import IntegrationSection6.GammaSelectedLabelFamilies
-import IntegrationSection6.GammaVFParameterBases
+module
+
+public import Integration7.UniformVolumeSchemaBounds
+public import IntegrationSection6.GammaSelectedLabelFamilies
+public import IntegrationSection6.GammaVFParameterBases
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Selected-label finite rows have one uniform valid formula bound,
 also when there are zero selected coordinates and the rows are ordinary. -/

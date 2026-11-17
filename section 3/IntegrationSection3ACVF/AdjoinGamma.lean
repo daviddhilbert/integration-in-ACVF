@@ -1,4 +1,10 @@
-import IntegrationSection3ACVF.FullGammaSyntax
+module
+
+public import IntegrationSection3ACVF.FullGammaSyntax
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Full invariant relations after adjoining an actual Gamma name. -/
 

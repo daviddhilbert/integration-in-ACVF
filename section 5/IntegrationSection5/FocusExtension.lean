@@ -1,4 +1,10 @@
-import IntegrationSection5.GammaFocusSection
+module
+
+public import IntegrationSection5.GammaFocusSection
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 open Classical FirstOrder FirstOrder.Language

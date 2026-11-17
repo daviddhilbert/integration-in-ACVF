@@ -1,6 +1,12 @@
-import Integration7.VFVolumeObjects
-import Integration7.VolumeFormProducts
-import Section4.VFProducts
+module
+
+public import Integration7.VFVolumeObjects
+public import Integration7.VolumeFormProducts
+public import Section4.VFProducts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual Cartesian product of positive VF volume objects, with
 concatenated VF/RV tuples and the product of the original densities. -/

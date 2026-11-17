@@ -1,8 +1,14 @@
+module
+
 /-
 Extracted from https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%205/Completed18CellRestrictions.lean
 Original declaration namespaces and notices are retained.
 -/
-import IntegrationSection5.FiniteRVComparison
+public import IntegrationSection5.FiniteRVComparison
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Restricting an RV-labelled prepared cell family to a condition on
 its old RV labels preserves its entire nonempty cells and positioning. -/

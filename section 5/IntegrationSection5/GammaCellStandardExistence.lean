@@ -1,6 +1,12 @@
-import IntegrationSection5.GammaBalancedCellComparison
-import IntegrationSection5.GammaProductCellComparison
-import IntegrationSection5.CellRectangleStandard
+module
+
+public import IntegrationSection5.GammaBalancedCellComparison
+public import IntegrationSection5.GammaProductCellComparison
+public import IntegrationSection5.CellRectangleStandard
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Full original-Gamma Lemma 5.7. Both actual standard programs and both
 directions of the actual RV[2] isomorphism are constructed and certified. -/

@@ -1,6 +1,12 @@
-import Integration7.VolumeCertificateRealizationOnRows
-import Integration7.VolumeSchemaRowExtension
-import Integration7.FiniteVolumeParameterContexts
+module
+
+public import Integration7.VolumeCertificateRealizationOnRows
+public import Integration7.VolumeSchemaRowExtension
+public import Integration7.FiniteVolumeParameterContexts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Small-context realization records the size of the internal base at
 its original cardinal. This permits descent of definable RV exceptions by

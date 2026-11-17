@@ -1,4 +1,10 @@
-import Integration7.MixedTwoCellDecomposition
+module
+
+public import Integration7.MixedTwoCellDecomposition
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Retain the actual global positioning map behind the mixed-label
 cell decomposition. Its centre depends only on the RV refinement label

@@ -1,5 +1,11 @@
-import IntegrationSection5.GammaIsoCoordinates
-import IntegrationSection5.ActiveUnaryProjection
+module
+
+public import IntegrationSection5.GammaIsoCoordinates
+public import IntegrationSection5.ActiveUnaryProjection
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Project an actual original-Gamma unary isomorphism to a scalar centre, with its full graph, zero extension and complementary-coordinate independence. -/
 noncomputable section

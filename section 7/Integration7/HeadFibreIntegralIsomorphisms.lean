@@ -1,7 +1,13 @@
-import Integration7.HeadFibreContractionCoordinates
-import Integration7.VolumeFamilyHeadIntegrals
-import Integration7.VolumeRelabeling
-import Section4.RVIsoTools
+module
+
+public import Integration7.HeadFibreContractionCoordinates
+public import Integration7.VolumeFamilyHeadIntegrals
+public import Integration7.VolumeRelabeling
+public import Section4.RVIsoTools
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual head-integral row is volume-isomorphic to the actual
 unary frozen-family contraction object, retaining every label and its

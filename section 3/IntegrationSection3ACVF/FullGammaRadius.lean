@@ -1,5 +1,11 @@
-import IntegrationSection3ACVF.FullBallCoset
-import IntegrationSection3ACVF.GammaRadiusAtomicity
+module
+
+public import IntegrationSection3ACVF.FullBallCoset
+public import IntegrationSection3ACVF.GammaRadiusAtomicity
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Lemma 3.4 at an original-base definable actual Gamma radius. -/
 

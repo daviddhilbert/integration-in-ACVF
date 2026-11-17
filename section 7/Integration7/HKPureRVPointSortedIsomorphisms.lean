@@ -1,5 +1,11 @@
-import Integration7.PureRVSortedIsomorphisms
-import IntegrationSection6.GammaRVGraphRaw
+module
+
+public import Integration7.PureRVSortedIsomorphisms
+public import IntegrationSection6.GammaRVGraphRaw
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Pure RV point isomorphisms retain their literal label values when
 converted to sorted tuples. This also retains an arbitrary exact density. -/

@@ -1,5 +1,11 @@
-import IntegrationSection6.GlobalIntegrationCharacterization
-import IntegrationSection6.GammaRVArbitraryPadding
+module
+
+public import IntegrationSection6.GlobalIntegrationCharacterization
+public import IntegrationSection6.GammaRVArbitraryPadding
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Equality of global RV integrals is exactly actual lift isomorphism,
 including representatives in different finite degrees. -/

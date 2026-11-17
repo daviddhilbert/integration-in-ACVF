@@ -1,6 +1,12 @@
-import Integration7.NormalizedVolumeCoefficientRing
-import Integration7.SemimoduleScalarExtension
-import Integration7.GradedAEVolumeIntegralLinearity
+module
+
+public import Integration7.NormalizedVolumeCoefficientRing
+public import Integration7.SemimoduleScalarExtension
+public import Integration7.GradedAEVolumeIntegralLinearity
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The normalized function module is the actual scalar extension of the
 checked finite graded AE function semimodule. Its integral is obtained from

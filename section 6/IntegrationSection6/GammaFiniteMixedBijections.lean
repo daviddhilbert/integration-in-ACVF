@@ -1,4 +1,10 @@
-import IntegrationSection6.GammaRelativeRVFiniteness
+module
+
+public import IntegrationSection6.GammaRelativeRVFiniteness
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! An actual Gamma bijection between equal-VF-arity mixed sets preserves
 finite RV fibres. No internal real presentation is bounded. -/

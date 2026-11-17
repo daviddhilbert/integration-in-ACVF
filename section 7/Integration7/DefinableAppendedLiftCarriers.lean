@@ -1,4 +1,10 @@
-import Integration7.DefinableAppendedFamilyLifts
+module
+
+public import Integration7.DefinableAppendedFamilyLifts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Coefficient-first full lifts of arbitrary volume maps have the
 literal original base point and realize the original volume tuple in

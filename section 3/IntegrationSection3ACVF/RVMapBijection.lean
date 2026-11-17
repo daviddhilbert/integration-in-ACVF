@@ -1,5 +1,11 @@
-import IntegrationSection3ACVF.RVMapRelation
-import IntegrationSection3ACVF.RVInverse
+module
+
+public import IntegrationSection3ACVF.RVMapRelation
+public import IntegrationSection3ACVF.RVInverse
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The difference relation of an injective definable VF map on an
 atomic open ball preserves and reflects equality of RV classes, even

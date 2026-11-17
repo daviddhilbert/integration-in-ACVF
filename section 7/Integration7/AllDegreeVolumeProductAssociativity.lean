@@ -1,5 +1,11 @@
-import Integration7.AllDegreeVolumeData
-import Integration7.AllDegreeVolumeProductIsomorphisms
+module
+
+public import Integration7.AllDegreeVolumeData
+public import Integration7.AllDegreeVolumeProductIsomorphisms
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Reassociation for the original product in every volume degree.
 The density proof is multiplication associativity, including ordinary RV[0]. -/

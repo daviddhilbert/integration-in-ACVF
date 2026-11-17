@@ -1,4 +1,10 @@
-import Integration7.ExtraVolumeParameters
+module
+
+public import Integration7.ExtraVolumeParameters
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! First-order RV validity with auxiliary parameters confined to the
 exception map. The objects, density graphs, chart and chart supports are

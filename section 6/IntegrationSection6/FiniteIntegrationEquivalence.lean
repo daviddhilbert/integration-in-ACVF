@@ -1,4 +1,10 @@
-import IntegrationSection6.FiniteIntegrationMap
+module
+
+public import IntegrationSection6.FiniteIntegrationMap
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual additive integration equivalence, Proposition6.18. -/
 noncomputable section

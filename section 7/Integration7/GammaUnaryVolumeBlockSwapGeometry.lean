@@ -1,8 +1,14 @@
-import Integration7.GammaVolumeCoordinatePermutations
-import Integration7.GammaVolumeSliceAssemblyGeometry
-import Integration7.VolumeBlowupRightProducts
-import Integration7.GammaVolumeSliceDensityAssembly
-import IntegrationSection6.GammaSwappedVolumes
+module
+
+public import Integration7.GammaVolumeCoordinatePermutations
+public import Integration7.GammaVolumeSliceAssemblyGeometry
+public import Integration7.VolumeBlowupRightProducts
+public import Integration7.GammaVolumeSliceDensityAssembly
+public import IntegrationSection6.GammaSwappedVolumes
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Swapping a unary VF volume block with the selected RV block
 preserves common volume blowups. Both densities remain unchanged;

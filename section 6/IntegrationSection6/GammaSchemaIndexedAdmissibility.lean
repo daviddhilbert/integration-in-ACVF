@@ -1,6 +1,12 @@
-import IntegrationSection6.GammaSchemaIndexedObjects
-import IntegrationSection6.GammaSchemaRowImages
-import IntegrationSection6.GammaIndexedAdmissibility
+module
+
+public import IntegrationSection6.GammaSchemaIndexedObjects
+public import IntegrationSection6.GammaSchemaRowImages
+public import IntegrationSection6.GammaIndexedAdmissibility
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Valid admissibility rows glue to actual Gamma admissibility in the
 finite-volume indexed object. The index set may be infinite; fixing its

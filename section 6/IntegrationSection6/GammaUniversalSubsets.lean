@@ -1,5 +1,11 @@
-import IntegrationSection6.GammaRVSetRealization
-import IntegrationSection6.FiniteGammaUniversalCharts
+module
+
+public import IntegrationSection6.GammaRVSetRealization
+public import IntegrationSection6.FiniteGammaUniversalCharts
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Original-Gamma RV loci have native definable-set presentations at a
 common internal code universe. That universe is never added to the original

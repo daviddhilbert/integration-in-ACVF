@@ -1,7 +1,13 @@
-import IntegrationSection6.GammaFocusLabelAlgebraicity
-import IntegrationSection6.NormalizedLifts
-import IntegrationSection6.NormalizedFocus
-import IntegrationSection6.AdmissibleFocusRelabeling
+module
+
+public import IntegrationSection6.GammaFocusLabelAlgebraicity
+public import IntegrationSection6.NormalizedLifts
+public import IntegrationSection6.NormalizedFocus
+public import IntegrationSection6.AdmissibleFocusRelabeling
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A full genuine Gamma focus forces admissibility in the actual RV
 object. Only the original real base is small; the code base can be arbitrary. -/

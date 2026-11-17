@@ -1,7 +1,13 @@
-import IntegrationSection5.ConstantCoordinateFibres
-import IntegrationSection5.RVAttachment
-import IntegrationSection5.RVCodePredicates
-import IntegrationSection5.FiniteMixedFamilyCoding
+module
+
+public import IntegrationSection5.ConstantCoordinateFibres
+public import IntegrationSection5.RVAttachment
+public import IntegrationSection5.RVCodePredicates
+public import IntegrationSection5.FiniteMixedFamilyCoding
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The all-constant tag locus is original-Gamma definable. After retaining
 its RV code as labels, every active VF fibre is finite. -/

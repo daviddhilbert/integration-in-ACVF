@@ -1,5 +1,11 @@
-import Integration7.HeadTailPermutationFibres
-import IntegrationSection5.RelativeFibreMaps
+module
+
+public import Integration7.HeadTailPermutationFibres
+public import IntegrationSection5.RelativeFibreMaps
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Conjugation by a frozen-tail permutation leaves the actual unary
 head fibre map unchanged. -/

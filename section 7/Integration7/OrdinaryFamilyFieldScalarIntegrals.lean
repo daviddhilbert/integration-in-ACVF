@@ -1,8 +1,14 @@
-import Integration7.OrdinaryFiniteCoefficientContractionCharts
-import Integration7.OrdinaryUnitGraphProductBijections
-import Integration7.FieldBaseUnaryRetainedContractions
-import Integration7.FieldBaseUnarySpecialPreparations
-import Integration7.PositiveVolumeProductOrdinaryScalars
+module
+
+public import Integration7.OrdinaryFiniteCoefficientContractionCharts
+public import Integration7.OrdinaryUnitGraphProductBijections
+public import Integration7.FieldBaseUnaryRetainedContractions
+public import Integration7.FieldBaseUnarySpecialPreparations
+public import Integration7.PositiveVolumeProductOrdinaryScalars
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual ordinary RV[0] coefficients commute with the unary field-base
 integral of ordinary-valued families. A degree-one raw contraction chart

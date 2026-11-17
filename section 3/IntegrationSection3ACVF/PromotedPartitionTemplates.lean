@@ -1,5 +1,11 @@
-import IntegrationSection3ACVF.UnaryPartitionTemplates
-import IntegrationSection3ACVF.RealParameterPromotion
+module
+
+public import IntegrationSection3ACVF.UnaryPartitionTemplates
+public import IntegrationSection3ACVF.RealParameterPromotion
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual finite scalar partitions, whose labels were named real
 parameters, yield finite tuples of original-base formulas at those labels. -/

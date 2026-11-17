@@ -1,6 +1,12 @@
-import Integration7.DefinableVolumeClassRescaling
-import Integration7.PositiveVolumeClassProductExtensions
-import Integration7.VolumeProductPointwise
+module
+
+public import Integration7.DefinableVolumeClassRescaling
+public import Integration7.PositiveVolumeClassProductExtensions
+public import Integration7.VolumeProductPointwise
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Definable density rescaling commutes with multiplication by a
 positive constant volume coefficient, on actual products and their classes. -/

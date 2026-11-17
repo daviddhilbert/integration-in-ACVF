@@ -1,6 +1,12 @@
-import IntegrationSection3ACVF.GammaFunctionSyntax
-import IntegrationSection3ACVF.GammaTupleParameters
-import IntegrationSection3ACVF.OrderedGermMonotonicity
+module
+
+public import IntegrationSection3ACVF.GammaFunctionSyntax
+public import IntegrationSection3ACVF.GammaTupleParameters
+public import IntegrationSection3ACVF.OrderedGermMonotonicity
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Full-base first-order syntax for local increasing germs and the
 prefix sets used to propagate them. No pointwise graph is assumed total. -/

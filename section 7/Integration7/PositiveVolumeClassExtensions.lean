@@ -1,6 +1,12 @@
-import Integration7.OrdinaryVolumeCoefficientExtensions
-import Integration7.BlowupParameterExtension
-import Integration7.IndexedVolumeEmpty
+module
+
+public import Integration7.OrdinaryVolumeCoefficientExtensions
+public import Integration7.BlowupParameterExtension
+public import Integration7.IndexedVolumeEmpty
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Enlarging the real parameter base gives an additive map on actual
 positive common-blowup classes. The representative and coproduct charts

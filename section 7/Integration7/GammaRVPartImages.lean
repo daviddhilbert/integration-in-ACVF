@@ -1,4 +1,10 @@
-import Integration7.GammaRVParameterSelections
+module
+
+public import Integration7.GammaRVParameterSelections
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A definable union of whole parameter fibres is selected by its
 actual RV image. This converts definable geometric cases into actual

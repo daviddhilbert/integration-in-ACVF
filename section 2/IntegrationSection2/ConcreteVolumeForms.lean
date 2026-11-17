@@ -1,7 +1,13 @@
-import Section9.MixedJacobian
-import Section9.LiftLabelRepresentatives
-import Section9.GammaJacobian
-import Section9.RVJacobian
+module
+
+public import Section9.MixedJacobian
+public import Section9.LiftLabelRepresentatives
+public import Section9.GammaJacobian
+public import Section9.RVJacobian
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Concrete RV-valued volume forms on the pinned finite-volume
 objects and their actual lifts. These definitions use the actual RV

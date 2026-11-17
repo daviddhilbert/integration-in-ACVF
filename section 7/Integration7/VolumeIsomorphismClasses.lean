@@ -1,5 +1,11 @@
-import Integration7.VolumeCoproductUnits
-import Integration7.VolumeCoproductIsomorphism
+module
+
+public import Integration7.VolumeCoproductUnits
+public import Integration7.VolumeCoproductIsomorphism
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual positive-degree volume-isomorphism classes. Addition is the
 definable coproduct; no blowup relation or scissor quotient is imposed here. -/

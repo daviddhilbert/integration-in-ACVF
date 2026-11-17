@@ -1,6 +1,12 @@
-import Integration7.NativeVolumeDomains
-import Integration7.RVCoordinateSelection
-import Integration7.GammaTermContextVolumeGeometry
+module
+
+public import Integration7.NativeVolumeDomains
+public import Integration7.RVCoordinateSelection
+public import Integration7.GammaTermContextVolumeGeometry
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! An actual finite selected tuple and a retained nonzero density on a
 pure RV native domain give the corresponding literal volume object. -/

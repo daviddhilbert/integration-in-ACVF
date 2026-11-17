@@ -1,4 +1,10 @@
-import IntegrationSection5.MixedScalarFamilies
+module
+
+public import IntegrationSection5.MixedScalarFamilies
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Descend actual mixed scalar-family refinement graphs to finite RV maps
 on the original mixed source. Complementary VF parameters remain free. -/

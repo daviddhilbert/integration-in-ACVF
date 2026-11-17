@@ -1,9 +1,15 @@
-import Integration7.AllDegreeVolumeClasses
-import Integration7.AllDegreeVolumeProductAssociativity
-import Integration7.AllDegreeVolumeProductUnits
-import Integration7.AllDegreeVolumeProductZeros
-import Integration7.AllDegreeVolumeLeftDistributivity
-import Integration7.AllDegreeVolumeRightDistributivity
+module
+
+public import Integration7.AllDegreeVolumeClasses
+public import Integration7.AllDegreeVolumeProductAssociativity
+public import Integration7.AllDegreeVolumeProductUnits
+public import Integration7.AllDegreeVolumeProductZeros
+public import Integration7.AllDegreeVolumeLeftDistributivity
+public import Integration7.AllDegreeVolumeRightDistributivity
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 noncomputable section
 open FirstOrder FirstOrder.Language

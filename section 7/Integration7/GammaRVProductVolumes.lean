@@ -1,4 +1,10 @@
-import Integration7.GammaRVProductMaps
+module
+
+public import Integration7.GammaRVProductMaps
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The complete volume graph of an actual RV product is obtained
 from the two factor volume graphs over the same original Gamma base. -/

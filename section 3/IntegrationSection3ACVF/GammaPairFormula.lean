@@ -1,5 +1,11 @@
-import IntegrationSection3ACVF.GammaSpecialization
-import IntegrationSection3ACVF.MultivariatePolynomialSupport
+module
+
+public import IntegrationSection3ACVF.GammaSpecialization
+public import IntegrationSection3ACVF.MultivariatePolynomialSupport
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A Gamma-only full base admits a two-VF-variable QF presentation with
 coefficients in exactly the original real VF parameter field. -/

@@ -1,4 +1,10 @@
-import Integration7.GammaAbsoluteValues
+module
+
+public import Integration7.GammaAbsoluteValues
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Equivalent absolute-value and Gamma forms of the pointwise volume
 equation. No generic RV-Jacobian condition is inferred from this equation. -/

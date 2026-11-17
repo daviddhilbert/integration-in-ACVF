@@ -1,5 +1,11 @@
-import Integration7.VolumeGammaWeightTuples
-import Section4.RVAppend
+module
+
+public import Integration7.VolumeGammaWeightTuples
+public import Section4.RVAppend
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual coordinate-and-density map on essential labels has finite
 fibres, since its coordinate prefix is the original finite volume map. -/

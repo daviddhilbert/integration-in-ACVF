@@ -1,9 +1,15 @@
-import Integration7.GammaSliceLiftChartValues
-import Integration7.GammaVolumeSliceDensityAssembly
-import Integration7.LiteralRVVolumeForms
-import Integration7.MixedJacobianVFComparison
-import Integration7.FiniteVolumeParameterContexts
-import IntegrationSection6.GammaRVRealization
+module
+
+public import Integration7.GammaSliceLiftChartValues
+public import Integration7.GammaVolumeSliceDensityAssembly
+public import Integration7.LiteralRVVolumeForms
+public import Integration7.MixedJacobianVFComparison
+public import Integration7.FiniteVolumeParameterContexts
+public import IntegrationSection6.GammaRVRealization
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A Gamma lift chart whose VF component follows a checked
 Jacobian-one map has an actual volume-preserving realization in a small

@@ -1,5 +1,11 @@
-import Integration7.GammaPreparedVolumeRows
-import Integration7.FrozenVolumeWitnessRecoding
+module
+
+public import Integration7.GammaPreparedVolumeRows
+public import Integration7.FrozenVolumeWitnessRecoding
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Descent of primitive rows through every internal volume object,
 elementary blowup and comparison in a finite common witness. -/

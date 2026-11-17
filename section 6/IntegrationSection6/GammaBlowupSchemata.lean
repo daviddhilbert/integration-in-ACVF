@@ -1,6 +1,12 @@
-import IntegrationSection6.GammaRawCoproductSchemaBridge
-import IntegrationSection6.GammaRawElementarySchemaBridge
-import IntegrationSection6.GammaSchemaChartTransfer
+module
+
+public import IntegrationSection6.GammaRawCoproductSchemaBridge
+public import IntegrationSection6.GammaRawElementarySchemaBridge
+public import IntegrationSection6.GammaSchemaChartTransfer
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A finite blowup witness is encoded by actual center/remainder object
 formulas, an admissible coordinate, and full source/result splitting charts.

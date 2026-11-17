@@ -1,6 +1,12 @@
-import IntegrationSection6.ElementaryBlowup
-import IntegrationSection6.Arithmetic
-import Section4.RVProductSymmetry
+module
+
+public import IntegrationSection6.ElementaryBlowup
+public import IntegrationSection6.Arithmetic
+public import Section4.RVProductSymmetry
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-!
 # Lemma 6.3: elementary blowups respect arbitrary RV isomorphisms

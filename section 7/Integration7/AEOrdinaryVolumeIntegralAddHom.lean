@@ -1,7 +1,13 @@
-import Integration7.AEOrdinaryRVVolumeIntegrals
-import Integration7.AEOrdinaryVolumeFunctionAddition
-import Integration7.OrdinaryVolumeFamilyCoproductRealizations
-import Integration7.PositiveVFVolumeAdditiveStructure
+module
+
+public import Integration7.AEOrdinaryRVVolumeIntegrals
+public import Integration7.AEOrdinaryVolumeFunctionAddition
+public import Integration7.OrdinaryVolumeFamilyCoproductRealizations
+public import Integration7.PositiveVFVolumeAdditiveStructure
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Ordinary RV[0]-valued AE integration is additive for the actual
 pointwise coproduct operation and sends the empty family to zero. -/

@@ -1,6 +1,12 @@
-import Integration7.GeneratedKernelPositiveDegree
-import IntegrationSection6.KernelEquivalence
-import IntegrationSection6.VFParameterCoefficientBases
+module
+
+public import Integration7.GeneratedKernelPositiveDegree
+public import IntegrationSection6.KernelEquivalence
+public import IntegrationSection6.VFParameterCoefficientBases
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual Section6 kernel theorem over its standing generated base,
 with no universal two-order premise. The final namespace gives the same

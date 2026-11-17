@@ -1,9 +1,15 @@
-import Integration7.CompletedSection6Kernel
-import Integration7.ClosedSection6ParameterCoefficientSemirings
-import Integration7.ClosedSection6GammaVFBaseChange
-import IntegrationSection6.IntegrationContexts
-import IntegrationSection6.ParameterCoefficientSemirings
-import IntegrationSection6.GammaVFBaseChange
+module
+
+public import Integration7.CompletedSection6Kernel
+public import Integration7.ClosedSection6ParameterCoefficientSemirings
+public import Integration7.ClosedSection6GammaVFBaseChange
+public import IntegrationSection6.IntegrationContexts
+public import IntegrationSection6.ParameterCoefficientSemirings
+public import IntegrationSection6.GammaVFBaseChange
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Closed generated-base Section6 integration. The former universal
 Section5 input is replaced by the canonical-model certificate; its kernel

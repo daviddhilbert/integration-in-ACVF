@@ -1,7 +1,13 @@
-import Integration7.HKAEZeroVolumeFunctions
-import Integration7.HKVolumeClassCoherence
-import Integration7.OrdinaryVolumeFamilyCoproducts
-import Integration7.OrdinaryZeroVolumeFamilies
+module
+
+public import Integration7.HKAEZeroVolumeFunctions
+public import Integration7.HKVolumeClassCoherence
+public import Integration7.OrdinaryVolumeFamilyCoproducts
+public import Integration7.OrdinaryZeroVolumeFamilies
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual weighted family coproducts, with the pointwise zero coefficient
 addition. The form is glued on the actual tagged domains. -/

@@ -1,14 +1,20 @@
-import IntegrationSection6.Library
-import ACVFQE
-import IntegrationSection3.Library
-import IntegrationSection3.FieldLibrary
-import IntegrationSection3.ProfileLibrary
-import IntegrationSection3.CoordinateLibrary
-import IntegrationSection2.Library
-import IntegrationSection3ACVF.Library
-import IntegrationSection4.Library
-import IntegrationSection5.Library
-import Integration7.Library
+module
+
+public import IntegrationSection6.Library
+public import ACVFQE
+public import IntegrationSection3.Library
+public import IntegrationSection3.FieldLibrary
+public import IntegrationSection3.ProfileLibrary
+public import IntegrationSection3.CoordinateLibrary
+public import IntegrationSection2.Library
+public import IntegrationSection3ACVF.Library
+public import IntegrationSection4.Library
+public import IntegrationSection5.Library
+public import Integration7.Library
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-!
 # Integration in algebraically closed valued fields

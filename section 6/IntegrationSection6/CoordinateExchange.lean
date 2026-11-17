@@ -1,7 +1,13 @@
-import IntegrationSection6.OrderedTwoCoordinateExchange
-import IntegrationSection6.VFPrefixSwaps
-import IntegrationSection6.PermutationFiniteFibres
-import IntegrationSection6.SmallVFFieldBases
+module
+
+public import IntegrationSection6.OrderedTwoCoordinateExchange
+public import IntegrationSection6.VFPrefixSwaps
+public import IntegrationSection6.PermutationFiniteFibres
+public import IntegrationSection6.SmallVFFieldBases
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Lemma6.16 in the finite RV categories for arbitrary VF arity. The
 first two contraction coordinates are exchanged and every later coordinate

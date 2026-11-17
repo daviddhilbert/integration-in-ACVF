@@ -1,5 +1,11 @@
-import IntegrationSection3ACVF.FiniteOrderCells
-import IntegrationSection3ACVF.GammaTupleParameters
+module
+
+public import IntegrationSection3ACVF.FiniteOrderCells
+public import IntegrationSection3ACVF.GammaTupleParameters
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Every finite-order code cell is definable after adjoining exactly
 its finitely many actual Gamma endpoints. -/

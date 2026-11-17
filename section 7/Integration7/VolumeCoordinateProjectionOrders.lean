@@ -1,4 +1,10 @@
-import IntegrationSection6.VFCoordinateProjections
+module
+
+public import IntegrationSection6.VFCoordinateProjections
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Put the discarded VF coordinates first and the retained coordinates
 last, using the actual enumerations of a nonempty coordinate projection. -/

@@ -1,7 +1,13 @@
-import Section4.RVDimension
-import Section4.MapCorestrict
-import Section4.VFFibreFiniteness
-import Section4.RVCategories
+module
+
+public import Section4.RVDimension
+public import Section4.MapCorestrict
+public import Section4.VFFibreFiniteness
+public import Section4.RVCategories
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A small exceptional set in the actual volume image pulls back
 to a small set of labels because the volume map is finite-to-one. -/

@@ -1,6 +1,12 @@
-import IntegrationSection6.OriginalFocusVolume
-import IntegrationSection6.KeyInverseCoordinates
-import IntegrationSection6.RVFocusProgram
+module
+
+public import IntegrationSection6.OriginalFocusVolume
+public import IntegrationSection6.KeyInverseCoordinates
+public import IntegrationSection6.RVFocusProgram
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The original-model focus relabeling has the stated RV coordinate
 formula, before and after removal of preparatory canonical labels. -/

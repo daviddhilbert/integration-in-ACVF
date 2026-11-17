@@ -1,5 +1,11 @@
-import Integration7.PositiveVFVolumeProducts
-import Integration7.VFVolumeBijections
+module
+
+public import Integration7.PositiveVFVolumeProducts
+public import Integration7.VFVolumeBijections
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Restricting the two actual Cartesian factors retains the original
 product density, pointwise on the concatenated product domain. -/

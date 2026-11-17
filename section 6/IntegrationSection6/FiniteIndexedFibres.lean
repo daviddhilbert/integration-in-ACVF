@@ -1,4 +1,10 @@
-import IntegrationSection6.FiniteCoordinateDeletion
+module
+
+public import IntegrationSection6.FiniteCoordinateDeletion
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Finite fibres survive assembling families over a finite-fibre base. -/
 noncomputable section

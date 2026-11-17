@@ -1,7 +1,13 @@
-import Integration7.GammaVolumeIndexedPresentations
-import Integration7.GammaVolumePresentationContexts
-import Integration7.VolumeSchemaRowSemantics
-import Integration7.RVParameterVolumeFibres
+module
+
+public import Integration7.GammaVolumeIndexedPresentations
+public import Integration7.GammaVolumePresentationContexts
+public import Integration7.VolumeSchemaRowSemantics
+public import Integration7.RVParameterVolumeFibres
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual fixed-parameter fibres of a joint indexed volume
 presentation interpret precisely the original volume-schema rows. -/

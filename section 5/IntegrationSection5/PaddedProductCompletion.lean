@@ -1,8 +1,14 @@
-import IntegrationSection5.ProjectionPaddingProductRefinement
-import IntegrationSection5.ProductRVBranchHead
-import IntegrationSection5.GammaBranchBoundaryPrefix
-import IntegrationSection5.CanonicalHeadGeometry
-import IntegrationSection5.CanonicalRVSliceGeometry
+module
+
+public import IntegrationSection5.ProjectionPaddingProductRefinement
+public import IntegrationSection5.ProductRVBranchHead
+public import IntegrationSection5.GammaBranchBoundaryPrefix
+public import IntegrationSection5.CanonicalHeadGeometry
+public import IntegrationSection5.CanonicalRVSliceGeometry
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 open Classical FirstOrder FirstOrder.Language

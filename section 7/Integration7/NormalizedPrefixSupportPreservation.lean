@@ -1,6 +1,12 @@
-import Integration7.NormalizedHeadSupportPreservation
-import Integration7.NormalizedVolumePrefixOperators
-import Integration7.PureVFPrefixImages
+module
+
+public import Integration7.NormalizedHeadSupportPreservation
+public import Integration7.NormalizedVolumePrefixOperators
+public import Integration7.PureVFPrefixImages
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Iterated head integration preserves the actual coordinate image
 of every supported normalized input. -/

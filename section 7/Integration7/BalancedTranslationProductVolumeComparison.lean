@@ -1,6 +1,12 @@
-import Integration7.NativeBalancedProductVolumeComparisonWithoutField
-import Integration7.NativeBalancedTranslations
-import Integration7.GammaRelativeTranslations
+module
+
+public import Integration7.NativeBalancedProductVolumeComparisonWithoutField
+public import Integration7.NativeBalancedTranslations
+public import Integration7.GammaRelativeTranslations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual horizontal and vertical translations of a balanced
 native cell supply the opposite-order product comparison. Their centre

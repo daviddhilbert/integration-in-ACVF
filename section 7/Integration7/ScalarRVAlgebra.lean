@@ -1,5 +1,11 @@
-import Integration7.ScalarRVMaps
-import Section3.DefinableConstants
+module
+
+public import Integration7.ScalarRVMaps
+public import Section3.DefinableConstants
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 set_option backward.isDefEq.respectTransparency false
 noncomputable section

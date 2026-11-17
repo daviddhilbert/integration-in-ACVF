@@ -1,4 +1,10 @@
-import IntegrationSection3ACVF.ThinFamilyGeometry
+module
+
+public import IntegrationSection3ACVF.ThinFamilyGeometry
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The intrinsic maximal open balls of a finite disjoint thin family
 are exactly its displayed maximal open classes. Open-to-open bijections

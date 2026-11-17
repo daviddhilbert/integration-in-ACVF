@@ -1,5 +1,11 @@
-import Integration7.VolumeSubobjects
-import Integration7.EssentialVolumeRestriction
+module
+
+public import Integration7.VolumeSubobjects
+public import Integration7.EssentialVolumeRestriction
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Volume isomorphisms carry complementary essential subobjects to
 complements of their actual images. Degenerate labels stay harmless. -/

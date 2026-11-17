@@ -1,6 +1,12 @@
-import IntegrationSection5.RestrictedHeadPreparation
-import IntegrationSection5.RelativeGammaPreparation
-import IntegrationSection5.GammaGraphOperations
+module
+
+public import IntegrationSection5.RestrictedHeadPreparation
+public import IntegrationSection5.RelativeGammaPreparation
+public import IntegrationSection5.GammaGraphOperations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! An actual head preparation of an arbitrary original-Gamma source,
 without any smallness premise on its working real presentation. -/

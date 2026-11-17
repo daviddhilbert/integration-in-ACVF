@@ -1,6 +1,12 @@
-import Integration7.GammaVolumeIndexedPresentations
-import Integration7.GammaVolumeAdmissibilityContexts
-import IntegrationSection6.GammaSchemaIndexedAdmissibility
+module
+
+public import Integration7.GammaVolumeIndexedPresentations
+public import Integration7.GammaVolumeAdmissibilityContexts
+public import IntegrationSection6.GammaSchemaIndexedAdmissibility
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Uniform fibre admissibility gives actual last-coordinate
 admissibility of the joint indexed volume object. -/

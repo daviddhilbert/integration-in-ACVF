@@ -1,6 +1,12 @@
-import IntegrationSection3ACVF.RadialOpenClasses
-import IntegrationSection3ACVF.RVDifferencePairs
-import IntegrationSection3.SurjectiveQuotientMap
+module
+
+public import IntegrationSection3ACVF.RadialOpenClasses
+public import IntegrationSection3ACVF.RVDifferencePairs
+public import IntegrationSection3.SurjectiveQuotientMap
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Open-to-open bijections of actual radial VF sets induce bijections
 of translated RV classes. The complete existential quotient graph is

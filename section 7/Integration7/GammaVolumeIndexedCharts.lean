@@ -1,5 +1,11 @@
-import Integration7.GammaVolumeIndexedPresentations
-import Integration7.GammaVolumeExistentialCertificates
+module
+
+public import Integration7.GammaVolumeIndexedPresentations
+public import Integration7.GammaVolumeExistentialCertificates
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The joint chart of a volume certificate preserves the actual RV
 index tuple and retains its full original-base Gamma graph. -/

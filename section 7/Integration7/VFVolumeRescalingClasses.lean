@@ -1,6 +1,12 @@
-import Integration7.VFVolumeDensityRescaling
-import Integration7.PositiveVolumeIntegrationEquivalence
-import Integration7.DefinableVolumeClassRescaling
+module
+
+public import Integration7.VFVolumeDensityRescaling
+public import Integration7.PositiveVolumeIntegrationEquivalence
+public import Integration7.DefinableVolumeClassRescaling
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Named density rescaling descends to actual almost-everywhere VF
 volume classes and commutes with the genuine RV volume lift. -/

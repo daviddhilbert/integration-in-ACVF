@@ -1,6 +1,12 @@
-import Integration7.OrdinaryIndexedUnitVolumeObjects
-import Integration7.GammaVolumeSliceAssemblyGeometry
-import Integration7.GammaEssentialIndexDomains
+module
+
+public import Integration7.OrdinaryIndexedUnitVolumeObjects
+public import Integration7.GammaVolumeSliceAssemblyGeometry
+public import Integration7.GammaEssentialIndexDomains
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Discarding zero base-volume indices retains an arbitrary nonzero
 coordinate density and the full original-Gamma isomorphism graph. -/

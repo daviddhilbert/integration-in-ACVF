@@ -1,4 +1,10 @@
-import IntegrationSection5.CoordinateCanonicalFibre
+module
+
+public import IntegrationSection5.CoordinateCanonicalFibre
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A one-coordinate canonical step preserves actual RV-pullbacks. -/
 noncomputable section

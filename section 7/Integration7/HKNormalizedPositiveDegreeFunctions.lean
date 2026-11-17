@@ -1,5 +1,11 @@
-import Integration7.GradedPointNormalization
-import Integration7.HKNormalizedVolumeFunctions
+module
+
+public import Integration7.GradedPointNormalization
+public import Integration7.HKNormalizedVolumeFunctions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Positive graded functions give the same actual normalized module
 as the full finite graded space. The inverse pads by the genuine central

@@ -1,4 +1,10 @@
-import IntegrationSection6.GammaVolumeSliceSchemata
+module
+
+public import IntegrationSection6.GammaVolumeSliceSchemata
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Literal underlying labels and volumes of arbitrary actual presentations
 of a volume slice. No chosen presentation is assumed canonical. -/

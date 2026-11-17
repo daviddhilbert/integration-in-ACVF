@@ -1,4 +1,10 @@
-import IntegrationSection6.GammaGraphPresentationIsomorphisms
+module
+
+public import IntegrationSection6.GammaGraphPresentationIsomorphisms
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A presentation may use equivalent full domain/volume formulas without
 changing its native object or its original-Gamma certificates. -/

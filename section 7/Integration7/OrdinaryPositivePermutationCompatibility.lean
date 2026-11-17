@@ -1,5 +1,11 @@
-import Integration7.AEOrdinaryVolumePermutations
-import Integration7.NormalizedPositivePermutationGenerators
+module
+
+public import Integration7.AEOrdinaryVolumePermutations
+public import Integration7.NormalizedPositivePermutationGenerators
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Coordinate permutation commutes with a positive coefficient acting
 on an ordinary-valued function. No normalization relation is used. -/

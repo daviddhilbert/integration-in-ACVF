@@ -1,5 +1,11 @@
-import Integration7.CanonicalPullbackContractionVolumes
-import Integration7.PullbackCoordinateGammaObjects
+module
+
+public import Integration7.CanonicalPullbackContractionVolumes
+public import Integration7.PullbackCoordinateGammaObjects
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A Gamma pullback has an actual canonical standard contraction
 in the same volume blowup class, with arbitrary retained density. -/

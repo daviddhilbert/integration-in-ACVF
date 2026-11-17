@@ -1,6 +1,12 @@
-import Integration7.GammaCoordinateDensityEquivalences
-import Integration7.ContractionRetainedDensityLabels
-import IntegrationSection6.RawFiniteContractions
+module
+
+public import Integration7.GammaCoordinateDensityEquivalences
+public import Integration7.ContractionRetainedDensityLabels
+public import IntegrationSection6.RawFiniteContractions
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Full first-volume normalization preserves the actual volume tuple
 and retained density for every positive-dimensional finite contraction.

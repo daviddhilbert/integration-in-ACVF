@@ -1,8 +1,14 @@
-import IntegrationSection6.FiniteGammaOverlap
-import IntegrationSection6.FiniteGammaElementaryPartitions
-import IntegrationSection6.FiniteGammaElementaryIsos
-import IntegrationSection6.FiniteGammaIsoClasses
-import IntegrationSection6.FiniteGammaChainTransport
+module
+
+public import IntegrationSection6.FiniteGammaOverlap
+public import IntegrationSection6.FiniteGammaElementaryPartitions
+public import IntegrationSection6.FiniteGammaElementaryIsos
+public import IntegrationSection6.FiniteGammaIsoClasses
+public import IntegrationSection6.FiniteGammaChainTransport
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The actual original-Gamma local diamond, exact finite grid and common
 blowup equivalence in RV[k]. Only the original B.real is bounded. -/

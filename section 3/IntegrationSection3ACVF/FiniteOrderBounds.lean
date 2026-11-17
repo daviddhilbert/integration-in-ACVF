@@ -1,7 +1,13 @@
-import Section4.CanonicalOrderController
-import Mathlib.Order.Bounds.Basic
-import Mathlib.Data.Finset.Max
-import Mathlib.Data.Set.Finite.Basic
+module
+
+public import Section4.CanonicalOrderController
+public import Mathlib.Order.Bounds.Basic
+public import Mathlib.Data.Finset.Max
+public import Mathlib.Data.Set.Finite.Basic
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 
 /-! Definable completeness from an actual finite endpoint controller.

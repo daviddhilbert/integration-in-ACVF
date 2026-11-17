@@ -1,6 +1,12 @@
-import Integration7.MatchingTranslationRectangles
-import Integration7.PreparedKeyLabelSpecialPreparations
-import Integration7.FixedContextBalancedPreparations
+module
+
+public import Integration7.MatchingTranslationRectangles
+public import Integration7.PreparedKeyLabelSpecialPreparations
+public import Integration7.FixedContextBalancedPreparations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The unchanged coordinate of each matching translation carries its
 entire original prepared unary key as literal selected RV labels. These

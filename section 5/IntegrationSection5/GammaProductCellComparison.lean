@@ -1,6 +1,12 @@
-import IntegrationSection5.GammaCellComparison
-import IntegrationSection5.ProductStandardComparison
-import IntegrationSection5.CellUnaryPreparations
+module
+
+public import IntegrationSection5.GammaCellComparison
+public import IntegrationSection5.ProductStandardComparison
+public import IntegrationSection5.CellUnaryPreparations
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Original-Gamma certification of the actual RV[2] product comparison.
 The quotient graph is obtained by existential composition of the two

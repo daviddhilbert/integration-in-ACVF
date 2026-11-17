@@ -1,4 +1,10 @@
-import IntegrationSection6.GammaRowBijectionPromotion
+module
+
+public import IntegrationSection6.GammaRowBijectionPromotion
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Realize a valid sorted chart as its actual bijection, and split a
 parameterized total set into its literal dependent family of fibres. -/

@@ -1,6 +1,12 @@
-import Integration7.GammaVolumeCommonNameRebasing
-import Integration7.RVVolumeIsomorphismDescent
-import Integration7.NondegenerateFiniteIso
+module
+
+public import Integration7.GammaVolumeCommonNameRebasing
+public import Integration7.RVVolumeIsomorphismDescent
+public import Integration7.NondegenerateFiniteIso
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The original-Gamma essential bijection is defined over the common
 names, and its two volume laws descend to that same real context. -/

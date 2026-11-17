@@ -1,5 +1,11 @@
-import IntegrationSection6.VFPrefixMaps
-import IntegrationSection5.RelativeSpecialExtension
+module
+
+public import IntegrationSection6.VFPrefixMaps
+public import IntegrationSection5.RelativeSpecialExtension
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Maps preserving the frozen VF tail induce actual maps on prefix fibres. -/
 noncomputable section

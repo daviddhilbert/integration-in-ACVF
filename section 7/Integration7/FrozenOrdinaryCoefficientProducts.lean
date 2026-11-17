@@ -1,9 +1,15 @@
-import Integration7.OrdinaryCoefficientFieldIntegralProducts
-import Integration7.FrozenHeadIntegralAdditivity
-import Integration7.FrozenOrdinaryHeadIntegralValues
-import Integration7.PositiveVolumeClassScalarExtensions
-import Integration7.PositiveVolumeClassProductExtensions
-import Integration7.DefinableVolumeParameterDescent
+module
+
+public import Integration7.OrdinaryCoefficientFieldIntegralProducts
+public import Integration7.FrozenHeadIntegralAdditivity
+public import Integration7.FrozenOrdinaryHeadIntegralValues
+public import Integration7.PositiveVolumeClassScalarExtensions
+public import Integration7.PositiveVolumeClassProductExtensions
+public import Integration7.DefinableVolumeParameterDescent
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Ordinary coefficient products commute with genuine frozen fibre
 integration. The resulting head-row identity descends to the original

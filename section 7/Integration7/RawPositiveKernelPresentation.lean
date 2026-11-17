@@ -1,5 +1,11 @@
-import Integration7.RawVolumeKernelIdeal
-import Integration7.SurjectiveGroupificationKernels
+module
+
+public import Integration7.RawVolumeKernelIdeal
+public import Integration7.SurjectiveGroupificationKernels
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Every raw kernel element has actual positive representatives with
 identical images in the geometric common-blowup semiring. This includes

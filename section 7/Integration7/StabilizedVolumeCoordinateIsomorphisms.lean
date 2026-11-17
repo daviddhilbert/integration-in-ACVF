@@ -1,5 +1,11 @@
-import Integration7.UnitPointVolumeSwaps
-import Integration7.GammaPermutedVolumeObjects
+module
+
+public import Integration7.UnitPointVolumeSwaps
+public import Integration7.GammaPermutedVolumeObjects
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Below the full RV dimension, unchanged-density coordinate
 permutation is an actual volume isomorphism. Multiplication by the

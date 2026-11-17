@@ -1,5 +1,11 @@
-import Integration7.GammaGeometricCommonWitnesses
-import Integration7.GammaVolumeBaseEquality
+module
+
+public import Integration7.GammaGeometricCommonWitnesses
+public import Integration7.GammaVolumeBaseEquality
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A geometric common witness depends on the actual coordinate/density
 rows and the parameter base, including after a VF tuple is frozen. -/

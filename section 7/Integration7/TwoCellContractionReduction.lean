@@ -1,5 +1,11 @@
-import Integration7.MixedCellGraphRefinements
-import Integration7.RVGraphRefinementContractionComparisons
+module
+
+public import Integration7.MixedCellGraphRefinements
+public import Integration7.RVGraphRefinementContractionComparisons
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Reduction of arbitrary specified VF² standard contractions to
 specified contractions on one actual definable two-cell family. The

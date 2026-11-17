@@ -1,6 +1,12 @@
-import Integration7.AERVVolumeFunctionAdditiveStructure
-import Integration7.VolumeFamilyIntegralAdditivity
-import Integration7.AERVVolumeFunctionIntegrals
+module
+
+public import Integration7.AERVVolumeFunctionAdditiveStructure
+public import Integration7.VolumeFamilyIntegralAdditivity
+public import Integration7.AERVVolumeFunctionIntegrals
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The canonical integral is an additive homomorphism on the actual
 almost-everywhere positive homogeneous volume-function quotient. -/

@@ -1,6 +1,12 @@
-import Integration7.NormalizedPositivePermutationGenerators
-import Integration7.PositiveGradedScalarBalance
-import Integration7.NormalizedHomogeneousIntegralValues
+module
+
+public import Integration7.NormalizedPositivePermutationGenerators
+public import Integration7.PositiveGradedScalarBalance
+public import Integration7.NormalizedHomogeneousIntegralValues
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Actual permutations of VF coordinates extend to S-linear maps on
 the full normalized function module and preserve its total integral. -/

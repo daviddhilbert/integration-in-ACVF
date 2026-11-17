@@ -1,6 +1,12 @@
-import Integration7.FixedRVVolumeCoordinates
-import Integration7.ConstantHeadCoordinateVolumeIsomorphisms
-import Section4.RVIsoTools
+module
+
+public import Integration7.FixedRVVolumeCoordinates
+public import Integration7.ConstantHeadCoordinateVolumeIsomorphisms
+public import Section4.RVIsoTools
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! A coordinate-preserving unary RV bijection remains a volume
 isomorphism after adjoining a fixed head coordinate. Degenerate unary

@@ -1,5 +1,11 @@
-import IntegrationSection5.CanonicalTranslationPreparation
-import IntegrationSection5.CellGammaBridge
+module
+
+public import IntegrationSection5.CanonicalTranslationPreparation
+public import IntegrationSection5.CellGammaBridge
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Exact translated RV-class fibres imply the required head saturation,
 including the RV label recording the original head coordinate. -/

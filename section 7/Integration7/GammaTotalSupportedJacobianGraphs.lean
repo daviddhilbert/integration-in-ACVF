@@ -1,5 +1,11 @@
-import Integration7.GammaSupportedJacobianGraphs
-import Section5.Assembly
+module
+
+public import Integration7.GammaSupportedJacobianGraphs
+public import Section5.Assembly
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! Complete the supported Jacobian graph by zero where no supported
 chart has a value. The resulting total functional relation retains the

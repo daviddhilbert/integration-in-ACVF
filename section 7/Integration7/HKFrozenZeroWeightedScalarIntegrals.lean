@@ -1,7 +1,13 @@
-import Integration7.HKZeroFamilyFieldScalarIntegrals
-import Integration7.HKFrozenZeroHeadIntegralValues
-import Integration7.HKPositiveVolumeClassScalarExtensions
-import Integration7.HKFrozenHeadWeightedZeroCoefficients
+module
+
+public import Integration7.HKZeroFamilyFieldScalarIntegrals
+public import Integration7.HKFrozenZeroHeadIntegralValues
+public import Integration7.HKPositiveVolumeClassScalarExtensions
+public import Integration7.HKFrozenHeadWeightedZeroCoefficients
+
+set_option backward.privateInPublic true
+set_option backward.proofsInPublic true
+@[expose] public section
 
 /-! The weighted-zero input scalar law holds on the genuine frozen unary fibres and descends to the original parameter context. -/
 noncomputable section
