@@ -171,3 +171,11 @@ This separate default build target retains the existing paper entry points.
 [PROMOTED-FOUNDATIONS.json](PROMOTED-FOUNDATIONS.json) records the original
 proof sources, exact statements and axiom inventories. CI builds the added
 target and checks every promoted public type against its original baseline.
+
+## Shared foundations
+
+Hilbert mathlib owns the paper-independent modules listed in
+`SHARED-FOUNDATION.json`. The additional extraction moves 27 implementation
+files there and preserves their original import paths, public types and
+hypotheses. The 40 shared paths are verified against the exact pinned provider
+bodies; Section 7 retains its complete 6,711-declaration audit.
