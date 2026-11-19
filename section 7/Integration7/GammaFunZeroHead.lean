@@ -108,6 +108,26 @@ end IntegrationInACVF.Section7
 namespace IntegrationInACVF.Section7
 variable {M : Type} [LRV.Structure M] [M ⊨ Axioms.ACVF] {G : Base (M := M)}
 
+/-- The density-graph bijection of a Gamma VF volume object is a Gamma isomorphism. -/
+theorem gamma_volume_density_graph_iso (hc : CanonicalStructure.IsCanonical (M := M)) (C : BaseContext M)
+    {k : ℕ} {U : PositiveVFVolumeObject (M := M) (C.base : Set M) k} (hU : VFVolumeObjectGamma U G) :
+    (VFVolumeIso.of_bijection (volumeDensityGraphBijection hc C U)).GammaDefinable G := by
+  have L := gammaLogicInput G
+  refine ⟨hU.domain,hU.densityGraph,?_⟩
+  apply SpecialTransformations.Section5.GammaGraphDefinable.congr (L.swap_graph hU.projection_graph)
+  intro p q
+  constructor
+  · rintro ⟨hq,rfl⟩
+    obtain ⟨hq0,hqe⟩ := (mem_volumeDensityGraph_iff U.form q).mp hq
+    exact ⟨⟨_,hq0⟩,rfl,hqe.symm⟩
+  · rintro ⟨u,rfl,rfl⟩
+    refine ⟨((appendDensityMap U.form).toImage u).property,?_⟩
+    change u.val = ((appendDensityMap U.form u).val.1,(appendDensityMap U.form u).val.2 ∘ Fin.castAdd 1)
+    rw [appendDensityMap_value]
+    refine Prod.ext rfl ?_
+    funext i
+    exact (Fin.append_left _ _ i).symm
+
 theorem gamma_class_reindex_heq (hc : CanonicalStructure.IsCanonical (M := M)) (C : BaseContext M) (G : Base (M := M))
     {p q : ℕ} (h : p = q) (U : GammaVolumeObjects G (C.base : Set M) q) :
     HEq (gammaVolumeBlowupClass hc C G (U.reindexDegree h)) (gammaVolumeBlowupClass hc C G U) := by
@@ -254,5 +274,84 @@ theorem zero_presentation_head_integral_ae (F H : ZeroPresentation C Ξ hΞ (n+1
 def aeZeroHeadIntegral : AEZeroFunction hc C Ξ hΞ (n+1) → AEFunction hc C Ξ hΞ n 0 :=
   Quotient.lift (fun F => Quotient.mk _ (F.headIntegral hc C Ξ hΞ hGenerated))
     (fun F H h => Quotient.sound (zero_presentation_head_integral_ae hc C Ξ hΞ hGenerated γ hγ hγ1 F H h))
+
+set_option maxHeartbeats 4000000 in
+include hγ hγ1 in
+/-- **Gamma head Fubini for weighted degree-zero functions.** -/
+theorem zero_presentation_head_fubini (F : ZeroPresentation C Ξ hΞ (n+1)) :
+    HEq ((F.headIntegral hc C Ξ hΞ hGenerated).appendedIntegral hc C Ξ hΞ hGenerated)
+      (F.integral hc C Ξ hΞ hGenerated γ hγ hγ1) := by
+  let T := F.headPrep hc C Ξ hΞ hGenerated
+  have hT := F.headPrep_map hc C Ξ hΞ hGenerated
+  have hTarget := F.headPrep_target hc C Ξ hΞ hGenerated
+  have hcon : GammaSetDefinable 𝔅 (carrier T.contractedSet) := gamma_headImage T.target hTarget
+  have hBC := gamma_named_code_context_base C Ξ hΞ
+  have hNames := gamma_named_code_context_names C Ξ hΞ
+  have hreal := small_gamma_named_real C Ξ hΞ
+  let W := F.family.fullVFObject
+  let A := nativeMixedVolumeDomain hc W.densityGraph.domain
+  have hA : GammaSetDefinable 𝔅 (carrier A) := F.gamma.densityGraph
+  obtain ⟨D,hD,_⟩ := generated_base_standard_contraction_exists (B := 𝔅) (𝔇).saturated (𝔇).model00
+    hreal hGenerated hBC T.contractedSet hcon (Equiv.refl _)
+  let P := identityHeadTailStandardContraction T D
+  have hP : GammaProgramDefinable 𝔅 P.program :=
+    gamma_orderedCastSource _ _ ⟨hT,hTarget,gamma_orderedCastSource _ _ hD⟩
+  let H := F.headIntegral hc C Ξ hΞ hGenerated
+  let δ := Fin.natAdd 1 (suffixIndex (specialRelative_rvArity_le T.special) (Fin.last F.arity))
+  have hδ := head_retained_density_nonzero T (Fin.last F.arity) F.family.densityGraph_label_nonzero
+  have h1 := (gamma_native_family_append_comparison (k := 0) hc 𝔇 𝔅 hBC hΞ γ hγ hγ1 T.contractedSet hcon
+    (headVolumeIndex T (Fin.elim0 : Fin 0 → Fin (F.arity+1))) (F.family.headIntegral hc Ξ T).finite_selected δ hδ
+    (H.contraction hc C Ξ hΞ hGenerated) D (H.contraction_gamma hc C Ξ hΞ hGenerated) hD).descend hc 𝔇 hNames
+  have hS := standard_append_volume_object_gamma_of (k := 0) hc 𝔇 Ξ 𝔅 T.contractedSet
+    (headVolumeIndex T (Fin.elim0 : Fin 0 → Fin (F.arity+1))) δ hδ (F.family.headIntegral hc Ξ T).finite_selected D hD
+  let S : GammaVolumeObjects 𝔅 𝔖 (appendVolumeDegree (n+1) 0) := ⟨_,hS⟩
+  have hHS : H.appendedIntegral hc C Ξ hΞ hGenerated = gammaVolumeBlowupClass hc 𝔇 𝔅 S :=
+    (gammaVolumeBlowupClass_eq_iff hc 𝔇 𝔅).mpr h1
+  let e2 := ordinaryHeadIntegralVolumeIso hc 𝔇 Ξ A W.densityGraph.finite_labels T (Fin.last F.arity)
+    F.family.densityGraph_label_nonzero (F.family.headIntegral hc Ξ T).finite_selected D
+  have he2 := gamma_volume_iso_of_label_identity hc e2 (hS.reindexDegree (head_tail_volume_degree (n+1)).symm)
+    rfl (fun _ => rfl)
+  have h3 := GammaNamed.raw_standard_volume_normalization hc 𝔇 𝔅 hBC A hA W.densityGraph.finite_labels
+    (Fin.last F.arity) F.family.densityGraph_label_nonzero P hP
+  let ω := mixedRetainedLabelVolumeForm (rawSpecialSet hc A) (Fin.last F.arity)
+    (fun p => F.family.densityGraph_label_nonzero p.val p.property)
+  let U := nativeMixedVFVolumeObject hc A W.densityGraph.finite_labels ω
+  have hU : VFVolumeObjectGamma U 𝔅 :=
+    VFVolumeObjectGamma.of_density_graph (gamma_coordinate_volume_density_graph hc hA ω (Fin.last F.arity) (fun _ => rfl))
+  obtain ⟨E,hE,_⟩ := generated_base_standard_contraction_exists (B := 𝔅) (𝔇).saturated (𝔇).model00
+    hreal hGenerated hBC (nativeMixedVolumeDomain hc U.densityGraph.domain) hU.densityGraph (Equiv.refl _)
+  have h4 := GammaNamed.retained_density_graph_contraction_comparison hc 𝔇 𝔅 hBC hΞ (gamma_named_generic hc C Ξ hΞ)
+    γ hγ hγ1 A hA W.densityGraph.finite_labels ω (Fin.last F.arity) (fun _ => rfl) P hP hU E hE
+  have h5 := gamma_named_integration_contraction hc C Ξ hΞ hGenerated γ hγ hγ1 U hU E hE
+  have h6 : gammaVFVolumeClass hc 𝔇 𝔅 ⟨W,F.gamma.fullVFObject⟩ = gammaVFVolumeClass hc 𝔇 𝔅 ⟨U,hU⟩ := by
+    apply (gammaVFVolumeClass_eq_iff hc 𝔇 𝔅).mpr
+    let f : SpecialTransformations.DefinableGeometry.Map W.densityGraph.domain U.domain :=
+      SpecialTransformations.DefinableGeometry.Map.inclusion (fun _ h => h)
+    have hf : Function.Bijective f := by
+      constructor
+      · intro p q he
+        exact Subtype.ext (congrArg (fun z : U.domain => z.val) he)
+      · intro q
+        exact ⟨⟨q.val,q.property⟩,rfl⟩
+    let b : VFVolumeBijection W.densityGraph U :=
+      VFVolumeBijection.of_preserving_vf_and_density hc 𝔇 f hf (fun _ => rfl) (fun p => densityGraph_form_last W p)
+    have hb : (VFVolumeIso.of_bijection b).GammaDefinable 𝔅 :=
+      ⟨F.gamma.densityGraph,hU.domain,vf_identity_map_gamma _ (fun _ => rfl) F.gamma.densityGraph⟩
+    exact ⟨_,(gamma_volume_density_graph_iso hc 𝔇 F.gamma.fullVFObject).trans hc 𝔇 hb⟩
+  rw [hHS]
+  change HEq _ (gammaNamedIntegrationEquiv hc C Ξ hΞ hGenerated γ hγ hγ1 (n+1)
+    (gammaVFVolumeClass hc 𝔇 𝔅 ⟨W,F.gamma.fullVFObject⟩))
+  rw [h6,h5]
+  refine (gamma_class_reindex_heq hc 𝔇 𝔅 (head_tail_volume_degree (n+1)).symm S).symm.trans (heq_of_eq ?_)
+  apply (gammaVolumeBlowupClass_eq_iff hc 𝔇 𝔅).mpr
+  exact (GammaVolumeBlowupEquivalent.of_iso 𝔇 𝔅 _ he2).trans hc 𝔇 𝔅 ((h3.trans hc h4).descend hc 𝔇 hNames)
+
+include hγ hγ1 in
+/-- **Gamma head Fubini for weighted degree-zero almost-everywhere functions.** -/
+theorem ae_zero_head_fubini (f : AEZeroFunction hc C Ξ hΞ (n+1)) :
+    HEq (aeAppendedIntegral hc C Ξ hΞ hGenerated γ hγ hγ1 (aeZeroHeadIntegral hc C Ξ hΞ hGenerated γ hγ hγ1 f))
+      (aeZeroIntegral hc C Ξ hΞ hGenerated γ hγ hγ1 f) := by
+  induction f using Quotient.inductionOn with
+  | h F => exact zero_presentation_head_fubini hc C Ξ hΞ hGenerated γ hγ hγ1 F
 
 end IntegrationInACVF.Section7.GammaFun
