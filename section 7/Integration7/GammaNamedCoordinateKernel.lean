@@ -22,7 +22,6 @@ theorem rv_volume_lift_coordinate_kernel
     (hGeneric : ∀ {p : ℕ} (x : Fin p → SpecialTransformations.Section5.VF (M := M)),
       AlgebraicIndependent (vfParameterField G.real) x →
       AlgebraicIndependent (vfParameterField (C.base : Set M)) x)
-    (hTransport : GammaVolumeTransportInput hc G (C.base : Set M))
     (γ : Values.Gamma (M := M)) (hγ : γ ∈ G.gamma) (hγ1 : 1 < γ)
     (U V : PositiveRVVolumeObject (M := M) (C.base : Set M) k)
     (hU : VolumeObjectGamma U G) (hV : VolumeObjectGamma V G)
@@ -49,7 +48,7 @@ theorem rv_volume_lift_coordinate_kernel
   have hf' : f'.GammaDefinable G :=
     (actual_rv_volume_lift_chart_gamma hc C hGC U hU).trans hc C
       (hf.trans hc C ((actual_rv_volume_lift_chart_gamma hc C hGC V hV).symm hc C))
-  have hMiddle := pullback_volume_ae_kernel hc C G hGC hΞ hGenerated hNames hGeneric hTransport γ hγ hγ1
+  have hMiddle := pullback_volume_ae_kernel hc C G hGC hΞ hGenerated hNames hGeneric γ hγ hγ1
     A B hA hB hAP hBP hfinA hfinB hAF hBF ω π δ ε
     (actual_rv_volume_lift_chart_density hc U δ hUδ) (actual_rv_volume_lift_chart_density hc V ε hVε)
     hδ hε f' hf'

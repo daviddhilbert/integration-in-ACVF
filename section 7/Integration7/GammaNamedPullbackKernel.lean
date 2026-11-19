@@ -5,7 +5,7 @@ import Integration7.GammaNativePreparedMixedPartitions
 /-! The Gamma-named common-blowup kernel for an actual almost-everywhere VF
 volume isomorphism between RV pullbacks with retained coordinate densities.
 All data are Gamma-definable over an arbitrary Gamma base `G`, coded in a
-context containing the common names of `G`. The Gamma volume-transport input
+context containing the common names of `G`. `gamma_volume_transport_input`
 supplies the Gamma intermediate densities of the Section 5.6 factor chains. -/
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
@@ -38,7 +38,6 @@ theorem native_prepared_mixed_partition_exists (C : BaseContext M)
 
 theorem prepared_subdomain_volume_chain_exists
     (hc : CanonicalStructure.IsCanonical (M := M)) (C : BaseContext M) (G : Base (M := M))
-    (hTransport : GammaVolumeTransportInput hc G (C.base : Set M))
     {A L : DefSet (M := M) (C.base : Set M) (n+1) a}
     {B K : DefSet (M := M) (C.base : Set M) (n+1) b}
     (hLA : carrier L ⊆ carrier A) (hKB : carrier K ⊆ carrier B)
@@ -67,7 +66,7 @@ theorem prepared_subdomain_volume_chain_exists
   have hψP : GammaSetDefinable G (volumeDensityGraph ψP).carrier :=
     gamma_coordinate_volume_density_graph hc (GammaChainDefinable.target G _ (hP (some i))) ψP
       (suffixIndex (special_chain_rvArity_le P.special.chain) δ) (fun _ => rfl)
-  apply special_conjugate_volume_chain_exists hc C hTransport (P.pieceSpecial (some i)) (R.pieceSpecial (some i))
+  apply special_conjugate_volume_chain_exists hc C (P.pieceSpecial (some i)) (R.pieceSpecial (some i))
     (hP (some i)) (hR (some i)) ωD πE ψP χR hψP ?_ ?_ (fun x => (hfinA x).subset (fun _ h => hLA (Q.sourceSubset i h)))
     (Q.chain i) (hQ i) (Q.volume i)
   · intro p
@@ -89,7 +88,6 @@ theorem prepared_subdomain_volume_gluing
     (hGenerated : VFGammaGeneratedBase G) (hNames : commonRealNames G ⊆ (C.base : Set M))
     (hGeneric : ∀ {p : ℕ} (x : Fin p → VF (M := M)), AlgebraicIndependent (vfParameterField G.real) x →
       AlgebraicIndependent (vfParameterField (C.base : Set M)) x)
-    (hTransport : GammaVolumeTransportInput hc G (C.base : Set M))
     (γ : Values.Gamma (M := M)) (hγ : γ ∈ G.gamma) (hγ1 : 1 < γ)
     {A L : DefSet (M := M) (C.base : Set M) (n+1) a}
     {B K : DefSet (M := M) (C.base : Set M) (n+1) b}
@@ -147,7 +145,7 @@ theorem prepared_subdomain_volume_gluing
           (rawSpecialMap hc (R.pieceSpecial none).toMap) (R.pieceSpecial none).bijective
         exact he ▸ hsmallK
     | some i =>
-      obtain ⟨T,hTΓ,hT⟩ := prepared_subdomain_volume_chain_exists hc C G hTransport hLA hKB ω π δ ε hω hπ
+      obtain ⟨T,hTΓ,hT⟩ := prepared_subdomain_volume_chain_exists hc C G hLA hKB ω π δ ε hω hπ
         hδ hε hfinA Q hQ P R hP hR i
       exact pullback_unary_chain_volume_comparison hc C G hGC hΞ hGenerated hNames hGeneric γ hγ hγ1
         (P.pieces (some i)) (R.pieces (some i)) (hPpieces (some i)) (hRpieces (some i))
@@ -168,7 +166,6 @@ theorem pullback_volume_ae_kernel
     (hGenerated : VFGammaGeneratedBase G) (hNames : commonRealNames G ⊆ (C.base : Set M))
     (hGeneric : ∀ {p : ℕ} (x : Fin p → VF (M := M)), AlgebraicIndependent (vfParameterField G.real) x →
       AlgebraicIndependent (vfParameterField (C.base : Set M)) x)
-    (hTransport : GammaVolumeTransportInput hc G (C.base : Set M))
     (γ : Values.Gamma (M := M)) (hγ : γ ∈ G.gamma) (hγ1 : 1 < γ)
     (A : DefSet (M := M) (C.base : Set M) (n+1) a)
     (B : DefSet (M := M) (C.base : Set M) (n+1) b)
@@ -229,11 +226,11 @@ theorem pullback_volume_ae_kernel
     (native_completed_partition_subset B K Q.target hKB Q.targetSubset)
     (native_completed_partition_disjoint B K Q.target Q.targetSubset Q.targetDisjoint)
     (native_completed_partition_cover B K Q.target hKB Q.targetSubset Q.targetCover)
-  have hLeft := special_pullback_volume_comparison hc C G hGC hΞ hGenerated hNames hGeneric hTransport
+  have hLeft := special_pullback_volume_comparison hc C G hGC hΞ hGenerated hNames hGeneric
     γ hγ hγ1 P.special hPs hAP P.pullback hfinA hAF ω δ hω hδ
-  have hRight := special_pullback_volume_comparison hc C G hGC hΞ hGenerated hNames hGeneric hTransport
+  have hRight := special_pullback_volume_comparison hc C G hGC hΞ hGenerated hNames hGeneric
     γ hγ hγ1 R.special hRs hBP R.pullback hfinB hBF π ε hπ hε
-  have hMiddle := prepared_subdomain_volume_gluing hc C G hGC hΞ hGenerated hNames hGeneric hTransport
+  have hMiddle := prepared_subdomain_volume_gluing hc C G hGC hΞ hGenerated hNames hGeneric
     γ hγ hγ1 hLA hKB ω π δ ε hω hπ hδ hε hfinA hfinB
     f.source_complement_small f.target_complement_small Q hQ P R hPs hRs hP hR
   exact hLeft.trans hc (hMiddle.trans hc (hRight.symm hc))

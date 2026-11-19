@@ -7,7 +7,7 @@ For Gamma RV volume objects `U V` over an arbitrary Gamma base `G`, coded in
 a context `C` containing the real part and the common names of `G`, a
 Gamma almost-everywhere VF volume isomorphism of their lifts yields a Gamma
 common volume blowup equivalence over `C.base`. The densities are arbitrary.
-The statement is conditional on the named Gamma volume-transport input. -/
+Gamma intermediate densities come from `gamma_volume_transport_input`. -/
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 open FirstOrder FirstOrder.Language
@@ -25,7 +25,6 @@ theorem rv_volume_lift_common_context_kernel
     (hGeneric : ∀ {p : ℕ} (x : Fin p → SpecialTransformations.Section5.VF (M := M)),
       AlgebraicIndependent (vfParameterField G.real) x →
       AlgebraicIndependent (vfParameterField (C.base : Set M)) x)
-    (hTransport : GammaVolumeTransportInput hc G (C.base : Set M))
     (γ : Values.Gamma (M := M)) (hγ : γ ∈ G.gamma) (hγ1 : 1 < γ)
     (U V : GammaVolumeObjects G (C.base : Set M) k)
     (f : VFVolumeIso (rvVolumeLift U.val) (rvVolumeLift V.val)) (hf : f.GammaDefinable G) :
@@ -36,7 +35,7 @@ theorem rv_volume_lift_common_context_kernel
   have hgV := density_graph_lift_gamma hc C hGC V.property
   let g := (gU.symm hc C).trans hc C (f.trans hc C gV)
   have hg : g.GammaDefinable G := (hgU.symm hc C).trans hc C (hf.trans hc C hgV)
-  have hMiddle := rv_volume_lift_coordinate_kernel hc C G hGC hΞ hGenerated hNames hGeneric hTransport
+  have hMiddle := rv_volume_lift_coordinate_kernel hc C G hGC hΞ hGenerated hNames hGeneric
     γ hγ hγ1 U.val.densityGraph V.val.densityGraph (U.property.densityGraph hc) (V.property.densityGraph hc)
     (Fin.last U.val.underlying.obj.arity) (Fin.last V.val.underlying.obj.arity)
     U.val.densityGraph_density_last V.val.densityGraph_density_last g hg
@@ -55,12 +54,11 @@ theorem gamma_volume_blowup_of_lift_iso
     (hGeneric : ∀ {p : ℕ} (x : Fin p → SpecialTransformations.Section5.VF (M := M)),
       AlgebraicIndependent (vfParameterField G.real) x →
       AlgebraicIndependent (vfParameterField (C.base : Set M)) x)
-    (hTransport : GammaVolumeTransportInput hc G (C.base : Set M))
     (γ : Values.Gamma (M := M)) (hγ : γ ∈ G.gamma) (hγ1 : 1 < γ)
     (U V : GammaVolumeObjects G (C.base : Set M) k)
     (f : VFVolumeIso (rvVolumeLift U.val) (rvVolumeLift V.val)) (hf : f.GammaDefinable G) :
     GammaVolumeBlowupEquivalent G (C.base : Set M) k U V :=
-  (rv_volume_lift_common_context_kernel hc C G hGC hΞ hGenerated hNames hGeneric hTransport
+  (rv_volume_lift_common_context_kernel hc C G hGC hΞ hGenerated hNames hGeneric
     γ hγ hγ1 U V f hf).descend hc C hNames
 
 end IntegrationInACVF.Section7.GammaNamed

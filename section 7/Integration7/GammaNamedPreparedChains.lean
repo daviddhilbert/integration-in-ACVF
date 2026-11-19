@@ -4,7 +4,7 @@ import Integration7.UnaryChainVolumePreservation
 
 /-! Gamma unary chains are closed under append and inverse. Conjugating a
 Gamma unary chain by Gamma special bijections gives a Gamma unary chain with
-Gamma volume data, using the Gamma volume-transport input. -/
+Gamma volume data, using `gamma_volume_transport_input`. -/
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 open FirstOrder FirstOrder.Language
@@ -65,7 +65,6 @@ theorem gamma_unary_chain_inverse {A : DefSet (M := M) S n a} {B : DefSet (M := 
 /-- Gamma chain volume data from ordinary chain volume data, via Gamma transport. -/
 theorem gamma_unary_chain_volume_data_of_data
     (hc : CanonicalStructure.IsCanonical (M := M)) (C : BaseContext M)
-    (hTransport : GammaVolumeTransportInput hc G (C.base : Set M))
     {A : DefSet (M := M) (C.base : Set M) (n+1) a} {B : DefSet (M := M) (C.base : Set M) (n+1) b}
     (T : UnaryChain (C.base : Set M) (n+1) A B) (hT : GammaUnaryChainDefinable G T)
     (ω : VolumeForm (rawSpecialSet hc A)) (π : VolumeForm (rawSpecialSet hc B))
@@ -73,14 +72,13 @@ theorem gamma_unary_chain_volume_data_of_data
     (hData : unaryChainVolumeData hc T ω π)
     (hfinA : ∀ x : Fin (n+1) → VF (M := M), {r : Fin a → RV (M := M) | (x,r) ∈ carrier A}.Finite) :
     gammaUnaryChainVolumeData hc G T ω π :=
-  gamma_unary_chain_volume_data_of_composite hc C (Nat.zero_lt_succ n) hTransport T hT ω π hω
+  gamma_unary_chain_volume_data_of_composite hc C (Nat.zero_lt_succ n) T hT ω π hω
     (unary_chain_volume_data_preserves hc C T ω π hData hfinA)
 
 namespace GammaNamed
 
 theorem special_conjugate_volume_chain_exists
     (hc : CanonicalStructure.IsCanonical (M := M)) (C : BaseContext M)
-    (hTransport : GammaVolumeTransportInput hc G (C.base : Set M))
     {A : DefSet (M := M) (C.base : Set M) (n+1) a} {B : DefSet (M := M) (C.base : Set M) (n+1) b}
     {D : DefSet (M := M) (C.base : Set M) (n+1) c} {E : DefSet (M := M) (C.base : Set M) (n+1) d}
     (P : SpecialBijection A D) (R : SpecialBijection B E)
@@ -106,7 +104,7 @@ theorem special_conjugate_volume_chain_exists
     gamma_unary_chain_append _ _ (gamma_unary_chain_inverse _ (gamma_special_unary_chain _ P.chain hP))
       (gamma_unary_chain_append _ _ hTΓ (gamma_special_unary_chain _ R.chain hR))
   refine ⟨tP.inverse.append (T.append tR),hW,?_⟩
-  exact gamma_unary_chain_volume_data_of_data hc C hTransport _ hW ψ χ hψ
+  exact gamma_unary_chain_volume_data_of_data hc C _ hW ψ χ hψ
     (unary_chain_volume_data_append hc C tP.inverse (T.append tR) ψ ω χ hInv hTail hfinD) hfinD
 
 end GammaNamed

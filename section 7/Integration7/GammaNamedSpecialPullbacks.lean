@@ -6,7 +6,7 @@ import Section5.GammaRestriction
 /-! Gamma-named special pullbacks: the coordinate-density volume object of
 the target of a Gamma special bijection, and its comparison with the source
 pullback. The unary factor chain of a Gamma special chain is a Gamma unary
-chain; its Gamma volume data comes from the Gamma volume-transport input. -/
+chain; its Gamma volume data comes from `gamma_volume_transport_input`. -/
 noncomputable section
 set_option backward.isDefEq.respectTransparency false
 open FirstOrder FirstOrder.Language
@@ -45,7 +45,6 @@ theorem special_pullback_volume_comparison
     (hGenerated : VFGammaGeneratedBase G) (hNames : commonRealNames G ⊆ (C.base : Set M))
     (hGeneric : ∀ {p : ℕ} (x : Fin p → VF (M := M)), AlgebraicIndependent (vfParameterField G.real) x →
       AlgebraicIndependent (vfParameterField (C.base : Set M)) x)
-    (hTransport : GammaVolumeTransportInput hc G (C.base : Set M))
     (γ : Values.Gamma (M := M)) (hγ : γ ∈ G.gamma) (hγ1 : 1 < γ)
     {A : DefSet (M := M) (C.base : Set M) (n+1) a} {B : DefSet (M := M) (C.base : Set M) (n+1) b}
     (T : SpecialBijection A B) (hT : GammaChainDefinable G T.chain)
@@ -68,7 +67,7 @@ theorem special_pullback_volume_comparison
     exact (special_oldLabels T ⟨p.val,p.property⟩ δ).symm
   have hπ : ∀ p, π.value p = p.val.2 (suffixIndex (special_chain_rvArity_le T.chain) δ) := fun _ => rfl
   have hData : gammaUnaryChainVolumeData hc G t ω π := by
-    apply gamma_unary_chain_volume_data_of_composite hc C (Nat.zero_lt_succ n) hTransport t
+    apply gamma_unary_chain_volume_data_of_composite hc C (Nat.zero_lt_succ n) t
       (gamma_special_unary_chain _ T.chain hT) ω π (gamma_coordinate_volume_density_graph hc hA ω δ hω)
     rw [specialUnaryChain_toMap]
     exact (special_preserves_volume hc C (Nat.zero_lt_succ n) T ω π hDensity).1

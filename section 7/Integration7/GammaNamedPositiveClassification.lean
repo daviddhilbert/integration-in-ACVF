@@ -13,8 +13,8 @@ Gamma graphs; RV classes up to Gamma common volume blowups.
 * `gamma_named_lift_class_surjective`: every Gamma VF class is the class of
   the lift of a Gamma RV object (unconditional).
 * `gamma_named_blowup_class_eq_of_lift_class_eq`: Gamma-isomorphic lifts have
-  equal Gamma blowup classes (forward Proposition 7.8), conditional on the
-  named `GammaVolumeTransportInput`.
+  equal Gamma blowup classes (forward Proposition 7.8, unconditional; the
+  Gamma intermediate densities come from `gamma_volume_transport_input`).
 
 Well-definedness of the lift on Gamma blowup classes needs a Gamma version of
 the prescribed-volume lifting theorem and is not claimed here. -/
@@ -91,11 +91,9 @@ theorem gamma_named_lift_class_surjective
     (fun _ h => gamma_named_code_context_base C Ξ hΞ h) (gamma_named_code_context_names C Ξ hΞ) hGenerated A.val A.property
   exact ⟨P,(gammaVFVolumeClass_eq_iff hc _ _).mpr ⟨e,he⟩⟩
 
-/-- Gamma-named forward Proposition 7.8 on classes, conditional on the named
-Gamma volume-transport input. -/
+/-- Gamma-named forward Proposition 7.8 on classes. -/
 theorem gamma_named_blowup_class_eq_of_lift_class_eq
     (hGenerated : VFGammaGeneratedBase (gammaNamedBase C Ξ))
-    (hTransport : GammaVolumeTransportInput hc (gammaNamedBase C Ξ) ((gammaNamedCodeContext C Ξ hΞ).base : Set M))
     (γ : Values.Gamma (M := M)) (hγ : γ ∈ Ξ) (hγ1 : 1 < γ)
     (U V : GammaVolumeObjects (gammaNamedBase C Ξ) ((gammaNamedCodeContext C Ξ hΞ).base : Set M) k)
     (h : gammaVFVolumeClass hc (gammaNamedCodeContext C Ξ hΞ) (gammaNamedBase C Ξ)
@@ -109,6 +107,6 @@ theorem gamma_named_blowup_class_eq_of_lift_class_eq
     (GammaNamed.gamma_volume_blowup_of_lift_iso hc (gammaNamedCodeContext C Ξ hΞ) (gammaNamedBase C Ξ)
       (fun _ h => gamma_named_code_context_base C Ξ hΞ h) hΞ hGenerated
       (gamma_named_code_context_names C Ξ hΞ) (fun x hx => gamma_named_code_context_generic C Ξ hΞ hc x hx)
-      hTransport γ hγ hγ1 U V f hf)
+      γ hγ hγ1 U V f hf)
 
 end IntegrationInACVF.Section7
