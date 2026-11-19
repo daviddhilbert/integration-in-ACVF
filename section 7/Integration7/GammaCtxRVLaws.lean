@@ -27,14 +27,15 @@ local notation "𝔅" => B₀
 local notation "𝔇" => C
 local notation "𝔖" => (C.base : Set M)
 
-/-- Gamma RV volume classes in every degree, in the context `C` over the base `B₀`. -/
-abbrev GammaNamedRVClasses : ℕ → Type
+/-- Gamma RV volume classes in every degree, in the context `C` over the base `B₀`. This is a `def`
+(not an `abbrev`) so that its instances never apply to the named classes `HK.GammaNamedRVClasses`. -/
+def GammaNamedRVClasses : ℕ → Type
   | 0 => GammaZeroRVClasses B₀ (C.base : Set M)
   | k+1 => GammaVolumeBlowupClasses hc C B₀ k
 
 instance gammaNamedRVClassesAddCommMonoid : (n : ℕ) → AddCommMonoid (GammaNamedRVClasses hc C B₀ n)
   | 0 => gammaZeroRVAddCommMonoid hc
-  | _+1 => inferInstance
+  | k+1 => inferInstanceAs (AddCommMonoid (GammaVolumeBlowupClasses hc C B₀ k))
 
 
 
