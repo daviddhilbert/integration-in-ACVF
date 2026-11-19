@@ -165,3 +165,53 @@ theorem gamma_vf_iso_contraction_comparison (hc : CanonicalStructure.IsCanonical
   exact ((hPU.symm hc).trans hc hPQ).trans hc hQV
 
 end IntegrationInACVF.Section7.GammaNamed
+
+namespace IntegrationInACVF.Section7.GammaNamed
+variable {M : Type} [sM : LRV.Structure M] [M ⊨ Axioms.ACVF] {n a d : ℕ}
+
+set_option maxHeartbeats 3200000 in
+/-- The selected standard contraction of a Gamma domain is common-context equivalent to
+any Gamma standard contraction of its coordinate VF realization. -/
+theorem gamma_selected_realization_contraction (hc : CanonicalStructure.IsCanonical (M := M)) (C : BaseContext M)
+    (G : Base (M := M)) (hGC : G.real ⊆ (C.base : Set M)) (hΞ : Cardinal.mk G.gamma < C.κ)
+    (hGenerated : VFGammaGeneratedBase G) (hNames : commonRealNames G ⊆ (C.base : Set M))
+    (hGeneric : ∀ {p : ℕ} (x : Fin p → VF (M := M)), AlgebraicIndependent (vfParameterField G.real) x →
+      AlgebraicIndependent (vfParameterField (C.base : Set M)) x)
+    (γ : Values.Gamma (M := M)) (hγ : γ ∈ G.gamma) (hγ1 : 1 < γ)
+    (A : DefSet (M := M) (C.base : Set M) (n+1) a) (hA : GammaSetDefinable G (carrier A)) (ρ : Fin d → Fin a)
+    (hfin : ∀ (x : Fin (n+1) → VF (M := M)) (t : Fin d → RV (M := M)),
+      {r : Fin a → RV (M := M) | (x,r) ∈ carrier A ∧ r ∘ ρ = t}.Finite)
+    (δ : Fin a) (hδ : ∀ p ∈ carrier A, (p.2 δ).val ≠ iRVZero)
+    {σ : Equiv.Perm (Fin (n+1))} (T : StandardContraction A σ) (hT : GammaProgramDefinable G T.program)
+    (hW : VFVolumeObjectGamma (selectedCoordinateVolumeRealization hc A ρ hfin δ hδ) G)
+    {υ : Equiv.Perm (Fin ((d+n)+1))}
+    (EW : StandardContraction (nativeMixedVolumeDomain hc
+      (selectedCoordinateVolumeRealization hc A ρ hfin δ hδ).densityGraph.domain) υ)
+    (hEW : GammaProgramDefinable G EW.program) :
+    CommonContextVolumeEquivalent G C
+      ⟨selectedStandardVolumeObject hc C G.gamma A ρ δ hδ hfin T,
+        selected_standard_volume_object_gamma hc C G.gamma G A ρ δ hδ hfin T hT⟩
+      ⟨(selectedCoordinateVolumeRealization hc A ρ hfin δ hδ).standardContractionObject hc C G.gamma EW,
+        standard_contraction_object_gamma hc C G hGC _ hW EW hEW⟩ := by
+  let W := selectedCoordinateVolumeRealization hc A ρ hfin δ hδ
+  obtain ⟨r,V,E,hE,hVF,hCon,hFull⟩ := selected_rv_vf_tail_full_program_exists hc T.program
+    (gamma_vfPermutationImage A hA σ) hT ρ
+  let L := nativeProgramSelectedRVVFTailLift (n := n+1) (d := d) hc A ρ
+  have hL : GammaSetDefinable G (carrier L) := gamma_native_program_selected_rv_vf_tail_lift hc A ρ hA
+  have hfinL := native_program_selected_rv_vf_tail_finite_labels hc A ρ hfin
+  have hδL : ∀ p ∈ carrier L, (p.2 δ).val ≠ iRVZero := fun p hp =>
+    native_program_selected_rv_vf_tail_density_nonzero hc A ρ δ (fun q => hδ q.val q.property) ⟨p,hp⟩
+  let T' := selectedRVVFTailStandardContraction hc T ρ E
+  have hT' := gamma_selected_rv_vf_tail_standard_contraction hc T ρ E hFull
+  obtain ⟨E1,hE1,_,_,_⟩ := generated_base_standard_contraction_exists (B := G)
+    C.saturated C.model00 ((Cardinal.mk_le_mk_of_subset hGC).trans_lt C.small) hGenerated hGC
+    (nativeMixedVolumeDomain hc W.densityGraph.domain) hW.densityGraph (selectedVFTailPermutation d σ)
+  have hRet := retained_density_graph_contraction_comparison hc C G hGC hΞ hGeneric γ hγ hγ1 L hL hfinL W.form δ
+    (fun _ => rfl) T' hT' hW E1 hE1
+  have hNorm := raw_standard_volume_normalization hc C G hGC L hL hfinL δ hδL T' hT'
+  have hTail := selected_tail_completion_common hc C G hGC A hA ρ hfin δ hδ T hT E hE hFull hVF hCon
+  have hSame := gamma_vf_iso_contraction_comparison hc C G hGC hΞ hGenerated hNames hGeneric γ hγ hγ1 W W hW hW
+    (VFVolumeIso.refl hc C W) (hW.refl_iso hc C) E1 EW hE1 hEW
+  exact (((hTail.symm hc).trans hc hNorm).trans hc hRet).trans hc hSame
+
+end IntegrationInACVF.Section7.GammaNamed
