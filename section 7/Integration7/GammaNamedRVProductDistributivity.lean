@@ -120,12 +120,20 @@ theorem gammaNamedRVClass_coprod {n : ℕ} (U V : GammaRVObjects 𝔅 𝔖 n) :
   | zero => rfl
   | succ k => rfl
 
+section Generic
+variable {X : ℕ → Type}
+  (φ : ∀ {n : ℕ}, GammaRVObjects (gammaNamedBase C Ξ) ((gammaNamedCodeContext C Ξ hΞ).base : Set M) n → X n)
+variable (hφ : ∀ {n : ℕ} (U V : GammaRVObjects (gammaNamedBase C Ξ) ((gammaNamedCodeContext C Ξ hΞ).base : Set M) n)
+  (e : rvVolumeIsoInDegree ((gammaNamedCodeContext C Ξ hΞ).base : Set M) n U.val V.val),
+  IsoGamma n e (gammaNamedBase C Ξ) → φ U = φ V)
+include hc hφ
+
 set_option allowUnsafeReducibility true in
 attribute [local reducible] RVVolumeData.coprod productData rvFiniteProductObject
   rvFiniteCoprodObject rvCoprodObject rvProductObject in
-theorem gamma_product_right_distrib {n m : ℕ} (U : GammaRVObjects 𝔅 𝔖 n) (V W : GammaRVObjects 𝔅 𝔖 m) :
-    gammaNamedRVClass hc C Ξ hΞ (U.product hc (V.coprod W)) =
-      gammaNamedRVClass hc C Ξ hΞ ((U.product hc V).coprod (U.product hc W)) := by
+theorem gen_product_right_distrib {n m : ℕ} (U : GammaRVObjects 𝔅 𝔖 n) (V W : GammaRVObjects 𝔅 𝔖 m) :
+    φ (U.product hc (V.coprod W)) =
+      φ ((U.product hc V).coprod (U.product hc W)) := by
   obtain ⟨U,hU⟩ := U
   obtain ⟨V,hV⟩ := V
   obtain ⟨W,hW⟩ := W
@@ -139,7 +147,7 @@ theorem gamma_product_right_distrib {n m : ℕ} (U : GammaRVObjects 𝔅 𝔖 n)
   have hAd := hU.domain
   have hBd := hV.domain
   have hLd := hW.domain
-  have key : gammaNamedRVClass hc C Ξ hΞ ⟨ofData (D.coprod E),hF⟩ = gammaNamedRVClass hc C Ξ hΞ ⟨ofData G,hG⟩ := by
+  have key : φ ⟨ofData (D.coprod E),hF⟩ = φ ⟨ofData G,hG⟩ := by
     revert hF hG hAd hBd hLd
     cases n <;> cases m
     all_goals
@@ -148,7 +156,7 @@ theorem gamma_product_right_distrib {n m : ℕ} (U : GammaRVObjects 𝔅 𝔖 n)
       let Bv := underlying 𝔖 _ V
       let L := underlying 𝔖 _ W
       let ωU := form 𝔖 _ U
-      exact eq_of_heq (gammaNamedRVClass_heq_of_reindex hc C Ξ hΞ rfl (D.coprod E) G
+      exact eq_of_heq (gen_heq_of_reindex hc C Ξ hΞ φ hφ rfl (D.coprod E) G
         (rvProductCoprodFold A.obj Bv.obj L.obj).map (rvProductCoprodFold_bijective A.obj Bv.obj L.obj)
         (by
           intro x
@@ -185,14 +193,14 @@ theorem gamma_product_right_distrib {n m : ℕ} (U : GammaRVObjects 𝔅 𝔖 n)
                   ((productData_density_pair _ _ U W u w).symm.trans
                     (RVVolumeData.coprod_density_right D E (rvPackPair _ _ u w)).symm))))
         hF hG (gamma_rv_product_coprod_fold hc A.obj Bv.obj L.obj hAd hBd hLd))
-  exact key.symm.trans (gammaNamedRVClass_congr hc C Ξ hΞ (data_coprod_ofData D E))
+  exact key.symm.trans (gen_congr hc C Ξ hΞ φ hφ (data_coprod_ofData D E))
 
 set_option allowUnsafeReducibility true in
 attribute [local reducible] RVVolumeData.coprod productData rvFiniteProductObject
   rvFiniteCoprodObject rvCoprodObject rvProductObject in
-theorem gamma_product_left_distrib {n m : ℕ} (U V : GammaRVObjects 𝔅 𝔖 n) (W : GammaRVObjects 𝔅 𝔖 m) :
-    gammaNamedRVClass hc C Ξ hΞ ((U.coprod V).product hc W) =
-      gammaNamedRVClass hc C Ξ hΞ ((U.product hc W).coprod (V.product hc W)) := by
+theorem gen_product_left_distrib {n m : ℕ} (U V : GammaRVObjects 𝔅 𝔖 n) (W : GammaRVObjects 𝔅 𝔖 m) :
+    φ ((U.coprod V).product hc W) =
+      φ ((U.product hc W).coprod (V.product hc W)) := by
   obtain ⟨U,hU⟩ := U
   obtain ⟨V,hV⟩ := V
   obtain ⟨W,hW⟩ := W
@@ -206,7 +214,7 @@ theorem gamma_product_left_distrib {n m : ℕ} (U V : GammaRVObjects 𝔅 𝔖 n
   have hAd := hU.domain
   have hBd := hV.domain
   have hLd := hW.domain
-  have key : gammaNamedRVClass hc C Ξ hΞ ⟨ofData (D.coprod E),hF⟩ = gammaNamedRVClass hc C Ξ hΞ ⟨ofData G,hG⟩ := by
+  have key : φ ⟨ofData (D.coprod E),hF⟩ = φ ⟨ofData G,hG⟩ := by
     revert hF hG hAd hBd hLd
     cases n <;> cases m
     all_goals
@@ -215,7 +223,7 @@ theorem gamma_product_left_distrib {n m : ℕ} (U V : GammaRVObjects 𝔅 𝔖 n
       let Bv := underlying 𝔖 _ V
       let L := underlying 𝔖 _ W
       let ωW := form 𝔖 _ W
-      exact eq_of_heq (gammaNamedRVClass_heq_of_reindex hc C Ξ hΞ rfl (D.coprod E) G
+      exact eq_of_heq (gen_heq_of_reindex hc C Ξ hΞ φ hφ rfl (D.coprod E) G
         (rvLeftProductCoprodFold A.obj Bv.obj L.obj).map (rvLeftProductCoprodFold_bijective A.obj Bv.obj L.obj)
         (by
           intro x
@@ -252,6 +260,20 @@ theorem gamma_product_left_distrib {n m : ℕ} (U V : GammaRVObjects 𝔅 𝔖 n
                   ((productData_density_pair _ _ V W v w).symm.trans
                     (RVVolumeData.coprod_density_right D E (rvPackPair _ _ v w)).symm))))
         hF hG (gamma_rv_left_product_coprod_fold hc A.obj Bv.obj L.obj hAd hBd hLd))
-  exact key.symm.trans (gammaNamedRVClass_congr hc C Ξ hΞ (data_coprod_ofData D E))
+  exact key.symm.trans (gen_congr hc C Ξ hΞ φ hφ (data_coprod_ofData D E))
+
+end Generic
+
+theorem gamma_product_right_distrib {n m : ℕ} (U : GammaRVObjects 𝔅 𝔖 n) (V W : GammaRVObjects 𝔅 𝔖 m) :
+    gammaNamedRVClass hc C Ξ hΞ (U.product hc (V.coprod W)) =
+      gammaNamedRVClass hc C Ξ hΞ ((U.product hc V).coprod (U.product hc W)) :=
+  gen_product_right_distrib hc C Ξ hΞ (X := GammaNamedRVClasses hc C Ξ hΞ) (gammaNamedRVClass hc C Ξ hΞ)
+    (gammaNamedRVClass_eq_of_iso hc C Ξ hΞ) U V W
+
+theorem gamma_product_left_distrib {n m : ℕ} (U V : GammaRVObjects 𝔅 𝔖 n) (W : GammaRVObjects 𝔅 𝔖 m) :
+    gammaNamedRVClass hc C Ξ hΞ ((U.coprod V).product hc W) =
+      gammaNamedRVClass hc C Ξ hΞ ((U.product hc W).coprod (V.product hc W)) :=
+  gen_product_left_distrib hc C Ξ hΞ (X := GammaNamedRVClasses hc C Ξ hΞ) (gammaNamedRVClass hc C Ξ hΞ)
+    (gammaNamedRVClass_eq_of_iso hc C Ξ hΞ) U V W
 
 end IntegrationInACVF.Section7.HK

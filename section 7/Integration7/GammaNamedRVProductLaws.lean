@@ -124,25 +124,51 @@ theorem gammaNamedRVClass_congr {n : ℕ} {U V : GammaRVObjects 𝔅 𝔖 n} (h 
     gammaNamedRVClass hc C Ξ hΞ U = gammaNamedRVClass hc C Ξ hΞ V :=
   congrArg _ (Subtype.ext h)
 
+def gammaUnit : GammaRVObjects 𝔅 𝔖 0 := ⟨unit 𝔖,RVVolumeObject.Gamma.unit hc 𝔖⟩
+
+def gammaEmpty (n : ℕ) : GammaRVObjects 𝔅 𝔖 n := ⟨HK.empty 𝔖 n,RVVolumeObject.Gamma.empty n 𝔖⟩
+
+theorem rv_product_assoc_raw {k l j : ℕ} (A : RVObject (M := M) 𝔖 k) (V : RVObject (M := M) 𝔖 l)
+    (W : RVObject (M := M) 𝔖 j) (x : (rvProductObject (rvProductObject A V) W).domain) :
+    (rvProductAssocMap A V W x).val = x.val ∘ Fin.cast (Nat.add_assoc A.arity V.arity W.arity).symm := by
+  obtain ⟨uv,w,rfl⟩ := exists_rvPackPair (rvProductObject A V).domain W.domain x
+  obtain ⟨u,v,rfl⟩ := exists_rvPackPair A.domain V.domain uv
+  rw [rvProductAssocMap_pair]
+  change Fin.append u.val (Fin.append v.val w.val) = Fin.append (Fin.append u.val v.val) w.val ∘ _
+  rw [Fin.append_assoc]
+  funext i
+  simp only [Function.comp_apply, Fin.cast_cast, Fin.cast_eq_self]
+
+/-! ### Laws for any Gamma-isomorphism-invariant class map -/
+
+section Generic
+variable {X : ℕ → Type}
+  (φ : ∀ {n : ℕ}, GammaRVObjects (gammaNamedBase C Ξ) ((gammaNamedCodeContext C Ξ hΞ).base : Set M) n → X n)
+variable (hφ : ∀ {n : ℕ} (U V : GammaRVObjects (gammaNamedBase C Ξ) ((gammaNamedCodeContext C Ξ hΞ).base : Set M) n)
+  (e : rvVolumeIsoInDegree ((gammaNamedCodeContext C Ξ hΞ).base : Set M) n U.val V.val),
+  IsoGamma n e (gammaNamedBase C Ξ) → φ U = φ V)
+include hc hφ
+
+theorem gen_congr {n : ℕ} {U V : GammaRVObjects 𝔅 𝔖 n} (h : U.val = V.val) : φ U = φ V :=
+  congrArg _ (Subtype.ext h)
+
 /-- Relabelling along a Gamma coordinate bijection, with a degree identification. -/
-theorem gammaNamedRVClass_heq_of_reindex {n m : ℕ} (h : n = m)
+theorem gen_heq_of_reindex {n m : ℕ} (h : n = m)
     (D : RVVolumeData (M := M) 𝔖 n) (E : RVVolumeData (M := M) 𝔖 m)
     (F : Map D.underlying.obj.domain E.underlying.obj.domain) (hF : Function.Bijective F)
     (hcoord : ∀ u, E.underlying.obj.value (F u) ∘ finCongr h = D.underlying.obj.value u)
-    (hφ : ∀ u, E.form.value (F u) = D.form.value u)
+    (hdens : ∀ u, E.form.value (F u) = D.form.value u)
     (hD : RVVolumeObject.Gamma n (ofData D) 𝔅) (hE : RVVolumeObject.Gamma m (ofData E) 𝔅)
     (hFΓ : RVMapGamma F 𝔅) :
-    HEq (gammaNamedRVClass hc C Ξ hΞ ⟨ofData D,hD⟩) (gammaNamedRVClass hc C Ξ hΞ ⟨ofData E,hE⟩) := by
+    HEq (φ ⟨ofData D,hD⟩) (φ ⟨ofData E,hE⟩) := by
   subst h
-  exact heq_of_eq (gammaNamedRVClass_eq_of_iso hc C Ξ hΞ _ _
-    (dataRelabelIso hc 𝔇 D E F hF hcoord hφ) (dataRelabelIso_gamma hc 𝔇 D E F hF hcoord hφ hD hFΓ))
+  exact heq_of_eq (hφ _ _
+    (dataRelabelIso hc 𝔇 D E F hF hcoord hdens) (dataRelabelIso_gamma hc 𝔇 D E F hF hcoord hdens hD hFΓ))
 
 /-! ### Unit laws -/
 
-def gammaUnit : GammaRVObjects 𝔅 𝔖 0 := ⟨unit 𝔖,RVVolumeObject.Gamma.unit hc 𝔖⟩
-
-theorem gamma_product_right_unit {n : ℕ} (U : GammaRVObjects 𝔅 𝔖 n) :
-    gammaNamedRVClass hc C Ξ hΞ (U.product hc (gammaUnit hc C Ξ hΞ)) = gammaNamedRVClass hc C Ξ hΞ U := by
+theorem gen_product_right_unit {n : ℕ} (U : GammaRVObjects 𝔅 𝔖 n) :
+    φ (U.product hc (gammaUnit hc C Ξ hΞ)) = φ U := by
   let A := underlying 𝔖 n U.val
   let Z := unit (M := M) 𝔖
   let D := productData n 0 U.val Z
@@ -158,7 +184,7 @@ theorem gamma_product_right_unit {n : ℕ} (U : GammaRVObjects 𝔅 𝔖 n) :
   have hFΓ : RVMapGamma F 𝔅 := (gamma_rv_unpack_fst hc A.obj.domain Z.underlying.obj.domain
     (gamma_rv_product_domain_of U.property.domain (RVVolumeObject.Gamma.unit (B := 𝔅) hc 𝔖).domain)).congr
     (fun _ => rfl)
-  have h := gammaNamedRVClass_heq_of_reindex hc C Ξ hΞ rfl D E F (rvProductRightUnitMap_bijective A.obj)
+  have h := gen_heq_of_reindex hc C Ξ hΞ φ hφ rfl D E F (rvProductRightUnitMap_bijective A.obj)
     (by
       intro x
       obtain ⟨u,z,rfl⟩ := exists_rvPackPair A.obj.domain Z.underlying.obj.domain x
@@ -174,10 +200,10 @@ theorem gamma_product_right_unit {n : ℕ} (U : GammaRVObjects 𝔅 𝔖 n) :
       exact (congrArg E.form.value (hpair u z)).trans
         ((mul_one (E.form.value u)).symm.trans (productData_density_pair n 0 U.val Z u z).symm))
     hD U.property.dataOfObject hFΓ
-  exact (eq_of_heq h).trans (gammaNamedRVClass_congr hc C Ξ hΞ (dataOfObject_ofData n U.val))
+  exact (eq_of_heq h).trans (gen_congr hc C Ξ hΞ φ hφ (dataOfObject_ofData n U.val))
 
-theorem gamma_product_left_unit {n : ℕ} (U : GammaRVObjects 𝔅 𝔖 n) :
-    HEq (gammaNamedRVClass hc C Ξ hΞ ((gammaUnit hc C Ξ hΞ).product hc U)) (gammaNamedRVClass hc C Ξ hΞ U) := by
+theorem gen_product_left_unit {n : ℕ} (U : GammaRVObjects 𝔅 𝔖 n) :
+    HEq (φ ((gammaUnit hc C Ξ hΞ).product hc U)) (φ U) := by
   let A := underlying 𝔖 n U.val
   let Z := unit (M := M) 𝔖
   let D := productData 0 n Z U.val
@@ -201,7 +227,7 @@ theorem gamma_product_left_unit {n : ℕ} (U : GammaRVObjects 𝔅 𝔖 n) :
     change (Map.prodSnd _ _ (rvUnpack _ _ (rvPackPair _ _ z u))).val = u.val
     rw [rvUnpack_pair]
     rfl
-  have h := gammaNamedRVClass_heq_of_reindex hc C Ξ hΞ (Nat.zero_add n) D E F hF
+  have h := gen_heq_of_reindex hc C Ξ hΞ φ hφ (Nat.zero_add n) D E F hF
     (by
       intro x
       obtain ⟨z,u,rfl⟩ := exists_rvPackPair Z.underlying.obj.domain A.obj.domain x
@@ -217,16 +243,14 @@ theorem gamma_product_left_unit {n : ℕ} (U : GammaRVObjects 𝔅 𝔖 n) :
       exact (congrArg E.form.value (hpair z u)).trans
         ((one_mul (E.form.value u)).symm.trans (productData_density_pair 0 n Z U.val z u).symm))
     hD U.property.dataOfObject hFΓ
-  exact h.trans (heq_of_eq (gammaNamedRVClass_congr hc C Ξ hΞ (dataOfObject_ofData n U.val)))
+  exact h.trans (heq_of_eq (gen_congr hc C Ξ hΞ φ hφ (dataOfObject_ofData n U.val)))
 
 
 /-! ### Zero laws -/
 
-def gammaEmpty (n : ℕ) : GammaRVObjects 𝔅 𝔖 n := ⟨HK.empty 𝔖 n,RVVolumeObject.Gamma.empty n 𝔖⟩
-
-theorem gamma_product_right_zero {n m : ℕ} (U : GammaRVObjects 𝔅 𝔖 n) :
-    gammaNamedRVClass hc C Ξ hΞ (U.product hc (gammaEmpty C Ξ hΞ m)) =
-      gammaNamedRVClass hc C Ξ hΞ (gammaEmpty C Ξ hΞ (n+m)) := by
+theorem gen_product_right_zero {n m : ℕ} (U : GammaRVObjects 𝔅 𝔖 n) :
+    φ (U.product hc (gammaEmpty C Ξ hΞ m)) =
+      φ (gammaEmpty C Ξ hΞ (n+m)) := by
   let D := productData n m U.val (HK.empty 𝔖 m)
   let E := dataOfObject (n+m) (HK.empty 𝔖 (n+m))
   have hD : D.underlying.obj.domain.carrier = ∅ := by
@@ -237,15 +261,15 @@ theorem gamma_product_right_zero {n m : ℕ} (U : GammaRVObjects 𝔅 𝔖 n) :
     exact (empty_domain (S := 𝔖) m).le p.property.2
   have hE : E.underlying.obj.domain.carrier = ∅ := empty_domain (n+m)
   let F := Map.fromEmpty hD E.underlying.obj.domain
-  have h := gammaNamedRVClass_heq_of_reindex hc C Ξ hΞ rfl D E F (Map.bijective_of_empty F hD hE)
+  have h := gen_heq_of_reindex hc C Ξ hΞ φ hφ rfl D E F (Map.bijective_of_empty F hD hE)
     (fun x => (hD.le x.property).elim) (fun x => (hD.le x.property).elim)
     (U.product hc (gammaEmpty C Ξ hΞ m)).property (gammaEmpty C Ξ hΞ (n+m)).property.dataOfObject
     (gamma_rv_map_of_empty F hD)
-  exact (eq_of_heq h).trans (gammaNamedRVClass_congr hc C Ξ hΞ (dataOfObject_ofData (n+m) _))
+  exact (eq_of_heq h).trans (gen_congr hc C Ξ hΞ φ hφ (dataOfObject_ofData (n+m) _))
 
-theorem gamma_product_left_zero {n m : ℕ} (U : GammaRVObjects 𝔅 𝔖 m) :
-    gammaNamedRVClass hc C Ξ hΞ ((gammaEmpty C Ξ hΞ n).product hc U) =
-      gammaNamedRVClass hc C Ξ hΞ (gammaEmpty C Ξ hΞ (n+m)) := by
+theorem gen_product_left_zero {n m : ℕ} (U : GammaRVObjects 𝔅 𝔖 m) :
+    φ ((gammaEmpty C Ξ hΞ n).product hc U) =
+      φ (gammaEmpty C Ξ hΞ (n+m)) := by
   let D := productData n m (HK.empty 𝔖 n) U.val
   let E := dataOfObject (n+m) (HK.empty 𝔖 (n+m))
   have hD : D.underlying.obj.domain.carrier = ∅ := by
@@ -256,39 +280,28 @@ theorem gamma_product_left_zero {n m : ℕ} (U : GammaRVObjects 𝔅 𝔖 m) :
     exact (empty_domain (S := 𝔖) n).le p.property.1
   have hE : E.underlying.obj.domain.carrier = ∅ := empty_domain (n+m)
   let F := Map.fromEmpty hD E.underlying.obj.domain
-  have h := gammaNamedRVClass_heq_of_reindex hc C Ξ hΞ rfl D E F (Map.bijective_of_empty F hD hE)
+  have h := gen_heq_of_reindex hc C Ξ hΞ φ hφ rfl D E F (Map.bijective_of_empty F hD hE)
     (fun x => (hD.le x.property).elim) (fun x => (hD.le x.property).elim)
     ((gammaEmpty C Ξ hΞ n).product hc U).property (gammaEmpty C Ξ hΞ (n+m)).property.dataOfObject
     (gamma_rv_map_of_empty F hD)
-  exact (eq_of_heq h).trans (gammaNamedRVClass_congr hc C Ξ hΞ (dataOfObject_ofData (n+m) _))
+  exact (eq_of_heq h).trans (gen_congr hc C Ξ hΞ φ hφ (dataOfObject_ofData (n+m) _))
 
 /-! ### Associativity -/
 
-theorem rv_product_assoc_raw {k l j : ℕ} (A : RVObject (M := M) 𝔖 k) (V : RVObject (M := M) 𝔖 l)
-    (W : RVObject (M := M) 𝔖 j) (x : (rvProductObject (rvProductObject A V) W).domain) :
-    (rvProductAssocMap A V W x).val = x.val ∘ Fin.cast (Nat.add_assoc A.arity V.arity W.arity).symm := by
-  obtain ⟨uv,w,rfl⟩ := exists_rvPackPair (rvProductObject A V).domain W.domain x
-  obtain ⟨u,v,rfl⟩ := exists_rvPackPair A.domain V.domain uv
-  rw [rvProductAssocMap_pair]
-  change Fin.append u.val (Fin.append v.val w.val) = Fin.append (Fin.append u.val v.val) w.val ∘ _
-  rw [Fin.append_assoc]
-  funext i
-  simp only [Function.comp_apply, Fin.cast_cast, Fin.cast_eq_self]
-
 set_option allowUnsafeReducibility true in
 attribute [local reducible] productData rvFiniteProductObject rvProductObject in
-theorem gamma_product_assoc {n m l : ℕ} (U : GammaRVObjects 𝔅 𝔖 n) (V : GammaRVObjects 𝔅 𝔖 m)
+theorem gen_product_assoc {n m l : ℕ} (U : GammaRVObjects 𝔅 𝔖 n) (V : GammaRVObjects 𝔅 𝔖 m)
     (W : GammaRVObjects 𝔅 𝔖 l) :
-    HEq (gammaNamedRVClass hc C Ξ hΞ ((U.product hc V).product hc W))
-      (gammaNamedRVClass hc C Ξ hΞ (U.product hc (V.product hc W))) := by
+    HEq (φ ((U.product hc V).product hc W))
+      (φ (U.product hc (V.product hc W))) := by
   obtain ⟨U,hU⟩ := U
   obtain ⟨V,hV⟩ := V
   obtain ⟨W,hW⟩ := W
   have hUVW := RVVolumeObject.Gamma.product hc (RVVolumeObject.Gamma.product hc hU hV) hW
   have hUVW' := RVVolumeObject.Gamma.product hc hU (RVVolumeObject.Gamma.product hc hV hW)
   have hdom := gamma_rv_product_domain_of (gamma_rv_product_domain_of hU.domain hV.domain) hW.domain
-  change HEq (gammaNamedRVClass hc C Ξ hΞ ⟨ofData (productData (n+m) l (HK.product 𝔖 n m U V) W),hUVW⟩)
-    (gammaNamedRVClass hc C Ξ hΞ ⟨ofData (productData n (m+l) U (HK.product 𝔖 m l V W)),hUVW'⟩)
+  change HEq (φ ⟨ofData (productData (n+m) l (HK.product 𝔖 n m U V) W),hUVW⟩)
+    (φ ⟨ofData (productData n (m+l) U (HK.product 𝔖 m l V W)),hUVW'⟩)
   revert hUVW hUVW' hdom
   cases n <;> cases m <;> cases l
   all_goals
@@ -296,7 +309,7 @@ theorem gamma_product_assoc {n m l : ℕ} (U : GammaRVObjects 𝔅 𝔖 n) (V : 
     let A := underlying 𝔖 _ U
     let Bv := underlying 𝔖 _ V
     let L := underlying 𝔖 _ W
-    exact gammaNamedRVClass_heq_of_reindex hc C Ξ hΞ (Nat.add_assoc _ _ _) _ _
+    exact gen_heq_of_reindex hc C Ξ hΞ φ hφ (Nat.add_assoc _ _ _) _ _
       (rvProductAssocMap A.obj Bv.obj L.obj) (rvProductAssocMap_bijective A.obj Bv.obj L.obj)
       (by
         intro x
@@ -325,5 +338,50 @@ theorem gamma_product_assoc {n m l : ℕ} (U : GammaRVObjects 𝔅 𝔖 n) (V : 
                 (productData_density_pair _ _ (HK.product 𝔖 _ _ U V) W (rvPackPair A.obj.domain Bv.obj.domain u v) w).symm))))
       hUVW hUVW' (gamma_rv_coordinate_map hc (rvProductAssocMap A.obj Bv.obj L.obj) _ hdom
         (rv_product_assoc_raw C Ξ hΞ A.obj Bv.obj L.obj))
+
+
+end Generic
+
+/-! ### Laws on Gamma-named blowup classes -/
+
+theorem gammaNamedRVClass_heq_of_reindex {n m : ℕ} (h : n = m)
+    (D : RVVolumeData (M := M) 𝔖 n) (E : RVVolumeData (M := M) 𝔖 m)
+    (F : Map D.underlying.obj.domain E.underlying.obj.domain) (hF : Function.Bijective F)
+    (hcoord : ∀ u, E.underlying.obj.value (F u) ∘ finCongr h = D.underlying.obj.value u)
+    (hφ : ∀ u, E.form.value (F u) = D.form.value u)
+    (hD : RVVolumeObject.Gamma n (ofData D) 𝔅) (hE : RVVolumeObject.Gamma m (ofData E) 𝔅)
+    (hFΓ : RVMapGamma F 𝔅) :
+    HEq (gammaNamedRVClass hc C Ξ hΞ ⟨ofData D,hD⟩) (gammaNamedRVClass hc C Ξ hΞ ⟨ofData E,hE⟩) :=
+  gen_heq_of_reindex hc C Ξ hΞ (X := GammaNamedRVClasses hc C Ξ hΞ) (gammaNamedRVClass hc C Ξ hΞ)
+    (gammaNamedRVClass_eq_of_iso hc C Ξ hΞ) h D E F hF hcoord hφ hD hE hFΓ
+
+theorem gamma_product_right_unit {n : ℕ} (U : GammaRVObjects 𝔅 𝔖 n) :
+    gammaNamedRVClass hc C Ξ hΞ (U.product hc (gammaUnit hc C Ξ hΞ)) = gammaNamedRVClass hc C Ξ hΞ U :=
+  gen_product_right_unit hc C Ξ hΞ (X := GammaNamedRVClasses hc C Ξ hΞ) (gammaNamedRVClass hc C Ξ hΞ)
+    (gammaNamedRVClass_eq_of_iso hc C Ξ hΞ) U
+
+theorem gamma_product_left_unit {n : ℕ} (U : GammaRVObjects 𝔅 𝔖 n) :
+    HEq (gammaNamedRVClass hc C Ξ hΞ ((gammaUnit hc C Ξ hΞ).product hc U)) (gammaNamedRVClass hc C Ξ hΞ U) :=
+  gen_product_left_unit hc C Ξ hΞ (X := GammaNamedRVClasses hc C Ξ hΞ) (gammaNamedRVClass hc C Ξ hΞ)
+    (gammaNamedRVClass_eq_of_iso hc C Ξ hΞ) U
+
+theorem gamma_product_right_zero {n m : ℕ} (U : GammaRVObjects 𝔅 𝔖 n) :
+    gammaNamedRVClass hc C Ξ hΞ (U.product hc (gammaEmpty C Ξ hΞ m)) =
+      gammaNamedRVClass hc C Ξ hΞ (gammaEmpty C Ξ hΞ (n+m)) :=
+  gen_product_right_zero hc C Ξ hΞ (X := GammaNamedRVClasses hc C Ξ hΞ) (gammaNamedRVClass hc C Ξ hΞ)
+    (gammaNamedRVClass_eq_of_iso hc C Ξ hΞ) U
+
+theorem gamma_product_left_zero {n m : ℕ} (U : GammaRVObjects 𝔅 𝔖 m) :
+    gammaNamedRVClass hc C Ξ hΞ ((gammaEmpty C Ξ hΞ n).product hc U) =
+      gammaNamedRVClass hc C Ξ hΞ (gammaEmpty C Ξ hΞ (n+m)) :=
+  gen_product_left_zero hc C Ξ hΞ (X := GammaNamedRVClasses hc C Ξ hΞ) (gammaNamedRVClass hc C Ξ hΞ)
+    (gammaNamedRVClass_eq_of_iso hc C Ξ hΞ) U
+
+theorem gamma_product_assoc {n m l : ℕ} (U : GammaRVObjects 𝔅 𝔖 n) (V : GammaRVObjects 𝔅 𝔖 m)
+    (W : GammaRVObjects 𝔅 𝔖 l) :
+    HEq (gammaNamedRVClass hc C Ξ hΞ ((U.product hc V).product hc W))
+      (gammaNamedRVClass hc C Ξ hΞ (U.product hc (V.product hc W))) :=
+  gen_product_assoc hc C Ξ hΞ (X := GammaNamedRVClasses hc C Ξ hΞ) (gammaNamedRVClass hc C Ξ hΞ)
+    (gammaNamedRVClass_eq_of_iso hc C Ξ hΞ) U V W
 
 end IntegrationInACVF.Section7.HK
