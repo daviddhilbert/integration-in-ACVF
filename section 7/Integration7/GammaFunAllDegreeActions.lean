@@ -109,4 +109,72 @@ def presAct : {i j : ℕ} → HK.GammaRVObjects 𝔅 𝔖 i → Pres C Ξ hΞ n 
   | _+1, _+1, U, F => (F : Presentation C Ξ hΞ n _).leftProduct hc C Ξ hΞ
       ⟨U.val,(HK.RVVolumeObject.Gamma.positive_iff _).mp U.property⟩
 
+set_option maxHeartbeats 1600000 in
+/-- **Rows of all-degree coefficient actions.** -/
+theorem pres_act_row {i j : ℕ} (u : HK.GammaRVObjects 𝔅 𝔖 i) (F : Pres C Ξ hΞ n j) (x : Fin (n+1) → VFType (M := M)) :
+    HEq (presRowClass hc C Ξ hΞ (presAct hc C Ξ hΞ u F) x)
+      (HK.Ctx.gammaNamedRVClass hc (vfParameterVolumeContext 𝔇 x) (rowGammaBase 𝔅 x)
+        ((coefRow C Ξ hΞ u x).product hc (presRow hc C Ξ hΞ F x))) := by
+  let D := vfParameterVolumeContext 𝔇 x
+  let Bx := rowGammaBase 𝔅 x
+  cases i with
+  | zero =>
+    let Z : HK.GammaZeroRVObjects 𝔅 𝔖 := ⟨u.val,(HK.RVVolumeObject.Gamma.zero_iff _).mp u.property⟩
+    cases j with
+    | zero =>
+      apply heq_of_eq
+      let F0 : ZeroPresentation C Ξ hΞ n := F
+      let RZ := zeroRowCoefficient Z x
+      let RF : HK.GammaZeroRVObjects Bx (D.base : Set M) := ⟨F0.family.rowInContext x,F0.gamma.row x⟩
+      have h1 := gamma_zero_family_scalar_row_iso hc F0.gamma Z x
+      have h2 := gamma_zero_product_swap_iso hc RF RZ
+      exact Quotient.sound ⟨(HK.zeroVolumeFamilyScalarRowIso F0.family Z.val x).trans (HK.zeroProductSwapIso RF.val RZ.val),
+        h1.trans h2⟩
+    | succ k =>
+      let F' : Presentation C Ξ hΞ n k := F
+      refine (presentation_reindex_row_heq hc C Ξ hΞ (Nat.zero_add k).symm (F'.zeroCoef hc C Ξ hΞ Z) x).trans ?_
+      let RF : GammaVolumeObjects Bx (D.base : Set M) k := ⟨F'.family.rowInContext x,F'.gamma.row hc x⟩
+      let RZ := zeroRowCoefficient Z x
+      have e1 := gamma_weighted_zero_row_class hc F'.gamma Z x
+      have e2 : gammaVolumeBlowupClass hc D Bx (RF.posZeroProd hc RZ) = gammaVolumeBlowupClass hc D Bx (RF.zeroProd hc RZ) :=
+        (gammaVolumeBlowupClass_eq_iff hc D Bx).mpr (GammaVolumeBlowupEquivalent.of_iso D Bx
+          (U := RF.posZeroProd hc RZ) (V := RF.zeroProd hc RZ)
+          (HK.mixedProductSwapIso hc D RF.val RZ.val) (gamma_mixed_product_swap_iso hc D RF.property RZ.property))
+      have hZP := HK.RVVolumeObject.Gamma.product (n := 0) (m := k+1) hc ((HK.RVVolumeObject.Gamma.zero_iff _).mpr RZ.property)
+        ((HK.RVVolumeObject.Gamma.positive_iff _).mpr RF.property)
+      have e3 : gammaVolumeBlowupClass hc D Bx ((RF.zeroProd hc RZ).reindexDegree (Nat.zero_add k)) =
+          gammaVolumeBlowupClass hc D Bx ⟨HK.product (D.base : Set M) 0 (k+1) RZ.val RF.val,
+            (HK.RVVolumeObject.Gamma.positive_iff _).mp hZP⟩ :=
+        (gammaVolumeBlowupClass_eq_iff hc D Bx).mpr (GammaVolumeBlowupEquivalent.of_iso D Bx
+          ((HK.productZeroPositiveIso hc D RZ.val RF.val).symm hc D)
+          ((gamma_volume_iso_of_label_identity hc (HK.productZeroPositiveIso hc D RZ.val RF.val)
+            ((HK.RVVolumeObject.Gamma.positive_iff _).mp hZP) rfl (fun _ => rfl)).symm hc D Bx))
+      refine (heq_of_eq (e1.trans e2)).trans ?_
+      exact (gamma_class_reindex_heq hc D Bx (Nat.zero_add k) _).symm.trans (heq_of_eq e3)
+  | succ p =>
+    let U : GammaVolumeObjects 𝔅 𝔖 p := ⟨u.val,(HK.RVVolumeObject.Gamma.positive_iff _).mp u.property⟩
+    cases j with
+    | zero =>
+      apply heq_of_eq
+      let F0 : ZeroPresentation C Ξ hΞ n := F
+      let RU := positiveRowCoefficient U x
+      let RF : HK.GammaZeroRVObjects Bx (D.base : Set M) := ⟨F0.family.rowInContext x,F0.gamma.row x⟩
+      have e1 := gamma_zero_family_positive_product_row_class hc F0.gamma U x
+      have e2 : gammaVolumeBlowupClass hc D Bx (RU.posZeroProd hc RF) =
+          gammaVolumeBlowupClass hc D Bx ⟨HK.zeroProduct RF.val RU.val,VolumeObjectGamma.zeroProd hc RF.property RU.property⟩ :=
+        (gammaVolumeBlowupClass_eq_iff hc D Bx).mpr (GammaVolumeBlowupEquivalent.of_iso D Bx
+          (U := RU.posZeroProd hc RF) (V := ⟨HK.zeroProduct RF.val RU.val,VolumeObjectGamma.zeroProd hc RF.property RU.property⟩)
+          (HK.mixedProductSwapIso hc D RU.val RF.val) (gamma_mixed_product_swap_iso hc D RU.property RF.property))
+      have hPZ := HK.RVVolumeObject.Gamma.product (n := p+1) (m := 0) hc ((HK.RVVolumeObject.Gamma.positive_iff _).mpr RU.property)
+        ((HK.RVVolumeObject.Gamma.zero_iff _).mpr RF.property)
+      have e3 : gammaVolumeBlowupClass hc D Bx ⟨HK.product (D.base : Set M) (p+1) 0 RU.val RF.val,
+            (HK.RVVolumeObject.Gamma.positive_iff _).mp hPZ⟩ = gammaVolumeBlowupClass hc D Bx (RU.posZeroProd hc RF) :=
+        (gammaVolumeBlowupClass_eq_iff hc D Bx).mpr (GammaVolumeBlowupEquivalent.of_iso D Bx
+          (HK.productPositiveZeroIso hc D RU.val RF.val)
+          (gamma_volume_iso_of_label_identity hc (HK.productPositiveZeroIso hc D RU.val RF.val)
+            ((HK.RVVolumeObject.Gamma.positive_iff _).mp hPZ) rfl (fun _ => rfl)))
+      exact e1.trans (e2.symm.trans e3.symm)
+    | succ k =>
+      exact heq_of_eq (gamma_left_product_row_class hc U.property (F : Presentation C Ξ hΞ n k).gamma x)
+
 end IntegrationInACVF.Section7.GammaFun
