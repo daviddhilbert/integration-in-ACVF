@@ -5,6 +5,7 @@ import Integration7.GammaNamedUnaryChains
 import Integration7.GammaNamedCorollary76
 import Integration7.GammaNamedPreparedChains
 import Integration7.IntegrationStandardContractionFormula
+import Integration7.SelectedFamilySmallIntegrals
 
 /-! **Gamma integration of a standard contraction.** Every Gamma positive VF
 volume object is Gamma isomorphic to the lift of a Gamma RV object that is
@@ -213,5 +214,65 @@ theorem gamma_selected_realization_contraction (hc : CanonicalStructure.IsCanoni
   have hSame := gamma_vf_iso_contraction_comparison hc C G hGC hΞ hGenerated hNames hGeneric γ hγ hγ1 W W hW hW
     (VFVolumeIso.refl hc C W) (hW.refl_iso hc C) E1 EW hE1 hEW
   exact (((hTail.symm hc).trans hc hNorm).trans hc hRet).trans hc hSame
+
+end IntegrationInACVF.Section7.GammaNamed
+
+namespace IntegrationInACVF.Section7.GammaNamed
+variable {M : Type} [sM : LRV.Structure M] [M ⊨ Axioms.ACVF] {n a d : ℕ}
+
+theorem selected_realization_mem (hc : CanonicalStructure.IsCanonical (M := M)) {C : BaseContext M}
+    (A : DefSet (M := M) (C.base : Set M) (n+1) a) (ρ : Fin d → Fin a)
+    (hfin : ∀ (x : Fin (n+1) → VF (M := M)) (t : Fin d → RV (M := M)),
+      {r : Fin a → RV (M := M) | (x,r) ∈ carrier A ∧ r ∘ ρ = t}.Finite)
+    (δ : Fin a) (hδ : ∀ p ∈ carrier A, (p.2 δ).val ≠ iRVZero) (p : Point (M := M) ((d+n)+1) a) :
+    p ∈ (selectedCoordinateVolumeRealization hc A ρ hfin δ hδ).domain.carrier ↔
+      ((p.1 ∘ finCongr (Nat.add_comm (n+1) d)) ∘ Fin.castAdd d,p.2) ∈ carrier A ∧
+        SpecialTransformations.Section4.tupleRV ((p.1 ∘ finCongr (Nat.add_comm (n+1) d)) ∘ Fin.natAdd (n+1)) =
+          p.2 ∘ ρ := by
+  change p ∈ carrier (nativeVFArityCast (Nat.add_comm (n+1) d) (nativeSelectedRVVFTailLift hc A ρ)) ↔ _
+  rw [native_vf_arity_cast_carrier,native_selected_rv_vf_tail_lift_carrier]
+
+/-- Realizations of nested domains differing by a VF-small set are Gamma isomorphic. -/
+theorem gamma_selected_realization_cofull_iso (hc : CanonicalStructure.IsCanonical (M := M)) (C : BaseContext M)
+    (G : Base (M := M)) (A A' D : DefSet (M := M) (C.base : Set M) (n+1) a)
+    (hsub : carrier A' ⊆ carrier A) (hD : ∀ p ∈ carrier A, p ∉ carrier A' → p ∈ carrier D)
+    (ρ : Fin d → Fin a)
+    (hfin : ∀ (x : Fin (n+1) → VF (M := M)) (t : Fin d → RV (M := M)),
+      {r : Fin a → RV (M := M) | (x,r) ∈ carrier A ∧ r ∘ ρ = t}.Finite)
+    (hfin' : ∀ (x : Fin (n+1) → VF (M := M)) (t : Fin d → RV (M := M)),
+      {r : Fin a → RV (M := M) | (x,r) ∈ carrier A' ∧ r ∘ ρ = t}.Finite)
+    (hfinD : ∀ (x : Fin (n+1) → VF (M := M)) (t : Fin d → RV (M := M)),
+      {r : Fin a → RV (M := M) | (x,r) ∈ carrier D ∧ r ∘ ρ = t}.Finite)
+    (δ : Fin a) (hδ : ∀ p ∈ carrier A, (p.2 δ).val ≠ iRVZero) (hδ' : ∀ p ∈ carrier A', (p.2 δ).val ≠ iRVZero)
+    (hδD : ∀ p ∈ carrier D, (p.2 δ).val ≠ iRVZero)
+    (hSmall : SpecialTransformations.Section4.vfDim (SpecialTransformations.Section4.rawRVSpace (M := M) 1)
+      (rawSpecialSet hc D) < n+1)
+    (hW' : VFVolumeObjectGamma (selectedCoordinateVolumeRealization hc A' ρ hfin' δ hδ') G) :
+    ∃ f : VFVolumeIso (selectedCoordinateVolumeRealization hc A' ρ hfin' δ hδ')
+      (selectedCoordinateVolumeRealization hc A ρ hfin δ hδ), f.GammaDefinable G := by
+  let W := selectedCoordinateVolumeRealization hc A ρ hfin δ hδ
+  let W' := selectedCoordinateVolumeRealization hc A' ρ hfin' δ hδ'
+  have hsubW : W'.domain.carrier ⊆ W.domain.carrier := by
+    intro p hp
+    rw [selected_realization_mem] at hp ⊢
+    exact ⟨hsub hp.1,hp.2⟩
+  have hcof : VFCofull W.domain W'.domain := by
+    refine ⟨hsubW,?_⟩
+    have hSub : (W.domain.sdiff W'.domain).carrier ⊆
+        (selectedCoordinateVolumeRealization hc D ρ hfinD δ hδD).domain.carrier := by
+      intro p hp
+      have h1 := (selected_realization_mem hc A ρ hfin δ hδ p).mp hp.1
+      apply (selected_realization_mem hc D ρ hfinD δ hδD p).mpr
+      refine ⟨hD _ h1.1 (fun h => hp.2 ((selected_realization_mem hc A' ρ hfin' δ hδ' p).mpr ⟨h,h1.2⟩)),h1.2⟩
+    exact (IntegrationInACVF.Section7.vfDim_mono_same_arity hSub).trans_lt
+      ((selected_coordinate_volume_realization_dimension_le hc D ρ hfinD δ hδD).trans_lt (by omega))
+  let g : SpecialTransformations.DefinableGeometry.Map W'.domain (W.restrict W'.domain hsubW).domain :=
+    SpecialTransformations.DefinableGeometry.Map.id _
+  let b : VFVolumeBijection W' (W.restrict W'.domain hsubW) :=
+    VFVolumeBijection.of_preserving_vf_and_density hc C g Function.bijective_id (fun _ => rfl) (fun _ => rfl)
+  refine ⟨(VFVolumeIso.of_bijection b).trans hc C (vfVolumeCofullRestrictionIso hc C W W'.domain hcof),?_⟩
+  refine VFVolumeIso.GammaDefinable.trans hc C ?_ ?_
+  · exact ⟨hW'.domain,hW'.domain,vf_identity_map_gamma _ (fun _ => rfl) hW'.domain⟩
+  · exact ⟨hW'.domain,hW'.domain,vf_identity_map_gamma _ (fun _ => rfl) hW'.domain⟩
 
 end IntegrationInACVF.Section7.GammaNamed
