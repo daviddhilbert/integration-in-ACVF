@@ -1,5 +1,6 @@
 import Integration7.GammaCoefficientLiftIsos
 import Integration7.GammaFunPositiveActions
+import Integration7.GammaFunSection7Results
 
 /-! **Coefficient linearity of the Gamma-named appended integral (positive degrees).** The
 appended-convention Gamma-named integral of the coefficient-first product `U • F` of a Gamma positive
@@ -106,5 +107,34 @@ theorem presentation_left_product_appended_integral (U : GammaVolumeObjects 𝔅
   have d := (c4.trans hc (CommonContextVolumeEquivalent.prod hc c5 (c6.symm hc))).reindexDegree hc h
   have hAll := ((c1.trans hc c2).trans hc c3).trans hc d
   exact (gammaVolumeBlowupClass_eq_iff hc 𝔇 𝔅).mpr (hAll.descend hc 𝔇 hNames)
+
+
+set_option maxHeartbeats 1600000 in
+include hγ hγ1 in
+/-- **Positive coefficient linearity of the Gamma-named semiring integral.** -/
+theorem gamma_semiring_integral_positive_coefficient (c : GammaVolumeBlowupClasses hc 𝔇 𝔅 p)
+    (f : AEFunction hc C Ξ hΞ n k) :
+    gammaSemiringIntegral hc C Ξ hΞ hGenerated γ hγ hγ1 (aePositiveCoefficientAction hc C Ξ hΞ p c f) =
+      DirectSum.of (HK.GammaNamedRVClasses hc C Ξ hΞ) (p+1) c * gammaSemiringIntegral hc C Ξ hΞ hGenerated γ hγ hγ1 f := by
+  induction c using Quotient.inductionOn with
+  | h U =>
+  induction f using Quotient.inductionOn with
+  | h F =>
+  change DirectSum.of (HK.GammaNamedRVClasses hc C Ξ hΞ) (appendVolumeDegree (n+1) ((p+1)+k) + 1)
+      ((F.leftProduct hc C Ξ hΞ U).appendedIntegral hc C Ξ hΞ hGenerated) =
+    DirectSum.of (HK.GammaNamedRVClasses hc C Ξ hΞ) (p+1) (gammaVolumeBlowupClass hc 𝔇 𝔅 U) *
+      DirectSum.of (HK.GammaNamedRVClasses hc C Ξ hΞ) (appendVolumeDegree (n+1) k + 1)
+        (F.appendedIntegral hc C Ξ hΞ hGenerated)
+  rw [DirectSum.of_mul_of]
+  apply gamma_semiring_of_heq hc C Ξ hΞ (appended_positive_coefficient_degree_eq (n+1) p k)
+  rw [presentation_left_product_appended_integral hc C Ξ hΞ hGenerated γ hγ hγ1 U F]
+  refine (gamma_class_reindex_heq hc 𝔇 𝔅 _ _).trans (heq_of_eq ?_)
+  let V := F.appendedObject hc C Ξ hΞ (F.contraction hc C Ξ hΞ hGenerated) (F.contraction_gamma hc C Ξ hΞ hGenerated)
+  change _ = HK.gammaNamedRVMul hc C Ξ hΞ
+    (HK.gammaNamedRVClass hc C Ξ hΞ (n := p+1) ⟨U.val,(HK.RVVolumeObject.Gamma.positive_iff _).mpr U.property⟩)
+    (HK.gammaNamedRVClass hc C Ξ hΞ (n := appendVolumeDegree (n+1) k + 1)
+      ⟨V.val,(HK.RVVolumeObject.Gamma.positive_iff _).mpr V.property⟩)
+  rw [HK.gammaNamedRVMul_class]
+  rfl
 
 end IntegrationInACVF.Section7.GammaFun
