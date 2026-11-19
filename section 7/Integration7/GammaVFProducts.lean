@@ -2,6 +2,8 @@ import Integration7.GammaFunPositiveCoefficients
 import Integration7.VolumeLiftProductBijections
 import Integration7.GammaNamedPositiveClassification
 import Integration7.GammaNamedBlowupProducts
+import Integration7.VFVolumeProductIsomorphisms
+import Integration7.GammaGenIntegralAdditivity
 
 /-! Gamma certificates for Cartesian products of positive VF volume objects, and the Gamma lift
 of products: the product of the lifts of two Gamma RV volume objects is Gamma isomorphic to the
@@ -138,4 +140,149 @@ theorem volume_lift_product_iso_gamma (hc : CanonicalStructure.IsCanonical (M :=
   have ht := gamma_rv_lift_carrier hc C hGC (U.prod V) (hU.prod hc hV)
   exact ⟨hs.domain, ht, vf_identity_map_gamma (volumeLiftProductBijection hc C U V).map (fun _ => rfl) hs.domain⟩
 
+section ProductMaps
+variable {S : Set M} {U U' : PositiveVFVolumeObject (M := M) S n} {V V' : PositiveVFVolumeObject (M := M) S m}
+
+theorem positive_vf_volume_product_map_value (f : SpecialTransformations.DefinableGeometry.Map U.domain U'.domain)
+    (g : SpecialTransformations.DefinableGeometry.Map V.domain V'.domain) (w : (U.prod V).domain)
+    (u : U.domain) (v : V.domain)
+    (hu : u.val = (w.val.1 ∘ Fin.castAdd (m+1),w.val.2 ∘ Fin.castAdd V.arity))
+    (hv : v.val = (w.val.1 ∘ (Fin.natAdd (n+1) : Fin (m+1) → Fin ((n+1)+(m+1))),w.val.2 ∘ Fin.natAdd U.arity)) :
+    (positiveVFVolumeProductMap f g w).val =
+      (Fin.append (m := n+1) (n := m+1) (f u).val.1 (g v).val.1,Fin.append (f u).val.2 (g v).val.2) := by
+  have hw : w = (SpecialTransformations.Section4.mixedPack U.domain V.domain).toImage
+      ⟨(u.val,v.val),u.property,v.property⟩ := by
+    apply Subtype.ext
+    change w.val = (Fin.append (m := n+1) (n := m+1) u.val.1 v.val.1,Fin.append u.val.2 v.val.2)
+    rw [hu,hv]
+    refine Prod.ext ?_ ?_
+    · exact (Fin.append_castAdd_natAdd (m := n+1) (n := m+1) (f := w.val.1)).symm
+    · exact Fin.append_castAdd_natAdd.symm
+  subst hw
+  simp only [positiveVFVolumeProductMap,SpecialTransformations.DefinableGeometry.Map.comp_apply,
+    SpecialTransformations.Section4.mixedUnpack_pack]
+  rfl
+
+theorem gamma_positive_vf_volume_product_map_graph
+    {f : SpecialTransformations.DefinableGeometry.Map U.domain U'.domain}
+    {g : SpecialTransformations.DefinableGeometry.Map V.domain V'.domain}
+    (hf : GammaGraphDefinable G (vfMixedMapGraph f)) (hg : GammaGraphDefinable G (vfMixedMapGraph g))
+    (hU : GammaSetDefinable G U.domain.carrier) (hV : GammaSetDefinable G V.domain.carrier) :
+    GammaGraphDefinable G (vfMixedMapGraph (positiveVFVolumeProductMap f g)) := by
+  have L := gammaLogicInput G
+  have hF := hf.preimage_maps
+    (mixedCoordinatePointMap (Fin.castAdd (m+1) : Fin (n+1) → Fin ((n+1)+(m+1)))
+      (Fin.castAdd V.arity : Fin U.arity → Fin (U.arity+V.arity)) G.real)
+    (mixedCoordinatePointMap (Fin.castAdd (m+1) : Fin (n+1) → Fin ((n+1)+(m+1)))
+      (Fin.castAdd V'.arity : Fin U'.arity → Fin (U'.arity+V'.arity)) G.real)
+  have hG := hg.preimage_maps
+    (mixedCoordinatePointMap (Fin.natAdd (n+1) : Fin (m+1) → Fin ((n+1)+(m+1)))
+      (Fin.natAdd U.arity : Fin V.arity → Fin (U.arity+V.arity)) G.real)
+    (mixedCoordinatePointMap (Fin.natAdd (n+1) : Fin (m+1) → Fin ((n+1)+(m+1)))
+      (Fin.natAdd U'.arity : Fin V'.arity → Fin (U'.arity+V'.arity)) G.real)
+  have hR := L.restrict_graph (gamma_mixed_product_domain hU hV) (hF.inter hG)
+  apply SpecialTransformations.Section5.GammaGraphDefinable.congr hR
+  intro p q
+  simp only [mixedCoordinatePointMap_value]
+  constructor
+  · rintro ⟨hp,⟨u,hu,hfu⟩,⟨v,hv,hgv⟩⟩
+    refine ⟨⟨p,hp⟩,rfl,?_⟩
+    rw [positive_vf_volume_product_map_value f g ⟨p,hp⟩ u v hu hv,hfu,hgv]
+    refine Prod.ext ?_ ?_
+    · exact Fin.append_castAdd_natAdd (m := n+1) (n := m+1) (f := q.1)
+    · exact Fin.append_castAdd_natAdd
+  · rintro ⟨w,rfl,rfl⟩
+    have h := (SpecialTransformations.Section4.mem_mixedProductDomain (n := n+1) (m := m+1)
+      U.domain V.domain w.val).mp w.property
+    have hval := positive_vf_volume_product_map_value f g w ⟨_,h.1⟩ ⟨_,h.2⟩ rfl rfl
+    refine ⟨w.property,⟨⟨_,h.1⟩,rfl,?_⟩,⟨⟨_,h.2⟩,rfl,?_⟩⟩
+    · rw [hval]
+      refine Prod.ext ?_ ?_
+      · funext i
+        exact (Fin.append_left _ _ i).symm
+      · funext i
+        exact (Fin.append_left _ _ i).symm
+    · rw [hval]
+      refine Prod.ext ?_ ?_
+      · funext i
+        exact (Fin.append_right _ _ i).symm
+      · funext i
+        exact (Fin.append_right _ _ i).symm
+
+end ProductMaps
+
+/-- **Products of Gamma VF volume isomorphisms are Gamma.** -/
+theorem VFVolumeIso.GammaDefinable.prod (hc : CanonicalStructure.IsCanonical (M := M)) (C : BaseContext M)
+    {U U' : PositiveVFVolumeObject (M := M) (C.base : Set M) n}
+    {V V' : PositiveVFVolumeObject (M := M) (C.base : Set M) m}
+    {f : VFVolumeIso U U'} {g : VFVolumeIso V V'} (hf : f.GammaDefinable G) (hg : g.GammaDefinable G) :
+    (f.prod hc C g).GammaDefinable G := by
+  have hP := gamma_mixed_product_domain hf.source hg.source
+  have hQ := gamma_mixed_product_domain hf.target hg.target
+  refine ⟨hP,hQ,?_⟩
+  have h₁ := (show VFBijGamma (vfVolumeProductRestrictionBijection hc C U V f.source g.source
+    f.source_subset g.source_subset) G from vf_identity_map_gamma _ (fun _ => rfl) hP).symm hc C
+  have h₂ : VFBijGamma (f.bijection.prod hc g.bijection) G :=
+    gamma_positive_vf_volume_product_map_graph hf.graph hg.graph hf.source hg.source
+  have h₃ : VFBijGamma (vfVolumeProductRestrictionBijection hc C U' V' f.target g.target
+    f.target_subset g.target_subset) G := vf_identity_map_gamma _ (fun _ => rfl) hQ
+  exact h₁.trans hc C (h₂.trans hc C h₃)
+
+/-- Common-context equivalence respects positive products. -/
+theorem CommonContextVolumeEquivalent.prod (hc : CanonicalStructure.IsCanonical (M := M)) {C : BaseContext M}
+    {k l : ℕ} {U U' : GammaVolumeObjects G (C.base : Set M) k} {V V' : GammaVolumeObjects G (C.base : Set M) l}
+    (h : CommonContextVolumeEquivalent G C U U') (g : CommonContextVolumeEquivalent G C V V') :
+    CommonContextVolumeEquivalent G C (U.prod hc V) (U'.prod hc V') := by
+  obtain ⟨D,hCD,h⟩ := h
+  obtain ⟨E,hCE,g⟩ := g
+  obtain ⟨F,hDF,hEF⟩ := volume_context_join_exists D E
+  have h1 := (h.extend hDF).product_right hc F (V.extend (hCD.trans hDF))
+  have h2 := (g.extend hEF).product_left hc F (U'.extend (hCD.trans hDF))
+  exact ⟨F,hCD.trans hDF,h1.trans hc F G h2⟩
+
+end IntegrationInACVF.Section7
+
+namespace IntegrationInACVF.Section7.GammaNamed
+variable {M : Type} [LRV.Structure M] [M ⊨ Axioms.ACVF] {k l : ℕ}
+
+set_option maxHeartbeats 3200000 in
+/-- **Contraction of products.** A Gamma standard contraction of a product of Gamma VF volume
+objects is common-context equivalent to the product of contractions of the factors. -/
+theorem gamma_prod_contraction (hc : CanonicalStructure.IsCanonical (M := M)) (C : BaseContext M)
+    (G : Base (M := M)) (hGC : G.real ⊆ (C.base : Set M)) (hΞ : Cardinal.mk G.gamma < C.κ)
+    (hGenerated : VFGammaGeneratedBase G) (hNames : commonRealNames G ⊆ (C.base : Set M))
+    (hGeneric : ∀ {p : ℕ} (x : Fin p → SpecialTransformations.Section5.VF (M := M)),
+      AlgebraicIndependent (vfParameterField G.real) x → AlgebraicIndependent (vfParameterField (C.base : Set M)) x)
+    (γ : Values.Gamma (M := M)) (hγ : γ ∈ G.gamma) (hγ1 : 1 < γ)
+    (W₁ : PositiveVFVolumeObject (M := M) (C.base : Set M) k) (W₂ : PositiveVFVolumeObject (M := M) (C.base : Set M) l)
+    (h₁ : VFVolumeObjectGamma W₁ G) (h₂ : VFVolumeObjectGamma W₂ G) (h₁₂ : VFVolumeObjectGamma (W₁.prod W₂) G)
+    {σ₁ : Equiv.Perm (Fin (k+1))} {σ₂ : Equiv.Perm (Fin (l+1))} {σ : Equiv.Perm (Fin (((k+1)+l)+1))}
+    (E₁ : StandardContraction (nativeMixedVolumeDomain hc W₁.densityGraph.domain) σ₁)
+    (E₂ : StandardContraction (nativeMixedVolumeDomain hc W₂.densityGraph.domain) σ₂)
+    (E : StandardContraction (nativeMixedVolumeDomain hc (W₁.prod W₂).densityGraph.domain) σ)
+    (hE₁ : GammaProgramDefinable G E₁.program) (hE₂ : GammaProgramDefinable G E₂.program)
+    (hE : GammaProgramDefinable G E.program) :
+    CommonContextVolumeEquivalent G C
+      ⟨(W₁.prod W₂).standardContractionObject hc C G.gamma E,standard_contraction_object_gamma hc C G hGC _ h₁₂ E hE⟩
+      (GammaVolumeObjects.prod hc
+        ⟨W₁.standardContractionObject hc C G.gamma E₁,standard_contraction_object_gamma hc C G hGC _ h₁ E₁ hE₁⟩
+        ⟨W₂.standardContractionObject hc C G.gamma E₂,standard_contraction_object_gamma hc C G hGC _ h₂ E₂ hE₂⟩) := by
+  obtain ⟨P₁,⟨e₁,he₁⟩,hP₁⟩ := gamma_lift_contraction_comparison hc C G hGC hΞ hGenerated hNames hGeneric γ hγ hγ1
+    W₁ h₁ E₁ hE₁
+  obtain ⟨P₂,⟨e₂,he₂⟩,hP₂⟩ := gamma_lift_contraction_comparison hc C G hGC hΞ hGenerated hNames hGeneric γ hγ hγ1
+    W₂ h₂ E₂ hE₂
+  obtain ⟨P,⟨e,he⟩,hP⟩ := gamma_lift_contraction_comparison hc C G hGC hΞ hGenerated hNames hGeneric γ hγ hγ1
+    (W₁.prod W₂) h₁₂ E hE
+  have hL := volume_lift_product_iso_gamma hc C hGC P₁.property P₂.property
+  let f : VFVolumeIso (rvVolumeLift P.val) (rvVolumeLift (P₁.prod hc P₂).val) :=
+    ((e.symm hc C).trans hc C ((e₁.prod hc C e₂).trans hc C (volumeLiftProductIso hc C P₁.val P₂.val)))
+  have hf : f.GammaDefinable G :=
+    (he.symm hc C).trans hc C ((he₁.prod hc C he₂).trans hc C hL)
+  have hK := rv_volume_lift_common_context_kernel hc C G hGC hΞ hGenerated hNames hGeneric γ hγ hγ1 P
+    (P₁.prod hc P₂) f hf
+  exact ((hP.symm hc).trans hc hK).trans hc (CommonContextVolumeEquivalent.prod hc hP₁ hP₂)
+
+end IntegrationInACVF.Section7.GammaNamed
+
+namespace IntegrationInACVF.Section7
 end IntegrationInACVF.Section7
