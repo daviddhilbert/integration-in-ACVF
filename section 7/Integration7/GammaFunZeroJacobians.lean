@@ -296,4 +296,159 @@ theorem domain_jacobian_ae_exceptional {X Y : GammaVFSet C Ξ hΞ n} (φ : Gamma
     · intro u hne hu
       exact hnot ⟨x.property,Or.inr (Or.inr ⟨u,hu,hne⟩)⟩
 
+set_option maxHeartbeats 4000000 in
+/-- **Gamma Jacobian transforms of weighted degree-zero functions respect almost-everywhere equivalence.** -/
+theorem zero_presentation_jacobian_ae {X Y : GammaVFSet C Ξ hΞ n} (F H : ZeroPresentation C Ξ hΞ n)
+    (φ : GammaVFBijection C Ξ hΞ X Y) (hF : F.SupportedIn C Ξ hΞ X) (hH : H.SupportedIn C Ξ hΞ X)
+    (h : ZeroAEEquivalent C Ξ hΞ F H) :
+    ZeroAEEquivalent C Ξ hΞ (F.jacobian hc C Ξ hΞ φ hF) (H.jacobian hc C Ξ hΞ φ hH) := by
+  obtain ⟨E,hE,hRows⟩ := h
+  obtain ⟨E',hE',hgood⟩ := domain_jacobian_ae_exceptional hc C Ξ hΞ φ F.family.domain H.family.domain
+    F.gamma.domain H.gamma.domain hF hH (F.jacobianValue hc C Ξ hΞ φ hF) (H.jacobianValue hc C Ξ hΞ φ hH)
+    (F.jacobianValue_gamma hc C Ξ hΞ φ hF) (H.jacobianValue_gamma hc C Ξ hΞ φ hH)
+    (F.jacobianValue_spec hc C Ξ hΞ φ hF) (H.jacobianValue_spec hc C Ξ hΞ φ hH) E hE
+  refine ⟨E',hE',?_⟩
+  intro y hy
+  let Cy := vfParameterVolumeContext 𝔇 y
+  let By := rowGammaBase 𝔅 y
+  by_cases hyY : y ∈ Y.set.carrier
+  swap
+  · have hF0 : ((F.jacobian hc C Ξ hΞ φ hF).family.rowInContext y).underlying.obj.domain.carrier = ∅ :=
+      HK.zero_jacobian_row_empty_outside 𝔇 F.family φ.map φ.bijective hF y hyY
+    have hH0 : ((H.jacobian hc C Ξ hΞ φ hH).family.rowInContext y).underlying.obj.domain.carrier = ∅ :=
+      HK.zero_jacobian_row_empty_outside 𝔇 H.family φ.map φ.bijective hH y hyY
+    let f : SpecialTransformations.DefinableGeometry.Map
+        ((F.jacobian hc C Ξ hΞ φ hF).family.rowInContext y).underlying.obj.domain
+        ((H.jacobian hc C Ξ hΞ φ hH).family.rowInContext y).underlying.obj.domain :=
+      SpecialTransformations.DefinableGeometry.Map.fromEmpty hF0 _
+    refine Quotient.sound ⟨HK.ZeroRVVolumeIso.ofBijection f
+      (SpecialTransformations.DefinableGeometry.Map.bijective_of_empty f hF0 hH0) (fun u => (hF0.le u.property).elim),?_⟩
+    apply SpecialTransformations.Section5.GammaGraphDefinable.congr (FiniteRV.gamma_empty_graph (B := By) _ _)
+    intro p q
+    constructor
+    · exact False.elim
+    · rintro ⟨u,_,_⟩
+      exact (hF0.le u.property).elim
+  let y' : Y.set := ⟨y,hyY⟩
+  obtain ⟨hxE,hgF,hgH⟩ := hgood y' hy
+  let x := φ.map.inverse φ.bijective y'
+  let Cx := vfParameterVolumeContext 𝔇 x.val
+  let Bx := rowGammaBase 𝔅 x.val
+  obtain ⟨e,he⟩ := Quotient.exact (hRows x.val hxE)
+  let c := (jacobianValueDensityForm (φ.pureJacobian hc C Ξ hΞ)).value (pureVFEmptyGraphMap X.set x)
+  have hconstF : ∀ u : F.family.domain, u.val.1 = x.val →
+      (jacobianValueDensityForm (F.jacobianValue hc C Ξ hΞ φ hF)).value u = c := by
+    intro u hu
+    have hux : (⟨u.val.1,hF u⟩ : X.set) = x := Subtype.ext hu
+    apply jacobian_value_density_congr
+    rw [← hux]
+    by_contra hne
+    exact hgF u hne hu
+  have hconstH : ∀ u : H.family.domain, u.val.1 = x.val →
+      (jacobianValueDensityForm (H.jacobianValue hc C Ξ hΞ φ hH)).value u = c := by
+    intro u hu
+    have hux : (⟨u.val.1,hH u⟩ : X.set) = x := Subtype.ext hu
+    apply jacobian_value_density_congr
+    rw [← hux]
+    by_contra hne
+    exact hgH u hne hu
+  have hPC : By.real ⊆ (Cy.base : Set M) := by
+    rintro z (hz | hz)
+    · exact vfParameterVolumeContext_contains 𝔇 y (Or.inl (gamma_named_code_context_base C Ξ hΞ hz))
+    · exact vfParameterVolumeContext_contains 𝔇 y (Or.inr hz)
+  have hΓ : Cardinal.mk By.gamma < Cy.κ := hΞ
+  let D := gammaDefinableNamesVolumeContext hc Cy By hPC hΓ
+  have hYD : (Cy.base : Set M) ⊆ (D.base : Set M) :=
+    fun z hz => gamma_definable_names_context_contains hc Cy By hPC hΓ (Or.inl hz)
+  have hxdef : ∀ i, DefinableClosureAtBase By .vf (x.val i).val :=
+    definableClosure_of_gamma_vf_point (φ.inverse_point_gamma C Ξ hΞ y')
+  have hxD : ∀ i, (x.val i).val ∈ (D.base : Set M) :=
+    fun i => gamma_definable_names_context_singleton hc Cy By hPC hΓ (hxdef i)
+  have hXD : (Cx.base : Set M) ⊆ (D.base : Set M) := by
+    intro z hz
+    refine (Substructure.closure_le.mpr ?_) hz
+    rintro w (hw | ⟨i,rfl⟩)
+    · exact hYD (vfParameterVolumeContext_contains 𝔇 y (Or.inl hw))
+    · exact hxD i
+  have hNamesY := row_context_names 𝔇 𝔅 (gamma_named_code_context_names C Ξ hΞ) y
+  have hDnames : ∀ t ∈ (D.base : Set M), (Cy.base : Set M).Definable₁ LRV {t} := by
+    intro t ht
+    have h := (mem_definableClosure_iff_raw hc _ t).mp ht
+    rwa [Set.union_eq_left.mpr hNamesY] at h
+  let JF := (F.jacobian hc C Ξ hΞ φ hF).family.rowInContext y
+  let JH := (H.jacobian hc C Ξ hΞ φ hH).family.rowInContext y
+  let FX := F.family.rowInContext x.val
+  let HX := H.family.rowInContext x.val
+  have hFdom : ∀ r, r ∈ (JF.extend hYD).underlying.obj.domain.carrier ↔ r ∈ (FX.extend hXD).underlying.obj.domain.carrier :=
+    fun r => HK.ZeroVFVolumeFamily.pushforwardBase_fibre F.family φ.map φ.bijective hF y' r
+  have hHdom : ∀ r, r ∈ (JH.extend hYD).underlying.obj.domain.carrier ↔ r ∈ (HX.extend hXD).underlying.obj.domain.carrier :=
+    fun r => HK.ZeroVFVolumeFamily.pushforwardBase_fibre H.family φ.map φ.bijective hH y' r
+  let e1 := e.extend hXD
+  let fF : SpecialTransformations.DefinableGeometry.Map (JF.extend hYD).underlying.obj.domain
+      (FX.extend hXD).underlying.obj.domain :=
+    SpecialTransformations.DefinableGeometry.Map.inclusion (fun r hr => (hFdom r).mp hr)
+  let fH : SpecialTransformations.DefinableGeometry.Map (HX.extend hXD).underlying.obj.domain
+      (JH.extend hYD).underlying.obj.domain :=
+    SpecialTransformations.DefinableGeometry.Map.inclusion (fun r hr => (hHdom r).mpr hr)
+  let g := fH.comp ((finiteIsoMap e1.iso).comp fF)
+  have hg : Function.Bijective g := by
+    have hfF : Function.Bijective fF := ⟨fun u v huv => Subtype.ext (congrArg (fun w : (FX.extend hXD).underlying.obj.domain => w.val) huv),
+      fun v => ⟨⟨v.val,(hFdom v.val).mpr v.property⟩,rfl⟩⟩
+    have hfH : Function.Bijective fH := ⟨fun u v huv => Subtype.ext (congrArg (fun w : (JH.extend hYD).underlying.obj.domain => w.val) huv),
+      fun v => ⟨⟨v.val,(hHdom v.val).mp v.property⟩,rfl⟩⟩
+    exact hfH.comp ((finiteIsoMap_bijective e1.iso).comp hfF)
+  have hjF : ∀ r : (JF.extend hYD).underlying.obj.domain,
+      (JF.extend hYD).form.value r = F.family.form.value ⟨(x.val,r.val),(hFdom r.val).mp r.property⟩ * c⁻¹ := by
+    intro r
+    let p : F.family.domain := ⟨(x.val,r.val),(hFdom r.val).mp r.property⟩
+    have hq : (mixedVFBaseMap φ.map F.family.domain hF).toImage p =
+        (⟨(y,r.val),r.property⟩ : (F.jacobian hc C Ξ hΞ φ hF).family.domain) := by
+      apply Subtype.ext
+      exact Prod.ext (congrArg Subtype.val
+        (SpecialTransformations.DefinableGeometry.Map.apply_inverse φ.map φ.bijective y')) rfl
+    have h := jacobian_transported_form_value (mixedVFBaseMap φ.map F.family.domain hF).toImage
+      (mixed_vf_base_map_to_image_bijective φ.map φ.bijective.1 F.family.domain hF)
+      (F.jacobianValue hc C Ξ hΞ φ hF) F.family.form p
+    rw [hq,hconstF p rfl,div_eq_mul_inv] at h
+    exact h
+  have hjH : ∀ r : (JH.extend hYD).underlying.obj.domain,
+      (JH.extend hYD).form.value r = H.family.form.value ⟨(x.val,r.val),(hHdom r.val).mp r.property⟩ * c⁻¹ := by
+    intro r
+    let p : H.family.domain := ⟨(x.val,r.val),(hHdom r.val).mp r.property⟩
+    have hq : (mixedVFBaseMap φ.map H.family.domain hH).toImage p =
+        (⟨(y,r.val),r.property⟩ : (H.jacobian hc C Ξ hΞ φ hH).family.domain) := by
+      apply Subtype.ext
+      exact Prod.ext (congrArg Subtype.val
+        (SpecialTransformations.DefinableGeometry.Map.apply_inverse φ.map φ.bijective y')) rfl
+    have h := jacobian_transported_form_value (mixedVFBaseMap φ.map H.family.domain hH).toImage
+      (mixed_vf_base_map_to_image_bijective φ.map φ.bijective.1 H.family.domain hH)
+      (H.jacobianValue hc C Ξ hΞ φ hH) H.family.form p
+    rw [hq,hconstH p rfl,div_eq_mul_inv] at h
+    exact h
+  have hdens : ∀ r, (JF.extend hYD).form.value r = (JH.extend hYD).form.value (g r) := by
+    intro r
+    rw [hjF,hjH]
+    congr 1
+    exact e.density ⟨r.val,(hFdom r.val).mp r.property⟩
+  let e2 := HK.ZeroRVVolumeIso.ofBijection g hg hdens
+  let e3 := e2.descendDefinableNames hYD hDnames
+  have hdom : GammaBaseDominated Bx By := by
+    refine ⟨?_,Set.Subset.refl _⟩
+    rintro z (hz | ⟨i,rfl⟩)
+    · exact (subset_closureBase By).1 (Or.inl hz)
+    · exact ⟨.vf,hxdef i⟩
+  refine Quotient.sound ⟨e3,?_⟩
+  have he' := hdom.graph he
+  apply SpecialTransformations.Section5.GammaGraphDefinable.congr he'
+  intro p q
+  constructor
+  · rintro ⟨u,hu,hq⟩
+    refine ⟨⟨u.val,(hFdom u.val).mpr u.property⟩,hu,?_⟩
+    rw [← hq]
+    rfl
+  · rintro ⟨u,hu,hq⟩
+    refine ⟨⟨u.val,(hFdom u.val).mp u.property⟩,hu,?_⟩
+    rw [← hq]
+    rfl
+
 end IntegrationInACVF.Section7.GammaFun
