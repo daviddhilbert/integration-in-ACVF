@@ -68,13 +68,41 @@ blowups and contraction programs have Gamma graphs. `VFGammaGeneratedBase ⟨C.b
 | 7.10 | `HK.gamma_named_theorem_7_10`, `HK.gammaNamedGradedIntegrationEquiv`, `HK.gammaNamedIntegrationRingEquiv` |
 | 7.13 | `HK.gamma_named_raw_volume_kernel_principal`, `HK.gamma_named_theorem_7_13` |
 
-Not yet restated: Propositions 7.11/7.12 and Theorems 7.14/7.15 (function integration) still
-carry `hNames` in their HK statements. A Gamma-named version needs a parallel Gamma-named
-function layer, about 540 modules in the existing stack. That scope awaits an author decision.
+### Gamma-named function layer (additive)
+
+The entry point `Integration7.GammaFunSection7AdditiveResults` (imported by
+`Integration7.Library`) restates function integration over the same Gamma-named setting.
+A function is a selected VF volume family (positive degree) or a weighted degree-zero
+family, coded over the named code context, with a Gamma certificate over `⟨C.base, Ξ⟩`,
+modulo Gamma almost-everywhere equivalence. Values lie in `HK.GammaNamedRVSemiring`.
+
+| Result | Gamma-named interface (namespace `GammaFun`) |
+| --- | --- |
+| 7.11 | `gamma_named_proposition_7_11`, `_7_11_zero`, `_7_11_zero_permute`; additive forms `gamma_named_proposition_7_11_add_hom`, `_7_11_zero_add_hom` |
+| 7.12 | `gamma_named_proposition_7_12`, `_7_12_zero`; additive forms `gamma_named_proposition_7_12_add_hom`, `_7_12_zero_add_hom` |
+| 7.14 | `gamma_named_theorem_7_14` (nonempty retained sets), `gamma_named_theorem_7_14_zero` (projections discarding at least one coordinate), `gamma_named_two_projection_fubini` |
+| 7.15 | `gamma_named_theorem_7_15`, `gamma_named_theorem_7_15_zero` |
+
+Gamma AE functions, supported functions and their weighted degree-zero versions are additive
+commutative monoids. Integrals, head integrals, Jacobian transforms, coordinate permutations,
+prefix integrals and coordinate integrals are additive monoid homomorphisms
+(`aeIntegralAddHom`, `aeHeadIntegralAddHom`, `supportedJacobianAddHom`,
+`aeCoordinateIntegralAddHom` and the `Zero` versions). Head-integral additivity uses a new
+argument: the head preparation of a sum is cut along the summand tag, and each cut is
+compared with its summand at generic points.
+
+**Deferred** (author decision "Finalize, linear later"): the linear forms of 7.11/7.12 over
+`HK.GammaNamedRVSemiring` and the normalized 7.14/7.15. They need the Gamma coefficient
+module, and in particular head-integral coefficient linearity `headInt(c•f) = c•headInt f`.
+The raw proof identifies head-integral rows with frozen field-base fibre integrals; that
+argument does not carry over to the Gamma setting. Candidate routes: a Gamma port of the
+frozen field-base fibre-integral theory, or head preparations of products with a constant
+RV factor (per-fibre chain lifts) combined with the pairwise generic head comparison. The
+corresponding `HK` statements still carry `hNames`.
 
 These modules require the special-transformations branch `gamma-lift-9-16` (local commit
 `932a507`, which contains Gamma Theorem 9.16). The registered dependency pin is unchanged
-until the author coordinates the bump. The 45 new headlines are audited in
-`verification/hnames-removal/` (receipt and log). Only `propext`, `Classical.choice` and
-`Quot.sound` occur, and no exported type mentions `hNames`. `Integration7.Library` builds
-with the local provider (13,491 jobs).
+until the author coordinates the bump. The 132 new headlines (45 class-level, 87 function
+layer) are audited in `verification/hnames-removal/` (receipt and logs). Only `propext`,
+`Classical.choice` and `Quot.sound` occur, and no exported type mentions `hNames`.
+`Integration7.Library` builds with the local provider (13,523 jobs).

@@ -15,7 +15,10 @@ The accepted nonempty-E restriction of 7.5 is retained.
 
 ## Gamma-named results (local branch `remove-hnames`)
 
-Gamma-named 7.6–7.10 and 7.13 hold without `hNames`; 7.11/7.12/7.14/7.15 still carry it.
+Gamma-named 7.6–7.10 and 7.13 hold without `hNames`. Gamma-named 7.11/7.12 hold in additive
+form and 7.14/7.15 for homogeneous functions (entry point
+`Integration7.GammaFunSection7AdditiveResults`). The linear 7.11/7.12 and normalized
+7.14/7.15 are deferred: they need head-integral coefficient linearity.
 See the "Gamma-named results" section of [COMPLETION.md](COMPLETION.md). These modules
 need the special-transformations `gamma-lift-9-16` provider (local `932a507`).
 

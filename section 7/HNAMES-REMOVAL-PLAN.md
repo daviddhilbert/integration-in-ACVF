@@ -63,6 +63,9 @@ side and the integration equivalences, then the class semirings and the
 
 Steps 1–3 are done for 7.6–7.10 and 7.13: see `Integration7.GammaNamedSection7Results` and
 the Gamma-named section of COMPLETION.md. The VF side needed Gamma Theorem 9.16 (provider
-branch `gamma-lift-9-16`). Step 3 for 7.11/7.12/7.14/7.15 needs a parallel Gamma-named
-function layer and awaits an author decision. Step 5 (diamond-integral) has not started;
+branch `gamma-lift-9-16`). Step 3 for 7.11/7.12/7.14/7.15: the author chose
+the full Gamma-named function layer, then "Finalize, linear later". Done: the additive layer
+(`Integration7.GammaFunSection7AdditiveResults`), with Gamma-named 7.11/7.12 in additive form
+and 7.14/7.15 for homogeneous functions. Deferred: the linear 7.11/7.12 and normalized
+7.14/7.15, which need head-integral coefficient linearity (see COMPLETION.md). Step 5 (diamond-integral) has not started;
 see `HNAMES-API-REPORT.md`.

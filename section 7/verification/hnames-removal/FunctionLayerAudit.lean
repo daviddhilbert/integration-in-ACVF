@@ -1,0 +1,181 @@
+import Integration7.Library
+open FirstOrder FirstOrder.Language CategoryTheory
+open SpecialTransformations.Milestone0 SpecialTransformations.Milestone0.LRV
+open SpecialTransformations.Section3 SpecialTransformations.Section4 SpecialTransformations.Section9
+open SpecialTransformations.DefinableGeometry IntegrationInACVF.Section7
+set_option pp.universes true
+set_option pp.proofs false
+#check @IntegrationInACVF.Section7.GammaFun.Presentation
+#print axioms IntegrationInACVF.Section7.GammaFun.Presentation
+#check @IntegrationInACVF.Section7.GammaFun.Presentation.integral
+#print axioms IntegrationInACVF.Section7.GammaFun.Presentation.integral
+#check @IntegrationInACVF.Section7.GammaFun.Presentation.appendedIntegral
+#print axioms IntegrationInACVF.Section7.GammaFun.Presentation.appendedIntegral
+#check @IntegrationInACVF.Section7.GammaFun.AEEquivalent
+#print axioms IntegrationInACVF.Section7.GammaFun.AEEquivalent
+#check @IntegrationInACVF.Section7.GammaFun.AEFunction
+#print axioms IntegrationInACVF.Section7.GammaFun.AEFunction
+#check @IntegrationInACVF.Section7.GammaFun.aeIntegral
+#print axioms IntegrationInACVF.Section7.GammaFun.aeIntegral
+#check @IntegrationInACVF.Section7.GammaFun.aeAppendedIntegral
+#print axioms IntegrationInACVF.Section7.GammaFun.aeAppendedIntegral
+#check @IntegrationInACVF.Section7.GammaFun.ZeroPresentation
+#print axioms IntegrationInACVF.Section7.GammaFun.ZeroPresentation
+#check @IntegrationInACVF.Section7.GammaFun.ZeroPresentation.integral
+#print axioms IntegrationInACVF.Section7.GammaFun.ZeroPresentation.integral
+#check @IntegrationInACVF.Section7.GammaFun.ZeroAEEquivalent
+#print axioms IntegrationInACVF.Section7.GammaFun.ZeroAEEquivalent
+#check @IntegrationInACVF.Section7.GammaFun.AEZeroFunction
+#print axioms IntegrationInACVF.Section7.GammaFun.AEZeroFunction
+#check @IntegrationInACVF.Section7.GammaFun.aeZeroIntegral
+#print axioms IntegrationInACVF.Section7.GammaFun.aeZeroIntegral
+#check @IntegrationInACVF.Section7.GammaFun.GammaVFSet
+#print axioms IntegrationInACVF.Section7.GammaFun.GammaVFSet
+#check @IntegrationInACVF.Section7.GammaFun.GammaVFBijection
+#print axioms IntegrationInACVF.Section7.GammaFun.GammaVFBijection
+#check @IntegrationInACVF.Section7.GammaFun.SupportedAEFunction
+#print axioms IntegrationInACVF.Section7.GammaFun.SupportedAEFunction
+#check @IntegrationInACVF.Section7.GammaFun.SupportedAEZeroFunction
+#print axioms IntegrationInACVF.Section7.GammaFun.SupportedAEZeroFunction
+#check @IntegrationInACVF.Section7.GammaFun.aeHeadIntegral
+#print axioms IntegrationInACVF.Section7.GammaFun.aeHeadIntegral
+#check @IntegrationInACVF.Section7.GammaFun.aeZeroHeadIntegral
+#print axioms IntegrationInACVF.Section7.GammaFun.aeZeroHeadIntegral
+#check @IntegrationInACVF.Section7.GammaFun.aePrefixIntegral
+#print axioms IntegrationInACVF.Section7.GammaFun.aePrefixIntegral
+#check @IntegrationInACVF.Section7.GammaFun.aeZeroPrefixIntegral
+#print axioms IntegrationInACVF.Section7.GammaFun.aeZeroPrefixIntegral
+#check @IntegrationInACVF.Section7.GammaFun.aePermute
+#print axioms IntegrationInACVF.Section7.GammaFun.aePermute
+#check @IntegrationInACVF.Section7.GammaFun.aeZeroPermute
+#print axioms IntegrationInACVF.Section7.GammaFun.aeZeroPermute
+#check @IntegrationInACVF.Section7.GammaFun.aeCoordinateIntegral
+#print axioms IntegrationInACVF.Section7.GammaFun.aeCoordinateIntegral
+#check @IntegrationInACVF.Section7.GammaFun.aeZeroCoordinateIntegral
+#print axioms IntegrationInACVF.Section7.GammaFun.aeZeroCoordinateIntegral
+#check @IntegrationInACVF.Section7.GammaFun.supportedJacobian
+#print axioms IntegrationInACVF.Section7.GammaFun.supportedJacobian
+#check @IntegrationInACVF.Section7.GammaFun.supportedZeroJacobian
+#print axioms IntegrationInACVF.Section7.GammaFun.supportedZeroJacobian
+#check @IntegrationInACVF.Section7.GammaFun.gammaSemiringIntegral
+#print axioms IntegrationInACVF.Section7.GammaFun.gammaSemiringIntegral
+#check @IntegrationInACVF.Section7.GammaFun.gammaSemiringZeroIntegral
+#print axioms IntegrationInACVF.Section7.GammaFun.gammaSemiringZeroIntegral
+#check @IntegrationInACVF.Section7.GammaFun.presentation_integral_eq_of_rows
+#print axioms IntegrationInACVF.Section7.GammaFun.presentation_integral_eq_of_rows
+#check @IntegrationInACVF.Section7.GammaFun.presentation_integral_ae
+#print axioms IntegrationInACVF.Section7.GammaFun.presentation_integral_ae
+#check @IntegrationInACVF.Section7.GammaFun.presentation_head_integral_ae
+#print axioms IntegrationInACVF.Section7.GammaFun.presentation_head_integral_ae
+#check @IntegrationInACVF.Section7.GammaFun.zero_presentation_head_integral_ae
+#print axioms IntegrationInACVF.Section7.GammaFun.zero_presentation_head_integral_ae
+#check @IntegrationInACVF.Section7.GammaFun.presentation_jacobian_ae
+#print axioms IntegrationInACVF.Section7.GammaFun.presentation_jacobian_ae
+#check @IntegrationInACVF.Section7.GammaFun.zero_presentation_jacobian_ae
+#print axioms IntegrationInACVF.Section7.GammaFun.zero_presentation_jacobian_ae
+#check @IntegrationInACVF.Section7.GammaFun.ae_head_fubini
+#print axioms IntegrationInACVF.Section7.GammaFun.ae_head_fubini
+#check @IntegrationInACVF.Section7.GammaFun.ae_zero_head_fubini
+#print axioms IntegrationInACVF.Section7.GammaFun.ae_zero_head_fubini
+#check @IntegrationInACVF.Section7.GammaFun.ae_prefix_fubini
+#print axioms IntegrationInACVF.Section7.GammaFun.ae_prefix_fubini
+#check @IntegrationInACVF.Section7.GammaFun.ae_coordinate_fubini
+#print axioms IntegrationInACVF.Section7.GammaFun.ae_coordinate_fubini
+#check @IntegrationInACVF.Section7.GammaFun.ae_zero_coordinate_fubini
+#print axioms IntegrationInACVF.Section7.GammaFun.ae_zero_coordinate_fubini
+#check @IntegrationInACVF.Section7.GammaFun.supported_jacobian_integral
+#print axioms IntegrationInACVF.Section7.GammaFun.supported_jacobian_integral
+#check @IntegrationInACVF.Section7.GammaFun.supported_zero_jacobian_integral
+#print axioms IntegrationInACVF.Section7.GammaFun.supported_zero_jacobian_integral
+#check @IntegrationInACVF.Section7.GammaFun.gamma_named_proposition_7_11
+#print axioms IntegrationInACVF.Section7.GammaFun.gamma_named_proposition_7_11
+#check @IntegrationInACVF.Section7.GammaFun.gamma_named_proposition_7_11_zero
+#print axioms IntegrationInACVF.Section7.GammaFun.gamma_named_proposition_7_11_zero
+#check @IntegrationInACVF.Section7.GammaFun.gamma_named_proposition_7_11_zero_permute
+#print axioms IntegrationInACVF.Section7.GammaFun.gamma_named_proposition_7_11_zero_permute
+#check @IntegrationInACVF.Section7.GammaFun.gamma_named_proposition_7_12
+#print axioms IntegrationInACVF.Section7.GammaFun.gamma_named_proposition_7_12
+#check @IntegrationInACVF.Section7.GammaFun.gamma_named_proposition_7_12_zero
+#print axioms IntegrationInACVF.Section7.GammaFun.gamma_named_proposition_7_12_zero
+#check @IntegrationInACVF.Section7.GammaFun.aeFunctionAddCommMonoid
+#print axioms IntegrationInACVF.Section7.GammaFun.aeFunctionAddCommMonoid
+#check @IntegrationInACVF.Section7.GammaFun.aeZeroFunctionAddCommMonoid
+#print axioms IntegrationInACVF.Section7.GammaFun.aeZeroFunctionAddCommMonoid
+#check @IntegrationInACVF.Section7.GammaFun.supportedAEFunctionAddCommMonoid
+#print axioms IntegrationInACVF.Section7.GammaFun.supportedAEFunctionAddCommMonoid
+#check @IntegrationInACVF.Section7.GammaFun.supportedAEZeroFunctionAddCommMonoid
+#print axioms IntegrationInACVF.Section7.GammaFun.supportedAEZeroFunctionAddCommMonoid
+#check @IntegrationInACVF.Section7.GammaFun.presentation_integral_add
+#print axioms IntegrationInACVF.Section7.GammaFun.presentation_integral_add
+#check @IntegrationInACVF.Section7.GammaFun.presentation_appended_integral_add
+#print axioms IntegrationInACVF.Section7.GammaFun.presentation_appended_integral_add
+#check @IntegrationInACVF.Section7.GammaFun.zero_presentation_integral_add
+#print axioms IntegrationInACVF.Section7.GammaFun.zero_presentation_integral_add
+#check @IntegrationInACVF.Section7.GammaFun.presentation_head_integral_add
+#print axioms IntegrationInACVF.Section7.GammaFun.presentation_head_integral_add
+#check @IntegrationInACVF.Section7.GammaFun.zero_presentation_head_integral_add
+#print axioms IntegrationInACVF.Section7.GammaFun.zero_presentation_head_integral_add
+#check @IntegrationInACVF.Section7.GammaFun.presentation_jacobian_add
+#print axioms IntegrationInACVF.Section7.GammaFun.presentation_jacobian_add
+#check @IntegrationInACVF.Section7.GammaFun.zero_presentation_jacobian_add
+#print axioms IntegrationInACVF.Section7.GammaFun.zero_presentation_jacobian_add
+#check @IntegrationInACVF.Section7.GammaFun.aeIntegralAddHom
+#print axioms IntegrationInACVF.Section7.GammaFun.aeIntegralAddHom
+#check @IntegrationInACVF.Section7.GammaFun.aeAppendedIntegralAddHom
+#print axioms IntegrationInACVF.Section7.GammaFun.aeAppendedIntegralAddHom
+#check @IntegrationInACVF.Section7.GammaFun.gammaSemiringIntegralAddHom
+#print axioms IntegrationInACVF.Section7.GammaFun.gammaSemiringIntegralAddHom
+#check @IntegrationInACVF.Section7.GammaFun.aeZeroIntegralAddHom
+#print axioms IntegrationInACVF.Section7.GammaFun.aeZeroIntegralAddHom
+#check @IntegrationInACVF.Section7.GammaFun.gammaSemiringZeroIntegralAddHom
+#print axioms IntegrationInACVF.Section7.GammaFun.gammaSemiringZeroIntegralAddHom
+#check @IntegrationInACVF.Section7.GammaFun.aeHeadIntegralAddHom
+#print axioms IntegrationInACVF.Section7.GammaFun.aeHeadIntegralAddHom
+#check @IntegrationInACVF.Section7.GammaFun.aeZeroHeadIntegralAddHom
+#print axioms IntegrationInACVF.Section7.GammaFun.aeZeroHeadIntegralAddHom
+#check @IntegrationInACVF.Section7.GammaFun.supportedJacobianAddHom
+#print axioms IntegrationInACVF.Section7.GammaFun.supportedJacobianAddHom
+#check @IntegrationInACVF.Section7.GammaFun.supportedZeroJacobianAddHom
+#print axioms IntegrationInACVF.Section7.GammaFun.supportedZeroJacobianAddHom
+#check @IntegrationInACVF.Section7.GammaFun.aePermuteAddHom
+#print axioms IntegrationInACVF.Section7.GammaFun.aePermuteAddHom
+#check @IntegrationInACVF.Section7.GammaFun.aeZeroPermuteAddHom
+#print axioms IntegrationInACVF.Section7.GammaFun.aeZeroPermuteAddHom
+#check @IntegrationInACVF.Section7.GammaFun.aePrefixIntegralAddHom
+#print axioms IntegrationInACVF.Section7.GammaFun.aePrefixIntegralAddHom
+#check @IntegrationInACVF.Section7.GammaFun.aeZeroPrefixIntegralAddHom
+#print axioms IntegrationInACVF.Section7.GammaFun.aeZeroPrefixIntegralAddHom
+#check @IntegrationInACVF.Section7.GammaFun.aeCoordinateIntegralAddHom
+#print axioms IntegrationInACVF.Section7.GammaFun.aeCoordinateIntegralAddHom
+#check @IntegrationInACVF.Section7.GammaFun.aeZeroCoordinateIntegralAddHom
+#print axioms IntegrationInACVF.Section7.GammaFun.aeZeroCoordinateIntegralAddHom
+#check @IntegrationInACVF.Section7.GammaFun.gamma_named_proposition_7_11_add_hom
+#print axioms IntegrationInACVF.Section7.GammaFun.gamma_named_proposition_7_11_add_hom
+#check @IntegrationInACVF.Section7.GammaFun.gamma_named_proposition_7_11_zero_add_hom
+#print axioms IntegrationInACVF.Section7.GammaFun.gamma_named_proposition_7_11_zero_add_hom
+#check @IntegrationInACVF.Section7.GammaFun.gamma_named_proposition_7_12_add_hom
+#print axioms IntegrationInACVF.Section7.GammaFun.gamma_named_proposition_7_12_add_hom
+#check @IntegrationInACVF.Section7.GammaFun.gamma_named_proposition_7_12_zero_add_hom
+#print axioms IntegrationInACVF.Section7.GammaFun.gamma_named_proposition_7_12_zero_add_hom
+#check @IntegrationInACVF.Section7.GammaFun.gamma_named_two_projection_fubini
+#print axioms IntegrationInACVF.Section7.GammaFun.gamma_named_two_projection_fubini
+#check @IntegrationInACVF.Section7.GammaFun.gamma_named_theorem_7_14
+#print axioms IntegrationInACVF.Section7.GammaFun.gamma_named_theorem_7_14
+#check @IntegrationInACVF.Section7.GammaFun.gamma_named_theorem_7_14_zero
+#print axioms IntegrationInACVF.Section7.GammaFun.gamma_named_theorem_7_14_zero
+#check @IntegrationInACVF.Section7.GammaFun.gamma_named_theorem_7_15
+#print axioms IntegrationInACVF.Section7.GammaFun.gamma_named_theorem_7_15
+#check @IntegrationInACVF.Section7.GammaFun.gamma_named_theorem_7_15_zero
+#print axioms IntegrationInACVF.Section7.GammaFun.gamma_named_theorem_7_15_zero
+#check @IntegrationInACVF.Section7.GammaNamed.gamma_lift_contraction_comparison
+#print axioms IntegrationInACVF.Section7.GammaNamed.gamma_lift_contraction_comparison
+#check @IntegrationInACVF.Section7.GammaNamed.gamma_vf_iso_contraction_comparison
+#print axioms IntegrationInACVF.Section7.GammaNamed.gamma_vf_iso_contraction_comparison
+#check @IntegrationInACVF.Section7.GammaNamed.gamma_selected_realization_contraction
+#print axioms IntegrationInACVF.Section7.GammaNamed.gamma_selected_realization_contraction
+#check @IntegrationInACVF.Section7.GammaNamed.gamma_coprod_contraction
+#print axioms IntegrationInACVF.Section7.GammaNamed.gamma_coprod_contraction
+#check @IntegrationInACVF.Section7.GammaVolumeBlowupEquivalent.changeBase
+#print axioms IntegrationInACVF.Section7.GammaVolumeBlowupEquivalent.changeBase
+#check @IntegrationInACVF.Section7.GammaBaseDominated
+#print axioms IntegrationInACVF.Section7.GammaBaseDominated

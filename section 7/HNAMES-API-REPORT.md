@@ -12,11 +12,26 @@ integration-in-ACVF `remove-hnames` and special-transformations `gamma-lift-9-16
 - **New Gamma-named class API.** It covers 7.6–7.10 and 7.13 over `⟨C.base, Ξ⟩` with no
   `hNames`. The entry point is `Integration7.GammaNamedSection7Results`, which is imported by
   `Integration7.Library`.
-- **Not covered.** Propositions 7.11/7.12 and Theorems 7.14/7.15 (supported function
-  integration, Fubini, change of variables) have no Gamma-named version yet. Their `HK`
-  statements still need `hNames`. This scope awaits an author decision. Restating them means
-  porting a function layer of about 540 modules (about 34k lines) to Gamma-named domains,
-  presentations and coefficient semiring.
+- **New Gamma-named function layer (additive).** Entry point
+  `Integration7.GammaFunSection7AdditiveResults`, also imported by `Integration7.Library`.
+  - Gamma-named 7.11 and 7.12 hold in additive form: as equalities of additive monoid
+    homomorphisms into `HK.GammaNamedRVSemiring`, and pointwise on each function.
+  - Gamma-named 7.14 and 7.15 hold for homogeneous functions.
+  - Both cover positive degree and weighted degree zero.
+- **Deferred** (author decision "Finalize, linear later"):
+  - the linear 7.11/7.12 over `HK.GammaNamedRVSemiring`;
+  - the normalized 7.14/7.15.
+
+  They need the Gamma coefficient module, and in particular head-integral coefficient
+  linearity, `headInt(c•f) = c•headInt f`. The raw proof (`FrozenHeadIntegralPositiveCoefficients`)
+  identifies head-integral rows with frozen field-base fibre integrals. That argument does not
+  carry over to the Gamma setting. Two candidate routes:
+  1. a Gamma port of the frozen field-base fibre-integral theory;
+  2. head preparations of products with a constant RV factor (per-fibre special bijections
+     lifted by `gamma_chain_lift_rv_labels`, with a uniform label arrangement), combined with
+     the pairwise generic head comparison.
+
+  Either is several thousand lines. The corresponding `HK` statements still carry `hNames`.
 
 ## Dependency changes required
 
@@ -28,12 +43,14 @@ integration-in-ACVF `remove-hnames` and special-transformations `gamma-lift-9-16
    - integration-in-ACVF currently consumes it only through an uncommitted `lake-manifest.json`
      revision. `lakefile.toml` still names `423c767`.
 2. **integration-in-ACVF.** Bump diamond-integral's pin to the `remove-hnames` tip once it is
-   published. The tip includes 49 new modules, `Library.lean` and documentation.
-3. **Registry.** `section 7/VERIFICATION.json` registers the new modules and 45 declarations
-   under `gamma_named_hnames_removal`.
+   published. The tip includes 81 new modules (49 class-level, 32 function-layer),
+   `Library.lean` and documentation.
+3. **Registry.** `section 7/VERIFICATION.json` registers the new modules and 132 declarations
+   under `gamma_named_hnames_removal` (45 class-level; 87 in its `function_layer` entry).
    - `dependency_pins` deliberately keeps `423c767`, so `section 7/verify.py` reports a pin
      mismatch until the coordinated bump.
-   - The blueprint has four new nodes: `s7-gn-7`, `s7-gn-9`, `s7-gn-10` and `s7-gn-13`.
+   - The blueprint has seven new nodes: `s7-gn-7`, `s7-gn-9`, `s7-gn-10`, `s7-gn-13`,
+     `s7-gn-11`, `s7-gn-12` and `s7-gn-14`.
    - Its fingerprint manifest is already stale on `main` (46 drifted files in Sections 2–3), so
      it needs regeneration at publication.
 
@@ -73,6 +90,47 @@ Supporting public lemmas that diamond-integral may reuse:
 - The Gamma basic relation: `gamma_degree_one_basic_volume_relation`.
 - The transport input: `gamma_volume_transport_input`.
 
+## New public declarations: Gamma-named function layer (namespace `IntegrationInACVF.Section7.GammaFun`)
+
+Functions and operations (all with `hc`, `C`, `Ξ`, `hΞ`; integrals and integral operators also
+take `hGenerated`, `γ`, `hγ`, `hγ1`):
+
+- Presentations and quotients: `Presentation`, `AEEquivalent`, `AEFunction`,
+  `ZeroPresentation`, `ZeroAEEquivalent`, `AEZeroFunction`.
+- Gamma VF sets and bijections: `GammaVFSet`, `GammaVFBijection`.
+- Supported functions: `SupportedAEFunction`, `SupportedAEZeroFunction`.
+- Integrals: `aeIntegral`, `aeAppendedIntegral`, `aeZeroIntegral`, `gammaSemiringIntegral`,
+  `gammaSemiringZeroIntegral`.
+- Operators: `aeHeadIntegral`, `aeZeroHeadIntegral`, `aePrefixIntegral`,
+  `aeZeroPrefixIntegral`, `aePermute`, `aeZeroPermute`, `aeCoordinateIntegral`,
+  `aeZeroCoordinateIntegral`, `supportedJacobian`, `supportedZeroJacobian`.
+- Additive structure: the `AddCommMonoid` instances `aeFunctionAddCommMonoid`,
+  `aeZeroFunctionAddCommMonoid`, `supportedAEFunctionAddCommMonoid` and
+  `supportedAEZeroFunctionAddCommMonoid`.
+- Additive monoid homomorphisms: `aeIntegralAddHom`, `aeAppendedIntegralAddHom`,
+  `gammaSemiringIntegralAddHom`, `aeZeroIntegralAddHom`, `gammaSemiringZeroIntegralAddHom`,
+  `aeHeadIntegralAddHom`, `aeZeroHeadIntegralAddHom`, `supportedJacobianAddHom`,
+  `supportedZeroJacobianAddHom`, `aePermuteAddHom`, `aeZeroPermuteAddHom`,
+  `aePrefixIntegralAddHom`, `aeZeroPrefixIntegralAddHom`, `aeCoordinateIntegralAddHom`,
+  `aeZeroCoordinateIntegralAddHom`.
+
+| Paper | Declaration |
+| --- | --- |
+| 7.5 | `presentation_integral_eq_of_rows` (Gamma Lemma 7.5 on integrals) |
+| 7.11 | `gamma_named_proposition_7_11` (any `VFCoordinateProjection`), `_7_11_zero` (at least one discarded coordinate), `_7_11_zero_permute`, `gamma_named_proposition_7_11_add_hom`, `_7_11_zero_add_hom` |
+| 7.12 | `gamma_named_proposition_7_12`, `_7_12_zero`, `gamma_named_proposition_7_12_add_hom`, `_7_12_zero_add_hom` |
+| 7.14 | `gamma_named_theorem_7_14` (nonempty retained sets), `gamma_named_theorem_7_14_zero`, `gamma_named_two_projection_fubini` |
+| 7.15 | `gamma_named_theorem_7_15`, `gamma_named_theorem_7_15_zero` |
+
+Supporting results: `ae_head_fubini`, `ae_zero_head_fubini`, `ae_prefix_fubini`,
+`ae_coordinate_fubini`, `ae_zero_coordinate_fubini`, the AE-descent theorems
+`presentation_head_integral_ae`, `presentation_jacobian_ae` and their zero versions, and the
+additivity theorems `presentation_integral_add`, `presentation_head_integral_add`,
+`presentation_jacobian_add` and their zero versions. The generic Gamma tools are
+`GammaNamed.gamma_lift_contraction_comparison`, `GammaNamed.gamma_vf_iso_contraction_comparison`,
+`GammaNamed.gamma_coprod_contraction`, `GammaBaseDominated` and
+`GammaVolumeBlowupEquivalent.changeBase`.
+
 ## Migration notes for diamond-integral
 
 - **Section 3 files: only a pin bump is needed.** 41 diamond-integral `section 3` files
@@ -95,14 +153,15 @@ Supporting public lemmas that diamond-integral may reuse:
   automatically Gamma-named objects, because the code set changes from `C.base` to the code
   context. A bridge (upward code extension, as in `GammaVolumeObjects.extend`) is not provided
   as a public map on classes.
-- **Function-level uses.** Any use of 7.11–7.15 must keep `hNames` until the scope decision
-  above.
+- **Function-level uses.** The additive Gamma-named 7.11/7.12 and the homogeneous 7.14/7.15
+  are available without `hNames`. Uses of the linear 7.11/7.12 or the normalized 7.14/7.15
+  must keep the `HK` statements (with `hNames`) until the deferred layer is built.
 
 ## Verification
 
-- `lake build Integration7.Library` with the local provider passed: 13,491 jobs, exit 0.
-- `section 7/verification/hnames-removal/receipt.json` is a PASS for the 45 headline types and
-  axioms. Only `propext`, `Classical.choice` and `Quot.sound` occur, and `hNames` appears in
+- `lake build Integration7.Library` with the local provider passed: 13,523 jobs, exit 0.
+- `section 7/verification/hnames-removal/receipt.json` is a PASS for the 132 headline types and
+  axioms (45 class-level in `HNamesAudit.log`, 87 function-layer in `FunctionLayerAudit.log`). Only `propext`, `Classical.choice` and `Quot.sound` occur, and `hNames` appears in
   no exported type.
 - The provider's 18 new Section 9 headlines are in `scripts/verify_ci.py` SECTION9_HEADLINES
   and were audited on that branch.
