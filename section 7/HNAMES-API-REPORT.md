@@ -18,20 +18,19 @@ integration-in-ACVF `remove-hnames` and special-transformations `gamma-lift-9-16
     homomorphisms into `HK.GammaNamedRVSemiring`, and pointwise on each function.
   - Gamma-named 7.14 and 7.15 hold for homogeneous functions.
   - Both cover positive degree and weighted degree zero.
-- **Deferred** (author decision "Finalize, linear later"):
-  - the linear 7.11/7.12 over `HK.GammaNamedRVSemiring`;
-  - the normalized 7.14/7.15.
-
-  They need the Gamma coefficient module, and in particular head-integral coefficient
-  linearity, `headInt(c•f) = c•headInt f`. The raw proof (`FrozenHeadIntegralPositiveCoefficients`)
-  identifies head-integral rows with frozen field-base fibre integrals. That argument does not
-  carry over to the Gamma setting. Two candidate routes:
-  1. a Gamma port of the frozen field-base fibre-integral theory;
-  2. head preparations of products with a constant RV factor (per-fibre special bijections
-     lifted by `gamma_chain_lift_rv_labels`, with a uniform label arrangement), combined with
-     the pairwise generic head comparison.
-
-  Either is several thousand lines. The corresponding `HK` statements still carry `hNames`.
+- **Linear layer: in progress** on branch `gamma-linear-section7` (local, from `origin/main`
+  5a69a5e; the author asked to start it). Entry point `Integration7.GammaFunLinearResults`,
+  imported by `Integration7.Library`.
+  - Done: the graded Gamma-named functions (weighted degree zero in component zero, positive
+    coefficient degree `k` in component `k+1`) form a module over `HK.GammaNamedRVSemiring`
+    (`GammaFun.aeGradedAction`, instance `GammaFun.gradedAEFunctionModule`). The graded
+    Gamma-named integral is `HK.GammaNamedRVSemiring`-linear (`GammaFun.gradedIntegralLinearMap`;
+    `GammaFun.comp_integral_act` for every pair of degrees).
+  - Remaining: the linear 7.12 (Jacobian linearity on supported functions), the linear 7.11
+    (head-integral coefficient linearity, then coordinate integrals) and the normalized
+    7.14/7.15. Head linearity follows the fibre-product route recorded in the scoping notes
+    (the frozen field-base port is the fallback).
+  - The corresponding `HK` statements still carry `hNames`.
 
 ## Dependency changes required
 
@@ -129,6 +128,40 @@ additivity theorems `presentation_integral_add`, `presentation_head_integral_add
 `GammaNamed.gamma_lift_contraction_comparison`, `GammaNamed.gamma_vf_iso_contraction_comparison`,
 `GammaNamed.gamma_coprod_contraction`, `GammaBaseDominated` and
 `GammaVolumeBlowupEquivalent.changeBase`.
+
+## New public declarations: Gamma-named linear layer (namespace `IntegrationInACVF.Section7.GammaFun` unless noted)
+
+Status: partial (see the summary). 50 headline declarations, audited in
+`verification/hnames-removal/LinearLayerAudit.log`.
+
+- Coefficient actions on presentations: `Presentation.leftProduct` (positive on positive),
+  `Presentation.zeroCoef` (weighted degree zero on positive), `ZeroPresentation.posCoef`,
+  `ZeroPresentation.zeroCoef`; uniformly `presAct`, with rows `pres_act_row`.
+- Almost-everywhere actions and module: `AEComp`, `aeAct`, `aeAct_mk`, `aeActBiadditive`,
+  `aeAct_one`, `aeAct_assoc`, `aeGradedAction`, `GradedAEFunction`, `gradedAEFunctionModule`,
+  `graded_ae_action_of`.
+- Integral linearity: `presentation_left_product_appended_integral`,
+  `gamma_semiring_integral_positive_coefficient`, `presentation_zero_coef_integral`,
+  `presentation_zero_coef_appended_integral`, `zero_presentation_pos_coef_appended_integral`,
+  `zero_presentation_zero_coef_integral`, `comp_integral_act`, `compIntegral`,
+  `gradedIntegralAddHom`, `graded_integral_smul`, `gradedIntegralLinearMap`.
+- Gamma tools (namespace `Section7`): `VFVolumeObjectGamma.prod`, `.permuteVF`, `.weightedZero`,
+  `VFVolumeIso.GammaDefinable.prod`, `volume_lift_product_iso_gamma`,
+  `weighted_lift_zero_product_iso_gamma`, `selected_positive_coefficient_appended_lift_gamma`,
+  `SelectedVFVolumeFamily.Gamma.appendedFullLift`, `.weightedZero`,
+  `DefinableVFVolumeFamily.Gamma.toSelected`, `HK.ZeroVFVolumeFamily.Gamma.positiveProduct`,
+  `.prodZero`, `CommonContextVolumeEquivalent.prod`; contraction lemmas
+  `GammaNamed.gamma_prod_contraction`, `GammaNamed.gamma_vf_permutation_covariance`,
+  `GammaNamed.gamma_weighted_zero_contraction`, `GammaFun.presentation_appended_full_lift`,
+  `GammaFun.presentation_full_lift_contraction`, `GammaFun.gamma_named_integration_equiv_contraction`.
+- Context-generic class laws (namespace `Section7.HK.Ctx`): the laws of `GammaNamedRVProductLaws`,
+  `GammaNamedRVProductDistributivity` and `GammaNamedRVSemiring` for an arbitrary code context and
+  base, applied in row contexts. `HK.Ctx.GammaNamedRVClasses` is a `def` so its instances never
+  apply to the named classes.
+- Generic helpers over an arbitrary Gamma base (e.g. `GammaNamed.gamma_prod_contraction`) take
+  `commonRealNames G ⊆ C.base`, as the existing `GammaNamed` tools do; they are only used with the
+  named code context, where it holds by `gamma_named_code_context_names`. No headline type mentions
+  it.
 
 ## Migration notes for diamond-integral
 

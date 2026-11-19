@@ -1,6 +1,7 @@
 import Integration7.HKCorrectedSection7Results
 import Integration7.GammaNamedSection7Results
 import Integration7.GammaFunSection7AdditiveResults
+import Integration7.GammaFunLinearResults
 import Integration7.HKDefinableRescalingWeightedProducts
 import Integration7.HKGlobalJacobianCoefficientLaws
 import Integration7.HKGlobalJacobianLinearMaps

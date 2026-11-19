@@ -91,14 +91,16 @@ prefix integrals and coordinate integrals are additive monoid homomorphisms
 argument: the head preparation of a sum is cut along the summand tag, and each cut is
 compared with its summand at generic points.
 
-**Deferred** (author decision "Finalize, linear later"): the linear forms of 7.11/7.12 over
-`HK.GammaNamedRVSemiring` and the normalized 7.14/7.15. They need the Gamma coefficient
-module, and in particular head-integral coefficient linearity `headInt(c•f) = c•headInt f`.
-The raw proof identifies head-integral rows with frozen field-base fibre integrals; that
-argument does not carry over to the Gamma setting. Candidate routes: a Gamma port of the
-frozen field-base fibre-integral theory, or head preparations of products with a constant
-RV factor (per-fibre chain lifts) combined with the pairwise generic head comparison. The
-corresponding `HK` statements still carry `hNames`.
+**Linear layer (in progress, branch `gamma-linear-section7`).** The author asked to start the
+deferred linear 7.11/7.12 and normalized 7.14/7.15. Entry point
+`Integration7.GammaFunLinearResults`. Proved: Gamma-named RV classes of every degree act on the
+graded Gamma-named functions (`GammaFun.aeGradedAction`), giving a module over
+`HK.GammaNamedRVSemiring` (`GammaFun.gradedAEFunctionModule`), and the graded Gamma-named integral
+is linear (`GammaFun.gradedIntegralLinearMap`; `GammaFun.comp_integral_act` in every pair of
+degrees). Remaining: Jacobian linearity and the linear 7.12; head-integral coefficient
+linearity `headInt(c•f) = c•headInt f` (fibre-product route, with the frozen field-base port as
+fallback), coordinate integrals and the linear 7.11; the normalized 7.14/7.15. The `HK`
+statements still carry `hNames`.
 
 These modules require the special-transformations branch `gamma-lift-9-16` (local commit
 `932a507`, which contains Gamma Theorem 9.16). The registered dependency pin is unchanged

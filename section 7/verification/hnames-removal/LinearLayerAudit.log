@@ -1,0 +1,592 @@
+@VFVolumeObjectGamma.prod : ∀ {M : Type} [inst : Structure.{0, 0, 0} LRV M]
+  [inst_1 : Theory.Model.{0, 0, 0} M Axioms.ACVF] {G : GammaParameters.Base} {S : Set.{0} M} {n m : ℕ},
+  CanonicalStructure.IsCanonical →
+    ∀ {U : PositiveVFVolumeObject S n} {V : PositiveVFVolumeObject S m},
+      VFVolumeObjectGamma U G → VFVolumeObjectGamma V G → VFVolumeObjectGamma (U.prod V) G
+'IntegrationInACVF.Section7.VFVolumeObjectGamma.prod' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@volume_lift_product_iso_gamma : ∀ {M : Type} [inst : Structure.{0, 0, 0} LRV M]
+  [inst_1 : Theory.Model.{0, 0, 0} M Axioms.ACVF] {G : GammaParameters.Base} {n m : ℕ}
+  (hc : CanonicalStructure.IsCanonical) (C : BaseContext M),
+  G.real ⊆ ↑C.base →
+    ∀ {U : PositiveRVVolumeObject (↑C.base) n} {V : PositiveRVVolumeObject (↑C.base) m},
+      VolumeObjectGamma U G → VolumeObjectGamma V G → (volumeLiftProductIso hc C U V).GammaDefinable G
+'IntegrationInACVF.Section7.volume_lift_product_iso_gamma' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@VFVolumeIso.GammaDefinable.prod : ∀ {M : Type} [inst : Structure.{0, 0, 0} LRV M]
+  [inst_1 : Theory.Model.{0, 0, 0} M Axioms.ACVF] {G : GammaParameters.Base} {n m : ℕ}
+  (hc : CanonicalStructure.IsCanonical) (C : BaseContext M) {U U' : PositiveVFVolumeObject (↑C.base) n}
+  {V V' : PositiveVFVolumeObject (↑C.base) m} {f : VFVolumeIso U U'} {g : VFVolumeIso V V'},
+  f.GammaDefinable G → g.GammaDefinable G → (VFVolumeIso.prod hc C f g).GammaDefinable G
+'IntegrationInACVF.Section7.VFVolumeIso.GammaDefinable.prod' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@CommonContextVolumeEquivalent.prod : ∀ {M : Type} [inst : Structure.{0, 0, 0} LRV M]
+  [inst_1 : Theory.Model.{0, 0, 0} M Axioms.ACVF] {G : GammaParameters.Base} (hc : CanonicalStructure.IsCanonical)
+  {C : BaseContext M} {k l : ℕ} {U U' : GammaVolumeObjects G (↑C.base) k} {V V' : GammaVolumeObjects G (↑C.base) l},
+  CommonContextVolumeEquivalent G C U U' →
+    CommonContextVolumeEquivalent G C V V' →
+      CommonContextVolumeEquivalent G C (GammaVolumeObjects.prod hc U V) (GammaVolumeObjects.prod hc U' V')
+'IntegrationInACVF.Section7.CommonContextVolumeEquivalent.prod' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@VFVolumeObjectGamma.permuteVF : ∀ {M : Type} [inst : Structure.{0, 0, 0} LRV M]
+  [inst_1 : Theory.Model.{0, 0, 0} M Axioms.ACVF] {G : GammaParameters.Base} {k : ℕ},
+  CanonicalStructure.IsCanonical →
+    ∀ (C : BaseContext M) {U : PositiveVFVolumeObject (↑C.base) k},
+      VFVolumeObjectGamma U G →
+        ∀ (σ : Equiv.Perm.{1} (Fin (HAdd.hAdd.{0, 0, 0} k 1))), VFVolumeObjectGamma (U.permuteVF σ) G
+'IntegrationInACVF.Section7.VFVolumeObjectGamma.permuteVF' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@selected_positive_coefficient_appended_lift_gamma : ∀ {M : Type} [inst : Structure.{0, 0, 0} LRV M]
+  [inst_1 : Theory.Model.{0, 0, 0} M Axioms.ACVF] {G : GammaParameters.Base} (hc : CanonicalStructure.IsCanonical)
+  (C : BaseContext M),
+  G.real ⊆ ↑C.base →
+    ∀ {n a k p : ℕ} {U : PositiveRVVolumeObject (↑C.base) p},
+      VolumeObjectGamma U G →
+        ∀ {F : SelectedVFVolumeFamily C n a k},
+          F.Gamma G →
+            (VFVolumeIso.of_bijection (selectedPositiveCoefficientAppendedLiftBijection hc U F)).GammaDefinable G
+'IntegrationInACVF.Section7.selected_positive_coefficient_appended_lift_gamma' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@SelectedVFVolumeFamily.Gamma.appendedFullLift : ∀ {M : Type} [inst : Structure.{0, 0, 0} LRV M]
+  [inst_1 : Theory.Model.{0, 0, 0} M Axioms.ACVF] {G : GammaParameters.Base},
+  CanonicalStructure.IsCanonical →
+    ∀ {C : BaseContext M} {n a k : ℕ} {F : SelectedVFVolumeFamily C n a k},
+      F.Gamma G → VFVolumeObjectGamma F.appendedFullLift G
+'IntegrationInACVF.Section7.SelectedVFVolumeFamily.Gamma.appendedFullLift' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@SelectedVFVolumeFamily.Gamma.weightedZero : ∀ {M : Type} [inst : Structure.{0, 0, 0} LRV M]
+  [inst_1 : Theory.Model.{0, 0, 0} M Axioms.ACVF] {G : GammaParameters.Base} {n a k : ℕ} {C : BaseContext M},
+  CanonicalStructure.IsCanonical →
+    ∀ {F : SelectedVFVolumeFamily C n a k},
+      F.Gamma G → ∀ {Z : HK.ZeroRVVolumeObject ↑C.base}, Z.Gamma G → (HK.selectedFamilyWeightedZeroProduct F Z).Gamma G
+'IntegrationInACVF.Section7.SelectedVFVolumeFamily.Gamma.weightedZero' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DefinableVFVolumeFamily.Gamma.toSelected : ∀ {M : Type} [inst : Structure.{0, 0, 0} LRV M]
+  [inst_1 : Theory.Model.{0, 0, 0} M Axioms.ACVF] {G : GammaParameters.Base} {n a k : ℕ} {C : BaseContext M}
+  {F : DefinableVFVolumeFamily C n a k}, F.Gamma G → F.toSelected.Gamma G
+'IntegrationInACVF.Section7.DefinableVFVolumeFamily.Gamma.toSelected' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@HK.ZeroVFVolumeFamily.Gamma.positiveProduct : ∀ {M : Type} [inst : Structure.{0, 0, 0} LRV M]
+  [inst_1 : Theory.Model.{0, 0, 0} M Axioms.ACVF] {G : GammaParameters.Base} {n a p : ℕ} {C : BaseContext M},
+  CanonicalStructure.IsCanonical →
+    ∀ {F : HK.ZeroVFVolumeFamily C n a},
+      F.Gamma G →
+        ∀ {U : PositiveRVVolumeObject (↑C.base) p},
+          VolumeObjectGamma U G → (HK.selectedZeroFamilyPositiveProduct U F).Gamma G
+'IntegrationInACVF.Section7.HK.ZeroVFVolumeFamily.Gamma.positiveProduct' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@HK.ZeroVFVolumeFamily.Gamma.prodZero : ∀ {M : Type} [inst : Structure.{0, 0, 0} LRV M]
+  [inst_1 : Theory.Model.{0, 0, 0} M Axioms.ACVF] {G : GammaParameters.Base} {C : BaseContext M} {n a : ℕ},
+  CanonicalStructure.IsCanonical →
+    ∀ {F : HK.ZeroVFVolumeFamily C n a},
+      F.Gamma G → ∀ {Z : HK.ZeroRVVolumeObject ↑C.base}, Z.Gamma G → (F.prodZero Z).Gamma G
+'IntegrationInACVF.Section7.HK.ZeroVFVolumeFamily.Gamma.prodZero' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@VFVolumeObjectGamma.weightedZero : ∀ {M : Type} [inst : Structure.{0, 0, 0} LRV M]
+  [inst_1 : Theory.Model.{0, 0, 0} M Axioms.ACVF] {G : GammaParameters.Base} {S : Set.{0} M} {n : ℕ}
+  {X : PositiveVFVolumeObject S n} {Z : HK.ZeroRVVolumeObject S},
+  CanonicalStructure.IsCanonical →
+    VFVolumeObjectGamma X G → Z.Gamma G → VFVolumeObjectGamma (HK.positiveVFZeroProduct X Z) G
+'IntegrationInACVF.Section7.VFVolumeObjectGamma.weightedZero' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@weighted_lift_zero_product_iso_gamma : ∀ {M : Type} [inst : Structure.{0, 0, 0} LRV M]
+  [inst_1 : Theory.Model.{0, 0, 0} M Axioms.ACVF] {G : GammaParameters.Base} (hc : CanonicalStructure.IsCanonical)
+  (C : BaseContext M),
+  G.real ⊆ ↑C.base →
+    ∀ {k : ℕ} {U : PositiveRVVolumeObject (↑C.base) k},
+      VolumeObjectGamma U G →
+        ∀ {Z : HK.ZeroRVVolumeObject ↑C.base},
+          Z.Gamma G → (VFVolumeIso.of_bijection (HK.weightedLiftZeroProductBijection hc C U Z)).GammaDefinable G
+'IntegrationInACVF.Section7.weighted_lift_zero_product_iso_gamma' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@HK.Ctx.GammaNamedRVClasses : {M : Type} →
+  [inst : Structure.{0, 0, 0} LRV M] →
+    [inst_1 : Theory.Model.{0, 0, 0} M Axioms.ACVF] →
+      CanonicalStructure.IsCanonical → BaseContext M → GammaParameters.Base → ℕ → Type
+'IntegrationInACVF.Section7.HK.Ctx.GammaNamedRVClasses' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@HK.Ctx.gammaNamedRVClassesGSemiring : {M : Type} →
+  [inst : Structure.{0, 0, 0} LRV M] →
+    [inst_1 : Theory.Model.{0, 0, 0} M Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        (C : BaseContext M) →
+          (B₀ : GammaParameters.Base) → DirectSum.GSemiring.{0, 0} (HK.Ctx.GammaNamedRVClasses hc C B₀)
+'IntegrationInACVF.Section7.HK.Ctx.gammaNamedRVClassesGSemiring' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@HK.Ctx.gamma_product_assoc : ∀ {M : Type} [inst : Structure.{0, 0, 0} LRV M]
+  [inst_1 : Theory.Model.{0, 0, 0} M Axioms.ACVF] (hc : CanonicalStructure.IsCanonical) (C : BaseContext M)
+  (B₀ : GammaParameters.Base) {n m l : ℕ} (U : HK.GammaRVObjects B₀ (↑C.base) n) (V : HK.GammaRVObjects B₀ (↑C.base) m)
+  (W : HK.GammaRVObjects B₀ (↑C.base) l),
+  HEq.{1} (HK.Ctx.gammaNamedRVClass hc C B₀ (HK.GammaRVObjects.product hc (HK.GammaRVObjects.product hc U V) W))
+    (HK.Ctx.gammaNamedRVClass hc C B₀ (HK.GammaRVObjects.product hc U (HK.GammaRVObjects.product hc V W)))
+'IntegrationInACVF.Section7.HK.Ctx.gamma_product_assoc' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@HK.Ctx.gamma_product_left_unit : ∀ {M : Type} [inst : Structure.{0, 0, 0} LRV M]
+  [inst_1 : Theory.Model.{0, 0, 0} M Axioms.ACVF] (hc : CanonicalStructure.IsCanonical) (C : BaseContext M)
+  (B₀ : GammaParameters.Base) {n : ℕ} (U : HK.GammaRVObjects B₀ (↑C.base) n),
+  HEq.{1} (HK.Ctx.gammaNamedRVClass hc C B₀ (HK.GammaRVObjects.product hc (HK.Ctx.gammaUnit hc C B₀) U))
+    (HK.Ctx.gammaNamedRVClass hc C B₀ U)
+'IntegrationInACVF.Section7.HK.Ctx.gamma_product_left_unit' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@HK.Ctx.gamma_product_left_distrib : ∀ {M : Type} [inst : Structure.{0, 0, 0} LRV M]
+  [inst_1 : Theory.Model.{0, 0, 0} M Axioms.ACVF] (hc : CanonicalStructure.IsCanonical) (C : BaseContext M)
+  (B₀ : GammaParameters.Base) {n m : ℕ} (U V : HK.GammaRVObjects B₀ (↑C.base) n) (W : HK.GammaRVObjects B₀ (↑C.base) m),
+  Eq.{1} (HK.Ctx.gammaNamedRVClass hc C B₀ (HK.GammaRVObjects.product hc (U.coprod V) W))
+    (HK.Ctx.gammaNamedRVClass hc C B₀ ((HK.GammaRVObjects.product hc U W).coprod (HK.GammaRVObjects.product hc V W)))
+'IntegrationInACVF.Section7.HK.Ctx.gamma_product_left_distrib' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@HK.Ctx.gamma_product_right_distrib : ∀ {M : Type} [inst : Structure.{0, 0, 0} LRV M]
+  [inst_1 : Theory.Model.{0, 0, 0} M Axioms.ACVF] (hc : CanonicalStructure.IsCanonical) (C : BaseContext M)
+  (B₀ : GammaParameters.Base) {n m : ℕ} (U : HK.GammaRVObjects B₀ (↑C.base) n) (V W : HK.GammaRVObjects B₀ (↑C.base) m),
+  Eq.{1} (HK.Ctx.gammaNamedRVClass hc C B₀ (HK.GammaRVObjects.product hc U (V.coprod W)))
+    (HK.Ctx.gammaNamedRVClass hc C B₀ ((HK.GammaRVObjects.product hc U V).coprod (HK.GammaRVObjects.product hc U W)))
+'IntegrationInACVF.Section7.HK.Ctx.gamma_product_right_distrib' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@HK.Ctx.gamma_named_product_congr_left : ∀ {M : Type} [inst : Structure.{0, 0, 0} LRV M]
+  [inst_1 : Theory.Model.{0, 0, 0} M Axioms.ACVF] (hc : CanonicalStructure.IsCanonical) (C : BaseContext M)
+  (B₀ : GammaParameters.Base) {n m : ℕ} {U U' : HK.GammaRVObjects B₀ (↑C.base) n},
+  Eq.{1} (HK.Ctx.gammaNamedRVClass hc C B₀ U) (HK.Ctx.gammaNamedRVClass hc C B₀ U') →
+    ∀ (V : HK.GammaRVObjects B₀ (↑C.base) m),
+      Eq.{1} (HK.Ctx.gammaNamedRVClass hc C B₀ (HK.GammaRVObjects.product hc U V))
+        (HK.Ctx.gammaNamedRVClass hc C B₀ (HK.GammaRVObjects.product hc U' V))
+'IntegrationInACVF.Section7.HK.Ctx.gamma_named_product_congr_left' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@HK.Ctx.gamma_named_product_congr_right : ∀ {M : Type} [inst : Structure.{0, 0, 0} LRV M]
+  [inst_1 : Theory.Model.{0, 0, 0} M Axioms.ACVF] (hc : CanonicalStructure.IsCanonical) (C : BaseContext M)
+  (B₀ : GammaParameters.Base) {n m : ℕ} (U : HK.GammaRVObjects B₀ (↑C.base) n)
+  {V V' : HK.GammaRVObjects B₀ (↑C.base) m},
+  Eq.{1} (HK.Ctx.gammaNamedRVClass hc C B₀ V) (HK.Ctx.gammaNamedRVClass hc C B₀ V') →
+    Eq.{1} (HK.Ctx.gammaNamedRVClass hc C B₀ (HK.GammaRVObjects.product hc U V))
+      (HK.Ctx.gammaNamedRVClass hc C B₀ (HK.GammaRVObjects.product hc U V'))
+'IntegrationInACVF.Section7.HK.Ctx.gamma_named_product_congr_right' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@GammaFun.presentation_appended_full_lift : ∀ {M : Type} [inst : Structure.{0, 0, 0} LRV M]
+  [inst_1 : Theory.Model.{0, 0, 0} M Axioms.ACVF] {n k : ℕ} (hc : CanonicalStructure.IsCanonical) (C : BaseContext M)
+  (Ξ : Set.{0} Values.Gamma) (hΞ : LT.lt.{1} (Cardinal.mk.{0} ↑Ξ) C.κ),
+  GammaParameters.VFGammaGeneratedBase (gammaNamedBase C Ξ) →
+    ∀ (γ : Values.Gamma),
+      Membership.mem.{0, 0} Ξ γ →
+        LT.lt.{0} 1 γ →
+          ∀ (F : GammaFun.Presentation C Ξ hΞ n k)
+            (T :
+              IntegrationInACVF.Section5.StandardContraction (nativeMixedVolumeDomain hc F.family.densityGraph.domain)
+                (Equiv.refl.{1} (Fin (HAdd.hAdd.{0, 0, 0} n 1))))
+            (hT : IntegrationInACVF.Section5.GammaProgramDefinable (gammaNamedBase C Ξ) T.program)
+            {υ : Equiv.Perm.{1} (Fin (HAdd.hAdd.{0, 0, 0} (appendVolumeDegree (HAdd.hAdd.{0, 0, 0} n 1) k) 1))}
+            (E :
+              IntegrationInACVF.Section5.StandardContraction
+                (nativeMixedVolumeDomain hc F.family.appendedFullLift.densityGraph.domain) υ)
+            (hE : IntegrationInACVF.Section5.GammaProgramDefinable (gammaNamedBase C Ξ) E.program),
+            CommonContextVolumeEquivalent (gammaNamedBase C Ξ) (gammaNamedCodeContext C Ξ hΞ)
+              (GammaFun.Presentation.appendedObject hc C Ξ hΞ F T hT)
+              (Subtype.mk.{1}
+                (PositiveVFVolumeObject.standardContractionObject hc (gammaNamedCodeContext C Ξ hΞ)
+                  (gammaNamedBase C Ξ).gamma F.family.appendedFullLift E)
+                ⋯)
+'IntegrationInACVF.Section7.GammaFun.presentation_appended_full_lift' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@GammaFun.presentation_left_product_appended_integral : ∀ {M : Type} [inst : Structure.{0, 0, 0} LRV M]
+  [inst_1 : Theory.Model.{0, 0, 0} M Axioms.ACVF] {n k p : ℕ} (hc : CanonicalStructure.IsCanonical) (C : BaseContext M)
+  (Ξ : Set.{0} Values.Gamma) (hΞ : LT.lt.{1} (Cardinal.mk.{0} ↑Ξ) C.κ)
+  (hGenerated : GammaParameters.VFGammaGeneratedBase (gammaNamedBase C Ξ)) (γ : Values.Gamma),
+  Membership.mem.{0, 0} Ξ γ →
+    LT.lt.{0} 1 γ →
+      ∀ (U : GammaVolumeObjects (gammaNamedBase C Ξ) (↑(gammaNamedCodeContext C Ξ hΞ).base) p)
+        (F : GammaFun.Presentation C Ξ hΞ n k),
+        Eq.{1}
+          (GammaFun.Presentation.appendedIntegral hc C Ξ hΞ hGenerated
+            (GammaFun.Presentation.leftProduct hc C Ξ hΞ U F))
+          (gammaClassReindex hc (gammaNamedCodeContext C Ξ hΞ) ⋯
+            (gammaVolumeBlowupClass hc (gammaNamedCodeContext C Ξ hΞ) (gammaNamedBase C Ξ)
+              (GammaVolumeObjects.prod hc U
+                (GammaFun.Presentation.appendedObject hc C Ξ hΞ F
+                  (GammaFun.Presentation.contraction hc C Ξ hΞ hGenerated F) ⋯))))
+'IntegrationInACVF.Section7.GammaFun.presentation_left_product_appended_integral' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@GammaFun.gamma_semiring_integral_positive_coefficient : ∀ {M : Type} [inst : Structure.{0, 0, 0} LRV M]
+  [inst_1 : Theory.Model.{0, 0, 0} M Axioms.ACVF] {n k p : ℕ} (hc : CanonicalStructure.IsCanonical) (C : BaseContext M)
+  (Ξ : Set.{0} Values.Gamma) (hΞ : LT.lt.{1} (Cardinal.mk.{0} ↑Ξ) C.κ)
+  (hGenerated : GammaParameters.VFGammaGeneratedBase (gammaNamedBase C Ξ)) (γ : Values.Gamma)
+  (hγ : Membership.mem.{0, 0} Ξ γ) (hγ1 : LT.lt.{0} 1 γ)
+  (c : GammaVolumeBlowupClasses hc (gammaNamedCodeContext C Ξ hΞ) (gammaNamedBase C Ξ) p)
+  (f : GammaFun.AEFunction hc C Ξ hΞ n k),
+  Eq.{1}
+    (GammaFun.gammaSemiringIntegral hc C Ξ hΞ hGenerated γ hγ hγ1
+      (GammaFun.aePositiveCoefficientAction hc C Ξ hΞ p c f))
+    (HMul.hMul.{0, 0, 0} ((DirectSum.of.{0, 0} (HK.GammaNamedRVClasses hc C Ξ hΞ) (HAdd.hAdd.{0, 0, 0} p 1)) c)
+      (GammaFun.gammaSemiringIntegral hc C Ξ hΞ hGenerated γ hγ hγ1 f))
+'IntegrationInACVF.Section7.GammaFun.gamma_semiring_integral_positive_coefficient' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@GammaFun.Presentation.zeroCoef : {M : Type} →
+  [inst : Structure.{0, 0, 0} LRV M] →
+    [inst_1 : Theory.Model.{0, 0, 0} M Axioms.ACVF] →
+      {n : ℕ} →
+        CanonicalStructure.IsCanonical →
+          (C : BaseContext M) →
+            (Ξ : Set.{0} Values.Gamma) →
+              (hΞ : LT.lt.{1} (Cardinal.mk.{0} ↑Ξ) C.κ) →
+                HK.GammaZeroRVObjects (gammaNamedBase C Ξ) ↑(gammaNamedCodeContext C Ξ hΞ).base →
+                  {k : ℕ} → GammaFun.Presentation C Ξ hΞ n k → GammaFun.Presentation C Ξ hΞ n k
+'IntegrationInACVF.Section7.GammaFun.Presentation.zeroCoef' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@GammaFun.ZeroPresentation.posCoef : {M : Type} →
+  [inst : Structure.{0, 0, 0} LRV M] →
+    [inst_1 : Theory.Model.{0, 0, 0} M Axioms.ACVF] →
+      {n : ℕ} →
+        CanonicalStructure.IsCanonical →
+          (C : BaseContext M) →
+            (Ξ : Set.{0} Values.Gamma) →
+              (hΞ : LT.lt.{1} (Cardinal.mk.{0} ↑Ξ) C.κ) →
+                {p : ℕ} →
+                  GammaVolumeObjects (gammaNamedBase C Ξ) (↑(gammaNamedCodeContext C Ξ hΞ).base) p →
+                    GammaFun.ZeroPresentation C Ξ hΞ n → GammaFun.Presentation C Ξ hΞ n p
+'IntegrationInACVF.Section7.GammaFun.ZeroPresentation.posCoef' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@GammaFun.ZeroPresentation.zeroCoef : {M : Type} →
+  [inst : Structure.{0, 0, 0} LRV M] →
+    [inst_1 : Theory.Model.{0, 0, 0} M Axioms.ACVF] →
+      {n : ℕ} →
+        CanonicalStructure.IsCanonical →
+          (C : BaseContext M) →
+            (Ξ : Set.{0} Values.Gamma) →
+              (hΞ : LT.lt.{1} (Cardinal.mk.{0} ↑Ξ) C.κ) →
+                HK.GammaZeroRVObjects (gammaNamedBase C Ξ) ↑(gammaNamedCodeContext C Ξ hΞ).base →
+                  GammaFun.ZeroPresentation C Ξ hΞ n → GammaFun.ZeroPresentation C Ξ hΞ n
+'IntegrationInACVF.Section7.GammaFun.ZeroPresentation.zeroCoef' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@GammaFun.presAct : {M : Type} →
+  [inst : Structure.{0, 0, 0} LRV M] →
+    [inst_1 : Theory.Model.{0, 0, 0} M Axioms.ACVF] →
+      {n : ℕ} →
+        CanonicalStructure.IsCanonical →
+          (C : BaseContext M) →
+            (Ξ : Set.{0} Values.Gamma) →
+              (hΞ : LT.lt.{1} (Cardinal.mk.{0} ↑Ξ) C.κ) →
+                {i j : ℕ} →
+                  HK.GammaRVObjects (gammaNamedBase C Ξ) (↑(gammaNamedCodeContext C Ξ hΞ).base) i →
+                    GammaFun.Pres C Ξ hΞ n j → GammaFun.Pres C Ξ hΞ n (HAdd.hAdd.{0, 0, 0} i j)
+'IntegrationInACVF.Section7.GammaFun.presAct' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@GammaFun.pres_act_row : ∀ {M : Type} [inst : Structure.{0, 0, 0} LRV M] [inst_1 : Theory.Model.{0, 0, 0} M Axioms.ACVF]
+  {n : ℕ} (hc : CanonicalStructure.IsCanonical) (C : BaseContext M) (Ξ : Set.{0} Values.Gamma)
+  (hΞ : LT.lt.{1} (Cardinal.mk.{0} ↑Ξ) C.κ) {i j : ℕ}
+  (u : HK.GammaRVObjects (gammaNamedBase C Ξ) (↑(gammaNamedCodeContext C Ξ hΞ).base) i) (F : GammaFun.Pres C Ξ hΞ n j)
+  (x : Fin (HAdd.hAdd.{0, 0, 0} n 1) → Transfer.VFType),
+  HEq.{1} (GammaFun.presRowClass hc C Ξ hΞ (GammaFun.presAct hc C Ξ hΞ u F) x)
+    (HK.Ctx.gammaNamedRVClass hc (vfParameterVolumeContext (gammaNamedCodeContext C Ξ hΞ) x)
+      (rowGammaBase (gammaNamedBase C Ξ) x)
+      (HK.GammaRVObjects.product hc (GammaFun.coefRow C Ξ hΞ u x) (GammaFun.presRow hc C Ξ hΞ F x)))
+'IntegrationInACVF.Section7.GammaFun.pres_act_row' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@GammaFun.AEComp : {M : Type} →
+  [inst : Structure.{0, 0, 0} LRV M] →
+    [inst_1 : Theory.Model.{0, 0, 0} M Axioms.ACVF] →
+      CanonicalStructure.IsCanonical →
+        (C : BaseContext M) → (Ξ : Set.{0} Values.Gamma) → LT.lt.{1} (Cardinal.mk.{0} ↑Ξ) C.κ → ℕ → ℕ → Type
+'IntegrationInACVF.Section7.GammaFun.AEComp' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@GammaFun.aeAct : {M : Type} →
+  [inst : Structure.{0, 0, 0} LRV M] →
+    [inst_1 : Theory.Model.{0, 0, 0} M Axioms.ACVF] →
+      {n : ℕ} →
+        (hc : CanonicalStructure.IsCanonical) →
+          (C : BaseContext M) →
+            (Ξ : Set.{0} Values.Gamma) →
+              (hΞ : LT.lt.{1} (Cardinal.mk.{0} ↑Ξ) C.κ) →
+                {i j : ℕ} →
+                  HK.GammaNamedRVClasses hc C Ξ hΞ i →
+                    GammaFun.AEComp hc C Ξ hΞ n j → GammaFun.AEComp hc C Ξ hΞ n (HAdd.hAdd.{0, 0, 0} i j)
+'IntegrationInACVF.Section7.GammaFun.aeAct' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@GammaFun.aeAct_mk : ∀ {M : Type} [inst : Structure.{0, 0, 0} LRV M] [inst_1 : Theory.Model.{0, 0, 0} M Axioms.ACVF]
+  {n : ℕ} (hc : CanonicalStructure.IsCanonical) (C : BaseContext M) (Ξ : Set.{0} Values.Gamma)
+  (hΞ : LT.lt.{1} (Cardinal.mk.{0} ↑Ξ) C.κ) {i j : ℕ}
+  (u : HK.GammaRVObjects (gammaNamedBase C Ξ) (↑(gammaNamedCodeContext C Ξ hΞ).base) i) (F : GammaFun.Pres C Ξ hΞ n j),
+  Eq.{1} (GammaFun.aeAct hc C Ξ hΞ (HK.gammaNamedRVClass hc C Ξ hΞ u) (GammaFun.aeMk hc C Ξ hΞ F))
+    (GammaFun.aeMk hc C Ξ hΞ (GammaFun.presAct hc C Ξ hΞ u F))
+'IntegrationInACVF.Section7.GammaFun.aeAct_mk' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@GammaFun.aeActBiadditive : {M : Type} →
+  [inst : Structure.{0, 0, 0} LRV M] →
+    [inst_1 : Theory.Model.{0, 0, 0} M Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        (C : BaseContext M) →
+          (Ξ : Set.{0} Values.Gamma) →
+            (hΞ : LT.lt.{1} (Cardinal.mk.{0} ↑Ξ) C.κ) →
+              (n i j : ℕ) →
+                AddMonoidHom.{0, 0} (HK.GammaNamedRVClasses hc C Ξ hΞ i)
+                  (AddMonoidHom.{0, 0} (GammaFun.AEComp hc C Ξ hΞ n j)
+                    (GammaFun.AEComp hc C Ξ hΞ n (HAdd.hAdd.{0, 0, 0} i j)))
+'IntegrationInACVF.Section7.GammaFun.aeActBiadditive' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@GammaFun.aeAct_one : ∀ {M : Type} [inst : Structure.{0, 0, 0} LRV M] [inst_1 : Theory.Model.{0, 0, 0} M Axioms.ACVF]
+  {n : ℕ} (hc : CanonicalStructure.IsCanonical) (C : BaseContext M) (Ξ : Set.{0} Values.Gamma)
+  (hΞ : LT.lt.{1} (Cardinal.mk.{0} ↑Ξ) C.κ) {j : ℕ} (f : GammaFun.AEComp hc C Ξ hΞ n j),
+  HEq.{1} (GammaFun.aeAct hc C Ξ hΞ GradedMonoid.GOne.one.{0, 0} f) f
+'IntegrationInACVF.Section7.GammaFun.aeAct_one' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@GammaFun.aeAct_assoc : ∀ {M : Type} [inst : Structure.{0, 0, 0} LRV M] [inst_1 : Theory.Model.{0, 0, 0} M Axioms.ACVF]
+  {n : ℕ} (hc : CanonicalStructure.IsCanonical) (C : BaseContext M) (Ξ : Set.{0} Values.Gamma)
+  (hΞ : LT.lt.{1} (Cardinal.mk.{0} ↑Ξ) C.κ) {i j k : ℕ} (a : HK.GammaNamedRVClasses hc C Ξ hΞ i)
+  (b : HK.GammaNamedRVClasses hc C Ξ hΞ j) (f : GammaFun.AEComp hc C Ξ hΞ n k),
+  HEq.{1} (GammaFun.aeAct hc C Ξ hΞ (HK.gammaNamedRVMul hc C Ξ hΞ a b) f)
+    (GammaFun.aeAct hc C Ξ hΞ a (GammaFun.aeAct hc C Ξ hΞ b f))
+'IntegrationInACVF.Section7.GammaFun.aeAct_assoc' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@GammaFun.aeGradedAction : {M : Type} →
+  [inst : Structure.{0, 0, 0} LRV M] →
+    [inst_1 : Theory.Model.{0, 0, 0} M Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        (C : BaseContext M) →
+          (Ξ : Set.{0} Values.Gamma) →
+            (hΞ : LT.lt.{1} (Cardinal.mk.{0} ↑Ξ) C.κ) →
+              (n : ℕ) → GradedSemiringAction (HK.GammaNamedRVClasses hc C Ξ hΞ) (GammaFun.AEComp hc C Ξ hΞ n)
+'IntegrationInACVF.Section7.GammaFun.aeGradedAction' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@GammaFun.GradedAEFunction : {M : Type} →
+  [inst : Structure.{0, 0, 0} LRV M] →
+    [inst_1 : Theory.Model.{0, 0, 0} M Axioms.ACVF] →
+      CanonicalStructure.IsCanonical →
+        (C : BaseContext M) → (Ξ : Set.{0} Values.Gamma) → LT.lt.{1} (Cardinal.mk.{0} ↑Ξ) C.κ → ℕ → Type
+'IntegrationInACVF.Section7.GammaFun.GradedAEFunction' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@GammaFun.gradedAEFunctionModule : {M : Type} →
+  [inst : Structure.{0, 0, 0} LRV M] →
+    [inst_1 : Theory.Model.{0, 0, 0} M Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        (C : BaseContext M) →
+          (Ξ : Set.{0} Values.Gamma) →
+            (hΞ : LT.lt.{1} (Cardinal.mk.{0} ↑Ξ) C.κ) →
+              (n : ℕ) → Module.{0, 0} (HK.GammaNamedRVSemiring hc C Ξ hΞ) (GammaFun.GradedAEFunction hc C Ξ hΞ n)
+'IntegrationInACVF.Section7.GammaFun.gradedAEFunctionModule' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@GammaFun.graded_ae_action_of : ∀ {M : Type} [inst : Structure.{0, 0, 0} LRV M]
+  [inst_1 : Theory.Model.{0, 0, 0} M Axioms.ACVF] {n : ℕ} (hc : CanonicalStructure.IsCanonical) (C : BaseContext M)
+  (Ξ : Set.{0} Values.Gamma) (hΞ : LT.lt.{1} (Cardinal.mk.{0} ↑Ξ) C.κ) {i j : ℕ}
+  (a : HK.GammaNamedRVClasses hc C Ξ hΞ i) (f : GammaFun.AEComp hc C Ξ hΞ n j),
+  Eq.{1}
+    (HSMul.hSMul.{0, 0, 0} ((DirectSum.of.{0, 0} (HK.GammaNamedRVClasses hc C Ξ hΞ) i) a)
+      ((DirectSum.of.{0, 0} (GammaFun.AEComp hc C Ξ hΞ n) j) f))
+    ((DirectSum.of.{0, 0} (GammaFun.AEComp hc C Ξ hΞ n) (HAdd.hAdd.{0, 0, 0} i j)) (GammaFun.aeAct hc C Ξ hΞ a f))
+'IntegrationInACVF.Section7.GammaFun.graded_ae_action_of' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@GammaFun.gamma_named_integration_equiv_contraction : ∀ {M : Type} [inst : Structure.{0, 0, 0} LRV M]
+  [inst_1 : Theory.Model.{0, 0, 0} M Axioms.ACVF] (hc : CanonicalStructure.IsCanonical) (C : BaseContext M)
+  (Ξ : Set.{0} Values.Gamma) (hΞ : LT.lt.{1} (Cardinal.mk.{0} ↑Ξ) C.κ)
+  (hGenerated : GammaParameters.VFGammaGeneratedBase (gammaNamedBase C Ξ)) (γ : Values.Gamma)
+  (hγ : Membership.mem.{0, 0} Ξ γ) (hγ1 : LT.lt.{0} 1 γ) {k : ℕ}
+  (X : GammaVFVolumeObjects (gammaNamedBase C Ξ) (↑(gammaNamedCodeContext C Ξ hΞ).base) k)
+  {σ : Equiv.Perm.{1} (Fin (HAdd.hAdd.{0, 0, 0} k 1))}
+  (E : IntegrationInACVF.Section5.StandardContraction (nativeMixedVolumeDomain hc (↑X).densityGraph.domain) σ)
+  (hE : IntegrationInACVF.Section5.GammaProgramDefinable (gammaNamedBase C Ξ) E.program),
+  Eq.{1}
+    ((GammaFun.gammaNamedIntegrationEquiv hc C Ξ hΞ hGenerated γ hγ hγ1 k)
+      (gammaVFVolumeClass hc (gammaNamedCodeContext C Ξ hΞ) (gammaNamedBase C Ξ) X))
+    (gammaVolumeBlowupClass hc (gammaNamedCodeContext C Ξ hΞ) (gammaNamedBase C Ξ)
+      (Subtype.mk.{1}
+        (PositiveVFVolumeObject.standardContractionObject hc (gammaNamedCodeContext C Ξ hΞ) (gammaNamedBase C Ξ).gamma
+          (↑X) E)
+        ⋯))
+'IntegrationInACVF.Section7.GammaFun.gamma_named_integration_equiv_contraction' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@GammaFun.zero_presentation_pos_coef_appended_integral : ∀ {M : Type} [inst : Structure.{0, 0, 0} LRV M]
+  [inst_1 : Theory.Model.{0, 0, 0} M Axioms.ACVF] {n p : ℕ} (hc : CanonicalStructure.IsCanonical) (C : BaseContext M)
+  (Ξ : Set.{0} Values.Gamma) (hΞ : LT.lt.{1} (Cardinal.mk.{0} ↑Ξ) C.κ)
+  (hGenerated : GammaParameters.VFGammaGeneratedBase (gammaNamedBase C Ξ)) (γ : Values.Gamma),
+  Membership.mem.{0, 0} Ξ γ →
+    LT.lt.{0} 1 γ →
+      ∀ (U : GammaVolumeObjects (gammaNamedBase C Ξ) (↑(gammaNamedCodeContext C Ξ hΞ).base) p)
+        (F : GammaFun.ZeroPresentation C Ξ hΞ n) {σ : Equiv.Perm.{1} (Fin (HAdd.hAdd.{0, 0, 0} n 1))}
+        (E0 :
+          IntegrationInACVF.Section5.StandardContraction
+            (nativeMixedVolumeDomain hc F.family.fullVFObject.densityGraph.domain) σ)
+        (hE0 : IntegrationInACVF.Section5.GammaProgramDefinable (gammaNamedBase C Ξ) E0.program),
+        Eq.{1}
+          (GammaFun.Presentation.appendedIntegral hc C Ξ hΞ hGenerated
+            (GammaFun.ZeroPresentation.posCoef hc C Ξ hΞ U F))
+          (gammaClassReindex hc (gammaNamedCodeContext C Ξ hΞ) ⋯
+            (gammaVolumeBlowupClass hc (gammaNamedCodeContext C Ξ hΞ) (gammaNamedBase C Ξ)
+              (GammaVolumeObjects.prod hc U
+                (Subtype.mk.{1}
+                  (PositiveVFVolumeObject.standardContractionObject hc (gammaNamedCodeContext C Ξ hΞ)
+                    (gammaNamedBase C Ξ).gamma F.family.fullVFObject E0)
+                  ⋯))))
+'IntegrationInACVF.Section7.GammaFun.zero_presentation_pos_coef_appended_integral' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@GammaFun.presentation_full_lift_contraction : ∀ {M : Type} [inst : Structure.{0, 0, 0} LRV M]
+  [inst_1 : Theory.Model.{0, 0, 0} M Axioms.ACVF] {n k : ℕ} (hc : CanonicalStructure.IsCanonical) (C : BaseContext M)
+  (Ξ : Set.{0} Values.Gamma) (hΞ : LT.lt.{1} (Cardinal.mk.{0} ↑Ξ) C.κ),
+  GammaParameters.VFGammaGeneratedBase (gammaNamedBase C Ξ) →
+    ∀ (γ : Values.Gamma),
+      Membership.mem.{0, 0} Ξ γ →
+        LT.lt.{0} 1 γ →
+          ∀ (F : GammaFun.Presentation C Ξ hΞ n k)
+            (T :
+              IntegrationInACVF.Section5.StandardContraction (nativeMixedVolumeDomain hc F.family.densityGraph.domain)
+                (Equiv.refl.{1} (Fin (HAdd.hAdd.{0, 0, 0} n 1))))
+            (hT : IntegrationInACVF.Section5.GammaProgramDefinable (gammaNamedBase C Ξ) T.program)
+            {υ : Equiv.Perm.{1} (Fin (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} n 1) k) 1))}
+            (E :
+              IntegrationInACVF.Section5.StandardContraction
+                (nativeMixedVolumeDomain hc F.family.fullLift.densityGraph.domain) υ)
+            (hE : IntegrationInACVF.Section5.GammaProgramDefinable (gammaNamedBase C Ξ) E.program),
+            CommonContextVolumeEquivalent (gammaNamedBase C Ξ) (gammaNamedCodeContext C Ξ hΞ)
+              (Subtype.mk.{1}
+                (PositiveVFVolumeObject.standardContractionObject hc (gammaNamedCodeContext C Ξ hΞ)
+                  (gammaNamedBase C Ξ).gamma F.family.fullLift E)
+                ⋯)
+              ((GammaFun.Presentation.integralObject hc C Ξ hΞ F T hT).reindexDegree ⋯)
+'IntegrationInACVF.Section7.GammaFun.presentation_full_lift_contraction' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@GammaFun.presentation_zero_coef_integral : ∀ {M : Type} [inst : Structure.{0, 0, 0} LRV M]
+  [inst_1 : Theory.Model.{0, 0, 0} M Axioms.ACVF] {n k : ℕ} (hc : CanonicalStructure.IsCanonical) (C : BaseContext M)
+  (Ξ : Set.{0} Values.Gamma) (hΞ : LT.lt.{1} (Cardinal.mk.{0} ↑Ξ) C.κ)
+  (hGenerated : GammaParameters.VFGammaGeneratedBase (gammaNamedBase C Ξ)) (γ : Values.Gamma),
+  Membership.mem.{0, 0} Ξ γ →
+    LT.lt.{0} 1 γ →
+      ∀ (Z : HK.GammaZeroRVObjects (gammaNamedBase C Ξ) ↑(gammaNamedCodeContext C Ξ hΞ).base)
+        (F : GammaFun.Presentation C Ξ hΞ n k),
+        Eq.{1} (GammaFun.Presentation.integral hc C Ξ hΞ hGenerated (GammaFun.Presentation.zeroCoef hc C Ξ hΞ Z F))
+          (gammaVolumeBlowupClass hc (gammaNamedCodeContext C Ξ hΞ) (gammaNamedBase C Ξ)
+            (GammaVolumeObjects.posZeroProd hc
+              (GammaFun.Presentation.integralObject hc C Ξ hΞ F
+                (GammaFun.Presentation.contraction hc C Ξ hΞ hGenerated F) ⋯)
+              Z))
+'IntegrationInACVF.Section7.GammaFun.presentation_zero_coef_integral' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@GammaFun.presentation_zero_coef_appended_integral : ∀ {M : Type} [inst : Structure.{0, 0, 0} LRV M]
+  [inst_1 : Theory.Model.{0, 0, 0} M Axioms.ACVF] {n k : ℕ} (hc : CanonicalStructure.IsCanonical) (C : BaseContext M)
+  (Ξ : Set.{0} Values.Gamma) (hΞ : LT.lt.{1} (Cardinal.mk.{0} ↑Ξ) C.κ)
+  (hGenerated : GammaParameters.VFGammaGeneratedBase (gammaNamedBase C Ξ)) (γ : Values.Gamma),
+  Membership.mem.{0, 0} Ξ γ →
+    LT.lt.{0} 1 γ →
+      ∀ (Z : HK.GammaZeroRVObjects (gammaNamedBase C Ξ) ↑(gammaNamedCodeContext C Ξ hΞ).base)
+        (F : GammaFun.Presentation C Ξ hΞ n k),
+        Eq.{1}
+          (GammaFun.Presentation.appendedIntegral hc C Ξ hΞ hGenerated (GammaFun.Presentation.zeroCoef hc C Ξ hΞ Z F))
+          (gammaVolumeBlowupClass hc (gammaNamedCodeContext C Ξ hΞ) (gammaNamedBase C Ξ)
+            (GammaVolumeObjects.posZeroProd hc
+              (GammaFun.Presentation.appendedObject hc C Ξ hΞ F
+                (GammaFun.Presentation.contraction hc C Ξ hΞ hGenerated F) ⋯)
+              Z))
+'IntegrationInACVF.Section7.GammaFun.presentation_zero_coef_appended_integral' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@GammaFun.zero_presentation_zero_coef_integral : ∀ {M : Type} [inst : Structure.{0, 0, 0} LRV M]
+  [inst_1 : Theory.Model.{0, 0, 0} M Axioms.ACVF] {n : ℕ} (hc : CanonicalStructure.IsCanonical) (C : BaseContext M)
+  (Ξ : Set.{0} Values.Gamma) (hΞ : LT.lt.{1} (Cardinal.mk.{0} ↑Ξ) C.κ)
+  (hGenerated : GammaParameters.VFGammaGeneratedBase (gammaNamedBase C Ξ)) (γ : Values.Gamma)
+  (hγ : Membership.mem.{0, 0} Ξ γ) (hγ1 : LT.lt.{0} 1 γ)
+  (Z : HK.GammaZeroRVObjects (gammaNamedBase C Ξ) ↑(gammaNamedCodeContext C Ξ hΞ).base)
+  (F : GammaFun.ZeroPresentation C Ξ hΞ n) {σ : Equiv.Perm.{1} (Fin (HAdd.hAdd.{0, 0, 0} n 1))}
+  (E0 :
+    IntegrationInACVF.Section5.StandardContraction
+      (nativeMixedVolumeDomain hc F.family.fullVFObject.densityGraph.domain) σ)
+  (hE0 : IntegrationInACVF.Section5.GammaProgramDefinable (gammaNamedBase C Ξ) E0.program),
+  Eq.{1}
+    (GammaFun.ZeroPresentation.integral hc C Ξ hΞ hGenerated γ hγ hγ1
+      (GammaFun.ZeroPresentation.zeroCoef hc C Ξ hΞ Z F))
+    (gammaVolumeBlowupClass hc (gammaNamedCodeContext C Ξ hΞ) (gammaNamedBase C Ξ)
+      (GammaVolumeObjects.posZeroProd hc
+        (Subtype.mk.{1}
+          (PositiveVFVolumeObject.standardContractionObject hc (gammaNamedCodeContext C Ξ hΞ) (gammaNamedBase C Ξ).gamma
+            F.family.fullVFObject E0)
+          ⋯)
+        Z))
+'IntegrationInACVF.Section7.GammaFun.zero_presentation_zero_coef_integral' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@GammaFun.compIntegral : {M : Type} →
+  [inst : Structure.{0, 0, 0} LRV M] →
+    [inst_1 : Theory.Model.{0, 0, 0} M Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        (C : BaseContext M) →
+          (Ξ : Set.{0} Values.Gamma) →
+            (hΞ : LT.lt.{1} (Cardinal.mk.{0} ↑Ξ) C.κ) →
+              GammaParameters.VFGammaGeneratedBase (gammaNamedBase C Ξ) →
+                (γ : Values.Gamma) →
+                  Membership.mem.{0, 0} Ξ γ →
+                    LT.lt.{0} 1 γ →
+                      (n j : ℕ) →
+                        AddMonoidHom.{0, 0} (GammaFun.AEComp hc C Ξ hΞ n j) (HK.GammaNamedRVSemiring hc C Ξ hΞ)
+'IntegrationInACVF.Section7.GammaFun.compIntegral' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@GammaFun.comp_integral_act : ∀ {M : Type} [inst : Structure.{0, 0, 0} LRV M]
+  [inst_1 : Theory.Model.{0, 0, 0} M Axioms.ACVF] {n : ℕ} (hc : CanonicalStructure.IsCanonical) (C : BaseContext M)
+  (Ξ : Set.{0} Values.Gamma) (hΞ : LT.lt.{1} (Cardinal.mk.{0} ↑Ξ) C.κ)
+  (hGenerated : GammaParameters.VFGammaGeneratedBase (gammaNamedBase C Ξ)) (γ : Values.Gamma)
+  (hγ : Membership.mem.{0, 0} Ξ γ) (hγ1 : LT.lt.{0} 1 γ) {i j : ℕ} (a : HK.GammaNamedRVClasses hc C Ξ hΞ i)
+  (f : GammaFun.AEComp hc C Ξ hΞ n j),
+  Eq.{1}
+    ((GammaFun.compIntegral hc C Ξ hΞ hGenerated γ hγ hγ1 n (HAdd.hAdd.{0, 0, 0} i j)) (GammaFun.aeAct hc C Ξ hΞ a f))
+    (HMul.hMul.{0, 0, 0} ((DirectSum.of.{0, 0} (HK.GammaNamedRVClasses hc C Ξ hΞ) i) a)
+      ((GammaFun.compIntegral hc C Ξ hΞ hGenerated γ hγ hγ1 n j) f))
+'IntegrationInACVF.Section7.GammaFun.comp_integral_act' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@GammaFun.gradedIntegralAddHom : {M : Type} →
+  [inst : Structure.{0, 0, 0} LRV M] →
+    [inst_1 : Theory.Model.{0, 0, 0} M Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        (C : BaseContext M) →
+          (Ξ : Set.{0} Values.Gamma) →
+            (hΞ : LT.lt.{1} (Cardinal.mk.{0} ↑Ξ) C.κ) →
+              GammaParameters.VFGammaGeneratedBase (gammaNamedBase C Ξ) →
+                (γ : Values.Gamma) →
+                  Membership.mem.{0, 0} Ξ γ →
+                    LT.lt.{0} 1 γ →
+                      (n : ℕ) →
+                        AddMonoidHom.{0, 0} (GammaFun.GradedAEFunction hc C Ξ hΞ n) (HK.GammaNamedRVSemiring hc C Ξ hΞ)
+'IntegrationInACVF.Section7.GammaFun.gradedIntegralAddHom' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@GammaFun.graded_integral_smul : ∀ {M : Type} [inst : Structure.{0, 0, 0} LRV M]
+  [inst_1 : Theory.Model.{0, 0, 0} M Axioms.ACVF] {n : ℕ} (hc : CanonicalStructure.IsCanonical) (C : BaseContext M)
+  (Ξ : Set.{0} Values.Gamma) (hΞ : LT.lt.{1} (Cardinal.mk.{0} ↑Ξ) C.κ)
+  (hGenerated : GammaParameters.VFGammaGeneratedBase (gammaNamedBase C Ξ)) (γ : Values.Gamma)
+  (hγ : Membership.mem.{0, 0} Ξ γ) (hγ1 : LT.lt.{0} 1 γ) (r : HK.GammaNamedRVSemiring hc C Ξ hΞ)
+  (f : GammaFun.GradedAEFunction hc C Ξ hΞ n),
+  Eq.{1} ((GammaFun.gradedIntegralAddHom hc C Ξ hΞ hGenerated γ hγ hγ1 n) (HSMul.hSMul.{0, 0, 0} r f))
+    (HMul.hMul.{0, 0, 0} r ((GammaFun.gradedIntegralAddHom hc C Ξ hΞ hGenerated γ hγ hγ1 n) f))
+'IntegrationInACVF.Section7.GammaFun.graded_integral_smul' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@GammaFun.gradedIntegralLinearMap : {M : Type} →
+  [inst : Structure.{0, 0, 0} LRV M] →
+    [inst_1 : Theory.Model.{0, 0, 0} M Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        (C : BaseContext M) →
+          (Ξ : Set.{0} Values.Gamma) →
+            (hΞ : LT.lt.{1} (Cardinal.mk.{0} ↑Ξ) C.κ) →
+              GammaParameters.VFGammaGeneratedBase (gammaNamedBase C Ξ) →
+                (γ : Values.Gamma) →
+                  Membership.mem.{0, 0} Ξ γ →
+                    LT.lt.{0} 1 γ →
+                      (n : ℕ) →
+                        LinearMap.{0, 0, 0, 0} (RingHom.id.{0} (HK.GammaNamedRVSemiring hc C Ξ hΞ))
+                          (GammaFun.GradedAEFunction hc C Ξ hΞ n) (HK.GammaNamedRVSemiring hc C Ξ hΞ)
+'IntegrationInACVF.Section7.GammaFun.gradedIntegralLinearMap' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
