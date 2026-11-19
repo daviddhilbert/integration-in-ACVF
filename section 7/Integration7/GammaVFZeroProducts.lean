@@ -180,4 +180,90 @@ theorem VFVolumeObjectGamma.weightedZero (hc : CanonicalStructure.IsCanonical (M
 
 end WeightedZero
 
+/-- The lift of a weighted positive-zero product is Gamma isomorphic to the weighted product of the lift. -/
+theorem weighted_lift_zero_product_iso_gamma (hc : CanonicalStructure.IsCanonical (M := M)) (C : BaseContext M)
+    (hGC : G.real ⊆ (C.base : Set M)) {k : ℕ} {U : PositiveRVVolumeObject (M := M) (C.base : Set M) k}
+    (hU : VolumeObjectGamma U G) {Z : HK.ZeroRVVolumeObject (M := M) (C.base : Set M)} (hZ : Z.Gamma G) :
+    (VFVolumeIso.of_bijection (HK.weightedLiftZeroProductBijection hc C U Z)).GammaDefinable G := by
+  have hs := (rv_volume_lift_gamma hc C hGC hU).weightedZero hc hZ
+  have ht := gamma_rv_lift_carrier hc C hGC (HK.positiveZeroProduct U Z) (hU.posZeroProd hc hZ)
+  exact ⟨hs.domain,ht,vf_identity_map_gamma _ (fun _ => rfl) hs.domain⟩
+
+open SpecialTransformations.Section4 SpecialTransformations.Section9 SpecialTransformations.DefinableGeometry in
+set_option maxHeartbeats 1600000 in
+/-- Weighted degree-zero products of Gamma VF isomorphisms (identity on the factor) are Gamma. -/
+theorem weighted_vf_zero_product_iso_gamma (hc : CanonicalStructure.IsCanonical (M := M)) (C : BaseContext M) {k : ℕ}
+    {U V : PositiveVFVolumeObject (M := M) (C.base : Set M) k} {f : VFVolumeIso U V} (hf : f.GammaDefinable G)
+    {Z : HK.ZeroRVVolumeObject (M := M) (C.base : Set M)} (hZ : Z.Gamma G) :
+    (HK.weightedVFZeroProductIso hc C f (HK.ZeroRVVolumeIso.refl Z)).GammaDefinable G := by
+  have hZL := HK.zeroLift_gamma hZ
+  have hP := gamma_mixed_product_domain hf.source hZL.set
+  have hQ := gamma_mixed_product_domain hf.target hZL.set
+  refine ⟨hP,hQ,?_⟩
+  have h₁ := (show VFBijGamma (HK.weightedVFZeroRestrictionBijection hc C U Z f.source f.source_subset) G from
+    vf_identity_map_gamma _ (fun _ => rfl) hP).symm hc C
+  have hg : GammaGraphDefinable G (vfMixedMapGraph
+      (ordinaryFiniteAmbientIso (HK.zeroLiftIso (HK.ZeroRVVolumeIso.refl Z)).iso).hom) :=
+    vf_identity_map_gamma _ (fun p => congrArg Subtype.val
+      (SpecialTransformations.DefinableGeometry.Map.inverse_apply (liftLabelMap Z.underlying.obj)
+        (zero_lift_label_map_bijective Z.underlying.obj) p)) hZL.set
+  have h₂ : VFBijGamma (HK.weightedVFZeroProductBijection f.bijection
+      (ordinaryFiniteAmbientIso (HK.zeroLiftIso (HK.ZeroRVVolumeIso.refl Z)).iso).hom
+      (DefinableSetCat.bijective_of_iso (ordinaryFiniteAmbientIso (HK.zeroLiftIso (HK.ZeroRVVolumeIso.refl Z)).iso))
+      (HK.zeroLiftIso (HK.ZeroRVVolumeIso.refl Z)).density) G :=
+    gamma_mixed_domain_product_map_graph hf.graph hg hf.source hZL.set
+  have h₃ : VFBijGamma (HK.weightedVFZeroRestrictionBijection hc C V Z f.target f.target_subset) G :=
+    vf_identity_map_gamma _ (fun _ => rfl) hQ
+  exact h₁.trans hc C (h₂.trans hc C h₃)
+
+theorem CommonContextVolumeEquivalent.posZeroProd (hc : CanonicalStructure.IsCanonical (M := M)) {C : BaseContext M}
+    {k : ℕ} {U V : GammaVolumeObjects G (C.base : Set M) k} (h : CommonContextVolumeEquivalent G C U V)
+    (Z : HK.GammaZeroRVObjects G (C.base : Set M)) :
+    CommonContextVolumeEquivalent G C (U.posZeroProd hc Z) (V.posZeroProd hc Z) := by
+  obtain ⟨D,hCD,h⟩ := h
+  exact ⟨D,hCD,h.weightedPositiveZero hc D ⟨Z.val.extend hCD,Z.property.extend hCD⟩⟩
+
+end IntegrationInACVF.Section7
+
+namespace IntegrationInACVF.Section7.GammaNamed
+variable {M : Type} [LRV.Structure M] [M ⊨ Axioms.ACVF] {k : ℕ}
+
+set_option maxHeartbeats 3200000 in
+/-- **Contraction of weighted degree-zero factors.** -/
+theorem gamma_weighted_zero_contraction (hc : CanonicalStructure.IsCanonical (M := M)) (C : BaseContext M)
+    (G : Base (M := M)) (hGC : G.real ⊆ (C.base : Set M)) (hΞ : Cardinal.mk G.gamma < C.κ)
+    (hGenerated : VFGammaGeneratedBase G) (hNames : commonRealNames G ⊆ (C.base : Set M))
+    (hGeneric : ∀ {p : ℕ} (x : Fin p → VF (M := M)), AlgebraicIndependent (vfParameterField G.real) x →
+      AlgebraicIndependent (vfParameterField (C.base : Set M)) x)
+    (γ : Values.Gamma (M := M)) (hγ : γ ∈ G.gamma) (hγ1 : 1 < γ)
+    (X : PositiveVFVolumeObject (M := M) (C.base : Set M) k) (hX : VFVolumeObjectGamma X G)
+    (Z : HK.GammaZeroRVObjects G (C.base : Set M))
+    (hXZ : VFVolumeObjectGamma (HK.positiveVFZeroProduct X Z.val) G)
+    {σ υ : Equiv.Perm (Fin (k+1))}
+    (E : StandardContraction (nativeMixedVolumeDomain hc X.densityGraph.domain) σ)
+    (E' : StandardContraction (nativeMixedVolumeDomain hc (HK.positiveVFZeroProduct X Z.val).densityGraph.domain) υ)
+    (hE : GammaProgramDefinable G E.program) (hE' : GammaProgramDefinable G E'.program) :
+    CommonContextVolumeEquivalent G C
+      ⟨(HK.positiveVFZeroProduct X Z.val).standardContractionObject hc C G.gamma E',
+        standard_contraction_object_gamma hc C G hGC _ hXZ E' hE'⟩
+      (GammaVolumeObjects.posZeroProd hc ⟨X.standardContractionObject hc C G.gamma E,
+        standard_contraction_object_gamma hc C G hGC _ hX E hE⟩ Z) := by
+  obtain ⟨P,⟨e,he⟩,hP⟩ := gamma_lift_contraction_comparison hc C G hGC hΞ hGenerated hNames hGeneric γ hγ hγ1
+    X hX E hE
+  obtain ⟨Q,⟨e',he'⟩,hQ⟩ := gamma_lift_contraction_comparison hc C G hGC hΞ hGenerated hNames hGeneric γ hγ hγ1
+    (HK.positiveVFZeroProduct X Z.val) hXZ E' hE'
+  let f : VFVolumeIso (rvVolumeLift Q.val) (rvVolumeLift (P.posZeroProd hc Z).val) :=
+    (e'.symm hc C).trans hc C ((HK.weightedVFZeroProductIso hc C e (HK.ZeroRVVolumeIso.refl Z.val)).trans hc C
+      (VFVolumeIso.of_bijection (HK.weightedLiftZeroProductBijection hc C P.val Z.val)))
+  have hf : f.GammaDefinable G :=
+    (he'.symm hc C).trans hc C ((weighted_vf_zero_product_iso_gamma hc C he Z.property).trans hc C
+      (weighted_lift_zero_product_iso_gamma hc C hGC P.property Z.property))
+  have hK := rv_volume_lift_common_context_kernel hc C G hGC hΞ hGenerated hNames hGeneric γ hγ hγ1 Q
+    (P.posZeroProd hc Z) f hf
+  exact ((hQ.symm hc).trans hc hK).trans hc (CommonContextVolumeEquivalent.posZeroProd hc hP Z)
+
+end IntegrationInACVF.Section7.GammaNamed
+
+namespace IntegrationInACVF.Section7
+
 end IntegrationInACVF.Section7
