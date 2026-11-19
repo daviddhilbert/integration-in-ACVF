@@ -48,7 +48,7 @@ A map from a subset of Gamma to RV with full graph definable over the original r
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section2.corollary_2_15`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%202/IntegrationSection2/GammaFiniteImage.lean#L61)
+- [`IntegrationInACVF.Section2.corollary_2_15`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%202/IntegrationSection2/GammaFiniteImage.lean#L61)
 
 </details>
 
@@ -65,7 +65,7 @@ For an actual essential isomorphism of finite-volume RV objects of positive degr
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section2.corollary_2_34`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%202/IntegrationSection2/VolumeDescentTheorem.lean#L34)
+- [`IntegrationInACVF.Section2.corollary_2_34`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%202/IntegrationSection2/VolumeDescentTheorem.lean#L34)
 
 </details>
 
@@ -82,7 +82,7 @@ In the corrected upstream measured degree-zero category, descend the lifted bije
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section2.WeightedZeroVolumeDescent.corollary_2_34_zero_weighted`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%202/IntegrationSection2/WeightedZeroVolumeDescent.lean#L29)
+- [`IntegrationInACVF.Section2.WeightedZeroVolumeDescent.corollary_2_34_zero_weighted`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%202/IntegrationSection2/WeightedZeroVolumeDescent.lean#L29)
 
 </details>
 
@@ -92,13 +92,11 @@ In the corrected upstream measured degree-zero category, descend the lifted bije
 
 ### 3.1: complete types and atomic sets
 
-A set generates a complete type over its parameter base if every definable test contains it or misses it. Atomicity adds definability of that set. These are separate notions, so later complete-type ambient sets need not be definable.
+A set generates a complete type over its parameter base if every definable test contains it or misses it. Atomicity adds definability of that set. These are separate notions, so later complete-type ambient sets need not be definable. The definitions IntegrationInACVF.Section3.GeneratesCompleteType and IntegrationInACVF.Section3.IsAtomic are implemented in hilbert-mathlib (HilbertMathlib.Foundation.ModelTheory.Atomicity, at the pinned revision 88bb338) and imported through the compatibility module section 3/IntegrationSection3/Atomicity.lean.
 
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section3.GeneratesCompleteType`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%203/IntegrationSection3/Atomicity.lean#L29)
-- [`IntegrationInACVF.Section3.IsAtomic`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%203/IntegrationSection3/Atomicity.lean#L33)
 
 </details>
 
@@ -115,7 +113,7 @@ Parametric-ball atomicity over the full real/Gamma/ball base is preserved when t
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section3ACVF.AdjoinBall.lemma_3_2`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%203/IntegrationSection3ACVF/AdjoinBall.lean#L133)
+- [`IntegrationInACVF.Section3ACVF.AdjoinBall.lemma_3_2`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%203/IntegrationSection3ACVF/AdjoinBall.lean#L133)
 
 </details>
 
@@ -132,7 +130,7 @@ An actual definable atomic set remains atomic after adjoining any finite Gamma t
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section3ACVF.FullGammaAtomicity.lemma_3_3`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%203/IntegrationSection3ACVF/FullGammaAtomicity.lean#L127)
+- [`IntegrationInACVF.Section3ACVF.FullGammaAtomicity.lemma_3_3`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%203/IntegrationSection3ACVF/FullGammaAtomicity.lean#L127)
 
 </details>
 
@@ -149,7 +147,7 @@ Every actual open or closed ball, with arbitrary initially unnamed radius, and t
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section3ACVF.CompleteTypeBallAtomicity.lemma_3_4`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%203/IntegrationSection3ACVF/CompleteTypeBallAtomicity.lean#L60)
+- [`IntegrationInACVF.Section3ACVF.CompleteTypeBallAtomicity.lemma_3_4`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%203/IntegrationSection3ACVF/CompleteTypeBallAtomicity.lean#L60)
 
 </details>
 
@@ -166,7 +164,7 @@ An atomic unary VF set has an actual finite nonempty disjoint primitive decompos
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section3ACVF.PrimitiveDecomposition.lemma_3_6`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%203/IntegrationSection3ACVF/PrimitiveDecomposition.lean#L127)
+- [`IntegrationInACVF.Section3ACVF.PrimitiveDecomposition.lemma_3_6`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%203/IntegrationSection3ACVF/PrimitiveDecomposition.lean#L127)
 
 </details>
 
@@ -183,7 +181,7 @@ The primitive decomposition gives whole-ball coverage at the radius of an inner 
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section3ACVF.SameRadiusCoverage.corollary_3_7_gamma`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%203/IntegrationSection3ACVF/SameRadiusCoverage.lean#L25)
+- [`IntegrationInACVF.Section3ACVF.SameRadiusCoverage.corollary_3_7_gamma`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%203/IntegrationSection3ACVF/SameRadiusCoverage.lean#L25)
 
 </details>
 
@@ -200,7 +198,7 @@ Actual definable partial-domain VF maps preserve the recorded atomicity and one-
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section3ACVF.PrimitiveImages.lemma_3_8`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%203/IntegrationSection3ACVF/PrimitiveImages.lean#L34)
+- [`IntegrationInACVF.Section3ACVF.PrimitiveImages.lemma_3_8`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%203/IntegrationSection3ACVF/PrimitiveImages.lean#L34)
 
 </details>
 
@@ -217,8 +215,8 @@ Definable RV-powerset families in arbitrary finite RV arity are constant on an a
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section3ACVF.OpenBallConstancy.lemma_3_9`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%203/IntegrationSection3ACVF/OpenBallConstancy.lean#L51)
-- [`IntegrationInACVF.Section3ACVF.OpenBallConstancy.corollary_3_10`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%203/IntegrationSection3ACVF/OpenBallConstancy.lean#L81)
+- [`IntegrationInACVF.Section3ACVF.OpenBallConstancy.lemma_3_9`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%203/IntegrationSection3ACVF/OpenBallConstancy.lean#L51)
+- [`IntegrationInACVF.Section3ACVF.OpenBallConstancy.corollary_3_10`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%203/IntegrationSection3ACVF/OpenBallConstancy.lean#L81)
 
 </details>
 
@@ -235,7 +233,7 @@ The separation conclusion holds with the accepted nonempty-set hypothesis. Both 
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section3ACVF.Separation.lemma_3_11`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%203/IntegrationSection3ACVF/Separation.lean#L58)
+- [`IntegrationInACVF.Section3ACVF.Separation.lemma_3_11`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%203/IntegrationSection3ACVF/Separation.lean#L58)
 
 </details>
 
@@ -252,7 +250,7 @@ A definable VF image of an atomic open ball is either constant or an atomic open
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section3ACVF.OpenImages.lemma_3_13`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%203/IntegrationSection3ACVF/OpenImages.lean#L43)
+- [`IntegrationInACVF.Section3ACVF.OpenImages.lemma_3_13`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%203/IntegrationSection3ACVF/OpenImages.lean#L43)
 
 </details>
 
@@ -269,7 +267,7 @@ An infinite one-component atomic target cannot be closed when its only ball imag
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section3ACVF.ClosedImageObstruction.lemma_3_14`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%203/IntegrationSection3ACVF/ClosedImageObstruction.lean#L154)
+- [`IntegrationInACVF.Section3ACVF.ClosedImageObstruction.lemma_3_14`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%203/IntegrationSection3ACVF/ClosedImageObstruction.lean#L154)
 
 </details>
 
@@ -286,7 +284,7 @@ The open-image conclusion extends to the full original real/Gamma/ball base, arb
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section3ACVF.FullCompleteTypeOpenImages.lemma_3_15`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%203/IntegrationSection3ACVF/FullCompleteTypeOpenImages.lean#L19)
+- [`IntegrationInACVF.Section3ACVF.FullCompleteTypeOpenImages.lemma_3_15`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%203/IntegrationSection3ACVF/FullCompleteTypeOpenImages.lean#L19)
 
 </details>
 
@@ -303,7 +301,7 @@ The actual map is Gamma-linear with coefficient the target/source radius ratio, 
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section3ACVF.GammaLinearity.lemma_3_16`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%203/IntegrationSection3ACVF/GammaLinearity.lean#L67)
+- [`IntegrationInACVF.Section3ACVF.GammaLinearity.lemma_3_16`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%203/IntegrationSection3ACVF/GammaLinearity.lean#L67)
 
 </details>
 
@@ -320,7 +318,7 @@ The ordinary-open-source result constructs the least linear radius and proves th
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section3ACVF.LeastLinearRadiusExistence.corollary_3_17_ordinary`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%203/IntegrationSection3ACVF/LeastLinearRadiusExistence.lean#L44)
+- [`IntegrationInACVF.Section3ACVF.LeastLinearRadiusExistence.corollary_3_17_ordinary`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%203/IntegrationSection3ACVF/LeastLinearRadiusExistence.lean#L44)
 
 </details>
 
@@ -337,7 +335,7 @@ Actual RV linearity holds in the recorded standing scope. The proof uses an affi
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section3ACVF.RVLinearity.lemma_3_18`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%203/IntegrationSection3ACVF/RVLinearity.lean#L101)
+- [`IntegrationInACVF.Section3ACVF.RVLinearity.lemma_3_18`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%203/IntegrationSection3ACVF/RVLinearity.lean#L101)
 
 </details>
 
@@ -354,7 +352,7 @@ Construct a finite disjoint partition into nonempty original-base definable piec
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section3ACVF.FullOpenToOpenPartition.proposition_3_19`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%203/IntegrationSection3ACVF/FullOpenToOpenPartition.lean#L93)
+- [`IntegrationInACVF.Section3ACVF.FullOpenToOpenPartition.proposition_3_19`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%203/IntegrationSection3ACVF/FullOpenToOpenPartition.lean#L93)
 
 </details>
 
@@ -371,7 +369,7 @@ Construct one uniform finite nonempty disjoint original-base partition for the s
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section3ACVF.CoordinatePartitions.proposition_3_21`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%203/IntegrationSection3ACVF/CoordinatePartitions.lean#L20)
+- [`IntegrationInACVF.Section3ACVF.CoordinatePartitions.proposition_3_21`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%203/IntegrationSection3ACVF/CoordinatePartitions.lean#L20)
 
 </details>
 
@@ -388,7 +386,7 @@ An original-base definable open-to-open VF bijection preserves components and ac
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section3ACVF.ThinFamilyConservation.lemma_3_22`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%203/IntegrationSection3ACVF/ThinFamilyConservation.lean#L24)
+- [`IntegrationInACVF.Section3ACVF.ThinFamilyConservation.lemma_3_22`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%203/IntegrationSection3ACVF/ThinFamilyConservation.lean#L24)
 
 </details>
 
@@ -405,7 +403,7 @@ There is no definable bijection between distinct actual atomic primitive shapes:
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section3ACVF.AtomicPrimitiveDistinction.proposition_3_23`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%203/IntegrationSection3ACVF/AtomicPrimitiveDistinction.lean#L92)
+- [`IntegrationInACVF.Section3ACVF.AtomicPrimitiveDistinction.proposition_3_23`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%203/IntegrationSection3ACVF/AtomicPrimitiveDistinction.lean#L92)
 
 </details>
 
@@ -422,7 +420,7 @@ The author-corrected obstruction holds for an ordinary closed parent with a sing
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section3ACVF.PuncturedBallObstruction.proposition_3_24`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%203/IntegrationSection3ACVF/PuncturedBallObstruction.lean#L35)
+- [`IntegrationInACVF.Section3ACVF.PuncturedBallObstruction.proposition_3_24`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%203/IntegrationSection3ACVF/PuncturedBallObstruction.lean#L35)
 
 </details>
 
@@ -441,7 +439,7 @@ An actual special bijection has an original-Gamma-base offset graph and the exac
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section4.GammaOffsets.lemma_4_1`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%204/IntegrationSection4/GammaOffsets.lean#L174)
+- [`IntegrationInACVF.Section4.GammaOffsets.lemma_4_1`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%204/IntegrationSection4/GammaOffsets.lean#L174)
 
 </details>
 
@@ -458,7 +456,7 @@ Construct an actual original-base special bijection to an RV pullback whose inve
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section4.LinearPreparation.lemma_4_2`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%204/IntegrationSection4/LinearPreparation.lean#L22)
+- [`IntegrationInACVF.Section4.LinearPreparation.lemma_4_2`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%204/IntegrationSection4/LinearPreparation.lean#L22)
 
 </details>
 
@@ -475,7 +473,7 @@ One preparation works for every ordinary target radius, with at most one source 
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section4.RadiusPreparation.lemma_4_3`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%204/IntegrationSection4/RadiusPreparation.lean#L106)
+- [`IntegrationInACVF.Section4.RadiusPreparation.lemma_4_3`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%204/IntegrationSection4/RadiusPreparation.lean#L106)
 
 </details>
 
@@ -492,7 +490,7 @@ Prepare the actual inverse-difference RV range to a singleton using translated R
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section4.InverseDifferencePreparation.lemma_4_4`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%204/IntegrationSection4/InverseDifferencePreparation.lean#L66)
+- [`IntegrationInACVF.Section4.InverseDifferencePreparation.lemma_4_4`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%204/IntegrationSection4/InverseDifferencePreparation.lean#L66)
 
 </details>
 
@@ -509,7 +507,7 @@ For a nondegenerate balanced configuration the slope is the ratio of the two par
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section4.BalancedSlope.remark_4_6`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%204/IntegrationSection4/BalancedSlope.lean#L31)
+- [`IntegrationInACVF.Section4.BalancedSlope.remark_4_6`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%204/IntegrationSection4/BalancedSlope.lean#L31)
 
 </details>
 
@@ -526,7 +524,7 @@ Every original-base definable native VF-squared set admits an actual finite-arit
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section4.lemma_4_8`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%204/IntegrationSection4/TwoCellDecomposition.lean#L59)
+- [`IntegrationInACVF.Section4.lemma_4_8`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%204/IntegrationSection4/TwoCellDecomposition.lean#L59)
 
 </details>
 
@@ -539,7 +537,7 @@ The two actual fibre identities specify a balanced relation, positioning map and
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section4.BalancedFibres.HasBalancedFibres`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%204/IntegrationSection4/BalancedFibres.lean#L66)
+- [`IntegrationInACVF.Section4.BalancedFibres.HasBalancedFibres`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%204/IntegrationSection4/BalancedFibres.lean#L66)
 
 </details>
 
@@ -554,7 +552,7 @@ A two-cell consists of actual one-cell projections and one of the recorded posit
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section4.Cells.DefinableTwoCell`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%204/IntegrationSection4/Cells.lean#L93)
+- [`IntegrationInACVF.Section4.Cells.DefinableTwoCell`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%204/IntegrationSection4/Cells.lean#L93)
 
 </details>
 
@@ -571,8 +569,8 @@ A nonbalanced cell is a product of a one-cell and an open ball after positioning
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section4.CellRectangles.rectangle`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%204/IntegrationSection4/CellRectangles.lean#L70)
-- [`IntegrationInACVF.Section4.CellRectangles.open_polydisc`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%204/IntegrationSection4/CellRectangles.lean#L115)
+- [`IntegrationInACVF.Section4.CellRectangles.rectangle`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%204/IntegrationSection4/CellRectangles.lean#L70)
+- [`IntegrationInACVF.Section4.CellRectangles.open_polydisc`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%204/IntegrationSection4/CellRectangles.lean#L115)
 
 </details>
 
@@ -591,7 +589,7 @@ Construct two actual Gamma special bijections to RV pullbacks, a contractible co
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section5.lemma_5_1_finite`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%205/IntegrationSection5/FiniteGeometryPreparation.lean#L20)
+- [`IntegrationInACVF.Section5.lemma_5_1_finite`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%205/IntegrationSection5/FiniteGeometryPreparation.lean#L20)
 
 </details>
 
@@ -608,7 +606,7 @@ Construct both special preparations, mutual contractibility, the unique commutin
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section5.lemma_5_2_finite`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%205/IntegrationSection5/FiniteGeometryPreparation.lean#L49)
+- [`IntegrationInACVF.Section5.lemma_5_2_finite`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%205/IntegrationSection5/FiniteGeometryPreparation.lean#L49)
 
 </details>
 
@@ -625,7 +623,7 @@ The prepared mutually contractible unary bijection induces the actual finite-cat
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section5.lemma_5_3_finite`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%205/IntegrationSection5/FiniteNumbered.lean#L23)
+- [`IntegrationInACVF.Section5.lemma_5_3_finite`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%205/IntegrationSection5/FiniteNumbered.lean#L23)
 
 </details>
 
@@ -642,7 +640,7 @@ An actual special bijection factors through actual coordinate-fibre relative-spe
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section5.special_relativeSpecial_factorization`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%205/IntegrationSection5/RelativeSpecialFactorization.lean#L81)
+- [`IntegrationInACVF.Section5.special_relativeSpecial_factorization`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%205/IntegrationSection5/RelativeSpecialFactorization.lean#L81)
 
 </details>
 
@@ -659,7 +657,7 @@ For every VF order, including zero arity, construct a standard contraction with 
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section5.lemma_5_5`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%205/IntegrationSection5/FiniteStandardContractionData.lean#L57)
+- [`IntegrationInACVF.Section5.lemma_5_5`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%205/IntegrationSection5/FiniteStandardContractionData.lean#L57)
 
 </details>
 
@@ -676,7 +674,7 @@ In positive VF arity construct a finite disjoint covering Gamma partition, actua
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section5.lemma_5_6_finite`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%205/IntegrationSection5/FiniteUnaryPartition.lean#L31)
+- [`IntegrationInACVF.Section5.lemma_5_6_finite`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%205/IntegrationSection5/FiniteUnaryPartition.lean#L31)
 
 </details>
 
@@ -693,7 +691,7 @@ Every definable two-cell has both actual standard contractions and an actual Gam
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section5.lemma_5_7_finite`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%205/IntegrationSection5/FiniteNumbered.lean#L56)
+- [`IntegrationInACVF.Section5.lemma_5_7_finite`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%205/IntegrationSection5/FiniteNumbered.lean#L56)
 
 </details>
 
@@ -710,7 +708,7 @@ Construct a VF-fixed positioned cell-label injection and both whole-source stand
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section5.lemma_5_8_finite`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%205/IntegrationSection5/FiniteRVComparison.lean#L72)
+- [`IntegrationInACVF.Section5.lemma_5_8_finite`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%205/IntegrationSection5/FiniteRVComparison.lean#L72)
 
 </details>
 
@@ -729,9 +727,9 @@ Elementary blowups of isomorphic finite-volume RV objects are isomorphic. Iterat
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section6.FiniteRV.lemma_6_3`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%206/IntegrationSection6/FiniteRVTheorems.lean#L14)
-- [`IntegrationInACVF.Section6.FiniteRV.lemma_6_5`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%206/IntegrationSection6/FiniteRVTheorems.lean#L22)
-- [`IntegrationInACVF.Section6.FiniteRV.corollary_6_6`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%206/IntegrationSection6/FiniteRVTheorems.lean#L36)
+- [`IntegrationInACVF.Section6.FiniteRV.lemma_6_3`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%206/IntegrationSection6/FiniteRVTheorems.lean#L14)
+- [`IntegrationInACVF.Section6.FiniteRV.lemma_6_5`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%206/IntegrationSection6/FiniteRVTheorems.lean#L22)
+- [`IntegrationInACVF.Section6.FiniteRV.corollary_6_6`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%206/IntegrationSection6/FiniteRVTheorems.lean#L36)
 
 </details>
 
@@ -748,8 +746,8 @@ On actual RV[k] representatives the additive and graded multiplicative congruenc
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section6.FiniteRV.lemma_6_8_add_class_iff`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%206/IntegrationSection6/FiniteRVTheorems.lean#L60)
-- [`IntegrationInACVF.Section6.FiniteRV.lemma_6_8_mul_class_iff`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%206/IntegrationSection6/FiniteRVTheorems.lean#L66)
+- [`IntegrationInACVF.Section6.FiniteRV.lemma_6_8_add_class_iff`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%206/IntegrationSection6/FiniteRVTheorems.lean#L60)
+- [`IntegrationInACVF.Section6.FiniteRV.lemma_6_8_mul_class_iff`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%206/IntegrationSection6/FiniteRVTheorems.lean#L66)
 
 </details>
 
@@ -766,8 +764,8 @@ Actual Gamma-certified special chains induce finite blowup diagrams. The element
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section6.FiniteRV.corollary_6_10_gamma`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%206/IntegrationSection6/FiniteGammaSpecialBijections.lean#L18)
-- [`IntegrationInACVF.Section6.lemma_6_12`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%206/IntegrationSection6/GammaFiniteElementary.lean#L62)
+- [`IntegrationInACVF.Section6.FiniteRV.corollary_6_10_gamma`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%206/IntegrationSection6/FiniteGammaSpecialBijections.lean#L18)
+- [`IntegrationInACVF.Section6.lemma_6_12`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%206/IntegrationSection6/GammaFiniteElementary.lean#L62)
 
 </details>
 
@@ -784,7 +782,7 @@ The closed generated-base API proves the ordinary integration kernel equivalence
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section7.CompletedSection6.lemma_6_17`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%207/Integration7/CompletedSection6Kernel.lean#L60)
+- [`IntegrationInACVF.Section7.CompletedSection6.lemma_6_17`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%207/Integration7/CompletedSection6Kernel.lean#L60)
 
 </details>
 
@@ -801,7 +799,7 @@ Integration is an additive equivalence from actual finite Gamma VF[k] scissors t
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section7.CompletedSection6.proposition_6_18`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%207/Integration7/ClosedSection6FiniteIntegrationEquivalence.lean#L67)
+- [`IntegrationInACVF.Section7.CompletedSection6.proposition_6_18`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%207/Integration7/ClosedSection6FiniteIntegrationEquivalence.lean#L67)
 
 </details>
 
@@ -818,7 +816,7 @@ Global ordinary integration is a semiring equivalence with the graded RV blowup 
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section7.CompletedSection6.theorem_6_19`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%207/Integration7/ClosedSection6GlobalIntegrationSemiringEquivalence.lean#L86)
+- [`IntegrationInACVF.Section7.CompletedSection6.theorem_6_19`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%207/Integration7/ClosedSection6GlobalIntegrationSemiringEquivalence.lean#L86)
 
 </details>
 
@@ -835,8 +833,8 @@ Actual parameter-dependent coefficient semirings over definable closure give rep
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section7.CompletedSection6.remark_6_20_representative_independence`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%207/Integration7/ClosedSection6DefinableFamilyIntegration.lean#L69)
-- [`IntegrationInACVF.Section7.CompletedSection6.remark_6_20_linearity`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%207/Integration7/ClosedSection6LinearFunctionIntegration.lean#L48)
+- [`IntegrationInACVF.Section7.CompletedSection6.remark_6_20_representative_independence`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%207/Integration7/ClosedSection6DefinableFamilyIntegration.lean#L69)
+- [`IntegrationInACVF.Section7.CompletedSection6.remark_6_20_linearity`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%207/Integration7/ClosedSection6LinearFunctionIntegration.lean#L48)
 
 </details>
 
@@ -853,7 +851,7 @@ Coordinate pushforwards on actual definable functions have the literal fibre-int
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section7.CompletedSection6.proposition_6_21`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%207/Integration7/ClosedSection6CoordinatePushforwards.lean#L41)
+- [`IntegrationInACVF.Section7.CompletedSection6.proposition_6_21`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%207/Integration7/ClosedSection6CoordinatePushforwards.lean#L41)
 
 </details>
 
@@ -870,8 +868,8 @@ The groupified ordinary VF ring embeds into the localized ordinary RV ring, with
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section7.CompletedSection6.theorem_6_22`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%207/Integration7/ClosedSection6IntegrationLocalizationEmbedding.lean#L68)
-- [`IntegrationInACVF.Section7.CompletedSection6.theorem_6_22_injective`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%207/Integration7/ClosedSection6IntegrationLocalizationEmbedding.lean#L75)
+- [`IntegrationInACVF.Section7.CompletedSection6.theorem_6_22`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%207/Integration7/ClosedSection6IntegrationLocalizationEmbedding.lean#L68)
+- [`IntegrationInACVF.Section7.CompletedSection6.theorem_6_22_injective`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%207/Integration7/ClosedSection6IntegrationLocalizationEmbedding.lean#L75)
 
 </details>
 
@@ -888,8 +886,8 @@ In every degree use an actual finite-volume RV object with a nonzero definable R
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section7.HK.ZeroRVVolumeObject`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%207/Integration7/HKRVVolumeObjects.lean#L15)
-- [`IntegrationInACVF.Section7.HK.RVVolumeObject`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%207/Integration7/HKRVVolumeObjects.lean#L19)
+- [`IntegrationInACVF.Section7.HK.ZeroRVVolumeObject`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%207/Integration7/HKRVVolumeObjects.lean#L15)
+- [`IntegrationInACVF.Section7.HK.RVVolumeObject`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%207/Integration7/HKRVVolumeObjects.lean#L19)
 
 </details>
 
@@ -904,8 +902,8 @@ Measured VF degree zero likewise carries an arbitrary nonzero definable RV form.
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section7.HK.VFVolumeObject`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%207/Integration7/HKZeroVolumeIntegration.lean#L48)
-- [`IntegrationInACVF.Section7.HK.zeroVolumeIntegrationEquiv`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%207/Integration7/HKZeroVolumeIntegration.lean#L38)
+- [`IntegrationInACVF.Section7.HK.VFVolumeObject`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%207/Integration7/HKZeroVolumeIntegration.lean#L48)
+- [`IntegrationInACVF.Section7.HK.zeroVolumeIntegrationEquiv`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%207/Integration7/HKZeroVolumeIntegration.lean#L38)
 
 </details>
 
@@ -922,7 +920,7 @@ Products multiply both RV forms in every degree, including either factor of degr
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section7.HK.weighted_lift_zero_product_map_density`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%207/Integration7/HKWeightedZeroLiftProducts.lean#L27)
+- [`IntegrationInACVF.Section7.HK.weighted_lift_zero_product_map_density`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%207/Integration7/HKWeightedZeroLiftProducts.lean#L27)
 
 </details>
 
@@ -939,7 +937,7 @@ Elementary blowups of isomorphic actual positive-volume objects are volume-isomo
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section7.lemma_7_2`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%207/Integration7/ElementaryBlowupComparisonTheorem.lean#L16)
+- [`IntegrationInACVF.Section7.lemma_7_2`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%207/Integration7/ElementaryBlowupComparisonTheorem.lean#L16)
 
 </details>
 
@@ -956,7 +954,7 @@ The positive-volume semiring relation is identified with actual common volume bl
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section7.lemma_7_4`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%207/Integration7/VolumeSemiringCongruenceTheorem.lean#L15)
+- [`IntegrationInACVF.Section7.lemma_7_4`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%207/Integration7/VolumeSemiringCongruenceTheorem.lean#L15)
 
 </details>
 
@@ -973,8 +971,8 @@ For the specified actual standard contractions, fibrewise common-volume-blowup e
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section7.lemma_7_5`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%207/Integration7/Lemma75.lean#L19)
-- [`IntegrationInACVF.Section7.lemma_7_5_ordinary`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%207/Integration7/Lemma75.lean#L39)
+- [`IntegrationInACVF.Section7.lemma_7_5`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%207/Integration7/Lemma75.lean#L19)
+- [`IntegrationInACVF.Section7.lemma_7_5_ordinary`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%207/Integration7/Lemma75.lean#L39)
 
 </details>
 
@@ -991,7 +989,7 @@ The actual positive-dimensional contractions have the recorded volume-blowup com
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section7.corollary_7_6`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%207/Integration7/Corollary76.lean#L28)
+- [`IntegrationInACVF.Section7.corollary_7_6`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%207/Integration7/Corollary76.lean#L28)
 
 </details>
 
@@ -1008,7 +1006,7 @@ The actual volume contraction exchange holds in the native and ordinary interfac
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section7.lemma_7_7`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%207/Integration7/Lemma77.lean#L55)
+- [`IntegrationInACVF.Section7.lemma_7_7`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%207/Integration7/Lemma77.lean#L55)
 
 </details>
 
@@ -1025,7 +1023,7 @@ For positive-degree measured objects, equality of the actual lifted classes is c
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section7.proposition_7_8`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%207/Integration7/PositiveVolumeLiftKernel.lean#L28)
+- [`IntegrationInACVF.Section7.proposition_7_8`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%207/Integration7/PositiveVolumeLiftKernel.lean#L28)
 
 </details>
 
@@ -1042,7 +1040,7 @@ Positive-degree volume integration and actual lifting are inverse on the relevan
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section7.proposition_7_9_positive`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%207/Integration7/PositiveVolumeIntegrationEquivalence.lean#L50)
+- [`IntegrationInACVF.Section7.proposition_7_9_positive`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%207/Integration7/PositiveVolumeIntegrationEquivalence.lean#L50)
 
 </details>
 
@@ -1059,7 +1057,7 @@ Corrected graded class integration is a semiring equivalence. An arbitrary VF cl
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section7.HK.theorem_7_10`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%207/Integration7/HKSection7ClassTheorems.lean#L56)
+- [`IntegrationInACVF.Section7.HK.theorem_7_10`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%207/Integration7/HKSection7ClassTheorems.lean#L56)
 
 </details>
 
@@ -1076,8 +1074,8 @@ For the corrected raw RV volume ring, the kernel of projection to the blowup rin
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section7.HK.raw_volume_kernel_principal`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%207/Integration7/HKPrincipalVolumeKernel.lean#L44)
-- [`IntegrationInACVF.Section7.HK.theorem_7_13`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%207/Integration7/HKSection7ClassTheorems.lean#L70)
+- [`IntegrationInACVF.Section7.HK.raw_volume_kernel_principal`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%207/Integration7/HKPrincipalVolumeKernel.lean#L44)
+- [`IntegrationInACVF.Section7.HK.theorem_7_13`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%207/Integration7/HKSection7ClassTheorems.lean#L70)
 
 </details>
 
@@ -1096,9 +1094,9 @@ Raw head, prefix and arbitrary retained-coordinate integrals are linear over the
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section7.HK.gradedAEVolumeHeadIntegralLinearMap`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%207/Integration7/HKGradedHeadIntegralLinearMaps.lean#L71)
-- [`IntegrationInACVF.Section7.HK.gradedAEVolumePrefixIntegralLinearMap`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%207/Integration7/HKGradedPrefixIntegralLinearMaps.lean#L20)
-- [`IntegrationInACVF.Section7.HK.gradedAEVolumeCoordinateIntegralLinearMap`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%207/Integration7/HKGradedCoordinateIntegralLinearMaps.lean#L38)
+- [`IntegrationInACVF.Section7.HK.gradedAEVolumeHeadIntegralLinearMap`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%207/Integration7/HKGradedHeadIntegralLinearMaps.lean#L71)
+- [`IntegrationInACVF.Section7.HK.gradedAEVolumePrefixIntegralLinearMap`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%207/Integration7/HKGradedPrefixIntegralLinearMaps.lean#L20)
+- [`IntegrationInACVF.Section7.HK.gradedAEVolumeCoordinateIntegralLinearMap`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%207/Integration7/HKGradedCoordinateIntegralLinearMaps.lean#L38)
 
 </details>
 
@@ -1113,8 +1111,8 @@ The support submodule is exactly the faithful image of actual supported graded p
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section7.HK.rawSupportedVolumeSubmodule`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%207/Integration7/HKRawSupportedFunctionLinearIntegrals.lean#L20)
-- [`IntegrationInACVF.Section7.HK.rawSupportedVolumeRangeEquiv`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%207/Integration7/HKRawSupportedFunctionLinearIntegrals.lean#L29)
+- [`IntegrationInACVF.Section7.HK.rawSupportedVolumeSubmodule`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%207/Integration7/HKRawSupportedFunctionLinearIntegrals.lean#L20)
+- [`IntegrationInACVF.Section7.HK.rawSupportedVolumeRangeEquiv`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%207/Integration7/HKRawSupportedFunctionLinearIntegrals.lean#L29)
 
 </details>
 
@@ -1131,7 +1129,7 @@ Coordinate integration followed by total integration equals the total integral a
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section7.HK.proposition_7_11`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%207/Integration7/HKRawSupportedFunctionLinearIntegrals.lean#L75)
+- [`IntegrationInACVF.Section7.HK.proposition_7_11`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%207/Integration7/HKRawSupportedFunctionLinearIntegrals.lean#L75)
 
 </details>
 
@@ -1148,7 +1146,7 @@ For an actual definable bijection, the supported Jacobian transform preserves th
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section7.HK.proposition_7_12`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%207/Integration7/HKRawSupportedFunctionLinearIntegrals.lean#L87)
+- [`IntegrationInACVF.Section7.HK.proposition_7_12`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%207/Integration7/HKRawSupportedFunctionLinearIntegrals.lean#L87)
 
 </details>
 
@@ -1163,7 +1161,7 @@ Extend the actual supported semimodule by balanced scalar extension to the corre
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section7.HK.RawRingSupportedVolumeFunction`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%207/Integration7/HKRawRingSupportedFunctionIntegrals.lean#L20)
+- [`IntegrationInACVF.Section7.HK.RawRingSupportedVolumeFunction`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%207/Integration7/HKRawRingSupportedFunctionIntegrals.lean#L20)
 
 </details>
 
@@ -1180,7 +1178,7 @@ Raw supported Fubini holds on every ring-valued function and formal difference, 
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section7.HK.proposition_7_11_ring`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%207/Integration7/HKRawRingSupportedFunctionIntegrals.lean#L55)
+- [`IntegrationInACVF.Section7.HK.proposition_7_11_ring`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%207/Integration7/HKRawRingSupportedFunctionIntegrals.lean#L55)
 
 </details>
 
@@ -1197,7 +1195,7 @@ Raw supported change of variables holds on every ring-valued function and formal
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section7.HK.proposition_7_12_ring`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%207/Integration7/HKRawRingSupportedFunctionIntegrals.lean#L63)
+- [`IntegrationInACVF.Section7.HK.proposition_7_12_ring`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%207/Integration7/HKRawRingSupportedFunctionIntegrals.lean#L63)
 
 </details>
 
@@ -1214,7 +1212,7 @@ The corrected normalized coefficient ring is commutative. Normalization is perfo
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section7.HK.normalized_volume_ring_mul_comm`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%207/Integration7/HKNormalizedVolumeCommRing.lean#L45)
+- [`IntegrationInACVF.Section7.HK.normalized_volume_ring_mul_comm`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%207/Integration7/HKNormalizedVolumeCommRing.lean#L45)
 
 </details>
 
@@ -1231,7 +1229,7 @@ For any two nonempty retained-coordinate sets of a positive-dimensional VF domai
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section7.HK.theorem_7_14`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%207/Integration7/HKNormalizedSection7Theorems.lean#L32)
+- [`IntegrationInACVF.Section7.HK.theorem_7_14`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%207/Integration7/HKNormalizedSection7Theorems.lean#L32)
 
 </details>
 
@@ -1248,6 +1246,140 @@ The normalized integral on an actual supported domain equals the normalized inte
 <details>
 <summary>Lean declarations</summary>
 
-- [`IntegrationInACVF.Section7.HK.theorem_7_15`](https://github.com/daviddhilbert/integration-in-ACVF/blob/862aa448b4314df673bccd928d1353af6650d7f1/section%207/Integration7/HKNormalizedSection7Theorems.lean#L46)
+- [`IntegrationInACVF.Section7.HK.theorem_7_15`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%207/Integration7/HKNormalizedSection7Theorems.lean#L46)
+
+</details>
+
+## Section 7: volume forms and corrected class algebra
+
+<a id="s7-gn-7"></a>
+
+### 7.6/7.7: Gamma-named contraction independence
+
+Over the Gamma-named base <C.base, Xi>, with objects coded over the named code context and Gamma-definable over that base and with Gamma-definable contraction programs, Corollary 7.6 holds and any two standard contractions of a positive VF volume object, in arbitrary orders, are common-context blowup equivalent. No hypothesis puts the common names of the base into C.base.
+
+**Proof outline.** Apply the Gamma-base contraction comparisons in the named code context, which contains the common names and preserves genericity of VF points.
+
+**Uses:** [7.6: contraction-order comparison](#s7-6), [7.7: volume coordinate exchange](#s7-7).
+
+<details>
+<summary>Lean declarations</summary>
+
+- [`IntegrationInACVF.Section7.GammaNamed.gamma_named_corollary_7_6`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%207/Integration7/GammaNamedLemma77.lean#L32)
+- [`IntegrationInACVF.Section7.GammaNamed.gamma_named_lemma_7_7`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%207/Integration7/GammaNamedLemma77.lean#L53)
+
+</details>
+
+<a id="s7-gn-9"></a>
+
+### 7.8/7.9: Gamma-named classification
+
+In every degree, including weighted degree zero, the actual lift is a bijection from Gamma-named RV classes (Gamma objects modulo Gamma isomorphisms and Gamma blowups) to Gamma-named VF classes (Gamma isomorphism classes). Two Gamma RV objects have equal classes exactly when their lifts have equal classes.
+
+**Proof outline.** The kernel direction uses Gamma-named Lemma 7.7. The converse lifts Gamma RV isomorphisms by the Gamma-definable prescribed-volume lift (special-transformations Gamma 9.16, whose new step bounds the rank of points of Gamma sets by their RV dimension) and Gamma elementary blowups by Gamma charts. Degree zero uses the Gamma presentation of finite VF sets.
+
+**Uses:** [7.6/7.7: Gamma-named contraction independence](#s7-gn-7), [7.8: positive volume lift kernel](#s7-8), [7.9: positive integration equivalence](#s7-9), [Corrected VF volume objects and zero integration](#s7-zero-vf).
+
+<details>
+<summary>Lean declarations</summary>
+
+- [`IntegrationInACVF.Section7.HK.gamma_named_proposition_7_8`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%207/Integration7/GammaNamedSection7Results.lean#L37)
+- [`IntegrationInACVF.Section7.HK.gamma_named_lift_on_classes_bijective`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%207/Integration7/GammaNamedAllDegreeClasses.lean#L46)
+
+</details>
+
+<a id="s7-gn-10"></a>
+
+### 7.10: Gamma-named graded integration
+
+Actual products make Gamma-named RV classes a graded semiring, and Gamma-named integration is a graded semiring isomorphism (and a ring isomorphism of Grothendieck rings). A VF class integrates to the class of a Gamma RV object exactly when it is the class of that object's actual lift.
+
+**Proof outline.** Products descend: Gamma isomorphisms multiply factorwise, and Gamma blowups multiply with positive or weighted degree-zero Gamma factors on either side. The semiring laws are the actual relabelling isomorphisms, which act by coordinate selections and are therefore Gamma. Transport the structure along Proposition 7.9.
+
+**Uses:** [7.8/7.9: Gamma-named classification](#s7-gn-9), [Multiplication of both volume forms](#s7-products), [7.10: corrected all-degree integration](#s7-10).
+
+<details>
+<summary>Lean declarations</summary>
+
+- [`IntegrationInACVF.Section7.HK.gammaNamedGradedIntegrationEquiv`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%207/Integration7/GammaNamedTheorem710.lean#L64)
+- [`IntegrationInACVF.Section7.HK.gamma_named_theorem_7_10`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%207/Integration7/GammaNamedTheorem710.lean#L90)
+
+</details>
+
+<a id="s7-gn-13"></a>
+
+### 7.13: Gamma-named principal kernel
+
+The kernel of the projection from the Grothendieck ring of Gamma-named RV isomorphism classes to the Gamma-named blowup ring is the two-sided ideal generated by point minus cone. Consequently the Gamma-named VF class ring is isomorphic to that quotient.
+
+**Proof outline.** Every elementary Gamma blowup factors, up to Gamma isomorphisms, as a Gamma head factor times the point and times the cone; the comparison after blowing up is the existing Gamma corrected isomorphism. A ring map identifying point and cone therefore descends to blowup classes.
+
+**Uses:** [7.10: Gamma-named graded integration](#s7-gn-10), [7.13: the actual principal measured kernel](#s7-13).
+
+<details>
+<summary>Lean declarations</summary>
+
+- [`IntegrationInACVF.Section7.HK.gamma_named_raw_volume_kernel_principal`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%207/Integration7/GammaNamedTheorem713.lean#L342)
+- [`IntegrationInACVF.Section7.HK.gamma_named_theorem_7_13`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%207/Integration7/GammaNamedTheorem713.lean#L390)
+
+</details>
+
+## Section 7: supported functions and integral identities
+
+<a id="s7-gn-11"></a>
+
+### 7.11: Gamma-named coordinate Fubini (additive)
+
+For Gamma-named almost-everywhere functions (presentations coded over the named code context and Gamma over <C.base, Xi>), positive or weighted degree zero, integration along any VF coordinate projection followed by integration of the retained coordinates equals total integration, with values in the Gamma-named RV semiring. Coordinate integrals and integrals are additive monoid homomorphisms and the identity holds as an equality of such homomorphisms. No hypothesis puts the common names of the base into C.base. The linear form over the Gamma-named semiring is deferred.
+
+**Proof outline.** Gamma head integrals descend to almost-everywhere classes through generic Gamma witnesses; head Fubini compares appended Gamma standard objects; coordinate permutations are Gamma Jacobian transforms. Additivity of the head integral cuts the head preparation of a sum along the summand tag and compares each cut with its summand at generic points.
+
+**Uses:** [7.10: Gamma-named graded integration](#s7-gn-10), [7.11: raw supported Fubini](#s7-11).
+
+<details>
+<summary>Lean declarations</summary>
+
+- [`IntegrationInACVF.Section7.GammaFun.gamma_named_proposition_7_11`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%207/Integration7/GammaFunSection7Results.lean#L39)
+- [`IntegrationInACVF.Section7.GammaFun.gamma_named_proposition_7_11_add_hom`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%207/Integration7/GammaFunSection7AdditiveResults.lean#L25)
+- [`IntegrationInACVF.Section7.GammaFun.gamma_named_proposition_7_11_zero_add_hom`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%207/Integration7/GammaFunSection7AdditiveResults.lean#L32)
+
+</details>
+
+<a id="s7-gn-12"></a>
+
+### 7.12: Gamma-named change of variables (additive)
+
+For a Gamma VF bijection between Gamma VF sets, the Gamma Jacobian transform of supported Gamma-named functions, positive or weighted degree zero, preserves the Gamma-named integral. Jacobian transforms are additive and the identity holds as an equality of additive monoid homomorphisms. The linear form is deferred.
+
+**Proof outline.** The Jacobian transform uses a Gamma Jacobian value map; it respects almost-everywhere equivalence because away from a small Gamma set the prescribed values equal the pure Jacobian. The transported form preserves VF volume, so the full lifts are Gamma isomorphic.
+
+**Uses:** [7.10: Gamma-named graded integration](#s7-gn-10), [7.12: unpadded raw change of variables](#s7-12).
+
+<details>
+<summary>Lean declarations</summary>
+
+- [`IntegrationInACVF.Section7.GammaFun.gamma_named_proposition_7_12`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%207/Integration7/GammaFunSection7Results.lean#L66)
+- [`IntegrationInACVF.Section7.GammaFun.gamma_named_proposition_7_12_add_hom`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%207/Integration7/GammaFunSection7AdditiveResults.lean#L40)
+- [`IntegrationInACVF.Section7.GammaFun.gamma_named_proposition_7_12_zero_add_hom`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%207/Integration7/GammaFunSection7AdditiveResults.lean#L47)
+
+</details>
+
+<a id="s7-gn-14"></a>
+
+### 7.14/7.15: Gamma-named Fubini and change of variables (homogeneous)
+
+For Gamma-named functions, positive or weighted degree zero, any two coordinate projections give the same iterated Gamma-named integral (for nonempty retained coordinate sets in positive degree; for projections discarding at least one coordinate in weighted degree zero), and the Gamma-named integral is invariant under Gamma Jacobian transforms. The normalized function-module form is deferred.
+
+**Proof outline.** Apply Gamma-named 7.11 to each projection and Gamma-named 7.12 to the bijection.
+
+**Uses:** [7.11: Gamma-named coordinate Fubini (additive)](#s7-gn-11), [7.12: Gamma-named change of variables (additive)](#s7-gn-12), [7.14: normalized supported Fubini](#s7-14), [7.15: normalized change of variables](#s7-15).
+
+<details>
+<summary>Lean declarations</summary>
+
+- [`IntegrationInACVF.Section7.GammaFun.gamma_named_theorem_7_14`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%207/Integration7/GammaFunSection7AdditiveResults.lean#L63)
+- [`IntegrationInACVF.Section7.GammaFun.gamma_named_theorem_7_14_zero`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%207/Integration7/GammaFunSection7AdditiveResults.lean#L73)
+- [`IntegrationInACVF.Section7.GammaFun.gamma_named_theorem_7_15`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%207/Integration7/GammaFunSection7AdditiveResults.lean#L81)
+- [`IntegrationInACVF.Section7.GammaFun.gamma_named_theorem_7_15_zero`](https://github.com/daviddhilbert/integration-in-ACVF/blob/644f8dbedaf12726f00e082c7f68ec6734d12c6e/section%207/Integration7/GammaFunSection7AdditiveResults.lean#L88)
 
 </details>

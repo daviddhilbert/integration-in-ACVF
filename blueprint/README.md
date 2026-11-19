@@ -20,12 +20,14 @@ The release also includes `dependency-graph.svg` as a separate download; its
 node links open the mathematical statements. The complete leanblueprint HTML
 version remains available in the portable web archive.
 
-The **71 selected nodes** link to **87 distinct Lean declarations**, with
+The **78 selected nodes** link to **103 distinct Lean declarations**, with
 numbered results, proof outlines and a clickable dependency graph. The graph
 records selected mathematical dependencies rather than every Lean expression
-dependency. Every source link is pinned to the checked proof commit
-[`862aa448b431`](https://github.com/daviddhilbert/integration-in-ACVF/tree/862aa448b4314df673bccd928d1353af6650d7f1).
-[Its CI passed](https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/43851204054).
+dependency. Every source link is pinned to the proof commit
+[`644f8dbedaf1`](https://github.com/daviddhilbert/integration-in-ACVF/tree/644f8dbedaf12726f00e082c7f68ec6734d12c6e).
+The definitions of 3.1 now live in hilbert-mathlib; their node links there.
+[Proof CI](https://github.com/daviddhilbert/integration-in-ACVF/actions/workflows/lean.yml)
+runs on that commit.
 
 The scope notes are part of the blueprint. In particular, RV[k] has finite-to-one
 volume maps with arbitrary auxiliary RV arity; 5.5 uses explicit RV presentation

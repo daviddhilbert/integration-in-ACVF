@@ -61,10 +61,11 @@ This blueprint covers the integration project, Sections 2--7 of
 \href{https://arxiv.org/abs/0809.0473v2}{Integration in algebraically closed valued fields}.
 Section 1 is introductory. The graph records selected mathematical dependencies,
 not a complete expression-level dependency graph. Every green node has linked
-Lean declarations at proof revision \texttt{862aa448b431}; definitions are
+Lean declarations at proof revision \texttt{644f8dbedaf1} (except 3.1, whose definitions are
+imported from hilbert-mathlib and linked in its statement); definitions are
 marked checked because their actual implementations compile. The prose is a
 proof outline: the full linked types determine all hypotheses and conclusions.
-\href{https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/43851204054}{Matching proof CI passed}.
+\href{https://github.com/daviddhilbert/integration-in-ACVF/actions/workflows/lean.yml}{Proof CI runs} on that revision.
 
 Lean is pinned to 4.35.0; Mathlib, special transformations and ACVF-QE are pinned
 in the project manifest. The language has named RV inversion with $0^{-1}=0$,
@@ -177,11 +178,9 @@ The checked upstream weighted-zero category supplies the actual pointwise measur
 
 \label{s3-atomic}
 
-\lean{IntegrationInACVF.Section3.GeneratesCompleteType, IntegrationInACVF.Section3.IsAtomic}
-
 \leanok
 
-A set generates a complete type over its parameter base if every definable test contains it or misses it. Atomicity adds definability of that set. These are separate notions, so later complete-type ambient sets need not be definable.
+A set generates a complete type over its parameter base if every definable test contains it or misses it. Atomicity adds definability of that set. These are separate notions, so later complete-type ambient sets need not be definable. The definitions \texttt{IntegrationInACVF.Section3.GeneratesCompleteType} and \texttt{IntegrationInACVF.Section3.IsAtomic} are implemented in \href{https://github.com/daviddhilbert/hilbert-mathlib/blob/88bb3386f616779bfd87eb453d8a7c899ad63961/HilbertMathlib/Foundation/ModelTheory/Atomicity.lean#L34-L39}{hilbert-mathlib} at the pinned revision \texttt{88bb338} and imported through the compatibility module \texttt{section 3/IntegrationSection3/Atomicity.lean}.
 
 \end{definition}
 
