@@ -1,9 +1,11 @@
 import Integration7.VFVolumeComposition
+import Integration7.VolumeDensityGraphs
 import Section5.GammaInvariantLogic
 
 /-! Gamma-definability of actual positive-degree VF volume objects and of
 actual almost-everywhere VF volume isomorphisms over a Gamma base `B`.
-Objects record Gamma graphs of their domains and volume forms; isomorphisms
+Objects record Gamma graphs of their domains and of their volume-form graphs
+(the density graph used before standard contraction); isomorphisms
 record Gamma graphs of their cofull source and target and of the bijection.
 Identity, inverse and composition retain these graphs. -/
 noncomputable section
@@ -25,9 +27,7 @@ def vfMixedMapGraph {n a m b : ℕ} {A : DefSet (rawMixedSpace (M := M) n a) S}
 
 structure VFVolumeObjectGamma (U : PositiveVFVolumeObject (M := M) S k) (B : Base (M := M)) : Prop where
   domain : GammaSetDefinable B U.domain.carrier
-  density : GammaGraphDefinable B
-    (fun (p : Point (M := M) (k+1) U.arity) (q : Point (M := M) 0 1) =>
-      ∃ u : U.domain, u.val = p ∧ (U.form.map u).val = q.2)
+  densityGraph : GammaSetDefinable B (volumeDensityGraph U.form).carrier
 
 structure VFVolumeIso.GammaDefinable {U V : PositiveVFVolumeObject (M := M) S k}
     (f : VFVolumeIso U V) (B : Base (M := M)) : Prop where
