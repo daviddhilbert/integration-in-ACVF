@@ -1,5 +1,6 @@
 import Integration7.GammaFunPositiveCoefficients
 import Integration7.GammaNamedPositiveProductIsos
+import Integration7.GammaVolumeLeftDistributivity
 
 /-! The action of positive Gamma-named coefficient classes on Gamma-named positive functions:
 multiplication by the actual left product. It respects Gamma blowup equivalence of the
@@ -112,5 +113,61 @@ def aePositiveCoefficientAddHom (p : ℕ) (c : GammaVolumeBlowupClasses hc 𝔇 
   map_add' f g := by
     induction c using Quotient.inductionOn with
     | h U => exact Quotient.inductionOn₂ f g (fun F H => Quotient.sound (presentation_left_product_add hc C Ξ hΞ U F H))
+
+set_option maxHeartbeats 800000 in
+theorem row_coefficient_coprod (U U' : GammaVolumeObjects 𝔅 𝔖 p) (x : Fin (n+1) → VFType (M := M)) :
+    gammaVolumeBlowupClass hc (vfParameterVolumeContext 𝔇 x) (rowGammaBase 𝔅 x) (rowCoefficient C Ξ hΞ (U.coprod U') x) =
+      gammaVolumeBlowupClass hc (vfParameterVolumeContext 𝔇 x) (rowGammaBase 𝔅 x)
+        ((rowCoefficient C Ξ hΞ U x).coprod (rowCoefficient C Ξ hΞ U' x)) :=
+  gamma_class_eq_of_select hc _ _ _ _ id (fun _ h => h) (fun s hs => ⟨s,hs,rfl⟩) (fun _ _ _ _ h => h)
+    (fun _ => rfl) (fun _ => rfl)
+
+/-- **The positive coefficient action is additive in the coefficient.** -/
+theorem presentation_left_product_coef_add (U U' : GammaVolumeObjects 𝔅 𝔖 p) (F : Presentation C Ξ hΞ n k) :
+    AEEquivalent hc C Ξ hΞ (F.leftProduct hc C Ξ hΞ (U.coprod U'))
+      ((F.leftProduct hc C Ξ hΞ U).add C Ξ hΞ (F.leftProduct hc C Ξ hΞ U')) := by
+  apply ae_equivalent_of_rows hc C Ξ hΞ
+  intro x
+  rw [presentation_add_row_class,presentation_left_product_row_class,presentation_left_product_row_class,
+    presentation_left_product_row_class]
+  let Cx := vfParameterVolumeContext 𝔇 x
+  let Bx := rowGammaBase 𝔅 x
+  let A : GammaVolumeObjects Bx (Cx.base : Set M) k := ⟨F.family.rowInContext x,F.gamma.row hc x⟩
+  let R := rowCoefficient C Ξ hΞ U x
+  let R' := rowCoefficient C Ξ hΞ U' x
+  have hR := (gammaVolumeBlowupClass_eq_iff hc Cx Bx).mp (row_coefficient_coprod hc C Ξ hΞ U U' x)
+  rw [← gammaVolumeBlowupClass_coprod]
+  apply (gammaVolumeBlowupClass_eq_iff hc Cx Bx).mpr
+  refine (hR.product_right hc Cx A).trans hc Cx Bx ?_
+  exact GammaVolumeBlowupEquivalent.of_iso Cx Bx ((volumeLeftProductCoprodFoldIso hc Cx R.val R'.val A.val).symm hc Cx)
+    ((gamma_volume_left_product_coprod_fold_iso hc Cx R.property R'.property A.property).symm hc Cx Bx)
+
+theorem presentation_left_product_coef_zero (F : Presentation C Ξ hΞ n k) (p : ℕ) :
+    AEEquivalent hc C Ξ hΞ (F.leftProduct hc C Ξ hΞ (GammaVolumeObjects.empty 𝔅 𝔖 p))
+      (Presentation.zero C Ξ hΞ n ((p+1)+k)) := by
+  apply ae_equivalent_of_rows hc C Ξ hΞ
+  intro x
+  rw [presentation_zero_row_class]
+  apply presentation_row_class_zero_of_empty hc C Ξ hΞ
+  intro r hr
+  obtain ⟨_,u,_⟩ := (mem_left_product _ F.family _).mp hr
+  exact u.property
+
+/-- **The biadditive positive coefficient action.** -/
+def aePositiveCoefficientBiadditive (p n k : ℕ) :
+    GammaVolumeBlowupClasses hc 𝔇 𝔅 p →+ (AEFunction hc C Ξ hΞ n k →+ AEFunction hc C Ξ hΞ n ((p+1)+k)) where
+  toFun c := aePositiveCoefficientAddHom hc C Ξ hΞ p c n k
+  map_zero' := by
+    ext f
+    induction f using Quotient.inductionOn with
+    | h F => exact Quotient.sound (presentation_left_product_coef_zero hc C Ξ hΞ F p)
+  map_add' c c' := by
+    ext f
+    induction c using Quotient.inductionOn with
+    | h U =>
+      induction c' using Quotient.inductionOn with
+      | h U' =>
+        induction f using Quotient.inductionOn with
+        | h F => exact Quotient.sound (presentation_left_product_coef_add hc C Ξ hΞ U U' F)
 
 end IntegrationInACVF.Section7.GammaFun
