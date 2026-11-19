@@ -13,6 +13,12 @@ The actual principal kernel, class 7.10/7.13, normalized 7.14–7.15 and
 commutativity of the corrected normalized coefficient ring are proved.
 The accepted nonempty-E restriction of 7.5 is retained.
 
+## Gamma-named results (local branch `remove-hnames`)
+
+Gamma-named 7.6–7.10 and 7.13 hold without `hNames`; 7.11/7.12/7.14/7.15 still carry it.
+See the "Gamma-named results" section of [COMPLETION.md](COMPLETION.md). These modules
+need the special-transformations `gamma-lift-9-16` provider (local `932a507`).
+
 ## Current checked boundary
 
 `Integration7.Library` integrates 2,041 source modules plus its entrypoint.

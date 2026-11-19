@@ -1,1390 +1,1489 @@
 [
-  {
-    "id": "s2-finite",
-    "title": "2.15: finite Gamma images",
-    "kind": "corollary",
-    "section": "Section 2: finite images and volume descent",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section2.corollary_2_15",
-        "file": "section 2/IntegrationSection2/GammaFiniteImage.lean",
-        "line": 61
-      }
-    ],
-    "dependencies": [],
-    "statement": "A map from a subset of Gamma to RV with full graph definable over the original real/Gamma base has finite image. Genuine saturation, an infinite cardinal, small original real base and ACVF(0,0) remain explicit.",
-    "proof": "Apply the pinned finite-projection theorem to the full invariant graph."
-  },
-  {
-    "id": "s2-volume",
-    "title": "2.34: positive-degree volume descent",
-    "kind": "corollary",
-    "section": "Section 2: finite images and volume descent",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section2.corollary_2_34",
-        "file": "section 2/IntegrationSection2/VolumeDescentTheorem.lean",
-        "line": 34
-      }
-    ],
-    "dependencies": [
-      "s2-finite"
-    ],
-    "statement": "For an actual essential isomorphism of finite-volume RV objects of positive degree, a compatible measure-preserving lifted bijection implies the RV volume equation off an RV-small set and the Gamma volume equation at every essential label. The underlying isomorphism is the supplied one.",
-    "proof": "Construct the finite-extension and Gauss-graph input. Use Jacobian uniqueness and finite label fibres for the RV equation; restrict to fixed labels and descend constant-value polydiscs for the pointwise Gamma equation."
-  },
-  {
-    "id": "s2-zero",
-    "title": "2.34: exact weighted degree zero",
-    "kind": "corollary",
-    "section": "Section 2: finite images and volume descent",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section2.WeightedZeroVolumeDescent.corollary_2_34_zero_weighted",
-        "file": "section 2/IntegrationSection2/WeightedZeroVolumeDescent.lean",
-        "line": 29
-      }
-    ],
-    "dependencies": [
-      "s2-volume"
-    ],
-    "statement": "In the corrected upstream measured degree-zero category, descend the lifted bijection while retaining its supplied ordinary label map and preserving the RV form exactly at every point. The ordinary degree-zero category is unchanged.",
-    "proof": "The checked upstream weighted-zero category supplies the actual pointwise measure equation; no positive-dimensional exceptional-set inference is used at degree zero."
-  },
-  {
-    "id": "s3-atomic",
-    "title": "3.1: complete types and atomic sets",
-    "kind": "definition",
-    "section": "Section 3: atomic sets and parametric balls",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section3.GeneratesCompleteType",
-        "file": "section 3/IntegrationSection3/Atomicity.lean",
-        "line": 29
-      },
-      {
-        "name": "IntegrationInACVF.Section3.IsAtomic",
-        "file": "section 3/IntegrationSection3/Atomicity.lean",
-        "line": 33
-      }
-    ],
-    "dependencies": [],
-    "statement": "A set generates a complete type over its parameter base if every definable test contains it or misses it. Atomicity adds definability of that set. These are separate notions, so later complete-type ambient sets need not be definable.",
-    "proof": ""
-  },
-  {
-    "id": "s3-2",
-    "title": "3.2: adjoining a ball name",
-    "kind": "lemma",
-    "section": "Section 3: atomic sets and parametric balls",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section3ACVF.AdjoinBall.lemma_3_2",
-        "file": "section 3/IntegrationSection3ACVF/AdjoinBall.lean",
-        "line": 133
-      }
-    ],
-    "dependencies": [
-      "s3-atomic"
-    ],
-    "statement": "Parametric-ball atomicity over the full real/Gamma/ball base is preserved when the actual input ball name is adjoined, under the stated nonalgebraicity of the output ball name.",
-    "proof": "The linked implementation constructs the actual objects over the original interpreted base. Its full Lean type records the precise standing hypotheses; no stronger uniformity or parameter-smallness claim is implicit here."
-  },
-  {
-    "id": "s3-3",
-    "title": "3.3: Gamma parameters",
-    "kind": "lemma",
-    "section": "Section 3: atomic sets and parametric balls",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section3ACVF.FullGammaAtomicity.lemma_3_3",
-        "file": "section 3/IntegrationSection3ACVF/FullGammaAtomicity.lean",
-        "line": 127
-      }
-    ],
-    "dependencies": [
-      "s3-2"
-    ],
-    "statement": "An actual definable atomic set remains atomic after adjoining any finite Gamma tuple, including mixed VF/RV tuple ambients. ACVF(0,0) and an originally definable nontrivial Gamma value are retained.",
-    "proof": "The linked implementation constructs the actual objects over the original interpreted base. Its full Lean type records the precise standing hypotheses; no stronger uniformity or parameter-smallness claim is implicit here."
-  },
-  {
-    "id": "s3-4",
-    "title": "3.4: ball atomicity",
-    "kind": "lemma",
-    "section": "Section 3: atomic sets and parametric balls",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section3ACVF.CompleteTypeBallAtomicity.lemma_3_4",
-        "file": "section 3/IntegrationSection3ACVF/CompleteTypeBallAtomicity.lean",
-        "line": 60
-      }
-    ],
-    "dependencies": [
-      "s3-3"
-    ],
-    "statement": "Every actual open or closed ball, with arbitrary initially unnamed radius, and the singleton and whole-field cases satisfy the complete-type ball-atomicity conclusion over the full interpreted base. Only the actual ball name is adjoined; the ambient complete type need not be definable.",
-    "proof": "The linked implementation constructs the actual objects over the original interpreted base. Its full Lean type records the precise standing hypotheses; no stronger uniformity or parameter-smallness claim is implicit here."
-  },
-  {
-    "id": "s3-6",
-    "title": "3.6: primitive decomposition",
-    "kind": "lemma",
-    "section": "Section 3: atomic sets and parametric balls",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section3ACVF.PrimitiveDecomposition.lemma_3_6",
-        "file": "section 3/IntegrationSection3ACVF/PrimitiveDecomposition.lean",
-        "line": 127
-      }
-    ],
-    "dependencies": [
-      "s3-4"
-    ],
-    "statement": "An atomic unary VF set has an actual finite nonempty disjoint primitive decomposition with common radius, valuative centre and primitive kind. Individual components need not be definable over the original base.",
-    "proof": "The linked implementation constructs the actual objects over the original interpreted base. Its full Lean type records the precise standing hypotheses; no stronger uniformity or parameter-smallness claim is implicit here."
-  },
-  {
-    "id": "s3-7",
-    "title": "3.7: coverage at a fixed radius",
-    "kind": "corollary",
-    "section": "Section 3: atomic sets and parametric balls",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section3ACVF.SameRadiusCoverage.corollary_3_7_gamma",
-        "file": "section 3/IntegrationSection3ACVF/SameRadiusCoverage.lean",
-        "line": 25
-      }
-    ],
-    "dependencies": [
-      "s3-3",
-      "s3-6"
-    ],
-    "statement": "The primitive decomposition gives whole-ball coverage at the radius of an inner ball, including the singleton and whole-field cases. An initially unnamed radius is adjoined using Gamma atomicity.",
-    "proof": "The linked implementation constructs the actual objects over the original interpreted base. Its full Lean type records the precise standing hypotheses; no stronger uniformity or parameter-smallness claim is implicit here."
-  },
-  {
-    "id": "s3-8",
-    "title": "3.8: primitive images",
-    "kind": "lemma",
-    "section": "Section 3: atomic sets and parametric balls",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section3ACVF.PrimitiveImages.lemma_3_8",
-        "file": "section 3/IntegrationSection3ACVF/PrimitiveImages.lean",
-        "line": 34
-      }
-    ],
-    "dependencies": [
-      "s3-6"
-    ],
-    "statement": "Actual definable partial-domain VF maps preserve the recorded atomicity and one-component conditions on their images.",
-    "proof": "The linked implementation constructs the actual objects over the original interpreted base. Its full Lean type records the precise standing hypotheses; no stronger uniformity or parameter-smallness claim is implicit here."
-  },
-  {
-    "id": "s3-9",
-    "title": "3.9 and 3.10: RV constancy",
-    "kind": "lemma",
-    "section": "Section 3: atomic sets and parametric balls",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section3ACVF.OpenBallConstancy.lemma_3_9",
-        "file": "section 3/IntegrationSection3ACVF/OpenBallConstancy.lean",
-        "line": 51
-      },
-      {
-        "name": "IntegrationInACVF.Section3ACVF.OpenBallConstancy.corollary_3_10",
-        "file": "section 3/IntegrationSection3ACVF/OpenBallConstancy.lean",
-        "line": 81
-      }
-    ],
-    "dependencies": [
-      "s3-3",
-      "s3-6"
-    ],
-    "statement": "Definable RV-powerset families in arbitrary finite RV arity are constant on an atomic open ball; the companion corollary applies to arbitrary-radius open subballs of a definable atomic set.",
-    "proof": "The linked implementation constructs the actual objects over the original interpreted base. Its full Lean type records the precise standing hypotheses; no stronger uniformity or parameter-smallness claim is implicit here."
-  },
-  {
-    "id": "s3-11",
-    "title": "3.11: corrected separation",
-    "kind": "lemma",
-    "section": "Section 3: atomic sets and parametric balls",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section3ACVF.Separation.lemma_3_11",
-        "file": "section 3/IntegrationSection3ACVF/Separation.lean",
-        "line": 58
-      }
-    ],
-    "dependencies": [
-      "s3-6",
-      "s3-9"
-    ],
-    "statement": "The separation conclusion holds with the accepted nonempty-set hypothesis. Both radii may be initially unnamed. The empty-set case is excluded as recorded in the paper corrections.",
-    "proof": "The linked implementation constructs the actual objects over the original interpreted base. Its full Lean type records the precise standing hypotheses; no stronger uniformity or parameter-smallness claim is implicit here."
-  },
-  {
-    "id": "s3-13",
-    "title": "3.13: images of atomic open balls",
-    "kind": "lemma",
-    "section": "Section 3: atomic sets and parametric balls",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section3ACVF.OpenImages.lemma_3_13",
-        "file": "section 3/IntegrationSection3ACVF/OpenImages.lean",
-        "line": 43
-      }
-    ],
-    "dependencies": [
-      "s3-8",
-      "s3-9"
-    ],
-    "statement": "A definable VF image of an atomic open ball is either constant or an atomic open ball.",
-    "proof": "The linked implementation constructs the actual objects over the original interpreted base. Its full Lean type records the precise standing hypotheses; no stronger uniformity or parameter-smallness claim is implicit here."
-  },
-  {
-    "id": "s3-14",
-    "title": "3.14: closed-image obstruction",
-    "kind": "lemma",
-    "section": "Section 3: atomic sets and parametric balls",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section3ACVF.ClosedImageObstruction.lemma_3_14",
-        "file": "section 3/IntegrationSection3ACVF/ClosedImageObstruction.lean",
-        "line": 154
-      }
-    ],
-    "dependencies": [
-      "s3-13"
-    ],
-    "statement": "An infinite one-component atomic target cannot be closed when its only ball imaginary is the source open-ball name. Original Gamma names are allowed, and the source radius need not be named.",
-    "proof": "The linked implementation constructs the actual objects over the original interpreted base. Its full Lean type records the precise standing hypotheses; no stronger uniformity or parameter-smallness claim is implicit here."
-  },
-  {
-    "id": "s3-15",
-    "title": "3.15: complete-type open images",
-    "kind": "lemma",
-    "section": "Section 3: atomic sets and parametric balls",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section3ACVF.FullCompleteTypeOpenImages.lemma_3_15",
-        "file": "section 3/IntegrationSection3ACVF/FullCompleteTypeOpenImages.lean",
-        "line": 19
-      }
-    ],
-    "dependencies": [
-      "s3-4",
-      "s3-14"
-    ],
-    "statement": "The open-image conclusion extends to the full original real/Gamma/ball base, arbitrary open-ball radii and possibly undefinable complete-type ambients. The map may be defined on a larger definable domain.",
-    "proof": "The linked implementation constructs the actual objects over the original interpreted base. Its full Lean type records the precise standing hypotheses; no stronger uniformity or parameter-smallness claim is implicit here."
-  },
-  {
-    "id": "s3-16",
-    "title": "3.16: Gamma linearity",
-    "kind": "lemma",
-    "section": "Section 3: atomic sets and parametric balls",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section3ACVF.GammaLinearity.lemma_3_16",
-        "file": "section 3/IntegrationSection3ACVF/GammaLinearity.lean",
-        "line": 67
-      }
-    ],
-    "dependencies": [
-      "s3-15"
-    ],
-    "statement": "The actual map is Gamma-linear with coefficient the target/source radius ratio, using actual radius properties. Linearity is proved, rather than assumed.",
-    "proof": "The linked implementation constructs the actual objects over the original interpreted base. Its full Lean type records the precise standing hypotheses; no stronger uniformity or parameter-smallness claim is implicit here."
-  },
-  {
-    "id": "s3-17",
-    "title": "3.17: least radius for ordinary open balls",
-    "kind": "corollary",
-    "section": "Section 3: atomic sets and parametric balls",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section3ACVF.LeastLinearRadiusExistence.corollary_3_17_ordinary",
-        "file": "section 3/IntegrationSection3ACVF/LeastLinearRadiusExistence.lean",
-        "line": 44
-      }
-    ],
-    "dependencies": [
-      "s3-16"
-    ],
-    "statement": "The ordinary-open-source result constructs the least linear radius and proves the exclusion under injectivity and the stated standing hypotheses. The whole-field source has a separate conditional interface: existence of a least radius for the identity on VF is not asserted.",
-    "proof": "The linked implementation constructs the actual objects over the original interpreted base. Its full Lean type records the precise standing hypotheses; no stronger uniformity or parameter-smallness claim is implicit here."
-  },
-  {
-    "id": "s3-18",
-    "title": "3.18: RV linearity",
-    "kind": "lemma",
-    "section": "Section 3: atomic sets and parametric balls",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section3ACVF.RVLinearity.lemma_3_18",
-        "file": "section 3/IntegrationSection3ACVF/RVLinearity.lean",
-        "line": 101
-      }
-    ],
-    "dependencies": [
-      "s3-16"
-    ],
-    "statement": "Actual RV linearity holds in the recorded standing scope. The proof uses an affine-error replacement for the printed endpoint inference.",
-    "proof": "The linked implementation constructs the actual objects over the original interpreted base. Its full Lean type records the precise standing hypotheses; no stronger uniformity or parameter-smallness claim is implicit here."
-  },
-  {
-    "id": "s3-19",
-    "title": "3.19: open-to-open partition",
-    "kind": "proposition",
-    "section": "Section 3: atomic sets and parametric balls",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section3ACVF.FullOpenToOpenPartition.proposition_3_19",
-        "file": "section 3/IntegrationSection3ACVF/FullOpenToOpenPartition.lean",
-        "line": 93
-      }
-    ],
-    "dependencies": [
-      "s3-15",
-      "s3-18"
-    ],
-    "statement": "Construct a finite disjoint partition into nonempty original-base definable pieces on which the actual map is open-to-open. There is no cardinal bound on old imaginary names.",
-    "proof": "The linked implementation constructs the actual objects over the original interpreted base. Its full Lean type records the precise standing hypotheses; no stronger uniformity or parameter-smallness claim is implicit here."
-  },
-  {
-    "id": "s3-21",
-    "title": "3.21: coordinate partitions",
-    "kind": "proposition",
-    "section": "Section 3: atomic sets and parametric balls",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section3ACVF.CoordinatePartitions.proposition_3_21",
-        "file": "section 3/IntegrationSection3ACVF/CoordinatePartitions.lean",
-        "line": 20
-      }
-    ],
-    "dependencies": [
-      "s3-19"
-    ],
-    "statement": "Construct one uniform finite nonempty disjoint original-base partition for the selected VF coordinate pairs of actual mixed finite-tuple injections. Arbitrary finite index types cover all mixed arities.",
-    "proof": "The linked implementation constructs the actual objects over the original interpreted base. Its full Lean type records the precise standing hypotheses; no stronger uniformity or parameter-smallness claim is implicit here."
-  },
-  {
-    "id": "s3-22",
-    "title": "3.22: components and holes",
-    "kind": "lemma",
-    "section": "Section 3: atomic sets and parametric balls",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section3ACVF.ThinFamilyConservation.lemma_3_22",
-        "file": "section 3/IntegrationSection3ACVF/ThinFamilyConservation.lean",
-        "line": 24
-      }
-    ],
-    "dependencies": [
-      "s3-19"
-    ],
-    "statement": "An original-base definable open-to-open VF bijection preserves components and actual holes for finite disjoint thin families. This theorem needs ACVF and a genuine nontrivial value, but no saturation or characteristic-zero premise.",
-    "proof": "The linked implementation constructs the actual objects over the original interpreted base. Its full Lean type records the precise standing hypotheses; no stronger uniformity or parameter-smallness claim is implicit here."
-  },
-  {
-    "id": "s3-23",
-    "title": "3.23: primitive distinction",
-    "kind": "proposition",
-    "section": "Section 3: atomic sets and parametric balls",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section3ACVF.AtomicPrimitiveDistinction.proposition_3_23",
-        "file": "section 3/IntegrationSection3ACVF/AtomicPrimitiveDistinction.lean",
-        "line": 92
-      }
-    ],
-    "dependencies": [
-      "s3-22"
-    ],
-    "statement": "There is no definable bijection between distinct actual atomic primitive shapes: open ball, closed ball and thin annulus. ACVF(0,0) and an originally definable nontrivial value remain explicit.",
-    "proof": "The linked implementation constructs the actual objects over the original interpreted base. Its full Lean type records the precise standing hypotheses; no stronger uniformity or parameter-smallness claim is implicit here."
-  },
-  {
-    "id": "s3-24",
-    "title": "3.24: corrected punctured-ball obstruction",
-    "kind": "proposition",
-    "section": "Section 3: atomic sets and parametric balls",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section3ACVF.PuncturedBallObstruction.proposition_3_24",
-        "file": "section 3/IntegrationSection3ACVF/PuncturedBallObstruction.lean",
-        "line": 35
-      }
-    ],
-    "dependencies": [
-      "s3-22",
-      "s3-23"
-    ],
-    "statement": "The author-corrected obstruction holds for an ordinary closed parent with a single proper open hole. The open target includes VF. The full original interpreted base and displayed saturation, smallness and ACVF(0,0) hypotheses are retained.",
-    "proof": "The linked implementation constructs the actual objects over the original interpreted base. Its full Lean type records the precise standing hypotheses; no stronger uniformity or parameter-smallness claim is implicit here."
-  },
-  {
-    "id": "s4-1",
-    "title": "4.1: translation offsets",
-    "kind": "lemma",
-    "section": "Section 4: preparation and two-cells",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section4.GammaOffsets.lemma_4_1",
-        "file": "section 4/IntegrationSection4/GammaOffsets.lean",
-        "line": 174
-      }
-    ],
-    "dependencies": [
-      "s3-9"
-    ],
-    "statement": "An actual special bijection has an original-Gamma-base offset graph and the exact inverse-fibre translation identity, including the zero case.",
-    "proof": "Construct the preparation uniformly over the original base using the earlier atomic geometry and actual special transformations; the linked theorem retains its displayed model, base and cardinal hypotheses."
-  },
-  {
-    "id": "s4-2",
-    "title": "4.2: linear preparation",
-    "kind": "lemma",
-    "section": "Section 4: preparation and two-cells",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section4.LinearPreparation.lemma_4_2",
-        "file": "section 4/IntegrationSection4/LinearPreparation.lean",
-        "line": 22
-      }
-    ],
-    "dependencies": [
-      "s3-16",
-      "s3-19",
-      "s4-1"
-    ],
-    "statement": "Construct an actual original-base special bijection to an RV pullback whose inverse VF pieces are Gamma-linear and open-to-open. Prepare the full radius/slope relation; no definable least-radius function is assumed.",
-    "proof": "Construct the preparation uniformly over the original base using the earlier atomic geometry and actual special transformations; the linked theorem retains its displayed model, base and cardinal hypotheses."
-  },
-  {
-    "id": "s4-3",
-    "title": "4.3: corrected radius preparation",
-    "kind": "lemma",
-    "section": "Section 4: preparation and two-cells",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section4.RadiusPreparation.lemma_4_3",
-        "file": "section 4/IntegrationSection4/RadiusPreparation.lean",
-        "line": 106
-      }
-    ],
-    "dependencies": [
-      "s4-2"
-    ],
-    "statement": "One preparation works for every ordinary target radius, with at most one source radius on each actual inverse piece. The whole-field source is included. This is the accepted corrected statement.",
-    "proof": "Construct the preparation uniformly over the original base using the earlier atomic geometry and actual special transformations; the linked theorem retains its displayed model, base and cardinal hypotheses."
-  },
-  {
-    "id": "s4-4",
-    "title": "4.4: inverse differences",
-    "kind": "lemma",
-    "section": "Section 4: preparation and two-cells",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section4.InverseDifferencePreparation.lemma_4_4",
-        "file": "section 4/IntegrationSection4/InverseDifferencePreparation.lean",
-        "line": 66
-      }
-    ],
-    "dependencies": [
-      "s4-2",
-      "s4-3"
-    ],
-    "statement": "Prepare the actual inverse-difference RV range to a singleton using translated RV fibres and an actual open-to-open positioning bijection. Individual fibre paradigms need not be definable.",
-    "proof": "Construct the preparation uniformly over the original base using the earlier atomic geometry and actual special transformations; the linked theorem retains its displayed model, base and cardinal hypotheses."
-  },
-  {
-    "id": "s4-6",
-    "title": "4.6: balanced slope",
-    "kind": "lemma",
-    "section": "Section 4: preparation and two-cells",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section4.BalancedSlope.remark_4_6",
-        "file": "section 4/IntegrationSection4/BalancedSlope.lean",
-        "line": 31
-      }
-    ],
-    "dependencies": [
-      "s4-balanced",
-      "s3-16"
-    ],
-    "statement": "For a nondegenerate balanced configuration the slope is the ratio of the two paradigm values, derived from the actual fibre identities and linearity.",
-    "proof": "Construct the preparation uniformly over the original base using the earlier atomic geometry and actual special transformations; the linked theorem retains its displayed model, base and cardinal hypotheses."
-  },
-  {
-    "id": "s4-8",
-    "title": "4.8: definable two-cell decomposition",
-    "kind": "lemma",
-    "section": "Section 4: preparation and two-cells",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section4.lemma_4_8",
-        "file": "section 4/IntegrationSection4/TwoCellDecomposition.lean",
-        "line": 59
-      }
-    ],
-    "dependencies": [
-      "s4-4",
-      "s4-cells",
-      "s3-21"
-    ],
-    "statement": "Every original-base definable native VF-squared set admits an actual finite-arity Gamma RV map whose nonempty fibres are definable two-cells over the original Gamma base with the output RV tuple. The positioning graph and both paradigms are definable; no cell-existence or family-gluing conclusion is assumed.",
-    "proof": "Construct the preparation uniformly over the original base using the earlier atomic geometry and actual special transformations; the linked theorem retains its displayed model, base and cardinal hypotheses."
-  },
-  {
-    "id": "s4-balanced",
-    "title": "4.5: balanced fibres",
-    "kind": "definition",
-    "section": "Section 4: preparation and two-cells",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section4.BalancedFibres.HasBalancedFibres",
-        "file": "section 4/IntegrationSection4/BalancedFibres.lean",
-        "line": 66
-      }
-    ],
-    "dependencies": [],
-    "statement": "The two actual fibre identities specify a balanced relation, positioning map and RV paradigms. Degenerate paradigms are handled explicitly.",
-    "proof": ""
-  },
-  {
-    "id": "s4-cells",
-    "title": "4.7: definable two-cells",
-    "kind": "definition",
-    "section": "Section 4: preparation and two-cells",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section4.Cells.DefinableTwoCell",
-        "file": "section 4/IntegrationSection4/Cells.lean",
-        "line": 93
-      }
-    ],
-    "dependencies": [
-      "s4-balanced"
-    ],
-    "statement": "A two-cell consists of actual one-cell projections and one of the recorded positioning alternatives, with the full original-Gamma definability of the relation, positioning map and paradigms.",
-    "proof": ""
-  },
-  {
-    "id": "s4-rectangle",
-    "title": "Corrected rectangle observation",
-    "kind": "proposition",
-    "section": "Section 4: preparation and two-cells",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section4.CellRectangles.rectangle",
-        "file": "section 4/IntegrationSection4/CellRectangles.lean",
-        "line": 70
-      },
-      {
-        "name": "IntegrationInACVF.Section4.CellRectangles.open_polydisc",
-        "file": "section 4/IntegrationSection4/CellRectangles.lean",
-        "line": 115
-      }
-    ],
-    "dependencies": [
-      "s4-cells"
-    ],
-    "statement": "A nonbalanced cell is a product of a one-cell and an open ball after positioning. It is an open polydisc when the first projection is open. The unrestricted open-polydisc wording is replaced by the accepted rectangle statement.",
-    "proof": "Identify both actual fibres; the point-times-open-ball counterexample explains why openness of the first projection is needed."
-  },
-  {
-    "id": "s5-1",
-    "title": "5.1: finite preparation",
-    "kind": "lemma",
-    "section": "Section 5: finite-volume standard contractions",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section5.lemma_5_1_finite",
-        "file": "section 5/IntegrationSection5/FiniteGeometryPreparation.lean",
-        "line": 20
-      }
-    ],
-    "dependencies": [
-      "s4-2"
-    ],
-    "statement": "Construct two actual Gamma special bijections to RV pullbacks, a contractible conjugate with its full Gamma graph, and finite volume maps for both prepared objects.",
-    "proof": "Use the checked uniform preparation and finite contraction compiler. RV[k] means finite-to-one volume maps, with arbitrary auxiliary RV arity; the full theorem type retains saturation, original-base smallness and the required field, generation and named-value hypotheses."
-  },
-  {
-    "id": "s5-2",
-    "title": "5.2: comparison of unary preparations",
-    "kind": "lemma",
-    "section": "Section 5: finite-volume standard contractions",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section5.lemma_5_2_finite",
-        "file": "section 5/IntegrationSection5/FiniteGeometryPreparation.lean",
-        "line": 49
-      }
-    ],
-    "dependencies": [
-      "s5-1"
-    ],
-    "statement": "Construct both special preparations, mutual contractibility, the unique commuting key bijection and an actual RV[1] isomorphism with both Gamma graphs. Target finiteness follows from source finiteness.",
-    "proof": "Use the checked uniform preparation and finite contraction compiler. RV[k] means finite-to-one volume maps, with arbitrary auxiliary RV arity; the full theorem type retains saturation, original-base smallness and the required field, generation and named-value hypotheses."
-  },
-  {
-    "id": "s5-3",
-    "title": "5.3: the finite-category square",
-    "kind": "lemma",
-    "section": "Section 5: finite-volume standard contractions",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section5.lemma_5_3_finite",
-        "file": "section 5/IntegrationSection5/FiniteNumbered.lean",
-        "line": 23
-      }
-    ],
-    "dependencies": [
-      "s5-2"
-    ],
-    "statement": "The prepared mutually contractible unary bijection induces the actual finite-category isomorphism and commuting key square.",
-    "proof": "Use the checked uniform preparation and finite contraction compiler. RV[k] means finite-to-one volume maps, with arbitrary auxiliary RV arity; the full theorem type retains saturation, original-base smallness and the required field, generation and named-value hypotheses."
-  },
-  {
-    "id": "s5-4",
-    "title": "5.4: relative-special factorization",
-    "kind": "lemma",
-    "section": "Section 5: finite-volume standard contractions",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section5.special_relativeSpecial_factorization",
-        "file": "section 5/IntegrationSection5/RelativeSpecialFactorization.lean",
-        "line": 81
-      }
-    ],
-    "dependencies": [
-      "s5-1"
-    ],
-    "statement": "An actual special bijection factors through actual coordinate-fibre relative-special witnesses. Complementary VF coordinates become fibre parameters. Gamma bijections preserve finite RV fibres.",
-    "proof": "Use the checked uniform preparation and finite contraction compiler. RV[k] means finite-to-one volume maps, with arbitrary auxiliary RV arity; the full theorem type retains saturation, original-base smallness and the required field, generation and named-value hypotheses."
-  },
-  {
-    "id": "s5-5",
-    "title": "5.5: presented standard contraction",
-    "kind": "lemma",
-    "section": "Section 5: finite-volume standard contractions",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section5.lemma_5_5",
-        "file": "section 5/IntegrationSection5/FiniteStandardContractionData.lean",
-        "line": 57
-      }
-    ],
-    "dependencies": [
-      "s5-3",
-      "s5-4"
-    ],
-    "statement": "For every VF order, including zero arity, construct a standard contraction with native and normalized RV[n] objects, a natural Gamma lift isomorphism and an actual global special presentation. Explicit original-Gamma RV charts connect the special-chain target to the actual lift; no unchanged-arity literal special witness is asserted.",
-    "proof": "Use the checked uniform preparation and finite contraction compiler. RV[k] means finite-to-one volume maps, with arbitrary auxiliary RV arity; the full theorem type retains saturation, original-base smallness and the required field, generation and named-value hypotheses."
-  },
-  {
-    "id": "s5-6",
-    "title": "5.6: relatively unary factors",
-    "kind": "lemma",
-    "section": "Section 5: finite-volume standard contractions",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section5.lemma_5_6_finite",
-        "file": "section 5/IntegrationSection5/FiniteUnaryPartition.lean",
-        "line": 31
-      }
-    ],
-    "dependencies": [
-      "s5-4",
-      "s5-5"
-    ],
-    "statement": "In positive VF arity construct a finite disjoint covering Gamma partition, actual relatively unary factors, a common real realization and finite RV fibres at every intermediate stage.",
-    "proof": "Use the checked uniform preparation and finite contraction compiler. RV[k] means finite-to-one volume maps, with arbitrary auxiliary RV arity; the full theorem type retains saturation, original-base smallness and the required field, generation and named-value hypotheses."
-  },
-  {
-    "id": "s5-7",
-    "title": "5.7: two-cell contractions",
-    "kind": "lemma",
-    "section": "Section 5: finite-volume standard contractions",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section5.lemma_5_7_finite",
-        "file": "section 5/IntegrationSection5/FiniteNumbered.lean",
-        "line": 56
-      }
-    ],
-    "dependencies": [
-      "s4-8",
-      "s5-5"
-    ],
-    "statement": "Every definable two-cell has both actual standard contractions and an actual Gamma RV[2] isomorphism. Finite volume is derived without an additional source assumption.",
-    "proof": "Use the checked uniform preparation and finite contraction compiler. RV[k] means finite-to-one volume maps, with arbitrary auxiliary RV arity; the full theorem type retains saturation, original-base smallness and the required field, generation and named-value hypotheses."
-  },
-  {
-    "id": "s5-8",
-    "title": "5.8: two contraction orders",
-    "kind": "lemma",
-    "section": "Section 5: finite-volume standard contractions",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section5.lemma_5_8_finite",
-        "file": "section 5/IntegrationSection5/FiniteRVComparison.lean",
-        "line": 72
-      }
-    ],
-    "dependencies": [
-      "s5-6",
-      "s5-7"
-    ],
-    "statement": "Construct a VF-fixed positioned cell-label injection and both whole-source standard contractions with an actual Gamma RV[2] comparison and both finite volume maps.",
-    "proof": "Use the checked uniform preparation and finite contraction compiler. RV[k] means finite-to-one volume maps, with arbitrary auxiliary RV arity; the full theorem type retains saturation, original-base smallness and the required field, generation and named-value hypotheses."
-  },
-  {
-    "id": "s6-confluence",
-    "title": "6.3--6.6: finite common blowups",
-    "kind": "lemma",
-    "section": "Section 6: blowups and ordinary integration",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section6.FiniteRV.lemma_6_3",
-        "file": "section 6/IntegrationSection6/FiniteRVTheorems.lean",
-        "line": 14
-      },
-      {
-        "name": "IntegrationInACVF.Section6.FiniteRV.lemma_6_5",
-        "file": "section 6/IntegrationSection6/FiniteRVTheorems.lean",
-        "line": 22
-      },
-      {
-        "name": "IntegrationInACVF.Section6.FiniteRV.corollary_6_6",
-        "file": "section 6/IntegrationSection6/FiniteRVTheorems.lean",
-        "line": 36
-      }
-    ],
-    "dependencies": [
-      "s5-5"
-    ],
-    "statement": "Elementary blowups of isomorphic finite-volume RV objects are isomorphic. Iterated blowups admit common refinements in the actual finite category, yielding isomorphism-invariant common-blowup equivalence.",
-    "proof": "Transport elementary blowups and commute successive steps, deriving finite volume for every intermediate object."
-  },
-  {
-    "id": "s6-congruence",
-    "title": "6.8: the blowup congruence",
-    "kind": "lemma",
-    "section": "Section 6: blowups and ordinary integration",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section6.FiniteRV.lemma_6_8_add_class_iff",
-        "file": "section 6/IntegrationSection6/FiniteRVTheorems.lean",
-        "line": 60
-      },
-      {
-        "name": "IntegrationInACVF.Section6.FiniteRV.lemma_6_8_mul_class_iff",
-        "file": "section 6/IntegrationSection6/FiniteRVTheorems.lean",
-        "line": 66
-      }
-    ],
-    "dependencies": [
-      "s6-confluence"
-    ],
-    "statement": "On actual RV[k] representatives the additive and graded multiplicative congruences agree exactly with common-blowup equivalence. Cartesian products preserve this relation.",
-    "proof": "Construct the congruences from actual finite partitions and elementary blowups."
-  },
-  {
-    "id": "s6-special",
-    "title": "6.10 and 6.12: special-chain lift diagrams",
-    "kind": "lemma",
-    "section": "Section 6: blowups and ordinary integration",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section6.FiniteRV.corollary_6_10_gamma",
-        "file": "section 6/IntegrationSection6/FiniteGammaSpecialBijections.lean",
-        "line": 18
-      },
-      {
-        "name": "IntegrationInACVF.Section6.lemma_6_12",
-        "file": "section 6/IntegrationSection6/GammaFiniteElementary.lean",
-        "line": 62
-      }
-    ],
-    "dependencies": [
-      "s6-confluence",
-      "s5-4"
-    ],
-    "statement": "Actual Gamma-certified special chains induce finite blowup diagrams. The elementary lift isomorphism is constructed over the original Gamma base, without a canonical-presentation assumption.",
-    "proof": "Use the actual focus and graph constructions, preserving finite intermediate objects and the genuine VF/Gamma-generated-base hypothesis where required."
-  },
-  {
-    "id": "s6-closed-input",
-    "title": "Closing the Section 5 input",
-    "kind": "theorem",
-    "section": "Section 6: blowups and ordinary integration",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section7.CompletedSection6.lemma_6_17",
-        "file": "section 7/Integration7/CompletedSection6Kernel.lean",
-        "line": 60
-      }
-    ],
-    "dependencies": [
-      "s5-8",
-      "s6-congruence",
-      "s6-special"
-    ],
-    "statement": "The closed generated-base API proves the ordinary integration kernel equivalence from the completed Section 5 theorem, including its needed finite-VF-parameter instances. It carries no unproved universal Section 5.8 hypothesis.",
-    "proof": "Descend the finite parameter bases through definable closure, prove contraction-order independence without deleting zero RV labels, and identify the kernel."
-  },
-  {
-    "id": "s6-18",
-    "title": "6.18: additive integration",
-    "kind": "proposition",
-    "section": "Section 6: blowups and ordinary integration",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section7.CompletedSection6.proposition_6_18",
-        "file": "section 7/Integration7/ClosedSection6FiniteIntegrationEquivalence.lean",
-        "line": 67
-      }
-    ],
-    "dependencies": [
-      "s6-closed-input"
-    ],
-    "statement": "Integration is an additive equivalence from actual finite Gamma VF[k] scissors to the finite RV[k] common-blowup quotient, with both inverse laws.",
-    "proof": "Use the closed kernel equivalence and actual lifts; prove representative independence by finite partition gluing."
-  },
-  {
-    "id": "s6-19",
-    "title": "6.19: global semiring equivalence",
-    "kind": "theorem",
-    "section": "Section 6: blowups and ordinary integration",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section7.CompletedSection6.theorem_6_19",
-        "file": "section 7/Integration7/ClosedSection6GlobalIntegrationSemiringEquivalence.lean",
-        "line": 86
-      }
-    ],
-    "dependencies": [
-      "s6-18",
-      "s6-congruence"
-    ],
-    "statement": "Global ordinary integration is a semiring equivalence with the graded RV blowup target. Addition is the original scissor addition and multiplication is the actual Cartesian product.",
-    "proof": "Construct the finite-stage congruence union and bilinear Cartesian product; integration preserves products and the unit."
-  },
-  {
-    "id": "s6-20",
-    "title": "6.20: definable families",
-    "kind": "remark",
-    "section": "Section 6: blowups and ordinary integration",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section7.CompletedSection6.remark_6_20_representative_independence",
-        "file": "section 7/Integration7/ClosedSection6DefinableFamilyIntegration.lean",
-        "line": 69
-      },
-      {
-        "name": "IntegrationInACVF.Section7.CompletedSection6.remark_6_20_linearity",
-        "file": "section 7/Integration7/ClosedSection6LinearFunctionIntegration.lean",
-        "line": 48
-      }
-    ],
-    "dependencies": [
-      "s6-19"
-    ],
-    "statement": "Actual parameter-dependent coefficient semirings over definable closure give representative-independent family integration. Integration is linear on the definable-function quotient, including zero, addition and scalar multiplication.",
-    "proof": "Construct literal total family lifts and compare arbitrary finite RV degrees."
-  },
-  {
-    "id": "s6-21",
-    "title": "6.21: coordinate Fubini",
-    "kind": "proposition",
-    "section": "Section 6: blowups and ordinary integration",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section7.CompletedSection6.proposition_6_21",
-        "file": "section 7/Integration7/ClosedSection6CoordinatePushforwards.lean",
-        "line": 41
-      }
-    ],
-    "dependencies": [
-      "s6-20"
-    ],
-    "statement": "Coordinate pushforwards on actual definable functions have the literal fibre-integral formula, and iterated integration equals total integration.",
-    "proof": "Descend the geometric coordinate maps through the function quotient using the proved family identities."
-  },
-  {
-    "id": "s6-22",
-    "title": "6.22: ordinary localization",
-    "kind": "theorem",
-    "section": "Section 6: blowups and ordinary integration",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section7.CompletedSection6.theorem_6_22",
-        "file": "section 7/Integration7/ClosedSection6IntegrationLocalizationEmbedding.lean",
-        "line": 68
-      },
-      {
-        "name": "IntegrationInACVF.Section7.CompletedSection6.theorem_6_22_injective",
-        "file": "section 7/Integration7/ClosedSection6IntegrationLocalizationEmbedding.lean",
-        "line": 75
-      }
-    ],
-    "dependencies": [
-      "s6-19"
-    ],
-    "statement": "The groupified ordinary VF ring embeds into the localized ordinary RV ring, with the proved homogeneous normalization formula. Ordinary degree zero retains its original category.",
-    "proof": "Identify the principal ordinary relation, construct the graded additive colimit and use injective padding. These are ordinary results, not the corrected measured principal-kernel claim of Section 7."
-  },
-  {
-    "id": "s7-zero-rv",
-    "title": "Corrected RV volume objects",
-    "kind": "definition",
-    "section": "Section 7: volume forms and corrected class algebra",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section7.HK.ZeroRVVolumeObject",
-        "file": "section 7/Integration7/HKRVVolumeObjects.lean",
-        "line": 15
-      },
-      {
-        "name": "IntegrationInACVF.Section7.HK.RVVolumeObject",
-        "file": "section 7/Integration7/HKRVVolumeObjects.lean",
-        "line": 19
-      }
-    ],
-    "dependencies": [
-      "s2-zero"
-    ],
-    "statement": "In every degree use an actual finite-volume RV object with a nonzero definable RV form. In measured degree zero retain that arbitrary form, with exact weight-preserving zero isomorphisms. Positive objects agree with the existing positive-degree objects; ordinary RV[0] is unchanged.",
-    "proof": ""
-  },
-  {
-    "id": "s7-zero-vf",
-    "title": "Corrected VF volume objects and zero integration",
-    "kind": "definition",
-    "section": "Section 7: volume forms and corrected class algebra",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section7.HK.VFVolumeObject",
-        "file": "section 7/Integration7/HKZeroVolumeIntegration.lean",
-        "line": 48
-      },
-      {
-        "name": "IntegrationInACVF.Section7.HK.zeroVolumeIntegrationEquiv",
-        "file": "section 7/Integration7/HKZeroVolumeIntegration.lean",
-        "line": 38
-      }
-    ],
-    "dependencies": [
-      "s7-zero-rv"
-    ],
-    "statement": "Measured VF degree zero likewise carries an arbitrary nonzero definable RV form. Its lift and integration equivalence preserve the actual form. Positive-dimensional objects retain the actual partial Jacobian measure condition.",
-    "proof": ""
-  },
-  {
-    "id": "s7-products",
-    "title": "Multiplication of both volume forms",
-    "kind": "lemma",
-    "section": "Section 7: volume forms and corrected class algebra",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section7.HK.weighted_lift_zero_product_map_density",
-        "file": "section 7/Integration7/HKWeightedZeroLiftProducts.lean",
-        "line": 27
-      }
-    ],
-    "dependencies": [
-      "s7-zero-rv",
-      "s7-zero-vf"
-    ],
-    "statement": "Products multiply both RV forms in every degree, including either factor of degree zero. Weighted zero lifting respects this actual density equation.",
-    "proof": "The zero-degree factor contributes its density; retaining this factor repairs the degree-one factorization failure of the legacy neutral-zero convention."
-  },
-  {
-    "id": "s7-2",
-    "title": "7.2: elementary volume blowup comparison",
-    "kind": "lemma",
-    "section": "Section 7: volume forms and corrected class algebra",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section7.lemma_7_2",
-        "file": "section 7/Integration7/ElementaryBlowupComparisonTheorem.lean",
-        "line": 16
-      }
-    ],
-    "dependencies": [
-      "s6-confluence"
-    ],
-    "statement": "Elementary blowups of isomorphic actual positive-volume objects are volume-isomorphic, under the displayed canonical-model and base-context hypotheses.",
-    "proof": "Construct and compare the elementary volume diagrams over the recorded base."
-  },
-  {
-    "id": "s7-4",
-    "title": "7.4: volume blowup congruence",
-    "kind": "lemma",
-    "section": "Section 7: volume forms and corrected class algebra",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section7.lemma_7_4",
-        "file": "section 7/Integration7/VolumeSemiringCongruenceTheorem.lean",
-        "line": 15
-      }
-    ],
-    "dependencies": [
-      "s7-2",
-      "s6-congruence"
-    ],
-    "statement": "The positive-volume semiring relation is identified with actual common volume blowups. Corrected zero-degree adapters retain exact weighted zero isomorphisms.",
-    "proof": "Use elementary comparisons, finite partitions and product compatibility."
-  },
-  {
-    "id": "s7-5",
-    "title": "7.5: specified selected contractions",
-    "kind": "lemma",
-    "section": "Section 7: volume forms and corrected class algebra",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section7.lemma_7_5",
-        "file": "section 7/Integration7/Lemma75.lean",
-        "line": 19
-      },
-      {
-        "name": "IntegrationInACVF.Section7.lemma_7_5_ordinary",
-        "file": "section 7/Integration7/Lemma75.lean",
-        "line": 39
-      }
-    ],
-    "dependencies": [
-      "s5-8",
-      "s7-4"
-    ],
-    "statement": "For the specified actual standard contractions, fibrewise common-volume-blowup equivalence over the common VF projection gives common blowups of the appended objects after the displayed base extension. The selected-coordinate set is nonempty; that condition is carried by the selected-family data.",
-    "proof": "Prepare the selected families uniformly and compare the supplied contractions. The empty selected set is outside the accepted statement."
-  },
-  {
-    "id": "s7-6",
-    "title": "7.6: contraction-order comparison",
-    "kind": "corollary",
-    "section": "Section 7: volume forms and corrected class algebra",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section7.corollary_7_6",
-        "file": "section 7/Integration7/Corollary76.lean",
-        "line": 28
-      }
-    ],
-    "dependencies": [
-      "s7-5"
-    ],
-    "statement": "The actual positive-dimensional contractions have the recorded volume-blowup comparison, with the original selected volume labels and standing hypotheses retained.",
-    "proof": "Apply the specified-contraction comparison to the actual family data."
-  },
-  {
-    "id": "s7-7",
-    "title": "7.7: volume coordinate exchange",
-    "kind": "lemma",
-    "section": "Section 7: volume forms and corrected class algebra",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section7.lemma_7_7",
-        "file": "section 7/Integration7/Lemma77.lean",
-        "line": 55
-      }
-    ],
-    "dependencies": [
-      "s7-6"
-    ],
-    "statement": "The actual volume contraction exchange holds in the native and ordinary interfaces, supplying independence of the selected contraction order.",
-    "proof": "Compare actual coordinate preparations and use common volume blowups."
-  },
-  {
-    "id": "s7-8",
-    "title": "7.8: positive volume lift kernel",
-    "kind": "proposition",
-    "section": "Section 7: volume forms and corrected class algebra",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section7.proposition_7_8",
-        "file": "section 7/Integration7/PositiveVolumeLiftKernel.lean",
-        "line": 28
-      }
-    ],
-    "dependencies": [
-      "s7-7",
-      "s2-volume"
-    ],
-    "statement": "For positive-degree measured objects, equality of the actual lifted classes is characterized by common volume blowups. The actual original-base geometry and volume equations are retained.",
-    "proof": "Use volume descent in one direction and constructed volume-preserving elementary lift maps in the other."
-  },
-  {
-    "id": "s7-9",
-    "title": "7.9: positive integration equivalence",
-    "kind": "proposition",
-    "section": "Section 7: volume forms and corrected class algebra",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section7.proposition_7_9_positive",
-        "file": "section 7/Integration7/PositiveVolumeIntegrationEquivalence.lean",
-        "line": 50
-      }
-    ],
-    "dependencies": [
-      "s7-8"
-    ],
-    "statement": "Positive-degree volume integration and actual lifting are inverse on the relevant classes.",
-    "proof": "Combine existence of volume contractions with the proved lift-kernel equivalence."
-  },
-  {
-    "id": "s7-10",
-    "title": "7.10: corrected all-degree integration",
-    "kind": "theorem",
-    "section": "Section 7: volume forms and corrected class algebra",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section7.HK.theorem_7_10",
-        "file": "section 7/Integration7/HKSection7ClassTheorems.lean",
-        "line": 56
-      }
-    ],
-    "dependencies": [
-      "s7-9",
-      "s7-zero-vf",
-      "s7-products"
-    ],
-    "statement": "Corrected graded class integration is a semiring equivalence. An arbitrary VF class integrates to the homogeneous RV blowup class of an object exactly when it is the class of that object\\'s actual lift. This includes arbitrary weighted degree-zero objects.",
-    "proof": "Combine the exact weighted zero equivalence with positive integration, then prove the actual product and coproduct laws."
-  },
-  {
-    "id": "s7-13",
-    "title": "7.13: the actual principal measured kernel",
-    "kind": "theorem",
-    "section": "Section 7: volume forms and corrected class algebra",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section7.HK.raw_volume_kernel_principal",
-        "file": "section 7/Integration7/HKPrincipalVolumeKernel.lean",
-        "line": 44
-      },
-      {
-        "name": "IntegrationInACVF.Section7.HK.theorem_7_13",
-        "file": "section 7/Integration7/HKSection7ClassTheorems.lean",
-        "line": 70
-      }
-    ],
-    "dependencies": [
-      "s7-10",
-      "s7-products"
-    ],
-    "statement": "For the corrected raw RV volume ring, the kernel of projection to the blowup ring is the ideal generated by the actual basic volume difference. Consequently the actual VF class ring is isomorphic to that single-generator quotient. The coefficient in degree one may be a weighted point.",
-    "proof": "Factor the elementary relation using corrected weighted zero coefficients, prove both ideal inclusions and apply the ring quotient equivalence. No cancellation of raw point padding is used."
-  },
-  {
-    "id": "s7-linear",
-    "title": "Full corrected coefficient linearity",
-    "kind": "theorem",
-    "section": "Section 7: supported functions and integral identities",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section7.HK.gradedAEVolumeHeadIntegralLinearMap",
-        "file": "section 7/Integration7/HKGradedHeadIntegralLinearMaps.lean",
-        "line": 71
-      },
-      {
-        "name": "IntegrationInACVF.Section7.HK.gradedAEVolumePrefixIntegralLinearMap",
-        "file": "section 7/Integration7/HKGradedPrefixIntegralLinearMaps.lean",
-        "line": 20
-      },
-      {
-        "name": "IntegrationInACVF.Section7.HK.gradedAEVolumeCoordinateIntegralLinearMap",
-        "file": "section 7/Integration7/HKGradedCoordinateIntegralLinearMaps.lean",
-        "line": 38
-      }
-    ],
-    "dependencies": [
-      "s7-10",
-      "s7-products"
-    ],
-    "statement": "Raw head, prefix and arbitrary retained-coordinate integrals are linear over the full corrected graded coefficient semiring, in every function and scalar degree. Function index $n$ represents $n+1$ VF coordinates.",
-    "proof": "Prove zero-coefficient, positive-coefficient and degree-transport identities, then descend the geometric operations to the full graded function quotient."
-  },
-  {
-    "id": "s7-support",
-    "title": "Faithful actual support",
-    "kind": "definition",
-    "section": "Section 7: supported functions and integral identities",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section7.HK.rawSupportedVolumeSubmodule",
-        "file": "section 7/Integration7/HKRawSupportedFunctionLinearIntegrals.lean",
-        "line": 20
-      },
-      {
-        "name": "IntegrationInACVF.Section7.HK.rawSupportedVolumeRangeEquiv",
-        "file": "section 7/Integration7/HKRawSupportedFunctionLinearIntegrals.lean",
-        "line": 29
-      }
-    ],
-    "dependencies": [
-      "s7-linear"
-    ],
-    "statement": "The support submodule is exactly the faithful image of actual supported graded presentations. Coordinate and Jacobian operators preserve that support; formal support claims are tied to actual presentations.",
-    "proof": ""
-  },
-  {
-    "id": "s7-11",
-    "title": "7.11: raw supported Fubini",
-    "kind": "proposition",
-    "section": "Section 7: supported functions and integral identities",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section7.HK.proposition_7_11",
-        "file": "section 7/Integration7/HKRawSupportedFunctionLinearIntegrals.lean",
-        "line": 75
-      }
-    ],
-    "dependencies": [
-      "s7-linear",
-      "s7-support"
-    ],
-    "statement": "Coordinate integration followed by total integration equals the total integral as linear maps on all actual supported graded functions, over the full corrected coefficient semiring. Retained coordinate projections are nonempty; a separate map supplies total integration.",
-    "proof": "Compare the forgotten supported operator with the graded geometric coordinate integral and apply total Fubini."
-  },
-  {
-    "id": "s7-12",
-    "title": "7.12: unpadded raw change of variables",
-    "kind": "proposition",
-    "section": "Section 7: supported functions and integral identities",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section7.HK.proposition_7_12",
-        "file": "section 7/Integration7/HKRawSupportedFunctionLinearIntegrals.lean",
-        "line": 87
-      }
-    ],
-    "dependencies": [
-      "s7-linear",
-      "s7-support"
-    ],
-    "statement": "For an actual definable bijection, the supported Jacobian transform preserves the raw total integral as an equality of full-coefficient linear maps, in every function degree.",
-    "proof": "Derive the supported formula from the actual geometric Jacobian map and its coefficient laws. The formula has no raw point padding to cancel."
-  },
-  {
-    "id": "s7-ring",
-    "title": "Balanced unnormalized ring functions",
-    "kind": "definition",
-    "section": "Section 7: supported functions and integral identities",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section7.HK.RawRingSupportedVolumeFunction",
-        "file": "section 7/Integration7/HKRawRingSupportedFunctionIntegrals.lean",
-        "line": 20
-      }
-    ],
-    "dependencies": [
-      "s7-13",
-      "s7-support"
-    ],
-    "statement": "Extend the actual supported semimodule by balanced scalar extension to the corrected Grothendieck coefficient ring. Geometric coordinate and Jacobian operators extend linearly to every formal difference.",
-    "proof": ""
-  },
-  {
-    "id": "s7-11-ring",
-    "title": "7.11 over the Grothendieck ring",
-    "kind": "proposition",
-    "section": "Section 7: supported functions and integral identities",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section7.HK.proposition_7_11_ring",
-        "file": "section 7/Integration7/HKRawRingSupportedFunctionIntegrals.lean",
-        "line": 55
-      }
-    ],
-    "dependencies": [
-      "s7-ring",
-      "s7-11"
-    ],
-    "statement": "Raw supported Fubini holds on every ring-valued function and formal difference, with the full corrected coefficient ring.",
-    "proof": "Extend the actual linear-map identity through balanced scalar extension."
-  },
-  {
-    "id": "s7-12-ring",
-    "title": "7.12 over the Grothendieck ring",
-    "kind": "proposition",
-    "section": "Section 7: supported functions and integral identities",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section7.HK.proposition_7_12_ring",
-        "file": "section 7/Integration7/HKRawRingSupportedFunctionIntegrals.lean",
-        "line": 63
-      }
-    ],
-    "dependencies": [
-      "s7-ring",
-      "s7-12"
-    ],
-    "statement": "Raw supported change of variables holds on every ring-valued function and formal difference, without point padding or a positive function-degree restriction.",
-    "proof": "Extend the actual supported Jacobian map and its integral identity through balanced scalar extension."
-  },
-  {
-    "id": "s7-normalized",
-    "title": "The corrected normalized commutative ring",
-    "kind": "lemma",
-    "section": "Section 7: supported functions and integral identities",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section7.HK.normalized_volume_ring_mul_comm",
-        "file": "section 7/Integration7/HKNormalizedVolumeCommRing.lean",
-        "line": 45
-      }
-    ],
-    "dependencies": [
-      "s7-13"
-    ],
-    "statement": "The corrected normalized coefficient ring is commutative. Normalization is performed in that ring and does not assert cancellability of a raw point class.",
-    "proof": "Use the normalized basic-image commutation law and represent arbitrary elements by basic differences."
-  },
-  {
-    "id": "s7-14",
-    "title": "7.14: normalized supported Fubini",
-    "kind": "theorem",
-    "section": "Section 7: supported functions and integral identities",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section7.HK.theorem_7_14",
-        "file": "section 7/Integration7/HKNormalizedSection7Theorems.lean",
-        "line": 32
-      }
-    ],
-    "dependencies": [
-      "s7-11",
-      "s7-normalized"
-    ],
-    "statement": "For any two nonempty retained-coordinate sets of a positive-dimensional VF domain, coordinate integration followed by total integration gives the same normalized integral for every normalized supported function.",
-    "proof": "Both sides equal the separately defined total integral; normalize the geometric supported identity."
-  },
-  {
-    "id": "s7-15",
-    "title": "7.15: normalized change of variables",
-    "kind": "theorem",
-    "section": "Section 7: supported functions and integral identities",
-    "declarations": [
-      {
-        "name": "IntegrationInACVF.Section7.HK.theorem_7_15",
-        "file": "section 7/Integration7/HKNormalizedSection7Theorems.lean",
-        "line": 46
-      }
-    ],
-    "dependencies": [
-      "s7-12",
-      "s7-normalized"
-    ],
-    "statement": "The normalized integral on an actual supported domain equals the normalized integral of its Jacobian transform under any actual definable bijection, in the displayed positive-VF-dimensional function interface.",
-    "proof": "Descend and normalize the actual supported change-of-variables identity."
-  }
+ {
+  "id": "s2-finite",
+  "title": "2.15: finite Gamma images",
+  "kind": "corollary",
+  "section": "Section 2: finite images and volume descent",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section2.corollary_2_15",
+    "file": "section 2/IntegrationSection2/GammaFiniteImage.lean",
+    "line": 61
+   }
+  ],
+  "dependencies": [],
+  "statement": "A map from a subset of Gamma to RV with full graph definable over the original real/Gamma base has finite image. Genuine saturation, an infinite cardinal, small original real base and ACVF(0,0) remain explicit.",
+  "proof": "Apply the pinned finite-projection theorem to the full invariant graph."
+ },
+ {
+  "id": "s2-volume",
+  "title": "2.34: positive-degree volume descent",
+  "kind": "corollary",
+  "section": "Section 2: finite images and volume descent",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section2.corollary_2_34",
+    "file": "section 2/IntegrationSection2/VolumeDescentTheorem.lean",
+    "line": 34
+   }
+  ],
+  "dependencies": [
+   "s2-finite"
+  ],
+  "statement": "For an actual essential isomorphism of finite-volume RV objects of positive degree, a compatible measure-preserving lifted bijection implies the RV volume equation off an RV-small set and the Gamma volume equation at every essential label. The underlying isomorphism is the supplied one.",
+  "proof": "Construct the finite-extension and Gauss-graph input. Use Jacobian uniqueness and finite label fibres for the RV equation; restrict to fixed labels and descend constant-value polydiscs for the pointwise Gamma equation."
+ },
+ {
+  "id": "s2-zero",
+  "title": "2.34: exact weighted degree zero",
+  "kind": "corollary",
+  "section": "Section 2: finite images and volume descent",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section2.WeightedZeroVolumeDescent.corollary_2_34_zero_weighted",
+    "file": "section 2/IntegrationSection2/WeightedZeroVolumeDescent.lean",
+    "line": 29
+   }
+  ],
+  "dependencies": [
+   "s2-volume"
+  ],
+  "statement": "In the corrected upstream measured degree-zero category, descend the lifted bijection while retaining its supplied ordinary label map and preserving the RV form exactly at every point. The ordinary degree-zero category is unchanged.",
+  "proof": "The checked upstream weighted-zero category supplies the actual pointwise measure equation; no positive-dimensional exceptional-set inference is used at degree zero."
+ },
+ {
+  "id": "s3-atomic",
+  "title": "3.1: complete types and atomic sets",
+  "kind": "definition",
+  "section": "Section 3: atomic sets and parametric balls",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section3.GeneratesCompleteType",
+    "file": "section 3/IntegrationSection3/Atomicity.lean",
+    "line": 29
+   },
+   {
+    "name": "IntegrationInACVF.Section3.IsAtomic",
+    "file": "section 3/IntegrationSection3/Atomicity.lean",
+    "line": 33
+   }
+  ],
+  "dependencies": [],
+  "statement": "A set generates a complete type over its parameter base if every definable test contains it or misses it. Atomicity adds definability of that set. These are separate notions, so later complete-type ambient sets need not be definable.",
+  "proof": ""
+ },
+ {
+  "id": "s3-2",
+  "title": "3.2: adjoining a ball name",
+  "kind": "lemma",
+  "section": "Section 3: atomic sets and parametric balls",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section3ACVF.AdjoinBall.lemma_3_2",
+    "file": "section 3/IntegrationSection3ACVF/AdjoinBall.lean",
+    "line": 133
+   }
+  ],
+  "dependencies": [
+   "s3-atomic"
+  ],
+  "statement": "Parametric-ball atomicity over the full real/Gamma/ball base is preserved when the actual input ball name is adjoined, under the stated nonalgebraicity of the output ball name.",
+  "proof": "The linked implementation constructs the actual objects over the original interpreted base. Its full Lean type records the precise standing hypotheses; no stronger uniformity or parameter-smallness claim is implicit here."
+ },
+ {
+  "id": "s3-3",
+  "title": "3.3: Gamma parameters",
+  "kind": "lemma",
+  "section": "Section 3: atomic sets and parametric balls",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section3ACVF.FullGammaAtomicity.lemma_3_3",
+    "file": "section 3/IntegrationSection3ACVF/FullGammaAtomicity.lean",
+    "line": 127
+   }
+  ],
+  "dependencies": [
+   "s3-2"
+  ],
+  "statement": "An actual definable atomic set remains atomic after adjoining any finite Gamma tuple, including mixed VF/RV tuple ambients. ACVF(0,0) and an originally definable nontrivial Gamma value are retained.",
+  "proof": "The linked implementation constructs the actual objects over the original interpreted base. Its full Lean type records the precise standing hypotheses; no stronger uniformity or parameter-smallness claim is implicit here."
+ },
+ {
+  "id": "s3-4",
+  "title": "3.4: ball atomicity",
+  "kind": "lemma",
+  "section": "Section 3: atomic sets and parametric balls",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section3ACVF.CompleteTypeBallAtomicity.lemma_3_4",
+    "file": "section 3/IntegrationSection3ACVF/CompleteTypeBallAtomicity.lean",
+    "line": 60
+   }
+  ],
+  "dependencies": [
+   "s3-3"
+  ],
+  "statement": "Every actual open or closed ball, with arbitrary initially unnamed radius, and the singleton and whole-field cases satisfy the complete-type ball-atomicity conclusion over the full interpreted base. Only the actual ball name is adjoined; the ambient complete type need not be definable.",
+  "proof": "The linked implementation constructs the actual objects over the original interpreted base. Its full Lean type records the precise standing hypotheses; no stronger uniformity or parameter-smallness claim is implicit here."
+ },
+ {
+  "id": "s3-6",
+  "title": "3.6: primitive decomposition",
+  "kind": "lemma",
+  "section": "Section 3: atomic sets and parametric balls",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section3ACVF.PrimitiveDecomposition.lemma_3_6",
+    "file": "section 3/IntegrationSection3ACVF/PrimitiveDecomposition.lean",
+    "line": 127
+   }
+  ],
+  "dependencies": [
+   "s3-4"
+  ],
+  "statement": "An atomic unary VF set has an actual finite nonempty disjoint primitive decomposition with common radius, valuative centre and primitive kind. Individual components need not be definable over the original base.",
+  "proof": "The linked implementation constructs the actual objects over the original interpreted base. Its full Lean type records the precise standing hypotheses; no stronger uniformity or parameter-smallness claim is implicit here."
+ },
+ {
+  "id": "s3-7",
+  "title": "3.7: coverage at a fixed radius",
+  "kind": "corollary",
+  "section": "Section 3: atomic sets and parametric balls",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section3ACVF.SameRadiusCoverage.corollary_3_7_gamma",
+    "file": "section 3/IntegrationSection3ACVF/SameRadiusCoverage.lean",
+    "line": 25
+   }
+  ],
+  "dependencies": [
+   "s3-3",
+   "s3-6"
+  ],
+  "statement": "The primitive decomposition gives whole-ball coverage at the radius of an inner ball, including the singleton and whole-field cases. An initially unnamed radius is adjoined using Gamma atomicity.",
+  "proof": "The linked implementation constructs the actual objects over the original interpreted base. Its full Lean type records the precise standing hypotheses; no stronger uniformity or parameter-smallness claim is implicit here."
+ },
+ {
+  "id": "s3-8",
+  "title": "3.8: primitive images",
+  "kind": "lemma",
+  "section": "Section 3: atomic sets and parametric balls",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section3ACVF.PrimitiveImages.lemma_3_8",
+    "file": "section 3/IntegrationSection3ACVF/PrimitiveImages.lean",
+    "line": 34
+   }
+  ],
+  "dependencies": [
+   "s3-6"
+  ],
+  "statement": "Actual definable partial-domain VF maps preserve the recorded atomicity and one-component conditions on their images.",
+  "proof": "The linked implementation constructs the actual objects over the original interpreted base. Its full Lean type records the precise standing hypotheses; no stronger uniformity or parameter-smallness claim is implicit here."
+ },
+ {
+  "id": "s3-9",
+  "title": "3.9 and 3.10: RV constancy",
+  "kind": "lemma",
+  "section": "Section 3: atomic sets and parametric balls",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section3ACVF.OpenBallConstancy.lemma_3_9",
+    "file": "section 3/IntegrationSection3ACVF/OpenBallConstancy.lean",
+    "line": 51
+   },
+   {
+    "name": "IntegrationInACVF.Section3ACVF.OpenBallConstancy.corollary_3_10",
+    "file": "section 3/IntegrationSection3ACVF/OpenBallConstancy.lean",
+    "line": 81
+   }
+  ],
+  "dependencies": [
+   "s3-3",
+   "s3-6"
+  ],
+  "statement": "Definable RV-powerset families in arbitrary finite RV arity are constant on an atomic open ball; the companion corollary applies to arbitrary-radius open subballs of a definable atomic set.",
+  "proof": "The linked implementation constructs the actual objects over the original interpreted base. Its full Lean type records the precise standing hypotheses; no stronger uniformity or parameter-smallness claim is implicit here."
+ },
+ {
+  "id": "s3-11",
+  "title": "3.11: corrected separation",
+  "kind": "lemma",
+  "section": "Section 3: atomic sets and parametric balls",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section3ACVF.Separation.lemma_3_11",
+    "file": "section 3/IntegrationSection3ACVF/Separation.lean",
+    "line": 58
+   }
+  ],
+  "dependencies": [
+   "s3-6",
+   "s3-9"
+  ],
+  "statement": "The separation conclusion holds with the accepted nonempty-set hypothesis. Both radii may be initially unnamed. The empty-set case is excluded as recorded in the paper corrections.",
+  "proof": "The linked implementation constructs the actual objects over the original interpreted base. Its full Lean type records the precise standing hypotheses; no stronger uniformity or parameter-smallness claim is implicit here."
+ },
+ {
+  "id": "s3-13",
+  "title": "3.13: images of atomic open balls",
+  "kind": "lemma",
+  "section": "Section 3: atomic sets and parametric balls",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section3ACVF.OpenImages.lemma_3_13",
+    "file": "section 3/IntegrationSection3ACVF/OpenImages.lean",
+    "line": 43
+   }
+  ],
+  "dependencies": [
+   "s3-8",
+   "s3-9"
+  ],
+  "statement": "A definable VF image of an atomic open ball is either constant or an atomic open ball.",
+  "proof": "The linked implementation constructs the actual objects over the original interpreted base. Its full Lean type records the precise standing hypotheses; no stronger uniformity or parameter-smallness claim is implicit here."
+ },
+ {
+  "id": "s3-14",
+  "title": "3.14: closed-image obstruction",
+  "kind": "lemma",
+  "section": "Section 3: atomic sets and parametric balls",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section3ACVF.ClosedImageObstruction.lemma_3_14",
+    "file": "section 3/IntegrationSection3ACVF/ClosedImageObstruction.lean",
+    "line": 154
+   }
+  ],
+  "dependencies": [
+   "s3-13"
+  ],
+  "statement": "An infinite one-component atomic target cannot be closed when its only ball imaginary is the source open-ball name. Original Gamma names are allowed, and the source radius need not be named.",
+  "proof": "The linked implementation constructs the actual objects over the original interpreted base. Its full Lean type records the precise standing hypotheses; no stronger uniformity or parameter-smallness claim is implicit here."
+ },
+ {
+  "id": "s3-15",
+  "title": "3.15: complete-type open images",
+  "kind": "lemma",
+  "section": "Section 3: atomic sets and parametric balls",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section3ACVF.FullCompleteTypeOpenImages.lemma_3_15",
+    "file": "section 3/IntegrationSection3ACVF/FullCompleteTypeOpenImages.lean",
+    "line": 19
+   }
+  ],
+  "dependencies": [
+   "s3-4",
+   "s3-14"
+  ],
+  "statement": "The open-image conclusion extends to the full original real/Gamma/ball base, arbitrary open-ball radii and possibly undefinable complete-type ambients. The map may be defined on a larger definable domain.",
+  "proof": "The linked implementation constructs the actual objects over the original interpreted base. Its full Lean type records the precise standing hypotheses; no stronger uniformity or parameter-smallness claim is implicit here."
+ },
+ {
+  "id": "s3-16",
+  "title": "3.16: Gamma linearity",
+  "kind": "lemma",
+  "section": "Section 3: atomic sets and parametric balls",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section3ACVF.GammaLinearity.lemma_3_16",
+    "file": "section 3/IntegrationSection3ACVF/GammaLinearity.lean",
+    "line": 67
+   }
+  ],
+  "dependencies": [
+   "s3-15"
+  ],
+  "statement": "The actual map is Gamma-linear with coefficient the target/source radius ratio, using actual radius properties. Linearity is proved, rather than assumed.",
+  "proof": "The linked implementation constructs the actual objects over the original interpreted base. Its full Lean type records the precise standing hypotheses; no stronger uniformity or parameter-smallness claim is implicit here."
+ },
+ {
+  "id": "s3-17",
+  "title": "3.17: least radius for ordinary open balls",
+  "kind": "corollary",
+  "section": "Section 3: atomic sets and parametric balls",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section3ACVF.LeastLinearRadiusExistence.corollary_3_17_ordinary",
+    "file": "section 3/IntegrationSection3ACVF/LeastLinearRadiusExistence.lean",
+    "line": 44
+   }
+  ],
+  "dependencies": [
+   "s3-16"
+  ],
+  "statement": "The ordinary-open-source result constructs the least linear radius and proves the exclusion under injectivity and the stated standing hypotheses. The whole-field source has a separate conditional interface: existence of a least radius for the identity on VF is not asserted.",
+  "proof": "The linked implementation constructs the actual objects over the original interpreted base. Its full Lean type records the precise standing hypotheses; no stronger uniformity or parameter-smallness claim is implicit here."
+ },
+ {
+  "id": "s3-18",
+  "title": "3.18: RV linearity",
+  "kind": "lemma",
+  "section": "Section 3: atomic sets and parametric balls",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section3ACVF.RVLinearity.lemma_3_18",
+    "file": "section 3/IntegrationSection3ACVF/RVLinearity.lean",
+    "line": 101
+   }
+  ],
+  "dependencies": [
+   "s3-16"
+  ],
+  "statement": "Actual RV linearity holds in the recorded standing scope. The proof uses an affine-error replacement for the printed endpoint inference.",
+  "proof": "The linked implementation constructs the actual objects over the original interpreted base. Its full Lean type records the precise standing hypotheses; no stronger uniformity or parameter-smallness claim is implicit here."
+ },
+ {
+  "id": "s3-19",
+  "title": "3.19: open-to-open partition",
+  "kind": "proposition",
+  "section": "Section 3: atomic sets and parametric balls",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section3ACVF.FullOpenToOpenPartition.proposition_3_19",
+    "file": "section 3/IntegrationSection3ACVF/FullOpenToOpenPartition.lean",
+    "line": 93
+   }
+  ],
+  "dependencies": [
+   "s3-15",
+   "s3-18"
+  ],
+  "statement": "Construct a finite disjoint partition into nonempty original-base definable pieces on which the actual map is open-to-open. There is no cardinal bound on old imaginary names.",
+  "proof": "The linked implementation constructs the actual objects over the original interpreted base. Its full Lean type records the precise standing hypotheses; no stronger uniformity or parameter-smallness claim is implicit here."
+ },
+ {
+  "id": "s3-21",
+  "title": "3.21: coordinate partitions",
+  "kind": "proposition",
+  "section": "Section 3: atomic sets and parametric balls",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section3ACVF.CoordinatePartitions.proposition_3_21",
+    "file": "section 3/IntegrationSection3ACVF/CoordinatePartitions.lean",
+    "line": 20
+   }
+  ],
+  "dependencies": [
+   "s3-19"
+  ],
+  "statement": "Construct one uniform finite nonempty disjoint original-base partition for the selected VF coordinate pairs of actual mixed finite-tuple injections. Arbitrary finite index types cover all mixed arities.",
+  "proof": "The linked implementation constructs the actual objects over the original interpreted base. Its full Lean type records the precise standing hypotheses; no stronger uniformity or parameter-smallness claim is implicit here."
+ },
+ {
+  "id": "s3-22",
+  "title": "3.22: components and holes",
+  "kind": "lemma",
+  "section": "Section 3: atomic sets and parametric balls",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section3ACVF.ThinFamilyConservation.lemma_3_22",
+    "file": "section 3/IntegrationSection3ACVF/ThinFamilyConservation.lean",
+    "line": 24
+   }
+  ],
+  "dependencies": [
+   "s3-19"
+  ],
+  "statement": "An original-base definable open-to-open VF bijection preserves components and actual holes for finite disjoint thin families. This theorem needs ACVF and a genuine nontrivial value, but no saturation or characteristic-zero premise.",
+  "proof": "The linked implementation constructs the actual objects over the original interpreted base. Its full Lean type records the precise standing hypotheses; no stronger uniformity or parameter-smallness claim is implicit here."
+ },
+ {
+  "id": "s3-23",
+  "title": "3.23: primitive distinction",
+  "kind": "proposition",
+  "section": "Section 3: atomic sets and parametric balls",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section3ACVF.AtomicPrimitiveDistinction.proposition_3_23",
+    "file": "section 3/IntegrationSection3ACVF/AtomicPrimitiveDistinction.lean",
+    "line": 92
+   }
+  ],
+  "dependencies": [
+   "s3-22"
+  ],
+  "statement": "There is no definable bijection between distinct actual atomic primitive shapes: open ball, closed ball and thin annulus. ACVF(0,0) and an originally definable nontrivial value remain explicit.",
+  "proof": "The linked implementation constructs the actual objects over the original interpreted base. Its full Lean type records the precise standing hypotheses; no stronger uniformity or parameter-smallness claim is implicit here."
+ },
+ {
+  "id": "s3-24",
+  "title": "3.24: corrected punctured-ball obstruction",
+  "kind": "proposition",
+  "section": "Section 3: atomic sets and parametric balls",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section3ACVF.PuncturedBallObstruction.proposition_3_24",
+    "file": "section 3/IntegrationSection3ACVF/PuncturedBallObstruction.lean",
+    "line": 35
+   }
+  ],
+  "dependencies": [
+   "s3-22",
+   "s3-23"
+  ],
+  "statement": "The author-corrected obstruction holds for an ordinary closed parent with a single proper open hole. The open target includes VF. The full original interpreted base and displayed saturation, smallness and ACVF(0,0) hypotheses are retained.",
+  "proof": "The linked implementation constructs the actual objects over the original interpreted base. Its full Lean type records the precise standing hypotheses; no stronger uniformity or parameter-smallness claim is implicit here."
+ },
+ {
+  "id": "s4-1",
+  "title": "4.1: translation offsets",
+  "kind": "lemma",
+  "section": "Section 4: preparation and two-cells",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section4.GammaOffsets.lemma_4_1",
+    "file": "section 4/IntegrationSection4/GammaOffsets.lean",
+    "line": 174
+   }
+  ],
+  "dependencies": [
+   "s3-9"
+  ],
+  "statement": "An actual special bijection has an original-Gamma-base offset graph and the exact inverse-fibre translation identity, including the zero case.",
+  "proof": "Construct the preparation uniformly over the original base using the earlier atomic geometry and actual special transformations; the linked theorem retains its displayed model, base and cardinal hypotheses."
+ },
+ {
+  "id": "s4-2",
+  "title": "4.2: linear preparation",
+  "kind": "lemma",
+  "section": "Section 4: preparation and two-cells",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section4.LinearPreparation.lemma_4_2",
+    "file": "section 4/IntegrationSection4/LinearPreparation.lean",
+    "line": 22
+   }
+  ],
+  "dependencies": [
+   "s3-16",
+   "s3-19",
+   "s4-1"
+  ],
+  "statement": "Construct an actual original-base special bijection to an RV pullback whose inverse VF pieces are Gamma-linear and open-to-open. Prepare the full radius/slope relation; no definable least-radius function is assumed.",
+  "proof": "Construct the preparation uniformly over the original base using the earlier atomic geometry and actual special transformations; the linked theorem retains its displayed model, base and cardinal hypotheses."
+ },
+ {
+  "id": "s4-3",
+  "title": "4.3: corrected radius preparation",
+  "kind": "lemma",
+  "section": "Section 4: preparation and two-cells",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section4.RadiusPreparation.lemma_4_3",
+    "file": "section 4/IntegrationSection4/RadiusPreparation.lean",
+    "line": 106
+   }
+  ],
+  "dependencies": [
+   "s4-2"
+  ],
+  "statement": "One preparation works for every ordinary target radius, with at most one source radius on each actual inverse piece. The whole-field source is included. This is the accepted corrected statement.",
+  "proof": "Construct the preparation uniformly over the original base using the earlier atomic geometry and actual special transformations; the linked theorem retains its displayed model, base and cardinal hypotheses."
+ },
+ {
+  "id": "s4-4",
+  "title": "4.4: inverse differences",
+  "kind": "lemma",
+  "section": "Section 4: preparation and two-cells",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section4.InverseDifferencePreparation.lemma_4_4",
+    "file": "section 4/IntegrationSection4/InverseDifferencePreparation.lean",
+    "line": 66
+   }
+  ],
+  "dependencies": [
+   "s4-2",
+   "s4-3"
+  ],
+  "statement": "Prepare the actual inverse-difference RV range to a singleton using translated RV fibres and an actual open-to-open positioning bijection. Individual fibre paradigms need not be definable.",
+  "proof": "Construct the preparation uniformly over the original base using the earlier atomic geometry and actual special transformations; the linked theorem retains its displayed model, base and cardinal hypotheses."
+ },
+ {
+  "id": "s4-6",
+  "title": "4.6: balanced slope",
+  "kind": "lemma",
+  "section": "Section 4: preparation and two-cells",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section4.BalancedSlope.remark_4_6",
+    "file": "section 4/IntegrationSection4/BalancedSlope.lean",
+    "line": 31
+   }
+  ],
+  "dependencies": [
+   "s4-balanced",
+   "s3-16"
+  ],
+  "statement": "For a nondegenerate balanced configuration the slope is the ratio of the two paradigm values, derived from the actual fibre identities and linearity.",
+  "proof": "Construct the preparation uniformly over the original base using the earlier atomic geometry and actual special transformations; the linked theorem retains its displayed model, base and cardinal hypotheses."
+ },
+ {
+  "id": "s4-8",
+  "title": "4.8: definable two-cell decomposition",
+  "kind": "lemma",
+  "section": "Section 4: preparation and two-cells",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section4.lemma_4_8",
+    "file": "section 4/IntegrationSection4/TwoCellDecomposition.lean",
+    "line": 59
+   }
+  ],
+  "dependencies": [
+   "s4-4",
+   "s4-cells",
+   "s3-21"
+  ],
+  "statement": "Every original-base definable native VF-squared set admits an actual finite-arity Gamma RV map whose nonempty fibres are definable two-cells over the original Gamma base with the output RV tuple. The positioning graph and both paradigms are definable; no cell-existence or family-gluing conclusion is assumed.",
+  "proof": "Construct the preparation uniformly over the original base using the earlier atomic geometry and actual special transformations; the linked theorem retains its displayed model, base and cardinal hypotheses."
+ },
+ {
+  "id": "s4-balanced",
+  "title": "4.5: balanced fibres",
+  "kind": "definition",
+  "section": "Section 4: preparation and two-cells",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section4.BalancedFibres.HasBalancedFibres",
+    "file": "section 4/IntegrationSection4/BalancedFibres.lean",
+    "line": 66
+   }
+  ],
+  "dependencies": [],
+  "statement": "The two actual fibre identities specify a balanced relation, positioning map and RV paradigms. Degenerate paradigms are handled explicitly.",
+  "proof": ""
+ },
+ {
+  "id": "s4-cells",
+  "title": "4.7: definable two-cells",
+  "kind": "definition",
+  "section": "Section 4: preparation and two-cells",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section4.Cells.DefinableTwoCell",
+    "file": "section 4/IntegrationSection4/Cells.lean",
+    "line": 93
+   }
+  ],
+  "dependencies": [
+   "s4-balanced"
+  ],
+  "statement": "A two-cell consists of actual one-cell projections and one of the recorded positioning alternatives, with the full original-Gamma definability of the relation, positioning map and paradigms.",
+  "proof": ""
+ },
+ {
+  "id": "s4-rectangle",
+  "title": "Corrected rectangle observation",
+  "kind": "proposition",
+  "section": "Section 4: preparation and two-cells",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section4.CellRectangles.rectangle",
+    "file": "section 4/IntegrationSection4/CellRectangles.lean",
+    "line": 70
+   },
+   {
+    "name": "IntegrationInACVF.Section4.CellRectangles.open_polydisc",
+    "file": "section 4/IntegrationSection4/CellRectangles.lean",
+    "line": 115
+   }
+  ],
+  "dependencies": [
+   "s4-cells"
+  ],
+  "statement": "A nonbalanced cell is a product of a one-cell and an open ball after positioning. It is an open polydisc when the first projection is open. The unrestricted open-polydisc wording is replaced by the accepted rectangle statement.",
+  "proof": "Identify both actual fibres; the point-times-open-ball counterexample explains why openness of the first projection is needed."
+ },
+ {
+  "id": "s5-1",
+  "title": "5.1: finite preparation",
+  "kind": "lemma",
+  "section": "Section 5: finite-volume standard contractions",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section5.lemma_5_1_finite",
+    "file": "section 5/IntegrationSection5/FiniteGeometryPreparation.lean",
+    "line": 20
+   }
+  ],
+  "dependencies": [
+   "s4-2"
+  ],
+  "statement": "Construct two actual Gamma special bijections to RV pullbacks, a contractible conjugate with its full Gamma graph, and finite volume maps for both prepared objects.",
+  "proof": "Use the checked uniform preparation and finite contraction compiler. RV[k] means finite-to-one volume maps, with arbitrary auxiliary RV arity; the full theorem type retains saturation, original-base smallness and the required field, generation and named-value hypotheses."
+ },
+ {
+  "id": "s5-2",
+  "title": "5.2: comparison of unary preparations",
+  "kind": "lemma",
+  "section": "Section 5: finite-volume standard contractions",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section5.lemma_5_2_finite",
+    "file": "section 5/IntegrationSection5/FiniteGeometryPreparation.lean",
+    "line": 49
+   }
+  ],
+  "dependencies": [
+   "s5-1"
+  ],
+  "statement": "Construct both special preparations, mutual contractibility, the unique commuting key bijection and an actual RV[1] isomorphism with both Gamma graphs. Target finiteness follows from source finiteness.",
+  "proof": "Use the checked uniform preparation and finite contraction compiler. RV[k] means finite-to-one volume maps, with arbitrary auxiliary RV arity; the full theorem type retains saturation, original-base smallness and the required field, generation and named-value hypotheses."
+ },
+ {
+  "id": "s5-3",
+  "title": "5.3: the finite-category square",
+  "kind": "lemma",
+  "section": "Section 5: finite-volume standard contractions",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section5.lemma_5_3_finite",
+    "file": "section 5/IntegrationSection5/FiniteNumbered.lean",
+    "line": 23
+   }
+  ],
+  "dependencies": [
+   "s5-2"
+  ],
+  "statement": "The prepared mutually contractible unary bijection induces the actual finite-category isomorphism and commuting key square.",
+  "proof": "Use the checked uniform preparation and finite contraction compiler. RV[k] means finite-to-one volume maps, with arbitrary auxiliary RV arity; the full theorem type retains saturation, original-base smallness and the required field, generation and named-value hypotheses."
+ },
+ {
+  "id": "s5-4",
+  "title": "5.4: relative-special factorization",
+  "kind": "lemma",
+  "section": "Section 5: finite-volume standard contractions",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section5.special_relativeSpecial_factorization",
+    "file": "section 5/IntegrationSection5/RelativeSpecialFactorization.lean",
+    "line": 81
+   }
+  ],
+  "dependencies": [
+   "s5-1"
+  ],
+  "statement": "An actual special bijection factors through actual coordinate-fibre relative-special witnesses. Complementary VF coordinates become fibre parameters. Gamma bijections preserve finite RV fibres.",
+  "proof": "Use the checked uniform preparation and finite contraction compiler. RV[k] means finite-to-one volume maps, with arbitrary auxiliary RV arity; the full theorem type retains saturation, original-base smallness and the required field, generation and named-value hypotheses."
+ },
+ {
+  "id": "s5-5",
+  "title": "5.5: presented standard contraction",
+  "kind": "lemma",
+  "section": "Section 5: finite-volume standard contractions",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section5.lemma_5_5",
+    "file": "section 5/IntegrationSection5/FiniteStandardContractionData.lean",
+    "line": 57
+   }
+  ],
+  "dependencies": [
+   "s5-3",
+   "s5-4"
+  ],
+  "statement": "For every VF order, including zero arity, construct a standard contraction with native and normalized RV[n] objects, a natural Gamma lift isomorphism and an actual global special presentation. Explicit original-Gamma RV charts connect the special-chain target to the actual lift; no unchanged-arity literal special witness is asserted.",
+  "proof": "Use the checked uniform preparation and finite contraction compiler. RV[k] means finite-to-one volume maps, with arbitrary auxiliary RV arity; the full theorem type retains saturation, original-base smallness and the required field, generation and named-value hypotheses."
+ },
+ {
+  "id": "s5-6",
+  "title": "5.6: relatively unary factors",
+  "kind": "lemma",
+  "section": "Section 5: finite-volume standard contractions",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section5.lemma_5_6_finite",
+    "file": "section 5/IntegrationSection5/FiniteUnaryPartition.lean",
+    "line": 31
+   }
+  ],
+  "dependencies": [
+   "s5-4",
+   "s5-5"
+  ],
+  "statement": "In positive VF arity construct a finite disjoint covering Gamma partition, actual relatively unary factors, a common real realization and finite RV fibres at every intermediate stage.",
+  "proof": "Use the checked uniform preparation and finite contraction compiler. RV[k] means finite-to-one volume maps, with arbitrary auxiliary RV arity; the full theorem type retains saturation, original-base smallness and the required field, generation and named-value hypotheses."
+ },
+ {
+  "id": "s5-7",
+  "title": "5.7: two-cell contractions",
+  "kind": "lemma",
+  "section": "Section 5: finite-volume standard contractions",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section5.lemma_5_7_finite",
+    "file": "section 5/IntegrationSection5/FiniteNumbered.lean",
+    "line": 56
+   }
+  ],
+  "dependencies": [
+   "s4-8",
+   "s5-5"
+  ],
+  "statement": "Every definable two-cell has both actual standard contractions and an actual Gamma RV[2] isomorphism. Finite volume is derived without an additional source assumption.",
+  "proof": "Use the checked uniform preparation and finite contraction compiler. RV[k] means finite-to-one volume maps, with arbitrary auxiliary RV arity; the full theorem type retains saturation, original-base smallness and the required field, generation and named-value hypotheses."
+ },
+ {
+  "id": "s5-8",
+  "title": "5.8: two contraction orders",
+  "kind": "lemma",
+  "section": "Section 5: finite-volume standard contractions",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section5.lemma_5_8_finite",
+    "file": "section 5/IntegrationSection5/FiniteRVComparison.lean",
+    "line": 72
+   }
+  ],
+  "dependencies": [
+   "s5-6",
+   "s5-7"
+  ],
+  "statement": "Construct a VF-fixed positioned cell-label injection and both whole-source standard contractions with an actual Gamma RV[2] comparison and both finite volume maps.",
+  "proof": "Use the checked uniform preparation and finite contraction compiler. RV[k] means finite-to-one volume maps, with arbitrary auxiliary RV arity; the full theorem type retains saturation, original-base smallness and the required field, generation and named-value hypotheses."
+ },
+ {
+  "id": "s6-confluence",
+  "title": "6.3--6.6: finite common blowups",
+  "kind": "lemma",
+  "section": "Section 6: blowups and ordinary integration",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section6.FiniteRV.lemma_6_3",
+    "file": "section 6/IntegrationSection6/FiniteRVTheorems.lean",
+    "line": 14
+   },
+   {
+    "name": "IntegrationInACVF.Section6.FiniteRV.lemma_6_5",
+    "file": "section 6/IntegrationSection6/FiniteRVTheorems.lean",
+    "line": 22
+   },
+   {
+    "name": "IntegrationInACVF.Section6.FiniteRV.corollary_6_6",
+    "file": "section 6/IntegrationSection6/FiniteRVTheorems.lean",
+    "line": 36
+   }
+  ],
+  "dependencies": [
+   "s5-5"
+  ],
+  "statement": "Elementary blowups of isomorphic finite-volume RV objects are isomorphic. Iterated blowups admit common refinements in the actual finite category, yielding isomorphism-invariant common-blowup equivalence.",
+  "proof": "Transport elementary blowups and commute successive steps, deriving finite volume for every intermediate object."
+ },
+ {
+  "id": "s6-congruence",
+  "title": "6.8: the blowup congruence",
+  "kind": "lemma",
+  "section": "Section 6: blowups and ordinary integration",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section6.FiniteRV.lemma_6_8_add_class_iff",
+    "file": "section 6/IntegrationSection6/FiniteRVTheorems.lean",
+    "line": 60
+   },
+   {
+    "name": "IntegrationInACVF.Section6.FiniteRV.lemma_6_8_mul_class_iff",
+    "file": "section 6/IntegrationSection6/FiniteRVTheorems.lean",
+    "line": 66
+   }
+  ],
+  "dependencies": [
+   "s6-confluence"
+  ],
+  "statement": "On actual RV[k] representatives the additive and graded multiplicative congruences agree exactly with common-blowup equivalence. Cartesian products preserve this relation.",
+  "proof": "Construct the congruences from actual finite partitions and elementary blowups."
+ },
+ {
+  "id": "s6-special",
+  "title": "6.10 and 6.12: special-chain lift diagrams",
+  "kind": "lemma",
+  "section": "Section 6: blowups and ordinary integration",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section6.FiniteRV.corollary_6_10_gamma",
+    "file": "section 6/IntegrationSection6/FiniteGammaSpecialBijections.lean",
+    "line": 18
+   },
+   {
+    "name": "IntegrationInACVF.Section6.lemma_6_12",
+    "file": "section 6/IntegrationSection6/GammaFiniteElementary.lean",
+    "line": 62
+   }
+  ],
+  "dependencies": [
+   "s6-confluence",
+   "s5-4"
+  ],
+  "statement": "Actual Gamma-certified special chains induce finite blowup diagrams. The elementary lift isomorphism is constructed over the original Gamma base, without a canonical-presentation assumption.",
+  "proof": "Use the actual focus and graph constructions, preserving finite intermediate objects and the genuine VF/Gamma-generated-base hypothesis where required."
+ },
+ {
+  "id": "s6-closed-input",
+  "title": "Closing the Section 5 input",
+  "kind": "theorem",
+  "section": "Section 6: blowups and ordinary integration",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section7.CompletedSection6.lemma_6_17",
+    "file": "section 7/Integration7/CompletedSection6Kernel.lean",
+    "line": 60
+   }
+  ],
+  "dependencies": [
+   "s5-8",
+   "s6-congruence",
+   "s6-special"
+  ],
+  "statement": "The closed generated-base API proves the ordinary integration kernel equivalence from the completed Section 5 theorem, including its needed finite-VF-parameter instances. It carries no unproved universal Section 5.8 hypothesis.",
+  "proof": "Descend the finite parameter bases through definable closure, prove contraction-order independence without deleting zero RV labels, and identify the kernel."
+ },
+ {
+  "id": "s6-18",
+  "title": "6.18: additive integration",
+  "kind": "proposition",
+  "section": "Section 6: blowups and ordinary integration",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section7.CompletedSection6.proposition_6_18",
+    "file": "section 7/Integration7/ClosedSection6FiniteIntegrationEquivalence.lean",
+    "line": 67
+   }
+  ],
+  "dependencies": [
+   "s6-closed-input"
+  ],
+  "statement": "Integration is an additive equivalence from actual finite Gamma VF[k] scissors to the finite RV[k] common-blowup quotient, with both inverse laws.",
+  "proof": "Use the closed kernel equivalence and actual lifts; prove representative independence by finite partition gluing."
+ },
+ {
+  "id": "s6-19",
+  "title": "6.19: global semiring equivalence",
+  "kind": "theorem",
+  "section": "Section 6: blowups and ordinary integration",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section7.CompletedSection6.theorem_6_19",
+    "file": "section 7/Integration7/ClosedSection6GlobalIntegrationSemiringEquivalence.lean",
+    "line": 86
+   }
+  ],
+  "dependencies": [
+   "s6-18",
+   "s6-congruence"
+  ],
+  "statement": "Global ordinary integration is a semiring equivalence with the graded RV blowup target. Addition is the original scissor addition and multiplication is the actual Cartesian product.",
+  "proof": "Construct the finite-stage congruence union and bilinear Cartesian product; integration preserves products and the unit."
+ },
+ {
+  "id": "s6-20",
+  "title": "6.20: definable families",
+  "kind": "remark",
+  "section": "Section 6: blowups and ordinary integration",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section7.CompletedSection6.remark_6_20_representative_independence",
+    "file": "section 7/Integration7/ClosedSection6DefinableFamilyIntegration.lean",
+    "line": 69
+   },
+   {
+    "name": "IntegrationInACVF.Section7.CompletedSection6.remark_6_20_linearity",
+    "file": "section 7/Integration7/ClosedSection6LinearFunctionIntegration.lean",
+    "line": 48
+   }
+  ],
+  "dependencies": [
+   "s6-19"
+  ],
+  "statement": "Actual parameter-dependent coefficient semirings over definable closure give representative-independent family integration. Integration is linear on the definable-function quotient, including zero, addition and scalar multiplication.",
+  "proof": "Construct literal total family lifts and compare arbitrary finite RV degrees."
+ },
+ {
+  "id": "s6-21",
+  "title": "6.21: coordinate Fubini",
+  "kind": "proposition",
+  "section": "Section 6: blowups and ordinary integration",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section7.CompletedSection6.proposition_6_21",
+    "file": "section 7/Integration7/ClosedSection6CoordinatePushforwards.lean",
+    "line": 41
+   }
+  ],
+  "dependencies": [
+   "s6-20"
+  ],
+  "statement": "Coordinate pushforwards on actual definable functions have the literal fibre-integral formula, and iterated integration equals total integration.",
+  "proof": "Descend the geometric coordinate maps through the function quotient using the proved family identities."
+ },
+ {
+  "id": "s6-22",
+  "title": "6.22: ordinary localization",
+  "kind": "theorem",
+  "section": "Section 6: blowups and ordinary integration",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section7.CompletedSection6.theorem_6_22",
+    "file": "section 7/Integration7/ClosedSection6IntegrationLocalizationEmbedding.lean",
+    "line": 68
+   },
+   {
+    "name": "IntegrationInACVF.Section7.CompletedSection6.theorem_6_22_injective",
+    "file": "section 7/Integration7/ClosedSection6IntegrationLocalizationEmbedding.lean",
+    "line": 75
+   }
+  ],
+  "dependencies": [
+   "s6-19"
+  ],
+  "statement": "The groupified ordinary VF ring embeds into the localized ordinary RV ring, with the proved homogeneous normalization formula. Ordinary degree zero retains its original category.",
+  "proof": "Identify the principal ordinary relation, construct the graded additive colimit and use injective padding. These are ordinary results, not the corrected measured principal-kernel claim of Section 7."
+ },
+ {
+  "id": "s7-zero-rv",
+  "title": "Corrected RV volume objects",
+  "kind": "definition",
+  "section": "Section 7: volume forms and corrected class algebra",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section7.HK.ZeroRVVolumeObject",
+    "file": "section 7/Integration7/HKRVVolumeObjects.lean",
+    "line": 15
+   },
+   {
+    "name": "IntegrationInACVF.Section7.HK.RVVolumeObject",
+    "file": "section 7/Integration7/HKRVVolumeObjects.lean",
+    "line": 19
+   }
+  ],
+  "dependencies": [
+   "s2-zero"
+  ],
+  "statement": "In every degree use an actual finite-volume RV object with a nonzero definable RV form. In measured degree zero retain that arbitrary form, with exact weight-preserving zero isomorphisms. Positive objects agree with the existing positive-degree objects; ordinary RV[0] is unchanged.",
+  "proof": ""
+ },
+ {
+  "id": "s7-zero-vf",
+  "title": "Corrected VF volume objects and zero integration",
+  "kind": "definition",
+  "section": "Section 7: volume forms and corrected class algebra",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section7.HK.VFVolumeObject",
+    "file": "section 7/Integration7/HKZeroVolumeIntegration.lean",
+    "line": 48
+   },
+   {
+    "name": "IntegrationInACVF.Section7.HK.zeroVolumeIntegrationEquiv",
+    "file": "section 7/Integration7/HKZeroVolumeIntegration.lean",
+    "line": 38
+   }
+  ],
+  "dependencies": [
+   "s7-zero-rv"
+  ],
+  "statement": "Measured VF degree zero likewise carries an arbitrary nonzero definable RV form. Its lift and integration equivalence preserve the actual form. Positive-dimensional objects retain the actual partial Jacobian measure condition.",
+  "proof": ""
+ },
+ {
+  "id": "s7-products",
+  "title": "Multiplication of both volume forms",
+  "kind": "lemma",
+  "section": "Section 7: volume forms and corrected class algebra",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section7.HK.weighted_lift_zero_product_map_density",
+    "file": "section 7/Integration7/HKWeightedZeroLiftProducts.lean",
+    "line": 27
+   }
+  ],
+  "dependencies": [
+   "s7-zero-rv",
+   "s7-zero-vf"
+  ],
+  "statement": "Products multiply both RV forms in every degree, including either factor of degree zero. Weighted zero lifting respects this actual density equation.",
+  "proof": "The zero-degree factor contributes its density; retaining this factor repairs the degree-one factorization failure of the legacy neutral-zero convention."
+ },
+ {
+  "id": "s7-2",
+  "title": "7.2: elementary volume blowup comparison",
+  "kind": "lemma",
+  "section": "Section 7: volume forms and corrected class algebra",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section7.lemma_7_2",
+    "file": "section 7/Integration7/ElementaryBlowupComparisonTheorem.lean",
+    "line": 16
+   }
+  ],
+  "dependencies": [
+   "s6-confluence"
+  ],
+  "statement": "Elementary blowups of isomorphic actual positive-volume objects are volume-isomorphic, under the displayed canonical-model and base-context hypotheses.",
+  "proof": "Construct and compare the elementary volume diagrams over the recorded base."
+ },
+ {
+  "id": "s7-4",
+  "title": "7.4: volume blowup congruence",
+  "kind": "lemma",
+  "section": "Section 7: volume forms and corrected class algebra",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section7.lemma_7_4",
+    "file": "section 7/Integration7/VolumeSemiringCongruenceTheorem.lean",
+    "line": 15
+   }
+  ],
+  "dependencies": [
+   "s7-2",
+   "s6-congruence"
+  ],
+  "statement": "The positive-volume semiring relation is identified with actual common volume blowups. Corrected zero-degree adapters retain exact weighted zero isomorphisms.",
+  "proof": "Use elementary comparisons, finite partitions and product compatibility."
+ },
+ {
+  "id": "s7-5",
+  "title": "7.5: specified selected contractions",
+  "kind": "lemma",
+  "section": "Section 7: volume forms and corrected class algebra",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section7.lemma_7_5",
+    "file": "section 7/Integration7/Lemma75.lean",
+    "line": 19
+   },
+   {
+    "name": "IntegrationInACVF.Section7.lemma_7_5_ordinary",
+    "file": "section 7/Integration7/Lemma75.lean",
+    "line": 39
+   }
+  ],
+  "dependencies": [
+   "s5-8",
+   "s7-4"
+  ],
+  "statement": "For the specified actual standard contractions, fibrewise common-volume-blowup equivalence over the common VF projection gives common blowups of the appended objects after the displayed base extension. The selected-coordinate set is nonempty; that condition is carried by the selected-family data.",
+  "proof": "Prepare the selected families uniformly and compare the supplied contractions. The empty selected set is outside the accepted statement."
+ },
+ {
+  "id": "s7-6",
+  "title": "7.6: contraction-order comparison",
+  "kind": "corollary",
+  "section": "Section 7: volume forms and corrected class algebra",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section7.corollary_7_6",
+    "file": "section 7/Integration7/Corollary76.lean",
+    "line": 28
+   }
+  ],
+  "dependencies": [
+   "s7-5"
+  ],
+  "statement": "The actual positive-dimensional contractions have the recorded volume-blowup comparison, with the original selected volume labels and standing hypotheses retained.",
+  "proof": "Apply the specified-contraction comparison to the actual family data."
+ },
+ {
+  "id": "s7-7",
+  "title": "7.7: volume coordinate exchange",
+  "kind": "lemma",
+  "section": "Section 7: volume forms and corrected class algebra",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section7.lemma_7_7",
+    "file": "section 7/Integration7/Lemma77.lean",
+    "line": 55
+   }
+  ],
+  "dependencies": [
+   "s7-6"
+  ],
+  "statement": "The actual volume contraction exchange holds in the native and ordinary interfaces, supplying independence of the selected contraction order.",
+  "proof": "Compare actual coordinate preparations and use common volume blowups."
+ },
+ {
+  "id": "s7-8",
+  "title": "7.8: positive volume lift kernel",
+  "kind": "proposition",
+  "section": "Section 7: volume forms and corrected class algebra",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section7.proposition_7_8",
+    "file": "section 7/Integration7/PositiveVolumeLiftKernel.lean",
+    "line": 28
+   }
+  ],
+  "dependencies": [
+   "s7-7",
+   "s2-volume"
+  ],
+  "statement": "For positive-degree measured objects, equality of the actual lifted classes is characterized by common volume blowups. The actual original-base geometry and volume equations are retained.",
+  "proof": "Use volume descent in one direction and constructed volume-preserving elementary lift maps in the other."
+ },
+ {
+  "id": "s7-9",
+  "title": "7.9: positive integration equivalence",
+  "kind": "proposition",
+  "section": "Section 7: volume forms and corrected class algebra",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section7.proposition_7_9_positive",
+    "file": "section 7/Integration7/PositiveVolumeIntegrationEquivalence.lean",
+    "line": 50
+   }
+  ],
+  "dependencies": [
+   "s7-8"
+  ],
+  "statement": "Positive-degree volume integration and actual lifting are inverse on the relevant classes.",
+  "proof": "Combine existence of volume contractions with the proved lift-kernel equivalence."
+ },
+ {
+  "id": "s7-10",
+  "title": "7.10: corrected all-degree integration",
+  "kind": "theorem",
+  "section": "Section 7: volume forms and corrected class algebra",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section7.HK.theorem_7_10",
+    "file": "section 7/Integration7/HKSection7ClassTheorems.lean",
+    "line": 56
+   }
+  ],
+  "dependencies": [
+   "s7-9",
+   "s7-zero-vf",
+   "s7-products"
+  ],
+  "statement": "Corrected graded class integration is a semiring equivalence. An arbitrary VF class integrates to the homogeneous RV blowup class of an object exactly when it is the class of that object\\'s actual lift. This includes arbitrary weighted degree-zero objects.",
+  "proof": "Combine the exact weighted zero equivalence with positive integration, then prove the actual product and coproduct laws."
+ },
+ {
+  "id": "s7-13",
+  "title": "7.13: the actual principal measured kernel",
+  "kind": "theorem",
+  "section": "Section 7: volume forms and corrected class algebra",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section7.HK.raw_volume_kernel_principal",
+    "file": "section 7/Integration7/HKPrincipalVolumeKernel.lean",
+    "line": 44
+   },
+   {
+    "name": "IntegrationInACVF.Section7.HK.theorem_7_13",
+    "file": "section 7/Integration7/HKSection7ClassTheorems.lean",
+    "line": 70
+   }
+  ],
+  "dependencies": [
+   "s7-10",
+   "s7-products"
+  ],
+  "statement": "For the corrected raw RV volume ring, the kernel of projection to the blowup ring is the ideal generated by the actual basic volume difference. Consequently the actual VF class ring is isomorphic to that single-generator quotient. The coefficient in degree one may be a weighted point.",
+  "proof": "Factor the elementary relation using corrected weighted zero coefficients, prove both ideal inclusions and apply the ring quotient equivalence. No cancellation of raw point padding is used."
+ },
+ {
+  "id": "s7-linear",
+  "title": "Full corrected coefficient linearity",
+  "kind": "theorem",
+  "section": "Section 7: supported functions and integral identities",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section7.HK.gradedAEVolumeHeadIntegralLinearMap",
+    "file": "section 7/Integration7/HKGradedHeadIntegralLinearMaps.lean",
+    "line": 71
+   },
+   {
+    "name": "IntegrationInACVF.Section7.HK.gradedAEVolumePrefixIntegralLinearMap",
+    "file": "section 7/Integration7/HKGradedPrefixIntegralLinearMaps.lean",
+    "line": 20
+   },
+   {
+    "name": "IntegrationInACVF.Section7.HK.gradedAEVolumeCoordinateIntegralLinearMap",
+    "file": "section 7/Integration7/HKGradedCoordinateIntegralLinearMaps.lean",
+    "line": 38
+   }
+  ],
+  "dependencies": [
+   "s7-10",
+   "s7-products"
+  ],
+  "statement": "Raw head, prefix and arbitrary retained-coordinate integrals are linear over the full corrected graded coefficient semiring, in every function and scalar degree. Function index $n$ represents $n+1$ VF coordinates.",
+  "proof": "Prove zero-coefficient, positive-coefficient and degree-transport identities, then descend the geometric operations to the full graded function quotient."
+ },
+ {
+  "id": "s7-support",
+  "title": "Faithful actual support",
+  "kind": "definition",
+  "section": "Section 7: supported functions and integral identities",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section7.HK.rawSupportedVolumeSubmodule",
+    "file": "section 7/Integration7/HKRawSupportedFunctionLinearIntegrals.lean",
+    "line": 20
+   },
+   {
+    "name": "IntegrationInACVF.Section7.HK.rawSupportedVolumeRangeEquiv",
+    "file": "section 7/Integration7/HKRawSupportedFunctionLinearIntegrals.lean",
+    "line": 29
+   }
+  ],
+  "dependencies": [
+   "s7-linear"
+  ],
+  "statement": "The support submodule is exactly the faithful image of actual supported graded presentations. Coordinate and Jacobian operators preserve that support; formal support claims are tied to actual presentations.",
+  "proof": ""
+ },
+ {
+  "id": "s7-11",
+  "title": "7.11: raw supported Fubini",
+  "kind": "proposition",
+  "section": "Section 7: supported functions and integral identities",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section7.HK.proposition_7_11",
+    "file": "section 7/Integration7/HKRawSupportedFunctionLinearIntegrals.lean",
+    "line": 75
+   }
+  ],
+  "dependencies": [
+   "s7-linear",
+   "s7-support"
+  ],
+  "statement": "Coordinate integration followed by total integration equals the total integral as linear maps on all actual supported graded functions, over the full corrected coefficient semiring. Retained coordinate projections are nonempty; a separate map supplies total integration.",
+  "proof": "Compare the forgotten supported operator with the graded geometric coordinate integral and apply total Fubini."
+ },
+ {
+  "id": "s7-12",
+  "title": "7.12: unpadded raw change of variables",
+  "kind": "proposition",
+  "section": "Section 7: supported functions and integral identities",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section7.HK.proposition_7_12",
+    "file": "section 7/Integration7/HKRawSupportedFunctionLinearIntegrals.lean",
+    "line": 87
+   }
+  ],
+  "dependencies": [
+   "s7-linear",
+   "s7-support"
+  ],
+  "statement": "For an actual definable bijection, the supported Jacobian transform preserves the raw total integral as an equality of full-coefficient linear maps, in every function degree.",
+  "proof": "Derive the supported formula from the actual geometric Jacobian map and its coefficient laws. The formula has no raw point padding to cancel."
+ },
+ {
+  "id": "s7-ring",
+  "title": "Balanced unnormalized ring functions",
+  "kind": "definition",
+  "section": "Section 7: supported functions and integral identities",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section7.HK.RawRingSupportedVolumeFunction",
+    "file": "section 7/Integration7/HKRawRingSupportedFunctionIntegrals.lean",
+    "line": 20
+   }
+  ],
+  "dependencies": [
+   "s7-13",
+   "s7-support"
+  ],
+  "statement": "Extend the actual supported semimodule by balanced scalar extension to the corrected Grothendieck coefficient ring. Geometric coordinate and Jacobian operators extend linearly to every formal difference.",
+  "proof": ""
+ },
+ {
+  "id": "s7-11-ring",
+  "title": "7.11 over the Grothendieck ring",
+  "kind": "proposition",
+  "section": "Section 7: supported functions and integral identities",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section7.HK.proposition_7_11_ring",
+    "file": "section 7/Integration7/HKRawRingSupportedFunctionIntegrals.lean",
+    "line": 55
+   }
+  ],
+  "dependencies": [
+   "s7-ring",
+   "s7-11"
+  ],
+  "statement": "Raw supported Fubini holds on every ring-valued function and formal difference, with the full corrected coefficient ring.",
+  "proof": "Extend the actual linear-map identity through balanced scalar extension."
+ },
+ {
+  "id": "s7-12-ring",
+  "title": "7.12 over the Grothendieck ring",
+  "kind": "proposition",
+  "section": "Section 7: supported functions and integral identities",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section7.HK.proposition_7_12_ring",
+    "file": "section 7/Integration7/HKRawRingSupportedFunctionIntegrals.lean",
+    "line": 63
+   }
+  ],
+  "dependencies": [
+   "s7-ring",
+   "s7-12"
+  ],
+  "statement": "Raw supported change of variables holds on every ring-valued function and formal difference, without point padding or a positive function-degree restriction.",
+  "proof": "Extend the actual supported Jacobian map and its integral identity through balanced scalar extension."
+ },
+ {
+  "id": "s7-normalized",
+  "title": "The corrected normalized commutative ring",
+  "kind": "lemma",
+  "section": "Section 7: supported functions and integral identities",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section7.HK.normalized_volume_ring_mul_comm",
+    "file": "section 7/Integration7/HKNormalizedVolumeCommRing.lean",
+    "line": 45
+   }
+  ],
+  "dependencies": [
+   "s7-13"
+  ],
+  "statement": "The corrected normalized coefficient ring is commutative. Normalization is performed in that ring and does not assert cancellability of a raw point class.",
+  "proof": "Use the normalized basic-image commutation law and represent arbitrary elements by basic differences."
+ },
+ {
+  "id": "s7-14",
+  "title": "7.14: normalized supported Fubini",
+  "kind": "theorem",
+  "section": "Section 7: supported functions and integral identities",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section7.HK.theorem_7_14",
+    "file": "section 7/Integration7/HKNormalizedSection7Theorems.lean",
+    "line": 32
+   }
+  ],
+  "dependencies": [
+   "s7-11",
+   "s7-normalized"
+  ],
+  "statement": "For any two nonempty retained-coordinate sets of a positive-dimensional VF domain, coordinate integration followed by total integration gives the same normalized integral for every normalized supported function.",
+  "proof": "Both sides equal the separately defined total integral; normalize the geometric supported identity."
+ },
+ {
+  "id": "s7-15",
+  "title": "7.15: normalized change of variables",
+  "kind": "theorem",
+  "section": "Section 7: supported functions and integral identities",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section7.HK.theorem_7_15",
+    "file": "section 7/Integration7/HKNormalizedSection7Theorems.lean",
+    "line": 46
+   }
+  ],
+  "dependencies": [
+   "s7-12",
+   "s7-normalized"
+  ],
+  "statement": "The normalized integral on an actual supported domain equals the normalized integral of its Jacobian transform under any actual definable bijection, in the displayed positive-VF-dimensional function interface.",
+  "proof": "Descend and normalize the actual supported change-of-variables identity."
+ },
+ {
+  "id": "s7-gn-7",
+  "title": "7.6/7.7: Gamma-named contraction independence",
+  "kind": "lemma",
+  "section": "Section 7: volume forms and corrected class algebra",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section7.GammaNamed.gamma_named_corollary_7_6",
+    "file": "section 7/Integration7/GammaNamedLemma77.lean",
+    "line": 32
+   },
+   {
+    "name": "IntegrationInACVF.Section7.GammaNamed.gamma_named_lemma_7_7",
+    "file": "section 7/Integration7/GammaNamedLemma77.lean",
+    "line": 53
+   }
+  ],
+  "dependencies": [
+   "s7-6",
+   "s7-7"
+  ],
+  "statement": "Over the Gamma-named base <C.base, Xi>, with objects coded over the named code context and Gamma-definable over that base and with Gamma-definable contraction programs, Corollary 7.6 holds and any two standard contractions of a positive VF volume object, in arbitrary orders, are common-context blowup equivalent. No hypothesis puts the common names of the base into C.base.",
+  "proof": "Apply the Gamma-base contraction comparisons in the named code context, which contains the common names and preserves genericity of VF points."
+ },
+ {
+  "id": "s7-gn-9",
+  "title": "7.8/7.9: Gamma-named classification",
+  "kind": "proposition",
+  "section": "Section 7: volume forms and corrected class algebra",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section7.HK.gamma_named_proposition_7_8",
+    "file": "section 7/Integration7/GammaNamedSection7Results.lean",
+    "line": 37
+   },
+   {
+    "name": "IntegrationInACVF.Section7.HK.gamma_named_lift_on_classes_bijective",
+    "file": "section 7/Integration7/GammaNamedAllDegreeClasses.lean",
+    "line": 46
+   }
+  ],
+  "dependencies": [
+   "s7-gn-7",
+   "s7-8",
+   "s7-9",
+   "s7-zero-vf"
+  ],
+  "statement": "In every degree, including weighted degree zero, the actual lift is a bijection from Gamma-named RV classes (Gamma objects modulo Gamma isomorphisms and Gamma blowups) to Gamma-named VF classes (Gamma isomorphism classes). Two Gamma RV objects have equal classes exactly when their lifts have equal classes.",
+  "proof": "The kernel direction uses Gamma-named Lemma 7.7. The converse lifts Gamma RV isomorphisms by the Gamma-definable prescribed-volume lift (special-transformations Gamma 9.16, whose new step bounds the rank of points of Gamma sets by their RV dimension) and Gamma elementary blowups by Gamma charts. Degree zero uses the Gamma presentation of finite VF sets."
+ },
+ {
+  "id": "s7-gn-10",
+  "title": "7.10: Gamma-named graded integration",
+  "kind": "theorem",
+  "section": "Section 7: volume forms and corrected class algebra",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section7.HK.gammaNamedGradedIntegrationEquiv",
+    "file": "section 7/Integration7/GammaNamedTheorem710.lean",
+    "line": 64
+   },
+   {
+    "name": "IntegrationInACVF.Section7.HK.gamma_named_theorem_7_10",
+    "file": "section 7/Integration7/GammaNamedTheorem710.lean",
+    "line": 90
+   }
+  ],
+  "dependencies": [
+   "s7-gn-9",
+   "s7-products",
+   "s7-10"
+  ],
+  "statement": "Actual products make Gamma-named RV classes a graded semiring, and Gamma-named integration is a graded semiring isomorphism (and a ring isomorphism of Grothendieck rings). A VF class integrates to the class of a Gamma RV object exactly when it is the class of that object's actual lift.",
+  "proof": "Products descend: Gamma isomorphisms multiply factorwise, and Gamma blowups multiply with positive or weighted degree-zero Gamma factors on either side. The semiring laws are the actual relabelling isomorphisms, which act by coordinate selections and are therefore Gamma. Transport the structure along Proposition 7.9."
+ },
+ {
+  "id": "s7-gn-13",
+  "title": "7.13: Gamma-named principal kernel",
+  "kind": "theorem",
+  "section": "Section 7: volume forms and corrected class algebra",
+  "declarations": [
+   {
+    "name": "IntegrationInACVF.Section7.HK.gamma_named_raw_volume_kernel_principal",
+    "file": "section 7/Integration7/GammaNamedTheorem713.lean",
+    "line": 342
+   },
+   {
+    "name": "IntegrationInACVF.Section7.HK.gamma_named_theorem_7_13",
+    "file": "section 7/Integration7/GammaNamedTheorem713.lean",
+    "line": 390
+   }
+  ],
+  "dependencies": [
+   "s7-gn-10",
+   "s7-13"
+  ],
+  "statement": "The kernel of the projection from the Grothendieck ring of Gamma-named RV isomorphism classes to the Gamma-named blowup ring is the two-sided ideal generated by point minus cone. Consequently the Gamma-named VF class ring is isomorphic to that quotient.",
+  "proof": "Every elementary Gamma blowup factors, up to Gamma isomorphisms, as a Gamma head factor times the point and times the cone; the comparison after blowing up is the existing Gamma corrected isomorphism. A ring map identifying point and cone therefore descends to blowup classes."
+ }
 ]

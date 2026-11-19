@@ -1,0 +1,97 @@
+import Integration7.Library
+open FirstOrder FirstOrder.Language CategoryTheory
+open SpecialTransformations.Milestone0 SpecialTransformations.Milestone0.LRV
+open SpecialTransformations.Section3 SpecialTransformations.Section4 SpecialTransformations.Section9
+open SpecialTransformations.DefinableGeometry IntegrationInACVF.Section7
+set_option pp.universes true
+set_option pp.proofs false
+#check @IntegrationInACVF.Section7.gammaNamedBase
+#print axioms IntegrationInACVF.Section7.gammaNamedBase
+#check @IntegrationInACVF.Section7.gammaNamedCodeContext
+#print axioms IntegrationInACVF.Section7.gammaNamedCodeContext
+#check @IntegrationInACVF.Section7.gamma_named_code_context_names
+#print axioms IntegrationInACVF.Section7.gamma_named_code_context_names
+#check @IntegrationInACVF.Section7.GammaNamed.gamma_named_corollary_7_6
+#print axioms IntegrationInACVF.Section7.GammaNamed.gamma_named_corollary_7_6
+#check @IntegrationInACVF.Section7.GammaNamed.gamma_named_lemma_7_7
+#print axioms IntegrationInACVF.Section7.GammaNamed.gamma_named_lemma_7_7
+#check @IntegrationInACVF.Section7.gamma_named_blowup_class_eq_of_lift_class_eq
+#print axioms IntegrationInACVF.Section7.gamma_named_blowup_class_eq_of_lift_class_eq
+#check @IntegrationInACVF.Section7.gamma_named_lift_class_eq_of_blowup_class_eq
+#print axioms IntegrationInACVF.Section7.gamma_named_lift_class_eq_of_blowup_class_eq
+#check @IntegrationInACVF.Section7.gamma_named_volume_lift_on_classes_bijective
+#print axioms IntegrationInACVF.Section7.gamma_named_volume_lift_on_classes_bijective
+#check @IntegrationInACVF.Section7.GammaNamed.rv_volume_iso_lift_gamma
+#print axioms IntegrationInACVF.Section7.GammaNamed.rv_volume_iso_lift_gamma
+#check @IntegrationInACVF.Section7.HK.GammaNamedRVClasses
+#print axioms IntegrationInACVF.Section7.HK.GammaNamedRVClasses
+#check @IntegrationInACVF.Section7.HK.GammaNamedVFClasses
+#print axioms IntegrationInACVF.Section7.HK.GammaNamedVFClasses
+#check @IntegrationInACVF.Section7.HK.gammaNamedLiftOnClasses
+#print axioms IntegrationInACVF.Section7.HK.gammaNamedLiftOnClasses
+#check @IntegrationInACVF.Section7.HK.gamma_named_lift_on_classes_bijective
+#print axioms IntegrationInACVF.Section7.HK.gamma_named_lift_on_classes_bijective
+#check @IntegrationInACVF.Section7.HK.gammaNamedIntegrationEquiv
+#print axioms IntegrationInACVF.Section7.HK.gammaNamedIntegrationEquiv
+#check @IntegrationInACVF.Section7.HK.gammaNamedIntegrationAddEquiv
+#print axioms IntegrationInACVF.Section7.HK.gammaNamedIntegrationAddEquiv
+#check @IntegrationInACVF.Section7.HK.gamma_named_proposition_7_8
+#print axioms IntegrationInACVF.Section7.HK.gamma_named_proposition_7_8
+#check @IntegrationInACVF.Section7.HK.RVVolumeObject.Gamma.product
+#print axioms IntegrationInACVF.Section7.HK.RVVolumeObject.Gamma.product
+#check @IntegrationInACVF.Section7.GammaVolumeBlowupEquivalent.product_left
+#print axioms IntegrationInACVF.Section7.GammaVolumeBlowupEquivalent.product_left
+#check @IntegrationInACVF.Section7.GammaVolumeBlowupEquivalent.product_right
+#print axioms IntegrationInACVF.Section7.GammaVolumeBlowupEquivalent.product_right
+#check @IntegrationInACVF.Section7.GammaVolumeBlowupEquivalent.weightedZero
+#print axioms IntegrationInACVF.Section7.GammaVolumeBlowupEquivalent.weightedZero
+#check @IntegrationInACVF.Section7.GammaVolumeBlowupEquivalent.weightedPositiveZero
+#print axioms IntegrationInACVF.Section7.GammaVolumeBlowupEquivalent.weightedPositiveZero
+#check @IntegrationInACVF.Section7.HK.gamma_named_product_congr
+#print axioms IntegrationInACVF.Section7.HK.gamma_named_product_congr
+#check @IntegrationInACVF.Section7.HK.gammaNamedRVClassesGSemiring
+#print axioms IntegrationInACVF.Section7.HK.gammaNamedRVClassesGSemiring
+#check @IntegrationInACVF.Section7.HK.GammaNamedRVSemiring
+#print axioms IntegrationInACVF.Section7.HK.GammaNamedRVSemiring
+#check @IntegrationInACVF.Section7.HK.gammaNamedVFLiftClass
+#print axioms IntegrationInACVF.Section7.HK.gammaNamedVFLiftClass
+#check @IntegrationInACVF.Section7.HK.gamma_named_class_integration_lift
+#print axioms IntegrationInACVF.Section7.HK.gamma_named_class_integration_lift
+#check @IntegrationInACVF.Section7.HK.gammaNamedVFClassGradedSemiring
+#print axioms IntegrationInACVF.Section7.HK.gammaNamedVFClassGradedSemiring
+#check @IntegrationInACVF.Section7.HK.gammaNamedGradedIntegrationEquiv
+#print axioms IntegrationInACVF.Section7.HK.gammaNamedGradedIntegrationEquiv
+#check @IntegrationInACVF.Section7.HK.gamma_named_graded_integration_of
+#print axioms IntegrationInACVF.Section7.HK.gamma_named_graded_integration_of
+#check @IntegrationInACVF.Section7.HK.gamma_named_theorem_7_10
+#print axioms IntegrationInACVF.Section7.HK.gamma_named_theorem_7_10
+#check @IntegrationInACVF.Section7.HK.GammaNamedRVRing
+#print axioms IntegrationInACVF.Section7.HK.GammaNamedRVRing
+#check @IntegrationInACVF.Section7.HK.gammaNamedIntegrationRingEquiv
+#print axioms IntegrationInACVF.Section7.HK.gammaNamedIntegrationRingEquiv
+#check @IntegrationInACVF.Section7.HK.GammaNamedRVIsoClasses
+#print axioms IntegrationInACVF.Section7.HK.GammaNamedRVIsoClasses
+#check @IntegrationInACVF.Section7.HK.gammaNamedRVIsoClassesGSemiring
+#print axioms IntegrationInACVF.Section7.HK.gammaNamedRVIsoClassesGSemiring
+#check @IntegrationInACVF.Section7.HK.gammaNamedGradedBlowupProjection
+#print axioms IntegrationInACVF.Section7.HK.gammaNamedGradedBlowupProjection
+#check @IntegrationInACVF.Section7.HK.gammaNamedGradedBlowupProjection_surjective
+#print axioms IntegrationInACVF.Section7.HK.gammaNamedGradedBlowupProjection_surjective
+#check @IntegrationInACVF.Section7.gamma_degree_one_basic_volume_relation
+#print axioms IntegrationInACVF.Section7.gamma_degree_one_basic_volume_relation
+#check @IntegrationInACVF.Section7.HK.gamma_elementary_semiring_factorization
+#print axioms IntegrationInACVF.Section7.HK.gamma_elementary_semiring_factorization
+#check @IntegrationInACVF.Section7.HK.gamma_common_blowup_image_eq_of_basic
+#print axioms IntegrationInACVF.Section7.HK.gamma_common_blowup_image_eq_of_basic
+#check @IntegrationInACVF.Section7.HK.gammaBlowupUniversalDescend
+#print axioms IntegrationInACVF.Section7.HK.gammaBlowupUniversalDescend
+#check @IntegrationInACVF.Section7.HK.gammaNamedBasicVolumeRelationIdeal
+#print axioms IntegrationInACVF.Section7.HK.gammaNamedBasicVolumeRelationIdeal
+#check @IntegrationInACVF.Section7.HK.gamma_named_raw_volume_kernel_principal
+#print axioms IntegrationInACVF.Section7.HK.gamma_named_raw_volume_kernel_principal
+#check @IntegrationInACVF.Section7.HK.gammaNamedPrincipalKernelQuotientEquiv
+#print axioms IntegrationInACVF.Section7.HK.gammaNamedPrincipalKernelQuotientEquiv
+#check @IntegrationInACVF.Section7.HK.gamma_named_theorem_7_13
+#print axioms IntegrationInACVF.Section7.HK.gamma_named_theorem_7_13
+#check @IntegrationInACVF.Section7.gamma_volume_transport_input
+#print axioms IntegrationInACVF.Section7.gamma_volume_transport_input
