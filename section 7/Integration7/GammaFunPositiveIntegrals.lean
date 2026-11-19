@@ -1,4 +1,6 @@
 import Integration7.GammaFunIntegrationFormula
+import Integration7.SelectedFamilyRestrictions
+import Integration7.VolumeFamilyBaseExceptions
 
 /-! Gamma-named positive homogeneous function presentations over `⟨C.base, Ξ⟩`
 and their integrals in the Gamma-named RV classes. A presentation is a
@@ -147,3 +149,77 @@ theorem presentation_integral_eq_of_rows (F H : Presentation C Ξ hΞ n k)
     (GammaVolumeBlowupEquivalent.of_reindexDegree' hc 𝔇 𝔅 (selected_append_degree_eq n k) hNew)
 
 end IntegrationInACVF.Section7.GammaFun
+
+namespace IntegrationInACVF.Section7
+variable {M : Type} [LRV.Structure M] [M ⊨ Axioms.ACVF] {C : BaseContext M} {G : Base (M := M)} {n a k : ℕ}
+
+theorem mem_volumeDensityGraph_restrict (F : SelectedVFVolumeFamily C n a k)
+    (L : SpecialTransformations.DefinableGeometry.DefSet (SpecialTransformations.Section4.rawMixedSpace (M := M) n a)
+      (C.base : Set M))
+    (hL : L.carrier ⊆ F.domain.carrier) (q : Point (M := M) n (a+1)) :
+    q ∈ (volumeDensityGraph (F.restrict L hL).form).carrier ↔
+      q ∈ (volumeDensityGraph F.form).carrier ∧ (q.1,q.2 ∘ Fin.castAdd 1) ∈ L.carrier := by
+  rw [mem_volumeDensityGraph_iff,mem_volumeDensityGraph_iff]
+  constructor
+  · rintro ⟨h0,he⟩
+    exact ⟨⟨hL h0,he.trans rfl⟩,h0⟩
+  · rintro ⟨⟨h0,he⟩,h1⟩
+    exact ⟨h1,he.trans rfl⟩
+
+theorem gamma_drop_last_preimage {S : Set (Point (M := M) n a)} (hS : GammaSetDefinable G S) :
+    GammaSetDefinable G {q : Point (M := M) n (a+1) | (q.1,q.2 ∘ Fin.castAdd 1) ∈ S} := by
+  have L := gammaLogicInput G
+  have h := L.image_graph (L.restrict_graph hS (L.swap_graph (gamma_drop_last_rv_graph (G := G) (n := n) (a := a))))
+  convert h using 1
+  ext q
+  constructor
+  · intro hq
+    exact ⟨_,hq,rfl⟩
+  · rintro ⟨p,hp,rfl⟩
+    exact hp
+
+theorem SelectedVFVolumeFamily.Gamma.restrict {F : SelectedVFVolumeFamily C n a k} (hF : F.Gamma G)
+    (L : SpecialTransformations.DefinableGeometry.DefSet (SpecialTransformations.Section4.rawMixedSpace (M := M) n a)
+      (C.base : Set M))
+    (hL : L.carrier ⊆ F.domain.carrier) (hLΓ : GammaSetDefinable G L.carrier) :
+    (F.restrict L hL).Gamma G := by
+  refine ⟨hLΓ,?_⟩
+  have h := (gammaLogicInput G).inter hF.densityGraph (gamma_drop_last_preimage hLΓ)
+  convert h using 1
+  ext q
+  exact mem_volumeDensityGraph_restrict F L hL q
+
+/-- The preimage of a Gamma VF set in a family domain is Gamma. -/
+theorem SelectedVFVolumeFamily.Gamma.preimage {F : SelectedVFVolumeFamily C n a k} (hF : F.Gamma G)
+    (E : SpecialTransformations.DefinableGeometry.DefSet (SpecialTransformations.Section4.rawVFSpace (M := M) n)
+      (C.base : Set M))
+    (hE : GammaSetDefinable G {p : Point (M := M) n 0 | p.1 ∈ E.carrier}) :
+    GammaSetDefinable G (definableMapPreimage (SpecialTransformations.DefinableGeometry.Map.fst
+      (SpecialTransformations.Section4.rawVFSpace (M := M) n) (SpecialTransformations.Section4.rawRVSpace a)
+      (C.base : Set M) F.domain) E).carrier := by
+  have hP := (gammaLogicInput G).preimage_real
+    (mixedCoordinatePointMap (id : Fin n → Fin n) (Fin.elim0 : Fin 0 → Fin a) G.real) hE
+  have h := (gammaLogicInput G).inter hF.domain hP
+  convert h using 1
+  ext p
+  constructor
+  · rintro ⟨b,hb,hbE⟩
+    refine ⟨hb ▸ b.property,⟨p,Set.mem_univ _⟩,rfl,?_⟩
+    change p.1 ∈ E.carrier
+    rw [← hb]
+    exact hbE
+  · rintro ⟨hp,b,hb,hbE⟩
+    refine ⟨⟨p,hp⟩,rfl,?_⟩
+    change p.1 ∈ E.carrier
+    have : (b.val.1 ∘ id) = p.1 := by rw [hb]; rfl
+    rw [← this]
+    exact hbE
+
+theorem SelectedVFVolumeFamily.Gamma.outsideBase {F : SelectedVFVolumeFamily C n a k} (hF : F.Gamma G)
+    (E : SpecialTransformations.DefinableGeometry.DefSet (SpecialTransformations.Section4.rawVFSpace (M := M) n)
+      (C.base : Set M))
+    (hE : GammaSetDefinable G {p : Point (M := M) n 0 | p.1 ∈ E.carrier}) :
+    (F.outsideBase E).Gamma G :=
+  hF.restrict _ _ ((gammaLogicInput G).sdiff hF.domain (hF.preimage E hE))
+
+end IntegrationInACVF.Section7
