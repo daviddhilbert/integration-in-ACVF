@@ -40,15 +40,14 @@ integration-in-ACVF `remove-hnames` and special-transformations `gamma-lift-9-16
      including `Section9.GammaLift.gamma_theorem_9_16_finite_volume`.
    - The range also contains three provider commits that predate this work: `2d5f80e`,
      `0db959b` and `183d10d`.
-   - integration-in-ACVF currently consumes it only through an uncommitted `lake-manifest.json`
-     revision. `lakefile.toml` still names `423c767`.
+   - Done: `lakefile.toml`, `lake-manifest.json` and `section 7/VERIFICATION.json` pin `932a507`
+     (published on special-transformations main).
 2. **integration-in-ACVF.** Bump diamond-integral's pin to the `remove-hnames` tip once it is
    published. The tip includes 81 new modules (49 class-level, 32 function-layer),
    `Library.lean` and documentation.
 3. **Registry.** `section 7/VERIFICATION.json` registers the new modules and 132 declarations
    under `gamma_named_hnames_removal` (45 class-level; 87 in its `function_layer` entry).
-   - `dependency_pins` deliberately keeps `423c767`, so `section 7/verify.py` reports a pin
-     mismatch until the coordinated bump.
+   - `dependency_pins` names `932a507`, matching the manifest.
    - The blueprint has seven new nodes: `s7-gn-7`, `s7-gn-9`, `s7-gn-10`, `s7-gn-13`,
      `s7-gn-11`, `s7-gn-12` and `s7-gn-14`.
    - Its fingerprint manifest is already stale on `main` (46 drifted files in Sections 2–3), so
