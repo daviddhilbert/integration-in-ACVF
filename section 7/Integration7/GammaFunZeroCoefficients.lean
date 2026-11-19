@@ -122,4 +122,31 @@ theorem SelectedVFVolumeFamily.Gamma.weightedZero (hc : CanonicalStructure.IsCan
   ⟨gamma_mixed_rv_factor_domain hF.domain hZ.domain,
     density_graph_of_volume_form_graph _ (gamma_weighted_zero_product_form_graph hc hF hZ)⟩
 
+theorem HK.ZeroRVVolumeObject.Gamma.changeBase {B' : Base (M := M)} {Z : HK.ZeroRVVolumeObject (M := M) S}
+    (hZ : Z.Gamma B') (h : GammaBaseDominated B' G) : Z.Gamma G :=
+  ⟨h.set hZ.domain,h.graph hZ.density⟩
+
+theorem HK.ZeroRVVolumeObject.Gamma.extend {T : Set M} {Z : HK.ZeroRVVolumeObject (M := M) S}
+    (hZ : Z.Gamma G) (h : S ⊆ T) : (Z.extend h).Gamma G :=
+  ⟨hZ.domain,hZ.density⟩
+
+/-- The row coefficient of a Gamma degree-zero object. -/
+def zeroRowCoefficient (Z : HK.GammaZeroRVObjects G (C.base : Set M)) (x : Fin n → VFType (M := M)) :
+    HK.GammaZeroRVObjects (rowGammaBase G x) ((vfParameterVolumeContext C x).base : Set M) :=
+  ⟨HK.zeroVolumeCoefficientInContext Z.val x,
+    (Z.property.extend _).changeBase (GammaBaseDominated.of_subset Set.subset_union_left (Set.Subset.refl _))⟩
+
+theorem gamma_weighted_zero_row_class (hc : CanonicalStructure.IsCanonical (M := M))
+    {F : SelectedVFVolumeFamily C n a k} (hF : F.Gamma G)
+    (Z : HK.GammaZeroRVObjects G (C.base : Set M)) (x : Fin n → VFType (M := M)) :
+    gammaVolumeBlowupClass hc (vfParameterVolumeContext C x) (rowGammaBase G x)
+        ⟨(HK.selectedFamilyWeightedZeroProduct F Z.val).rowInContext x,(hF.weightedZero hc Z.property).row hc x⟩ =
+      gammaVolumeBlowupClass hc (vfParameterVolumeContext C x) (rowGammaBase G x)
+        (GammaVolumeObjects.posZeroProd hc ⟨F.rowInContext x,hF.row hc x⟩ (zeroRowCoefficient Z x)) := by
+  let e := HK.selectedFamilyWeightedZeroRowIso hc F Z.val x
+  apply (gammaVolumeBlowupClass_eq_iff hc _ _).mpr
+  exact GammaVolumeBlowupEquivalent.of_iso _ _ e
+    (gamma_volume_iso_of_label_identity hc e ((hF.weightedZero hc Z.property).row hc x) rfl
+      (fun u => congrArg Subtype.val (finiteIsoMap_apply_symm e.iso.symm u)))
+
 end IntegrationInACVF.Section7
