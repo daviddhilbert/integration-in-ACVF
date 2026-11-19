@@ -134,3 +134,34 @@ theorem gamma_lift_contraction_comparison (hc : CanonicalStructure.IsCanonical (
   exact ((hLast.trans hc (hMiddle.symm hc)).trans hc (hFirst.symm hc))
 
 end IntegrationInACVF.Section7.GammaNamed
+
+namespace IntegrationInACVF.Section7.GammaNamed
+variable {M : Type} [sM : LRV.Structure M] [M ⊨ Axioms.ACVF] {k : ℕ}
+
+/-- **Contraction invariance.** Standard contractions of Gamma-isomorphic Gamma VF
+volume objects are common-context equivalent. -/
+theorem gamma_vf_iso_contraction_comparison (hc : CanonicalStructure.IsCanonical (M := M)) (C : BaseContext M)
+    (G : Base (M := M)) (hGC : G.real ⊆ (C.base : Set M)) (hΞ : Cardinal.mk G.gamma < C.κ)
+    (hGenerated : VFGammaGeneratedBase G) (hNames : commonRealNames G ⊆ (C.base : Set M))
+    (hGeneric : ∀ {p : ℕ} (x : Fin p → VF (M := M)), AlgebraicIndependent (vfParameterField G.real) x →
+      AlgebraicIndependent (vfParameterField (C.base : Set M)) x)
+    (γ : Values.Gamma (M := M)) (hγ : γ ∈ G.gamma) (hγ1 : 1 < γ)
+    (U V : PositiveVFVolumeObject (M := M) (C.base : Set M) k)
+    (hU : VFVolumeObjectGamma U G) (hV : VFVolumeObjectGamma V G)
+    (f : VFVolumeIso U V) (hf : f.GammaDefinable G)
+    {σ υ : Equiv.Perm (Fin (k+1))}
+    (E : StandardContraction (nativeMixedVolumeDomain hc U.densityGraph.domain) σ)
+    (E' : StandardContraction (nativeMixedVolumeDomain hc V.densityGraph.domain) υ)
+    (hE : GammaProgramDefinable G E.program) (hE' : GammaProgramDefinable G E'.program) :
+    CommonContextVolumeEquivalent G C
+      ⟨U.standardContractionObject hc C G.gamma E,standard_contraction_object_gamma hc C G hGC U hU E hE⟩
+      ⟨V.standardContractionObject hc C G.gamma E',standard_contraction_object_gamma hc C G hGC V hV E' hE'⟩ := by
+  obtain ⟨P,⟨eU,heU⟩,hPU⟩ := gamma_lift_contraction_comparison hc C G hGC hΞ hGenerated hNames hGeneric γ hγ hγ1
+    U hU E hE
+  obtain ⟨Q,⟨eV,heV⟩,hQV⟩ := gamma_lift_contraction_comparison hc C G hGC hΞ hGenerated hNames hGeneric γ hγ hγ1
+    V hV E' hE'
+  have hPQ := rv_volume_lift_common_context_kernel hc C G hGC hΞ hGenerated hNames hGeneric γ hγ hγ1 P Q
+    ((eU.symm hc C).trans hc C (f.trans hc C eV)) ((heU.symm hc C).trans hc C (hf.trans hc C heV))
+  exact ((hPU.symm hc).trans hc hPQ).trans hc hQV
+
+end IntegrationInACVF.Section7.GammaNamed
