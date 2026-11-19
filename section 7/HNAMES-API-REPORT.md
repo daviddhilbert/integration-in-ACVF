@@ -75,10 +75,22 @@ Supporting public lemmas that diamond-integral may reuse:
 
 ## Migration notes for diamond-integral
 
-- **Section 3 files.** The 42 Section 3 files that pass `hNames` (measured Gamma lift and the
-  positive-degree reverse kernel) can switch to `HK.gamma_named_proposition_7_8` and
-  `HK.gamma_named_lift_on_classes_bijective`. This applies only where their objects can be
-  expressed as `HK.GammaRVObjects` over the named code context.
+- **Section 3 files: only a pin bump is needed.** 41 diamond-integral `section 3` files
+  mention `hNames`.
+  - Three of them (`GammaGroundRealNamesElimination`, `MeasuredRealGroundObjects`,
+    `MeasuredRealGroundVFArrows`) use an unrelated local hypothesis of that name ("the Gamma
+    names are definable over the real base"). They import nothing from Integration7.
+  - The other 38 use no numbered Section 7 result, no `HK.` class category and nothing from
+    7.8 or 7.9. They depend only on the hNames-taking internals of Lemma 7.7's proof (the
+    P1/P2/P3/P6 roots: `gammaRVGraphRefinement*`, `rvLabelCut`, `gammaNativePresentation`,
+    `uniform_balanced_position_preparation_exists`,
+    `independent_rectangle_family_preparations_exists`,
+    `frozen_generated_context_contains_names`, and similar).
+  - The positive-degree reverse kernel is diamond-integral's own theorem. Its headline
+    (Theorem 3.22) carries no `hNames`, because it discharges the condition internally with a
+    code context containing the common names.
+  - These roots (P1–P4) stay unchanged, and every existing public declaration stays
+    byte-stable: the branch is purely additive.
 - **Raw objects are not Gamma-named objects.** Raw objects over `C.base` are not
   automatically Gamma-named objects, because the code set changes from `C.base` to the code
   context. A bridge (upward code extension, as in `GammaVolumeObjects.extend`) is not provided
