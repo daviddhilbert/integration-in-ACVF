@@ -1,4 +1,5 @@
 import Integration7.GammaFunPositiveIntegrals
+import Integration7.AERVVolumeFunctionIntegrals
 
 /-! Gamma-named positive almost-everywhere functions and their integrals.
 Removing the part of a presentation over a Gamma VF-small set does not change
@@ -122,5 +123,97 @@ theorem presentation_integral_outside_base (F : Presentation C Ξ hΞ n k) (E : 
     _ _ hW' hW f hf EW' EW hEW' hEW
   exact (gammaVolumeBlowupClass_eq_iff hc 𝔇 𝔅).mpr
     (((h1.trans hc (h3.symm hc)).trans hc (h2.symm hc)).descend hc 𝔇 hNames)
+
+
+/-! ### The almost-everywhere quotient -/
+
+/-- The Gamma-named class of the row of a presentation at a VF point. -/
+def Presentation.rowClass (F : Presentation C Ξ hΞ n k) (x : Fin (n+1) → VFType (M := M)) :
+    GammaVolumeBlowupClasses hc (vfParameterVolumeContext 𝔇 x) (rowGammaBase 𝔅 x) k :=
+  gammaVolumeBlowupClass hc (vfParameterVolumeContext 𝔇 x) (rowGammaBase 𝔅 x)
+    ⟨F.family.rowInContext x,F.gamma.row hc x⟩
+
+/-- The empty Gamma VF set. -/
+def GammaVFSet.empty (n : ℕ) : GammaVFSet C Ξ hΞ n :=
+  ⟨SpecialTransformations.DefinableGeometry.DefSet.empty _ _,by
+    have h := gamma_empty_point_set (G := 𝔅) (n := n+1) (a := 0)
+    convert h using 1
+    exact Set.eq_empty_iff_forall_notMem.mpr (fun p hp => hp)⟩
+
+/-- The union of Gamma VF sets. -/
+def GammaVFSet.union (E D : GammaVFSet C Ξ hΞ n) : GammaVFSet C Ξ hΞ n :=
+  ⟨E.set.union D.set,by
+    have h := (gammaLogicInput 𝔅).union E.gamma D.gamma
+    convert h using 1
+    ext p
+    exact Iff.rfl⟩
+
+/-- Almost-everywhere equivalence of Gamma-named presentations. -/
+def AEEquivalent (F H : Presentation C Ξ hΞ n k) : Prop :=
+  ∃ E : GammaVFSet C Ξ hΞ n,
+    SpecialTransformations.Section4.vfDim (SpecialTransformations.Section4.rawRVSpace (M := M) 1) E.set < n+1 ∧
+      ∀ x, x ∉ E.set.carrier → F.rowClass hc C Ξ hΞ x = H.rowClass hc C Ξ hΞ x
+
+def aeSetoid (n k : ℕ) : Setoid (Presentation C Ξ hΞ n k) where
+  r := AEEquivalent hc C Ξ hΞ
+  iseqv := ⟨fun _ => ⟨GammaVFSet.empty C Ξ hΞ n,(SpecialTransformations.DefinableGeometry.Dimension.dim_empty SpecialTransformations.Section4.rawVFSpace
+      (SpecialTransformations.Section4.AuxiliaryCoordinates.space (SpecialTransformations.Section4.rawRVSpace (M := M) 1)) (SpecialTransformations.Section4.AuxiliaryCoordinates.rv 0)).trans_lt
+        (Nat.zero_lt_succ n),fun _ _ => rfl⟩,
+    fun ⟨E,hE,h⟩ => ⟨E,hE,fun x hx => (h x hx).symm⟩,
+    fun ⟨E,hE,h⟩ ⟨D,hD,g⟩ => ⟨E.union C Ξ hΞ D,by
+      change SpecialTransformations.Section4.vfDim _ (E.set.union D.set) < n+1
+      rw [pure_vf_dim_union hc 𝔇]
+      exact max_lt hE hD,
+      fun x hx => (h x (fun he => hx (Or.inl he))).trans (g x (fun hd => hx (Or.inr hd)))⟩⟩
+
+/-- **Gamma-named positive almost-everywhere functions** on `VF^(n+1)` with coefficient
+degree `k+1`. -/
+abbrev AEFunction (n k : ℕ) := Quotient (aeSetoid hc C Ξ hΞ n k)
+
+theorem gamma_outside_base_row_iso (F : Presentation C Ξ hΞ n k) (E : GammaVFSet C Ξ hΞ n)
+    (x : Fin (n+1) → VFType (M := M)) (hx : x ∉ E.set.carrier) :
+    (selectedFamilyOutsideBaseRowIso hc F.family E.set x hx).GammaDefinable (rowGammaBase 𝔅 x) := by
+  have hR := (F.outsideBase C Ξ hΞ E).gamma.row hc x
+  exact gamma_volume_iso_of_preserving_coordinates_full hc (vfParameterVolumeContext 𝔇 x) _
+    (fun _ => rfl) (fun _ => rfl) (gamma_essential_volume_domain _ hR.coordinates)
+    ((gamma_rv_coordinate_map hc
+      (SpecialTransformations.DefinableGeometry.Map.inclusion (fun r hr => hr.1) :
+        SpecialTransformations.DefinableGeometry.Map ((F.outsideBase C Ξ hΞ E).family.rowInContext x).underlying.obj.domain
+          (F.family.rowInContext x).underlying.obj.domain) id hR.domain_graph (fun _ => rfl)).congr (fun _ => rfl))
+
+include hγ hγ1 in
+/-- The integral descends to almost-everywhere functions. -/
+theorem presentation_integral_ae (F H : Presentation C Ξ hΞ n k) (h : AEEquivalent hc C Ξ hΞ F H) :
+    F.integral hc C Ξ hΞ hGenerated = H.integral hc C Ξ hΞ hGenerated := by
+  obtain ⟨E,hE,hRows⟩ := h
+  refine (presentation_integral_outside_base hc C Ξ hΞ hGenerated γ hγ hγ1 F E hE).trans
+    (((presentation_integral_eq_of_rows hc C Ξ hΞ hGenerated γ hγ hγ1 _ _ ?_)).trans
+      (presentation_integral_outside_base hc C Ξ hΞ hGenerated γ hγ hγ1 H E hE).symm)
+  intro x
+  let Cx := vfParameterVolumeContext 𝔇 x
+  by_cases hx : x ∈ E.set.carrier
+  · have hF0 := selected_family_outside_base_row_empty F.family E.set x hx
+    have hH0 := selected_family_outside_base_row_empty H.family E.set x hx
+    refine GammaVolumeBlowupEquivalent.of_iso Cx (rowGammaBase 𝔅 x) (RVVolumeIso.of_empty hc Cx _ _ hF0 hH0) ?_
+    apply GammaGraphDefinable.congr (FiniteRV.gamma_empty_graph (B := rowGammaBase 𝔅 x) _ _)
+    intro p q
+    constructor
+    · exact False.elim
+    · rintro ⟨u,_,_⟩
+      exact (hF0.le (rvEssentialLabels_subset _ u.property)).elim
+  · have h1 := GammaVolumeBlowupEquivalent.of_iso Cx (rowGammaBase 𝔅 x)
+      (U := ⟨(F.outsideBase C Ξ hΞ E).family.rowInContext x,(F.outsideBase C Ξ hΞ E).gamma.row hc x⟩)
+      (V := ⟨F.family.rowInContext x,F.gamma.row hc x⟩) _ (gamma_outside_base_row_iso hc C Ξ hΞ F E x hx)
+    have h2 := GammaVolumeBlowupEquivalent.of_iso Cx (rowGammaBase 𝔅 x)
+      (U := ⟨(H.outsideBase C Ξ hΞ E).family.rowInContext x,(H.outsideBase C Ξ hΞ E).gamma.row hc x⟩)
+      (V := ⟨H.family.rowInContext x,H.gamma.row hc x⟩) _ (gamma_outside_base_row_iso hc C Ξ hΞ H E x hx)
+    exact (h1.trans hc Cx _ ((gammaVolumeBlowupClass_eq_iff hc Cx _).mp (hRows x hx))).trans hc Cx _
+      (h2.symm hc Cx _)
+
+include hγ hγ1 in
+/-- **The Gamma-named integral of an almost-everywhere function.** -/
+def aeIntegral : AEFunction hc C Ξ hΞ n k → HK.GammaNamedRVClasses hc C Ξ hΞ (((k+1)+n)+1) :=
+  Quotient.lift (fun F => F.integral hc C Ξ hΞ hGenerated)
+    (fun F H h => presentation_integral_ae hc C Ξ hΞ hGenerated γ hγ hγ1 F H h)
 
 end IntegrationInACVF.Section7.GammaFun
