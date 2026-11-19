@@ -347,4 +347,147 @@ theorem SelectedVFVolumeFamily.Gamma.leftProduct (hc : CanonicalStructure.IsCano
     {F : SelectedVFVolumeFamily C n a k} (hF : F.Gamma G) : (selectedVolumeFamilyLeftProduct U F).Gamma G :=
   ⟨gamma_left_product_domain hU hF,density_graph_of_volume_form_graph _ (gamma_left_product_form_graph hc hU hF)⟩
 
+theorem left_product_point_of_coords (U : PositiveRVVolumeObject (M := M) (C.base : Set M) p)
+    (F : SelectedVFVolumeFamily C n a k) (q : Point (M := M) n ((a+U.underlying.obj.arity)+(((p+1)+k)+1)))
+    (hq : q ∈ (selectedVolumeFamilyLeftProduct U F).domain.carrier) :
+    leftProductPoint U F ⟨_,((mem_left_product_coords U F q).mp hq).1⟩
+      ⟨_,(((mem_left_product_coords U F q).mp hq).2).1⟩ = q := by
+  obtain ⟨h1,h2,hv,hs⟩ := (mem_left_product_coords U F q).mp hq
+  unfold leftProductPoint
+  refine Prod.ext rfl ?_
+  funext i
+  refine Fin.addCases (fun j => ?_) (fun j => ?_) i
+  · refine Fin.addCases (fun l => ?_) (fun l => ?_) j
+    · simp only [Fin.append_left]
+      rfl
+    · simp only [Fin.append_left,Fin.append_right]
+      rfl
+  · refine Fin.addCases (m := p+1) (n := k+1) (fun l => ?_) (fun l => ?_) j
+    · dsimp only
+      erw [Fin.append_right]
+      have := congrFun hv l
+      simp only [Function.comp_apply] at this
+      exact (Fin.append_left _ _ l).trans this
+    · dsimp only
+      erw [Fin.append_right]
+      have := congrFun hs l
+      simp only [Function.comp_apply] at this
+      exact (Fin.append_right _ _ l).trans this
+
+/-- Row coordinates of a left product: coefficient labels followed by family labels. -/
+def leftProductRowIndex (a b W : ℕ) : Fin (b+a) → Fin ((a+b)+W) :=
+  Fin.append (leftProductCoefIndex a b W) (leftProductBaseIndex a b W)
+
+theorem left_product_row_select (U : PositiveRVVolumeObject (M := M) (C.base : Set M) p)
+    (t : Fin ((a+U.underlying.obj.arity)+(((p+1)+k)+1)) → CanonicalRV.RVSort M) :
+    t ∘ leftProductRowIndex a U.underlying.obj.arity (((p+1)+k)+1) =
+      SpecialTransformations.Section4.rvAppend (t ∘ leftProductCoefIndex a U.underlying.obj.arity (((p+1)+k)+1))
+        (t ∘ leftProductBaseIndex a U.underlying.obj.arity (((p+1)+k)+1)) := by
+  funext i
+  refine Fin.addCases (fun j => ?_) (fun j => ?_) i
+  · simp only [leftProductRowIndex,Function.comp_apply,Fin.append_left,SpecialTransformations.Section4.rvAppend]
+  · simp only [leftProductRowIndex,Function.comp_apply,Fin.append_right,SpecialTransformations.Section4.rvAppend]
+
+theorem rv_product_value_of_eq {S : Set M} {k l : ℕ}
+    (U : SpecialTransformations.Section4.RVObject (M := M) S k) (V : SpecialTransformations.Section4.RVObject (M := M) S l)
+    (c : (SpecialTransformations.Section4.rvProductObject U V).domain) (u : U.domain) (v : V.domain)
+    (h : c.val = SpecialTransformations.Section4.rvAppend u.val v.val) :
+    (SpecialTransformations.Section4.rvProductObject U V).value c =
+      SpecialTransformations.Section4.rvAppend (U.value u) (V.value v) := by
+  have he : c = SpecialTransformations.Section4.rvPackPair U.domain V.domain u v := Subtype.ext h
+  subst he
+  exact SpecialTransformations.Section4.rvProductObject_value_pair U V u v
+
+theorem positive_product_density_of_eq {S : Set M} {k l : ℕ}
+    (U : PositiveRVVolumeObject (M := M) S k) (V : PositiveRVVolumeObject (M := M) S l)
+    (c : (U.prod V).underlying.obj.domain) (u : U.underlying.obj.domain) (v : V.underlying.obj.domain)
+    (h : c.val = SpecialTransformations.Section4.rvAppend u.val v.val) :
+    (U.prod V).form.value c = U.form.value u * V.form.value v := by
+  have he : c = SpecialTransformations.Section4.rvPackPair U.underlying.obj.domain V.underlying.obj.domain u v :=
+    Subtype.ext h
+  subst he
+  change ((U.form.prod V.form).pullback (SpecialTransformations.Section4.rvUnpack _ _)).value _ = _
+  rw [VolumeForm.pullback_value,SpecialTransformations.Section4.rvUnpack_pair,VolumeForm.prod_value]
+  rfl
+
+set_option maxHeartbeats 1600000 in
+/-- **Rows of a positive-coefficient product are products of rows.** -/
+theorem gamma_left_product_row_class (hc : CanonicalStructure.IsCanonical (M := M)) {G : Base (M := M)}
+    {U : PositiveRVVolumeObject (M := M) (C.base : Set M) p} (hU : VolumeObjectGamma U G)
+    {F : SelectedVFVolumeFamily C n a k} (hF : F.Gamma G) (x : Fin n → VFType (M := M)) :
+    gammaVolumeBlowupClass hc (vfParameterVolumeContext C x) (rowGammaBase G x)
+        ⟨(selectedVolumeFamilyLeftProduct U F).rowInContext x,(hF.leftProduct hc hU).row hc x⟩ =
+      gammaVolumeBlowupClass hc (vfParameterVolumeContext C x) (rowGammaBase G x)
+        ((GammaVolumeObjects.changeBase (B := rowGammaBase G x) (GammaVolumeObjects.extend ⟨U,hU⟩
+            (fun _ h => vfParameterVolumeContext_contains C x (Or.inl h)))
+          (GammaBaseDominated.of_subset Set.subset_union_left (Set.Subset.refl _))).prod hc
+          ⟨F.rowInContext x,hF.row hc x⟩) := by
+  set b := U.underlying.obj.arity
+  set W := ((p+1)+k)+1
+  refine gamma_class_eq_of_select hc _ _ _ _ (leftProductRowIndex a b W) ?hmap ?hsurj ?hinj ?hcoord ?hden
+  case hmap =>
+    intro t ht
+    obtain ⟨h1,h2,-,-⟩ := (mem_left_product_coords U F (x,t)).mp ht
+    rw [left_product_row_select]
+    exact (SpecialTransformations.Section4.mem_rvProductDomain _ _ _).mpr ⟨_,h2,_,h1,rfl⟩
+  case hsurj =>
+    intro s hs
+    obtain ⟨u,hu,r,hr,rfl⟩ := (SpecialTransformations.Section4.mem_rvProductDomain _ _ _).mp hs
+    let f : F.domain := ⟨(x,r),hr⟩
+    let u' : U.underlying.obj.domain := ⟨u,hu⟩
+    have hmem : (x,(leftProductPoint U F f u').2) ∈ (selectedVolumeFamilyLeftProduct U F).domain.carrier :=
+      (mem_left_product U F _).mpr ⟨f,u',rfl⟩
+    refine ⟨_,hmem,?_⟩
+    rw [left_product_row_select]
+    congr 1
+    · funext i
+      simp only [leftProductPoint,leftProductCoefIndex,Function.comp_apply,Fin.append_left,Fin.append_right]
+      rfl
+    · funext i
+      simp only [leftProductPoint,leftProductBaseIndex,Function.comp_apply,Fin.append_left]
+      rfl
+  case hinj =>
+    intro t ht t' ht' h
+    rw [left_product_row_select,left_product_row_select] at h
+    have hu := SpecialTransformations.Section4.rvAppend_injective
+      (show (fun ab => SpecialTransformations.Section4.rvAppend ab.1 ab.2)
+          (t ∘ leftProductCoefIndex a b W,t ∘ leftProductBaseIndex a b W) =
+        (fun ab => SpecialTransformations.Section4.rvAppend ab.1 ab.2)
+          (t' ∘ leftProductCoefIndex a b W,t' ∘ leftProductBaseIndex a b W) from h)
+    have e1 := left_product_point_of_coords U F (x,t) ht
+    have e2 := left_product_point_of_coords U F (x,t') ht'
+    have hc1 : t ∘ leftProductBaseIndex a b W = t' ∘ leftProductBaseIndex a b W := congrArg Prod.snd hu
+    have hc2 : t ∘ leftProductCoefIndex a b W = t' ∘ leftProductCoefIndex a b W := congrArg Prod.fst hu
+    have ef : (⟨_,((mem_left_product_coords U F (x,t)).mp ht).1⟩ : F.domain) =
+        ⟨_,((mem_left_product_coords U F (x,t')).mp ht').1⟩ := Subtype.ext (Prod.ext rfl hc1)
+    have eu : (⟨_,(((mem_left_product_coords U F (x,t)).mp ht).2).1⟩ : U.underlying.obj.domain) =
+        ⟨_,(((mem_left_product_coords U F (x,t')).mp ht').2).1⟩ := Subtype.ext hc2
+    exact congrArg Prod.snd (e1.symm.trans ((congrArg₂ (leftProductPoint U F) ef eu).trans e2))
+  case hcoord =>
+    intro t
+    obtain ⟨h1,h2,hv,hs⟩ := (mem_left_product_coords U F (x,t.val)).mp t.property
+    refine (rv_product_value_of_eq
+      (U.extend (fun _ h => vfParameterVolumeContext_contains C x (Or.inl h))).underlying.obj
+      (F.rowInContext x).underlying.obj _ ⟨_,h2⟩ ⟨_,h1⟩ (left_product_row_select U t.val)).trans ?_
+    change SpecialTransformations.Section4.rvAppend (U.underlying.obj.value ⟨_,h2⟩) ((t.val ∘ _) ∘ F.selected) =
+      t.val ∘ Fin.natAdd (a+b)
+    rw [hv,hs]
+    funext i
+    refine Fin.addCases (m := p+1) (n := k+1) (fun l => ?_) (fun l => ?_) i
+    · simp only [SpecialTransformations.Section4.rvAppend,Fin.append_left,Function.comp_apply,
+        leftProductCoefVolumeIndex]
+      rfl
+    · simp only [SpecialTransformations.Section4.rvAppend,Fin.append_right,Function.comp_apply,
+        leftProductBaseVolumeIndex]
+      rfl
+  case hden =>
+    intro t
+    obtain ⟨h1,h2,hv,hs⟩ := (mem_left_product_coords U F (x,t.val)).mp t.property
+    refine (positive_product_density_of_eq
+      (U.extend (fun _ h => vfParameterVolumeContext_contains C x (Or.inl h)))
+      (F.rowInContext x) _ ⟨_,h2⟩ ⟨_,h1⟩ (left_product_row_select U t.val)).trans ?_
+    change _ = (selectedVolumeFamilyLeftProduct U F).form.value ⟨(x,t.val),t.property⟩
+    rw [left_product_density_coords]
+    rfl
+
 end IntegrationInACVF.Section7
