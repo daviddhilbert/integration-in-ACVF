@@ -75,6 +75,11 @@ jobs:
       - name: Check shared proof ownership and provenance
         run: python3 scripts/check_shared_foundation.py
 
+      # The path-filtered blueprint workflow skips Lean-only commits, so check
+      # the blueprint fingerprints and declaration anchors on every revision.
+      - name: Check blueprint fingerprints and declaration anchors
+        run: python3 scripts/check_blueprint.py
+
       - name: Restore compiled pinned predecessors
         id: predecessor-cache
         uses: actions/cache/restore@v4
