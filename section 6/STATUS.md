@@ -34,6 +34,11 @@ implemented in the finite-category scope below. The complete Section 6
 audit, root build and project-wide verification pass.
 No numbered Section 6 obligation remains in the scope below.
 
+*Note, November 19, 2026:* in the legacy `Section6.FiniteRV` interfaces,
+6.16–6.22 hold only under the undischarged universal Section 5.8 premise.
+Their closed counterparts are in `IntegrationInACVF.Section7.CompletedSection6`;
+see "Main entry points" below.
+
 ## Scope and explicit inputs
 
 All public numbered statements concern **RV[k]**, whose volume maps have
@@ -71,7 +76,7 @@ occur. The root build passed **11,202 jobs**. Evidence:
 The project-wide command
 `lake env python3 scripts/verify_ci.py --reuse-certified` passed on the final
 integrated state, including the inherited QE audit and all available
-verifiers for Sections2–6. Section 7 has no verifier and was skipped.
+verifiers for Sections2–6. Section 7 has no verifier and was skipped. *(Historical, November 12; Section 7 now has a verifier.)*
 Section 6 rechecked all 2,268 full types and reports, with 0 fresh modules and
 733 exact certified artifacts. Earlier passes compiled every added module.
 Evidence is in `.scratch/section6-final-project-audit.log`,
@@ -136,9 +141,40 @@ receipts are retained in `.scratch/`; they certify their own snapshots.
 
 ## Main entry points
 
+*Updated November 19, 2026.* The main entry points are the **closed**
+theorems in `IntegrationInACVF.Section7.CompletedSection6` (import
+`Integration7.Library`). They assume no Section 5.8 premise: the needed
+two-order input is proved over the standing VF/Gamma-generated base by
+`IntegrationInACVF.Section7.completed_vf_parameter_two_order_input`. The
+canonical-model, saturation, characteristic, field and generation
+hypotheses remain explicit.
+
+* `CompletedSection6.lemma_6_16`
+* `CompletedSection6.lemma_6_17`, `CompletedSection6.lemma_6_17_kernel`
+* `CompletedSection6.proposition_6_18`, `CompletedSection6.proposition_6_18_lift`
+* `CompletedSection6.theorem_6_19`, `CompletedSection6.theorem_6_19_characterization`,
+  `CompletedSection6.theorem_6_19_lift`, `CompletedSection6.theorem_6_19_lift_finite`
+* `CompletedSection6.IntegrationContext.functionModule`,
+  `CompletedSection6.IntegrationContext.integralLinearMap`
+* `CompletedSection6.remark_6_20_representative_independence`,
+  `CompletedSection6.remark_6_20_linearity`
+* `CompletedSection6.coordinatePushforward`, `CompletedSection6.coordinatePushforward_value`,
+  `CompletedSection6.coordinatePushforward_integral`, `CompletedSection6.proposition_6_21`
+* `CompletedSection6.theorem_6_22`, `CompletedSection6.theorem_6_22_injective`,
+  `CompletedSection6.theorem_6_22_lift`, `CompletedSection6.theorem_6_22_graded_colimit`
+
+### Conditional legacy interfaces
+
+The names below are the original Section 6 interfaces. 6.16–6.22 among them
+(and `FiniteRV.IntegrationContext`) are **conditional**: they take the
+universal Section 5.8 premise (`h58`, or `Section5TwoOrderInputAll`), which
+quantifies over arbitrary frozen parameter bases and is **not discharged**.
+Do not count them as unconditional proofs; use the closed names above.
+
 All names below are in `IntegrationInACVF.Section6`, unless qualified.
 The full import is `IntegrationSection6.Library`.
 
+* `FiniteRV.lemma_6_16`
 * `FiniteRV.lemma_6_17`
 * `FiniteRV.proposition_6_18`
 * `FiniteRV.theorem_6_19`, `FiniteRV.theorem_6_19_characterization`
