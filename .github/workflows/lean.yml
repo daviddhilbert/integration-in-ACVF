@@ -28,6 +28,21 @@ jobs:
         with:
           persist-credentials: false
 
+      # The Section 7 library needs more memory than the 16 GB hosted runner has:
+      # each GammaFun* module maps ~6.5 GB of imports, and the runner lost
+      # communication under memory pressure. Add swap before building.
+      - name: Add swap space
+        run: |
+          df -h / /mnt || true
+          sudo swapoff -a || true
+          sudo rm -f /mnt/swapfile
+          # Use the runner's scratch disk; keep the root disk for the build.
+          sudo fallocate -l 12G /mnt/swapfile-ci
+          sudo chmod 600 /mnt/swapfile-ci
+          sudo mkswap /mnt/swapfile-ci
+          sudo swapon /mnt/swapfile-ci
+          free -h
+
       - name: Set up Python
         uses: actions/setup-python@v6
         with:
@@ -130,8 +145,8 @@ jobs:
       - name: Build the project and predecessor import
         id: build
         env:
-          # Each Section 7 GammaFun* module needs ~6.5 GB RSS to load its imports; 4 concurrent jobs OOM the 16 GB runner.
-          LEAN_NUM_THREADS: "2"
+          # Each Section 7 GammaFun* module needs ~6.5 GB RSS to load its imports; even 2 concurrent jobs starved the 16 GB runner.
+          LEAN_NUM_THREADS: "1"
         shell: bash
         run: |
           mkdir -p .scratch/ci-verified
