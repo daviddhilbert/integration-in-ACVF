@@ -125,7 +125,8 @@ jobs:
       - name: Build the project and predecessor import
         id: build
         env:
-          LEAN_NUM_THREADS: "4"
+          # Each Section 7 GammaFun* module needs ~6.5 GB RSS to load its imports; 4 concurrent jobs OOM the 16 GB runner.
+          LEAN_NUM_THREADS: "2"
         shell: bash
         run: |
           mkdir -p .scratch/ci-verified
