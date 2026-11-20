@@ -1,5 +1,16 @@
 # Whole-project audit — November 16, 2026
 
+**Update, November 20, 2026 (UTC).** A fresh local check of the
+`audit-cleanup` sources passed the root build (13,801 jobs) and the
+foundation plus every Section 2–7 verifier. The six registries now contain
+**12,877 audited exports**, and every verifier also compares the full
+statements of its audited declarations with the committed baseline in
+`verification/headline-types/`. All 3,860 section Lean files contain no
+admissions or custom axiom declarations outside comments and strings. See
+the [current integrity receipt](verification/project-integrity-2026-11-20.json).
+CI for these commits is reported separately. The November 16 account below
+is historical.
+
 The fresh UTC integrity check passed the root build and foundation plus every
 Section 2–7 verifier. The six registries contain **12,597 audited exports**.
 All **4,209 published files** at proof commit `862aa448b431` match the cloud

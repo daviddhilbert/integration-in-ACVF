@@ -6,6 +6,9 @@ The author explicitly approved: **exclude VF as the closed parent**, requiring
 an ordinary closed ball with radius in Gamma. See PAPER-CORRECTIONS.md for
 the corrected target. No extra restriction on the target's open parent was
 requested or adopted. The corrected proposition remains to be proved.
+*(Superseded: the corrected proposition is now proved by
+`PuncturedBallObstruction.proposition_3_24`; see PAPER-CORRECTIONS.md and
+section 3/STATUS.md. Noted November 19, 2026.)*
 
 The independent Lean theorem
 Proposition324WholeFieldBoundary.counterexample constructs a nonempty

@@ -78,6 +78,8 @@ types and axiom records are exact. All 166 additions, including structure and
 inductive constructor interfaces, were manually reviewed in 1997 readable lines.
 Root build: 10708 jobs. The whole-project verifier passes foundation and
 Sections 2, 3, 4, 5; Sections 6, 7 have no verifiers and are skipped.
+*(Historical, November 15. Sections 6 and 7 now have verifiers, and
+`scripts/verify_ci.py` runs all of them; noted November 19, 2026.)*
 
 Evidence is retained in .scratch/section5-final-1852-verified/. VERIFICATION.json is
 the compact source/pin/type-hash/axiom index; VERIFICATION.json.gz retains the

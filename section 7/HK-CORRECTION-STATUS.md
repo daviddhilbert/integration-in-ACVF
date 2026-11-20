@@ -42,6 +42,8 @@ There is no remaining Section 7 mathematical proof obligation in this scope.
 ## Automation and publication
 
 The final full-project automated verification passed for the foundation and Sections 2–7 at the sealed 2,041-module / 6,711-export boundary. The Section 7 audit took 46.7 seconds. No fresh remote CI pass is claimed yet.
+*(Superseded: CI run 43851204054 for proof commit 862aa44 passed, as stated at
+the top of this file. Noted November 19, 2026.)*
 
 The completed source is the 2,041-module / 6,711-export completion revision on
 `section-7/reconstructed-foundation`. The previous checkpoint is

@@ -16,20 +16,23 @@ This is the sequel to [Special transformations](https://github.com/daviddhilbert
 It reuses the common ACVF-QE language and pinned dependencies; exact versions
 and reproduction details are recorded below and in `lake-manifest.json`.
 
-Thirteen reusable algebra, grading and finite-coordinate modules are provided
-by the pinned [hilbert-mathlib](https://github.com/daviddhilbert/hilbert-mathlib)
+Forty reusable algebra, grading and finite-coordinate modules (thirteen in the
+first extraction, 27 in the second) are provided by the pinned [hilbert-mathlib](https://github.com/daviddhilbert/hilbert-mathlib)
 dependency. Their original module paths remain compatibility imports, with
 unchanged declaration names and mathematical statements.
 [SHARED-FOUNDATION.json](SHARED-FOUNDATION.json) records the exact proof
 providers and source fingerprints. CI checks those identities before building.
 
 The [mathematical blueprint](blueprint/README.md) covers Sections 2–7 with
-71 selected nodes, 87 linked Lean declarations and a clickable dependency graph.
+84 selected nodes, 132 linked Lean declarations and a clickable dependency graph.
 The [v1.0.0 release](https://github.com/daviddhilbert/integration-in-ACVF/releases/tag/v1.0.0)
 includes its PDF, portable web version and Palomar handoff package.
-The [whole-project integrity receipt](verification/project-integrity-2026-11-16.json)
-records the passing root build, all section verifiers and comparison of every
-published file with the cloud workspace.
+The [whole-project integrity receipt](verification/project-integrity-2026-11-20.json)
+records the passing root build, all section verifiers, the statement baselines
+and the admission scan for the current sources (regenerated 2026-11-20 UTC).
+The [November 16 receipt](verification/project-integrity-2026-11-16.json),
+which also compared every published file with the cloud workspace, is kept
+as history.
 
 | Directory | Paper section |
 | --- | --- |
@@ -87,10 +90,17 @@ essential label are proved separately. Henselian ascent, finite immediate
 triviality, primitive residue lifting and the required degree equality
 supply the Gauss graph input. No graph or finite-extension reference
 hypothesis remains in the final theorem. Its weighted degree-zero extension retains the supplied label isomorphism
-and proves exact preservation of the actual RV form. See [Section 2 status](section%202/STATUS.md).
+and proves exact preservation of the actual RV form. The all-degree theorem
+with this weighted degree-zero branch is
+`VolumeDescentAllDegrees.corollary_2_34_all_degrees_weighted`; the legacy
+`corollary_2_34_all_degrees` concludes `True` in degree zero. Lemma 2.33 is
+false as stated and is not used (see [PAPER-CORRECTIONS.md](PAPER-CORRECTIONS.md)).
+See [Section 2 targets](section%202/TARGETS.md) and [status](section%202/STATUS.md).
 
 All 21 numbered Section 3 results through Proposition 3.24 have checked
-implementations in their [recorded scopes](section%203/STATUS.md), including
+implementations. The count is the 24 numbered items 3.1–3.24 minus the three
+definitions 3.1, 3.5 and 3.20; 3.9–3.10, 3.11–3.14 and the other grouped rows
+count each number separately. They are checked in their [recorded scopes](section%203/STATUS.md), including
 full original real/Gamma/ball parameter bases where stated. The approved
 nonemptiness correction in 3.11 and ordinary closed-parent correction in
 3.24 are recorded in [PAPER-CORRECTIONS.md](PAPER-CORRECTIONS.md). The open
@@ -118,6 +128,8 @@ See [Section 4 status](section%204/STATUS.md).
 The [whole-project audit](PROJECT-AUDIT.md) records the current checked
 boundary, publication state and unfinished mathematical obligations.
 
+*Historical record of the November 11, 2026 Section 4 batch; current
+verification covers all sections, see the integrity receipt above.*
 The Section 4 integration build and complete project verifiers pass locally
 for foundation and Sections 2–5. Section 4 adds 445 full-type/axiom audits;
 its source-matched evidence is [VERIFICATION.json](section%204/VERIFICATION.json).
@@ -126,6 +138,8 @@ passed, and its retained complete types, axiom records, source/pin hashes
 and audit hashes match the local receipt exactly.
 
 
+*Historical record of the November 11, 2026 Section 2 batch; the current
+counts are 73 Section 2 and 1,244 Section 3 audits, in the section receipts.*
 The full root build, inherited QE audit, all 68 Section 2 and all 1,244
 Section 3 type/axiom audits pass locally. All 54 previous Section 2 types
 and all Section 3 types are unchanged; all 14 new complete types match
@@ -143,9 +157,15 @@ lake env python3 scripts/verify_ci.py
 ```
 
 [Lean verification](.github/workflows/lean.yml) runs on pushes, pull requests
-and manual dispatch, retaining complete audit evidence. Green CI confirms
-the exported types; exact hypotheses and paper fidelity also require manual
-review. The section receipts record the checked sources and pins.
+and manual dispatch, retaining complete audit evidence. Every section
+verifier, and the inherited QE audit in `scripts/verify_ci.py`, compares the
+full statements (`#check` output) of the declarations it audits with the
+reviewed baseline in [verification/headline-types/](verification/headline-types)
+and fails on any difference, so green CI confirms the audited exported types
+are unchanged. After reviewing an intended statement change, rerun the
+verifier with `UPDATE_HEADLINE_BASELINE=1` and commit the new baseline.
+Exact hypotheses and paper fidelity still require manual review. The
+section receipts record the checked sources and pins.
 
 The referee attachment remains reference material only; see
 [REFERENCE-NOTES.md](REFERENCE-NOTES.md). The requested writeup of proofs
@@ -156,9 +176,12 @@ Section 6's closed entrypoints include the kernel equivalence, additive
 and semiring integration, parameter-dependent definable functions and
 linearity, coordinate pushforwards/Fubini, and the principal-ideal and
 localization theorem. They retain the standing canonical-model,
-saturation, characteristic, field and VF/Gamma-generation hypotheses;
-the earlier universal Section 5.8 premise is no longer assumed.
-The older conditional interfaces remain available. See
+saturation, characteristic, field and VF/Gamma-generation hypotheses.
+These closed `CompletedSection6` entrypoints, including Lemma 6.16
+(`CompletedSection6.lemma_6_16`), do not assume the earlier universal
+Section 5.8 premise. The older conditional `Section6.FiniteRV` 6.16–6.22
+interfaces remain available and still assume it; that premise is not
+discharged. See
 [Section 6 status](section%206/STATUS.md) and
 [Section 7 status](section%207/STATUS.md) for their locations and evidence.
 The project verifier accepts `--reuse-certified`
@@ -187,4 +210,4 @@ Hilbert mathlib owns the paper-independent modules listed in
 `SHARED-FOUNDATION.json`. The additional extraction moves 27 implementation
 files there and preserves their original import paths, public types and
 hypotheses. The 40 shared paths are verified against the exact pinned provider
-bodies; Section 7 retains its complete 6,711-declaration audit.
+bodies; Section 7 retains its complete declaration audit (6,990 exports).

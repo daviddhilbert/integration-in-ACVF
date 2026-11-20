@@ -8,6 +8,9 @@ volume forms in **both measured degree-zero categories**, µRV[0] and µVF[0].
 Ordinary RV[0], VF[0], and the unmeasured theory remain unchanged.
 
 **The review is complete; correction is paused awaiting the upstream API.**
+*(Historical, November 15, 2026. The upstream API was published and the
+correction is complete; see the implementation status above. Noted
+November 19, 2026.)*
 The preserved staging work adds 18 modules / 112 exports under the corrected
 convention, including degree-one geometric factorization, weighted zero
 lift/classification and zero descent. See

@@ -32,7 +32,7 @@ constructions, including every complete exported type, with only propext,
 Classical.choice and Quot.sound. Exact source and pin identities are in
 `.scratch/section4-verified/receipt.json`; final published evidence is recorded
 in VERIFICATION.json. Root build and full project integration checks passed for foundation and
-Sections 2–5; Sections 6–7 have no verifiers. CI 43100323010 passed on proof commit 802eb9c. Artifact 13892318636
+Sections 2–5; Sections 6–7 have no verifiers. *(Historical; Sections 6 and 7 now have verifiers. Noted November 19, 2026.)* CI 43100323010 passed on proof commit 802eb9c. Artifact 13892318636
 matches all complete types, axiom records, source/pin inputs and audit
 hashes exactly. Publication adds only receipt/documentation changes to
 those checked proof sources; see VERIFICATION.json.

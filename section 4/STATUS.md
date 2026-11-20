@@ -108,6 +108,7 @@ The final 445-declaration full-type/axiom audit passed. The full root build
 passed (10,382 Lake jobs, mostly reused artifacts), and
 `lake env python3 scripts/verify_ci.py` passed for foundation and Sections
 2, 3, 4 and 5. Sections 6 and 7 have no verifiers and are skipped.
+*(Historical; Sections 6 and 7 now have verifiers. Noted November 19, 2026.)*
 The earlier section-library build passed 9,921 Lake jobs.
 
 VERIFICATION.json records every complete exported type, allowed axioms,

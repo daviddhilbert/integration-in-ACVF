@@ -407,7 +407,7 @@ modules, 731 certified-reused), with 11,202 root build jobs. Its receipt is
 archived in `.scratch/section6-final-733/`. `IntegrationGradedColimit`
 directly specializes the additive colimit universal property to the actual
 VF Grothendieck group. The project-wide inherited QE and Sections2–6 audits also pass;
-Section 7 has no verifier. The explicit `--reuse-certified` project-runner
+Section 7 has no verifier. *(Historical; Sections 6 and 7 now have verifiers. Noted November 19, 2026.)* The explicit `--reuse-certified` project-runner
 option forwards Section 6’s sealed reuse checks while preserving fresh
 compilation by default.
 All sources and hypotheses are checked at the existing dependency pins and
