@@ -195,3 +195,105 @@ set_option pp.proofs false
 #print axioms IntegrationInACVF.Section7.GammaFun.gamma_named_normalized_theorem_7_15
 #check @IntegrationInACVF.Section7.GammaFun.presentation_ae_of_generic_rows
 #print axioms IntegrationInACVF.Section7.GammaFun.presentation_ae_of_generic_rows
+#check @IntegrationInACVF.Section7.SelectedVFVolumeFamily.Gamma.headFibre
+#print axioms IntegrationInACVF.Section7.SelectedVFVolumeFamily.Gamma.headFibre
+#check @IntegrationInACVF.Section7.gamma_head_fibre_standard_contraction
+#print axioms IntegrationInACVF.Section7.gamma_head_fibre_standard_contraction
+#check @IntegrationInACVF.Section7.head_fibre_integral_volume_iso_gamma
+#print axioms IntegrationInACVF.Section7.head_fibre_integral_volume_iso_gamma
+#check @IntegrationInACVF.Section7.gamma_field_unary_special_preparation
+#print axioms IntegrationInACVF.Section7.gamma_field_unary_special_preparation
+#check @IntegrationInACVF.Section7.VolumeObjectGamma.canonicalVolumeLabels
+#print axioms IntegrationInACVF.Section7.VolumeObjectGamma.canonicalVolumeLabels
+#check @IntegrationInACVF.Section7.rv_coordinate_density_native_iso_gamma
+#print axioms IntegrationInACVF.Section7.rv_coordinate_density_native_iso_gamma
+#check @IntegrationInACVF.Section7.SelectedVFVolumeFamily.Gamma.coordinateSelectedCoefficient
+#print axioms IntegrationInACVF.Section7.SelectedVFVolumeFamily.Gamma.coordinateSelectedCoefficient
+#check @IntegrationInACVF.Section7.gamma_unary_special_standard_contraction
+#print axioms IntegrationInACVF.Section7.gamma_unary_special_standard_contraction
+#check @IntegrationInACVF.Section7.head_fibre_left_product_row_class
+#print axioms IntegrationInACVF.Section7.head_fibre_left_product_row_class
+#check @IntegrationInACVF.Section7.coordinate_selected_coefficient_row_class
+#print axioms IntegrationInACVF.Section7.coordinate_selected_coefficient_row_class
+#check @IntegrationInACVF.Section7.CommonContextVolumeEquivalent.of_extend_context
+#print axioms IntegrationInACVF.Section7.CommonContextVolumeEquivalent.of_extend_context
+#check @IntegrationInACVF.Section7.CommonContextVolumeEquivalent.reduce
+#print axioms IntegrationInACVF.Section7.CommonContextVolumeEquivalent.reduce
+#check @IntegrationInACVF.Section7.GammaFun.head_left_product_common
+#print axioms IntegrationInACVF.Section7.GammaFun.head_left_product_common
+#check @IntegrationInACVF.Section7.GammaFun.presentation_head_left_product_ae
+#print axioms IntegrationInACVF.Section7.GammaFun.presentation_head_left_product_ae
+#check @IntegrationInACVF.Section7.GammaFun.ae_head_integral_positive_coefficient
+#print axioms IntegrationInACVF.Section7.GammaFun.ae_head_integral_positive_coefficient
+#check @IntegrationInACVF.Section7.HK.ZeroRVVolumeObject.Gamma.zeroRVNativeDensity
+#print axioms IntegrationInACVF.Section7.HK.ZeroRVVolumeObject.Gamma.zeroRVNativeDensity
+#check @IntegrationInACVF.Section7.CommonContextVolumeEquivalent.zeroProd
+#print axioms IntegrationInACVF.Section7.CommonContextVolumeEquivalent.zeroProd
+#check @IntegrationInACVF.Section7.GammaFun.head_zero_coef_common
+#print axioms IntegrationInACVF.Section7.GammaFun.head_zero_coef_common
+#check @IntegrationInACVF.Section7.GammaFun.presentation_head_zero_coef_ae
+#print axioms IntegrationInACVF.Section7.GammaFun.presentation_head_zero_coef_ae
+#check @IntegrationInACVF.Section7.HK.ZeroVFVolumeFamily.Gamma.headFibre
+#print axioms IntegrationInACVF.Section7.HK.ZeroVFVolumeFamily.Gamma.headFibre
+#check @IntegrationInACVF.Section7.gamma_zero_head_fibre_standard_contraction
+#print axioms IntegrationInACVF.Section7.gamma_zero_head_fibre_standard_contraction
+#check @IntegrationInACVF.Section7.GammaFun.head_zero_zero_common
+#print axioms IntegrationInACVF.Section7.GammaFun.head_zero_zero_common
+#check @IntegrationInACVF.Section7.GammaFun.presentation_head_zero_zero_ae
+#print axioms IntegrationInACVF.Section7.GammaFun.presentation_head_zero_zero_ae
+#check @IntegrationInACVF.Section7.GammaFun.head_pos_zero_common
+#print axioms IntegrationInACVF.Section7.GammaFun.head_pos_zero_common
+#check @IntegrationInACVF.Section7.GammaFun.presentation_head_pos_zero_ae
+#print axioms IntegrationInACVF.Section7.GammaFun.presentation_head_pos_zero_ae
+#check @IntegrationInACVF.Section7.GammaFun.pres_head_act
+#print axioms IntegrationInACVF.Section7.GammaFun.pres_head_act
+#check @IntegrationInACVF.Section7.GammaFun.ae_head_comp_act
+#print axioms IntegrationInACVF.Section7.GammaFun.ae_head_comp_act
+#check @IntegrationInACVF.Section7.GammaFun.gradedHeadLinearMap
+#print axioms IntegrationInACVF.Section7.GammaFun.gradedHeadLinearMap
+#check @IntegrationInACVF.Section7.GammaFun.graded_head_of
+#print axioms IntegrationInACVF.Section7.GammaFun.graded_head_of
+#check @IntegrationInACVF.Section7.GammaFun.graded_head_fubini
+#print axioms IntegrationInACVF.Section7.GammaFun.graded_head_fubini
+#check @IntegrationInACVF.Section7.GammaFun.gradedUnivEquiv
+#print axioms IntegrationInACVF.Section7.GammaFun.gradedUnivEquiv
+#check @IntegrationInACVF.Section7.GammaFun.gradedPermuteLinearMap
+#print axioms IntegrationInACVF.Section7.GammaFun.gradedPermuteLinearMap
+#check @IntegrationInACVF.Section7.GammaFun.graded_permute_of
+#print axioms IntegrationInACVF.Section7.GammaFun.graded_permute_of
+#check @IntegrationInACVF.Section7.GammaFun.graded_permute_of_zero
+#print axioms IntegrationInACVF.Section7.GammaFun.graded_permute_of_zero
+#check @IntegrationInACVF.Section7.GammaFun.graded_permute_fubini
+#print axioms IntegrationInACVF.Section7.GammaFun.graded_permute_fubini
+#check @IntegrationInACVF.Section7.GammaFun.gradedReindexBase
+#print axioms IntegrationInACVF.Section7.GammaFun.gradedReindexBase
+#check @IntegrationInACVF.Section7.GammaFun.graded_reindex_base_fubini
+#print axioms IntegrationInACVF.Section7.GammaFun.graded_reindex_base_fubini
+#check @IntegrationInACVF.Section7.GammaFun.gradedPrefixLinearMap
+#print axioms IntegrationInACVF.Section7.GammaFun.gradedPrefixLinearMap
+#check @IntegrationInACVF.Section7.GammaFun.graded_prefix_of
+#print axioms IntegrationInACVF.Section7.GammaFun.graded_prefix_of
+#check @IntegrationInACVF.Section7.GammaFun.graded_prefix_fubini
+#print axioms IntegrationInACVF.Section7.GammaFun.graded_prefix_fubini
+#check @IntegrationInACVF.Section7.GammaFun.gradedCoordinateIntegralLinearMap
+#print axioms IntegrationInACVF.Section7.GammaFun.gradedCoordinateIntegralLinearMap
+#check @IntegrationInACVF.Section7.GammaFun.graded_coordinate_integral_of
+#print axioms IntegrationInACVF.Section7.GammaFun.graded_coordinate_integral_of
+#check @IntegrationInACVF.Section7.GammaFun.graded_coordinate_integral_of_zero
+#print axioms IntegrationInACVF.Section7.GammaFun.graded_coordinate_integral_of_zero
+#check @IntegrationInACVF.Section7.GammaFun.gamma_named_linear_proposition_7_11
+#print axioms IntegrationInACVF.Section7.GammaFun.gamma_named_linear_proposition_7_11
+#check @IntegrationInACVF.Section7.GammaFun.gamma_named_linear_two_projection_fubini
+#print axioms IntegrationInACVF.Section7.GammaFun.gamma_named_linear_two_projection_fubini
+#check @IntegrationInACVF.Section7.GammaFun.gamma_named_linear_theorem_7_14
+#print axioms IntegrationInACVF.Section7.GammaFun.gamma_named_linear_theorem_7_14
+#check @IntegrationInACVF.Section7.GammaFun.normalizedCoordinateIntegral
+#print axioms IntegrationInACVF.Section7.GammaFun.normalizedCoordinateIntegral
+#check @IntegrationInACVF.Section7.GammaFun.normalized_coordinate_integral_generator
+#print axioms IntegrationInACVF.Section7.GammaFun.normalized_coordinate_integral_generator
+#check @IntegrationInACVF.Section7.GammaFun.gamma_named_normalized_linear_fubini
+#print axioms IntegrationInACVF.Section7.GammaFun.gamma_named_normalized_linear_fubini
+#check @IntegrationInACVF.Section7.GammaFun.gamma_named_normalized_linear_theorem_7_14
+#print axioms IntegrationInACVF.Section7.GammaFun.gamma_named_normalized_linear_theorem_7_14
+#check @IntegrationInACVF.Section7.GammaFun.gamma_named_normalized_theorem_7_14
+#print axioms IntegrationInACVF.Section7.GammaFun.gamma_named_normalized_theorem_7_14

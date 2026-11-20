@@ -18,10 +18,10 @@ integration-in-ACVF `remove-hnames` and special-transformations `gamma-lift-9-16
     homomorphisms into `HK.GammaNamedRVSemiring`, and pointwise on each function.
   - Gamma-named 7.14 and 7.15 hold for homogeneous functions.
   - Both cover positive degree and weighted degree zero.
-- **Linear layer: in progress** on branch `gamma-linear-section7` (local, from `origin/main`
-  5a69a5e; the author asked to start it). Entry points `Integration7.GammaFunLinearResults`
-  (module and integral) and `Integration7.GammaFunLinearSection7` (7.12, normalized 7.15), both
-  imported by `Integration7.Library`.
+- **Linear layer: complete for the requested targets** on branch `gamma-linear-section7` (local,
+  from `origin/main` 5a69a5e; the author asked for it). Entry points
+  `Integration7.GammaFunLinearResults` (module and integral) and `Integration7.GammaFunLinearSection7`
+  (7.11, 7.12, normalized 7.14, normalized 7.15), both imported by `Integration7.Library`.
   - Done: the graded Gamma-named functions (weighted degree zero in component zero, positive
     coefficient degree `k` in component `k+1`) form a module over `HK.GammaNamedRVSemiring`
     (`GammaFun.aeGradedAction`, instance `GammaFun.gradedAEFunctionModule`). The graded
@@ -42,12 +42,36 @@ integration-in-ACVF `remove-hnames` and special-transformations `gamma-lift-9-16
       generators inside the scalar extension of the full module, with a restricted Jacobian
       built from positive operators. The Gamma statement uses the scalar extension of the
       supported module itself. The two agree on generators; the carriers are not identified.
-  - Remaining: the linear 7.11 and normalized 7.14, which need head-integral coefficient
-    linearity (then coordinate integrals). Route: identify head rows with unary fibre-family
-    contractions (`headFibreIntegralVolumeIso`, identity on carriers) and compare contractions
-    with `gamma_family_lemma_7_5` (no `hNames`); the coefficient-product contraction needs a
-    Gamma unary special preparation of the fibre, which in turn needs a Gamma-definable chain
-    (see the scoping notes).
+  - Done: **head-integral coefficient linearity**, almost everywhere, in all four degree cases:
+    `GammaFun.presentation_head_left_product_ae` (positive coefficient, positive function),
+    `GammaFun.presentation_head_zero_coef_ae` (weighted degree-zero coefficient, positive
+    function), `GammaFun.presentation_head_pos_zero_ae` (positive coefficient, degree-zero
+    function), `GammaFun.presentation_head_zero_zero_ae` (both degree zero). Head rows are unary
+    fibre-family contractions (`head_fibre_integral_volume_iso_gamma`); the coefficient product
+    is contracted through a Gamma native coefficient preparation over the VF field base of the
+    row (`gamma_field_unary_special_preparation`), and the two contractions are compared by Gamma
+    Lemma 7.5 (rows at every point) or, in the degree-zero cases, at generic points through
+    frozen generated contexts and `GammaFun.presentation_ae_of_generic_rows`.
+  - Done: **linear 7.11.** The graded head integral is linear (`GammaFun.gradedHeadLinearMap`,
+    `GammaFun.graded_head_fubini`); graded functions supported in `VF^(n+1)` are all graded
+    functions (`GammaFun.gradedUnivEquiv`), so coordinate permutations are linear Jacobian
+    transforms (`GammaFun.gradedPermuteLinearMap`); prefix integrals iterate head integrals
+    (`GammaFun.gradedPrefixLinearMap`). The graded coordinate integral
+    `GammaFun.gradedCoordinateIntegralLinearMap` agrees with `aeCoordinateIntegral` and
+    `aeZeroCoordinateIntegral` on components (`GammaFun.graded_coordinate_integral_of`,
+    `GammaFun.graded_coordinate_integral_of_zero`), and
+    `GammaFun.gamma_named_linear_proposition_7_11` and `GammaFun.gamma_named_linear_theorem_7_14`
+    are equalities of `HK.GammaNamedRVSemiring`-linear maps.
+  - Done: **normalized 7.14.** `GammaFun.normalizedCoordinateIntegral` is the scalar extension of
+    the graded coordinate integral; `GammaFun.gamma_named_normalized_linear_fubini`,
+    `GammaFun.gamma_named_normalized_linear_theorem_7_14` and
+    `GammaFun.gamma_named_normalized_theorem_7_14` follow from linear 7.11.
+    - Formulation note for the author: linear 7.11 and normalized 7.14 are stated on all graded
+      (resp. normalized) Gamma-named functions on `VF^(n+1)`, without a support set. The raw
+      `HK.theorem_7_14` is stated on normalized functions supported in a set `X`, with the
+      coordinate image of `X` as target. The integrals of supported functions are integrals of
+      their underlying functions, so the identities carry the same content; support
+      preservation by coordinate integrals is not formalized in the Gamma layer.
   - The corresponding `HK` statements still carry `hNames`.
 
 ## Dependency changes required
@@ -149,8 +173,8 @@ additivity theorems `presentation_integral_add`, `presentation_head_integral_add
 
 ## New public declarations: Gamma-named linear layer (namespace `IntegrationInACVF.Section7.GammaFun` unless noted)
 
-Status: partial (see the summary). 95 headline declarations, audited in
-`verification/hnames-removal/LinearLayerAudit.log`.
+Status: complete for the requested targets (see the summary). 146 headline declarations,
+audited in `verification/hnames-removal/LinearLayerAudit.log`.
 
 - Coefficient actions on presentations: `Presentation.leftProduct` (positive on positive),
   `Presentation.zeroCoef` (weighted degree zero on positive), `ZeroPresentation.posCoef`,
@@ -182,6 +206,36 @@ Status: partial (see the summary). 95 headline declarations, audited in
   `normalizedSupportedIntegral`, `normalized_supported_integral_generator`,
   `gamma_named_normalized_linear_theorem_7_15`, `gamma_named_normalized_theorem_7_15`.
 - AE descent: `presentation_ae_of_generic_rows`.
+- Head-integral coefficient linearity: `presentation_head_left_product_ae`,
+  `ae_head_integral_positive_coefficient`, `head_left_product_common`,
+  `presentation_head_zero_coef_ae`, `head_zero_coef_common`, `presentation_head_pos_zero_ae`,
+  `head_pos_zero_common`, `presentation_head_zero_zero_ae`, `head_zero_zero_common`.
+- Head-linearity tools (namespace `Section7`): `SelectedVFVolumeFamily.Gamma.headFibre`,
+  `gamma_head_fibre_standard_contraction`, `head_fibre_integral_volume_iso_gamma`,
+  `HK.ZeroVFVolumeFamily.Gamma.headFibre`, `gamma_zero_head_fibre_standard_contraction`,
+  `gamma_field_unary_special_preparation`, `VolumeObjectGamma.canonicalVolumeLabels`,
+  `rv_coordinate_density_native_iso_gamma`, `HK.ZeroRVVolumeObject.Gamma.zeroRVNativeDensity`,
+  `SelectedVFVolumeFamily.Gamma.coordinateSelectedCoefficient`,
+  `gamma_unary_special_standard_contraction`, `head_fibre_left_product_row_class`,
+  `coordinate_selected_coefficient_row_class`, `CommonContextVolumeEquivalent.of_extend_context`,
+  `.reduce`, `.zeroProd`.
+- Graded head, permutation, prefix and coordinate integrals; linear 7.11: `pres_head_act`,
+  `ae_head_comp_act`, `gradedHeadLinearMap`, `graded_head_of`, `graded_head_fubini`,
+  `gradedUnivEquiv`, `gradedPermuteLinearMap`, `graded_permute_of`, `graded_permute_of_zero`,
+  `graded_permute_fubini`, `gradedReindexBase`, `graded_reindex_base_fubini`,
+  `gradedPrefixLinearMap`, `graded_prefix_of`, `graded_prefix_fubini`,
+  `gradedCoordinateIntegralLinearMap`, `graded_coordinate_integral_of`,
+  `graded_coordinate_integral_of_zero`, `gamma_named_linear_proposition_7_11`,
+  `gamma_named_linear_two_projection_fubini`, `gamma_named_linear_theorem_7_14`.
+- Normalized 7.14: `normalizedCoordinateIntegral`, `normalized_coordinate_integral_generator`,
+  `gamma_named_normalized_linear_fubini`, `gamma_named_normalized_linear_theorem_7_14`,
+  `gamma_named_normalized_theorem_7_14`.
+- Internal certificate lemmas `gamma_native_coefficient_preparation_exists`,
+  `coordinate_coefficient_contraction_product_iso_gamma`, their zero and finite-coefficient
+  versions, `raw_standard_vf_contraction` and `GammaFun.zero_head_row_contraction` take a names
+  hypothesis on an arbitrary context (they certify predecessor constructions parameterized by
+  one); they are used only with the named code context or frozen generated contexts, where it is
+  proved, and are not headlines.
 - Gamma tools (namespace `Section7`): `VFVolumeObjectGamma.prod`, `.permuteVF`, `.weightedZero`,
   `VFVolumeIso.GammaDefinable.prod`, `volume_lift_product_iso_gamma`,
   `weighted_lift_zero_product_iso_gamma`, `selected_positive_coefficient_appended_lift_gamma`,
@@ -223,9 +277,9 @@ Status: partial (see the summary). 95 headline declarations, audited in
   context. A bridge (upward code extension, as in `GammaVolumeObjects.extend`) is not provided
   as a public map on classes.
 - **Function-level uses.** The additive Gamma-named 7.11/7.12, the homogeneous 7.14/7.15, the
-  linear 7.12 and the normalized 7.15 are available without `hNames` (the last two on
-  `gamma-linear-section7`). Uses of the linear 7.11 or the normalized 7.14 must keep the `HK`
-  statements (with `hNames`) until head-integral linearity is built.
+  linear 7.11/7.12 and the normalized 7.14/7.15 are available without `hNames` (the last four on
+  `gamma-linear-section7`). The linear 7.11 and normalized 7.14 are unsupported formulations
+  (see the formulation note).
 
 ## Verification
 
@@ -233,5 +287,7 @@ Status: partial (see the summary). 95 headline declarations, audited in
 - `section 7/verification/hnames-removal/receipt.json` is a PASS for the 132 headline types and
   axioms (45 class-level in `HNamesAudit.log`, 87 function-layer in `FunctionLayerAudit.log`). Only `propext`, `Classical.choice` and `Quot.sound` occur, and `hNames` appears in
   no exported type.
+- On `gamma-linear-section7`: `lake build Integration7.Library` passed (13,568 jobs, exit 0), and
+  `LinearLayerAudit.log` checks 146 linear-layer headline types and axioms with the same result.
 - The provider's 18 new Section 9 headlines are in `scripts/verify_ci.py` SECTION9_HEADLINES
   and were audited on that branch.

@@ -91,8 +91,8 @@ prefix integrals and coordinate integrals are additive monoid homomorphisms
 argument: the head preparation of a sum is cut along the summand tag, and each cut is
 compared with its summand at generic points.
 
-**Linear layer (in progress, branch `gamma-linear-section7`).** The author asked to start the
-deferred linear 7.11/7.12 and normalized 7.14/7.15. Entry points
+**Linear layer (complete for the requested targets, branch `gamma-linear-section7`).** The
+author asked for the deferred linear 7.11/7.12 and normalized 7.14/7.15. Entry points
 `Integration7.GammaFunLinearResults` and `Integration7.GammaFunLinearSection7`. Proved:
 
 - Gamma-named RV classes of every degree act on the graded Gamma-named functions
@@ -107,8 +107,20 @@ deferred linear 7.11/7.12 and normalized 7.14/7.15. Entry points
   scalar extension of the supported module. Its carrier differs from the raw `HK.theorem_7_15`
   carrier (a span inside the extension of the full module); this is flagged for author review.
 
-Remaining: head-integral coefficient linearity `headInt(c•f) = c•headInt f`, coordinate
-integrals, the linear 7.11 and the normalized 7.14. The `HK` statements still carry `hNames`.
+- Head-integral coefficient linearity `headInt(c•f) = c•headInt f` almost everywhere, in all
+  four coefficient/function degree cases (`GammaFun.presentation_head_left_product_ae`,
+  `_zero_coef_ae`, `_pos_zero_ae`, `_zero_zero_ae`).
+- Linear 7.11: the graded head, permutation, prefix and coordinate integrals are linear
+  (`GammaFun.gradedCoordinateIntegralLinearMap`, agreeing with `aeCoordinateIntegral` and
+  `aeZeroCoordinateIntegral` on components), and `GammaFun.gamma_named_linear_proposition_7_11`
+  and `GammaFun.gamma_named_linear_theorem_7_14` are equalities of linear maps.
+- Normalized 7.14: `GammaFun.gamma_named_normalized_theorem_7_14` for the scalar extension
+  `GammaFun.normalizedCoordinateIntegral` of the graded coordinate integral.
+
+Linear 7.11 and normalized 7.14 are stated on all graded (resp. normalized) functions on
+`VF^(n+1)`, without a support set, whereas the raw `HK.proposition_7_11` and `HK.theorem_7_14`
+are supported; this is flagged for author review. The raw `HK` statements still carry `hNames`;
+the Gamma-named statements do not.
 
 These modules require the special-transformations branch `gamma-lift-9-16` (local commit
 `932a507`, which contains Gamma Theorem 9.16). The registered dependency pin is unchanged
