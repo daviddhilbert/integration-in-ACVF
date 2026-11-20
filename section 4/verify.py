@@ -15,6 +15,8 @@ import subprocess
 import sys
 
 ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT / 'scripts'))
+from headline_types import check as check_headline_types
 GENERIC = [
     'representative_spec', 'descendFun_spec', 'descendMap', 'descendMap_spec', 'descendMap_unique',
 ]
@@ -99,6 +101,8 @@ def main():
             if axioms - ALLOWED:
                 raise RuntimeError('Unexpected axioms for ' + name)
             records.append({'name': name, 'axioms': sorted(axioms)})
+        type_baseline = ('not compared for --descent-only' if selected else
+                         check_headline_types('section4', [module], names, out))
         after = {str(p.relative_to(ROOT)): digest(p) for p in inputs}
         if before != after:
             raise RuntimeError('Source or pin identity changed during verification')
@@ -112,6 +116,7 @@ def main():
             'complete_types_and_axioms': output,
             'audit_source_sha256': digest(audit),
             'audit_log_sha256': digest(out / 'HeadlineAudit.log'),
+            'headline_type_baseline': type_baseline,
             'scope': ('Generic same-base definable descent only; no numbered Section 4 lemma'
                       if selected else 'All public Section 4 theorems and function constructions currently imported by the section library; includes Lemmas 4.1–4.4 and 4.8, actual cell definitions and full label-base graph/paradigm definability, nondegenerate paradigm slopes, ordinary compatible-fibre slopes, balanced closed hulls/ball correspondence/internal symmetry, unary decomposition, parameterized cell definitions, and the independently checked singleton open-polydisc boundary'),
             'build_scope': 'Incremental selected Lake build; fresh complete-type and axiom consumer audit',

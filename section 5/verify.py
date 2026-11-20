@@ -18,6 +18,8 @@ import sys
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / '.scratch' / 'section5-verified'
+sys.path.insert(0, str(ROOT / 'scripts'))
+from headline_types import check as check_headline_types
 HEADLINES = [
     'IntegrationInACVF.Section5.contractible_comp',
     'IntegrationInACVF.Section5.focus_post_contractible',
@@ -1974,6 +1976,9 @@ def main():
                        re.search(r'⋯(?!\s*:)', types[name]) is not None)
             if omitted:
                 raise RuntimeError('Pretty-printer omitted part of type for ' + name)
+        type_baseline = check_headline_types(
+            'section5', ['IntegrationSection5.Library', 'IntegrationSection5.GeometryLibrary'],
+            HEADLINES, OUT)
         if sources != sorted((ROOT / 'section 5' / 'IntegrationSection5').glob('*.lean')):
             raise RuntimeError('Section source inventory changed during verification')
         if support_sources != sorted((ROOT / 'section 4' / 'IntegrationSection4').glob('*.lean')):
@@ -1993,6 +1998,7 @@ def main():
             'type_rendering': 'expanded' if '--full-proof-terms' in sys.argv else 'explicit declaration parameters; readable applications',
             'audit_source_sha256': digest(audit),
             'audit_log_sha256': digest(OUT / 'HeadlineAudit.log'),
+            'headline_type_baseline': type_baseline,
             'scope': 'Section5 through Corollary5.8 in the author\'s RV[k] scope: actual finite-to-one volume maps, arbitrary auxiliary RV arities and explicit finite mixed RV fibres where applicable. Lemmas5.1–5.3 construct actual special preparations and finite-category comparisons. Definition5.4 has actual coordinate-fibre specialness and factorization. Definition5.5 has all-order actual standard contractions, native and normalized RV[n] objects, full original-Gamma natural lift isomorphisms, and actual global special presentations with explicit VF-fixed Gamma RV projection charts and exact natural-lift squares under Notation2.5. Lemma5.6 constructs finite original-Gamma partitions and actual relatively unary chains with finite RV fibres at every stage. Lemmas5.7–5.8 construct both actual standard contractions and actual Gamma RV[2] isomorphisms, including uniform cell-label injection and whole-family gluing. All model, characteristic, saturation, smallness and parameter-base assumptions remain explicit. See STATUS.md for the precise presentation statement and hypotheses.',
             'build_scope': 'Incremental Lake Section 5 build and fresh full-type/axiom audit',
         }

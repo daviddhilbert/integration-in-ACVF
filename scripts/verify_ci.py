@@ -20,6 +20,8 @@ import sys
 import time
 
 ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT / 'scripts'))
+from headline_types import check as check_headline_types
 QE_HEADLINES = [
     'JohnsonACF.hasQEb',
     'hasQE_ACVF_val',
@@ -71,6 +73,7 @@ def audit_foundation():
                 raise RuntimeError('Unexpected axioms for ' + name + ': ' + str(axioms - ALLOWED))
             records.append({'name': name, 'axioms': sorted(axioms)})
         (out / 'headlines.json').write_text(json.dumps(records, indent=2) + '\n', encoding='utf-8')
+        check_headline_types('foundation', ['IntegrationInACVF'], headlines, out, lean=('lean',))
         status.write_text('PASS\n', encoding='utf-8')
         print('PASS: inherited QE headline types and allowed axioms.')
     except Exception:

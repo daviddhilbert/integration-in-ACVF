@@ -11,6 +11,8 @@ import sys
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / '.scratch' / 'section2-verified'
+sys.path.insert(0, str(ROOT / 'scripts'))
+from headline_types import check as check_headline_types
 HEADLINES = [
     'IntegrationInACVF.Section2.corollary_2_15_real_base',
     'IntegrationInACVF.Section2.corollary_2_15',
@@ -76,6 +78,7 @@ def main():
             if axioms - ALLOWED:
                 raise RuntimeError('Unexpected axioms for ' + name)
             records.append({'name': name, 'axioms': sorted(axioms)})
+        type_baseline = check_headline_types('section2', ['IntegrationSection2.Library'], HEADLINES, OUT)
         after = {str(p.relative_to(ROOT)): digest(p) for p in inputs}
         if before != after:
             raise RuntimeError('Source or pin identity changed during verification')
@@ -88,6 +91,7 @@ def main():
             'headline_audits': records,
             'audit_source_sha256': digest(audit),
             'audit_log_sha256': digest(OUT / 'HeadlineAudit.log'),
+            'headline_type_baseline': type_baseline,
             'scope': 'Corollary2.15 and Corollary2.34: positive-degree embedded proofs and corrected upstream weighted zero, retaining exact RV weights and the supplied label map; the legacy zero interface is the neutral-form specialization; standing model/base/lift/measure hypotheses explicit',
             'build_scope': 'Incremental Lake Section 2 build and fresh type/axiom audit',
         }

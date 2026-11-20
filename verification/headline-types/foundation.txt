@@ -1,0 +1,17 @@
+JohnsonACF.hasQEb : QECriterion.HasQEb ACFValidation.acf
+hasQE_ACVF_val : QECriterion.HasQE ValPM.ACVF_val
+hasQEb_ACVF_val : QECriterion.HasQEb ValPM.ACVF_val
+SpecialTransformations.Milestone0.theorem_2_3_quantifier_elimination : SpecialTransformations.Milestone0.HasQE
+  SpecialTransformations.Milestone0.Axioms.ACVF
+ValPM.hasQE_ACVF_trivial_val : QECriterion.HasQE ValPM.ACVFTrivial_val
+ValPM.hasQEb_ACVF_trivial_val : QECriterion.HasQEb ValPM.ACVFTrivial_val
+SpecialTransformations.TrivialRV.canonical_trivial_rv_qe : ∀ (α : Type)
+  (sα : α → SpecialTransformations.Milestone0.SortTag) (n : ℕ) (sn : Fin n → SpecialTransformations.Milestone0.SortTag)
+  (φ : SpecialTransformations.Milestone0.LRV.BoundedFormula α n),
+  ∃ ψ,
+    ψ.IsQF ∧
+      SpecialTransformations.Milestone0.LRV.WellSorted sα sn ψ ∧
+        ∀ (K : Type) [inst : Field K] [IsAlgClosed K] (v : α → K ⊕ K) (a : Fin n → K ⊕ K),
+          (∀ (i : α), SpecialTransformations.Milestone0.sortEval (sα i) (v i)) →
+            (∀ (i : Fin n), SpecialTransformations.Milestone0.sortEval (sn i) (a i)) → (φ.Realize v a ↔ ψ.Realize v a)
+SpecialTransformations.TrivialRV.hasQE : SpecialTransformations.Milestone0.HasQE SpecialTransformations.TrivialRV.theory

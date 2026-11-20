@@ -13,6 +13,7 @@ OUT = ROOT / '.scratch/section7-verified'
 ALLOWED = {'propext', 'Classical.choice', 'Quot.sound'}
 sys.path.insert(0, str(ROOT / 'scripts'))
 from check_shared_foundation import verify as verify_shared_foundation
+from headline_types import check as check_headline_types
 
 
 def main():
@@ -58,9 +59,10 @@ set_option pp.proofs false
         axioms = {re.sub(r'\.\{[^}]*\}', '', item.strip()) for item in body.split(',') if item.strip()}
         if not axioms <= ALLOWED:
             raise RuntimeError(f'Unapproved axioms for {name}: {sorted(axioms - ALLOWED)}')
+    type_baseline = check_headline_types('section7', ['Integration7.Library'], names, OUT)
     receipt = {'status': 'PASS', 'scope': registry['scope'], 'exports': len(names),
                'source_sha256': registry['source_sha256'], 'audit_log': str(log.relative_to(ROOT)),
-               'shared_proof_providers': shared_providers}
+               'shared_proof_providers': shared_providers, 'headline_type_baseline': type_baseline}
     (OUT / 'receipt.json').write_text(json.dumps(receipt, indent=2) + '\n')
     print(f'PASS: {len(names)} Section 7 exports. Scope: {registry["scope"]}')
 

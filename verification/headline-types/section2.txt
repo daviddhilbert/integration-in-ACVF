@@ -1,0 +1,706 @@
+@IntegrationInACVF.Section2.corollary_2_15_real_base : ∀ {M : Type}
+  [sM : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {κ : Cardinal.{0}},
+  Cardinal.aleph0 ≤ κ →
+    SpecialTransformations.Section3.Saturated M κ →
+      M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF00 →
+        ∀ (Q : Set M),
+          Cardinal.mk ↑Q < κ →
+            ∀ (A : Set SpecialTransformations.Section3.Values.Gamma) (f : ↑A → M),
+              (∀ (γ : ↑A), SpecialTransformations.Milestone0.iRV (f γ)) →
+                Q.Definable₂ SpecialTransformations.Milestone0.LRV (IntegrationInACVF.Section2.gammaRVGraph A f) →
+                  (Set.range f).Finite
+@IntegrationInACVF.Section2.corollary_2_15 : ∀ {M : Type} [sM : SpecialTransformations.Milestone0.LRV.Structure M]
+  [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {κ : Cardinal.{0}},
+  Cardinal.aleph0 ≤ κ →
+    SpecialTransformations.Section3.Saturated M κ →
+      M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF00 →
+        ∀ (B : SpecialTransformations.Section3.GammaParameters.Base),
+          Cardinal.mk ↑B.real < κ →
+            ∀ (A : Set SpecialTransformations.Section3.Values.Gamma) (f : ↑A → M),
+              (∀ (γ : ↑A), SpecialTransformations.Milestone0.iRV (f γ)) →
+                SpecialTransformations.Section3.GammaParameters.DefinableOverBase B
+                    (fun x => SpecialTransformations.Milestone0.SortTag.rv)
+                    {z | (z 0, z 1) ∈ IntegrationInACVF.Section2.gammaRVGraph A f} →
+                  (Set.range f).Finite
+@IntegrationInACVF.Section2.ConcreteVolumeForms.value_ne_zero : ∀ {M : Type}
+  [sM : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {S : Set M} {k : ℕ} {U : SpecialTransformations.Section4.RVFiniteObject S k}
+  (ω : IntegrationInACVF.Section2.ConcreteVolumeForms.RVForm U) (u : ↑U.obj.domain.carrier),
+  IntegrationInACVF.Section2.ConcreteVolumeForms.value ω u ≠ 0
+@IntegrationInACVF.Section2.ConcreteVolumeForms.liftedValue_eq : ∀ {M : Type}
+  [sM : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {S : Set M} {k : ℕ} {U : SpecialTransformations.Section4.RVFiniteObject S k}
+  (ω : IntegrationInACVF.Section2.ConcreteVolumeForms.RVForm U)
+  (p : ↑(SpecialTransformations.Section4.rvLift U.obj).carrier),
+  IntegrationInACVF.Section2.ConcreteVolumeForms.liftedValue ω p =
+    IntegrationInACVF.Section2.ConcreteVolumeForms.value ω
+      ((SpecialTransformations.Section9.liftLabelMap U.obj).toFun p)
+@IntegrationInACVF.Section2.ConcreteVolumeForms.nonzero_jacobian_of_preserves : ∀ {M : Type}
+  [sM : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {S : Set M} {k : ℕ} {U V : SpecialTransformations.Section4.RVFiniteObject S k}
+  (ω : IntegrationInACVF.Section2.ConcreteVolumeForms.RVForm U)
+  (π : IntegrationInACVF.Section2.ConcreteVolumeForms.RVForm V)
+  (f :
+    SpecialTransformations.DefinableGeometry.Map (SpecialTransformations.Section4.rvLift U.obj)
+      (SpecialTransformations.Section4.rvLift V.obj))
+  (p : ↑(SpecialTransformations.Section4.rvLift U.obj).carrier) (J : SpecialTransformations.Milestone0.Transfer.VFType),
+  IntegrationInACVF.Section2.ConcreteVolumeForms.liftedValue ω p =
+      IntegrationInACVF.Section2.ConcreteVolumeForms.liftedValue π (f.toFun p) * CanonicalRV.encodedRv J →
+    J ≠ 0
+@IntegrationInACVF.Section2.VolumeCharacteristic.charZero : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF],
+  M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF00 → CharZero SpecialTransformations.Milestone0.Transfer.VFType
+@IntegrationInACVF.Section2.LiftFibreAvoidance.exists_outside : ∀ {M Γ : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] [inst_2 : LinearOrderedCommGroupWithZero Γ]
+  [inst_3 : Valued SpecialTransformations.Milestone0.Transfer.VFType Γ] {S : Set M} {k : ℕ},
+  CanonicalStructure.IsCanonical →
+    ∀ {κ : Cardinal.{0}},
+      SpecialTransformations.Section3.Saturated M κ →
+        Cardinal.mk ↑S < κ →
+          (∀ (x y : SpecialTransformations.Milestone0.Transfer.VFType),
+              SpecialTransformations.Milestone0.VFValued.predV x y ↔ Valued.v x ≤ Valued.v y) →
+            ∀ (U : SpecialTransformations.Section4.RVObject S k) (u : ↑U.domain.carrier),
+              (∀ (i : Fin k), ↑(U.value u i) ≠ SpecialTransformations.Milestone0.iRVZero) →
+                ∀
+                  (Z :
+                    SpecialTransformations.DefinableGeometry.DefSet
+                      (SpecialTransformations.Section4.rawMixedSpace k U.arity) S),
+                  SpecialTransformations.Section4.vfDim (SpecialTransformations.Section4.rawRVSpace 1) Z < k →
+                    ∃ p, (↑p).2 = ↑u ∧ ↑p ∉ Z.carrier
+@IntegrationInACVF.Section2.FixedLabelLift.base_subset : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {S : Set M} {k : ℕ} {U V : SpecialTransformations.Section4.RVObject S k} (e : U ≅ V) (u : ↑U.domain.carrier),
+  S ⊆ IntegrationInACVF.Section2.FixedLabelLift.labelBase e u
+@IntegrationInACVF.Section2.FixedLabelLift.source_base_subset : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {S : Set M} {k : ℕ} {U V : SpecialTransformations.Section4.RVObject S k} (e : U ≅ V) (u : ↑U.domain.carrier),
+  S ∪ Set.range (SpecialTransformations.Section4.rvValues ↑u) ⊆ IntegrationInACVF.Section2.FixedLabelLift.labelBase e u
+@IntegrationInACVF.Section2.FixedLabelLift.target_base_subset : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {S : Set M} {k : ℕ} {U V : SpecialTransformations.Section4.RVObject S k} (e : U ≅ V) (u : ↑U.domain.carrier),
+  S ∪ Set.range (SpecialTransformations.Section4.rvValues ↑(e.hom.map.toFun u)) ⊆
+    IntegrationInACVF.Section2.FixedLabelLift.labelBase e u
+@IntegrationInACVF.Section2.FixedLabelLift.source_mem : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set M} {k : ℕ}
+  {U V : SpecialTransformations.Section4.RVObject S k} (e : U ≅ V) (u : ↑U.domain.carrier)
+  (p : (SpecialTransformations.Section4.rawMixedSpace k U.arity).Carrier),
+  p ∈ (IntegrationInACVF.Section2.FixedLabelLift.source e u).carrier ↔
+    p ∈ (SpecialTransformations.Section4.rvLift U).carrier ∧ p.2 = ↑u
+@IntegrationInACVF.Section2.FixedLabelLift.target_mem : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set M} {k : ℕ}
+  {U V : SpecialTransformations.Section4.RVObject S k} (e : U ≅ V) (u : ↑U.domain.carrier)
+  (p : (SpecialTransformations.Section4.rawMixedSpace k V.arity).Carrier),
+  p ∈ (IntegrationInACVF.Section2.FixedLabelLift.target e u).carrier ↔
+    p ∈ (SpecialTransformations.Section4.rvLift V).carrier ∧ p.2 = ↑(e.hom.map.toFun u)
+@IntegrationInACVF.Section2.FixedLabelLift.fibreMap_bijective : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set M} {k : ℕ}
+  {U V : SpecialTransformations.Section4.RVObject S k} (e : U ≅ V)
+  (f :
+    SpecialTransformations.DefinableGeometry.Map (SpecialTransformations.Section4.rvLift U)
+      (SpecialTransformations.Section4.rvLift V)),
+  Function.Bijective f.toFun →
+    ∀ (hlabel : ∀ (p : ↑(SpecialTransformations.Section4.rvLift U).carrier), e.hom.map.graph (↑p).2 (↑(f.toFun p)).2)
+      (u : ↑U.domain.carrier),
+      Function.Bijective (IntegrationInACVF.Section2.FixedLabelLift.fibreMap e f hlabel u).toFun
+@IntegrationInACVF.Section2.FixedLabelLift.jacobian : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set M} {k : ℕ}
+  {U V : SpecialTransformations.Section4.RVObject S k} (e : U ≅ V)
+  (f :
+    SpecialTransformations.DefinableGeometry.Map (SpecialTransformations.Section4.rvLift U)
+      (SpecialTransformations.Section4.rvLift V))
+  (hlabel : ∀ (p : ↑(SpecialTransformations.Section4.rvLift U).carrier), e.hom.map.graph (↑p).2 (↑(f.toFun p)).2)
+  (u : ↑U.domain.carrier) (p : ↑(IntegrationInACVF.Section2.FixedLabelLift.source e u).carrier)
+  {J : SpecialTransformations.Milestone0.Transfer.VFType},
+  SpecialTransformations.Section9.HasMixedVFJacobianAt f.toFun ⟨↑p, ⋯⟩ J →
+    SpecialTransformations.Section9.HasMixedVFJacobianAt
+      (IntegrationInACVF.Section2.FixedLabelLift.fibreMap e f hlabel u).toFun p J
+@IntegrationInACVF.Section2.FixedLabelLift.small_base : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {S : Set M} {k : ℕ} {U V : SpecialTransformations.Section4.RVObject S k} {κ : Cardinal.{0}},
+  Cardinal.aleph0 ≤ κ →
+    Cardinal.mk ↑S < κ →
+      ∀ (e : U ≅ V) (u : ↑U.domain.carrier), Cardinal.mk ↑(IntegrationInACVF.Section2.FixedLabelLift.labelBase e u) < κ
+@IntegrationInACVF.Section2.LiftFibreGeometry.nonzero_representatives : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {k : ℕ} (t : Fin k → CanonicalRV.RVSort M),
+  (∀ (i : Fin k), ↑(t i) ≠ SpecialTransformations.Milestone0.iRVZero) →
+    ∃ a, (∀ (i : Fin k), a i ≠ 0) ∧ SpecialTransformations.Section4.tupleRV a = t
+@IntegrationInACVF.Section2.LiftFibreGeometry.projection : ∀ {M Γ : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] [inst_2 : LinearOrderedCommGroupWithZero Γ] {S T : Set M}
+  {k : ℕ} (v : Valuation SpecialTransformations.Milestone0.Transfer.VFType Γ),
+  (∀ (x y : SpecialTransformations.Milestone0.Transfer.VFType),
+      SpecialTransformations.Milestone0.VFValued.predV x y ↔ v x ≤ v y) →
+    ∀ (U : SpecialTransformations.Section4.RVObject S k) (u : ↑U.domain.carrier)
+      (hST : S ∪ Set.range (SpecialTransformations.Section4.rvValues ↑u) ⊆ T)
+      (a : Fin k → SpecialTransformations.Milestone0.Transfer.VFType),
+      SpecialTransformations.Section4.tupleRV a = U.value u →
+        ∀ (x : Fin k → SpecialTransformations.Milestone0.Transfer.VFType),
+          (∃ p, (↑p).1 = x) ↔ x ∈ SpecialTransformations.Section7.RVFibre v fun i => RVCalc.rv v (a i)
+@IntegrationInACVF.Section2.FibreVolumeEquations.ratio : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set M} {k : ℕ}
+  {U V : SpecialTransformations.Section4.RVFiniteObject S k} (e : U.obj ≅ V.obj)
+  (ω : IntegrationInACVF.Section2.ConcreteVolumeForms.RVForm U)
+  (π : IntegrationInACVF.Section2.ConcreteVolumeForms.RVForm V)
+  (f :
+    SpecialTransformations.DefinableGeometry.Map (SpecialTransformations.Section4.rvLift U.obj)
+      (SpecialTransformations.Section4.rvLift V.obj)),
+  (∀ (p : ↑(SpecialTransformations.Section4.rvLift U.obj).carrier), e.hom.map.graph (↑p).2 (↑(f.toFun p)).2) →
+    ∀ (u : ↑U.obj.domain.carrier) (p : ↑(IntegrationInACVF.Section2.FixedLabelLift.source e u).carrier)
+      (J : SpecialTransformations.Milestone0.Transfer.VFType),
+      IntegrationInACVF.Section2.ConcreteVolumeForms.liftedValue ω ⟨↑p, ⋯⟩ =
+          IntegrationInACVF.Section2.ConcreteVolumeForms.liftedValue π (f.toFun ⟨↑p, ⋯⟩) * CanonicalRV.encodedRv J →
+        CanonicalRV.encodedRv J =
+          IntegrationInACVF.Section2.ConcreteVolumeForms.value ω u /
+            IntegrationInACVF.Section2.ConcreteVolumeForms.value π (e.hom.map.toFun u)
+@IntegrationInACVF.Section2.FibreVolumeEquations.gamma_equation_of_ratio : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set M} {k : ℕ}
+  {U V : SpecialTransformations.Section4.RVFiniteObject S k} {u : ↑U.obj.domain.carrier} {w : ↑V.obj.domain.carrier}
+  (ω : IntegrationInACVF.Section2.ConcreteVolumeForms.RVForm U)
+  (π : IntegrationInACVF.Section2.ConcreteVolumeForms.RVForm V)
+  (a b : Fin k → SpecialTransformations.Milestone0.Transfer.VFType)
+  (hU : ∀ (i : Fin k), ↑(U.obj.value u i) ≠ SpecialTransformations.Milestone0.iRVZero)
+  (hV : ∀ (i : Fin k), ↑(V.obj.value w i) ≠ SpecialTransformations.Milestone0.iRVZero),
+  SpecialTransformations.Section4.tupleRV a = U.obj.value u →
+    SpecialTransformations.Section4.tupleRV b = V.obj.value w →
+      ∀ (c : SpecialTransformations.Milestone0.Transfer.VFType),
+        CanonicalRV.encodedRv c =
+            IntegrationInACVF.Section2.ConcreteVolumeForms.value ω u /
+              IntegrationInACVF.Section2.ConcreteVolumeForms.value π w →
+          SpecialTransformations.Section3.Values.vfValueHom c =
+              (∏ i, SpecialTransformations.Section3.Values.vfValueHom (b i)) /
+                ∏ i, SpecialTransformations.Section3.Values.vfValueHom (a i) →
+            IntegrationInACVF.Section2.ConcreteVolumeForms.gammaValue ω u =
+              IntegrationInACVF.Section2.ConcreteVolumeForms.gammaValue π w *
+                SpecialTransformations.Section9.rvGammaJacobian (U.obj.value u) (V.obj.value w) hU hV
+@IntegrationInACVF.Section2.GenericVolumeDescent.generic_equation : ∀ {M : Type}
+  [sM : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {k : ℕ},
+  CanonicalStructure.IsCanonical →
+    ∀ (C : SpecialTransformations.Section3.BaseContext M),
+      0 < k →
+        ∀ {U V : SpecialTransformations.Section4.RVFiniteObject (↑C.base) k} (e : U ≅ V),
+          (∀ (u : ↑U.obj.domain.carrier) (i : Fin k), ↑(U.obj.value u i) ≠ SpecialTransformations.Milestone0.iRVZero) →
+            (∀ (u : ↑V.obj.domain.carrier) (i : Fin k),
+                ↑(V.obj.value u i) ≠ SpecialTransformations.Milestone0.iRVZero) →
+              ∀ (ω : IntegrationInACVF.Section2.ConcreteVolumeForms.RVForm U)
+                (π : IntegrationInACVF.Section2.ConcreteVolumeForms.RVForm V)
+                (f :
+                  SpecialTransformations.DefinableGeometry.Map (SpecialTransformations.Section4.rvLift U.obj)
+                    (SpecialTransformations.Section4.rvLift V.obj)),
+                Function.Bijective f.toFun →
+                  (∀ (p : ↑(SpecialTransformations.Section4.rvLift U.obj).carrier),
+                      ((SpecialTransformations.Section4.finiteVolumeProperty (↑C.base) k).ι.mapIso e).hom.map.graph
+                        (↑p).2 (↑(f.toFun p)).2) →
+                    IntegrationInACVF.Section2.ConcreteVolumeForms.PreservesOff ω π f →
+                      SpecialTransformations.Section9.HenselizedGaussGraphInput
+                          SpecialTransformations.Milestone0.Transfer.VFType →
+                        have E := (SpecialTransformations.Section4.finiteVolumeProperty (↑C.base) k).ι.mapIso e;
+                        ∃ D,
+                          D.carrier ⊆ U.obj.volume.image.carrier ∧
+                            SpecialTransformations.Section4.rvDim D < k ∧
+                              ∀ (u : ↑U.obj.domain.carrier),
+                                U.obj.value u ∉ D.carrier →
+                                  SpecialTransformations.Section9.IsRVJacobianAt
+                                    (SpecialTransformations.Section9.volumeCorrespondence E.hom.map).carrier
+                                    (U.obj.value u) (V.obj.value (E.hom.map.toFun u))
+                                    (IntegrationInACVF.Section2.ConcreteVolumeForms.value ω u /
+                                      IntegrationInACVF.Section2.ConcreteVolumeForms.value π (E.hom.map.toFun u))
+@IntegrationInACVF.Section2.GammaVolumeDescent.pointwise_equation : ∀ {M : Type}
+  [sM : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {k : ℕ},
+  CanonicalStructure.IsCanonical →
+    ∀ (C : SpecialTransformations.Section3.BaseContext M)
+      {U V : SpecialTransformations.Section4.RVFiniteObject (↑C.base) k} (e : U ≅ V)
+      (hU : ∀ (u : ↑U.obj.domain.carrier) (i : Fin k), ↑(U.obj.value u i) ≠ SpecialTransformations.Milestone0.iRVZero)
+      (hV : ∀ (u : ↑V.obj.domain.carrier) (i : Fin k), ↑(V.obj.value u i) ≠ SpecialTransformations.Milestone0.iRVZero)
+      (ω : IntegrationInACVF.Section2.ConcreteVolumeForms.RVForm U)
+      (π : IntegrationInACVF.Section2.ConcreteVolumeForms.RVForm V)
+      (f :
+        SpecialTransformations.DefinableGeometry.Map (SpecialTransformations.Section4.rvLift U.obj)
+          (SpecialTransformations.Section4.rvLift V.obj)),
+      Function.Bijective f.toFun →
+        (∀ (p : ↑(SpecialTransformations.Section4.rvLift U.obj).carrier),
+            ((SpecialTransformations.Section4.finiteVolumeProperty (↑C.base) k).ι.mapIso e).hom.map.graph (↑p).2
+              (↑(f.toFun p)).2) →
+          IntegrationInACVF.Section2.ConcreteVolumeForms.PreservesOff ω π f →
+            SpecialTransformations.Section9.HenselizedGaussGraphInput
+                SpecialTransformations.Milestone0.Transfer.VFType →
+              have E := (SpecialTransformations.Section4.finiteVolumeProperty (↑C.base) k).ι.mapIso e;
+              ∀ (u : ↑U.obj.domain.carrier),
+                IntegrationInACVF.Section2.ConcreteVolumeForms.gammaValue ω u =
+                  IntegrationInACVF.Section2.ConcreteVolumeForms.gammaValue π (E.hom.map.toFun u) *
+                    SpecialTransformations.Section9.rvGammaJacobian (U.obj.value u) (V.obj.value (E.hom.map.toFun u)) ⋯
+                      ⋯
+@IntegrationInACVF.Section2.VolumeBadLabels.mem_labels : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] {S : Set M} {k : ℕ}
+  (U : SpecialTransformations.Section4.RVFiniteObject S k)
+  (D : SpecialTransformations.DefinableGeometry.DefSet (SpecialTransformations.Section4.rawRVSpace k) S)
+  (u : ↑U.obj.domain.carrier),
+  ↑u ∈ (IntegrationInACVF.Section2.VolumeBadLabels.labels U D).carrier ↔ U.obj.value u ∈ D.carrier
+@IntegrationInACVF.Section2.VolumeBadLabels.dimension_le : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] {S : Set M} {k : ℕ}
+  (U : SpecialTransformations.Section4.RVFiniteObject S k)
+  (D : SpecialTransformations.DefinableGeometry.DefSet (SpecialTransformations.Section4.rawRVSpace k) S),
+  SpecialTransformations.Section4.rvDim (IntegrationInACVF.Section2.VolumeBadLabels.labels U D) ≤
+    SpecialTransformations.Section4.rvDim D
+@IntegrationInACVF.Section2.ConcreteVolumeMorphisms.zero_arity : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set M}
+  {U V : SpecialTransformations.Section4.RVFiniteObject S 0} (e : U ≅ V)
+  (ω : IntegrationInACVF.Section2.ConcreteVolumeForms.RVForm U)
+  (π : IntegrationInACVF.Section2.ConcreteVolumeForms.RVForm V),
+  IntegrationInACVF.Section2.ConcreteVolumeMorphisms.IsVolumeIsomorphism e ω π ⋯ ⋯
+@IntegrationInACVF.Section2.VolumeLiftDescent.corollary_2_34_positive : ∀ {M : Type}
+  [sM : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {k : ℕ},
+  CanonicalStructure.IsCanonical →
+    ∀ (C : SpecialTransformations.Section3.BaseContext M),
+      0 < k →
+        ∀ {U V : SpecialTransformations.Section4.RVFiniteObject (↑C.base) k} (e : U ≅ V)
+          (hU :
+            ∀ (u : ↑U.obj.domain.carrier) (i : Fin k), ↑(U.obj.value u i) ≠ SpecialTransformations.Milestone0.iRVZero)
+          (hV :
+            ∀ (u : ↑V.obj.domain.carrier) (i : Fin k), ↑(V.obj.value u i) ≠ SpecialTransformations.Milestone0.iRVZero)
+          (ω : IntegrationInACVF.Section2.ConcreteVolumeForms.RVForm U)
+          (π : IntegrationInACVF.Section2.ConcreteVolumeForms.RVForm V)
+          (f :
+            SpecialTransformations.DefinableGeometry.Map (SpecialTransformations.Section4.rvLift U.obj)
+              (SpecialTransformations.Section4.rvLift V.obj)),
+          Function.Bijective f.toFun →
+            (∀ (p : ↑(SpecialTransformations.Section4.rvLift U.obj).carrier),
+                ((SpecialTransformations.Section4.finiteVolumeProperty (↑C.base) k).ι.mapIso e).hom.map.graph (↑p).2
+                  (↑(f.toFun p)).2) →
+              IntegrationInACVF.Section2.ConcreteVolumeForms.PreservesOff ω π f →
+                SpecialTransformations.Section9.HenselizedGaussGraphInput
+                    SpecialTransformations.Milestone0.Transfer.VFType →
+                  IntegrationInACVF.Section2.ConcreteVolumeMorphisms.IsVolumeIsomorphism e ω π hU hV
+@IntegrationInACVF.Section2.VolumeLiftDescent.corollary_2_34_essential : ∀ {M : Type}
+  [sM : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {k : ℕ},
+  CanonicalStructure.IsCanonical →
+    ∀ (C : SpecialTransformations.Section3.BaseContext M)
+      {U V : SpecialTransformations.Section4.RVFiniteObject (↑C.base) (k + 1)}
+      (e : SpecialTransformations.Section9.RVFiniteEssentialIso U V)
+      (ω : IntegrationInACVF.Section2.ConcreteVolumeForms.RVForm U)
+      (π : IntegrationInACVF.Section2.ConcreteVolumeForms.RVForm V)
+      (f :
+        SpecialTransformations.DefinableGeometry.Map
+          (SpecialTransformations.Section4.rvLift (SpecialTransformations.Section9.rvFiniteEssential U).obj)
+          (SpecialTransformations.Section4.rvLift (SpecialTransformations.Section9.rvFiniteEssential V).obj)),
+      Function.Bijective f.toFun →
+        (∀
+            (p :
+              ↑(SpecialTransformations.Section4.rvLift
+                    (SpecialTransformations.Section9.rvFiniteEssential U).obj).carrier),
+            ((SpecialTransformations.Section4.finiteVolumeProperty (↑C.base) (k + 1)).ι.mapIso e).hom.map.graph (↑p).2
+              (↑(f.toFun p)).2) →
+          IntegrationInACVF.Section2.ConcreteVolumeForms.PreservesOff
+              (IntegrationInACVF.Section2.ConcreteVolumeMorphisms.essentialForm ω)
+              (IntegrationInACVF.Section2.ConcreteVolumeMorphisms.essentialForm π) f →
+            SpecialTransformations.Section9.HenselizedGaussGraphInput
+                SpecialTransformations.Milestone0.Transfer.VFType →
+              IntegrationInACVF.Section2.ConcreteVolumeMorphisms.IsVolumeIsomorphism e
+                (IntegrationInACVF.Section2.ConcreteVolumeMorphisms.essentialForm ω)
+                (IntegrationInACVF.Section2.ConcreteVolumeMorphisms.essentialForm π) ⋯ ⋯
+@IntegrationInACVF.Section2.VolumeLiftDescent.corollary_2_34_of_finite_extension_reference : ∀ {M : Type}
+  [sM : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {k : ℕ},
+  CanonicalStructure.IsCanonical →
+    ∀ (C : SpecialTransformations.Section3.BaseContext M),
+      0 < k →
+        ∀ {U V : SpecialTransformations.Section4.RVFiniteObject (↑C.base) k} (e : U ≅ V)
+          (hU :
+            ∀ (u : ↑U.obj.domain.carrier) (i : Fin k), ↑(U.obj.value u i) ≠ SpecialTransformations.Milestone0.iRVZero)
+          (hV :
+            ∀ (u : ↑V.obj.domain.carrier) (i : Fin k), ↑(V.obj.value u i) ≠ SpecialTransformations.Milestone0.iRVZero)
+          (ω : IntegrationInACVF.Section2.ConcreteVolumeForms.RVForm U)
+          (π : IntegrationInACVF.Section2.ConcreteVolumeForms.RVForm V)
+          (f :
+            SpecialTransformations.DefinableGeometry.Map (SpecialTransformations.Section4.rvLift U.obj)
+              (SpecialTransformations.Section4.rvLift V.obj)),
+          Function.Bijective f.toFun →
+            (∀ (p : ↑(SpecialTransformations.Section4.rvLift U.obj).carrier),
+                ((SpecialTransformations.Section4.finiteVolumeProperty (↑C.base) k).ι.mapIso e).hom.map.graph (↑p).2
+                  (↑(f.toFun p)).2) →
+              IntegrationInACVF.Section2.ConcreteVolumeForms.PreservesOff ω π f →
+                SpecialTransformations.Section9.FiniteHenselianExtensionReference →
+                  IntegrationInACVF.Section2.ConcreteVolumeMorphisms.IsVolumeIsomorphism e ω π hU hV
+@IntegrationInACVF.Section2.HenselianImmediateGalois.same_values : ∀ {L : Type u_1} {Γ : Type u_2} [inst : Field L]
+  [inst_1 : LinearOrderedCommGroupWithZero Γ] (v : Valuation L Γ) (F : Subfield L),
+  IntegrationInACVF.Section2.HenselianImmediateGalois.ImmediateApproximation v F → ∀ (x : L), ∃ c, v ↑c = v x
+@IntegrationInACVF.Section2.HenselianImmediateGalois.automorphism_value : ∀ {L : Type u_1} {Γ : Type u_2}
+  [inst : Field L] [inst_1 : LinearOrderedCommGroupWithZero Γ] (v : Valuation L Γ) (F : Subfield L) [IsGalois (↥F) L]
+  [HenselianLocalRing ↥(Valuation.comap F.subtype v).valuationSubring]
+  [CharZero (IsLocalRing.ResidueField ↥v.valuationSubring)],
+  (∀ (x : L), ∃ c, v ↑c = v x) → ∀ (σ : Gal(L/↥F)) (x : L), v (σ x) = v x
+@IntegrationInACVF.Section2.HenselianImmediateGalois.trace_kernel_zero : ∀ {L : Type u_1} {Γ : Type u_2}
+  [inst : Field L] [inst_1 : LinearOrderedCommGroupWithZero Γ] (v : Valuation L Γ) (F : Subfield L) [IsGalois (↥F) L]
+  [FiniteDimensional (↥F) L] [HenselianLocalRing ↥(Valuation.comap F.subtype v).valuationSubring]
+  [CharZero (IsLocalRing.ResidueField ↥v.valuationSubring)],
+  IntegrationInACVF.Section2.HenselianImmediateGalois.ImmediateApproximation v F →
+    ∀ (x : L), (Algebra.trace (↥F) L) x = 0 → x = 0
+@IntegrationInACVF.Section2.HenselianImmediateGalois.finrank_eq_one : ∀ {L : Type u_1} {Γ : Type u_2} [inst : Field L]
+  [inst_1 : LinearOrderedCommGroupWithZero Γ] (v : Valuation L Γ) (F : Subfield L) [IsGalois (↥F) L]
+  [FiniteDimensional (↥F) L] [HenselianLocalRing ↥(Valuation.comap F.subtype v).valuationSubring]
+  [CharZero (IsLocalRing.ResidueField ↥v.valuationSubring)],
+  IntegrationInACVF.Section2.HenselianImmediateGalois.ImmediateApproximation v F → Module.finrank (↥F) L = 1
+@IntegrationInACVF.Section2.HenselianFixedField.derivative_unit_of_close : ∀ {R : Type u_1} [inst : CommRing R]
+  [inst_1 : IsLocalRing R] (f : Polynomial R) (a b : R),
+  b - a ∈ IsLocalRing.maximalIdeal R →
+    IsUnit (Polynomial.eval a (Polynomial.derivative f)) → IsUnit (Polynomial.eval b (Polynomial.derivative f))
+@IntegrationInACVF.Section2.HenselianFixedField.henselian_of_comparisons : ∀ {K : Type u_1} {Γ : Type u_2}
+  [inst : Field K] [IsAlgClosed K] [inst_2 : LinearOrderedCommGroupWithZero Γ] (v : Valuation K Γ) (F : Subfield K)
+  [IsGalois (↥F) K],
+  (∀ (σ : Gal(K/↥F)) (x y : K), v (σ x) ≤ v (σ y) ↔ v x ≤ v y) →
+    HenselianLocalRing ↥(Valuation.comap F.subtype v).valuationSubring
+@IntegrationInACVF.Section2.HenselianAlgebraicTower.henselian_intermediate : ∀ {K : Type u_1} {Γ : Type u_2}
+  [inst : Field K] [IsAlgClosed K] [inst_2 : LinearOrderedCommGroupWithZero Γ] (v : Valuation K Γ) (F E : Subfield K)
+  [IsGalois (↥F) K] [IsGalois (↥E) K] [HenselianLocalRing ↥(Valuation.comap F.subtype v).valuationSubring]
+  [CharZero (IsLocalRing.ResidueField ↥v.valuationSubring)],
+  F ≤ E → HenselianLocalRing ↥(Valuation.comap E.subtype v).valuationSubring
+@IntegrationInACVF.Section2.HenselianAlgebraicTower.automorphism_value_of_base_value : ∀ {K : Type u_1} {Γ : Type u_2}
+  [inst : Field K] [IsAlgClosed K] [inst_2 : LinearOrderedCommGroupWithZero Γ] (v : Valuation K Γ) (F : Subfield K)
+  [IsGalois (↥F) K] [HenselianLocalRing ↥(Valuation.comap F.subtype v).valuationSubring]
+  [CharZero (IsLocalRing.ResidueField ↥v.valuationSubring)] (σ : Gal(K/↥F)) (x : K) (c : ↥F), v ↑c = v x → v (σ x) = v x
+@IntegrationInACVF.Section2.ResidueIndependentLifts.residue_nonzero_iff_value_one : ∀ {K : Type u_1} {Γ : Type u_2}
+  [inst : Field K] [inst_1 : LinearOrderedCommGroupWithZero Γ] (v : Valuation K Γ) (a : ↥v.valuationSubring),
+  (IsLocalRing.residue ↥v.valuationSubring) a ≠ 0 ↔ v ↑a = 1
+@IntegrationInACVF.Section2.ResidueIndependentLifts.coefficient_le : ∀ {K : Type u_1} {Γ : Type u_2} {ι : Type u_3}
+  [inst : Field K] [inst_1 : LinearOrderedCommGroupWithZero Γ] (v : Valuation K Γ) (F : Subfield K)
+  (u : ι → ↥v.valuationSubring) (s : Finset ι),
+  (∀ (c : ι → IsLocalRing.ResidueField ↥(Valuation.comap F.subtype v).valuationSubring),
+      ∑ j ∈ s,
+            (SpecialTransformations.Section9.residueFieldInclusion v F) (c j) *
+              (IsLocalRing.residue ↥v.valuationSubring) (u j) =
+          0 →
+        ∀ i ∈ s, c i = 0) →
+    ∀ (c : ι → ↥F), ∀ i ∈ s, v ↑(c i) ≤ v (∑ j ∈ s, ↑(c j) * ↑(u j))
+@IntegrationInACVF.Section2.ResidueIndependentLifts.independent : ∀ {K : Type u_1} {Γ : Type u_2} {ι : Type u_3}
+  [inst : Field K] [inst_1 : LinearOrderedCommGroupWithZero Γ] (v : Valuation K Γ) (F : Subfield K)
+  (u : ι → ↥v.valuationSubring),
+  (LinearIndependent (IsLocalRing.ResidueField ↥(Valuation.comap F.subtype v).valuationSubring) fun i =>
+      (IsLocalRing.residue ↥v.valuationSubring) (u i)) →
+    LinearIndependent ↥F fun i => ↑(u i)
+@IntegrationInACVF.Section2.ResidueIndependentLifts.residue_finite : ∀ {K : Type u_1} {Γ : Type u_2} [inst : Field K]
+  [inst_1 : LinearOrderedCommGroupWithZero Γ] (v : Valuation K Γ) (F : Subfield K) [FiniteDimensional (↥F) K],
+  FiniteDimensional (IsLocalRing.ResidueField ↥(Valuation.comap F.subtype v).valuationSubring)
+    (IsLocalRing.ResidueField ↥v.valuationSubring)
+@IntegrationInACVF.Section2.ResidueIndependentLifts.residue_finrank_le : ∀ {K : Type u_1} {Γ : Type u_2}
+  [inst : Field K] [inst_1 : LinearOrderedCommGroupWithZero Γ] (v : Valuation K Γ) (F : Subfield K)
+  [FiniteDimensional (↥F) K],
+  Module.finrank (IsLocalRing.ResidueField ↥(Valuation.comap F.subtype v).valuationSubring)
+      (IsLocalRing.ResidueField ↥v.valuationSubring) ≤
+    Module.finrank (↥F) K
+@IntegrationInACVF.Section2.PrimitiveResidueLift.exists_lift : ∀ {K : Type u_1} {Γ : Type u_2} [inst : Field K]
+  [inst_1 : LinearOrderedCommGroupWithZero Γ] (v : Valuation K Γ) (F : Subfield K) [FiniteDimensional (↥F) K]
+  [HenselianLocalRing ↥v.valuationSubring] [CharZero (IsLocalRing.ResidueField ↥v.valuationSubring)],
+  ∃ pb u P,
+    P.Monic ∧
+      Polynomial.map (IsLocalRing.residue ↥(Valuation.comap F.subtype v).valuationSubring) P =
+          minpoly (IsLocalRing.ResidueField ↥(Valuation.comap F.subtype v).valuationSubring) pb.gen ∧
+        (IsLocalRing.residue ↥v.valuationSubring) u = pb.gen ∧
+          (Polynomial.map (SpecialTransformations.Section9.valuationRingInclusion v F) P).IsRoot u
+@IntegrationInACVF.Section2.ValuedSubfieldRestriction.henselian_iff : ∀ {K Γ : Type} [inst : Field K]
+  [inst_1 : LinearOrderedCommGroupWithZero Γ] (v : Valuation K Γ) (C F : Subfield K),
+  F ≤ C →
+    (HenselianLocalRing
+        ↥(Valuation.comap (Subfield.comap C.subtype F).subtype (Valuation.comap C.subtype v)).valuationSubring ↔
+      HenselianLocalRing ↥(Valuation.comap F.subtype v).valuationSubring)
+@IntegrationInACVF.Section2.AlgebraicEnvelopeBases.algebraic_comap : ∀ {K : Type} [inst : Field K] (F : Subfield K)
+  (C : IntermediateField (↥F) K) [Algebra.IsAlgebraic ↥F ↥C] (D : Subfield K),
+  F ≤ D → Algebra.IsAlgebraic ↥(Subfield.comap C.toSubfield.subtype D) ↥C
+@IntegrationInACVF.Section2.AlgebraicEnvelopeBases.galois_comap : ∀ {K : Type} [inst : Field K] (F : Subfield K)
+  (C : IntermediateField (↥F) K) [CharZero K] [IsAlgClosed ↥C] [Algebra.IsAlgebraic ↥F ↥C] (D : Subfield K),
+  F ≤ D → IsGalois ↥(Subfield.comap C.toSubfield.subtype D) ↥C
+@IntegrationInACVF.Section2.AlgebraicSubfieldHenselian.algebraic_henselian : ∀ {K Γ : Type} [inst : Field K]
+  [IsAlgClosed K] [CharZero K] [inst_3 : LinearOrderedCommGroupWithZero Γ] (v : Valuation K Γ) (F E : Subfield K)
+  [HenselianLocalRing ↥(Valuation.comap F.subtype v).valuationSubring]
+  [CharZero (IsLocalRing.ResidueField ↥v.valuationSubring)],
+  F ≤ E → (∀ x ∈ E, IsAlgebraic (↥F) x) → HenselianLocalRing ↥(Valuation.comap E.subtype v).valuationSubring
+@IntegrationInACVF.Section2.HenselianImmediateEmbeddings.embedding_value : ∀ {K : Type u_1} {Γ : Type u_2}
+  [inst : Field K] [IsAlgClosed K] [CharZero K] [inst_3 : LinearOrderedCommGroupWithZero Γ] (v : Valuation K Γ)
+  (F : Subfield K) [IsGalois (↥F) K] [HenselianLocalRing ↥(Valuation.comap F.subtype v).valuationSubring]
+  [CharZero (IsLocalRing.ResidueField ↥v.valuationSubring)] (E : IntermediateField (↥F) K),
+  (∀ (x : ↥E), ∃ c, v ↑c = v ↑x) → ∀ (φ : ↥E →ₐ[↥F] K) (x : ↥E), v (φ x) = v ↑x
+@IntegrationInACVF.Section2.HenselianImmediateEmbeddings.trace_kernel_zero : ∀ {K : Type u_1} {Γ : Type u_2}
+  [inst : Field K] [IsAlgClosed K] [CharZero K] [inst_3 : LinearOrderedCommGroupWithZero Γ] (v : Valuation K Γ)
+  (F : Subfield K) [IsGalois (↥F) K] [HenselianLocalRing ↥(Valuation.comap F.subtype v).valuationSubring]
+  [CharZero (IsLocalRing.ResidueField ↥v.valuationSubring)] (E : IntermediateField (↥F) K) [FiniteDimensional ↥F ↥E],
+  (∀ (x : ↥E), x ≠ 0 → ∃ c, v (↑x - ↑c) < v ↑x) → ∀ (x : ↥E), (Algebra.trace ↥F ↥E) x = 0 → x = 0
+@IntegrationInACVF.Section2.HenselianImmediateEmbeddings.finrank_eq_one : ∀ {K : Type u_1} {Γ : Type u_2}
+  [inst : Field K] [IsAlgClosed K] [CharZero K] [inst_3 : LinearOrderedCommGroupWithZero Γ] (v : Valuation K Γ)
+  (F : Subfield K) [IsGalois (↥F) K] [HenselianLocalRing ↥(Valuation.comap F.subtype v).valuationSubring]
+  [CharZero (IsLocalRing.ResidueField ↥v.valuationSubring)] (E : IntermediateField (↥F) K) [FiniteDimensional ↥F ↥E],
+  (∀ (x : ↥E), x ≠ 0 → ∃ c, v (↑x - ↑c) < v ↑x) → Module.finrank ↥F ↥E = 1
+@IntegrationInACVF.Section2.PrimitiveResidueDegree.field_root : ∀ {K : Type u_1} {Γ : Type u_2} [inst : Field K]
+  [inst_1 : LinearOrderedCommGroupWithZero Γ] (v : Valuation K Γ) (F : Subfield K)
+  (P : Polynomial ↥(Valuation.comap F.subtype v).valuationSubring) (u : ↥v.valuationSubring),
+  (Polynomial.map (SpecialTransformations.Section9.valuationRingInclusion v F) P).IsRoot u →
+    (Polynomial.aeval ↑u) (Polynomial.map (Valuation.comap F.subtype v).valuationSubring.subtype P) = 0
+@IntegrationInACVF.Section2.PrimitiveResidueDegree.independent_powers : ∀ {K : Type u_1} {Γ : Type u_2} [inst : Field K]
+  [inst_1 : LinearOrderedCommGroupWithZero Γ] (v : Valuation K Γ) (F : Subfield K) (u : ↥v.valuationSubring)
+  (pb :
+    PowerBasis (IsLocalRing.ResidueField ↥(Valuation.comap F.subtype v).valuationSubring)
+      (IsLocalRing.ResidueField ↥v.valuationSubring)),
+  (IsLocalRing.residue ↥v.valuationSubring) u = pb.gen → LinearIndependent ↥F fun i => ↑u ^ ↑i
+@IntegrationInACVF.Section2.PrimitiveResidueDegree.generated_degree : ∀ {K : Type u_1} {Γ : Type u_2} [inst : Field K]
+  [inst_1 : LinearOrderedCommGroupWithZero Γ] (v : Valuation K Γ) (F : Subfield K) (u : ↥v.valuationSubring)
+  (P : Polynomial ↥(Valuation.comap F.subtype v).valuationSubring),
+  P.Monic →
+    (Polynomial.map (SpecialTransformations.Section9.valuationRingInclusion v F) P).IsRoot u →
+      ∀
+        (pb :
+          PowerBasis (IsLocalRing.ResidueField ↥(Valuation.comap F.subtype v).valuationSubring)
+            (IsLocalRing.ResidueField ↥v.valuationSubring)),
+        (IsLocalRing.residue ↥v.valuationSubring) u = pb.gen →
+          Polynomial.map (IsLocalRing.residue ↥(Valuation.comap F.subtype v).valuationSubring) P =
+              minpoly (IsLocalRing.ResidueField ↥(Valuation.comap F.subtype v).valuationSubring) pb.gen →
+            Module.finrank ↥F ↥(↥F)⟮↑u⟯ =
+              Module.finrank (IsLocalRing.ResidueField ↥(Valuation.comap F.subtype v).valuationSubring)
+                (IsLocalRing.ResidueField ↥v.valuationSubring)
+@IntegrationInACVF.Section2.ResidueGeneratedSurjectivity.surjective : ∀ {K : Type u_1} {Γ : Type u_2} [inst : Field K]
+  [inst_1 : LinearOrderedCommGroupWithZero Γ] (v : Valuation K Γ) (F E : Subfield K),
+  F ≤ E →
+    ∀ (u : ↥v.valuationSubring),
+      ↑u ∈ E →
+        ∀
+          (pb :
+            PowerBasis (IsLocalRing.ResidueField ↥(Valuation.comap F.subtype v).valuationSubring)
+              (IsLocalRing.ResidueField ↥v.valuationSubring)),
+          (IsLocalRing.residue ↥v.valuationSubring) u = pb.gen →
+            Function.Surjective ⇑(SpecialTransformations.Section9.residueFieldInclusion v E)
+@IntegrationInACVF.Section2.ImmediateApproximationFromResidues.approximate : ∀ {K : Type u_1} {Γ : Type u_2}
+  [inst : Field K] [inst_1 : LinearOrderedCommGroupWithZero Γ] (v : Valuation K Γ) (F : Subfield K),
+  (∀ (x : K), ∃ a, v ↑a = v x) →
+    Function.Surjective ⇑(SpecialTransformations.Section9.residueFieldInclusion v F) →
+      ∀ (x : K), x ≠ 0 → ∃ c, v (x - ↑c) < v x
+@IntegrationInACVF.Section2.FiniteImmediateSubfield.finrank_eq_one : ∀ {K Γ : Type} [inst : Field K] [IsAlgClosed K]
+  [CharZero K] [inst_3 : LinearOrderedCommGroupWithZero Γ] (v : Valuation K Γ) (F : Subfield K)
+  [HenselianLocalRing ↥(Valuation.comap F.subtype v).valuationSubring]
+  [CharZero (IsLocalRing.ResidueField ↥v.valuationSubring)] (L : IntermediateField (↥F) K) [FiniteDimensional ↥F ↥L],
+  (∀ (x : ↥L), x ≠ 0 → ∃ c, v (↑x - ↑c) < v ↑x) → Module.finrank ↥F ↥L = 1
+@IntegrationInACVF.Section2.EmbeddedValuationTransport.henselian_iff : ∀ {D K Γ : Type} [inst : Field D]
+  [inst_1 : Field K] [inst_2 : LinearOrderedCommGroupWithZero Γ] (v : Valuation K Γ) (f : D →+* K),
+  HenselianLocalRing ↥(Valuation.comap f v).valuationSubring ↔
+    HenselianLocalRing ↥(Valuation.comap f.fieldRange.subtype v).valuationSubring
+@IntegrationInACVF.Section2.FieldDegreeTransport.finrank : ∀ {F E L N : Type} [inst : Field F] [inst_1 : Field E]
+  [inst_2 : Field L] [inst_3 : Field N] [inst_4 : Algebra F L] [inst_5 : Algebra E N] (eF : F ≃+* E) (eL : L ≃+* N),
+  (∀ (c : F) (x : L), eL (c • x) = eF c • eL x) → Module.finrank F L = Module.finrank E N
+@IntegrationInACVF.Section2.FieldDegreeTransport.finite_left : ∀ {F E L N : Type} [inst : Field F] [inst_1 : Field E]
+  [inst_2 : Field L] [inst_3 : Field N] [inst_4 : Algebra F L] [inst_5 : Algebra E N] (eF : F ≃+* E) (eL : L ≃+* N),
+  (∀ (c : F) (x : L), eL (c • x) = eF c • eL x) → ∀ [FiniteDimensional E N], FiniteDimensional F L
+@IntegrationInACVF.Section2.FiniteImmediateEmbedded.finrank_eq_one : ∀ {D K Γ : Type} [inst : Field D]
+  [inst_1 : Field K] [IsAlgClosed K] [CharZero K] [inst_4 : LinearOrderedCommGroupWithZero Γ] (v : Valuation K Γ)
+  (f : D →+* K) (F : Subfield D) [FiniteDimensional (↥F) D]
+  [HenselianLocalRing ↥(Valuation.comap F.subtype (Valuation.comap f v)).valuationSubring]
+  [CharZero (IsLocalRing.ResidueField ↥v.valuationSubring)],
+  (∀ (x : D), x ≠ 0 → ∃ c, v (f x - f ↑c) < v (f x)) → Module.finrank (↥F) D = 1
+@IntegrationInACVF.Section2.EmbeddedAlgebraicHenselian.henselian : ∀ {D K Γ : Type} [inst : Field D] [inst_1 : Field K]
+  [IsAlgClosed K] [CharZero K] [inst_4 : LinearOrderedCommGroupWithZero Γ] (v : Valuation K Γ) (f : D →+* K)
+  (F : Subfield D) [HenselianLocalRing ↥(Valuation.comap F.subtype (Valuation.comap f v)).valuationSubring]
+  [CharZero (IsLocalRing.ResidueField ↥v.valuationSubring)],
+  (∀ (x : D), IsAlgebraic (↥F) x) → HenselianLocalRing ↥(Valuation.comap f v).valuationSubring
+@IntegrationInACVF.Section2.EmbeddedResidueCharacteristic.charZero : ∀ {D K Γ : Type} [inst : Field D]
+  [inst_1 : Field K] [inst_2 : LinearOrderedCommGroupWithZero Γ] (v : Valuation K Γ) (f : D →+* K)
+  [CharZero (IsLocalRing.ResidueField ↥v.valuationSubring)],
+  CharZero (IsLocalRing.ResidueField ↥(Valuation.comap f v).valuationSubring)
+@IntegrationInACVF.Section2.EmbeddedIntermediateHenselian.henselian : ∀ {D K Γ : Type} [inst : Field D]
+  [inst_1 : Field K] [IsAlgClosed K] [CharZero K] [inst_4 : LinearOrderedCommGroupWithZero Γ] (v : Valuation K Γ)
+  (f : D →+* K) (F : Subfield D) [FiniteDimensional (↥F) D]
+  [HenselianLocalRing ↥(Valuation.comap F.subtype (Valuation.comap f v)).valuationSubring]
+  [CharZero (IsLocalRing.ResidueField ↥v.valuationSubring)] (M : IntermediateField (↥F) D),
+  HenselianLocalRing ↥(Valuation.comap M.toSubfield.subtype (Valuation.comap f v)).valuationSubring
+@IntegrationInACVF.Section2.EmbeddedFiniteResidueDegree.residue_degree : ∀ {D K Γ : Type} [inst : Field D]
+  [inst_1 : Field K] [IsAlgClosed K] [CharZero K] [inst_4 : LinearOrderedCommGroupWithZero Γ] (v : Valuation K Γ)
+  (f : D →+* K) (F : Subfield D) [FiniteDimensional (↥F) D]
+  [HenselianLocalRing ↥(Valuation.comap F.subtype (Valuation.comap f v)).valuationSubring]
+  [CharZero (IsLocalRing.ResidueField ↥v.valuationSubring)],
+  (∀ (x : D), ∃ c, (Valuation.comap f v) ↑c = (Valuation.comap f v) x) →
+    Module.finrank (↥F) D =
+      Module.finrank (IsLocalRing.ResidueField ↥(Valuation.comap F.subtype (Valuation.comap f v)).valuationSubring)
+        (IsLocalRing.ResidueField ↥(Valuation.comap f v).valuationSubring)
+@IntegrationInACVF.Section2.ResidueZeroCharacteristic.field_charZero : ∀ {K : Type u_1} {Γ : Type u_2} [inst : Field K]
+  [inst_1 : LinearOrderedCommGroupWithZero Γ] (v : Valuation K Γ)
+  [CharZero (IsLocalRing.ResidueField ↥v.valuationSubring)], CharZero K
+IntegrationInACVF.Section2.ConstructedGaussGraph.graph_input : ∀ (K : Type) [inst : Field K] [IsAlgClosed K],
+  SpecialTransformations.Section9.HenselizedGaussGraphInput K
+@IntegrationInACVF.Section2.ConstructedGaussGraph.acvf_graph_input : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF],
+  SpecialTransformations.Section9.HenselizedGaussGraphInput SpecialTransformations.Milestone0.Transfer.VFType
+@IntegrationInACVF.Section2.corollary_2_34_nonzero : ∀ {M : Type}
+  [sM : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {k : ℕ},
+  CanonicalStructure.IsCanonical →
+    ∀ (C : SpecialTransformations.Section3.BaseContext M),
+      0 < k →
+        ∀ {U V : SpecialTransformations.Section4.RVFiniteObject (↑C.base) k} (e : U ≅ V)
+          (hU :
+            ∀ (u : ↑U.obj.domain.carrier) (i : Fin k), ↑(U.obj.value u i) ≠ SpecialTransformations.Milestone0.iRVZero)
+          (hV :
+            ∀ (u : ↑V.obj.domain.carrier) (i : Fin k), ↑(V.obj.value u i) ≠ SpecialTransformations.Milestone0.iRVZero)
+          (ω : IntegrationInACVF.Section2.ConcreteVolumeForms.RVForm U)
+          (π : IntegrationInACVF.Section2.ConcreteVolumeForms.RVForm V)
+          (f :
+            SpecialTransformations.DefinableGeometry.Map (SpecialTransformations.Section4.rvLift U.obj)
+              (SpecialTransformations.Section4.rvLift V.obj)),
+          Function.Bijective f.toFun →
+            (∀ (p : ↑(SpecialTransformations.Section4.rvLift U.obj).carrier),
+                ((SpecialTransformations.Section4.finiteVolumeProperty (↑C.base) k).ι.mapIso e).hom.map.graph (↑p).2
+                  (↑(f.toFun p)).2) →
+              IntegrationInACVF.Section2.ConcreteVolumeForms.PreservesOff ω π f →
+                IntegrationInACVF.Section2.ConcreteVolumeMorphisms.IsVolumeIsomorphism e ω π hU hV
+@IntegrationInACVF.Section2.corollary_2_34 : ∀ {M : Type} [sM : SpecialTransformations.Milestone0.LRV.Structure M]
+  [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {k : ℕ},
+  CanonicalStructure.IsCanonical →
+    ∀ (C : SpecialTransformations.Section3.BaseContext M)
+      {U V : SpecialTransformations.Section4.RVFiniteObject (↑C.base) (k + 1)}
+      (e : SpecialTransformations.Section9.RVFiniteEssentialIso U V)
+      (ω : IntegrationInACVF.Section2.ConcreteVolumeForms.RVForm U)
+      (π : IntegrationInACVF.Section2.ConcreteVolumeForms.RVForm V)
+      (f :
+        SpecialTransformations.DefinableGeometry.Map
+          (SpecialTransformations.Section4.rvLift (SpecialTransformations.Section9.rvFiniteEssential U).obj)
+          (SpecialTransformations.Section4.rvLift (SpecialTransformations.Section9.rvFiniteEssential V).obj)),
+      Function.Bijective f.toFun →
+        (∀
+            (p :
+              ↑(SpecialTransformations.Section4.rvLift
+                    (SpecialTransformations.Section9.rvFiniteEssential U).obj).carrier),
+            ((SpecialTransformations.Section4.finiteVolumeProperty (↑C.base) (k + 1)).ι.mapIso e).hom.map.graph (↑p).2
+              (↑(f.toFun p)).2) →
+          IntegrationInACVF.Section2.ConcreteVolumeForms.PreservesOff
+              (IntegrationInACVF.Section2.ConcreteVolumeMorphisms.essentialForm ω)
+              (IntegrationInACVF.Section2.ConcreteVolumeMorphisms.essentialForm π) f →
+            IntegrationInACVF.Section2.ConcreteVolumeMorphisms.IsVolumeIsomorphism e
+              (IntegrationInACVF.Section2.ConcreteVolumeMorphisms.essentialForm ω)
+              (IntegrationInACVF.Section2.ConcreteVolumeMorphisms.essentialForm π) ⋯ ⋯
+@IntegrationInACVF.Section2.VolumeDescentAllDegrees.corollary_2_34_all_degrees : ∀ {M : Type}
+  [sM : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {k : ℕ},
+  CanonicalStructure.IsCanonical →
+    ∀ (C : SpecialTransformations.Section3.BaseContext M)
+      {U V : SpecialTransformations.Section4.RVFiniteObject (↑C.base) k}
+      (e : SpecialTransformations.Section9.RVFiniteEssentialIso U V)
+      (ω : IntegrationInACVF.Section2.VolumeDescentAllDegrees.Form U)
+      (π : IntegrationInACVF.Section2.VolumeDescentAllDegrees.Form V)
+      (f :
+        SpecialTransformations.DefinableGeometry.Map
+          (SpecialTransformations.Section4.rvLift (SpecialTransformations.Section9.rvFiniteEssentialPart U).obj)
+          (SpecialTransformations.Section4.rvLift (SpecialTransformations.Section9.rvFiniteEssentialPart V).obj)),
+      Function.Bijective f.toFun →
+        (∀
+            (p :
+              ↑(SpecialTransformations.Section4.rvLift
+                    (SpecialTransformations.Section9.rvFiniteEssentialPart U).obj).carrier),
+            ((SpecialTransformations.Section4.finiteVolumeProperty (↑C.base) k).ι.mapIso e).hom.map.graph (↑p).2
+              (↑(f.toFun p)).2) →
+          IntegrationInACVF.Section2.VolumeDescentAllDegrees.PreservesLift ω π f →
+            IntegrationInACVF.Section2.VolumeDescentAllDegrees.IsVolumeIsomorphism e ω π
+@IntegrationInACVF.Section2.WeightedZeroVolumeDescent.labelMap : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {S : Set M} →
+        {U V : SpecialTransformations.Section10.MeasuredRVZero S SpecialTransformations.Section10.rvVolumeScale} →
+          (U.underlying ≅ V.underlying) →
+            SpecialTransformations.DefinableGeometry.Map U.underlying.obj.domain V.underlying.obj.domain
+@IntegrationInACVF.Section2.WeightedZeroVolumeDescent.labelMap_bijective : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set M}
+  {U V : SpecialTransformations.Section10.MeasuredRVZero S SpecialTransformations.Section10.rvVolumeScale}
+  (e : U.underlying ≅ V.underlying),
+  Function.Bijective (IntegrationInACVF.Section2.WeightedZeroVolumeDescent.labelMap e).toFun
+@IntegrationInACVF.Section2.WeightedZeroVolumeDescent.corollary_2_34_zero_weighted : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {S : Set M} →
+        (hc : CanonicalStructure.IsCanonical) →
+          {U V : SpecialTransformations.Section10.MeasuredRVZero S SpecialTransformations.Section10.rvVolumeScale} →
+            (e : U.underlying ≅ V.underlying) →
+              (f :
+                  SpecialTransformations.DefinableGeometry.Map (SpecialTransformations.Section4.rvLift U.underlying.obj)
+                    (SpecialTransformations.Section4.rvLift V.underlying.obj)) →
+                (∀ (p : ↑(SpecialTransformations.Section4.rvLift U.underlying.obj).carrier),
+                    (SpecialTransformations.Section9.liftLabelMap V.underlying.obj).toFun (f.toFun p) =
+                      (IntegrationInACVF.Section2.WeightedZeroVolumeDescent.labelMap e).toFun
+                        ((SpecialTransformations.Section9.liftLabelMap U.underlying.obj).toFun p)) →
+                  (∀ (p : ↑(SpecialTransformations.Section4.rvLift U.underlying.obj).carrier),
+                      ∃ J,
+                        SpecialTransformations.Section9.HasMixedVFJacobianAt f.toFun p J ∧
+                          SpecialTransformations.Section10.WeightedZero.weight
+                              (SpecialTransformations.Section10.MeasuredRVZero.lift hc U) p =
+                            SpecialTransformations.Section10.WeightedZero.weight
+                                (SpecialTransformations.Section10.MeasuredRVZero.lift hc V) (f.toFun p) *
+                              CanonicalRV.encodedRv J) →
+                    (U ≅ V)
+@IntegrationInACVF.Section2.WeightedZeroVolumeDescent.corollary_2_34_zero_weighted_map : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set M} (hc : CanonicalStructure.IsCanonical)
+  {U V : SpecialTransformations.Section10.MeasuredRVZero S SpecialTransformations.Section10.rvVolumeScale}
+  (e : U.underlying ≅ V.underlying)
+  (f :
+    SpecialTransformations.DefinableGeometry.Map (SpecialTransformations.Section4.rvLift U.underlying.obj)
+      (SpecialTransformations.Section4.rvLift V.underlying.obj))
+  (hlabel :
+    ∀ (p : ↑(SpecialTransformations.Section4.rvLift U.underlying.obj).carrier),
+      (SpecialTransformations.Section9.liftLabelMap V.underlying.obj).toFun (f.toFun p) =
+        (IntegrationInACVF.Section2.WeightedZeroVolumeDescent.labelMap e).toFun
+          ((SpecialTransformations.Section9.liftLabelMap U.underlying.obj).toFun p))
+  (hMeasure :
+    ∀ (p : ↑(SpecialTransformations.Section4.rvLift U.underlying.obj).carrier),
+      ∃ J,
+        SpecialTransformations.Section9.HasMixedVFJacobianAt f.toFun p J ∧
+          SpecialTransformations.Section10.WeightedZero.weight
+              (SpecialTransformations.Section10.MeasuredRVZero.lift hc U) p =
+            SpecialTransformations.Section10.WeightedZero.weight
+                (SpecialTransformations.Section10.MeasuredRVZero.lift hc V) (f.toFun p) *
+              CanonicalRV.encodedRv J),
+  (IntegrationInACVF.Section2.WeightedZeroVolumeDescent.corollary_2_34_zero_weighted hc e f hlabel hMeasure).hom.map =
+    IntegrationInACVF.Section2.WeightedZeroVolumeDescent.labelMap e
+@IntegrationInACVF.Section2.VolumeDescentAllDegrees.corollary_2_34_all_degrees_weighted : ∀ {M : Type}
+  [sM : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) (C : SpecialTransformations.Section3.BaseContext M),
+  (∀ {U V : SpecialTransformations.Section10.MeasuredRVZero (↑C.base) SpecialTransformations.Section10.rvVolumeScale}
+      (e : U.underlying ≅ V.underlying)
+      (f :
+        SpecialTransformations.DefinableGeometry.Map (SpecialTransformations.Section4.rvLift U.underlying.obj)
+          (SpecialTransformations.Section4.rvLift V.underlying.obj)),
+      (∀ (p : ↑(SpecialTransformations.Section4.rvLift U.underlying.obj).carrier),
+          (SpecialTransformations.Section9.liftLabelMap V.underlying.obj).toFun (f.toFun p) =
+            (IntegrationInACVF.Section2.WeightedZeroVolumeDescent.labelMap e).toFun
+              ((SpecialTransformations.Section9.liftLabelMap U.underlying.obj).toFun p)) →
+        (∀ (p : ↑(SpecialTransformations.Section4.rvLift U.underlying.obj).carrier),
+            ∃ J,
+              SpecialTransformations.Section9.HasMixedVFJacobianAt f.toFun p J ∧
+                SpecialTransformations.Section10.WeightedZero.weight
+                    (SpecialTransformations.Section10.MeasuredRVZero.lift hc U) p =
+                  SpecialTransformations.Section10.WeightedZero.weight
+                      (SpecialTransformations.Section10.MeasuredRVZero.lift hc V) (f.toFun p) *
+                    CanonicalRV.encodedRv J) →
+          ∃ i, i.hom.map = IntegrationInACVF.Section2.WeightedZeroVolumeDescent.labelMap e) ∧
+    ∀ {j : ℕ} {U V : SpecialTransformations.Section4.RVFiniteObject (↑C.base) (j + 1)}
+      (e : SpecialTransformations.Section9.RVFiniteEssentialIso U V)
+      (ω : IntegrationInACVF.Section2.VolumeDescentAllDegrees.Form U)
+      (π : IntegrationInACVF.Section2.VolumeDescentAllDegrees.Form V)
+      (f :
+        SpecialTransformations.DefinableGeometry.Map
+          (SpecialTransformations.Section4.rvLift (SpecialTransformations.Section9.rvFiniteEssentialPart U).obj)
+          (SpecialTransformations.Section4.rvLift (SpecialTransformations.Section9.rvFiniteEssentialPart V).obj)),
+      Function.Bijective f.toFun →
+        (∀
+            (p :
+              ↑(SpecialTransformations.Section4.rvLift
+                    (SpecialTransformations.Section9.rvFiniteEssentialPart U).obj).carrier),
+            ((SpecialTransformations.Section4.finiteVolumeProperty (↑C.base) (j + 1)).ι.mapIso e).hom.map.graph (↑p).2
+              (↑(f.toFun p)).2) →
+          IntegrationInACVF.Section2.VolumeDescentAllDegrees.PreservesLift ω π f →
+            IntegrationInACVF.Section2.VolumeDescentAllDegrees.IsVolumeIsomorphism e ω π
