@@ -16,31 +16,6 @@ open IntegrationInACVF.Section5 IntegrationInACVF.Section6
 namespace IntegrationInACVF.Section7
 variable {M : Type} [LRV.Structure M] [M ⊨ Axioms.ACVF] {B : Base (M := M)} {S : Set M} {C : BaseContext M} {n a : ℕ}
 
-/-- Class equality of Gamma degree-zero objects from a bijective coordinate selection. -/
-theorem zero_class_eq_of_select (hc : CanonicalStructure.IsCanonical (M := M)) (X Y : HK.GammaZeroRVObjects B S)
-    (σ : Fin Y.val.underlying.obj.arity → Fin X.val.underlying.obj.arity)
-    (hmap : ∀ t ∈ X.val.underlying.obj.domain.carrier, t ∘ σ ∈ Y.val.underlying.obj.domain.carrier)
-    (hsurj : ∀ s ∈ Y.val.underlying.obj.domain.carrier, ∃ t ∈ X.val.underlying.obj.domain.carrier, t ∘ σ = s)
-    (hinj : ∀ t ∈ X.val.underlying.obj.domain.carrier, ∀ t' ∈ X.val.underlying.obj.domain.carrier,
-      t ∘ σ = t' ∘ σ → t = t')
-    (hden : ∀ t : X.val.underlying.obj.domain, X.val.form.value t = Y.val.form.value ⟨t.val ∘ σ,hmap _ t.property⟩) :
-    (Quotient.mk _ X : HK.GammaZeroRVClasses B S) = Quotient.mk _ Y := by
-  let f : Map X.val.underlying.obj.domain Y.val.underlying.obj.domain :=
-    ((rvCoordinateSelectMap S σ).comp (Map.inclusion (fun _ _ => Set.mem_univ _))).corestrict
-      (fun s => hmap s.val s.property)
-  have hfv : ∀ s, (f s).val = s.val ∘ σ := fun _ => rfl
-  have hf : Function.Bijective f := by
-    constructor
-    · intro s s' h
-      apply Subtype.ext
-      exact hinj s.val s.property s'.val s'.property
-        ((hfv s).symm.trans ((congrArg (fun w : Y.val.underlying.obj.domain => w.val) h).trans (hfv s')))
-    · intro t
-      obtain ⟨s,hs,hst⟩ := hsurj t.val t.property
-      exact ⟨⟨s,hs⟩,Subtype.ext hst⟩
-  exact Quotient.sound ⟨HK.ZeroRVVolumeIso.ofBijection f hf hden,
-    gamma_rv_coordinate_map hc _ σ X.property.domain (fun _ => rfl)⟩
-
 theorem zero_prod_zero_density (F : HK.ZeroVFVolumeFamily C n a)
     (Z : HK.ZeroRVVolumeObject (M := M) (C.base : Set M)) (q : (F.prodZero Z).domain) :
     (F.prodZero Z).form.value q =
