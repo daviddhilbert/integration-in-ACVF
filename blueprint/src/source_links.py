@@ -1,6 +1,6 @@
 """Resolve blueprint declarations to the checked integration-in-ACVF source revision."""
 from pathlib import Path
-SOURCE = "https://github.com/daviddhilbert/integration-in-ACVF/blob/b7dd3d1247de520b80e4d85099afdf13c22288d2/"
+SOURCE = "https://github.com/daviddhilbert/integration-in-ACVF/blob/4a0e6c27e87012dbd792efaeb6fda7b95cffc036/"
 def ProcessOptions(options, document):
     links = dict(line.split("\t") for line in Path(__file__).with_name("source-links.tsv").read_text(encoding="utf-8").splitlines())
     def set_source_links():

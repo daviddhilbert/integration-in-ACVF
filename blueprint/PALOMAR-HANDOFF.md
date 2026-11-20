@@ -16,7 +16,9 @@ packaging and corrected root comments without changing any section proof.
 Validation: Lean 4.35.0; exact pinned Mathlib, ACVF-QE and special-transformations
 revisions in `lake-manifest.json`; root build and foundation plus all six section
 verifiers passed. The registered section boundary has **12,597 audited exports**.
-There are **71 blueprint nodes / 87 distinct linked declarations**. The source
+There are **71 blueprint nodes / 87 distinct linked declarations**. *(v1.0.0 submission counts. As of November 20, 2026 the blueprint has
+84 nodes / 132 linked declarations and the section verifiers audit 12,877
+exports; see `verification/project-integrity-2026-11-20.json`.)* The source
 manifest covers all section Lean files, including retained audit programs, not
 only the selected blueprint declarations. Only `propext`, `Classical.choice`
 and `Quot.sound` are permitted by the exported audits.

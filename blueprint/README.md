@@ -20,11 +20,11 @@ The release also includes `dependency-graph.svg` as a separate download; its
 node links open the mathematical statements. The complete leanblueprint HTML
 version remains available in the portable web archive.
 
-The **78 selected nodes** link to **103 distinct Lean declarations**, with
+The **84 selected nodes** link to **132 distinct Lean declarations**, with
 numbered results, proof outlines and a clickable dependency graph. The graph
 records selected mathematical dependencies rather than every Lean expression
 dependency. Every source link is pinned to the proof commit
-[`644f8dbedaf1`](https://github.com/daviddhilbert/integration-in-ACVF/tree/644f8dbedaf12726f00e082c7f68ec6734d12c6e).
+[`4a0e6c27e870`](https://github.com/daviddhilbert/integration-in-ACVF/tree/4a0e6c27e87012dbd792efaeb6fda7b95cffc036).
 The definitions of 3.1 now live in hilbert-mathlib; their node links there.
 [Proof CI](https://github.com/daviddhilbert/integration-in-ACVF/actions/workflows/lean.yml)
 runs on that commit.
@@ -42,10 +42,11 @@ stated explicitly. No additional pure Gamma/RES integration target is claimed.
 
 `nodes.json` records the graph, statements and declaration anchors.
 `src/source-links.tsv` resolves every declaration to its source line.
-`proof-source-manifest.json` fingerprints all 3,720 section Lean files and the
-toolchain, dependency pins and verification programs. The fingerprint check is
+`proof-source-manifest.json` fingerprints all 3,860 section Lean files and the
+toolchain, dependency pins, verification programs and headline statement
+baselines. The fingerprint check is
 a documentation check, distinct from fresh Lean verification. The whole-project
-integrity receipt is [versioned separately](../verification/project-integrity-2026-11-16.json).
+integrity receipt is [versioned separately](../verification/project-integrity-2026-11-20.json).
 
 Build from the repository root:
 
