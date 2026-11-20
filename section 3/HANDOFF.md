@@ -44,8 +44,10 @@ boundary,not a refutation of the conditional3.17 exclusion. No author
 correction or altered radius codomain is adopted. Keep this explicit when
 using threshold functions in later sections.
 
-For2.34 use VolumeDescentAllDegrees.corollary_2_34_all_degrees or the positive
-IntegrationInACVF.Section2.corollary_2_34. The generic RV and pointwise Gamma
+For2.34 use VolumeDescentAllDegrees.corollary_2_34_all_degrees_weighted
+(all degrees, with the weighted degree-zero branch) or the positive
+IntegrationInACVF.Section2.corollary_2_34. *(Updated November 19, 2026; the
+legacy corollary_2_34_all_degrees concludes True in degree zero.)* The generic RV and pointwise Gamma
 conditions are both supplied. ConstructedGaussGraph proves the necessary
 input using the checked embedded finite-extension degree theorem; no new
 reference is assumed. See section2/HANDOFF.md and PROOF-WRITEUP.md.

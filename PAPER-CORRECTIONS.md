@@ -17,7 +17,36 @@ This replaces the measured-zero identifications µRV[0] = RV[0] and
 µVF[0] = VF[0]. It does not add an unproved HK theorem as a formal input.
 The accepted nonempty-E scope of 7.5 remains unchanged. The migration and
 its downstream extensions are not yet Lean-verified; prior audits retain
-their original scope. See [the whole-project impact review](HK-CONVENTION-REVIEW.md).
+their original scope. *(Superseded November 19, 2026: the migration is now
+Lean-verified. The corrected `IntegrationInACVF.Section7.HK` API, the weighted
+zero Corollary 2.34 and Section 7 are checked by the section verifiers; see
+[section 7/COMPLETION.md](section%207/COMPLETION.md).)* See [the whole-project impact review](HK-CONVENTION-REVIEW.md).
+
+## Lemma 2.33: false as stated
+
+Recorded November 19, 2026, from the predecessor project's note
+`Special transformation/Section9/LEMMA-9.15.md` (local author records,
+outside this repository).
+
+Lemma 2.33 is false as stated. It repeats the unrestricted Gamma clause of
+Special transformations Lemma 9.15 (see also [PROJECT-AUDIT.md](PROJECT-AUDIT.md)).
+That note constructs an arity-two
+counterexample: a parameter-free bijection of `(1+m)²` that lifts the
+identity on the singleton RV object of degree two with volume coordinate
+`(1,1)`. Its Gamma-Jacobian on RV is zero, but the full-dimensional VF
+locus off the axes has no point where the determinant has valuation zero,
+so agreement fails at every VF-generic point. The note states that the
+example "also refutes the repeated claim in [Yin, Integration in ACVF,
+Lemma 2.33]" (LEMMA-9.15.md, lines 53–54).
+
+The author approved deleting the unrestricted Gamma assertion of 9.15 on
+November 7, 2026 (LEMMA-9.15.md, lines 6–9). Lemma 2.33 is therefore not a
+formalization target. Corollary 2.34 does not use it: its Gamma equation is
+proved independently, at every essential label, by fixed-label restriction
+and constant-value polydisc descent (see
+[section 2/STATUS.md](section%202/STATUS.md) and
+[section 2/TARGETS.md](section%202/TARGETS.md)). No corrected statement of
+Lemma 2.33 has been proposed or approved.
 
 ## Lemma 3.11: nonempty relation
 

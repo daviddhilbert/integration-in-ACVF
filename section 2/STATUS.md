@@ -27,10 +27,13 @@ explicit. Both complete theorem types are unchanged in the current audit.
 `VolumeDescentTheorem.lean` exports `IntegrationInACVF.Section2.corollary_2_34`
 for actual essential isomorphisms of arbitrary original finite-volume RV
 objects in positive degree, and `corollary_2_34_nonzero` for nondegenerate
-objects. `VolumeDescentAllDegrees.corollary_2_34_all_degrees` covers every
-natural degree in its legacy interface. Its PUnit zero branch is now the
-neutral-form specialization. The unrestricted measured zero target is the
-weighted upstream theorem above, with its actual pointwise measure equation.
+objects. The all-degree entry point is
+`VolumeDescentAllDegrees.corollary_2_34_all_degrees_weighted` (November 19,
+2026): its degree-zero branch is the weighted upstream theorem above, with
+its actual pointwise measure equation, and its positive branches are the
+legacy ones. The legacy `VolumeDescentAllDegrees.corollary_2_34_all_degrees`
+keeps its type, but its PUnit zero branch concludes `True`; do not use it as
+the all-degree statement.
 
 The conclusion is the two actual volume conditions on the supplied genuine
 underlying RV isomorphism. The RV equation holds off a definable RV-small

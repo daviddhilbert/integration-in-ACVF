@@ -9,13 +9,21 @@ Section 2 verifier passed all **72** reports under predecessor
 `verification/hk-zero/receipt.json`. Positive descent and 2.15 are unchanged.
 The old PUnit zero interface remains its neutral-form specialization.
 
+*November 19, 2026:* the all-degree entry point is
+`VolumeDescentAllDegrees.corollary_2_34_all_degrees_weighted`. Its degree-zero
+branch is `corollary_2_34_zero_weighted`; its positive branches are those of
+the legacy theorem. The legacy `corollary_2_34_all_degrees` concludes `True`
+in degree zero. See [TARGETS.md](TARGETS.md) for the Section 2 inventory.
+
 ## Historical ordinary-zero checkpoint
 
 
 The final all-degree Corollary 2.34 has no graph or finite-extension
 reference hypothesis. Entry points:
 
-- `VolumeDescentAllDegrees.corollary_2_34_all_degrees` for every degree.
+- `VolumeDescentAllDegrees.corollary_2_34_all_degrees` for every degree
+  (historical; its degree-zero branch is `True`. Use
+  `VolumeDescentAllDegrees.corollary_2_34_all_degrees_weighted`.)
 - `IntegrationInACVF.Section2.corollary_2_34` for positive essential objects.
 - `IntegrationInACVF.Section2.corollary_2_34_nonzero` for nondegenerate objects.
 - `ConstructedGaussGraph.acvf_graph_input` supplies the actual predecessor
