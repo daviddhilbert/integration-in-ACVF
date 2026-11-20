@@ -2320,10 +2320,14 @@ normalized 7.14/7.15 (`Integration7.GammaFunLinearSection7`).
   almost-everywhere class (`GammaFun.presentation_ae_of_generic_rows`). The corrected raw layer
   used injective definable parameter descent at this point. Review whether the generic-point
   route counts as a different proof.
-- **Formulation differences (flagged for the author).** Linear 7.11 and normalized 7.14 are stated
-  on all graded (resp. normalized) functions on `VF^(n+1)`, without a support set. Normalized 7.15
-  uses the scalar extension of the supported module, not the span of supported generators in the
-  extension of the full module.
+- **Unsupported 7.11/7.14 (author decision).** Linear 7.11 and normalized 7.14 are stated on all
+  graded (resp. normalized) functions on `VF^(n+1)`, without a support set. Asked whether
+  Gamma-named coordinate integrals should be proved to preserve supports, the author answered
+  "Not needed" (relayed November 19, 2026), so the unsupported formulation is retained and
+  support preservation is not a target.
+- **Normalized 7.15 carrier (flagged for the author).** Normalized 7.15 uses the scalar extension
+  of the supported module, not the span of supported generators in the extension of the full
+  module.
 
 Evidence: 146 linear-layer headline types and axioms in
 `section 7/verification/hnames-removal/LinearLayerAudit.log` (only `propext`, `Classical.choice`

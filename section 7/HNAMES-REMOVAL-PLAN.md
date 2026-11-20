@@ -69,6 +69,6 @@ the full Gamma-named function layer, then "Finalize, linear later". Done: the ad
 and 7.14/7.15 for homogeneous functions. Linear layer on `gamma-linear-section7` (entry points
 `Integration7.GammaFunLinearResults`, `Integration7.GammaFunLinearSection7`): graded module,
 linear integral, head-integral coefficient linearity, linear 7.11/7.12 and normalized
-7.14/7.15 done (see COMPLETION.md; the 7.11/7.14 formulation is unsupported and flagged for the
-author). Step 5 (diamond-integral) has not started;
+7.14/7.15 done (see COMPLETION.md; the 7.11/7.14 formulation is unsupported, retained by author
+decision). Step 5 (diamond-integral) has not started;
 see `HNAMES-API-REPORT.md`.

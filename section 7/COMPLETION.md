@@ -119,7 +119,8 @@ author asked for the deferred linear 7.11/7.12 and normalized 7.14/7.15. Entry p
 
 Linear 7.11 and normalized 7.14 are stated on all graded (resp. normalized) functions on
 `VF^(n+1)`, without a support set, whereas the raw `HK.proposition_7_11` and `HK.theorem_7_14`
-are supported; this is flagged for author review. The raw `HK` statements still carry `hNames`;
+are supported. The author decided support preservation is not needed (relayed November 19,
+2026), so this formulation is retained. The raw `HK` statements still carry `hNames`;
 the Gamma-named statements do not.
 
 These modules require the special-transformations branch `gamma-lift-9-16` (local commit

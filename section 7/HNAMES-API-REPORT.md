@@ -66,12 +66,14 @@ integration-in-ACVF `remove-hnames` and special-transformations `gamma-lift-9-16
     the graded coordinate integral; `GammaFun.gamma_named_normalized_linear_fubini`,
     `GammaFun.gamma_named_normalized_linear_theorem_7_14` and
     `GammaFun.gamma_named_normalized_theorem_7_14` follow from linear 7.11.
-    - Formulation note for the author: linear 7.11 and normalized 7.14 are stated on all graded
-      (resp. normalized) Gamma-named functions on `VF^(n+1)`, without a support set. The raw
-      `HK.theorem_7_14` is stated on normalized functions supported in a set `X`, with the
-      coordinate image of `X` as target. The integrals of supported functions are integrals of
-      their underlying functions, so the identities carry the same content; support
-      preservation by coordinate integrals is not formalized in the Gamma layer.
+    - Formulation (author decision, relayed November 19, 2026): linear 7.11 and normalized 7.14
+      are stated on all graded (resp. normalized) Gamma-named functions on `VF^(n+1)`, without a
+      support set, and this unsupported formulation is retained. Asked whether to prove that
+      Gamma-named coordinate integrals preserve supports (map functions on `X` to functions on
+      the coordinate image of `X`), the author answered "Not needed". The raw `HK.theorem_7_14`
+      is stated on normalized functions supported in `X`, with the coordinate image of `X` as
+      target; integrals of supported functions are integrals of their underlying functions, so
+      the identities carry the same content. Support preservation is not a target.
   - The corresponding `HK` statements still carry `hNames`.
 
 ## Dependency changes required
@@ -278,8 +280,8 @@ audited in `verification/hnames-removal/LinearLayerAudit.log`.
   as a public map on classes.
 - **Function-level uses.** The additive Gamma-named 7.11/7.12, the homogeneous 7.14/7.15, the
   linear 7.11/7.12 and the normalized 7.14/7.15 are available without `hNames` (the last four on
-  `gamma-linear-section7`). The linear 7.11 and normalized 7.14 are unsupported formulations
-  (see the formulation note).
+  `gamma-linear-section7`). The linear 7.11 and normalized 7.14 are unsupported formulations,
+  retained by author decision (see the formulation note).
 
 ## Verification
 

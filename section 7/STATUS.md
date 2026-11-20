@@ -21,8 +21,8 @@ form and 7.14/7.15 for homogeneous functions (entry point
 (entry points `Integration7.GammaFunLinearResults` and `Integration7.GammaFunLinearSection7`)
 proves the graded `HK.GammaNamedRVSemiring`-module of Gamma-named functions, the linear graded
 integral, head-integral coefficient linearity in all degrees, the linear 7.11/7.12 and the
-normalized 7.14/7.15. The linear 7.11 and normalized 7.14 are stated without a support set
-(flagged for author review).
+normalized 7.14/7.15. The linear 7.11 and normalized 7.14 are stated without a support set,
+retained by author decision (support preservation not needed).
 See the "Gamma-named results" section of [COMPLETION.md](COMPLETION.md). These modules
 need the special-transformations `gamma-lift-9-16` provider (local `932a507`).
 
