@@ -64,15 +64,14 @@ jobs:
         with:
           python-version: "3.12"
 
-      # setup-python's macOS installer defaults to /Users/runner/hostedtoolcache,
-      # which does not exist on the self-hosted Mac; give it ghrunner's own cache.
-      - name: Set up Python (self-hosted)
+      # setup-python's macOS installer always writes to /Users/runner, which does
+      # not exist on the self-hosted Mac. The CI scripts run on the system
+      # Python 3.9 there (checked: they parse, import and pass their unit tests).
+      - name: Use the system Python (self-hosted)
         if: ${{ runner.environment != 'github-hosted' }}
-        uses: actions/setup-python@v6
-        env:
-          AGENT_TOOLSDIRECTORY: /Users/ghrunner/hostedtoolcache
-        with:
-          python-version: "3.12"
+        run: |
+          command -v python3
+          python3 -c 'import sys; assert sys.version_info >= (3, 9), sys.version; print(sys.version)'
 
       - name: Check CI verifier dispatch
         run: python3 -m unittest discover -s scripts -p 'test_verify_ci.py'
