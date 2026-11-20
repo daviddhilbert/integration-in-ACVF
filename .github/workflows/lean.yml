@@ -59,7 +59,18 @@ jobs:
           free -h
 
       - name: Set up Python
+        if: ${{ runner.environment == 'github-hosted' }}
         uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      # setup-python's macOS installer defaults to /Users/runner/hostedtoolcache,
+      # which does not exist on the self-hosted Mac; give it ghrunner's own cache.
+      - name: Set up Python (self-hosted)
+        if: ${{ runner.environment != 'github-hosted' }}
+        uses: actions/setup-python@v6
+        env:
+          AGENT_TOOLSDIRECTORY: /Users/ghrunner/hostedtoolcache
         with:
           python-version: "3.12"
 
