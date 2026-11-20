@@ -92,15 +92,23 @@ argument: the head preparation of a sum is cut along the summand tag, and each c
 compared with its summand at generic points.
 
 **Linear layer (in progress, branch `gamma-linear-section7`).** The author asked to start the
-deferred linear 7.11/7.12 and normalized 7.14/7.15. Entry point
-`Integration7.GammaFunLinearResults`. Proved: Gamma-named RV classes of every degree act on the
-graded Gamma-named functions (`GammaFun.aeGradedAction`), giving a module over
-`HK.GammaNamedRVSemiring` (`GammaFun.gradedAEFunctionModule`), and the graded Gamma-named integral
-is linear (`GammaFun.gradedIntegralLinearMap`; `GammaFun.comp_integral_act` in every pair of
-degrees). Remaining: Jacobian linearity and the linear 7.12; head-integral coefficient
-linearity `headInt(c•f) = c•headInt f` (fibre-product route, with the frozen field-base port as
-fallback), coordinate integrals and the linear 7.11; the normalized 7.14/7.15. The `HK`
-statements still carry `hNames`.
+deferred linear 7.11/7.12 and normalized 7.14/7.15. Entry points
+`Integration7.GammaFunLinearResults` and `Integration7.GammaFunLinearSection7`. Proved:
+
+- Gamma-named RV classes of every degree act on the graded Gamma-named functions
+  (`GammaFun.aeGradedAction`), giving a module over `HK.GammaNamedRVSemiring`
+  (`GammaFun.gradedAEFunctionModule`). The graded Gamma-named integral is linear
+  (`GammaFun.gradedIntegralLinearMap`; `GammaFun.comp_integral_act` in every pair of degrees).
+- Linear 7.12: Jacobian transforms commute with coefficients of every degree, supported
+  functions form a module, and `GammaFun.gamma_named_linear_proposition_7_12` is an equality of
+  linear maps.
+- Normalized 7.15: the Gamma-named point class is central, `HK.NormalizedGammaRVRing` is the
+  normalized coefficient ring, and `GammaFun.gamma_named_normalized_theorem_7_15` holds on the
+  scalar extension of the supported module. Its carrier differs from the raw `HK.theorem_7_15`
+  carrier (a span inside the extension of the full module); this is flagged for author review.
+
+Remaining: head-integral coefficient linearity `headInt(c•f) = c•headInt f`, coordinate
+integrals, the linear 7.11 and the normalized 7.14. The `HK` statements still carry `hNames`.
 
 These modules require the special-transformations branch `gamma-lift-9-16` (local commit
 `932a507`, which contains Gamma Theorem 9.16). The registered dependency pin is unchanged

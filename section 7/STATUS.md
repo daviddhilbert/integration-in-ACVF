@@ -18,9 +18,10 @@ The accepted nonempty-E restriction of 7.5 is retained.
 Gamma-named 7.6–7.10 and 7.13 hold without `hNames`. Gamma-named 7.11/7.12 hold in additive
 form and 7.14/7.15 for homogeneous functions (entry point
 `Integration7.GammaFunSection7AdditiveResults`). The linear layer is in progress on
-`gamma-linear-section7` (entry point `Integration7.GammaFunLinearResults`): the graded
-`HK.GammaNamedRVSemiring`-module of Gamma-named functions and the linear graded integral are
-proved; the linear 7.11/7.12 and normalized 7.14/7.15 remain.
+`gamma-linear-section7` (entry points `Integration7.GammaFunLinearResults` and
+`Integration7.GammaFunLinearSection7`): the graded `HK.GammaNamedRVSemiring`-module of
+Gamma-named functions, the linear graded integral, the linear 7.12 and the normalized 7.15 are
+proved; the linear 7.11 and normalized 7.14 (head-integral linearity) remain.
 See the "Gamma-named results" section of [COMPLETION.md](COMPLETION.md). These modules
 need the special-transformations `gamma-lift-9-16` provider (local `932a507`).
 

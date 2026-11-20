@@ -105,3 +105,93 @@ set_option pp.proofs false
 #print axioms IntegrationInACVF.Section7.GammaFun.graded_integral_smul
 #check @IntegrationInACVF.Section7.GammaFun.gradedIntegralLinearMap
 #print axioms IntegrationInACVF.Section7.GammaFun.gradedIntegralLinearMap
+#check @IntegrationInACVF.Section7.is_jacobian_value_map_comp
+#print axioms IntegrationInACVF.Section7.is_jacobian_value_map_comp
+#check @IntegrationInACVF.Section7.GammaFun.Presentation.jacobianWith
+#print axioms IntegrationInACVF.Section7.GammaFun.Presentation.jacobianWith
+#check @IntegrationInACVF.Section7.GammaFun.ZeroPresentation.jacobianWith
+#print axioms IntegrationInACVF.Section7.GammaFun.ZeroPresentation.jacobianWith
+#check @IntegrationInACVF.Section7.GammaFun.presentation_jacobian_with_ae
+#print axioms IntegrationInACVF.Section7.GammaFun.presentation_jacobian_with_ae
+#check @IntegrationInACVF.Section7.GammaFun.zero_presentation_jacobian_with_ae
+#print axioms IntegrationInACVF.Section7.GammaFun.zero_presentation_jacobian_with_ae
+#check @IntegrationInACVF.Section7.zero_class_eq_of_select
+#print axioms IntegrationInACVF.Section7.zero_class_eq_of_select
+#check @IntegrationInACVF.Section7.GammaFun.presentation_left_product_jacobian
+#print axioms IntegrationInACVF.Section7.GammaFun.presentation_left_product_jacobian
+#check @IntegrationInACVF.Section7.GammaFun.presentation_zero_coef_jacobian
+#print axioms IntegrationInACVF.Section7.GammaFun.presentation_zero_coef_jacobian
+#check @IntegrationInACVF.Section7.GammaFun.zero_presentation_pos_coef_jacobian
+#print axioms IntegrationInACVF.Section7.GammaFun.zero_presentation_pos_coef_jacobian
+#check @IntegrationInACVF.Section7.GammaFun.zero_presentation_zero_coef_jacobian
+#print axioms IntegrationInACVF.Section7.GammaFun.zero_presentation_zero_coef_jacobian
+#check @IntegrationInACVF.Section7.GammaFun.PresSupported
+#print axioms IntegrationInACVF.Section7.GammaFun.PresSupported
+#check @IntegrationInACVF.Section7.GammaFun.pres_act_supported
+#print axioms IntegrationInACVF.Section7.GammaFun.pres_act_supported
+#check @IntegrationInACVF.Section7.GammaFun.SuppComp
+#print axioms IntegrationInACVF.Section7.GammaFun.SuppComp
+#check @IntegrationInACVF.Section7.GammaFun.suppForget
+#print axioms IntegrationInACVF.Section7.GammaFun.suppForget
+#check @IntegrationInACVF.Section7.GammaFun.suppAct
+#print axioms IntegrationInACVF.Section7.GammaFun.suppAct
+#check @IntegrationInACVF.Section7.GammaFun.suppGradedAction
+#print axioms IntegrationInACVF.Section7.GammaFun.suppGradedAction
+#check @IntegrationInACVF.Section7.GammaFun.SupportedGradedFunction
+#print axioms IntegrationInACVF.Section7.GammaFun.SupportedGradedFunction
+#check @IntegrationInACVF.Section7.GammaFun.supportedGradedFunctionModule
+#print axioms IntegrationInACVF.Section7.GammaFun.supportedGradedFunctionModule
+#check @IntegrationInACVF.Section7.GammaFun.supported_graded_action_of
+#print axioms IntegrationInACVF.Section7.GammaFun.supported_graded_action_of
+#check @IntegrationInACVF.Section7.GammaFun.presJac
+#print axioms IntegrationInACVF.Section7.GammaFun.presJac
+#check @IntegrationInACVF.Section7.GammaFun.suppJac
+#print axioms IntegrationInACVF.Section7.GammaFun.suppJac
+#check @IntegrationInACVF.Section7.GammaFun.supp_jac_act
+#print axioms IntegrationInACVF.Section7.GammaFun.supp_jac_act
+#check @IntegrationInACVF.Section7.GammaFun.suppForgetLinearMap
+#print axioms IntegrationInACVF.Section7.GammaFun.suppForgetLinearMap
+#check @IntegrationInACVF.Section7.GammaFun.suppJacLinearMap
+#print axioms IntegrationInACVF.Section7.GammaFun.suppJacLinearMap
+#check @IntegrationInACVF.Section7.GammaFun.suppIntegralLinearMap
+#print axioms IntegrationInACVF.Section7.GammaFun.suppIntegralLinearMap
+#check @IntegrationInACVF.Section7.GammaFun.gamma_named_linear_proposition_7_12
+#print axioms IntegrationInACVF.Section7.GammaFun.gamma_named_linear_proposition_7_12
+#check @IntegrationInACVF.Section7.gamma_volume_unit_point_swap_iso
+#print axioms IntegrationInACVF.Section7.gamma_volume_unit_point_swap_iso
+#check @IntegrationInACVF.Section7.HK.gammaPointClass
+#print axioms IntegrationInACVF.Section7.HK.gammaPointClass
+#check @IntegrationInACVF.Section7.HK.gamma_point_class_commutes
+#print axioms IntegrationInACVF.Section7.HK.gamma_point_class_commutes
+#check @IntegrationInACVF.Section7.HK.GammaPointLocalization
+#print axioms IntegrationInACVF.Section7.HK.GammaPointLocalization
+#check @IntegrationInACVF.Section7.HK.normalizedGammaSemiringMap
+#print axioms IntegrationInACVF.Section7.HK.normalizedGammaSemiringMap
+#check @IntegrationInACVF.Section7.HK.NormalizedGammaRVRing
+#print axioms IntegrationInACVF.Section7.HK.NormalizedGammaRVRing
+#check @IntegrationInACVF.Section7.HK.normalizedGammaCoefficientMap
+#print axioms IntegrationInACVF.Section7.HK.normalizedGammaCoefficientMap
+#check @IntegrationInACVF.Section7.HK.normalized_gamma_coefficient_point
+#print axioms IntegrationInACVF.Section7.HK.normalized_gamma_coefficient_point
+#check @IntegrationInACVF.Section7.GammaFun.normalizedExtend
+#print axioms IntegrationInACVF.Section7.GammaFun.normalizedExtend
+#check @IntegrationInACVF.Section7.GammaFun.NormalizedFunction
+#print axioms IntegrationInACVF.Section7.GammaFun.NormalizedFunction
+#check @IntegrationInACVF.Section7.GammaFun.NormalizedSupportedFunction
+#print axioms IntegrationInACVF.Section7.GammaFun.NormalizedSupportedFunction
+#check @IntegrationInACVF.Section7.GammaFun.normalizedSupportedForget
+#print axioms IntegrationInACVF.Section7.GammaFun.normalizedSupportedForget
+#check @IntegrationInACVF.Section7.GammaFun.normalizedSupportedJacobian
+#print axioms IntegrationInACVF.Section7.GammaFun.normalizedSupportedJacobian
+#check @IntegrationInACVF.Section7.GammaFun.normalizedIntegral
+#print axioms IntegrationInACVF.Section7.GammaFun.normalizedIntegral
+#check @IntegrationInACVF.Section7.GammaFun.normalizedSupportedIntegral
+#print axioms IntegrationInACVF.Section7.GammaFun.normalizedSupportedIntegral
+#check @IntegrationInACVF.Section7.GammaFun.normalized_supported_integral_generator
+#print axioms IntegrationInACVF.Section7.GammaFun.normalized_supported_integral_generator
+#check @IntegrationInACVF.Section7.GammaFun.gamma_named_normalized_linear_theorem_7_15
+#print axioms IntegrationInACVF.Section7.GammaFun.gamma_named_normalized_linear_theorem_7_15
+#check @IntegrationInACVF.Section7.GammaFun.gamma_named_normalized_theorem_7_15
+#print axioms IntegrationInACVF.Section7.GammaFun.gamma_named_normalized_theorem_7_15
+#check @IntegrationInACVF.Section7.GammaFun.presentation_ae_of_generic_rows
+#print axioms IntegrationInACVF.Section7.GammaFun.presentation_ae_of_generic_rows

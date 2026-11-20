@@ -19,17 +19,35 @@ integration-in-ACVF `remove-hnames` and special-transformations `gamma-lift-9-16
   - Gamma-named 7.14 and 7.15 hold for homogeneous functions.
   - Both cover positive degree and weighted degree zero.
 - **Linear layer: in progress** on branch `gamma-linear-section7` (local, from `origin/main`
-  5a69a5e; the author asked to start it). Entry point `Integration7.GammaFunLinearResults`,
+  5a69a5e; the author asked to start it). Entry points `Integration7.GammaFunLinearResults`
+  (module and integral) and `Integration7.GammaFunLinearSection7` (7.12, normalized 7.15), both
   imported by `Integration7.Library`.
   - Done: the graded Gamma-named functions (weighted degree zero in component zero, positive
     coefficient degree `k` in component `k+1`) form a module over `HK.GammaNamedRVSemiring`
     (`GammaFun.aeGradedAction`, instance `GammaFun.gradedAEFunctionModule`). The graded
     Gamma-named integral is `HK.GammaNamedRVSemiring`-linear (`GammaFun.gradedIntegralLinearMap`;
     `GammaFun.comp_integral_act` for every pair of degrees).
-  - Remaining: the linear 7.12 (Jacobian linearity on supported functions), the linear 7.11
-    (head-integral coefficient linearity, then coordinate integrals) and the normalized
-    7.14/7.15. Head linearity follows the fibre-product route recorded in the scoping notes
-    (the frozen field-base port is the fallback).
+  - Done: **linear 7.12.** Jacobian transforms commute with coefficients of every degree on
+    functions of every degree (almost everywhere). Supported graded functions form a module
+    (`GammaFun.supportedGradedFunctionModule`), the Jacobian transform is linear
+    (`GammaFun.suppJacLinearMap`), and `GammaFun.gamma_named_linear_proposition_7_12` is an
+    equality of `HK.GammaNamedRVSemiring`-linear maps.
+  - Done: **normalized 7.15.** The Gamma-named degree-one point class is central
+    (`HK.gamma_point_class_commutes`). Localizing at it and normalizing homogeneous terms gives
+    `HK.NormalizedGammaRVRing` with `HK.normalizedGammaCoefficientMap` (point ↦ 1). Normalized
+    supported functions are the scalar extension of the supported graded module
+    (`GammaFun.NormalizedSupportedFunction`); `GammaFun.gamma_named_normalized_linear_theorem_7_15`
+    and `GammaFun.gamma_named_normalized_theorem_7_15` follow from linear 7.12.
+    - Formulation note for the author: the raw `HK.theorem_7_15` uses the span of supported
+      generators inside the scalar extension of the full module, with a restricted Jacobian
+      built from positive operators. The Gamma statement uses the scalar extension of the
+      supported module itself. The two agree on generators; the carriers are not identified.
+  - Remaining: the linear 7.11 and normalized 7.14, which need head-integral coefficient
+    linearity (then coordinate integrals). Route: identify head rows with unary fibre-family
+    contractions (`headFibreIntegralVolumeIso`, identity on carriers) and compare contractions
+    with `gamma_family_lemma_7_5` (no `hNames`); the coefficient-product contraction needs a
+    Gamma unary special preparation of the fibre, which in turn needs a Gamma-definable chain
+    (see the scoping notes).
   - The corresponding `HK` statements still carry `hNames`.
 
 ## Dependency changes required
@@ -131,7 +149,7 @@ additivity theorems `presentation_integral_add`, `presentation_head_integral_add
 
 ## New public declarations: Gamma-named linear layer (namespace `IntegrationInACVF.Section7.GammaFun` unless noted)
 
-Status: partial (see the summary). 50 headline declarations, audited in
+Status: partial (see the summary). 95 headline declarations, audited in
 `verification/hnames-removal/LinearLayerAudit.log`.
 
 - Coefficient actions on presentations: `Presentation.leftProduct` (positive on positive),
@@ -145,6 +163,25 @@ Status: partial (see the summary). 50 headline declarations, audited in
   `presentation_zero_coef_appended_integral`, `zero_presentation_pos_coef_appended_integral`,
   `zero_presentation_zero_coef_integral`, `comp_integral_act`, `compIntegral`,
   `gradedIntegralAddHom`, `graded_integral_smul`, `gradedIntegralLinearMap`.
+- Jacobian linearity: `is_jacobian_value_map_comp` (namespace `Section7`),
+  `Presentation.jacobianWith`, `ZeroPresentation.jacobianWith`, `presentation_jacobian_with_ae`,
+  `zero_presentation_jacobian_with_ae`, `zero_class_eq_of_select` (namespace `Section7`),
+  `presentation_left_product_jacobian`, `presentation_zero_coef_jacobian`,
+  `zero_presentation_pos_coef_jacobian`, `zero_presentation_zero_coef_jacobian`.
+- Supported module and linear 7.12: `PresSupported`, `pres_act_supported`, `SuppComp`,
+  `suppForget`, `suppAct`, `suppGradedAction`, `SupportedGradedFunction`,
+  `supportedGradedFunctionModule`, `supported_graded_action_of`, `presJac`, `suppJac`,
+  `supp_jac_act`, `suppForgetLinearMap`, `suppJacLinearMap`, `suppIntegralLinearMap`,
+  `gamma_named_linear_proposition_7_12`.
+- Normalized coefficients (namespace `Section7.HK` unless noted): `gammaPointClass`,
+  `gamma_point_class_commutes`, `GammaPointLocalization`, `normalizedGammaSemiringMap`,
+  `NormalizedGammaRVRing`, `normalizedGammaCoefficientMap`, `normalized_gamma_coefficient_point`,
+  `Section7.gamma_volume_unit_point_swap_iso`.
+- Normalized 7.15: `normalizedExtend`, `NormalizedFunction`, `NormalizedSupportedFunction`,
+  `normalizedSupportedForget`, `normalizedSupportedJacobian`, `normalizedIntegral`,
+  `normalizedSupportedIntegral`, `normalized_supported_integral_generator`,
+  `gamma_named_normalized_linear_theorem_7_15`, `gamma_named_normalized_theorem_7_15`.
+- AE descent: `presentation_ae_of_generic_rows`.
 - Gamma tools (namespace `Section7`): `VFVolumeObjectGamma.prod`, `.permuteVF`, `.weightedZero`,
   `VFVolumeIso.GammaDefinable.prod`, `volume_lift_product_iso_gamma`,
   `weighted_lift_zero_product_iso_gamma`, `selected_positive_coefficient_appended_lift_gamma`,
@@ -185,9 +222,10 @@ Status: partial (see the summary). 50 headline declarations, audited in
   automatically Gamma-named objects, because the code set changes from `C.base` to the code
   context. A bridge (upward code extension, as in `GammaVolumeObjects.extend`) is not provided
   as a public map on classes.
-- **Function-level uses.** The additive Gamma-named 7.11/7.12 and the homogeneous 7.14/7.15
-  are available without `hNames`. Uses of the linear 7.11/7.12 or the normalized 7.14/7.15
-  must keep the `HK` statements (with `hNames`) until the deferred layer is built.
+- **Function-level uses.** The additive Gamma-named 7.11/7.12, the homogeneous 7.14/7.15, the
+  linear 7.12 and the normalized 7.15 are available without `hNames` (the last two on
+  `gamma-linear-section7`). Uses of the linear 7.11 or the normalized 7.14 must keep the `HK`
+  statements (with `hNames`) until head-integral linearity is built.
 
 ## Verification
 
