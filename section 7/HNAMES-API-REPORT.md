@@ -38,10 +38,11 @@ integration-in-ACVF `remove-hnames` and special-transformations `gamma-lift-9-16
     supported functions are the scalar extension of the supported graded module
     (`GammaFun.NormalizedSupportedFunction`); `GammaFun.gamma_named_normalized_linear_theorem_7_15`
     and `GammaFun.gamma_named_normalized_theorem_7_15` follow from linear 7.12.
-    - Formulation note for the author: the raw `HK.theorem_7_15` uses the span of supported
+    - Formulation (accepted by the author, November 19, 2026): the raw `HK.theorem_7_15` uses the span of supported
       generators inside the scalar extension of the full module, with a restricted Jacobian
       built from positive operators. The Gamma statement uses the scalar extension of the
-      supported module itself. The two agree on generators; the carriers are not identified.
+      supported module itself. The two agree on generators; the carriers are not identified, and
+      that identification is not a target.
   - Done: **head-integral coefficient linearity**, almost everywhere, in all four degree cases:
     `GammaFun.presentation_head_left_product_ae` (positive coefficient, positive function),
     `GammaFun.presentation_head_zero_coef_ae` (weighted degree-zero coefficient, positive

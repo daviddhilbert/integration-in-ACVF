@@ -2310,7 +2310,7 @@ normalized 7.14/7.15 (`Integration7.GammaFunLinearSection7`).
   scalar extensions along the normalization map are assembled from the homogeneous laws. Linear
   7.11 composes graded head Fubini with linear 7.12 for the coordinate permutation of the full
   VF space.
-- **Head-integral coefficient linearity (provisional classification: adaptation).** Head rows are
+- **Head-integral coefficient linearity (adaptation; author decision).** Head rows are
   unary fibre-family contractions. The coefficient-times-fibre family is contracted through a
   Gamma native presentation of the coefficient and a Gamma unary special preparation over the VF
   field base of the row. The two contractions are compared by the Gamma Lemma 7.5 for families.
@@ -2318,16 +2318,17 @@ normalized 7.14/7.15 (`Integration7.GammaFunLinearSection7`).
   Gamma comparison tools need a generated base with independence, so the rows are compared only
   at points generic over a frozen generated context; rows at generic points then determine the
   almost-everywhere class (`GammaFun.presentation_ae_of_generic_rows`). The corrected raw layer
-  used injective definable parameter descent at this point. Review whether the generic-point
-  route counts as a different proof.
+  used injective definable parameter descent at this point. The author classified the
+  generic-point route as an adaptation, not a different proof (November 19, 2026).
 - **Unsupported 7.11/7.14 (author decision).** Linear 7.11 and normalized 7.14 are stated on all
   graded (resp. normalized) functions on `VF^(n+1)`, without a support set. Asked whether
   Gamma-named coordinate integrals should be proved to preserve supports, the author answered
   "Not needed" (relayed November 19, 2026), so the unsupported formulation is retained and
   support preservation is not a target.
-- **Normalized 7.15 carrier (flagged for the author).** Normalized 7.15 uses the scalar extension
+- **Normalized 7.15 carrier (author decision).** Normalized 7.15 uses the scalar extension
   of the supported module, not the span of supported generators in the extension of the full
-  module.
+  module. The author accepted this domain (November 19, 2026); identifying the two carriers is
+  not a target.
 
 Evidence: 146 linear-layer headline types and axioms in
 `section 7/verification/hnames-removal/LinearLayerAudit.log` (only `propext`, `Classical.choice`
