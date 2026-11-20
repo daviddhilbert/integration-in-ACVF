@@ -17,21 +17,35 @@ concurrency:
 jobs:
   verify:
     name: Pinned build and foundation audits
-    runs-on: ubuntu-latest
+    # Pushes and manual runs build on the self-hosted Mac mini, which keeps
+    # .lake between runs. Pull requests (which may come from forks of this
+    # public repository) stay on GitHub-hosted runners. The Mac uses 6 Lean
+    # threads per step so several repositories can build there at once.
+    runs-on: ${{ github.event_name == 'pull_request' && 'ubuntu-latest' || fromJSON('["self-hosted","macOS","ARM64","diamond-mac-mini"]') }}
     timeout-minutes: 180
     env:
-      LEAN_NUM_THREADS: "2"
+      LEAN_NUM_THREADS: ${{ github.event_name == 'pull_request' && '2' || '6' }}
       PYTHONUNBUFFERED: "1"
     steps:
       - name: Check out this revision
         uses: actions/checkout@v5
         with:
           persist-credentials: false
+          # Keep the local .lake build on the self-hosted runner.
+          clean: ${{ github.event_name == 'pull_request' }}
+
+      # The checkout above keeps untracked files on the self-hosted runner.
+      # Start from an empty evidence directory, as on a fresh hosted runner, so
+      # the uploaded artifact never contains logs from an earlier run.
+      - name: Remove evidence from earlier self-hosted runs
+        if: ${{ runner.environment == 'self-hosted' }}
+        run: rm -rf .scratch
 
       # The Section 7 library needs more memory than the 16 GB hosted runner has:
       # each GammaFun* module maps ~6.5 GB of imports, and the runner lost
       # communication under memory pressure. Add swap before building.
       - name: Add swap space
+        if: ${{ runner.os == 'Linux' }}
         run: |
           df -h / /mnt || true
           sudo swapoff -a || true
@@ -53,6 +67,7 @@ jobs:
 
       - name: Install the pinned Lean toolchain
         id: setup
+        if: ${{ runner.os == 'Linux' }}
         shell: bash
         run: |
           if [[ $(<lean-toolchain) != leanprover/lean4:v4.35.0 ]]; then
@@ -78,6 +93,25 @@ jobs:
           "$toolchain/lake" --version
           echo "$toolchain" >> "$GITHUB_PATH"
 
+      # The Mac mini has elan on PATH with the pinned toolchain installed; the
+      # lean and lake proxies select it from lean-toolchain.
+      - name: Select the pinned Lean toolchain with elan
+        id: setup-elan
+        if: ${{ runner.os == 'macOS' }}
+        shell: bash
+        run: |
+          if [[ $(<lean-toolchain) != leanprover/lean4:v4.35.0 ]]; then
+            echo "Install the new Lean pin on the self-hosted runner."
+            exit 1
+          fi
+          elan show
+          lean --version
+          lake --version
+          if [[ $(lean --version) != *"version 4.35.0"* ]]; then
+            echo "elan did not resolve the pinned Lean toolchain."
+            exit 1
+          fi
+
       - name: Restore cached Mathlib dependencies
         env:
           MATHLIB_CACHE_GET_URL: https://cache.mathlib.org/mathlib4
@@ -97,6 +131,7 @@ jobs:
 
       - name: Restore compiled pinned predecessors
         id: predecessor-cache
+        if: ${{ runner.environment == 'github-hosted' }}
         uses: actions/cache/restore@v4
         with:
           path: |
@@ -110,14 +145,14 @@ jobs:
       - name: Build the pinned predecessor
         id: predecessor-build
         env:
-          LEAN_NUM_THREADS: "4"
+          LEAN_NUM_THREADS: ${{ github.event_name == 'pull_request' && '4' || '6' }}
         shell: bash
         run: |
           mkdir -p .scratch/ci-verified
           lake build SpecialTransformations 2>&1 | tee .scratch/ci-verified/PredecessorBuild.log
 
       - name: Save compiled pinned predecessors
-        if: ${{ steps.predecessor-cache.outputs.cache-hit != 'true' }}
+        if: ${{ runner.environment == 'github-hosted' && steps.predecessor-cache.outputs.cache-hit != 'true' }}
         uses: actions/cache/save@v4
         with:
           path: |
@@ -128,6 +163,7 @@ jobs:
 
       - name: Restore compiled project modules
         id: project-cache
+        if: ${{ runner.environment == 'github-hosted' }}
         uses: actions/cache/restore@v4
         with:
           path: |
@@ -145,8 +181,9 @@ jobs:
       - name: Build the project and predecessor import
         id: build
         env:
-          # Each Section 7 GammaFun* module needs ~6.5 GB RSS to load its imports; even 2 concurrent jobs starved the 16 GB runner.
-          LEAN_NUM_THREADS: "1"
+          # Each Section 7 GammaFun* module needs ~6.5 GB RSS to load its imports; even 2 concurrent jobs starved the 16 GB hosted runner.
+          # The 64 GB Mac mini runs 6.
+          LEAN_NUM_THREADS: ${{ github.event_name == 'pull_request' && '1' || '6' }}
         shell: bash
         run: |
           mkdir -p .scratch/ci-verified
@@ -156,7 +193,7 @@ jobs:
       # build. Lake validates source/import traces after a restore, so partial
       # caches cannot make an incomplete or failed module pass verification.
       - name: Save compiled project modules
-        if: ${{ always() && steps.project-cache.outputs.cache-hit != 'true' && (steps.build.outcome == 'success' || steps.build.outcome == 'failure' || steps.build.outcome == 'cancelled') }}
+        if: ${{ always() && runner.environment == 'github-hosted' && steps.project-cache.outputs.cache-hit != 'true' && (steps.build.outcome == 'success' || steps.build.outcome == 'failure' || steps.build.outcome == 'cancelled') }}
         uses: actions/cache/save@v4
         with:
           path: |
