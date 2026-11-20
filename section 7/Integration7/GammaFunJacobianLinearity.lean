@@ -151,4 +151,48 @@ theorem jacobian_with_density_eq {X Y : GammaVFSet C Ξ hΞ n} (φ : GammaVFBije
   rw [jacobian_transported_form_value,jacobian_transported_form_value,
     jacobian_value_density_congr j₂ j₁ p p (hj2.trans hj1.symm)]
 
+set_option maxHeartbeats 6400000 in
+/-- **Two Gamma Jacobian value maps give almost-everywhere equal Jacobian transforms.** -/
+theorem presentation_jacobian_with_ae {X Y : GammaVFSet C Ξ hΞ n} (F : Presentation C Ξ hΞ n k)
+    (φ : GammaVFBijection C Ξ hΞ X Y) (hF : F.SupportedIn C Ξ hΞ X)
+    (j₁ j₂ : Map F.family.domain (DefSet.univ (rawVFSpace (M := M) 1) 𝔖))
+    (h₁Γ : GammaGraphDefinable 𝔅 (fun (p : Point (M := M) (n+1) F.arity) (z : Point (M := M) 1 0) =>
+      ∃ u : F.family.domain, u.val = p ∧ (j₁ u).val = z.1))
+    (h₂Γ : GammaGraphDefinable 𝔅 (fun (p : Point (M := M) (n+1) F.arity) (z : Point (M := M) 1 0) =>
+      ∃ u : F.family.domain, u.val = p ∧ (j₂ u).val = z.1))
+    (h₁ : IsJacobianValueMap (mixedVFBaseMap φ.map F.family.domain hF).toImage j₁)
+    (h₂ : IsJacobianValueMap (mixedVFBaseMap φ.map F.family.domain hF).toImage j₂) :
+    AEEquivalent hc C Ξ hΞ (F.jacobianWith hc C Ξ hΞ φ hF j₁ h₁Γ) (F.jacobianWith hc C Ξ hΞ φ hF j₂ h₂Γ) := by
+  obtain ⟨E,hE,hg⟩ := domain_jacobian_ae_exceptional hc C Ξ hΞ φ F.family.domain F.family.domain
+    F.gamma.domain F.gamma.domain hF hF j₁ j₂ h₁Γ h₂Γ h₁ h₂ (GammaVFSet.empty C Ξ hΞ n)
+    (gamma_vf_set_empty_small C Ξ hΞ n)
+  refine ⟨E,hE,fun y hy => ?_⟩
+  let J₁ := F.jacobianWith hc C Ξ hΞ φ hF j₁ h₁Γ
+  let J₂ := F.jacobianWith hc C Ξ hΞ φ hF j₂ h₂Γ
+  let D := vfParameterVolumeContext 𝔇 y
+  have hForm : ∀ s : (J₁.family.rowInContext y).underlying.obj.domain,
+      (J₂.family.rowInContext y).form.value s = (J₁.family.rowInContext y).form.value s := by
+    intro s
+    obtain ⟨p,hp⟩ := s.property
+    have hJ : (⟨(y,s.val),s.property⟩ : J₁.family.domain) = (mixedVFBaseMap φ.map F.family.domain hF).toImage p :=
+      Subtype.ext hp.symm
+    change (jacobianTransportedForm (mixedVFBaseMap φ.map F.family.domain hF).toImage _ j₂ F.family.form).value
+        ⟨(y,s.val),s.property⟩ =
+      (jacobianTransportedForm (mixedVFBaseMap φ.map F.family.domain hF).toImage _ j₁ F.family.form).value
+        ⟨(y,s.val),s.property⟩
+    rw [hJ]
+    exact jacobian_with_density_eq hc C Ξ hΞ φ F.family.domain hF F.family.form j₁ j₂ E
+      (fun y' hy' => ⟨(hg y' hy').2.1,(hg y' hy').2.2⟩) y hy p (congrArg Prod.fst hp)
+  have hJ := J₁.gamma.row hc y
+  let f : Map (J₁.family.rowInContext y).underlying.obj.domain (J₂.family.rowInContext y).underlying.obj.domain :=
+    Map.id _
+  have hCoord : ∀ s, (J₂.family.rowInContext y).underlying.obj.value (f s) =
+      (J₁.family.rowInContext y).underlying.obj.value s := fun _ => rfl
+  refine gammaVolumeBlowupClass_iso hc D (rowGammaBase 𝔅 y) (RVVolumeIso.of_preserving_coordinates_full hc D
+    (SpecialTransformations.Section4.rvFiniteIsoOfAmbient
+      (SpecialTransformations.Section4.rvIsoOfVolumePreservingBijection f Function.bijective_id hCoord)) hCoord hForm) ?_
+  exact gamma_volume_iso_of_full_map _ f (gamma_essential_volume_domain _ hJ.coordinates)
+    (gamma_rv_coordinate_map hc _ id hJ.domain_graph (fun _ => rfl)) (fun _ => rfl)
+
+
 end IntegrationInACVF.Section7.GammaFun
