@@ -13,20 +13,26 @@ The actual principal kernel, class 7.10/7.13, normalized 7.14–7.15 and
 commutativity of the corrected normalized coefficient ring are proved.
 The accepted nonempty-E restriction of 7.5 is retained.
 
-## Gamma-named results (local branch `remove-hnames`)
+## Gamma-named results (on `main`)
 
-Gamma-named 7.6–7.10 and 7.13 hold without `hNames`. Gamma-named 7.11/7.12 hold in additive
+Gamma-named 7.6–7.10 and 7.13 hold without `hNames` (developed on the local branches
+`remove-hnames` and `gamma-linear-section7`; now on `main` and imported by `Integration7.Library`). Gamma-named 7.11/7.12 hold in additive
 form and 7.14/7.15 for homogeneous functions (entry point
-`Integration7.GammaFunSection7AdditiveResults`). The linear layer on `gamma-linear-section7`
-(entry points `Integration7.GammaFunLinearResults` and `Integration7.GammaFunLinearSection7`)
+`Integration7.GammaFunSection7AdditiveResults`). The linear layer (entry points `Integration7.GammaFunLinearResults` and `Integration7.GammaFunLinearSection7`)
 proves the graded `HK.GammaNamedRVSemiring`-module of Gamma-named functions, the linear graded
 integral, head-integral coefficient linearity in all degrees, the linear 7.11/7.12 and the
 normalized 7.14/7.15. The linear 7.11 and normalized 7.14 are stated without a support set,
-retained by author decision (support preservation not needed).
+retained by author decision (support preservation not needed). The normalized 7.15 carrier
+(scalar extension of the supported module) was accepted by the author on November 19, 2026.
 See the "Gamma-named results" section of [COMPLETION.md](COMPLETION.md). These modules
-need the special-transformations `gamma-lift-9-16` provider (local `932a507`).
+need special-transformations `932a507` (Gamma Theorem 9.16), which the Lake manifest pins.
 
 ## Current checked boundary
+
+*November 19, 2026:* `VERIFICATION.json` now registers 2,168 source modules plus
+Library and 6,990 exports, including the Gamma-named layers and
+`CompletedSection6.lemma_6_16`; `verify.py` audits all of them. The paragraph
+below records the November 16 completion boundary.
 
 `Integration7.Library` integrates 2,041 source modules plus its entrypoint.
 All 6,711 registered exports have complete incremental type/axiom reviews;

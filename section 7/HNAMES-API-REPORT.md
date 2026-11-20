@@ -3,6 +3,12 @@
 Date: November 20, 2026. Branches (local, not pushed):
 integration-in-ACVF `remove-hnames` and special-transformations `gamma-lift-9-16`.
 
+*Status update, November 19, 2026 (local time):* both branches are published.
+The Gamma-named class, function and linear layers are on integration-in-ACVF
+`main` (through 494ed71), and special-transformations `932a507` is an ancestor
+of its `main`. The Lake manifest pins `932a507`. The notes below about local,
+unpushed branches are historical.
+
 ## Summary
 
 - **Additive only.** No existing declaration was removed, renamed or restated. Every
@@ -87,7 +93,7 @@ integration-in-ACVF `remove-hnames` and special-transformations `gamma-lift-9-16
    - Done: `lakefile.toml`, `lake-manifest.json` and `section 7/VERIFICATION.json` pin `932a507`
      (published on special-transformations main).
 2. **integration-in-ACVF.** Bump diamond-integral's pin to the `remove-hnames` tip once it is
-   published. The tip includes 81 new modules (49 class-level, 32 function-layer),
+   published. *(Now published on `main`; bump to a `main` commit.)* The tip includes 81 new modules (49 class-level, 32 function-layer),
    `Library.lean` and documentation.
 3. **Registry.** `section 7/VERIFICATION.json` registers the new modules and 132 declarations
    under `gamma_named_hnames_removal` (45 class-level; 87 in its `function_layer` entry).
@@ -95,7 +101,8 @@ integration-in-ACVF `remove-hnames` and special-transformations `gamma-lift-9-16
    - The blueprint has seven new nodes: `s7-gn-7`, `s7-gn-9`, `s7-gn-10`, `s7-gn-13`,
      `s7-gn-11`, `s7-gn-12` and `s7-gn-14`.
    - Its fingerprint manifest is already stale on `main` (46 drifted files in Sections 2–3), so
-     it needs regeneration at publication.
+     it needs regeneration at publication. *(Regenerated since; `scripts/check_blueprint.py`
+     passes.)*
 
 ## New public declarations (namespace `IntegrationInACVF.Section7`)
 

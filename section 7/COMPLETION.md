@@ -42,8 +42,11 @@ categories.
 There is no remaining Section 7 proof obligation in this accepted target.
 Earlier open-boundary paragraphs in incremental ledgers are historical.
 
-The sealed registry contains 2,041 source modules plus Library and 6,711
-audited exports. The final two batches add 40 modules / 140 exports; every
+The sealed registry contained 2,041 source modules plus Library and 6,711
+audited exports at completion (November 16, 2026). *(November 19, 2026: after
+the Gamma-named batches below, the closed `CompletedSection6.lemma_6_16`, and
+registration of the Gamma-named linear layer, `VERIFICATION.json` registers
+2,168 source modules plus Library and 6,990 exports.)* The final two batches add 40 modules / 140 exports; every
 new actual source compiled, every complete new exported type and allowed-axiom
 report was reviewed once (1,791 + 1,356 lines), and both affected Library
 builds passed. Only `propext`, `Classical.choice` and `Quot.sound` occur.
@@ -51,8 +54,10 @@ The final root build passed 13,548 jobs including valid cached dependencies.
 Final automated verification and publication evidence are recorded separately
 in `../verification/hk-upgrade/` and `HK-CORRECTION-STATUS.md`.
 
-## Gamma-named results without `hNames` (branch `remove-hnames`, local)
+## Gamma-named results without `hNames` (on `main`)
 
+These results were developed on the local branches `remove-hnames` and
+`gamma-linear-section7` and are now on `main`, imported by `Integration7.Library`.
 The corrected class theorems above assume `hNames : commonRealNames ⟨C.base, Ξ⟩ ⊆ C.base`.
 The entry point `Integration7.GammaNamedSection7Results` restates the class results over
 Gamma-named categories and removes that hypothesis. Objects are coded over the named code
@@ -91,7 +96,7 @@ prefix integrals and coordinate integrals are additive monoid homomorphisms
 argument: the head preparation of a sum is cut along the summand tag, and each cut is
 compared with its summand at generic points.
 
-**Linear layer (complete for the requested targets, branch `gamma-linear-section7`).** The
+**Linear layer (complete for the requested targets; developed on `gamma-linear-section7`, now on `main`).** The
 author asked for the deferred linear 7.11/7.12 and normalized 7.14/7.15. Entry points
 `Integration7.GammaFunLinearResults` and `Integration7.GammaFunLinearSection7`. Proved:
 
@@ -105,7 +110,8 @@ author asked for the deferred linear 7.11/7.12 and normalized 7.14/7.15. Entry p
 - Normalized 7.15: the Gamma-named point class is central, `HK.NormalizedGammaRVRing` is the
   normalized coefficient ring, and `GammaFun.gamma_named_normalized_theorem_7_15` holds on the
   scalar extension of the supported module. Its carrier differs from the raw `HK.theorem_7_15`
-  carrier (a span inside the extension of the full module); this is flagged for author review.
+  carrier (a span inside the extension of the full module). The author accepted this domain
+  (November 19, 2026); identifying the two carriers is not a target.
 
 - Head-integral coefficient linearity `headInt(c•f) = c•headInt f` almost everywhere, in all
   four coefficient/function degree cases (`GammaFun.presentation_head_left_product_ae`,
@@ -123,9 +129,11 @@ are supported. The author decided support preservation is not needed (relayed No
 2026), so this formulation is retained. The raw `HK` statements still carry `hNames`;
 the Gamma-named statements do not.
 
-These modules require the special-transformations branch `gamma-lift-9-16` (local commit
-`932a507`, which contains Gamma Theorem 9.16). The registered dependency pin is unchanged
-until the author coordinates the bump. The 132 new headlines (45 class-level, 87 function
-layer) are audited in `verification/hnames-removal/` (receipt and logs). Only `propext`,
+These modules require special-transformations commit `932a507` (Gamma Theorem 9.16, from its
+`gamma-lift-9-16` branch, now an ancestor of special-transformations `main`). The Lake
+manifest pins `932a507` (commit 5a69a5e), and `VERIFICATION.json` records the same pin.
+The 132 class/function headlines (45 class-level, 87 function layer) and the 146
+linear-layer headlines are audited in `verification/hnames-removal/` (receipt and logs);
+all are also in the main `VERIFICATION.json` registry checked by `verify.py`. Only `propext`,
 `Classical.choice` and `Quot.sound` occur, and no exported type mentions `hNames`.
-`Integration7.Library` builds with the local provider (13,523 jobs).
+`Integration7.Library` builds with the pinned provider.

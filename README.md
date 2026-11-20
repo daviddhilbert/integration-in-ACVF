@@ -53,13 +53,18 @@ kernel (7.10/7.13), full coefficient-linear raw operators, balanced ring-valued
 supported Fubini/change of variables (7.11/7.12), and normalized supported
 7.14/7.15 are checked. The accepted nonempty-E restriction of 7.5 and all
 standing hypotheses remain explicit. The public entrypoint is
-`Integration7.HKCorrectedSection7Results`. The sealed registry contains 2,041
-modules plus Library and 6,711 audited exports. See the
-[Section 7 completion record](section%207/COMPLETION.md). Gamma-named versions of 7.6–7.10 and 7.13 that drop the
-common-names hypothesis `hNames` are on the local branch `remove-hnames`
-(entry point `Integration7.GammaNamedSection7Results`). They require the
-special-transformations Gamma 9.16 provider; 7.11/7.12/7.14/7.15 still assume
-`hNames`. Earlier ordinary-zero
+`Integration7.HKCorrectedSection7Results`. The registry in
+[section 7/VERIFICATION.json](section%207/VERIFICATION.json) lists 2,168
+modules plus Library and 6,990 audited exports. See the
+[Section 7 completion record](section%207/COMPLETION.md).
+
+Gamma-named versions of 7.6–7.15 that drop the common-names hypothesis
+`hNames` are on `main`. The class results 7.6–7.10 and 7.13 are in
+`Integration7.GammaNamedSection7Results`; additive 7.11/7.12 and homogeneous
+7.14/7.15 are in `Integration7.GammaFunSection7AdditiveResults`; linear
+7.11/7.12 and normalized 7.14/7.15 are in `Integration7.GammaFunLinearSection7`.
+They use special-transformations `932a507` (Gamma Theorem 9.16), which the
+manifest pins. The raw `HK` theorems still take `hNames`. Earlier ordinary-zero
 interfaces retain their historical scope; other sections' documented scope
 boundaries are unchanged.
 See [Section 5 status](section%205/STATUS.md),
