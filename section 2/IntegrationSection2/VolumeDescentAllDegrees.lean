@@ -38,6 +38,11 @@ noncomputable def IsVolumeIsomorphism {U V : RVFiniteObject (M := M) S k}
     exact ConcreteVolumeMorphisms.IsVolumeIsomorphism e (essentialForm ω) (essentialForm π)
       (rvEssential_value_nonzero U.obj) (rvEssential_value_nonzero V.obj)
 
+/-- Legacy all-degree interface. In degree zero `Form 0 = PUnit` and
+`IsVolumeIsomorphism` is `True`, so that branch is vacuous. Use
+`corollary_2_34_all_degrees_weighted` (in `VolumeDescentAllDegreesWeighted`),
+whose degree-zero branch is the corrected weighted statement
+`WeightedZeroVolumeDescent.corollary_2_34_zero_weighted`. -/
 theorem corollary_2_34_all_degrees (hc : CanonicalStructure.IsCanonical (M := M))
     (C : BaseContext M) {U V : RVFiniteObject (M := M) (C.base : Set M) k}
     (e : RVFiniteEssentialIso U V) (ω : Form U) (π : Form V)
