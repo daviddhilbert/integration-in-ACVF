@@ -211,3 +211,9 @@ Hilbert mathlib owns the paper-independent modules listed in
 files there and preserves their original import paths, public types and
 hypotheses. The 40 shared paths are verified against the exact pinned provider
 bodies; Section 7 retains its complete declaration audit (6,990 exports).
+
+## License
+
+This repository is licensed under the [Apache License, Version 2.0](LICENSE).
+The blueprint scaffolding keeps its MIT notice
+([blueprint/SCAFFOLDING-LICENSE.txt](blueprint/SCAFFOLDING-LICENSE.txt)).
